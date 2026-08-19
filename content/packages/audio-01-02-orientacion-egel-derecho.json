@@ -1,0 +1,497 @@
+{
+  "packageVersion": "1.0",
+  "subject": {
+    "name": "Orientación EGEL Derecho",
+    "description": "Estructura oficial del EGEL Plus Derecho, estrategia de estudio y resolución razonada de reactivos."
+  },
+  "class": {
+    "title": "Cómo estudiar y resolver el EGEL Plus Derecho",
+    "description": "Primera clase del curso: reconoce la estructura vigente del examen, organiza el estudio por áreas y aplica un método de lectura jurídica para resolver casos sin depender de la memorización."
+  },
+  "transcript": {
+    "originalFiles": [
+      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 01.txt",
+      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 02.txt"
+    ],
+    "cleaned": "Los Audios 01 y 02 corresponden a la inducción del curso. Explican que la preparación debe apoyarse en la guía oficial aplicable, el estudio constante y la comprensión de casos, no en preguntas filtradas ni respuestas memorizadas. Presentan las áreas de Función pública, Litigio y Justicia alternativa y fe pública, además de la necesidad de practicar lectura y administración del tiempo. También introducen temas jurídicos como federalismo, división de poderes, amparo y ramas del derecho; esos fragmentos se reservan para sus clases temáticas posteriores. Se eliminaron del material didáctico promociones, bromas, comentarios personales, afirmaciones no verificadas y datos logísticos propios de una aplicación anterior. La estructura y modalidades se actualizaron con la información oficial del Ceneval consultada el 11 de agosto de 2026."
+  },
+  "topics": [
+    {
+      "title": "Estructura y estrategia para el EGEL Plus Derecho",
+      "description": "Cómo ubicar las secciones y áreas del examen, reconocer un reactivo piloto, leer casos jurídicos con método y convertir los errores de práctica en un plan de estudio ordenado.",
+      "learningJourney": {
+        "openingPrompt": "Si un reactivo presenta un caso extenso con datos irrelevantes, ¿qué deberías identificar antes de intentar recordar una ley o elegir una respuesta?",
+        "quickChecks": [
+          {
+            "prompt": "¿Cuáles son las dos secciones generales del EGEL Plus?",
+            "answer": "La sección disciplinar específica de la profesión y la sección transversal de Lenguaje y Comunicación.",
+            "feedback": "La preparación jurídica y las habilidades de lectura y redacción se evalúan como componentes distintos pero complementarios."
+          },
+          {
+            "prompt": "¿Cuáles son las tres áreas disciplinares de Derecho?",
+            "answer": "Función pública, Litigio y Justicia alternativa y fe pública.",
+            "feedback": "Estas áreas organizan competencias profesionales; no deben confundirse con una lista aislada de materias universitarias."
+          },
+          {
+            "prompt": "¿Los reactivos piloto cuentan para la calificación?",
+            "answer": "No, pero no están identificados durante la aplicación y deben responderse con el mismo cuidado.",
+            "feedback": "No intentes adivinar cuáles son piloto; administra el tiempo y responde todos los reactivos disponibles."
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una sustentante lee un caso sobre una autoridad municipal. El reactivo describe varios antecedentes, pero pregunta únicamente qué órgano es competente para emitir el acto. Dos opciones mencionan instituciones conocidas y otra coincide con el ámbito territorial y la facultad prevista en el caso.",
+          "question": "¿Qué método debe usar antes de elegir la respuesta?",
+          "legalRule": "En los reactivos de opción múltiple debe identificarse la tarea, seleccionar los hechos jurídicamente relevantes y contrastar cada opción con la regla aplicable.",
+          "reasoning": "La popularidad de una institución no resuelve la competencia. La sustentante debe ubicar el verbo de la instrucción, distinguir ámbito de gobierno y facultad, y eliminar las opciones incompatibles con esos datos.",
+          "conclusion": "Debe elegir la opción respaldada por la competencia y los hechos del caso, no la que simplemente resulte más familiar."
+        },
+        "closingPrompt": "Explica en voz alta cómo pasarías de un caso desconocido a una respuesta justificada usando tarea, hechos, regla, descarte y verificación.",
+        "nextActivity": "Recorre el mapa visual, contesta la guía de preguntas y respuestas y resuelve los diez reactivos con tres opciones."
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "El EGEL Plus Derecho evalúa conocimientos y habilidades disciplinares, así como comprensión lectora y redacción indirecta. La preparación eficaz combina cuatro acciones: conocer la guía oficial correspondiente a la fecha de aplicación, diagnosticar fortalezas y vacíos, estudiar por relaciones y practicar casos con retroalimentación. Para cada reactivo identifica qué te piden, conserva solo los hechos relevantes, formula la regla aplicable, descarta opciones incompatibles y verifica que la respuesta atienda exactamente la pregunta.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "El EGEL Plus Derecho no es una repetición literal de un plan de estudios universitario. Ceneval construye un perfil general de egreso y organiza la evaluación en dos secciones. La sección disciplinar reúne tres áreas: Función pública, Litigio y Justicia alternativa y fe pública. La sección transversal evalúa Comprensión lectora y Redacción indirecta. La guía oficial consultada presenta 200 reactivos: 140 disciplinares y 60 transversales, además de un porcentaje de reactivos piloto que no se considera para la calificación. Los reactivos actuales tienen tres opciones y una sola respuesta correcta.\n\nUn área no equivale a una asignatura. Función pública integra competencias, facultades y límites de entes federales, locales y municipales, así como derechos y obligaciones frente a la autoridad. Litigio reúne la intervención en controversias de Derecho público, privado y social. Justicia alternativa y fe pública comprende mecanismos no jurisdiccionales y funciones que otorgan certeza jurídica. Comprensión lectora y redacción indirecta exigen interpretar, evaluar y seleccionar textos adecuados.\n\nLos Audios 01 y 02 contienen una idea pedagógica válida: el examen se resuelve mejor por comprensión que por memorización. Sin embargo, sus cifras, horarios y comentarios sobre aplicaciones pasadas no deben asumirse vigentes. La guía correspondiente al periodo de aplicación, el pase de ingreso y las instrucciones oficiales prevalecen siempre.\n\nEl método de cinco pasos para un reactivo jurídico es: 1) leer primero la instrucción y ubicar el verbo rector; 2) identificar sujetos, autoridad, acto, momento procesal y pretensión; 3) formular la regla o criterio relevante; 4) contrastar y descartar cada opción; 5) verificar que la respuesta resuelva lo preguntado y no otro problema cercano. Si el caso resulta muy técnico, evita quedarte bloqueada: marca la mejor respuesta razonada dentro del tiempo disponible y continúa conforme a las reglas de tu modalidad.\n\nEl estudio también necesita un ciclo. Comienza con un diagnóstico por áreas; convierte cada error en una categoría concreta; elige una fuente vigente; estudia un bloque breve; practica casos; explica por qué cada distractor falla; y vuelve a medir. Un registro de errores es más útil que releer sin propósito porque revela patrones: norma confundida, etapa procesal equivocada, lectura incompleta, excepción ignorada o manejo deficiente del tiempo.\n\nLa ética forma parte de la preparación. Ceneval publica versiones diferentes y no avala cursos ni instituciones asesoras. Utiliza materiales propios, fuentes oficiales y práctica original. Nunca dependas de filtraciones, suplantaciones o bancos presentados como preguntas reales. El objetivo es desarrollar criterio jurídico transferible al examen y al ejercicio profesional.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "legal_basis",
+          "title": "Base oficial vigente",
+          "content": "La fuente rectora de esta clase es la información oficial del Ceneval, no una disposición jurídica. Para el EGEL Plus Derecho, la guía vigente debe elegirse según la fecha de aplicación. La estructura oficial consultada distingue una sección disciplinar con Función pública, Litigio y Justicia alternativa y fe pública, y una sección transversal con Comprensión lectora y Redacción indirecta. La guía señala 140 reactivos disciplinares y 60 transversales, tres opciones por reactivo y un porcentaje de reactivos piloto no calificados. Las modalidades, horarios, materiales permitidos, requerimientos técnicos y reglas operativas deben confirmarse en la guía y el pase de ingreso de cada sustentante. Consulta realizada el 11 de agosto de 2026.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo: leer antes de recordar",
+          "content": "El caso dice que una persona fue notificada el lunes, presentó un escrito el viernes y pregunta si actuó dentro de un plazo de cinco días. Antes de buscar una respuesta, subraya cuatro datos: fecha inicial, acto de notificación, plazo indicado y fecha de presentación. Después pregunta qué regla de cómputo aplica y si existen días inhábiles. Este orden evita elegir una opción solo porque menciona cinco días. El reactivo evalúa la aplicación de la regla a los hechos, no la repetición aislada del número.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo EGEL: competencia y distractores",
+          "content": "Una autoridad estatal pretende resolver un asunto que la Constitución reserva expresamente a la Federación. La instrucción pide identificar el problema jurídico principal. Opción A: falta de competencia; opción B: error de redacción; opción C: incumplimiento contractual. El método correcto localiza primero la tarea —identificar el problema principal— y después el hecho decisivo —la reserva federal—. La respuesta es falta de competencia. Los otros datos pueden ser verosímiles, pero no explican la invalidez central descrita en el caso.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "summary",
+          "title": "Resumen de la primera clase",
+          "content": "El examen integra una sección disciplinar y otra transversal. Derecho se organiza en Función pública, Litigio y Justicia alternativa y fe pública; Lenguaje y Comunicación comprende lectura y redacción indirecta. Los reactivos plantean problemas con tres opciones y una respuesta correcta. Los reactivos piloto no se distinguen ni califican, por lo que todos deben atenderse. La estrategia central es estudiar con fuentes vigentes, practicar casos, justificar descartes y registrar errores. Los datos logísticos siempre se verifican en la guía correspondiente y en el pase de ingreso.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de preguntas y respuestas",
+          "content": "1. ¿Qué evalúa el EGEL Plus Derecho? Conocimientos y habilidades disciplinares, comprensión lectora y redacción indirecta. 2. ¿Cuáles son las áreas disciplinares? Función pública, Litigio y Justicia alternativa y fe pública. 3. ¿Cuáles son las áreas transversales? Comprensión lectora y Redacción indirecta. 4. ¿Cuántas opciones tiene cada reactivo oficial? Tres, con una sola respuesta correcta. 5. ¿Qué es un reactivo piloto? Una pregunta usada para obtener información técnica que no cuenta para la calificación. 6. ¿Puede identificarse durante el examen? No. 7. ¿Qué se lee primero? La instrucción y su verbo rector. 8. ¿Qué hechos deben conservarse? Solo los que modifican la solución jurídica. 9. ¿Cómo se usa un distractor? Se explica qué regla, etapa o dato contradice. 10. ¿Qué se hace con cada error? Se clasifica y se convierte en una tarea de estudio. 11. ¿Debes memorizar bancos filtrados? No; practica reactivos originales y fuentes oficiales. 12. ¿Qué documento manda sobre horarios y modalidad? La guía aplicable y el pase de ingreso.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Sección disciplinar: conocimientos y habilidades propios de Derecho. Sección transversal: comprensión lectora y redacción indirecta comunes a las profesiones. Área: conjunto de competencias profesionales relacionadas. Reactivo: problema explícito acompañado de opciones de respuesta. Reactivo piloto: pregunta no calificada utilizada para obtener evidencia técnica. Verbo rector: acción exigida por la instrucción, como identificar, determinar o seleccionar. Hecho relevante: dato que cambia la aplicación de la regla. Distractor: opción plausible pero jurídicamente incompatible con la tarea o los hechos. Diagnóstico: medición inicial de fortalezas y vacíos. Registro de errores: bitácora que vincula cada fallo con su causa y la acción correctiva.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes y cómo evitarlos",
+          "content": "No uses como vigentes los horarios o cifras escuchados en una grabación antigua; consulta la guía de tu periodo. No confundas área con materia universitaria. No intentes descubrir qué reactivo es piloto. No elijas una opción por contener una palabra conocida. No leas primero todas las opciones sin saber qué pide la instrucción. No agregues hechos que el caso no proporciona. No selecciones una regla general cuando el caso activa una excepción. No estudies solo releyendo: practica, explica distractores y registra errores. No uses preguntas supuestamente filtradas ni confundas un curso privado con material avalado por Ceneval.",
+          "sourceOrigin": "mixed"
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual para dominar el EGEL Plus Derecho",
+        "description": "Parte del examen al centro y recorre sus ramas: estructura, reactivos, método de resolución y ciclo de estudio.",
+        "nodes": [
+          {
+            "id": "egel",
+            "label": "EGEL Plus Derecho",
+            "description": "Evaluación disciplinar y transversal del perfil general de egreso."
+          },
+          {
+            "id": "estructura",
+            "label": "1. Estructura",
+            "description": "Dos secciones y cinco áreas.",
+            "parentId": "egel"
+          },
+          {
+            "id": "disciplinar",
+            "label": "Sección disciplinar",
+            "description": "140 reactivos en la guía consultada.",
+            "parentId": "estructura"
+          },
+          {
+            "id": "funcion",
+            "label": "Función pública",
+            "description": "Entes, competencias, límites, derechos y obligaciones.",
+            "parentId": "disciplinar"
+          },
+          {
+            "id": "litigio",
+            "label": "Litigio",
+            "description": "Controversias de Derecho público, privado y social.",
+            "parentId": "disciplinar"
+          },
+          {
+            "id": "alternativa",
+            "label": "Justicia alternativa y fe pública",
+            "description": "Soluciones no jurisdiccionales y certeza jurídica.",
+            "parentId": "disciplinar"
+          },
+          {
+            "id": "transversal",
+            "label": "Lenguaje y Comunicación",
+            "description": "60 reactivos en la guía consultada.",
+            "parentId": "estructura"
+          },
+          {
+            "id": "lectura",
+            "label": "Comprensión lectora",
+            "description": "Identificar, interpretar y evaluar información.",
+            "parentId": "transversal"
+          },
+          {
+            "id": "redaccion",
+            "label": "Redacción indirecta",
+            "description": "Seleccionar el texto adecuado para una situación.",
+            "parentId": "transversal"
+          },
+          {
+            "id": "reactivo",
+            "label": "2. Reactivo",
+            "description": "Problema explícito, tres opciones y una correcta.",
+            "parentId": "egel"
+          },
+          {
+            "id": "piloto",
+            "label": "Piloto",
+            "description": "No se identifica y no cuenta para la calificación.",
+            "parentId": "reactivo"
+          },
+          {
+            "id": "metodo",
+            "label": "3. Método de cinco pasos",
+            "description": "Proceso reproducible para resolver casos.",
+            "parentId": "egel"
+          },
+          {
+            "id": "tarea",
+            "label": "Tarea",
+            "description": "Ubica la instrucción y el verbo rector.",
+            "parentId": "metodo"
+          },
+          {
+            "id": "hechos",
+            "label": "Hechos relevantes",
+            "description": "Separa datos decisivos de información secundaria.",
+            "parentId": "metodo"
+          },
+          {
+            "id": "regla",
+            "label": "Regla aplicable",
+            "description": "Relaciona hechos con norma, principio o criterio.",
+            "parentId": "metodo"
+          },
+          {
+            "id": "descarte",
+            "label": "Descarte",
+            "description": "Explica por qué falla cada distractor.",
+            "parentId": "metodo"
+          },
+          {
+            "id": "verificacion",
+            "label": "Verificación",
+            "description": "Confirma que respondes exactamente lo preguntado.",
+            "parentId": "metodo"
+          },
+          {
+            "id": "ciclo",
+            "label": "4. Ciclo de estudio",
+            "description": "Mejora continua basada en evidencia.",
+            "parentId": "egel"
+          },
+          {
+            "id": "diagnostico",
+            "label": "Diagnosticar",
+            "description": "Mide por área y detecta patrones.",
+            "parentId": "ciclo"
+          },
+          {
+            "id": "practica",
+            "label": "Estudiar + practicar",
+            "description": "Usa fuentes vigentes y casos originales.",
+            "parentId": "ciclo"
+          },
+          {
+            "id": "retroalimentar",
+            "label": "Retroalimentar",
+            "description": "Convierte cada error en una acción concreta.",
+            "parentId": "ciclo"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "EGEL Plus — Examen General para el Egreso de la Licenciatura",
+          "url": "https://ceneval.edu.mx/examenes-egreso-egel/",
+          "institution": "Centro Nacional de Evaluación para la Educación Superior, A.C.",
+          "jurisdiction": "México",
+          "citation": "Estructura, modalidades, guías por periodo y preguntas frecuentes del EGEL Plus",
+          "retrievedOn": "2026-08-11",
+          "note": "Página oficial para elegir la guía correspondiente a la fecha de aplicación."
+        },
+        {
+          "title": "Guía para el sustentante EGEL Plus Derecho — julio de 2026",
+          "url": "https://online.flippingbook.com/view/900977387/",
+          "institution": "Centro Nacional de Evaluación para la Educación Superior, A.C.",
+          "jurisdiction": "México",
+          "citation": "Guía para aplicaciones entre el 28 de agosto y el 3 de diciembre de 2026",
+          "retrievedOn": "2026-08-11",
+          "note": "Fuente oficial vigente para estructura y preparación del EGEL Plus Derecho en ese periodo."
+        },
+        {
+          "title": "Reportes para sustentantes EGEL Plus",
+          "url": "https://ceneval.edu.mx/reportes-egel/",
+          "institution": "Centro Nacional de Evaluación para la Educación Superior, A.C.",
+          "jurisdiction": "México",
+          "citation": "Niveles de desempeño e interpretación de resultados",
+          "retrievedOn": "2026-08-11",
+          "note": "Explica que el desempeño se reporta por área, sección y resultado global."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Cuáles son las dos secciones del EGEL Plus?",
+          "answer": "La sección disciplinar específica de la profesión y la sección transversal de Lenguaje y Comunicación.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "question": "¿Cuáles son las tres áreas disciplinares del EGEL Plus Derecho?",
+          "answer": "Función pública, Litigio y Justicia alternativa y fe pública.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "question": "¿Qué áreas integran Lenguaje y Comunicación?",
+          "answer": "Comprensión lectora y Redacción indirecta.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "question": "¿Cuántas opciones contiene un reactivo oficial del EGEL Plus?",
+          "answer": "Tres opciones, de las cuales solo una es correcta.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "question": "¿Qué es un reactivo piloto?",
+          "answer": "Una pregunta utilizada para obtener evidencia técnica que no se considera para la calificación.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "question": "¿Puedes saber durante el examen qué reactivo es piloto?",
+          "answer": "No. Los reactivos piloto no se identifican y deben responderse con el mismo cuidado.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "question": "¿Cuál es el primer paso al resolver un caso?",
+          "answer": "Leer la instrucción e identificar el verbo rector que define la tarea.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "question": "¿Qué es un hecho jurídicamente relevante?",
+          "answer": "Un dato del caso que modifica la regla aplicable o la conclusión jurídica.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "question": "¿Cómo se aprovecha un distractor durante la práctica?",
+          "answer": "Explicando qué hecho, regla, excepción o etapa lo vuelve incorrecto.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "question": "¿Por qué conviene llevar un registro de errores?",
+          "answer": "Porque transforma fallos repetidos en tareas específicas de estudio y permite medir el progreso.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "question": "¿Qué documento prevalece sobre la logística mencionada en una clase grabada?",
+          "answer": "La guía oficial correspondiente al periodo y el pase de ingreso de la persona sustentante.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "question": "¿Ceneval avala instituciones o cursos de preparación?",
+          "answer": "No. Ceneval se presenta como instancia evaluadora y no recomienda ni vincula entidades asesoras.",
+          "sourceOrigin": "complementary"
+        }
+      ],
+      "exam": {
+        "title": "Diagnóstico: estructura y resolución del EGEL Plus Derecho",
+        "description": "Diez reactivos originales de tres opciones sobre estructura, lectura estratégica, distractores, ética y planificación del estudio.",
+        "questions": [
+          {
+            "text": "Una sustentante organiza su preparación separando Función pública, Litigio y Justicia alternativa y fe pública. ¿Qué sección está estudiando?",
+            "difficulty": "basic",
+            "options": [
+              "La sección disciplinar específica de Derecho",
+              "La sección transversal de Lenguaje y Comunicación",
+              "El cuestionario de contexto"
+            ],
+            "correctOption": 0,
+            "explanation": "Las tres áreas mencionadas integran la sección disciplinar específica del EGEL Plus Derecho.",
+            "optionExplanations": [
+              "Agrupa correctamente las tres áreas profesionales de Derecho.",
+              "La sección transversal comprende lectura y redacción indirecta.",
+              "El cuestionario de contexto no evalúa esas áreas disciplinares."
+            ]
+          },
+          {
+            "text": "Durante el examen aparece una pregunta mucho más técnica que las anteriores. ¿Cuál es la actuación más adecuada?",
+            "difficulty": "basic",
+            "options": [
+              "Dejar de responder porque seguramente es piloto",
+              "Responderla con el mejor análisis posible y continuar administrando el tiempo",
+              "Buscar en internet si la pregunta cuenta para la calificación"
+            ],
+            "correctOption": 1,
+            "explanation": "Los reactivos piloto no están identificados; se debe responder cada pregunta y conservar el control del tiempo.",
+            "optionExplanations": [
+              "No es posible confirmar que sea piloto durante la aplicación.",
+              "Mantiene una estrategia válida frente a cualquier reactivo.",
+              "El uso de internet contraviene las condiciones de aplicación."
+            ]
+          },
+          {
+            "text": "Un caso contiene nombres, fechas, cargos y antecedentes, pero pregunta cuál autoridad es competente. ¿Qué debe localizarse primero?",
+            "difficulty": "basic",
+            "options": [
+              "La opción con el nombre de la institución más conocida",
+              "El verbo de la instrucción y los hechos que determinan la competencia",
+              "La respuesta más extensa porque contiene más información"
+            ],
+            "correctOption": 1,
+            "explanation": "La tarea y los hechos jurídicamente relevantes orientan la regla de competencia y permiten descartar datos secundarios.",
+            "optionExplanations": [
+              "La familiaridad del nombre no demuestra competencia.",
+              "Es el inicio correcto del método de resolución.",
+              "La extensión de una opción no demuestra que sea correcta."
+            ]
+          },
+          {
+            "text": "Una estudiante relee toda la legislación cada semana, pero repite los mismos errores en casos prácticos. ¿Qué ajuste es más útil?",
+            "difficulty": "intermediate",
+            "options": [
+              "Releer más rápido sin revisar las respuestas",
+              "Memorizar únicamente las letras de un banco de respuestas",
+              "Clasificar cada error, estudiar la regla asociada y practicar un caso equivalente"
+            ],
+            "correctOption": 2,
+            "explanation": "La retroalimentación debe convertir el error en una causa identificable y en una acción concreta de estudio y práctica.",
+            "optionExplanations": [
+              "La velocidad no corrige la causa del error.",
+              "Memorizar letras no desarrolla criterio transferible.",
+              "Cierra correctamente el ciclo de diagnóstico y mejora."
+            ]
+          },
+          {
+            "text": "¿Cuál pareja pertenece a la sección transversal común a las profesiones?",
+            "difficulty": "basic",
+            "options": [
+              "Función pública y Litigio",
+              "Comprensión lectora y Redacción indirecta",
+              "Justicia alternativa y Fe pública"
+            ],
+            "correctOption": 1,
+            "explanation": "La sección transversal del EGEL Plus evalúa Comprensión lectora y Redacción indirecta.",
+            "optionExplanations": [
+              "Ambas son áreas disciplinares de Derecho.",
+              "Es la integración oficial de Lenguaje y Comunicación.",
+              "Forman conjuntamente una de las áreas disciplinares."
+            ]
+          },
+          {
+            "text": "Una grabación antigua afirma una duración concreta, pero el pase de ingreso vigente muestra otra organización. ¿Qué información debe seguirse?",
+            "difficulty": "intermediate",
+            "options": [
+              "La grabación, porque contiene la explicación del docente",
+              "El promedio de comentarios publicados en redes sociales",
+              "La guía aplicable y el pase de ingreso vigente"
+            ],
+            "correctOption": 2,
+            "explanation": "Las condiciones operativas pueden actualizarse; los documentos oficiales vinculados con la aplicación concreta prevalecen.",
+            "optionExplanations": [
+              "Una grabación puede conservar datos de un periodo anterior.",
+              "Los comentarios no sustituyen instrucciones oficiales.",
+              "Son las fuentes que regulan la aplicación correspondiente."
+            ]
+          },
+          {
+            "text": "En un reactivo, dos opciones contienen reglas verdaderas, pero solo una responde la cuestión procesal planteada. ¿Cómo debe elegirse?",
+            "difficulty": "advanced",
+            "options": [
+              "Elegir cualquiera porque ambas reglas existen",
+              "Seleccionar la regla vinculada con la tarea, etapa y hechos del caso",
+              "Elegir siempre la regla más general"
+            ],
+            "correctOption": 1,
+            "explanation": "Una afirmación verdadera puede funcionar como distractor si no resuelve el problema específico presentado.",
+            "optionExplanations": [
+              "La existencia de una regla no demuestra su pertinencia.",
+              "Integra correctamente instrucción, contexto procesal y hechos.",
+              "Una regla general puede ceder ante una especial o excepción."
+            ]
+          },
+          {
+            "text": "Una persona obtiene un banco anunciado como copia del examen y decide estudiar solo sus respuestas. ¿Cuál es el principal problema académico?",
+            "difficulty": "intermediate",
+            "options": [
+              "Impide desarrollar criterio y puede usar contenido desactualizado o indebido",
+              "Contiene necesariamente demasiadas explicaciones oficiales",
+              "Garantiza únicamente un desempeño satisfactorio, no sobresaliente"
+            ],
+            "correctOption": 0,
+            "explanation": "La memorización de materiales no verificados no construye comprensión y puede involucrar información desactualizada o contraria a la ética.",
+            "optionExplanations": [
+              "Identifica tanto el riesgo pedagógico como el ético.",
+              "No existe garantía de que contenga explicaciones oficiales.",
+              "Ningún banco de ese tipo garantiza un nivel de desempeño."
+            ]
+          },
+          {
+            "text": "Después de una práctica, una estudiante anota: “fallé porque confundí la autoridad competente”. ¿Cuál es el siguiente paso más preciso?",
+            "difficulty": "advanced",
+            "options": [
+              "Registrar la letra correcta y no volver al tema",
+              "Estudiar criterios de competencia y resolver casos comparables",
+              "Cambiar de área cada vez que aparezca una dificultad"
+            ],
+            "correctOption": 1,
+            "explanation": "Un registro de errores sirve cuando conecta la causa con una acción medible de estudio y práctica posterior.",
+            "optionExplanations": [
+              "La letra no explica la regla ni previene la repetición.",
+              "Convierte el diagnóstico en una intervención concreta.",
+              "Evitar el área mantiene el vacío detectado."
+            ]
+          },
+          {
+            "text": "¿Cuál secuencia representa mejor el método completo de resolución enseñado en esta clase?",
+            "difficulty": "advanced",
+            "options": [
+              "Leer opciones, recordar una palabra, adivinar y continuar",
+              "Memorizar, copiar, comparar longitud y elegir",
+              "Identificar tarea, seleccionar hechos, formular regla, descartar y verificar"
+            ],
+            "correctOption": 2,
+            "explanation": "La secuencia conecta la instrucción con los hechos y la regla, somete las opciones a contraste y verifica la respuesta final.",
+            "optionExplanations": [
+              "La familiaridad verbal no sustituye el razonamiento jurídico.",
+              "La memorización y la longitud no son criterios de validez.",
+              "Reproduce los cinco pasos de análisis de la clase."
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

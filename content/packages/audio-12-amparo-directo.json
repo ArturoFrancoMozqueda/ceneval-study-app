@@ -1,0 +1,111 @@
+{
+  "packageVersion": "1.0",
+  "subject": {
+    "name": "Derecho electoral y juicio de amparo",
+    "description": "Derechos político-electorales, sistema de medios de impugnación y mecanismos constitucionales de protección."
+  },
+  "class": {
+    "title": "Amparo directo: procedencia, demanda y trámite",
+    "description": "Undécima clase del curso: identifica el acto reclamado, definitividad, violaciones procesales, presentación ante la responsable, trámite, suspensión y revisión excepcional."
+  },
+  "transcript": {
+    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 12.txt",
+    "cleaned": "Se utilizó el fragmento del Audio 12 que comienza con la explicación del amparo directo; las líneas iniciales electorales quedaron en C10. Se eliminaron promociones, datos personales, bromas, expresiones ofensivas y ejemplos imprecisos. Se corrigió que el amparo directo no procede contra cualquier resolución, sino contra sentencias definitivas, laudos y resoluciones que pongan fin al juicio; que la definitividad tiene excepciones; que la presentación puede ser impresa o electrónica; y que la suspensión no surge automáticamente en todas las materias. También se precisaron el plazo general, las tareas de la autoridad responsable, la competencia del Tribunal Colegiado de Circuito y la revisión excepcional ante la Suprema Corte."
+  },
+  "topics": [
+    {
+      "title": "Cómo reconocer y tramitar un amparo directo",
+      "description": "Acto terminal, recursos ordinarios, conceptos de violación, autoridad responsable, colegiado, suspensión y sentencia.",
+      "learningJourney": {
+        "openingPrompt": "Una resolución interlocutoria causa molestia, pero el juicio continúa y existe apelación. ¿Procede ya amparo directo?",
+        "quickChecks": [
+          {"prompt":"¿Cuál es el acto típico del amparo directo?","answer":"Una sentencia definitiva, laudo o resolución que ponga fin al juicio, emitida por un tribunal judicial, administrativo, agrario o laboral.","feedback":"Una resolución intraprocesal que no termina el juicio normalmente no encaja por sí sola."},
+          {"prompt":"¿Dónde se presenta la demanda?","answer":"Por conducto de la autoridad responsable que emitió el acto reclamado.","feedback":"Presentarla ante autoridad distinta no interrumpe el plazo."},
+          {"prompt":"¿La presentación suspende siempre el acto?","answer":"No. La autoridad responsable resuelve la suspensión; en materia penal sí opera de oficio y de plano con la sola presentación.","feedback":"Fuera de penal deben revisarse petición, requisitos, interés social y reglas especiales."}
+        ],
+        "practicalCase": {
+          "facts": "Una sala del Tribunal Federal de Justicia Administrativa confirma definitivamente un crédito fiscal contra una empresa. La ley no concede a la particular un recurso ordinario que pueda modificar la sentencia. La notificación surtió efectos y han pasado ocho días hábiles.",
+          "question": "¿Qué vía procede, dónde se presenta y quién resuelve?",
+          "legalRule": "Los artículos 170, 175 y 176 de la Ley de Amparo permiten amparo directo contra sentencias definitivas administrativas, mediante demanda escrita presentada por conducto de la autoridad responsable; conoce el Tribunal Colegiado de Circuito.",
+          "reasoning": "La sentencia decide el juicio principal, proviene de tribunal administrativo, no existe recurso ordinario pendiente y el plazo general de quince días no ha transcurrido. La sala responsable recibe y tramita, pero no resuelve el fondo constitucional.",
+          "conclusion": "Procede amparo directo; la demanda se presenta ante la sala responsable para remisión al Tribunal Colegiado competente."
+        },
+        "closingPrompt": "Antes de elegir la vía pregunta: ¿el acto termina el juicio?, ¿queda recurso ordinario?, ¿la violación está en el fallo o fue preparada durante el procedimiento?, ¿sigue abierto el plazo?",
+        "nextActivity": "Recorre el mapa, responde la guía de doce preguntas y resuelve diez casos tipo EGEL."
+      },
+      "materials": [
+        {"type":"short_answer","title":"Respuesta corta: qué es el amparo directo","content":"Es el juicio constitucional contra sentencias definitivas, laudos y resoluciones que ponen fin al juicio, dictadas por tribunales judiciales, administrativos, agrarios o laborales. Se presenta por conducto de la autoridad responsable y, por regla, lo resuelve un Tribunal Colegiado de Circuito.","sourceOrigin":"mixed"},
+        {"type":"full_explanation","title":"Explicación completa desde cero","content":"El amparo directo no es una apelación ni una tercera instancia ordinaria. Controla la constitucionalidad de una decisión terminal y de violaciones procesales que hayan afectado las defensas y trascendido al resultado.\n\nSentencia definitiva o laudo es el que decide el juicio en lo principal. Resolución que pone fin es la que, sin decidir el fondo, concluye el proceso. No basta que una interlocutoria sea importante: debe verificarse si realmente termina el juicio; de lo contrario puede corresponder otra vía o esperar la resolución final.\n\nLa definitividad exige agotar los recursos ordinarios capaces de modificar o revocar el acto. La Ley prevé excepciones, por lo que no debe tratarse como regla absoluta. Las violaciones procesales deben haberse impugnado oportunamente y hacerse valer al reclamar la sentencia, salvo supuestos legales de excepción o suplencia.\n\nEl plazo general es de quince días desde el momento que fija la ley, pero el artículo 17 contiene excepciones. La demanda debe formularse por escrito y puede presentarse impresa o electrónicamente. Debe identificar a la persona quejosa, tercero interesado, autoridad responsable, acto reclamado, antecedentes, derechos y conceptos de violación.\n\nLa demanda se presenta por conducto de la autoridad responsable. Esta certifica fechas y días inhábiles, emplaza al tercero, rinde informe justificado y remite demanda y autos al Tribunal Colegiado. Presentarla ante autoridad distinta no interrumpe el plazo. La contraparte favorecida por la resolución suele ser tercero interesado; la autoridad que emitió el fallo es responsable.\n\nEl Tribunal Colegiado admite, previene o desecha y sustancia el asunto. Los conceptos de violación explican por qué la decisión o el procedimiento lesionan derechos; no son simples agravios de legalidad. Puede cuestionarse la constitucionalidad de una norma aplicada mediante los conceptos dirigidos contra la resolución.\n\nLa suspensión en directo la decide la autoridad responsable dentro de veinticuatro horas. Fuera de materia penal no es automática y se aplican los requisitos legales. En penal, la sola presentación provoca suspensión de oficio y de plano de la resolución reclamada.\n\nLa sentencia puede negar, sobreseer o conceder. La concesión puede eliminar el acto o exigir que la responsable dicte otro reparando la violación. Las sentencias de directo son generalmente terminales; la revisión ante la Suprema Corte solo procede cuando subsiste una cuestión constitucional con interés excepcional. El Pleno también puede atraer amparos directos de interés y trascendencia en los supuestos legales.","sourceOrigin":"mixed"},
+        {"type":"legal_basis","title":"Fundamento jurídico vigente","content":"Constitución, artículos 103 y 107, fracciones III y V. Ley de Amparo: artículos 3, 5 y 17; 170 a 174 sobre procedencia y violaciones procesales; 175 a 178 sobre demanda y trámite ante responsable; 179 a 189 sobre Tribunal Colegiado; 190 y 191 sobre suspensión; 81, fracción II, sobre revisión excepcional; y 40 sobre atracción.","sourceOrigin":"complementary"},
+        {"type":"simple_example","title":"Ejemplo sencillo: resolución que sí pone fin","content":"Un tribunal desecha definitivamente una demanda y con ello concluye el juicio sin estudiar el fondo. Si ya no existe recurso ordinario capaz de corregirlo, la resolución puede reclamarse en amparo directo porque pone fin al juicio, aunque no sea una sentencia de mérito.","sourceOrigin":"mixed"},
+        {"type":"ceneval_example","title":"Cómo aparece en un reactivo tipo EGEL","content":"Busca tres señales: tribunal de origen, resolución terminal y recursos agotados. La respuesta correcta suele combinar presentación ante la autoridad responsable y resolución por Tribunal Colegiado. Desconfía de opciones que envían la demanda directamente al colegiado, llaman automática a toda suspensión o tratan el amparo como apelación.","sourceOrigin":"complementary"},
+        {"type":"summary","title":"Resumen para repasar","content":"Directo: sentencia definitiva, laudo o resolución final. Violación en el fallo o procesal trascendente. Plazo general: 15 días, con excepciones. Demanda escrita impresa o electrónica. Se presenta ante responsable; esta certifica, emplaza, informa y remite. Resuelve Tribunal Colegiado. Suspensión: decide responsable; automática de oficio y de plano solo en penal. Revisión ante SCJN: excepcional por cuestión constitucional.","sourceOrigin":"mixed"},
+        {"type":"study_guide","title":"Guía de preguntas y respuestas","content":"1. ¿Contra qué procede? Respuesta: sentencias definitivas, laudos y resoluciones que ponen fin.\n2. ¿Qué tribunales pueden emitirlas? Respuesta: judiciales, administrativos, agrarios o laborales.\n3. ¿Qué es sentencia definitiva? Respuesta: la que decide el juicio principal.\n4. ¿Qué es resolución final? Respuesta: la que concluye el juicio sin decidirlo en lo principal.\n5. ¿Qué exige definitividad? Respuesta: agotar recursos ordinarios eficaces, salvo excepción.\n6. ¿Cuál es el plazo general? Respuesta: quince días.\n7. ¿Cómo se presenta? Respuesta: por escrito, impreso o electrónico.\n8. ¿Ante quién? Respuesta: ante la autoridad responsable.\n9. ¿Quién resuelve? Respuesta: Tribunal Colegiado de Circuito.\n10. ¿Quién suele ser tercero interesado? Respuesta: la contraparte beneficiada por el fallo.\n11. ¿La suspensión es siempre automática? Respuesta: no; la responsable decide, salvo regla penal.\n12. ¿Cuándo hay revisión? Respuesta: excepcionalmente por cuestión constitucional de interés excepcional.","sourceOrigin":"mixed"},
+        {"type":"key_concepts","title":"Conceptos clave","content":"Acto reclamado: decisión terminal. Quejosa: persona afectada. Responsable: tribunal que emitió el acto. Tercero interesado: quien busca conservarlo. Definitividad: agotamiento ordinario. Preparación: impugnación oportuna de violación procesal. Concepto de violación: argumento constitucional. Informe justificado: explicación de la responsable. Suspensión: preservación provisional. Amparo para efectos: nueva actuación reparadora.","sourceOrigin":"mixed"},
+        {"type":"common_errors","title":"Errores comunes y correcciones","content":"Error: cualquier interlocutoria va a directo. Corrección: debe decidir o terminar el juicio. Error: siempre se presenta en el colegiado. Corrección: se presenta por conducto de responsable. Error: solo admite papel. Corrección: puede ser electrónica. Error: basta llamarlo tercera instancia. Corrección: es juicio constitucional autónomo. Error: suspensión automática general. Corrección: la responsable decide; penal tiene regla especial. Error: revisión ordinaria ante Corte. Corrección: solo procede excepcionalmente por cuestión constitucional.","sourceOrigin":"mixed"}
+      ],
+      "conceptMap": {
+        "title": "Mapa visual del amparo directo",
+        "description": "Del acto terminal a la sentencia constitucional.",
+        "nodes": [
+          {"id":"directo","label":"Amparo directo","description":"Control constitucional de decisiones terminales."},
+          {"id":"acto","label":"1. Acto reclamado","description":"Debe terminar el juicio.","parentId":"directo"},
+          {"id":"sentencia","label":"Sentencia definitiva","description":"Decide el fondo.","parentId":"acto"},
+          {"id":"laudo","label":"Laudo","description":"Decisión laboral terminal.","parentId":"acto"},
+          {"id":"fin","label":"Resolución final","description":"Concluye sin resolver el fondo.","parentId":"acto"},
+          {"id":"filtros","label":"2. Filtros","description":"Procedencia temporal y procesal.","parentId":"directo"},
+          {"id":"definitividad","label":"Definitividad","description":"Agotar recursos, salvo excepción.","parentId":"filtros"},
+          {"id":"plazo","label":"Plazo general: 15 días","description":"Revisar excepciones y cómputo.","parentId":"filtros"},
+          {"id":"preparacion","label":"Preparar violaciones","description":"Impugnarlas oportunamente.","parentId":"filtros"},
+          {"id":"demanda","label":"3. Demanda escrita","description":"Impresa o electrónica.","parentId":"directo"},
+          {"id":"conceptos","label":"Conceptos de violación","description":"Argumentos constitucionales.","parentId":"demanda"},
+          {"id":"responsable","label":"4. Autoridad responsable","description":"Recibe y tramita.","parentId":"directo"},
+          {"id":"certifica","label":"Certifica y emplaza","description":"Fechas y tercero interesado.","parentId":"responsable"},
+          {"id":"informe","label":"Informe justificado","description":"Defiende el acto.","parentId":"responsable"},
+          {"id":"remite","label":"Remisión de autos","description":"Envía al colegiado.","parentId":"responsable"},
+          {"id":"colegiado","label":"5. Tribunal Colegiado","description":"Resuelve el fondo.","parentId":"directo"},
+          {"id":"sentido","label":"Sentencia","description":"Sobresee, niega o concede.","parentId":"colegiado"},
+          {"id":"suspension","label":"6. Suspensión","description":"La decide la responsable.","parentId":"directo"},
+          {"id":"penal","label":"Regla penal","description":"De oficio y de plano.","parentId":"suspension"},
+          {"id":"revision","label":"7. Revisión excepcional","description":"Cuestión constitucional ante SCJN.","parentId":"directo"},
+          {"id":"atraccion","label":"Atracción","description":"Interés y trascendencia.","parentId":"revision"}
+        ]
+      },
+      "references": [
+        {"title":"Constitución Política de los Estados Unidos Mexicanos","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"México","citation":"Artículos 103 y 107; últimas reformas DOF 02-06-2026","retrievedOn":"2026-08-11","note":"Fundamento, procedencia y competencia del amparo directo."},
+        {"title":"Ley de Amparo","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"México","citation":"Artículos 3, 5, 17, 40, 81 y 170 a 191; última reforma DOF 16-10-2025","retrievedOn":"2026-08-11","note":"Procedencia, demanda, trámite, suspensión y revisión."},
+        {"title":"Ley Orgánica del Poder Judicial de la Federación","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/LOPJF.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"México","citation":"Competencia de tribunales colegiados; texto vigente","retrievedOn":"2026-08-11","note":"Organización del órgano que conoce el amparo directo."}
+      ],
+      "flashcards": [
+        {"question":"¿Cuál es el acto típico?","answer":"Sentencia definitiva, laudo o resolución que pone fin al juicio.","sourceOrigin":"mixed"},
+        {"question":"¿Quién emite el acto?","answer":"Tribunal judicial, administrativo, agrario o laboral.","sourceOrigin":"complementary"},
+        {"question":"¿Qué es definitividad?","answer":"Agotar recursos ordinarios capaces de modificar o revocar.","sourceOrigin":"mixed"},
+        {"question":"¿Cuál es el plazo general?","answer":"Quince días, sin olvidar excepciones legales.","sourceOrigin":"mixed"},
+        {"question":"¿Puede ser electrónica la demanda?","answer":"Sí; las promociones escritas pueden ser impresas o electrónicas.","sourceOrigin":"complementary"},
+        {"question":"¿Dónde se presenta?","answer":"Por conducto de la autoridad responsable.","sourceOrigin":"mixed"},
+        {"question":"¿Quién resuelve?","answer":"El Tribunal Colegiado de Circuito competente.","sourceOrigin":"mixed"},
+        {"question":"¿Qué hace la responsable?","answer":"Certifica, emplaza, informa y remite los autos.","sourceOrigin":"complementary"},
+        {"question":"¿Quién es tercero interesado?","answer":"Quien tiene interés jurídico en que subsista el acto.","sourceOrigin":"mixed"},
+        {"question":"¿La suspensión es automática siempre?","answer":"No; fuera de la regla penal debe decidirse conforme a la ley.","sourceOrigin":"complementary"},
+        {"question":"¿Qué ocurre en penal?","answer":"La responsable suspende de oficio y de plano con la presentación.","sourceOrigin":"complementary"},
+        {"question":"¿La revisión ante SCJN es ordinaria?","answer":"No; es excepcional por una cuestión constitucional relevante.","sourceOrigin":"complementary"}
+      ],
+      "exam": {
+        "title": "Examen: amparo directo",
+        "description": "Diez casos originales sobre procedencia, presentación, trámite, suspensión y recursos.",
+        "questions": [
+          {"text":"Una sentencia civil definitiva ya no admite apelación. ¿Qué vía constitucional procede en principio?","difficulty":"basic","options":["Amparo directo","Amparo indirecto contra norma autoaplicativa","Controversia constitucional"],"correctOption":0,"explanation":"Es una decisión terminal de tribunal y se agotó la vía ordinaria.","optionExplanations":["Coincide con el artículo 170.","No es el acto descrito.","No existe conflicto entre entes públicos."]},
+          {"text":"Una interlocutoria niega una prueba, pero el juicio sigue. ¿Es amparo directo inmediato por ese solo dato?","difficulty":"intermediate","options":["No, no pone fin al juicio","Sí, toda interlocutoria es directa","Sí, sin revisar recursos"],"correctOption":0,"explanation":"Debe analizarse como violación procesal y prepararse; no es decisión terminal.","optionExplanations":["Aplica el filtro correcto.","La etiqueta no basta.","La definitividad no puede ignorarse."]},
+          {"text":"¿Ante quién se presenta la demanda de amparo directo?","difficulty":"basic","options":["Autoridad responsable","Directamente ante la SCJN","Ministerio Público local"],"correctOption":0,"explanation":"El artículo 176 exige conducto de la responsable.","optionExplanations":["Es la regla legal.","La Corte no es mesa inicial ordinaria.","No corresponde."]},
+          {"text":"La demanda se entrega a autoridad distinta a la responsable el último día. ¿Se interrumpe el plazo?","difficulty":"advanced","options":["No","Sí, siempre","Solo si la autoridad acepta el fondo"],"correctOption":0,"explanation":"La presentación incorrecta no interrumpe el plazo.","optionExplanations":["Es la consecuencia expresa.","Contradice el artículo 176.","La receptora no decide ese efecto."]},
+          {"text":"¿Qué órgano resuelve ordinariamente el amparo directo?","difficulty":"basic","options":["Tribunal Colegiado de Circuito","Juzgado cívico","Tribunal electoral local"],"correctOption":0,"explanation":"Es la competencia constitucional y legal.","optionExplanations":["Respuesta correcta.","No tiene jurisdicción de amparo.","La materia es distinta."]},
+          {"text":"Una demanda impresa identifica acto y autoridad, pero omite conceptos de violación. ¿Qué requisito falta?","difficulty":"basic","options":["Argumentos constitucionales contra el acto","Incidente electoral","Contrato privado"],"correctOption":0,"explanation":"El artículo 175 exige conceptos de violación.","optionExplanations":["Es el contenido omitido.","No aplica.","No integra la demanda."]},
+          {"text":"¿Qué tarea corresponde a la autoridad responsable tras recibir la demanda?","difficulty":"intermediate","options":["Certificar fechas, emplazar, informar y remitir","Resolver definitivamente el amparo","Declarar jurisprudencia nacional"],"correctOption":0,"explanation":"La responsable tramita; el colegiado resuelve.","optionExplanations":["Resume el artículo 178.","No decide el fondo constitucional.","No tiene esa atribución."]},
+          {"text":"Se presenta amparo directo administrativo y la persona supone suspensión automática. ¿Qué corrección procede?","difficulty":"intermediate","options":["La responsable debe decidir conforme a requisitos legales","Siempre se suspende de plano","Nunca puede suspenderse"],"correctOption":0,"explanation":"La regla automática de oficio y de plano es especial de penal.","optionExplanations":["Distingue correctamente materias.","Generaliza la excepción.","La ley sí contempla suspensión."]},
+          {"text":"En amparo directo penal se presenta la demanda contra condena. ¿Qué ocurre con la suspensión?","difficulty":"basic","options":["Se ordena de oficio y de plano","Solo existe tras audiencia incidental","La decide la contraparte"],"correctOption":0,"explanation":"El artículo 191 establece la regla especial penal.","optionExplanations":["Es la consecuencia legal.","No es el esquema aplicable.","La contraparte no decide."]},
+          {"text":"Una sentencia de amparo directo no contiene cuestión constitucional excepcional. ¿Procede revisión ordinaria ante SCJN?","difficulty":"advanced","options":["No","Sí, en todo caso","Sí, como tercera instancia"],"correctOption":0,"explanation":"La revisión directa es excepcional, no una apelación general.","optionExplanations":["Aplica el límite del artículo 81.","No existe revisión universal.","El amparo no es tercera instancia."]}
+        ]
+      }
+    }
+  ]
+}

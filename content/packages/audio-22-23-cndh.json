@@ -1,0 +1,268 @@
+{
+  "packageVersion": "1.0",
+  "subject": {
+    "name": "Derecho Administrativo",
+    "description": "Organización, actividad y control de la administración pública mexicana."
+  },
+  "class": {
+    "title": "CNDH: queja, conciliación, recomendación y límites",
+    "description": "Decimosexta clase del curso: competencia de la CNDH, trámite de la queja, investigación, conciliación, recomendaciones, acuerdos de no responsabilidad y límites constitucionales."
+  },
+  "transcript": {
+    "originalFiles": [
+      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 22.txt",
+      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 23.txt"
+    ],
+    "cleaned": "Se integró el bloque final del Audio 22 y el contenido académico del Audio 23. Se eliminaron anuncios, examen dictado, nombres y datos personales, lenguaje ofensivo, comentarios sexuales, opiniones partidistas, anécdotas no verificables y ejemplos que podían estigmatizar. Se corrigió que la base constitucional de la CNDH está en el artículo 102, apartado B; que la prohibición de atender consultas interpretativas no impide a su Presidencia promover acciones de inconstitucionalidad conforme a los artículos 105 constitucional y 15 de la Ley de la CNDH; que una recomendación es pública y no vinculatoria, pero exige respuesta y justificación pública ante la negativa; que no anula actos, impone prisión ni destituye por sí misma; que la queja no suspende los plazos de otros medios de defensa; y que la competencia federal, local, electoral, jurisdiccional y respecto del Poder Judicial de la Federación debe analizarse con precisión."
+  },
+  "topics": [
+    {
+      "title": "Protección no jurisdiccional de los derechos humanos",
+      "description": "Cómo identificar la competencia de la CNDH y seguir el procedimiento desde la queja hasta la conciliación, la recomendación o el acuerdo de no responsabilidad.",
+      "learningJourney": {
+        "openingPrompt": "Una autoridad federal niega atención médica sin justificarlo. ¿Qué puede hacer la CNDH y qué remedios debe conservar la persona afectada?",
+        "quickChecks": [
+          {
+            "prompt": "¿La recomendación de la CNDH puede anular directamente el acto de autoridad?",
+            "answer": "No. Es pública y no vinculatoria y por sí misma no anula, modifica ni deja sin efecto el acto.",
+            "feedback": "No vinculatoria no significa irrelevante: la autoridad debe responder y justificar públicamente una negativa."
+          },
+          {
+            "prompt": "¿Presentar una queja suspende el plazo para promover amparo?",
+            "answer": "No. La queja y las resoluciones de la CNDH no suspenden ni interrumpen los plazos de otros medios de defensa.",
+            "feedback": "En un caso práctico, protege simultáneamente los plazos jurisdiccionales o administrativos aplicables."
+          },
+          {
+            "prompt": "¿Qué resolución procede si no se comprueba la violación imputada?",
+            "answer": "Un acuerdo de no responsabilidad.",
+            "feedback": "La queja inicia una investigación; no prueba por sí sola que la violación ocurrió."
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una persona afirma que una institución federal de salud retrasó injustificadamente un tratamiento. Conserva recetas, solicitudes y respuestas. También existe un plazo próximo para impugnar una resolución administrativa relacionada.",
+          "question": "¿Qué ruta debe seguir sin perder defensas?",
+          "legalRule": "La CNDH puede conocer presuntas violaciones derivadas de actos u omisiones de autoridades administrativas federales, investigar y solicitar medidas cautelares; su procedimiento no suspende otros plazos legales.",
+          "reasoning": "La persona puede presentar la queja con su evidencia y pedir atención urgente, pero debe promover oportunamente los recursos o el amparo que correspondan. La CNDH investigará antes de determinar si formula recomendación o acuerdo de no responsabilidad.",
+          "conclusion": "Procede activar la vía no jurisdiccional sin abandonar los medios de defensa capaces de modificar o anular el acto."
+        },
+        "closingPrompt": "Explica el recorrido completo de una queja y distingue los efectos de una recomendación de los de una sentencia.",
+        "nextActivity": "Recorre el mapa visual, repasa la guía de doce preguntas y resuelve los diez casos originales."
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "La CNDH es un organismo constitucional autónomo que protege derechos humanos mediante una vía no jurisdiccional. Recibe quejas, investiga presuntas violaciones imputadas principalmente a autoridades administrativas federales, procura soluciones cuando el caso lo permite y puede emitir recomendaciones públicas no vinculatorias o acuerdos de no responsabilidad. No sustituye a los tribunales ni suspende los plazos de otros medios de defensa.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "El artículo 102, apartado B, constitucional establece un sistema no jurisdiccional de protección de derechos humanos. La CNDH posee autonomía de gestión y presupuestaria, personalidad jurídica y patrimonio propios. Su objeto comprende protección, observancia, promoción, estudio y divulgación de los derechos humanos.\n\nLa primera pregunta de un caso es la competencia. La CNDH conoce quejas por presuntas violaciones imputadas a autoridades y personas servidoras públicas federales, excepto las del Poder Judicial de la Federación. Si intervienen conjuntamente autoridades federales y locales, la competencia corresponde a la CNDH; si los hechos se atribuyen exclusivamente a autoridades locales o municipales, en principio conoce el organismo estatal. La CNDH también resuelve inconformidades relacionadas con organismos locales.\n\nCualquier persona puede denunciar una presunta violación y presentar queja directamente o mediante representante. La regla general es un año desde el inicio de los hechos o desde su conocimiento, con excepciones razonadas para infracciones graves y sin plazo para hechos que por su gravedad puedan considerarse de lesa humanidad. La presentación puede ser oral, escrita, en lengua de señas o por medios eléctricos, electrónicos o telefónicos, con las reglas de identificación y ratificación legales.\n\nAdmitida la queja, se comunica a la autoridad y se solicita un informe. La investigación puede reunir documentos, informes, inspecciones, peritajes y testimonios. Las pruebas se valoran en conjunto. También pueden solicitarse medidas precautorias o cautelares para evitar una consumación irreparable o daños de difícil reparación.\n\nLa conciliación busca una solución inmediata respetuosa de los derechos afectados. No debe entenderse como renuncia forzada ni como salida automática para cualquier caso: depende de la naturaleza del asunto y del marco aplicable. Si se cumple la solución, se archiva; el expediente puede reabrirse cuando el compromiso no se cumple en el plazo legal.\n\nAl concluir la investigación puede elaborarse una recomendación si se acredita la violación, o un acuerdo de no responsabilidad si no se comprueba. La recomendación puede proponer restitución y, cuando proceda, reparación, capacitación, protocolos, investigaciones u otras medidas legalmente pertinentes. Es pública y no imperativa: no anula actos ni sanciona directamente. La autoridad debe informar si la acepta y acreditar su cumplimiento; una negativa debe fundarse, motivarse y hacerse pública, y puede dar lugar a una comparecencia legislativa para explicar sus razones.\n\nLa CNDH no conoce actos y resoluciones electorales, resoluciones jurisdiccionales ni consultas sobre interpretación constitucional o legal. Tampoco examina el fondo de una decisión judicial. Esa prohibición de consultas es distinta de la facultad de su Presidencia para promover acciones de inconstitucionalidad contra normas que vulneren derechos humanos.\n\nPara CENEVAL usa cuatro filtros: autoridad involucrada, naturaleza administrativa o jurisdiccional del acto, nivel federal o local y efecto buscado. Si se necesita anular o suspender el acto, la queja por sí sola no basta: deben preservarse los recursos, juicios o amparo correspondientes.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "La Constitución regula el sistema no jurisdiccional en el artículo 102, apartado B: competencia por actos u omisiones administrativas, recomendaciones públicas no vinculatorias, deber de respuesta, exclusiones electoral y jurisdiccional, autonomía e inconformidades. El artículo 105, fracción II, inciso g), reconoce la legitimación de la CNDH para promover acciones de inconstitucionalidad. La Ley de la CNDH desarrolla competencia y atribuciones en los artículos 3, 6 a 8 y 15; presentación y efectos de la queja en los artículos 25 a 34; conciliación e investigación en los artículos 36 a 42; y recomendación o no responsabilidad en los artículos 44 a 46. Consulta oficial realizada el 11 de agosto de 2026.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Una dependencia federal conserva durante meses un documento personal sin contestar las solicitudes de devolución. La persona puede quejarse ante la CNDH y aportar acuses y respuestas. La Comisión pedirá informes e investigará; si acredita una violación, puede recomendar devolución, medidas de no repetición y las acciones procedentes. Si la persona necesita una orden obligatoria o enfrenta un plazo de impugnación, debe utilizar además el medio de defensa adecuado.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo CENEVAL",
+          "content": "Una autoridad federal rechaza una recomendación de la CNDH y guarda silencio. La respuesta correcta no es que pueda ignorarla por ser no vinculatoria. Debe fundar, motivar y hacer pública su negativa; además, puede ser llamada por el Senado o la Comisión Permanente para explicarla. La comparecencia es un mecanismo de rendición de cuentas, no una condena penal automática.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "La CNDH protege derechos por una vía no jurisdiccional. Recibe quejas, verifica competencia, solicita informes, investiga, puede pedir medidas cautelares e intenta soluciones compatibles con los derechos. El expediente concluye con recomendación o acuerdo de no responsabilidad, según las pruebas. La recomendación es pública y no vinculatoria, pero exige respuesta; no anula actos ni sustituye sentencias. La queja no detiene plazos de otras defensas. Quedan fuera los asuntos electorales, las resoluciones jurisdiccionales, las consultas interpretativas y las autoridades del Poder Judicial de la Federación en los términos constitucionales.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía intensiva de preguntas y respuestas",
+          "content": "1. ¿Qué es la CNDH? Respuesta: un organismo constitucional autónomo de protección no jurisdiccional. 2. ¿Qué investiga? Respuesta: presuntas violaciones vinculadas con actos u omisiones de autoridades administrativas federales. 3. ¿Quién puede quejarse? Respuesta: cualquier persona, directamente o mediante representante, con supuestos adicionales legales. 4. ¿Cuál es el plazo general? Respuesta: un año desde los hechos o su conocimiento, con excepciones. 5. ¿La queja suspende otros plazos? Respuesta: no. 6. ¿Qué ocurre al admitirla? Respuesta: se comunica a la autoridad y se solicita informe. 7. ¿Qué puede recabar? Respuesta: informes, documentos, inspecciones, peritajes y testimonios. 8. ¿Para qué sirven las cautelares? Respuesta: para evitar daños irreparables o difíciles de reparar. 9. ¿Qué busca la conciliación? Respuesta: una solución inmediata respetuosa de derechos cuando el caso lo permite. 10. ¿Cómo concluye? Respuesta: con recomendación o acuerdo de no responsabilidad, según las pruebas. 11. ¿La recomendación obliga como sentencia? Respuesta: no; exige respuesta, pero no anula el acto. 12. ¿Qué asuntos están excluidos? Respuesta: electorales, resoluciones jurisdiccionales, consultas interpretativas y los demás límites constitucionales y legales.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Queja: comunicación de hechos que pueden constituir una violación. Quejoso: persona que activa el procedimiento. Competencia: habilitación legal de la CNDH según autoridad y materia. Informe: respuesta solicitada a la autoridad señalada. Investigación: obtención y valoración conjunta de pruebas. Medida cautelar: solicitud preventiva para evitar consumación o daño difícil de reparar. Conciliación: solución inmediata compatible con los derechos afectados. Recomendación: resolución pública no imperativa fundada en el expediente. Acuerdo de no responsabilidad: conclusión cuando no se comprueba la violación. No vinculatoriedad: ausencia de fuerza imperativa directa, sin eliminar el deber de respuesta. Acción de inconstitucionalidad: control abstracto que la Presidencia de la CNDH puede promover en los supuestos constitucionales.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "No confundas queja con prueba definitiva. No digas que la CNDH dicta sentencias, encarcela, destituye o anula actos. No interpretes no vinculatoria como permiso para guardar silencio. No abandones amparo, recursos o juicios: la queja no suspende sus plazos. No atribuyas automáticamente competencia federal a un conflicto exclusivamente local. No presentes la conciliación como obligatoria o apta para todos los casos. No confundas las consultas interpretativas prohibidas con la acción de inconstitucionalidad. No afirmes que una comparecencia legislativa inicia automáticamente una investigación penal. No confundas CNDH con CONAPRED ni con una fiscalía. No uses una anécdota para concluir violación sin investigación y pruebas.",
+          "sourceOrigin": "complementary"
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual del procedimiento ante la CNDH",
+        "description": "Sigue la ruta desde la competencia y la queja hasta las posibles conclusiones y sus efectos.",
+        "nodes": [
+          {"id": "cndh", "label": "CNDH", "description": "Protección no jurisdiccional de derechos humanos."},
+          {"id": "competencia", "label": "1. Competencia", "description": "Primero identifica autoridad, nivel y materia.", "parentId": "cndh"},
+          {"id": "federal", "label": "Autoridad federal", "description": "Actos u omisiones administrativas federales.", "parentId": "competencia"},
+          {"id": "mixta", "label": "Intervención mixta", "description": "Autoridades federales y locales: conoce la CNDH.", "parentId": "competencia"},
+          {"id": "local", "label": "Solo local", "description": "En principio conoce el organismo de la entidad.", "parentId": "competencia"},
+          {"id": "limites", "label": "Límites", "description": "Materias fuera de la queja ante CNDH.", "parentId": "competencia"},
+          {"id": "electoral", "label": "Electoral", "description": "Actos y resoluciones electorales excluidos.", "parentId": "limites"},
+          {"id": "jurisdiccional", "label": "Jurisdiccional", "description": "No revisa resoluciones ni el fondo judicial.", "parentId": "limites"},
+          {"id": "pjf", "label": "Poder Judicial federal", "description": "Excepción constitucional a la competencia.", "parentId": "limites"},
+          {"id": "queja", "label": "2. Queja", "description": "Relato identificable de una presunta violación.", "parentId": "cndh"},
+          {"id": "persona", "label": "Cualquier persona", "description": "Directamente o por representante.", "parentId": "queja"},
+          {"id": "plazo", "label": "Plazo general: un año", "description": "Con excepciones previstas en la ley.", "parentId": "queja"},
+          {"id": "no-suspende", "label": "No suspende defensas", "description": "Conserva plazos de recursos, juicios y amparo.", "parentId": "queja"},
+          {"id": "investigacion", "label": "3. Investigación", "description": "La Comisión verifica los hechos.", "parentId": "cndh"},
+          {"id": "informe", "label": "Informe de autoridad", "description": "Antecedentes, fundamento y documentos.", "parentId": "investigacion"},
+          {"id": "pruebas", "label": "Pruebas", "description": "Documentos, visitas, peritos y testigos.", "parentId": "investigacion"},
+          {"id": "cautelares", "label": "Medidas cautelares", "description": "Previenen daños irreparables o difíciles de reparar.", "parentId": "investigacion"},
+          {"id": "conciliacion", "label": "Conciliación", "description": "Solución inmediata cuando procede.", "parentId": "investigacion"},
+          {"id": "conclusion", "label": "4. Conclusión", "description": "Depende de hechos y pruebas.", "parentId": "cndh"},
+          {"id": "recomendacion", "label": "Recomendación", "description": "Pública, fundada y no vinculatoria.", "parentId": "conclusion"},
+          {"id": "no-responsabilidad", "label": "No responsabilidad", "description": "No se comprobó la violación.", "parentId": "conclusion"},
+          {"id": "respuesta", "label": "Respuesta de autoridad", "description": "Acepta y acredita cumplimiento o justifica negativa.", "parentId": "recomendacion"},
+          {"id": "comparecencia", "label": "Rendición de cuentas", "description": "Posible comparecencia legislativa por negativa.", "parentId": "respuesta"},
+          {"id": "sin-anulacion", "label": "No anula el acto", "description": "Para efectos obligatorios usa la vía legal adecuada.", "parentId": "recomendacion"}
+        ]
+      },
+      "references": [
+        {
+          "title": "Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Artículos 102, apartado B, y 105, fracción II, inciso g); últimas reformas DOF 02-06-2026",
+          "retrievedOn": "2026-08-11",
+          "note": "Base constitucional de la CNDH, recomendaciones, límites y acción de inconstitucionalidad."
+        },
+        {
+          "title": "Ley de la Comisión Nacional de los Derechos Humanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LCNDH.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Artículos 3, 6 a 8, 15, 25 a 46; última reforma DOF 01-04-2024",
+          "retrievedOn": "2026-08-11",
+          "note": "Regula competencia, queja, investigación, conciliación, medidas y conclusiones."
+        },
+        {
+          "title": "Reglamento Interno de la Comisión Nacional de los Derechos Humanos",
+          "url": "https://www.cndh.org.mx/sites/default/files/documentos/2019-04/Reglamento_CNDH.pdf",
+          "institution": "Comisión Nacional de los Derechos Humanos",
+          "jurisdiction": "Federal, México",
+          "citation": "Disposiciones sobre tramitación de quejas, conciliación, recomendaciones y seguimiento",
+          "retrievedOn": "2026-08-11",
+          "note": "Desarrolla la organización y el trámite interno; debe consultarse junto con la Constitución y la ley vigente."
+        }
+      ],
+      "flashcards": [
+        {"question": "¿Qué tipo de protección brinda la CNDH?", "answer": "Protección no jurisdiccional de los derechos humanos.", "sourceOrigin": "mixed"},
+        {"question": "¿Contra qué autoridades conoce principalmente la CNDH?", "answer": "Contra autoridades y personas servidoras públicas federales por actos u omisiones administrativas, con los límites constitucionales.", "sourceOrigin": "mixed"},
+        {"question": "¿Quién puede denunciar una presunta violación?", "answer": "Cualquier persona; la ley permite presentación directa, por representante y otros supuestos de apoyo.", "sourceOrigin": "complementary"},
+        {"question": "¿Cuál es el plazo general para presentar la queja?", "answer": "Un año desde que comenzó la ejecución de los hechos o desde que se tuvo conocimiento, salvo excepciones legales.", "sourceOrigin": "complementary"},
+        {"question": "¿La queja suspende el plazo de un recurso o amparo?", "answer": "No. Los plazos preclusivos, de prescripción o caducidad continúan.", "sourceOrigin": "complementary"},
+        {"question": "¿Qué solicita la CNDH a la autoridad al admitir la queja?", "answer": "Un informe sobre los actos u omisiones atribuidos y sus antecedentes, fundamentos y documentos.", "sourceOrigin": "mixed"},
+        {"question": "¿Para qué se solicitan medidas cautelares?", "answer": "Para evitar la consumación irreparable de la violación o daños de difícil reparación.", "sourceOrigin": "complementary"},
+        {"question": "¿Cuándo puede buscarse conciliación?", "answer": "Cuando la naturaleza del caso permite una solución inmediata compatible con el respeto a los derechos afectados.", "sourceOrigin": "mixed"},
+        {"question": "¿Qué ocurre si se comprueba una violación?", "answer": "Puede formularse una recomendación pública con las medidas procedentes.", "sourceOrigin": "mixed"},
+        {"question": "¿Qué ocurre si no se comprueba la violación?", "answer": "Se dicta acuerdo de no responsabilidad.", "sourceOrigin": "mixed"},
+        {"question": "¿Qué debe hacer una autoridad que rechaza una recomendación?", "answer": "Fundar, motivar y hacer pública su negativa, además de atender en su caso la comparecencia constitucional.", "sourceOrigin": "complementary"},
+        {"question": "¿Puede la CNDH promover acciones de inconstitucionalidad?", "answer": "Sí, por conducto de su Presidencia y respecto de normas y tratados que vulneren derechos humanos en los supuestos constitucionales.", "sourceOrigin": "complementary"}
+      ],
+      "exam": {
+        "title": "Examen: procedimiento y competencia de la CNDH",
+        "description": "Diez casos originales sobre competencia, queja, investigación, conciliación, recomendaciones y límites.",
+        "questions": [
+          {
+            "text": "Una autoridad administrativa federal retiene injustificadamente documentos de una persona. ¿Qué institución puede conocer la queja no jurisdiccional?",
+            "difficulty": "basic",
+            "options": ["La CNDH", "El Senado como tribunal", "Un partido político"],
+            "correctOption": 0,
+            "explanation": "La CNDH conoce presuntas violaciones derivadas de actos u omisiones de autoridades administrativas federales.",
+            "optionExplanations": ["Corresponde a su competencia material y federal.", "El Senado no sustituye el procedimiento de queja.", "Un partido no es el organismo protector competente."]
+          },
+          {
+            "text": "Una persona presenta queja ante la CNDH un día antes de vencer el plazo de amparo. ¿Qué debe hacer?",
+            "difficulty": "intermediate",
+            "options": ["Esperar, porque la queja suspende el plazo", "Promover oportunamente el amparo si procede", "Pedir que la recomendación sustituya la sentencia"],
+            "correctOption": 1,
+            "explanation": "El artículo 32 de la Ley de la CNDH dispone que la queja no suspende ni interrumpe los plazos de otros medios de defensa.",
+            "optionExplanations": ["La queja no suspende ese plazo.", "Conserva el medio de defensa capaz de producir efectos obligatorios.", "Una recomendación no es una sentencia."]
+          },
+          {
+            "text": "¿Qué resultado corresponde cuando la investigación no comprueba la violación de derechos humanos imputada?",
+            "difficulty": "basic",
+            "options": ["Acuerdo de no responsabilidad", "Sentencia absolutoria", "Recomendación sancionadora automática"],
+            "correctOption": 0,
+            "explanation": "La Ley de la CNDH prevé el acuerdo de no responsabilidad cuando no se comprueba la violación.",
+            "optionExplanations": ["Es la conclusión legal del procedimiento.", "La CNDH no es un tribunal penal.", "No puede sancionar automáticamente."]
+          },
+          {
+            "text": "Una autoridad rechaza una recomendación porque no es vinculante. ¿Cuál es su obligación constitucional?",
+            "difficulty": "intermediate",
+            "options": ["No responder", "Fundar, motivar y publicar la negativa", "Anular por sí misma toda la investigación"],
+            "correctOption": 1,
+            "explanation": "La no aceptación o incumplimiento debe explicarse mediante una negativa fundada, motivada y pública.",
+            "optionExplanations": ["El deber de respuesta subsiste.", "Es la exigencia constitucional y legal.", "La autoridad destinataria no anula la investigación."]
+          },
+          {
+            "text": "Una queja pretende que la CNDH revoque el sentido de una sentencia definitiva. ¿Qué debe concluirse?",
+            "difficulty": "basic",
+            "options": ["La CNDH debe revisar el fondo", "Es un asunto jurisdiccional excluido", "La conciliación revoca automáticamente la sentencia"],
+            "correctOption": 1,
+            "explanation": "La CNDH no puede examinar cuestiones jurisdiccionales de fondo ni sustituir los medios de impugnación judicial.",
+            "optionExplanations": ["Excede su competencia.", "Es el límite aplicable.", "La conciliación no tiene ese efecto."]
+          },
+          {
+            "text": "Durante la investigación existe riesgo inmediato de daño irreparable. ¿Qué actuación es congruente con la ley?",
+            "difficulty": "intermediate",
+            "options": ["Solicitar medidas precautorias o cautelares", "Imponer una condena penal", "Suspender indefinidamente todos los juicios"],
+            "correctOption": 0,
+            "explanation": "El visitador puede solicitar a las autoridades competentes medidas necesarias para evitar consumación irreparable o daños difíciles de reparar.",
+            "optionExplanations": ["Es la herramienta preventiva legal.", "La CNDH no impone condenas penales.", "No tiene esa facultad general."]
+          },
+          {
+            "text": "Los hechos se atribuyen exclusivamente a una autoridad municipal. ¿Quién conoce en principio?",
+            "difficulty": "intermediate",
+            "options": ["El organismo local de derechos humanos", "Siempre la CNDH", "La Suprema Corte como primera instancia de queja"],
+            "correctOption": 0,
+            "explanation": "Cuando los hechos son exclusivamente locales o municipales, en principio conoce el organismo de la entidad federativa.",
+            "optionExplanations": ["Respeta la distribución legal de competencia.", "La competencia federal no es automática.", "La Corte no tramita esta queja como primera instancia."]
+          },
+          {
+            "text": "¿Qué afirmación distingue correctamente una recomendación de una sentencia?",
+            "difficulty": "advanced",
+            "options": ["La recomendación es pública y no imperativa; la sentencia puede producir efectos obligatorios", "Ambas encarcelan directamente", "La recomendación siempre anula el acto"],
+            "correctOption": 0,
+            "explanation": "La recomendación no tiene carácter imperativo y por sí misma no anula ni modifica el acto reclamado.",
+            "optionExplanations": ["Expresa la diferencia esencial.", "La CNDH no impone prisión.", "La ley niega ese efecto directo."]
+          },
+          {
+            "text": "Una persona pide a la CNDH una consulta abstracta sobre cómo interpretar una ley. ¿Qué respuesta es correcta?",
+            "difficulty": "advanced",
+            "options": ["La consulta está fuera de su competencia", "Debe emitir una sentencia consultiva", "Debe convertirla automáticamente en acción de inconstitucionalidad"],
+            "correctOption": 0,
+            "explanation": "La ley excluye consultas de autoridades o particulares sobre interpretación constitucional o legal; eso es distinto de la facultad institucional de promover una acción.",
+            "optionExplanations": ["Es la exclusión expresa.", "La CNDH no emite sentencias consultivas.", "La acción tiene requisitos y una decisión institucional propia."]
+          },
+          {
+            "text": "¿Cuál es la secuencia más completa del procedimiento estudiado?",
+            "difficulty": "advanced",
+            "options": ["Queja, competencia, investigación y conclusión según pruebas", "Queja, condena automática y prisión", "Denuncia, elección popular y reforma constitucional"],
+            "correctOption": 0,
+            "explanation": "El procedimiento exige verificar competencia, reunir y valorar pruebas y concluir mediante la vía legal correspondiente.",
+            "optionExplanations": ["Resume correctamente la ruta.", "No existe condena automática.", "Mezcla instituciones ajenas al procedimiento."]
+          }
+        ]
+      }
+    }
+  ]
+}

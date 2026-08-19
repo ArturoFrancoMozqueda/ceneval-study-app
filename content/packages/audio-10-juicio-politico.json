@@ -1,0 +1,270 @@
+{
+  "packageVersion": "1.0",
+  "subject": {
+    "name": "Derecho constitucional y responsabilidad pública",
+    "description": "Control constitucional, distribución del poder público, federalismo y responsabilidades de las autoridades en México."
+  },
+  "class": {
+    "title": "Juicio político y responsabilidad de altos servidores públicos",
+    "description": "Octava clase del curso: distingue responsabilidad política, declaración de procedencia y responsabilidad penal, e identifica sujetos, causas, etapas, votaciones y sanciones."
+  },
+  "transcript": {
+    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 10.txt",
+    "cleaned": "El Audio 10 presenta el juicio político como procedimiento constitucional extraordinario para exigir responsabilidad a determinadas personas servidoras públicas. Explica la intervención diferenciada de las Cámaras de Diputados y Senadores, la audiencia y la posibilidad de destitución e inhabilitación. Se eliminaron promociones, bromas, expresiones ofensivas, comentarios partidistas, datos personales y ejemplos no verificables. Se corrigió que el Senado no impone multas mediante juicio político: las sanciones constitucionales son destitución e inhabilitación. También se corrigió que juicio político y declaración de procedencia no forman una secuencia obligatoria; son procedimientos autónomos con finalidades distintas. Se actualizaron los sujetos del artículo 110 tras la reforma judicial, la regla especial para autoridades locales, las votaciones, los plazos y la diferencia entre responsabilidad política, administrativa y penal."
+  },
+  "topics": [
+    {
+      "title": "Cómo identificar el juicio político y distinguirlo del desafuero",
+      "description": "Sujetos, conductas, denuncia, acusación, jurado de sentencia, sanciones y diferencias con otros regímenes de responsabilidad.",
+      "learningJourney": {
+        "openingPrompt": "Si una persona servidora pública comete posiblemente un delito, ¿siempre debe existir primero un juicio político para que la fiscalía pueda proceder?",
+        "quickChecks": [
+          {
+            "prompt": "¿Cuál es la finalidad del juicio político?",
+            "answer": "Sancionar responsabilidad política por actos u omisiones graves que perjudiquen intereses públicos fundamentales o su buen despacho.",
+            "feedback": "No determina responsabilidad penal ni sustituye el proceso penal."
+          },
+          {
+            "prompt": "¿Qué función cumple cada Cámara?",
+            "answer": "Diputados sustancia y acusa; el Senado actúa como Jurado de Sentencia y, en su caso, sanciona.",
+            "feedback": "La Cámara de Diputados acusa por mayoría absoluta de presentes; el Senado resuelve por dos terceras partes de presentes."
+          },
+          {
+            "prompt": "¿Cuáles son las sanciones?",
+            "answer": "Destitución e inhabilitación para desempeñar funciones, empleos, cargos o comisiones en el servicio público.",
+            "feedback": "La multa y la prisión pertenecen a otros regímenes; no son sanciones del juicio político del artículo 110."
+          }
+        ],
+        "practicalCase": {
+          "facts": "La titular de una secretaría federal presuntamente desvía de manera sistemática recursos de un programa público y altera su operación. Una ciudadana presenta denuncia documentada ante la Cámara de Diputados durante el encargo.",
+          "question": "¿Qué procedimiento puede iniciarse y qué deben hacer las Cámaras?",
+          "legalRule": "Las secretarías de Despacho están comprendidas en el artículo 110. El juicio político procede por actos u omisiones que redunden en perjuicio de intereses públicos fundamentales o su buen despacho. Diputados instruye y acusa; Senadores sentencia.",
+          "reasoning": "Debe comprobarse la calidad del sujeto, la gravedad constitucional y legal de la conducta, la oportunidad y suficiencia inicial de la denuncia. La persona denunciada tiene derecho de audiencia y defensa. Una posible conducta delictiva podrá investigarse por la vía penal correspondiente; no convierte automáticamente el juicio político en proceso penal.",
+          "conclusion": "Puede tramitarse juicio político para destitución e inhabilitación y, de forma autónoma, analizarse responsabilidad administrativa o penal y la necesidad de declaración de procedencia."
+        },
+        "closingPrompt": "En cada caso separa cuatro preguntas: ¿es sujeto del artículo 110?, ¿hay causa política grave?, ¿qué Cámara actúa? y ¿se busca sanción política o persecución penal?",
+        "nextActivity": "Recorre el mapa visual, contesta la guía de doce preguntas y resuelve diez casos tipo EGEL."
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta corta: qué es el juicio político",
+          "content": "Es un procedimiento constitucional de responsabilidad política contra determinadas personas servidoras públicas por actos u omisiones graves que perjudican intereses públicos fundamentales o su buen despacho. La Cámara de Diputados instruye y acusa; el Senado resuelve. Sus sanciones son destitución e inhabilitación, no prisión.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "El Título Cuarto constitucional distingue responsabilidades política, penal y administrativa. Pueden surgir de una misma conducta, pero sus procedimientos se desarrollan de manera autónoma y no debe imponerse dos veces una sanción de la misma naturaleza por el mismo hecho.\n\nEl juicio político se reserva a las personas enumeradas por el artículo 110: integrantes del Congreso de la Unión; ministras y ministros de la SCJN; integrantes del Tribunal de Disciplina Judicial y del órgano de administración judicial; titulares de secretarías; FGR; magistraturas de circuito y judicaturas de distrito; determinadas autoridades electorales; integrantes de órganos constitucionales autónomos; y direcciones generales o equivalentes de diversas entidades paraestatales, entre otras categorías del propio texto. No basta ser cualquier persona empleada pública.\n\nPara autoridades locales mencionadas en el segundo párrafo del artículo 110, el juicio federal se limita a violaciones graves a la Constitución y leyes federales o manejo indebido de fondos federales. La resolución federal es declarativa y se comunica a la legislatura local para que actúe conforme a sus atribuciones.\n\nLa causa no es cualquier error. Los actos u omisiones deben redundar en perjuicio de intereses públicos fundamentales o su buen despacho. La ley menciona ataques a instituciones democráticas o a la forma republicana, violaciones a derechos humanos, ataque al sufragio, usurpación de atribuciones, infracciones u omisiones graves y violaciones graves o sistemáticas a planes, programas, presupuestos o reglas de recursos. La mera expresión de ideas no da lugar al juicio político.\n\nCualquier ciudadanía puede formular por escrito una denuncia responsable ante la Cámara de Diputados, apoyada en documentos o elementos suficientes; una denuncia anónima no produce efectos. La persona denunciada conserva audiencia y defensa. La Cámara de Diputados sustancia mediante sus órganos internos y, si decide acusar, requiere mayoría absoluta de integrantes presentes.\n\nLa acusación pasa al Senado. Erigido en Jurado de Sentencia, practica las diligencias, oye a la persona acusada y resuelve. Para sancionar necesita dos terceras partes de integrantes presentes. Las decisiones de ambas Cámaras en este procedimiento son inatacables conforme al artículo 110.\n\nLas sanciones son destitución e inhabilitación; la ley permite inhabilitar de uno a veinte años. No hay multa ni prisión como sanción del juicio político. Si los hechos también son delito, la responsabilidad penal se analiza por separado. La declaración de procedencia del artículo 111 decide si puede continuarse penalmente contra ciertas personas durante el encargo; no declara culpabilidad y no exige que antes exista juicio político.\n\nEl juicio político solo puede iniciarse durante el encargo y dentro del año posterior. Las sanciones deben aplicarse dentro de un año desde el inicio. El Presidente de la República no aparece en la lista ordinaria de sujetos del artículo 110; su posible responsabilidad penal sigue la regla especial del artículo 111.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Constitución, artículos 108 a 114: regímenes de responsabilidad, denuncia ciudadana, sujetos, sanciones, Cámaras, votaciones, declaración de procedencia y temporalidad. Ley Federal de Responsabilidades de los Servidores Públicos, artículos 5 a 24: sujetos, causas, denuncia, instrucción, acusación y Jurado de Sentencia. Artículo 8: destitución e inhabilitación de uno a veinte años. Ley General de Responsabilidades Administrativas: régimen distinto para faltas administrativas.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo: responsabilidad política y penal separadas",
+          "content": "Un secretario de Estado usa recursos públicos para obstaculizar sistemáticamente el funcionamiento de una institución y además existen indicios de delito. El juicio político puede buscar destitución e inhabilitación. La investigación penal persigue responsabilidad penal y puede requerir declaración de procedencia según el cargo. Ninguna de esas vías sustituye automáticamente a la otra.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Cómo aparece en un reactivo tipo EGEL",
+          "content": "Identifica la finalidad. Si se pregunta por destitución e inhabilitación ante el Congreso, es juicio político. Si se pregunta si puede procederse penalmente durante el encargo, es declaración de procedencia. Memoriza el flujo: Diputados instruye y acusa por mayoría absoluta de presentes; Senado sentencia por dos tercios de presentes. Descarta multa, prisión y reparación como sanciones propias del juicio político.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "summary",
+          "title": "Resumen para repasar",
+          "content": "Juicio político equivale a responsabilidad política grave, no penal. Solo alcanza sujetos del artículo 110. Cualquier ciudadanía puede denunciar con pruebas. Diputados instruye y acusa; Senado sentencia. Votaciones: mayoría absoluta y dos tercios de presentes. Sanciones: destitución e inhabilitación. Inicio: durante el cargo y hasta un año después. La declaración de procedencia es autónoma y solo habilita la persecución penal.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de preguntas y respuestas",
+          "content": "1. ¿Qué responsabilidad determina el juicio político? Respuesta: responsabilidad política.\n2. ¿Contra quién procede? Respuesta: contra las personas expresamente enumeradas en el artículo 110.\n3. ¿Qué conducta lo origina? Respuesta: actos u omisiones graves en perjuicio de intereses públicos fundamentales o su buen despacho.\n4. ¿Procede por expresar ideas? Respuesta: no.\n5. ¿Quién puede denunciar? Respuesta: cualquier ciudadanía, bajo responsabilidad y con elementos probatorios.\n6. ¿Dónde se denuncia? Respuesta: ante la Cámara de Diputados.\n7. ¿Qué hace Diputados? Respuesta: sustancia el procedimiento y, en su caso, formula acusación.\n8. ¿Qué mayoría requiere Diputados? Respuesta: mayoría absoluta de integrantes presentes.\n9. ¿Qué hace el Senado? Respuesta: actúa como Jurado de Sentencia y resuelve.\n10. ¿Qué mayoría requiere el Senado? Respuesta: dos terceras partes de integrantes presentes.\n11. ¿Cuáles son las sanciones? Respuesta: destitución e inhabilitación.\n12. ¿Es igual a declaración de procedencia? Respuesta: no; esta última habilita el proceso penal sin decidir culpabilidad.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Responsabilidad política: consecuencia constitucional por desempeño grave. Denuncia: acto ciudadano documentado que inicia revisión. Sección Instructora: órgano de Diputados que investiga. Órgano de acusación: papel de la Cámara de Diputados. Jurado de Sentencia: papel del Senado. Destitución: separación del cargo. Inhabilitación: impedimento temporal para servir en cargos públicos. Declaración de procedencia: decisión previa sobre persecución penal, sin prejuzgar culpabilidad.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes y correcciones",
+          "content": "Error: confundir juicio político con proceso penal. Corrección: sanciona responsabilidad política. Error: creer que siempre antecede al desafuero. Corrección: los procedimientos son autónomos. Error: atribuir multas al Senado. Corrección: destitución e inhabilitación son las sanciones propias. Error: decir que Diputados sanciona. Corrección: acusa; el Senado sentencia. Error: olvidar la audiencia. Corrección: ambas etapas deben respetar defensa. Error: creer que una denuncia anónima basta. Corrección: no produce efectos conforme a la ley.",
+          "sourceOrigin": "mixed"
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual del juicio político",
+        "description": "Sigue el procedimiento desde la causa hasta la sanción y sepáralo de la vía penal.",
+        "nodes": [
+          {"id":"juicio","label":"Juicio político","description":"Responsabilidad política constitucional."},
+          {"id":"procedencia","label":"1. Procedencia","description":"Sujeto más conducta grave.","parentId":"juicio"},
+          {"id":"sujeto","label":"Sujeto del artículo 110","description":"Lista constitucional cerrada.","parentId":"procedencia"},
+          {"id":"causa","label":"Perjuicio público grave","description":"Intereses fundamentales o buen despacho.","parentId":"procedencia"},
+          {"id":"ideas","label":"No por ideas","description":"La mera expresión no lo origina.","parentId":"procedencia"},
+          {"id":"denuncia","label":"2. Denuncia","description":"Inicio ante Diputados.","parentId":"juicio"},
+          {"id":"ciudadania","label":"Cualquier ciudadanía","description":"Bajo estricta responsabilidad.","parentId":"denuncia"},
+          {"id":"pruebas","label":"Elementos probatorios","description":"No produce efectos si es anónima.","parentId":"denuncia"},
+          {"id":"diputados","label":"3. Cámara de Diputados","description":"Instruye y acusa.","parentId":"juicio"},
+          {"id":"instruccion","label":"Investigación y audiencia","description":"Sección Instructora y defensa.","parentId":"diputados"},
+          {"id":"acusacion","label":"Acusación","description":"Mayoría absoluta de presentes.","parentId":"diputados"},
+          {"id":"senado","label":"4. Senado","description":"Jurado de Sentencia.","parentId":"juicio"},
+          {"id":"audiencia","label":"Diligencias y defensa","description":"Oye a la persona acusada.","parentId":"senado"},
+          {"id":"sentencia","label":"Resolución","description":"Dos tercios de presentes.","parentId":"senado"},
+          {"id":"sanciones","label":"5. Sanciones","description":"Consecuencias políticas.","parentId":"juicio"},
+          {"id":"destitucion","label":"Destitución","description":"Separación del cargo.","parentId":"sanciones"},
+          {"id":"inhabilitacion","label":"Inhabilitación","description":"De uno a veinte años según la ley.","parentId":"sanciones"},
+          {"id":"diferencia","label":"6. No confundir","description":"Otros regímenes autónomos.","parentId":"juicio"},
+          {"id":"desafuero","label":"Declaración de procedencia","description":"Habilita persecución penal; no condena.","parentId":"diferencia"},
+          {"id":"administrativa","label":"Responsabilidad administrativa","description":"Se rige por su propio procedimiento.","parentId":"diferencia"}
+        ]
+      },
+      "references": [
+        {
+          "title": "Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 108 a 114; últimas reformas DOF 02-06-2026",
+          "retrievedOn": "2026-08-11",
+          "note": "Sujetos, responsabilidades, procedimiento, votaciones, sanciones y temporalidad."
+        },
+        {
+          "title": "Ley Federal de Responsabilidades de los Servidores Públicos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFRSP.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Título Segundo, artículos 5 a 45; última reforma DOF 01-04-2024",
+          "retrievedOn": "2026-08-11",
+          "note": "Causas y procedimiento de juicio político y declaración de procedencia."
+        },
+        {
+          "title": "Comisión Jurisdiccional: fundamento jurídico",
+          "url": "https://www5.diputados.gob.mx/index.php/camara/Comision-Jurisdiccional/Fundamento-Juridico",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Funciones de la Comisión Jurisdiccional y Sección Instructora",
+          "retrievedOn": "2026-08-11",
+          "note": "Descripción institucional de la etapa de instrucción y acusación."
+        },
+        {
+          "title": "Ley General de Responsabilidades Administrativas",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGRA.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Texto vigente; última reforma DOF 15-12-2025",
+          "retrievedOn": "2026-08-11",
+          "note": "Referencia para distinguir la responsabilidad administrativa del juicio político."
+        }
+      ],
+      "flashcards": [
+        {"question":"¿Qué responsabilidad determina el juicio político?","answer":"Responsabilidad política de sujetos constitucionalmente enumerados.","sourceOrigin":"mixed"},
+        {"question":"¿Qué Cámara instruye y acusa?","answer":"La Cámara de Diputados.","sourceOrigin":"mixed"},
+        {"question":"¿Qué Cámara actúa como Jurado de Sentencia?","answer":"La Cámara de Senadores.","sourceOrigin":"mixed"},
+        {"question":"¿Qué mayoría necesita Diputados para acusar?","answer":"Mayoría absoluta de sus integrantes presentes.","sourceOrigin":"complementary"},
+        {"question":"¿Qué mayoría necesita el Senado para sancionar?","answer":"Dos terceras partes de sus integrantes presentes.","sourceOrigin":"complementary"},
+        {"question":"¿Cuáles son las sanciones?","answer":"Destitución e inhabilitación para el servicio público.","sourceOrigin":"mixed"},
+        {"question":"¿Puede imponer prisión el Senado en juicio político?","answer":"No; la prisión pertenece al régimen penal.","sourceOrigin":"complementary"},
+        {"question":"¿Procede por la mera expresión de ideas?","answer":"No, la ley lo excluye expresamente.","sourceOrigin":"complementary"},
+        {"question":"¿Quién puede denunciar?","answer":"Cualquier ciudadanía, responsablemente y con elementos de prueba.","sourceOrigin":"complementary"},
+        {"question":"¿Cuándo puede iniciarse?","answer":"Durante el encargo y dentro del año posterior.","sourceOrigin":"complementary"},
+        {"question":"¿Juicio político y declaración de procedencia son iguales?","answer":"No; el primero sanciona políticamente y la segunda habilita la vía penal.","sourceOrigin":"mixed"},
+        {"question":"¿La declaración de procedencia decide culpabilidad?","answer":"No; solo permite que actúen las autoridades penales competentes.","sourceOrigin":"complementary"}
+      ],
+      "exam": {
+        "title": "Examen: juicio político y declaración de procedencia",
+        "description": "Diez casos originales sobre sujetos, etapas, votaciones, sanciones y vías autónomas.",
+        "questions": [
+          {
+            "text": "Una denuncia pretende que el Senado condene a prisión a una secretaria de Estado mediante juicio político. ¿Cuál es el error?",
+            "difficulty": "basic",
+            "options": ["La prisión no es sanción del juicio político", "Las secretarías nunca son sujetos", "El Senado no interviene"],
+            "correctOption": 0,
+            "explanation": "El juicio político solo permite destitución e inhabilitación; la prisión exige proceso penal.",
+            "optionExplanations": ["Distingue correctamente las sanciones.", "Las personas titulares sí aparecen en el artículo 110.", "El Senado actúa como Jurado de Sentencia."]
+          },
+          {
+            "text": "¿Qué órgano formula la acusación constitucional antes de remitir el asunto al Senado?",
+            "difficulty": "basic",
+            "options": ["La Cámara de Diputados", "La Fiscalía General de la República", "La Suprema Corte"],
+            "correctOption": 0,
+            "explanation": "Diputados sustancia y actúa como órgano de acusación.",
+            "optionExplanations": ["Es su función constitucional.", "La FGR no sustituye a la Cámara en esta etapa.", "La SCJN no juzga el juicio político."]
+          },
+          {
+            "text": "El Senado va a imponer sanción en juicio político. ¿Qué votación requiere?",
+            "difficulty": "basic",
+            "options": ["Dos terceras partes de integrantes presentes", "Mayoría simple del total nacional", "Unanimidad de ambas Cámaras"],
+            "correctOption": 0,
+            "explanation": "El artículo 110 exige dos tercios de los presentes en el Senado.",
+            "optionExplanations": ["Es la mayoría constitucional.", "Esa regla no corresponde.", "No se exige unanimidad."]
+          },
+          {
+            "text": "Una denuncia se basa únicamente en opiniones críticas expresadas por un servidor público. ¿Qué dispone la ley?",
+            "difficulty": "basic",
+            "options": ["No procede por la mera expresión de ideas", "Siempre procede si hubo polémica", "Produce destitución automática"],
+            "correctOption": 0,
+            "explanation": "El artículo 7 excluye expresamente la mera expresión de ideas.",
+            "optionExplanations": ["Es la regla legal aplicable.", "La polémica no sustituye la causa grave.", "Nunca existe sanción automática."]
+          },
+          {
+            "text": "Una conducta puede constituir falta política y delito. ¿Deben tramitarse necesariamente en secuencia?",
+            "difficulty": "intermediate",
+            "options": ["No, los procedimientos son autónomos", "Sí, siempre inicia juicio político", "Sí, pero solo si lo ordena la SCJN"],
+            "correctOption": 0,
+            "explanation": "La Constitución reconoce autonomía entre los regímenes de responsabilidad.",
+            "optionExplanations": ["Evita confundir finalidades y procedimientos.", "No hay prelación universal.", "La SCJN no dirige estas Cámaras."]
+          },
+          {
+            "text": "Una persona dejó el cargo hace ocho meses y se presenta denuncia por hechos del encargo. ¿Puede iniciarse juicio político en principio?",
+            "difficulty": "intermediate",
+            "options": ["Sí, está dentro del año posterior", "No, termina el mismo día del cargo", "Solo con autorización judicial"],
+            "correctOption": 0,
+            "explanation": "El artículo 114 permite iniciarlo dentro del año posterior a la conclusión.",
+            "optionExplanations": ["Se conserva oportunidad temporal.", "La Constitución amplía un año.", "No exige autorización judicial."]
+          },
+          {
+            "text": "La Cámara de Diputados decide si puede perseguirse penalmente a un servidor protegido, sin resolver su culpabilidad. ¿Qué procedimiento es?",
+            "difficulty": "basic",
+            "options": ["Declaración de procedencia", "Juicio político", "Acción de inconstitucionalidad"],
+            "correctOption": 0,
+            "explanation": "La declaración de procedencia habilita la actuación penal sin condenar.",
+            "optionExplanations": ["Coincide con su finalidad.", "El juicio político impone sanciones políticas.", "La acción controla normas generales."]
+          },
+          {
+            "text": "En juicio político federal contra un gobernador por manejo indebido de recursos federales, ¿qué efecto tiene la resolución federal?",
+            "difficulty": "advanced",
+            "options": ["Es declarativa y se comunica a la legislatura local", "Destituye automáticamente en todos los casos", "Impone directamente pena penal"],
+            "correctOption": 0,
+            "explanation": "El segundo párrafo del artículo 110 establece esa regla especial para autoridades locales.",
+            "optionExplanations": ["Respeta la intervención local prevista.", "La resolución federal no opera así.", "No es un proceso penal."]
+          },
+          {
+            "text": "La Cámara de Diputados acusa con mayoría absoluta de presentes y el Senado escucha al acusado. ¿Qué principio se materializa especialmente?",
+            "difficulty": "intermediate",
+            "options": ["Derecho de audiencia y defensa", "Relatividad del amparo", "Instancia de parte agraviada"],
+            "correctOption": 0,
+            "explanation": "El artículo 110 exige audiencia durante ambas funciones parlamentarias.",
+            "optionExplanations": ["La persona puede conocer, alegar y defenderse.", "No se trata de sentencia de amparo.", "El juicio político nace de denuncia, no de amparo."]
+          },
+          {
+            "text": "¿Cuál combinación describe correctamente las sanciones del juicio político?",
+            "difficulty": "basic",
+            "options": ["Destitución e inhabilitación", "Multa y prisión", "Reparación civil y arresto"],
+            "correctOption": 0,
+            "explanation": "Son las únicas categorías sancionadoras previstas por el artículo 110.",
+            "optionExplanations": ["Es la respuesta constitucional.", "Corresponden a otros regímenes.", "No son sanciones propias del juicio político."]
+          }
+        ]
+      }
+    }
+  ]
+}

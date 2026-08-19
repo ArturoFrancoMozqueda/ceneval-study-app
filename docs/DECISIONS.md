@@ -1,0 +1,160 @@
+# Registro de decisiones
+
+## ADR-001 — Enfoque inicial en CENEVAL de Derecho
+
+**Fecha:** 2026-07-23  
+**Estado:** Aceptada
+
+La primera versión estará enfocada únicamente en personas egresadas de Derecho que se preparan para CENEVAL.
+
+**Razón:** permite crear una experiencia específica antes de generalizar.
+
+---
+
+## ADR-002 — Una sola usuaria en la primera versión
+
+**Fecha:** 2026-07-23  
+**Estado:** Aceptada
+
+La primera versión no necesita registro público ni gestión completa de múltiples usuarios.
+
+**Razón:** reduce complejidad y permite validar el flujo central.
+
+---
+
+## ADR-003 — Conservar la transcripción original
+
+**Fecha:** 2026-07-23  
+**Estado:** Aceptada
+
+La versión original será inmutable desde el procesamiento automático.
+
+**Razón:** permite verificar cambios y conservar la fuente.
+
+---
+
+## ADR-004 — Contenido generado editable
+
+**Fecha:** 2026-07-23  
+**Estado:** Aceptada
+
+El material generado por IA podrá revisarse, modificarse, aceptarse o rechazarse.
+
+**Razón:** la IA puede cometer errores y el estudiante debe mantener control.
+
+---
+
+## ADR-005 — Arquitectura monolítica
+
+**Fecha:** 2026-07-23  
+**Estado:** Aceptada
+
+Se usará una aplicación Next.js monolítica con Supabase.
+
+**Razón:** es suficiente para el alcance inicial y más sencilla de aprender y mantener.
+
+---
+
+## ADR-006 — IA después del flujo manual
+
+**Fecha:** 2026-07-23  
+**Estado:** Aceptada
+
+Primero se diseñarán datos, pantallas y flujos manuales. Después se integrará IA.
+
+**Razón:** evita que la lógica principal dependa desde el inicio de una integración costosa e incierta.
+
+---
+
+## ADR-007 — Documentación antes de implementación
+
+**Fecha:** 2026-07-23  
+**Estado:** Aceptada
+
+Se terminarán visión, requisitos, historias, navegación, arquitectura y datos antes de implementar funciones grandes.
+
+**Razón:** el usuario desea aprender ingeniería de software completa y evitar construir sin dirección.
+
+---
+
+## ADR-008 — No usar infraestructura avanzada inicialmente
+
+**Fecha:** 2026-07-23  
+**Estado:** Aceptada
+
+No se usarán microservicios, Kubernetes ni Docker obligatorio.
+
+**Razón:** no existe una necesidad técnica que justifique esa complejidad.
+
+---
+
+## ADR-009 — Acceso a Supabase únicamente desde el servidor
+
+**Fecha:** 2026-07-23  
+**Estado:** Reemplazada por ADR-012
+
+Mientras la aplicación sea de una sola usuaria y no tenga autenticación, las
+tablas permanecerán cerradas para los roles `anon` y `authenticated`. Next.js
+accederá mediante una clave privada disponible solamente en el servidor.
+
+**Razón:** una política pública para una aplicación sin identidad permitiría
+que cualquier persona con la URL y la clave publicable leyera o modificara los
+datos. Cuando se incorpore Auth, se añadirán `user_id` y políticas de propiedad
+por fila.
+
+La etapa multiusuario ya comenzó. Las lecturas cotidianas usan la identidad
+autenticada y RLS; la clave privada se reserva para operaciones administrativas
+controladas.
+
+---
+
+## ADR-010 — Biblioteca editorial en lugar de contenido creado por estudiantes
+
+**Fecha:** 2026-07-23  
+**Estado:** Aceptada
+
+Codex prepara los paquetes a partir de las transcripciones entregadas por la
+administradora. Los estudiantes reciben contenido terminado y publicado.
+
+## ADR-011 — Revisión humana antes de publicar
+
+**Fecha:** 2026-07-23  
+**Estado:** Aceptada
+
+Todo paquete queda como borrador y necesita aprobación de la administradora.
+
+## ADR-012 — Cuentas individuales con biblioteca compartida
+
+**Fecha:** 2026-07-23  
+**Estado:** Pospuesta temporalmente
+
+El registro es abierto; todo estudiante ve la misma biblioteca publicada, pero
+su progreso es privado.
+
+Esta decisión queda pospuesta por ADR-014 mientras la aplicación se utiliza de
+forma privada.
+
+## ADR-013 — Posponer OpenAI en el runtime
+
+**Fecha:** 2026-07-23  
+**Estado:** Aceptada
+
+Codex prepara e importa el contenido. La API de OpenAI se reserva para una
+automatización o tutor futuro.
+
+---
+
+## ADR-014 — Acceso privado para una sola administradora
+
+**Fecha:** 2026-07-29  
+**Estado:** Aceptada
+
+Por el momento, la aplicación solo permite el acceso de cuentas con rol
+`admin`. El registro público está desactivado y las cuentas con rol `student`
+no pueden entrar en las rutas protegidas.
+
+**Razón:** Fatima desea usar y validar personalmente la biblioteca antes de
+abrirla a otras personas.
+
+El modo público podrá recuperarse explícitamente con
+`PRIVATE_ACCESS_ONLY=false`, acompañado de una nueva revisión de seguridad.

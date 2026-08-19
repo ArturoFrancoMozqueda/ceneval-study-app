@@ -1,0 +1,265 @@
+{
+  "packageVersion": "1.0",
+  "subject": {
+    "name": "Teoría procesal y organización judicial",
+    "description": "Bases del ejercicio jurisdiccional, competencia, resoluciones judiciales y estructura de los órganos que imparten justicia."
+  },
+  "class": {
+    "title": "Poder Judicial local, instancias y conflictos de competencia",
+    "description": "Cuarta clase del curso: comprende la justicia de las entidades federativas, distingue primera y segunda instancia y determina cómo verificar recursos y conflictos competenciales."
+  },
+  "transcript": {
+    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 18.txt",
+    "cleaned": "El Audio 18 presenta la organización judicial de las entidades federativas, la relación entre órganos de primera y segunda instancia, la posible existencia de juzgados de menor cuantía o especializados, la apelación y los conflictos de competencia. Se conservaron los ejemplos que permiten reconocer materia, grado, territorio y cuantía. Se eliminaron promociones, bromas, comentarios personales, cifras salariales y opiniones políticas. Se corrigieron afirmaciones absolutas: la denominación y estructura de los órganos locales no es idéntica en todo México; la existencia de juzgados menores, sus materias, cuantías y recursos depende de la constitución, ley orgánica y legislación procesal aplicables; tampoco toda sentencia de primera instancia es apelable. La explicación se actualizó con los artículos 17 y 116 de la Constitución federal, el CNPCF y, como ejemplo de consulta local, el catálogo legislativo oficial de Michoacán."
+  },
+  "topics": [
+    {
+      "title": "Cómo ubicar el órgano judicial local y la instancia correcta",
+      "description": "Método para leer la organización judicial de cada entidad, identificar órganos de origen y alzada y resolver preguntas sobre recursos y competencia.",
+      "learningJourney": {
+        "openingPrompt": "Si un asunto familiar comienza ante un órgano local, ¿puedes asumir que la autoridad y el recurso se llaman igual en todas las entidades federativas?",
+        "quickChecks": [
+          {
+            "prompt": "¿Quién define la estructura concreta del Poder Judicial de una entidad?",
+            "answer": "La Constitución federal fija bases; la constitución local, la ley orgánica y las leyes procesales concretan órganos y atribuciones.",
+            "feedback": "El federalismo permite variantes locales, por lo que los nombres y competencias deben verificarse."
+          },
+          {
+            "prompt": "¿Qué diferencia existe entre primera y segunda instancia?",
+            "answer": "La primera conoce originalmente del litigio; la segunda revisa las resoluciones impugnables en los términos de la ley.",
+            "feedback": "La segunda instancia no aparece automáticamente: depende de que exista un recurso procedente."
+          },
+          {
+            "prompt": "¿Toda sentencia local admite apelación?",
+            "answer": "No. La procedencia depende de la materia, tipo de procedimiento, resolución, cuantía y legislación aplicable.",
+            "feedback": "Si la apelación no procede, aún debe analizarse si existe otra defensa o juicio de amparo, sin asumirlo automáticamente."
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una persona recibe una sentencia en un juicio local de cuantía reducida. La transcripción afirma que los asuntos menores nunca son apelables, pero la legislación orgánica y procesal de la entidad contiene reglas propias sobre órganos, cuantías y recursos.",
+          "question": "¿Cómo debe decidirse si procede la apelación y quién la resuelve?",
+          "legalRule": "La procedencia del recurso y el órgano de alzada se determinan mediante la legislación vigente aplicable al tipo de juicio, resolución y organización judicial de la entidad.",
+          "reasoning": "No es válido trasladar una regla observada en un estado a todo el país. Deben identificarse la entidad, materia, procedimiento, resolución y cuantía; después se consulta el código procesal y la ley orgánica para saber si existe apelación y qué órgano tiene competencia para resolverla.",
+          "conclusion": "La respuesta correcta surge de la norma local y procesal vigente, no de una regla general memorizada sobre juzgados menores."
+        },
+        "closingPrompt": "Describe el recorrido de un asunto desde el órgano de origen hasta una posible segunda instancia, señalando en qué momento verificarías competencia y procedencia del recurso.",
+        "nextActivity": "Recorre el mapa visual, responde la guía y resuelve los diez casos sobre órganos locales, instancias, recursos y conflictos."
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta corta: justicia local",
+          "content": "Los poderes judiciales locales resuelven las controversias que las constituciones y leyes asignan al orden común. La Constitución federal establece bases de independencia y organización, pero cada entidad concreta sus órganos, especializaciones, distritos, instancias y competencias. Para resolver un caso deben consultarse la constitución local, la ley orgánica y la norma procesal vigente.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "México es una federación. Por ello existen órganos jurisdiccionales federales y poderes judiciales en las entidades federativas. El artículo 116 constitucional dispone que el Poder Judicial de los estados se ejerce por los tribunales establecidos en sus constituciones y fija bases sobre independencia, integración y funcionamiento. Esa regla no impone un organigrama idéntico para todas las entidades.\n\nEn términos generales existe un órgano o conjunto de órganos que conocen inicialmente del litigio y órganos que revisan determinadas decisiones. Pueden existir juzgados civiles, familiares, penales, laborales, mercantiles por competencia concurrente, especializados, mixtos, comunales o de menor cuantía, pero sus nombres y atribuciones dependen de cada entidad. El tribunal superior o supremo tribunal local puede organizarse en pleno, salas unitarias o colegiadas conforme a su normativa.\n\nLa primera instancia es el grado en que normalmente se inicia y desarrolla el litigio. La segunda instancia revisa una resolución mediante el recurso legalmente procedente. No toda decisión ni todo procedimiento admite apelación. El análisis exige identificar materia, procedimiento, tipo de resolución, cuantía si la ley la utiliza, oportunidad y reglas transitorias. Tampoco puede afirmarse que todos los juzgados menores del país sean inapelables.\n\nEl CNPCF unifica gradualmente reglas procesales civiles y familiares, pero conserva la importancia de las leyes orgánicas para distribuir competencias. Su artículo 77 establece materia, grado y territorio, y permite usar cuantía únicamente cuando la ley orgánica respectiva define órganos con ese criterio. Durante la transición debe comprobarse si el Código Nacional ya entró en vigor en la entidad y para el asunto analizado.\n\nUn conflicto de competencia aparece cuando dos órganos discrepan sobre quién debe conocer. Puede ser positivo si ambos se consideran competentes o negativo si ambos rechazan el asunto. La autoridad que lo resuelve no se elige por intuición: la determina la ley según los órganos involucrados, su materia, grado y ámbito territorial. A veces será un órgano superior local; si intervienen ámbitos o circuitos distintos, puede operar otra regla.\n\nDespués de agotar o no existir recursos ordinarios, una resolución local puede ser combatida mediante amparo si se cumplen sus requisitos. El amparo directo corresponde, en términos generales, contra sentencias definitivas, laudos o resoluciones que ponen fin al juicio, conforme a los artículos 170 y siguientes de la Ley de Amparo. No debe usarse como sustituto automático de una apelación procedente ni suponerse que cualquier auto se combate por esa vía.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Constitución federal, artículos 17 y 116, fracción III: acceso a la justicia y bases de los poderes judiciales de los estados. CNPCF, artículos 77 y siguientes: competencia objetiva por materia, grado y territorio; cuantía condicionada a la ley orgánica; reglas para conflictos competenciales y recursos. Ley de Amparo, artículos 170 y siguientes: procedencia general del amparo directo. Para un caso concreto deben añadirse la constitución y ley orgánica de la entidad, además del código procesal vigente y sus transitorios.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo: ruta de un asunto familiar",
+          "content": "Una demanda de alimentos se presenta ante el órgano local que la ley declara competente. Ese órgano conoce en primera instancia. Si dicta una resolución que la ley permite apelar, el recurso será revisado por el órgano de segunda instancia designado localmente. Si la norma no concede apelación, no puede inventarse; debe analizarse la defensa procedente y, en su momento, si se actualizan los requisitos del amparo.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Cómo aparece en un reactivo tipo EGEL",
+          "content": "El caso suele proporcionar entidad federativa, materia, órgano que dictó la resolución, tipo de juicio y medio de defensa intentado. Primero determina si el asunto es local o federal. Después ubica materia y grado. Finalmente verifica si la resolución es recurrible y qué órgano señala la ley. Descarta respuestas que conviertan una práctica local en regla nacional o que supongan apelación por el solo hecho de existir una sentencia.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "summary",
+          "title": "Resumen para repasar",
+          "content": "Los poderes judiciales locales se rigen por bases federales y normas propias. Su estructura no es uniforme. Primera instancia significa conocimiento original; segunda instancia, revisión mediante recurso procedente. Materia, grado y territorio son factores centrales; la cuantía sólo opera si la ley orgánica la emplea. La apelación nunca debe presumirse. Los conflictos de competencia los resuelve el órgano previsto por la ley. El amparo directo tiene supuestos propios y no sustituye automáticamente recursos ordinarios.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de preguntas y respuestas",
+          "content": "1. ¿Por qué existen poderes judiciales locales? Respuesta: por la organización federal y la distribución constitucional de asuntos.\n2. ¿Son idénticos en todas las entidades? Respuesta: no; cada constitución y ley orgánica local concreta su estructura.\n3. ¿Qué es primera instancia? Respuesta: el grado en que normalmente se conoce originalmente del litigio.\n4. ¿Qué es segunda instancia? Respuesta: la revisión de una resolución mediante el recurso que la ley autoriza.\n5. ¿Toda sentencia se apela? Respuesta: no; depende del procedimiento y legislación aplicable.\n6. ¿Qué función tiene una ley orgánica judicial? Respuesta: organiza órganos, distritos, especializaciones y competencias.\n7. ¿Cuándo opera la cuantía? Respuesta: cuando la ley orgánica establece órganos definidos por ese criterio.\n8. ¿Qué es un conflicto positivo? Respuesta: dos órganos se consideran competentes.\n9. ¿Qué es un conflicto negativo? Respuesta: dos órganos rechazan conocer del mismo asunto.\n10. ¿Quién resuelve el conflicto? Respuesta: el órgano señalado por la norma aplicable según materia y relación entre tribunales.\n11. ¿Cuándo se analiza amparo directo? Respuesta: ante sentencias definitivas, laudos o resoluciones que ponen fin al juicio, bajo requisitos legales.\n12. ¿Qué cinco datos deben identificarse? Respuesta: entidad, materia, órgano de origen, resolución y recurso previsto.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Federalismo judicial: coexistencia de jurisdicciones federal y locales. Poder Judicial local: órganos de justicia de una entidad. Ley orgánica: norma que estructura y distribuye competencias. Primera instancia: conocimiento original. Segunda instancia: revisión mediante recurso. Tribunal de alzada: órgano que resuelve la impugnación correspondiente. Cuantía: criterio económico sólo cuando la organización judicial lo contempla. Conflicto positivo: ambos órganos aceptan competencia. Conflicto negativo: ambos la rechazan. Amparo directo: control constitucional contra ciertas resoluciones finales.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "Creer que todos los tribunales locales tienen el mismo nombre; copiar la estructura de un estado a otro; confundir primera instancia con órgano de menor cuantía; afirmar que todo juez menor es inapelable; asumir que toda sentencia admite apelación; aplicar cuantía sin consultar la ley orgánica; enviar automáticamente todo conflicto al tribunal superior; confundir alzada con amparo; omitir la transición del CNPCF; y memorizar cifras locales que pueden reformarse.",
+          "sourceOrigin": "mixed"
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual del Poder Judicial local",
+        "description": "Parte del federalismo y recorre normas organizativas, órganos, instancias, recursos y conflictos de competencia.",
+        "nodes": [
+          { "id": "federalismo", "label": "Federalismo judicial", "description": "Coexisten justicia federal y local." },
+          { "id": "local", "label": "Poder Judicial local", "description": "Resuelve asuntos asignados al orden común.", "parentId": "federalismo" },
+          { "id": "bases", "label": "Bases federales", "description": "Artículos 17 y 116 constitucionales.", "parentId": "local" },
+          { "id": "normas", "label": "Normas de la entidad", "description": "Constitución, ley orgánica y leyes procesales.", "parentId": "local" },
+          { "id": "organos", "label": "Órganos variables", "description": "Nombres y especializaciones dependen de cada entidad.", "parentId": "normas" },
+          { "id": "primera", "label": "Primera instancia", "description": "Conocimiento original del asunto.", "parentId": "organos" },
+          { "id": "alzada", "label": "Segunda instancia", "description": "Revisión sólo si procede un recurso.", "parentId": "organos" },
+          { "id": "factores", "label": "Competencia", "description": "Selecciona el órgano correcto.", "parentId": "local" },
+          { "id": "materia", "label": "Materia", "description": "Civil, familiar, penal, laboral u otra.", "parentId": "factores" },
+          { "id": "grado", "label": "Grado", "description": "Instancia procesal.", "parentId": "factores" },
+          { "id": "territorio", "label": "Territorio", "description": "Punto de conexión geográfica.", "parentId": "factores" },
+          { "id": "cuantia", "label": "Cuantía condicionada", "description": "Opera si la ley orgánica la adopta.", "parentId": "factores" },
+          { "id": "conflicto", "label": "Conflicto competencial", "description": "Dos órganos aceptan o rechazan conocer.", "parentId": "factores" },
+          { "id": "recurso", "label": "Recurso ordinario", "description": "Procede únicamente cuando la ley lo autoriza.", "parentId": "alzada" },
+          { "id": "amparo", "label": "Control constitucional", "description": "Se analiza después conforme a sus propios requisitos.", "parentId": "recurso" }
+        ]
+      },
+      "references": [
+        {
+          "title": "Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 17 y 116, fracción III; última reforma DOF 02-06-2026",
+          "retrievedOn": "2026-08-11",
+          "note": "Bases constitucionales del acceso a la justicia y de los poderes judiciales locales."
+        },
+        {
+          "title": "Código Nacional de Procedimientos Civiles y Familiares",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 77 y siguientes; última reforma DOF 15-01-2026",
+          "retrievedOn": "2026-08-11",
+          "note": "Competencia, recursos y conflictos en la transición procesal nacional."
+        },
+        {
+          "title": "Ley de Amparo",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 170 y siguientes; última reforma DOF 16-10-2025",
+          "retrievedOn": "2026-08-11",
+          "note": "Supuestos generales del amparo directo contra resoluciones finales."
+        },
+        {
+          "title": "Leyes del Estado de Michoacán",
+          "url": "https://congresomich.gob.mx/leyes/",
+          "institution": "Congreso del Estado de Michoacán de Ocampo",
+          "jurisdiction": "Michoacán, México",
+          "citation": "Catálogo oficial: Constitución local y Ley Orgánica del Poder Judicial",
+          "retrievedOn": "2026-08-11",
+          "note": "Ejemplo de la consulta local obligatoria para organización y competencia."
+        }
+      ],
+      "flashcards": [
+        { "question": "¿Qué norma federal fija bases para los poderes judiciales estatales?", "answer": "El artículo 116, fracción III, de la Constitución Política de los Estados Unidos Mexicanos.", "sourceOrigin": "complementary" },
+        { "question": "¿La estructura judicial local es idéntica en todo México?", "answer": "No. Las entidades concretan órganos y competencias mediante sus propias constituciones y leyes.", "sourceOrigin": "mixed" },
+        { "question": "¿Qué es la primera instancia?", "answer": "El grado en el que normalmente se conoce originalmente y se decide el litigio.", "sourceOrigin": "mixed" },
+        { "question": "¿Qué es la segunda instancia?", "answer": "La revisión de una resolución por el órgano de alzada mediante un recurso procedente.", "sourceOrigin": "mixed" },
+        { "question": "¿Toda sentencia local admite apelación?", "answer": "No. Debe existir una disposición que autorice el recurso para ese procedimiento y resolución.", "sourceOrigin": "complementary" },
+        { "question": "¿Qué documento organiza los juzgados de una entidad?", "answer": "Principalmente su ley orgánica judicial, en armonía con las constituciones federal y local.", "sourceOrigin": "mixed" },
+        { "question": "¿Cuándo puede distribuir competencia la cuantía?", "answer": "Cuando la ley orgánica respectiva establece órganos definidos por el valor del asunto.", "sourceOrigin": "complementary" },
+        { "question": "¿Qué es un conflicto positivo de competencia?", "answer": "El supuesto en que dos órganos sostienen que les corresponde conocer del asunto.", "sourceOrigin": "mixed" },
+        { "question": "¿Qué es un conflicto negativo de competencia?", "answer": "El supuesto en que dos órganos rechazan conocer del mismo asunto.", "sourceOrigin": "mixed" },
+        { "question": "¿Quién resuelve un conflicto competencial?", "answer": "El órgano que señale la legislación aplicable según materia, grado y tribunales involucrados.", "sourceOrigin": "complementary" },
+        { "question": "¿Qué resoluciones son objeto general del amparo directo?", "answer": "Sentencias definitivas, laudos y resoluciones que ponen fin al juicio, bajo los requisitos de la Ley de Amparo.", "sourceOrigin": "complementary" },
+        { "question": "¿Qué debes identificar en un caso de justicia local?", "answer": "Entidad, materia, órgano de origen, grado, resolución, recurso y normas vigentes.", "sourceOrigin": "mixed" }
+      ],
+      "exam": {
+        "title": "Práctica: Poder Judicial local e instancias",
+        "description": "Diez reactivos originales de tres opciones sobre federalismo judicial, organización local, alzada, cuantía y conflictos competenciales.",
+        "questions": [
+          {
+            "text": "¿Qué conjunto normativo debe consultarse para conocer la organización concreta del Poder Judicial de una entidad?",
+            "difficulty": "basic",
+            "options": ["Constitución local y ley orgánica judicial", "Únicamente la Constitución federal", "Sólo el Código Penal Federal"],
+            "correctOption": 0,
+            "explanation": "La Constitución federal fija bases, mientras las normas locales concretan órganos, distritos y atribuciones.",
+            "optionExplanations": ["Contiene la organización específica de la entidad.", "Fija bases, pero no agota el diseño local.", "No organiza todos los órganos judiciales estatales."]
+          },
+          {
+            "text": "Una sala revisa una sentencia mediante apelación autorizada por la ley. ¿En qué grado actúa?",
+            "difficulty": "basic",
+            "options": ["Segunda instancia", "Primera instancia", "Jurisdicción voluntaria"],
+            "correctOption": 0,
+            "explanation": "La revisión de una resolución de origen mediante apelación corresponde a la segunda instancia.",
+            "optionExplanations": ["Es el grado de revisión o alzada.", "La primera instancia conoció originalmente.", "La jurisdicción voluntaria no describe el grado de revisión."]
+          },
+          {
+            "text": "Un caso afirma que todos los juzgados menores del país son inapelables. ¿Cómo debe evaluarse esa afirmación?",
+            "difficulty": "intermediate",
+            "options": ["Es incorrecta porque debe revisarse la legislación aplicable", "Es una regla constitucional absoluta", "Es correcta siempre que el litigio sea civil"],
+            "correctOption": 0,
+            "explanation": "La existencia, competencia y recursos de esos órganos dependen de las normas de cada entidad y procedimiento.",
+            "optionExplanations": ["Evita convertir una regla local en nacional.", "La Constitución no establece esa prohibición universal.", "La materia civil no vuelve universal la inapelabilidad."]
+          },
+          {
+            "text": "¿Qué dato debe comprobarse para utilizar la cuantía como factor de competencia conforme al CNPCF?",
+            "difficulty": "intermediate",
+            "options": ["Que la ley orgánica defina órganos mediante cuantía", "Que exista cualquier cantidad en la demanda", "Que el actor prefiera un juzgado menor"],
+            "correctOption": 0,
+            "explanation": "El artículo 77 condiciona ese criterio a la organización judicial establecida en la ley orgánica respectiva.",
+            "optionExplanations": ["Es el requisito normativo expreso.", "Una suma reclamada no basta por sí sola.", "La voluntad unilateral no crea competencia."]
+          },
+          {
+            "text": "Dos juzgados locales sostienen que ambos deben conocer del mismo litigio. ¿Qué tipo de conflicto existe?",
+            "difficulty": "basic",
+            "options": ["Positivo de competencia", "Negativo de competencia", "Conflicto de cosa juzgada"],
+            "correctOption": 0,
+            "explanation": "El conflicto es positivo porque ambos órganos afirman tener competencia.",
+            "optionExplanations": ["Ambos aceptan conocer del asunto.", "Sería negativo si ambos lo rechazaran.", "No se discute la repetición de un litigio ya resuelto."]
+          },
+          {
+            "text": "Dos órganos rechazan un asunto y cada uno sostiene que corresponde al otro. ¿Qué debe hacerse?",
+            "difficulty": "intermediate",
+            "options": ["Aplicar el procedimiento legal para resolver el conflicto negativo", "Permitir que el actor elija sin límites", "Archivar definitivamente el derecho reclamado"],
+            "correctOption": 0,
+            "explanation": "La legislación establece qué órgano dirime el conflicto negativo y determina quién debe conocer.",
+            "optionExplanations": ["Canaliza la discrepancia mediante la autoridad competente.", "La elección de parte no sustituye todas las reglas.", "El conflicto no extingue automáticamente el derecho sustantivo."]
+          },
+          {
+            "text": "Una persona desea apelar cualquier resolución porque considera injusta la decisión. ¿Cuál es la respuesta correcta?",
+            "difficulty": "intermediate",
+            "options": ["Debe verificar si la ley declara apelable esa resolución", "Toda resolución es apelable por acceso a la justicia", "La apelación depende sólo del desacuerdo personal"],
+            "correctOption": 0,
+            "explanation": "Los recursos son medios legalmente configurados y su procedencia depende del supuesto previsto.",
+            "optionExplanations": ["Parte de la regulación específica del recurso.", "El acceso a la justicia no elimina los requisitos legales razonables.", "El agravio no crea por sí mismo un recurso inexistente."]
+          },
+          {
+            "text": "¿Qué efecto produce la entrada gradual del CNPCF al analizar un asunto local en 2026?",
+            "difficulty": "advanced",
+            "options": ["Obliga a verificar declaratoria y régimen transitorio", "Hace inaplicable toda legislación procesal local desde 2023", "Permite elegir libremente entre cualquier código"],
+            "correctOption": 0,
+            "explanation": "La transición exige comprobar cuándo entró en vigor el Código Nacional para la entidad y el procedimiento.",
+            "optionExplanations": ["Determina correctamente la norma temporalmente aplicable.", "La expedición no produjo sustitución inmediata en todo el país.", "La vigencia no depende de una elección libre de las partes."]
+          },
+          {
+            "text": "Una sentencia definitiva local pone fin al juicio y no existe recurso ordinario procedente. ¿Qué análisis sigue?",
+            "difficulty": "advanced",
+            "options": ["Revisar si cumple los requisitos del amparo directo", "Interponer apelación aunque la ley no la permita", "Presentar automáticamente amparo indirecto"],
+            "correctOption": 0,
+            "explanation": "La Ley de Amparo permite analizar el amparo directo contra ciertas resoluciones finales, sujeto a sus requisitos.",
+            "optionExplanations": ["Identifica la vía constitucional potencial sin darla por concedida.", "No puede inventarse un recurso ordinario.", "La resolución final no conduce automáticamente al amparo indirecto."]
+          },
+          {
+            "text": "¿Cuál es el método más seguro para elegir órgano y recurso en un caso local?",
+            "difficulty": "advanced",
+            "options": ["Identificar entidad, materia, grado, resolución y normas vigentes", "Usar siempre el organigrama de Michoacán", "Elegir la respuesta con el nombre de tribunal más conocido"],
+            "correctOption": 0,
+            "explanation": "El método conecta los hechos con la distribución constitucional, orgánica y procesal aplicable.",
+            "optionExplanations": ["Incluye los datos jurídicamente determinantes.", "Una entidad no representa automáticamente a las demás.", "La familiaridad del nombre no demuestra competencia."]
+          }
+        ]
+      }
+    }
+  ]
+}

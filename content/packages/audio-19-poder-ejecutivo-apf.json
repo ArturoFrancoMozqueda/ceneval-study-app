@@ -1,0 +1,324 @@
+{
+  "packageVersion": "1.0",
+  "subject": {
+    "name": "Derecho Administrativo",
+    "description": "Organización, actividad y control de la administración pública mexicana."
+  },
+  "class": {
+    "title": "Poder Ejecutivo y Administración Pública Federal",
+    "description": "Clase introductoria sobre el fundamento constitucional del Poder Ejecutivo y la organización centralizada y paraestatal de la Administración Pública Federal."
+  },
+  "transcript": {
+    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 19.txt"
+  },
+  "topics": [
+    {
+      "title": "Estructura del Poder Ejecutivo y de la APF",
+      "description": "Fundamento constitucional, formas de organización administrativa y diferencias entre dependencias, órganos desconcentrados y organismos descentralizados.",
+      "learningJourney": {
+        "openingPrompt": "Una oficina pública recibe facultades especializadas, pero continúa subordinada a una Secretaría. ¿Cómo determinarías qué tipo de órgano es?",
+        "quickChecks": [
+          {
+            "prompt": "¿Qué dato distingue principalmente a un organismo descentralizado?",
+            "answer": "La personalidad jurídica y el patrimonio propios.",
+            "feedback": "La autonomía técnica no basta: busca una persona jurídica diferenciada y revisa su ley de creación."
+          },
+          {
+            "prompt": "¿La desconcentración elimina la subordinación jerárquica?",
+            "answer": "No. El órgano desconcentrado permanece dentro de una dependencia.",
+            "feedback": "Las facultades especializadas se ejercen dentro de la estructura centralizada y bajo subordinación."
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una ley crea un ente para prestar un servicio público especializado, le reconoce personalidad jurídica y patrimonio propios y lo somete a coordinación sectorial.",
+          "question": "¿Pertenece a la administración centralizada o paraestatal y por qué?",
+          "legalRule": "La Constitución divide la APF en centralizada y paraestatal; la LOAPF regula los organismos descentralizados como entidades con personalidad y patrimonio propios.",
+          "reasoning": "La personalidad jurídica diferenciada y el patrimonio propio descartan que sea una simple unidad subordinada dentro de una Secretaría.",
+          "conclusion": "Se trata de un organismo descentralizado perteneciente a la administración pública paraestatal."
+        },
+        "closingPrompt": "Explica con tus palabras la diferencia entre desconcentración y descentralización usando jerarquía, personalidad jurídica y patrimonio.",
+        "nextActivity": "Resuelve las flashcards difíciles y después completa el mini examen."
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "El Poder Ejecutivo Federal se deposita en la persona titular de la Presidencia. Para atender los asuntos administrativos se auxilia de la Administración Pública Federal, que la Constitución divide en centralizada y paraestatal. La Ley Orgánica de la Administración Pública Federal desarrolla su estructura, competencias y relaciones.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "El Estado realiza funciones legislativas, administrativas y jurisdiccionales. En el ámbito federal, la función ejecutiva corresponde a la persona titular de la Presidencia, quien ejecuta las leyes y dirige la administración. La Administración Pública Federal no es un poder distinto: es el conjunto organizado de dependencias y entidades mediante las que el Ejecutivo atiende asuntos públicos.\n\nLa organización centralizada comprende dependencias sujetas a una relación jerárquica directa con la Presidencia. Entre ellas se encuentran las Secretarías de Estado y la Consejería Jurídica del Ejecutivo Federal, conforme al texto vigente de la ley. Una Secretaría tiene una esfera de competencia definida por la LOAPF; por ejemplo, Gobernación atiende la política interior y Hacienda las materias hacendaria, presupuestaria y fiscal que la ley le atribuye.\n\nLa desconcentración ocurre dentro de la administración centralizada. Un órgano administrativo desconcentrado recibe facultades específicas para resolver con mayor especialización o proximidad, pero sigue jerárquicamente subordinado a una Secretaría y no se convierte, por esa sola razón, en una persona jurídica independiente.\n\nLa administración paraestatal agrupa entidades creadas o reconocidas por ley, como organismos descentralizados, empresas públicas del Estado y otras categorías previstas por el orden jurídico. Un organismo descentralizado suele tener personalidad jurídica y patrimonio propios, además de autonomía técnica u operativa para cumplir un objeto público determinado. Esa autonomía no significa independencia absoluta: permanece sujeto a la ley, a mecanismos de coordinación sectorial, presupuesto, control y rendición de cuentas.\n\nPara resolver reactivos CENEVAL conviene preguntar, en orden: ¿el ente pertenece a la estructura directa de una Secretaría?, ¿tiene personalidad jurídica y patrimonio propios?, ¿existe subordinación jerárquica o solamente coordinación y control?, ¿qué ley le asigna la competencia? Esas pistas permiten diferenciar dependencia, órgano desconcentrado y organismo descentralizado.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "La Constitución, en su artículo 89, enumera facultades y obligaciones de la persona titular de la Presidencia, entre ellas promulgar y ejecutar las leyes. El artículo 90 dispone que la Administración Pública Federal será centralizada y paraestatal conforme a la ley orgánica que expida el Congreso. La LOAPF desarrolla esta base: sus primeros artículos determinan la integración de ambos sectores; el artículo 17 regula órganos administrativos desconcentrados; el artículo 26 enumera las dependencias para el despacho administrativo, y los artículos siguientes distribuyen atribuciones entre ellas. Debe consultarse siempre el texto vigente, pues las denominaciones, el número de Secretarías y sus competencias pueden cambiar mediante reforma. Consulta oficial realizada el 10 de agosto de 2026.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Imagina una organización escolar. La dirección general equivale, solo para visualizar la jerarquía, a la Presidencia. Las coordinaciones que reciben instrucciones directas se parecen a dependencias centralizadas. Una oficina especializada que sigue dentro de una coordinación se parece a un órgano desconcentrado. Una institución creada con patrimonio y reglas propias para prestar un servicio concreto se aproxima a un organismo descentralizado. La comparación ayuda a entender, pero la clasificación jurídica real siempre depende de la Constitución y de la ley aplicable.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Ejemplo tipo CENEVAL",
+          "content": "Una ley crea un ente para prestar un servicio público especializado, le reconoce personalidad jurídica y patrimonio propios y lo sujeta a coordinación sectorial. La característica decisiva es la existencia de una persona jurídica diferenciada; por ello, la mejor clasificación es organismo descentralizado de la administración paraestatal. Si el caso señalara que una unidad depende jerárquicamente de una Secretaría y solo recibe facultades específicas, la respuesta sería órgano administrativo desconcentrado.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Presidencia y Administración Pública Federal no son sinónimos. La Presidencia encabeza el Ejecutivo; la APF es el aparato organizado que auxilia en la función administrativa. La APF se divide constitucionalmente en centralizada y paraestatal. Las dependencias y órganos desconcentrados pertenecen al ámbito centralizado; los organismos descentralizados pertenecen al paraestatal y tienen personalidad jurídica y patrimonio propios. La competencia siempre debe encontrarse en una norma.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de estudio",
+          "content": "1. Memoriza la relación: artículo 89 = facultades presidenciales; artículo 90 = organización de la APF. 2. Dibuja dos ramas: centralizada y paraestatal. 3. En centralizada coloca Secretarías y órganos desconcentrados; anota subordinación jerárquica. 4. En paraestatal coloca organismos descentralizados; anota personalidad y patrimonio propios. 5. Practica casos identificando las palabras clave: jerarquía, facultades específicas, personalidad jurídica, patrimonio y objeto público. 6. Verifica nombres y competencias en la LOAPF vigente, no en listas memorizadas de años anteriores.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Poder Ejecutivo: función estatal encabezada por la Presidencia en el orden federal. Administración pública: organización que realiza actividad administrativa para satisfacer fines públicos. Competencia: atribución jurídica conferida por una norma. Centralización: organización con dirección y subordinación jerárquica. Desconcentración: transferencia interna de facultades a un órgano subordinado. Descentralización: creación o reconocimiento de una persona jurídica diferenciada con patrimonio propio para un objeto público. Sector paraestatal: conjunto de entidades previsto por la LOAPF y leyes especiales.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "No confundas desconcentración con descentralización: el órgano desconcentrado continúa dentro de una dependencia; el organismo descentralizado tiene personalidad jurídica y patrimonio propios. No supongas que autonomía técnica equivale a soberanía o ausencia de control. No clasifiques un ente únicamente por su nombre: revisa su ley de creación. No memorices un número fijo de Secretarías, porque la LOAPF puede reformarse. No atribuyas automáticamente personalidad jurídica propia a todas las Secretarías ni confundas administración paraestatal con empresas privadas contratadas por el gobierno.",
+          "sourceOrigin": "complementary"
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa de la Administración Pública Federal",
+        "description": "Relación entre Presidencia, administración centralizada y sector paraestatal.",
+        "nodes": [
+          {
+            "id": "ejecutivo",
+            "label": "Poder Ejecutivo Federal",
+            "description": "Se deposita en la persona titular de la Presidencia."
+          },
+          {
+            "id": "apf",
+            "label": "Administración Pública Federal",
+            "description": "Organización auxiliar del Ejecutivo.",
+            "parentId": "ejecutivo"
+          },
+          {
+            "id": "centralizada",
+            "label": "Administración centralizada",
+            "description": "Predomina la subordinación jerárquica.",
+            "parentId": "apf"
+          },
+          {
+            "id": "secretarias",
+            "label": "Secretarías de Estado",
+            "description": "Dependencias con competencias asignadas por la LOAPF.",
+            "parentId": "centralizada"
+          },
+          {
+            "id": "desconcentrados",
+            "label": "Órganos desconcentrados",
+            "description": "Facultades específicas y subordinación a una Secretaría.",
+            "parentId": "centralizada"
+          },
+          {
+            "id": "paraestatal",
+            "label": "Administración paraestatal",
+            "description": "Entidades reguladas por la LOAPF y leyes especiales.",
+            "parentId": "apf"
+          },
+          {
+            "id": "descentralizados",
+            "label": "Organismos descentralizados",
+            "description": "Personalidad jurídica y patrimonio propios.",
+            "parentId": "paraestatal"
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Artículos 80, 89 y 90; últimas reformas DOF 02-06-2026",
+          "retrievedOn": "2026-08-10",
+          "note": "Fuente primaria para la titularidad del Ejecutivo y la división constitucional de la APF."
+        },
+        {
+          "title": "Ley Orgánica de la Administración Pública Federal",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Artículos 1, 2, 3, 17, 26 y correlativos; última reforma DOF 07-05-2026",
+          "retrievedOn": "2026-08-10",
+          "note": "Texto oficial vigente para estructura, dependencias, entidades y competencias."
+        },
+        {
+          "title": "Ley Orgánica de la Administración Pública Federal: reformas",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/loapf.htm",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Historial oficial de reformas y acceso al texto vigente",
+          "retrievedOn": "2026-08-10",
+          "note": "Permite comprobar cambios de denominación y fecha de actualización."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿En quién se deposita el Poder Ejecutivo Federal?",
+          "answer": "En una sola persona denominada Presidenta o Presidente de los Estados Unidos Mexicanos.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "question": "¿Qué regula principalmente el artículo 89 constitucional?",
+          "answer": "Las facultades y obligaciones de la persona titular de la Presidencia de la República.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "question": "¿Qué división de la APF establece el artículo 90 constitucional?",
+          "answer": "La divide en administración pública centralizada y administración pública paraestatal.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "question": "¿Qué norma desarrolla la organización de la APF?",
+          "answer": "La Ley Orgánica de la Administración Pública Federal y las leyes especiales aplicables.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "question": "¿Qué caracteriza a la centralización administrativa?",
+          "answer": "La existencia de una relación de dirección y subordinación jerárquica dentro del Ejecutivo.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "question": "¿Un órgano desconcentrado deja de pertenecer a su Secretaría?",
+          "answer": "No. Conserva subordinación jerárquica aunque reciba facultades específicas para resolver asuntos.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "question": "¿Qué dos rasgos identifican normalmente a un organismo descentralizado?",
+          "answer": "La personalidad jurídica propia y un patrimonio propio destinado al cumplimiento de su objeto.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "question": "¿Autonomía técnica significa ausencia total de control estatal?",
+          "answer": "No. La entidad continúa sujeta a la ley, presupuesto, coordinación y mecanismos de control.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "question": "¿Cómo se determina la competencia de una Secretaría?",
+          "answer": "Mediante la LOAPF, su reglamento interior y las demás leyes que le atribuyan funciones.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "question": "¿Por qué no conviene memorizar un número fijo de Secretarías?",
+          "answer": "Porque el Congreso puede reformar la LOAPF y modificar nombres, número y competencias.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "question": "¿La APF constituye un cuarto poder de la Unión?",
+          "answer": "No. Es la organización administrativa mediante la cual actúa el Poder Ejecutivo Federal.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "question": "¿Cuál es la pista decisiva para distinguir descentralización de desconcentración?",
+          "answer": "La existencia de una persona jurídica diferenciada con patrimonio propio, frente a la subordinación interna.",
+          "sourceOrigin": "complementary"
+        }
+      ],
+      "exam": {
+        "title": "Mini examen: Poder Ejecutivo y APF",
+        "description": "Diez reactivos originales de dificultad gradual con retroalimentación por opción.",
+        "questions": [
+          {
+            "text": "¿Qué precepto constitucional establece que la Administración Pública Federal será centralizada y paraestatal?",
+            "difficulty": "basic",
+            "options": ["Artículo 90", "Artículo 89", "Artículo 94", "Artículo 115"],
+            "correctOption": 0,
+            "explanation": "El artículo 90 constitucional establece expresamente la división de la Administración Pública Federal en centralizada y paraestatal y remite su organización a la ley orgánica.",
+            "optionExplanations": ["Correcta: contiene la base constitucional de la organización administrativa federal.", "Regula facultades y obligaciones presidenciales, no formula por sí solo esa división.", "Se refiere principalmente al Poder Judicial de la Federación.", "Regula las bases constitucionales del municipio libre."]
+          },
+          {
+            "text": "¿Cuál es el ordenamiento que distribuye las atribuciones principales de las Secretarías de Estado?",
+            "difficulty": "basic",
+            "options": ["Código Civil Federal", "Ley de Amparo", "Ley Orgánica de la Administración Pública Federal", "Código Nacional de Procedimientos Penales"],
+            "correctOption": 2,
+            "explanation": "La LOAPF organiza la administración federal y asigna materias a sus dependencias; otras leyes y reglamentos complementan esas atribuciones.",
+            "optionExplanations": ["Regula relaciones civiles federales y no organiza las Secretarías.", "Regula el juicio constitucional de amparo.", "Correcta: organiza la APF y distribuye competencias administrativas.", "Regula el procedimiento penal acusatorio, no la estructura administrativa."]
+          },
+          {
+            "text": "Una unidad recibe facultades técnicas específicas, pero permanece subordinada jerárquicamente a una Secretaría. ¿Cómo debe clasificarse?",
+            "difficulty": "intermediate",
+            "options": ["Organismo constitucional autónomo", "Órgano administrativo desconcentrado", "Organismo descentralizado", "Empresa privada concesionaria"],
+            "correctOption": 1,
+            "explanation": "La desconcentración distribuye facultades dentro de la misma estructura centralizada y conserva la subordinación jerárquica respecto de la dependencia correspondiente.",
+            "optionExplanations": ["Su autonomía deriva directamente de la Constitución y no coincide con el supuesto.", "Correcta: hay facultades específicas sin romper la jerarquía administrativa.", "Requeriría personalidad jurídica y patrimonio propios como entidad diferenciada.", "Una concesionaria no se integra por ese solo hecho a la estructura administrativa."]
+          },
+          {
+            "text": "Una ley crea un ente con personalidad jurídica y patrimonio propios para prestar un servicio público. ¿Cuál es la clasificación más probable?",
+            "difficulty": "intermediate",
+            "options": ["Secretaría de Estado", "Órgano desconcentrado", "Organismo descentralizado", "Unidad administrativa interna"],
+            "correctOption": 2,
+            "explanation": "La personalidad jurídica y el patrimonio propios son rasgos característicos del organismo descentralizado, constituido para atender un objeto público determinado.",
+            "optionExplanations": ["Una Secretaría forma parte de la administración centralizada.", "Mantendría subordinación interna y normalmente no sería persona jurídica distinta.", "Correcta: los rasgos descritos corresponden a la descentralización.", "Una unidad interna carece de la diferenciación jurídica planteada."]
+          },
+          {
+            "text": "¿Cuál afirmación describe correctamente la relación entre Poder Ejecutivo y Administración Pública Federal?",
+            "difficulty": "basic",
+            "options": ["Son dos poderes federales independientes", "La APF auxilia al Poder Ejecutivo en la función administrativa", "La APF depende del Poder Judicial", "La APF únicamente comprende empresas públicas"],
+            "correctOption": 1,
+            "explanation": "La Administración Pública Federal es el conjunto organizado de dependencias y entidades mediante el cual el Ejecutivo desarrolla la actividad administrativa del Estado.",
+            "optionExplanations": ["La APF no constituye un poder separado dentro de la división constitucional.", "Correcta: expresa la relación funcional entre Ejecutivo y aparato administrativo.", "No existe esa dependencia general respecto del Poder Judicial.", "También comprende el sector centralizado y otras entidades paraestatales."]
+          },
+          {
+            "text": "¿Qué dato es jurídicamente más útil para clasificar a un ente como descentralizado?",
+            "difficulty": "intermediate",
+            "options": ["Que su nombre contenga la palabra nacional", "Que tenga oficinas en varios estados", "Que su titular sea designado por una autoridad", "Que la ley le otorgue personalidad jurídica y patrimonio propios"],
+            "correctOption": 3,
+            "explanation": "La clasificación depende de la norma de creación y de su estructura jurídica; personalidad y patrimonio propios muestran una entidad diferenciada de la administración centralizada.",
+            "optionExplanations": ["La denominación no determina por sí sola la naturaleza jurídica.", "La presencia territorial no define el tipo de organización.", "Diversos entes tienen titulares designados sin ser descentralizados.", "Correcta: son elementos jurídicos centrales de la descentralización."]
+          },
+          {
+            "text": "¿Cuál enunciado sobre la autonomía técnica de una entidad paraestatal es correcto?",
+            "difficulty": "advanced",
+            "options": ["La libera de obedecer la Constitución", "Elimina todo control presupuestario", "Permite especialización, pero subsisten controles legales y administrativos", "La convierte necesariamente en órgano constitucional autónomo"],
+            "correctOption": 2,
+            "explanation": "La autonomía técnica facilita decisiones especializadas dentro del objeto de la entidad, pero no elimina su sujeción a la Constitución, leyes, presupuesto y mecanismos de control.",
+            "optionExplanations": ["Toda autoridad permanece sujeta a la Constitución.", "La autonomía no elimina las reglas y controles presupuestarios.", "Correcta: autonomía operativa no equivale a independencia absoluta.", "La autonomía constitucional exige fundamento constitucional específico."]
+          },
+          {
+            "text": "Al resolver un caso, una estudiante usa una lista de Secretarías aprendida años atrás. ¿Cuál es el método correcto?",
+            "difficulty": "intermediate",
+            "options": ["Conservar la lista porque nunca cambia", "Consultar la LOAPF vigente y la fecha de su última reforma", "Usar solamente una publicación de redes sociales", "Clasificar por el nombre coloquial de cada oficina"],
+            "correctOption": 1,
+            "explanation": "La estructura administrativa cambia mediante reformas legales. La respuesta jurídicamente fundada debe basarse en el texto vigente de la LOAPF y en fuentes oficiales.",
+            "optionExplanations": ["Las denominaciones y competencias sí pueden ser reformadas.", "Correcta: asegura vigencia y fundamento normativo verificable.", "Una red social no sustituye el texto oficial aplicable.", "Los nombres coloquiales pueden producir clasificaciones incorrectas."]
+          },
+          {
+            "text": "Si una autoridad administrativa actúa fuera de las atribuciones que le confiere la ley, ¿qué principio se compromete directamente?",
+            "difficulty": "advanced",
+            "options": ["Principio de legalidad", "Libertad contractual", "Autonomía de la voluntad", "Relatividad de las sentencias de amparo"],
+            "correctOption": 0,
+            "explanation": "Las autoridades solo pueden realizar aquello para lo que están jurídicamente facultadas. Actuar fuera de competencia vulnera el principio de legalidad administrativa.",
+            "optionExplanations": ["Correcta: la competencia debe derivar de una norma válida.", "Opera principalmente en relaciones contractuales entre particulares.", "Es una noción propia del derecho privado y tiene límites legales.", "Se refiere a los efectos de determinadas sentencias de amparo."]
+          },
+          {
+            "text": "¿Cuál comparación distingue mejor a un órgano desconcentrado de un organismo descentralizado?",
+            "difficulty": "advanced",
+            "options": ["Ambos son siempre personas jurídicas independientes", "El desconcentrado conserva subordinación; el descentralizado tiene personalidad y patrimonio propios", "El descentralizado depende jerárquicamente de una Secretaría en idénticos términos", "La diferencia depende exclusivamente del tamaño de su presupuesto"],
+            "correctOption": 1,
+            "explanation": "La desconcentración es una distribución interna de facultades dentro de una dependencia; la descentralización crea una entidad jurídicamente diferenciada para cumplir un objeto público.",
+            "optionExplanations": ["El órgano desconcentrado no es necesariamente persona jurídica distinta.", "Correcta: resume la diferencia estructural relevante para el examen.", "La coordinación sectorial no equivale a subordinación jerárquica idéntica.", "El monto presupuestal no determina por sí solo la naturaleza jurídica."]
+          }
+        ]
+      }
+    }
+  ]
+}

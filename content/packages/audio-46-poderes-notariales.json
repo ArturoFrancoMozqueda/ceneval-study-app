@@ -1,0 +1,202 @@
+{
+  "packageVersion": "1.0",
+  "subject": {
+    "name": "Derecho Notarial y Registral",
+    "description": "Fe pública, instrumentos notariales, protocolo, representación, actuaciones y efectos registrales."
+  },
+  "class": {
+    "title": "Poderes notariales: dominio, administración y representación procesal",
+    "description": "Trigésima cuarta clase del plan académico: alcance, forma, límites, uso y terminación de los poderes generales y especiales."
+  },
+  "transcript": {
+    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 46.txt",
+    "cleaned": "Se conservó la primera parte del Audio 46 sobre poderes para actos de dominio, administración y pleitos y cobranzas. El bloque posterior sobre capitulaciones matrimoniales se reservó para la clase familiar correspondiente. Se eliminaron conversaciones personales, precios, bromas, expresiones discriminatorias, anécdotas sin valor académico y afirmaciones de práctica local no acreditadas. Se corrigió que las tres categorías del artículo 2554 del Código Civil Federal son facultades diferenciadas y que un poder de dominio no incorpora automáticamente administración o litigio; que comprar, vender, donar, gravar, contratar personal, operar cuentas, suscribir títulos y comparecer a juicio exigen revisar el texto del poder y la norma especial; que los poderes generales no necesariamente deben constar siempre en escritura pública porque el código también contempla carta poder con firmas ratificadas; que la inscripción registral no es requisito universal para todo poder ni convalida facultades inexistentes; que un poder otorgado en otra entidad no pierde autenticidad por ese solo hecho; y que no existe una duración general obligatoria de tres años en el Código Civil Federal ni en los artículos michoacanos consultados, pues el plazo puede pactarse y el mandato también termina por revocación, renuncia, muerte, incapacidad, vencimiento o conclusión del negocio conforme a la legislación aplicable."
+  },
+  "topics": [{
+    "title": "Elegir y acreditar el poder según el acto",
+    "description": "Método para distinguir facultades de dominio, administración, pleitos y cobranzas y poderes especiales.",
+    "learningJourney": {
+      "openingPrompt": "Una gerente puede contratar personal, firmar cheques, vender un inmueble y desistirse de una demanda solo porque administra la empresa?",
+      "quickChecks": [
+        {
+          "prompt": "Un poder de dominio incluye automáticamente pleitos y cobranzas?",
+          "answer": "No. Las categorías son distintas; deben leerse las facultades efectivamente conferidas y las cláusulas especiales exigidas.",
+          "feedback": "No construyas una jerarquía automática entre poderes."
+        },
+        {
+          "prompt": "Todo poder general debe constar necesariamente en escritura pública?",
+          "answer": "No bajo la regla federal: puede constar en escritura pública o carta poder con dos testigos y firmas ratificadas, sin perjuicio de normas especiales.",
+          "feedback": "Distingue instrumento público de carta poder ratificada."
+        },
+        {
+          "prompt": "Ser gerente basta para disponer de una cuenta bancaria?",
+          "answer": "No necesariamente. Deben revisarse estatutos, nombramiento, poder, facultades de títulos de crédito y requisitos de la institución.",
+          "feedback": "El cargo y la representación no siempre tienen igual alcance."
+        }
+      ],
+      "practicalCase": {
+        "facts": "Una sociedad quiere que su gerente contrate personal y servicios, pague contribuciones, firme cheques, venda un inmueble y se desista de una demanda. El documento solo dice poder general para actos de administración.",
+        "question": "Qué actos puede realizar con seguridad y cuáles requieren revisar o ampliar facultades?",
+        "legalRule": "El artículo 2554 CCF distingue pleitos y cobranzas, administración y dominio; el 2587 exige poder o cláusula especial para actos procesales determinados. La suscripción de títulos de crédito y la disposición de bienes se rigen además por normas especiales.",
+        "reasoning": "Contratar servicios o personal y atender pagos ordinarios puede encajar en administración si corresponde al giro. Vender el inmueble es acto de dominio. Desistirse requiere facultad procesal especial. Firmar cheques no se presume por el cargo: debe existir facultad y cumplir requisitos bancarios y cambiarios.",
+        "conclusion": "Debe diseñarse un poder por funciones y riesgos, no confiar en el nombre del cargo ni en una supuesta inclusión automática de categorías."
+      },
+      "closingPrompt": "Clasifica cada acto por dominio, administración, litigio o facultad especial y explica qué documento acreditaría la representación.",
+      "nextActivity": "Estudia el mapa visual, responde la guía de doce preguntas y resuelve los diez casos originales."
+    },
+    "materials": [
+      {
+        "type": "short_answer",
+        "title": "Respuesta breve",
+        "content": "Pleitos y cobranzas permite representación judicial y de cobro dentro de las facultades otorgadas; administración cubre conservación y gestión ordinaria de bienes o negocios; dominio confiere facultades de dueño para disponer y defender bienes. Un poder especial se limita a un acto o negocio. Las categorías no se acumulan automáticamente: hay que leer objeto, límites, cláusulas especiales, forma, vigencia y norma aplicable.",
+        "sourceOrigin": "mixed"
+      },
+      {
+        "type": "full_explanation",
+        "title": "Explicación completa desde cero",
+        "content": "El mandato es el contrato por el que una persona encarga a otra la realización de actos jurídicos por su cuenta. El poder es la manifestación que legitima al apoderado para actuar frente a terceros. En la práctica suelen documentarse juntos, pero conviene distinguir la relación interna de encargo y la representación externa.\n\nEl artículo 2553 del Código Civil Federal clasifica el mandato en general o especial. Son generales los tres primeros supuestos del artículo 2554: pleitos y cobranzas, administración y dominio. Cualquier otro mandato es especial. El poder especial identifica un acto, bien, procedimiento o finalidad determinada; también pueden limitarse expresamente las facultades de un poder general.\n\nPleitos y cobranzas sirve para representar en controversias y gestiones de cobro, pero la frase general no elimina todas las exigencias. El artículo 2587 enumera actos que requieren poder o cláusula especial, como desistirse, transigir, comprometer en árbitros, absolver posiciones, hacer cesión de bienes, recusar y recibir pagos. Además deben revisarse la materia y la norma procesal vigente. El CNPCF reconoce la comparecencia de personas físicas mediante representantes autorizados y de personas jurídicas conforme a ley, estatutos, poderes o mandatos; su implementación es gradual hasta el 1 de abril de 2027.\n\nAdministrar consiste en conservar, aprovechar y gestionar bienes o una empresa sin transmitir su sustancia. Puede abarcar contratación ordinaria de personal y servicios, cobros, pagos, contribuciones y actos propios del giro. Sin embargo, no todo acto de una gerencia se presume autorizado. Estatutos, acuerdos corporativos, límites monetarios, instrucciones y normas especiales pueden exigir autorización adicional.\n\nFirmar cheques, pagarés u otros títulos no debe resolverse solo con la etiqueta administración. La facultad para suscribir títulos de crédito tiene regulación especial; el documento y los registros de la institución financiera deben comprobarse. El reactivo correcto separa administrar una operación de asumir una obligación cambiaria o disponer de fondos.\n\nDominio permite ejercer facultades de dueño respecto de bienes y realizar gestiones para defenderlos. Comprende típicamente enajenar, donar, gravar o constituir derechos reales cuando el poder y la ley lo permiten. Comprar no siempre se clasifica mecánicamente como dominio: debe analizarse si es adquisición extraordinaria, acto del giro, inversión administrativa o si implica financiación y gravamen.\n\nEs incorrecto enseñar que dominio incluye siempre administración y pleitos. El artículo 2554 describe tres poderes generales separados. Un instrumento puede otorgar los tres, pero debe decirlo o desprenderse válidamente de su texto y régimen aplicable. Para examen, identifica la facultad principal de cada conducta y evita inferencias no escritas.\n\nLa forma depende del tipo y del valor o naturaleza del negocio. Conforme a los artículos 2551 y 2555 CCF, el mandato escrito puede constar en escritura pública, escrito privado con dos testigos y firmas ratificadas o carta poder; cuando es general, supera el umbral legal o autoriza un acto que debe constar en instrumento público, se requiere escritura pública o carta poder con testigos y firmas ratificadas. Por ello, no es exacto decir que todo poder general exige exclusivamente escritura. Una norma local o especial puede establecer algo diferente.\n\nTampoco existe inscripción universal de todos los poderes. La publicidad registral puede ser necesaria o útil en ciertos actos, personas morales o registros, pero no sustituye la forma ni crea facultades. Un poder otorgado en Michoacán puede usarse en Querétaro si satisface las reglas aplicables; pueden requerirse testimonio, certificación, inscripción o comprobación adicional según acto y registro, pero el cambio de entidad no lo vuelve falso.\n\nLa duración debe leerse en el instrumento y la ley. El CCF no establece un máximo general de tres años. El artículo 2595 dispone terminación por revocación, renuncia, muerte, interdicción, vencimiento del plazo, conclusión del negocio y otros casos. En Michoacán los artículos 1714 a 1716 regulan categorías y forma, sin imponer en esos preceptos un plazo universal trienal. Una práctica notarial o un plazo escrito no debe presentarse como regla nacional.\n\nLa revocación debe comunicarse de forma eficaz. Si el mandato era para tratar con persona determinada, el artículo 2597 CCF exige notificarle la revocación para evitar que actos posteriores de un mandatario produzcan efectos frente a quien actuó de buena fe. También conviene recuperar testimonios y avisar a instituciones y registros pertinentes.\n\nPara resolver casos CENEVAL usa cinco preguntas: quién otorga y con qué capacidad; qué acto concreto realizará el apoderado; qué categoría y cláusulas especiales necesita; qué forma y publicidad exige la ley; y si el poder sigue vigente y no fue revocado. Después compara el acto ejecutado con el texto, sin dejarte llevar solo por el cargo de gerente o representante legal.",
+        "sourceOrigin": "mixed"
+      },
+      {
+        "type": "legal_basis",
+        "title": "Fundamento jurídico vigente",
+        "content": "Código Civil Federal, última reforma DOF 14-11-2025: artículos 2546 a 2557 sobre mandato, clases y forma; 2586 y 2587 sobre mandato judicial y cláusulas especiales; 2592 y 2595 a 2604 sobre terminación y efectos. Código Civil para el Estado de Michoacán de Ocampo, texto oficial con última reforma informada 30-11-2023: artículos 1714 a 1716 y correlativos. Código Nacional de Procedimientos Civiles y Familiares, última reforma DOF 15-01-2026: artículos 4 y 128 sobre representación, sujeto a entrada en vigor gradual. Deben añadirse la norma corporativa, registral, bancaria o cambiaria específica del acto.",
+        "sourceOrigin": "complementary"
+      },
+      {
+        "type": "simple_example",
+        "title": "Ejemplo sencillo",
+        "content": "Lucía recibe poder de administración para contratar mantenimiento y pagar servicios de un hotel. Puede realizar esas gestiones ordinarias dentro de los límites escritos. No puede asumir que también puede vender el hotel o desistirse de una demanda: el primer acto es de dominio y el segundo exige revisar facultades procesales especiales.",
+        "sourceOrigin": "mixed"
+      },
+      {
+        "type": "ceneval_example",
+        "title": "Caso tipo CENEVAL",
+        "content": "Una persona moral otorga a su gerente poder general para administrar bienes. El gerente pretende vender una bodega y transigir un juicio. La mejor respuesta es revisar y ampliar el instrumento: la venta requiere dominio y la transacción exige facultad o cláusula especial; el cargo de gerente no corrige la falta.",
+        "sourceOrigin": "mixed"
+      },
+      {
+        "type": "summary",
+        "title": "Resumen",
+        "content": "Poder general: pleitos y cobranzas, administración o dominio. Poder especial: acto concreto. Las categorías son separadas. Administración gestiona; dominio dispone; pleitos representa en controversias. Algunos actos procesales requieren cláusula especial. La forma puede ser escritura o carta poder ratificada según la ley. Inscripción y plazo no son universales. Siempre verifica otorgante, acto, facultades, forma, publicidad, vigencia y revocación.",
+        "sourceOrigin": "mixed"
+      },
+      {
+        "type": "study_guide",
+        "title": "Guía intensiva de preguntas y respuestas",
+        "content": "1. Qué es mandato? Respuesta: encargo de actos jurídicos. 2. Qué es poder? Respuesta: facultad de representación frente a terceros. 3. Cuáles son los poderes generales? Respuesta: pleitos y cobranzas, administración y dominio. 4. Qué es poder especial? Respuesta: el limitado a un acto o negocio. 5. Administración permite vender? Respuesta: no por sí sola. 6. Dominio incluye litigio? Respuesta: no automáticamente. 7. Qué cubre pleitos y cobranzas? Respuesta: representación litigiosa y cobro dentro de sus cláusulas. 8. Desistirse requiere algo adicional? Respuesta: cláusula o poder especial conforme a la ley. 9. Todo poder general va solo en escritura? Respuesta: no; la regla federal también admite carta poder ratificada. 10. Todo poder se inscribe? Respuesta: no, depende del acto y registro. 11. Dura siempre tres años? Respuesta: no existe ese máximo general federal. 12. Cómo termina? Respuesta: entre otras causas, revocación, renuncia, muerte, incapacidad, plazo o conclusión del negocio.",
+        "sourceOrigin": "mixed"
+      },
+      {
+        "type": "key_concepts",
+        "title": "Conceptos clave",
+        "content": "Mandante: quien encarga. Mandatario: quien acepta el encargo. Poderdante: quien confiere representación. Apoderado: quien actúa frente a terceros. Poder general: categoría amplia legal. Poder especial: acto determinado. Pleitos y cobranzas: defensa y cobro. Administración: gestión y conservación. Dominio: disposición como dueño. Cláusula especial: autorización expresa exigida. Testimonio: copia autorizada del instrumento. Ratificación: confirmación formal de firmas. Publicidad registral: oponibilidad o difusión cuando proceda. Vigencia: periodo eficaz. Revocación: retiro del poder. Sustitución: designación de otro representante cuando se autoriza. Exceso de poder: acto fuera de facultades.",
+        "sourceOrigin": "mixed"
+      },
+      {
+        "type": "common_errors",
+        "title": "Errores comunes",
+        "content": "No confundas cargo laboral con representación. No supongas que dominio incluye administración y litigio. No clasifiques toda compra como dominio sin analizar el giro. No equipares administrar con firmar cualquier título de crédito. No afirmes que todos los poderes generales requieren exclusivamente escritura pública. No exijas inscripción universal. No rechaces un poder solo porque procede de otra entidad. No inventes un máximo nacional de tres años. No olvides límites monetarios, temporales o territoriales. No omitas cláusulas especiales para desistir, transigir o recibir pagos. No confundas autenticidad con suficiencia de facultades. No uses un poder revocado o vencido.",
+        "sourceOrigin": "complementary"
+      }
+    ],
+    "conceptMap": {
+      "title": "Mapa visual: seleccionar un poder",
+      "description": "Del acto concreto a la categoría, formalidad y vigencia necesarias.",
+      "nodes": [
+        {"id":"poder","label":"Poder y mandato","description":"Representación para actos jurídicos."},
+        {"id":"sujetos","label":"Sujetos","description":"Quién otorga y quién actúa.","parentId":"poder"},
+        {"id":"mandante","label":"Mandante o poderdante","description":"Define encargo y facultades.","parentId":"sujetos"},
+        {"id":"mandatario","label":"Mandatario o apoderado","description":"Actúa dentro de límites.","parentId":"sujetos"},
+        {"id":"clasificacion","label":"Clasificación","description":"General o especial.","parentId":"poder"},
+        {"id":"general","label":"Poder general","description":"Tres categorías legales.","parentId":"clasificacion"},
+        {"id":"especial","label":"Poder especial","description":"Acto o negocio determinado.","parentId":"clasificacion"},
+        {"id":"pleitos","label":"Pleitos y cobranzas","description":"Representación y cobro.","parentId":"general"},
+        {"id":"juicio","label":"Comparecer en juicio","description":"Acreditar personalidad.","parentId":"pleitos"},
+        {"id":"cobro","label":"Gestionar cobros","description":"Dentro del encargo.","parentId":"pleitos"},
+        {"id":"clausula","label":"Cláusula especial","description":"Desistir, transigir y otros.","parentId":"pleitos"},
+        {"id":"administracion","label":"Administración","description":"Gestión y conservación.","parentId":"general"},
+        {"id":"personal","label":"Personal y servicios","description":"Actos ordinarios del giro.","parentId":"administracion"},
+        {"id":"pagos","label":"Pagos y contribuciones","description":"Según facultades y giro.","parentId":"administracion"},
+        {"id":"bancos","label":"Operación bancaria","description":"Revisar facultad específica.","parentId":"administracion"},
+        {"id":"dominio","label":"Dominio","description":"Facultades de dueño.","parentId":"general"},
+        {"id":"venta","label":"Enajenar","description":"Transmitir bienes.","parentId":"dominio"},
+        {"id":"gravamen","label":"Gravar","description":"Constituir garantía o derecho real.","parentId":"dominio"},
+        {"id":"defensa","label":"Defender bienes","description":"Gestiones vinculadas al dominio.","parentId":"dominio"},
+        {"id":"separadas","label":"Categorías separadas","description":"No se incluyen automáticamente.","parentId":"general"},
+        {"id":"forma","label":"Forma","description":"Depende de tipo y acto.","parentId":"poder"},
+        {"id":"escritura","label":"Escritura pública","description":"Una forma posible o exigida.","parentId":"forma"},
+        {"id":"carta","label":"Carta poder ratificada","description":"Alternativa prevista por CCF.","parentId":"forma"},
+        {"id":"instrumento","label":"Acto en instrumento público","description":"Exige forma congruente.","parentId":"forma"},
+        {"id":"publicidad","label":"Publicidad","description":"Solo cuando corresponda.","parentId":"poder"},
+        {"id":"registro","label":"Inscripción registral","description":"No es requisito universal.","parentId":"publicidad"},
+        {"id":"otraentidad","label":"Uso en otra entidad","description":"Revisar certificación y ley.","parentId":"publicidad"},
+        {"id":"control","label":"Control de vigencia","description":"Confirmar eficacia actual.","parentId":"poder"},
+        {"id":"plazo","label":"Plazo pactado","description":"No hay máximo federal general de tres años.","parentId":"control"},
+        {"id":"revocacion","label":"Revocación","description":"Retiro y notificación.","parentId":"control"},
+        {"id":"renuncia","label":"Renuncia","description":"Decisión del mandatario.","parentId":"control"},
+        {"id":"terminacion","label":"Otras causas","description":"Muerte, incapacidad o conclusión.","parentId":"control"},
+        {"id":"metodo","label":"Método CENEVAL","description":"Acto, facultad, forma y vigencia.","parentId":"poder"}
+      ]
+    },
+    "references": [
+      {
+        "title": "Código Civil Federal",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCF.pdf",
+        "institution": "Cámara de Diputados del H. Congreso de la Unión",
+        "jurisdiction": "Federal, México",
+        "citation": "Artículos 2546 a 2557, 2586 a 2587 y 2592 a 2604; última reforma DOF 14-11-2025",
+        "retrievedOn": "2026-08-11",
+        "note": "Clases, alcance, forma, cláusulas especiales y terminación del mandato."
+      },
+      {
+        "title": "Código Civil para el Estado de Michoacán de Ocampo",
+        "url": "https://congresomich.gob.mx/leyes/",
+        "institution": "Congreso del Estado de Michoacán de Ocampo",
+        "jurisdiction": "Michoacán",
+        "citation": "Artículos 1714 a 1716 y correlativos; última reforma informada 30-11-2023",
+        "retrievedOn": "2026-08-11",
+        "note": "Regulación local de poderes generales, especiales y su forma."
+      },
+      {
+        "title": "Código Nacional de Procedimientos Civiles y Familiares",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+        "institution": "Cámara de Diputados del H. Congreso de la Unión",
+        "jurisdiction": "Nacional, México",
+        "citation": "Artículos 4 y 128 y transitorios; última reforma DOF 15-01-2026",
+        "retrievedOn": "2026-08-11",
+        "note": "Representación procesal e implementación gradual del código nacional."
+      }
+    ],
+    "flashcards": [
+      {"question":"Qué diferencia mandato y poder?","answer":"El mandato regula el encargo interno; el poder legitima la representación frente a terceros.","sourceOrigin":"complementary"},
+      {"question":"Cuáles son los tres poderes generales?","answer":"Pleitos y cobranzas, administración y dominio.","sourceOrigin":"mixed"},
+      {"question":"Qué caracteriza al poder especial?","answer":"Se limita a un acto, bien, procedimiento o negocio determinado.","sourceOrigin":"complementary"},
+      {"question":"Qué permite administración?","answer":"Gestionar y conservar bienes o negocios dentro del giro y de los límites escritos.","sourceOrigin":"mixed"},
+      {"question":"Qué permite dominio?","answer":"Ejercer facultades de dueño, incluida disposición, cuando el texto y la ley lo autorizan.","sourceOrigin":"mixed"},
+      {"question":"Dominio incluye siempre pleitos?","answer":"No, las categorías del poder general son distintas.","sourceOrigin":"complementary"},
+      {"question":"Qué exige desistirse de un juicio?","answer":"Poder o cláusula especial conforme a la legislación aplicable.","sourceOrigin":"complementary"},
+      {"question":"Ser gerente basta para firmar cheques?","answer":"No; se revisan estatutos, poder, facultad cambiaria y requisitos bancarios.","sourceOrigin":"mixed"},
+      {"question":"Todo poder general exige solo escritura?","answer":"No; el CCF también contempla carta poder con testigos y firmas ratificadas.","sourceOrigin":"complementary"},
+      {"question":"Todo poder debe inscribirse?","answer":"No; la publicidad registral depende del acto y del régimen aplicable.","sourceOrigin":"complementary"},
+      {"question":"Existe vigencia federal máxima de tres años?","answer":"No; debe revisarse el plazo pactado y las causas legales de terminación.","sourceOrigin":"complementary"},
+      {"question":"Por qué se notifica la revocación?","answer":"Para impedir que terceros de buena fe confíen en una representación ya retirada.","sourceOrigin":"complementary"}
+    ],
+    "exam": {
+      "title": "Evaluación: poderes y representación",
+      "description": "Diez casos originales para elegir facultad, forma y control de vigencia.",
+      "questions": [
+        {"text":"Una apoderada debe vender un inmueble de su representado. Qué facultad principal requiere?","difficulty":"basic","options":["Actos de dominio","Actos de administración","Solo pleitos y cobranzas"],"correctOption":0,"explanation":"Enajenar un inmueble es un acto dispositivo propio del dominio.","optionExplanations":["Permite disposición como dueño dentro de límites.","La administración ordinaria no basta para vender.","Litigar no autoriza enajenar."]},
+        {"text":"El apoderado contratará mantenimiento y pagará servicios ordinarios de un hotel. Qué poder corresponde?","difficulty":"basic","options":["Administración","Dominio exclusivamente","Pleitos y cobranzas"],"correctOption":0,"explanation":"Son actos ordinarios de gestión y conservación del negocio.","optionExplanations":["Coincide con la finalidad administrativa.","No se transmite ni grava el hotel.","No existe controversia o cobro judicial."]},
+        {"text":"Un poder dice únicamente actos de dominio. Puede presumirse que también autoriza cualquier litigio?","difficulty":"intermediate","options":["No, deben revisarse facultades separadas","Sí, siempre incluye todos los poderes","Sí, porque defender bienes equivale a todo juicio"],"correctOption":0,"explanation":"Las categorías del artículo 2554 son diferenciadas y el instrumento debe interpretarse por su texto.","optionExplanations":["Evita una inclusión automática inexistente.","Confunde amplitud con acumulación.","La defensa del bien no sustituye toda cláusula procesal."]},
+        {"text":"La mandataria pretende transigir una demanda con poder de pleitos sin facultad especial. Qué debe hacerse?","difficulty":"advanced","options":["Verificar y conferir cláusula especial","Permitirlo por ser abogada","Inscribir el poder y nada más"],"correctOption":0,"explanation":"Transigir es uno de los actos que requieren poder o cláusula especial.","optionExplanations":["Atiende la exigencia del artículo 2587.","La profesión no amplía el poder.","La inscripción no crea una facultad omitida."]},
+        {"text":"El Código Civil Federal exige forma para un poder general. Cuál opción refleja su regla?","difficulty":"intermediate","options":["Escritura pública o carta poder con testigos y firmas ratificadas","Únicamente escritura pública en todos los casos","Siempre puede ser verbal"],"correctOption":0,"explanation":"El artículo 2555 contempla esas dos formas para el mandato general.","optionExplanations":["Reproduce la alternativa legal.","Elimina indebidamente la carta ratificada.","El mandato general no queda en la excepción verbal."]},
+        {"text":"Un poder fue otorgado en Michoacán y se presentará en Querétaro. Qué conclusión es correcta?","difficulty":"intermediate","options":["Revisar forma, certificación y requisitos del acto","Es inválido por provenir de otro estado","Debe rehacerse siempre ante el juez local"],"correctOption":0,"explanation":"El origen territorial no produce falsedad automática; importa cumplir el régimen aplicable.","optionExplanations":["Es el control jurídico pertinente.","Federalismo no implica invalidez automática.","No hay regla universal de repetición judicial."]},
+        {"text":"Una gerente tiene acceso operativo a la empresa, pero el poder no menciona títulos de crédito. Puede firmar pagarés sin más?","difficulty":"advanced","options":["No, debe verificarse facultad específica","Sí, por su cargo","Sí, porque administrar incluye toda obligación"],"correctOption":0,"explanation":"La suscripción cambiaria requiere revisar la autorización especial y la norma aplicable.","optionExplanations":["Separa gestión ordinaria de obligación cambiaria.","El puesto no acredita facultad suficiente.","La administración tiene límites."]},
+        {"text":"El documento no fija plazo y alguien afirma que todo poder michoacano vence en tres años. Es correcta la afirmación?","difficulty":"intermediate","options":["No, no es una regla universal","Sí, todos vencen exactamente a los tres años","Sí, aunque el negocio termine antes"],"correctOption":0,"explanation":"Debe leerse el instrumento y las causas legales; los preceptos consultados no fijan ese máximo general.","optionExplanations":["Distingue práctica, pacto y ley.","Generaliza una duración no universal.","La conclusión del negocio también puede terminarlo."]},
+        {"text":"El mandante revoca un poder dado para negociar con un proveedor específico. Qué medida protege frente a actos posteriores?","difficulty":"advanced","options":["Notificar la revocación al proveedor","Guardar la revocación en privado","Esperar a que el apoderado la mencione"],"correctOption":0,"explanation":"La notificación evita que el tercero determinado siga confiando de buena fe.","optionExplanations":["Cumple la lógica del artículo 2597.","No informa al tercero expuesto.","Deja el control al representante revocado."]},
+        {"text":"Una persona solo necesita que otra firme una escritura de venta determinada. Qué diseño reduce el riesgo?","difficulty":"advanced","options":["Poder especial con bien, acto y límites","Poder general ilimitado para todo","Nombramiento verbal sin ratificación"],"correctOption":0,"explanation":"La especialidad ajusta la representación al negocio concreto y evita facultades innecesarias.","optionExplanations":["Define con precisión objeto y alcance.","Otorga más facultades de las necesarias.","No satisface la forma del acto pretendido."]}
+      ]
+    }
+  }]
+}

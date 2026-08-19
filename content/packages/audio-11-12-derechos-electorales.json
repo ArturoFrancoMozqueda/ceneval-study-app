@@ -1,0 +1,277 @@
+{
+  "packageVersion": "1.0",
+  "subject": {
+    "name": "Derecho electoral y juicio de amparo",
+    "description": "Derechos político-electorales, sistema de medios de impugnación y mecanismos constitucionales de protección."
+  },
+  "class": {
+    "title": "Derechos político-electorales y medios de impugnación",
+    "description": "Décima clase del curso: distingue voto activo y pasivo, asociación y afiliación, autonomía indígena, juicio de la ciudadanía, juicio de revisión constitucional electoral, definitividad y competencia del TEPJF."
+  },
+  "transcript": {
+    "originalFiles": [
+      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 11.txt",
+      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 12.txt"
+    ],
+    "cleaned": "Se integró el contenido electoral del Audio 11 y únicamente el cierre electoral de las líneas iniciales del Audio 12; el bloque posterior sobre amparo directo se reservó para C11. Se eliminaron promociones, datos personales, bromas, expresiones ofensivas, opiniones partidistas y ejemplos no verificables. Se conservaron los problemas sobre voto pasivo, afiliación, sistemas normativos indígenas y decisiones electorales locales. Se corrigió que los organismos públicos locales electorales no son dependencias del INE; que no todo asunto federal corresponde a Sala Superior; que el juicio de revisión constitucional electoral solo puede promoverse por partidos políticos mediante representantes legítimos; y que sus requisitos incluyen determinancia, reparabilidad y agotamiento de instancias. También se actualizaron la protección de cargos judiciales electos, los principios rectores y la denominación incluyente de juicio de la ciudadanía conforme a la legislación vigente."
+  },
+  "topics": [
+    {
+      "title": "Cómo elegir la vía electoral correcta",
+      "description": "Derechos protegidos, acto reclamado, legitimación, definitividad, JDC, JRC, órganos competentes y efectos.",
+      "learningJourney": {
+        "openingPrompt": "Si un tribunal electoral local confirma la negativa de registro de una candidatura ciudadana, ¿la persona debe promover amparo o un medio electoral?",
+        "quickChecks": [
+          {
+            "prompt": "¿Qué protege el juicio de la ciudadanía o JDC?",
+            "answer": "Principalmente los derechos de votar, ser votada o votado, asociación política, afiliación partidista e integración de determinadas autoridades electorales; la ley también incorporó cargos judiciales federales electos.",
+            "feedback": "La vía protege derechos personales político-electorales y no se reduce al día de la elección."
+          },
+          {
+            "prompt": "¿Quién puede promover el JRC?",
+            "answer": "Solo los partidos políticos, por medio de sus representantes legítimos.",
+            "feedback": "Una candidatura o persona ciudadana no sustituye esa legitimación; debe identificar la vía personal procedente."
+          },
+          {
+            "prompt": "¿Toda controversia federal corresponde a Sala Superior?",
+            "answer": "No. La competencia entre Sala Superior y salas regionales depende del derecho, cargo, elección, territorio y reglas legales aplicables.",
+            "feedback": "Por ejemplo, diversos asuntos sobre diputaciones y senadurías de mayoría relativa corresponden a salas regionales."
+          }
+        ],
+        "practicalCase": {
+          "facts": "Un partido impugna una sentencia definitiva del tribunal electoral de un estado relacionada con una elección municipal. Alega violación constitucional determinante, agotó las instancias locales y todavía es posible reparar antes de la toma de posesión.",
+          "question": "¿Qué medio y qué órgano federal son, en principio, competentes?",
+          "legalRule": "Los artículos 86 a 88 de la Ley General del Sistema de Medios de Impugnación regulan el JRC: impugna actos o resoluciones definitivos de autoridades electorales locales, exige determinancia, reparabilidad y definitividad, y solo lo promueven partidos. Para elecciones municipales conoce la sala regional territorialmente competente.",
+          "reasoning": "El promovente sí tiene legitimación; el acto proviene de autoridad electoral local y es definitivo; la violación puede incidir en el resultado y aún es reparable. Como se relaciona con ayuntamiento, la distribución legal apunta a sala regional, no automáticamente a Sala Superior.",
+          "conclusion": "En principio procede JRC ante la sala regional correspondiente, sujeto al cumplimiento integral de requisitos y oportunidad."
+        },
+        "closingPrompt": "Resuelve cada caso con cuatro filtros: derecho o elección afectada, quién promueve, si agotó la vía previa y qué Sala corresponde.",
+        "nextActivity": "Recorre el mapa visual, responde la guía de doce preguntas y resuelve diez casos tipo EGEL."
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta corta: JDC y JRC",
+          "content": "El JDC o juicio de la ciudadanía protege derechos político-electorales personales, como votar, ser votada o votado, asociarse y afiliarse. El JRC controla actos o resoluciones definitivos de autoridades electorales locales que pueden violar la Constitución y afectar de manera determinante una elección; únicamente pueden promoverlo partidos políticos con representación legítima.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "Los derechos político-electorales permiten intervenir en la formación democrática del poder. El artículo 35 constitucional incluye votar —voto activo— y poder ser votada o votado en condiciones de paridad —voto pasivo—, además de asociarse individual y libremente para participar pacíficamente en asuntos políticos. La afiliación a un partido debe ser libre e individual. Estos derechos se relacionan con igualdad, no discriminación, petición política y acceso a funciones públicas.\n\nLa organización electoral se rige por certeza, legalidad, independencia, imparcialidad, máxima publicidad y objetividad. El INE ejerce competencias nacionales y coordina un sistema con organismos públicos locales electorales. Estos organismos locales tienen personalidad y autonomía conforme al diseño constitucional y no deben describirse simplemente como oficinas subordinadas al INE, aunque el Instituto pueda asumir, atraer o delegar funciones en los casos legales.\n\nEl Tribunal Electoral del Poder Judicial de la Federación es la máxima autoridad jurisdiccional electoral, salvo el control abstracto del artículo 105. Funciona con Sala Superior y salas regionales. La competencia no se decide solo por decir federal o local: deben revisarse el cargo, el tipo de elección, el territorio, el acto y la regla legal concreta. Sala Superior conoce, entre otros, determinados asuntos presidenciales, gubernaturas, Jefatura de Gobierno, representación proporcional y órganos partidistas nacionales; las salas regionales conocen diversos casos de mayoría relativa, diputaciones locales, municipios, alcaldías y órganos partidistas no nacionales.\n\nEl juicio para la protección de los derechos político-electorales de la ciudadanía, conocido como JDC, procede cuando una persona reclama violaciones a votar, ser votada, asociarse políticamente o afiliarse. También puede proteger el derecho a integrar autoridades electorales locales y, desde la reforma de 2024, la titularidad de cargos del Poder Judicial de la Federación electos por voto. La ley contempla supuestos de credencial, lista nominal, registro de candidatura, vida interna partidista y otros actos que afectan directamente el derecho.\n\nPor regla general deben agotarse los medios internos del partido o los recursos locales idóneos antes de acudir a la instancia federal: es el principio de definitividad. Sin embargo, la aplicación concreta exige revisar si la vía previa es efectiva, si los plazos permiten reparar y si existe una excepción jurisprudencial. No basta memorizar que siempre se agota o que siempre puede saltarse.\n\nLas sentencias de fondo del JDC pueden confirmar, revocar o modificar y restituir a la parte promovente en el goce del derecho. Aunque el artículo 84 las califica como definitivas e inatacables, la propia ley prevé recurso de reconsideración contra ciertas sentencias de salas regionales en supuestos extraordinarios; no debe afirmarse que cualquier JDC tiene una apelación ordinaria.\n\nEl JRC es distinto. Solo impugna actos o resoluciones de autoridades electorales de las entidades federativas vinculados con comicios locales. El acto debe ser definitivo y firme, violar la Constitución, ser determinante, admitir reparación material y jurídica antes de la instalación o toma de posesión y haber agotado instancias previas. Su legitimación pertenece exclusivamente a partidos políticos mediante representantes legítimos. Sala Superior conoce los relativos a gubernaturas y Jefatura de Gobierno; las salas regionales, los de autoridades municipales, diputaciones locales y alcaldías de Ciudad de México.\n\nLos sistemas normativos de pueblos y comunidades indígenas merecen protección constitucional. La autonomía puede comprender elección de autoridades propias, pero debe respetar la Constitución, la dignidad e integridad de las mujeres, la igualdad sustantiva y los derechos humanos. Una práctica histórica no justifica excluir a las mujeres. Las acciones afirmativas buscan remover desigualdades estructurales y su validez se analiza por finalidad, necesidad y proporcionalidad, no mediante descalificaciones generales.\n\nEl amparo no reemplaza el sistema electoral. La Ley de Amparo establece improcedencia contra resoluciones o declaraciones de autoridades competentes en materia electoral. Ante un problema electoral debe identificarse el medio previsto por la legislación electoral, su plazo, legitimación, autoridad responsable y Sala competente."
+          ,
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Constitución, artículos 2, 35, 41 y 99: autonomía indígena, derechos ciudadanos, principios y autoridades electorales, y jurisdicción del TEPJF. Ley General del Sistema de Medios de Impugnación en Materia Electoral, artículos 79 a 85: JDC; 86 a 93: JRC; y 61 a 70: reconsideración. Ley General de Instituciones y Procedimientos Electorales: distribución de funciones entre INE y organismos públicos locales. Ley de Amparo, artículo 61, fracción XV: improcedencia frente a resoluciones o declaraciones electorales.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo: voto pasivo",
+          "content": "Una autoridad niega indebidamente a una persona el registro para competir por una presidencia municipal. Tras agotar el medio local eficaz, la persona puede promover juicio de la ciudadanía ante la sala regional competente. El objeto es restituir su derecho a ser votada, no obtener una indemnización ni sustituir la vía con amparo.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Cómo aparece en un reactivo tipo EGEL",
+          "content": "Si promueve una persona por su candidatura, afiliación, credencial o integración de autoridad, piensa primero en JDC. Si promueve un partido contra una resolución electoral local definitiva, verifica JRC y sus seis requisitos. Para competencia, no uses la fórmula simplista federal igual a Superior: identifica cargo y ámbito. Descarta amparo cuando el acto es materialmente electoral.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "summary",
+          "title": "Resumen para repasar",
+          "content": "Voto activo es votar; voto pasivo es ser votada o votado. Principios: certeza, legalidad, independencia, imparcialidad, máxima publicidad y objetividad. JDC protege derechos personales y exige, por regla, definitividad. JRC lo promueven partidos contra decisiones electorales locales definitivas, constitucionalmente relevantes, determinantes y reparables. Superior: gubernaturas y Jefatura de Gobierno en JRC; regionales: municipios, diputaciones locales y alcaldías. No usar amparo como sustituto electoral.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de preguntas y respuestas",
+          "content": "1. ¿Qué es voto activo? Respuesta: el derecho de votar.\n2. ¿Qué es voto pasivo? Respuesta: el derecho de ser votada o votado cumpliendo requisitos constitucionales y legales.\n3. ¿Qué protege el JDC? Respuesta: votar, ser votado, asociación política, afiliación y otros derechos político-electorales previstos por la ley.\n4. ¿Quién promueve JDC? Respuesta: la ciudadanía afectada, individualmente o mediante representación legal en los supuestos permitidos.\n5. ¿Qué efecto favorable puede tener? Respuesta: revocar o modificar y restituir el derecho violado.\n6. ¿Qué es definitividad? Respuesta: agotar previamente los medios idóneos disponibles.\n7. ¿Quién promueve JRC? Respuesta: exclusivamente partidos políticos por representación legítima.\n8. ¿Contra qué procede JRC? Respuesta: actos o resoluciones definitivos de autoridades electorales locales vinculados con comicios.\n9. ¿Qué significa determinancia? Respuesta: que la violación pueda influir en el proceso o resultado electoral.\n10. ¿Quién conoce JRC de gobernador? Respuesta: Sala Superior.\n11. ¿Quién conoce JRC municipal? Respuesta: la sala regional territorialmente competente.\n12. ¿Procede amparo contra una resolución electoral? Respuesta: no; debe usarse el sistema electoral aplicable.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Voto activo: elegir. Voto pasivo: competir y acceder al cargo. Afiliación: pertenencia libre e individual a partido. Asociación política: organización pacífica para participar. JDC: tutela personal político-electoral. JRC: control constitucional de decisiones electorales locales promovido por partidos. Definitividad: agotamiento de vías previas eficaces. Determinancia: aptitud para influir en proceso o resultado. Reparabilidad: posibilidad temporal y jurídica de corregir. OPLE: autoridad electoral administrativa local autónoma.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes y correcciones",
+          "content": "Error: creer que JDC solo protege candidaturas. Corrección: también voto, afiliación, asociación y otros derechos. Error: decir que cualquier persona promueve JRC. Corrección: solo partidos con representación legítima. Error: mandar toda elección federal a Sala Superior. Corrección: la competencia se distribuye por cargo y materia. Error: afirmar que los OPLE son parte subordinada del INE. Corrección: son autoridades locales autónomas coordinadas en el sistema nacional. Error: sustituir legalidad por constitucionalidad en la lista de principios del INE. Corrección: memoriza los seis del artículo 41. Error: promover amparo electoral. Corrección: aplica el medio electoral y su definitividad.",
+          "sourceOrigin": "mixed"
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual de derechos y medios electorales",
+        "description": "Parte del derecho afectado y avanza por legitimación, definitividad, vía y Sala competente.",
+        "nodes": [
+          {"id":"sistema","label":"Protección político-electoral","description":"Derechos, autoridades y medios."},
+          {"id":"derechos","label":"1. Derechos","description":"Artículo 35 y derechos relacionados.","parentId":"sistema"},
+          {"id":"activo","label":"Voto activo","description":"Elegir mediante sufragio.","parentId":"derechos"},
+          {"id":"pasivo","label":"Voto pasivo","description":"Ser votada o votado en paridad.","parentId":"derechos"},
+          {"id":"asociacion","label":"Asociación política","description":"Participación pacífica y libre.","parentId":"derechos"},
+          {"id":"afiliacion","label":"Afiliación","description":"Pertenencia individual a partido.","parentId":"derechos"},
+          {"id":"autonomia","label":"Autonomía indígena","description":"Sistemas propios con derechos humanos.","parentId":"derechos"},
+          {"id":"principios","label":"2. Principios rectores","description":"Guían la función electoral.","parentId":"sistema"},
+          {"id":"seis","label":"Seis principios","description":"Certeza, legalidad, independencia, imparcialidad, publicidad y objetividad.","parentId":"principios"},
+          {"id":"autoridades","label":"3. Autoridades","description":"Administrativas y jurisdiccionales.","parentId":"sistema"},
+          {"id":"ine_ople","label":"INE y OPLE","description":"Competencias coordinadas, no subordinación simple.","parentId":"autoridades"},
+          {"id":"tepjf","label":"TEPJF","description":"Sala Superior y salas regionales.","parentId":"autoridades"},
+          {"id":"jdc","label":"4. JDC","description":"Protección de la ciudadanía.","parentId":"sistema"},
+          {"id":"persona","label":"Legitimación personal","description":"Derecho propio afectado.","parentId":"jdc"},
+          {"id":"efectos","label":"Restitución","description":"Confirma, modifica o revoca.","parentId":"jdc"},
+          {"id":"jrc","label":"5. JRC","description":"Control de elecciones locales.","parentId":"sistema"},
+          {"id":"partidos","label":"Solo partidos","description":"Representación legítima.","parentId":"jrc"},
+          {"id":"requisitos","label":"Requisitos especiales","description":"Firmeza, determinancia y reparabilidad.","parentId":"jrc"},
+          {"id":"definitividad","label":"6. Definitividad","description":"Agotar vías previas eficaces.","parentId":"sistema"},
+          {"id":"competencia","label":"7. Competencia","description":"Cargo, materia y territorio.","parentId":"sistema"},
+          {"id":"superior","label":"Sala Superior","description":"Entre otros, gubernaturas en JRC.","parentId":"competencia"},
+          {"id":"regionales","label":"Salas regionales","description":"Entre otros, municipios y diputaciones locales.","parentId":"competencia"},
+          {"id":"no_amparo","label":"No sustituir con amparo","description":"Improcedencia en materia electoral.","parentId":"sistema"}
+        ]
+      },
+      "references": [
+        {
+          "title": "Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 2, 35, 41 y 99; últimas reformas DOF 02-06-2026",
+          "retrievedOn": "2026-08-11",
+          "note": "Derechos, autonomía, principios, autoridades y jurisdicción electoral."
+        },
+        {
+          "title": "Ley General del Sistema de Medios de Impugnación en Materia Electoral",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGSMIME.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 79 a 93; última reforma DOF 14-11-2025",
+          "retrievedOn": "2026-08-11",
+          "note": "Procedencia, legitimación, competencia y efectos de JDC y JRC."
+        },
+        {
+          "title": "Ley General de Instituciones y Procedimientos Electorales",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGIPE.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Texto vigente consultado el 11-08-2026",
+          "retrievedOn": "2026-08-11",
+          "note": "Funciones electorales nacionales y locales y organización de procesos."
+        },
+        {
+          "title": "Ley de Amparo",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículo 61, fracción XV; texto vigente consultado el 11-08-2026",
+          "retrievedOn": "2026-08-11",
+          "note": "Improcedencia del amparo contra resoluciones o declaraciones electorales."
+        }
+      ],
+      "flashcards": [
+        {"question":"¿Qué es voto activo?","answer":"El derecho de votar en elecciones.","sourceOrigin":"mixed"},
+        {"question":"¿Qué es voto pasivo?","answer":"El derecho de ser votada o votado para un cargo.","sourceOrigin":"mixed"},
+        {"question":"¿Qué cuatro núcleos clásicos protege el JDC?","answer":"Votar, ser votado, asociación política y afiliación partidista.","sourceOrigin":"mixed"},
+        {"question":"¿Quién promueve el JRC?","answer":"Solo partidos políticos mediante representantes legítimos.","sourceOrigin":"complementary"},
+        {"question":"¿Qué exige la definitividad?","answer":"Agotar en tiempo las vías previas idóneas y eficaces.","sourceOrigin":"mixed"},
+        {"question":"¿Qué es determinancia?","answer":"Aptitud de la violación para incidir en el proceso o resultado electoral.","sourceOrigin":"complementary"},
+        {"question":"¿Qué Sala conoce JRC sobre gubernatura?","answer":"La Sala Superior.","sourceOrigin":"complementary"},
+        {"question":"¿Qué Sala conoce JRC municipal?","answer":"La sala regional territorialmente competente.","sourceOrigin":"complementary"},
+        {"question":"¿Todo asunto federal va a Sala Superior?","answer":"No; la ley distribuye asuntos también a salas regionales.","sourceOrigin":"complementary"},
+        {"question":"¿Los OPLE dependen jerárquicamente del INE?","answer":"No; son autoridades locales autónomas con competencias coordinadas.","sourceOrigin":"complementary"},
+        {"question":"¿Cuáles son los principios rectores?","answer":"Certeza, legalidad, independencia, imparcialidad, máxima publicidad y objetividad.","sourceOrigin":"mixed"},
+        {"question":"¿El amparo sustituye al medio electoral?","answer":"No; es improcedente contra resoluciones o declaraciones electorales.","sourceOrigin":"complementary"}
+      ],
+      "exam": {
+        "title": "Examen: derechos político-electorales, JDC y JRC",
+        "description": "Diez casos originales sobre derechos, legitimación, requisitos, competencia y vía idónea.",
+        "questions": [
+          {
+            "text": "Una ciudadana cumple requisitos, pero la autoridad niega sin fundamento su registro como candidata. ¿Qué derecho se afecta?",
+            "difficulty": "basic",
+            "options": ["Voto pasivo", "Voto activo", "Libertad de tránsito"],
+            "correctOption": 0,
+            "explanation": "El voto pasivo comprende el derecho a ser votada en condiciones constitucionales y legales.",
+            "optionExplanations": ["Identifica el derecho afectado.", "Voto activo es emitir sufragio.", "No guarda relación con candidatura."]
+          },
+          {
+            "text": "Un partido expulsa a una persona sin respetar sus normas internas y se agota la vía partidista. ¿Qué medio federal protege, en principio, su afiliación?",
+            "difficulty": "basic",
+            "options": ["JDC", "JRC", "Amparo directo"],
+            "correctOption": 0,
+            "explanation": "El JDC protege el derecho de afiliación libre e individual.",
+            "optionExplanations": ["Es la vía personal electoral.", "El JRC tiene legitimación partidista y otro objeto.", "El amparo no sustituye la jurisdicción electoral."]
+          },
+          {
+            "text": "Una persona ciudadana pretende promover JRC por la negativa de su candidatura. ¿Cuál es el problema principal?",
+            "difficulty": "basic",
+            "options": ["Carece de legitimación para JRC", "El JRC solo existe en materia fiscal", "Debe promoverlo el INE"],
+            "correctOption": 0,
+            "explanation": "El artículo 88 reserva el JRC a partidos políticos con representación legítima.",
+            "optionExplanations": ["Es la barrera procesal correcta.", "El JRC es electoral.", "El INE suele ser autoridad, no promovente sustituto."]
+          },
+          {
+            "text": "Un partido impugna una sentencia local sobre elección municipal mediante JRC. ¿Qué órgano conoce en principio?",
+            "difficulty": "intermediate",
+            "options": ["Sala regional competente", "Sala Superior en todo caso", "Juzgado de Distrito"],
+            "correctOption": 0,
+            "explanation": "Los JRC relativos a autoridades municipales corresponden a salas regionales.",
+            "optionExplanations": ["Aplica la distribución del artículo 87.", "No toda materia electoral llega a Superior.", "No es amparo."]
+          },
+          {
+            "text": "El JRC cuestiona una elección de gubernatura y reúne requisitos. ¿Qué Sala es competente?",
+            "difficulty": "basic",
+            "options": ["Sala Superior", "Sala regional", "Tribunal Colegiado de Circuito"],
+            "correctOption": 0,
+            "explanation": "La Sala Superior conoce JRC relacionados con gubernaturas.",
+            "optionExplanations": ["Es la competencia legal.", "Las regionales conocen otras elecciones locales.", "No corresponde a amparo directo."]
+          },
+          {
+            "text": "Un partido omite un recurso local eficaz y presenta inmediatamente JRC. ¿Qué requisito incumple?",
+            "difficulty": "intermediate",
+            "options": ["Definitividad", "Paridad", "Máxima publicidad"],
+            "correctOption": 0,
+            "explanation": "El JRC exige agotar en tiempo y forma las instancias previas.",
+            "optionExplanations": ["Es el requisito procesal aplicable.", "Paridad regula integración y candidaturas.", "Publicidad es principio de función electoral."]
+          },
+          {
+            "text": "La violación alegada no puede influir en el proceso ni en el resultado electoral. ¿Qué requisito especial de JRC falta?",
+            "difficulty": "intermediate",
+            "options": ["Determinancia", "Personería notarial", "Bilateralidad contractual"],
+            "correctOption": 0,
+            "explanation": "La violación debe poder resultar determinante para el proceso o resultado.",
+            "optionExplanations": ["Es el requisito del artículo 86.", "No es la cuestión planteada.", "Es concepto ajeno al medio."]
+          },
+          {
+            "text": "Una comunidad aplica su sistema normativo y excluye por completo a las mujeres de cargos. ¿La autonomía valida la exclusión?",
+            "difficulty": "intermediate",
+            "options": ["No, debe respetar igualdad y derechos humanos", "Sí, toda costumbre es absoluta", "Sí, si lo decide una sola autoridad"],
+            "correctOption": 0,
+            "explanation": "La autonomía constitucional está limitada por dignidad, igualdad sustantiva y derechos de las mujeres.",
+            "optionExplanations": ["Armoniza autonomía y derechos.", "Ninguna autonomía es licencia para discriminar.", "La decisión unilateral no elimina derechos."]
+          },
+          {
+            "text": "¿Cuál lista contiene exclusivamente principios rectores constitucionales de la función electoral?",
+            "difficulty": "basic",
+            "options": ["Certeza, legalidad, independencia, imparcialidad, máxima publicidad y objetividad", "Oralidad, concentración, contradicción y continuidad", "Instancia de parte, relatividad y definitividad"],
+            "correctOption": 0,
+            "explanation": "Es la lista del artículo 41 para la función electoral.",
+            "optionExplanations": ["Contiene los seis principios.", "Son principios procesales penales.", "Son referencias tradicionales del amparo."]
+          },
+          {
+            "text": "Una persona presenta amparo contra la sentencia de un tribunal electoral competente. ¿Qué debe advertirse?",
+            "difficulty": "advanced",
+            "options": ["El amparo es improcedente y debe identificarse la vía electoral", "El amparo siempre sustituye al JDC", "Debe transformarse automáticamente en controversia"],
+            "correctOption": 0,
+            "explanation": "La Ley de Amparo excluye resoluciones o declaraciones de autoridades electorales.",
+            "optionExplanations": ["Distingue correctamente los sistemas.", "No existe esa sustitución general.", "La controversia protege competencias públicas, no este derecho personal."]
+          }
+        ]
+      }
+    }
+  ]
+}

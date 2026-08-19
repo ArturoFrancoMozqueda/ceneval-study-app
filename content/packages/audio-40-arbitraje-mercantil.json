@@ -1,0 +1,204 @@
+{
+  "packageVersion": "1.0",
+  "subject": {
+    "name": "Mecanismos Alternativos y Solución de Conflictos",
+    "description": "Negociación, mediación, conciliación, justicia restaurativa, arbitraje y procedimientos especializados de solución de controversias."
+  },
+  "class": {
+    "title": "Arbitraje mercantil: convenio, procedimiento y laudo",
+    "description": "Trigésima clase del plan académico: acuerdo arbitral, autonomía de las partes, tribunal arbitral, procedimiento, laudo, nulidad, reconocimiento y ejecución."
+  },
+  "transcript": {
+    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 40.txt",
+    "cleaned": "Se conservó el bloque académico sobre arbitraje del Audio 40 y se enlazó con la clase anterior sobre mecanismos autocompositivos. Se eliminaron saludos, opiniones políticas, expresiones discriminatorias, afirmaciones personales, ejemplos sin soporte y contenido ajeno al examen. Se corrigió que el arbitraje es heterocompositivo porque un tercero decide mediante laudo; que el árbitro no tiene que ser corredor público, sino la persona o tribunal designado conforme al convenio y la ley; que la autonomía de la voluntad está limitada por igualdad procesal, arbitrabilidad y orden público; que el convenio arbitral debe constar por escrito en las formas admitidas; que la cláusula arbitral es separable del contrato principal y el tribunal puede decidir sobre su competencia; que la confidencialidad no nace automáticamente para todo arbitraje mercantil del Código de Comercio, sino que depende del acuerdo, reglamento institucional o norma aplicable; y que el laudo es obligatorio, pero su nulidad no funciona como una apelación sobre el fondo."
+  },
+  "topics": [
+    {
+      "title": "Del convenio arbitral a la ejecución del laudo",
+      "description": "Ruta completa del arbitraje mercantil mexicano y límites del control judicial.",
+      "learningJourney": {
+        "openingPrompt": "Dos empresas pactaron que cualquier controversia contractual sería resuelta por arbitraje. Surge el conflicto y una demanda se presenta ante un juez. ¿Qué debe revisarse antes de estudiar el fondo?",
+        "quickChecks": [
+          {
+            "prompt": "¿El árbitro solo puede ser corredor público?",
+            "answer": "No. Las partes pueden acordar el número y método de nombramiento; por regla supletoria existe un árbitro y la nacionalidad no impide el nombramiento salvo pacto distinto.",
+            "feedback": "Separa la profesión de una persona del cargo arbitral que recibe por designación."
+          },
+          {
+            "prompt": "¿Todo arbitraje mercantil es secreto por disposición del Código de Comercio?",
+            "answer": "No. La confidencialidad puede derivar del convenio, del reglamento institucional o de otra norma, pero el régimen general del Código no declara secreto automático para todo arbitraje.",
+            "feedback": "No confundas práctica frecuente con regla legal universal."
+          },
+          {
+            "prompt": "¿La nulidad del contrato elimina siempre la cláusula arbitral?",
+            "answer": "No. La cláusula se considera independiente; la invalidez del contrato no produce por sí sola la invalidez del convenio arbitral.",
+            "feedback": "Aplica separabilidad y competencia-competencia."
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una compradora mexicana y una proveedora extranjera incluyeron una cláusula arbitral escrita. Después de iniciado el arbitraje, la compradora alega nulidad del contrato y pide al juez decidir el fondo. El tribunal arbitral continúa y dicta laudo.",
+          "question": "¿Qué reglas determinan la competencia, validez y posible ejecución?",
+          "legalRule": "Los artículos 1423, 1424, 1432, 1448, 1457 y 1461 del Código de Comercio regulan forma del convenio, remisión al arbitraje, competencia del tribunal, requisitos del laudo, nulidad y reconocimiento.",
+          "reasoning": "Primero se comprueba convenio escrito y materia arbitrable. El juez remite a arbitraje si se solicita oportunamente, salvo convenio nulo, ineficaz o imposible de ejecutar. El tribunal puede resolver su competencia y la cláusula se analiza separadamente. El laudo escrito y notificado obliga; solo puede anularse o rechazarse su ejecución por causales legales, no por simple desacuerdo con el razonamiento.",
+          "conclusion": "El arbitraje desplaza la decisión del fondo al tribunal arbitral, pero conserva apoyo y control judicial limitado en los momentos previstos por la ley."
+        },
+        "closingPrompt": "Explica la ruta convenio arbitral → integración del tribunal → procedimiento → laudo → nulidad o ejecución e identifica en qué puntos puede intervenir un juez.",
+        "nextActivity": "Estudia el mapa visual, responde la guía de doce preguntas y resuelve los diez casos originales."
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "El arbitraje mercantil es un mecanismo heterocompositivo: las partes someten una controversia comercial a uno o más árbitros, quienes deciden mediante laudo. Se funda en convenio escrito, respeta autonomía procesal, igualdad y defensa, y admite intervención judicial únicamente para apoyo y control legal. El laudo es vinculante; la nulidad y la negativa de ejecución proceden solo por causas tasadas.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "El arbitraje es distinto de mediación y conciliación. En estas últimas, las partes deciden si celebran un acuerdo; en el arbitraje delegan a un tercero la decisión de la controversia. Por eso es heterocompositivo y termina normalmente en un laudo. La Ley General de Mecanismos Alternativos lo define, y el Código de Comercio regula el arbitraje comercial nacional e internacional cuando la sede está en México, sin perjuicio de tratados y materias no arbitrables.\n\nLa puerta de entrada es el convenio arbitral. Puede ser una cláusula incluida desde el contrato o un acuerdo posterior para someter una controversia ya surgida. Debe constar por escrito. La forma se satisface mediante documento firmado, intercambio de comunicaciones que deje constancia, escritos procesales donde una parte lo afirme y la otra no lo niegue, o referencia contractual a otro documento que contenga la cláusula.\n\nSi una parte demanda ante un juez pese al convenio, la otra debe pedir la remisión al arbitraje en el momento legal. El juez remite salvo que compruebe que el acuerdo es nulo, ineficaz o de ejecución imposible. Mientras se decide ese punto, el arbitraje puede iniciar o continuar y dictarse laudo. Pactar arbitraje tampoco impide solicitar medidas cautelares judiciales.\n\nLa cláusula arbitral es separable del contrato principal. El tribunal arbitral puede decidir sobre su propia competencia, incluso sobre existencia o validez del convenio. Así, declarar nulo el contrato no invalida automáticamente la cláusula. Esto evita que una sola alegación paralice el procedimiento y se conoce como competencia-competencia.\n\nLas partes pueden fijar número de árbitros y procedimiento de nombramiento. A falta de acuerdo, el Código establece reglas supletorias y un árbitro. No existe regla que reserve la función a corredores públicos. Deben revelarse circunstancias que generen dudas justificadas sobre imparcialidad o independencia, y pueden formularse recusaciones conforme al acuerdo o la ley.\n\nLa autonomía permite escoger sede, idioma, reglas, institución, ley aplicable y forma de presentar pruebas dentro de límites legales. Si no hay acuerdo, el tribunal conduce el procedimiento de manera apropiada. Siempre debe dar trato igual y oportunidad plena de hacer valer derechos. La sede jurídica no impide celebrar audiencias o diligencias en otro lugar.\n\nPara decidir el fondo, el tribunal aplica el derecho elegido por las partes. Sin elección, determina la norma aplicable según el caso. Solo puede resolver en equidad o como amigable componedor cuando las partes lo autoricen expresamente. Debe observar el contrato y los usos mercantiles aplicables. Si las partes transigen, pueden pedir que el acuerdo conste como laudo por consentimiento.\n\nEl laudo debe constar por escrito y estar firmado. En tribunal colegiado puede bastar mayoría con explicación de firmas faltantes. Debe estar motivado, salvo dispensa de las partes o laudo por consentimiento, indicar fecha y lugar y notificarse mediante copia firmada. El laudo no es una sentencia estatal, pero es obligatorio y puede ser reconocido y ejecutado judicialmente.\n\nLa acción de nulidad no es apelación. El juez no reexamina libremente hechos o derecho. Solo revisa causales como incapacidad o invalidez del convenio, falta de notificación o defensa, exceso respecto de lo sometido, integración o procedimiento contrarios al acuerdo o ley, materia no arbitrable u orden público. La solicitud debe presentarse, por regla, dentro de tres meses.\n\nLos laudos nacionales y extranjeros se reconocen como vinculantes. Para ejecutar se presenta petición escrita con laudo y convenio autenticados o certificados y traducción al español cuando sea necesaria. La negativa se limita a causales legales semejantes a las de nulidad y a las de la Convención de Nueva York.\n\nLa intervención judicial no desaparece: puede apoyar nombramientos, recusación, medidas provisionales, pruebas, nulidad, reconocimiento y ejecución. Pero el artículo 1421 impide una intervención general fuera de los casos autorizados.\n\nLa confidencialidad requiere precisión. Muchos reglamentos y convenios la pactan, pero el Código de Comercio no convierte automáticamente todo arbitraje mercantil en secreto. Para resolver un caso CENEVAL, lee la cláusula y el reglamento aplicable antes de afirmar reserva absoluta. La secuencia de análisis es: comercio y arbitrabilidad, convenio escrito, alcance, integración imparcial, debido proceso, ley aplicable, requisitos del laudo y control judicial limitado.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Código de Comercio vigente al 14-11-2025: artículos 1415 a 1463, especialmente 1421 a 1428, 1432, 1434 a 1436, 1445, 1447, 1448, 1450, 1451, 1457, 1458, 1461 y 1462. LGMASC sin reformas desde el DOF 26-01-2024: artículo 4, definición de arbitraje. Convención de Nueva York, promulgación DOF 22-06-1971: convenio escrito y reconocimiento y ejecución de laudos extranjeros. Consulta oficial: 11 de agosto de 2026.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Una distribuidora y un fabricante pactan que sus disputas se resolverán por un árbitro. Al surgir un incumplimiento, cada parte presenta pruebas y argumentos; el árbitro aplica el contrato y dicta un laudo. No está mediando porque no ayuda a que ellas decidan: él resuelve.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo CENEVAL",
+          "content": "Si una demanda judicial versa sobre un contrato con cláusula arbitral escrita, la respuesta correcta suele exigir verificar petición oportuna de remisión y validez del convenio. El juez no estudia directamente el incumplimiento si debe remitir al arbitraje; tampoco anula un laudo solo porque habría valorado distinto la prueba.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Convenio escrito: origen de la competencia. Separabilidad: la cláusula vive jurídicamente aparte del contrato. Competencia-competencia: el tribunal decide su jurisdicción. Autonomía: partes eligen árbitros, sede, reglas y derecho dentro de límites. Debido proceso: igualdad y defensa. Laudo: decisión escrita, motivada y vinculante. Nulidad: control excepcional, no apelación. Ejecución: judicial y sujeta a causales tasadas. Confidencialidad: no automática en todos los casos.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía intensiva de preguntas y respuestas",
+          "content": "1. ¿Qué es arbitraje? Respuesta: decisión de una controversia por uno o más árbitros mediante laudo. 2. ¿Es autocompositivo? Respuesta: no, es heterocompositivo. 3. ¿Qué lo origina? Respuesta: convenio arbitral escrito. 4. ¿Cláusula o acuerdo posterior? Respuesta: ambas formas son posibles. 5. ¿Qué es separabilidad? Respuesta: la cláusula se analiza aparte del contrato. 6. ¿Qué es competencia-competencia? Respuesta: el tribunal decide sobre su jurisdicción. 7. ¿Cuántos árbitros hay sin pacto? Respuesta: uno. 8. ¿Puede ser solo corredor público? Respuesta: no. 9. ¿Principio procesal central? Respuesta: igualdad y oportunidad plena de defensa. 10. ¿Qué produce el tribunal? Respuesta: un laudo escrito y vinculante. 11. ¿La nulidad es apelación? Respuesta: no, solo procede por causales legales. 12. ¿Confidencialidad automática? Respuesta: no; depende del convenio, reglamento o norma aplicable.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Arbitraje mercantil: decisión privada de controversia comercial. Convenio arbitral: acuerdo escrito de sometimiento. Cláusula compromisoria: convenio dentro de contrato. Tribunal arbitral: árbitro único o panel. Sede: domicilio jurídico del arbitraje. Separabilidad: independencia de la cláusula. Competencia-competencia: potestad para decidir jurisdicción. Recusación: cuestionamiento de imparcialidad o independencia. Autonomía procesal: elección de reglas. Laudo: decisión vinculante. Laudo por consentimiento: transacción elevada a laudo. Corrección e interpretación: ajustes limitados. Nulidad: control judicial tasado. Reconocimiento: atribución de eficacia. Ejecución: cumplimiento coactivo judicial.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "No confundas árbitro con mediador o conciliador. No exijas que sea corredor público. No supongas tres árbitros si no hay pacto. No trates la autonomía como ilimitada. No ignores forma escrita del convenio. No sostengas que nulidad del contrato elimina automáticamente la cláusula. No confundas sede con lugar físico de cada audiencia. No permitas decisión en equidad sin autorización expresa. No llames sentencia al laudo. No uses nulidad como apelación del fondo. No afirmes confidencialidad universal. No olvides que el juez conserva funciones de apoyo, nulidad y ejecución.",
+          "sourceOrigin": "complementary"
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual: ruta del arbitraje mercantil",
+        "description": "Desde el pacto escrito hasta la eficacia judicial del laudo.",
+        "nodes": [
+          {"id":"arbitraje","label":"Arbitraje mercantil","description":"Tercero decide mediante laudo."},
+          {"id":"filtros","label":"Filtros iniciales","description":"Ámbito y disponibilidad.","parentId":"arbitraje"},
+          {"id":"comercial","label":"Materia comercial","description":"Nacional o internacional.","parentId":"filtros"},
+          {"id":"arbitrable","label":"Materia arbitrable","description":"No todo conflicto puede someterse.","parentId":"filtros"},
+          {"id":"convenio","label":"Convenio arbitral","description":"Fuente de la competencia.","parentId":"arbitraje"},
+          {"id":"clausula","label":"Cláusula contractual","description":"Pactada antes del conflicto.","parentId":"convenio"},
+          {"id":"posterior","label":"Acuerdo posterior","description":"Controversia ya surgida.","parentId":"convenio"},
+          {"id":"escrito","label":"Constancia escrita","description":"Documento o comunicaciones.","parentId":"convenio"},
+          {"id":"remision","label":"Remisión judicial","description":"Juez respeta convenio válido.","parentId":"convenio"},
+          {"id":"separabilidad","label":"Separabilidad","description":"Cláusula independiente.","parentId":"convenio"},
+          {"id":"tribunal","label":"Tribunal arbitral","description":"Árbitro único o plural.","parentId":"arbitraje"},
+          {"id":"numero","label":"Número de árbitros","description":"Pacto; supletoriamente uno.","parentId":"tribunal"},
+          {"id":"designacion","label":"Designación","description":"Método acordado o legal.","parentId":"tribunal"},
+          {"id":"independencia","label":"Independencia e imparcialidad","description":"Deber de revelación.","parentId":"tribunal"},
+          {"id":"recusacion","label":"Recusación","description":"Dudas justificadas.","parentId":"tribunal"},
+          {"id":"competencia","label":"Competencia-competencia","description":"Decide su jurisdicción.","parentId":"tribunal"},
+          {"id":"procedimiento","label":"Procedimiento","description":"Autonomía con garantías.","parentId":"arbitraje"},
+          {"id":"igualdad","label":"Igualdad","description":"Mismo trato procesal.","parentId":"procedimiento"},
+          {"id":"defensa","label":"Oportunidad de defensa","description":"Presentar el propio caso.","parentId":"procedimiento"},
+          {"id":"reglas","label":"Reglas elegidas","description":"Institucionales o ad hoc.","parentId":"procedimiento"},
+          {"id":"sede","label":"Sede jurídica","description":"Elegida o determinada.","parentId":"procedimiento"},
+          {"id":"prueba","label":"Prueba","description":"Admisibilidad y valoración.","parentId":"procedimiento"},
+          {"id":"derecho","label":"Derecho aplicable","description":"Elección de las partes.","parentId":"procedimiento"},
+          {"id":"equidad","label":"Equidad","description":"Solo con autorización expresa.","parentId":"derecho"},
+          {"id":"laudo","label":"Laudo","description":"Decisión vinculante.","parentId":"arbitraje"},
+          {"id":"forma","label":"Escrito y firmado","description":"Requisitos formales.","parentId":"laudo"},
+          {"id":"motivacion","label":"Motivación","description":"Regla con excepciones.","parentId":"laudo"},
+          {"id":"consentimiento","label":"Laudo por consentimiento","description":"Transacción incorporada.","parentId":"laudo"},
+          {"id":"control","label":"Control judicial","description":"Apoyo y revisión limitada.","parentId":"arbitraje"},
+          {"id":"cautelares","label":"Medidas provisionales","description":"Compatibles con arbitraje.","parentId":"control"},
+          {"id":"nulidad","label":"Nulidad tasada","description":"No es apelación.","parentId":"control"},
+          {"id":"reconocimiento","label":"Reconocimiento","description":"Eficacia del laudo.","parentId":"control"},
+          {"id":"ejecucion","label":"Ejecución","description":"Cumplimiento coactivo.","parentId":"control"}
+        ]
+      },
+      "references": [
+        {
+          "title": "Código de Comercio",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Artículos 1415 a 1463; última reforma DOF 14-11-2025",
+          "retrievedOn": "2026-08-11",
+          "note": "Régimen mexicano del arbitraje comercial, laudo, nulidad y ejecución."
+        },
+        {
+          "title": "Ley General de Mecanismos Alternativos de Solución de Controversias",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGMASC.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Nacional, México",
+          "citation": "Artículo 4; nueva ley DOF 26-01-2024, sin reformas",
+          "retrievedOn": "2026-08-11",
+          "note": "Definición general del arbitraje y remisión a la legislación aplicable."
+        },
+        {
+          "title": "Convención sobre el Reconocimiento y Ejecución de las Sentencias Arbitrales Extranjeras",
+          "url": "https://www.ordenjuridico.gob.mx/TratInt/2022ml/SENTENCIAS%20ARBITRALES%20EXTRANJERAS.pdf",
+          "institution": "Orden Jurídico Nacional, Secretaría de Gobernación",
+          "jurisdiction": "Tratado internacional vigente para México",
+          "citation": "Convención de Nueva York de 1958; promulgación DOF 22-06-1971",
+          "retrievedOn": "2026-08-11",
+          "note": "Reconocimiento del convenio escrito y ejecución de laudos extranjeros."
+        }
+      ],
+      "flashcards": [
+        {"question":"¿Qué naturaleza tiene el arbitraje?","answer":"Heterocompositiva: el tribunal arbitral decide la controversia.","sourceOrigin":"mixed"},
+        {"question":"¿Qué es un convenio arbitral?","answer":"El acuerdo escrito para someter a arbitraje todas o ciertas controversias.","sourceOrigin":"complementary"},
+        {"question":"¿Qué significa separabilidad?","answer":"Que la cláusula arbitral se considera independiente del contrato principal.","sourceOrigin":"complementary"},
+        {"question":"¿Qué es competencia-competencia?","answer":"La facultad del tribunal arbitral para decidir sobre su propia jurisdicción.","sourceOrigin":"complementary"},
+        {"question":"¿Cuántos árbitros hay a falta de pacto?","answer":"Uno, conforme a la regla supletoria del Código de Comercio.","sourceOrigin":"complementary"},
+        {"question":"¿Qué debe revelar un posible árbitro?","answer":"Circunstancias que causen dudas justificadas sobre imparcialidad o independencia.","sourceOrigin":"complementary"},
+        {"question":"¿Puede pedirse una cautelar judicial pese al convenio?","answer":"Sí. La solicitud es compatible con el acuerdo arbitral.","sourceOrigin":"complementary"},
+        {"question":"¿Qué garantía rige el procedimiento?","answer":"Trato igual y oportunidad plena de hacer valer los derechos.","sourceOrigin":"complementary"},
+        {"question":"¿Cuándo puede decidirse en equidad?","answer":"Solo cuando las partes lo autorizan expresamente.","sourceOrigin":"complementary"},
+        {"question":"¿Qué requisitos básicos tiene el laudo?","answer":"Debe ser escrito, firmado, normalmente motivado, fechado, situado y notificado.","sourceOrigin":"complementary"},
+        {"question":"¿La nulidad permite revisar libremente el fondo?","answer":"No. Solo opera por causales legales específicas.","sourceOrigin":"complementary"},
+        {"question":"¿Todo arbitraje es automáticamente confidencial?","answer":"No. Debe revisarse convenio, reglamento institucional y ley aplicable.","sourceOrigin":"mixed"}
+      ],
+      "exam": {
+        "title": "Evaluación: arbitraje mercantil",
+        "description": "Diez casos originales sobre convenio, tribunal, procedimiento, laudo y control judicial.",
+        "questions": [
+          {"text":"Dos empresas someten por escrito sus futuras controversias contractuales a un tercero que decidirá. ¿Qué pactaron?","difficulty":"basic","options":["Convenio arbitral","Mediación","Conciliación"],"correctOption":0,"explanation":"El acuerdo escrito atribuye decisión a un tribunal arbitral.","optionExplanations":["Es la fuente de competencia arbitral.","El mediador no decide.","El conciliador propone sin imponer."]},
+          {"text":"La parte demandada invoca oportunamente una cláusula válida ante el juez. ¿Qué procede?","difficulty":"intermediate","options":["Remitir a las partes al arbitraje","Resolver siempre el fondo","Declarar inexistente el contrato"],"correctOption":0,"explanation":"El artículo 1424 exige remisión salvo nulidad, ineficacia o imposibilidad del convenio.","optionExplanations":["Respeta el pacto arbitral.","Desconoce la remisión legal.","La cláusula no prueba inexistencia."]},
+          {"text":"Se alega que el contrato principal es nulo. ¿Qué ocurre automáticamente con la cláusula arbitral?","difficulty":"advanced","options":["Nada; debe analizarse separadamente","También es nula sin análisis","El juez debe dictar el laudo"],"correctOption":0,"explanation":"La separabilidad impide trasladar automáticamente la nulidad.","optionExplanations":["Es la regla correcta.","Confunde contrato y cláusula.","El juez no sustituye al tribunal arbitral."]},
+          {"text":"Las partes no pactaron número de árbitros. ¿Cuál es la regla supletoria?","difficulty":"basic","options":["Un árbitro","Tres árbitros","Cinco corredores públicos"],"correctOption":0,"explanation":"El artículo 1426 establece uno a falta de acuerdo.","optionExplanations":["Es el número legal supletorio.","Tres puede pactarse, pero no es la regla.","No existe esa exigencia."]},
+          {"text":"Una candidata a árbitra tiene una relación financiera relevante con una parte. ¿Qué debe hacer?","difficulty":"intermediate","options":["Revelarla sin demora","Ocultarla hasta el laudo","Delegar el caso al juez"],"correctOption":0,"explanation":"Existe deber continuo de revelar circunstancias relevantes.","optionExplanations":["Protege imparcialidad e independencia.","Impediría evaluar una recusación.","No es consecuencia automática."]},
+          {"text":"El tribunal niega a una parte oportunidad real de presentar su caso. ¿Qué principio viola?","difficulty":"intermediate","options":["Igualdad y defensa","Confidencialidad automática","Gratuidad universal"],"correctOption":0,"explanation":"El artículo 1434 exige igualdad y plena oportunidad procesal.","optionExplanations":["Es la garantía directamente afectada.","No responde al problema.","El arbitraje no es necesariamente gratuito."]},
+          {"text":"Sin autorización de las partes, el árbitro decide solo según lo que considera justo, ignorando el derecho aplicable. ¿Es correcto?","difficulty":"advanced","options":["No, la equidad requiere autorización expresa","Sí, siempre","Sí, si el árbitro es abogado"],"correctOption":0,"explanation":"La amigable composición o equidad exige autorización expresa.","optionExplanations":["Aplica el artículo 1445.","La autonomía no autoriza automáticamente.","La profesión no sustituye el pacto."]},
+          {"text":"Una parte pide anular el laudo porque el juez habría valorado distinto una factura. ¿Basta ese motivo?","difficulty":"advanced","options":["No, la nulidad no es apelación del fondo","Sí, toda diferencia permite nulidad","Sí, sin límite temporal"],"correctOption":0,"explanation":"La nulidad se limita a causales del artículo 1457.","optionExplanations":["Es el alcance correcto.","Inventaría una causal abierta.","Además existe plazo legal."]},
+          {"text":"El laudo extranjero está en otro idioma y se solicita ejecución en México. ¿Qué puede requerirse?","difficulty":"intermediate","options":["Traducción al español y documentos certificados","Nuevo arbitraje obligatorio","Aprobación del mediador"],"correctOption":0,"explanation":"El artículo 1461 prevé laudo, convenio y traducción cuando sea necesaria.","optionExplanations":["Son recaudos de reconocimiento.","No se repite automáticamente el arbitraje.","No interviene mediador."]},
+          {"text":"Una cláusula no menciona confidencialidad y el reglamento tampoco. ¿Puede afirmarse que todo es secreto automáticamente por el Código?","difficulty":"advanced","options":["No; debe identificarse una fuente aplicable","Sí, sin revisar nada","Sí, porque todo laudo es sentencia"],"correctOption":0,"explanation":"El Código no establece secreto universal para todo arbitraje mercantil.","optionExplanations":["Evita convertir una práctica en regla absoluta.","Carece de fundamento general.","Laudo y sentencia estatal son distintos."]}
+        ]
+      }
+    }
+  ]
+}

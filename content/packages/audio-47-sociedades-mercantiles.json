@@ -1,0 +1,202 @@
+{
+  "packageVersion": "1.0",
+  "subject": {
+    "name": "Derecho Mercantil Societario",
+    "description": "Constitución, organización, decisiones, transformación y terminación de sociedades mercantiles."
+  },
+  "class": {
+    "title": "Sociedades mercantiles: constitución, administración y asambleas",
+    "description": "Trigésima quinta clase del plan académico: nacimiento de la sociedad, estatutos, administración y decisiones ordinarias y extraordinarias."
+  },
+  "transcript": {
+    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 47.txt",
+    "cleaned": "Se conservaron las explicaciones sobre constitución de sociedades mercantiles, estatutos, Registro Público de Comercio, administración, informe anual, asambleas ordinarias y extraordinarias, capital, transformación, fusión y disolución. Se eliminaron conversaciones sobre el examen, anécdotas comerciales, precios, lenguaje ofensivo, publicidad y consejos empresariales no jurídicos. Se corrigió que no toda persona moral persigue lucro ni toda sociedad mercantil se define únicamente por obtener ganancias; que la sociedad mercantil deriva de una forma reconocida por la LGSM y puede realizar actos necesarios para su objeto; que la sociedad por acciones simplificada tiene un procedimiento electrónico especial; que el RPC opera mediante una plataforma nacional pero las oficinas y derechos registrales involucran a las entidades; que las asambleas ordinarias de la sociedad anónima no deben celebrarse siempre ante notario ni inscribirse cada año, pues sus actas se asientan en el libro social; que las extraordinarias sí deben protocolizarse e inscribirse; que las asambleas pueden celebrarse por medios electrónicos si los estatutos lo prevén y se preservan identidad, participación y voto; que un aumento de capital no es siempre extraordinario en cualquier tipo y modalidad social sin revisar estatutos y parte fija o variable; y que disolución, liquidación, cancelación fiscal y liberación de denominación son etapas o trámites distintos, sin extinción automática de deudas."
+  },
+  "topics": [{
+    "title": "Del contrato social a las decisiones de la asamblea",
+    "description": "Constitución, órganos, informe anual, convocatorias, acuerdos y modificaciones estructurales.",
+    "learningJourney": {
+      "openingPrompt": "Una sociedad quiere aprobar estados financieros, cambiar al administrador, aumentar capital y fusionarse. ¿Puede decidir todo en la misma clase de asamblea y sin formalidades?",
+      "quickChecks": [
+        {
+          "prompt": "¿Toda asamblea ordinaria debe celebrarse ante notario?",
+          "answer": "No. En la sociedad anónima el acta se asienta normalmente en el libro respectivo; solo si no puede asentarse se protocoliza. Las extraordinarias sí se protocolizan e inscriben.",
+          "feedback": "Distingue documentación ordinaria de formalización extraordinaria."
+        },
+        {
+          "prompt": "¿Cuándo se celebra la ordinaria anual?",
+          "answer": "Por lo menos una vez al año, dentro de los cuatro meses siguientes a la clausura del ejercicio social.",
+          "feedback": "No basta decir solamente una vez al año."
+        },
+        {
+          "prompt": "¿Disolver elimina las deudas?",
+          "answer": "No. Abre la liquidación, durante la cual se cobran créditos, pagan pasivos y distribuye el remanente si existe.",
+          "feedback": "Disolución no equivale a desaparición instantánea."
+        }
+      ],
+      "practicalCase": {
+        "facts": "Una sociedad anónima cerró ejercicio el 31 de diciembre. En marzo quiere aprobar el informe financiero, remover al administrador, aumentar el capital fijo y fusionarse. El administrador propone una reunión informal sin convocatoria.",
+        "question": "¿Qué acuerdos son ordinarios, cuáles extraordinarios y qué formalidades deben observarse?",
+        "legalRule": "Los artículos 181 y 182 LGSM separan materias ordinarias y extraordinarias; los artículos 186 a 194 regulan convocatoria, quórum, actas, protocolización e inscripción.",
+        "reasoning": "El informe, nombramiento o remoción y emolumentos pertenecen a la ordinaria. El aumento del capital social fijo y la fusión modifican el contrato y son extraordinarios. Debe existir convocatoria válida, salvo asamblea totalitaria, y cumplirse los quórums. El acta extraordinaria se protocoliza e inscribe.",
+        "conclusion": "La sociedad puede organizar reuniones sucesivas o una misma convocatoria con tratamiento y votación diferenciados, pero cada materia conserva su quórum y formalidad."
+      },
+      "closingPrompt": "Clasifica cada decisión societaria por órgano, tipo de asamblea, quórum, acta y publicidad necesaria.",
+      "nextActivity": "Recorre el mapa visual, responde la guía de doce preguntas y resuelve los diez casos originales."
+    },
+    "materials": [
+      {
+        "type": "short_answer",
+        "title": "Respuesta breve",
+        "content": "La sociedad mercantil se constituye en una forma reconocida por la LGSM y, salvo la SAS, ante fedatario público; su acto constitutivo contiene socios, objeto, nombre, duración, capital, administración, utilidades, disolución y reglas de asamblea. En la sociedad anónima la asamblea ordinaria atiende informe anual, administradores, comisarios y emolumentos; la extraordinaria decide modificaciones estructurales como disolución anticipada, capital fijo, objeto, transformación y fusión.",
+        "sourceOrigin": "mixed"
+      },
+      {
+        "type": "full_explanation",
+        "title": "Explicación completa desde cero",
+        "content": "Una sociedad mercantil es la persona jurídica constituida bajo alguna de las formas reconocidas por la Ley General de Sociedades Mercantiles. La calificación no depende solo de que obtenga ganancias: el artículo 4 considera mercantiles a las sociedades formadas bajo esas especies y les permite realizar los actos de comercio necesarios para cumplir su objeto, salvo prohibición legal o estatutaria.\n\nLa constitución comienza con la elección del tipo social, las personas socias, el objeto, capital, administración y reglas de decisión. La Secretaría de Economía autoriza el uso de la denominación o razón social mediante el Módulo Único de Autorizaciones. La autorización del nombre no crea la sociedad; después se formaliza el acto constitutivo y se presenta el aviso de uso. Cuando deja de utilizarse por cambio, fusión o liquidación, procede el aviso de liberación.\n\nEl artículo 5 LGSM dispone que las sociedades se constituyen ante fedatario público y que sus modificaciones constan de igual forma. La SAS es excepción: se forma mediante el procedimiento electrónico especial del capítulo XIV. El artículo 6 exige que la escritura o póliza incluya identidad de constituyentes, objeto, denominación o razón, duración, capital, aportaciones, domicilio, administración y facultades, nombramientos, distribución de utilidades y pérdidas, reserva, disolución, liquidación y reglas de asambleas, incluso mecanismos tecnológicos cuando se adopten.\n\nLa inscripción en el Registro Público de Comercio brinda publicidad a los actos mercantiles que la ley manda registrar. Cada comerciante o sociedad tiene folio mercantil electrónico. No debe confundirse el RPC con el Registro Público de la Propiedad, aunque puedan compartir oficinas locales. El SIGER funciona en una plataforma nacional; los derechos y la operación de oficinas se coordinan con las entidades. Antes de la inscripción, quien actúe en nombre de la sociedad puede responder ilimitada y solidariamente frente a terceros por esas operaciones conforme al artículo 7 LGSM.\n\nLos estatutos son las reglas de organización de la sociedad. Delimitan objeto, órganos, atribuciones, convocatoria, quórums, votos, representación y controles. La administración de toda sociedad mercantil corresponde a su administrador o administradores, quienes pueden realizar operaciones inherentes al objeto, salvo límites legales o estatutarios. En la sociedad anónima puede existir administrador único o consejo; la vigilancia corresponde normalmente a uno o más comisarios.\n\nLa asamblea general de accionistas es el órgano supremo de la sociedad anónima. Puede acordar y ratificar actos y operaciones dentro de su competencia. Los estatutos pueden permitir resoluciones unánimes fuera de asamblea confirmadas por escrito y asambleas presenciales, electrónicas o híbridas, siempre que existan mecanismos de acceso, identidad, participación simultánea, deliberación, voto y evidencia. Usar videoconferencia no significa por sí solo celebrar fuera del domicilio social.\n\nLa asamblea ordinaria conoce cualquier asunto no reservado por el artículo 182 a la extraordinaria. Debe reunirse por lo menos una vez al año dentro de los cuatro meses siguientes al cierre para discutir, aprobar o modificar el informe de administradores considerando el de comisarios; nombrar administrador, consejo o comisarios cuando proceda; y determinar sus emolumentos si los estatutos no los fijaron. No es una simple cuenta de caja: el artículo 172 exige políticas, situación financiera, resultados, cambios financieros y patrimoniales y notas.\n\nLa extraordinaria conoce prórroga, disolución anticipada, aumento o reducción del capital social, cambio de objeto o nacionalidad, transformación, fusión, acciones privilegiadas, amortización de acciones, bonos, cualquier modificación del contrato y asuntos con quórum especial. La lista corresponde a la sociedad anónima. En capital variable debe revisarse la parte afectada, los estatutos y los artículos especiales: no toda variación de la parte variable exige reformar el contrato como si fuera capital fijo.\n\nLa convocatoria corresponde generalmente al administrador, consejo o comisarios y se publica en el sistema electrónico de la Secretaría de Economía con la anticipación estatutaria o, en defecto, quince días. Debe contener orden del día y firma. Una resolución tomada con infracción puede ser nula, salvo que al votar esté representada la totalidad de las acciones. La asamblea totalitaria no autoriza omitir quórums materiales ni tratar de forma engañosa asuntos no consentidos.\n\nEn primera convocatoria, la ordinaria requiere por regla supletoria al menos la mitad del capital representado y mayoría de votos presentes. La extraordinaria exige al menos tres cuartas partes del capital representado y decisiones de acciones equivalentes a la mitad del capital, salvo mayoría estatutaria superior. En segunda convocatoria la ordinaria resuelve con las acciones presentes; la extraordinaria conserva como mínimo el voto favorable de la mitad del capital.\n\nLas actas ordinarias se asientan en el libro de asambleas y se firman por presidencia, secretaría y comisarios asistentes, de forma autógrafa o electrónica; se anexan pruebas de convocatoria. Si no pueden asentarse en el libro, se protocolizan. Las actas extraordinarias se protocolizan ante fedatario y se inscriben en el RPC. Por eso es incorrecto afirmar que cada ordinaria anual necesariamente se celebra ante notario y se registra.\n\nLa fusión debe aprobarse por cada sociedad conforme a su naturaleza. Los acuerdos se inscriben y publican junto con balances y sistema de extinción del pasivo; los acreedores cuentan con protección y oposición. Transformación cambia el tipo social sin que por ello deba confundirse automáticamente con crear una persona nueva. Ambas operaciones requieren análisis de estatutos, acreedores, impuestos, competencia y efectos laborales.\n\nLa disolución anticipada es acuerdo extraordinario, pero no borra obligaciones ni cancela inmediatamente la persona moral. La sociedad entra en liquidación: se concluyen operaciones pendientes, cobran créditos, venden bienes cuando proceda, pagan pasivos y distribuye el haber restante. Después se cancela el folio y se realizan avisos fiscales y de denominación aplicables. La falta de rentabilidad puede motivar a los socios, pero la causa jurídica debe encuadrar en la ley o el contrato.\n\nPara CENEVAL identifica primero el tipo social, porque las reglas citadas de asamblea son principalmente de sociedad anónima. Luego pregunta: materia ordinaria o extraordinaria; convocante competente; publicación y orden del día; quórum de instalación; mayoría de decisión; acta, protocolización e inscripción; y protección de minorías y acreedores.",
+        "sourceOrigin": "mixed"
+      },
+      {
+        "type": "legal_basis",
+        "title": "Fundamento jurídico vigente",
+        "content": "Ley General de Sociedades Mercantiles, última reforma DOF 20-10-2023 y cantidades SAS actualizadas por acuerdo DOF 26-12-2025: artículos 1 a 10, 142 a 178, 179 a 206, 213 a 228 y 229 a 249 Bis. Código de Comercio, artículos 18 a 25 sobre Registro Público de Comercio. Reglamento para la Autorización de Uso de Denominaciones y Razones Sociales y Módulo Único de Autorizaciones de la Secretaría de Economía. Las reglas de los artículos 178 a 206 se aplican específicamente a la sociedad anónima y no deben generalizarse sin ajustes a todas las especies.",
+        "sourceOrigin": "complementary"
+      },
+      {
+        "type": "simple_example",
+        "title": "Ejemplo sencillo",
+        "content": "La sociedad cerró ejercicio el 31 de diciembre. Convoca para el 20 de marzo a discutir el informe, nombrar administradora y fijar su remuneración: asamblea ordinaria anual. Si también cambiará el objeto social, ese punto es extraordinario, con quórum, protocolización e inscripción propios.",
+        "sourceOrigin": "mixed"
+      },
+      {
+        "type": "ceneval_example",
+        "title": "Caso tipo CENEVAL",
+        "content": "Si el reactivo indica que una sociedad anónima quiere fusionarse y ofrece como opciones asamblea ordinaria privada, decisión unilateral del administrador o asamblea extraordinaria, la correcta es extraordinaria. Debe seguir convocatoria y quórum, protocolizar el acta, inscribir y publicar los acuerdos, sin ignorar los derechos de acreedores.",
+        "sourceOrigin": "mixed"
+      },
+      {
+        "type": "summary",
+        "title": "Resumen",
+        "content": "Constitución: tipo, denominación, fedatario salvo SAS, estatutos y RPC. Administración: ejecuta operaciones del objeto dentro de límites. Ordinaria anual: informe, administradores, comisarios y emolumentos dentro de cuatro meses. Extraordinaria: reforma estructural, capital fijo, objeto, transformación, fusión y disolución. Convocatoria electrónica, quórums y orden del día son esenciales. Ordinaria va al libro; extraordinaria se protocoliza e inscribe. Disolución abre liquidación y no extingue deudas.",
+        "sourceOrigin": "mixed"
+      },
+      {
+        "type": "study_guide",
+        "title": "Guía intensiva de preguntas y respuestas",
+        "content": "1. ¿Qué hace mercantil a la sociedad? Respuesta: constituirse bajo una forma reconocida por la LGSM. 2. ¿La autorización del nombre crea la sociedad? Respuesta: no. 3. ¿Quién formaliza la constitución ordinaria? Respuesta: fedatario público; la SAS tiene vía electrónica especial. 4. ¿Qué son estatutos? Respuesta: reglas de organización y funcionamiento. 5. ¿Qué publica el RPC? Respuesta: actos mercantiles legalmente inscribibles. 6. ¿Quién administra? Respuesta: administrador o administradores dentro del objeto y límites. 7. ¿Cuándo es la ordinaria anual? Respuesta: dentro de cuatro meses del cierre. 8. ¿Qué revisa? Respuesta: informe, nombramientos y emolumentos. 9. ¿Qué decide la extraordinaria? Respuesta: reformas y operaciones estructurales del artículo 182. 10. ¿Toda ordinaria requiere notario? Respuesta: no. 11. ¿Qué acta se protocoliza e inscribe siempre? Respuesta: la extraordinaria. 12. ¿Disolver borra deudas? Respuesta: no; inicia la liquidación.",
+        "sourceOrigin": "mixed"
+      },
+      {
+        "type": "key_concepts",
+        "title": "Conceptos clave",
+        "content": "Sociedad mercantil: persona bajo especie LGSM. Acto constitutivo: negocio de creación. Estatutos: reglas internas. Denominación: nombre autorizado. Objeto social: actividades permitidas. Capital social: aportaciones y cifra estatutaria. RPC: publicidad mercantil. Folio mercantil: expediente electrónico. Administrador: órgano de gestión. Consejo: administración colegiada. Comisario: vigilancia. Asamblea: órgano deliberante. Ordinaria: materia no reservada. Extraordinaria: reforma estructural. Convocatoria: llamado formal. Orden del día: asuntos a resolver. Quórum: capital requerido. Mayoría: votos necesarios. Protocolización: incorporación ante fedatario. Fusión: integración de sociedades. Transformación: cambio de tipo. Disolución: inicio de terminación. Liquidación: realización de activos y pasivos.",
+        "sourceOrigin": "mixed"
+      },
+      {
+        "type": "common_errors",
+        "title": "Errores comunes",
+        "content": "No definas toda persona moral como lucrativa. No confundas autorización de nombre con constitución. No olvides la excepción electrónica de la SAS. No confundas RPC con Registro de la Propiedad. No digas que el RPC conserva públicamente copias completas de cada acta; publicita datos de actos mediante formas registrales. No llames cuenta general a todo el informe del artículo 172. No exijas notario e inscripción para toda ordinaria. No ignores los cuatro meses posteriores al cierre. No clasifiques toda variación de capital variable como reforma del capital fijo. No omitas convocatoria, orden del día o quórum. No confundas fusión con simple compra de acciones. No equipares disolución con liquidación ni cancelación de deudas.",
+        "sourceOrigin": "complementary"
+      }
+    ],
+    "conceptMap": {
+      "title": "Mapa visual: ciclo de una sociedad mercantil",
+      "description": "Constitución, órganos, decisiones y cambios estructurales.",
+      "nodes": [
+        {"id":"sociedad","label":"Sociedad mercantil","description":"Forma reconocida por la LGSM."},
+        {"id":"constitucion","label":"Constitución","description":"Nacimiento jurídico organizado.","parentId":"sociedad"},
+        {"id":"tipo","label":"Tipo social","description":"Especie adecuada al proyecto.","parentId":"constitucion"},
+        {"id":"nombre","label":"Denominación o razón","description":"Autorización de uso.","parentId":"constitucion"},
+        {"id":"fedatario","label":"Fedatario público","description":"Regla general de formalización.","parentId":"constitucion"},
+        {"id":"sas","label":"SAS electrónica","description":"Excepción procedimental.","parentId":"constitucion"},
+        {"id":"estatutos","label":"Estatutos","description":"Reglas de organización.","parentId":"sociedad"},
+        {"id":"objeto","label":"Objeto","description":"Actividades y límites.","parentId":"estatutos"},
+        {"id":"capital","label":"Capital","description":"Aportaciones y estructura.","parentId":"estatutos"},
+        {"id":"organos","label":"Órganos","description":"Administración, vigilancia y asamblea.","parentId":"estatutos"},
+        {"id":"rpc","label":"Registro Público de Comercio","description":"Publicidad mercantil.","parentId":"sociedad"},
+        {"id":"folio","label":"Folio mercantil","description":"Expediente electrónico.","parentId":"rpc"},
+        {"id":"oponibilidad","label":"Efectos frente a terceros","description":"Según acto y registro.","parentId":"rpc"},
+        {"id":"administracion","label":"Administración","description":"Operaciones inherentes al objeto.","parentId":"sociedad"},
+        {"id":"administrador","label":"Administrador único","description":"Gestión individual.","parentId":"administracion"},
+        {"id":"consejo","label":"Consejo","description":"Gestión colegiada.","parentId":"administracion"},
+        {"id":"limites","label":"Ley y estatutos","description":"Delimitan facultades.","parentId":"administracion"},
+        {"id":"asamblea","label":"Asamblea general","description":"Órgano supremo de la SA.","parentId":"sociedad"},
+        {"id":"ordinaria","label":"Ordinaria","description":"Materia no reservada.","parentId":"asamblea"},
+        {"id":"informe","label":"Informe anual","description":"Aprobar, modificar o rechazar.","parentId":"ordinaria"},
+        {"id":"nombramientos","label":"Nombramientos","description":"Administración y vigilancia.","parentId":"ordinaria"},
+        {"id":"cuatromeses","label":"Dentro de cuatro meses","description":"Después del cierre.","parentId":"ordinaria"},
+        {"id":"extraordinaria","label":"Extraordinaria","description":"Materias del artículo 182.","parentId":"asamblea"},
+        {"id":"reforma","label":"Reforma estatutaria","description":"Objeto, capital fijo y otras.","parentId":"extraordinaria"},
+        {"id":"transformacion","label":"Transformación","description":"Cambio de especie.","parentId":"extraordinaria"},
+        {"id":"fusion","label":"Fusión","description":"Integración societaria.","parentId":"extraordinaria"},
+        {"id":"disolucion","label":"Disolución anticipada","description":"Abre etapa de liquidación.","parentId":"extraordinaria"},
+        {"id":"procedimiento","label":"Procedimiento","description":"Validez de la decisión.","parentId":"asamblea"},
+        {"id":"convocatoria","label":"Convocatoria","description":"Sistema electrónico y orden.","parentId":"procedimiento"},
+        {"id":"quorum","label":"Quórum y mayoría","description":"Según tipo de asamblea.","parentId":"procedimiento"},
+        {"id":"electronica","label":"Participación electrónica","description":"Identidad, deliberación y evidencia.","parentId":"procedimiento"},
+        {"id":"acta","label":"Acta","description":"Documenta acuerdos.","parentId":"procedimiento"},
+        {"id":"formalidad","label":"Formalidad del acta","description":"Libro ordinario; protocolo y RPC extraordinario.","parentId":"acta"}
+      ]
+    },
+    "references": [
+      {
+        "title": "Ley General de Sociedades Mercantiles",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGSM.pdf",
+        "institution": "Cámara de Diputados del H. Congreso de la Unión",
+        "jurisdiction": "Federal, México",
+        "citation": "Artículos 1 a 10, 142 a 206 y 213 a 249 Bis; última reforma DOF 20-10-2023",
+        "retrievedOn": "2026-08-11",
+        "note": "Constitución, órganos, asambleas, fusión, transformación, disolución y liquidación."
+      },
+      {
+        "title": "Registro Público de Comercio - SIGER",
+        "url": "https://rpc.economia.gob.mx/siger2/xhtml/que_inscribe.xhtml",
+        "institution": "Secretaría de Economía",
+        "jurisdiction": "Federal, México",
+        "citation": "Información institucional sobre actos inscribibles y formas precodificadas",
+        "retrievedOn": "2026-08-11",
+        "note": "Publicidad de actos mercantiles y operación del folio electrónico."
+      },
+      {
+        "title": "Módulo Único de Autorizaciones",
+        "url": "https://mua.economia.gob.mx/mua-web/muaHome",
+        "institution": "Secretaría de Economía",
+        "jurisdiction": "Federal, México",
+        "citation": "Autorización, aviso de uso y aviso de liberación de denominaciones y razones sociales",
+        "retrievedOn": "2026-08-11",
+        "note": "Trámites vigentes relativos al nombre de sociedades y asociaciones."
+      }
+    ],
+    "flashcards": [
+      {"question":"¿Qué hace mercantil a una sociedad?","answer":"Constituirse bajo una de las formas reconocidas por la LGSM.","sourceOrigin":"complementary"},
+      {"question":"¿La autorización del nombre crea la sociedad?","answer":"No; solo permite usar la denominación o razón social autorizada.","sourceOrigin":"complementary"},
+      {"question":"¿Cuál es la excepción al fedatario en la constitución?","answer":"La sociedad por acciones simplificada sigue un procedimiento electrónico especial.","sourceOrigin":"complementary"},
+      {"question":"¿Qué contienen los estatutos?","answer":"Las reglas de estructura, órganos, capital, decisiones, disolución y liquidación.","sourceOrigin":"mixed"},
+      {"question":"¿Qué función cumple el RPC?","answer":"Da publicidad a los actos mercantiles que deben inscribirse.","sourceOrigin":"mixed"},
+      {"question":"¿Qué trata la ordinaria anual?","answer":"Informe, administradores, comisarios y emolumentos, además del orden del día.","sourceOrigin":"mixed"},
+      {"question":"¿Cuándo debe reunirse la ordinaria anual?","answer":"Dentro de los cuatro meses siguientes al cierre del ejercicio.","sourceOrigin":"complementary"},
+      {"question":"¿Qué trata la extraordinaria?","answer":"Modificaciones estructurales y demás materias del artículo 182 LGSM.","sourceOrigin":"mixed"},
+      {"question":"¿Toda ordinaria se protocoliza?","answer":"No; normalmente se asienta y firma en el libro de asambleas.","sourceOrigin":"complementary"},
+      {"question":"¿Qué ocurre con el acta extraordinaria?","answer":"Se protocoliza ante fedatario y se inscribe en el RPC.","sourceOrigin":"complementary"},
+      {"question":"¿Puede haber asamblea electrónica?","answer":"Sí, si los estatutos lo prevén y garantizan identidad, participación, voto y evidencia.","sourceOrigin":"complementary"},
+      {"question":"¿Disolución equivale a extinción inmediata?","answer":"No; abre la liquidación y las deudas deben atenderse.","sourceOrigin":"mixed"}
+    ],
+    "exam": {
+      "title": "Evaluación: sociedades y asambleas",
+      "description": "Diez casos originales sobre constitución, órganos, acuerdos y formalidades.",
+      "questions": [
+        {"text":"Una empresa obtuvo autorización de denominación de la Secretaría de Economía. ¿Ya nació la sociedad?","difficulty":"basic","options":["No, falta constitución conforme al tipo","Sí, la autorización crea personalidad","Sí, aunque no haya estatutos"],"correctOption":0,"explanation":"La autorización reserva el nombre, pero no sustituye el acto constitutivo.","optionExplanations":["Distingue nombre y constitución.","Confunde trámites diferentes.","La organización requiere estatutos."]},
+        {"text":"¿Qué sociedad se constituye mediante procedimiento electrónico especial y no por la regla ordinaria ante fedatario?","difficulty":"basic","options":["Sociedad por acciones simplificada","Sociedad anónima tradicional","Sociedad en nombre colectivo"],"correctOption":0,"explanation":"La SAS es la excepción expresa del artículo 5 LGSM.","optionExplanations":["Corresponde al capítulo XIV.","Sigue la formalización general.","No tiene esa excepción electrónica."]},
+        {"text":"La sociedad cerró ejercicio el 31 de diciembre. ¿Cuándo debe celebrar su ordinaria anual?","difficulty":"basic","options":["Dentro de los cuatro meses siguientes","En cualquier momento sin límite","Exactamente el 31 de diciembre siguiente"],"correctOption":0,"explanation":"El artículo 181 fija ese periodo posterior al cierre.","optionExplanations":["Es el plazo legal.","Omite el límite temporal.","Añade una fecha inexistente."]},
+        {"text":"La asamblea decidirá aprobar el informe y nombrar administrador. ¿Qué tipo corresponde?","difficulty":"basic","options":["Ordinaria","Extraordinaria","Especial de acreedores"],"correctOption":0,"explanation":"Son materias ordinarias expresas del artículo 181.","optionExplanations":["Coincide con informe y nombramiento.","No reforman el contrato social.","Los acreedores no integran esa asamblea."]},
+        {"text":"Una sociedad anónima cambiará su objeto social. ¿Qué órgano y formalidad corresponden?","difficulty":"intermediate","options":["Asamblea extraordinaria, protocolización e inscripción","Administrador por decisión privada","Ordinaria sin acta"],"correctOption":0,"explanation":"Cambiar el objeto es materia extraordinaria y reforma estatutaria.","optionExplanations":["Reúne órgano y formalidad.","El administrador carece de competencia unilateral.","La ordinaria no basta."]},
+        {"text":"El profesor afirma que toda ordinaria anual debe realizarse ante notario e inscribirse. ¿Es correcto?","difficulty":"intermediate","options":["No, normalmente va al libro social","Sí, sin excepción","Solo si no hay informe financiero"],"correctOption":0,"explanation":"El artículo 194 reserva protocolización obligatoria e inscripción a las extraordinarias; la ordinaria se asienta en libro.","optionExplanations":["Corrige la generalización.","Contradice el régimen del acta.","El informe no determina esa forma."]},
+        {"text":"Los estatutos permiten asambleas por videoconferencia y hay controles de identidad y voto. ¿Son válidas?","difficulty":"intermediate","options":["Sí, con los requisitos legales y estatutarios","No, toda asamblea debe ser física","Sí, aunque nadie pueda deliberar"],"correctOption":0,"explanation":"La reforma de 2023 admite medios electrónicos funcionalmente equivalentes.","optionExplanations":["Exige controles y participación.","Ignora la reforma vigente.","La deliberación funcional es indispensable."]},
+        {"text":"Se omitió publicar convocatoria, pero al votar estaba representada la totalidad de acciones. ¿Qué regla es relevante?","difficulty":"advanced","options":["La totalidad puede salvar esa infracción de convocatoria","La resolución es siempre inexistente","El administrador decide sin votación"],"correctOption":0,"explanation":"El artículo 188 establece la salvedad de representación total al momento de votar.","optionExplanations":["Aplica la excepción legal.","Desconoce la asamblea totalitaria.","Sustituye indebidamente al órgano."]},
+        {"text":"Una fusión fue aprobada. ¿Basta comprar acciones y dejarla sin publicidad?","difficulty":"advanced","options":["No, hay aprobación, inscripción, publicación y tutela de acreedores","Sí, toda compra es fusión","Sí, si el administrador lo anuncia verbalmente"],"correctOption":0,"explanation":"La fusión societaria tiene procedimiento legal propio.","optionExplanations":["Integra requisitos de los artículos 222 a 225.","Compra y fusión no son sinónimos.","La publicidad verbal es insuficiente."]},
+        {"text":"Los socios acuerdan disolución anticipada y creen que desaparecen impuestos y proveedores. ¿Qué respuesta es correcta?","difficulty":"advanced","options":["Las obligaciones se atienden en liquidación","Todas las deudas se extinguen al votar","Solo sobreviven las deudas fiscales"],"correctOption":0,"explanation":"La disolución inicia una fase de liquidación; no borra pasivos.","optionExplanations":["Distingue disolución y liquidación.","Crearía extinción sin fundamento.","También subsisten otros acreedores."]}
+      ]
+    }
+  }]
+}

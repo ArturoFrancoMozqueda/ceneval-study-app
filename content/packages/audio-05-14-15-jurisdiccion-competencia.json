@@ -1,0 +1,278 @@
+{
+  "packageVersion": "1.0",
+  "subject": {
+    "name": "Teoría procesal y organización judicial",
+    "description": "Bases del ejercicio jurisdiccional, competencia, resoluciones judiciales y estructura de los órganos que imparten justicia."
+  },
+  "class": {
+    "title": "Jurisdicción, competencia y ámbitos de actuación judicial",
+    "description": "Tercera clase del curso: diferencia jurisdicción y competencia, identifica sus factores, distingue control ordinario y constitucional y reconoce resoluciones e incidentes."
+  },
+  "transcript": {
+    "originalFiles": [
+      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 05.txt",
+      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 14.txt",
+      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 15.txt"
+    ],
+    "cleaned": "El cierre del Audio 05 introduce la jurisdicción como función estatal y la relaciona con la división de poderes. Los Audios 14 y 15 desarrollan jurisdicción ordinaria, constitucional y convencional; competencia por materia, grado, territorio y cuantía; órganos federales; clases de resoluciones e incidentes. Se conservaron los conceptos y ejemplos útiles, pero se eliminaron promociones, bromas, comentarios políticos, descalificaciones y anécdotas ajenas al aprendizaje. Se corrigió la afirmación de que las personas juzgadoras ordinarias no pueden interpretar la Constitución: dentro de su competencia y de las reglas procesales pueden ejercer control difuso, aunque no declaran la invalidez general de una norma. También se evitó presentar como universales las denominaciones de resoluciones o los efectos de todo incidente, porque dependen de la legislación aplicable. La estructura federal se actualizó con la Constitución y la Ley Orgánica del Poder Judicial de la Federación vigentes en agosto de 2026."
+  },
+  "topics": [
+    {
+      "title": "Del poder de juzgar al órgano competente",
+      "description": "Jurisdicción como función estatal, competencia como límite legal y método para elegir autoridad, vía, instancia, territorio y materia.",
+      "learningJourney": {
+        "openingPrompt": "Si dos jueces ejercen jurisdicción, ¿significa que ambos pueden resolver cualquier controversia o la ley reserva cada asunto a un órgano determinado?",
+        "quickChecks": [
+          {
+            "prompt": "¿Cuál es la relación entre jurisdicción y competencia?",
+            "answer": "La jurisdicción es la función estatal de resolver controversias; la competencia delimita qué asuntos puede conocer cada órgano.",
+            "feedback": "Puede pensarse en la jurisdicción como el género y en la competencia como la porción atribuida por la ley."
+          },
+          {
+            "prompt": "¿Qué factores básicos determinan la competencia objetiva?",
+            "answer": "Materia, grado y territorio; la cuantía opera cuando la ley orgánica correspondiente la utiliza.",
+            "feedback": "El artículo 77 del CNPCF formula expresamente esta regla y condiciona la cuantía a la organización judicial aplicable."
+          },
+          {
+            "prompt": "¿Una persona juzgadora ordinaria puede ejercer control difuso?",
+            "answer": "Sí, dentro de su competencia y de las reglas procesales, con efectos en el caso concreto.",
+            "feedback": "Esto no equivale a un proceso de control concentrado ni autoriza a declarar invalidez general."
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una empresa presenta una demanda civil ante un juzgado situado en otra entidad. El contrato señala un lugar de cumplimiento distinto, el demandado vive en una tercera ciudad y la cuantía sólo es relevante si la ley orgánica distribuye juzgados con ese criterio.",
+          "question": "¿Puede decidirse la competencia únicamente porque el juzgado elegido ejerce jurisdicción civil?",
+          "legalRule": "Toda demanda debe presentarse ante autoridad competente. Deben revisarse materia, grado, territorio y, cuando corresponda conforme a la ley orgánica, cuantía, además de reglas especiales y pactos legalmente válidos.",
+          "reasoning": "Que un órgano ejerza jurisdicción civil no basta para atribuirle el caso. Es necesario identificar la pretensión, la instancia, los puntos de conexión territorial y la regla orgánica sobre cuantía. Sólo después puede justificarse el órgano competente.",
+          "conclusion": "La jurisdicción habilita la función de juzgar; la competencia selecciona legalmente al órgano que puede conocer del litigio concreto."
+        },
+        "closingPrompt": "Explica por qué la competencia protege seguridad jurídica y cómo revisarías materia, grado, territorio y cuantía antes de presentar una demanda.",
+        "nextActivity": "Estudia el mapa visual, responde la guía y resuelve los diez casos de competencia, control judicial y resoluciones."
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta corta: jurisdicción y competencia",
+          "content": "La jurisdicción es la función pública de conocer, resolver y, en su caso, ejecutar controversias mediante la aplicación del derecho. La competencia es el límite jurídico que distribuye esa función entre órganos concretos. No basta que una autoridad sea juzgadora: debe tener atribución por materia, grado, territorio y, cuando la ley lo prevea, cuantía.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "La jurisdicción pertenece al Estado y se materializa mediante órganos que conocen controversias, conducen procedimientos, dictan decisiones y hacen posible su cumplimiento. La competencia no es sinónimo: es la suma de facultades que la ley confiere a cada órgano para conocer una clase determinada de asuntos. Por eso la competencia limita la jurisdicción y constituye una garantía de legalidad y seguridad jurídica vinculada con el artículo 16 constitucional.\n\nPara ubicar al órgano correcto se analiza primero la materia: civil, familiar, penal, laboral, administrativa, mercantil, electoral, agraria o constitucional, entre otras. Luego se identifica el grado o instancia. Después se aplican los puntos de conexión territorial. La cuantía sólo distribuye asuntos cuando la ley orgánica correspondiente establece órganos definidos mediante ese criterio. También pueden existir reglas de especialización, prevención, turno, acumulación o conexidad según la legislación.\n\nLa jurisdicción ordinaria resuelve la controversia principal mediante legislación sustantiva y procesal aplicable. La justicia constitucional concentrada conoce procesos cuyo objeto incluye el control constitucional, como el amparo dentro de las competencias que asignan la Constitución y la ley. Sin embargo, la distinción no significa que los jueces ordinarios ignoren la Constitución. Todas las autoridades deben respetar derechos humanos y las personas juzgadoras pueden ejercer control difuso dentro de su competencia y reglas procesales, privilegiando interpretación conforme y, cuando proceda, inaplicando una norma en el caso concreto. No pueden expulsarla del sistema con efectos generales por esa vía.\n\nEl control de convencionalidad exige contrastar la norma aplicable con los derechos reconocidos en tratados internacionales de los que México es parte. Debe realizarse dentro del marco competencial y procesal del órgano. El principio pro persona orienta a favorecer la protección más amplia, pero no crea competencia inexistente ni permite ignorar indiscriminadamente requisitos procesales.\n\nLas resoluciones judiciales reciben distintas denominaciones según materia y código. De manera didáctica pueden distinguirse acuerdos o autos que impulsan o deciden cuestiones del trámite, sentencias interlocutorias que resuelven determinadas cuestiones incidentales y sentencias definitivas que deciden la controversia principal. La clasificación exacta, el recurso y los efectos deben comprobarse en la ley aplicable.\n\nUn incidente es una cuestión accesoria relacionada con el proceso principal que requiere decisión propia. Algunos pueden suspender el avance por disposición expresa; otros se tramitan sin detenerlo. No todo imprevisto es automáticamente incidente y no todos tienen idéntico trámite. Para resolver un reactivo deben identificarse la materia, la norma, la cuestión planteada, la resolución procedente y el medio de impugnación previsto.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Constitución, artículos 1, 16, 17, 94, 103, 104, 107 y 133: derechos humanos, autoridad competente, acceso a la justicia, Poder Judicial federal, controversias federales, amparo y supremacía normativa. CNPCF, artículo 77: competencia por materia, grado y territorio, y por cuantía cuando la ley orgánica la contemple. Ley Orgánica del Poder Judicial de la Federación: integración y atribuciones vigentes de órganos federales. Ley de Amparo, artículos 33 a 40: órganos y reglas de competencia en amparo. Los criterios de la SCJN distinguen jurisdicción y competencia y reconocen control difuso dentro del marco competencial.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo: el mapa y la dirección",
+          "content": "La jurisdicción se parece a la función general de una red de hospitales para prestar atención médica. La competencia se parece a la asignación del caso: pediatría, urgencias, especialidad, sede y nivel de atención. Que todas las unidades pertenezcan al sistema no significa que cualquiera atienda cualquier asunto. En justicia, la ley determina esa distribución y no la preferencia de las partes.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Cómo aparece en un reactivo tipo EGEL",
+          "content": "Un reactivo suele proporcionar domicilio de las partes, lugar del acto, naturaleza de la pretensión, órgano que emitió la decisión e instancia procesal. Antes de elegir, clasifica cada dato: materia, grado, territorio, cuantía o regla especial. Si pregunta por amparo, distingue directo e indirecto y revisa el acto reclamado. Si pregunta por una resolución, identifica si decide el fondo, una cuestión incidental o sólo conduce el procedimiento.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "summary",
+          "title": "Resumen para repasar",
+          "content": "Jurisdicción es función estatal; competencia es su límite legal para el caso concreto. Los factores centrales son materia, grado y territorio; la cuantía depende de la ley orgánica. Los órganos ordinarios pueden realizar control difuso dentro de su competencia, pero no invalidar normas con efectos generales. El control convencional opera dentro del mismo marco. Autos, interlocutorias y definitivas deben clasificarse conforme al código aplicable. Los incidentes son cuestiones accesorias con efectos y trámite legalmente determinados.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de preguntas y respuestas",
+          "content": "1. ¿Qué es jurisdicción? Respuesta: la función estatal de conocer, resolver y ejecutar controversias mediante el derecho.\n2. ¿Qué es competencia? Respuesta: la porción de jurisdicción atribuida legalmente a un órgano para ciertos asuntos.\n3. ¿Qué factor atiende a la naturaleza del litigio? Respuesta: la materia.\n4. ¿Qué factor atiende a la instancia? Respuesta: el grado.\n5. ¿Qué factor usa puntos geográficos de conexión? Respuesta: el territorio.\n6. ¿Cuándo opera la cuantía? Respuesta: cuando la ley orgánica define órganos por el valor del asunto.\n7. ¿Qué exige el artículo 16? Respuesta: que el acto provenga de autoridad competente y esté fundado y motivado.\n8. ¿Qué garantiza el artículo 17? Respuesta: justicia pronta, completa, imparcial y gratuita en los términos legales.\n9. ¿Qué es control difuso? Respuesta: examen de regularidad que una persona juzgadora realiza dentro de un caso y de su competencia.\n10. ¿Puede un juez ordinario declarar invalidez general? Respuesta: no mediante control difuso; sus efectos se limitan al caso.\n11. ¿Qué es un incidente? Respuesta: una cuestión accesoria que requiere resolución dentro o vinculada con el proceso.\n12. ¿Qué decide una sentencia definitiva? Respuesta: la controversia principal, salvo la clasificación específica de la ley aplicable.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Jurisdicción: función de impartir justicia. Competencia: límite legal para conocer un asunto. Materia: naturaleza jurídica del conflicto. Grado: instancia procesal. Territorio: conexión geográfica. Cuantía: valor como criterio orgánico excepcional. Control concentrado: proceso con objeto constitucional específico. Control difuso: técnica aplicada dentro de un caso. Convencionalidad: contraste con tratados de derechos humanos. Auto: resolución de trámite o decisión procesal según la ley. Interlocutoria: resolución de determinada cuestión incidental. Definitiva: decisión del fondo. Incidente: cuestión accesoria del proceso.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "Usar jurisdicción y competencia como sinónimos; elegir tribunal sólo por cercanía; aplicar siempre la cuantía aunque la ley orgánica no la contemple; confundir fuero federal con gravedad del asunto; afirmar que un juez ordinario no puede interpretar la Constitución; creer que control difuso produce invalidez general; usar principio pro persona para ignorar competencia; suponer que todo incidente suspende el juicio; y memorizar nombres de resoluciones sin revisar materia, código, efectos y recurso procedente.",
+          "sourceOrigin": "mixed"
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual: de la jurisdicción al caso competente",
+        "description": "Sigue la función estatal, sus límites, los controles y las decisiones que aparecen dentro del proceso.",
+        "nodes": [
+          { "id": "justicia", "label": "Impartición de justicia", "description": "Función estatal sometida a Constitución y ley." },
+          { "id": "jurisdiccion", "label": "Jurisdicción", "description": "Conocer, resolver y ejecutar controversias.", "parentId": "justicia" },
+          { "id": "competencia", "label": "Competencia", "description": "Límite legal de la jurisdicción.", "parentId": "jurisdiccion" },
+          { "id": "materia", "label": "Materia", "description": "Naturaleza del litigio.", "parentId": "competencia" },
+          { "id": "grado", "label": "Grado", "description": "Instancia o nivel de conocimiento.", "parentId": "competencia" },
+          { "id": "territorio", "label": "Territorio", "description": "Puntos geográficos de conexión.", "parentId": "competencia" },
+          { "id": "cuantia", "label": "Cuantía", "description": "Sólo si la organización judicial la utiliza.", "parentId": "competencia" },
+          { "id": "controles", "label": "Regularidad jurídica", "description": "Legalidad, constitucionalidad y convencionalidad.", "parentId": "justicia" },
+          { "id": "ordinario", "label": "Litigio ordinario", "description": "Resuelve la controversia principal.", "parentId": "controles" },
+          { "id": "concentrado", "label": "Control concentrado", "description": "Proceso constitucional específico.", "parentId": "controles" },
+          { "id": "difuso", "label": "Control difuso", "description": "Técnica dentro del caso y la competencia.", "parentId": "controles" },
+          { "id": "resoluciones", "label": "Resoluciones", "description": "Decisiones durante y al final del proceso.", "parentId": "justicia" },
+          { "id": "autos", "label": "Acuerdos o autos", "description": "Impulsan o deciden cuestiones procesales.", "parentId": "resoluciones" },
+          { "id": "interlocutoria", "label": "Interlocutoria", "description": "Resuelve una cuestión incidental prevista.", "parentId": "resoluciones" },
+          { "id": "definitiva", "label": "Definitiva", "description": "Decide la controversia principal.", "parentId": "resoluciones" }
+        ]
+      },
+      "references": [
+        {
+          "title": "Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 1, 16, 17, 94, 103, 104, 107 y 133; última reforma DOF 02-06-2026",
+          "retrievedOn": "2026-08-11",
+          "note": "Fundamento de competencia, acceso a la justicia y controles constitucionales."
+        },
+        {
+          "title": "Código Nacional de Procedimientos Civiles y Familiares",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 77 y siguientes; última reforma DOF 15-01-2026",
+          "retrievedOn": "2026-08-11",
+          "note": "Factores de competencia y reglas sobre resoluciones e incidentes."
+        },
+        {
+          "title": "Ley Orgánica del Poder Judicial de la Federación",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LOPJF.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Texto vigente, última reforma DOF 28-11-2025",
+          "retrievedOn": "2026-08-11",
+          "note": "Organización y competencias vigentes de los órganos judiciales federales."
+        },
+        {
+          "title": "Ley de Amparo",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 33 a 40; última reforma DOF 16-10-2025",
+          "retrievedOn": "2026-08-11",
+          "note": "Órganos y reglas de competencia para amparo directo e indirecto."
+        },
+        {
+          "title": "Competencia como límite de la jurisdicción",
+          "url": "https://sjf2.scjn.gob.mx/detalle/ejecutoria/34098",
+          "institution": "Suprema Corte de Justicia de la Nación",
+          "jurisdiction": "México",
+          "citation": "Semanario Judicial de la Federación, ejecutoria sobre jurisdicción, competencia y seguridad jurídica",
+          "retrievedOn": "2026-08-11",
+          "note": "Criterio oficial empleado para precisar la relación entre ambos conceptos."
+        }
+      ],
+      "flashcards": [
+        { "question": "¿Qué es la jurisdicción?", "answer": "La función estatal de conocer, resolver y, cuando corresponda, ejecutar controversias mediante el derecho.", "sourceOrigin": "mixed" },
+        { "question": "¿Qué es la competencia?", "answer": "El conjunto de facultades legales que delimita qué asuntos puede conocer un órgano jurisdiccional.", "sourceOrigin": "mixed" },
+        { "question": "¿Cómo se relacionan jurisdicción y competencia?", "answer": "La jurisdicción es el género; la competencia es la porción legalmente asignada a cada órgano.", "sourceOrigin": "complementary" },
+        { "question": "¿Qué determina la competencia por materia?", "answer": "La naturaleza jurídica de la controversia o de la pretensión planteada.", "sourceOrigin": "class" },
+        { "question": "¿Qué determina la competencia por grado?", "answer": "La instancia o nivel en que un órgano conoce del asunto o de su impugnación.", "sourceOrigin": "class" },
+        { "question": "¿Qué determina la competencia territorial?", "answer": "Los puntos de conexión geográfica previstos en la legislación aplicable.", "sourceOrigin": "mixed" },
+        { "question": "¿Cuándo es relevante la cuantía conforme al CNPCF?", "answer": "Cuando la ley orgánica respectiva establece órganos cuya competencia se define por ese criterio.", "sourceOrigin": "complementary" },
+        { "question": "¿Qué es control difuso?", "answer": "Una técnica de regularidad constitucional o convencional ejercida dentro de un caso y de la competencia del órgano.", "sourceOrigin": "complementary" },
+        { "question": "¿Qué efecto tiene normalmente la inaplicación en control difuso?", "answer": "Se limita al caso concreto y no expulsa la norma del orden jurídico con efectos generales.", "sourceOrigin": "complementary" },
+        { "question": "¿Qué es una cuestión incidental?", "answer": "Una controversia accesoria vinculada con el proceso principal que requiere una decisión específica.", "sourceOrigin": "mixed" },
+        { "question": "¿Qué suele resolver una sentencia interlocutoria?", "answer": "Una cuestión incidental o intermedia que la ley ordena decidir separadamente del fondo.", "sourceOrigin": "mixed" },
+        { "question": "¿Qué debe revisarse antes de elegir tribunal?", "answer": "Pretensión, materia, grado, territorio, cuantía cuando proceda y cualquier regla especial aplicable.", "sourceOrigin": "complementary" }
+      ],
+      "exam": {
+        "title": "Práctica: jurisdicción y competencia",
+        "description": "Diez reactivos originales de tres opciones sobre factores competenciales, control judicial, resoluciones e incidentes.",
+        "questions": [
+          {
+            "text": "Un tribunal tiene la función estatal de impartir justicia, pero la ley reserva el litigio familiar a otro órgano. ¿Qué concepto impide que conozca?",
+            "difficulty": "basic",
+            "options": ["Competencia", "Jurisdicción", "Legitimación de la parte"],
+            "correctOption": 0,
+            "explanation": "Aunque el tribunal ejerza jurisdicción, carece de la atribución legal específica para conocer la materia familiar.",
+            "optionExplanations": ["Delimita qué asuntos conoce cada órgano.", "La función general de juzgar sí existe, pero no basta.", "La legitimación se refiere a la relación de las partes con la pretensión."]
+          },
+          {
+            "text": "Una controversia se asigna a un juzgado mercantil por la naturaleza del acto reclamado. ¿Qué factor se aplicó?",
+            "difficulty": "basic",
+            "options": ["Materia", "Grado", "Territorio"],
+            "correctOption": 0,
+            "explanation": "La naturaleza mercantil de la controversia determina la competencia por materia.",
+            "optionExplanations": ["Clasifica el litigio según su naturaleza jurídica.", "El grado se refiere a la instancia.", "El territorio se refiere a conexiones geográficas."]
+          },
+          {
+            "text": "Un tribunal revisa mediante apelación una resolución de primera instancia. ¿Qué factor explica su intervención?",
+            "difficulty": "basic",
+            "options": ["Grado", "Cuantía", "Turno"],
+            "correctOption": 0,
+            "explanation": "La revisión por un órgano de segunda instancia corresponde a la competencia por grado.",
+            "optionExplanations": ["Identifica el nivel o instancia procesal.", "El valor del asunto no explica por sí solo la apelación.", "El turno distribuye asuntos entre órganos equivalentes."]
+          },
+          {
+            "text": "Conforme al artículo 77 del CNPCF, ¿cuándo debe usarse la cuantía para determinar competencia?",
+            "difficulty": "intermediate",
+            "options": ["Siempre que exista una cantidad reclamada", "Sólo si la ley orgánica define órganos mediante ese criterio", "Únicamente si ambas partes lo solicitan"],
+            "correctOption": 1,
+            "explanation": "El CNPCF condiciona la competencia por cuantía a que la ley orgánica correspondiente establezca órganos definidos así.",
+            "optionExplanations": ["La sola existencia de una suma no activa necesariamente el criterio.", "Es la condición establecida por el artículo 77.", "La competencia no depende únicamente del acuerdo de las partes."]
+          },
+          {
+            "text": "Una persona juzgadora ordinaria advierte que una norma aplicable vulnera derechos humanos. ¿Cuál actuación describe correctamente el control difuso?",
+            "difficulty": "advanced",
+            "options": ["Puede analizarla dentro de su competencia y, si procede, inaplicarla al caso", "Debe declararla inválida para toda la población", "Debe ignorar la Constitución porque sólo resuelve legalidad"],
+            "correctOption": 0,
+            "explanation": "El control difuso se ejerce dentro del caso, de la competencia y de las reglas procesales, con efectos concretos.",
+            "optionExplanations": ["Respeta el alcance individual y el marco competencial.", "La invalidez general no deriva del control difuso ordinario.", "Todas las autoridades judiciales están vinculadas por la Constitución y los derechos humanos."]
+          },
+          {
+            "text": "¿Cuál afirmación distingue mejor control concentrado y control difuso?",
+            "difficulty": "advanced",
+            "options": ["El concentrado tiene un proceso constitucional específico; el difuso opera como técnica dentro del caso", "El difuso siempre produce efectos generales", "El concentrado puede ejercerlo cualquier particular"],
+            "correctOption": 0,
+            "explanation": "La diferencia central está en el objeto y vía del control, la competencia del órgano y los efectos de la decisión.",
+            "optionExplanations": ["Distingue correctamente proceso específico y técnica incidental.", "El control difuso normalmente tiene efectos en el caso concreto.", "El control jurisdiccional corresponde a órganos facultados, no a particulares."]
+          },
+          {
+            "text": "Durante un juicio surge una controversia accesoria sobre nulidad de una notificación. ¿Cómo debe clasificarse inicialmente?",
+            "difficulty": "intermediate",
+            "options": ["Cuestión incidental", "Sentencia definitiva", "Nuevo derecho sustantivo autónomo"],
+            "correctOption": 0,
+            "explanation": "La validez de una actuación dentro del juicio es una cuestión accesoria cuyo trámite y efecto determina la ley procesal.",
+            "optionExplanations": ["Se vincula con el proceso principal y requiere decisión propia.", "La cuestión no decide por sí misma el fondo del litigio.", "No crea un derecho sustantivo separado del procedimiento."]
+          },
+          {
+            "text": "¿Qué debe hacerse para saber si un incidente suspende el procedimiento principal?",
+            "difficulty": "intermediate",
+            "options": ["Revisar la norma procesal aplicable", "Suponer que todos lo suspenden", "Preguntar cuál parte lo promovió"],
+            "correctOption": 0,
+            "explanation": "Los efectos del incidente dependen de su regulación expresa; no existe una regla universal de suspensión.",
+            "optionExplanations": ["La ley define trámite, efectos y resolución.", "Muchos incidentes continúan por cuerda separada o sin suspensión.", "La identidad del promovente no determina por sí sola el efecto."]
+          },
+          {
+            "text": "Una resolución decide finalmente la pretensión principal después del proceso. ¿Cuál es su clasificación general?",
+            "difficulty": "basic",
+            "options": ["Sentencia definitiva", "Acuerdo de mero trámite", "Incidente de competencia"],
+            "correctOption": 0,
+            "explanation": "La sentencia definitiva resuelve la controversia principal, sin perjuicio de la terminología particular de cada materia.",
+            "optionExplanations": ["Decide el fondo o pretensión principal.", "Un trámite sólo impulsa el procedimiento.", "El incidente es una cuestión accesoria, no la decisión final del fondo."]
+          },
+          {
+            "text": "Antes de presentar una demanda, ¿qué secuencia ofrece el análisis competencial más completo?",
+            "difficulty": "advanced",
+            "options": ["Elegir el tribunal más cercano y después adaptar la pretensión", "Identificar pretensión, materia, grado, territorio, cuantía aplicable y reglas especiales", "Elegir siempre un juzgado federal porque tiene mayor jerarquía"],
+            "correctOption": 1,
+            "explanation": "La competencia se justifica mediante la pretensión y todos los factores y reglas legales relevantes, no por conveniencia o jerarquía aparente.",
+            "optionExplanations": ["La cercanía no sustituye las reglas legales.", "Integra los factores necesarios en orden lógico.", "La competencia federal depende de la Constitución y las leyes, no de una preferencia general."]
+          }
+        ]
+      }
+    }
+  ]
+}

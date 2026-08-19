@@ -1,0 +1,160 @@
+{
+  "packageVersion": "1.0",
+  "subject": {
+    "name": "Derecho Fiscal",
+    "description": "Contribuciones, obligaciones fiscales y medios de defensa en México."
+  },
+  "class": {
+    "title": "Obligaciones fiscales por régimen: RFC, e.firma, Buzón, CFDI y declaraciones",
+    "description": "Decimonovena clase del curso: obligaciones transversales y diferencias esenciales entre RESICO, actividad empresarial, salarios, personas morales lucrativas y entidades sin fines de lucro."
+  },
+  "transcript": {
+    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 67.txt",
+    "cleaned": "Se utilizó únicamente la primera parte fiscal del Audio 67; el bloque de divorcio se reservó para las clases de derecho familiar. Se eliminaron anuncios, examen dictado, datos personales, lenguaje ofensivo, consejos de negocios y afirmaciones sin sustento. Se corrigió que e.firma y Buzón Tributario son herramientas distintas; que los avisos a medios de contacto no sustituyen la notificación depositada en el Buzón; que la inscripción al RFC sin actividad económica no genera por sí sola declaraciones o pago; que cada régimen tiene obligaciones propias y no basta una lista universal; que RESICO exige CFDI por ingresos efectivamente cobrados, pago mensual y obligaciones del artículo 113-G, sin confundir las facilidades de la Resolución Miscelánea del ejercicio; que la persona moral no declara simplemente ingresos y egresos, sino que determina impuestos y cumple declaraciones, retenciones, contabilidad y CFDI; que la persona asalariada puede estar obligada a presentar anual en los supuestos del artículo 98; que los asimilados son categorías legales y no autorizan encubrir subordinación; que el umbral salarial relevante es 400,000 pesos, no 500,000; y que no toda asociación civil es no contribuyente ni todo donativo es deducible: se requiere ubicación legal y, cuando corresponda, donataria autorizada y requisitos."
+  },
+  "topics": [
+    {
+      "title": "Identificación y cumplimiento según el régimen fiscal",
+      "description": "Método para saber qué avisos, comprobantes, declaraciones y retenciones corresponden a cada contribuyente sin mezclar regímenes.",
+      "learningJourney": {
+        "openingPrompt": "Una persona obtiene salario, inicia una actividad profesional y cambia de domicilio. ¿Qué obligaciones debe revisar y quién cumple cada una?",
+        "quickChecks": [
+          {"prompt": "¿La e.firma recibe notificaciones fiscales?", "answer": "No por sí misma; autentica y firma trámites. El Buzón Tributario es el sistema de comunicación electrónica.", "feedback": "Relaciona cada herramienta con su función antes de resolver el caso."},
+          {"prompt": "¿Toda persona asalariada queda liberada de presentar declaración anual?", "answer": "No. El artículo 98 prevé supuestos en que debe presentarla.", "feedback": "Revisa ingresos distintos, empleadores simultáneos, fuente extranjera, aviso y umbral salarial."},
+          {"prompt": "¿Constituir una asociación civil elimina automáticamente el ISR?", "answer": "No. Debe verificarse si encuadra en el Título III y qué obligaciones o ingresos gravables conserva.", "feedback": "Forma civil, no lucratividad y autorización para recibir donativos son preguntas diferentes."}
+        ],
+        "practicalCase": {
+          "facts": "Una arquitecta asalariada empieza a prestar servicios independientes, cambia su domicilio y recibe pagos de clientes. Su empleador continúa timbrando la nómina.",
+          "question": "¿Qué debe actualizar y qué obligaciones no puede delegar al empleador?",
+          "legalRule": "El RFC debe reflejar domicilio, actividades y obligaciones; los ingresos profesionales requieren CFDI y declaraciones del régimen aplicable. El empleador solo cumple las retenciones y comprobantes relacionados con el salario.",
+          "reasoning": "La nómina no cubre la nueva actividad independiente. La arquitecta debe actualizar el RFC, conservar acceso a e.firma y Buzón cuando corresponda, emitir CFDI y presentar pagos y anual según su régimen; además acumulará los ingresos en la anual aplicable.",
+          "conclusion": "Cada fuente de ingreso conserva su tratamiento y el contribuyente debe coordinar, no sustituir, las obligaciones de ambos regímenes."
+        },
+        "closingPrompt": "Compara en una tabla quién emite CFDI, quién retiene y cuándo presenta mensual y anual en cada régimen estudiado.",
+        "nextActivity": "Recorre el mapa de decisión, estudia las doce preguntas y resuelve los diez casos."
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "Las obligaciones fiscales se determinan por persona, actividad, ingreso y régimen. RFC, e.firma, Buzón y CFDI cumplen funciones diferentes. La inscripción identifica; la e.firma autentica; el Buzón comunica actos y permite promociones; el CFDI documenta operaciones. Declaraciones, retenciones, contabilidad y avisos cambian entre salarios, actividad empresarial, RESICO y personas morales.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "El cumplimiento empieza con una pregunta: ¿quién obtiene qué ingreso y bajo qué régimen? Una misma persona puede tener salarios, honorarios, arrendamiento u otras fuentes. Cada una activa reglas propias y después se coordinan cuando la ley exige declaración anual.\n\nEl RFC es el registro de identificación fiscal. El artículo 27 del CFF exige inscripción y actualización de identidad, domicilio, actividades y obligaciones. Las personas mayores de edad deben solicitar su inscripción, pero si no realizan actividad económica quedan bajo ese rubro sin obligación de presentar declaraciones o pagar contribuciones por la mera inscripción. Al iniciar, ampliar, cambiar, suspender o reanudar actividades deben presentarse los avisos aplicables; dejar de usar una cuenta no sustituye el aviso.\n\nLa e.firma es un mecanismo de autenticación y firma electrónica con efectos jurídicos. No es un buzón ni un correo. El Buzón Tributario del artículo 17-K es el sistema donde la autoridad deposita actos, resoluciones y mensajes y donde el contribuyente presenta promociones o atiende requerimientos. El correo y número móvil registrados sirven como mecanismos de aviso; el aviso no sustituye el documento electrónico ni debe confundirse con mensajes informales o fraudulentos.\n\nEl CFDI documenta ingresos, nómina, retenciones y otras operaciones conforme al CFF. Su emisión no depende de que el cliente insista: cuando la ley obliga, debe expedirse. También debe comprobarse la materialidad de la operación; un CFDI no corrige una actividad inexistente ni reemplaza contrato, pago, entrega o contabilidad.\n\nEn el régimen general de actividades empresariales y profesionales, la persona física solicita y actualiza RFC, lleva contabilidad, expide CFDI, conserva documentación, presenta pagos provisionales y declaración anual. Si cesa temporalmente, debe presentar el aviso de suspensión cuando proceda, sin asumir que eso elimina obligaciones anteriores.\n\nRESICO de personas físicas es una opción para quienes realizan únicamente actividades empresariales, profesionales o arrendamiento y cumplen requisitos, incluido el límite de ingresos. La ley exige RFC actualizado, e.firma, Buzón activo, CFDI por ingresos efectivamente cobrados, comprobantes de gastos, comprobante global cuando proceda y pago mensual. La LISR contiene anual; la Resolución Miscelánea del ejercicio puede otorgar facilidades, por lo que no debe memorizarse una excepción sin fecha.\n\nEn salarios, el empleador retiene ISR, emite CFDI de nómina y normalmente calcula el impuesto anual. Sin embargo, la persona trabajadora debe presentar anual cuando se actualiza algún supuesto del artículo 98: otros ingresos acumulables, aviso de que presentará, terminación antes de fin de año o empleadores simultáneos en el supuesto legal, fuente extranjera o pagador no retenedor, o salarios superiores a 400,000 pesos. Asimilado a salario no equivale necesariamente a relación laboral ni es una vía lícita para ocultar subordinación.\n\nLas personas morales del régimen general realizan pagos provisionales, contabilidad, CFDI, retenciones y anual dentro de los tres meses siguientes al cierre, ordinariamente marzo. No basta reportar una lista informal de ingresos y egresos. Las personas morales con fines no lucrativos solo reciben el tratamiento del Título III si encuadran legalmente; pueden conservar declaraciones informativas, retenciones y obligaciones. Una asociación civil no se vuelve donataria autorizada automáticamente y un donativo solo es deducible si cumple la ley y sus límites.\n\nMétodo CENEVAL: identifica sujeto, actividad, régimen y periodo; separa obligación propia de la de un retenedor; define herramienta o declaración; verifica excepción y vigencia. Así se evitan respuestas universales para situaciones distintas.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "El CFF regula e.firma en los artículos 17-D a 17-J, Buzón Tributario en el artículo 17-K, RFC y avisos en el artículo 27, contabilidad en el 28 y CFDI en los artículos 29 y 29-A. La LISR regula salarios y obligaciones de empleador y trabajador en los artículos 94 a 99; actividad empresarial y profesional en los artículos 100 a 110; RESICO en los artículos 113-E a 113-J; personas morales del régimen general en los artículos 9, 14 y 76; y personas morales con fines no lucrativos en los artículos 79 a 86. Consulta oficial realizada el 11 de agosto de 2026; las facilidades de la RMF deben verificarse para el ejercicio concreto.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Una persona inscrita sin actividad empieza a vender muebles. No necesita otro RFC: debe actualizar actividades y obligaciones. A partir de ahí emite CFDI, presenta declaraciones y lleva los registros de su régimen. Su e.firma le permite realizar trámites; las notificaciones se consultan en el Buzón. Si deja temporalmente el negocio, presenta el aviso que corresponda.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo CENEVAL",
+          "content": "Una trabajadora recibió salarios de dos empleadores simultáneamente y supone que ambos patrones resolverán su anual. La respuesta correcta es que debe revisar el artículo 98 y presentar declaración anual al actualizarse ese supuesto. Los CFDI y retenciones de los empleadores son insumos para su declaración, no una liberación automática.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "RFC identifica y debe actualizarse; e.firma autentica; Buzón comunica; CFDI documenta. Actividad empresarial general y RESICO tienen pagos, comprobantes y reglas distintas. El empleador retiene y timbra nómina, pero el trabajador puede tener anual propia. La persona moral general presenta provisionales y anual; una entidad no lucrativa solo recibe tratamiento especial si cumple la ley. Nunca apliques un umbral o una obligación fuera de su régimen y ejercicio.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía intensiva de preguntas y respuestas",
+          "content": "1. ¿Para qué sirve el RFC? Respuesta: identificar y registrar situación fiscal. 2. ¿RFC sin actividad genera impuesto? Respuesta: no por sí solo. 3. ¿Qué hace la e.firma? Respuesta: autentica y firma trámites. 4. ¿Qué hace el Buzón? Respuesta: recibe actos y permite comunicaciones oficiales. 5. ¿El aviso por correo es la notificación? Respuesta: no; alerta para consultar el Buzón. 6. ¿Qué prueba el CFDI? Respuesta: documenta una operación, sujeto a materialidad. 7. ¿Qué se actualiza al ampliar negocio? Respuesta: actividades y obligaciones del RFC. 8. ¿Qué exige RESICO? Respuesta: requisitos, CFDI y pagos del régimen. 9. ¿Quién timbra nómina? Respuesta: el empleador. 10. ¿Cuándo declara anual un asalariado? Respuesta: en supuestos del artículo 98. 11. ¿Cuándo declara anual una moral general? Respuesta: dentro de tres meses del cierre. 12. ¿Toda AC está exenta? Respuesta: no; debe encuadrar en el Título III.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "RFC: registro e identificación fiscal. Aviso: comunicación de cambio de situación. e.firma: firma electrónica avanzada para autenticación. Buzón Tributario: sistema oficial de comunicación. Medio de contacto: correo o teléfono para avisos. CFDI: comprobante fiscal digital. Retenedor: sujeto que descuenta y entera impuesto. Pago provisional: anticipo periódico. Declaración anual: determinación del ejercicio. RESICO: régimen opcional simplificado sujeto a requisitos. Salario asimilado: ingreso enumerado fiscalmente, sin resolver por sí solo la existencia laboral. Persona moral no lucrativa: entidad que encuadra en los supuestos legales del Título III. Donataria autorizada: entidad con autorización fiscal específica.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "No confundas e.firma con Buzón. No tomes un correo o SMS como el acto notificado. No pulses enlaces sospechosos: entra al portal oficial. No concluyas que RFC sin actividad obliga a pagar. No dejes sin actualizar domicilio o actividades. No creas que suspender equivale a abandonar cuentas sin aviso. No mezcles RESICO con el régimen general. No digas que el trabajador nunca presenta anual. No uses 500,000 pesos para salarios o asimilados: revisa el umbral de 400,000 y demás supuestos. No uses asimilados para disfrazar subordinación. No declares automáticamente exenta a toda AC ni deducible cualquier donativo.",
+          "sourceOrigin": "complementary"
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual de obligaciones por régimen",
+        "description": "Parte de la identificación común y sigue la rama del régimen correspondiente.",
+        "nodes": [
+          {"id":"cumplimiento","label":"Cumplimiento fiscal","description":"Sujeto + ingreso + régimen + periodo."},
+          {"id":"herramientas","label":"Herramientas comunes","description":"No cumplen la misma función.","parentId":"cumplimiento"},
+          {"id":"rfc","label":"RFC","description":"Identidad, domicilio, actividades y obligaciones.","parentId":"herramientas"},
+          {"id":"efirma","label":"e.firma","description":"Autenticación y firma electrónica.","parentId":"herramientas"},
+          {"id":"buzon","label":"Buzón Tributario","description":"Notificaciones, mensajes y promociones.","parentId":"herramientas"},
+          {"id":"contacto","label":"Correo + teléfono","description":"Avisan; no sustituyen el documento.","parentId":"buzon"},
+          {"id":"cfdi","label":"CFDI","description":"Documenta operaciones reales.","parentId":"herramientas"},
+          {"id":"regimen","label":"Elegir régimen","description":"Las obligaciones no son universales.","parentId":"cumplimiento"},
+          {"id":"actividad","label":"Actividad empresarial","description":"Régimen general de persona física.","parentId":"regimen"},
+          {"id":"act-pagos","label":"Pagos provisionales","description":"Mensuales y anual conforme a LISR.","parentId":"actividad"},
+          {"id":"act-registros","label":"Contabilidad + CFDI","description":"Conservar soporte de ingresos y gastos.","parentId":"actividad"},
+          {"id":"resico","label":"RESICO persona física","description":"Opción sujeta a requisitos y límite.","parentId":"regimen"},
+          {"id":"resico-cobrado","label":"Ingreso cobrado + CFDI","description":"Base y comprobación simplificadas.","parentId":"resico"},
+          {"id":"resico-mensual","label":"Pago mensual","description":"A más tardar el día 17.","parentId":"resico"},
+          {"id":"resico-rmf","label":"Revisar RMF anual","description":"Las facilidades dependen del ejercicio.","parentId":"resico"},
+          {"id":"salarios","label":"Sueldos y salarios","description":"Obligaciones compartidas.","parentId":"regimen"},
+          {"id":"patron","label":"Empleador","description":"Retiene, timbra y calcula cuando procede.","parentId":"salarios"},
+          {"id":"trabajador","label":"Trabajador","description":"Presenta anual en casos del artículo 98.","parentId":"salarios"},
+          {"id":"moral","label":"Persona moral general","description":"Régimen lucrativo.","parentId":"regimen"},
+          {"id":"moral-mensual","label":"Provisionales + retenciones","description":"Cumplimiento periódico.","parentId":"moral"},
+          {"id":"moral-anual","label":"Anual: tres meses","description":"Ordinariamente marzo.","parentId":"moral"},
+          {"id":"no-lucrativa","label":"Fines no lucrativos","description":"Solo supuestos del Título III.","parentId":"regimen"},
+          {"id":"obligaciones-nl","label":"Conserva obligaciones","description":"Informativas, retenciones y casos gravables.","parentId":"no-lucrativa"},
+          {"id":"donataria","label":"Donataria autorizada","description":"Autorización distinta de ser AC.","parentId":"no-lucrativa"},
+          {"id":"cambios","label":"Cambios y suspensión","description":"Presentar avisos aplicables.","parentId":"cumplimiento"}
+        ]
+      },
+      "references": [
+        {"title":"Código Fiscal de la Federación","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Federal, México","citation":"Artículos 17-D a 17-K y 27 a 30; última reforma DOF 09-04-2026","retrievedOn":"2026-08-11","note":"Base vigente de e.firma, Buzón, RFC, contabilidad y CFDI."},
+        {"title":"Ley del Impuesto sobre la Renta","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/LISR.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Federal, México","citation":"Artículos 9, 14, 76, 79 a 86, 94 a 110 y 113-E a 113-J; última reforma DOF 01-04-2024","retrievedOn":"2026-08-11","note":"Distingue obligaciones de personas morales, salarios, actividad empresarial y RESICO."},
+        {"title":"Declaración Anual 2025 Personas","url":"https://www.sat.gob.mx/minisitio/DeclaracionAnual/Personas/quienes_deben_presentarla.html","institution":"Servicio de Administración Tributaria","jurisdiction":"Federal, México","citation":"Orientación oficial para declaración presentada en abril de 2026","retrievedOn":"2026-08-11","note":"Permite contrastar obligaciones por tipo de ingreso y facilidades vigentes; la ley y RMF aplicable prevalecen."}
+      ],
+      "flashcards": [
+        {"question":"¿Qué información debe mantenerse actualizada en RFC?","answer":"Identidad, domicilio, actividades económicas, obligaciones y medios de contacto aplicables.","sourceOrigin":"mixed"},
+        {"question":"¿Qué efecto tiene el RFC de una persona sin actividad?","answer":"La identifica, pero no genera por sí solo declaraciones o pago de contribuciones.","sourceOrigin":"complementary"},
+        {"question":"¿Para qué sirve la e.firma?","answer":"Para acreditar identidad y firmar electrónicamente trámites y documentos.","sourceOrigin":"mixed"},
+        {"question":"¿Qué se deposita en el Buzón Tributario?","answer":"Actos, resoluciones, mensajes y comunicaciones electrónicas de la autoridad.","sourceOrigin":"mixed"},
+        {"question":"¿El aviso por correo sustituye la notificación?","answer":"No. Advierte que debe consultarse el documento en el Buzón.","sourceOrigin":"complementary"},
+        {"question":"¿Qué obligación documental tiene quien realiza operaciones?","answer":"Expedir y conservar los CFDI que correspondan, además del soporte material.","sourceOrigin":"mixed"},
+        {"question":"¿Qué exige el artículo 113-G a RESICO?","answer":"RFC actualizado, e.firma, Buzón, CFDI, pagos mensuales y demás obligaciones enumeradas.","sourceOrigin":"complementary"},
+        {"question":"¿Quién retiene ISR por salarios?","answer":"El empleador o pagador obligado.","sourceOrigin":"mixed"},
+        {"question":"¿Cuándo puede declarar anual una persona asalariada?","answer":"Cuando se actualiza alguno de los supuestos del artículo 98, incluido exceder 400,000 pesos.","sourceOrigin":"complementary"},
+        {"question":"¿Cuándo presenta anual una persona moral general?","answer":"Dentro de los tres meses siguientes al cierre del ejercicio, normalmente en marzo.","sourceOrigin":"complementary"},
+        {"question":"¿Toda asociación civil es no contribuyente de ISR?","answer":"No. Debe encuadrar en un supuesto del Título III y cumplir sus obligaciones.","sourceOrigin":"mixed"},
+        {"question":"¿Ser asociación civil equivale a ser donataria autorizada?","answer":"No. La autorización para recibir donativos deducibles es una condición fiscal específica.","sourceOrigin":"complementary"}
+      ],
+      "exam": {
+        "title": "Examen: obligaciones fiscales por régimen",
+        "description": "Diez casos originales sobre identificación, herramientas, comprobantes, declaraciones y diferencias de régimen.",
+        "questions": [
+          {"text":"Una persona mayor de edad se inscribe al RFC sin actividad económica. ¿Qué efecto inmediato tiene?","difficulty":"basic","options":["Debe pagar ISR mensual","No adquiere por ello obligación de declarar o pagar","Debe constituir una sociedad"],"correctOption":1,"explanation":"El artículo 27 del CFF prevé inscripción sin actividad y sin obligaciones de pago o declaración por esa sola circunstancia.","optionExplanations":["Falta actividad o ingreso que active el impuesto.","Es la regla expresa del CFF.","La inscripción no exige persona moral."]},
+          {"text":"¿Qué herramienta utiliza la autoridad para depositar una resolución digital al contribuyente?","difficulty":"basic","options":["Buzón Tributario","e.firma aislada","CFDI de nómina"],"correctOption":0,"explanation":"El artículo 17-K define el Buzón como sistema de comunicación para actos y resoluciones.","optionExplanations":["Es el canal oficial correspondiente.","La e.firma autentica, pero no es bandeja.","El CFDI documenta un pago laboral."]},
+          {"text":"Llega un correo que avisa sobre un documento fiscal. ¿Qué debe hacer el contribuyente?","difficulty":"intermediate","options":["Responder con contraseña","Entrar por el portal oficial y revisar el Buzón","Considerar el correo como resolución completa"],"correctOption":1,"explanation":"El medio de contacto solo avisa; la consulta debe hacerse de forma segura en el Buzón.","optionExplanations":["Nunca debe enviar credenciales por correo.","Es la conducta segura y jurídicamente correcta.","El aviso no sustituye el documento."]},
+          {"text":"Una comerciante agrega renta de vehículos a su venta de autos. ¿Qué acción fiscal corresponde?","difficulty":"basic","options":["Actualizar actividades y obligaciones en RFC","Solicitar un segundo RFC","Esperar una visita"],"correctOption":0,"explanation":"El mismo contribuyente debe informar la ampliación de actividades mediante el aviso aplicable.","optionExplanations":["Mantiene congruente su situación fiscal.","Cada persona tiene una clave, no una por giro.","El aviso debe ser oportuno."]},
+          {"text":"¿Cuál obligación caracteriza a una persona física en RESICO conforme al artículo 113-G?","difficulty":"intermediate","options":["CFDI por ingresos cobrados y pago mensual","No emitir comprobantes","Declarar solo cuando el cliente lo pida"],"correctOption":0,"explanation":"RESICO exige comprobación de ingresos efectivamente cobrados y pagos mensuales, entre otras obligaciones.","optionExplanations":["Reúne dos obligaciones expresas.","Contradice la ley.","La obligación no depende de preferencia del cliente."]},
+          {"text":"Una trabajadora tuvo dos empleadores simultáneos. ¿Quién debe revisar la declaración anual?","difficulty":"intermediate","options":["La propia trabajadora conforme al artículo 98","Nadie porque hubo retenciones","Solo el banco"],"correctOption":0,"explanation":"La simultaneidad de empleadores es uno de los supuestos legales de declaración anual del trabajador.","optionExplanations":["Es la persona obligada en ese supuesto.","Las retenciones no eliminan automáticamente la anual.","El banco no sustituye al contribuyente."]},
+          {"text":"¿Qué umbral salarial anual menciona el artículo 98 para obligación de declarar?","difficulty":"basic","options":["400,000 pesos","500,000 pesos","3,500,000 pesos"],"correctOption":0,"explanation":"El umbral salarial del artículo 98 es 400,000 pesos; los otros montos pertenecen a reglas diferentes.","optionExplanations":["Es el monto legal aplicable.","No es el umbral salarial señalado.","Corresponde al límite de RESICO en otro contexto."]},
+          {"text":"Una sociedad del régimen general pregunta por su declaración anual. ¿Cuál respuesta es correcta?","difficulty":"intermediate","options":["Dentro de los tres meses siguientes al cierre","Siempre en abril como persona física","Solo si tuvo utilidad"],"correctOption":0,"explanation":"La persona moral general presenta la anual dentro de los tres meses posteriores al cierre, normalmente marzo.","optionExplanations":["Es la regla temporal correcta.","Abril es referencia general de personas físicas.","La obligación no depende solo de utilidad positiva."]},
+          {"text":"Una asociación civil afirma que no paga ni declara nada por su forma jurídica. ¿Qué análisis procede?","difficulty":"advanced","options":["Verificar si encuadra en Título III y sus obligaciones","Aceptar que toda AC está exenta","Convertir todos sus ingresos en donativos"],"correctOption":0,"explanation":"La forma AC no determina por sí sola todo el tratamiento fiscal ni elimina obligaciones.","optionExplanations":["Es el análisis legal necesario.","Generaliza indebidamente.","La naturaleza real de cada ingreso prevalece."]},
+          {"text":"Una empresa paga como asimilado a quien trabaja subordinadamente. ¿Qué conclusión es segura?","difficulty":"advanced","options":["La etiqueta fiscal elimina la relación laboral","Debe analizarse la realidad de la subordinación","Nunca se retiene ISR"],"correctOption":1,"explanation":"La clasificación fiscal como asimilado no resuelve ni puede ocultar por sí sola los elementos de una relación laboral.","optionExplanations":["La realidad puede contradecir la etiqueta.","Es el análisis jurídicamente correcto.","Los asimilados están sujetos a retención según la ley."]}
+        ]
+      }
+    }
+  ]
+}

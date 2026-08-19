@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f5f0;
+  --surface: #fffdf9;
+  --foreground: #172033;
+  --muted: #5b6474;
+  --brand: #243b64;
+  --brand-deep: #192b4b;
+  --success: #2f6b57;
+  --success-soft: #dce9e2;
+  --warning: #a36316;
+  --danger: #a23b3b;
+  --border: #ded9cf;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-brand: var(--brand);
+  --color-brand-deep: var(--brand-deep);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-border: var(--border);
+  --font-sans: "Montserrat", "Montserrat Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Montserrat", "Montserrat Fallback", ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 90% 0%, rgb(220 233 226 / 45%), transparent 26rem),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-montserrat), "Montserrat", ui-sans-serif, system-ui,
+    sans-serif;
+}
+
+h1,
+h2 {
+  font-family: var(--font-anton), "Anton", Impact, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid rgb(36 59 100 / 35%);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--success-soft);
+  color: var(--foreground);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

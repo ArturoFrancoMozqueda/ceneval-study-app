@@ -1,0 +1,272 @@
+{
+  "packageVersion": "1.0",
+  "subject": {
+    "name": "Derecho constitucional y proceso legislativo",
+    "description": "Organización del Congreso, formación de leyes federales, participación del Ejecutivo y reforma constitucional en México."
+  },
+  "class": {
+    "title": "Procedimiento legislativo federal: de la iniciativa a la vigencia",
+    "description": "Novena clase del curso: identifica quién puede iniciar, distingue cámara de origen y revisora, resuelve los posibles recorridos del proyecto y separa ley ordinaria de reforma constitucional."
+  },
+  "transcript": {
+    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 22.txt",
+    "cleaned": "Esta clase utiliza únicamente el fragmento legislativo del Audio 22, que inicia con la explicación del procedimiento para crear una ley. El bloque inicial sobre órganos centralizados, desconcentrados y descentralizados se reservó para la clase C14 de Administración Pública Federal. Se eliminaron pausas, bromas, expresiones ofensivas, comentarios políticos, promociones y ejemplos no verificables. Se corrigió que ambas Cámaras discuten y aprueban el proyecto, no solamente la revisora; que los asuntos energéticos no integran por sí mismos la lista constitucional de inicio obligatorio en Diputados; que las excepciones son empréstitos, contribuciones o impuestos y reclutamiento de tropas; y que el llamado veto consiste en devolver el proyecto con observaciones dentro del plazo constitucional, no en posponerlo automáticamente a otro periodo. También se precisaron los plazos de aprobación tácita, promulgación y publicación, y se sustituyó la afirmación desactualizada sobre impugnar reformas constitucionales por el texto vigente de los artículos 105 y 107."
+  },
+  "topics": [
+    {
+      "title": "Cómo seguir el recorrido de una ley o decreto federal",
+      "description": "Iniciativa, comisión y dictamen, discusión y votación bicameral, observaciones del Ejecutivo, promulgación, publicación, vigencia y reforma constitucional.",
+      "learningJourney": {
+        "openingPrompt": "Si el Senado modifica un proyecto aprobado por Diputados, ¿puede enviarlo directamente al Ejecutivo sin que Diputados conozca los cambios?",
+        "quickChecks": [
+          {
+            "prompt": "¿Quiénes tienen derecho constitucional de iniciar leyes o decretos?",
+            "answer": "La persona titular de la Presidencia, diputadas y diputados, senadoras y senadores, legislaturas de los estados y de la Ciudad de México, y ciudadanía equivalente al menos al 0.13 % de la lista nominal.",
+            "feedback": "Una dependencia o la Fiscalía puede aportar insumos, pero no sustituye a los sujetos facultados por el artículo 71."
+          },
+          {
+            "prompt": "¿Qué proyectos deben iniciar necesariamente en la Cámara de Diputados?",
+            "answer": "Los relativos a empréstitos, contribuciones o impuestos y reclutamiento de tropas.",
+            "feedback": "Energía e hidrocarburos no aparecen como excepción autónoma en el artículo 72, inciso H."
+          },
+          {
+            "prompt": "¿Qué pasa si el Ejecutivo no devuelve el proyecto con observaciones en treinta días naturales?",
+            "answer": "Se reputa aprobado; después tiene diez días naturales para promulgarlo y publicarlo. Si tampoco lo hace, se considera promulgado y la Presidencia de la Cámara de origen ordena su publicación dentro de otros diez días.",
+            "feedback": "El cierre o suspensión de sesiones no interrumpe estos plazos."
+          }
+        ],
+        "practicalCase": {
+          "facts": "El Senado recibe una iniciativa sobre comercio, la turna a comisión y aprueba el dictamen. Diputados, como cámara revisora, cambia dos artículos y aprueba el resto. El Ejecutivo aún no ha recibido el proyecto.",
+          "question": "¿Puede enviarse ya al Ejecutivo y qué parte debe volver al Senado?",
+          "legalRule": "El artículo 72, inciso E, ordena que cuando la revisora desecha parcialmente, modifica o adiciona, el proyecto vuelva a la cámara de origen; la nueva discusión se limita a lo cambiado y no puede alterar los artículos ya aprobados por ambas.",
+          "reasoning": "Comercio puede comenzar en cualquiera de las Cámaras. Como Diputados introdujo cambios, todavía no existe coincidencia bicameral sobre esos artículos. El Senado debe decidir sobre las modificaciones; las disposiciones ya aprobadas por ambas quedan fuera de esa nueva discusión.",
+          "conclusion": "No debe enviarse aún al Ejecutivo. La minuta regresa al Senado para resolver exclusivamente las modificaciones hechas por Diputados."
+        },
+        "closingPrompt": "Ante cualquier caso identifica cinco datos: promovente facultado, cámara de origen, decisión de cada Cámara, conducta del Ejecutivo y fecha o regla de entrada en vigor.",
+        "nextActivity": "Recorre el mapa visual, contesta la guía de doce preguntas y resuelve diez casos tipo EGEL."
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta corta: qué es el procedimiento legislativo",
+          "content": "Es el conjunto de actos constitucionales y parlamentarios mediante los cuales una iniciativa puede convertirse en ley o decreto. En el procedimiento bicameral ordinario comprende presentación, turno y dictamen, discusión y votación en la cámara de origen, revisión por la otra Cámara, intervención del Ejecutivo, publicación y entrada en vigor.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "El procedimiento comienza con una iniciativa, que es una propuesta y no una ley vigente. El artículo 71 reconoce el derecho de iniciar al Presidente de la República; diputadas, diputados, senadoras y senadores; legislaturas de los estados y de la Ciudad de México; y ciudadanía equivalente, por lo menos, al 0.13 % de la lista nominal. Una autoridad no incluida puede colaborar técnicamente, pero la presentación debe provenir de un sujeto facultado.\n\nLa iniciativa se presenta en una Cámara, se turna normalmente a una o más comisiones y estas estudian el asunto. El dictamen expone antecedentes y razones y propone aprobar, modificar o desechar. Después, el Pleno discute y vota, por regla general primero en lo general y luego en lo particular. Por eso no debe memorizarse una separación artificial según la cual la cámara de origen solo discute y la revisora solo aprueba: ambas pueden discutir, modificar y votar.\n\nLa cámara en la que comienza el trámite es la de origen; la otra es la revisora. Como regla, un proyecto puede iniciar indistintamente en Diputados o Senadores. El artículo 72, inciso H, reserva el inicio en Diputados únicamente para empréstitos, contribuciones o impuestos y reclutamiento de tropas. Los asuntos de energía no constituyen por sí solos una cuarta excepción. Las resoluciones exclusivas de una Cámara tampoco recorren necesariamente el circuito bicameral ordinario.\n\nSi la cámara de origen aprueba, envía una minuta a la revisora. Si esta aprueba el mismo texto, pasa al Ejecutivo. Si lo rechaza totalmente, vuelve con observaciones; puede existir una segunda revisión con las mayorías del inciso D. Si lo modifica, adiciona o desecha parcialmente, regresa a origen y la nueva discusión se limita a las diferencias. Solo cuando ambas Cámaras coinciden puede cerrarse la fase legislativa.\n\nRecibido el proyecto, el Ejecutivo puede publicarlo si no tiene observaciones o devolverlo total o parcialmente a la cámara de origen. Esta devolución con observaciones es lo que suele llamarse veto. Debe ocurrir dentro de treinta días naturales; si no, el proyecto se reputa aprobado. Para superar observaciones, origen debe confirmarlo por dos terceras partes del número total de votos y la revisora por la misma mayoría. Entonces vuelve al Ejecutivo para promulgación.\n\nSi transcurren los treinta días sin devolución, el Ejecutivo dispone de diez días naturales para promulgar y publicar. Si tampoco actúa, la ley o decreto se considera promulgado y la Presidencia de la Cámara de origen ordena su publicación en el Diario Oficial de la Federación dentro de diez días, sin refrendo. Promulgación y publicación están relacionadas, pero no son idénticas: la primera reconoce y ordena cumplir el producto normativo; la segunda difunde oficialmente su texto.\n\nLa entrada en vigor se determina normalmente en los artículos transitorios. Si la disposición fija una fecha posterior a su publicación, obliga desde esa fecha. Como regla supletoria federal, el artículo 3 del Código Civil Federal prevé efectos tres días después de la publicación y un sistema sucesivo para lugares distintos; en la práctica legislativa moderna suele usarse una cláusula expresa, por ejemplo, al día siguiente de la publicación.\n\nLa reforma constitucional sigue un procedimiento agravado. El artículo 135 exige el voto de dos terceras partes de las personas presentes en el Congreso de la Unión y la aprobación de la mayoría de las legislaturas de los estados y de la Ciudad de México; después, el Congreso o la Comisión Permanente computa los votos y declara la aprobación. Además, una reforma constitucional no puede recibir trámite preferente. Conforme al texto vigente, el amparo no procede contra adiciones o reformas a la Constitución y las controversias y acciones de inconstitucionalidad que pretendan controvertirlas son improcedentes.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Constitución, artículos 70 a 72: naturaleza de las resoluciones, sujetos con iniciativa, trámite preferente, discusión bicameral, observaciones, plazos, devolución y cámara de origen. Artículo 135: procedimiento agravado de reforma constitucional. Artículos 105 y 107: improcedencia vigente de controversias, acciones y amparo contra adiciones o reformas constitucionales. Reglamento de la Cámara de Diputados, especialmente artículos 77 a 82 y 104 a 109: iniciativas, dictámenes, discusión y votación. Código Civil Federal, artículos 3 y 4: sistemas supletorios de inicio de vigencia.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo: recorrido sin cambios",
+          "content": "Una senadora presenta una iniciativa de comercio. El Senado es cámara de origen: la turna, dictamina, discute y aprueba. Diputados funciona como revisora y aprueba exactamente el mismo texto. Se remite al Ejecutivo; si no formula observaciones, se promulga y publica. La norma entra en vigor en la fecha indicada por sus transitorios.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Cómo aparece en un reactivo tipo EGEL",
+          "content": "Primero ubica si el asunto exige inicio en Diputados: empréstito, contribución o impuesto, o reclutamiento de tropas. Luego sigue la coincidencia de textos. Si la revisora cambia algo, debe volver a origen. Si el Ejecutivo guarda silencio, cuenta treinta días, diez para promulgar y publicar y, finalmente, diez para que la Presidencia de origen ordene la publicación. Descarta respuestas que atribuyan toda la aprobación a una sola Cámara.",
+          "sourceOrigin": "complementary"
+        },
+        {
+          "type": "summary",
+          "title": "Resumen para repasar",
+          "content": "Iniciativa no equivale a ley. Sujetos del artículo 71: Presidencia, legisladores federales, legislaturas locales y ciudadanía del 0.13 %. Origen y revisora discuten y votan. Inicio forzoso en Diputados: empréstitos, contribuciones o impuestos y tropas. Cambios de revisora regresan a origen. Observaciones del Ejecutivo: treinta días. Silencio: aprobación tácita, diez días para promulgar/publicar y otros diez para publicación ordenada por origen. Reforma constitucional: dos tercios presentes más mayoría de legislaturas locales.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de preguntas y respuestas",
+          "content": "1. ¿Qué es una iniciativa? Respuesta: una propuesta de ley o decreto; todavía no es derecho vigente.\n2. ¿Quiénes pueden iniciar? Respuesta: Presidencia, legisladores federales, legislaturas locales y ciudadanía equivalente al menos al 0.13 % de la lista nominal.\n3. ¿Qué hace una comisión? Respuesta: estudia la iniciativa y propone al Pleno un dictamen.\n4. ¿Qué es la cámara de origen? Respuesta: la primera Cámara que conoce y vota el proyecto.\n5. ¿Qué es la cámara revisora? Respuesta: la otra Cámara, que discute y vota la minuta.\n6. ¿Qué debe iniciar en Diputados? Respuesta: empréstitos, contribuciones o impuestos y reclutamiento de tropas.\n7. ¿Ambas Cámaras aprueban? Respuesta: sí, cuando se trata de un proyecto bicameral.\n8. ¿Qué pasa si la revisora modifica? Respuesta: vuelve a origen para discutir únicamente las diferencias.\n9. ¿Qué es el veto? Respuesta: la devolución total o parcial del proyecto con observaciones del Ejecutivo.\n10. ¿Cuánto tiene el Ejecutivo para observar? Respuesta: treinta días naturales desde la recepción.\n11. ¿Cuándo inicia vigencia? Respuesta: en la fecha prevista en transitorios o conforme a la regla supletoria aplicable.\n12. ¿Qué exige una reforma constitucional? Respuesta: dos tercios de presentes del Congreso, mayoría de legislaturas locales, cómputo y declaratoria.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Iniciativa: propuesta presentada por sujeto facultado. Turno: envío a comisión competente. Dictamen: resolución razonada que la comisión propone al Pleno. Cámara de origen: primera en conocer. Minuta: proyecto aprobado que se remite a la otra Cámara. Cámara revisora: segunda en conocer. Observaciones: objeciones del Ejecutivo. Promulgación: reconocimiento y orden de cumplimiento. Publicación: inserción oficial del texto. Vacatio legis: lapso entre publicación y vigencia. Poder revisor: órganos que participan en la reforma constitucional.",
+          "sourceOrigin": "mixed"
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes y correcciones",
+          "content": "Error: creer que origen solo discute y revisora solo aprueba. Corrección: ambas discuten y votan. Error: incluir hidrocarburos entre los asuntos que forzosamente inician en Diputados. Corrección: el artículo 72 H solo enumera empréstitos, contribuciones o impuestos y tropas. Error: decir que veto significa dejar el asunto para otro periodo. Corrección: es devolución con observaciones y activa una nueva deliberación. Error: confundir promulgación con publicación. Corrección: son actos relacionados pero conceptualmente distinguibles. Error: aplicar el artículo 135 como si fuera una ley ordinaria. Corrección: exige legislaturas locales. Error: afirmar hoy que procede amparo contra el procedimiento de reforma constitucional. Corrección: el artículo 107 vigente excluye el amparo contra adiciones o reformas.",
+          "sourceOrigin": "mixed"
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual del procedimiento legislativo federal",
+        "description": "Sigue el flujo ordinario, sus retornos y la ruta especial de reforma constitucional.",
+        "nodes": [
+          {"id":"proceso","label":"Procedimiento legislativo","description":"De propuesta a norma vigente."},
+          {"id":"iniciativa","label":"1. Iniciativa","description":"Propuesta de ley o decreto.","parentId":"proceso"},
+          {"id":"facultados","label":"Sujetos del artículo 71","description":"Presidencia, Congreso, legislaturas y ciudadanía.","parentId":"iniciativa"},
+          {"id":"ciudadana","label":"Iniciativa ciudadana","description":"Al menos 0.13 % de lista nominal.","parentId":"facultados"},
+          {"id":"comision","label":"2. Comisión","description":"Estudio técnico y político.","parentId":"proceso"},
+          {"id":"dictamen","label":"Dictamen","description":"Propone aprobar, modificar o desechar.","parentId":"comision"},
+          {"id":"origen","label":"3. Cámara de origen","description":"Discute y vota primero.","parentId":"proceso"},
+          {"id":"diputados","label":"Inicio obligatorio en Diputados","description":"Empréstitos, impuestos y tropas.","parentId":"origen"},
+          {"id":"minuta","label":"Minuta aprobada","description":"Se envía a la revisora.","parentId":"origen"},
+          {"id":"revisora","label":"4. Cámara revisora","description":"También discute y vota.","parentId":"proceso"},
+          {"id":"coincide","label":"Aprueba igual texto","description":"Se remite al Ejecutivo.","parentId":"revisora"},
+          {"id":"cambia","label":"Modifica o adiciona","description":"Regresa a origen por diferencias.","parentId":"revisora"},
+          {"id":"rechaza","label":"Desecha","description":"Activa reglas de segunda revisión.","parentId":"revisora"},
+          {"id":"ejecutivo","label":"5. Ejecutivo","description":"Publica u observa.","parentId":"proceso"},
+          {"id":"observa","label":"Observaciones","description":"Devolución dentro de 30 días.","parentId":"ejecutivo"},
+          {"id":"supera","label":"Superación","description":"Dos tercios de votos en cada Cámara.","parentId":"observa"},
+          {"id":"silencio","label":"Silencio","description":"Aprobación tácita y plazos 10 + 10.","parentId":"ejecutivo"},
+          {"id":"publicacion","label":"6. Publicación","description":"Texto en el DOF.","parentId":"proceso"},
+          {"id":"vigencia","label":"7. Entrada en vigor","description":"Fecha transitoria o regla supletoria.","parentId":"publicacion"},
+          {"id":"reforma","label":"Ruta constitucional","description":"Procedimiento agravado del artículo 135.","parentId":"proceso"},
+          {"id":"dos_tercios","label":"Dos tercios presentes","description":"Aprobación en el Congreso.","parentId":"reforma"},
+          {"id":"legislaturas","label":"Mayoría de legislaturas","description":"Estados y Ciudad de México.","parentId":"reforma"}
+        ]
+      },
+      "references": [
+        {
+          "title": "Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 70 a 72, 105, 107 y 135; últimas reformas DOF 02-06-2026",
+          "retrievedOn": "2026-08-11",
+          "note": "Sujetos, procedimiento bicameral, observaciones, reforma constitucional e improcedencias vigentes."
+        },
+        {
+          "title": "Reglamento de la Cámara de Diputados",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/Reg_Diputados.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 77 a 82 y 104 a 109; última reforma DOF 07-05-2025",
+          "retrievedOn": "2026-08-11",
+          "note": "Trámite de iniciativas, dictámenes, discusión y votación en la Cámara de Diputados."
+        },
+        {
+          "title": "Código Civil Federal",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCF.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 3 y 4; última reforma DOF 14-11-2025",
+          "retrievedOn": "2026-08-11",
+          "note": "Reglas federales supletorias sobre inicio de efectos y fecha expresa de vigencia."
+        },
+        {
+          "title": "Glosario legislativo: Dictamen",
+          "url": "https://www3.diputados.gob.mx/camara/001_diputados/007_destacados/d_accesos_directos/006_glosario_de_terminos/g_dictamen",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Definición institucional de dictamen y su contenido",
+          "retrievedOn": "2026-08-11",
+          "note": "Apoyo para distinguir iniciativa, dictamen y decisión del Pleno."
+        }
+      ],
+      "flashcards": [
+        {"question":"¿Una iniciativa ya es una ley?","answer":"No; es una propuesta que debe completar el procedimiento aplicable.","sourceOrigin":"mixed"},
+        {"question":"¿Qué porcentaje exige la iniciativa ciudadana?","answer":"Al menos 0.13 % de la lista nominal de electores.","sourceOrigin":"mixed"},
+        {"question":"¿Qué es la cámara de origen?","answer":"La primera Cámara que conoce, discute y vota el proyecto.","sourceOrigin":"mixed"},
+        {"question":"¿Qué asuntos deben iniciar en Diputados?","answer":"Empréstitos, contribuciones o impuestos y reclutamiento de tropas.","sourceOrigin":"complementary"},
+        {"question":"¿Energía siempre debe iniciar en Diputados?","answer":"No; el artículo 72 H no la enumera como excepción autónoma.","sourceOrigin":"complementary"},
+        {"question":"¿Qué pasa si revisora modifica?","answer":"El proyecto vuelve a origen para discutir solo las diferencias.","sourceOrigin":"complementary"},
+        {"question":"¿Qué es el veto presidencial?","answer":"La devolución total o parcial del proyecto con observaciones.","sourceOrigin":"mixed"},
+        {"question":"¿Cuál es el plazo para observaciones?","answer":"Treinta días naturales desde la recepción del proyecto.","sourceOrigin":"complementary"},
+        {"question":"¿Qué sigue al silencio por treinta días?","answer":"Diez días naturales para promulgar y publicar.","sourceOrigin":"complementary"},
+        {"question":"¿Quién ordena publicar ante la segunda omisión?","answer":"La Presidencia de la Cámara de origen, dentro de diez días.","sourceOrigin":"complementary"},
+        {"question":"¿Qué exige el artículo 135?","answer":"Dos tercios de presentes en el Congreso y mayoría de legislaturas locales.","sourceOrigin":"mixed"},
+        {"question":"¿Procede amparo contra una reforma constitucional?","answer":"No, el artículo 107 vigente lo excluye expresamente.","sourceOrigin":"complementary"}
+      ],
+      "exam": {
+        "title": "Examen: procedimiento legislativo federal",
+        "description": "Diez casos originales sobre iniciativa, cámaras, observaciones, publicación, vigencia y reforma constitucional.",
+        "questions": [
+          {
+            "text": "Una asociación civil reúne apoyo equivalente al 0.13 % de la lista nominal y presenta un proyecto. ¿Qué figura ejerce?",
+            "difficulty": "basic",
+            "options": ["Iniciativa ciudadana", "Referéndum vinculante", "Controversia constitucional"],
+            "correctOption": 0,
+            "explanation": "El artículo 71 reconoce iniciativa a la ciudadanía que alcance ese umbral.",
+            "optionExplanations": ["Es el mecanismo aplicable.", "No se está votando directamente la ley.", "No existe un conflicto competencial."]
+          },
+          {
+            "text": "Un proyecto crea un nuevo impuesto federal. ¿En qué Cámara debe iniciar?",
+            "difficulty": "basic",
+            "options": ["Cámara de Diputados", "Cámara de Senadores", "Cualquiera indistintamente"],
+            "correctOption": 0,
+            "explanation": "Los proyectos sobre contribuciones o impuestos deben discutirse primero en Diputados.",
+            "optionExplanations": ["Es la excepción del artículo 72 H.", "Puede ser revisora, no origen en este caso.", "La regla indistinta cede ante la excepción."]
+          },
+          {
+            "text": "Una iniciativa regula únicamente comercio electrónico. ¿Puede comenzar en el Senado?",
+            "difficulty": "basic",
+            "options": ["Sí, salvo otra regla especial aplicable", "No, todo impacto económico inicia en Diputados", "No, todas las leyes inician en Diputados"],
+            "correctOption": 0,
+            "explanation": "Comercio no está entre las excepciones expresas del artículo 72 H.",
+            "optionExplanations": ["Aplica la regla de inicio indistinto.", "Impacto económico no equivale a impuesto.", "La Constitución reconoce dos posibles cámaras de origen."]
+          },
+          {
+            "text": "Diputados aprobó una minuta y el Senado cambió tres artículos. ¿Qué sigue?",
+            "difficulty": "intermediate",
+            "options": ["Regresa a Diputados para discutir los cambios", "Pasa directamente al Ejecutivo", "Se publica automáticamente"],
+            "correctOption": 0,
+            "explanation": "La cámara de origen debe resolver las modificaciones de la revisora.",
+            "optionExplanations": ["Respeta la coincidencia bicameral.", "Aún no existe texto idéntico aprobado.", "La publicación requiere concluir las fases previas."]
+          },
+          {
+            "text": "El Ejecutivo devuelve a origen un proyecto con objeciones dentro de veinte días. ¿Qué facultad ejerció?",
+            "difficulty": "basic",
+            "options": ["Observaciones o veto", "Iniciativa preferente", "Facultad reglamentaria"],
+            "correctOption": 0,
+            "explanation": "El veto se materializa mediante devolución con observaciones dentro de treinta días naturales.",
+            "optionExplanations": ["Describe correctamente el acto.", "La preferencia opera al iniciar proyectos.", "Un reglamento ejecuta una ley ya vigente."]
+          },
+          {
+            "text": "El Ejecutivo recibió un proyecto y durante treinta días naturales no lo devolvió. ¿Cuál es el efecto inmediato?",
+            "difficulty": "intermediate",
+            "options": ["Se reputa aprobado por el Ejecutivo", "Se desecha definitivamente", "Debe votarse desde el inicio"],
+            "correctOption": 0,
+            "explanation": "El artículo 72 B establece aprobación tácita por falta de observaciones oportunas.",
+            "optionExplanations": ["Es el efecto constitucional.", "El silencio no desecha.", "No reinicia la fase legislativa."]
+          },
+          {
+            "text": "Tras la aprobación tácita, pasan diez días y el Ejecutivo tampoco promulga ni publica. ¿Qué procede?",
+            "difficulty": "advanced",
+            "options": ["Se considera promulgada y origen ordena publicarla dentro de diez días", "El proyecto caduca", "La Suprema Corte debe publicarlo"],
+            "correctOption": 0,
+            "explanation": "La Constitución previene que la inacción ejecutiva bloquee indefinidamente la publicación.",
+            "optionExplanations": ["Es la secuencia 30 + 10 + 10.", "No existe esa caducidad.", "La Corte no sustituye la publicación."]
+          },
+          {
+            "text": "Un decreto fue publicado hoy y su transitorio dice que entra en vigor en noventa días. ¿Cuándo obliga?",
+            "difficulty": "basic",
+            "options": ["En la fecha fijada por el transitorio", "Siempre tres días después", "Desde que se presentó la iniciativa"],
+            "correctOption": 0,
+            "explanation": "La fecha expresa de vigencia prevalece si la publicación fue anterior.",
+            "optionExplanations": ["Aplica el artículo 4 del Código Civil Federal.", "La regla de tres días es supletoria.", "La iniciativa aún no crea obligaciones."]
+          },
+          {
+            "text": "El Congreso aprueba una reforma constitucional por mayoría simple y la publica sin consultar legislaturas locales. ¿Qué requisito falta?",
+            "difficulty": "intermediate",
+            "options": ["Dos tercios de presentes y mayoría de legislaturas locales", "Aprobación exclusiva del Senado", "Referéndum nacional obligatorio"],
+            "correctOption": 0,
+            "explanation": "El artículo 135 establece un procedimiento agravado con participación federal y local.",
+            "optionExplanations": ["Integra ambos requisitos centrales.", "No es facultad exclusiva.", "La Constitución federal no exige ese referéndum general."]
+          },
+          {
+            "text": "Una persona intenta promover amparo cuyo objeto directo es una adición a la Constitución. ¿Qué regla vigente aplica?",
+            "difficulty": "advanced",
+            "options": ["El amparo es improcedente", "Procede solo ante juez local", "Procede si reúne 0.13 % de firmas"],
+            "correctOption": 0,
+            "explanation": "El artículo 107 vigente dispone que no procede amparo contra adiciones o reformas a la Constitución.",
+            "optionExplanations": ["Es la exclusión constitucional expresa.", "La competencia local no elimina la improcedencia.", "Ese porcentaje corresponde a iniciativa ciudadana."]
+          }
+        ]
+      }
+    }
+  ]
+}
