@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { TopicDetail } from "@/components/topic-detail";
 import { requireUser } from "@/lib/auth";
 import { getTopic } from "@/lib/data/academic";
@@ -28,6 +29,8 @@ export default async function TopicPage({
 }: TopicPageProps) {
   await requireUser();
   const { topicId } = await params;
+  const numericId = Number(topicId);
+  if (!Number.isInteger(numericId) || numericId < 1) notFound();
 
-  return <TopicDetail topicId={Number(topicId)} />;
+  return <TopicDetail topicId={numericId} />;
 }

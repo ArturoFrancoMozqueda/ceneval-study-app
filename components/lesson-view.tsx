@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useTransition } from "react";
 import {
   saveQuickCheckAction,
@@ -13,6 +14,7 @@ import type {
   StudyMaterial,
   StudyProgress,
 } from "@/lib/data/academic";
+import type { StudyContinuation } from "@/lib/study/continuation";
 
 const steps = [
   { id: "discover", label: "Descubre" },
@@ -43,12 +45,101 @@ function Material({ material }: { material: StudyMaterial }) {
   );
 }
 
+function ContinuationCard({
+  continuation,
+}: {
+  continuation: StudyContinuation;
+}) {
+  if (continuation.kind === "unavailable") return null;
+
+  if (continuation.kind === "topic") {
+    return (
+      <aside
+        aria-labelledby="study-continuation-title"
+        className="mt-7 rounded-2xl border border-success/30 bg-success-soft p-5 sm:p-6"
+      >
+        <p className="text-sm font-semibold text-success">
+          Siguiente tema de {continuation.curriculumCode}
+        </p>
+        <h2 className="mt-2 text-xl font-semibold" id="study-continuation-title">
+          {continuation.topicTitle}
+        </h2>
+        <p className="mt-2 text-sm leading-6 text-muted">
+          Continúa con el siguiente tema aprobado de esta clase.
+        </p>
+        <Link
+          className="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-brand px-5 text-center font-semibold text-white sm:w-auto"
+          href={`/temas/${continuation.topicId}`}
+        >
+          Estudiar el siguiente tema →
+        </Link>
+      </aside>
+    );
+  }
+
+  if (continuation.kind === "class") {
+    return (
+      <aside
+        aria-labelledby="study-continuation-title"
+        className="mt-7 rounded-2xl border border-success/30 bg-success-soft p-5 sm:p-6"
+      >
+        <p className="text-sm font-semibold text-success">Clase completada</p>
+        <h2 className="mt-2 text-xl font-semibold" id="study-continuation-title">
+          Sigue con {continuation.curriculumCode} · {continuation.classTitle}
+        </h2>
+        <p className="mt-2 text-sm leading-6 text-muted">
+          Terminaste el último tema. Abre la siguiente clase publicada del
+          recorrido curricular.
+        </p>
+        <Link
+          className="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-brand px-5 text-center font-semibold text-white sm:w-auto"
+          href={`/clases/${continuation.classId}`}
+        >
+          Ir a la siguiente clase →
+        </Link>
+      </aside>
+    );
+  }
+
+  return (
+    <aside
+      aria-labelledby="study-continuation-title"
+      className="mt-7 rounded-2xl border border-success/30 bg-success-soft p-5 sm:p-6"
+    >
+      <p className="text-sm font-semibold text-success">Recorrido al día</p>
+      <h2 className="mt-2 text-xl font-semibold" id="study-continuation-title">
+        Terminaste todo el contenido publicado
+      </h2>
+      <p className="mt-2 text-sm leading-6 text-muted">
+        Puedes volver a Sesiones para revisar tu avance o practicar lo que ya
+        estudiaste en la cola de repaso.
+      </p>
+      <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+        <Link
+          className="inline-flex min-h-12 items-center justify-center rounded-xl bg-brand px-5 text-center font-semibold text-white"
+          href="/sesiones"
+        >
+          Volver a Sesiones
+        </Link>
+        <Link
+          className="inline-flex min-h-12 items-center justify-center rounded-xl border border-border bg-white px-5 text-center font-semibold text-brand"
+          href="/estudiar/repaso"
+        >
+          Ir al repaso
+        </Link>
+      </div>
+    </aside>
+  );
+}
+
 export function LessonView({
   lesson,
   initialProgress,
+  continuation,
 }: {
   lesson: LessonBundle;
   initialProgress: StudyProgress | null;
+  continuation: StudyContinuation;
 }) {
   const [activeStep, setActiveStep] = useState<StepId>(
     initialProgress?.currentStep ?? "discover",
@@ -61,6 +152,9 @@ export function LessonView({
   );
   const [completed, setCompleted] = useState<StepId[]>(
     initialProgress?.completedSteps ?? [],
+  );
+  const [topicCompleted, setTopicCompleted] = useState(
+    initialProgress?.completedSteps.includes("check") ?? false,
   );
   const [showSources, setShowSources] = useState(false);
   const [quickCheckRevealed, setQuickCheckRevealed] = useState(false);
@@ -492,12 +586,16 @@ export function LessonView({
                     ? completed
                     : [...completed, "check"];
                   setCompleted(nextCompleted);
+                  setTopicCompleted(true);
                   persist("check", 0, nextCompleted);
                 }}
               />
             ) : (
               <p className="text-muted">El examen está pendiente.</p>
             )}
+            {topicCompleted ? (
+              <ContinuationCard continuation={continuation} />
+            ) : null}
           </div>
         ) : null}
       </section>

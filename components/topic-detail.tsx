@@ -1,26 +1,20 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { LessonView } from "@/components/lesson-view";
-import { getLessonBundle, getStudyProgress } from "@/lib/data/academic";
+import {
+  getLessonBundle,
+  getStudyContinuation,
+  getStudyProgress,
+} from "@/lib/data/academic";
 
 export async function TopicDetail({ topicId }: { topicId: number }) {
-  const [lesson, progress] = await Promise.all([
+  const [lesson, progress, continuation] = await Promise.all([
     getLessonBundle(topicId),
     getStudyProgress(topicId),
+    getStudyContinuation(topicId),
   ]);
 
-  if (!lesson) {
-    return (
-      <section className="rounded-2xl border border-border bg-surface p-8">
-        <h1 className="text-2xl font-semibold">Tema no disponible</h1>
-        <p className="mt-2 text-muted">
-          Puede que todavía sea un borrador o que no exista.
-        </p>
-        <Link className="mt-5 inline-flex text-brand" href="/materias">
-          Volver a la biblioteca
-        </Link>
-      </section>
-    );
-  }
+  if (!lesson) notFound();
 
   return (
     <div>
@@ -59,7 +53,11 @@ export async function TopicDetail({ topicId }: { topicId: number }) {
           jurídica.
         </p>
       </header>
-      <LessonView initialProgress={progress} lesson={lesson} />
+      <LessonView
+        continuation={continuation}
+        initialProgress={progress}
+        lesson={lesson}
+      />
     </div>
   );
 }
