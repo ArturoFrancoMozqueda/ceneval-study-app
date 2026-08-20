@@ -63,8 +63,9 @@ textarea {
 }
 
 :focus-visible {
-  outline: 3px solid rgb(36 59 100 / 35%);
+  outline: 3px solid var(--brand-deep);
   outline-offset: 3px;
+  box-shadow: 0 0 0 2px var(--surface);
 }
 
 ::selection {
