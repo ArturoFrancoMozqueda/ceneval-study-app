@@ -3,6 +3,11 @@
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { isPrivateAccessOnly } from "@/lib/access";
+import {
+  invalidCredentialsState,
+  type SignInState,
+  validateSignInInput,
+} from "@/lib/auth-state";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 
 function value(formData: FormData, field: string) {
@@ -10,17 +15,21 @@ function value(formData: FormData, field: string) {
   return typeof entry === "string" ? entry.trim() : "";
 }
 
-function authError(path: string, message: string): never {
-  redirect(`${path}?error=${encodeURIComponent(message)}`);
+function authError(path: string, message: string, field?: string): never {
+  const params = new URLSearchParams({ error: message });
+  if (field) params.set("field", field);
+  redirect(`${path}?${params.toString()}`);
 }
 
-export async function signInAction(formData: FormData) {
+export async function signInAction(
+  _previousState: SignInState,
+  formData: FormData,
+): Promise<SignInState> {
   const email = value(formData, "email").toLowerCase();
   const password = value(formData, "password");
+  const validationState = validateSignInInput(email, password);
 
-  if (!email || !password) {
-    authError("/iniciar-sesion", "Escribe tu correo y contraseña.");
-  }
+  if (validationState) return validationState;
 
   const supabase = await createServerSupabaseClient();
   const { data, error } = await supabase.auth.signInWithPassword({
@@ -29,10 +38,7 @@ export async function signInAction(formData: FormData) {
   });
 
   if (error) {
-    authError(
-      "/iniciar-sesion",
-      "No pudimos iniciar sesión. Revisa tus datos o confirma tu correo.",
-    );
+    return invalidCredentialsState();
   }
 
   if (isPrivateAccessOnly()) {
@@ -44,10 +50,10 @@ export async function signInAction(formData: FormData) {
 
     if (profileError || profile?.role !== "admin") {
       await supabase.auth.signOut();
-      authError(
-        "/iniciar-sesion",
-        "Esta aplicación es privada y solo permite la cuenta administradora.",
-      );
+      return {
+        message:
+          "Esta aplicación es privada y solo permite la cuenta administradora.",
+      };
     }
   }
 
@@ -67,13 +73,17 @@ export async function signUpAction(formData: FormData) {
   const password = value(formData, "password");
 
   if (fullName.length < 2) {
-    authError("/registro", "Escribe tu nombre.");
+    authError("/registro", "Escribe tu nombre.", "fullName");
   }
   if (!email.includes("@")) {
-    authError("/registro", "Escribe un correo válido.");
+    authError("/registro", "Escribe un correo válido.", "email");
   }
   if (password.length < 8) {
-    authError("/registro", "La contraseña debe tener al menos 8 caracteres.");
+    authError(
+      "/registro",
+      "La contraseña debe tener al menos 8 caracteres.",
+      "password",
+    );
   }
 
   const headerStore = await headers();
@@ -94,9 +104,7 @@ export async function signUpAction(formData: FormData) {
   if (error) {
     authError(
       "/registro",
-      error.message.toLowerCase().includes("already")
-        ? "Ese correo ya tiene una cuenta."
-        : "No pudimos crear la cuenta. Intenta nuevamente.",
+      "No pudimos crear la cuenta. Revisa los datos o intenta nuevamente.",
     );
   }
 
@@ -106,7 +114,11 @@ export async function signUpAction(formData: FormData) {
 export async function requestPasswordResetAction(formData: FormData) {
   const email = value(formData, "email").toLowerCase();
   if (!email.includes("@")) {
-    authError("/recuperar-contrasena", "Escribe un correo válido.");
+    authError(
+      "/recuperar-contrasena",
+      "Escribe un correo válido.",
+      "email",
+    );
   }
 
   const headerStore = await headers();
@@ -137,6 +149,7 @@ export async function updatePasswordAction(formData: FormData) {
     authError(
       "/actualizar-contrasena",
       "La contraseña debe tener al menos 8 caracteres.",
+      "password",
     );
   }
 
