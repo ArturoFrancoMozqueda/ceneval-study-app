@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { requireUser } from "@/lib/auth";
+import { getReviewOverview } from "@/lib/data/academic";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = { title: "Estudiar" };
@@ -11,8 +12,7 @@ export default async function StudyPage() {
   const [
     { data: topics },
     { data: progressRows },
-    { count: difficultCards },
-    { count: difficultChecks },
+    reviewOverview,
   ] = await Promise.all([
     supabase
       .from("topics")
@@ -24,16 +24,7 @@ export default async function StudyPage() {
       .from("study_progress")
       .select("topic_id,completed_steps,last_activity_at")
       .eq("user_id", user.id),
-    supabase
-      .from("flashcard_reviews")
-      .select("id", { count: "exact", head: true })
-      .eq("user_id", user.id)
-      .in("rating", ["again", "hard"]),
-    supabase
-      .from("quick_check_responses")
-      .select("id", { count: "exact", head: true })
-      .eq("user_id", user.id)
-      .eq("needs_review", true),
+    getReviewOverview(user.id),
   ]);
   const progressByTopic = new Map(
     (progressRows ?? []).map((row) => [
@@ -41,7 +32,14 @@ export default async function StudyPage() {
       Array.isArray(row.completed_steps) ? row.completed_steps.length : 0,
     ]),
   );
-  const reviewCount = (difficultCards ?? 0) + (difficultChecks ?? 0);
+  const dueCount = reviewOverview.dueCards.length;
+  const nextReviewLabel = reviewOverview.nextReviewAt
+    ? new Intl.DateTimeFormat("es-MX", {
+        dateStyle: "medium",
+        timeStyle: "short",
+        timeZone: "America/Mexico_City",
+      }).format(new Date(reviewOverview.nextReviewAt))
+    : null;
 
   return (
     <div>
@@ -51,17 +49,29 @@ export default async function StudyPage() {
       </h1>
       <section className="mt-8 grid gap-4 sm:grid-cols-2">
         <article className="rounded-2xl border border-border bg-white p-6">
-          <p className="text-xl font-semibold">
-            {reviewCount ? "Repaso recomendado" : "Al día"}
-          </p>
+          <h2 className="text-xl font-semibold">
+            {dueCount ? "Repaso listo" : "Al día por hoy"}
+          </h2>
           <p className="mt-1 text-sm text-muted">
-            {reviewCount
-              ? `${reviewCount} respuestas difíciles para volver a practicar`
-              : "No tienes conceptos marcados como difíciles"}
+            {reviewOverview.currentDifficultCount
+              ? `${reviewOverview.currentDifficultCount} conceptos necesitan refuerzo según tu respuesta más reciente.`
+              : "No tienes conceptos marcados actualmente para reforzar."}
           </p>
+          {dueCount ? (
+            <Link
+              className="mt-5 inline-flex min-h-11 items-center rounded-xl bg-brand px-5 text-sm font-semibold text-white hover:bg-brand-deep"
+              href="/estudiar/repaso"
+            >
+              Repasar {dueCount} {dueCount === 1 ? "tarjeta" : "tarjetas"}
+            </Link>
+          ) : nextReviewLabel ? (
+            <p className="mt-4 text-xs font-semibold text-success">
+              Próximo repaso: {nextReviewLabel}
+            </p>
+          ) : null}
         </article>
         <article className="rounded-2xl border border-border bg-white p-6">
-          <p className="text-xl font-semibold">Sesiones de 5, 10 o 15 min</p>
+          <h2 className="text-xl font-semibold">Sesiones de 5, 10 o 15 min</h2>
           <p className="mt-1 text-sm text-muted">
             Elige el tiempo disponible dentro de cualquier tema
           </p>

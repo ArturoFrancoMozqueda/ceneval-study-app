@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test:reviews": "tsx scripts/test-review-schedule.ts",
     "content:check": "tsx scripts/check-content.ts",
     "content:import": "tsx --env-file=.env.local scripts/import-content.ts",
     "security:rls": "tsx --env-file=.env.local scripts/test-rls.ts"
