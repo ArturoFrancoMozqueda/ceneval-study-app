@@ -11,6 +11,10 @@ import {
   type FlashcardReviewRecord,
   type QuickCheckRecord,
 } from "@/lib/study/review-schedule";
+import {
+  deriveStudyContinuation,
+  type StudyContinuation,
+} from "@/lib/study/continuation";
 
 export type PublicationStatus =
   | "draft"
@@ -483,6 +487,103 @@ export async function getTopic(topicId: number): Promise<Topic | null> {
     sourceType: data.source_type as Topic["sourceType"],
     approvalStatus: data.approval_status as Topic["approvalStatus"],
   };
+}
+
+export async function getStudyContinuation(
+  topicId: number,
+): Promise<StudyContinuation> {
+  await connection();
+  if (!Number.isInteger(topicId) || topicId <= 0) {
+    return { kind: "unavailable" };
+  }
+
+  const supabase = await createServerSupabaseClient();
+  const { data: currentRow, error: currentError } = await supabase
+    .from("topics")
+    .select(
+      "id,class_id,position,approval_status,classes!inner(id,publication_status,curriculum_order,curriculum_code)",
+    )
+    .eq("id", topicId)
+    .eq("approval_status", "approved")
+    .eq("classes.publication_status", "published")
+    .maybeSingle();
+
+  if (currentError) {
+    fail("getStudyContinuation current topic", currentError.message);
+  }
+  if (!currentRow) return { kind: "unavailable" };
+
+  const rawClass = currentRow.classes as unknown;
+  const currentClass = Array.isArray(rawClass) ? rawClass[0] : rawClass;
+  if (!currentClass || typeof currentClass !== "object") {
+    return { kind: "unavailable" };
+  }
+  const classRecord = currentClass as Record<string, unknown>;
+  const curriculumOrder = Number(classRecord.curriculum_order);
+  const curriculumCode = String(classRecord.curriculum_code ?? "");
+  if (!Number.isInteger(curriculumOrder) || !/^C\d{2}$/.test(curriculumCode)) {
+    return { kind: "unavailable" };
+  }
+
+  const [topicResult, classResult] = await Promise.all([
+    supabase
+      .from("topics")
+      .select("id,class_id,title,position")
+      .eq("class_id", currentRow.class_id)
+      .eq("approval_status", "approved")
+      .gt("position", currentRow.position)
+      .order("position", { ascending: true })
+      .limit(1)
+      .maybeSingle(),
+    supabase
+      .from("classes")
+      .select("id,title,curriculum_order,curriculum_code")
+      .eq("publication_status", "published")
+      .gt("curriculum_order", curriculumOrder)
+      .not("curriculum_code", "is", null)
+      .order("curriculum_order", { ascending: true })
+      .limit(1)
+      .maybeSingle(),
+  ]);
+
+  if (topicResult.error) {
+    fail("getStudyContinuation next topic", topicResult.error.message);
+  }
+  if (classResult.error) {
+    fail("getStudyContinuation next class", classResult.error.message);
+  }
+
+  return deriveStudyContinuation({
+    current: {
+      id: currentRow.id as number,
+      classId: currentRow.class_id as number,
+      position: currentRow.position as number,
+      curriculumOrder,
+      curriculumCode,
+    },
+    topics: topicResult.data
+      ? [
+          {
+            id: topicResult.data.id as number,
+            classId: topicResult.data.class_id as number,
+            title: topicResult.data.title as string,
+            position: topicResult.data.position as number,
+            approved: true,
+          },
+        ]
+      : [],
+    classes: classResult.data
+      ? [
+          {
+            id: classResult.data.id as number,
+            title: classResult.data.title as string,
+            curriculumOrder: classResult.data.curriculum_order as number,
+            curriculumCode: classResult.data.curriculum_code as string,
+            published: true,
+          },
+        ]
+      : [],
+  });
 }
 
 export async function getStudyProgress(
