@@ -127,7 +127,9 @@ recorrido normal; las retiradas quedarán únicamente en administración.
   `loading.tsx`, `not-found.tsx` ni `global-error.tsx` en todo el proyecto.
 - **El examen no muestra las explicaciones** que el servidor ya envía al
   navegador (`app/actions/academic.ts:464`).
-- **Sin respaldos de la base ni historial de git útil** (un solo commit).
+- **Sin un respaldo real y restaurado de la base.** Ya existe el procedimiento
+  seguro y su prueba local en `docs/SUPABASE_BACKUP.md`, pero aún falta una
+  ejecución autorizada, copia externa y restauración de ensayo.
 - **Las transcripciones originales solo existen en el disco `F:`.**
 - Numeración unificada por código Cxx en todas las pantallas.
 - Filtrado completo de contenido retirado en todas las pantallas de estudio.
@@ -201,8 +203,11 @@ apareció el bloqueo real.
    `F:\TRANSCRIPCIONES CENEVAL\AUDIO NN.txt`. En cualquier otra computadora,
    `content:check` y `content:import` fallan. Si ese disco se pierde,
    desaparece el material de origen de las 58 clases.
-2. **Exportar la base de Supabase y dejar el comando documentado.** La única
-   copia armada de las 40 clases vive ahí, sin respaldo.
+2. **Ejecutar y probar el respaldo documentado de Supabase.** El comando y la
+   verificación local ya existen en `docs/SUPABASE_BACKUP.md`, pero no se
+   conectaron a producción. La única copia armada de las 40 clases sigue sin un
+   respaldo real hasta generar una exportación autorizada, copiarla fuera del
+   equipo y restaurarla en un proyecto de ensayo.
 3. **Empezar a hacer commits**, uno por clase publicada como mínimo. Hoy el
    repositorio tiene un solo commit inicial: no hay punto de retorno.
 4. **Hacer que `scripts/import-content.ts` asigne `curriculum_code` y
@@ -293,7 +298,7 @@ Esta es la lista corregida.
 | # | Tarea | Evidencia para cerrarla |
 | ---: | --- | --- |
 | 1 | Respaldar el disco `F:` e incorporar las transcripciones | `content:check` corre en una computadora limpia |
-| 2 | Exportar la base de Supabase | Archivo de respaldo con fecha y comando documentado |
+| 2 | Ejecutar y probar el respaldo de Supabase | Exportación fechada, copia externa y restauración de ensayo documentadas |
 | 3 | Hacer commits del trabajo existente | Historial con más de un commit |
 | 4 | Asignar orden curricular en el importador | C41 aparece en `/sesiones` sin intervención manual |
 | 5 | Agregar `error.tsx`, `loading.tsx` y `not-found.tsx` | `/temas/abc` muestra una pantalla en español, con salida |

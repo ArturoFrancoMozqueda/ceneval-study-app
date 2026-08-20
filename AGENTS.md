@@ -62,6 +62,8 @@ npm run dev             # servidor local en http://localhost:3000
 npm run test:local      # pruebas locales; no usa Supabase ni el disco F:
 npm run lint            # eslint
 npm run build           # compilación de producción
+npm run test:backup     # prueba local de integridad; usa datos sintéticos
+npm run backup:supabase -- -ConfirmProduction # exportación remota autorizada
 npm run content:check   # validar paquetes de content/packages/
 npm run content:import  # importar un paquete como borrador   (escribe en Supabase)
 npm run security:rls    # suite de 20 pruebas de permisos      (escribe en Supabase)
@@ -69,9 +71,11 @@ npm run security:rls    # suite de 20 pruebas de permisos      (escribe en Supab
 
 En Windows, si PowerShell bloquea `npm.ps1`, usa `npm.cmd`.
 
-**`content:import` y `security:rls` tocan la base remota de producción.** No los
-ejecutes para "verificar" algo de paso. `security:rls` llega a publicar una
-clase de prueba durante unos segundos.
+**`content:import` y `security:rls` escriben en la base remota de producción.**
+**`backup:supabase` la lee y puede contener datos privados en disco.** No
+ejecutes ninguno para "verificar" algo de paso. El respaldo requiere
+autorización expresa y `-ConfirmProduction`; para comprobar el mecanismo sin
+red usa `npm run test:backup`. Consulta `docs/SUPABASE_BACKUP.md`.
 
 ## Reglas duras
 

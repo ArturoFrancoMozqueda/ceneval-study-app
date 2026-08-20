@@ -13,6 +13,9 @@
 # testing
 /coverage
 
+# database backups (may contain private user and study data)
+/backups/supabase/
+
 # next.js
 /.next/
 /out/
