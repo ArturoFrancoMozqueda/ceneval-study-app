@@ -1,117 +1,113 @@
 # Pruebas de seguridad y RLS
 
-## Ejecución
+Última conciliación documental: 20 de agosto de 2026.
+
+Hay dos niveles de comprobación y no deben confundirse:
+
+1. pruebas locales y estáticas, seguras para CI;
+2. una suite de integración que crea datos en Supabase remoto.
+
+## Pruebas locales
+
+```text
+npm run test:local
+```
+
+Este comando no usa `.env.local`, Supabase remoto ni el disco `F:`. Incluye:
+
+- validación estricta y pertenencia de respuestas de examen;
+- exposición mínima de retroalimentación;
+- cálculo del repaso espaciado a partir de la respuesta más reciente;
+- esquema de paquetes académicos;
+- destinos permitidos de confirmación de autenticación;
+- validación local del inicio de sesión;
+- cabeceras de seguridad;
+- entradas válidas de acciones de estudio;
+- estructura de las políticas RLS que limitan actividad a contenido publicado;
+- integridad del procedimiento de respaldo con SQL sintético.
+
+GitHub Actions ejecuta estas pruebas, lint y build en pull requests y pushes a
+`main`, sin secretos y sin acceso a Supabase.
+
+La comprobación `test:rls-policies` es estática: confirma que la migración
+versionada contiene ownership, rol `authenticated`, encadenamiento a clase
+publicada y `USING`/`WITH CHECK` para actualizaciones. No demuestra por sí sola
+que la migración ya esté activa en la base remota.
+
+## Suite RLS remota
 
 ```text
 npm run security:rls
 ```
 
-El comando utiliza las variables privadas de `.env.local`. No imprime claves ni
-contraseñas.
+El comando usa las variables privadas de `.env.local` y escribe en Supabase.
+No debe ejecutarse como una verificación rutinaria ni dentro de CI. Cada corrida
+crea cuentas, una clase temporal y actividad asociada; durante la prueba cambia
+la clase por `draft → review → published → withdrawn` y luego limpia los datos.
 
-## Qué comprueba
+La suite actual contiene **31 comprobaciones**. Cubre:
 
-- el rol anónimo no puede consultar clases;
-- una estudiante autenticada puede leer clases publicadas;
-- una estudiante no puede leer una clase borrador;
-- una administradora puede leer la misma clase borrador;
-- dos estudiantes no pueden leer ni escribir el progreso de la otra;
-- una estudiante no puede registrar revisiones de flashcards para otra;
-- los intentos de examen permanecen aislados por estudiante;
-- las respuestas individuales solo son visibles para la dueña del intento;
-- `exam_answer_keys` no es consultable por estudiantes;
-- una estudiante no puede cambiar el estado editorial;
-- una estudiante puede actualizar su progreso, pero no borrarlo directamente;
-- una estudiante solo puede leer su propio perfil.
+- anónimo sin acceso a clases;
+- contenido publicado visible y borrador, revisión o retirada ocultos;
+- acceso editorial a contenido no publicado;
+- aislamiento de perfiles, progreso, revisiones e intentos por propietario;
+- claves de examen inaccesibles;
+- estudiante sin permisos editoriales;
+- actividad de estudio denegada sobre borradores y retiradas;
+- actividad permitida mientras la clase está publicada;
+- progreso retirado sin mutaciones posteriores;
+- rol editorial sin convertir un borrador en contenido estudiable.
 
-## Datos temporales
+## Estado real de ejecución
 
-Cada ejecución crea:
+La última ejecución remota documentada fue el **29 de julio de 2026**:
 
-- dos cuentas estudiante confirmadas;
-- una cuenta administradora confirmada;
-- una clase en estado `draft`;
-- progreso, revisiones e intentos asociados a las cuentas de prueba.
+- versión anterior de la suite;
+- 20 de 20 comprobaciones aprobadas;
+- recorrido editorial básico aprobado.
 
-La suite cierra las sesiones y elimina la clase y las cuentas temporales dentro
-de su bloque de limpieza, incluso cuando una comprobación falla. Las relaciones
-con borrado en cascada eliminan el progreso temporal.
+Desde entonces, el código amplió la suite a 31 comprobaciones y añadió la
+migración
+`20260820225524_restrict_learning_activity_to_published_content.sql`. No existe
+evidencia en el repositorio de que esa migración se haya aplicado a Supabase ni
+de que la suite ampliada se haya ejecutado allí.
 
-## Último resultado
+Por lo tanto, la afirmación correcta es:
 
-Fecha: 29 de julio de 2026.
+> Las políticas nuevas están versionadas y comprobadas de forma estática; su
+> aplicación y comportamiento en Supabase remoto siguen pendientes de
+> verificación autorizada.
 
-Resultado: 20 de 20 comprobaciones aprobadas.
+## Orden seguro para cerrar la verificación
 
-## Auditoría de funciones privilegiadas
+1. Completar el procedimiento autorizado de `docs/SUPABASE_BACKUP.md` y
+   conservar una exportación verificable fuera del equipo.
+2. Consultar el historial de migraciones del proyecto remoto.
+3. Aplicar la migración pendiente, si corresponde, en una ventana autorizada.
+4. Ejecutar `npm run security:rls` una sola vez después de aplicarla.
+5. Registrar fecha, commit, conteo y resultado sin copiar secretos.
+6. Repetir los asesores de seguridad y rendimiento de Supabase.
 
-Fecha: 29 de julio de 2026.
+## Auditoría previa de funciones privilegiadas
 
-Se revisaron todas las funciones declaradas en las migraciones:
+El 29 de julio se revisaron las funciones declaradas entonces:
 
-- `public.set_updated_at()` usa `security invoker`, fija `search_path = ''` y
-  revoca `EXECUTE` a `public`, `anon` y `authenticated`;
-- `private.handle_new_user()` usa `security definer`, fija
-  `search_path = ''`, califica la tabla como `public.profiles` y revoca la
-  ejecución directa a `public`, `anon` y `authenticated`; solo se usa mediante
-  el trigger de creación de usuarios;
-- `private.is_admin()` usa `security definer`, fija `search_path = ''`,
-  consulta explícitamente `public.profiles` y compara el perfil con
-  `auth.uid()`; revoca el acceso general y concede `EXECUTE` únicamente a
-  `authenticated`, porque las políticas RLS necesitan invocarla.
+- `public.set_updated_at()` usa `security invoker` y fija `search_path`;
+- `private.handle_new_user()` usa `security definer`, califica sus tablas y no
+  concede ejecución directa a roles públicos;
+- `private.is_admin()` usa `security definer`, compara con `auth.uid()` y solo
+  puede ser invocada por `authenticated` para resolver políticas RLS.
 
-Resultado: no se encontraron funciones privilegiadas expuestas a `anon`, rutas
-de búsqueda mutables ni permisos `EXECUTE` innecesarios. No fue necesario
-modificar el esquema.
-
-La revisión sigue las recomendaciones de Supabase para preferir
-`security invoker`, fijar el `search_path` en funciones `security definer`,
-revocar la ejecución predeterminada y alojar auxiliares de RLS en un esquema no
-expuesto.
-
-## Asesores de Supabase
-
-Fecha: 29 de julio de 2026.
-
-Los asesores de seguridad y rendimiento se ejecutaron mediante Supabase CLI
-2.110.0 contra el proyecto vinculado `lcfdlhgpwmqeggsfbnbo`.
-
-Resultados y decisiones:
-
-- se detectó que `public.rls_auto_enable()` conservaba el permiso `EXECUTE`
-  predeterminado para `anon` y `authenticated`;
-- se revocaron esos permisos y se verificó mediante
-  `has_function_privilege` que ambos roles devuelven `false`;
-- al repetir el asesor desaparecieron las dos advertencias de la función;
-- `exam_answer_keys` mantiene RLS sin políticas de forma intencional, pues sus
-  claves solo deben ser accesibles desde el servidor;
-- la protección contra contraseñas filtradas permanece como advertencia porque
-  Supabase la ofrece únicamente en el plan Pro o superior;
-- los índices todavía no utilizados se conservan: la base tiene poco uso y
-  varios respaldan relaciones o consultas previstas.
-
-La corrección quedó registrada en la migración
-`20260729173157_restrict_rls_auto_enable_execute.sql`.
+También se restringió la ejecución de `public.rls_auto_enable()` mediante
+`20260729173157_restrict_rls_auto_enable_execute.sql`. Esta evidencia pertenece
+a esa fecha y no sustituye una nueva corrida de asesores tras las migraciones
+posteriores.
 
 ## Cobertura pendiente
 
 - cuenta registrada pero todavía no verificada;
-- activar la protección contra contraseñas filtradas si el proyecto cambia al
-  plan Pro.
-
-## Estados editoriales
-
-Fecha: 29 de julio de 2026.
-
-La suite prueba el recorrido temporal `draft` → `review` → `published` →
-`withdrawn` y confirma que:
-
-- una clase en revisión permanece oculta para estudiantes;
-- una clase publicada se vuelve visible;
-- una clase retirada vuelve a quedar oculta;
-- la administradora conserva acceso a la clase retirada;
-- la fecha de publicación se conserva al retirar;
-- los datos temporales se eliminan al terminar.
-
-Resultado: las cuatro comprobaciones editoriales pasaron y la suite completa
-alcanzó 20 de 20 pruebas.
+- pruebas de interfaz y recorridos reales en navegador;
+- confirmar la migración del 20 de agosto en remoto;
+- repetir la suite actual de 31 comprobaciones y asesores;
+- activar protección contra contraseñas filtradas si el plan de Supabase lo
+  permite en el futuro.
