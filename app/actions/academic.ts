@@ -13,6 +13,10 @@ import {
   parseQuickCheck,
   parseStudyProgress,
 } from "@/lib/study-action-input";
+import {
+  derivePublicationDiagnostics,
+  type PublicationReadinessFailure,
+} from "@/lib/publication-readiness";
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 import { getTranscriptValidationError } from "@/lib/transcript-validation";
@@ -23,6 +27,7 @@ export type ActionResult = {
   score?: number;
   total?: number;
   review?: ExamReview[];
+  publicationReadiness?: PublicationReadinessFailure;
 };
 
 function textValue(formData: FormData, name: string) {
@@ -33,6 +38,17 @@ function textValue(formData: FormData, name: string) {
 function databaseError(operation: string, message: string): ActionResult {
   console.error(`[Supabase] ${operation}: ${message}`);
   return { error: "No pudimos guardar los cambios. Intenta nuevamente." };
+}
+
+function publicationCheckDatabaseError(
+  operation: string,
+  message: string,
+): ActionResult {
+  console.error(`[Supabase] ${operation}: ${message}`);
+  return {
+    error:
+      "No pudimos comprobar los requisitos de publicación. Actualiza la página e intenta nuevamente.",
+  };
 }
 
 const studyActivityError =
@@ -272,44 +288,105 @@ export async function updateTopicStatusAction(
 export async function updatePublicationStatusAction(
   classId: number,
   status: "draft" | "review" | "published" | "withdrawn",
-) {
+): Promise<ActionResult> {
   await requireAdmin();
+
+  if (!Number.isInteger(classId) || classId <= 0) {
+    return { error: "La clase seleccionada no es válida." };
+  }
+  if (
+    !(["draft", "review", "published", "withdrawn"] as const).includes(status)
+  ) {
+    return { error: "El estado de publicación no es válido." };
+  }
+
   const admin = getSupabaseAdminClient();
+  const { data: studyClass, error: classError } = await admin
+    .from("classes")
+    .select("id,publication_status")
+    .eq("id", classId)
+    .maybeSingle();
+  if (classError) {
+    return databaseError("loadClassPublicationStatus", classError.message);
+  }
+  if (!studyClass) {
+    return { error: "No encontramos la clase que quieres editar." };
+  }
+  if (studyClass.publication_status === status) return { id: classId };
 
   if (status === "published") {
-    const [topics, materials, maps, cards, exams] = await Promise.all([
-      admin
-        .from("topics")
-        .select("id")
-        .eq("class_id", classId)
-        .eq("approval_status", "approved"),
+    const topics = await admin
+      .from("topics")
+      .select("id,title")
+      .eq("class_id", classId)
+      .eq("approval_status", "approved")
+      .order("position", { ascending: true });
+    if (topics.error) {
+      return publicationCheckDatabaseError(
+        "loadApprovedTopicsForPublication",
+        topics.error.message,
+      );
+    }
+
+    const approvedTopics = (topics.data ?? []).map(({ id, title }) => ({
+      id: id as number,
+      title: title as string,
+    }));
+    if (approvedTopics.length === 0) {
+      return {
+        error: "La clase no tiene temas aprobados para publicar.",
+        publicationReadiness: { reason: "no-approved-topics" },
+      };
+    }
+
+    const topicIds = approvedTopics.map(({ id }) => id);
+    const [materials, maps, cards, exams] = await Promise.all([
       admin
         .from("study_materials")
         .select("topic_id,material_type")
+        .in("topic_id", topicIds)
         .eq("is_current", true),
-      admin.from("concept_maps").select("topic_id").eq("is_current", true),
-      admin.from("flashcards").select("topic_id"),
-      admin.from("exams").select("topic_id").eq("is_current", true),
+      admin
+        .from("concept_maps")
+        .select("topic_id")
+        .in("topic_id", topicIds)
+        .eq("is_current", true),
+      admin.from("flashcards").select("topic_id").in("topic_id", topicIds),
+      admin
+        .from("exams")
+        .select("id,topic_id,exam_questions(id)")
+        .in("topic_id", topicIds)
+        .eq("is_current", true),
     ]);
-    const topicIds = new Set((topics.data ?? []).map(({ id }) => id as number));
-    const complete = [...topicIds].every((topicId) => {
-      const materialTypes = new Set(
-        (materials.data ?? [])
-          .filter(({ topic_id }) => topic_id === topicId)
-          .map(({ material_type }) => material_type),
+
+    const checks = [
+      ["loadMaterialsForPublication", materials.error],
+      ["loadConceptMapsForPublication", maps.error],
+      ["loadFlashcardsForPublication", cards.error],
+      ["loadExamsForPublication", exams.error],
+    ] as const;
+    const failedCheck = checks.find(([, error]) => error);
+    if (failedCheck?.[1]) {
+      return publicationCheckDatabaseError(
+        failedCheck[0],
+        failedCheck[1].message,
       );
-      return (
-        materialTypes.size >= 9 &&
-        (maps.data ?? []).some(({ topic_id }) => topic_id === topicId) &&
-        (cards.data ?? []).filter(({ topic_id }) => topic_id === topicId).length >=
-          10 &&
-        (exams.data ?? []).some(({ topic_id }) => topic_id === topicId)
-      );
+    }
+
+    const diagnostics = derivePublicationDiagnostics({
+      topics: approvedTopics,
+      materials: materials.data ?? [],
+      conceptMaps: maps.data ?? [],
+      flashcards: cards.data ?? [],
+      exams: exams.data ?? [],
     });
-    if (topicIds.size === 0 || !complete) {
+    if (diagnostics.length > 0) {
       return {
-        error:
-          "La clase aún no tiene un paquete completo por cada tema aprobado.",
+        error: "Completa los requisitos indicados antes de publicar la clase.",
+        publicationReadiness: {
+          reason: "incomplete-topics",
+          topics: diagnostics,
+        },
       };
     }
   }
@@ -324,11 +401,20 @@ export async function updatePublicationStatusAction(
     update.published_at = null;
   }
 
-  const { error } = await admin
+  const { data: updatedClass, error } = await admin
     .from("classes")
     .update(update)
-    .eq("id", classId);
+    .eq("id", classId)
+    .eq("publication_status", studyClass.publication_status)
+    .select("id")
+    .maybeSingle();
   if (error) return databaseError("updatePublicationStatus", error.message);
+  if (!updatedClass) {
+    return {
+      error:
+        "El estado cambió mientras publicabas. Actualiza la página y vuelve a intentarlo.",
+    };
+  }
   revalidatePath("/");
   revalidatePath("/materias");
   revalidatePath("/administrar");

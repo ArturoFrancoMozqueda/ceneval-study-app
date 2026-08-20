@@ -80,7 +80,8 @@ export default async function EditorialClassPage({
         <h2 className="text-xl font-semibold">Publicación</h2>
         <p className="mt-2 text-sm leading-6 text-muted">
           Para publicar, cada tema necesita nueve secciones, mapa conceptual,
-          al menos diez flashcards y un examen.
+          al menos diez flashcards y un examen vigente con exactamente diez
+          preguntas.
         </p>
         <div className="mt-5">
           <PublicationControls
