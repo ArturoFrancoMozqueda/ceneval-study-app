@@ -158,3 +158,60 @@ abrirla a otras personas.
 
 El modo público podrá recuperarse explícitamente con
 `PRIVATE_ACCESS_ONLY=false`, acompañado de una nueva revisión de seguridad.
+
+---
+
+## ADR-015 — Suscripción separada de roles y denegada por defecto
+
+**Fecha:** 2026-08-20
+
+**Estado:** Aceptada como arquitectura objetivo; implementación bloqueada
+
+El objetivo comercial futuro es vender acceso a la biblioteca mediante
+suscripción. Esta dirección no reemplaza todavía ADR-014: la aplicación sigue
+privada, sin registro público y sin cobros.
+
+Cuando se implemente, identidad, rol y derecho de acceso serán conceptos
+separados:
+
+- Supabase Auth comprobará la identidad;
+- `profiles.role` conservará capacidades editoriales `admin` o de estudio
+  `student`;
+- un entitlement server-side, acotado por producto y tiempo, decidirá el
+  acceso comercial;
+- la administradora tendrá un entitlement operativo explícito, no un bypass
+  comercial implícito por su rol.
+
+El acceso se denegará si el entitlement falta, venció, fue revocado o no puede
+comprobarse. Los eventos firmados del proveedor actualizarán una proyección
+local idempotente y auditable; una página de éxito del navegador nunca
+concederá acceso. RLS añadirá defensa en profundidad y las tablas de
+facturación no quedarán expuestas a clientes autenticados.
+
+La integración permanecerá dentro del monolito Next.js + Supabase mientras no
+exista evidencia que justifique infraestructura adicional.
+
+**Razón:** un rol describe responsabilidades, no una relación comercial.
+Separarlo de entitlements evita que una promoción administrativa conceda un
+producto, que un parámetro del navegador simule pago o que una falla del
+proveedor abra acceso por accidente.
+
+**Decisiones todavía abiertas:**
+
+- proveedor y cuenta contractual;
+- productos, planes, precios y moneda;
+- existencia y reglas de prueba;
+- cancelación inmediata o al final del periodo;
+- gracia por cobro fallido;
+- reembolsos, contracargos e impuestos;
+- portal, medios de pago, soporte y fecha de apertura.
+
+Ninguna de estas decisiones se infiere en este ADR. Antes de activar cobros se
+deben completar los gates de respaldo restaurable, RLS remota verificada,
+despliegue privado, observabilidad, recorridos de navegador y políticas
+legales/fiscales descritos en
+[`SUBSCRIPTION_ARCHITECTURE.md`](SUBSCRIPTION_ARCHITECTURE.md).
+
+**Consecuencias:** habrá más estados y trabajo operativo que en un booleano
+`is_paid`, pero se obtienen revocación explicable, reintentos seguros,
+conciliación y una frontera auditable entre administración y acceso comercial.
