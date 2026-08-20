@@ -4,13 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { updatePublicationStatusAction } from "@/app/actions/academic";
 import type { PublicationStatus } from "@/lib/data/academic";
-
-const labels: Record<PublicationStatus, string> = {
-  draft: "Volver a borrador",
-  review: "Enviar a revisión",
-  published: "Publicar clase",
-  withdrawn: "Retirar clase",
-};
+import { publicationStatusActionLabels } from "@/lib/status-labels";
 
 export function PublicationControls({
   classId,
@@ -63,7 +57,9 @@ export function PublicationControls({
             onClick={() => requestStatusChange(status)}
             type="button"
           >
-            {pending === status ? "Guardando…" : labels[status]}
+            {pending === status
+              ? "Guardando…"
+              : publicationStatusActionLabels[status]}
           </button>
         ))}
       </div>

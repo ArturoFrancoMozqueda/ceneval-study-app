@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { EmptyState } from "@/components/empty-state";
 import { requireUser } from "@/lib/auth";
 import {
   getClass,
@@ -6,6 +7,7 @@ import {
   getSubject,
   getTopicsForClass,
 } from "@/lib/data/academic";
+import { publicationStatusLabels } from "@/lib/status-labels";
 
 export async function ClassDetail({ classId }: { classId: number }) {
   const user = await requireUser();
@@ -59,7 +61,7 @@ export async function ClassDetail({ classId }: { classId: number }) {
           </p>
           {user.role === "admin" ? (
             <span className="rounded-full bg-background px-3 py-1 text-xs font-semibold text-muted">
-              {studyClass.publicationStatus}
+              {publicationStatusLabels[studyClass.publicationStatus]}
             </span>
           ) : null}
         </div>
@@ -100,26 +102,48 @@ export async function ClassDetail({ classId }: { classId: number }) {
           <p className="font-mono text-xs text-muted">{topics.length} temas</p>
         </div>
         <div className="mt-5 space-y-4">
-          {topics.map((topic, index) => (
-            <Link
-              className="group flex items-center gap-4 rounded-2xl border border-border bg-white p-5 hover:border-brand/30"
-              href={`/temas/${topic.id}`}
-              key={topic.id}
-            >
-              <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-success-soft font-mono text-sm font-semibold text-success">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <span className="min-w-0 flex-1">
-                <span className="block font-semibold">{topic.title}</span>
-                <span className="mt-1 line-clamp-2 block text-sm text-muted">
-                  {topic.description}
+          {topics.length ? (
+            topics.map((topic, index) => (
+              <Link
+                className="group flex items-center gap-4 rounded-2xl border border-border bg-white p-5 hover:border-brand/30"
+                href={`/temas/${topic.id}`}
+                key={topic.id}
+              >
+                <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-success-soft font-mono text-sm font-semibold text-success">
+                  {String(index + 1).padStart(2, "0")}
                 </span>
-              </span>
-              <span className="text-brand transition-transform group-hover:translate-x-1">
-                →
-              </span>
-            </Link>
-          ))}
+                <span className="min-w-0 flex-1">
+                  <span className="block font-semibold">{topic.title}</span>
+                  <span className="mt-1 line-clamp-2 block text-sm text-muted">
+                    {topic.description}
+                  </span>
+                </span>
+                <span className="text-brand transition-transform group-hover:translate-x-1">
+                  →
+                </span>
+              </Link>
+            ))
+          ) : (
+            <EmptyState
+              actionHref={
+                user.role === "admin"
+                  ? `/clases/${studyClass.id}/temas`
+                  : `/materias/${subject.id}`
+              }
+              actionLabel={
+                user.role === "admin"
+                  ? "Organizar los temas"
+                  : "Volver a la materia"
+              }
+              description={
+                user.role === "admin"
+                  ? "Define y aprueba los temas para convertir esta clase en una ruta de estudio completa."
+                  : "Cuando esta clase tenga temas aprobados, aparecerán aquí en el orden recomendado."
+              }
+              headingLevel="h3"
+              title="Esta clase aún no tiene temas disponibles"
+            />
+          )}
         </div>
         {user.role === "admin" ? (
           <div className="mt-7 flex flex-wrap gap-3 border-t border-border pt-6">

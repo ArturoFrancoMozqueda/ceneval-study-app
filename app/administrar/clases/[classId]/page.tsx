@@ -7,6 +7,10 @@ import {
   getSubject,
   getTopicsForClass,
 } from "@/lib/data/academic";
+import {
+  publicationStatusLabels,
+  topicApprovalStatusLabels,
+} from "@/lib/status-labels";
 
 export default async function EditorialClassPage({
   params,
@@ -36,7 +40,9 @@ export default async function EditorialClassPage({
         <h1 className="mt-2 text-3xl font-semibold">{studyClass.title}</h1>
         <p className="mt-3 text-muted">
           Estado actual:{" "}
-          <span className="font-semibold">{studyClass.publicationStatus}</span>
+          <span className="font-semibold">
+            {publicationStatusLabels[studyClass.publicationStatus]}
+          </span>
         </p>
       </header>
       <section className="mt-8 rounded-2xl border border-border bg-white p-6">
@@ -75,7 +81,7 @@ export default async function EditorialClassPage({
               <span>
                 <span className="font-semibold">{topic.title}</span>
                 <span className="mt-1 block text-sm text-muted">
-                  {topic.approvalStatus}
+                  {topicApprovalStatusLabels[topic.approvalStatus]}
                 </span>
               </span>
               <span className="text-brand">Vista previa →</span>
