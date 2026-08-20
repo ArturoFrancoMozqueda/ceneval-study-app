@@ -8,6 +8,11 @@ import {
   validateExamSelections,
   type ExamReview,
 } from "@/lib/exam-submission";
+import {
+  parseFlashcardReview,
+  parseQuickCheck,
+  parseStudyProgress,
+} from "@/lib/study-action-input";
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 
@@ -19,15 +24,6 @@ export type ActionResult = {
   review?: ExamReview[];
 };
 
-const studySteps = [
-  "discover",
-  "understand",
-  "apply",
-  "remember",
-  "check",
-] as const;
-type StudyStep = (typeof studySteps)[number];
-
 function textValue(formData: FormData, name: string) {
   const value = formData.get(name);
   return typeof value === "string" ? value.trim() : "";
@@ -36,6 +32,53 @@ function textValue(formData: FormData, name: string) {
 function databaseError(operation: string, message: string): ActionResult {
   console.error(`[Supabase] ${operation}: ${message}`);
   return { error: "No pudimos guardar los cambios. Intenta nuevamente." };
+}
+
+const studyActivityError =
+  "No pudimos guardar esta actividad de estudio. Actualiza la página e intenta nuevamente.";
+
+type AuthenticatedSupabaseClient = Awaited<
+  ReturnType<typeof createServerSupabaseClient>
+>;
+
+type PublishedTopicCheck =
+  | { available: true }
+  | { available: false; databaseMessage?: string };
+
+function unavailableStudyActivity(
+  operation?: string,
+  databaseMessage?: string,
+): ActionResult {
+  if (operation && databaseMessage) {
+    console.error(`[Supabase] ${operation}: ${databaseMessage}`);
+  }
+  return { error: studyActivityError };
+}
+
+async function checkPublishedTopic(
+  supabase: AuthenticatedSupabaseClient,
+  topicId: number,
+): Promise<PublishedTopicCheck> {
+  const { data: topic, error: topicError } = await supabase
+    .from("topics")
+    .select("id,class_id")
+    .eq("id", topicId)
+    .maybeSingle();
+  if (topicError) {
+    return { available: false, databaseMessage: topicError.message };
+  }
+  if (!topic) return { available: false };
+
+  const { data: studyClass, error: classError } = await supabase
+    .from("classes")
+    .select("id")
+    .eq("id", topic.class_id)
+    .eq("publication_status", "published")
+    .maybeSingle();
+  if (classError) {
+    return { available: false, databaseMessage: classError.message };
+  }
+  return studyClass ? { available: true } : { available: false };
 }
 
 export async function createSubjectAction(formData: FormData) {
@@ -297,47 +340,64 @@ export async function updatePublicationStatusAction(
 }
 
 export async function reviewFlashcardAction(
-  flashcardId: number,
-  rating: "again" | "hard" | "good" | "easy",
+  flashcardId: unknown,
+  rating: unknown,
 ) {
   const user = await requireUser();
-  const intervals = { again: 10, hard: 1440, good: 4320, easy: 10080 };
-  const nextReview = new Date(
-    Date.now() + intervals[rating] * 60 * 1000,
-  ).toISOString();
-  const supabase = await createServerSupabaseClient();
-  const { error } = await supabase.from("flashcard_reviews").insert({
-    user_id: user.id,
-    flashcard_id: flashcardId,
-    rating,
-    next_review_at: nextReview,
-  });
-  if (error) return databaseError("reviewFlashcard", error.message);
-  revalidatePath("/estudiar");
-  return { id: flashcardId };
-}
+  const input = parseFlashcardReview({ flashcardId, rating });
+  if (!input) return unavailableStudyActivity();
 
-export async function saveStudyProgressAction(input: {
-  topicId: number;
-  currentStep: StudyStep;
-  materialIndex: number;
-  sessionMinutes: 5 | 10 | 15;
-  completedSteps: StudyStep[];
-}) {
-  const user = await requireUser();
-  if (
-    !Number.isInteger(input.topicId) ||
-    input.topicId < 1 ||
-    !studySteps.includes(input.currentStep) ||
-    !Number.isInteger(input.materialIndex) ||
-    input.materialIndex < 0 ||
-    ![5, 10, 15].includes(input.sessionMinutes) ||
-    input.completedSteps.some((step) => !studySteps.includes(step))
-  ) {
-    return { error: "No pudimos guardar esta posición de estudio." };
+  const supabase = await createServerSupabaseClient();
+  const { data: flashcard, error: flashcardError } = await supabase
+    .from("flashcards")
+    .select("id,topic_id")
+    .eq("id", input.flashcardId)
+    .maybeSingle();
+  if (flashcardError) {
+    return unavailableStudyActivity("authorizeFlashcard", flashcardError.message);
+  }
+  if (!flashcard) return unavailableStudyActivity();
+
+  const topicCheck = await checkPublishedTopic(
+    supabase,
+    flashcard.topic_id as number,
+  );
+  if (!topicCheck.available) {
+    return unavailableStudyActivity(
+      "authorizeFlashcardTopic",
+      topicCheck.databaseMessage,
+    );
   }
 
+  const intervals = { again: 10, hard: 1440, good: 4320, easy: 10080 };
+  const nextReview = new Date(
+    Date.now() + intervals[input.rating] * 60 * 1000,
+  ).toISOString();
+  const { error } = await supabase.from("flashcard_reviews").insert({
+    user_id: user.id,
+    flashcard_id: input.flashcardId,
+    rating: input.rating,
+    next_review_at: nextReview,
+  });
+  if (error) return unavailableStudyActivity("reviewFlashcard", error.message);
+  revalidatePath("/estudiar");
+  return { id: input.flashcardId };
+}
+
+export async function saveStudyProgressAction(rawInput: unknown) {
+  const user = await requireUser();
+  const input = parseStudyProgress(rawInput);
+  if (!input) return unavailableStudyActivity();
+
   const supabase = await createServerSupabaseClient();
+  const topicCheck = await checkPublishedTopic(supabase, input.topicId);
+  if (!topicCheck.available) {
+    return unavailableStudyActivity(
+      "authorizeStudyProgress",
+      topicCheck.databaseMessage,
+    );
+  }
+
   const { error } = await supabase.from("study_progress").upsert(
     {
       user_id: user.id,
@@ -345,39 +405,39 @@ export async function saveStudyProgressAction(input: {
       current_step: input.currentStep,
       material_index: input.materialIndex,
       session_minutes: input.sessionMinutes,
-      completed_steps: [...new Set(input.completedSteps)],
+      completed_steps: input.completedSteps,
       last_activity_at: new Date().toISOString(),
     },
     { onConflict: "user_id,topic_id" },
   );
-  if (error) return databaseError("saveStudyProgress", error.message);
+  if (error) return unavailableStudyActivity("saveStudyProgress", error.message);
   revalidatePath("/");
   revalidatePath("/estudiar");
   return { id: input.topicId };
 }
 
-export async function saveQuickCheckAction(input: {
-  topicId: number;
-  prompt: string;
-  response: string;
-  needsReview: boolean;
-}) {
+export async function saveQuickCheckAction(rawInput: unknown) {
   const user = await requireUser();
-  const prompt = input.prompt.trim().slice(0, 500);
-  const response = input.response.trim().slice(0, 1000);
-  if (!Number.isInteger(input.topicId) || input.topicId < 1 || !prompt || !response) {
-    return { error: "Selecciona una respuesta antes de continuar." };
-  }
+  const input = parseQuickCheck(rawInput);
+  if (!input) return unavailableStudyActivity();
 
   const supabase = await createServerSupabaseClient();
+  const topicCheck = await checkPublishedTopic(supabase, input.topicId);
+  if (!topicCheck.available) {
+    return unavailableStudyActivity(
+      "authorizeQuickCheck",
+      topicCheck.databaseMessage,
+    );
+  }
+
   const { error } = await supabase.from("quick_check_responses").insert({
     user_id: user.id,
     topic_id: input.topicId,
-    prompt,
-    response,
+    prompt: input.prompt,
+    response: input.response,
     needs_review: input.needsReview,
   });
-  if (error) return databaseError("saveQuickCheck", error.message);
+  if (error) return unavailableStudyActivity("saveQuickCheck", error.message);
   revalidatePath("/estudiar");
   return { id: input.topicId };
 }
