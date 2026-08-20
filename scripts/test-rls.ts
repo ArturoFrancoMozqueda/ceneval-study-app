@@ -33,6 +33,8 @@ const admin = createClient(url, secretKey, {
 const createdUsers: TestUser[] = [];
 const results: TestResult[] = [];
 let temporaryClassId: number | null = null;
+let temporaryTopicId: number | null = null;
+let temporaryFlashcardId: number | null = null;
 
 function check(name: string, condition: boolean, detail?: string) {
   results.push({ name, passed: condition });
@@ -121,6 +123,31 @@ async function main() {
   if (temporaryClass.error) throw temporaryClass.error;
   temporaryClassId = temporaryClass.data.id as number;
 
+  const temporaryTopic = await admin
+    .from("topics")
+    .insert({
+      class_id: temporaryClassId,
+      title: "Tema temporal para probar actividad protegida",
+      position: 1,
+    })
+    .select("id")
+    .single();
+  if (temporaryTopic.error) throw temporaryTopic.error;
+  temporaryTopicId = temporaryTopic.data.id as number;
+
+  const temporaryFlashcard = await admin
+    .from("flashcards")
+    .insert({
+      topic_id: temporaryTopicId,
+      question: "¿Esta tarjeta pertenece a contenido publicado?",
+      answer: "Depende del estado editorial de su clase.",
+      position: 1,
+    })
+    .select("id")
+    .single();
+  if (temporaryFlashcard.error) throw temporaryFlashcard.error;
+  temporaryFlashcardId = temporaryFlashcard.data.id as number;
+
   const publishedClassId = publishedResult.data.id as number;
   const studentClasses = await studentA.client
     .from("classes")
@@ -157,6 +184,54 @@ async function main() {
     adminClasses.data.length === 1,
   );
 
+  const [draftProgress, draftQuickCheck, draftReview, adminDraftProgress] =
+    await Promise.all([
+      studentA.client.from("study_progress").insert({
+        user_id: studentA.id,
+        topic_id: temporaryTopicId,
+        current_step: "discover",
+        material_index: 0,
+        session_minutes: 5,
+        completed_steps: [],
+      }),
+      studentA.client.from("quick_check_responses").insert({
+        user_id: studentA.id,
+        topic_id: temporaryTopicId,
+        prompt: "Comprobación sobre un borrador",
+        response: "No debe registrarse.",
+        needs_review: false,
+      }),
+      studentA.client.from("flashcard_reviews").insert({
+        user_id: studentA.id,
+        flashcard_id: temporaryFlashcardId,
+        rating: "again",
+      }),
+      testAdmin.client.from("study_progress").insert({
+        user_id: testAdmin.id,
+        topic_id: temporaryTopicId,
+        current_step: "discover",
+        material_index: 0,
+        session_minutes: 5,
+        completed_steps: [],
+      }),
+    ]);
+  check(
+    "Una estudiante no puede registrar progreso sobre un borrador",
+    Boolean(draftProgress.error),
+  );
+  check(
+    "Una estudiante no puede responder comprobaciones de un borrador",
+    Boolean(draftQuickCheck.error),
+  );
+  check(
+    "Una estudiante no puede revisar tarjetas de un borrador",
+    Boolean(draftReview.error),
+  );
+  check(
+    "El rol editorial tampoco convierte un borrador en contenido estudiable",
+    Boolean(adminDraftProgress.error),
+  );
+
   const moveToReview = await admin
     .from("classes")
     .update({ publication_status: "review", published_at: null })
@@ -191,6 +266,45 @@ async function main() {
     publishedForStudent.data.length === 1,
   );
 
+  const [publishedProgress, publishedQuickCheck, publishedReview] =
+    await Promise.all([
+      studentA.client.from("study_progress").insert({
+        user_id: studentA.id,
+        topic_id: temporaryTopicId,
+        current_step: "discover",
+        material_index: 0,
+        session_minutes: 5,
+        completed_steps: [],
+      }),
+      studentA.client.from("quick_check_responses").insert({
+        user_id: studentA.id,
+        topic_id: temporaryTopicId,
+        prompt: "Comprobación sobre contenido publicado",
+        response: "Sí debe registrarse.",
+        needs_review: false,
+      }),
+      studentA.client.from("flashcard_reviews").insert({
+        user_id: studentA.id,
+        flashcard_id: temporaryFlashcardId,
+        rating: "good",
+      }),
+    ]);
+  check(
+    "Una estudiante puede registrar progreso sobre contenido publicado",
+    !publishedProgress.error,
+    publishedProgress.error?.message,
+  );
+  check(
+    "Una estudiante puede responder comprobaciones de contenido publicado",
+    !publishedQuickCheck.error,
+    publishedQuickCheck.error?.message,
+  );
+  check(
+    "Una estudiante puede revisar tarjetas de contenido publicado",
+    !publishedReview.error,
+    publishedReview.error?.message,
+  );
+
   const withdrawTemporary = await admin
     .from("classes")
     .update({ publication_status: "withdrawn" })
@@ -219,6 +333,76 @@ async function main() {
       Date.parse(withdrawnForAdmin.data.published_at) ===
         Date.parse(firstPublicationAt),
   );
+
+  const [withdrawnProgress, withdrawnQuickCheck, withdrawnReview] =
+    await Promise.all([
+      studentA.client
+        .from("study_progress")
+        .update({ material_index: 1 })
+        .eq("user_id", studentA.id)
+        .eq("topic_id", temporaryTopicId)
+        .select("material_index"),
+      studentA.client.from("quick_check_responses").insert({
+        user_id: studentA.id,
+        topic_id: temporaryTopicId,
+        prompt: "Comprobación sobre contenido retirado",
+        response: "No debe registrarse.",
+        needs_review: false,
+      }),
+      studentA.client.from("flashcard_reviews").insert({
+        user_id: studentA.id,
+        flashcard_id: temporaryFlashcardId,
+        rating: "easy",
+      }),
+    ]);
+  check(
+    "Una estudiante no puede actualizar progreso de contenido retirado",
+    Boolean(withdrawnProgress.error) ||
+      (withdrawnProgress.data !== null && withdrawnProgress.data.length === 0),
+  );
+  check(
+    "Una estudiante no puede responder comprobaciones de contenido retirado",
+    Boolean(withdrawnQuickCheck.error),
+  );
+  check(
+    "Una estudiante no puede revisar tarjetas de contenido retirado",
+    Boolean(withdrawnReview.error),
+  );
+
+  const persistedTemporaryProgress = await admin
+    .from("study_progress")
+    .select("material_index")
+    .eq("user_id", studentA.id)
+    .eq("topic_id", temporaryTopicId)
+    .single();
+  if (persistedTemporaryProgress.error) {
+    throw persistedTemporaryProgress.error;
+  }
+  check(
+    "El progreso retirado conserva su último valor publicado",
+    persistedTemporaryProgress.data.material_index === 0,
+  );
+
+  const clearTemporaryActivity = await Promise.all([
+    admin
+      .from("study_progress")
+      .delete()
+      .eq("user_id", studentA.id)
+      .eq("topic_id", temporaryTopicId),
+    admin
+      .from("quick_check_responses")
+      .delete()
+      .eq("user_id", studentA.id)
+      .eq("topic_id", temporaryTopicId),
+    admin
+      .from("flashcard_reviews")
+      .delete()
+      .eq("user_id", studentA.id)
+      .eq("flashcard_id", temporaryFlashcardId),
+  ]);
+  for (const cleanupResult of clearTemporaryActivity) {
+    if (cleanupResult.error) throw cleanupResult.error;
+  }
 
   const topicResult = await admin
     .from("topics")
