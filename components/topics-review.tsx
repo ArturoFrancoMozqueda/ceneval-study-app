@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import {
   createTopicAction,
   updateTopicStatusAction,
@@ -34,53 +34,93 @@ export function TopicsReview({
   const [showForm, setShowForm] = useState(false);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [error, setError] = useState("");
+  const [formError, setFormError] = useState("");
+  const [statusMessage, setStatusMessage] = useState("");
+  const [statusMessageIsError, setStatusMessageIsError] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [pendingTopicId, setPendingTopicId] = useState<number | null>(null);
+  const [pendingTopicStatus, setPendingTopicStatus] = useState<
+    "approved" | "rejected" | null
+  >(null);
+  const addTopicPendingRef = useRef(false);
+  const statusPendingRef = useRef(false);
 
   async function handleAddTopic(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const normalizedTitle = title.trim();
 
     if (!normalizedTitle) {
-      setError("Escribe el nombre del tema.");
+      setFormError("Escribe el nombre del tema.");
       return;
     }
+    if (addTopicPendingRef.current) return;
 
+    addTopicPendingRef.current = true;
     setIsSubmitting(true);
-    const result = await createTopicAction(
-      studyClass.id,
-      new FormData(event.currentTarget),
-    );
+    setFormError("");
+    try {
+      const result = await createTopicAction(
+        studyClass.id,
+        new FormData(event.currentTarget),
+      );
 
-    if (result.error) {
-      setError(result.error);
+      if (result.error) {
+        setFormError(result.error);
+        return;
+      }
+
+      setTitle("");
+      setDescription("");
+      setShowForm(false);
+      router.refresh();
+    } catch {
+      setFormError(
+        "No pudimos crear el tema. Actualiza la página e intenta nuevamente.",
+      );
+    } finally {
+      addTopicPendingRef.current = false;
       setIsSubmitting(false);
-      return;
     }
-
-    setTitle("");
-    setDescription("");
-    setShowForm(false);
-    setIsSubmitting(false);
-    router.refresh();
   }
 
   async function changeTopicStatus(
     topicId: number,
     status: "approved" | "rejected",
   ) {
-    const result = await updateTopicStatusAction(
-      topicId,
-      studyClass.id,
-      status,
-    );
+    if (statusPendingRef.current) return;
 
-    if (result.error) {
-      setError(result.error);
-      return;
+    statusPendingRef.current = true;
+    setPendingTopicId(topicId);
+    setPendingTopicStatus(status);
+    setStatusMessage("");
+    try {
+      const result = await updateTopicStatusAction(
+        topicId,
+        studyClass.id,
+        status,
+      );
+
+      if (result.error) {
+        setStatusMessageIsError(true);
+        setStatusMessage(result.error);
+        return;
+      }
+
+      setStatusMessageIsError(false);
+      setStatusMessage(
+        status === "approved" ? "Tema aprobado." : "Tema rechazado.",
+      );
+      router.refresh();
+    } catch {
+      setStatusMessageIsError(true);
+      setStatusMessage(
+        "No pudimos cambiar el estado. Actualiza la página e intenta nuevamente.",
+      );
+    } finally {
+      statusPendingRef.current = false;
+      setPendingTopicId(null);
+      setPendingTopicStatus(null);
     }
-
-    router.refresh();
   }
 
   const approvedTopics = topics.filter(
@@ -154,21 +194,26 @@ export function TopicsReview({
                 Nombre
               </label>
               <input
-                aria-invalid={Boolean(error)}
+                aria-describedby={formError ? "topic-title-error" : undefined}
+                aria-invalid={Boolean(formError)}
                 className={`mt-2 min-h-12 w-full rounded-xl border bg-white px-4 ${
-                  error ? "border-danger" : "border-border"
+                  formError ? "border-danger" : "border-border"
                 }`}
                 id="topic-title"
                 name="title"
                 onChange={(event) => {
                   setTitle(event.target.value);
-                  if (error) setError("");
+                  if (formError) setFormError("");
                 }}
                 value={title}
               />
-              {error ? (
-                <p className="mt-2 text-sm text-danger" role="alert">
-                  {error}
+              {formError ? (
+                <p
+                  className="mt-2 text-sm text-danger"
+                  id="topic-title-error"
+                  role="alert"
+                >
+                  {formError}
                 </p>
               ) : null}
             </div>
@@ -208,10 +253,20 @@ export function TopicsReview({
       ) : null}
 
       <section className="mt-8">
+        <p
+          aria-atomic="true"
+          aria-live={statusMessageIsError ? "assertive" : "polite"}
+          className={`mb-4 min-h-6 text-sm font-medium ${
+            statusMessageIsError ? "text-danger" : "text-success"
+          }`}
+        >
+          {statusMessage}
+        </p>
         {topics.length > 0 ? (
           <div className="space-y-4">
             {topics.map((topic) => (
               <article
+                aria-busy={pendingTopicId === topic.id}
                 className="rounded-2xl border border-border bg-surface p-5 shadow-[0_8px_25px_rgb(23_32_51_/_0.04)] sm:p-6"
                 key={topic.id}
               >
@@ -237,13 +292,17 @@ export function TopicsReview({
                   <div className="flex flex-wrap items-center gap-2">
                     {topic.approvalStatus !== "approved" ? (
                       <button
-                        className="min-h-10 rounded-xl bg-success-soft px-4 text-sm font-semibold text-success"
+                        className="min-h-11 rounded-xl bg-success-soft px-4 text-sm font-semibold text-success disabled:cursor-not-allowed disabled:opacity-60"
+                        disabled={pendingTopicId !== null}
                         onClick={() =>
                           changeTopicStatus(topic.id, "approved")
                         }
                         type="button"
                       >
-                        Aprobar
+                        {pendingTopicId === topic.id &&
+                        pendingTopicStatus === "approved"
+                          ? "Aprobando…"
+                          : "Aprobar"}
                       </button>
                     ) : (
                       <Link
@@ -256,13 +315,17 @@ export function TopicsReview({
                     )}
                     {topic.approvalStatus !== "rejected" ? (
                       <button
-                        className="min-h-10 rounded-xl px-4 text-sm font-semibold text-muted hover:bg-background"
+                        className="min-h-11 rounded-xl px-4 text-sm font-semibold text-muted hover:bg-background disabled:cursor-not-allowed disabled:opacity-60"
+                        disabled={pendingTopicId !== null}
                         onClick={() =>
                           changeTopicStatus(topic.id, "rejected")
                         }
                         type="button"
                       >
-                        Rechazar
+                        {pendingTopicId === topic.id &&
+                        pendingTopicStatus === "rejected"
+                          ? "Rechazando…"
+                          : "Rechazar"}
                       </button>
                     ) : null}
                   </div>

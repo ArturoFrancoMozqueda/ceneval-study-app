@@ -149,6 +149,11 @@ alguna sigue abierta; si corriges una, actualiza esta lista.
   pero no hay evidencia en el repositorio de que ya se aplicó al proyecto
   remoto. No presentes esa capa como activa hasta verificar el historial de
   migraciones y ejecutar la suite RLS en una ventana autorizada.
+- **La creación concurrente de temas también tiene una migración pendiente de
+  confirmación remota.** `20260820234325_create_topic_with_next_position.sql`
+  asigna la siguiente posición de forma transaccional y su RPC solo puede ser
+  ejecutada por `service_role`. No habilites el código que la invoca hasta que
+  una persona autorizada aplique y verifique esa migración en Supabase.
 - **Existe el procedimiento, no un respaldo real de Supabase.**
   `docs/SUPABASE_BACKUP.md` y `npm run test:backup` documentan y comprueban el
   mecanismo con datos sintéticos. Todavía falta una exportación autorizada de

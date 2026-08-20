@@ -20,6 +20,12 @@ import {
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 import { getTranscriptValidationError } from "@/lib/transcript-validation";
+import {
+  isPositiveInteger,
+  isTopicApprovalStatus,
+  topicMutationErrorMessage,
+  type TopicApprovalStatus,
+} from "@/lib/editorial-actions";
 
 export type ActionResult = {
   error?: string;
@@ -235,6 +241,10 @@ export async function createTopicAction(
   formData: FormData,
 ) {
   await requireAdmin();
+  if (!isPositiveInteger(classId)) {
+    return { error: "La clase seleccionada no es válida." };
+  }
+
   const title = textValue(formData, "title");
   const description = textValue(formData, "description");
   if (!title) return { error: "Escribe el nombre del tema." };
@@ -242,44 +252,57 @@ export async function createTopicAction(
     return { error: "Revisa la longitud de los campos." };
   }
 
-  const admin = getSupabaseAdminClient();
-  const { count, error: countError } = await admin
-    .from("topics")
-    .select("id", { count: "exact", head: true })
-    .eq("class_id", classId);
-  if (countError) return databaseError("countTopics", countError.message);
+  const { data, error } = await getSupabaseAdminClient().rpc(
+    "create_topic_with_next_position",
+    {
+      p_class_id: classId,
+      p_title: title,
+      p_description: description || null,
+    },
+  );
 
-  const { data, error } = await admin
-    .from("topics")
-    .insert({
-      class_id: classId,
-      title,
-      description: description || null,
-      position: (count ?? 0) + 1,
-      source_type: "manual",
-      approval_status: "approved",
-    })
-    .select("id")
-    .single();
-
-  if (error) return databaseError("createTopic", error.message);
+  if (error) {
+    console.error(`[Supabase] createTopic: ${error.message}`);
+    return { error: topicMutationErrorMessage(error.code) };
+  }
+  if (!isPositiveInteger(data)) {
+    return databaseError(
+      "createTopic",
+      "The atomic topic insert did not return a valid identifier.",
+    );
+  }
   revalidatePath(`/clases/${classId}`);
   revalidatePath(`/clases/${classId}/temas`);
-  return { id: data.id as number };
+  return { id: data };
 }
 
 export async function updateTopicStatusAction(
   topicId: number,
   classId: number,
-  status: "approved" | "rejected",
+  status: TopicApprovalStatus,
 ) {
   await requireAdmin();
-  const { error } = await getSupabaseAdminClient()
+  if (!isPositiveInteger(topicId) || !isPositiveInteger(classId)) {
+    return { error: "El tema o la clase seleccionada no son válidos." };
+  }
+  if (!isTopicApprovalStatus(status)) {
+    return { error: "El estado editorial seleccionado no es válido." };
+  }
+
+  const { data, error } = await getSupabaseAdminClient()
     .from("topics")
     .update({ approval_status: status })
     .eq("id", topicId)
-    .eq("class_id", classId);
-  if (error) return databaseError("updateTopicStatus", error.message);
+    .eq("class_id", classId)
+    .select("id")
+    .maybeSingle();
+  if (error) {
+    console.error(`[Supabase] updateTopicStatus: ${error.message}`);
+    return { error: topicMutationErrorMessage(error.code) };
+  }
+  if (!data) {
+    return { error: "El tema ya no existe en esta clase. Actualiza la página." };
+  }
   revalidatePath(`/clases/${classId}/temas`);
   revalidatePath(`/temas/${topicId}`);
   return { id: topicId };

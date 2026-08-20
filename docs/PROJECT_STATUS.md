@@ -157,6 +157,27 @@ alguna vez se pretende reimportarlos.
 La corrección está probada de forma local a nivel de esquema y código, pero C41
 aún no se ha importado para demostrar el recorrido completo en la base remota.
 
+### Controles editoriales concurrentes
+
+La revisión de temas evita solicitudes duplicadas desde la interfaz: desactiva
+aprobar y rechazar mientras hay un cambio pendiente, muestra el estado de la
+operación y anuncia el resultado o error a tecnologías de asistencia. Las
+Server Actions vuelven a validar rol, identificadores y estado, y no devuelven
+detalles internos de Supabase.
+
+La migración
+`20260820234325_create_topic_with_next_position.sql` reemplaza el cálculo
+separado de `count + 1` por una función transaccional. Un bloqueo asesor por
+clase serializa únicamente las altas que compiten por la siguiente posición;
+la función usa `security invoker` y solo concede ejecución a `service_role`.
+
+**Gate operativo:** la migración está versionada y tiene comprobación estática
+local, pero no se aplicó ni se verificó contra Supabase remoto en este trabajo.
+Antes de crear temas con este código, una persona autorizada debe revisar y
+aplicar la migración, confirmar su historial y ejecutar los asesores de base.
+No debe habilitarse la nueva Server Action en un entorno cuya migración siga
+pendiente.
+
 ### Examen y retroalimentación
 
 - La Server Action valida con Zod IDs enteros positivos y una forma estricta.
