@@ -34,15 +34,18 @@ transcripción → preparación editorial → borrador → revisión → publica
 - 40 de 58 clases publicadas. La siguiente es C41 (juicio ejecutivo mercantil oral).
 - La app es **privada**: solo la administradora entra. El registro de
   estudiantes está pospuesto por decisión de producto.
+- El objetivo futuro es ofrecerla mediante **suscripción**, pero todavía no se
+  han definido proveedor de pagos, precios, planes ni fecha de apertura. No
+  implementes registro público o cobros sin una decisión explícita.
 - **No hay despliegue.** Solo corre en `localhost`.
 - Hay CI para pruebas unitarias locales, lint y build. Aún no hay pruebas
   automatizadas de interfaz.
 
 ## Orden de lectura
 
-1. `docs/auditoria-2026-08/README.md` — auditoría del 19 de agosto de 2026.
-   Corrige varias afirmaciones de los demás documentos. Léela primero.
-2. `docs/PROJECT_STATUS.md` — estado y plan vigentes.
+1. `docs/PROJECT_STATUS.md` — estado y plan vigentes.
+2. `docs/auditoria-2026-08/README.md` — corte histórico del 19 de agosto y
+   conciliación con el código integrado después de la auditoría.
 3. `docs/03-user-stories.md` — qué debe hacer el producto.
 4. `docs/DECISIONS.md` — decisiones tomadas y por qué (ADR).
 5. El resto de `docs/`, según lo que vayas a tocar.
@@ -66,7 +69,7 @@ npm run test:backup     # prueba local de integridad; usa datos sintéticos
 npm run backup:supabase -- -ConfirmProduction # exportación remota autorizada
 npm run content:check   # validar paquetes de content/packages/
 npm run content:import  # importar un paquete como borrador   (escribe en Supabase)
-npm run security:rls    # suite de 20 pruebas de permisos      (escribe en Supabase)
+npm run security:rls    # suite de integración RLS             (escribe en Supabase)
 ```
 
 En Windows, si PowerShell bloquea `npm.ps1`, usa `npm.cmd`.
@@ -140,6 +143,19 @@ alguna sigue abierta; si corriges una, actualiza esta lista.
 - **Las transcripciones originales solo existen en el disco `F:`.** Los 41
   paquetes apuntan a `F:\TRANSCRIPCIONES CENEVAL\AUDIO NN.txt`, así que
   `content:check` y `content:import` fallan en cualquier otra computadora.
+- **La migración RLS más reciente está versionada, no confirmada en remoto.**
+  `20260820225524_restrict_learning_activity_to_published_content.sql` bloquea
+  actividad sobre contenido no publicado y tiene comprobación estática en CI,
+  pero no hay evidencia en el repositorio de que ya se aplicó al proyecto
+  remoto. No presentes esa capa como activa hasta verificar el historial de
+  migraciones y ejecutar la suite RLS en una ventana autorizada.
+- **Existe el procedimiento, no un respaldo real de Supabase.**
+  `docs/SUPABASE_BACKUP.md` y `npm run test:backup` documentan y comprueban el
+  mecanismo con datos sintéticos. Todavía falta una exportación autorizada de
+  las 40 clases, copia externa verificada y restauración en un proyecto de
+  ensayo. Git y CI tampoco sustituyen esos pasos.
+- **No hay despliegue.** La app continúa limitada a `localhost`; no confundas
+  CI en GitHub Actions con una publicación en Vercel.
 - **Tres numeraciones distintas.** Audio 01–70 (transcripciones), C01–C58
   (orden académico) e ID de Supabase (técnico). No las confundas: C40 tiene el
   ID 49, y eso no significa que existan 49 clases.

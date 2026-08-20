@@ -1,350 +1,337 @@
 # Estado actual y siguientes pasos — CENEVAL Study App
 
-Última actualización: 19 de agosto de 2026  
-Responsables: Fatima (administradora y validación) y Codex (desarrollo y contenido)
+Última actualización: 20 de agosto de 2026
 
-> **Corrección del 19 de agosto de 2026.** Una auditoría de tres perspectivas
-> (técnica, de uso y de producto) comprobó que varias tareas listadas aquí como
-> pendientes críticas **ya estaban construidas y funcionando**: el orden
-> curricular, la pantalla `/sesiones`, la navegación anterior/siguiente y el
-> supuesto límite de 12 temas en `/estudiar`, que nunca existió. Las secciones
-> 3, 5, 8, 9 y 12 se corrigieron en consecuencia. El detalle y la evidencia
-> están en [`docs/auditoria-2026-08/`](auditoria-2026-08/README.md).
+Base documental: `origin/main` en `66dd42d`
+
+Responsables: Fatima (administración y validación) y Codex (desarrollo y contenido)
+
+Este documento describe el estado del código integrado. Los datos de Supabase
+se citan con la fecha de su última auditoría; no se vuelven a dar por
+verificados sin consultar el proyecto remoto.
 
 ## 1. Resumen ejecutivo
 
-La aplicación ya tiene un núcleo funcional: autenticación privada, biblioteca por
-materias, clases completas, mapas conceptuales, guías, tarjetas, exámenes,
-progreso, panel administrativo y persistencia en Supabase.
+La aplicación tiene un núcleo local funcional: autenticación privada,
+biblioteca académica, sesiones en orden curricular, materiales, mapas,
+flashcards, repaso espaciado, exámenes, progreso, búsqueda y panel editorial.
+Desde la auditoría del 19 de agosto se integraron correcciones de seguridad,
+navegación, accesibilidad, estados de interfaz, dependencias y CI.
 
-La base remota fue auditada el 12 de agosto de 2026 y contiene:
+Los bloqueos operativos reales siguen siendo:
 
-| Elemento | Estado real |
+1. las transcripciones originales dependen del disco `F:`;
+2. existe un procedimiento seguro de respaldo, pero todavía no una exportación
+   comprobable de la base, una copia externa ni una restauración probada;
+3. la migración RLS del 20 de agosto está en Git, pero no hay evidencia de que
+   ya se aplicó a Supabase remoto;
+4. la aplicación no está desplegada y solo se usa en `localhost`;
+5. C41–C58 y los bancos acumulativos siguen pendientes.
+
+El historial de Git ya es útil y existe CI. Esos dos hallazgos de la auditoría
+original están resueltos, pero ninguno reemplaza un respaldo de la base.
+
+### Estado actual y producto objetivo
+
+Hoy la aplicación es privada, la usa únicamente la administradora, el registro
+de estudiantes está pospuesto y no existen cobros. El objetivo de producto es
+ofrecer acceso mediante suscripción cuando contenido, seguridad, operación y
+despliegue estén listos.
+
+Ese objetivo no autoriza todavía a abrir el registro ni define proveedor de
+pagos, precios, planes, periodo de prueba, cancelaciones o fecha de lanzamiento.
+Esas decisiones deben resolverse antes de diseñar o implementar la venta.
+
+## 2. Inventario académico conocido
+
+La última lectura documentada de la base remota, realizada el 12 de agosto de
+2026, registró:
+
+| Elemento | Último dato conocido |
 | --- | ---: |
 | Clases académicas previstas | 58 |
 | Clases publicadas | 40 |
 | Clases restantes | 18 |
-| Avance de clases | 69 % |
 | Versiones retiradas conservadas | 2 |
 | Materias con clases publicadas | 15 |
 | Temas publicados | 40 |
 | Materiales publicados | 360 |
-| Mapas conceptuales visuales | 40 |
-| Flashcards publicadas | 480 |
-| Preguntas de examen publicadas | 400 |
+| Mapas conceptuales | 40 |
+| Flashcards | 480 |
+| Preguntas de examen | 400 |
 
 La siguiente clase académica es **C41 — Juicio ejecutivo mercantil oral**,
-construida con el Audio 54 y la primera parte del Audio 55.
+con Audio 54 y la primera parte del Audio 55. Antes de afirmar que los conteos
+siguen iguales, deben verificarse de nuevo en Supabase.
 
-## 2. Aclaración sobre las 40 clases
+Existen tres identificadores distintos:
 
-Las 40 clases sí están publicadas en Supabase, pero no aparecen juntas en la
-pantalla de una materia. Están distribuidas entre 15 materias.
+- Audio 01–70: procedencia de las transcripciones;
+- C01–C58: orden académico recomendado;
+- ID de Supabase: identificador técnico sin significado curricular.
 
-La pantalla mostrada por la administradora corresponde únicamente a Derecho
-Administrativo. En esa materia existen tres clases publicadas y dos versiones
-retiradas. El panel administrativo muestra también las retiradas para conservar
-su historial; una estudiante no debería verlas como contenido vigente.
+C40 tiene el ID 49; eso no significa que existan 49 clases vigentes.
 
-También hay tres numeraciones diferentes que no deben confundirse:
+## 3. Estado técnico integrado
 
-- **Audio 01–70:** orden de las transcripciones originales.
-- **C01–C58:** orden académico del plan consolidado.
-- **ID de Supabase:** identificador técnico. Por ejemplo, C40 tiene el ID 49.
+### Plataforma y dependencias
 
-El ID 49 no significa que existan 49 clases vigentes. Hay saltos porque se
-hicieron pruebas y se conservaron versiones retiradas.
+- Next.js 16.3.1 con App Router.
+- React y React DOM 19.2.4.
+- Supabase JS 2.110.8 y `@supabase/ssr` 0.12.3.
+- Supabase CLI 2.115.0 fijada como dependencia de desarrollo para respaldos.
+- Zod 4.4.3, TypeScript 5 y Tailwind 4.
+- Node 24.14.0 fijado en `.node-version`.
+- `npm audit --audit-level=moderate` reportó cero vulnerabilidades el 20 de
+  agosto de 2026 sobre el árbol versionado.
 
-## 3. Navegación: resuelto, con una falla nueva
+### Integración continua
 
-El problema descrito en agosto **ya está resuelto**. Verificado en el código el
-19 de agosto de 2026:
+`.github/workflows/ci.yml` ejecuta en cada pull request y cada push a `main`:
 
-- `/sesiones` (`app/sesiones/page.tsx`) reúne todas las clases publicadas en
-  orden C01→C40, con código, materia, audios de origen y progreso;
-- ofrece las dos vistas previstas: orden recomendado y orden por audios;
-- `class-detail.tsx:82` muestra los botones “Anterior” y “Siguiente”, resueltos
-  por `getPublishedSessionNeighbors()`;
-- `/estudiar` **nunca** estuvo limitada a 12 temas: la consulta
-  (`app/estudiar/page.tsx:17`) no tiene `.limit()` ni `.slice()`.
+1. `npm ci --ignore-scripts`;
+2. `npm run test:local`;
+3. `npm run lint`;
+4. `npm run build`.
 
-Quedan dos fallas reales de navegación, que sí deben corregirse:
+Las acciones de terceros están fijadas por SHA, el job tiene permisos de solo
+lectura y no recibe secretos. La CI no se conecta a Supabase ni sustituye las
+pruebas de interfaz o la suite RLS remota.
 
-1. **Las clases nuevas nacerán fuera del recorrido.** Ver la sección 8.
-2. **Dos numeraciones contradictorias.** `/sesiones` muestra `C17` y el detalle
-   de materia muestra esa misma clase como `03`, porque
-   `components/subject-detail.tsx:59` calcula un número por posición sobre una
-   lista ordenada por fecha de publicación descendente. Es exactamente el riesgo
-   que advierte la sección 10 de este documento, sobreviviendo en otra pantalla.
+### Respaldo de Supabase
 
-## 4. Decisión de producto
+`docs/SUPABASE_BACKUP.md` documenta un respaldo lógico con la CLI fijada:
 
-Se incorporará una sección llamada **Sesiones** con dos órdenes disponibles:
+- `npm run test:backup` crea datos sintéticos y comprueba integridad local sin
+  red ni credenciales;
+- `npm run backup:supabase -- -ConfirmProduction` es el único comando que lee
+  el proyecto remoto y exige autorización expresa;
+- `npm run backup:verify` valida archivos, tamaños y sumas SHA-256;
+- el procedimiento exige copia cifrada externa y restauración separada en un
+  proyecto de ensayo.
 
-1. **Orden recomendado:** C01, C02, C03… C58. Este será el orden predeterminado
-   para estudiar porque respeta la secuencia pedagógica consolidada.
-2. **Orden de audios:** Audio 01, Audio 02… Audio 70. Servirá para localizar qué
-   clase recibió cada transcripción, incluso cuando un audio se dividió entre
-   dos clases, varios audios se unieron o un audio se destinó a un banco.
+El mecanismo está versionado y su prueba sintética forma parte de
+`test:local`. **Todavía no se ha generado un respaldo real**, no existe copia
+externa comprobada y no se ha ensayado una restauración. Los SQL pueden contener
+datos privados y están excluidos de Git.
 
-Cada tarjeta deberá mostrar código de clase, título, materia, audio o fragmento
-de origen, estado y progreso. Solo las clases publicadas formarán parte del
-recorrido normal; las retiradas quedarán únicamente en administración.
+### Navegación y estados
 
-## 5. Estado técnico actual
+- `/sesiones` muestra las clases publicadas por orden Cxx y por audio.
+- La navegación anterior/siguiente usa el orden curricular.
+- Las vistas de materia muestran el código Cxx; ya no numeran por posición.
+- Existen `app/error.tsx`, `app/global-error.tsx`, `app/loading.tsx` y
+  `app/not-found.tsx`, todos en español y con una salida comprensible.
+- Hay estados vacíos con acciones en sesiones, materias, clase, estudio y
+  administración, además de un estado específico para una cola de repaso vacía.
+- Los estados editoriales se traducen mediante `lib/status-labels.ts`.
+- La cuenta móvil permite cambiar contraseña y cerrar sesión.
+- El foco visible usa un anillo opaco de alto contraste.
 
-### Funciona y está verificado
+Esto resuelve los hallazgos generales de ausencia de estados y numeración. No
+equivale todavía a una prueba automática de cada URL inválida o de todos los
+recorridos en navegador.
 
-- Next.js 16.3.1, React 19.2.4 y TypeScript.
-- Aplicación local en `http://localhost:3000`.
-- Supabase remoto enlazado y con datos persistentes.
-- Inicio de sesión y recuperación de contraseña.
-- Modo privado limitado a la administradora.
-- Roles y políticas RLS.
-- Flujo editorial `draft → published → withdrawn`.
-- Importador y validador de paquetes académicos.
-- Conservación de la transcripción original y versión didáctica.
-- Nueve materiales por tema.
-- Mapa conceptual visual integrado en cada clase.
-- Guía de preguntas y respuestas.
-- Flashcards y registro de revisiones.
-- Repaso espaciado con cola de tarjetas vencidas y prioridad para las más
-  difíciles; los indicadores usan únicamente la respuesta más reciente.
-- Examen con respuestas protegidas hasta entregar el intento.
-- Progreso individual.
-- Búsqueda de contenido publicado.
-- Edición básica y retiro desde el panel administrativo.
-- Suite RLS de 20 comprobaciones aprobada en la última auditoría registrada.
-- CI reproducible con pruebas locales, lint y build, sin secretos ni acceso a
-  Supabase.
-- `npm run lint` y `npm run build` aprobados después de la clase C40.
+### Importación y orden curricular
 
-### Parcial o pendiente
+El bloqueo por clases nuevas sin código quedó corregido en el código:
 
-- **El importador no asigna el orden curricular.** Es el bloqueo real: ver la
-  sección 8.
-- **Sin pantallas de error, carga ni 404.** No existe ningún `error.tsx`,
-  `loading.tsx`, `not-found.tsx` ni `global-error.tsx` en todo el proyecto.
-- **El examen no muestra las explicaciones** que el servidor ya envía al
-  navegador (`app/actions/academic.ts:464`).
-- **Sin un respaldo real y restaurado de la base.** Ya existe el procedimiento
-  seguro y su prueba local en `docs/SUPABASE_BACKUP.md`, pero aún falta una
-  ejecución autorizada, copia externa y restauración de ensayo.
-- **Las transcripciones originales solo existen en el disco `F:`.**
-- Numeración unificada por código Cxx en todas las pantallas.
-- Filtrado completo de contenido retirado en todas las pantallas de estudio.
-- Presentación clara del avance total del plan.
-- Historial y análisis profundo de temas débiles.
-- Exámenes acumulativos de los 16 módulos.
-- Tres bancos transversales de práctica.
-- Pruebas automatizadas de interfaz y recorridos completos.
-- Auditoría final de accesibilidad y uso móvil.
-- Despliegue formal en Vercel: no existe una vinculación local `.vercel`
-  comprobable en esta auditoría.
-- Dominio, monitoreo, respaldos y manual de operación.
-- Acceso público de estudiantes, expresamente pospuesto por ahora.
+- el contrato actual es `packageVersion: "1.1"`;
+- el importador exige `curriculum.code`, `curriculum.order` y fuentes de audio;
+- escribe `curriculum_code`, `curriculum_order` y `class_audio_sources`;
+- detecta colisiones de código u orden antes de crear la clase;
+- si falla después de crearla, intenta borrar la clase parcial.
 
-## 6. Contenido académico terminado
+Los 41 paquetes existentes continúan en contrato 1.0 y se conservan como
+históricos. El importador los rechaza de forma explícita: cualquier paquete
+nuevo, incluida C41, debe prepararse en 1.1. Los paquetes 1.0 deben migrarse si
+alguna vez se pretende reimportarlos.
 
-Están publicadas C01–C40:
+La corrección está probada de forma local a nivel de esquema y código, pero C41
+aún no se ha importado para demostrar el recorrido completo en la base remota.
 
-- C01–C05: orientación, fundamentos y teoría procesal.
-- C06–C09: constitucional y responsabilidad pública.
-- C10–C13: electoral y amparo.
-- C14–C16: administrativo y CNDH.
-- C17–C23: fiscal y justicia administrativa.
-- C24–C28: proceso penal.
-- C29–C31: mecanismos alternativos, arbitraje y consumo.
-- C32–C34: notarial y registral.
-- C35: sociedades mercantiles.
-- C36–C39: propiedad intelectual.
-- C40: juicio ejecutivo mercantil escrito.
+### Examen y retroalimentación
 
-Cada clase publicada contiene, como estándar, una transcripción conservada, una
-versión depurada, nueve materiales, un mapa visual, una guía, doce flashcards,
-diez reactivos originales y fuentes verificables.
+- La Server Action valida con Zod IDs enteros positivos y una forma estricta.
+- Comprueba que el examen sea visible para la sesión autenticada.
+- Rechaza preguntas ajenas, respuestas incompletas y opciones que no
+  pertenecen a la pregunta o al examen entregado.
+- La calificación sigue en servidor y `exam_answer_keys` permanece bloqueada
+  por RLS para clientes autenticados.
+- Al terminar, la interfaz muestra la explicación general y la explicación de
+  la opción elegida.
+- No se envían explicaciones de opciones no elegidas.
+- Hay pruebas locales para selección cruzada, forma inválida y exposición
+  mínima de retroalimentación.
 
-## 7. Clases restantes, en orden de producción
+### Repaso y progreso
 
-| Orden | Clase pendiente | Fuente principal | Resultado requerido |
-| --- | --- | --- | --- |
-| 1 | C41 Juicio ejecutivo mercantil oral | Audio 54 + primera parte de 55 | Paquete completo, validado y publicado |
-| 2 | C42 Juicio oral mercantil | Segunda parte de 55 | Completar cierre con Código de Comercio vigente |
-| 3 | C43 Juicio ordinario mercantil escrito | Primera parte de 56 | Confirmar procedencia actual frente a oralidad |
-| 4 | C44 Relación individual de trabajo y prestaciones | Audio 58 + primera parte de 59 | Actualizar salarios y reglas vigentes |
-| 5 | C45 Terminación laboral | Primera parte de 59 | Separar finiquito e indemnización |
-| 6 | C46 Competencia y conciliación prejudicial laboral | Segunda parte de 59 + inicio de 60 | Verificar excepciones a conciliación |
-| 7 | C47 Juicio ordinario laboral | Segunda parte de 60 | Completar demanda, réplica y audiencias |
-| 8 | C48 Sindicatos, contrato colectivo y huelga | Audio 61 | Contrastar con LFT vigente |
-| 9 | C49 Jurisdicción voluntaria | Audio 62 | Consignación e información ad perpetuam |
-| 10 | C50 Arrendamiento inmobiliario especial oral | Primera parte de 69 | Condicionar al régimen territorial aplicable |
-| 11 | C51 Regímenes patrimoniales del matrimonio | Segunda parte de 46 | Definir legislación local aplicable |
-| 12 | C52 Divorcio voluntario y convenio familiar | Primera parte de 63 | Integrar convenio y control judicial |
-| 13 | C53 Divorcio sin expresión de causa | Segunda parte de 67 | Distinguir código nacional y régimen local |
-| 14 | C54 Medidas familiares provisionales | Audio 68 | Alimentos, custodia y convivencia |
-| 15 | C55 Apertura de sucesión | Segunda parte de 63 | Testamentaria e intestamentaria |
-| 16 | C56 Herederos y albacea | Cierre de 63 + inicio de 64 | Primera sección sucesoria |
-| 17 | C57 Inventario, avalúo y oposición | Audio 64 | Segunda sección sucesoria |
-| 18 | C58 Administración, partición y adjudicación | Sin fuente suficiente | Crear con legislación oficial y revisión reforzada |
+- `/estudiar/repaso` usa `next_review_at` para construir la cola vencida.
+- La prioridad considera dificultad y antigüedad.
+- Los contadores usan únicamente la revisión más reciente de cada tarjeta y la
+  comprobación más reciente de cada tema; ya no crecen indefinidamente por el
+  historial acumulado.
+- Una cola vacía informa cuándo será el próximo repaso, si existe fecha.
+- `getStudyProgress` filtra por `topic_id` y por el `user_id` autenticado.
 
-## 8. Plan específico para terminar el proyecto
+### Acciones de estudio y RLS
 
-### Prioridad 0 — Proteger el trabajo y desbloquear C41
+Las acciones de revisión, progreso y comprobación rápida:
 
-Los puntos 1 a 7 de la versión anterior de esta sección **ya están hechos**: la
-migración `20260812175550_add_curriculum_session_metadata.sql` creó
-`curriculum_code`, `curriculum_order` y `class_audio_sources`; `/sesiones`
-existe con sus dos vistas; y la navegación anterior/siguiente funciona. El
-punto 8 —“probar que C41 se incorpora automáticamente”— nunca se ejecutó, y ahí
-apareció el bloqueo real.
+- validan la entrada con esquemas estrictos;
+- derivan `user_id` de la sesión;
+- resuelven primero el recurso con el cliente autenticado sujeto a RLS;
+- solo escriben si la cadena termina en una clase publicada;
+- devuelven mensajes que no permiten enumerar borradores o IDs inexistentes.
 
-1. **Respaldar el disco `F:` e incorporar las transcripciones al repositorio.**
-   Los 41 paquetes de `content/packages/` apuntan a
-   `F:\TRANSCRIPCIONES CENEVAL\AUDIO NN.txt`. En cualquier otra computadora,
-   `content:check` y `content:import` fallan. Si ese disco se pierde,
-   desaparece el material de origen de las 58 clases.
-2. **Ejecutar y probar el respaldo documentado de Supabase.** El comando y la
-   verificación local ya existen en `docs/SUPABASE_BACKUP.md`, pero no se
-   conectaron a producción. La única copia armada de las 40 clases sigue sin un
-   respaldo real hasta generar una exportación autorizada, copiarla fuera del
-   equipo y restaurarla en un proyecto de ensayo.
-3. **Empezar a hacer commits**, uno por clase publicada como mínimo. Hoy el
-   repositorio tiene un solo commit inicial: no hay punto de retorno.
-4. **Hacer que `scripts/import-content.ts` asigne `curriculum_code` y
-   `curriculum_order`.** Hoy no los escribe (`scripts/import-content.ts:47`), y
-   esas columnas se poblaron una sola vez con un `update` fijo
-   `where c.id between 10 and 49`, que son exactamente las 40 clases actuales.
-   Como `getPublishedSessions` descarta las clases con orden vacío
-   (`lib/data/academic.ts:339`), **C41 se publicaría y sería invisible** en
-   `/sesiones` y en “Siguiente” desde C40, sin ninguna pantalla para corregirlo
-   a mano. Lo mismo aplica a las 18 clases restantes.
-5. **Decidir si vuelve la aprobación expresa antes de publicar.** ADR-011 la
-   exige; la sección 9 de `ROADMAP_TRACKING.md` la sustituyó por una
-   autorización permanente. El validador comprueba formato, no vigencia
-   jurídica. Las dos opciones son defendibles; la contradicción no.
+La migración
+`20260820225524_restrict_learning_activity_to_published_content.sql` añade la
+misma condición a la Data API para `flashcard_reviews`, `study_progress` y
+`quick_check_responses`. La migración es transaccional y su estructura se
+comprueba localmente en CI.
 
-**Criterio de terminado:** existe una copia del material de origen fuera del
-disco `F:`, existe una exportación de la base, y C41 se publica y aparece
-automáticamente en `/sesiones` y en la navegación, sin intervención manual.
+**Estado de despliegue de esa migración:** no confirmado. El archivo está
+integrado en Git, pero no hay evidencia local de que Supabase remoto lo haya
+aplicado ni de una ejecución posterior de las 31 comprobaciones actuales. La
+última ejecución remota documentada sigue siendo la suite anterior de 20
+comprobaciones, aprobada el 29 de julio de 2026.
 
-### Prioridad 1 — Completar C41–C58
+## 4. Seguridad y calidad: qué está probado
 
-Para cada clase, sin acumular borradores:
+`npm run test:local` reúne pruebas sin Supabase ni disco `F:` para:
 
-1. leer las fuentes de audio y marcar sus cortes;
-2. separar contenido útil, errores y material que debe excluirse;
-3. consultar legislación y fuentes oficiales vigentes;
-4. redactar primero guía y mapa visual;
-5. completar los nueve materiales;
-6. crear de 10 a 15 flashcards y diez reactivos de tres opciones;
-7. ejecutar `content:check`;
-8. ejecutar lint y build;
-9. importar como borrador;
-10. verificar en Supabase todos los conteos;
-11. publicar inmediatamente si todo pasa;
-12. comprobar que aparezca en `/sesiones` y actualizar el roadmap.
+- entrega y calificación segura del examen;
+- cálculo de repaso espaciado;
+- esquema del paquete académico;
+- redirecciones permitidas en confirmación de autenticación;
+- validación y mensajes del inicio de sesión;
+- cabeceras de seguridad;
+- entrada de acciones de estudio;
+- estructura esperada de las políticas RLS nuevas;
+- integridad del procedimiento de respaldo con datos sintéticos.
 
-**Criterio de terminado:** 58 de 58 clases publicadas y accesibles en orden.
+También existen cabeceras de seguridad, redirección de autenticación limitada
+a destinos internos y un aviso educativo/de vigencia en la interfaz.
 
-### Prioridad 2 — Práctica acumulativa
+Queda pendiente:
 
-1. Crear B01, diagnóstico y estrategia de examen.
-2. Crear B02, banco interdisciplinario con los audios de revisión.
-3. Crear B03, comprensión lectora y lenguaje con textos originales.
-4. Crear un examen acumulativo original para cada uno de los 16 módulos.
-5. Etiquetar cada error por materia y competencia.
-6. Mostrar recomendaciones basadas en respuestas reales.
+- aplicar y probar la migración RLS contra el proyecto remoto;
+- pruebas automatizadas de interfaz y recorridos completos;
+- repetir asesores de Supabase después de aplicar migraciones;
+- auditoría final de accesibilidad en navegador y dispositivos reales;
+- dejar de degradar silenciosamente ciertos errores de progreso a `null`.
 
-**Criterio de terminado:** los tres bancos y 16 exámenes modulares pueden
-resolverse sin revelar previamente las respuestas y conservan historial.
+## 5. Contenido terminado y pendiente
 
-### Prioridad 3 — Calidad del producto
+El último inventario registra C01–C40 publicadas. Cada clase se preparó con
+transcripción conservada, versión depurada, nueve materiales, mapa conceptual,
+guía, flashcards, diez reactivos y fuentes.
 
-1. Agregar pruebas automáticas para inicio de sesión, sesiones, clase, mapa,
-   guía, flashcards, examen y progreso.
-2. Repetir la suite RLS y los asesores de seguridad.
-3. Confirmar que borradores y retiradas no sean visibles fuera de administración.
-4. Probar recuperación de contraseña con correo real.
-5. Revisar accesibilidad: teclado, foco, contraste, etiquetas y lectores.
-6. Probar resoluciones de teléfono, tableta y computadora.
-7. Corregir estados de carga, error y listas vacías.
-8. Medir tiempos de carga de las páginas con 58 clases.
+Orden de producción restante:
 
-**Criterio de terminado:** flujos centrales aprobados automáticamente, sin
-errores críticos de accesibilidad, permisos o navegación.
+| Orden | Clase | Fuente principal |
+| ---: | --- | --- |
+| 1 | C41 Juicio ejecutivo mercantil oral | Audio 54 + primera parte de 55 |
+| 2 | C42 Juicio oral mercantil | Segunda parte de 55 |
+| 3 | C43 Juicio ordinario mercantil escrito | Primera parte de 56 |
+| 4 | C44 Relación individual de trabajo y prestaciones | Audio 58 + primera parte de 59 |
+| 5 | C45 Terminación laboral | Primera parte de 59 |
+| 6 | C46 Competencia y conciliación prejudicial laboral | Segunda parte de 59 + inicio de 60 |
+| 7 | C47 Juicio ordinario laboral | Segunda parte de 60 |
+| 8 | C48 Sindicatos, contrato colectivo y huelga | Audio 61 |
+| 9 | C49 Jurisdicción voluntaria | Audio 62 |
+| 10 | C50 Arrendamiento inmobiliario especial oral | Primera parte de 69 |
+| 11 | C51 Regímenes patrimoniales del matrimonio | Segunda parte de 46 |
+| 12 | C52 Divorcio voluntario y convenio familiar | Primera parte de 63 |
+| 13 | C53 Divorcio sin expresión de causa | Segunda parte de 67 |
+| 14 | C54 Medidas familiares provisionales | Audio 68 |
+| 15 | C55 Apertura de sucesión | Segunda parte de 63 |
+| 16 | C56 Herederos y albacea | Cierre de 63 + inicio de 64 |
+| 17 | C57 Inventario, avalúo y oposición | Audio 64 |
+| 18 | C58 Administración, partición y adjudicación | Sin fuente suficiente |
+
+Además siguen pendientes tres bancos transversales y 16 exámenes acumulativos.
+
+## 6. Plan vigente
+
+### Prioridad 0 — Proteger y comprobar
+
+1. Copiar las transcripciones fuera del disco `F:` y verificar la copia.
+2. Seguir `docs/SUPABASE_BACKUP.md`: generar una exportación autorizada,
+   verificarla, copiarla fuera del equipo y restaurarla en un proyecto de ensayo.
+3. Confirmar en el historial remoto si la migración RLS del 20 de agosto está
+   aplicada; si no, aplicarla en una ventana autorizada.
+4. Ejecutar `npm run security:rls` después de la migración y registrar el
+   resultado. Esta suite crea y elimina datos remotos; no pertenece a CI.
+5. Preparar C41 con contrato 1.1 y ejecutar `content:check`.
+
+### Prioridad 1 — Demostrar el pipeline con C41
+
+1. Importar C41 como borrador.
+2. Confirmar código C41, orden 41 y audios de origen en Supabase.
+3. Revisar vigencia jurídica y conteos editoriales.
+4. Publicar solo después de la revisión autorizada.
+5. Comprobar que aparece en `/sesiones` y como siguiente de C40.
+
+### Prioridad 2 — Completar C42–C58
+
+Repetir el pipeline 1.1 con fuentes oficiales, validación, revisión editorial,
+publicación, navegación y un commit por unidad de trabajo.
+
+### Prioridad 3 — Calidad de producto
+
+1. Automatizar inicio de sesión, biblioteca, clase, repaso, examen y progreso
+   en un navegador real.
+2. Probar URLs inválidas, estados vacíos, errores y recuperación.
+3. Auditar teclado, lector de pantalla, contraste y uso móvil.
+4. Medir la aplicación con 58 clases.
 
 ### Prioridad 4 — Despliegue y operación
 
-1. Crear o vincular el proyecto de Vercel.
-2. Configurar variables de producción sin exponer la clave secreta.
-3. Configurar URLs de redirección de Supabase Auth para producción.
-4. Desplegar una vista previa y recorrer el flujo completo.
-5. Promover el despliegue aprobado a producción.
-6. Definir dominio propio si se desea.
-7. Activar registros y monitoreo de errores.
-8. Documentar respaldo, restauración y actualización legal.
-9. Crear manual breve para administrar, publicar y retirar clases.
-10. Decidir después si se habilitará registro de estudiantes.
+1. Vincular Vercel y configurar variables sin exponer secretos.
+2. Configurar redirecciones de Supabase Auth para producción.
+3. Probar una vista previa y promoverla solo tras aprobación.
+4. Añadir monitoreo, manual de operación, respaldo y restauración.
+5. Definir el modelo de suscripción antes de implementar registro o pagos.
 
-**Criterio de terminado:** existe una URL estable de producción, el flujo
-privado funciona fuera de localhost y la administradora puede operar la app con
-un manual.
-
-## 9. Próximas diez tareas ejecutables
-
-Las cinco primeras tareas de la lista anterior estaban cerradas o eran falsas.
-Esta es la lista corregida.
+## 7. Próximas tareas ejecutables
 
 | # | Tarea | Evidencia para cerrarla |
 | ---: | --- | --- |
-| 1 | Respaldar el disco `F:` e incorporar las transcripciones | `content:check` corre en una computadora limpia |
-| 2 | Ejecutar y probar el respaldo de Supabase | Exportación fechada, copia externa y restauración de ensayo documentadas |
-| 3 | Hacer commits del trabajo existente | Historial con más de un commit |
-| 4 | Asignar orden curricular en el importador | C41 aparece en `/sesiones` sin intervención manual |
-| 5 | Agregar `error.tsx`, `loading.tsx` y `not-found.tsx` | `/temas/abc` muestra una pantalla en español, con salida |
-| 6 | Mostrar las explicaciones al terminar un examen | La estudiante ve qué falló y por qué |
-| 7 | Unificar la numeración por código Cxx | `subject-detail.tsx` deja de numerar por posición |
-| 8 | Cerrar la redirección abierta y validar el examen | `app/auth/confirm/route.ts` y `academic.ts:443` |
-| 9 | Crear y publicar C41 | Conteos, lint y build aprobados, y visible en `/sesiones` |
-| 10 | Desplegar en Vercel en modo privado | Recorrido de las 40 clases desde el teléfono |
+| 1 | Respaldar las transcripciones | Copia verificada fuera de `F:` |
+| 2 | Ejecutar y probar el respaldo documentado | Exportación fechada, copia externa verificada y restauración de ensayo |
+| 3 | Aplicar/verificar la migración RLS | Historial remoto y suite de 31 comprobaciones aprobada |
+| 4 | Preparar C41 en contrato 1.1 | `content:check` aprobado |
+| 5 | Importar y publicar C41 | Visible en `/sesiones` y después de C40 |
+| 6 | Crear pruebas de navegador | Flujos centrales reproducibles en CI o entorno aislado |
+| 7 | Desplegar en modo privado | URL estable aprobada desde teléfono y computadora |
 
-## 10. Riesgos y controles
+## 8. Decisiones de producto abiertas
 
-| Riesgo | Control requerido |
-| --- | --- |
-| Confundir ID técnico con número de clase | Mostrar siempre código Cxx y ocultar el ID como dato principal |
-| Perder el orden entre materias | Usar `curriculum_order`, no fecha de publicación |
-| Mostrar contenido retirado | Filtrar `publication_status = published` en vistas de estudio |
-| Cambios legislativos | Registrar fecha de consulta y revisar antes de publicar |
-| Audio incompleto o erróneo | Conservar original y completar solo con fuentes oficiales |
-| Crecer contenido sin pruebas | Validar, compilar y verificar cada clase antes de avanzar |
-| Exponer secretos | Mantener la clave secreta solo en servidor y variables protegidas |
-| Depender únicamente de localhost | Completar despliegue y prueba en producción |
+1. Resolver la contradicción sobre aprobación expresa antes de publicar.
+2. Confirmar si el estándar definitivo es de tres o cuatro opciones por reactivo.
+3. Decidir el alcance de los 16 exámenes acumulativos.
+4. Definir responsables del repositorio, Supabase, respaldo y despliegue.
+5. Definir proveedor, planes, precio, reglas de acceso y soporte de la futura
+   suscripción; hasta entonces, mantener cerrado el registro.
 
-## 11. Definición final de terminado
+## 9. Definición de terminado
 
-El proyecto se considerará terminado cuando:
+El proyecto estará terminado cuando existan 58 clases publicadas y navegables,
+los bancos y exámenes acumulativos acordados, protección RLS verificada en
+remoto, pruebas automáticas de los flujos centrales, experiencia accesible en
+teléfono y computadora, despliegue estable, respaldo restaurable y manual de
+operación aprobado por Fatima. Para ofrecerla comercialmente, además deberán
+estar aprobados e implementados el modelo de suscripción, el control de acceso
+correspondiente y sus recorridos de alta, cobro, cancelación y soporte.
 
-- existan 58 clases publicadas y navegables en orden;
-- estén disponibles los tres bancos y 16 exámenes acumulativos;
-- mapas, guías, flashcards, exámenes y progreso funcionen en todas las clases;
-- borradores, respuestas y progreso estén protegidos por permisos verificados;
-- los flujos centrales tengan pruebas automáticas;
-- la experiencia sea accesible en teléfono y computadora;
-- exista una URL estable de producción;
-- haya un manual de administración, respaldo y mantenimiento;
-- Fatima apruebe el recorrido completo desde C01 hasta el cierre del plan.
+## 10. Siguiente acción inmediata
 
-## 12. Siguiente acción inmediata
+No hace falta reconstruir CI, estados, numeración, repaso, examen ni el soporte
+1.1 del importador: ya están integrados. La siguiente acción es proteger los
+datos y cerrar la diferencia entre código y base remota:
 
-La vista **Sesiones** ya existe y funciona. Lo que falta antes de producir C41
-es proteger lo ya hecho y desbloquear lo que sigue, en este orden:
-
-1. respaldar el disco `F:` e incorporar las transcripciones al repositorio;
-2. exportar la base de Supabase;
-3. hacer commits del trabajo existente;
-4. corregir el importador para que asigne `curriculum_code` y
-   `curriculum_order`, y comprobarlo publicando C41.
-
-Sin el punto 4, cada una de las 18 clases restantes se publicará correctamente
-en la base y será invisible en el recorrido de estudio.
+1. respaldar `F:`;
+2. ejecutar y completar el procedimiento de `docs/SUPABASE_BACKUP.md`;
+3. verificar/aplicar la migración RLS y ejecutar la suite remota;
+4. preparar e importar C41 con contrato 1.1.

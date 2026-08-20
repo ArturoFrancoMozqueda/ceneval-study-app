@@ -6,9 +6,9 @@ El punto de entrada del repositorio es [`AGENTS.md`](../AGENTS.md), en la raíz.
 
 ## Orden de lectura
 
-0. `auditoria-2026-08/README.md` — auditoría del 19 de agosto de 2026. Léela
-   antes que nada: corrige varias afirmaciones de los documentos siguientes.
-1. `PROJECT_STATUS.md`
+0. `PROJECT_STATUS.md` — estado vigente del código integrado y bloqueos reales.
+1. `auditoria-2026-08/README.md` — corte histórico del 19 de agosto y tabla de
+   conciliación con el estado posterior.
 2. `01-product-vision.md`
 3. `02-functional-requirements.md`
 4. `03-user-stories.md`
@@ -34,8 +34,9 @@ No los uses como referencia.
 | `05-system-architecture.md` | Describe la arquitectura técnica acordada | Aprobado |
 | `06-database-design.md` | Define entidades, relaciones y reglas de datos | Aprobado |
 | `08-visual-design.md` | Define personalidad, colores, tipografía y componentes | Aprobado |
-| `SECURITY_TESTING.md` | Suite de permisos y su última ejecución | Activo |
-| `auditoria-2026-08/` | Auditoría de tres perspectivas y evidencia | Vigente |
+| `SECURITY_TESTING.md` | Distingue cobertura local, suite remota y última ejecución comprobada | Activo |
+| `SUPABASE_BACKUP.md` | Procedimiento seguro de exportación, verificación y restauración de ensayo | Activo; ejecución real pendiente |
+| `auditoria-2026-08/` | Corte histórico con conciliación vigente en su README | Histórico y referencial |
 | `archivo/` | Documentos históricos que ya no aplican | Archivado |
 | `DEVELOPMENT_WORKFLOW.md` | Establece cómo trabajar en el repositorio | Activo |
 | `TEACHING_STYLE.md` | Indica cómo enseñar al usuario | Activo |
