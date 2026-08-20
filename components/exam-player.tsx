@@ -39,9 +39,14 @@ export function ExamPlayer({
 
   if (result?.score !== undefined) {
     return (
-      <section>
+      <section aria-labelledby="exam-result-title" aria-live="polite">
         <div className="rounded-2xl bg-success-soft p-6 text-center">
-          <p className="text-sm font-semibold text-success">Resultado</p>
+          <h2
+            className="text-sm font-semibold text-success"
+            id="exam-result-title"
+          >
+            Resultado
+          </h2>
           <p className="mt-2 text-4xl font-semibold">
             {result.score}/{result.total}
           </p>
@@ -53,6 +58,9 @@ export function ExamPlayer({
           {exam.questions.map((question) => {
             const review = result.review?.find(
               ({ questionId }) => questionId === question.id,
+            );
+            const selectedOption = question.options.find(
+              ({ id }) => id === answers[String(question.id)],
             );
             return (
               <article
@@ -67,9 +75,23 @@ export function ExamPlayer({
                   {review?.correct ? "Respuesta correcta" : "Necesita repaso"}
                 </p>
                 <h3 className="mt-2 font-semibold">{question.text}</h3>
-                <p className="mt-3 whitespace-pre-line text-sm leading-6 text-muted">
-                  {review?.explanation}
-                </p>
+                <div className="mt-4 rounded-xl bg-background p-4">
+                  <h4 className="text-sm font-semibold">Tu respuesta</h4>
+                  <p className="mt-1 text-sm leading-6">
+                    {selectedOption?.text}
+                  </p>
+                  <p className="mt-2 whitespace-pre-line text-sm leading-6 text-muted">
+                    {review?.selectedOptionExplanation}
+                  </p>
+                </div>
+                <div className="mt-4">
+                  <h4 className="text-sm font-semibold">
+                    Explicación general
+                  </h4>
+                  <p className="mt-1 whitespace-pre-line text-sm leading-6 text-muted">
+                    {review?.explanation}
+                  </p>
+                </div>
               </article>
             );
           })}

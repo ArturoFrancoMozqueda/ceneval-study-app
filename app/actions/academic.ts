@@ -2,6 +2,12 @@
 
 import { revalidatePath } from "next/cache";
 import { requireAdmin, requireUser } from "@/lib/auth";
+import {
+  gradeExamSelections,
+  parseExamSubmission,
+  validateExamSelections,
+  type ExamReview,
+} from "@/lib/exam-submission";
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 
@@ -10,12 +16,7 @@ export type ActionResult = {
   id?: number;
   score?: number;
   total?: number;
-  review?: {
-    questionId: number;
-    correct: boolean;
-    explanation: string;
-    optionExplanations: Record<string, string>;
-  }[];
+  review?: ExamReview[];
 };
 
 const studySteps = [
@@ -382,15 +383,23 @@ export async function saveQuickCheckAction(input: {
 }
 
 export async function submitExamAction(
-  examId: number,
-  answers: Record<string, number>,
+  examId: unknown,
+  answers: unknown,
 ): Promise<ActionResult> {
   const user = await requireUser();
+  const submission = parseExamSubmission(examId, answers);
+  if (!submission) {
+    return {
+      error:
+        "Las respuestas enviadas no son válidas. Vuelve a abrir el examen e inténtalo nuevamente.",
+    };
+  }
+
   const student = await createServerSupabaseClient();
   const { data: exam, error: examError } = await student
     .from("exams")
     .select("id")
-    .eq("id", examId)
+    .eq("id", submission.examId)
     .maybeSingle();
   if (examError || !exam) return { error: "El examen no está disponible." };
 
@@ -398,15 +407,38 @@ export async function submitExamAction(
   const { data: questions, error: questionsError } = await admin
     .from("exam_questions")
     .select("id")
-    .eq("exam_id", examId);
+    .eq("exam_id", submission.examId)
+    .order("position");
   if (questionsError || !questions?.length) {
     return { error: "El examen no tiene preguntas disponibles." };
   }
-  if (questions.some(({ id }) => !answers[String(id)])) {
-    return { error: "Responde todas las preguntas antes de entregar." };
-  }
 
   const questionIds = questions.map(({ id }) => id as number);
+  const { data: options, error: optionsError } = await admin
+    .from("exam_options")
+    .select("id,question_id")
+    .in("question_id", questionIds);
+  if (optionsError) return databaseError("loadExamOptions", optionsError.message);
+
+  const optionReferences = (options ?? []).map((option) => ({
+    id: option.id as number,
+    questionId: option.question_id as number,
+  }));
+  const selectionValidation = validateExamSelections(
+    submission.answers,
+    questions.map(({ id }) => ({ id: id as number })),
+    optionReferences,
+  );
+  if (!selectionValidation.success && selectionValidation.reason === "incomplete") {
+    return { error: "Responde todas las preguntas antes de entregar." };
+  }
+  if (!selectionValidation.success) {
+    return {
+      error:
+        "Las respuestas no corresponden a este examen. Vuelve a abrirlo e inténtalo nuevamente.",
+    };
+  }
+
   const { data: keys, error: keysError } = await admin
     .from("exam_answer_keys")
     .select(
@@ -417,51 +449,64 @@ export async function submitExamAction(
     return databaseError("gradeExam", keysError?.message ?? "missing keys");
   }
 
-  const score = keys.filter(
-    ({ correct_option_id, question_id }) =>
-      answers[String(question_id)] === correct_option_id,
-  ).length;
+  const grading = gradeExamSelections(
+    selectionValidation.selections,
+    optionReferences,
+    keys.map((key) => ({
+      questionId: key.question_id as number,
+      correctOptionId: key.correct_option_id as number,
+      explanation: key.explanation,
+      optionExplanations: key.option_explanations,
+    })),
+  );
+  if (!grading.success) {
+    return databaseError("gradeExam", "invalid answer key data");
+  }
+
   const { data: attempt, error: attemptError } = await admin
     .from("exam_attempts")
     .insert({
       user_id: user.id,
-      exam_id: examId,
+      exam_id: submission.examId,
       completed_at: new Date().toISOString(),
-      score,
+      score: grading.score,
       total_questions: questionIds.length,
     })
     .select("id")
     .single();
   if (attemptError) return databaseError("createAttempt", attemptError.message);
 
-  const keyByQuestion = new Map(
-    keys.map(({ correct_option_id, question_id }) => [
-      question_id as number,
-      correct_option_id as number,
-    ]),
+  const correctnessByQuestion = new Map(
+    grading.review.map(({ questionId, correct }) => [questionId, correct]),
   );
   const { error: answersError } = await admin.from("exam_answers").insert(
-    questionIds.map((questionId) => ({
+    selectionValidation.selections.map((selection) => ({
       attempt_id: attempt.id,
-      question_id: questionId,
-      selected_option_id: answers[String(questionId)],
-      is_correct: answers[String(questionId)] === keyByQuestion.get(questionId),
+      question_id: selection.questionId,
+      selected_option_id: selection.selectedOptionId,
+      is_correct: correctnessByQuestion.get(selection.questionId) === true,
     })),
   );
-  if (answersError) return databaseError("saveAnswers", answersError.message);
+  if (answersError) {
+    const { error: cleanupError } = await admin
+      .from("exam_attempts")
+      .delete()
+      .eq("id", attempt.id)
+      .eq("user_id", user.id);
+    if (cleanupError) {
+      console.error(
+        `[Supabase] cleanupExamAttempt: ${cleanupError.message}; attempt=${attempt.id}`,
+      );
+    }
+    return databaseError("saveAnswers", answersError.message);
+  }
 
   revalidatePath("/");
   revalidatePath("/estudiar");
   return {
     id: attempt.id as number,
-    score,
+    score: grading.score,
     total: questionIds.length,
-    review: keys.map((key) => ({
-      questionId: key.question_id as number,
-      correct:
-        answers[String(key.question_id)] === key.correct_option_id,
-      explanation: key.explanation as string,
-      optionExplanations: key.option_explanations as Record<string, string>,
-    })),
+    review: grading.review,
   };
 }
