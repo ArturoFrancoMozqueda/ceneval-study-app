@@ -127,11 +127,10 @@ clase de prueba durante unos segundos.
 Detectadas en la auditoría de agosto de 2026. Verifica antes de asumir que
 alguna sigue abierta; si corriges una, actualiza esta lista.
 
-- **El importador no asigna `curriculum_code` ni `curriculum_order`.** Se
-  poblaron una sola vez con un `update … where c.id between 10 and 49`, que son
-  las 40 clases actuales. Como `getPublishedSessions` descarta las clases con
-  orden vacío (`lib/data/academic.ts:339`), **una clase nueva se publica y
-  queda invisible** en `/sesiones` y en la navegación anterior/siguiente.
+- **Los paquetes nuevos deben usar el contrato 1.1.** El importador ya asigna
+  `curriculum_code`, `curriculum_order` y `class_audio_sources`, y rechaza
+  colisiones antes de escribir. Los paquetes históricos 1.0 se conservan para
+  consulta, pero deben migrarse a 1.1 antes de volver a importarlos.
 - **Las transcripciones originales solo existen en el disco `F:`.** Los 41
   paquetes apuntan a `F:\TRANSCRIPCIONES CENEVAL\AUDIO NN.txt`, así que
   `content:check` y `content:import` fallan en cualquier otra computadora.

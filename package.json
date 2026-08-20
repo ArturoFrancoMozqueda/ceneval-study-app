@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "content:check": "tsx scripts/check-content.ts",
+    "content:test": "tsx --test lib/content/package-schema.test.ts",
     "content:import": "tsx --env-file=.env.local scripts/import-content.ts",
     "security:rls": "tsx --env-file=.env.local scripts/test-rls.ts"
   },
