@@ -120,13 +120,21 @@ export async function HomeDashboard() {
             reales de exámenes.
           </p>
         </div>
-        <Link
-          className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 self-start rounded-xl bg-brand px-5 text-sm font-semibold text-white hover:bg-brand-deep sm:self-auto"
-          href="/progreso"
-        >
-          Ver progreso
-          <ArrowRightIcon className="size-4" />
-        </Link>
+        <div className="flex shrink-0 flex-col gap-3 self-start sm:self-auto">
+          <Link
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-brand px-5 text-sm font-semibold text-white hover:bg-brand-deep"
+            href="/progreso"
+          >
+            Ver progreso
+            <ArrowRightIcon className="size-4" />
+          </Link>
+          <Link
+            className="inline-flex min-h-11 items-center justify-center rounded-xl border border-brand/20 bg-surface px-5 text-sm font-semibold text-brand hover:bg-background"
+            href="/progreso/examenes"
+          >
+            Historial de exámenes
+          </Link>
+        </div>
       </section>
 
       <section className="mt-10">
