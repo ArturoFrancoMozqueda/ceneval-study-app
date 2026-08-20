@@ -50,14 +50,14 @@ export async function SubjectDetail({ subjectId }: { subjectId: number }) {
         ) : null}
       </header>
       <section className="mt-9 space-y-4">
-        {classes.map((studyClass, index) => (
+        {classes.map((studyClass) => (
           <Link
             className="group flex items-center gap-4 rounded-2xl border border-border bg-white p-5 hover:border-brand/30"
             href={`/clases/${studyClass.id}`}
             key={studyClass.id}
           >
-            <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-success-soft font-mono text-sm font-semibold text-success">
-              {String(index + 1).padStart(2, "0")}
+            <span className="grid min-h-11 min-w-11 shrink-0 place-items-center rounded-xl bg-success-soft px-2 font-mono text-sm font-semibold text-success">
+              {studyClass.curriculumCode || "Sin código"}
             </span>
             <span className="min-w-0 flex-1">
               <span className="block font-semibold">{studyClass.title}</span>
