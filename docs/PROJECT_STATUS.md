@@ -115,6 +115,8 @@ recorrido normal; las retiradas quedarán únicamente en administración.
 - Búsqueda de contenido publicado.
 - Edición básica y retiro desde el panel administrativo.
 - Suite RLS de 20 comprobaciones aprobada en la última auditoría registrada.
+- CI reproducible con pruebas locales, lint y build, sin secretos ni acceso a
+  Supabase.
 - `npm run lint` y `npm run build` aprobados después de la clase C40.
 
 ### Parcial o pendiente

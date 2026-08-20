@@ -1,0 +1,46 @@
+name: Calidad
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: calidad-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  calidad:
+    name: Pruebas, lint y build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+          package-manager-cache: false
+
+      - name: Instalar dependencias bloqueadas
+        run: npm ci --ignore-scripts
+
+      - name: Ejecutar pruebas locales
+        run: npm run test:local
+
+      - name: Revisar el código
+        run: npm run lint
+
+      - name: Compilar para producción
+        run: npm run build

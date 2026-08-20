@@ -35,7 +35,8 @@ transcripción → preparación editorial → borrador → revisión → publica
 - La app es **privada**: solo la administradora entra. El registro de
   estudiantes está pospuesto por decisión de producto.
 - **No hay despliegue.** Solo corre en `localhost`.
-- No hay pruebas automatizadas de interfaz ni CI.
+- Hay CI para pruebas unitarias locales, lint y build. Aún no hay pruebas
+  automatizadas de interfaz.
 
 ## Orden de lectura
 
@@ -58,6 +59,7 @@ Supabase (auth, Postgres, RLS) · Zod. Despliegue previsto en Vercel.
 ```bash
 npm install             # instalar dependencias
 npm run dev             # servidor local en http://localhost:3000
+npm run test:local      # pruebas locales; no usa Supabase ni el disco F:
 npm run lint            # eslint
 npm run build           # compilación de producción
 npm run content:check   # validar paquetes de content/packages/
