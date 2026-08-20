@@ -4,6 +4,8 @@ Este directorio contiene la fuente principal de contexto para el desarrollo de C
 
 ## Orden de lectura
 
+0. `auditoria-2026-08/README.md` — auditoría del 19 de agosto de 2026. Léela
+   antes que nada: corrige varias afirmaciones de los documentos siguientes.
 1. `PROJECT_STATUS.md`
 2. `01-product-vision.md`
 3. `02-functional-requirements.md`

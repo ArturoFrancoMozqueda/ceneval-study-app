@@ -1,7 +1,15 @@
 # Estado actual y siguientes pasos — CENEVAL Study App
 
-Última actualización: 12 de agosto de 2026  
+Última actualización: 19 de agosto de 2026  
 Responsables: Fatima (administradora y validación) y Codex (desarrollo y contenido)
+
+> **Corrección del 19 de agosto de 2026.** Una auditoría de tres perspectivas
+> (técnica, de uso y de producto) comprobó que varias tareas listadas aquí como
+> pendientes críticas **ya estaban construidas y funcionando**: el orden
+> curricular, la pantalla `/sesiones`, la navegación anterior/siguiente y el
+> supuesto límite de 12 temas en `/estudiar`, que nunca existió. Las secciones
+> 3, 5, 8, 9 y 12 se corrigieron en consecuencia. El detalle y la evidencia
+> están en [`docs/auditoria-2026-08/`](auditoria-2026-08/README.md).
 
 ## 1. Resumen ejecutivo
 
@@ -47,19 +55,27 @@ También hay tres numeraciones diferentes que no deben confundirse:
 El ID 49 no significa que existan 49 clases vigentes. Hay saltos porque se
 hicieron pruebas y se conservaron versiones retiradas.
 
-## 3. Problema de navegación detectado
+## 3. Navegación: resuelto, con una falla nueva
 
-La aplicación todavía no ofrece una pantalla que reúna todas las sesiones en
-orden. Actualmente:
+El problema descrito en agosto **ya está resuelto**. Verificado en el código el
+19 de agosto de 2026:
 
-- `/materias` agrupa el contenido por materia;
-- cada materia ordena sus clases por fecha de publicación descendente;
-- `/estudiar` enseña solamente los 12 temas creados más recientemente;
-- no existe un botón estable de “clase anterior” y “clase siguiente”;
-- no se muestra de forma visible el código C01–C58 ni el audio de origen.
+- `/sesiones` (`app/sesiones/page.tsx`) reúne todas las clases publicadas en
+  orden C01→C40, con código, materia, audios de origen y progreso;
+- ofrece las dos vistas previstas: orden recomendado y orden por audios;
+- `class-detail.tsx:82` muestra los botones “Anterior” y “Siguiente”, resueltos
+  por `getPublishedSessionNeighbors()`;
+- `/estudiar` **nunca** estuvo limitada a 12 temas: la consulta
+  (`app/estudiar/page.tsx:17`) no tiene `.limit()` ni `.slice()`.
 
-Por eso no es posible recorrer cómodamente las clases desde la primera hasta la
-última, aunque los registros estén publicados.
+Quedan dos fallas reales de navegación, que sí deben corregirse:
+
+1. **Las clases nuevas nacerán fuera del recorrido.** Ver la sección 8.
+2. **Dos numeraciones contradictorias.** `/sesiones` muestra `C17` y el detalle
+   de materia muestra esa misma clase como `03`, porque
+   `components/subject-detail.tsx:59` calcula un número por posición sobre una
+   lista ordenada por fecha de publicación descendente. Es exactamente el riesgo
+   que advierte la sección 10 de este documento, sobreviviendo en otra pantalla.
 
 ## 4. Decisión de producto
 
@@ -101,8 +117,18 @@ recorrido normal; las retiradas quedarán únicamente en administración.
 
 ### Parcial o pendiente
 
-- Vista cronológica de todas las sesiones.
-- Navegación anterior/siguiente entre clases.
+- **El importador no asigna el orden curricular.** Es el bloqueo real: ver la
+  sección 8.
+- **Sin pantallas de error, carga ni 404.** No existe ningún `error.tsx`,
+  `loading.tsx`, `not-found.tsx` ni `global-error.tsx` en todo el proyecto.
+- **El examen no muestra las explicaciones** que el servidor ya envía al
+  navegador (`app/actions/academic.ts:464`).
+- **El repaso espaciado no se lee.** `next_review_at` se escribe y ninguna
+  consulta lo usa; el contador de “respuestas difíciles” de `/estudiar` cuenta
+  filas históricas, así que solo puede crecer.
+- **Sin respaldos de la base ni historial de git útil** (un solo commit).
+- **Las transcripciones originales solo existen en el disco `F:`.**
+- Numeración unificada por código Cxx en todas las pantallas.
 - Filtrado completo de contenido retirado en todas las pantallas de estudio.
 - Presentación clara del avance total del plan.
 - Historial y análisis profundo de temas débiles.
@@ -160,23 +186,40 @@ diez reactivos originales y fuentes verificables.
 
 ## 8. Plan específico para terminar el proyecto
 
-### Prioridad 0 — Hacer visible el orden de estudio
+### Prioridad 0 — Proteger el trabajo y desbloquear C41
 
-1. Crear una migración para agregar a cada clase `curriculum_code`,
-   `curriculum_order` y la relación con sus audios de origen.
-2. Cargar la correspondencia completa C01–C58 y Audio 01–70.
-3. Agregar la consulta de todas las clases publicadas ordenadas por
-   `curriculum_order`.
-4. Crear `/sesiones` con las vistas “Orden recomendado” y “Orden de audios”.
-5. Mostrar en cada tarjeta el código, número de sesión, materia y audio fuente.
-6. Añadir botones “Anterior” y “Siguiente” dentro de cada clase.
-7. Ocultar versiones `withdrawn` fuera del panel administrativo.
-8. Probar que C01 abre primero, C40 aparece en su posición y C41 se incorpora
-   automáticamente cuando se publique.
+Los puntos 1 a 7 de la versión anterior de esta sección **ya están hechos**: la
+migración `20260812175550_add_curriculum_session_metadata.sql` creó
+`curriculum_code`, `curriculum_order` y `class_audio_sources`; `/sesiones`
+existe con sus dos vistas; y la navegación anterior/siguiente funciona. El
+punto 8 —“probar que C41 se incorpora automáticamente”— nunca se ejecutó, y ahí
+apareció el bloqueo real.
 
-**Criterio de terminado:** la administradora puede comenzar en C01 y avanzar
-una por una sin entrar manualmente a cada materia; también puede localizar una
-transcripción por su número de audio.
+1. **Respaldar el disco `F:` e incorporar las transcripciones al repositorio.**
+   Los 41 paquetes de `content/packages/` apuntan a
+   `F:\TRANSCRIPCIONES CENEVAL\AUDIO NN.txt`. En cualquier otra computadora,
+   `content:check` y `content:import` fallan. Si ese disco se pierde,
+   desaparece el material de origen de las 58 clases.
+2. **Exportar la base de Supabase y dejar el comando documentado.** La única
+   copia armada de las 40 clases vive ahí, sin respaldo.
+3. **Empezar a hacer commits**, uno por clase publicada como mínimo. Hoy el
+   repositorio tiene un solo commit inicial: no hay punto de retorno.
+4. **Hacer que `scripts/import-content.ts` asigne `curriculum_code` y
+   `curriculum_order`.** Hoy no los escribe (`scripts/import-content.ts:47`), y
+   esas columnas se poblaron una sola vez con un `update` fijo
+   `where c.id between 10 and 49`, que son exactamente las 40 clases actuales.
+   Como `getPublishedSessions` descarta las clases con orden vacío
+   (`lib/data/academic.ts:339`), **C41 se publicaría y sería invisible** en
+   `/sesiones` y en “Siguiente” desde C40, sin ninguna pantalla para corregirlo
+   a mano. Lo mismo aplica a las 18 clases restantes.
+5. **Decidir si vuelve la aprobación expresa antes de publicar.** ADR-011 la
+   exige; la sección 9 de `ROADMAP_TRACKING.md` la sustituyó por una
+   autorización permanente. El validador comprueba formato, no vigencia
+   jurídica. Las dos opciones son defendibles; la contradicción no.
+
+**Criterio de terminado:** existe una copia del material de origen fuera del
+disco `F:`, existe una exportación de la base, y C41 se publica y aparece
+automáticamente en `/sesiones` y en la navegación, sin intervención manual.
 
 ### Prioridad 1 — Completar C41–C58
 
@@ -243,18 +286,21 @@ un manual.
 
 ## 9. Próximas diez tareas ejecutables
 
+Las cinco primeras tareas de la lista anterior estaban cerradas o eran falsas.
+Esta es la lista corregida.
+
 | # | Tarea | Evidencia para cerrarla |
 | ---: | --- | --- |
-| 1 | Implementar metadatos de orden y fuentes de audio | Migración aplicada y 40 clases rellenadas |
-| 2 | Crear la página `/sesiones` | C01–C40 visibles en orden recomendado |
-| 3 | Agregar la vista por número de audio | Audio 01–70 localizables con su destino |
-| 4 | Incorporar navegación anterior/siguiente | Recorrido continuo C01 → C40 |
-| 5 | Corregir `/estudiar` | No se limita arbitrariamente a 12 temas recientes |
-| 6 | Crear y publicar C41 | Conteos, lint y build aprobados |
-| 7 | Crear y publicar C42 | Conteos, lint y build aprobados |
-| 8 | Crear y publicar C43 | Módulo procesal mercantil completo |
-| 9 | Crear y publicar C44 | Inicio del módulo laboral |
-| 10 | Ejecutar prueba de regresión | Sesiones, contenido, RLS y progreso aprobados |
+| 1 | Respaldar el disco `F:` e incorporar las transcripciones | `content:check` corre en una computadora limpia |
+| 2 | Exportar la base de Supabase | Archivo de respaldo con fecha y comando documentado |
+| 3 | Hacer commits del trabajo existente | Historial con más de un commit |
+| 4 | Asignar orden curricular en el importador | C41 aparece en `/sesiones` sin intervención manual |
+| 5 | Agregar `error.tsx`, `loading.tsx` y `not-found.tsx` | `/temas/abc` muestra una pantalla en español, con salida |
+| 6 | Mostrar las explicaciones al terminar un examen | La estudiante ve qué falló y por qué |
+| 7 | Unificar la numeración por código Cxx | `subject-detail.tsx` deja de numerar por posición |
+| 8 | Cerrar la redirección abierta y validar el examen | `app/auth/confirm/route.ts` y `academic.ts:443` |
+| 9 | Crear y publicar C41 | Conteos, lint y build aprobados, y visible en `/sesiones` |
+| 10 | Desplegar en Vercel en modo privado | Recorrido de las 40 clases desde el teléfono |
 
 ## 10. Riesgos y controles
 
@@ -285,6 +331,14 @@ El proyecto se considerará terminado cuando:
 
 ## 12. Siguiente acción inmediata
 
-Antes de producir C41, implementar la vista **Sesiones** y el orden académico y
-por audios. Esto resolverá el problema actual de encontrar las 40 clases y hará
-que todas las siguientes aparezcan automáticamente en el lugar correcto.
+La vista **Sesiones** ya existe y funciona. Lo que falta antes de producir C41
+es proteger lo ya hecho y desbloquear lo que sigue, en este orden:
+
+1. respaldar el disco `F:` e incorporar las transcripciones al repositorio;
+2. exportar la base de Supabase;
+3. hacer commits del trabajo existente;
+4. corregir el importador para que asigne `curriculum_code` y
+   `curriculum_order`, y comprobarlo publicando C41.
+
+Sin el punto 4, cada una de las 18 clases restantes se publicará correctamente
+en la base y será invisible en el recorrido de estudio.
