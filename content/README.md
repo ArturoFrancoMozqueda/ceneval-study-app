@@ -25,11 +25,41 @@ encuentra en [`curriculum-plan.md`](./curriculum-plan.md).
 5. Revisar cada tema.
 6. La administradora confirma y se cambia el estado a `published`.
 
-## Contrato 1.0
+## Contrato 1.1
+
+Los paquetes nuevos deben usar `packageVersion: "1.1"` y declarar su lugar en
+el plan y sus audios de origen. El código y el orden deben coincidir; el
+validador rechaza códigos fuera de C01–C58, audios fuera de 01–70 y audios
+repetidos dentro de la misma clase.
+
+```json
+{
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C41",
+    "order": 41,
+    "audioSources": [
+      { "audioNumber": 54, "fragment": "completo" },
+      { "audioNumber": 55, "fragment": "primera parte" }
+    ]
+  }
+}
+```
+
+El orden de `audioSources` se conserva en la vista de sesiones. El importador
+comprueba que el código o el orden no pertenezcan a otra clase antes de crear
+ningún registro; los índices únicos de PostgreSQL protegen también contra dos
+importaciones simultáneas.
+
+Los paquetes históricos con contrato 1.0 todavía pueden validarse para
+conservar su contenido, pero no pueden volver a importarse hasta migrarlos al
+contrato 1.1.
 
 Cada paquete contiene:
 
 - materia y clase;
+- código y orden curricular;
+- uno o más audios de origen, con descripción del fragmento;
 - transcripción original y limpia;
 - uno o más temas;
 - los nueve tipos de material requeridos por tema;

@@ -134,8 +134,49 @@ const topicSchema = z
     }
   });
 
-const packageBase = z.object({
-  packageVersion: z.literal("1.0"),
+export const curriculumMetadataSchema = z
+  .object({
+    code: z
+      .string()
+      .trim()
+      .regex(/^C(?:0[1-9]|[1-4][0-9]|5[0-8])$/, {
+        message: "El código curricular debe estar entre C01 y C58.",
+      }),
+    order: z.number().int().min(1).max(58),
+    audioSources: z
+      .array(
+        z.object({
+          audioNumber: z.number().int().min(1).max(70),
+          fragment: z.string().trim().min(1).max(120),
+        }),
+      )
+      .min(1)
+      .max(10),
+  })
+  .superRefine((curriculum, context) => {
+    const codeOrder = Number(curriculum.code.slice(1));
+    if (codeOrder !== curriculum.order) {
+      context.addIssue({
+        code: "custom",
+        message: `El código ${curriculum.code} debe usar el orden ${codeOrder}.`,
+        path: ["order"],
+      });
+    }
+
+    const seenAudioNumbers = new Set<number>();
+    for (const [index, source] of curriculum.audioSources.entries()) {
+      if (seenAudioNumbers.has(source.audioNumber)) {
+        context.addIssue({
+          code: "custom",
+          message: `El Audio ${source.audioNumber} está repetido en la clase.`,
+          path: ["audioSources", index, "audioNumber"],
+        });
+      }
+      seenAudioNumbers.add(source.audioNumber);
+    }
+  });
+
+const packageContent = z.object({
   subject: z.object({
     name: z.string().trim().min(1).max(80),
     description: z.string().trim().max(300),
@@ -149,35 +190,60 @@ const packageBase = z.object({
   topics: z.array(topicSchema).min(1),
 });
 
-export const classPackageSchema = packageBase.extend({
+const transcriptSchema = z.object({
+  original: z.string().trim().min(30).max(200000),
+  cleaned: z.string().trim().min(30).max(200000),
+});
+
+const transcriptFileSchema = z
+  .object({
+    original: z.string().trim().min(30).max(200000).optional(),
+    originalFile: z.string().trim().min(1).optional(),
+    originalFiles: z.array(z.string().trim().min(1)).min(2).max(10).optional(),
+    cleaned: z.string().trim().min(30).max(200000).optional(),
+  })
+  .superRefine((transcript, context) => {
+    const sourceCount = [
+      transcript.original,
+      transcript.originalFile,
+      transcript.originalFiles,
+    ].filter(Boolean).length;
+    if (sourceCount !== 1) {
+      context.addIssue({
+        code: "custom",
+        message:
+          "Incluye exactamente una fuente: original, originalFile u originalFiles.",
+      });
+    }
+  });
+
+const legacyPackageSchema = packageContent.extend({
+  packageVersion: z.literal("1.0"),
+});
+
+const currentPackageSchema = packageContent.extend({
+  packageVersion: z.literal("1.1"),
+  curriculum: curriculumMetadataSchema,
+});
+
+export const classPackageSchema = z.discriminatedUnion("packageVersion", [
+  legacyPackageSchema.extend({ transcript: transcriptSchema }),
+  currentPackageSchema.extend({ transcript: transcriptSchema }),
+]);
+
+export const classPackageFileSchema = z.discriminatedUnion("packageVersion", [
+  legacyPackageSchema.extend({ transcript: transcriptFileSchema }),
+  currentPackageSchema.extend({ transcript: transcriptFileSchema }),
+]);
+
+export const importableClassPackageSchema = currentPackageSchema.extend({
   transcript: z.object({
     original: z.string().trim().min(30).max(200000),
     cleaned: z.string().trim().min(30).max(200000),
   }),
 });
 
-export const classPackageFileSchema = packageBase.extend({
-  transcript: z
-    .object({
-      original: z.string().trim().min(30).max(200000).optional(),
-      originalFile: z.string().trim().min(1).optional(),
-      originalFiles: z.array(z.string().trim().min(1)).min(2).max(10).optional(),
-      cleaned: z.string().trim().min(30).max(200000).optional(),
-    })
-    .superRefine((transcript, context) => {
-      const sourceCount = [
-        transcript.original,
-        transcript.originalFile,
-        transcript.originalFiles,
-      ].filter(Boolean).length;
-      if (sourceCount !== 1) {
-        context.addIssue({
-          code: "custom",
-          message:
-            "Incluye exactamente una fuente: original, originalFile u originalFiles.",
-        });
-      }
-    }),
-});
-
 export type ClassPackage = z.infer<typeof classPackageSchema>;
+export type ImportableClassPackage = z.infer<
+  typeof importableClassPackageSchema
+>;

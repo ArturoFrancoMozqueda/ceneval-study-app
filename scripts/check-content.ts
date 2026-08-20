@@ -9,8 +9,12 @@ if (!fileArgument) {
 
 async function main() {
   const bundle = await loadClassPackage(fileArgument!);
+  const curriculumSummary =
+    bundle.packageVersion === "1.1"
+      ? `, ${bundle.curriculum.code} (orden ${bundle.curriculum.order})`
+      : ", contrato histórico 1.0 no importable";
   console.log(
-    `Paquete válido: ${bundle.class.title}, ${bundle.topics.length} tema(s).`,
+    `Paquete válido: ${bundle.class.title}${curriculumSummary}, ${bundle.topics.length} tema(s).`,
   );
 }
 

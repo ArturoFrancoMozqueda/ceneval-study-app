@@ -1,5 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 import { loadClassPackage } from "../lib/content/load-package";
+import { importableClassPackageSchema } from "../lib/content/package-schema";
 
 const fileArgument = process.argv[2];
 if (!fileArgument) {
@@ -15,7 +16,13 @@ if (!url || !secretKey) {
   throw new Error("Faltan las variables privadas de Supabase.");
 }
 
-const bundle = await loadClassPackage(fileArgument!);
+const loadedBundle = await loadClassPackage(fileArgument!);
+if (loadedBundle.packageVersion === "1.0") {
+  throw new Error(
+    "El contrato 1.0 es histórico y no incluye el orden curricular. Actualiza el paquete a 1.1 antes de importarlo.",
+  );
+}
+const bundle = importableClassPackageSchema.parse(loadedBundle);
 const supabase = createClient(url, secretKey, {
   auth: { autoRefreshToken: false, persistSession: false },
 });
@@ -23,6 +30,27 @@ const supabase = createClient(url, secretKey, {
 let createdClassId: number | null = null;
 
 try {
+  const { data: curriculumConflicts, error: curriculumLookupError } =
+    await supabase
+      .from("classes")
+      .select("id,title,curriculum_code,curriculum_order")
+      .or(
+        `curriculum_code.eq.${bundle.curriculum.code},curriculum_order.eq.${bundle.curriculum.order}`,
+      )
+      .limit(2);
+  if (curriculumLookupError) throw curriculumLookupError;
+  if ((curriculumConflicts?.length ?? 0) > 0) {
+    const conflicts = (curriculumConflicts ?? [])
+      .map(
+        ({ id, title, curriculum_code, curriculum_order }) =>
+          `clase ${id} (${title}, ${curriculum_code ?? "sin código"}, orden ${curriculum_order ?? "sin orden"})`,
+      )
+      .join("; ");
+    throw new Error(
+      `${bundle.curriculum.code} u orden ${bundle.curriculum.order} ya están asignados a ${conflicts}. No se importó nada.`,
+    );
+  }
+
   const { data: existingSubject, error: subjectLookupError } = await supabase
     .from("subjects")
     .select("id")
@@ -53,11 +81,25 @@ try {
       teacher: bundle.class.teacher ?? null,
       description: bundle.class.description,
       publication_status: "draft",
+      curriculum_code: bundle.curriculum.code,
+      curriculum_order: bundle.curriculum.order,
     })
     .select("id")
     .single();
   if (classError) throw classError;
   createdClassId = studyClass.id as number;
+
+  const { error: audioSourcesError } = await supabase
+    .from("class_audio_sources")
+    .insert(
+      bundle.curriculum.audioSources.map((source, index) => ({
+        class_id: createdClassId,
+        audio_number: source.audioNumber,
+        fragment: source.fragment,
+        position: index + 1,
+      })),
+    );
+  if (audioSourcesError) throw audioSourcesError;
 
   const { data: transcript, error: transcriptError } = await supabase
     .from("transcripts")
@@ -210,7 +252,16 @@ try {
   );
 } catch (error) {
   if (createdClassId) {
-    await supabase.from("classes").delete().eq("id", createdClassId);
+    const { error: cleanupError } = await supabase
+      .from("classes")
+      .delete()
+      .eq("id", createdClassId);
+    if (cleanupError) {
+      throw new AggregateError(
+        [error, cleanupError],
+        `Falló la importación y no se pudo eliminar la clase parcial ${createdClassId}.`,
+      );
+    }
   }
   throw error;
 }
