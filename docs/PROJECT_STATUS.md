@@ -191,6 +191,12 @@ pendiente.
 - No se envían explicaciones de opciones no elegidas.
 - Hay pruebas locales para selección cruzada, forma inválida y exposición
   mínima de retroalimentación.
+- `/progreso/examenes` lista únicamente los intentos de la sesión autenticada,
+  con paginación por cursor, fecha, puntuación y etiquetas de examen vigente o
+  histórico. Los intentos anteriores no se sobrescriben.
+- El detalle recupera las respuestas mediante RLS y muestra solo la opción
+  elegida y si fue correcta; no consulta ni expone `exam_answer_keys` u otras
+  opciones. Los exámenes vigentes enlazan de vuelta al tema para repetirlos.
 
 ### Repaso y progreso
 
@@ -236,6 +242,7 @@ comprobaciones, aprobada el 29 de julio de 2026.
 `npm run test:local` reúne pruebas sin Supabase ni disco `F:` para:
 
 - entrega y calificación segura del examen;
+- derivación, paginación y enlaces seguros del historial de intentos;
 - cálculo de repaso espaciado;
 - derivación de progreso por materia y ausencia explícita de desempeño cuando
   no existen intentos válidos;

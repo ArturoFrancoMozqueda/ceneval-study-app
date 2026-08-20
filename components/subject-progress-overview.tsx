@@ -80,6 +80,13 @@ export function SubjectProgressOverview({
           Compara tu cobertura con el contenido publicado y revisa la evidencia
           real que ya generaste al estudiar.
         </p>
+        <Link
+          className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-xl bg-brand px-5 text-sm font-semibold text-white hover:bg-brand-deep"
+          href="/progreso/examenes"
+        >
+          Ver historial de exámenes
+          <ArrowRightIcon className="size-4" />
+        </Link>
       </header>
 
       <section
