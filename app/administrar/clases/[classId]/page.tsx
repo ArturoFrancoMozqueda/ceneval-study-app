@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ClassDetailsForm } from "@/components/class-details-form";
 import { PublicationControls } from "@/components/publication-controls";
@@ -8,11 +9,30 @@ import {
   getTopicsForClass,
 } from "@/lib/data/academic";
 
+type EditorialClassPageProps = {
+  params: Promise<{ classId: string }>;
+};
+
+export async function generateMetadata({
+  params,
+}: EditorialClassPageProps): Promise<Metadata> {
+  const { classId } = await params;
+  const numericId = Number(classId);
+  if (!Number.isInteger(numericId) || numericId < 1) {
+    return { title: "Clase no encontrada · Panel editorial" };
+  }
+
+  const studyClass = await getClass(numericId);
+  return {
+    title: studyClass
+      ? `${studyClass.curriculumCode || "Clase"} · ${studyClass.title} · Panel editorial`
+      : "Clase no encontrada · Panel editorial",
+  };
+}
+
 export default async function EditorialClassPage({
   params,
-}: {
-  params: Promise<{ classId: string }>;
-}) {
+}: EditorialClassPageProps) {
   await requireAdmin();
   const { classId } = await params;
   const numericId = Number(classId);

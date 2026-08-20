@@ -1,15 +1,30 @@
 import type { Metadata } from "next";
 import { SubjectDetail } from "@/components/subject-detail";
+import { getSubject } from "@/lib/data/academic";
 
-export const metadata: Metadata = {
-  title: "Detalle de materia",
+type SubjectPageProps = {
+  params: Promise<{ subjectId: string }>;
 };
+
+export async function generateMetadata({
+  params,
+}: SubjectPageProps): Promise<Metadata> {
+  const { subjectId } = await params;
+  const numericId = Number(subjectId);
+  if (!Number.isInteger(numericId) || numericId < 1) {
+    return { title: "Materia no encontrada" };
+  }
+
+  const subject = await getSubject(numericId);
+  return {
+    title: subject?.name || "Materia no encontrada",
+    description: subject?.description || undefined,
+  };
+}
 
 export default async function SubjectDetailPage({
   params,
-}: {
-  params: Promise<{ subjectId: string }>;
-}) {
+}: SubjectPageProps) {
   const { subjectId } = await params;
   const numericSubjectId = Number(subjectId);
 
