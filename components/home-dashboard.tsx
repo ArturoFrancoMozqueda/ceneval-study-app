@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { ArrowRightIcon, BookIcon } from "@/components/icons";
 import { requireUser } from "@/lib/auth";
-import { getSubjects } from "@/lib/data/academic";
+import { getReviewOverview, getSubjects } from "@/lib/data/academic";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 
 export async function HomeDashboard() {
   const [user, subjects] = await Promise.all([requireUser(), getSubjects()]);
   const supabase = await createServerSupabaseClient();
-  const [attempts, progressResult, checksResult] = await Promise.all([
+  const [attempts, progressResult, reviewOverview] = await Promise.all([
     supabase
       .from("exam_attempts")
       .select("score,total_questions")
@@ -19,11 +19,7 @@ export async function HomeDashboard() {
       .order("last_activity_at", { ascending: false })
       .limit(1)
       .maybeSingle(),
-    supabase
-      .from("quick_check_responses")
-      .select("id", { count: "exact", head: true })
-      .eq("user_id", user.id)
-      .eq("needs_review", true),
+    getReviewOverview(user.id),
   ]);
   const totalAnswers = (attempts.data ?? []).reduce(
     (sum, attempt) => sum + (attempt.total_questions ?? 0),
@@ -91,7 +87,7 @@ export async function HomeDashboard() {
           { label: "Estado del último tema", value: mastery },
           {
             label: "Conceptos para repasar",
-            value: checksResult.count ?? 0,
+            value: reviewOverview.currentDifficultCount,
           },
           {
             label: "Comprensión en exámenes",

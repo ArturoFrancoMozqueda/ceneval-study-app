@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "test:exam": "tsx --test tests/exam-submission.test.ts",
+    "test:reviews": "tsx scripts/test-review-schedule.ts",
     "content:check": "tsx scripts/check-content.ts",
     "content:test": "tsx --test lib/content/package-schema.test.ts",
     "content:import": "tsx --env-file=.env.local scripts/import-content.ts",

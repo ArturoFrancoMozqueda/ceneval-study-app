@@ -108,6 +108,8 @@ recorrido normal; las retiradas quedarán únicamente en administración.
 - Mapa conceptual visual integrado en cada clase.
 - Guía de preguntas y respuestas.
 - Flashcards y registro de revisiones.
+- Repaso espaciado con cola de tarjetas vencidas y prioridad para las más
+  difíciles; los indicadores usan únicamente la respuesta más reciente.
 - Examen con respuestas protegidas hasta entregar el intento.
 - Progreso individual.
 - Búsqueda de contenido publicado.
@@ -123,9 +125,6 @@ recorrido normal; las retiradas quedarán únicamente en administración.
   `loading.tsx`, `not-found.tsx` ni `global-error.tsx` en todo el proyecto.
 - **El examen no muestra las explicaciones** que el servidor ya envía al
   navegador (`app/actions/academic.ts:464`).
-- **El repaso espaciado no se lee.** `next_review_at` se escribe y ninguna
-  consulta lo usa; el contador de “respuestas difíciles” de `/estudiar` cuenta
-  filas históricas, así que solo puede crecer.
 - **Sin respaldos de la base ni historial de git útil** (un solo commit).
 - **Las transcripciones originales solo existen en el disco `F:`.**
 - Numeración unificada por código Cxx en todas las pantallas.
