@@ -2,7 +2,7 @@
 
 Última actualización: 20 de agosto de 2026
 
-Base documental: `origin/main` en `66dd42d`
+Base documental: `origin/main` en `3a1fe92`
 
 Responsables: Fatima (administración y validación) y Codex (desarrollo y contenido)
 
@@ -40,7 +40,14 @@ despliegue estén listos.
 
 Ese objetivo no autoriza todavía a abrir el registro ni define proveedor de
 pagos, precios, planes, periodo de prueba, cancelaciones o fecha de lanzamiento.
-Esas decisiones deben resolverse antes de diseñar o implementar la venta.
+Esas decisiones deben resolverse antes de concretar o implementar la venta.
+
+La arquitectura técnica objetivo ya está documentada en
+[`SUBSCRIPTION_ARCHITECTURE.md`](SUBSCRIPTION_ARCHITECTURE.md) y registrada en
+ADR-015. Separa rol y entitlement, deniega acceso por defecto y define
+webhooks, RLS, conciliación, entornos y recuperación. Es diseño, no
+funcionalidad integrada: no existe proveedor, checkout, webhook ni tabla de
+suscripciones.
 
 ## 2. Inventario académico conocido
 
@@ -301,7 +308,11 @@ publicación, navegación y un commit por unidad de trabajo.
 2. Configurar redirecciones de Supabase Auth para producción.
 3. Probar una vista previa y promoverla solo tras aprobación.
 4. Añadir monitoreo, manual de operación, respaldo y restauración.
-5. Definir el modelo de suscripción antes de implementar registro o pagos.
+5. Resolver proveedor, planes/precios, prueba, cancelación, reembolsos,
+   impuestos y soporte antes de implementar registro o pagos.
+6. Seguir los gates incrementales de `SUBSCRIPTION_ARCHITECTURE.md`: dominio y
+   autorización sin cobro, sandbox cerrado, piloto privado y solo después
+   apertura comercial explícita.
 
 ## 7. Próximas tareas ejecutables
 
@@ -322,7 +333,8 @@ publicación, navegación y un commit por unidad de trabajo.
 3. Decidir el alcance de los 16 exámenes acumulativos.
 4. Definir responsables del repositorio, Supabase, respaldo y despliegue.
 5. Definir proveedor, planes, precio, reglas de acceso y soporte de la futura
-   suscripción; hasta entonces, mantener cerrado el registro.
+   suscripción, además de prueba, cancelación, reembolsos e impuestos; hasta
+   entonces, mantener cerrado el registro.
 
 ## 9. Definición de terminado
 

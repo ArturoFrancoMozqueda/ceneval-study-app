@@ -15,6 +15,18 @@
   de escribirse.
 - La automatización con OpenAI no forma parte del runtime actual.
 
+## Arquitectura futura de suscripción
+
+El objetivo comercial es vender acceso mediante suscripción, pero el estado
+actual sigue siendo privado y sin cobros. La arquitectura objetivo está en
+[`SUBSCRIPTION_ARCHITECTURE.md`](SUBSCRIPTION_ARCHITECTURE.md): separa
+identidad, rol y entitlement; deniega acceso por defecto; define webhooks
+firmados, idempotentes y resistentes a replay; mantiene facturación fuera de
+la Data API; y establece gates previos a cualquier apertura.
+
+Ese documento no selecciona proveedor, plan, precio, prueba, política de
+cancelación o impuestos y no autoriza cambiar `PRIVATE_ACCESS_ONLY`.
+
 ## Estado
 
 **Aprobado por la usuaria el 2026-07-23.**
