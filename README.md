@@ -1,32 +1,28 @@
 # CENEVAL Study App
 
-Aplicación web para organizar materias, clases y transcripciones durante la preparación del CENEVAL de Derecho.
+Biblioteca de estudio para el examen CENEVAL de Derecho (titulación, México).
+Las clases se preparan editorialmente a partir de transcripciones de audio y se
+publican como paquetes completos: transcripción conservada, versión didáctica,
+nueve materiales, mapa conceptual, guía, flashcards y examen.
+
+> **¿Eres un agente de IA?** Lee [`AGENTS.md`](AGENTS.md) antes de tocar nada.
+> Contiene el contexto, las reglas duras y las trampas conocidas.
 
 ## Estado
 
-Las entregas 1A, 1B y 1C de la interfaz están implementadas:
+- **40 de 58 clases publicadas.** La siguiente es C41.
+- La aplicación es **privada**: por ahora solo entra la administradora. El
+  registro de estudiantes está pospuesto por decisión de producto.
+- Funciona sobre Supabase real: autenticación, roles, políticas RLS, biblioteca
+  por materias, recorrido en orden C01→C40, mapas, guías, flashcards, exámenes
+  con respuestas protegidas, progreso individual, búsqueda y panel editorial
+  con flujo `draft → published → withdrawn`.
+- **No hay despliegue todavía.** Solo corre en `localhost`.
+- No hay pruebas automatizadas de interfaz ni integración continua.
 
-- layout adaptable;
-- navegación de escritorio y móvil;
-- pantalla de Inicio;
-- lista de Materias;
-- formulario para crear una materia;
-- detalle de materia y lista de clases;
-- formulario para crear una clase;
-- detalle de clase;
-- captura y consulta de la transcripción original;
-- revisión, aprobación y rechazo de temas;
-- creación manual y detalle básico de temas;
-- datos temporales durante la sesión;
-- estados vacíos y pantallas informativas.
-
-El proyecto de Supabase y el esquema académico inicial ya están configurados.
-La interfaz todavía usa datos temporales mientras se completa la conexión
-privada del servidor.
-
-Consulta [docs/PROJECT_STATUS.md](docs/PROJECT_STATUS.md) para conocer el estado
-auditado, las clases terminadas y las tareas específicas para finalizar el
-proyecto.
+Para el estado detallado y el plan vigente, consulta
+[docs/PROJECT_STATUS.md](docs/PROJECT_STATUS.md). Para los problemas abiertos y
+su evidencia, [docs/auditoria-2026-08/](docs/auditoria-2026-08/README.md).
 
 ## Ejecutar localmente
 
@@ -57,12 +53,24 @@ npm run lint
 npm run build
 ```
 
+## Contenido académico
+
+```bash
+npm run content:check
+```
+
+Valida los paquetes de `content/packages/` antes de importarlos. Los comandos
+`content:import` y `security:rls` **escriben en la base remota**; no los
+ejecutes de paso. Requieren además las transcripciones originales, que hoy solo
+existen en un disco externo.
+
 ## Stack
 
-- Next.js con App Router
-- TypeScript
-- Tailwind CSS
-- Supabase en la fase de persistencia
+- Next.js 16 con App Router
+- React 19 y TypeScript
+- Tailwind CSS 4
+- Supabase: autenticación, Postgres y políticas RLS
+- Zod para validación de paquetes
 - Vercel para despliegue futuro
 
 ## Variables de entorno

@@ -384,4 +384,4 @@ La usuaria confirmó:
 - cálculo inicial del progreso desde la actividad;
 - umbrales iniciales de tema débil y dominado.
 
-La siguiente etapa es validar `07-roadmap.md`.
+El plan vigente está en la sección 8 de `PROJECT_STATUS.md`.

@@ -2,6 +2,8 @@
 
 Este directorio contiene la fuente principal de contexto para el desarrollo de CENEVAL Study App.
 
+El punto de entrada del repositorio es [`AGENTS.md`](../AGENTS.md), en la raíz.
+
 ## Orden de lectura
 
 0. `auditoria-2026-08/README.md` — auditoría del 19 de agosto de 2026. Léela
@@ -14,10 +16,12 @@ Este directorio contiene la fuente principal de contexto para el desarrollo de C
 6. `TEACHING_STYLE.md`
 7. `05-system-architecture.md`
 8. `06-database-design.md`
-9. `07-roadmap.md`
-10. `08-visual-design.md`
-11. `CODING_STANDARDS.md`
-12. `DECISIONS.md`
+9. `08-visual-design.md`
+10. `CODING_STANDARDS.md`
+11. `DECISIONS.md`
+
+`archivo/` guarda documentos históricos que **ya no describen el producto**.
+No los uses como referencia.
 
 ## Documentos
 
@@ -29,8 +33,10 @@ Este directorio contiene la fuente principal de contexto para el desarrollo de C
 | `04-navigation-and-screens.md` | Define navegación, páginas y flujos | Aprobado |
 | `05-system-architecture.md` | Describe la arquitectura técnica acordada | Aprobado |
 | `06-database-design.md` | Define entidades, relaciones y reglas de datos | Aprobado |
-| `07-roadmap.md` | Organiza las entregas y el orden de implementación | Aprobado |
 | `08-visual-design.md` | Define personalidad, colores, tipografía y componentes | Aprobado |
+| `SECURITY_TESTING.md` | Suite de permisos y su última ejecución | Activo |
+| `auditoria-2026-08/` | Auditoría de tres perspectivas y evidencia | Vigente |
+| `archivo/` | Documentos históricos que ya no aplican | Archivado |
 | `DEVELOPMENT_WORKFLOW.md` | Establece cómo trabajar en el repositorio | Activo |
 | `TEACHING_STYLE.md` | Indica cómo enseñar al usuario | Activo |
 | `CODING_STANDARDS.md` | Reglas para escribir y revisar código | Activo |
@@ -45,9 +51,9 @@ Cuando el código cambie el comportamiento del producto, deben revisarse:
 - historias de usuario;
 - arquitectura;
 - modelo de datos;
-- roadmap;
 - estado del proyecto;
-- decisiones.
+- decisiones;
+- las trampas conocidas de `AGENTS.md`, si corriges alguna.
 
 ## Nomenclatura
 
