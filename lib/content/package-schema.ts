@@ -1,4 +1,8 @@
 import { z } from "zod";
+import {
+  MAX_TRANSCRIPT_LENGTH,
+  MIN_TRANSCRIPT_LENGTH,
+} from "../transcript-validation";
 
 const sourceOrigin = z.enum(["class", "complementary", "mixed"]);
 const materialType = z.enum([
@@ -191,16 +195,34 @@ const packageContent = z.object({
 });
 
 const transcriptSchema = z.object({
-  original: z.string().trim().min(30).max(200000),
-  cleaned: z.string().trim().min(30).max(200000),
+  original: z
+    .string()
+    .trim()
+    .min(MIN_TRANSCRIPT_LENGTH)
+    .max(MAX_TRANSCRIPT_LENGTH),
+  cleaned: z
+    .string()
+    .trim()
+    .min(MIN_TRANSCRIPT_LENGTH)
+    .max(MAX_TRANSCRIPT_LENGTH),
 });
 
 const transcriptFileSchema = z
   .object({
-    original: z.string().trim().min(30).max(200000).optional(),
+    original: z
+      .string()
+      .trim()
+      .min(MIN_TRANSCRIPT_LENGTH)
+      .max(MAX_TRANSCRIPT_LENGTH)
+      .optional(),
     originalFile: z.string().trim().min(1).optional(),
     originalFiles: z.array(z.string().trim().min(1)).min(2).max(10).optional(),
-    cleaned: z.string().trim().min(30).max(200000).optional(),
+    cleaned: z
+      .string()
+      .trim()
+      .min(MIN_TRANSCRIPT_LENGTH)
+      .max(MAX_TRANSCRIPT_LENGTH)
+      .optional(),
   })
   .superRefine((transcript, context) => {
     const sourceCount = [
@@ -238,8 +260,16 @@ export const classPackageFileSchema = z.discriminatedUnion("packageVersion", [
 
 export const importableClassPackageSchema = currentPackageSchema.extend({
   transcript: z.object({
-    original: z.string().trim().min(30).max(200000),
-    cleaned: z.string().trim().min(30).max(200000),
+    original: z
+      .string()
+      .trim()
+      .min(MIN_TRANSCRIPT_LENGTH)
+      .max(MAX_TRANSCRIPT_LENGTH),
+    cleaned: z
+      .string()
+      .trim()
+      .min(MIN_TRANSCRIPT_LENGTH)
+      .max(MAX_TRANSCRIPT_LENGTH),
   }),
 });
 

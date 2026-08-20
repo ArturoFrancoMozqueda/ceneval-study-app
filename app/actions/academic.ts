@@ -15,6 +15,7 @@ import {
 } from "@/lib/study-action-input";
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
+import { getTranscriptValidationError } from "@/lib/transcript-validation";
 
 export type ActionResult = {
   error?: string;
@@ -191,12 +192,8 @@ export async function saveTranscriptAction(
 ) {
   await requireAdmin();
   const originalText = textValue(formData, "originalText");
-  if (originalText.length < 30) {
-    return { error: "Pega una transcripción de al menos 30 caracteres." };
-  }
-  if (originalText.length > 50000) {
-    return { error: "La transcripción supera el límite permitido." };
-  }
+  const validationError = getTranscriptValidationError(originalText);
+  if (validationError) return { error: validationError };
 
   const { data, error } = await getSupabaseAdminClient()
     .from("transcripts")

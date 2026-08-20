@@ -2,7 +2,12 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState, type FormEvent } from "react";
+import {
+  useRef,
+  useState,
+  type FormEvent,
+  type KeyboardEvent,
+} from "react";
 import { saveTranscriptAction } from "@/app/actions/academic";
 import { BookIcon } from "@/components/icons";
 import type {
@@ -10,8 +15,29 @@ import type {
   Subject,
   Transcript,
 } from "@/lib/data/academic";
+import {
+  getNextTabIndex,
+  getTranscriptValidationError,
+  MAX_TRANSCRIPT_LENGTH,
+  MIN_TRANSCRIPT_LENGTH,
+} from "@/lib/transcript-validation";
 
-const MAX_TRANSCRIPT_LENGTH = 50000;
+const transcriptTabs = [
+  {
+    id: "original",
+    label: "Original",
+    panelId: "transcript-panel-original",
+    tabId: "transcript-tab-original",
+  },
+  {
+    id: "cleaned",
+    label: "Versión limpia",
+    panelId: "transcript-panel-cleaned",
+    tabId: "transcript-tab-cleaned",
+  },
+] as const;
+
+type TranscriptVersion = (typeof transcriptTabs)[number]["id"];
 
 export function TranscriptWorkspace({
   studyClass,
@@ -26,16 +52,37 @@ export function TranscriptWorkspace({
   const [originalText, setOriginalText] = useState("");
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [activeVersion, setActiveVersion] = useState<"original" | "cleaned">(
-    "original",
-  );
+  const [activeVersion, setActiveVersion] =
+    useState<TranscriptVersion>("original");
+  const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const normalizedLength = originalText.trim().length;
+  const isOverLimit = normalizedLength > MAX_TRANSCRIPT_LENGTH;
+
+  function handleTabKeyDown(
+    event: KeyboardEvent<HTMLButtonElement>,
+    currentIndex: number,
+  ) {
+    const nextIndex = getNextTabIndex(
+      currentIndex,
+      event.key,
+      transcriptTabs.length,
+    );
+    if (nextIndex === null) return;
+
+    event.preventDefault();
+    const nextTab = transcriptTabs[nextIndex];
+    setActiveVersion(nextTab.id);
+    tabRefs.current[nextIndex]?.focus();
+  }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const normalizedText = originalText.trim();
+    const validationError = getTranscriptValidationError(originalText);
 
-    if (normalizedText.length < 30) {
-      setError("Pega una transcripción de al menos 30 caracteres.");
+    if (validationError) {
+      setError(validationError);
+      textareaRef.current?.focus();
       return;
     }
 
@@ -48,6 +95,7 @@ export function TranscriptWorkspace({
     if (result.error) {
       setError(result.error);
       setIsSubmitting(false);
+      textareaRef.current?.focus();
       return;
     }
 
@@ -120,52 +168,68 @@ export function TranscriptWorkspace({
           <div className="mt-6 rounded-2xl border border-border bg-surface p-5 shadow-[0_10px_30px_rgb(23_32_51_/_0.04)] sm:p-7">
             <div
               aria-label="Versiones de la transcripción"
+              aria-orientation="horizontal"
               className="inline-flex rounded-xl bg-background p-1"
               role="tablist"
             >
-              <button
-                aria-selected={activeVersion === "original"}
-                className={`min-h-10 rounded-lg px-4 text-sm font-semibold ${
-                  activeVersion === "original"
-                    ? "bg-surface text-brand shadow-sm"
-                    : "text-muted"
-                }`}
-                onClick={() => setActiveVersion("original")}
-                role="tab"
-                type="button"
-              >
-                Original
-              </button>
-              <button
-                aria-selected={activeVersion === "cleaned"}
-                className={`min-h-10 rounded-lg px-4 text-sm font-semibold ${
-                  activeVersion === "cleaned"
-                    ? "bg-surface text-brand shadow-sm"
-                    : "text-muted"
-                }`}
-                onClick={() => setActiveVersion("cleaned")}
-                role="tab"
-                type="button"
-              >
-                Versión limpia
-              </button>
+              {transcriptTabs.map((tab, index) => {
+                const isActive = activeVersion === tab.id;
+
+                return (
+                  <button
+                    aria-controls={tab.panelId}
+                    aria-selected={isActive}
+                    className={`min-h-11 rounded-lg px-4 text-sm font-semibold ${
+                      isActive
+                        ? "bg-surface text-brand shadow-sm"
+                        : "text-muted"
+                    }`}
+                    id={tab.tabId}
+                    key={tab.id}
+                    onClick={() => setActiveVersion(tab.id)}
+                    onKeyDown={(event) => handleTabKeyDown(event, index)}
+                    ref={(element) => {
+                      tabRefs.current[index] = element;
+                    }}
+                    role="tab"
+                    tabIndex={isActive ? 0 : -1}
+                    type="button"
+                  >
+                    {tab.label}
+                  </button>
+                );
+              })}
             </div>
 
-            <div className="mt-6 max-w-3xl whitespace-pre-wrap text-base leading-8 text-foreground/85">
-              {activeVersion === "original"
-                ? transcript.originalText
-                : transcript.cleanedText || (
-                    <div className="rounded-xl border border-dashed border-border bg-background p-5">
-                      <p className="font-semibold text-foreground">
-                        Versión limpia pendiente
-                      </p>
-                      <p className="mt-2 text-sm leading-6 text-muted">
-                        La limpieza automática se incorporará en la fase de
-                        inteligencia artificial. El original permanece
-                        disponible.
-                      </p>
-                    </div>
-                  )}
+            <div
+              aria-labelledby="transcript-tab-original"
+              className="mt-6 max-w-3xl whitespace-pre-wrap text-base leading-8 text-foreground/85"
+              hidden={activeVersion !== "original"}
+              id="transcript-panel-original"
+              role="tabpanel"
+              tabIndex={0}
+            >
+              {transcript.originalText}
+            </div>
+            <div
+              aria-labelledby="transcript-tab-cleaned"
+              className="mt-6 max-w-3xl whitespace-pre-wrap text-base leading-8 text-foreground/85"
+              hidden={activeVersion !== "cleaned"}
+              id="transcript-panel-cleaned"
+              role="tabpanel"
+              tabIndex={0}
+            >
+              {transcript.cleanedText || (
+                <div className="rounded-xl border border-dashed border-border bg-background p-5">
+                  <p className="font-semibold text-foreground">
+                    Versión limpia pendiente
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-muted">
+                    La limpieza automática se incorporará en la fase de
+                    inteligencia artificial. El original permanece disponible.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -193,40 +257,52 @@ export function TranscriptWorkspace({
           <textarea
             aria-describedby={
               error
-                ? "transcript-help transcript-error"
+                ? "transcript-help transcript-count transcript-error"
                 : "transcript-help transcript-count"
             }
             aria-invalid={Boolean(error)}
-            autoFocus
-            className={`mt-2 min-h-80 w-full resize-y rounded-xl border bg-white px-4 py-4 text-base leading-7 text-foreground placeholder:text-muted/60 focus:border-brand ${
-              error ? "border-danger" : "border-border"
+            className={`mt-2 min-h-80 w-full resize-y rounded-xl border bg-white px-4 py-4 text-base leading-7 text-foreground placeholder:text-muted focus:border-brand ${
+              error ? "border-danger" : "border-muted/70"
             }`}
             id="original-transcript"
-            maxLength={MAX_TRANSCRIPT_LENGTH}
             name="originalText"
             onChange={(event) => {
-              setOriginalText(event.target.value);
-              if (error) setError("");
+              const nextText = event.target.value;
+              setOriginalText(nextText);
+
+              if (nextText.trim().length > MAX_TRANSCRIPT_LENGTH) {
+                setError(getTranscriptValidationError(nextText) ?? "");
+              } else if (error) {
+                setError("");
+              }
             }}
             placeholder="Pega aquí la transcripción completa de tu clase…"
+            ref={textareaRef}
             value={originalText}
           />
-          <div className="mt-2 flex min-h-6 justify-between gap-4">
-            {error ? (
-              <p
-                className="text-sm font-medium text-danger"
-                id="transcript-error"
-                role="alert"
-              >
-                {error}
-              </p>
-            ) : (
+          <div className="mt-2 flex min-h-6 flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+            <div>
               <p className="text-sm text-muted" id="transcript-help">
-                Mínimo 30 caracteres.
+                Entre {MIN_TRANSCRIPT_LENGTH} y{" "}
+                {MAX_TRANSCRIPT_LENGTH.toLocaleString("es-MX")} caracteres. Si
+                excedes el límite, el texto permanecerá completo para que
+                puedas corregirlo.
               </p>
-            )}
-            <p className="shrink-0 font-mono text-xs text-muted" id="transcript-count">
-              {originalText.length.toLocaleString("es-MX")} /{" "}
+              {error ? (
+                <p
+                  className="mt-2 text-sm font-medium text-danger"
+                  id="transcript-error"
+                  role="alert"
+                >
+                  {error}
+                </p>
+              ) : null}
+            </div>
+            <p
+              className={`shrink-0 font-mono text-sm ${isOverLimit ? "font-semibold text-danger" : "text-muted"}`}
+              id="transcript-count"
+            >
+              {normalizedLength.toLocaleString("es-MX")} /{" "}
               {MAX_TRANSCRIPT_LENGTH.toLocaleString("es-MX")}
             </p>
           </div>
