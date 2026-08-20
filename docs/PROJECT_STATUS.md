@@ -95,7 +95,7 @@ recorrido normal; las retiradas quedarán únicamente en administración.
 
 ### Funciona y está verificado
 
-- Next.js 16.2.11, React 19.2.4 y TypeScript.
+- Next.js 16.3.1, React 19.2.4 y TypeScript.
 - Aplicación local en `http://localhost:3000`.
 - Supabase remoto enlazado y con datos persistentes.
 - Inicio de sesión y recuperación de contraseña.

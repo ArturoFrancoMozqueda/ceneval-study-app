@@ -50,7 +50,7 @@ transcripción → preparación editorial → borrador → revisión → publica
 
 ## Stack
 
-Next.js 16.2.11 (App Router) · React 19.2.4 · TypeScript · Tailwind 4 ·
+Next.js 16.3.1 (App Router) · React 19.2.4 · TypeScript · Tailwind 4 ·
 Supabase (auth, Postgres, RLS) · Zod. Despliegue previsto en Vercel.
 
 ## Comandos
