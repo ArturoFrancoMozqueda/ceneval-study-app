@@ -106,6 +106,29 @@ export async function HomeDashboard() {
         ))}
       </section>
 
+      <section
+        aria-labelledby="progreso-por-materia"
+        className="mt-8 flex flex-col gap-5 rounded-2xl border border-success/20 bg-success-soft/55 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6"
+      >
+        <div className="max-w-2xl">
+          <p className="text-sm font-semibold text-success">Tu registro</p>
+          <h2 className="mt-1 text-xl font-semibold" id="progreso-por-materia">
+            Mira tu avance materia por materia
+          </h2>
+          <p className="mt-2 text-sm leading-6 text-foreground/75">
+            Compara temas iniciados y finalizados, autoevaluaciones y resultados
+            reales de exámenes.
+          </p>
+        </div>
+        <Link
+          className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 self-start rounded-xl bg-brand px-5 text-sm font-semibold text-white hover:bg-brand-deep sm:self-auto"
+          href="/progreso"
+        >
+          Ver progreso
+          <ArrowRightIcon className="size-4" />
+        </Link>
+      </section>
+
       <section className="mt-10">
         <div className="flex items-end justify-between">
           <div>
