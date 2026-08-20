@@ -124,10 +124,44 @@ export function AppShell({
       <div className="min-w-0 lg:col-start-2">
         <header className="sticky top-0 z-10 flex h-16 items-center justify-between border-b border-border/70 bg-background/90 px-5 backdrop-blur lg:hidden">
           <Brand />
-          {user?.role === "admin" ? (
-            <Link className="text-xs font-semibold text-brand" href="/administrar">
-              Administrar
-            </Link>
+          {user ? (
+            <details className="group relative">
+              <summary className="flex min-h-11 cursor-pointer list-none items-center rounded-xl border border-border bg-surface px-3 text-xs font-semibold text-brand marker:content-none">
+                Cuenta
+              </summary>
+              <div className="absolute right-0 mt-2 w-64 rounded-2xl border border-border bg-surface p-4 shadow-lg">
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-success">
+                  Tu espacio de estudio
+                </p>
+                <p className="mt-2 break-words text-sm leading-6">
+                  {user.fullName || user.email}
+                </p>
+                <div className="mt-4 grid gap-2 border-t border-border pt-3">
+                  {user.role === "admin" ? (
+                    <Link
+                      className="flex min-h-11 items-center rounded-xl px-3 text-sm font-semibold text-brand hover:bg-background"
+                      href="/administrar"
+                    >
+                      Panel editorial
+                    </Link>
+                  ) : null}
+                  <Link
+                    className="flex min-h-11 items-center rounded-xl px-3 text-sm font-semibold text-brand hover:bg-background"
+                    href="/actualizar-contrasena"
+                  >
+                    Cambiar contraseña
+                  </Link>
+                  <form action={signOutAction}>
+                    <button
+                      className="flex min-h-11 w-full items-center rounded-xl px-3 text-left text-sm font-semibold text-danger hover:bg-background"
+                      type="submit"
+                    >
+                      Cerrar sesión
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </details>
           ) : null}
         </header>
         <main className="mx-auto w-full max-w-[1200px] px-5 pb-28 pt-7 sm:px-8 sm:pt-10 lg:px-10 lg:pb-12 lg:pt-12">
