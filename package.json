@@ -16,6 +16,7 @@
     "test:auth-redirect": "tsx scripts/check-auth-redirect.ts",
     "test:security-headers": "tsx scripts/check-security-headers.ts",
     "test:study-security": "tsx --test tests/study-action-input.test.ts",
+    "test:rls-policies": "tsx scripts/check-published-activity-policies.ts",
     "security:rls": "tsx --env-file=.env.local scripts/test-rls.ts"
   },
   "dependencies": {
