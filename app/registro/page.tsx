@@ -8,7 +8,7 @@ import { getCurrentUser } from "@/lib/auth";
 export default async function SignUpPage({
   searchParams,
 }: {
-  searchParams: Promise<{ error?: string }>;
+  searchParams: Promise<{ error?: string; field?: string }>;
 }) {
   if (isPrivateAccessOnly()) {
     redirect(
@@ -16,29 +16,35 @@ export default async function SignUpPage({
     );
   }
   if (await getCurrentUser()) redirect("/");
-  const { error } = await searchParams;
+  const { error, field } = await searchParams;
 
   return (
     <AuthCard
       action={signUpAction}
       description="Crea una cuenta gratuita para guardar tu progreso."
-      error={error}
+      error={field ? undefined : error}
       fields={
         <>
           <AuthField
             autoComplete="name"
+            description="Escribe cómo quieres que aparezca tu nombre."
+            error={field === "fullName" ? error : undefined}
             label="Nombre"
             name="fullName"
           />
           <AuthField
             autoComplete="email"
+            description="Usa un correo al que tengas acceso."
+            error={field === "email" ? error : undefined}
             label="Correo electrónico"
             name="email"
             type="email"
           />
           <AuthField
             autoComplete="new-password"
-            label="Contraseña (mínimo 8 caracteres)"
+            description="Usa al menos 8 caracteres; puedes apoyarte en un gestor de contraseñas."
+            error={field === "password" ? error : undefined}
+            label="Contraseña"
             name="password"
             type="password"
           />
@@ -47,7 +53,10 @@ export default async function SignUpPage({
       footer={
         <>
           ¿Ya tienes cuenta?{" "}
-          <Link className="font-semibold text-brand" href="/iniciar-sesion">
+          <Link
+            className="inline-flex min-h-11 items-center font-semibold text-brand"
+            href="/iniciar-sesion"
+          >
             Inicia sesión
           </Link>
         </>

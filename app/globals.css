@@ -11,6 +11,7 @@
   --success-soft: #dce9e2;
   --warning: #a36316;
   --danger: #a23b3b;
+  --danger-soft: #f9e7e7;
   --border: #ded9cf;
 }
 
@@ -25,6 +26,7 @@
   --color-success-soft: var(--success-soft);
   --color-warning: var(--warning);
   --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
   --color-border: var(--border);
   --font-sans: "Montserrat", "Montserrat Fallback", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Montserrat", "Montserrat Fallback", ui-sans-serif, system-ui, sans-serif;
