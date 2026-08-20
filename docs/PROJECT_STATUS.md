@@ -173,6 +173,13 @@ aún no se ha importado para demostrar el recorrido completo en la base remota.
   historial acumulado.
 - Una cola vacía informa cuándo será el próximo repaso, si existe fecha.
 - `getStudyProgress` filtra por `topic_id` y por el `user_id` autenticado.
+- `/progreso` compara por materia temas con actividad y temas con sus cinco
+  pasos completos contra el total aprobado de clases publicadas.
+- La misma vista separa evidencia verificable: aciertos sobre preguntas en
+  intentos finalizados del examen vigente y la última autoevaluación de cada
+  tema comprobado. No convierte la señal `needs_review` en una calificación.
+- Las cuatro consultas se ejecutan en paralelo, filtran por el `user_id` de la
+  sesión cuando leen actividad y encadenan el contenido a clases publicadas.
 
 ### Acciones de estudio y RLS
 
@@ -202,6 +209,8 @@ comprobaciones, aprobada el 29 de julio de 2026.
 
 - entrega y calificación segura del examen;
 - cálculo de repaso espaciado;
+- derivación de progreso por materia y ausencia explícita de desempeño cuando
+  no existen intentos válidos;
 - esquema del paquete académico;
 - redirecciones permitidas en confirmación de autenticación;
 - validación y mensajes del inicio de sesión;
