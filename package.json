@@ -10,6 +10,7 @@
     "content:check": "tsx scripts/check-content.ts",
     "content:import": "tsx --env-file=.env.local scripts/import-content.ts",
     "test:auth-redirect": "tsx scripts/check-auth-redirect.ts",
+    "test:study-security": "tsx --test tests/study-action-input.test.ts",
     "security:rls": "tsx --env-file=.env.local scripts/test-rls.ts"
   },
   "dependencies": {

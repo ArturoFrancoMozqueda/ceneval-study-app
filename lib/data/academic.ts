@@ -1,6 +1,7 @@
 import "server-only";
 
 import { connection } from "next/server";
+import { requireUser } from "@/lib/auth";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 
 export type PublicationStatus =
@@ -462,6 +463,7 @@ export async function getStudyProgress(
   topicId: number,
 ): Promise<StudyProgress | null> {
   await connection();
+  const user = await requireUser();
   const supabase = await createServerSupabaseClient();
   const { data, error } = await supabase
     .from("study_progress")
@@ -469,6 +471,7 @@ export async function getStudyProgress(
       "current_step,material_index,session_minutes,completed_steps,last_activity_at",
     )
     .eq("topic_id", topicId)
+    .eq("user_id", user.id)
     .maybeSingle();
 
   // The feature remains usable before the new migration is applied.
