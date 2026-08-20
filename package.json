@@ -9,6 +9,7 @@
     "lint": "eslint",
     "content:check": "tsx scripts/check-content.ts",
     "content:import": "tsx --env-file=.env.local scripts/import-content.ts",
+    "test:security-headers": "tsx scripts/check-security-headers.ts",
     "security:rls": "tsx --env-file=.env.local scripts/test-rls.ts"
   },
   "dependencies": {
