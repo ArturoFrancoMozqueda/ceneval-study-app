@@ -1,8 +1,14 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { submitExamAction, type ActionResult } from "@/app/actions/academic";
 import type { Exam } from "@/lib/data/academic";
+import {
+  canSubmitExamRun,
+  createExamRunState,
+  restartExamRun,
+  type ExamRunResult,
+} from "@/lib/exam-player-state";
 
 const difficultyLabel = {
   basic: "Básica",
@@ -17,27 +23,85 @@ export function ExamPlayer({
   exam: Exam;
   onComplete?: () => void;
 }) {
-  const [result, setResult] = useState<ActionResult | null>(null);
-  const [error, setError] = useState("");
-  const [submitting, setSubmitting] = useState(false);
-  const [questionIndex, setQuestionIndex] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [run, setRun] = useState(createExamRunState);
+  const submissionLock = useRef(false);
+  const examStartRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    if (run.runNumber > 0) examStartRef.current?.focus();
+  }, [run.runNumber]);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitting(true);
-    setError("");
-    const response = await submitExamAction(exam.id, answers);
-    setSubmitting(false);
-    if (response.error) {
-      setError(response.error);
+    if (
+      submissionLock.current ||
+      !canSubmitExamRun(run, exam.questions.length)
+    ) {
       return;
     }
-    setResult(response);
-    onComplete?.();
+
+    submissionLock.current = true;
+    const submittedAnswers = run.answers;
+    setRun((current) => ({ ...current, error: "", phase: "submitting" }));
+
+    try {
+      const response: ActionResult = await submitExamAction(
+        exam.id,
+        submittedAnswers,
+      );
+      if (response.error) {
+        setRun((current) => ({
+          ...current,
+          error: response.error ?? "No pudimos entregar el examen.",
+          phase: "answering",
+        }));
+        return;
+      }
+      if (
+        response.score === undefined ||
+        response.total === undefined ||
+        !response.review
+      ) {
+        setRun((current) => ({
+          ...current,
+          error: "No pudimos mostrar el resultado. Intenta entregarlo nuevamente.",
+          phase: "answering",
+        }));
+        return;
+      }
+
+      const result: ExamRunResult = {
+        score: response.score,
+        total: response.total,
+        review: response.review,
+      };
+      setRun((current) => ({
+        ...current,
+        answers: submittedAnswers,
+        phase: "reviewing",
+        result,
+      }));
+      onComplete?.();
+    } catch {
+      setRun((current) => ({
+        ...current,
+        error:
+          "No pudimos entregar el examen. Revisa tu conexión e intenta nuevamente.",
+        phase: "answering",
+      }));
+    } finally {
+      submissionLock.current = false;
+    }
   }
 
-  if (result?.score !== undefined) {
+  function restart() {
+    submissionLock.current = false;
+    setRun((current) => restartExamRun(current));
+  }
+
+  const { answers, error, phase, questionIndex, result } = run;
+
+  if (result) {
     return (
       <section aria-labelledby="exam-result-title" aria-live="polite">
         <div className="rounded-2xl bg-success-soft p-6 text-center">
@@ -96,6 +160,21 @@ export function ExamPlayer({
             );
           })}
         </div>
+        <div className="mt-6 rounded-2xl border border-border bg-background p-5">
+          <h3 className="font-semibold">¿Quieres intentarlo otra vez?</h3>
+          <p className="mt-2 text-sm leading-6 text-muted">
+            Tus respuestas y este resultado se conservarán como un intento
+            anterior. Empezarás con todas las opciones vacías y, cuando vuelvas
+            a entregar, se guardará un nuevo intento.
+          </p>
+          <button
+            className="mt-4 min-h-12 rounded-xl bg-brand px-6 font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            onClick={restart}
+            type="button"
+          >
+            Repetir examen
+          </button>
+        </div>
       </section>
     );
   }
@@ -103,7 +182,22 @@ export function ExamPlayer({
   const currentQuestion = exam.questions[questionIndex];
 
   return (
-    <form onSubmit={submit}>
+    <form aria-busy={phase === "submitting"} onSubmit={submit}>
+      <p
+        className="sr-only"
+        ref={examStartRef}
+        tabIndex={-1}
+      >
+        {run.runNumber > 0
+          ? "Nuevo intento iniciado. Las respuestas están vacías."
+          : "Examen iniciado."}
+      </p>
+      {run.runNumber > 0 ? (
+        <p className="mb-4 rounded-xl bg-brand-soft p-4 text-sm leading-6">
+          Nuevo intento: responde todas las preguntas. Al entregarlo, se
+          guardará separado del intento anterior.
+        </p>
+      ) : null}
       <div className="mb-4 flex items-center justify-between gap-4">
         <p className="font-mono text-xs text-muted">
           Pregunta {questionIndex + 1} de {exam.questions.length}
@@ -125,7 +219,10 @@ export function ExamPlayer({
         </div>
       </div>
 
-      <fieldset className="rounded-2xl border border-border bg-white p-5 sm:p-6">
+      <fieldset
+        className="rounded-2xl border border-border bg-white p-5 sm:p-6"
+        disabled={phase === "submitting"}
+      >
         <legend className="px-2 text-sm font-semibold text-success">
           {difficultyLabel[currentQuestion.difficulty]}
         </legend>
@@ -141,9 +238,12 @@ export function ExamPlayer({
                 className="mt-1"
                 name={`question-${currentQuestion.id}`}
                 onChange={() =>
-                  setAnswers((current) => ({
+                  setRun((current) => ({
                     ...current,
-                    [String(currentQuestion.id)]: option.id,
+                    answers: {
+                      ...current.answers,
+                      [String(currentQuestion.id)]: option.id,
+                    },
                   }))
                 }
                 required
@@ -165,8 +265,13 @@ export function ExamPlayer({
       <div className="mt-6 flex justify-between gap-3">
         <button
           className="min-h-12 rounded-xl border border-border bg-white px-5 font-semibold disabled:opacity-40"
-          disabled={questionIndex === 0}
-          onClick={() => setQuestionIndex((current) => current - 1)}
+          disabled={phase === "submitting" || questionIndex === 0}
+          onClick={() =>
+            setRun((current) => ({
+              ...current,
+              questionIndex: current.questionIndex - 1,
+            }))
+          }
           type="button"
         >
           Anterior
@@ -175,7 +280,12 @@ export function ExamPlayer({
           <button
             className="min-h-12 rounded-xl bg-brand px-6 font-semibold text-white disabled:opacity-40"
             disabled={!answers[String(currentQuestion.id)]}
-            onClick={() => setQuestionIndex((current) => current + 1)}
+            onClick={() =>
+              setRun((current) => ({
+                ...current,
+                questionIndex: current.questionIndex + 1,
+              }))
+            }
             type="button"
           >
             Siguiente pregunta
@@ -184,12 +294,12 @@ export function ExamPlayer({
           <button
             className="min-h-12 rounded-xl bg-brand px-6 font-semibold text-white disabled:opacity-60"
             disabled={
-              submitting ||
+              phase === "submitting" ||
               Object.keys(answers).length !== exam.questions.length
             }
             type="submit"
           >
-            {submitting ? "Calificando…" : "Entregar examen"}
+            {phase === "submitting" ? "Calificando…" : "Entregar examen"}
           </button>
         )}
       </div>
