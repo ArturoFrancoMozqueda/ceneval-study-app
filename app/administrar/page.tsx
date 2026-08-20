@@ -1,6 +1,11 @@
 import Link from "next/link";
+import { EmptyState } from "@/components/empty-state";
 import { requireAdmin } from "@/lib/auth";
 import { getClassesForSubject, getSubjects } from "@/lib/data/academic";
+import {
+  publicationStatusLabels,
+  publicationStatusPluralLabels,
+} from "@/lib/status-labels";
 
 export const metadata = { title: "Panel editorial" };
 
@@ -38,12 +43,7 @@ export default async function AdminPage() {
               {classes.filter((item) => item.publicationStatus === status).length}
             </p>
             <p className="mt-1 text-sm text-muted">
-              {{
-                draft: "Borradores",
-                review: "En revisión",
-                published: "Publicadas",
-                withdrawn: "Retiradas",
-              }[status]}
+              {publicationStatusPluralLabels[status]}
             </p>
           </article>
         ))}
@@ -55,25 +55,37 @@ export default async function AdminPage() {
             Crear materia
           </Link>
         </div>
-        <div className="mt-5 space-y-3">
-          {classes.map((studyClass) => (
-            <Link
-              className="flex flex-col gap-3 rounded-2xl border border-border bg-white p-5 hover:border-brand/30 sm:flex-row sm:items-center"
-              href={`/administrar/clases/${studyClass.id}`}
-              key={studyClass.id}
-            >
-              <span className="min-w-0 flex-1">
-                <span className="block font-semibold">{studyClass.title}</span>
-                <span className="mt-1 block text-sm text-muted">
-                  {studyClass.subject.name} · {studyClass.topicCount} temas
+        {classes.length ? (
+          <div className="mt-5 space-y-3">
+            {classes.map((studyClass) => (
+              <Link
+                className="flex flex-col gap-3 rounded-2xl border border-border bg-white p-5 hover:border-brand/30 sm:flex-row sm:items-center"
+                href={`/administrar/clases/${studyClass.id}`}
+                key={studyClass.id}
+              >
+                <span className="min-w-0 flex-1">
+                  <span className="block font-semibold">{studyClass.title}</span>
+                  <span className="mt-1 block text-sm text-muted">
+                    {studyClass.subject.name} · {studyClass.topicCount} temas
+                  </span>
                 </span>
-              </span>
-              <span className="self-start rounded-full bg-background px-3 py-1 text-xs font-semibold text-muted sm:self-auto">
-                {studyClass.publicationStatus}
-              </span>
-            </Link>
-          ))}
-        </div>
+                <span className="self-start rounded-full bg-background px-3 py-1 text-xs font-semibold text-muted sm:self-auto">
+                  {publicationStatusLabels[studyClass.publicationStatus]}
+                </span>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className="mt-5">
+            <EmptyState
+              actionHref="/materias/nueva"
+              actionLabel="Crear la primera materia"
+              description="Crea una materia y agrega su primera clase para iniciar el flujo de revisión y publicación."
+              headingLevel="h3"
+              title="Aún no hay clases para revisar"
+            />
+          </div>
+        )}
       </section>
     </div>
   );

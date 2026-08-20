@@ -13,17 +13,12 @@ import type {
   Subject,
   Topic,
 } from "@/lib/data/academic";
+import { topicApprovalStatusLabels } from "@/lib/status-labels";
 
 const statusStyles: Record<Topic["approvalStatus"], string> = {
   pending: "bg-amber-50 text-warning",
   approved: "bg-success-soft text-success",
   rejected: "bg-red-50 text-danger",
-};
-
-const statusLabels: Record<Topic["approvalStatus"], string> = {
-  pending: "Pendiente",
-  approved: "Aprobado",
-  rejected: "Rechazado",
 };
 
 export function TopicsReview({
@@ -227,7 +222,7 @@ export function TopicsReview({
                       <span
                         className={`rounded-full px-2.5 py-1 text-xs font-semibold ${statusStyles[topic.approvalStatus]}`}
                       >
-                        {statusLabels[topic.approvalStatus]}
+                        {topicApprovalStatusLabels[topic.approvalStatus]}
                       </span>
                       <span className="rounded-full bg-background px-2.5 py-1 text-xs text-muted">
                         {topic.sourceType === "manual"

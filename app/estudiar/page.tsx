@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { EmptyState } from "@/components/empty-state";
 import { requireUser } from "@/lib/auth";
 import { getReviewOverview } from "@/lib/data/academic";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
@@ -79,32 +80,52 @@ export default async function StudyPage() {
       </section>
       <section className="mt-9">
         <h2 className="text-2xl font-semibold">Temas disponibles</h2>
-        <div className="mt-5 grid gap-4 md:grid-cols-2">
-          {(topics ?? []).map((topic) => {
-            const completed = progressByTopic.get(topic.id as number) ?? 0;
-            const status =
-              completed >= 5
-                ? "Dominado"
-                : completed > 0
-                  ? "En práctica"
-                  : "Por comenzar";
-            return (
-              <Link
-                className="rounded-2xl border border-border bg-white p-5 hover:border-brand/30"
-                href={`/temas/${topic.id}`}
-                key={topic.id}
-              >
-                <span className="text-xs font-semibold text-success">
-                  {status}
-                </span>
-                <span className="mt-2 block font-semibold">{topic.title}</span>
-                <span className="mt-2 line-clamp-2 block text-sm leading-6 text-muted">
-                  {topic.description}
-                </span>
-              </Link>
-            );
-          })}
-        </div>
+        {(topics ?? []).length ? (
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            {(topics ?? []).map((topic) => {
+              const completed = progressByTopic.get(topic.id as number) ?? 0;
+              const status =
+                completed >= 5
+                  ? "Dominado"
+                  : completed > 0
+                    ? "En práctica"
+                    : "Por comenzar";
+              return (
+                <Link
+                  className="rounded-2xl border border-border bg-white p-5 hover:border-brand/30"
+                  href={`/temas/${topic.id}`}
+                  key={topic.id}
+                >
+                  <span className="text-xs font-semibold text-success">
+                    {status}
+                  </span>
+                  <span className="mt-2 block font-semibold">{topic.title}</span>
+                  <span className="mt-2 line-clamp-2 block text-sm leading-6 text-muted">
+                    {topic.description}
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="mt-5">
+            <EmptyState
+              actionHref={user.role === "admin" ? "/administrar" : "/materias"}
+              actionLabel={
+                user.role === "admin"
+                  ? "Ir al panel editorial"
+                  : "Volver a la biblioteca"
+              }
+              description={
+                user.role === "admin"
+                  ? "Aprueba los temas de una clase publicada para que sus materiales aparezcan en el centro de estudio."
+                  : "Los temas aparecerán aquí cuando estén aprobados y formen parte de una clase publicada."
+              }
+              headingLevel="h3"
+              title="Aún no hay temas disponibles para estudiar"
+            />
+          </div>
+        )}
       </section>
     </div>
   );
