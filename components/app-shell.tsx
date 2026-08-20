@@ -167,6 +167,14 @@ export function AppShell({
         <main className="mx-auto w-full max-w-[1200px] px-5 pb-28 pt-7 sm:px-8 sm:pt-10 lg:px-10 lg:pb-12 lg:pt-12">
           {children}
         </main>
+        <footer className="mx-auto w-full max-w-[1200px] px-5 pb-28 sm:px-8 lg:px-10 lg:pb-10">
+          <p className="border-t border-border pt-5 text-xs leading-5 text-muted">
+            Este contenido es educativo y está diseñado para preparar el examen
+            CENEVAL de Derecho; no constituye asesoría jurídica. Las normas
+            pueden cambiar, por lo que debes consultar la fuente oficial y su
+            fecha de vigencia antes de aplicarlas a un caso real.
+          </p>
+        </footer>
       </div>
 
       <nav
