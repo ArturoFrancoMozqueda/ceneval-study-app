@@ -135,10 +135,6 @@ alguna sigue abierta; si corriges una, actualiza esta lista.
 - **Las transcripciones originales solo existen en el disco `F:`.** Los 41
   paquetes apuntan a `F:\TRANSCRIPCIONES CENEVAL\AUDIO NN.txt`, así que
   `content:check` y `content:import` fallan en cualquier otra computadora.
-- **No hay `error.tsx`, `loading.tsx` ni `not-found.tsx`.** Cualquier fallo
-  muestra la pantalla por defecto de Next.js, en inglés.
-- **`components/subject-detail.tsx` numera las clases por posición**, no por
-  código Cxx, y contradice lo que muestra `/sesiones`.
 - **Tres numeraciones distintas.** Audio 01–70 (transcripciones), C01–C58
   (orden académico) e ID de Supabase (técnico). No las confundas: C40 tiene el
   ID 49, y eso no significa que existan 49 clases.
