@@ -26,8 +26,9 @@ Los bloqueos operativos reales siguen siendo:
    restauración;
 2. existe un procedimiento seguro de respaldo, pero todavía no una exportación
    comprobable de la base, una copia externa ni una restauración probada;
-3. el esquema y las once migraciones ya están aplicados en CENEVAL, pero la
-   suite RLS dinámica de 31 comprobaciones todavía no se ha ejecutado;
+3. el proyecto local aplica quince migraciones y pasó 141 comprobaciones RLS;
+   CENEVAL remoto conserva once migraciones y aún requiere ejecutar el mismo
+   gate en un entorno de ensayo autorizado antes de promover cambios;
 4. existe un despliegue técnico privado en un proyecto separado de Vercel
    Hobby, pero faltan persistir los secretos, ejecutar el bootstrap explícito
    de la administradora y validar registro, verificación y acceso; no hay
@@ -305,6 +306,13 @@ seguridad; el aviso de `exam_answer_keys` sin políticas es el bloqueo
 deliberado. Antes de abrir el acceso estudiantil, una persona autorizada debe
 ampliar y ejecutar la suite RLS dinámica con temas pendientes y rechazados.
 
+**Estado local posterior:** PostgreSQL 17.6 aplica quince migraciones desde
+cero. `npm run security:rls:local` ejecuta 141 comprobaciones sobre contenido
+sintético y verifica RPC, ownership, tablas trazables, temas `pending` y
+`rejected`, claves de examen y limpieza sin residuos. El ensayo detectó y
+corrigió que la actividad debía exigir tema aprobado y una recursión entre
+políticas de evidencia. Estas correcciones aún no están en CENEVAL remoto.
+
 ## 4. Seguridad y calidad: qué está probado
 
 `npm run test:local` reúne pruebas sin Supabase ni disco `F:` para:
@@ -335,7 +343,8 @@ recargar. Ambos runners rechazan URLs no locales y verifican su limpieza final.
 
 Queda pendiente:
 
-- ampliar y ejecutar la suite RLS dinámica contra el proyecto CENEVAL;
+- aplicar las cuatro migraciones locales pendientes en un proyecto de ensayo y
+  repetir allí la suite RLS antes de CENEVAL;
 - ampliar E2E a examen, tarjetas, progreso, errores y rutas inválidas;
 - auditoría final de accesibilidad en navegador y dispositivos reales;
 - dejar de degradar silenciosamente ciertos errores de progreso a `null`.

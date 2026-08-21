@@ -13,6 +13,7 @@ import {
 
 const ADMIN_EMAIL = "e2e-admin-local@example.invalid";
 const STUDENT_EMAIL = "e2e-student-local@example.invalid";
+const OTHER_STUDENT_EMAIL = "e2e-student-other-local@example.invalid";
 const fixture = createSyntheticTraceablePackage();
 const syntheticReference = fixture.topics[0]!.references[0]!;
 
@@ -45,7 +46,11 @@ async function listFixtureUserIds(service: SupabaseClient) {
     });
     if (error) throw error;
     for (const user of data.users) {
-      if (user.email === ADMIN_EMAIL || user.email === STUDENT_EMAIL) {
+      if (
+        user.email === ADMIN_EMAIL ||
+        user.email === STUDENT_EMAIL ||
+        user.email === OTHER_STUDENT_EMAIL
+      ) {
         ids.push(user.id);
       }
     }
@@ -157,6 +162,7 @@ async function createUser(
 async function prepareFixture(service: SupabaseClient) {
   const adminPassword = `Local-admin-${crypto.randomUUID()}-Aa1!`;
   const studentPassword = `Local-student-${crypto.randomUUID()}-Aa1!`;
+  const otherStudentPassword = `Local-other-${crypto.randomUUID()}-Aa1!`;
   const admin = await createUser(
     service,
     ADMIN_EMAIL,
@@ -168,6 +174,12 @@ async function prepareFixture(service: SupabaseClient) {
     STUDENT_EMAIL,
     studentPassword,
     "Estudiante E2E sintética",
+  );
+  await createUser(
+    service,
+    OTHER_STUDENT_EMAIL,
+    otherStudentPassword,
+    "Otra estudiante E2E sintética",
   );
 
   const { data: profile, error: profileError } = await service
@@ -242,7 +254,13 @@ async function prepareFixture(service: SupabaseClient) {
     throw new Error("El gate editorial rechazó la publicación E2E.");
   }
 
-  return { adminPassword, classId, studentPassword, topicId };
+  return {
+    adminPassword,
+    classId,
+    otherStudentPassword,
+    studentPassword,
+    topicId,
+  };
 }
 
 async function runChild(command: string, args: string[], environment: NodeJS.ProcessEnv) {
@@ -286,6 +304,8 @@ async function main() {
       E2E_BASE_URL: baseUrl,
       E2E_CLASS_ID: String(prepared.classId),
       E2E_STUDENT_EMAIL: STUDENT_EMAIL,
+      E2E_OTHER_STUDENT_EMAIL: OTHER_STUDENT_EMAIL,
+      E2E_OTHER_STUDENT_PASSWORD: prepared.otherStudentPassword,
       E2E_STUDENT_PASSWORD: prepared.studentPassword,
       E2E_TOPIC_ID: String(prepared.topicId),
       E2E_TOPIC_URL: `/temas/${prepared.topicId}`,
@@ -293,6 +313,7 @@ async function main() {
       NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: credentials.publishableKey,
       NEXT_PUBLIC_SUPABASE_URL: credentials.apiUrl,
       PRIVATE_ACCESS_ONLY: "true",
+      SUPABASE_LOCAL_DB_URL: credentials.databaseUrl,
       SUPABASE_SECRET_KEY: credentials.secretKey,
     });
   } finally {

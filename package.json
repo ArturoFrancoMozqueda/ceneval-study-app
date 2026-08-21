@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test:local": "npm run test:exam && npm run test:exam-history && npm run test:reviews && npm run test:subject-progress && npm run test:academic-queries && npm run content:test && npm run test:publication && npm run test:continuation && npm run test:onboarding && npm run test:study-experience && npm run test:editorial-experience && npm run test:auth-redirect && npm run test:auth-ux && npm run test:registration-security && npm run test:admin-bootstrap && npm run test:home-auth-order && npm run test:transcript && npm run test:transcript-sources && npm run test:transcript-archive && npm run test:security-headers && npm run test:e2e:fixture-unit && npm run test:e2e:process-cleanup && npm run test:study-security && npm run test:editorial-controls && npm run test:rls-policies && npm run test:topic-approval-policies && npm run test:curriculum-migration && npm run test:backup",
+    "test:local": "npm run test:exam && npm run test:exam-history && npm run test:reviews && npm run test:subject-progress && npm run test:academic-queries && npm run content:test && npm run test:publication && npm run test:continuation && npm run test:onboarding && npm run test:study-experience && npm run test:editorial-experience && npm run test:auth-redirect && npm run test:auth-ux && npm run test:registration-security && npm run test:admin-bootstrap && npm run test:home-auth-order && npm run test:transcript && npm run test:transcript-sources && npm run test:transcript-archive && npm run test:security-headers && npm run test:e2e:fixture-unit && npm run test:e2e:process-cleanup && npm run test:study-security && npm run test:editorial-controls && npm run test:rls-local-contract && npm run test:rls-policies && npm run test:topic-approval-policies && npm run test:curriculum-migration && npm run test:backup",
     "test:exam": "tsx --test tests/exam-submission.test.ts tests/exam-player-state.test.ts",
     "test:exam-history": "tsx --test tests/exam-history.test.ts",
     "test:reviews": "tsx scripts/test-review-schedule.ts",
@@ -21,6 +21,7 @@
     "test:e2e:local": "npm run test:e2e:local:with-fixture -- pwsh -NoProfile -File scripts/run-study-e2e.ps1",
     "test:e2e:fixture-unit": "tsx --test tests/local-e2e-fixture.test.ts",
     "test:e2e:process-cleanup": "tsx --test tests/local-process-cleanup.test.ts && pwsh -NoProfile -File scripts/test-local-process-cleanup.ps1",
+    "test:rls-local-contract": "tsx --test tests/rls-local-runner.test.ts",
     "test:continuation": "tsx --test tests/study-continuation.test.ts",
     "test:onboarding": "tsx --test tests/study-onboarding.test.ts",
     "test:study-experience": "tsx --test tests/study-experience-honesty.test.ts",
@@ -44,7 +45,8 @@
     "test:backup": "pwsh -NoProfile -File scripts/test-supabase-backup.ps1",
     "backup:supabase": "pwsh -NoProfile -File scripts/backup-supabase.ps1",
     "backup:verify": "pwsh -NoProfile -File scripts/verify-supabase-backup.ps1",
-    "security:rls": "tsx --env-file=.env.local scripts/test-rls.ts",
+    "security:rls": "npm run security:rls:local",
+    "security:rls:local": "npm run test:e2e:local:with-fixture -- node node_modules/tsx/dist/cli.mjs scripts/test-rls.ts",
     "admin:bootstrap": "tsx --env-file=.env.local scripts/bootstrap-admin.ts"
   },
   "dependencies": {

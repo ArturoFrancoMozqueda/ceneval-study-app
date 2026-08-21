@@ -60,9 +60,9 @@ npm run content:check
 ```
 
 Valida los paquetes de `content/packages/` antes de importarlos. Los comandos
-`content:import` y `security:rls` **escriben en la base remota**; no los
-ejecutes de paso. Requieren además las transcripciones originales, que hoy solo
-existen en un disco externo.
+`content:import` **escribe en la base remota**; no lo ejecutes de paso y recuerda
+que requiere las transcripciones originales. `security:rls` usa exclusivamente
+Supabase local, crea un paquete sintético y verifica su limpieza al terminar.
 
 ## Stack
 

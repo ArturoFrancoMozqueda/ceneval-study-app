@@ -84,12 +84,14 @@ npm run test:backup     # prueba local de integridad; usa datos sintéticos
 npm run backup:supabase -- -ConfirmProduction # exportación remota autorizada
 npm run content:check   # validar paquetes de content/packages/
 npm run content:import  # importar un paquete como borrador   (escribe en Supabase)
-npm run security:rls    # suite de integración RLS             (escribe en Supabase)
+npm run security:rls    # suite RLS dinámica                    (solo Supabase local)
 ```
 
 En Windows, si PowerShell bloquea `npm.ps1`, usa `npm.cmd`.
 
-**`content:import` y `security:rls` escriben en la base remota de producción.**
+**`content:import` escribe en la base remota de producción.**
+**`security:rls` falla cerrado salvo que detecte el proyecto Supabase local**
+**y crea únicamente un fixture sintético que elimina al terminar.**
 **`backup:supabase` la lee y puede contener datos privados en disco.** No
 ejecutes ninguno para "verificar" algo de paso. El respaldo requiere
 autorización expresa y `-ConfirmProduction`; para comprobar el mecanismo sin
@@ -166,17 +168,19 @@ alguna sigue abierta; si corriges una, actualiza esta lista.
   `AUDIO NN.txt`; el cargador los resuelve desde `CENEVAL_TRANSCRIPTS_DIR`.
   Falta una segunda copia independiente y una restauración ensayada; los
   originales nunca se agregan a Git ni a Vercel.
-- **Las once migraciones están aplicadas en CENEVAL, pero falta la suite RLS
-  dinámica.** El historial remoto se verificó el 20 de agosto de 2026 y los
-  asesores no mostraron errores de seguridad; el aviso de `exam_answer_keys`
-  sin políticas es el bloqueo deliberado. `npm run security:rls` todavía
-  requiere una ventana autorizada porque crea y publica datos temporales.
+- **Las once migraciones están aplicadas en CENEVAL; el gate RLS ampliado ya
+  pasó localmente.** El historial remoto se verificó el 20 de agosto de 2026 y
+  los asesores no mostraron errores de seguridad; el aviso de
+  `exam_answer_keys` sin políticas es el bloqueo deliberado. En PG17 local,
+  `npm run security:rls` aplicó 15 migraciones desde cero y aprobó 141
+  comprobaciones con cleanup sin residuos. Las migraciones locales posteriores
+  todavía no están aplicadas en CENEVAL.
 - **La protección de lectura por aprobación está aplicada en CENEVAL.**
   `20260821023330_restrict_reading_to_approved_topics.sql` impide que una
   estudiante lea temas pendientes o rechazados, y extiende el bloqueo a sus
   materiales, mapas, referencias, flashcards y exámenes. Su aplicación quedó
   verificada en el historial remoto, pero su comportamiento dinámico aún
-  requiere ejecutar la suite RLS ampliada.
+  quedó verificado dinámicamente en PG17 local por la suite RLS ampliada.
 - **Existe el procedimiento, no un respaldo real de Supabase.**
   `docs/SUPABASE_BACKUP.md` y `npm run test:backup` documentan y comprueban el
   mecanismo con datos sintéticos. El proyecto remoto actual no contiene

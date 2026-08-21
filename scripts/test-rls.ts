@@ -1,668 +1,360 @@
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+import { validateLocalSupabaseStatus } from "./lib/local-e2e-safety";
 
-type TestUser = {
-  client: SupabaseClient;
-  email: string;
-  id: string;
-  password: string;
+type QueryError = { code?: string; message?: string } | null;
+
+const required = (name: string) => {
+  const value = process.env[name]?.trim();
+  if (!value) throw new Error(`Falta la variable local ${name}.`);
+  return value;
 };
 
-type TestResult = {
-  name: string;
-  passed: boolean;
-};
-
-const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
-const publishableKey =
-  process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY?.trim();
-const secretKey = process.env.SUPABASE_SECRET_KEY?.trim();
-
-if (!url || !publishableKey || !secretKey) {
-  throw new Error(
-    "Faltan NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY o SUPABASE_SECRET_KEY.",
-  );
-}
-
-const admin = createClient(url, secretKey, {
-  auth: {
-    autoRefreshToken: false,
-    detectSessionInUrl: false,
-    persistSession: false,
-  },
+const credentials = validateLocalSupabaseStatus({
+  API_URL: required("NEXT_PUBLIC_SUPABASE_URL"),
+  DB_URL: required("SUPABASE_LOCAL_DB_URL"),
+  PUBLISHABLE_KEY: required("NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY"),
+  SECRET_KEY: required("SUPABASE_SECRET_KEY"),
 });
-const createdUsers: TestUser[] = [];
-const results: TestResult[] = [];
-let temporaryClassId: number | null = null;
-let temporaryTopicId: number | null = null;
-let temporaryFlashcardId: number | null = null;
-
-function check(name: string, condition: boolean, detail?: string) {
-  results.push({ name, passed: condition });
-  if (!condition) {
-    throw new Error(`${name}${detail ? `: ${detail}` : ""}`);
-  }
-  console.log(`✓ ${name}`);
+const classId = Number(required("E2E_CLASS_ID"));
+const topicId = Number(required("E2E_TOPIC_ID"));
+if (!Number.isSafeInteger(classId) || !Number.isSafeInteger(topicId)) {
+  throw new Error("Los identificadores E2E locales no son válidos.");
 }
 
-function publicClient() {
-  return createClient(url!, publishableKey!, {
-    auth: {
-      autoRefreshToken: false,
-      detectSessionInUrl: false,
-      persistSession: false,
-    },
+const service = createClient(credentials.apiUrl, credentials.secretKey, {
+  auth: { autoRefreshToken: false, persistSession: false },
+});
+const publicClient = () =>
+  createClient(credentials.apiUrl, credentials.publishableKey, {
+    auth: { autoRefreshToken: false, persistSession: false },
   });
+
+let passed = 0;
+let lastCheckpoint = "inicio";
+
+function checkpoint(name: string) {
+  lastCheckpoint = name;
+  console.log(`[RLS] ${name}`);
 }
 
-async function createTestUser(label: string) {
-  const nonce = `${Date.now()}-${crypto.randomUUID().slice(0, 8)}`;
-  const email = `rls-${label}-${nonce}@example.com`;
-  const password = `Rls-${crypto.randomUUID()}!`;
-  const { data, error } = await admin.auth.admin.createUser({
-    email,
-    password,
-    email_confirm: true,
-    user_metadata: { full_name: `Prueba RLS ${label}` },
-  });
-  if (error || !data.user) {
-    throw new Error(
-      `No se pudo crear la cuenta ${label}: ${error?.message ?? "sin usuario"}`,
-    );
-  }
+function check(name: string, condition: boolean) {
+  if (!condition) throw new Error(`Falló: ${name}.`);
+  passed += 1;
+  console.log(`  [OK] ${name}`);
+}
 
+function requireNoError(error: QueryError, context: string) {
+  if (error) {
+    const code = typeof error.code === "string" ? error.code : "sin-código";
+    throw new Error(`${context} (${code}).`);
+  }
+}
+
+async function signIn(emailName: string, passwordName: string) {
   const client = publicClient();
-  const signIn = await client.auth.signInWithPassword({ email, password });
-  if (signIn.error) {
-    throw new Error(
-      `No se pudo iniciar sesión como ${label}: ${signIn.error.message}`,
-    );
-  }
+  const { data, error } = await client.auth.signInWithPassword({
+    email: required(emailName),
+    password: required(passwordName),
+  });
+  if (error || !data.user) throw new Error("No se pudo iniciar una sesión RLS local.");
+  return { client, id: data.user.id };
+}
 
-  const user = { client, email, id: data.user.id, password };
-  createdUsers.push(user);
-  return user;
+async function countRows(
+  client: SupabaseClient,
+  table: string,
+  column: string,
+  value: number | number[],
+) {
+  let query = client.from(table).select("*");
+  query = Array.isArray(value)
+    ? query.in(column, value)
+    : query.eq(column, value);
+  const { data, error } = await query;
+  return { count: data?.length ?? 0, error };
+}
+
+async function expectVisible(
+  client: SupabaseClient,
+  table: string,
+  column: string,
+  value: number | number[],
+) {
+  const result = await countRows(client, table, column, value);
+  requireNoError(result.error, `No se pudo consultar ${table}`);
+  check(`${table} visible`, result.count > 0);
+}
+
+async function expectHidden(
+  client: SupabaseClient,
+  table: string,
+  column: string,
+  value: number | number[],
+) {
+  const result = await countRows(client, table, column, value);
+  check(`${table} oculto`, Boolean(result.error) || result.count === 0);
+}
+
+async function expectRpcDenied(
+  client: SupabaseClient,
+  name: "import_class_package_v12" | "export_class_package_v12",
+) {
+  const args =
+    name === "import_class_package_v12"
+      ? { p_package: { packageVersion: "1.2" } }
+      : { p_class_id: classId };
+  const { error } = await client.rpc(name, args);
+  check(`${name} denegada`, error?.code === "42501");
+}
+
+async function readResourceIds() {
+  const topicQuery = await service
+    .from("topics")
+    .select("id,approval_status")
+    .eq("id", topicId)
+    .eq("class_id", classId)
+    .single();
+  requireNoError(topicQuery.error, "No se encontró el tema sintético");
+
+  const [references, exams, artifacts] = await Promise.all([
+    service.from("topic_references").select("reference_id").eq("topic_id", topicId),
+    service.from("exams").select("id").eq("topic_id", topicId),
+    service.from("editorial_artifacts").select("id").eq("class_id", classId),
+  ]);
+  requireNoError(references.error, "No se leyeron referencias");
+  requireNoError(exams.error, "No se leyeron exámenes");
+  requireNoError(artifacts.error, "No se leyeron artefactos");
+  const referenceIds = (references.data ?? []).map((row) => Number(row.reference_id));
+  const examIds = (exams.data ?? []).map((row) => Number(row.id));
+  const artifactIds = (artifacts.data ?? []).map((row) => Number(row.id));
+
+  const questions = await service
+    .from("exam_questions")
+    .select("id")
+    .in("exam_id", examIds);
+  requireNoError(questions.error, "No se leyeron preguntas");
+  const questionIds = (questions.data ?? []).map((row) => Number(row.id));
+  const options = await service
+    .from("exam_options")
+    .select("id")
+    .in("question_id", questionIds);
+  requireNoError(options.error, "No se leyeron opciones");
+  const optionIds = (options.data ?? []).map((row) => Number(row.id));
+  check("fixture relacional completo", referenceIds.length > 0 && examIds.length > 0 && artifactIds.length > 0 && questionIds.length > 0 && optionIds.length > 0);
+  return { artifactIds, examIds, optionIds, questionIds, referenceIds };
+}
+
+async function assertStudyResources(
+  client: SupabaseClient,
+  ids: Awaited<ReturnType<typeof readResourceIds>>,
+  visibility: "visible" | "hidden",
+) {
+  const expectation = visibility === "visible" ? expectVisible : expectHidden;
+  const resources: Array<[string, string, number | number[]]> = [
+    ["topics", "id", topicId],
+    ["study_materials", "topic_id", topicId],
+    ["concept_maps", "topic_id", topicId],
+    ["topic_references", "topic_id", topicId],
+    ["legal_references", "id", ids.referenceIds],
+    ["flashcards", "topic_id", topicId],
+    ["exams", "id", ids.examIds],
+    ["exam_questions", "id", ids.questionIds],
+    ["exam_options", "id", ids.optionIds],
+    ["class_evidence", "class_id", classId],
+    ["topic_learning_journeys", "topic_id", topicId],
+    ["editorial_artifacts", "class_id", classId],
+    ["editorial_artifact_evidence", "artifact_id", ids.artifactIds],
+  ];
+  for (const [table, column, value] of resources) {
+    await expectation(client, table, column, value);
+  }
+}
+
+async function testActivityOwnership(
+  owner: { client: SupabaseClient; id: string },
+  other: { client: SupabaseClient; id: string },
+) {
+  checkpoint("ownership de actividad");
+  const flashcard = await service
+    .from("flashcards")
+    .select("id")
+    .eq("topic_id", topicId)
+    .limit(1)
+    .single();
+  requireNoError(flashcard.error, "No se encontró flashcard");
+  const flashcardId = Number(flashcard.data!.id);
+
+  const ownerProgress = await owner.client.from("study_progress").insert({
+    user_id: owner.id,
+    topic_id: topicId,
+    current_step: "discover",
+    material_index: 0,
+    session_minutes: 5,
+    completed_steps: [],
+  });
+  requireNoError(ownerProgress.error, "No se insertó progreso propio");
+  const otherProgress = await other.client.from("study_progress").insert({
+    user_id: other.id,
+    topic_id: topicId,
+    current_step: "understand",
+    material_index: 0,
+    session_minutes: 10,
+    completed_steps: ["discover"],
+  });
+  requireNoError(otherProgress.error, "No se insertó progreso de control");
+  const visibleProgress = await owner.client.from("study_progress").select("user_id");
+  requireNoError(visibleProgress.error, "No se leyó progreso propio");
+  check(
+    "progreso aislado por propietaria",
+    visibleProgress.data!.length === 1 && visibleProgress.data![0]!.user_id === owner.id,
+  );
+  const foreignProgress = await owner.client.from("study_progress").insert({
+    user_id: other.id,
+    topic_id: topicId,
+    current_step: "check",
+    material_index: 0,
+    session_minutes: 1,
+    completed_steps: [],
+  });
+  check("progreso ajeno denegado", Boolean(foreignProgress.error));
+
+  for (const actor of [owner, other]) {
+    const response = await actor.client.from("quick_check_responses").insert({
+      user_id: actor.id,
+      topic_id: topicId,
+      prompt: `Prompt RLS sintético ${actor.id.slice(0, 4)}`,
+      response: "Respuesta sintética.",
+      needs_review: false,
+    });
+    requireNoError(response.error, "No se insertó quick check propio");
+    const review = await actor.client.from("flashcard_reviews").insert({
+      user_id: actor.id,
+      flashcard_id: flashcardId,
+      rating: "good",
+    });
+    requireNoError(review.error, "No se insertó repaso propio");
+  }
+  const ownerResponses = await owner.client.from("quick_check_responses").select("user_id");
+  requireNoError(ownerResponses.error, "No se leyeron quick checks");
+  check("quick checks aislados", ownerResponses.data!.every((row) => row.user_id === owner.id));
+  const ownerReviews = await owner.client.from("flashcard_reviews").select("user_id");
+  requireNoError(ownerReviews.error, "No se leyeron repasos");
+  check("revisiones aisladas", ownerReviews.data!.every((row) => row.user_id === owner.id));
+
+  const foreignResponse = await owner.client.from("quick_check_responses").insert({
+    user_id: other.id,
+    topic_id: topicId,
+    prompt: "Prompt ajeno sintético",
+    response: "No debe guardarse.",
+    needs_review: false,
+  });
+  check("quick check ajeno denegado", Boolean(foreignResponse.error));
+  const foreignReview = await owner.client.from("flashcard_reviews").insert({
+    user_id: other.id,
+    flashcard_id: flashcardId,
+    rating: "easy",
+  });
+  check("revisión ajena denegada", Boolean(foreignReview.error));
+  return flashcardId;
 }
 
 async function main() {
   const anonymous = publicClient();
-  const anonymousClasses = await anonymous.from("classes").select("id");
-  check(
-    "El acceso anónimo no puede leer clases",
-    Boolean(anonymousClasses.error) || (anonymousClasses.data?.length ?? 0) === 0,
-  );
+  const owner = await signIn("E2E_STUDENT_EMAIL", "E2E_STUDENT_PASSWORD");
+  const other = await signIn("E2E_OTHER_STUDENT_EMAIL", "E2E_OTHER_STUDENT_PASSWORD");
+  const admin = await signIn("E2E_ADMIN_EMAIL", "E2E_ADMIN_PASSWORD");
+  const ids = await readResourceIds();
 
-  const studentA = await createTestUser("student-a");
-  const studentB = await createTestUser("student-b");
-  const testAdmin = await createTestUser("admin");
-
-  const promote = await admin
-    .from("profiles")
-    .update({ role: "admin" })
-    .eq("id", testAdmin.id);
-  if (promote.error) throw promote.error;
-
-  const publishedResult = await admin
-    .from("classes")
-    .select("id,subject_id")
-    .eq("publication_status", "published")
-    .limit(1)
-    .single();
-  if (publishedResult.error) throw publishedResult.error;
-
-  const temporaryClass = await admin
-    .from("classes")
-    .insert({
-      subject_id: publishedResult.data.subject_id,
-      title: `Prueba temporal RLS ${crypto.randomUUID().slice(0, 8)}`,
-      description: "Registro temporal creado por la suite de seguridad.",
-      publication_status: "draft",
-      published_at: null,
-    })
-    .select("id")
-    .single();
-  if (temporaryClass.error) throw temporaryClass.error;
-  temporaryClassId = temporaryClass.data.id as number;
-
-  const temporaryTopic = await admin
-    .from("topics")
-    .insert({
-      class_id: temporaryClassId,
-      title: "Tema temporal para probar actividad protegida",
-      position: 1,
-    })
-    .select("id")
-    .single();
-  if (temporaryTopic.error) throw temporaryTopic.error;
-  temporaryTopicId = temporaryTopic.data.id as number;
-
-  const temporaryFlashcard = await admin
-    .from("flashcards")
-    .insert({
-      topic_id: temporaryTopicId,
-      question: "¿Esta tarjeta pertenece a contenido publicado?",
-      answer: "Depende del estado editorial de su clase.",
-      position: 1,
-    })
-    .select("id")
-    .single();
-  if (temporaryFlashcard.error) throw temporaryFlashcard.error;
-  temporaryFlashcardId = temporaryFlashcard.data.id as number;
-
-  const publishedClassId = publishedResult.data.id as number;
-  const studentClasses = await studentA.client
-    .from("classes")
-    .select("id,publication_status");
-  if (studentClasses.error) throw studentClasses.error;
-  check(
-    "La estudiante puede leer contenido publicado",
-    studentClasses.data.some(({ id }) => id === publishedClassId),
-  );
-  check(
-    "La estudiante no puede leer borradores ni clases en revisión",
-    studentClasses.data.every(
-      ({ publication_status }) => publication_status === "published",
-    ),
-  );
-
-  const hiddenStudentClass = await studentA.client
-    .from("classes")
-    .select("id")
-    .eq("id", temporaryClassId);
-  if (hiddenStudentClass.error) throw hiddenStudentClass.error;
-  check(
-    "La estudiante no puede consultar una clase borrador específica",
-    hiddenStudentClass.data.length === 0,
-  );
-
-  const adminClasses = await testAdmin.client
-    .from("classes")
-    .select("id")
-    .eq("id", temporaryClassId);
-  if (adminClasses.error) throw adminClasses.error;
-  check(
-    "La administradora puede leer contenido no publicado",
-    adminClasses.data.length === 1,
-  );
-
-  const [draftProgress, draftQuickCheck, draftReview, adminDraftProgress] =
-    await Promise.all([
-      studentA.client.from("study_progress").insert({
-        user_id: studentA.id,
-        topic_id: temporaryTopicId,
-        current_step: "discover",
-        material_index: 0,
-        session_minutes: 5,
-        completed_steps: [],
-      }),
-      studentA.client.from("quick_check_responses").insert({
-        user_id: studentA.id,
-        topic_id: temporaryTopicId,
-        prompt: "Comprobación sobre un borrador",
-        response: "No debe registrarse.",
-        needs_review: false,
-      }),
-      studentA.client.from("flashcard_reviews").insert({
-        user_id: studentA.id,
-        flashcard_id: temporaryFlashcardId,
-        rating: "again",
-      }),
-      testAdmin.client.from("study_progress").insert({
-        user_id: testAdmin.id,
-        topic_id: temporaryTopicId,
-        current_step: "discover",
-        material_index: 0,
-        session_minutes: 5,
-        completed_steps: [],
-      }),
-    ]);
-  check(
-    "Una estudiante no puede registrar progreso sobre un borrador",
-    Boolean(draftProgress.error),
-  );
-  check(
-    "Una estudiante no puede responder comprobaciones de un borrador",
-    Boolean(draftQuickCheck.error),
-  );
-  check(
-    "Una estudiante no puede revisar tarjetas de un borrador",
-    Boolean(draftReview.error),
-  );
-  check(
-    "El rol editorial tampoco convierte un borrador en contenido estudiable",
-    Boolean(adminDraftProgress.error),
-  );
-
-  const moveToReview = await admin
-    .from("classes")
-    .update({ publication_status: "review", published_at: null })
-    .eq("id", temporaryClassId);
-  if (moveToReview.error) throw moveToReview.error;
-  const reviewForStudent = await studentA.client
-    .from("classes")
-    .select("id")
-    .eq("id", temporaryClassId);
-  if (reviewForStudent.error) throw reviewForStudent.error;
-  check(
-    "Una clase en revisión permanece oculta para estudiantes",
-    reviewForStudent.data.length === 0,
-  );
-
-  const firstPublicationAt = new Date().toISOString();
-  const publishTemporary = await admin
-    .from("classes")
-    .update({
-      publication_status: "published",
-      published_at: firstPublicationAt,
-    })
-    .eq("id", temporaryClassId);
-  if (publishTemporary.error) throw publishTemporary.error;
-  const publishedForStudent = await studentA.client
-    .from("classes")
-    .select("id")
-    .eq("id", temporaryClassId);
-  if (publishedForStudent.error) throw publishedForStudent.error;
-  check(
-    "Una clase publicada queda visible para estudiantes",
-    publishedForStudent.data.length === 1,
-  );
-
-  const [publishedProgress, publishedQuickCheck, publishedReview] =
-    await Promise.all([
-      studentA.client.from("study_progress").insert({
-        user_id: studentA.id,
-        topic_id: temporaryTopicId,
-        current_step: "discover",
-        material_index: 0,
-        session_minutes: 5,
-        completed_steps: [],
-      }),
-      studentA.client.from("quick_check_responses").insert({
-        user_id: studentA.id,
-        topic_id: temporaryTopicId,
-        prompt: "Comprobación sobre contenido publicado",
-        response: "Sí debe registrarse.",
-        needs_review: false,
-      }),
-      studentA.client.from("flashcard_reviews").insert({
-        user_id: studentA.id,
-        flashcard_id: temporaryFlashcardId,
-        rating: "good",
-      }),
-    ]);
-  check(
-    "Una estudiante puede registrar progreso sobre contenido publicado",
-    !publishedProgress.error,
-    publishedProgress.error?.message,
-  );
-  check(
-    "Una estudiante puede responder comprobaciones de contenido publicado",
-    !publishedQuickCheck.error,
-    publishedQuickCheck.error?.message,
-  );
-  check(
-    "Una estudiante puede revisar tarjetas de contenido publicado",
-    !publishedReview.error,
-    publishedReview.error?.message,
-  );
-
-  const withdrawTemporary = await admin
-    .from("classes")
-    .update({ publication_status: "withdrawn" })
-    .eq("id", temporaryClassId);
-  if (withdrawTemporary.error) throw withdrawTemporary.error;
-  const [withdrawnForStudent, withdrawnForAdmin] = await Promise.all([
-    studentA.client
-      .from("classes")
-      .select("id")
-      .eq("id", temporaryClassId),
-    testAdmin.client
-      .from("classes")
-      .select("id,publication_status,published_at")
-      .eq("id", temporaryClassId)
-      .single(),
-  ]);
-  if (withdrawnForStudent.error) throw withdrawnForStudent.error;
-  if (withdrawnForAdmin.error) throw withdrawnForAdmin.error;
-  check(
-    "Una clase retirada deja de ser visible para estudiantes",
-    withdrawnForStudent.data.length === 0,
-  );
-  check(
-    "La administradora conserva acceso y el historial de publicación al retirar",
-    withdrawnForAdmin.data.publication_status === "withdrawn" &&
-      Date.parse(withdrawnForAdmin.data.published_at) ===
-        Date.parse(firstPublicationAt),
-  );
-
-  const [withdrawnProgress, withdrawnQuickCheck, withdrawnReview] =
-    await Promise.all([
-      studentA.client
-        .from("study_progress")
-        .update({ material_index: 1 })
-        .eq("user_id", studentA.id)
-        .eq("topic_id", temporaryTopicId)
-        .select("material_index"),
-      studentA.client.from("quick_check_responses").insert({
-        user_id: studentA.id,
-        topic_id: temporaryTopicId,
-        prompt: "Comprobación sobre contenido retirado",
-        response: "No debe registrarse.",
-        needs_review: false,
-      }),
-      studentA.client.from("flashcard_reviews").insert({
-        user_id: studentA.id,
-        flashcard_id: temporaryFlashcardId,
-        rating: "easy",
-      }),
-    ]);
-  check(
-    "Una estudiante no puede actualizar progreso de contenido retirado",
-    Boolean(withdrawnProgress.error) ||
-      (withdrawnProgress.data !== null && withdrawnProgress.data.length === 0),
-  );
-  check(
-    "Una estudiante no puede responder comprobaciones de contenido retirado",
-    Boolean(withdrawnQuickCheck.error),
-  );
-  check(
-    "Una estudiante no puede revisar tarjetas de contenido retirado",
-    Boolean(withdrawnReview.error),
-  );
-
-  const persistedTemporaryProgress = await admin
-    .from("study_progress")
-    .select("material_index")
-    .eq("user_id", studentA.id)
-    .eq("topic_id", temporaryTopicId)
-    .single();
-  if (persistedTemporaryProgress.error) {
-    throw persistedTemporaryProgress.error;
+  checkpoint("anon y RPC privadas");
+  await expectHidden(anonymous, "classes", "id", classId);
+  await assertStudyResources(anonymous, ids, "hidden");
+  for (const client of [anonymous, owner.client, other.client]) {
+    await expectRpcDenied(client, "import_class_package_v12");
+    await expectRpcDenied(client, "export_class_package_v12");
   }
-  check(
-    "El progreso retirado conserva su último valor publicado",
-    persistedTemporaryProgress.data.material_index === 0,
-  );
 
-  const clearTemporaryActivity = await Promise.all([
-    admin
+  checkpoint("publicado y aprobado");
+  await expectVisible(owner.client, "classes", "id", classId);
+  await assertStudyResources(owner.client, ids, "visible");
+  await assertStudyResources(other.client, ids, "visible");
+  const answerKeys = await countRows(owner.client, "exam_answer_keys", "question_id", ids.questionIds);
+  check("exam_answer_keys bloqueada", Boolean(answerKeys.error) || answerKeys.count === 0);
+  const flashcardId = await testActivityOwnership(owner, other);
+
+  for (const status of ["pending", "rejected"] as const) {
+    checkpoint(`tema ${status}`);
+    const update = await service
+      .from("topics")
+      .update({ approval_status: status })
+      .eq("id", topicId);
+    requireNoError(update.error, `No se cambió el tema a ${status}`);
+    await assertStudyResources(owner.client, ids, "hidden");
+    await assertStudyResources(other.client, ids, "hidden");
+    await assertStudyResources(admin.client, ids, "visible");
+
+    const blockedProgress = await owner.client
       .from("study_progress")
-      .delete()
-      .eq("user_id", studentA.id)
-      .eq("topic_id", temporaryTopicId),
-    admin
+      .update({ material_index: status === "pending" ? 2 : 3 })
+      .eq("user_id", owner.id)
+      .eq("topic_id", topicId)
+      .select("material_index");
+    check(
+      `progreso bloqueado en ${status}`,
+      Boolean(blockedProgress.error) || blockedProgress.data?.length === 0,
+    );
+    const blockedQuickCheck = await owner.client
       .from("quick_check_responses")
-      .delete()
-      .eq("user_id", studentA.id)
-      .eq("topic_id", temporaryTopicId),
-    admin
-      .from("flashcard_reviews")
-      .delete()
-      .eq("user_id", studentA.id)
-      .eq("flashcard_id", temporaryFlashcardId),
-  ]);
-  for (const cleanupResult of clearTemporaryActivity) {
-    if (cleanupResult.error) throw cleanupResult.error;
-  }
-
-  const topicResult = await admin
-    .from("topics")
-    .select("id")
-    .eq("class_id", publishedClassId)
-    .limit(1)
-    .single();
-  if (topicResult.error) throw topicResult.error;
-  const topicId = topicResult.data.id as number;
-
-  const ownProgress = await studentA.client.from("study_progress").upsert({
-    user_id: studentA.id,
-    topic_id: topicId,
-    current_step: "understand",
-    material_index: 0,
-    session_minutes: 5,
-    completed_steps: ["discover"],
-  });
-  if (ownProgress.error) throw ownProgress.error;
-
-  const bProgress = await studentB.client.from("study_progress").upsert({
-    user_id: studentB.id,
-    topic_id: topicId,
-    current_step: "apply",
-    material_index: 0,
-    session_minutes: 10,
-    completed_steps: ["discover", "understand"],
-  });
-  if (bProgress.error) throw bProgress.error;
-
-  const visibleProgress = await studentA.client
-    .from("study_progress")
-    .select("user_id");
-  if (visibleProgress.error) throw visibleProgress.error;
-  check(
-    "Cada estudiante solo puede leer su propio progreso",
-    visibleProgress.data.length === 1 &&
-      visibleProgress.data[0].user_id === studentA.id,
-  );
-
-  const impersonatedProgress = await studentA.client
-    .from("study_progress")
-    .upsert({
-      user_id: studentB.id,
-      topic_id: topicId,
-      current_step: "check",
-      material_index: 0,
-      session_minutes: 15,
-      completed_steps: [],
+      .insert({
+        user_id: owner.id,
+        topic_id: topicId,
+        prompt: `Prompt bloqueado ${status}`,
+        response: "No debe persistir.",
+        needs_review: false,
+      });
+    check(`quick check bloqueado en ${status}`, Boolean(blockedQuickCheck.error));
+    const blockedReview = await owner.client.from("flashcard_reviews").insert({
+      user_id: owner.id,
+      flashcard_id: flashcardId,
+      rating: "again",
     });
-  check(
-    "Una estudiante no puede escribir progreso para otra",
-    Boolean(impersonatedProgress.error),
-  );
+    check(`revisión bloqueada en ${status}`, Boolean(blockedReview.error));
+  }
 
-  const updateOwnProgress = await studentA.client
-    .from("study_progress")
-    .update({ material_index: 1 })
-    .eq("user_id", studentA.id)
-    .eq("topic_id", topicId)
-    .select("material_index")
-    .single();
-  check(
-    "Una estudiante puede actualizar su propio progreso",
-    !updateOwnProgress.error &&
-      updateOwnProgress.data?.material_index === 1,
-    updateOwnProgress.error?.message,
-  );
+  checkpoint("perfiles");
+  const profiles = await owner.client.from("profiles").select("id,role");
+  requireNoError(profiles.error, "No se consultó perfil propio");
+  check("perfil aislado", profiles.data!.length === 1 && profiles.data![0]!.id === owner.id);
+  const foreignProfileUpdate = await owner.client
+    .from("profiles")
+    .update({ full_name: "No permitido" })
+    .eq("id", other.id)
+    .select("id");
+  check("perfil ajeno no modificable", Boolean(foreignProfileUpdate.error) || foreignProfileUpdate.data?.length === 0);
 
-  const deleteOwnProgress = await studentA.client
-    .from("study_progress")
-    .delete()
-    .eq("user_id", studentA.id)
-    .eq("topic_id", topicId);
-  check(
-    "Una estudiante no puede borrar directamente su progreso",
-    Boolean(deleteOwnProgress.error),
-  );
-
-  const flashcardResult = await admin
-    .from("flashcards")
-    .select("id")
-    .eq("topic_id", topicId)
-    .limit(1)
-    .single();
-  if (flashcardResult.error) throw flashcardResult.error;
-  const flashcardId = flashcardResult.data.id as number;
-
-  const ownReview = await studentA.client.from("flashcard_reviews").insert({
-    user_id: studentA.id,
-    flashcard_id: flashcardId,
-    rating: "hard",
-  });
-  if (ownReview.error) throw ownReview.error;
-  const foreignReview = await studentA.client.from("flashcard_reviews").insert({
-    user_id: studentB.id,
-    flashcard_id: flashcardId,
-    rating: "easy",
-  });
-  check(
-    "Una estudiante no puede registrar revisiones para otra",
-    Boolean(foreignReview.error),
-  );
-
-  const examResult = await admin
-    .from("exams")
-    .select("id")
-    .eq("topic_id", topicId)
-    .eq("is_current", true)
-    .single();
-  if (examResult.error) throw examResult.error;
-  const examId = examResult.data.id as number;
-
-  const [attemptA, attemptB] = await Promise.all([
-    admin
-      .from("exam_attempts")
-      .insert({ user_id: studentA.id, exam_id: examId })
-      .select("id")
-      .single(),
-    admin
-      .from("exam_attempts")
-      .insert({ user_id: studentB.id, exam_id: examId })
-      .select("id")
-      .single(),
-  ]);
-  if (attemptA.error) throw attemptA.error;
-  if (attemptB.error) throw attemptB.error;
-
-  const visibleAttempts = await studentA.client
-    .from("exam_attempts")
-    .select("id,user_id");
-  if (visibleAttempts.error) throw visibleAttempts.error;
-  check(
-    "Cada estudiante solo puede leer sus propios intentos",
-    visibleAttempts.data.length === 1 &&
-      visibleAttempts.data[0].user_id === studentA.id,
-  );
-
-  const questionResult = await admin
-    .from("exam_questions")
-    .select("id")
-    .eq("exam_id", examId)
-    .order("position")
-    .limit(1)
-    .single();
-  if (questionResult.error) throw questionResult.error;
-  const questionId = questionResult.data.id as number;
-
-  const optionResult = await admin
-    .from("exam_options")
-    .select("id")
-    .eq("question_id", questionId)
-    .order("position")
-    .limit(1)
-    .single();
-  if (optionResult.error) throw optionResult.error;
-  const optionId = optionResult.data.id as number;
-
-  const insertedAnswers = await admin.from("exam_answers").insert([
-    {
-      attempt_id: attemptA.data.id,
-      question_id: questionId,
-      selected_option_id: optionId,
-      is_correct: false,
-    },
-    {
-      attempt_id: attemptB.data.id,
-      question_id: questionId,
-      selected_option_id: optionId,
-      is_correct: false,
-    },
-  ]);
-  if (insertedAnswers.error) throw insertedAnswers.error;
-
-  const visibleAnswers = await studentA.client
-    .from("exam_answers")
-    .select("attempt_id");
-  if (visibleAnswers.error) throw visibleAnswers.error;
-  check(
-    "Cada estudiante solo puede leer las respuestas de sus propios intentos",
-    visibleAnswers.data.length === 1 &&
-      visibleAnswers.data[0].attempt_id === attemptA.data.id,
-  );
-
-  const foreignAnswers = await studentA.client
-    .from("exam_answers")
-    .select("attempt_id")
-    .eq("attempt_id", attemptB.data.id);
-  if (foreignAnswers.error) throw foreignAnswers.error;
-  check(
-    "Una estudiante no puede consultar respuestas de otro intento",
-    foreignAnswers.data.length === 0,
-  );
-
-  const answerKeys = await studentA.client
-    .from("exam_answer_keys")
-    .select("question_id")
-    .limit(1);
-  check(
-    "Las claves de respuestas no son consultables por estudiantes",
-    Boolean(answerKeys.error) || (answerKeys.data?.length ?? 0) === 0,
-  );
-
-  const publishAttempt = await studentA.client
-    .from("classes")
-    .update({
-      publication_status: "review",
-      published_at: null,
-    })
-    .eq("id", publishedClassId);
-  check(
-    "Una estudiante no puede cambiar el estado editorial",
-    Boolean(publishAttempt.error),
-  );
-
-  const profiles = await studentA.client.from("profiles").select("id,role");
-  if (profiles.error) throw profiles.error;
-  check(
-    "Una estudiante solo puede leer su propio perfil",
-    profiles.data.length === 1 && profiles.data[0].id === studentA.id,
-  );
+  console.log(`\n[OK] ${passed} comprobaciones RLS locales completadas.`);
 }
 
-async function cleanup() {
-  if (temporaryClassId !== null) {
-    const { error } = await admin
-      .from("classes")
-      .delete()
-      .eq("id", temporaryClassId);
-    if (error) {
-      console.error(
-        `No se pudo eliminar la clase temporal ${temporaryClassId}: ${error.message}`,
-      );
+function safeDiagnostic(error: unknown) {
+  let message: string | null = null;
+  let code: string | null = null;
+  if (error instanceof Error) {
+    message = error.message;
+  } else if (error && typeof error === "object") {
+    const record = error as Record<string, unknown>;
+    if (typeof record.message === "string") message = record.message;
+    if (typeof record.code === "string" && /^[A-Z0-9]{1,10}$/.test(record.code)) {
+      code = record.code;
     }
   }
-  for (const user of createdUsers) {
-    await user.client.auth.signOut();
-  }
-  for (const user of createdUsers) {
-    const { error } = await admin.auth.admin.deleteUser(user.id);
-    if (error) {
-      console.error(
-        `No se pudo eliminar la cuenta temporal ${user.email}: ${error.message}`,
-      );
-    }
-  }
+  if (!message && !code) return "Error desconocido";
+  const safe = (message ?? "Error de base de datos")
+    .replace(/https?:\/\/\S+/gi, "[URL]")
+    .replace(/[A-Za-z0-9_-]{32,}/g, "[dato]")
+    .replace(/[\w.+-]+@[\w.-]+/g, "[correo]");
+  return `${code ? `[${code}] ` : ""}${safe || "Error desconocido"}`;
 }
 
-async function run() {
-  try {
-    await main();
-    console.log(`\n${results.length} pruebas RLS completadas correctamente.`);
-  } finally {
-    await cleanup();
-  }
-}
-
-run().catch((error: unknown) => {
-  console.error(
-    error instanceof Error ? `\n✗ ${error.message}` : "\n✗ Error desconocido",
-  );
+main().catch((error: unknown) => {
+  console.error(`\n[FAIL] checkpoint=${lastCheckpoint}: ${safeDiagnostic(error)}`);
   process.exitCode = 1;
 });
