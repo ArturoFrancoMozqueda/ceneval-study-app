@@ -5,7 +5,7 @@ const migrationPath = join(
   process.cwd(),
   "supabase",
   "migrations",
-  "20260821022138_restrict_reading_to_approved_topics.sql",
+  "20260821023330_restrict_reading_to_approved_topics.sql",
 );
 const sql = normalize(readFileSync(migrationPath, "utf8"));
 

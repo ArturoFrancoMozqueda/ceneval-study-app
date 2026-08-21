@@ -37,7 +37,7 @@ publicada y `USING`/`WITH CHECK` para actualizaciones. No demuestra por sí sola
 que la migración ya esté activa en la base remota.
 
 La comprobación `test:topic-approval-policies` revisa de forma local que la
-migración `20260821022138_restrict_reading_to_approved_topics.sql` reemplace de
+migración `20260821023330_restrict_reading_to_approved_topics.sql` reemplace de
 manera atómica e idempotente las nueve políticas de lectura, exija tema
 `approved` y clase `published`, preserve `private.is_admin()` y mantenga los
 filtros redundantes de `getTopic` y `getLessonBundle`.
@@ -76,21 +76,21 @@ La última ejecución remota documentada fue el **29 de julio de 2026**:
 
 Desde entonces, el código amplió la suite a 31 comprobaciones y añadió la
 migración `20260821021203_restrict_learning_activity_to_published_content.sql`.
-Las diez migraciones se aplicaron al proyecto CENEVAL y su historial y catálogo
+Las once migraciones se aplicaron al proyecto CENEVAL y su historial y catálogo
 se verificaron el 20 de agosto de 2026. La suite ampliada todavía no se ha
 ejecutado allí.
 
-La migración de aprobación de temas creada después de esa verificación es la
-undécima migración local y **no se aplicó en remoto**. La suite dinámica también
+La migración de aprobación de temas se aplicó después de esa verificación
+inicial y su historial remoto también quedó confirmado. La suite dinámica
 debe ampliarse para comprobar con dos identidades que una estudiante no puede
 leer un tema pendiente o rechazado ni sus descendientes, mientras la
 administradora conserva acceso.
 
 Por lo tanto, la afirmación correcta es:
 
-> Las primeras diez migraciones están aplicadas en CENEVAL; la undécima solo
-> está versionada. El comportamiento dinámico de ambas capas sigue pendiente
-> de una ejecución autorizada de la suite actualizada.
+> Las once migraciones están aplicadas en CENEVAL. El comportamiento dinámico
+> de ambas capas sigue pendiente de una ejecución autorizada de la suite
+> actualizada.
 
 ## Orden seguro para cerrar la verificación
 
