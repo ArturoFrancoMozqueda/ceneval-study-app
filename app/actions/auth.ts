@@ -5,7 +5,7 @@ import { isPrivateAccessOnly } from "@/lib/access";
 import {
   authCallbackUrl,
   isAuthorizedPrivateRegistration,
-  PRIVATE_REGISTRATION_MESSAGE,
+  REGISTRATION_CONFIRMATION_MESSAGE,
   validatePasswordInput,
   validateRegistrationInput,
 } from "@/lib/auth/registration";
@@ -56,10 +56,7 @@ export async function signInAction(
 
     if (profileError || profile?.role !== "admin") {
       await supabase.auth.signOut();
-      return {
-        message:
-          "Esta aplicación es privada y solo permite la cuenta administradora.",
-      };
+      return invalidCredentialsState();
     }
   }
 
@@ -85,7 +82,7 @@ export async function signUpAction(formData: FormData) {
     )
   ) {
     redirect(
-      `/iniciar-sesion?message=${encodeURIComponent(PRIVATE_REGISTRATION_MESSAGE)}`,
+      `/iniciar-sesion?message=${encodeURIComponent(REGISTRATION_CONFIRMATION_MESSAGE)}`,
     );
   }
 
@@ -105,7 +102,7 @@ export async function signUpAction(formData: FormData) {
   if (error) {
     if (privateAccessOnly) {
       redirect(
-        `/iniciar-sesion?message=${encodeURIComponent(PRIVATE_REGISTRATION_MESSAGE)}`,
+        `/iniciar-sesion?message=${encodeURIComponent(REGISTRATION_CONFIRMATION_MESSAGE)}`,
       );
     }
     authError(
@@ -117,7 +114,7 @@ export async function signUpAction(formData: FormData) {
   redirect(
     `/iniciar-sesion?message=${encodeURIComponent(
       privateAccessOnly
-        ? PRIVATE_REGISTRATION_MESSAGE
+        ? REGISTRATION_CONFIRMATION_MESSAGE
         : "Revisa tu correo para confirmar la cuenta.",
     )}`,
   );

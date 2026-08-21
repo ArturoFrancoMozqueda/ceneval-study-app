@@ -4,12 +4,12 @@ import test from "node:test";
 import {
   authCallbackUrl,
   isAuthorizedPrivateRegistration,
-  PRIVATE_REGISTRATION_MESSAGE,
+  REGISTRATION_CONFIRMATION_MESSAGE,
   validatePasswordInput,
   validateRegistrationInput,
 } from "../lib/auth/registration";
 
-test("normaliza una solicitud de activación válida", () => {
+test("normaliza una solicitud de registro válida", () => {
   const result = validateRegistrationInput({
     fullName: "  Fátima Franco  ",
     email: "  ADMIN@EXAMPLE.COM ",
@@ -41,7 +41,7 @@ test("rechaza datos inválidos antes de llamar al proveedor", () => {
   });
 });
 
-test("la activación privada falla cerrada y solo acepta ADMIN_EMAIL", () => {
+test("el registro privado falla cerrado y solo acepta ADMIN_EMAIL", () => {
   assert.equal(
     isAuthorizedPrivateRegistration("admin@example.com", undefined),
     false,
@@ -62,9 +62,12 @@ test("la activación privada falla cerrada y solo acepta ADMIN_EMAIL", () => {
   );
 });
 
-test("el mensaje privado no revela si el correo existe o está autorizado", () => {
-  assert.doesNotMatch(PRIVATE_REGISTRATION_MESSAGE, /existe|registrad|admin/i);
-  assert.match(PRIVATE_REGISTRATION_MESSAGE, /si el correo está autorizado/i);
+test("el mensaje de confirmación no revela si el correo está autorizado", () => {
+  assert.doesNotMatch(
+    REGISTRATION_CONFIRMATION_MESSAGE,
+    /existe|registrad|admin|autorizado/i,
+  );
+  assert.match(REGISTRATION_CONFIRMATION_MESSAGE, /confirmar tu cuenta/i);
 });
 
 test("los callbacks usan el origen configurado, no cabeceras de la solicitud", () => {
@@ -98,4 +101,23 @@ test("el callback privado exige correo autorizado y rol admin sin promoverlo", (
   assert.match(source, /profile\?\.role !== "admin"/);
   assert.match(source, /await supabase\.auth\.signOut\(\)/);
   assert.doesNotMatch(source, /update\(\{ role: "admin" \}\)/);
+});
+
+test("login y registro muestran un flujo convencional sin lenguaje operativo", () => {
+  const registrationPage = readFileSync(
+    new URL("../app/registro/page.tsx", import.meta.url),
+    "utf8",
+  );
+  const signInForm = readFileSync(
+    new URL("../components/sign-in-form.tsx", import.meta.url),
+    "utf8",
+  );
+  const visibleSource = `${registrationPage}\n${signInForm}`;
+
+  assert.match(visibleSource, /Crea tu cuenta/);
+  assert.match(visibleSource, /Regístrate/);
+  assert.doesNotMatch(
+    visibleSource,
+    /administradora|invitaci[oó]n|bootstrap|activaci[oó]n|correo autorizado/i,
+  );
 });

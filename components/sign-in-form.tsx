@@ -9,11 +9,9 @@ import type { SignInState } from "@/lib/auth-state";
 export function SignInForm({
   initialError,
   initialMessage,
-  privateAccessOnly,
 }: {
   initialError?: string;
   initialMessage?: string;
-  privateAccessOnly: boolean;
 }) {
   const initialState: SignInState = { message: initialError };
   const [state, formAction, pending] = useActionState(
@@ -74,27 +72,15 @@ export function SignInForm({
         </>
       }
       footer={
-        privateAccessOnly ? (
-          <>
-            Acceso privado para la administradora. ¿Es tu primer acceso?{" "}
-            <Link
-              className="inline-flex min-h-11 items-center font-semibold text-brand"
-              href="/registro"
-            >
-              Activa tu cuenta
-            </Link>
-          </>
-        ) : (
-          <>
-            ¿Aún no tienes cuenta?{" "}
-            <Link
-              className="inline-flex min-h-11 items-center font-semibold text-brand"
-              href="/registro"
-            >
-              Regístrate
-            </Link>
-          </>
-        )
+        <>
+          ¿Aún no tienes cuenta?{" "}
+          <Link
+            className="inline-flex min-h-11 items-center font-semibold text-brand"
+            href="/registro"
+          >
+            Regístrate
+          </Link>
+        </>
       }
       message={initialMessage}
       pending={pending}

@@ -2,7 +2,6 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { signUpAction } from "@/app/actions/auth";
 import { AuthCard, AuthField } from "@/components/auth-card";
-import { isPrivateAccessOnly } from "@/lib/access";
 import { getCurrentUser } from "@/lib/auth";
 
 export default async function SignUpPage({
@@ -12,16 +11,11 @@ export default async function SignUpPage({
 }) {
   if (await getCurrentUser()) redirect("/");
   const { error, field } = await searchParams;
-  const privateAccessOnly = isPrivateAccessOnly();
 
   return (
     <AuthCard
       action={signUpAction}
-      description={
-        privateAccessOnly
-          ? "Activa la cuenta administradora con el correo autorizado. Si recibiste una invitación, abre primero el enlace del correo."
-          : "Crea una cuenta para guardar tu progreso."
-      }
+      description="Crea una cuenta con tu correo para guardar tu progreso de estudio."
       error={field ? undefined : error}
       fields={
         <>
@@ -61,8 +55,8 @@ export default async function SignUpPage({
           </Link>
         </>
       }
-      submitLabel={privateAccessOnly ? "Solicitar activación" : "Crear cuenta"}
-      title={privateAccessOnly ? "Activa tu acceso privado" : "Comienza a estudiar"}
+      submitLabel="Crear cuenta"
+      title="Crea tu cuenta"
     />
   );
 }
