@@ -3,7 +3,6 @@ import "server-only";
 import { cache } from "react";
 import { redirect } from "next/navigation";
 import { isPrivateAccessOnly } from "@/lib/access";
-import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 
 export type AppRole = "admin" | "student";
@@ -27,19 +26,7 @@ export const getCurrentUser = cache(async (): Promise<CurrentUser | null> => {
     .eq("id", data.user.id)
     .maybeSingle();
 
-  const configuredAdminEmail = process.env.ADMIN_EMAIL?.trim().toLowerCase();
-  let role: AppRole = profile?.role === "admin" ? "admin" : "student";
-  if (
-    configuredAdminEmail &&
-    data.user.email?.toLowerCase() === configuredAdminEmail &&
-    role !== "admin"
-  ) {
-    const { error: promotionError } = await getSupabaseAdminClient()
-      .from("profiles")
-      .update({ role: "admin" })
-      .eq("id", data.user.id);
-    if (!promotionError) role = "admin";
-  }
+  const role: AppRole = profile?.role === "admin" ? "admin" : "student";
 
   if (isPrivateAccessOnly() && role !== "admin") {
     return null;

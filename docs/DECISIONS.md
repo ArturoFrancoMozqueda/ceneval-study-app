@@ -258,3 +258,25 @@ acoplamiento moderado, por lo que el plan de salida exige migraciones
 versionadas, respaldos restaurables e inventario de extensiones y políticas.
 Los precios y umbrales se revisarán antes del piloto y trimestralmente cuando
 existan usuarias de pago.
+
+---
+
+## ADR-017 — Bootstrap administrativo explícito y fuera del render
+
+**Fecha:** 2026-08-20
+
+**Estado:** Aceptada
+
+La primera administradora se invita o promueve mediante el comando operativo
+documentado en `ADMIN_BOOTSTRAP.md`. El comando requiere correo y confirmación
+explícitos, usa la clave secreta únicamente en una terminal confiable y verifica
+el rol escrito. La aplicación no decide ni cambia roles durante el render.
+
+**Razón:** una lectura o visita HTTP no debe producir una mutación privilegiada.
+Separar el alta inicial evita reintentos silenciosos, elimina la promoción
+automática basada únicamente en `ADMIN_EMAIL` y deja una operación deliberada
+que puede registrarse y auditarse.
+
+**Consecuencia:** antes del primer acceso una persona autorizada debe configurar
+Supabase Auth, ejecutar el comando y completar la invitación. CI y Vercel no
+ejecutan este procedimiento automáticamente.

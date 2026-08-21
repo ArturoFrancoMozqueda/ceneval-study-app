@@ -26,9 +26,9 @@ Los bloqueos operativos reales siguen siendo:
 3. el esquema y las once migraciones ya están aplicados en CENEVAL, pero la
    suite RLS dinámica de 31 comprobaciones todavía no se ha ejecutado;
 4. existe un despliegue técnico privado en un proyecto separado de Vercel
-   Hobby, pero faltan persistir los secretos, ejecutar la activación cerrada de
-   la administradora y validar el recorrido autenticado; no hay despliegue
-   automático desde Git;
+   Hobby, pero faltan persistir los secretos, ejecutar el bootstrap explícito
+   de la administradora y validar registro, verificación y acceso; no hay
+   despliegue automático desde Git;
 5. C41–C58 y los bancos acumulativos siguen pendientes.
 
 El historial de Git ya es útil y existe CI. Esos dos hallazgos de la auditoría
@@ -130,9 +130,9 @@ y continúa con 0 usuarios y 0 contenido.
 El despliegue actual recibió las variables públicas y `PRIVATE_ACCESS_ONLY`
 durante la compilación. Antes de operar deben persistirse mediante el almacén
 seguro de Vercel `SUPABASE_SECRET_KEY`, `ADMIN_EMAIL` y el resto de variables,
-ejecutar la activación cerrada de la administradora, configurar las
-redirecciones de Supabase Auth y probar el recorrido autenticado. El proyecto
-no está conectado a Git; cada
+ejecutar el procedimiento explícito de `docs/ADMIN_BOOTSTRAP.md`, configurar las
+redirecciones de Supabase Auth y probar el recorrido convencional de registro,
+verificación e inicio de sesión. El proyecto no está conectado a Git; cada
 despliegue es manual y debe registrar el commit publicado.
 
 ### Respaldo de Supabase
@@ -379,8 +379,8 @@ publicación, navegación y un commit por unidad de trabajo.
 ### Prioridad 4 — Despliegue y operación
 
 1. Persistir y verificar las variables de Vercel sin exponer secretos.
-2. Configurar las redirecciones de Supabase Auth y ejecutar el flujo cerrado de
-   activación o invitación descrito en `PRIVATE_ADMIN_ACTIVATION.md`.
+2. Configurar las redirecciones de Supabase Auth, ejecutar el bootstrap interno
+   de `ADMIN_BOOTSTRAP.md` y probar registro, verificación e inicio de sesión.
 3. Probar login y rutas privadas desde teléfono y computadora, y revisar logs.
 4. Registrar cada publicación manual y decidir si se habilita integración Git.
 5. Añadir monitoreo, manual de operación, respaldo y restauración.
