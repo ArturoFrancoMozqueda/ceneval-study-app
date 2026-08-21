@@ -1,59 +1,1585 @@
 {
-  "packageVersion":"1.1",
-  "curriculum":{
-    "code":"C21",
-    "order":21,
-    "audioSources":[
-      {"audioNumber":29,"fragment":"Segunda parte: recurso de revocación"}
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C21",
+    "order": 21,
+    "audioSources": [
+      {
+        "audioNumber": 29,
+        "fragment": "Segunda parte: recurso de revocación"
+      }
     ]
   },
-  "subject":{"name":"Derecho Fiscal","description":"Contribuciones, obligaciones fiscales, facultades de comprobación y medios de defensa en México."},
-  "class":{"title":"Recurso de revocación en materia fiscal","description":"Vigésima primera clase del plan académico: procedencia, opción de vía, presentación, agravios, pruebas, resolución y efectos del recurso administrativo fiscal."},
-  "transcript":{"originalFile":"AUDIO 29.txt","cleaned":"Se utilizó exclusivamente el bloque del AUDIO 29 posterior a la determinación fiscal; el tramo sobre visita domiciliaria ya quedó integrado en C20. Se eliminaron saludos, bromas, lenguaje ofensivo, datos personales, opiniones subjetivas sobre el SAT y consejos de litigación engañosa. Se corrigió que el recurso de revocación es un medio administrativo optativo previo al juicio contencioso, no un juicio ni una simple petición informal; que procede contra los actos y resoluciones enumerados en el artículo 117 del CFF, no contra cualquier actuación fiscal; que el plazo general es de treinta días siguientes a aquel en que surta efectos la notificación, con excepciones; que se presenta por Buzón Tributario o medios autorizados, no indistintamente en papel; que el escrito debe cumplir los artículos 18 y 122 y acompañar los documentos del 123; que se admite toda clase de pruebas salvo testimonial y confesión de autoridades mediante absolución de posiciones; que pueden anunciarse pruebas adicionales y presentarse supervenientes; que la autoridad resuelve y notifica en un máximo de tres meses; que su silencio significa confirmación ficta; y que la resolución puede desechar, confirmar, reponer, dejar sin efectos o modificar el acto."},
-  "topics":[{
-    "title":"Procedencia, trámite y resolución del recurso de revocación",
-    "description":"Cómo decidir y construir el medio administrativo federal sin confundirlo con el juicio de nulidad.",
-    "learningJourney":{"openingPrompt":"Una empresa recibe una resolución definitiva que determina contribuciones y accesorios. ¿Debe acudir primero al SAT o puede demandar directamente ante el TFJA?","quickChecks":[{"prompt":"¿Es obligatorio agotar el recurso antes del juicio contencioso?","answer":"No. Los artículos 120 y 125 del CFF permiten optar entre recurso y juicio directo.","feedback":"La elección debe considerar procedencia, plazo, expediente y estrategia probatoria."},{"prompt":"¿Solo se admiten documentales y periciales?","answer":"No. Se admite toda clase de pruebas salvo testimonial y confesión de autoridades mediante absolución de posiciones.","feedback":"Distingue las exclusiones expresas del artículo 130."},{"prompt":"¿Qué ocurre si pasan tres meses sin resolución notificada?","answer":"Opera confirmación ficta; el recurrente puede esperar resolución expresa o impugnarla.","feedback":"No confundas silencio negativo con revocación favorable."}],"practicalCase":{"facts":"La autoridad notifica por Buzón una resolución que determina ISR, actualización y recargos. El contribuyente considera incorrecta la valoración de transferencias bancarias y tiene estados de cuenta, contratos y un dictamen pericial.","question":"¿Cómo puede plantear un recurso eficaz?","legalRule":"Los artículos 121 a 123 del CFF exigen presentación oportuna, identificación del acto, agravios, hechos controvertidos y pruebas, además de personalidad, acto, constancia de notificación y documentales o dictamen pericial. El artículo 130 regula admisión y valoración.","reasoning":"Debe calcular el plazo desde que surte efectos la notificación, elegir conscientemente la vía administrativa, formular agravios ligados a hechos y normas, adjuntar evidencia auténtica y relacionar cada prueba. Puede anunciar pruebas adicionales dentro del régimen legal.","conclusion":"El recurso no es un escrito genérico para ganar tiempo: requiere una teoría del caso completa, procedencia y prueba vinculada a cada agravio."},"closingPrompt":"Compara procedencia, plazo, requisitos, pruebas y posibles resoluciones del recurso de revocación.","nextActivity":"Recorre el mapa visual, responde las doce preguntas de la guía y resuelve diez casos originales."},
-    "materials":[
-      {"type":"short_answer","title":"Respuesta breve","content":"El recurso de revocación es un medio administrativo para impugnar actos fiscales federales previstos en el CFF. Es optativo antes del juicio ante el TFJA. Se presenta normalmente por Buzón Tributario dentro de treinta días desde que surte efectos la notificación, debe identificar acto, agravios, hechos y pruebas, y puede terminar confirmando, reponiendo, dejando sin efectos o modificando el acto, además de los supuestos de desechamiento o sobreseimiento.","sourceOrigin":"mixed"},
-      {"type":"full_explanation","title":"Explicación completa desde cero","content":"El recurso de revocación es un procedimiento administrativo de control de legalidad regulado por los artículos 116 a 133-G del CFF. Lo conoce una autoridad fiscal; por eso no es un juicio ni lo resuelve un tribunal. Que sea administrativo no lo convierte en una petición informal: tiene procedencia, plazo, cargas argumentativas, prueba y formas de resolución definidas por ley.\n\nEl artículo 117 establece los actos recurribles. Incluye resoluciones definitivas que determinen contribuciones, accesorios o aprovechamientos; nieguen devoluciones; sean aduaneras; o causen agravio definitivo, salvo excepciones. También comprende ciertos actos de cobro y del procedimiento administrativo de ejecución, determinación de valor de bienes y afectación al interés jurídico de terceros. No cualquier actuación preparatoria admite recurso.\n\nLos artículos 120 y 125 hacen optativa la revocación antes del juicio contencioso administrativo. El particular puede recurrir o demandar directamente ante el TFJA. La elección importa: actos antecedentes o consecuentes y conexidad pueden obligar a mantener la vía en los términos legales. No existe una respuesta universal sobre qué conviene; depende del acto, expediente, pruebas y objetivo.\n\nLa regla general del artículo 121 es presentación por Buzón Tributario dentro de treinta días siguientes a aquel en que surta efectos la notificación. Existen plazos y supuestos especiales, como ciertas violaciones del procedimiento de ejecución del artículo 127, además de causas de suspensión. Por eso se debe reconstruir la notificación y consultar el calendario aplicable, no repetir mecánicamente ‘tercer día’.\n\nEl escrito cumple los requisitos generales del artículo 18 y debe señalar acto o resolución, agravios, pruebas y hechos controvertidos. Deben acompañarse documentos de personalidad, acto impugnado, constancia de notificación, pruebas documentales y dictamen pericial, en su caso. Las omisiones provocan requerimientos y consecuencias distintas: desechamiento, tener por no presentado o pérdida del derecho probatorio, según el requisito incumplido.\n\nAgravio es la razón jurídica y fáctica por la que el acto lesiona al recurrente. Debe enlazar el hecho, la norma infringida, la actuación de la autoridad y el efecto solicitado. Puede cuestionar competencia, fundamentación, motivación, procedimiento, apreciación de hechos, interpretación de normas, base o cálculo, siempre que sea pertinente y procedente. Inventar agravios o reservar deliberadamente el caso no es una estrategia jurídica segura.\n\nEl régimen probatorio es más amplio de lo afirmado en la transcripción. El artículo 130 admite toda clase de pruebas excepto testimonial y confesión de autoridades mediante absolución de posiciones. Sí permite informes sobre hechos y documentos de expedientes. Pueden presentarse pruebas supervenientes antes de la resolución; además, el recurrente puede anunciar pruebas adicionales y cuenta con el plazo legal para exhibirlas. La autoridad puede ordenar documentos o diligencias para conocer mejor los hechos.\n\nLa autoridad debe resolver y notificar dentro de tres meses desde la interposición. Si guarda silencio, se entiende confirmado el acto: el recurrente puede esperar una resolución expresa o impugnar la confirmación ficta. La resolución debe estar fundada, estudiar agravios y precisar efectos.\n\nEl artículo 133 permite desechar, tener por no interpuesto o sobreseer; confirmar; ordenar reposición o nueva resolución; dejar sin efectos; o modificar el acto o sustituirlo. Un resultado favorable por vicio formal puede permitir reposición; no toda revocación equivale a desaparición definitiva del adeudo. Después, la resolución puede impugnarse mediante juicio contencioso conforme a los plazos indicados.","sourceOrigin":"mixed"},
-      {"type":"legal_basis","title":"Fundamento jurídico vigente","content":"CFF, artículos 116 y 117: existencia y procedencia; 120, 121 y 125: carácter optativo, plazo y elección de vía; 122 y 123: contenido del escrito y anexos; 124 y 124-A: improcedencia y sobreseimiento; 127 y 128: supuestos especiales en ejecución y terceros; 130: pruebas; 131 y 132: plazo, silencio y estudio; 133 y 133-A: sentidos y cumplimiento de la resolución. El texto consultado incorpora la última reforma DOF 09-04-2026 y cambios de 2025, incluida la ampliación de causales de improcedencia.","sourceOrigin":"complementary"},
-      {"type":"simple_example","title":"Ejemplo sencillo","content":"Una devolución de saldo a favor es negada mediante resolución definitiva. El contribuyente puede presentar recurso de revocación dentro del plazo general o acudir directamente al juicio contencioso. Si elige recurso, debe identificar la negativa, explicar por qué viola la ley y acompañar solicitud, resolución, notificación y documentos que prueben la procedencia del saldo.","sourceOrigin":"complementary"},
-      {"type":"ceneval_example","title":"Caso tipo CENEVAL","content":"Una persona recibe una liquidación definitiva y presenta en Buzón, dentro de treinta días, un escrito que identifica el acto pero omite agravios. La autoridad debe requerirle para expresarlos en cinco días; si incumple, desecha el recurso. La respuesta correcta no afirma que se estudia de oficio todo el asunto ni que la omisión carece de consecuencia.","sourceOrigin":"mixed"},
-      {"type":"summary","title":"Resumen","content":"Primero verifica acto recurrible e interés jurídico. Luego elige entre recurso optativo o juicio directo. Calcula treinta días desde que surte efectos la notificación, salvo regla especial. Presenta por Buzón con acto, agravios, hechos y pruebas, y anexa personalidad, resolución, notificación y evidencia. Se admiten pruebas salvo testimonial y confesión de autoridad por posiciones. La autoridad tiene tres meses; el silencio confirma fictamente. El resultado puede confirmar, reponer, dejar sin efectos o modificar.","sourceOrigin":"mixed"},
-      {"type":"study_guide","title":"Guía intensiva de preguntas y respuestas","content":"1. ¿Qué es? Respuesta: medio administrativo de control de legalidad fiscal federal. 2. ¿Es juicio? Respuesta: no; lo resuelve autoridad administrativa. 3. ¿Es obligatorio antes del TFJA? Respuesta: no, es optativo. 4. ¿Qué actos proceden? Respuesta: los enumerados en el artículo 117. 5. ¿Plazo general? Respuesta: treinta días desde que surte efectos la notificación. 6. ¿Dónde se presenta? Respuesta: por Buzón Tributario o medio autorizado. 7. ¿Qué contiene? Respuesta: acto, agravios, hechos controvertidos y pruebas, además del artículo 18. 8. ¿Qué se anexa? Respuesta: personalidad, acto, notificación, documentales y pericial, en su caso. 9. ¿Qué prueba no se admite? Respuesta: testimonial y confesión de autoridades por posiciones. 10. ¿Hay pruebas adicionales? Respuesta: sí, si se anuncian y exhiben conforme al plazo legal; también supervenientes. 11. ¿Plazo para resolver? Respuesta: máximo tres meses. 12. ¿Qué significa el silencio? Respuesta: confirmación ficta impugnable o espera de resolución expresa.","sourceOrigin":"mixed"},
-      {"type":"key_concepts","title":"Conceptos clave","content":"Recurso administrativo: revisión dentro de la administración. Acto definitivo: decisión que produce agravio final. Procedencia: encuadre en supuesto legal. Optatividad: elección entre recurso y juicio directo. Interés jurídico: afectación reconocida por la norma. Notificación: acto que activa el plazo. Agravio: argumento contra la legalidad del acto. Hecho controvertido: dato fáctico disputado. Personalidad: capacidad o representación acreditada. Prueba adicional: anunciada para exhibición posterior. Prueba superveniente: conocida o surgida después. Improcedencia: impedimento para estudiar el fondo. Sobreseimiento: terminación sin decisión de fondo. Confirmación ficta: efecto negativo del silencio. Reposición: corrección del procedimiento. Revocación: dejar sin efectos en el alcance resuelto.","sourceOrigin":"mixed"},
-      {"type":"common_errors","title":"Errores comunes","content":"No lo llames juicio de revocación. No afirmes que siempre debe agotarse antes del TFJA. No recurras cualquier acto: verifica el artículo 117 y causales del 124. No cuentes treinta días desde la fecha de emisión; parte de los efectos de la notificación. No supongas presentación física libre: la regla es Buzón o medio autorizado. No redactes agravios genéricos. No ocultes deliberadamente pruebas. No digas que solo existen documentales y periciales; la admisión es amplia con dos exclusiones. No confundas tres meses de resolución con plazo para interponer. No interpretes el silencio como victoria. No asumas que dejar sin efectos por vicio formal impide toda reposición.","sourceOrigin":"complementary"}
-    ],
-    "conceptMap":{"title":"Mapa visual: recurso de revocación fiscal","description":"Ruta de decisión desde el acto recurrible hasta la resolución y sus efectos.","nodes":[
-      {"id":"recurso","label":"Recurso de revocación","description":"Medio administrativo fiscal federal."},
-      {"id":"naturaleza","label":"Naturaleza","description":"Control administrativo de legalidad.","parentId":"recurso"},{"id":"no-juicio","label":"No es juicio","description":"Resuelve una autoridad fiscal.","parentId":"naturaleza"},{"id":"optativo","label":"Optativo","description":"Puede elegirse juicio directo.","parentId":"naturaleza"},
-      {"id":"procedencia","label":"Procedencia","description":"Actos del CFF 117.","parentId":"recurso"},{"id":"resoluciones","label":"Resoluciones definitivas","description":"Contribuciones, devoluciones, aduanas y agravios.","parentId":"procedencia"},{"id":"ejecucion","label":"Actos de ejecución","description":"Cobro, PAE, valor y terceros en supuestos legales.","parentId":"procedencia"},{"id":"limites","label":"Improcedencia","description":"Causales del artículo 124.","parentId":"procedencia"},
-      {"id":"eleccion","label":"Elección de vía","description":"Recurso o TFJA.","parentId":"recurso"},{"id":"conexidad","label":"Conexidad","description":"Puede exigir conservar la vía elegida.","parentId":"eleccion"},{"id":"estrategia","label":"Análisis del caso","description":"Acto, expediente, prueba y objetivo.","parentId":"eleccion"},
-      {"id":"presentacion","label":"Presentación","description":"Reglas de forma y tiempo.","parentId":"recurso"},{"id":"buzon","label":"Buzón Tributario","description":"Vía general del artículo 121.","parentId":"presentacion"},{"id":"treinta","label":"30 días","description":"Desde efectos de notificación.","parentId":"presentacion"},{"id":"especiales","label":"Reglas especiales","description":"PAE, terceros y suspensiones.","parentId":"presentacion"},
-      {"id":"escrito","label":"Escrito","description":"Construye la controversia.","parentId":"recurso"},{"id":"acto","label":"Acto impugnado","description":"Identificación precisa.","parentId":"escrito"},{"id":"agravios","label":"Agravios","description":"Hechos, norma, lesión y petición.","parentId":"escrito"},{"id":"hechos","label":"Hechos controvertidos","description":"Datos en disputa.","parentId":"escrito"},{"id":"anexos","label":"Anexos","description":"Personalidad, acto, notificación y pruebas.","parentId":"escrito"},
-      {"id":"prueba","label":"Prueba","description":"Régimen amplio del artículo 130.","parentId":"recurso"},{"id":"admitidas","label":"Clases admitidas","description":"Todas salvo exclusiones expresas.","parentId":"prueba"},{"id":"excluidas","label":"Exclusiones","description":"Testimonial y confesión por posiciones.","parentId":"prueba"},{"id":"adicionales","label":"Adicionales","description":"Se anuncian y exhiben en plazo.","parentId":"prueba"},{"id":"supervenientes","label":"Supervenientes","description":"Antes de la resolución.","parentId":"prueba"},
-      {"id":"resolucion","label":"Resolución","description":"Máximo tres meses.","parentId":"recurso"},{"id":"silencio","label":"Confirmación ficta","description":"Efecto del silencio.","parentId":"resolucion"},{"id":"confirmar","label":"Confirmar","description":"Subsiste el acto.","parentId":"resolucion"},{"id":"reponer","label":"Reponer o nueva resolución","description":"Corrige forma o procedimiento.","parentId":"resolucion"},{"id":"revocar","label":"Dejar sin efectos","description":"En el alcance establecido.","parentId":"resolucion"},{"id":"modificar","label":"Modificar o sustituir","description":"Resultado total o parcial favorable.","parentId":"resolucion"},{"id":"juicio","label":"Juicio posterior","description":"Impugnación ante TFJA.","parentId":"resolucion"}
-    ]},
-    "references":[
-      {"title":"Código Fiscal de la Federación","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Federal, México","citation":"Artículos 116 a 133-A; última reforma DOF 09-04-2026","retrievedOn":"2026-08-11","note":"Fuente primaria de procedencia, trámite, prueba, resolución y efectos."},
-      {"title":"Ley Federal de Procedimiento Contencioso Administrativo","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPCA.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Federal, México","citation":"Artículos 1 y 13; texto vigente consultado el 11-08-2026","retrievedOn":"2026-08-11","note":"Contraste con el juicio contencioso que puede elegirse directamente."},
-      {"title":"Portal del SAT: Buzón Tributario","url":"https://www.sat.gob.mx/minisitio/BuzonTributario/index.html","institution":"Servicio de Administración Tributaria","jurisdiction":"Federal, México","citation":"Medio oficial de comunicación y trámites electrónicos","retrievedOn":"2026-08-11","note":"Contexto operativo de la vía de presentación prevista en el artículo 121."}
-    ],
-    "flashcards":[
-      {"question":"¿Qué naturaleza tiene el recurso de revocación?","answer":"Es un medio administrativo de control de legalidad fiscal federal, no un juicio.","sourceOrigin":"mixed"},{"question":"¿Es obligatorio antes del juicio contencioso?","answer":"No; es optativo conforme a los artículos 120 y 125 del CFF.","sourceOrigin":"mixed"},{"question":"¿Dónde se identifica su procedencia?","answer":"Principalmente en el artículo 117 del CFF.","sourceOrigin":"complementary"},{"question":"¿Cuál es el plazo general para interponerlo?","answer":"Treinta días siguientes a aquel en que surta efectos la notificación, salvo excepciones.","sourceOrigin":"mixed"},{"question":"¿Cuál es la vía general de presentación?","answer":"El Buzón Tributario o los medios que autorice el SAT.","sourceOrigin":"mixed"},{"question":"¿Qué debe señalar el escrito?","answer":"Acto o resolución, agravios, pruebas y hechos controvertidos, además de requisitos generales.","sourceOrigin":"mixed"},{"question":"¿Qué documentos básicos se acompañan?","answer":"Personalidad, acto impugnado, constancia de notificación, documentales y dictamen pericial, en su caso.","sourceOrigin":"complementary"},{"question":"¿Se admite prueba testimonial?","answer":"No; es una de las exclusiones expresas del artículo 130.","sourceOrigin":"mixed"},{"question":"¿Se pueden presentar pruebas supervenientes?","answer":"Sí, mientras no se haya dictado la resolución.","sourceOrigin":"complementary"},{"question":"¿Cuánto tiene la autoridad para resolver?","answer":"Hasta tres meses desde la interposición.","sourceOrigin":"mixed"},{"question":"¿Qué produce el silencio de la autoridad?","answer":"Confirmación ficta del acto impugnado.","sourceOrigin":"mixed"},{"question":"¿Qué sentidos puede tener la resolución?","answer":"Desechar o sobreseer, confirmar, reponer, dejar sin efectos, modificar o sustituir, según el caso.","sourceOrigin":"complementary"}
-    ],
-    "exam":{"title":"Examen: recurso de revocación fiscal","description":"Diez casos originales sobre elección de vía, procedencia, plazo, prueba y resolución.","questions":[
-      {"text":"Una resolución determina contribuciones y accesorios. ¿Qué opción reconoce el CFF?","difficulty":"basic","options":["Interponer recurso de revocación o acudir directamente al juicio contencioso","Agotar siempre el recurso","Promover únicamente amparo directo"],"correctOption":0,"explanation":"El recurso es optativo antes del juicio ante el TFJA.","optionExplanations":["Es la regla de los artículos 120 y 125.","Niega la optatividad.","No es la vía ordinaria inmediata descrita."]},
-      {"text":"¿Qué característica distingue al recurso de un juicio?","difficulty":"basic","options":["Lo resuelve una autoridad administrativa","Lo resuelve siempre un tribunal colegiado","Carece de reglas legales"],"correctOption":0,"explanation":"Es un medio administrativo regulado por el CFF.","optionExplanations":["Describe su naturaleza.","Eso no corresponde al recurso.","Sí tiene procedimiento legal."]},
-      {"text":"Se notificó una liquidación definitiva. ¿Desde qué referencia corre el plazo general?","difficulty":"intermediate","options":["Desde el día siguiente a aquel en que surtió efectos la notificación","Desde la fecha interna de elaboración","Desde que el contribuyente desea impugnar"],"correctOption":0,"explanation":"El artículo 121 vincula treinta días a los efectos de la notificación.","optionExplanations":["Es la referencia legal.","Emisión y notificación son distintas.","La voluntad no modifica el plazo."]},
-      {"text":"¿Cuál es la vía general para presentar el recurso?","difficulty":"basic","options":["Buzón Tributario","Declaración verbal ante cualquier oficina","Correo personal del visitador"],"correctOption":0,"explanation":"El artículo 121 establece presentación por Buzón y permite otros medios autorizados.","optionExplanations":["Es la vía legal general.","No satisface el escrito.","No es un medio oficial autorizado."]},
-      {"text":"El escrito identifica el acto pero omite agravios. ¿Qué ocurre inicialmente?","difficulty":"intermediate","options":["La autoridad requiere que se expresen en cinco días","El contribuyente gana automáticamente","La omisión nunca puede corregirse"],"correctOption":0,"explanation":"El artículo 122 prevé requerimiento y desechamiento si no se cumple respecto de agravios.","optionExplanations":["Es la secuencia correcta.","No existe ese efecto.","La ley prevé requerimiento."]},
-      {"text":"¿Cuál prueba está expresamente excluida en el recurso ordinario?","difficulty":"basic","options":["Testimonial","Documental pública","Dictamen pericial"],"correctOption":0,"explanation":"El artículo 130 excluye testimonial y confesión de autoridades mediante posiciones.","optionExplanations":["Es una exclusión expresa.","Puede admitirse.","El artículo 123 contempla la pericial."]},
-      {"text":"El recurrente anuncia pruebas adicionales en su escrito. ¿Qué regla aplica?","difficulty":"intermediate","options":["Debe exhibirlas dentro del plazo legal de quince días desde el anuncio","Quedan prohibidas siempre","Puede presentarlas después de resuelto"],"correctOption":0,"explanation":"Los artículos 123 y 130 permiten anuncio y exhibición posterior dentro de quince días.","optionExplanations":["Es la regla vigente.","La ley sí las permite.","La resolución cierra esa oportunidad."]},
-      {"text":"Pasan tres meses sin que se notifique resolución. ¿Cuál es el efecto?","difficulty":"intermediate","options":["Confirmación ficta del acto","Revocación automática","Caducidad instantánea del crédito"],"correctOption":0,"explanation":"El artículo 131 atribuye efecto confirmatorio al silencio.","optionExplanations":["Es la consecuencia legal.","El silencio no favorece automáticamente.","No se extingue así el crédito."]},
-      {"text":"La autoridad detecta un vicio de procedimiento que afectó la resolución. ¿Qué puede ordenar al resolver?","difficulty":"advanced","options":["Reposición del procedimiento o nueva resolución","Prisión administrativa del recurrente","Eliminar toda obligación futura"],"correctOption":0,"explanation":"El artículo 133 permite mandar reponer o emitir nueva resolución.","optionExplanations":["Es uno de los sentidos legales.","No es efecto del recurso.","Excede la controversia."]},
-      {"text":"El acto ya fue impugnado ante el TFJA y después se intenta recurrir. ¿Qué problema existe?","difficulty":"advanced","options":["Se actualiza una causal de improcedencia","El recurso se vuelve obligatorio","El plazo se reinicia automáticamente"],"correctOption":0,"explanation":"El artículo 124 declara improcedente el recurso contra actos ya impugnados ante el Tribunal.","optionExplanations":["Respeta la elección de vía.","Contradice la optatividad.","No existe reinicio por esa razón."]}
-    ]}
-  }]
+  "subject": {
+    "name": "Derecho Fiscal",
+    "description": "Contribuciones, obligaciones fiscales, facultades de comprobación y medios de defensa en México."
+  },
+  "class": {
+    "title": "Recurso de revocación en materia fiscal",
+    "description": "Vigésima primera clase del plan académico: procedencia, opción de vía, presentación, agravios, pruebas, resolución y efectos del recurso administrativo fiscal."
+  },
+  "transcript": {
+    "originalFile": "AUDIO 29.txt",
+    "cleaned": "Se utilizó exclusivamente el bloque del AUDIO 29 posterior a la determinación fiscal; el tramo sobre visita domiciliaria quedó integrado en C20. Se eliminaron saludos, bromas, lenguaje ofensivo, datos personales, opiniones subjetivas sobre el SAT y consejos históricos de litigación engañosa. Se corrigió que el recurso de revocación es un medio administrativo optativo, no un juicio ni una petición informal; que procede solo contra los actos de los artículos 116 y 117 y está sujeto a improcedencia y sobreseimiento; que el plazo general es de treinta días siguientes a aquel en que surta efectos la notificación, con excepciones; que se presenta por Buzón Tributario o medios autorizados; que el escrito y anexos se rigen por los artículos 18, 122 y 123; que la prueba es amplia con las exclusiones del artículo 130; que la autoridad resuelve y notifica en tres meses y el silencio confirma fictamente; que impugnar no suspende por sí solo la ejecución sin atender las reglas de garantía; y que el recurso exclusivo de fondo exige los supuestos y cuantía del artículo 133-B y no es una vía universal."
+  },
+  "topics": [
+    {
+      "title": "Procedencia, trámite y resolución del recurso de revocación",
+      "description": "Procedencia, elección de vía, presentación, prueba, resolución y efectos del recurso administrativo fiscal federal.",
+      "learningJourney": {
+        "openingPrompt": "Una empresa recibe una resolución definitiva que determina contribuciones y accesorios. ¿Debe acudir primero al SAT o puede demandar directamente ante el TFJA?",
+        "quickChecks": [
+          {
+            "prompt": "¿Es obligatorio agotar el recurso antes del juicio contencioso?",
+            "answer": "No. Los artículos 120 y 125 del CFF permiten optar entre recurso y juicio directo.",
+            "feedback": "La elección debe considerar procedencia, plazo, expediente y estrategia probatoria.",
+            "evidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-lfpca-arts1-13-juicio",
+              "ev-c21-a29-l157-163-no-juicio-optativo",
+              "ev-c21-a29-l197-209-alternativa-vias"
+            ]
+          },
+          {
+            "prompt": "¿Solo se admiten documentales y periciales?",
+            "answer": "No. Se admite toda clase de pruebas salvo testimonial y confesión de autoridades mediante absolución de posiciones.",
+            "feedback": "Distingue las exclusiones expresas del artículo 130.",
+            "evidenceIds": [
+              "ev-c21-cff-art130-pruebas",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir"
+            ]
+          },
+          {
+            "prompt": "¿Qué ocurre si pasan tres meses sin resolución notificada?",
+            "answer": "Opera confirmación ficta; el recurrente puede esperar resolución expresa o impugnarla.",
+            "feedback": "No confundas silencio negativo con revocación favorable.",
+            "evidenceIds": [
+              "ev-c21-cff-arts131-133a-resolucion",
+              "ev-c21-a29-l261-265-plazo-resolucion"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "La autoridad notifica por Buzón una resolución que determina ISR, actualización y recargos. El contribuyente considera incorrecta la valoración de transferencias bancarias y tiene estados de cuenta, contratos y un dictamen pericial.",
+          "question": "¿Cómo puede plantear un recurso eficaz?",
+          "legalRule": "Los artículos 121 a 123 del CFF exigen presentación oportuna, identificación del acto, agravios, hechos controvertidos y pruebas, además de personalidad, acto, constancia de notificación y documentales o dictamen pericial. El artículo 130 regula admisión y valoración.",
+          "reasoning": "Debe calcular el plazo desde que surte efectos la notificación, elegir conscientemente la vía administrativa, formular agravios ligados a hechos y normas, adjuntar evidencia auténtica y relacionar cada prueba. Puede anunciar pruebas adicionales dentro del régimen legal.",
+          "conclusion": "El recurso no es un escrito genérico para ganar tiempo: requiere una teoría del caso completa, procedencia y prueba vinculada a cada agravio.",
+          "evidenceIds": [
+            "ev-c21-cff-arts12-121-134-135-plazo-presentacion",
+            "ev-c21-cff-arts18-122-123-escrito-anexos",
+            "ev-c21-a29-l175-181-agravios-prueba-corregir",
+            "ev-c21-a29-l273-275-elementos-escrito",
+            "ev-c21-cff-art130-pruebas"
+          ]
+        },
+        "closingPrompt": "Compara procedencia, plazo, requisitos, pruebas y posibles resoluciones del recurso de revocación.",
+        "nextActivity": "Recorre el mapa visual, responde las doce preguntas de la guía y resuelve diez casos originales.",
+        "openingPromptEvidenceIds": [
+          "ev-c21-cff-arts116-120-procedencia-optatividad",
+          "ev-c21-lfpca-arts1-13-juicio",
+          "ev-c21-a29-l157-163-no-juicio-optativo",
+          "ev-c21-a29-l197-209-alternativa-vias"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c21-cff-arts116-120-procedencia-optatividad",
+          "ev-c21-cff-arts124-128-improcedencia-especiales",
+          "ev-c21-cff-arts12-121-134-135-plazo-presentacion",
+          "ev-c21-cff-arts18-122-123-escrito-anexos",
+          "ev-c21-a29-l175-181-agravios-prueba-corregir",
+          "ev-c21-a29-l273-275-elementos-escrito",
+          "ev-c21-cff-art130-pruebas",
+          "ev-c21-cff-arts131-133a-resolucion"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c21-cff-arts116-120-procedencia-optatividad",
+          "ev-c21-cff-arts124-128-improcedencia-especiales",
+          "ev-c21-cff-arts18-122-123-escrito-anexos",
+          "ev-c21-a29-l175-181-agravios-prueba-corregir",
+          "ev-c21-a29-l273-275-elementos-escrito"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "El recurso de revocación es un medio administrativo para impugnar los actos fiscales federales previstos en los artículos 116 y 117 del CFF. Es optativo antes del juicio contencioso administrativo federal. La regla general exige presentarlo por Buzón Tributario dentro de treinta días siguientes a aquel en que surta efectos la notificación, sin perder de vista excepciones. Debe identificar acto, agravios, hechos y pruebas. La autoridad puede confirmar, reponer, dejar sin efectos, modificar o sustituir el acto, además de desechar, tener por no interpuesto o sobreseer cuando corresponda.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c21-cff-arts116-120-procedencia-optatividad",
+            "ev-c21-a29-l133-145-naturaleza",
+            "ev-c21-a29-l157-163-no-juicio-optativo",
+            "ev-c21-cff-arts124-128-improcedencia-especiales",
+            "ev-c21-cff-arts12-121-134-135-plazo-presentacion",
+            "ev-c21-cff-arts18-122-123-escrito-anexos",
+            "ev-c21-a29-l175-181-agravios-prueba-corregir",
+            "ev-c21-a29-l273-275-elementos-escrito",
+            "ev-c21-cff-arts131-133a-resolucion",
+            "ev-c21-a29-l261-265-plazo-resolucion"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "El recurso de revocación es un procedimiento administrativo de control de legalidad regulado por los artículos 116 a 133-G del CFF. Lo resuelve la autoridad fiscal competente; no es un juicio ante el TFJA ni una petición informal. Su procedencia, plazo, requisitos, prueba y resolución están definidos por ley.\n\nEl artículo 117 enumera los actos recurribles. Comprende resoluciones definitivas que determinen contribuciones, accesorios o aprovechamientos; nieguen devoluciones; sean aduaneras; o causen agravio definitivo en materia fiscal, con las exclusiones legales. También incluye ciertos actos de cobro y del procedimiento administrativo de ejecución, la determinación del valor de bienes y la afectación al interés jurídico de terceros. No cualquier actuación preparatoria admite recurso. Los artículos 124 y 124-A regulan improcedencia y sobreseimiento.\n\nEl artículo 120 hace optativa la revocación antes del juicio contencioso administrativo federal. El particular puede recurrir o acudir directamente al TFJA, pero los artículos 120 y 125 contienen reglas sobre actos antecedentes o consecuentes y resoluciones conexas. La elección debe verificarse para el acto concreto; no existe una vía universalmente mejor ni el amparo sustituye automáticamente esos medios ordinarios.\n\nLa regla general del artículo 121 es presentar por Buzón Tributario dentro de treinta días siguientes a aquel en que surta efectos la notificación. El propio artículo y los artículos 127 y 128 contienen suspensiones o momentos especiales para determinados sujetos y actos. El cómputo también exige revisar los artículos 12, 134 y 135. Por ello se reconstruyen notificación, efectos y calendario; no se cuenta desde la fecha interna de emisión.\n\nEl escrito debe cumplir el artículo 18 y señalar acto o resolución, agravios, pruebas y hechos controvertidos conforme al artículo 122. El artículo 123 exige, según el caso, documentos de personalidad, acto impugnado, constancia de notificación, documentales y dictamen pericial. Las omisiones producen requerimientos y consecuencias diferenciadas: desechamiento, tener por no presentado o pérdida de la oportunidad sobre hechos o pruebas, según el requisito incumplido.\n\nUn agravio enlaza hechos, norma infringida, actuación y efecto solicitado. Puede cuestionar competencia, fundamentación, motivación, procedimiento, hechos, interpretación, base o cálculo cuando sea pertinente. Las prácticas históricas de inventar agravios u ocultar pruebas no son una técnica vigente ni segura.\n\nEl artículo 130 admite toda clase de pruebas excepto testimonial y confesión de autoridades mediante absolución de posiciones. No prohíbe pedir informes sobre hechos o documentos de expedientes. Las pruebas supervenientes pueden presentarse antes de la resolución; si se anuncian pruebas adicionales conforme al artículo 123, el plazo para exhibirlas es de quince días desde el día siguiente al anuncio.\n\nLa autoridad debe resolver y notificar dentro de tres meses desde la interposición. Su silencio confirma fictamente el acto: el recurrente puede esperar resolución expresa o impugnar la confirmación presunta. La resolución debe fundarse en derecho, estudiar los agravios y precisar sus efectos.\n\nEl artículo 133 permite desechar, tener por no interpuesto o sobreseer; confirmar; ordenar reposición o nueva resolución; dejar sin efectos; o modificar o sustituir el acto. Los efectos de cumplimiento dependen del vicio conforme al artículo 133-A: una decisión favorable no siempre impide una reposición legal.\n\nLa interposición tampoco suspende automáticamente el cobro en cualquier caso. El artículo 144 vincula la suspensión del procedimiento administrativo de ejecución con la impugnación oportuna y la garantía del interés fiscal, satisfechos los requisitos legales, además de reglas especiales. Debe revisarse el acto y la forma de garantía aplicable.\n\nEl recurso exclusivo de fondo de los artículos 133-B a 133-G no está disponible para todo asunto: exige resolución definitiva derivada de las facultades del artículo 42, fracciones II, III o IX, y cuantía superior a doscientas UMA elevadas al año. Una vez elegido no puede variarse y solo permite agravios de fondo en los términos legales.\n\nEl recurso de revocación es distinto del acuerdo conclusivo de los artículos 69-C a 69-H, que opera durante ciertas facultades de comprobación antes de la resolución definitiva; también es distinto del juicio contencioso ante el TFJA y del amparo, cuya procedencia se determina conforme a sus propias normas.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c21-cff-arts116-120-procedencia-optatividad",
+            "ev-c21-cff-arts12-121-134-135-plazo-presentacion",
+            "ev-c21-cff-arts18-122-123-escrito-anexos",
+            "ev-c21-cff-arts124-128-improcedencia-especiales",
+            "ev-c21-cff-art130-pruebas",
+            "ev-c21-cff-arts131-133a-resolucion",
+            "ev-c21-cff-arts133b-133g-fondo",
+            "ev-c21-cff-arts141-144-garantia-suspension",
+            "ev-c21-lfpca-arts1-13-juicio",
+            "ev-c21-a29-l133-145-naturaleza",
+            "ev-c21-a29-l157-163-no-juicio-optativo",
+            "ev-c21-a29-l197-209-alternativa-vias",
+            "ev-c21-a29-l175-181-agravios-prueba-corregir",
+            "ev-c21-a29-l273-275-elementos-escrito",
+            "ev-c21-a29-l213-235-practicas-historicas-rechazar",
+            "ev-c21-a29-l261-265-plazo-resolucion",
+            "ev-c21-cff-arts69c-69h-acuerdo-conclusivo",
+            "ev-c21-lamp-arts61xx-170-distincion"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "CFF vigente al 09-04-2026: artículos 116 y 117, existencia y procedencia; 120, 121 y 125, optatividad, presentación y elección; 122 y 123, escrito y anexos; 124 a 128, improcedencia, sobreseimiento y supuestos especiales; 130, prueba; 131 a 133-A, resolución y cumplimiento; 133-B a 133-G, recurso exclusivo de fondo; 141 y 144, garantía y suspensión de ejecución. LFPCA vigente al 09-06-2026: contraste con el juicio contencioso administrativo federal, sin trasladar automáticamente sus reglas al recurso. CFF, artículos 69-C a 69-H: acuerdo conclusivo durante facultades de comprobación. Ley de Amparo, artículos 61, fracción XX, y 170: contraste con el proceso constitucional y su definitividad.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c21-cff-arts116-120-procedencia-optatividad",
+            "ev-c21-cff-arts12-121-134-135-plazo-presentacion",
+            "ev-c21-cff-arts18-122-123-escrito-anexos",
+            "ev-c21-cff-arts124-128-improcedencia-especiales",
+            "ev-c21-cff-art130-pruebas",
+            "ev-c21-cff-arts131-133a-resolucion",
+            "ev-c21-cff-arts133b-133g-fondo",
+            "ev-c21-cff-arts141-144-garantia-suspension",
+            "ev-c21-lfpca-arts1-13-juicio",
+            "ev-c21-cff-arts69c-69h-acuerdo-conclusivo",
+            "ev-c21-lamp-arts61xx-170-distincion"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Una devolución de saldo a favor es negada mediante resolución definitiva. El contribuyente puede presentar recurso de revocación dentro del plazo general o acudir directamente al juicio contencioso. Si elige recurso, debe identificar la negativa, explicar por qué viola la ley y acompañar solicitud, resolución, notificación y documentos que prueben la procedencia del saldo.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c21-cff-arts116-120-procedencia-optatividad",
+            "ev-c21-cff-arts124-128-improcedencia-especiales",
+            "ev-c21-cff-arts12-121-134-135-plazo-presentacion",
+            "ev-c21-cff-arts18-122-123-escrito-anexos",
+            "ev-c21-a29-l175-181-agravios-prueba-corregir",
+            "ev-c21-a29-l273-275-elementos-escrito",
+            "ev-c21-cff-art130-pruebas"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo CENEVAL",
+          "content": "Una persona recibe una liquidación definitiva y presenta en Buzón, dentro de treinta días, un escrito que identifica el acto pero omite agravios. La autoridad debe requerirle para expresarlos en cinco días; si incumple, desecha el recurso. La respuesta correcta no afirma que se estudia de oficio todo el asunto ni que la omisión carece de consecuencia.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c21-cff-arts18-122-123-escrito-anexos",
+            "ev-c21-a29-l175-181-agravios-prueba-corregir",
+            "ev-c21-a29-l273-275-elementos-escrito",
+            "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Primero verifica acto recurrible, interés jurídico y ausencia de causal de improcedencia. Después elige conscientemente entre recurso optativo y juicio directo. Calcula el plazo desde que surte efectos la notificación, salvo regla especial. Presenta por Buzón con acto, agravios, hechos y pruebas, y acompaña los documentos del artículo 123. La prueba es amplia con las exclusiones del artículo 130. La autoridad tiene tres meses; el silencio confirma fictamente. El resultado puede confirmar, reponer, dejar sin efectos o modificar. La suspensión del cobro no es automática y el recurso exclusivo de fondo exige procedencia y cuantía propias.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c21-cff-arts116-120-procedencia-optatividad",
+            "ev-c21-lfpca-arts1-13-juicio",
+            "ev-c21-a29-l157-163-no-juicio-optativo",
+            "ev-c21-a29-l197-209-alternativa-vias",
+            "ev-c21-cff-arts124-128-improcedencia-especiales",
+            "ev-c21-cff-arts12-121-134-135-plazo-presentacion",
+            "ev-c21-cff-arts18-122-123-escrito-anexos",
+            "ev-c21-a29-l175-181-agravios-prueba-corregir",
+            "ev-c21-a29-l273-275-elementos-escrito",
+            "ev-c21-cff-art130-pruebas",
+            "ev-c21-cff-arts131-133a-resolucion",
+            "ev-c21-cff-arts141-144-garantia-suspension",
+            "ev-c21-cff-arts133b-133g-fondo",
+            "ev-c21-a29-l261-265-plazo-resolucion"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía intensiva de preguntas y respuestas",
+          "content": "1. ¿Qué es? Respuesta: medio administrativo de control de legalidad fiscal federal. 2. ¿Es juicio? Respuesta: no; lo resuelve autoridad administrativa. 3. ¿Es obligatorio antes del TFJA? Respuesta: no, es optativo. 4. ¿Qué actos proceden? Respuesta: los enumerados en el artículo 117. 5. ¿Plazo general? Respuesta: treinta días desde que surte efectos la notificación. 6. ¿Dónde se presenta? Respuesta: por Buzón Tributario o medio autorizado. 7. ¿Qué contiene? Respuesta: acto, agravios, hechos controvertidos y pruebas, además del artículo 18. 8. ¿Qué se anexa? Respuesta: personalidad, acto, notificación, documentales y pericial, en su caso. 9. ¿Qué prueba no se admite? Respuesta: testimonial y confesión de autoridades por posiciones. 10. ¿Hay pruebas adicionales? Respuesta: sí, si se anuncian y exhiben conforme al plazo legal; también supervenientes. 11. ¿Plazo para resolver? Respuesta: máximo tres meses. 12. ¿Qué significa el silencio? Respuesta: confirmación ficta impugnable o espera de resolución expresa. 13. ¿La interposición suspende siempre el cobro? Respuesta: no; deben cumplirse las reglas de impugnación y garantía del artículo 144. 14. ¿Todo recurso puede tramitarse como exclusivo de fondo? Respuesta: no; requiere los supuestos y cuantía del artículo 133-B y solo admite agravios de fondo.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c21-cff-arts116-120-procedencia-optatividad",
+            "ev-c21-a29-l133-145-naturaleza",
+            "ev-c21-a29-l157-163-no-juicio-optativo",
+            "ev-c21-lfpca-arts1-13-juicio",
+            "ev-c21-a29-l197-209-alternativa-vias",
+            "ev-c21-cff-arts124-128-improcedencia-especiales",
+            "ev-c21-cff-arts12-121-134-135-plazo-presentacion",
+            "ev-c21-cff-arts18-122-123-escrito-anexos",
+            "ev-c21-a29-l175-181-agravios-prueba-corregir",
+            "ev-c21-a29-l273-275-elementos-escrito",
+            "ev-c21-cff-art130-pruebas",
+            "ev-c21-cff-arts131-133a-resolucion",
+            "ev-c21-cff-arts141-144-garantia-suspension",
+            "ev-c21-cff-arts133b-133g-fondo",
+            "ev-c21-a29-l261-265-plazo-resolucion"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Recurso administrativo: revisión dentro de la administración. Acto definitivo: decisión que produce agravio final. Procedencia: encuadre en supuesto legal. Optatividad: elección entre recurso y juicio directo. Interés jurídico: afectación reconocida por la norma. Notificación: acto que activa el plazo. Agravio: argumento contra la legalidad del acto. Hecho controvertido: dato fáctico disputado. Personalidad: capacidad o representación acreditada. Prueba adicional: anunciada para exhibición posterior. Prueba superveniente: conocida o surgida después. Improcedencia: impedimento para estudiar el fondo. Sobreseimiento: terminación sin decisión de fondo. Confirmación ficta: efecto negativo del silencio. Reposición: corrección del procedimiento. Revocación: dejar sin efectos en el alcance resuelto. Garantía del interés fiscal: mecanismo sujeto a formas y requisitos legales. Suspensión de ejecución: efecto condicionado, no automático. Recurso exclusivo de fondo: procedimiento especializado sujeto a resolución, facultad de origen, cuantía y agravios de fondo.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c21-cff-arts116-120-procedencia-optatividad",
+            "ev-c21-a29-l133-145-naturaleza",
+            "ev-c21-a29-l157-163-no-juicio-optativo",
+            "ev-c21-cff-arts124-128-improcedencia-especiales",
+            "ev-c21-cff-arts12-121-134-135-plazo-presentacion",
+            "ev-c21-cff-arts18-122-123-escrito-anexos",
+            "ev-c21-a29-l175-181-agravios-prueba-corregir",
+            "ev-c21-a29-l273-275-elementos-escrito",
+            "ev-c21-cff-art130-pruebas",
+            "ev-c21-cff-arts131-133a-resolucion",
+            "ev-c21-cff-arts141-144-garantia-suspension",
+            "ev-c21-cff-arts133b-133g-fondo",
+            "ev-c21-a29-l261-265-plazo-resolucion"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "No lo llames juicio de revocación. No afirmes que siempre debe agotarse antes del TFJA. No recurras cualquier acto: verifica los artículos 117, 124 y 124-A. No cuentes treinta días desde la emisión; parte de los efectos de la notificación y revisa excepciones. No supongas presentación física libre: la regla es Buzón o medio autorizado. No redactes agravios genéricos ni ocultes pruebas. No digas que solo existen documentales y periciales. No confundas tres meses para resolver con el plazo para interponer ni el silencio con victoria. No prometas suspensión automática del cobro: revisa garantía y artículo 144. No presentes el recurso exclusivo de fondo como universal. No confundas revocación con acuerdo conclusivo, juicio contencioso o amparo.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c21-cff-arts116-120-procedencia-optatividad",
+            "ev-c21-cff-arts124-128-improcedencia-especiales",
+            "ev-c21-cff-arts12-121-134-135-plazo-presentacion",
+            "ev-c21-cff-arts18-122-123-escrito-anexos",
+            "ev-c21-a29-l175-181-agravios-prueba-corregir",
+            "ev-c21-a29-l273-275-elementos-escrito",
+            "ev-c21-cff-art130-pruebas",
+            "ev-c21-cff-arts131-133a-resolucion",
+            "ev-c21-cff-arts141-144-garantia-suspension",
+            "ev-c21-cff-arts133b-133g-fondo",
+            "ev-c21-a29-l213-235-practicas-historicas-rechazar",
+            "ev-c21-a29-l261-265-plazo-resolucion",
+            "ev-c21-cff-arts69c-69h-acuerdo-conclusivo",
+            "ev-c21-lamp-arts61xx-170-distincion"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual: recurso de revocación fiscal",
+        "description": "Ruta de decisión desde el acto recurrible hasta la resolución y sus efectos.",
+        "nodes": [
+          {
+            "id": "recurso",
+            "label": "Recurso de revocación",
+            "description": "Medio administrativo fiscal federal.",
+            "evidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-a29-l133-145-naturaleza",
+              "ev-c21-a29-l157-163-no-juicio-optativo"
+            ]
+          },
+          {
+            "id": "naturaleza",
+            "label": "Naturaleza",
+            "description": "Control administrativo de legalidad.",
+            "parentId": "recurso",
+            "evidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-a29-l133-145-naturaleza",
+              "ev-c21-a29-l157-163-no-juicio-optativo"
+            ]
+          },
+          {
+            "id": "no-juicio",
+            "label": "No es juicio",
+            "description": "Resuelve una autoridad fiscal.",
+            "parentId": "naturaleza",
+            "evidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-a29-l133-145-naturaleza",
+              "ev-c21-a29-l157-163-no-juicio-optativo"
+            ]
+          },
+          {
+            "id": "optativo",
+            "label": "Optativo",
+            "description": "Puede elegirse juicio directo.",
+            "parentId": "naturaleza",
+            "evidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-lfpca-arts1-13-juicio",
+              "ev-c21-a29-l157-163-no-juicio-optativo",
+              "ev-c21-a29-l197-209-alternativa-vias"
+            ]
+          },
+          {
+            "id": "procedencia",
+            "label": "Procedencia",
+            "description": "Actos del CFF 117.",
+            "parentId": "recurso",
+            "evidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-cff-arts124-128-improcedencia-especiales"
+            ]
+          },
+          {
+            "id": "resoluciones",
+            "label": "Resoluciones definitivas",
+            "description": "Contribuciones, devoluciones, aduanas y agravios.",
+            "parentId": "procedencia",
+            "evidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-cff-arts124-128-improcedencia-especiales"
+            ]
+          },
+          {
+            "id": "ejecucion",
+            "label": "Actos de ejecución",
+            "description": "Cobro, PAE, valor y terceros en supuestos legales.",
+            "parentId": "procedencia",
+            "evidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-cff-arts124-128-improcedencia-especiales"
+            ]
+          },
+          {
+            "id": "limites",
+            "label": "Improcedencia",
+            "description": "Improcedencia y sobreseimiento legales.",
+            "parentId": "procedencia",
+            "evidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-cff-arts124-128-improcedencia-especiales"
+            ]
+          },
+          {
+            "id": "eleccion",
+            "label": "Elección de vía",
+            "description": "Recurso o TFJA.",
+            "parentId": "recurso",
+            "evidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-lfpca-arts1-13-juicio",
+              "ev-c21-a29-l157-163-no-juicio-optativo",
+              "ev-c21-a29-l197-209-alternativa-vias"
+            ]
+          },
+          {
+            "id": "conexidad",
+            "label": "Conexidad",
+            "description": "Puede exigir conservar la vía elegida.",
+            "parentId": "eleccion",
+            "evidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-lfpca-arts1-13-juicio",
+              "ev-c21-a29-l157-163-no-juicio-optativo",
+              "ev-c21-a29-l197-209-alternativa-vias"
+            ]
+          },
+          {
+            "id": "estrategia",
+            "label": "Análisis del caso",
+            "description": "Acto, prueba, garantía, objetivo y vía.",
+            "parentId": "eleccion",
+            "evidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-lfpca-arts1-13-juicio",
+              "ev-c21-a29-l157-163-no-juicio-optativo",
+              "ev-c21-a29-l197-209-alternativa-vias",
+              "ev-c21-cff-arts141-144-garantia-suspension"
+            ]
+          },
+          {
+            "id": "presentacion",
+            "label": "Presentación",
+            "description": "Reglas de forma y tiempo.",
+            "parentId": "recurso",
+            "evidenceIds": [
+              "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+            ]
+          },
+          {
+            "id": "buzon",
+            "label": "Buzón Tributario",
+            "description": "Vía general del artículo 121.",
+            "parentId": "presentacion",
+            "evidenceIds": [
+              "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+            ]
+          },
+          {
+            "id": "treinta",
+            "label": "30 días",
+            "description": "Desde efectos de notificación.",
+            "parentId": "presentacion",
+            "evidenceIds": [
+              "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+            ]
+          },
+          {
+            "id": "especiales",
+            "label": "Reglas especiales",
+            "description": "PAE, terceros, suspensiones y garantía.",
+            "parentId": "presentacion",
+            "evidenceIds": [
+              "ev-c21-cff-arts12-121-134-135-plazo-presentacion",
+              "ev-c21-cff-arts141-144-garantia-suspension",
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-cff-arts124-128-improcedencia-especiales"
+            ]
+          },
+          {
+            "id": "escrito",
+            "label": "Escrito",
+            "description": "Construye la controversia.",
+            "parentId": "recurso",
+            "evidenceIds": [
+              "ev-c21-cff-arts18-122-123-escrito-anexos",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir",
+              "ev-c21-a29-l273-275-elementos-escrito"
+            ]
+          },
+          {
+            "id": "acto",
+            "label": "Acto impugnado",
+            "description": "Identificación precisa.",
+            "parentId": "escrito",
+            "evidenceIds": [
+              "ev-c21-cff-arts18-122-123-escrito-anexos",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir",
+              "ev-c21-a29-l273-275-elementos-escrito"
+            ]
+          },
+          {
+            "id": "agravios",
+            "label": "Agravios",
+            "description": "Hechos, norma, lesión y petición.",
+            "parentId": "escrito",
+            "evidenceIds": [
+              "ev-c21-cff-arts18-122-123-escrito-anexos",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir",
+              "ev-c21-a29-l273-275-elementos-escrito"
+            ]
+          },
+          {
+            "id": "hechos",
+            "label": "Hechos controvertidos",
+            "description": "Datos en disputa.",
+            "parentId": "escrito",
+            "evidenceIds": [
+              "ev-c21-cff-arts18-122-123-escrito-anexos",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir",
+              "ev-c21-a29-l273-275-elementos-escrito"
+            ]
+          },
+          {
+            "id": "anexos",
+            "label": "Anexos",
+            "description": "Personalidad, acto, notificación y pruebas.",
+            "parentId": "escrito",
+            "evidenceIds": [
+              "ev-c21-cff-arts18-122-123-escrito-anexos",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir",
+              "ev-c21-a29-l273-275-elementos-escrito"
+            ]
+          },
+          {
+            "id": "prueba",
+            "label": "Prueba",
+            "description": "Régimen amplio del artículo 130.",
+            "parentId": "recurso",
+            "evidenceIds": [
+              "ev-c21-cff-art130-pruebas",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir"
+            ]
+          },
+          {
+            "id": "admitidas",
+            "label": "Clases admitidas",
+            "description": "Todas salvo exclusiones expresas.",
+            "parentId": "prueba",
+            "evidenceIds": [
+              "ev-c21-cff-art130-pruebas",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir"
+            ]
+          },
+          {
+            "id": "excluidas",
+            "label": "Exclusiones",
+            "description": "Testimonial y confesión por posiciones.",
+            "parentId": "prueba",
+            "evidenceIds": [
+              "ev-c21-cff-art130-pruebas",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir"
+            ]
+          },
+          {
+            "id": "adicionales",
+            "label": "Adicionales",
+            "description": "Se anuncian y exhiben en plazo.",
+            "parentId": "prueba",
+            "evidenceIds": [
+              "ev-c21-cff-art130-pruebas",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir",
+              "ev-c21-cff-arts18-122-123-escrito-anexos",
+              "ev-c21-a29-l273-275-elementos-escrito"
+            ]
+          },
+          {
+            "id": "supervenientes",
+            "label": "Supervenientes",
+            "description": "Antes de la resolución.",
+            "parentId": "prueba",
+            "evidenceIds": [
+              "ev-c21-cff-art130-pruebas",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir"
+            ]
+          },
+          {
+            "id": "resolucion",
+            "label": "Resolución",
+            "description": "Máximo tres meses.",
+            "parentId": "recurso",
+            "evidenceIds": [
+              "ev-c21-cff-arts131-133a-resolucion",
+              "ev-c21-a29-l261-265-plazo-resolucion"
+            ]
+          },
+          {
+            "id": "silencio",
+            "label": "Confirmación ficta",
+            "description": "Efecto del silencio.",
+            "parentId": "resolucion",
+            "evidenceIds": [
+              "ev-c21-cff-arts131-133a-resolucion",
+              "ev-c21-a29-l261-265-plazo-resolucion"
+            ]
+          },
+          {
+            "id": "confirmar",
+            "label": "Confirmar",
+            "description": "Subsiste el acto.",
+            "parentId": "resolucion",
+            "evidenceIds": [
+              "ev-c21-cff-arts131-133a-resolucion",
+              "ev-c21-a29-l261-265-plazo-resolucion"
+            ]
+          },
+          {
+            "id": "reponer",
+            "label": "Reponer o nueva resolución",
+            "description": "Corrige forma o procedimiento.",
+            "parentId": "resolucion",
+            "evidenceIds": [
+              "ev-c21-cff-arts131-133a-resolucion",
+              "ev-c21-a29-l261-265-plazo-resolucion"
+            ]
+          },
+          {
+            "id": "revocar",
+            "label": "Dejar sin efectos",
+            "description": "En el alcance establecido.",
+            "parentId": "resolucion",
+            "evidenceIds": [
+              "ev-c21-cff-arts131-133a-resolucion",
+              "ev-c21-a29-l261-265-plazo-resolucion"
+            ]
+          },
+          {
+            "id": "modificar",
+            "label": "Modificar o sustituir",
+            "description": "Resultado total o parcial favorable.",
+            "parentId": "resolucion",
+            "evidenceIds": [
+              "ev-c21-cff-arts131-133a-resolucion",
+              "ev-c21-a29-l261-265-plazo-resolucion"
+            ]
+          },
+          {
+            "id": "juicio",
+            "label": "Juicio posterior",
+            "description": "Vía distinta ante TFJA; revisar procedencia.",
+            "parentId": "resolucion",
+            "evidenceIds": [
+              "ev-c21-cff-arts131-133a-resolucion",
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-lfpca-arts1-13-juicio",
+              "ev-c21-a29-l157-163-no-juicio-optativo",
+              "ev-c21-a29-l197-209-alternativa-vias",
+              "ev-c21-a29-l261-265-plazo-resolucion"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Código Fiscal de la Federación",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Artículos 12, 18, 69-C a 69-H, 116 a 133-G, 134, 135, 141 y 144; última reforma DOF 09-04-2026",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente primaria de procedencia, trámite, prueba, resolución, recurso exclusivo de fondo y suspensión de ejecución.",
+          "evidenceIds": [
+            "ev-c21-cff-arts116-120-procedencia-optatividad",
+            "ev-c21-cff-arts12-121-134-135-plazo-presentacion",
+            "ev-c21-cff-arts18-122-123-escrito-anexos",
+            "ev-c21-cff-arts124-128-improcedencia-especiales",
+            "ev-c21-cff-art130-pruebas",
+            "ev-c21-cff-arts131-133a-resolucion",
+            "ev-c21-cff-arts133b-133g-fondo",
+            "ev-c21-cff-arts141-144-garantia-suspension",
+            "ev-c21-cff-arts69c-69h-acuerdo-conclusivo"
+          ]
+        },
+        {
+          "title": "Ley Federal de Procedimiento Contencioso Administrativo",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPCA.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Artículos 1 y 13; última reforma DOF 09-06-2026",
+          "retrievedOn": "2026-08-21",
+          "note": "Contraste oficial con el juicio contencioso administrativo federal, distinto del recurso administrativo.",
+          "evidenceIds": [
+            "ev-c21-lfpca-arts1-13-juicio"
+          ]
+        },
+        {
+          "title": "Ley de Amparo, Reglamentaria de los artículos 103 y 107 de la Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Artículos 61, fracción XX, y 170; última reforma DOF 16-10-2025",
+          "retrievedOn": "2026-08-21",
+          "note": "Contraste oficial: el amparo es un proceso constitucional distinto y su procedencia no se sustituye por el recurso fiscal.",
+          "evidenceIds": [
+            "ev-c21-lamp-arts61xx-170-distincion"
+          ]
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué naturaleza tiene el recurso de revocación?",
+          "answer": "Es un medio administrativo de control de legalidad fiscal federal, no un juicio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c21-cff-arts116-120-procedencia-optatividad",
+            "ev-c21-a29-l133-145-naturaleza",
+            "ev-c21-a29-l157-163-no-juicio-optativo"
+          ]
+        },
+        {
+          "question": "¿Es obligatorio antes del juicio contencioso?",
+          "answer": "No; es optativo conforme a los artículos 120 y 125 del CFF.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c21-cff-arts116-120-procedencia-optatividad",
+            "ev-c21-lfpca-arts1-13-juicio",
+            "ev-c21-a29-l157-163-no-juicio-optativo",
+            "ev-c21-a29-l197-209-alternativa-vias"
+          ]
+        },
+        {
+          "question": "¿Dónde se identifica su procedencia?",
+          "answer": "Principalmente en el artículo 117 del CFF.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c21-cff-arts116-120-procedencia-optatividad",
+            "ev-c21-cff-arts124-128-improcedencia-especiales"
+          ]
+        },
+        {
+          "question": "¿Cuál es el plazo general para interponerlo?",
+          "answer": "Treinta días siguientes a aquel en que surta efectos la notificación, salvo excepciones.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+          ]
+        },
+        {
+          "question": "¿Cuál es la vía general de presentación?",
+          "answer": "El Buzón Tributario o los medios que autorice el SAT.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+          ]
+        },
+        {
+          "question": "¿Qué debe señalar el escrito?",
+          "answer": "Acto o resolución, agravios, pruebas y hechos controvertidos, además de requisitos generales.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c21-cff-arts18-122-123-escrito-anexos",
+            "ev-c21-a29-l175-181-agravios-prueba-corregir",
+            "ev-c21-a29-l273-275-elementos-escrito"
+          ]
+        },
+        {
+          "question": "¿Qué documentos básicos se acompañan?",
+          "answer": "Personalidad, acto impugnado, constancia de notificación, documentales y dictamen pericial, en su caso.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c21-cff-arts18-122-123-escrito-anexos",
+            "ev-c21-a29-l175-181-agravios-prueba-corregir",
+            "ev-c21-a29-l273-275-elementos-escrito"
+          ]
+        },
+        {
+          "question": "¿Se admite prueba testimonial?",
+          "answer": "No; es una de las exclusiones expresas del artículo 130.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c21-cff-art130-pruebas",
+            "ev-c21-a29-l175-181-agravios-prueba-corregir"
+          ]
+        },
+        {
+          "question": "¿Se pueden presentar pruebas supervenientes?",
+          "answer": "Sí, mientras no se haya dictado la resolución.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c21-cff-art130-pruebas",
+            "ev-c21-a29-l175-181-agravios-prueba-corregir"
+          ]
+        },
+        {
+          "question": "¿Cuánto tiene la autoridad para resolver?",
+          "answer": "Hasta tres meses desde la interposición.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c21-cff-arts131-133a-resolucion",
+            "ev-c21-a29-l261-265-plazo-resolucion"
+          ]
+        },
+        {
+          "question": "¿Qué produce el silencio de la autoridad?",
+          "answer": "Confirmación ficta del acto impugnado.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c21-cff-arts131-133a-resolucion",
+            "ev-c21-a29-l261-265-plazo-resolucion"
+          ]
+        },
+        {
+          "question": "¿Qué sentidos puede tener la resolución?",
+          "answer": "Desechar o sobreseer, confirmar, reponer, dejar sin efectos, modificar o sustituir, según el caso.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c21-cff-arts131-133a-resolucion",
+            "ev-c21-a29-l261-265-plazo-resolucion"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Examen: recurso de revocación fiscal",
+        "description": "Diez casos originales sobre elección de vía, procedencia, plazo, prueba y resolución.",
+        "questions": [
+          {
+            "text": "Una resolución determina contribuciones y accesorios. ¿Qué opción reconoce el CFF?",
+            "difficulty": "basic",
+            "options": [
+              "Interponer recurso de revocación o acudir directamente al juicio contencioso",
+              "Agotar siempre el recurso",
+              "Promover únicamente amparo directo"
+            ],
+            "correctOption": 0,
+            "explanation": "El recurso es optativo antes del juicio ante el TFJA.",
+            "optionExplanations": [
+              "Es la regla de los artículos 120 y 125.",
+              "Niega la optatividad.",
+              "No es la vía ordinaria inmediata descrita."
+            ],
+            "evidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-lfpca-arts1-13-juicio",
+              "ev-c21-a29-l157-163-no-juicio-optativo",
+              "ev-c21-a29-l197-209-alternativa-vias"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c21-cff-arts116-120-procedencia-optatividad",
+                "ev-c21-lfpca-arts1-13-juicio",
+                "ev-c21-a29-l157-163-no-juicio-optativo",
+                "ev-c21-a29-l197-209-alternativa-vias"
+              ],
+              [
+                "ev-c21-cff-arts116-120-procedencia-optatividad",
+                "ev-c21-lfpca-arts1-13-juicio",
+                "ev-c21-a29-l157-163-no-juicio-optativo",
+                "ev-c21-a29-l197-209-alternativa-vias"
+              ],
+              [
+                "ev-c21-cff-arts116-120-procedencia-optatividad",
+                "ev-c21-lfpca-arts1-13-juicio",
+                "ev-c21-a29-l157-163-no-juicio-optativo",
+                "ev-c21-a29-l197-209-alternativa-vias"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-lfpca-arts1-13-juicio",
+              "ev-c21-a29-l157-163-no-juicio-optativo",
+              "ev-c21-a29-l197-209-alternativa-vias"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-lfpca-arts1-13-juicio",
+              "ev-c21-a29-l157-163-no-juicio-optativo",
+              "ev-c21-a29-l197-209-alternativa-vias"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c21-cff-arts116-120-procedencia-optatividad",
+                "ev-c21-lfpca-arts1-13-juicio",
+                "ev-c21-a29-l157-163-no-juicio-optativo",
+                "ev-c21-a29-l197-209-alternativa-vias"
+              ],
+              [
+                "ev-c21-cff-arts116-120-procedencia-optatividad",
+                "ev-c21-lfpca-arts1-13-juicio",
+                "ev-c21-a29-l157-163-no-juicio-optativo",
+                "ev-c21-a29-l197-209-alternativa-vias"
+              ],
+              [
+                "ev-c21-cff-arts116-120-procedencia-optatividad",
+                "ev-c21-lfpca-arts1-13-juicio",
+                "ev-c21-a29-l157-163-no-juicio-optativo",
+                "ev-c21-a29-l197-209-alternativa-vias"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué característica distingue al recurso de un juicio?",
+            "difficulty": "basic",
+            "options": [
+              "Lo resuelve una autoridad administrativa",
+              "Lo resuelve siempre un tribunal colegiado",
+              "Carece de reglas legales"
+            ],
+            "correctOption": 0,
+            "explanation": "Es un medio administrativo regulado por el CFF.",
+            "optionExplanations": [
+              "Describe su naturaleza.",
+              "Eso no corresponde al recurso.",
+              "Sí tiene procedimiento legal."
+            ],
+            "evidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-a29-l133-145-naturaleza",
+              "ev-c21-a29-l157-163-no-juicio-optativo"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c21-cff-arts116-120-procedencia-optatividad",
+                "ev-c21-a29-l133-145-naturaleza",
+                "ev-c21-a29-l157-163-no-juicio-optativo"
+              ],
+              [
+                "ev-c21-cff-arts116-120-procedencia-optatividad",
+                "ev-c21-a29-l133-145-naturaleza",
+                "ev-c21-a29-l157-163-no-juicio-optativo"
+              ],
+              [
+                "ev-c21-cff-arts116-120-procedencia-optatividad",
+                "ev-c21-a29-l133-145-naturaleza",
+                "ev-c21-a29-l157-163-no-juicio-optativo"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-a29-l133-145-naturaleza",
+              "ev-c21-a29-l157-163-no-juicio-optativo"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-a29-l133-145-naturaleza",
+              "ev-c21-a29-l157-163-no-juicio-optativo"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c21-cff-arts116-120-procedencia-optatividad",
+                "ev-c21-a29-l133-145-naturaleza",
+                "ev-c21-a29-l157-163-no-juicio-optativo"
+              ],
+              [
+                "ev-c21-cff-arts116-120-procedencia-optatividad",
+                "ev-c21-a29-l133-145-naturaleza",
+                "ev-c21-a29-l157-163-no-juicio-optativo"
+              ],
+              [
+                "ev-c21-cff-arts116-120-procedencia-optatividad",
+                "ev-c21-a29-l133-145-naturaleza",
+                "ev-c21-a29-l157-163-no-juicio-optativo"
+              ]
+            ]
+          },
+          {
+            "text": "Se notificó una liquidación definitiva. ¿Desde qué referencia corre el plazo general?",
+            "difficulty": "intermediate",
+            "options": [
+              "Desde el día siguiente a aquel en que surtió efectos la notificación",
+              "Desde la fecha interna de elaboración",
+              "Desde que el contribuyente desea impugnar"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 121 vincula treinta días a los efectos de la notificación.",
+            "optionExplanations": [
+              "Es la referencia legal.",
+              "Emisión y notificación son distintas.",
+              "La voluntad no modifica el plazo."
+            ],
+            "evidenceIds": [
+              "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+              ],
+              [
+                "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+              ],
+              [
+                "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+              ],
+              [
+                "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+              ],
+              [
+                "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál es la vía general para presentar el recurso?",
+            "difficulty": "basic",
+            "options": [
+              "Buzón Tributario",
+              "Declaración verbal ante cualquier oficina",
+              "Correo personal del visitador"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 121 establece presentación por Buzón y permite otros medios autorizados.",
+            "optionExplanations": [
+              "Es la vía legal general.",
+              "No satisface el escrito.",
+              "No es un medio oficial autorizado."
+            ],
+            "evidenceIds": [
+              "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+              ],
+              [
+                "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+              ],
+              [
+                "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+              ],
+              [
+                "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+              ],
+              [
+                "ev-c21-cff-arts12-121-134-135-plazo-presentacion"
+              ]
+            ]
+          },
+          {
+            "text": "El escrito identifica el acto pero omite agravios. ¿Qué ocurre inicialmente?",
+            "difficulty": "intermediate",
+            "options": [
+              "La autoridad requiere que se expresen en cinco días",
+              "El contribuyente gana automáticamente",
+              "La omisión nunca puede corregirse"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 122 prevé requerimiento y desechamiento si no se cumple respecto de agravios.",
+            "optionExplanations": [
+              "Es la secuencia correcta.",
+              "No existe ese efecto.",
+              "La ley prevé requerimiento."
+            ],
+            "evidenceIds": [
+              "ev-c21-cff-arts18-122-123-escrito-anexos",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir",
+              "ev-c21-a29-l273-275-elementos-escrito"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c21-cff-arts18-122-123-escrito-anexos",
+                "ev-c21-a29-l175-181-agravios-prueba-corregir",
+                "ev-c21-a29-l273-275-elementos-escrito"
+              ],
+              [
+                "ev-c21-cff-arts18-122-123-escrito-anexos",
+                "ev-c21-a29-l175-181-agravios-prueba-corregir",
+                "ev-c21-a29-l273-275-elementos-escrito"
+              ],
+              [
+                "ev-c21-cff-arts18-122-123-escrito-anexos",
+                "ev-c21-a29-l175-181-agravios-prueba-corregir",
+                "ev-c21-a29-l273-275-elementos-escrito"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c21-cff-arts18-122-123-escrito-anexos",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir",
+              "ev-c21-a29-l273-275-elementos-escrito"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c21-cff-arts18-122-123-escrito-anexos",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir",
+              "ev-c21-a29-l273-275-elementos-escrito"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c21-cff-arts18-122-123-escrito-anexos",
+                "ev-c21-a29-l175-181-agravios-prueba-corregir",
+                "ev-c21-a29-l273-275-elementos-escrito"
+              ],
+              [
+                "ev-c21-cff-arts18-122-123-escrito-anexos",
+                "ev-c21-a29-l175-181-agravios-prueba-corregir",
+                "ev-c21-a29-l273-275-elementos-escrito"
+              ],
+              [
+                "ev-c21-cff-arts18-122-123-escrito-anexos",
+                "ev-c21-a29-l175-181-agravios-prueba-corregir",
+                "ev-c21-a29-l273-275-elementos-escrito"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál prueba está expresamente excluida en el recurso ordinario?",
+            "difficulty": "basic",
+            "options": [
+              "Testimonial",
+              "Documental pública",
+              "Dictamen pericial"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 130 excluye testimonial y confesión de autoridades mediante posiciones.",
+            "optionExplanations": [
+              "Es una exclusión expresa.",
+              "Puede admitirse.",
+              "El artículo 123 contempla la pericial."
+            ],
+            "evidenceIds": [
+              "ev-c21-cff-art130-pruebas",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c21-cff-art130-pruebas",
+                "ev-c21-a29-l175-181-agravios-prueba-corregir"
+              ],
+              [
+                "ev-c21-cff-art130-pruebas",
+                "ev-c21-a29-l175-181-agravios-prueba-corregir"
+              ],
+              [
+                "ev-c21-cff-art130-pruebas",
+                "ev-c21-a29-l175-181-agravios-prueba-corregir"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c21-cff-art130-pruebas",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c21-cff-art130-pruebas",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c21-cff-art130-pruebas",
+                "ev-c21-a29-l175-181-agravios-prueba-corregir"
+              ],
+              [
+                "ev-c21-cff-art130-pruebas",
+                "ev-c21-a29-l175-181-agravios-prueba-corregir"
+              ],
+              [
+                "ev-c21-cff-art130-pruebas",
+                "ev-c21-a29-l175-181-agravios-prueba-corregir"
+              ]
+            ]
+          },
+          {
+            "text": "El recurrente anuncia pruebas adicionales en su escrito. ¿Qué regla aplica?",
+            "difficulty": "intermediate",
+            "options": [
+              "Debe exhibirlas dentro del plazo legal de quince días desde el anuncio",
+              "Quedan prohibidas siempre",
+              "Puede presentarlas después de resuelto"
+            ],
+            "correctOption": 0,
+            "explanation": "Los artículos 123 y 130 permiten anuncio y exhibición posterior dentro de quince días.",
+            "optionExplanations": [
+              "Es la regla vigente.",
+              "La ley sí las permite.",
+              "La resolución cierra esa oportunidad."
+            ],
+            "evidenceIds": [
+              "ev-c21-cff-arts18-122-123-escrito-anexos",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir",
+              "ev-c21-a29-l273-275-elementos-escrito",
+              "ev-c21-cff-art130-pruebas"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c21-cff-arts18-122-123-escrito-anexos",
+                "ev-c21-a29-l175-181-agravios-prueba-corregir",
+                "ev-c21-a29-l273-275-elementos-escrito",
+                "ev-c21-cff-art130-pruebas"
+              ],
+              [
+                "ev-c21-cff-arts18-122-123-escrito-anexos",
+                "ev-c21-a29-l175-181-agravios-prueba-corregir",
+                "ev-c21-a29-l273-275-elementos-escrito",
+                "ev-c21-cff-art130-pruebas"
+              ],
+              [
+                "ev-c21-cff-arts18-122-123-escrito-anexos",
+                "ev-c21-a29-l175-181-agravios-prueba-corregir",
+                "ev-c21-a29-l273-275-elementos-escrito",
+                "ev-c21-cff-art130-pruebas"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c21-cff-arts18-122-123-escrito-anexos",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir",
+              "ev-c21-a29-l273-275-elementos-escrito",
+              "ev-c21-cff-art130-pruebas"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c21-cff-arts18-122-123-escrito-anexos",
+              "ev-c21-a29-l175-181-agravios-prueba-corregir",
+              "ev-c21-a29-l273-275-elementos-escrito",
+              "ev-c21-cff-art130-pruebas"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c21-cff-arts18-122-123-escrito-anexos",
+                "ev-c21-a29-l175-181-agravios-prueba-corregir",
+                "ev-c21-a29-l273-275-elementos-escrito",
+                "ev-c21-cff-art130-pruebas"
+              ],
+              [
+                "ev-c21-cff-arts18-122-123-escrito-anexos",
+                "ev-c21-a29-l175-181-agravios-prueba-corregir",
+                "ev-c21-a29-l273-275-elementos-escrito",
+                "ev-c21-cff-art130-pruebas"
+              ],
+              [
+                "ev-c21-cff-arts18-122-123-escrito-anexos",
+                "ev-c21-a29-l175-181-agravios-prueba-corregir",
+                "ev-c21-a29-l273-275-elementos-escrito",
+                "ev-c21-cff-art130-pruebas"
+              ]
+            ]
+          },
+          {
+            "text": "Pasan tres meses sin que se notifique resolución. ¿Cuál es el efecto?",
+            "difficulty": "intermediate",
+            "options": [
+              "Confirmación ficta del acto",
+              "Revocación automática",
+              "Caducidad instantánea del crédito"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 131 atribuye efecto confirmatorio al silencio.",
+            "optionExplanations": [
+              "Es la consecuencia legal.",
+              "El silencio no favorece automáticamente.",
+              "No se extingue así el crédito."
+            ],
+            "evidenceIds": [
+              "ev-c21-cff-arts131-133a-resolucion",
+              "ev-c21-a29-l261-265-plazo-resolucion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c21-cff-arts131-133a-resolucion",
+                "ev-c21-a29-l261-265-plazo-resolucion"
+              ],
+              [
+                "ev-c21-cff-arts131-133a-resolucion",
+                "ev-c21-a29-l261-265-plazo-resolucion"
+              ],
+              [
+                "ev-c21-cff-arts131-133a-resolucion",
+                "ev-c21-a29-l261-265-plazo-resolucion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c21-cff-arts131-133a-resolucion",
+              "ev-c21-a29-l261-265-plazo-resolucion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c21-cff-arts131-133a-resolucion",
+              "ev-c21-a29-l261-265-plazo-resolucion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c21-cff-arts131-133a-resolucion",
+                "ev-c21-a29-l261-265-plazo-resolucion"
+              ],
+              [
+                "ev-c21-cff-arts131-133a-resolucion",
+                "ev-c21-a29-l261-265-plazo-resolucion"
+              ],
+              [
+                "ev-c21-cff-arts131-133a-resolucion",
+                "ev-c21-a29-l261-265-plazo-resolucion"
+              ]
+            ]
+          },
+          {
+            "text": "La autoridad detecta un vicio de procedimiento que afectó la resolución. ¿Qué puede ordenar al resolver?",
+            "difficulty": "advanced",
+            "options": [
+              "Reposición del procedimiento o nueva resolución",
+              "Prisión administrativa del recurrente",
+              "Eliminar toda obligación futura"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 133 permite mandar reponer o emitir nueva resolución.",
+            "optionExplanations": [
+              "Es uno de los sentidos legales.",
+              "No es efecto del recurso.",
+              "Excede la controversia."
+            ],
+            "evidenceIds": [
+              "ev-c21-cff-arts131-133a-resolucion",
+              "ev-c21-a29-l261-265-plazo-resolucion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c21-cff-arts131-133a-resolucion",
+                "ev-c21-a29-l261-265-plazo-resolucion"
+              ],
+              [
+                "ev-c21-cff-arts131-133a-resolucion",
+                "ev-c21-a29-l261-265-plazo-resolucion"
+              ],
+              [
+                "ev-c21-cff-arts131-133a-resolucion",
+                "ev-c21-a29-l261-265-plazo-resolucion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c21-cff-arts131-133a-resolucion",
+              "ev-c21-a29-l261-265-plazo-resolucion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c21-cff-arts131-133a-resolucion",
+              "ev-c21-a29-l261-265-plazo-resolucion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c21-cff-arts131-133a-resolucion",
+                "ev-c21-a29-l261-265-plazo-resolucion"
+              ],
+              [
+                "ev-c21-cff-arts131-133a-resolucion",
+                "ev-c21-a29-l261-265-plazo-resolucion"
+              ],
+              [
+                "ev-c21-cff-arts131-133a-resolucion",
+                "ev-c21-a29-l261-265-plazo-resolucion"
+              ]
+            ]
+          },
+          {
+            "text": "El acto ya fue impugnado ante el TFJA y después se intenta recurrir. ¿Qué problema existe?",
+            "difficulty": "advanced",
+            "options": [
+              "Se actualiza una causal de improcedencia",
+              "El recurso se vuelve obligatorio",
+              "El plazo se reinicia automáticamente"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 124 declara improcedente el recurso contra actos ya impugnados ante el Tribunal.",
+            "optionExplanations": [
+              "Respeta la elección de vía.",
+              "Contradice la optatividad.",
+              "No existe reinicio por esa razón."
+            ],
+            "evidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-cff-arts124-128-improcedencia-especiales"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c21-cff-arts116-120-procedencia-optatividad",
+                "ev-c21-cff-arts124-128-improcedencia-especiales"
+              ],
+              [
+                "ev-c21-cff-arts116-120-procedencia-optatividad",
+                "ev-c21-cff-arts124-128-improcedencia-especiales"
+              ],
+              [
+                "ev-c21-cff-arts116-120-procedencia-optatividad",
+                "ev-c21-cff-arts124-128-improcedencia-especiales"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-cff-arts124-128-improcedencia-especiales"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c21-cff-arts116-120-procedencia-optatividad",
+              "ev-c21-cff-arts124-128-improcedencia-especiales"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c21-cff-arts116-120-procedencia-optatividad",
+                "ev-c21-cff-arts124-128-improcedencia-especiales"
+              ],
+              [
+                "ev-c21-cff-arts116-120-procedencia-optatividad",
+                "ev-c21-cff-arts124-128-improcedencia-especiales"
+              ],
+              [
+                "ev-c21-cff-arts116-120-procedencia-optatividad",
+                "ev-c21-cff-arts124-128-improcedencia-especiales"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c21-cff-arts116-120-procedencia-optatividad",
+      "kind": "official",
+      "title": "Código Fiscal de la Federación",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 09-04-2026; artículos 116 a 120; procedencia y optatividad",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c21-cff-arts12-121-134-135-plazo-presentacion",
+      "kind": "official",
+      "title": "Código Fiscal de la Federación",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 09-04-2026; artículos 12, 121, 134 y 135; presentación, cómputo y efectos de notificación",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c21-cff-arts18-122-123-escrito-anexos",
+      "kind": "official",
+      "title": "Código Fiscal de la Federación",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 09-04-2026; artículos 18, 122 y 123; requisitos del escrito y anexos",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c21-cff-arts124-128-improcedencia-especiales",
+      "kind": "official",
+      "title": "Código Fiscal de la Federación",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 09-04-2026; artículos 124 a 128; improcedencia, sobreseimiento y supuestos especiales",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c21-cff-art130-pruebas",
+      "kind": "official",
+      "title": "Código Fiscal de la Federación",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 09-04-2026; artículo 130; admisión, exclusiones y oportunidad probatoria",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c21-cff-arts131-133a-resolucion",
+      "kind": "official",
+      "title": "Código Fiscal de la Federación",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 09-04-2026; artículos 131 a 133-A; silencio, resolución y cumplimiento",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c21-cff-arts133b-133g-fondo",
+      "kind": "official",
+      "title": "Código Fiscal de la Federación",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 09-04-2026; artículos 133-B a 133-G; recurso de revocación exclusivo de fondo",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c21-cff-arts141-144-garantia-suspension",
+      "kind": "official",
+      "title": "Código Fiscal de la Federación",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 09-04-2026; artículos 141 y 144; garantía del interés fiscal y suspensión de ejecución",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c21-lfpca-arts1-13-juicio",
+      "kind": "official",
+      "title": "Ley Federal de Procedimiento Contencioso Administrativo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPCA.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 09-06-2026; artículos 1 y 13",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c21-a29-l133-145-naturaleza",
+      "kind": "transcript",
+      "audioNumber": 29,
+      "locator": {
+        "type": "line_range",
+        "startLine": 133,
+        "endLine": 145
+      }
+    },
+    {
+      "id": "ev-c21-a29-l157-163-no-juicio-optativo",
+      "kind": "transcript",
+      "audioNumber": 29,
+      "locator": {
+        "type": "line_range",
+        "startLine": 157,
+        "endLine": 163
+      }
+    },
+    {
+      "id": "ev-c21-a29-l175-181-agravios-prueba-corregir",
+      "kind": "transcript",
+      "audioNumber": 29,
+      "locator": {
+        "type": "line_range",
+        "startLine": 175,
+        "endLine": 181
+      }
+    },
+    {
+      "id": "ev-c21-a29-l197-209-alternativa-vias",
+      "kind": "transcript",
+      "audioNumber": 29,
+      "locator": {
+        "type": "line_range",
+        "startLine": 197,
+        "endLine": 209
+      }
+    },
+    {
+      "id": "ev-c21-a29-l213-235-practicas-historicas-rechazar",
+      "kind": "transcript",
+      "audioNumber": 29,
+      "locator": {
+        "type": "line_range",
+        "startLine": 213,
+        "endLine": 235
+      }
+    },
+    {
+      "id": "ev-c21-a29-l261-265-plazo-resolucion",
+      "kind": "transcript",
+      "audioNumber": 29,
+      "locator": {
+        "type": "line_range",
+        "startLine": 261,
+        "endLine": 265
+      }
+    },
+    {
+      "id": "ev-c21-a29-l273-275-elementos-escrito",
+      "kind": "transcript",
+      "audioNumber": 29,
+      "locator": {
+        "type": "line_range",
+        "startLine": 273,
+        "endLine": 275
+      }
+    },
+    {
+      "id": "ev-c21-cff-arts69c-69h-acuerdo-conclusivo",
+      "kind": "official",
+      "title": "Código Fiscal de la Federación",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 09-04-2026; artículos 69-C a 69-H",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c21-lamp-arts61xx-170-distincion",
+      "kind": "official",
+      "title": "Ley de Amparo, Reglamentaria de los artículos 103 y 107 de la Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículos 61, fracción XX, y 170",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    }
+  ]
 }

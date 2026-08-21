@@ -308,6 +308,34 @@ const traceablePackages = [
       /recurso de revocación.*optativo antes de acudir al tribunal/i,
     ],
   },
+  {
+    code: "C21",
+    fileName: "audio-29-recurso-revocacion-fiscal.json",
+    artifacts: 150,
+    evidence: 18,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /optativa la revocación antes del juicio contencioso administrativo federal/i,
+      /silencio confirma fictamente el acto/i,
+      /interposición tampoco suspende automáticamente el cobro/i,
+      /cuantía superior a doscientas UMA elevadas al año/i,
+      /última reforma DOF 09-04-2026/i,
+    ],
+  },
+  {
+    code: "C22",
+    fileName: "audio-30-juicio-contencioso-instruccion.json",
+    artifacts: 152,
+    evidence: 14,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /reforma integral DOF 09-06-2026/i,
+      /tracto sucesivo.*cinco años desde el último efecto.*retrotrae sus efectos a los cinco años anteriores/i,
+      /autoridad es demandante, presenta siempre en línea/i,
+      /vía sumaria tampoco es una modalidad de libre elección/i,
+      /con o sin alegatos, la instrucción queda cerrada automáticamente/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -515,6 +543,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una generalización fiscal retirada como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C21" || expected.code === "C22") {
+      const obsoleteAsCurrent =
+        expected.code === "C21"
+          ? /(?:siempre|obligatorio).*antes.*TFJA|presentación física.*regla|silencio.*(?:revoca|favorece)|suspensión automática|todo recurso.*exclusivo de fondo/i
+          : /TFJA.*subordinado.*Ejecutivo|Buzón Tributario.*(?:presenta|tramita).*juicio|vía sumaria.*libre elección|testimonial.*(?:prohibida|inadmisible)|plazo general.*cuarenta y cinco días/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una regla procesal retirada como respuesta vigente.`,
         );
       }
     }
