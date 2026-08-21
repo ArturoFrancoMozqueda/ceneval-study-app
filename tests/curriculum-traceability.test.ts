@@ -397,6 +397,41 @@ const traceablePackages = [
       /CNPP vigente al 28-11-2025/i,
     ],
   },
+  {
+    code: "C27",
+    fileName: "audio-37-acuerdos-reparatorios.json",
+    artifacts: 150,
+    evidence: 15,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /mismos delitos dolosos.*violencia familiar o equivalentes.*incumplió previamente un acuerdo/i,
+      /DOF el 20-08-2025.*no es una exclusión vigente/i,
+      /hasta treinta días, a petición de las partes/i,
+      /si es diferido y no se fija plazo, se entiende un año/i,
+      /puede acudir al juez dentro de cinco días/i,
+      /cumplimiento parcial de contenido pecuniario debe ser tomado en cuenta/i,
+      /junta restaurativa, específicamente, el artículo 29/i,
+      /CNPP vigente al 28-11-2025/i,
+    ],
+  },
+  {
+    code: "C28",
+    fileName: "audio-37-38-suspension-condicional.json",
+    artifacts: 149,
+    evidence: 20,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /media aritmética de la pena de prisión no exceda cinco años/i,
+      /dos años desde el cumplimiento o cinco desde el incumplimiento/i,
+      /DOF el 20-08-2025.*No debe aplicarse como exclusión vigente/i,
+      /periodo de seis meses a tres años/i,
+      /No hay revocación, reaprehensión ni prisión automáticas/i,
+      /plazo hasta dos años más, una sola vez/i,
+      /condiciones y su plazo se interrumpen.*se reanudan al recuperar la libertad/i,
+      /suspensión condicional interrumpe la prescripción de la acción penal/i,
+      /CNPP vigente al 28-11-2025/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -652,6 +687,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una regla procesal absoluta o retirada como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C27" || expected.code === "C28") {
+      const obsoleteAsCurrent =
+        expected.code === "C27"
+          ? /hipótesis fiscales.*(?:impiden|excluyen|improcedente)|(?:todo|cualquier) acuerdo previo.*impide|(?:firma|celebración).*extingue.*(?:inmediata|automática)|Ministerio Público.*aprueba.*investigación complementaria|(?:toda|cualquier) prestación parcial.*(?:se pierde|carece de efecto)/i
+          : /hipótesis fiscales.*(?:impiden|excluyen|improcedente)|(?:todo|cualquier) delito.*media.*cinco años|revocación automática|(?:reaprehensión|prisión) automática|autoridad de supervisión.*(?:revoca|decide)|(?:toda|cualquier) oposición.*impide/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una exclusión invalidada o efecto automático como respuesta vigente.`,
         );
       }
     }

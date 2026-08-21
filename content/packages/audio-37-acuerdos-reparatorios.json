@@ -1,94 +1,1637 @@
 {
-  "packageVersion":"1.1",
-  "curriculum":{
-    "code":"C27",
-    "order":27,
-    "audioSources":[
-      {"audioNumber":37,"fragment":"Primera parte: acuerdos reparatorios"}
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C27",
+    "order": 27,
+    "audioSources": [
+      {
+        "audioNumber": 37,
+        "fragment": "Primera parte: acuerdos reparatorios"
+      }
     ]
   },
-  "subject":{"name":"Derecho Penal y Procesal Penal","description":"Teoría del delito, derechos de las partes, investigación, proceso penal acusatorio y soluciones alternas."},
-  "class":{"title":"Acuerdos reparatorios","description":"Vigesimoséptima clase del plan académico: procedencia, oportunidad, aprobación, contenido, cumplimiento e incumplimiento de los acuerdos reparatorios."},
-  "transcript":{"originalFile":"AUDIO 37.txt","cleaned":"Se conservó únicamente el bloque sobre acuerdos reparatorios; el inicio de suspensión condicional se reservó para la clase siguiente. Se eliminaron saludos, insultos, bromas, datos personales, relatos de robos, opiniones sociales y recomendaciones extrajurídicas. Se corrigió que el acuerdo no es simplemente un contrato civil ni una decisión unilateral: es una solución alterna penal celebrada voluntariamente entre víctima u ofendido e imputado, sujeta a aprobación y cumplimiento; que procede en tres categorías legales, pero tiene exclusiones expresas; que puede promoverse desde la denuncia o querella hasta antes del auto de apertura a juicio; que la autoridad aprobadora depende de la etapa; que si el cumplimiento diferido no fija plazo se entiende un año; que el incumplimiento injustificado reactiva el procedimiento como si no hubiera acuerdo, sin afirmar que toda prestación parcial se pierde automáticamente; que el cumplimiento total extingue la acción penal; y que un antecedente no impide cualquier acuerdo futuro, sino los supuestos específicos del artículo 187 vigente."},
-  "topics":[{
-    "title":"Procedencia, negociación y efectos del acuerdo reparatorio",
-    "description":"Cómo identificar si un caso admite acuerdo, quién lo aprueba y qué ocurre al cumplirse o incumplirse.",
-    "learningJourney":{"openingPrompt":"Después de un choque culposo, víctima e imputado desean reparar daños sin llegar a juicio. ¿Qué condiciones hacen válido y eficaz su acuerdo?","quickChecks":[{"prompt":"¿Todo delito admite acuerdo reparatorio?","answer":"No. Solo las categorías del artículo 187 y siempre que no opere una exclusión.","feedback":"Revisa procedencia y exclusiones antes de negociar."},{"prompt":"¿Firmar extingue de inmediato la acción penal?","answer":"Solo cuando el acuerdo de cumplimiento inmediato queda aprobado y cumplido; en el diferido, la extinción llega con el cumplimiento total verificado.","feedback":"Distingue celebración, aprobación y cumplimiento."},{"prompt":"¿Puede obligarse a la víctima a aceptar?","answer":"No. La participación debe ser voluntaria, informada y libre de coacción.","feedback":"La igualdad y la libertad son requisitos de validez."}],"practicalCase":{"facts":"Un conductor causa culposamente daños y lesiones. Víctima e imputado acuerdan pago inicial, tratamiento médico y tres mensualidades. No fijan fecha final y ya existe vinculación a proceso.","question":"¿Quién revisa el acuerdo, cuánto dura por defecto y cuándo se extingue la acción?","legalRule":"Los artículos 186 a 190 del CNPP regulan definición, procedencia, oportunidad, efectos y aprobación; la LNMASCMP exige voluntariedad, información, confidencialidad, imparcialidad, equidad y legalidad.","reasoning":"Por existir investigación complementaria, aprueba el juez de control. Al ser diferido sin plazo específico, se entiende por un año; durante el cumplimiento se suspenden trámite y prescripción. La acción se extingue hasta que se verifique el cumplimiento pleno.","conclusion":"El acuerdo es viable si el delito y antecedentes lo permiten, existe consentimiento libre, las obligaciones son proporcionales y se cumple totalmente."},"closingPrompt":"Explica la ruta desde la identificación de procedencia hasta la extinción de la acción penal, incluyendo autoridad, plazo e incumplimiento.","nextActivity":"Estudia el mapa visual, responde la guía de doce preguntas y resuelve los diez casos originales."},
-    "materials":[
-      {"type":"short_answer","title":"Respuesta breve","content":"El acuerdo reparatorio es una solución alterna entre víctima u ofendido e imputado. Procede por querella, requisito equivalente o perdón; delitos culposos; y delitos patrimoniales sin violencia sobre personas, salvo exclusiones. Puede celebrarse desde la denuncia o querella hasta antes del auto de apertura. Lo aprueba el MP en investigación inicial y el juez desde la complementaria. Cumplido totalmente extingue la acción penal; incumplido sin justa causa, continúa el procedimiento.","sourceOrigin":"mixed"},
-      {"type":"full_explanation","title":"Explicación completa desde cero","content":"El artículo 186 del CNPP define los acuerdos reparatorios como los celebrados entre víctima u ofendido e imputado que, una vez aprobados por el Ministerio Público o juez de control y cumplidos, extinguen la acción penal. Son una solución alterna del procedimiento, no una declaración de inocencia ni una condena.\n\nEl artículo 187 limita la procedencia a tres grupos: delitos perseguibles por querella, requisito equivalente o que admiten perdón; delitos culposos; y delitos patrimoniales sin violencia sobre las personas. No basta memorizar esos grupos: deben revisarse el tipo penal aplicable y las exclusiones. No proceden cuando el imputado celebró antes otros acuerdos por hechos correspondientes a los mismos delitos dolosos; en violencia familiar o equivalentes; ni cuando incumplió previamente un acuerdo, salvo absolución. La porción que excluía automáticamente ciertos supuestos del artículo 167 fue declarada inválida por la SCJN y la edición vigente del Código lo señala.\n\nEl acuerdo puede promoverse desde la denuncia o querella hasta antes del auto de apertura a juicio. Tras la vinculación, el juez puede suspender el proceso hasta treinta días, a petición de las partes, para que concreten el acuerdo con apoyo especializado. Si se interrumpe la concertación, cualquiera puede pedir continuar.\n\nMP o juez pueden invitar desde su primera intervención, pero no imponer. Deben explicar efectos. La Ley Nacional de Mecanismos Alternativos exige voluntariedad, información, confidencialidad, flexibilidad, simplicidad, imparcialidad, equidad y honestidad. Una persona facilitadora conduce diálogo o procesos restaurativos sin decidir por las partes.\n\nLas obligaciones pueden ser de dar, hacer o no hacer: pago, restitución, tratamiento, reparación material, disculpa u otras lícitas y proporcionales. Deben ser claras: monto o conducta, forma, fechas, lugar, comprobación y consecuencias. La reparación responde al daño real; no debe fijarse mediante amenaza ni aprovechar desigualdad.\n\nEl cumplimiento puede ser inmediato o diferido. Si es diferido y no se fija plazo, se entiende un año. Durante ese plazo se suspenden el trámite procesal y la prescripción de la acción penal. Esto evita que el proceso avance mientras se verifica el plan, pero aún no extingue la acción.\n\nEn investigación inicial aprueba el Ministerio Público. Desde la investigación complementaria aprueba el juez de control. Si el MP aprobó el acuerdo y una parte considera que el mecanismo no respetó la ley, puede acudir al juez dentro de cinco días. Antes de aprobar, la autoridad verifica que las obligaciones no sean notoriamente desproporcionadas, que existiera igualdad para negociar y ausencia de intimidación, amenaza o coacción.\n\nEl cumplimiento pleno extingue la acción penal y produce los efectos legales correspondientes. Si el imputado incumple sin justa causa, la investigación o proceso continúa como si no se hubiera celebrado. La información generada durante el mecanismo no puede usarse en perjuicio de las partes en el proceso. No debe afirmarse sin análisis que toda prestación parcial queda jurídicamente perdida: su tratamiento dependerá de lo cumplido, el acuerdo y las reglas de reparación aplicables.\n\nPara CENEVAL sigue cinco preguntas: ¿el delito entra en una categoría?, ¿hay exclusión?, ¿todavía existe oportunidad?, ¿quién aprueba en esa etapa?, ¿se cumplió totalmente? Esa secuencia evita confundir acuerdo reparatorio con suspensión condicional o procedimiento abreviado.","sourceOrigin":"mixed"},
-      {"type":"legal_basis","title":"Fundamento jurídico vigente","content":"Constitución vigente al 02-06-2026: artículo 17 sobre mecanismos alternativos y reparación. CNPP vigente al 28-11-2025: artículos 184 y 186 a 190. LNMASCMP vigente al 01-04-2024: artículos 1, 4, 5, 19, 20, 31 a 35. Consulta oficial: 11 de agosto de 2026.","sourceOrigin":"complementary"},
-      {"type":"simple_example","title":"Ejemplo sencillo","content":"En un choque culposo, la persona responsable acepta pagar reparación del vehículo en dos exhibiciones y cubrir el deducible médico. Si el acuerdo es libre, proporcional, aprobado y totalmente cumplido, se extingue la acción penal.","sourceOrigin":"mixed"},
-      {"type":"ceneval_example","title":"Caso tipo CENEVAL","content":"Ya hubo vinculación y las partes piden treinta días para negociar antes de la apertura. La autoridad competente es el juez de control, quien puede suspender hasta treinta días. No corresponde que el MP apruebe por sí solo en investigación complementaria.","sourceOrigin":"mixed"},
-      {"type":"summary","title":"Resumen","content":"Partes: víctima u ofendido e imputado. Casos: querella/perdón, culposos, patrimoniales sin violencia. Oportunidad: denuncia o querella hasta antes de apertura. Aprobación: MP en inicial; juez desde complementaria. Cumplimiento: inmediato o diferido; sin plazo, un año. Control: proporcionalidad, igualdad y ausencia de coacción. Efecto del cumplimiento total: extinción. Incumplimiento injustificado: continuación.","sourceOrigin":"mixed"},
-      {"type":"study_guide","title":"Guía intensiva de preguntas y respuestas","content":"1. ¿Qué es? Respuesta: solución alterna acordada, aprobada y cumplida. 2. ¿Quiénes acuerdan? Respuesta: víctima u ofendido e imputado. 3. ¿Tres categorías? Respuesta: querella/perdón, culposos y patrimoniales sin violencia. 4. ¿Violencia familiar? Respuesta: está excluida. 5. ¿Oportunidad? Respuesta: desde denuncia o querella hasta antes de apertura. 6. ¿Suspensión para negociar? Respuesta: hasta treinta días después de vinculación. 7. ¿Tipos de cumplimiento? Respuesta: inmediato o diferido. 8. ¿Sin plazo? Respuesta: un año. 9. ¿Quién aprueba en inicial? Respuesta: Ministerio Público. 10. ¿Desde complementaria? Respuesta: juez de control. 11. ¿Efecto del cumplimiento total? Respuesta: extingue acción penal. 12. ¿Incumplimiento injustificado? Respuesta: continúa el procedimiento como si no hubiera acuerdo.","sourceOrigin":"mixed"},
-      {"type":"key_concepts","title":"Conceptos clave","content":"Solución alterna: vía distinta al juicio. Acuerdo reparatorio: pacto penal reparador. Voluntariedad: decisión libre. Información: comprensión de efectos. Confidencialidad: reserva del mecanismo. Facilitador: tercero imparcial. Querella: requisito de parte. Culpa: infracción al deber de cuidado. Patrimonial sin violencia: afectación económica sin violencia personal. Cumplimiento inmediato: ejecución al aprobar. Diferido: obligaciones futuras. Proporcionalidad: equilibrio del plan. Extinción: cierre de acción penal.","sourceOrigin":"mixed"},
-      {"type":"common_errors","title":"Errores comunes","content":"No digas que procede en todo delito leve. No olvides exclusiones y antecedentes. No lo reduzcas a dinero ni contrato civil. No confundir invitación con obligación. No usar notario como sustituto automático de la aprobación penal. No afirmar que firmar extingue siempre de inmediato. No confundir treinta días para negociar con plazo para cumplir. No olvidar el año supletorio. No permitir coacción o desproporción. No usar información confidencial contra una parte. No afirmar que cualquier acuerdo previo impide otro. No asegurar que pagos parciales se pierden automáticamente.","sourceOrigin":"complementary"}
-    ],
-    "conceptMap":{"title":"Mapa visual: ruta del acuerdo reparatorio","description":"De la procedencia a la extinción o continuación del proceso.","nodes":[
-      {"id":"acuerdo","label":"Acuerdo reparatorio","description":"Solución alterna penal."},
-      {"id":"partes","label":"Partes","description":"Deciden libremente.","parentId":"acuerdo"},
-      {"id":"victima","label":"Víctima u ofendido","description":"Titular de reparación.","parentId":"partes"},
-      {"id":"imputado","label":"Imputado","description":"Asume obligaciones.","parentId":"partes"},
-      {"id":"procedencia","label":"Procedencia","description":"Artículo 187.","parentId":"acuerdo"},
-      {"id":"querella","label":"Querella o perdón","description":"Requisito de parte.","parentId":"procedencia"},
-      {"id":"culposo","label":"Delito culposo","description":"Sin intención típica.","parentId":"procedencia"},
-      {"id":"patrimonial","label":"Patrimonial sin violencia","description":"Sin violencia sobre personas.","parentId":"procedencia"},
-      {"id":"exclusiones","label":"Exclusiones","description":"Impiden la salida.","parentId":"procedencia"},
-      {"id":"familiar","label":"Violencia familiar","description":"No procede.","parentId":"exclusiones"},
-      {"id":"previo-doloso","label":"Mismo delito doloso","description":"Antecedente de acuerdo.","parentId":"exclusiones"},
-      {"id":"incumplido-previo","label":"Incumplimiento previo","description":"Salvo absolución.","parentId":"exclusiones"},
-      {"id":"oportunidad","label":"Oportunidad","description":"Ventana procesal.","parentId":"acuerdo"},
-      {"id":"inicio","label":"Denuncia o querella","description":"Desde su presentación.","parentId":"oportunidad"},
-      {"id":"limite","label":"Antes de apertura","description":"Límite definitivo.","parentId":"oportunidad"},
-      {"id":"negociar","label":"Hasta 30 días","description":"Suspensión para concertar.","parentId":"oportunidad"},
-      {"id":"principios","label":"Principios","description":"Protegen el diálogo.","parentId":"acuerdo"},
-      {"id":"voluntario","label":"Voluntariedad","description":"Sin obligación.","parentId":"principios"},
-      {"id":"informado","label":"Información","description":"Efectos claros.","parentId":"principios"},
-      {"id":"confidencial","label":"Confidencialidad","description":"No usar en perjuicio.","parentId":"principios"},
-      {"id":"igualdad","label":"Igualdad y equidad","description":"Sin abuso de poder.","parentId":"principios"},
-      {"id":"contenido","label":"Obligaciones","description":"Reparación concreta.","parentId":"acuerdo"},
-      {"id":"dar","label":"Dar","description":"Pago o restitución.","parentId":"contenido"},
-      {"id":"hacer","label":"Hacer","description":"Servicio o reparación.","parentId":"contenido"},
-      {"id":"no-hacer","label":"No hacer","description":"Compromiso lícito.","parentId":"contenido"},
-      {"id":"aprobacion","label":"Aprobación","description":"Control de legalidad.","parentId":"acuerdo"},
-      {"id":"mp","label":"MP en inicial","description":"Aprueba antes de complementaria.","parentId":"aprobacion"},
-      {"id":"juez","label":"Juez desde complementaria","description":"Control jurisdiccional.","parentId":"aprobacion"},
-      {"id":"cumplimiento","label":"Cumplimiento","description":"Inmediato o diferido.","parentId":"acuerdo"},
-      {"id":"un-ano","label":"Un año supletorio","description":"Si no se fija plazo.","parentId":"cumplimiento"},
-      {"id":"cumplido","label":"Cumplimiento pleno","description":"Extingue acción penal.","parentId":"cumplimiento"},
-      {"id":"incumplido","label":"Incumplimiento injustificado","description":"Continúa el procedimiento.","parentId":"cumplimiento"}
-    ]},
-    "references":[
-      {"title":"Código Nacional de Procedimientos Penales","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Federal, México","citation":"Artículos 184 y 186 a 190; última reforma DOF 28-11-2025","retrievedOn":"2026-08-11","note":"Fuente primaria de procedencia, oportunidad, control y efectos."},
-      {"title":"Ley Nacional de Mecanismos Alternativos de Solución de Controversias en Materia Penal","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/LNMASCMP.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Federal, México","citation":"Artículos 1, 4, 5, 19, 20 y 31 a 35; última reforma DOF 01-04-2024","retrievedOn":"2026-08-11","note":"Principios, facilitación, requisitos y seguimiento."},
-      {"title":"Constitución Política de los Estados Unidos Mexicanos","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Federal, México","citation":"Artículo 17; últimas reformas DOF 02-06-2026","retrievedOn":"2026-08-11","note":"Base constitucional de mecanismos alternativos y reparación."}
-    ],
-    "flashcards":[
-      {"question":"¿Qué efecto tiene el acuerdo cumplido?","answer":"Extingue la acción penal.","sourceOrigin":"complementary"},
-      {"question":"¿Quiénes celebran el acuerdo?","answer":"Víctima u ofendido e imputado.","sourceOrigin":"complementary"},
-      {"question":"¿Qué delitos por iniciativa de parte proceden?","answer":"Los de querella, requisito equivalente o que admiten perdón.","sourceOrigin":"complementary"},
-      {"question":"¿Proceden delitos culposos?","answer":"Sí, salvo que opere otra exclusión legal.","sourceOrigin":"mixed"},
-      {"question":"¿Qué patrimoniales proceden?","answer":"Los cometidos sin violencia sobre las personas.","sourceOrigin":"complementary"},
-      {"question":"¿Cuál es la ventana procesal?","answer":"Desde denuncia o querella hasta antes del auto de apertura.","sourceOrigin":"complementary"},
-      {"question":"¿Cuánto puede suspenderse para negociar?","answer":"Hasta treinta días después de vinculación, a petición de las partes.","sourceOrigin":"complementary"},
-      {"question":"¿Quién aprueba en investigación inicial?","answer":"El Ministerio Público.","sourceOrigin":"complementary"},
-      {"question":"¿Quién aprueba desde complementaria?","answer":"El juez de control.","sourceOrigin":"complementary"},
-      {"question":"¿Plazo diferido no especificado?","answer":"Se entiende por un año.","sourceOrigin":"complementary"},
-      {"question":"¿Qué suspende el plazo de cumplimiento?","answer":"El trámite del proceso y la prescripción de la acción penal.","sourceOrigin":"complementary"},
-      {"question":"¿Efecto del incumplimiento injustificado?","answer":"Continúa el procedimiento como si no se hubiera celebrado.","sourceOrigin":"complementary"}
-    ],
-    "exam":{"title":"Evaluación: acuerdos reparatorios","description":"Diez casos originales sobre procedencia, control y efectos.","questions":[
-      {"text":"¿Cuál es la naturaleza del acuerdo reparatorio?","difficulty":"basic","options":["Solución alterna penal","Sentencia condenatoria","Medida cautelar"],"correctOption":0,"explanation":"El CNPP lo regula como solución alterna.","optionExplanations":["Es la clasificación correcta.","No declara culpabilidad.","No asegura presencia procesal."]},
-      {"text":"¿Cuál caso entra expresamente en procedencia?","difficulty":"basic","options":["Daño culposo","Violencia familiar","Secuestro"],"correctOption":0,"explanation":"Los delitos culposos integran una categoría legal.","optionExplanations":["Sí puede proceder si no hay exclusión.","Está expresamente excluida.","No entra en las categorías ordinarias."]},
-      {"text":"Un robo patrimonial se cometió golpeando a la víctima. ¿Procede por la fracción patrimonial?","difficulty":"intermediate","options":["No, hubo violencia sobre la persona","Sí, todo patrimonial procede","Sí, si el imputado lo pide"],"correctOption":0,"explanation":"La categoría exige ausencia de violencia sobre las personas.","optionExplanations":["Falta un requisito esencial.","La regla no es universal.","La solicitud unilateral no elimina requisitos."]},
-      {"text":"¿Hasta cuándo puede celebrarse?","difficulty":"basic","options":["Antes del auto de apertura a juicio","Hasta después de sentencia","Solo antes de vinculación"],"correctOption":0,"explanation":"Ese es el límite del artículo 188.","optionExplanations":["Es la ventana correcta.","Ya terminó la oportunidad.","También puede celebrarse después de vinculación."]},
-      {"text":"Hay vinculación y las partes necesitan tiempo para negociar. ¿Qué puede hacer el juez?","difficulty":"intermediate","options":["Suspender hasta treinta días","Absolver de inmediato","Imponer el contenido del acuerdo"],"correctOption":0,"explanation":"El artículo 188 autoriza esa suspensión a petición de las partes.","optionExplanations":["Facilita concretar el acuerdo.","No hay base para absolución.","Violaría voluntariedad."]},
-      {"text":"Un acuerdo diferido no señala plazo. ¿Qué duración se entiende?","difficulty":"basic","options":["Un año","Treinta días","Cinco años"],"correctOption":0,"explanation":"El artículo 189 establece el año supletorio.","optionExplanations":["Es el plazo legal por defecto.","Ese plazo puede servir para concertar.","No es el plazo supletorio."]},
-      {"text":"El caso sigue en investigación inicial. ¿Quién aprueba el acuerdo?","difficulty":"intermediate","options":["Ministerio Público","Tribunal de enjuiciamiento","Perito valuador"],"correctOption":0,"explanation":"El artículo 190 asigna la aprobación inicial al MP.","optionExplanations":["Es la autoridad competente en esa etapa.","No corresponde a juicio.","El perito no aprueba acuerdos."]},
-      {"text":"Una obligación es notoriamente desproporcionada y fue aceptada bajo amenaza. ¿Debe aprobarse?","difficulty":"advanced","options":["No, falta igualdad y libertad","Sí, porque está firmada","Sí, si extingue rápido el asunto"],"correctOption":0,"explanation":"La autoridad debe verificar proporcionalidad y ausencia de coacción.","optionExplanations":["Protege validez y voluntariedad.","La firma no sana coacción.","La rapidez no sustituye legalidad."]},
-      {"text":"El imputado incumple sin justa causa. ¿Qué ocurre?","difficulty":"intermediate","options":["Continúa el procedimiento","Se extingue automáticamente la acción","La víctima pierde su derecho"],"correctOption":0,"explanation":"El proceso sigue como si no se hubiera celebrado acuerdo.","optionExplanations":["Es el efecto legal.","La extinción exige cumplimiento.","La víctima conserva tutela legal."]},
-      {"text":"Se cumple totalmente un acuerdo aprobado. ¿Qué efecto corresponde?","difficulty":"advanced","options":["Extinción de la acción penal","Vinculación automática","Prisión preventiva oficiosa"],"correctOption":0,"explanation":"Es el efecto central del artículo 186.","optionExplanations":["Concluye la persecución penal por cumplimiento.","La vinculación es una etapa previa distinta.","No deriva del acuerdo cumplido."]}
-    ]}
-  }]
+  "subject": {
+    "name": "Derecho Penal y Procesal Penal",
+    "description": "Teoría del delito, derechos de las partes, investigación, proceso penal acusatorio y soluciones alternas."
+  },
+  "class": {
+    "title": "Acuerdos reparatorios",
+    "description": "Vigesimoséptima clase del plan académico: procedencia, oportunidad, aprobación, contenido, cumplimiento e incumplimiento de los acuerdos reparatorios."
+  },
+  "transcript": {
+    "originalFile": "AUDIO 37.txt",
+    "cleaned": "Se conservó únicamente el bloque sobre acuerdos reparatorios; el inicio de suspensión condicional se reservó para la clase siguiente. Se eliminaron saludos, insultos, bromas, datos personales, relatos de robos, opiniones sociales y recomendaciones extrajurídicas. Se corrigió que el acuerdo no es simplemente un contrato civil ni una decisión unilateral: es una solución alterna penal celebrada voluntariamente entre víctima u ofendido e imputado, sujeta a aprobación y cumplimiento; que procede en tres categorías legales, pero tiene exclusiones expresas; que puede promoverse desde la denuncia o querella hasta antes del auto de apertura a juicio; que la autoridad aprobadora depende de la etapa; que si el cumplimiento diferido no fija plazo se entiende un año; que el incumplimiento injustificado reactiva el procedimiento como si no hubiera acuerdo, sin afirmar que toda prestación parcial se pierde automáticamente; que el cumplimiento total extingue la acción penal; y que un antecedente no impide cualquier acuerdo futuro, sino los supuestos específicos del artículo 187 vigente."
+  },
+  "topics": [
+    {
+      "title": "Procedencia, negociación y efectos del acuerdo reparatorio",
+      "description": "Cómo identificar si un caso admite acuerdo, quién lo aprueba y qué ocurre al cumplirse o incumplirse.",
+      "learningJourney": {
+        "openingPrompt": "Después de un choque culposo, víctima e imputado desean reparar daños sin llegar a juicio. ¿Qué condiciones hacen válido y eficaz su acuerdo?",
+        "quickChecks": [
+          {
+            "prompt": "¿Todo delito admite acuerdo reparatorio?",
+            "answer": "No. Solo las categorías del artículo 187 y siempre que no opere una exclusión.",
+            "feedback": "Revisa procedencia y exclusiones antes de negociar.",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art187-procedencia",
+              "ev-c27-a37-l003-015-procedencia",
+              "ev-c27-cnpp-art188-oportunidad",
+              "ev-c27-a37-l165-175-oportunidad",
+              "ev-c27-scjn-ai130-2019-invalidez"
+            ]
+          },
+          {
+            "prompt": "¿Firmar extingue de inmediato la acción penal?",
+            "answer": "Solo cuando el acuerdo de cumplimiento inmediato queda aprobado y cumplido; en el diferido, la extinción llega con el cumplimiento total verificado.",
+            "feedback": "Distingue celebración, aprobación y cumplimiento.",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art187-procedencia",
+              "ev-c27-a37-l003-015-procedencia",
+              "ev-c27-cnpp-art189-efectos",
+              "ev-c27-a37-l073-103-efectos-restaurativo",
+              "ev-c27-cnpp-art190-tramite",
+              "ev-c27-a37-l209-227-patrimonial-control",
+              "ev-c27-lnmasc-arts1-28-principios-mecanismos",
+              "ev-c27-cpeum-art17-masc"
+            ]
+          },
+          {
+            "prompt": "¿Puede obligarse a la víctima a aceptar?",
+            "answer": "No. La participación debe ser voluntaria, informada y libre de coacción.",
+            "feedback": "La igualdad y la libertad son requisitos de validez.",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art187-procedencia",
+              "ev-c27-a37-l003-015-procedencia",
+              "ev-c27-cnpp-art190-tramite",
+              "ev-c27-a37-l209-227-patrimonial-control",
+              "ev-c27-lnmasc-arts1-28-principios-mecanismos"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Un conductor causa culposamente daños y lesiones. Víctima e imputado acuerdan pago inicial, tratamiento médico y tres mensualidades. No fijan fecha final y ya existe vinculación a proceso.",
+          "question": "¿Quién revisa el acuerdo, cuánto dura por defecto y cuándo se extingue la acción?",
+          "legalRule": "Los artículos 186 a 190 del CNPP regulan definición, procedencia, oportunidad, efectos y aprobación; la LNMASCMP exige voluntariedad, información, confidencialidad, imparcialidad, equidad y legalidad.",
+          "reasoning": "Por existir investigación complementaria, aprueba el juez de control. Al ser diferido sin plazo específico, se entiende por un año; durante el cumplimiento se suspenden trámite y prescripción. La acción se extingue hasta que se verifique el cumplimiento pleno.",
+          "conclusion": "El acuerdo es viable si el delito y antecedentes lo permiten, existe consentimiento libre, las obligaciones son proporcionales y se cumple totalmente.",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art187-procedencia",
+            "ev-c27-a37-l003-015-procedencia",
+            "ev-c27-cnpp-art188-oportunidad",
+            "ev-c27-a37-l165-175-oportunidad",
+            "ev-c27-cnpp-art189-efectos",
+            "ev-c27-a37-l073-103-efectos-restaurativo",
+            "ev-c27-cnpp-art190-tramite",
+            "ev-c27-a37-l209-227-patrimonial-control",
+            "ev-c27-lnmasc-arts1-28-principios-mecanismos",
+            "ev-c27-lnmasc-arts29-35-reparacion-acuerdo"
+          ]
+        },
+        "closingPrompt": "Explica la ruta desde la identificación de procedencia hasta la extinción de la acción penal, incluyendo autoridad, plazo e incumplimiento.",
+        "nextActivity": "Estudia el mapa visual, responde la guía de doce preguntas y resuelve los diez casos originales.",
+        "openingPromptEvidenceIds": [
+          "ev-c27-cnpp-arts184-186-definicion",
+          "ev-c27-cnpp-art187-procedencia",
+          "ev-c27-a37-l003-015-procedencia"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c27-cnpp-arts184-186-definicion",
+          "ev-c27-cnpp-art187-procedencia",
+          "ev-c27-a37-l003-015-procedencia",
+          "ev-c27-cnpp-art189-efectos",
+          "ev-c27-a37-l073-103-efectos-restaurativo",
+          "ev-c27-cpeum-art17-masc"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c27-cnpp-arts184-186-definicion"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "El acuerdo reparatorio es una solución alterna entre víctima u ofendido e imputado. Procede por querella, requisito equivalente o perdón; delitos culposos; y delitos patrimoniales sin violencia sobre personas, salvo exclusiones. Puede celebrarse desde la denuncia o querella hasta antes del auto de apertura. Lo aprueba el MP en investigación inicial y el juez desde la complementaria. Cumplido totalmente extingue la acción penal; incumplido sin justa causa, continúa el procedimiento.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art187-procedencia",
+            "ev-c27-a37-l003-015-procedencia",
+            "ev-c27-cnpp-art188-oportunidad",
+            "ev-c27-a37-l165-175-oportunidad",
+            "ev-c27-cnpp-art189-efectos",
+            "ev-c27-a37-l073-103-efectos-restaurativo",
+            "ev-c27-cnpp-art190-tramite",
+            "ev-c27-a37-l209-227-patrimonial-control",
+            "ev-c27-cpeum-art17-masc",
+            "ev-c27-scjn-ai130-2019-invalidez"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "El artículo 186 del CNPP define los acuerdos reparatorios como los celebrados entre víctima u ofendido e imputado que, una vez aprobados por el Ministerio Público o juez de control y cumplidos, extinguen la acción penal. Son una solución alterna del procedimiento, no una declaración de inocencia ni una condena.\n\nEl artículo 187 limita la procedencia a tres grupos: delitos perseguibles por querella, requisito equivalente o que admiten perdón; delitos culposos; y delitos patrimoniales sin violencia sobre las personas. No basta memorizar esos grupos: deben revisarse el tipo penal aplicable y las exclusiones. No proceden cuando el imputado celebró antes otros acuerdos por hechos correspondientes a los mismos delitos dolosos; en violencia familiar o equivalentes; ni cuando incumplió previamente un acuerdo, salvo absolución. La porción del artículo 187 que excluía automáticamente las hipótesis fiscales del antiguo artículo 167, párrafo séptimo, fracciones I a III, fue declarada inválida por extensión en la Acción de Inconstitucionalidad 130/2019 y su acumulada 136/2019. La sentencia se publicó en el DOF el 20-08-2025 y el CNPP consolidado la muestra entre corchetes como inválida; no es una exclusión vigente.\n\nEl acuerdo puede promoverse desde la denuncia o querella hasta antes del auto de apertura a juicio. Tras la vinculación, el juez puede suspender el proceso hasta treinta días, a petición de las partes, para que concreten el acuerdo con apoyo especializado. Si se interrumpe la concertación, cualquiera puede pedir continuar.\n\nMP o juez pueden invitar desde su primera intervención, pero no imponer. Deben explicar efectos. La Ley Nacional de Mecanismos Alternativos exige voluntariedad, información, confidencialidad, flexibilidad, simplicidad, imparcialidad, equidad y honestidad. Una persona facilitadora conduce diálogo o procesos restaurativos sin decidir por las partes.\n\nLas obligaciones pactadas deben quedar descritas con claridad, incluyendo modo, tiempo y lugar de cumplimiento. En una junta restaurativa, específicamente, el artículo 29 de la LNMASCMP permite acordar reconocimiento y disculpa, compromisos de no repetición —incluso programas pertinentes—, restitución económica o en especie y otras formas lícitas aceptadas. Esos ejemplos no se imponen automáticamente a todo mecanismo: deben provenir del acuerdo libre y guardar relación con la reparación.\n\nEl cumplimiento puede ser inmediato o diferido. Si es diferido y no se fija plazo, se entiende un año. Durante ese plazo se suspenden el trámite procesal y la prescripción de la acción penal. Esto evita que el proceso avance mientras se verifica el plan, pero aún no extingue la acción.\n\nEn investigación inicial aprueba el Ministerio Público. Desde la investigación complementaria aprueba el juez de control. Si el MP aprobó el acuerdo y una parte considera que el mecanismo no respetó la ley, puede acudir al juez dentro de cinco días. Antes de aprobar, la autoridad verifica que las obligaciones no sean notoriamente desproporcionadas, que existiera igualdad para negociar y ausencia de intimidación, amenaza o coacción.\n\nEl cumplimiento pleno extingue la acción penal y produce los efectos legales correspondientes. Si el imputado incumple sin justa causa, la investigación o proceso continúa como si no se hubiera celebrado. La información generada durante el mecanismo no puede usarse en perjuicio de las partes en el proceso. El artículo 35 de la LNMASCMP precisa que el cumplimiento parcial de contenido pecuniario debe ser tomado en cuenta por el Ministerio Público para efectos de la reparación del daño. Esa regla no permite inventar efectos civiles universales para prestaciones no pecuniarias o cuestiones no resueltas.\n\nPara CENEVAL sigue cinco preguntas: ¿el delito entra en una categoría?, ¿hay exclusión?, ¿todavía existe oportunidad?, ¿quién aprueba en esa etapa?, ¿se cumplió totalmente? Esa secuencia evita confundir acuerdo reparatorio con suspensión condicional o procedimiento abreviado.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art187-procedencia",
+            "ev-c27-a37-l003-015-procedencia",
+            "ev-c27-cnpp-art188-oportunidad",
+            "ev-c27-a37-l165-175-oportunidad",
+            "ev-c27-cnpp-art189-efectos",
+            "ev-c27-a37-l073-103-efectos-restaurativo",
+            "ev-c27-cnpp-art190-tramite",
+            "ev-c27-a37-l209-227-patrimonial-control",
+            "ev-c27-lnmasc-arts1-28-principios-mecanismos",
+            "ev-c27-lnmasc-arts29-35-reparacion-acuerdo",
+            "ev-c27-cpeum-art17-masc",
+            "ev-c27-a37-l023-029-cumplimiento",
+            "ev-c27-a37-l045-057-plazo-aprobacion",
+            "ev-c27-scjn-ai130-2019-invalidez"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Constitución vigente al 02-06-2026: artículo 17. CNPP vigente al 28-11-2025: artículos 184 y 186 a 190; su artículo 187 ya marca como inválida la antigua exclusión fiscal por sentencia SCJN publicada DOF 20-08-2025. LNMASCMP vigente al 01-04-2024: artículos 1 a 8, 19, 20 y 29 a 35. Consulta oficial realizada el 21 de agosto de 2026.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c27-cpeum-art17-masc",
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art187-procedencia",
+            "ev-c27-cnpp-art188-oportunidad",
+            "ev-c27-cnpp-art189-efectos",
+            "ev-c27-cnpp-art190-tramite",
+            "ev-c27-lnmasc-arts1-28-principios-mecanismos",
+            "ev-c27-lnmasc-arts29-35-reparacion-acuerdo",
+            "ev-c27-scjn-ai130-2019-invalidez"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "En un choque culposo, la persona responsable acepta pagar reparación del vehículo en dos exhibiciones y cubrir el deducible médico. Si el acuerdo es libre, proporcional, aprobado y totalmente cumplido, se extingue la acción penal.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art187-procedencia",
+            "ev-c27-a37-l003-015-procedencia",
+            "ev-c27-cnpp-art189-efectos",
+            "ev-c27-a37-l073-103-efectos-restaurativo",
+            "ev-c27-cnpp-art190-tramite",
+            "ev-c27-a37-l209-227-patrimonial-control",
+            "ev-c27-cpeum-art17-masc"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo CENEVAL",
+          "content": "Ya hubo vinculación y las partes piden treinta días para negociar antes de la apertura. La autoridad competente es el juez de control, quien puede suspender hasta treinta días. No corresponde que el MP apruebe por sí solo en investigación complementaria.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art188-oportunidad",
+            "ev-c27-a37-l165-175-oportunidad",
+            "ev-c27-cnpp-art190-tramite",
+            "ev-c27-a37-l209-227-patrimonial-control"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Partes: víctima u ofendido e imputado. Casos: querella/perdón, culposos, patrimoniales sin violencia. Oportunidad: denuncia o querella hasta antes de apertura. Aprobación: MP en inicial; juez desde complementaria. Cumplimiento: inmediato o diferido; sin plazo, un año. Control: proporcionalidad, igualdad y ausencia de coacción. Efecto del cumplimiento total: extinción. Incumplimiento injustificado: continuación.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art187-procedencia",
+            "ev-c27-a37-l003-015-procedencia",
+            "ev-c27-cnpp-art188-oportunidad",
+            "ev-c27-a37-l165-175-oportunidad",
+            "ev-c27-cnpp-art189-efectos",
+            "ev-c27-a37-l073-103-efectos-restaurativo",
+            "ev-c27-cnpp-art190-tramite",
+            "ev-c27-a37-l209-227-patrimonial-control"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía intensiva de preguntas y respuestas",
+          "content": "1. ¿Qué es? Respuesta: solución alterna acordada, aprobada y cumplida. 2. ¿Quiénes acuerdan? Respuesta: víctima u ofendido e imputado. 3. ¿Tres categorías? Respuesta: querella/perdón, culposos y patrimoniales sin violencia. 4. ¿Violencia familiar? Respuesta: está excluida. 5. ¿Oportunidad? Respuesta: desde denuncia o querella hasta antes de apertura. 6. ¿Suspensión para negociar? Respuesta: hasta treinta días después de vinculación. 7. ¿Tipos de cumplimiento? Respuesta: inmediato o diferido. 8. ¿Sin plazo? Respuesta: un año. 9. ¿Quién aprueba en inicial? Respuesta: Ministerio Público. 10. ¿Desde complementaria? Respuesta: juez de control. 11. ¿Efecto del cumplimiento total? Respuesta: extingue acción penal. 12. ¿Incumplimiento injustificado? Respuesta: continúa el procedimiento como si no hubiera acuerdo.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art187-procedencia",
+            "ev-c27-a37-l003-015-procedencia",
+            "ev-c27-cnpp-art188-oportunidad",
+            "ev-c27-a37-l165-175-oportunidad",
+            "ev-c27-cnpp-art189-efectos",
+            "ev-c27-a37-l073-103-efectos-restaurativo",
+            "ev-c27-cnpp-art190-tramite",
+            "ev-c27-a37-l209-227-patrimonial-control",
+            "ev-c27-cpeum-art17-masc"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Solución alterna: vía distinta al juicio. Acuerdo reparatorio: pacto penal reparador. Voluntariedad: decisión libre. Información: comprensión de efectos. Confidencialidad: reserva del mecanismo. Facilitador: tercero imparcial. Querella: requisito de parte. Delito culposo: categoría del artículo 187 cuya configuración y pena deben verificarse en la ley penal aplicable. Patrimonial sin violencia: afectación económica sin violencia personal. Cumplimiento inmediato: ejecución al aprobar. Diferido: obligaciones futuras. Proporcionalidad: equilibrio del plan. Extinción: cierre de acción penal.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art187-procedencia",
+            "ev-c27-a37-l003-015-procedencia",
+            "ev-c27-cnpp-art189-efectos",
+            "ev-c27-a37-l073-103-efectos-restaurativo",
+            "ev-c27-cnpp-art190-tramite",
+            "ev-c27-a37-l209-227-patrimonial-control",
+            "ev-c27-lnmasc-arts1-28-principios-mecanismos",
+            "ev-c27-lnmasc-arts29-35-reparacion-acuerdo",
+            "ev-c27-cpeum-art17-masc"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "No digas que procede en todo delito leve. No olvides las exclusiones y antecedentes que aún conserva el artículo 187, pero no revivas la exclusión fiscal invalidada. No lo reduzcas a dinero ni contrato civil. No confundir invitación con obligación. No usar notario como sustituto automático de la aprobación penal. No afirmar que firmar extingue siempre de inmediato. No confundir treinta días para negociar con plazo para cumplir. No olvidar el año supletorio. No permitir coacción o desproporción. No usar información confidencial contra una parte. No afirmar que cualquier acuerdo previo impide otro. No asegurar que pagos parciales se pierden automáticamente.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art187-procedencia",
+            "ev-c27-a37-l003-015-procedencia",
+            "ev-c27-cnpp-art188-oportunidad",
+            "ev-c27-a37-l165-175-oportunidad",
+            "ev-c27-cnpp-art189-efectos",
+            "ev-c27-a37-l073-103-efectos-restaurativo",
+            "ev-c27-cnpp-art190-tramite",
+            "ev-c27-a37-l209-227-patrimonial-control",
+            "ev-c27-lnmasc-arts1-28-principios-mecanismos",
+            "ev-c27-lnmasc-arts29-35-reparacion-acuerdo",
+            "ev-c27-cpeum-art17-masc",
+            "ev-c27-scjn-ai130-2019-invalidez"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual: ruta del acuerdo reparatorio",
+        "description": "De la procedencia a la extinción o continuación del proceso.",
+        "nodes": [
+          {
+            "id": "acuerdo",
+            "label": "Acuerdo reparatorio",
+            "description": "Solución alterna penal.",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cpeum-art17-masc"
+            ]
+          },
+          {
+            "id": "partes",
+            "label": "Partes",
+            "description": "Deciden libremente.",
+            "parentId": "acuerdo",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion"
+            ]
+          },
+          {
+            "id": "victima",
+            "label": "Víctima u ofendido",
+            "description": "Titular de reparación.",
+            "parentId": "partes",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cpeum-art17-masc"
+            ]
+          },
+          {
+            "id": "imputado",
+            "label": "Imputado",
+            "description": "Asume obligaciones.",
+            "parentId": "partes",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-lnmasc-arts29-35-reparacion-acuerdo"
+            ]
+          },
+          {
+            "id": "procedencia",
+            "label": "Procedencia",
+            "description": "Artículo 187.",
+            "parentId": "acuerdo",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art187-procedencia",
+              "ev-c27-a37-l003-015-procedencia"
+            ]
+          },
+          {
+            "id": "querella",
+            "label": "Querella o perdón",
+            "description": "Requisito de parte.",
+            "parentId": "procedencia",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art187-procedencia",
+              "ev-c27-a37-l003-015-procedencia"
+            ]
+          },
+          {
+            "id": "culposo",
+            "label": "Delito culposo",
+            "description": "Categoría del artículo 187; verifica tipo y ley penal aplicable.",
+            "parentId": "procedencia",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art187-procedencia",
+              "ev-c27-a37-l003-015-procedencia"
+            ]
+          },
+          {
+            "id": "patrimonial",
+            "label": "Patrimonial sin violencia",
+            "description": "Sin violencia sobre personas.",
+            "parentId": "procedencia",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art187-procedencia",
+              "ev-c27-a37-l003-015-procedencia"
+            ]
+          },
+          {
+            "id": "exclusiones",
+            "label": "Exclusiones",
+            "description": "Impiden la salida.",
+            "parentId": "procedencia",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art187-procedencia",
+              "ev-c27-a37-l003-015-procedencia",
+              "ev-c27-scjn-ai130-2019-invalidez"
+            ]
+          },
+          {
+            "id": "familiar",
+            "label": "Violencia familiar",
+            "description": "No procede.",
+            "parentId": "exclusiones",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art187-procedencia",
+              "ev-c27-a37-l003-015-procedencia",
+              "ev-c27-scjn-ai130-2019-invalidez"
+            ]
+          },
+          {
+            "id": "previo-doloso",
+            "label": "Mismo delito doloso",
+            "description": "Antecedente de acuerdo.",
+            "parentId": "exclusiones",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art187-procedencia",
+              "ev-c27-a37-l003-015-procedencia",
+              "ev-c27-scjn-ai130-2019-invalidez"
+            ]
+          },
+          {
+            "id": "incumplido-previo",
+            "label": "Incumplimiento previo",
+            "description": "Salvo absolución.",
+            "parentId": "exclusiones",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art189-efectos",
+              "ev-c27-a37-l073-103-efectos-restaurativo",
+              "ev-c27-scjn-ai130-2019-invalidez"
+            ]
+          },
+          {
+            "id": "oportunidad",
+            "label": "Oportunidad",
+            "description": "Ventana procesal.",
+            "parentId": "acuerdo",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art188-oportunidad",
+              "ev-c27-a37-l165-175-oportunidad"
+            ]
+          },
+          {
+            "id": "inicio",
+            "label": "Denuncia o querella",
+            "description": "Desde su presentación.",
+            "parentId": "oportunidad",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art187-procedencia",
+              "ev-c27-a37-l003-015-procedencia",
+              "ev-c27-cnpp-art188-oportunidad",
+              "ev-c27-a37-l165-175-oportunidad"
+            ]
+          },
+          {
+            "id": "limite",
+            "label": "Antes de apertura",
+            "description": "Límite definitivo.",
+            "parentId": "oportunidad",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art188-oportunidad",
+              "ev-c27-a37-l165-175-oportunidad"
+            ]
+          },
+          {
+            "id": "negociar",
+            "label": "Hasta 30 días",
+            "description": "Suspensión para concertar.",
+            "parentId": "oportunidad",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art188-oportunidad",
+              "ev-c27-a37-l165-175-oportunidad"
+            ]
+          },
+          {
+            "id": "principios",
+            "label": "Principios",
+            "description": "Protegen el diálogo.",
+            "parentId": "acuerdo",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion"
+            ]
+          },
+          {
+            "id": "voluntario",
+            "label": "Voluntariedad",
+            "description": "Sin obligación.",
+            "parentId": "principios",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-lnmasc-arts1-28-principios-mecanismos",
+              "ev-c27-lnmasc-arts29-35-reparacion-acuerdo"
+            ]
+          },
+          {
+            "id": "informado",
+            "label": "Información",
+            "description": "Efectos claros.",
+            "parentId": "principios",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-lnmasc-arts1-28-principios-mecanismos"
+            ]
+          },
+          {
+            "id": "confidencial",
+            "label": "Confidencialidad",
+            "description": "No usar en perjuicio.",
+            "parentId": "principios",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art189-efectos",
+              "ev-c27-a37-l073-103-efectos-restaurativo",
+              "ev-c27-lnmasc-arts1-28-principios-mecanismos"
+            ]
+          },
+          {
+            "id": "igualdad",
+            "label": "Igualdad y equidad",
+            "description": "Sin abuso de poder.",
+            "parentId": "principios",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art190-tramite",
+              "ev-c27-a37-l209-227-patrimonial-control",
+              "ev-c27-lnmasc-arts1-28-principios-mecanismos"
+            ]
+          },
+          {
+            "id": "contenido",
+            "label": "Obligaciones",
+            "description": "Reparación concreta.",
+            "parentId": "acuerdo",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-lnmasc-arts29-35-reparacion-acuerdo",
+              "ev-c27-cpeum-art17-masc"
+            ]
+          },
+          {
+            "id": "dar",
+            "label": "Dar",
+            "description": "Pago o restitución.",
+            "parentId": "contenido",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-lnmasc-arts29-35-reparacion-acuerdo"
+            ]
+          },
+          {
+            "id": "hacer",
+            "label": "Hacer",
+            "description": "Servicio o reparación.",
+            "parentId": "contenido",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-lnmasc-arts29-35-reparacion-acuerdo",
+              "ev-c27-cpeum-art17-masc"
+            ]
+          },
+          {
+            "id": "no-hacer",
+            "label": "No hacer",
+            "description": "Compromiso lícito.",
+            "parentId": "contenido",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-lnmasc-arts29-35-reparacion-acuerdo"
+            ]
+          },
+          {
+            "id": "aprobacion",
+            "label": "Aprobación",
+            "description": "Control de legalidad.",
+            "parentId": "acuerdo",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art190-tramite",
+              "ev-c27-a37-l209-227-patrimonial-control"
+            ]
+          },
+          {
+            "id": "mp",
+            "label": "MP en inicial",
+            "description": "Aprueba antes de complementaria.",
+            "parentId": "aprobacion",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art190-tramite",
+              "ev-c27-a37-l209-227-patrimonial-control"
+            ]
+          },
+          {
+            "id": "juez",
+            "label": "Juez desde complementaria",
+            "description": "Control jurisdiccional.",
+            "parentId": "aprobacion",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art190-tramite",
+              "ev-c27-a37-l209-227-patrimonial-control"
+            ]
+          },
+          {
+            "id": "cumplimiento",
+            "label": "Cumplimiento",
+            "description": "Inmediato o diferido.",
+            "parentId": "acuerdo",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art189-efectos",
+              "ev-c27-a37-l073-103-efectos-restaurativo",
+              "ev-c27-a37-l023-029-cumplimiento"
+            ]
+          },
+          {
+            "id": "un-ano",
+            "label": "Un año supletorio",
+            "description": "Si no se fija plazo.",
+            "parentId": "cumplimiento",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art189-efectos",
+              "ev-c27-a37-l073-103-efectos-restaurativo",
+              "ev-c27-a37-l045-057-plazo-aprobacion"
+            ]
+          },
+          {
+            "id": "cumplido",
+            "label": "Cumplimiento pleno",
+            "description": "Extingue acción penal.",
+            "parentId": "cumplimiento",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art189-efectos",
+              "ev-c27-a37-l073-103-efectos-restaurativo",
+              "ev-c27-cpeum-art17-masc"
+            ]
+          },
+          {
+            "id": "incumplido",
+            "label": "Incumplimiento injustificado",
+            "description": "Continúa el procedimiento.",
+            "parentId": "cumplimiento",
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art189-efectos",
+              "ev-c27-a37-l073-103-efectos-restaurativo"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Artículo 17; últimas reformas DOF 02-06-2026",
+          "retrievedOn": "2026-08-21",
+          "note": "Fundamento constitucional de mecanismos alternativos y reparación penal.",
+          "evidenceIds": [
+            "ev-c27-cpeum-art17-masc"
+          ]
+        },
+        {
+          "title": "Código Nacional de Procedimientos Penales",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Nacional, México",
+          "citation": "Artículos 184 y 186 a 190; última reforma DOF 28-11-2025",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente primaria de procedencia, oportunidad, efectos y trámite.",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art187-procedencia",
+            "ev-c27-cnpp-art188-oportunidad",
+            "ev-c27-cnpp-art189-efectos",
+            "ev-c27-cnpp-art190-tramite"
+          ]
+        },
+        {
+          "title": "Ley Nacional de Mecanismos Alternativos de Solución de Controversias en Materia Penal",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LNMASCMP.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Nacional, México",
+          "citation": "Artículos 1 a 8, 19, 20 y 29 a 35; última reforma DOF 01-04-2024",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente primaria de principios, mecanismos, facilitación y acuerdos.",
+          "evidenceIds": [
+            "ev-c27-lnmasc-arts1-28-principios-mecanismos",
+            "ev-c27-lnmasc-arts29-35-reparacion-acuerdo"
+          ]
+        },
+        {
+          "title": "Sentencia de la Acción de Inconstitucionalidad 130/2019 y su acumulada 136/2019",
+          "url": "https://dof.gob.mx/nota_detalle_popup.php?codigo=5766200",
+          "institution": "Diario Oficial de la Federación y Suprema Corte de Justicia de la Nación",
+          "jurisdiction": "Federal, México",
+          "citation": "Resolutivo quinto; sentencia publicada DOF 20-08-2025",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente primaria de la invalidez por extensión de la antigua exclusión fiscal del artículo 187.",
+          "evidenceIds": [
+            "ev-c27-scjn-ai130-2019-invalidez"
+          ]
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué efecto tiene el acuerdo cumplido?",
+          "answer": "Extingue la acción penal.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art189-efectos",
+            "ev-c27-a37-l073-103-efectos-restaurativo",
+            "ev-c27-cpeum-art17-masc"
+          ]
+        },
+        {
+          "question": "¿Quiénes celebran el acuerdo?",
+          "answer": "Víctima u ofendido e imputado.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion"
+          ]
+        },
+        {
+          "question": "¿Qué delitos por iniciativa de parte proceden?",
+          "answer": "Los de querella, requisito equivalente o que admiten perdón.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art187-procedencia",
+            "ev-c27-a37-l003-015-procedencia"
+          ]
+        },
+        {
+          "question": "¿Proceden delitos culposos?",
+          "answer": "Sí, salvo que opere otra exclusión legal.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art187-procedencia",
+            "ev-c27-a37-l003-015-procedencia",
+            "ev-c27-scjn-ai130-2019-invalidez"
+          ]
+        },
+        {
+          "question": "¿Qué patrimoniales proceden?",
+          "answer": "Los cometidos sin violencia sobre las personas.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art187-procedencia",
+            "ev-c27-a37-l003-015-procedencia"
+          ]
+        },
+        {
+          "question": "¿Cuál es la ventana procesal?",
+          "answer": "Desde denuncia o querella hasta antes del auto de apertura.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art187-procedencia",
+            "ev-c27-a37-l003-015-procedencia",
+            "ev-c27-cnpp-art188-oportunidad",
+            "ev-c27-a37-l165-175-oportunidad"
+          ]
+        },
+        {
+          "question": "¿Cuánto puede suspenderse para negociar?",
+          "answer": "Hasta treinta días después de vinculación, a petición de las partes.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art188-oportunidad",
+            "ev-c27-a37-l165-175-oportunidad"
+          ]
+        },
+        {
+          "question": "¿Quién aprueba en investigación inicial?",
+          "answer": "El Ministerio Público.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art190-tramite",
+            "ev-c27-a37-l209-227-patrimonial-control"
+          ]
+        },
+        {
+          "question": "¿Quién aprueba desde complementaria?",
+          "answer": "El juez de control.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art190-tramite",
+            "ev-c27-a37-l209-227-patrimonial-control"
+          ]
+        },
+        {
+          "question": "¿Plazo diferido no especificado?",
+          "answer": "Se entiende por un año.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art189-efectos",
+            "ev-c27-a37-l073-103-efectos-restaurativo"
+          ]
+        },
+        {
+          "question": "¿Qué suspende el plazo de cumplimiento?",
+          "answer": "El trámite del proceso y la prescripción de la acción penal.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art189-efectos",
+            "ev-c27-a37-l073-103-efectos-restaurativo",
+            "ev-c27-cpeum-art17-masc"
+          ]
+        },
+        {
+          "question": "¿Efecto del incumplimiento injustificado?",
+          "answer": "Continúa el procedimiento como si no se hubiera celebrado.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c27-cnpp-arts184-186-definicion",
+            "ev-c27-cnpp-art189-efectos",
+            "ev-c27-a37-l073-103-efectos-restaurativo"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación: acuerdos reparatorios",
+        "description": "Diez casos originales sobre procedencia, control y efectos.",
+        "questions": [
+          {
+            "text": "¿Cuál es la naturaleza del acuerdo reparatorio?",
+            "difficulty": "basic",
+            "options": [
+              "Solución alterna penal",
+              "Sentencia condenatoria",
+              "Medida cautelar"
+            ],
+            "correctOption": 0,
+            "explanation": "El CNPP lo regula como solución alterna.",
+            "optionExplanations": [
+              "Es la clasificación correcta.",
+              "No declara culpabilidad.",
+              "No asegura presencia procesal."
+            ],
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cpeum-art17-masc"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cpeum-art17-masc"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cpeum-art17-masc"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cpeum-art17-masc"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cpeum-art17-masc"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál caso entra expresamente en procedencia?",
+            "difficulty": "basic",
+            "options": [
+              "Daño culposo",
+              "Violencia familiar",
+              "Secuestro"
+            ],
+            "correctOption": 0,
+            "explanation": "Los delitos culposos integran una categoría legal.",
+            "optionExplanations": [
+              "Sí puede proceder si no hay exclusión.",
+              "Está expresamente excluida.",
+              "No entra en las categorías ordinarias."
+            ],
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art187-procedencia",
+              "ev-c27-a37-l003-015-procedencia",
+              "ev-c27-scjn-ai130-2019-invalidez"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art187-procedencia",
+                "ev-c27-a37-l003-015-procedencia",
+                "ev-c27-scjn-ai130-2019-invalidez"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art187-procedencia",
+                "ev-c27-a37-l003-015-procedencia",
+                "ev-c27-scjn-ai130-2019-invalidez"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art187-procedencia",
+                "ev-c27-a37-l003-015-procedencia",
+                "ev-c27-scjn-ai130-2019-invalidez"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art187-procedencia",
+              "ev-c27-a37-l003-015-procedencia",
+              "ev-c27-scjn-ai130-2019-invalidez"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art187-procedencia",
+              "ev-c27-a37-l003-015-procedencia",
+              "ev-c27-scjn-ai130-2019-invalidez"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art187-procedencia",
+                "ev-c27-a37-l003-015-procedencia",
+                "ev-c27-scjn-ai130-2019-invalidez"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art187-procedencia",
+                "ev-c27-a37-l003-015-procedencia",
+                "ev-c27-scjn-ai130-2019-invalidez"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-scjn-ai130-2019-invalidez"
+              ]
+            ]
+          },
+          {
+            "text": "Un robo patrimonial se cometió golpeando a la víctima. ¿Procede por la fracción patrimonial?",
+            "difficulty": "intermediate",
+            "options": [
+              "No, hubo violencia sobre la persona",
+              "Sí, todo patrimonial procede",
+              "Sí, si el imputado lo pide"
+            ],
+            "correctOption": 0,
+            "explanation": "La categoría exige ausencia de violencia sobre las personas.",
+            "optionExplanations": [
+              "Falta un requisito esencial.",
+              "La regla no es universal.",
+              "La solicitud unilateral no elimina requisitos."
+            ],
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art187-procedencia",
+              "ev-c27-a37-l003-015-procedencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art187-procedencia",
+                "ev-c27-a37-l003-015-procedencia"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art187-procedencia",
+                "ev-c27-a37-l003-015-procedencia"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art187-procedencia",
+                "ev-c27-a37-l003-015-procedencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art187-procedencia",
+              "ev-c27-a37-l003-015-procedencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art187-procedencia",
+                "ev-c27-a37-l003-015-procedencia"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion"
+              ]
+            ]
+          },
+          {
+            "text": "¿Hasta cuándo puede celebrarse?",
+            "difficulty": "basic",
+            "options": [
+              "Antes del auto de apertura a juicio",
+              "Hasta después de sentencia",
+              "Solo antes de vinculación"
+            ],
+            "correctOption": 0,
+            "explanation": "Ese es el límite del artículo 188.",
+            "optionExplanations": [
+              "Es la ventana correcta.",
+              "Ya terminó la oportunidad.",
+              "También puede celebrarse después de vinculación."
+            ],
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art188-oportunidad",
+                "ev-c27-a37-l165-175-oportunidad"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art188-oportunidad",
+                "ev-c27-a37-l165-175-oportunidad"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art188-oportunidad",
+              "ev-c27-a37-l165-175-oportunidad"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art188-oportunidad",
+                "ev-c27-a37-l165-175-oportunidad"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art188-oportunidad",
+                "ev-c27-a37-l165-175-oportunidad"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion"
+              ]
+            ]
+          },
+          {
+            "text": "Hay vinculación y las partes necesitan tiempo para negociar. ¿Qué puede hacer el juez?",
+            "difficulty": "intermediate",
+            "options": [
+              "Suspender hasta treinta días",
+              "Absolver de inmediato",
+              "Imponer el contenido del acuerdo"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 188 autoriza esa suspensión a petición de las partes.",
+            "optionExplanations": [
+              "Facilita concretar el acuerdo.",
+              "No hay base para absolución.",
+              "Violaría voluntariedad."
+            ],
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art188-oportunidad",
+              "ev-c27-a37-l165-175-oportunidad",
+              "ev-c27-cnpp-art190-tramite",
+              "ev-c27-a37-l209-227-patrimonial-control",
+              "ev-c27-lnmasc-arts29-35-reparacion-acuerdo"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art188-oportunidad",
+                "ev-c27-a37-l165-175-oportunidad",
+                "ev-c27-cnpp-art190-tramite",
+                "ev-c27-a37-l209-227-patrimonial-control",
+                "ev-c27-lnmasc-arts1-28-principios-mecanismos",
+                "ev-c27-lnmasc-arts29-35-reparacion-acuerdo"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art188-oportunidad",
+                "ev-c27-a37-l165-175-oportunidad",
+                "ev-c27-cnpp-art189-efectos",
+                "ev-c27-a37-l073-103-efectos-restaurativo",
+                "ev-c27-cnpp-art190-tramite",
+                "ev-c27-a37-l209-227-patrimonial-control",
+                "ev-c27-lnmasc-arts29-35-reparacion-acuerdo"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art188-oportunidad",
+                "ev-c27-a37-l165-175-oportunidad",
+                "ev-c27-cnpp-art190-tramite",
+                "ev-c27-a37-l209-227-patrimonial-control",
+                "ev-c27-lnmasc-arts1-28-principios-mecanismos",
+                "ev-c27-lnmasc-arts29-35-reparacion-acuerdo"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art188-oportunidad",
+              "ev-c27-a37-l165-175-oportunidad",
+              "ev-c27-cnpp-art190-tramite",
+              "ev-c27-a37-l209-227-patrimonial-control",
+              "ev-c27-lnmasc-arts1-28-principios-mecanismos",
+              "ev-c27-lnmasc-arts29-35-reparacion-acuerdo"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art188-oportunidad",
+                "ev-c27-a37-l165-175-oportunidad",
+                "ev-c27-lnmasc-arts1-28-principios-mecanismos"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art189-efectos",
+                "ev-c27-a37-l073-103-efectos-restaurativo"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-lnmasc-arts1-28-principios-mecanismos",
+                "ev-c27-lnmasc-arts29-35-reparacion-acuerdo"
+              ]
+            ]
+          },
+          {
+            "text": "Un acuerdo diferido no señala plazo. ¿Qué duración se entiende?",
+            "difficulty": "basic",
+            "options": [
+              "Un año",
+              "Treinta días",
+              "Cinco años"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 189 establece el año supletorio.",
+            "optionExplanations": [
+              "Es el plazo legal por defecto.",
+              "Ese plazo puede servir para concertar.",
+              "No es el plazo supletorio."
+            ],
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art189-efectos",
+              "ev-c27-a37-l073-103-efectos-restaurativo"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art189-efectos",
+                "ev-c27-a37-l073-103-efectos-restaurativo"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art188-oportunidad",
+                "ev-c27-a37-l165-175-oportunidad",
+                "ev-c27-cnpp-art189-efectos",
+                "ev-c27-a37-l073-103-efectos-restaurativo"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art189-efectos",
+                "ev-c27-a37-l073-103-efectos-restaurativo"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art189-efectos",
+              "ev-c27-a37-l073-103-efectos-restaurativo"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art189-efectos",
+                "ev-c27-a37-l073-103-efectos-restaurativo"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art188-oportunidad",
+                "ev-c27-a37-l165-175-oportunidad"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion"
+              ]
+            ]
+          },
+          {
+            "text": "El caso sigue en investigación inicial. ¿Quién aprueba el acuerdo?",
+            "difficulty": "intermediate",
+            "options": [
+              "Ministerio Público",
+              "Tribunal de enjuiciamiento",
+              "Perito valuador"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 190 asigna la aprobación inicial al MP.",
+            "optionExplanations": [
+              "Es la autoridad competente en esa etapa.",
+              "No corresponde a juicio.",
+              "El perito no aprueba acuerdos."
+            ],
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art190-tramite",
+              "ev-c27-a37-l209-227-patrimonial-control"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art190-tramite",
+                "ev-c27-a37-l209-227-patrimonial-control"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art190-tramite",
+              "ev-c27-a37-l209-227-patrimonial-control"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art190-tramite",
+              "ev-c27-a37-l209-227-patrimonial-control"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art190-tramite",
+                "ev-c27-a37-l209-227-patrimonial-control"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion"
+              ]
+            ]
+          },
+          {
+            "text": "Una obligación es notoriamente desproporcionada y fue aceptada bajo amenaza. ¿Debe aprobarse?",
+            "difficulty": "advanced",
+            "options": [
+              "No, falta igualdad y libertad",
+              "Sí, porque está firmada",
+              "Sí, si extingue rápido el asunto"
+            ],
+            "correctOption": 0,
+            "explanation": "La autoridad debe verificar proporcionalidad y ausencia de coacción.",
+            "optionExplanations": [
+              "Protege validez y voluntariedad.",
+              "La firma no sana coacción.",
+              "La rapidez no sustituye legalidad."
+            ],
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art190-tramite",
+              "ev-c27-a37-l209-227-patrimonial-control",
+              "ev-c27-lnmasc-arts29-35-reparacion-acuerdo"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art190-tramite",
+                "ev-c27-a37-l209-227-patrimonial-control",
+                "ev-c27-lnmasc-arts1-28-principios-mecanismos",
+                "ev-c27-lnmasc-arts29-35-reparacion-acuerdo"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art190-tramite",
+                "ev-c27-a37-l209-227-patrimonial-control",
+                "ev-c27-lnmasc-arts29-35-reparacion-acuerdo"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art189-efectos",
+                "ev-c27-a37-l073-103-efectos-restaurativo",
+                "ev-c27-cnpp-art190-tramite",
+                "ev-c27-a37-l209-227-patrimonial-control",
+                "ev-c27-lnmasc-arts29-35-reparacion-acuerdo"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art190-tramite",
+              "ev-c27-a37-l209-227-patrimonial-control",
+              "ev-c27-lnmasc-arts1-28-principios-mecanismos",
+              "ev-c27-lnmasc-arts29-35-reparacion-acuerdo"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art190-tramite",
+              "ev-c27-a37-l209-227-patrimonial-control"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art190-tramite",
+                "ev-c27-a37-l209-227-patrimonial-control",
+                "ev-c27-lnmasc-arts1-28-principios-mecanismos"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art190-tramite",
+                "ev-c27-a37-l209-227-patrimonial-control"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art189-efectos",
+                "ev-c27-a37-l073-103-efectos-restaurativo"
+              ]
+            ]
+          },
+          {
+            "text": "El imputado incumple sin justa causa. ¿Qué ocurre?",
+            "difficulty": "intermediate",
+            "options": [
+              "Continúa el procedimiento",
+              "Se extingue automáticamente la acción",
+              "La víctima pierde su derecho"
+            ],
+            "correctOption": 0,
+            "explanation": "El proceso sigue como si no se hubiera celebrado acuerdo.",
+            "optionExplanations": [
+              "Es el efecto legal.",
+              "La extinción exige cumplimiento.",
+              "La víctima conserva tutela legal."
+            ],
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art189-efectos",
+              "ev-c27-a37-l073-103-efectos-restaurativo"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art189-efectos",
+                "ev-c27-a37-l073-103-efectos-restaurativo"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art189-efectos",
+                "ev-c27-a37-l073-103-efectos-restaurativo"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art189-efectos",
+                "ev-c27-a37-l073-103-efectos-restaurativo"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art189-efectos",
+              "ev-c27-a37-l073-103-efectos-restaurativo"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art189-efectos",
+                "ev-c27-a37-l073-103-efectos-restaurativo"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion"
+              ]
+            ]
+          },
+          {
+            "text": "Se cumple totalmente un acuerdo aprobado. ¿Qué efecto corresponde?",
+            "difficulty": "advanced",
+            "options": [
+              "Extinción de la acción penal",
+              "Vinculación automática",
+              "Prisión preventiva oficiosa"
+            ],
+            "correctOption": 0,
+            "explanation": "Es el efecto central del artículo 186.",
+            "optionExplanations": [
+              "Concluye la persecución penal por cumplimiento.",
+              "La vinculación es una etapa previa distinta.",
+              "No deriva del acuerdo cumplido."
+            ],
+            "evidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art189-efectos",
+              "ev-c27-a37-l073-103-efectos-restaurativo",
+              "ev-c27-cnpp-art190-tramite",
+              "ev-c27-a37-l209-227-patrimonial-control"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art189-efectos",
+                "ev-c27-a37-l073-103-efectos-restaurativo",
+                "ev-c27-cnpp-art190-tramite",
+                "ev-c27-a37-l209-227-patrimonial-control",
+                "ev-c27-cpeum-art17-masc"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art189-efectos",
+                "ev-c27-a37-l073-103-efectos-restaurativo",
+                "ev-c27-cnpp-art190-tramite",
+                "ev-c27-a37-l209-227-patrimonial-control"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art189-efectos",
+                "ev-c27-a37-l073-103-efectos-restaurativo",
+                "ev-c27-cnpp-art190-tramite",
+                "ev-c27-a37-l209-227-patrimonial-control"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion",
+              "ev-c27-cnpp-art189-efectos",
+              "ev-c27-a37-l073-103-efectos-restaurativo",
+              "ev-c27-cnpp-art190-tramite",
+              "ev-c27-a37-l209-227-patrimonial-control",
+              "ev-c27-cpeum-art17-masc"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c27-cnpp-arts184-186-definicion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art189-efectos",
+                "ev-c27-a37-l073-103-efectos-restaurativo",
+                "ev-c27-cpeum-art17-masc"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion"
+              ],
+              [
+                "ev-c27-cnpp-arts184-186-definicion",
+                "ev-c27-cnpp-art189-efectos",
+                "ev-c27-a37-l073-103-efectos-restaurativo"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c27-cpeum-art17-masc",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículo 17, mecanismos alternativos y reparación en materia penal",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c27-cnpp-arts184-186-definicion",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Penales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículos 184 a 186, solución alterna y definición del acuerdo reparatorio",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c27-cnpp-art187-procedencia",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Penales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículo 187, categorías, antecedentes y exclusiones; porción sobre antiguo artículo 167, párrafo séptimo, fracciones I a III, declarada inválida por SCJN y publicada DOF 20-08-2025",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c27-scjn-ai130-2019-invalidez",
+      "kind": "official",
+      "title": "Sentencia de la Acción de Inconstitucionalidad 130/2019 y su acumulada 136/2019",
+      "url": "https://dof.gob.mx/nota_detalle_popup.php?codigo=5766200",
+      "institution": "Diario Oficial de la Federación y Suprema Corte de Justicia de la Nación",
+      "jurisdiction": "México",
+      "locator": "sentencia publicada DOF 20-08-2025; resolutivo quinto; invalidez por extensión de la porción del artículo 187 vinculada con el antiguo artículo 167, párrafo séptimo, fracciones I a III",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c27-cnpp-art188-oportunidad",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Penales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículo 188, oportunidad y suspensión hasta por treinta días",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c27-cnpp-art189-efectos",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Penales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículo 189, invitación, cumplimiento inmediato o diferido, año supletorio, suspensión, incumplimiento, confidencialidad y extinción",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c27-cnpp-art190-tramite",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Penales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículo 190, aprobación por etapa, control judicial en cinco días, proporcionalidad, igualdad y ausencia de coacción",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c27-lnmasc-arts1-28-principios-mecanismos",
+      "kind": "official",
+      "title": "Ley Nacional de Mecanismos Alternativos de Solución de Controversias en Materia Penal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LNMASCMP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 01-04-2024; artículos 1 a 28, objeto, principios, derechos, facilitación, mediación, conciliación y junta restaurativa",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c27-lnmasc-arts29-35-reparacion-acuerdo",
+      "kind": "official",
+      "title": "Ley Nacional de Mecanismos Alternativos de Solución de Controversias en Materia Penal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LNMASCMP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 01-04-2024; artículos 29 a 35, alcance restaurativo, salvaguarda, contenido, validación, efectos y cumplimiento parcial o total",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c27-a37-l003-015-procedencia",
+      "kind": "transcript",
+      "audioNumber": 37,
+      "locator": {
+        "type": "line_range",
+        "startLine": 3,
+        "endLine": 15
+      }
+    },
+    {
+      "id": "ev-c27-a37-l023-029-cumplimiento",
+      "kind": "transcript",
+      "audioNumber": 37,
+      "locator": {
+        "type": "line_range",
+        "startLine": 23,
+        "endLine": 29
+      }
+    },
+    {
+      "id": "ev-c27-a37-l045-057-plazo-aprobacion",
+      "kind": "transcript",
+      "audioNumber": 37,
+      "locator": {
+        "type": "line_range",
+        "startLine": 45,
+        "endLine": 57
+      }
+    },
+    {
+      "id": "ev-c27-a37-l073-103-efectos-restaurativo",
+      "kind": "transcript",
+      "audioNumber": 37,
+      "locator": {
+        "type": "line_range",
+        "startLine": 73,
+        "endLine": 103
+      }
+    },
+    {
+      "id": "ev-c27-a37-l165-175-oportunidad",
+      "kind": "transcript",
+      "audioNumber": 37,
+      "locator": {
+        "type": "line_range",
+        "startLine": 165,
+        "endLine": 175
+      }
+    },
+    {
+      "id": "ev-c27-a37-l209-227-patrimonial-control",
+      "kind": "transcript",
+      "audioNumber": 37,
+      "locator": {
+        "type": "line_range",
+        "startLine": 209,
+        "endLine": 227
+      }
+    }
+  ]
 }

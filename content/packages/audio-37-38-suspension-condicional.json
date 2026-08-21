@@ -1,94 +1,1551 @@
 {
-  "packageVersion":"1.1",
-  "curriculum":{
-    "code":"C28",
-    "order":28,
-    "audioSources":[
-      {"audioNumber":37,"fragment":"Cierre: introducción a la suspensión condicional"},
-      {"audioNumber":38,"fragment":"Audio completo"}
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C28",
+    "order": 28,
+    "audioSources": [
+      {
+        "audioNumber": 37,
+        "fragment": "Cierre: introducción a la suspensión condicional"
+      },
+      {
+        "audioNumber": 38,
+        "fragment": "Audio completo"
+      }
     ]
   },
-  "subject":{"name":"Derecho Penal y Procesal Penal","description":"Teoría del delito, derechos de las partes, investigación, proceso penal acusatorio y soluciones alternas."},
-  "class":{"title":"Suspensión condicional del proceso","description":"Vigesimoctava clase del plan académico: procedencia, plan de reparación, condiciones, supervisión, revocación y sobreseimiento."},
-  "transcript":{"originalFiles":["AUDIO 37.txt","AUDIO 38.txt"],"cleaned":"Se conservaron el inicio después de la vinculación, la media aritmética, el plan de reparación, la oposición fundada, las condiciones, la supervisión, la revocación y el efecto del cumplimiento. Se eliminaron saludos, insultos, estereotipos, historias personales, afirmaciones pseudopsicológicas, datos de víctimas, opiniones sobre sexualidad, adicciones, música, armas y ciudades. Se corrigió que no debe afirmarse que ciertos delitos concretos admiten la suspensión sin revisar el tipo y la pena aplicables; que la oposición de la víctima debe ser fundada; que la solicitud corresponde al imputado o al Ministerio Público con acuerdo de aquél; que la revocación no es automática y exige petición, audiencia y decisión judicial; que el incumplimiento no produce por sí solo reaprehensión ni prisión; que el juez puede ampliar una sola vez hasta dos años; que los pagos recibidos se destinan a la indemnización si se revoca; que la autoridad de supervisión informa incumplimientos, pero el juez resuelve; y que, cumplidos plan y condiciones sin revocación, se extingue la acción y se decreta sobreseimiento."},
-  "topics":[{
-    "title":"Plan, condiciones y control de la suspensión condicional",
-    "description":"Requisitos y ruta de supervisión para suspender un proceso y alcanzar el sobreseimiento.",
-    "learningJourney":{"openingPrompt":"Una persona vinculada propone reparar el daño y someterse a condiciones. ¿Qué debe comprobar el juez antes de suspender el proceso?","quickChecks":[{"prompt":"¿Puede solicitarse antes de la vinculación?","answer":"No. La oportunidad comienza una vez dictado el auto de vinculación y termina antes de la apertura a juicio.","feedback":"A diferencia del acuerdo reparatorio, requiere proceso vinculado."},{"prompt":"¿Toda oposición de la víctima impide la suspensión?","answer":"No. El requisito es que no exista oposición fundada; el juez analiza las razones y la tutela efectiva.","feedback":"La mera inconformidad y la oposición fundada no son equivalentes."},{"prompt":"¿El incumplimiento revoca automáticamente?","answer":"No. MP o víctima solicitan, el juez convoca audiencia y decide; también puede ampliar una vez el plazo.","feedback":"Respeta contradicción y decisión judicial."}],"practicalCase":{"facts":"Una persona vinculada por un delito con pena de dos a seis años propone reparar el daño en mensualidades y someterse a tratamiento. La víctima acredita amenazas recientes y riesgo grave.","question":"¿Basta la media aritmética para conceder la suspensión?","legalRule":"Los artículos 191 a 200 del CNPP exigen media no mayor de cinco años, ausencia de oposición fundada, reglas sobre antecedentes, plan y condiciones que tutelen derechos.","reasoning":"La media es cuatro años y satisface la fracción I, pero el juez debe valorar la oposición fundada, el riesgo, la viabilidad del plan y condiciones. Cumplir un requisito numérico no obliga a conceder si no existe tutela efectiva.","conclusion":"La decisión es judicial e integral: procedencia formal, reparación viable y protección real de la víctima."},"closingPrompt":"Compara suspensión condicional y acuerdo reparatorio en inicio, participantes, plan, condiciones, control y efecto final.","nextActivity":"Recorre el mapa visual, responde la guía de doce preguntas y resuelve los diez casos originales."},
-    "materials":[
-      {"type":"short_answer","title":"Respuesta breve","content":"La suspensión condicional es una solución alterna solicitada por el imputado o por el MP con su acuerdo. Requiere vinculación por delito cuya media de prisión no exceda cinco años, ausencia de oposición fundada y cumplimiento de reglas sobre antecedentes. Incluye plan de reparación y condiciones por seis meses a tres años. Cumplidos ambos sin revocación, se extingue la acción y el juez sobresee.","sourceOrigin":"mixed"},
-      {"type":"full_explanation","title":"Explicación completa desde cero","content":"La suspensión condicional del proceso no es libertad automática ni sentencia. El artículo 191 del CNPP la define como el planteamiento del Ministerio Público o del imputado que contiene un plan detallado de reparación y el sometimiento a condiciones destinadas a tutelar efectivamente los derechos de la víctima; su cumplimiento puede extinguir la acción penal.\n\nProcede si ya se dictó auto de vinculación por un delito cuya media aritmética de la pena de prisión no exceda cinco años. La media se obtiene sumando mínima y máxima y dividiendo entre dos. Además, no debe existir oposición fundada de víctima u ofendido y deben haber transcurrido dos años desde el cumplimiento o cinco desde el incumplimiento de una suspensión anterior, salvo absolución en aquel procedimiento. La porción que declaraba improcedencia automática por ciertos supuestos del artículo 167 fue invalidada por la SCJN y así aparece en el texto vigente.\n\nNo deben memorizarse listas informales de delitos. Las penas y modalidades dependen del ordenamiento aplicable y pueden cambiar; primero se identifica el tipo penal concreto y luego se calcula la media. La violencia familiar no se resuelve igual que el acuerdo reparatorio: aquí no existe una exclusión nominal idéntica, pero la oposición fundada, el riesgo y la tutela de la víctima son decisivos.\n\nLa oportunidad va desde la vinculación hasta antes del auto de apertura a juicio. Puede solicitarla el imputado o el MP con acuerdo de aquél. La víctima debe ser citada; su incomparecencia no impide resolver, pero sus razones y derechos deben valorarse.\n\nEl plan de reparación especifica daño, obligaciones y plazos. La sola falta de recursos no basta para rechazar: el juez puede modificar el plan para hacerlo viable sin sacrificar reparación. La información generada por esta salida no puede usarse si el proceso continúa.\n\nEl juez fija un periodo de seis meses a tres años e impone una o varias condiciones. El catálogo enunciativo incluye residir en lugar determinado; evitar lugares o personas; abstenerse de drogas o abuso de alcohol; participar en tratamiento de adicciones; capacitarse; prestar servicio social; someterse a tratamiento médico o psicológico; trabajar o adquirir oficio; someterse a vigilancia; no poseer ni portar armas; no conducir; abstenerse de viajar al extranjero; cumplir deberes alimentarios; y cualquier otra condición que tutele efectivamente a la víctima. Deben ser idóneas, proporcionales y relacionadas con el caso.\n\nLa autoridad de supervisión de medidas cautelares y suspensión condicional da seguimiento e informa a las partes. Las instituciones designadas reportan cumplimiento. La supervisión no sustituye al juez ni autoriza castigos por sí misma.\n\nLa revocación exige incumplimiento injustificado de condiciones o plan, o sentencia ejecutoriada posterior en los términos del artículo 198. MP o víctima pide audiencia; las partes debaten y el juez decide. No hay revocación, reaprehensión ni prisión automáticas. El juez puede ampliar el plazo hasta dos años más, una sola vez.\n\nSi se revoca, los pagos recibidos se destinan a la indemnización que corresponda; no desaparecen. Si el imputado cumple condiciones y plan dentro del plazo sin revocación, se extingue la acción penal y el juez decreta sobreseimiento de oficio o a petición. Para resolver CENEVAL: calcula media, verifica vinculación y oportunidad, analiza oposición y antecedentes, elige plan y condición pertinente, y determina el efecto de cumplimiento o incumplimiento.","sourceOrigin":"mixed"},
-      {"type":"legal_basis","title":"Fundamento jurídico vigente","content":"CNPP vigente al 28-11-2025: artículos 184, 191 a 200 y 176 a 177 sobre supervisión. Constitución vigente al 02-06-2026: artículos 17 y 20. Consulta oficial realizada el 11 de agosto de 2026.","sourceOrigin":"complementary"},
-      {"type":"simple_example","title":"Ejemplo sencillo","content":"Pena de uno a cinco años: media de tres. Tras vinculación, el imputado propone pagar reparación y acudir a tratamiento durante un año. El juez escucha a la víctima, revisa antecedentes y decide condiciones idóneas.","sourceOrigin":"mixed"},
-      {"type":"ceneval_example","title":"Caso tipo CENEVAL","content":"La autoridad supervisora reporta una falta. La respuesta correcta no es revocación automática: MP o víctima debe pedir audiencia y el juez decidir si hubo incumplimiento injustificado, si procede revocar o si corresponde una ampliación legal.","sourceOrigin":"mixed"},
-      {"type":"summary","title":"Resumen","content":"Solicitud: imputado o MP con su acuerdo. Inicio: vinculación. Límite: antes de apertura. Requisitos: media ≤5, sin oposición fundada y antecedentes permitidos. Contenido: plan más condiciones. Duración: 6 meses a 3 años. Control: juez y autoridad supervisora. Incumplimiento: audiencia, no automatismo. Extensión: una vez hasta 2 años. Cumplimiento: extinción y sobreseimiento.","sourceOrigin":"mixed"},
-      {"type":"study_guide","title":"Guía intensiva de preguntas y respuestas","content":"1. ¿Qué es? Respuesta: plan de reparación más condiciones que suspenden el proceso. 2. ¿Quién solicita? Respuesta: imputado o MP con su acuerdo. 3. ¿Desde cuándo? Respuesta: desde la vinculación. 4. ¿Hasta cuándo? Respuesta: antes de apertura. 5. ¿Media máxima? Respuesta: no exceder cinco años. 6. ¿Víctima? Respuesta: no debe existir oposición fundada. 7. ¿Plan? Respuesta: reparación detallada con plazos. 8. ¿Duración? Respuesta: seis meses a tres años. 9. ¿Quién fija condiciones? Respuesta: juez de control. 10. ¿Quién supervisa? Respuesta: autoridad especializada. 11. ¿Revocación automática? Respuesta: no, requiere petición y audiencia. 12. ¿Cumplimiento total? Respuesta: extingue acción y produce sobreseimiento.","sourceOrigin":"mixed"},
-      {"type":"key_concepts","title":"Conceptos clave","content":"Suspensión condicional: solución alterna. Media aritmética: mínima más máxima entre dos. Vinculación: presupuesto temporal. Oposición fundada: razón jurídicamente sustentada. Plan de reparación: obligaciones y plazos. Condición: regla judicial de conducta. Supervisión: seguimiento especializado. Incumplimiento injustificado: presupuesto de posible revocación. Revocación: decisión judicial tras audiencia. Ampliación: hasta dos años una vez. Extinción: fin de acción penal. Sobreseimiento: resolución final favorable.","sourceOrigin":"mixed"},
-      {"type":"common_errors","title":"Errores comunes","content":"No confundir con acuerdo reparatorio. No solicitar antes de vinculación. No calcular media con una sola pena. No asumir que cualquier delito nombrado por el docente procede. No ignorar oposición fundada ni riesgo. No imponer terapia como castigo sin pertinencia. No confundir condición con medida cautelar. No atribuir revocación a la unidad supervisora. No revocar sin audiencia. No ordenar reaprehensión automática. No borrar pagos hechos si se revoca. No olvidar sobreseimiento al cumplimiento total.","sourceOrigin":"complementary"}
+  "subject": {
+    "name": "Derecho Penal y Procesal Penal",
+    "description": "Teoría del delito, derechos de las partes, investigación, proceso penal acusatorio y soluciones alternas."
+  },
+  "class": {
+    "title": "Suspensión condicional del proceso",
+    "description": "Vigesimoctava clase del plan académico: procedencia, plan de reparación, condiciones, supervisión, revocación y sobreseimiento."
+  },
+  "transcript": {
+    "originalFiles": [
+      "AUDIO 37.txt",
+      "AUDIO 38.txt"
     ],
-    "conceptMap":{"title":"Mapa visual: suspensión condicional del proceso","description":"Requisitos, condiciones, supervisión y desenlace.","nodes":[
-      {"id":"scp","label":"Suspensión condicional","description":"Solución alterna."},
-      {"id":"solicitud","label":"Solicitud","description":"Activa el análisis.","parentId":"scp"},
-      {"id":"imputado","label":"Imputado","description":"Puede solicitar.","parentId":"solicitud"},
-      {"id":"mp","label":"MP con acuerdo","description":"Requiere consentimiento del imputado.","parentId":"solicitud"},
-      {"id":"requisitos","label":"Procedencia","description":"Artículo 192.","parentId":"scp"},
-      {"id":"vinculacion","label":"Auto de vinculación","description":"Debe existir.","parentId":"requisitos"},
-      {"id":"media","label":"Media no mayor a 5","description":"Mínima más máxima entre dos.","parentId":"requisitos"},
-      {"id":"oposicion","label":"Sin oposición fundada","description":"Se escuchan razones de víctima.","parentId":"requisitos"},
-      {"id":"antecedente","label":"Antecedentes permitidos","description":"Dos o cinco años, según caso.","parentId":"requisitos"},
-      {"id":"oportunidad","label":"Oportunidad","description":"Ventana procesal.","parentId":"scp"},
-      {"id":"desde","label":"Desde vinculación","description":"Inicio.","parentId":"oportunidad"},
-      {"id":"hasta","label":"Antes de apertura","description":"Límite.","parentId":"oportunidad"},
-      {"id":"plan","label":"Plan de reparación","description":"Daño, obligaciones y plazos.","parentId":"scp"},
-      {"id":"viable","label":"Viabilidad","description":"Falta de recursos no basta para negar.","parentId":"plan"},
-      {"id":"victima","label":"Tutela de víctima","description":"Reparación y protección.","parentId":"plan"},
-      {"id":"condiciones","label":"Condiciones judiciales","description":"Idóneas y proporcionales.","parentId":"scp"},
-      {"id":"duracion","label":"6 meses a 3 años","description":"Periodo ordinario.","parentId":"condiciones"},
-      {"id":"lugar","label":"Lugar o personas","description":"Residencia y restricciones.","parentId":"condiciones"},
-      {"id":"salud","label":"Tratamiento","description":"Médico, psicológico o adicciones.","parentId":"condiciones"},
-      {"id":"trabajo","label":"Trabajo o capacitación","description":"Integración social.","parentId":"condiciones"},
-      {"id":"conducta","label":"Abstenciones","description":"Alcohol, drogas, armas o conducir.","parentId":"condiciones"},
-      {"id":"alimentos","label":"Deber alimentario","description":"Cumplimiento familiar.","parentId":"condiciones"},
-      {"id":"supervision","label":"Supervisión","description":"Seguimiento especializado.","parentId":"scp"},
-      {"id":"reporte","label":"Reporte a partes","description":"Informa cumplimiento o falta.","parentId":"supervision"},
-      {"id":"incumplimiento","label":"Posible incumplimiento","description":"Debe ser injustificado.","parentId":"scp"},
-      {"id":"audiencia","label":"Audiencia de revocación","description":"Contradicción ante juez.","parentId":"incumplimiento"},
-      {"id":"revocar","label":"Revocación","description":"Continúa el proceso.","parentId":"audiencia"},
-      {"id":"ampliar","label":"Ampliar una vez","description":"Hasta dos años más.","parentId":"audiencia"},
-      {"id":"cumplimiento","label":"Cumplimiento total","description":"Plan y condiciones.","parentId":"scp"},
-      {"id":"extincion","label":"Extinción de acción","description":"Efecto legal.","parentId":"cumplimiento"},
-      {"id":"sobreseimiento","label":"Sobreseimiento","description":"De oficio o a petición.","parentId":"extincion"}
-    ]},
-    "references":[
-      {"title":"Código Nacional de Procedimientos Penales","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Federal, México","citation":"Artículos 176, 177, 184 y 191 a 200; última reforma DOF 28-11-2025","retrievedOn":"2026-08-11","note":"Fuente primaria de requisitos, condiciones, supervisión y efectos."},
-      {"title":"Constitución Política de los Estados Unidos Mexicanos","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Federal, México","citation":"Artículos 17 y 20; últimas reformas DOF 02-06-2026","retrievedOn":"2026-08-11","note":"Base de mecanismos alternativos y derechos procesales."},
-      {"title":"Sentencia de la Acción de Inconstitucionalidad 130/2019 y acumulada 136/2019","url":"https://www.diputados.gob.mx/LeyesBiblio/actual/2025.htm","institution":"Cámara de Diputados del H. Congreso de la Unión y Suprema Corte de Justicia de la Nación","jurisdiction":"Federal, México","citation":"Declaración de invalidez publicada DOF 20-08-2025 respecto de porciones de los artículos 167, 187 y 192 CNPP","retrievedOn":"2026-08-11","note":"Acredita la invalidez de la exclusión automática vinculada al antiguo párrafo séptimo del artículo 167."}
-    ],
-    "flashcards":[
-      {"question":"¿Quién puede solicitar la suspensión?","answer":"El imputado o el MP con acuerdo del imputado.","sourceOrigin":"complementary"},
-      {"question":"¿Qué acto debe existir?","answer":"El auto de vinculación a proceso.","sourceOrigin":"complementary"},
-      {"question":"¿Media aritmética máxima?","answer":"No debe exceder de cinco años.","sourceOrigin":"complementary"},
-      {"question":"¿Qué papel tiene la víctima?","answer":"Su oposición fundada impide la procedencia.","sourceOrigin":"complementary"},
-      {"question":"¿Cuál es la oportunidad?","answer":"Desde vinculación hasta antes de apertura a juicio.","sourceOrigin":"complementary"},
-      {"question":"¿Qué contiene la propuesta?","answer":"Plan detallado de reparación y sometimiento a condiciones.","sourceOrigin":"complementary"},
-      {"question":"¿Duración ordinaria?","answer":"De seis meses a tres años.","sourceOrigin":"complementary"},
-      {"question":"¿Quién fija condiciones?","answer":"El juez de control.","sourceOrigin":"complementary"},
-      {"question":"¿Quién supervisa?","answer":"La autoridad de supervisión de medidas cautelares y suspensión.","sourceOrigin":"complementary"},
-      {"question":"¿Revocación automática?","answer":"No; requiere petición, audiencia y decisión judicial.","sourceOrigin":"mixed"},
-      {"question":"¿Ampliación posible?","answer":"Una sola vez y hasta dos años más.","sourceOrigin":"complementary"},
-      {"question":"¿Efecto del cumplimiento?","answer":"Extinción de la acción penal y sobreseimiento.","sourceOrigin":"complementary"}
-    ],
-    "exam":{"title":"Evaluación: suspensión condicional del proceso","description":"Diez casos originales sobre procedencia, condiciones y desenlace.","questions":[
-      {"text":"Pena de dos a seis años. ¿Cuál es su media?","difficulty":"basic","options":["Cuatro años","Seis años","Ocho años"],"correctOption":0,"explanation":"Se suman mínima y máxima y se divide entre dos.","optionExplanations":["(2+6)/2=4.","Es solo la máxima.","Es la suma sin dividir."]},
-      {"text":"¿Qué acto permite comenzar a solicitar la suspensión?","difficulty":"basic","options":["Auto de vinculación","Denuncia","Sentencia"],"correctOption":0,"explanation":"La oportunidad inicia con la vinculación.","optionExplanations":["Es el presupuesto correcto.","Aún no basta.","Es demasiado tarde."]},
-      {"text":"¿Quién puede formular la solicitud?","difficulty":"basic","options":["Imputado o MP con su acuerdo","Solo la víctima","La autoridad supervisora"],"correctOption":0,"explanation":"El artículo 192 legitima al imputado o al Ministerio Público con acuerdo de aquél.","optionExplanations":["Son los legitimados.","La víctima participa y puede oponerse fundadamente.","Supervisa, no solicita por sí."]},
-      {"text":"Una víctima acredita amenazas y riesgo grave. ¿Qué debe analizar el juez?","difficulty":"advanced","options":["Si existe oposición fundada","Solo la media aritmética","Únicamente la firma del imputado"],"correctOption":0,"explanation":"La tutela efectiva exige valorar razones y riesgo.","optionExplanations":["Es un requisito sustantivo.","La media no agota el análisis.","El consentimiento del imputado no basta."]},
-      {"text":"¿Qué debe acompañar la solicitud?","difficulty":"intermediate","options":["Plan detallado de reparación","Proyecto de sentencia condenatoria","Orden de aprehensión"],"correctOption":0,"explanation":"El plan es componente definitorio.","optionExplanations":["Incluye obligaciones y plazos.","No hay condena.","No es requisito de la salida."]},
-      {"text":"¿Cuál periodo ordinario puede fijar el juez?","difficulty":"basic","options":["Seis meses a tres años","Un día a treinta días","Cinco a diez años"],"correctOption":0,"explanation":"El artículo 195 fija un periodo no menor de seis meses ni mayor de tres años.","optionExplanations":["Rango correcto.","No corresponde.","Excede el rango."]},
-      {"text":"La supervisión reporta una falta. ¿Qué sigue jurídicamente?","difficulty":"advanced","options":["Petición y audiencia ante juez","Prisión automática","Extinción automática"],"correctOption":0,"explanation":"La revocación exige debate y resolución.","optionExplanations":["Respeta contradicción.","No deriva automáticamente.","El incumplimiento no extingue."]},
-      {"text":"¿Qué puede hacer el juez además de revocar?","difficulty":"intermediate","options":["Ampliar una vez hasta dos años","Ampliar indefinidamente","Condenar sin juicio"],"correctOption":0,"explanation":"El artículo 198 permite una extensión única.","optionExplanations":["Es la alternativa legal.","No existe ampliación indefinida.","Violaría debido proceso."]},
-      {"text":"Si se revoca después de pagos a la víctima, ¿qué ocurre con ellos?","difficulty":"advanced","options":["Se destinan a la indemnización correspondiente","Se devuelven siempre al imputado","Desaparecen jurídicamente"],"correctOption":0,"explanation":"El artículo 198 preserva su destino reparador.","optionExplanations":["Es el tratamiento legal.","No es la regla.","Los pagos no se borran."]},
-      {"text":"Se cumplieron plan y condiciones sin revocación. ¿Qué debe decretar el juez?","difficulty":"intermediate","options":["Sobreseimiento por extinción","Apertura automática a juicio","Nueva vinculación"],"correctOption":0,"explanation":"El artículo 199 extingue la acción y ordena sobreseer.","optionExplanations":["Es el desenlace correcto.","El cumplimiento evita continuar.","No corresponde repetir la etapa."]}
-    ]}
-  }]
+    "cleaned": "Se conservaron el inicio después de la vinculación, la media aritmética, el plan de reparación, la oposición fundada, las condiciones, la supervisión, la revocación y el efecto del cumplimiento. Se eliminaron saludos, insultos, estereotipos, historias personales, afirmaciones pseudopsicológicas, datos de víctimas, opiniones sobre sexualidad, adicciones, música, armas y ciudades. Se corrigió que no debe afirmarse que un delito es admisible o inadmisible solo por su nombre: debe revisarse la pena aplicable, calcular su media y aplicar el artículo 192 vigente, cuya antigua exclusión fiscal fue invalidada; que la oposición de la víctima debe ser fundada; que la solicitud corresponde al imputado o al Ministerio Público con acuerdo de aquél; que la revocación no es automática y exige petición, audiencia y decisión judicial; que el incumplimiento no produce por sí solo reaprehensión ni prisión; que el juez puede ampliar una sola vez hasta dos años; que los pagos recibidos se destinan a la indemnización si se revoca; que la autoridad de supervisión informa incumplimientos, pero el juez resuelve; y que, cumplidos plan y condiciones sin revocación, se extingue la acción y se decreta sobreseimiento."
+  },
+  "topics": [
+    {
+      "title": "Plan, condiciones y control de la suspensión condicional",
+      "description": "Requisitos y ruta de supervisión para suspender un proceso y alcanzar el sobreseimiento.",
+      "learningJourney": {
+        "openingPrompt": "Una persona vinculada propone reparar el daño y someterse a condiciones. ¿Qué debe comprobar el juez antes de suspender el proceso?",
+        "quickChecks": [
+          {
+            "prompt": "¿Puede solicitarse antes de la vinculación?",
+            "answer": "No. La oportunidad comienza una vez dictado el auto de vinculación y termina antes de la apertura a juicio.",
+            "feedback": "A diferencia del acuerdo reparatorio, requiere proceso vinculado.",
+            "evidenceIds": [
+              "ev-c28-cnpp-art192-procedencia",
+              "ev-c28-cnpp-art193-oportunidad",
+              "ev-c28-a37-l157-177-introduccion-media",
+              "ev-c28-a37-l205-227-media-vinculacion",
+              "ev-c28-a38-l031-055-procedencia"
+            ]
+          },
+          {
+            "prompt": "¿Toda oposición de la víctima impide la suspensión?",
+            "answer": "No. El requisito es que no exista oposición fundada; el juez analiza las razones y la tutela efectiva.",
+            "feedback": "La mera inconformidad y la oposición fundada no son equivalentes.",
+            "evidenceIds": [
+              "ev-c28-cpeum-arts17-20-soluciones-derechos",
+              "ev-c28-cnpp-art192-procedencia",
+              "ev-c28-a37-l177-205-suspension-condiciones",
+              "ev-c28-a38-l059-091-condiciones"
+            ]
+          },
+          {
+            "prompt": "¿El incumplimiento revoca automáticamente?",
+            "answer": "No. MP o víctima solicitan, el juez convoca audiencia y decide; también puede ampliar una vez el plazo.",
+            "feedback": "Respeta contradicción y decisión judicial.",
+            "evidenceIds": [
+              "ev-c28-cpeum-arts17-20-soluciones-derechos",
+              "ev-c28-cnpp-art192-procedencia",
+              "ev-c28-cnpp-art198-revocacion",
+              "ev-c28-a38-l103-121-condiciones-plazo",
+              "ev-c28-a38-l185-205-incumplimiento-audiencia"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una persona vinculada por un delito con pena de dos a seis años propone reparar el daño en mensualidades y someterse a tratamiento. La víctima acredita amenazas recientes y riesgo grave.",
+          "question": "¿Basta la media aritmética para conceder la suspensión?",
+          "legalRule": "Los artículos 191 a 200 del CNPP exigen media no mayor de cinco años, ausencia de oposición fundada, reglas sobre antecedentes, plan y condiciones que tutelen derechos.",
+          "reasoning": "La media es cuatro años y satisface la fracción I, pero el juez debe valorar la oposición fundada, el riesgo, la viabilidad del plan y condiciones. Cumplir un requisito numérico no obliga a conceder si no existe tutela efectiva.",
+          "conclusion": "La decisión es judicial e integral: procedencia formal, reparación viable y protección real de la víctima.",
+          "evidenceIds": [
+            "ev-c28-cpeum-arts17-20-soluciones-derechos",
+            "ev-c28-cnpp-art192-procedencia",
+            "ev-c28-cnpp-art193-oportunidad",
+            "ev-c28-cnpp-arts194-196-plan-condiciones",
+            "ev-c28-cnpp-art200-antecedentes",
+            "ev-c28-a37-l157-177-introduccion-media",
+            "ev-c28-a37-l205-227-media-vinculacion",
+            "ev-c28-a38-l031-055-procedencia",
+            "ev-c28-a37-l177-205-suspension-condiciones",
+            "ev-c28-a38-l059-091-condiciones",
+            "ev-c28-a38-l139-155-reparacion-supervision",
+            "ev-c28-a38-l169-183-seguimiento"
+          ]
+        },
+        "closingPrompt": "Compara suspensión condicional y acuerdo reparatorio en inicio, participantes, plan, condiciones, control y efecto final.",
+        "nextActivity": "Recorre el mapa visual, responde la guía de doce preguntas y resuelve los diez casos originales.",
+        "openingPromptEvidenceIds": [
+          "ev-c28-cnpp-art193-oportunidad",
+          "ev-c28-cnpp-arts194-196-plan-condiciones",
+          "ev-c28-a37-l157-177-introduccion-media",
+          "ev-c28-a37-l205-227-media-vinculacion",
+          "ev-c28-a38-l031-055-procedencia",
+          "ev-c28-a37-l177-205-suspension-condiciones",
+          "ev-c28-a38-l059-091-condiciones"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c28-cnpp-arts184-191-definicion",
+          "ev-c28-cnpp-arts194-196-plan-condiciones",
+          "ev-c28-a37-l177-205-suspension-condiciones",
+          "ev-c28-a38-l059-091-condiciones"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c28-cnpp-arts184-191-definicion",
+          "ev-c28-cnpp-art192-procedencia"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "La suspensión condicional es una solución alterna solicitada por el imputado o por el MP con su acuerdo. Requiere vinculación por delito cuya media de prisión no exceda cinco años, ausencia de oposición fundada y cumplimiento de reglas sobre antecedentes. Incluye plan de reparación y condiciones por seis meses a tres años. Cumplidos ambos sin revocación, se extingue la acción y el juez sobresee.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c28-cnpp-arts184-191-definicion",
+            "ev-c28-cnpp-art192-procedencia",
+            "ev-c28-cnpp-art193-oportunidad",
+            "ev-c28-cnpp-arts194-196-plan-condiciones",
+            "ev-c28-cnpp-art198-revocacion",
+            "ev-c28-cnpp-art199-cumplimiento",
+            "ev-c28-cnpp-art200-antecedentes",
+            "ev-c28-a37-l157-177-introduccion-media",
+            "ev-c28-a37-l205-227-media-vinculacion",
+            "ev-c28-a38-l031-055-procedencia",
+            "ev-c28-a37-l177-205-suspension-condiciones",
+            "ev-c28-a38-l059-091-condiciones",
+            "ev-c28-a38-l103-121-condiciones-plazo",
+            "ev-c28-a38-l139-155-reparacion-supervision",
+            "ev-c28-a38-l169-183-seguimiento",
+            "ev-c28-a38-l185-205-incumplimiento-audiencia"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "La suspensión condicional del proceso no es libertad automática ni sentencia. El artículo 191 del CNPP la define como el planteamiento del Ministerio Público o del imputado que contiene un plan detallado de reparación y el sometimiento a condiciones destinadas a tutelar efectivamente los derechos de la víctima; su cumplimiento puede extinguir la acción penal.\n\nProcede si ya se dictó auto de vinculación por un delito cuya media aritmética de la pena de prisión no exceda cinco años. La media se obtiene sumando mínima y máxima y dividiendo entre dos. Además, no debe existir oposición fundada de víctima u ofendido y deben haber transcurrido dos años desde el cumplimiento o cinco desde el incumplimiento de una suspensión anterior, salvo absolución en aquel procedimiento. La porción del artículo 192, párrafo tercero, que hacía improcedente automáticamente la suspensión para las hipótesis fiscales del antiguo artículo 167, párrafo séptimo, fracciones I a III, fue invalidada por extensión en la Acción de Inconstitucionalidad 130/2019 y su acumulada 136/2019. La sentencia se publicó en el DOF el 20-08-2025 y el CNPP consolidado vigente ya la muestra entre corchetes como inválida. No debe aplicarse como exclusión vigente.\n\nNo deben memorizarse listas informales de delitos. Las penas y modalidades dependen del ordenamiento aplicable y pueden cambiar; primero se identifica el tipo penal concreto y luego se calcula la media. La violencia familiar no se resuelve igual que el acuerdo reparatorio: aquí no existe una exclusión nominal idéntica, pero la oposición fundada, el riesgo y la tutela de la víctima son decisivos.\n\nLa oportunidad va desde la vinculación hasta antes del auto de apertura a juicio. Puede solicitarla el imputado o el MP con acuerdo de aquél. La víctima debe ser citada; su incomparecencia no impide resolver, pero sus razones y derechos deben valorarse.\n\nEl plan de reparación especifica daño, obligaciones y plazos. La sola falta de recursos no basta para rechazar: el juez puede modificar el plan para hacerlo viable sin sacrificar reparación. La información generada por esta salida no puede usarse si el proceso continúa.\n\nEl juez fija un periodo de seis meses a tres años e impone una o varias condiciones. El catálogo enunciativo incluye residir en lugar determinado; evitar lugares o personas; abstenerse de drogas o abuso de alcohol; participar en tratamiento de adicciones; capacitarse; prestar servicio social; someterse a tratamiento médico o psicológico; trabajar o adquirir oficio; someterse a vigilancia; no poseer ni portar armas; no conducir; abstenerse de viajar al extranjero; cumplir deberes alimentarios; y cualquier otra condición que tutele efectivamente a la víctima. Deben ser idóneas, proporcionales y relacionadas con el caso.\n\nLa autoridad de supervisión de medidas cautelares y suspensión condicional da seguimiento e informa a las partes conforme a los artículos 176, 177 y 208 a 210. Las instituciones designadas reportan cumplimiento; ante un posible incumplimiento, el reporte se remite a las partes para que se solicite la audiencia judicial correspondiente. La supervisión no sustituye al juez ni autoriza castigos por sí misma.\n\nLa revocación exige incumplimiento injustificado de condiciones o plan, o sentencia ejecutoriada posterior en los términos del artículo 198. MP o víctima pide audiencia; las partes debaten y el juez decide. No hay revocación, reaprehensión ni prisión automáticas. El juez puede ampliar el plazo hasta dos años más, una sola vez.\n\nSi la persona queda privada de la libertad por otro proceso, las condiciones y su plazo se interrumpen y se reanudan al recuperar la libertad. Si enfrenta ese otro proceso en libertad, continúan vigentes, pero la acción penal no puede extinguirse hasta que quede firme la resolución que la exima de responsabilidad. Además, la suspensión condicional interrumpe la prescripción de la acción penal. Estas reglas no equivalen a revocación automática.\n\nSi se revoca, los pagos recibidos se destinan a la indemnización que corresponda; no desaparecen. Si el imputado cumple condiciones y plan dentro del plazo sin revocación, se extingue la acción penal y el juez decreta sobreseimiento de oficio o a petición. Para resolver CENEVAL: calcula media, verifica vinculación y oportunidad, analiza oposición y antecedentes, elige plan y condición pertinente, y determina el efecto de cumplimiento o incumplimiento.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c28-cpeum-arts17-20-soluciones-derechos",
+            "ev-c28-cnpp-arts176-177-supervision",
+            "ev-c28-cnpp-arts208-210-reportes",
+            "ev-c28-cnpp-arts184-191-definicion",
+            "ev-c28-cnpp-art192-procedencia",
+            "ev-c28-scjn-ai130-2019-invalidez",
+            "ev-c28-cnpp-art193-oportunidad",
+            "ev-c28-cnpp-arts194-196-plan-condiciones",
+            "ev-c28-cnpp-art198-revocacion",
+            "ev-c28-cnpp-art199-cumplimiento",
+            "ev-c28-cnpp-art200-antecedentes",
+            "ev-c28-a37-l157-177-introduccion-media",
+            "ev-c28-a37-l205-227-media-vinculacion",
+            "ev-c28-a38-l031-055-procedencia",
+            "ev-c28-a37-l177-205-suspension-condiciones",
+            "ev-c28-a38-l059-091-condiciones",
+            "ev-c28-a38-l103-121-condiciones-plazo",
+            "ev-c28-a38-l139-155-reparacion-supervision",
+            "ev-c28-a38-l169-183-seguimiento",
+            "ev-c28-a38-l185-205-incumplimiento-audiencia"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "CNPP vigente al 28-11-2025: artículos 176 a 177, 184, 191 a 200 y 208 a 210. El texto consolidado marca como inválida la antigua exclusión del artículo 192, párrafo tercero, por sentencia de la SCJN publicada en el DOF el 20-08-2025. Constitución vigente al 02-06-2026: artículos 17 y 20. Consulta oficial realizada el 21 de agosto de 2026.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c28-cpeum-arts17-20-soluciones-derechos",
+            "ev-c28-scjn-ai130-2019-invalidez"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Pena de uno a cinco años: media de tres. Tras vinculación, el imputado propone pagar reparación y acudir a tratamiento durante un año. El juez escucha a la víctima, revisa antecedentes y decide condiciones idóneas.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c28-cpeum-arts17-20-soluciones-derechos",
+            "ev-c28-cnpp-art192-procedencia",
+            "ev-c28-cnpp-art193-oportunidad",
+            "ev-c28-cnpp-arts194-196-plan-condiciones",
+            "ev-c28-cnpp-art200-antecedentes",
+            "ev-c28-a37-l157-177-introduccion-media",
+            "ev-c28-a37-l205-227-media-vinculacion",
+            "ev-c28-a38-l031-055-procedencia",
+            "ev-c28-a37-l177-205-suspension-condiciones",
+            "ev-c28-a38-l059-091-condiciones",
+            "ev-c28-a38-l139-155-reparacion-supervision",
+            "ev-c28-a38-l169-183-seguimiento"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo CENEVAL",
+          "content": "La autoridad supervisora reporta una falta. La respuesta correcta no es revocación automática: MP o víctima debe pedir audiencia y el juez decidir si hubo incumplimiento injustificado, si procede revocar o si corresponde una ampliación legal.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c28-cpeum-arts17-20-soluciones-derechos",
+            "ev-c28-cnpp-art192-procedencia",
+            "ev-c28-cnpp-art198-revocacion",
+            "ev-c28-a38-l185-205-incumplimiento-audiencia"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Solicitud: imputado o MP con su acuerdo. Inicio: vinculación. Límite: antes de apertura. Requisitos: media ≤5, sin oposición fundada y antecedentes permitidos. Contenido: plan más condiciones. Duración: 6 meses a 3 años. Control: juez y autoridad supervisora. Incumplimiento: audiencia, no automatismo. Extensión: una vez hasta 2 años. Cumplimiento: extinción y sobreseimiento.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c28-cnpp-art192-procedencia",
+            "ev-c28-cnpp-art193-oportunidad",
+            "ev-c28-cnpp-arts194-196-plan-condiciones",
+            "ev-c28-cnpp-art198-revocacion",
+            "ev-c28-cnpp-art199-cumplimiento",
+            "ev-c28-cnpp-art200-antecedentes",
+            "ev-c28-a37-l157-177-introduccion-media",
+            "ev-c28-a37-l205-227-media-vinculacion",
+            "ev-c28-a38-l031-055-procedencia",
+            "ev-c28-a37-l177-205-suspension-condiciones",
+            "ev-c28-a38-l059-091-condiciones",
+            "ev-c28-a38-l185-205-incumplimiento-audiencia"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía intensiva de preguntas y respuestas",
+          "content": "1. ¿Qué es? Respuesta: plan de reparación más condiciones que suspenden el proceso. 2. ¿Quién solicita? Respuesta: imputado o MP con su acuerdo. 3. ¿Desde cuándo? Respuesta: desde la vinculación. 4. ¿Hasta cuándo? Respuesta: antes de apertura. 5. ¿Media máxima? Respuesta: no exceder cinco años. 6. ¿Víctima? Respuesta: no debe existir oposición fundada. 7. ¿Plan? Respuesta: reparación detallada con plazos. 8. ¿Duración? Respuesta: seis meses a tres años. 9. ¿Quién fija condiciones? Respuesta: juez de control. 10. ¿Quién supervisa? Respuesta: autoridad especializada. 11. ¿Revocación automática? Respuesta: no, requiere petición y audiencia. 12. ¿Cumplimiento total? Respuesta: extingue acción y produce sobreseimiento.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c28-cpeum-arts17-20-soluciones-derechos",
+            "ev-c28-cnpp-arts176-177-supervision",
+            "ev-c28-cnpp-arts208-210-reportes",
+            "ev-c28-cnpp-arts184-191-definicion",
+            "ev-c28-cnpp-art192-procedencia",
+            "ev-c28-cnpp-art193-oportunidad",
+            "ev-c28-cnpp-arts194-196-plan-condiciones",
+            "ev-c28-cnpp-art198-revocacion",
+            "ev-c28-cnpp-art199-cumplimiento",
+            "ev-c28-a37-l157-177-introduccion-media",
+            "ev-c28-a37-l205-227-media-vinculacion",
+            "ev-c28-a38-l031-055-procedencia",
+            "ev-c28-a37-l177-205-suspension-condiciones",
+            "ev-c28-a38-l059-091-condiciones",
+            "ev-c28-a38-l103-121-condiciones-plazo",
+            "ev-c28-a38-l139-155-reparacion-supervision",
+            "ev-c28-a38-l169-183-seguimiento",
+            "ev-c28-a38-l185-205-incumplimiento-audiencia"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Suspensión condicional: solución alterna. Media aritmética: mínima más máxima entre dos. Vinculación: presupuesto temporal. Oposición fundada: razón jurídicamente sustentada. Plan de reparación: obligaciones y plazos. Condición: regla judicial de conducta. Supervisión: seguimiento especializado. Incumplimiento injustificado: presupuesto de posible revocación. Revocación: decisión judicial tras audiencia. Ampliación: hasta dos años una vez. Extinción: fin de acción penal. Sobreseimiento: resolución final favorable.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c28-cnpp-arts176-177-supervision",
+            "ev-c28-cnpp-arts208-210-reportes",
+            "ev-c28-cnpp-arts184-191-definicion",
+            "ev-c28-cnpp-art192-procedencia",
+            "ev-c28-cnpp-art193-oportunidad",
+            "ev-c28-cnpp-arts194-196-plan-condiciones",
+            "ev-c28-cnpp-art198-revocacion",
+            "ev-c28-cnpp-art199-cumplimiento",
+            "ev-c28-a37-l157-177-introduccion-media",
+            "ev-c28-a37-l205-227-media-vinculacion",
+            "ev-c28-a38-l031-055-procedencia",
+            "ev-c28-a37-l177-205-suspension-condiciones",
+            "ev-c28-a38-l059-091-condiciones",
+            "ev-c28-a38-l103-121-condiciones-plazo",
+            "ev-c28-a38-l139-155-reparacion-supervision",
+            "ev-c28-a38-l169-183-seguimiento",
+            "ev-c28-a38-l185-205-incumplimiento-audiencia"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "No confundir con acuerdo reparatorio. No solicitar antes de vinculación. No calcular media con una sola pena. No decidir procedencia o improcedencia solo por el nombre del delito ni revivir la exclusión fiscal invalidada del antiguo artículo 192. No ignorar oposición fundada ni riesgo. No imponer terapia como castigo sin pertinencia. No confundir condición con medida cautelar. No atribuir revocación a la unidad supervisora. No revocar sin audiencia. No ordenar reaprehensión automática. No confundir interrupción de condiciones o prescripción con revocación. No borrar pagos hechos si se revoca. No olvidar sobreseimiento al cumplimiento total.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c28-cnpp-arts176-177-supervision",
+            "ev-c28-cnpp-arts208-210-reportes",
+            "ev-c28-cnpp-art192-procedencia",
+            "ev-c28-scjn-ai130-2019-invalidez",
+            "ev-c28-cnpp-art193-oportunidad",
+            "ev-c28-cnpp-art198-revocacion",
+            "ev-c28-cnpp-art199-cumplimiento"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual: suspensión condicional del proceso",
+        "description": "Requisitos, condiciones, supervisión y desenlace.",
+        "nodes": [
+          {
+            "id": "scp",
+            "label": "Suspensión condicional",
+            "description": "Solución alterna.",
+            "evidenceIds": [
+              "ev-c28-cnpp-arts184-191-definicion",
+              "ev-c28-cnpp-arts194-196-plan-condiciones",
+              "ev-c28-a37-l177-205-suspension-condiciones",
+              "ev-c28-a38-l059-091-condiciones"
+            ]
+          },
+          {
+            "id": "solicitud",
+            "label": "Solicitud",
+            "description": "Activa el análisis.",
+            "parentId": "scp",
+            "evidenceIds": [
+              "ev-c28-cnpp-art192-procedencia"
+            ]
+          },
+          {
+            "id": "imputado",
+            "label": "Imputado",
+            "description": "Puede solicitar.",
+            "parentId": "solicitud",
+            "evidenceIds": [
+              "ev-c28-cnpp-art192-procedencia"
+            ]
+          },
+          {
+            "id": "mp",
+            "label": "MP con acuerdo",
+            "description": "Requiere consentimiento del imputado.",
+            "parentId": "solicitud",
+            "evidenceIds": [
+              "ev-c28-cnpp-art192-procedencia"
+            ]
+          },
+          {
+            "id": "requisitos",
+            "label": "Procedencia",
+            "description": "Artículo 192.",
+            "parentId": "scp",
+            "evidenceIds": [
+              "ev-c28-cnpp-art192-procedencia",
+              "ev-c28-a37-l157-177-introduccion-media",
+              "ev-c28-a37-l205-227-media-vinculacion",
+              "ev-c28-a38-l031-055-procedencia"
+            ]
+          },
+          {
+            "id": "vinculacion",
+            "label": "Auto de vinculación",
+            "description": "Debe existir.",
+            "parentId": "requisitos",
+            "evidenceIds": [
+              "ev-c28-cnpp-art193-oportunidad",
+              "ev-c28-a37-l157-177-introduccion-media",
+              "ev-c28-a37-l205-227-media-vinculacion",
+              "ev-c28-a38-l031-055-procedencia"
+            ]
+          },
+          {
+            "id": "media",
+            "label": "Media no mayor a 5",
+            "description": "Mínima más máxima entre dos.",
+            "parentId": "requisitos",
+            "evidenceIds": [
+              "ev-c28-cnpp-art192-procedencia",
+              "ev-c28-a37-l157-177-introduccion-media",
+              "ev-c28-a37-l205-227-media-vinculacion",
+              "ev-c28-a38-l031-055-procedencia"
+            ]
+          },
+          {
+            "id": "oposicion",
+            "label": "Sin oposición fundada",
+            "description": "Se escuchan razones de víctima.",
+            "parentId": "requisitos",
+            "evidenceIds": [
+              "ev-c28-cpeum-arts17-20-soluciones-derechos",
+              "ev-c28-cnpp-art192-procedencia"
+            ]
+          },
+          {
+            "id": "antecedente",
+            "label": "Antecedentes permitidos",
+            "description": "Dos o cinco años, según caso.",
+            "parentId": "requisitos",
+            "evidenceIds": [
+              "ev-c28-cnpp-art192-procedencia",
+              "ev-c28-cnpp-art200-antecedentes"
+            ]
+          },
+          {
+            "id": "oportunidad",
+            "label": "Oportunidad",
+            "description": "Ventana procesal.",
+            "parentId": "scp",
+            "evidenceIds": [
+              "ev-c28-cnpp-art193-oportunidad",
+              "ev-c28-a37-l157-177-introduccion-media",
+              "ev-c28-a37-l205-227-media-vinculacion",
+              "ev-c28-a38-l031-055-procedencia"
+            ]
+          },
+          {
+            "id": "desde",
+            "label": "Desde vinculación",
+            "description": "Inicio.",
+            "parentId": "oportunidad",
+            "evidenceIds": [
+              "ev-c28-cnpp-art193-oportunidad",
+              "ev-c28-a37-l157-177-introduccion-media",
+              "ev-c28-a37-l205-227-media-vinculacion",
+              "ev-c28-a38-l031-055-procedencia"
+            ]
+          },
+          {
+            "id": "hasta",
+            "label": "Antes de apertura",
+            "description": "Límite.",
+            "parentId": "oportunidad",
+            "evidenceIds": [
+              "ev-c28-cnpp-art193-oportunidad",
+              "ev-c28-a37-l157-177-introduccion-media",
+              "ev-c28-a37-l205-227-media-vinculacion",
+              "ev-c28-a38-l031-055-procedencia"
+            ]
+          },
+          {
+            "id": "plan",
+            "label": "Plan de reparación",
+            "description": "Daño, obligaciones y plazos.",
+            "parentId": "scp",
+            "evidenceIds": [
+              "ev-c28-cnpp-arts194-196-plan-condiciones",
+              "ev-c28-a37-l177-205-suspension-condiciones",
+              "ev-c28-a38-l059-091-condiciones",
+              "ev-c28-a38-l103-121-condiciones-plazo",
+              "ev-c28-a38-l139-155-reparacion-supervision",
+              "ev-c28-a38-l169-183-seguimiento"
+            ]
+          },
+          {
+            "id": "viable",
+            "label": "Viabilidad",
+            "description": "Falta de recursos no basta para negar.",
+            "parentId": "plan",
+            "evidenceIds": [
+              "ev-c28-cnpp-arts194-196-plan-condiciones",
+              "ev-c28-a37-l177-205-suspension-condiciones",
+              "ev-c28-a38-l059-091-condiciones"
+            ]
+          },
+          {
+            "id": "victima",
+            "label": "Tutela de víctima",
+            "description": "Reparación y protección.",
+            "parentId": "plan",
+            "evidenceIds": [
+              "ev-c28-cpeum-arts17-20-soluciones-derechos",
+              "ev-c28-cnpp-arts194-196-plan-condiciones",
+              "ev-c28-a37-l177-205-suspension-condiciones",
+              "ev-c28-a38-l059-091-condiciones",
+              "ev-c28-a38-l139-155-reparacion-supervision",
+              "ev-c28-a38-l169-183-seguimiento"
+            ]
+          },
+          {
+            "id": "condiciones",
+            "label": "Condiciones judiciales",
+            "description": "Idóneas y proporcionales.",
+            "parentId": "scp",
+            "evidenceIds": [
+              "ev-c28-cnpp-arts194-196-plan-condiciones",
+              "ev-c28-a37-l177-205-suspension-condiciones",
+              "ev-c28-a38-l059-091-condiciones"
+            ]
+          },
+          {
+            "id": "duracion",
+            "label": "6 meses a 3 años",
+            "description": "Periodo ordinario.",
+            "parentId": "condiciones",
+            "evidenceIds": [
+              "ev-c28-cnpp-arts194-196-plan-condiciones",
+              "ev-c28-a37-l177-205-suspension-condiciones",
+              "ev-c28-a38-l059-091-condiciones"
+            ]
+          },
+          {
+            "id": "lugar",
+            "label": "Lugar o personas",
+            "description": "Residencia y restricciones.",
+            "parentId": "condiciones",
+            "evidenceIds": [
+              "ev-c28-cnpp-arts194-196-plan-condiciones",
+              "ev-c28-a37-l177-205-suspension-condiciones",
+              "ev-c28-a38-l059-091-condiciones"
+            ]
+          },
+          {
+            "id": "salud",
+            "label": "Tratamiento",
+            "description": "Médico, psicológico o adicciones.",
+            "parentId": "condiciones",
+            "evidenceIds": [
+              "ev-c28-cnpp-arts194-196-plan-condiciones",
+              "ev-c28-a37-l177-205-suspension-condiciones",
+              "ev-c28-a38-l059-091-condiciones"
+            ]
+          },
+          {
+            "id": "trabajo",
+            "label": "Trabajo o capacitación",
+            "description": "Integración social.",
+            "parentId": "condiciones",
+            "evidenceIds": [
+              "ev-c28-cnpp-arts194-196-plan-condiciones",
+              "ev-c28-a37-l177-205-suspension-condiciones",
+              "ev-c28-a38-l059-091-condiciones"
+            ]
+          },
+          {
+            "id": "conducta",
+            "label": "Abstenciones",
+            "description": "Alcohol, drogas, armas o conducir.",
+            "parentId": "condiciones",
+            "evidenceIds": [
+              "ev-c28-cnpp-arts194-196-plan-condiciones",
+              "ev-c28-a37-l177-205-suspension-condiciones",
+              "ev-c28-a38-l059-091-condiciones"
+            ]
+          },
+          {
+            "id": "alimentos",
+            "label": "Deber alimentario",
+            "description": "Cumplimiento familiar.",
+            "parentId": "condiciones",
+            "evidenceIds": [
+              "ev-c28-cnpp-arts194-196-plan-condiciones",
+              "ev-c28-a37-l177-205-suspension-condiciones",
+              "ev-c28-a38-l059-091-condiciones"
+            ]
+          },
+          {
+            "id": "supervision",
+            "label": "Supervisión",
+            "description": "Seguimiento especializado.",
+            "parentId": "scp",
+            "evidenceIds": [
+              "ev-c28-cnpp-arts176-177-supervision",
+              "ev-c28-cnpp-arts208-210-reportes",
+              "ev-c28-a38-l139-155-reparacion-supervision",
+              "ev-c28-a38-l169-183-seguimiento"
+            ]
+          },
+          {
+            "id": "reporte",
+            "label": "Reporte a partes",
+            "description": "Informa cumplimiento o falta.",
+            "parentId": "supervision",
+            "evidenceIds": [
+              "ev-c28-cnpp-arts176-177-supervision",
+              "ev-c28-cnpp-arts208-210-reportes",
+              "ev-c28-a38-l139-155-reparacion-supervision",
+              "ev-c28-a38-l169-183-seguimiento"
+            ]
+          },
+          {
+            "id": "incumplimiento",
+            "label": "Posible incumplimiento",
+            "description": "Debe ser injustificado.",
+            "parentId": "scp",
+            "evidenceIds": [
+              "ev-c28-cnpp-art198-revocacion",
+              "ev-c28-a38-l185-205-incumplimiento-audiencia"
+            ]
+          },
+          {
+            "id": "audiencia",
+            "label": "Audiencia de revocación",
+            "description": "Contradicción ante juez.",
+            "parentId": "incumplimiento",
+            "evidenceIds": [
+              "ev-c28-cpeum-arts17-20-soluciones-derechos",
+              "ev-c28-cnpp-art198-revocacion",
+              "ev-c28-a38-l185-205-incumplimiento-audiencia"
+            ]
+          },
+          {
+            "id": "revocar",
+            "label": "Revocación",
+            "description": "Continúa el proceso.",
+            "parentId": "audiencia",
+            "evidenceIds": [
+              "ev-c28-cnpp-art198-revocacion",
+              "ev-c28-a38-l185-205-incumplimiento-audiencia"
+            ]
+          },
+          {
+            "id": "ampliar",
+            "label": "Ampliar una vez",
+            "description": "Hasta dos años más.",
+            "parentId": "audiencia",
+            "evidenceIds": [
+              "ev-c28-cnpp-art192-procedencia",
+              "ev-c28-cnpp-art198-revocacion",
+              "ev-c28-a38-l185-205-incumplimiento-audiencia"
+            ]
+          },
+          {
+            "id": "cumplimiento",
+            "label": "Cumplimiento total",
+            "description": "Plan y condiciones.",
+            "parentId": "scp",
+            "evidenceIds": [
+              "ev-c28-cnpp-arts194-196-plan-condiciones",
+              "ev-c28-cnpp-art199-cumplimiento",
+              "ev-c28-a37-l177-205-suspension-condiciones",
+              "ev-c28-a38-l059-091-condiciones"
+            ]
+          },
+          {
+            "id": "extincion",
+            "label": "Extinción de acción",
+            "description": "Efecto legal.",
+            "parentId": "cumplimiento",
+            "evidenceIds": [
+              "ev-c28-cnpp-art199-cumplimiento"
+            ]
+          },
+          {
+            "id": "sobreseimiento",
+            "label": "Sobreseimiento",
+            "description": "De oficio o a petición.",
+            "parentId": "extincion",
+            "evidenceIds": [
+              "ev-c28-cnpp-art199-cumplimiento"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Código Nacional de Procedimientos Penales",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Nacional, México",
+          "citation": "Artículos 176–177, 184, 191–200 y 208–210; última reforma DOF 28-11-2025",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente primaria de procedencia, plan, condiciones, supervisión, revocación y efectos."
+        },
+        {
+          "title": "Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Artículos 17 y 20; últimas reformas DOF 02-06-2026",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente primaria de mecanismos alternativos y derechos procesales."
+        },
+        {
+          "title": "Sentencia de la Acción de Inconstitucionalidad 130/2019 y su acumulada 136/2019",
+          "url": "https://dof.gob.mx/nota_detalle_popup.php?codigo=5766200",
+          "institution": "Diario Oficial de la Federación y Suprema Corte de Justicia de la Nación",
+          "jurisdiction": "Federal, México",
+          "citation": "Resolutivo quinto; sentencia publicada DOF 20-08-2025",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente primaria de la invalidez por extensión de la antigua exclusión del artículo 192, párrafo tercero."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Quién puede solicitar la suspensión?",
+          "answer": "El imputado o el MP con acuerdo del imputado.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c28-cnpp-art192-procedencia"
+          ]
+        },
+        {
+          "question": "¿Qué acto debe existir?",
+          "answer": "El auto de vinculación a proceso.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c28-cnpp-art193-oportunidad"
+          ]
+        },
+        {
+          "question": "¿Media aritmética máxima?",
+          "answer": "No debe exceder de cinco años.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c28-cnpp-art192-procedencia"
+          ]
+        },
+        {
+          "question": "¿Qué papel tiene la víctima?",
+          "answer": "Su oposición fundada impide la procedencia.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c28-cpeum-arts17-20-soluciones-derechos",
+            "ev-c28-cnpp-art192-procedencia"
+          ]
+        },
+        {
+          "question": "¿Cuál es la oportunidad?",
+          "answer": "Desde vinculación hasta antes de apertura a juicio.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c28-cnpp-art193-oportunidad"
+          ]
+        },
+        {
+          "question": "¿Qué contiene la propuesta?",
+          "answer": "Plan detallado de reparación y sometimiento a condiciones.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c28-cnpp-arts194-196-plan-condiciones"
+          ]
+        },
+        {
+          "question": "¿Duración ordinaria?",
+          "answer": "De seis meses a tres años.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c28-cnpp-arts194-196-plan-condiciones"
+          ]
+        },
+        {
+          "question": "¿Quién fija condiciones?",
+          "answer": "El juez de control.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c28-cnpp-arts194-196-plan-condiciones"
+          ]
+        },
+        {
+          "question": "¿Quién supervisa?",
+          "answer": "La autoridad de supervisión de medidas cautelares y suspensión.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c28-cnpp-arts176-177-supervision",
+            "ev-c28-cnpp-arts208-210-reportes"
+          ]
+        },
+        {
+          "question": "¿Revocación automática?",
+          "answer": "No; requiere petición, audiencia y decisión judicial.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c28-cnpp-art198-revocacion",
+            "ev-c28-a38-l185-205-incumplimiento-audiencia"
+          ]
+        },
+        {
+          "question": "¿Ampliación posible?",
+          "answer": "Una sola vez y hasta dos años más.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c28-cnpp-art192-procedencia",
+            "ev-c28-cnpp-art198-revocacion"
+          ]
+        },
+        {
+          "question": "¿Efecto del cumplimiento?",
+          "answer": "Extinción de la acción penal y sobreseimiento.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c28-cnpp-art199-cumplimiento"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación: suspensión condicional del proceso",
+        "description": "Diez casos originales sobre procedencia, condiciones y desenlace.",
+        "questions": [
+          {
+            "text": "Pena de dos a seis años. ¿Cuál es su media?",
+            "difficulty": "basic",
+            "options": [
+              "Cuatro años",
+              "Seis años",
+              "Ocho años"
+            ],
+            "correctOption": 0,
+            "explanation": "Se suman mínima y máxima y se divide entre dos.",
+            "optionExplanations": [
+              "(2+6)/2=4.",
+              "Es solo la máxima.",
+              "Es la suma sin dividir."
+            ],
+            "evidenceIds": [
+              "ev-c28-cnpp-art192-procedencia",
+              "ev-c28-a37-l157-177-introduccion-media"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c28-cnpp-art192-procedencia",
+                "ev-c28-a37-l157-177-introduccion-media"
+              ],
+              [
+                "ev-c28-cnpp-art192-procedencia",
+                "ev-c28-a37-l157-177-introduccion-media"
+              ],
+              [
+                "ev-c28-cnpp-art192-procedencia",
+                "ev-c28-a37-l157-177-introduccion-media"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c28-cnpp-art192-procedencia",
+              "ev-c28-a37-l157-177-introduccion-media"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c28-cnpp-art192-procedencia",
+              "ev-c28-a37-l157-177-introduccion-media"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c28-cnpp-art192-procedencia",
+                "ev-c28-a37-l157-177-introduccion-media"
+              ],
+              [
+                "ev-c28-cnpp-art192-procedencia",
+                "ev-c28-a37-l157-177-introduccion-media"
+              ],
+              [
+                "ev-c28-cnpp-art192-procedencia",
+                "ev-c28-a37-l157-177-introduccion-media"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué acto permite comenzar a solicitar la suspensión?",
+            "difficulty": "basic",
+            "options": [
+              "Auto de vinculación",
+              "Denuncia",
+              "Sentencia"
+            ],
+            "correctOption": 0,
+            "explanation": "La oportunidad inicia con la vinculación.",
+            "optionExplanations": [
+              "Es el presupuesto correcto.",
+              "Aún no basta.",
+              "Es demasiado tarde."
+            ],
+            "evidenceIds": [
+              "ev-c28-cnpp-art193-oportunidad",
+              "ev-c28-a37-l205-227-media-vinculacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c28-cnpp-art193-oportunidad",
+                "ev-c28-a37-l205-227-media-vinculacion"
+              ],
+              [
+                "ev-c28-cnpp-art193-oportunidad",
+                "ev-c28-a37-l205-227-media-vinculacion"
+              ],
+              [
+                "ev-c28-cnpp-art193-oportunidad",
+                "ev-c28-a37-l205-227-media-vinculacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c28-cnpp-art193-oportunidad",
+              "ev-c28-a37-l205-227-media-vinculacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c28-cnpp-art193-oportunidad",
+              "ev-c28-a37-l205-227-media-vinculacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c28-cnpp-art193-oportunidad",
+                "ev-c28-a37-l205-227-media-vinculacion"
+              ],
+              [
+                "ev-c28-cnpp-art193-oportunidad",
+                "ev-c28-a37-l205-227-media-vinculacion"
+              ],
+              [
+                "ev-c28-cnpp-art193-oportunidad",
+                "ev-c28-a37-l205-227-media-vinculacion"
+              ]
+            ]
+          },
+          {
+            "text": "¿Quién puede formular la solicitud?",
+            "difficulty": "basic",
+            "options": [
+              "Imputado o MP con su acuerdo",
+              "Solo la víctima",
+              "La autoridad supervisora"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 192 legitima al imputado o al Ministerio Público con acuerdo de aquél.",
+            "optionExplanations": [
+              "Son los legitimados.",
+              "La víctima participa y puede oponerse fundadamente.",
+              "Supervisa, no solicita por sí."
+            ],
+            "evidenceIds": [
+              "ev-c28-cnpp-art192-procedencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c28-cnpp-art192-procedencia"
+              ],
+              [
+                "ev-c28-cnpp-art192-procedencia"
+              ],
+              [
+                "ev-c28-cnpp-art192-procedencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c28-cnpp-art192-procedencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c28-cnpp-art192-procedencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c28-cnpp-art192-procedencia"
+              ],
+              [
+                "ev-c28-cnpp-art192-procedencia"
+              ],
+              [
+                "ev-c28-cnpp-art192-procedencia"
+              ]
+            ]
+          },
+          {
+            "text": "Una víctima acredita amenazas y riesgo grave. ¿Qué debe analizar el juez?",
+            "difficulty": "advanced",
+            "options": [
+              "Si existe oposición fundada",
+              "Solo la media aritmética",
+              "Únicamente la firma del imputado"
+            ],
+            "correctOption": 0,
+            "explanation": "La tutela efectiva exige valorar razones y riesgo.",
+            "optionExplanations": [
+              "Es un requisito sustantivo.",
+              "La media no agota el análisis.",
+              "El consentimiento del imputado no basta."
+            ],
+            "evidenceIds": [
+              "ev-c28-cpeum-arts17-20-soluciones-derechos",
+              "ev-c28-cnpp-art192-procedencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c28-cpeum-arts17-20-soluciones-derechos",
+                "ev-c28-cnpp-art192-procedencia"
+              ],
+              [
+                "ev-c28-cpeum-arts17-20-soluciones-derechos",
+                "ev-c28-cnpp-art192-procedencia"
+              ],
+              [
+                "ev-c28-cpeum-arts17-20-soluciones-derechos",
+                "ev-c28-cnpp-art192-procedencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c28-cpeum-arts17-20-soluciones-derechos",
+              "ev-c28-cnpp-art192-procedencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c28-cpeum-arts17-20-soluciones-derechos",
+              "ev-c28-cnpp-art192-procedencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c28-cpeum-arts17-20-soluciones-derechos",
+                "ev-c28-cnpp-art192-procedencia"
+              ],
+              [
+                "ev-c28-cpeum-arts17-20-soluciones-derechos",
+                "ev-c28-cnpp-art192-procedencia"
+              ],
+              [
+                "ev-c28-cpeum-arts17-20-soluciones-derechos",
+                "ev-c28-cnpp-art192-procedencia"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué debe acompañar la solicitud?",
+            "difficulty": "intermediate",
+            "options": [
+              "Plan detallado de reparación",
+              "Proyecto de sentencia condenatoria",
+              "Orden de aprehensión"
+            ],
+            "correctOption": 0,
+            "explanation": "El plan es componente definitorio.",
+            "optionExplanations": [
+              "Incluye obligaciones y plazos.",
+              "No hay condena.",
+              "No es requisito de la salida."
+            ],
+            "evidenceIds": [
+              "ev-c28-cnpp-arts184-191-definicion",
+              "ev-c28-cnpp-arts194-196-plan-condiciones"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c28-cnpp-arts184-191-definicion",
+                "ev-c28-cnpp-arts194-196-plan-condiciones"
+              ],
+              [
+                "ev-c28-cnpp-arts184-191-definicion",
+                "ev-c28-cnpp-arts194-196-plan-condiciones"
+              ],
+              [
+                "ev-c28-cnpp-arts184-191-definicion",
+                "ev-c28-cnpp-arts194-196-plan-condiciones"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c28-cnpp-arts184-191-definicion",
+              "ev-c28-cnpp-arts194-196-plan-condiciones"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c28-cnpp-arts184-191-definicion",
+              "ev-c28-cnpp-arts194-196-plan-condiciones"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c28-cnpp-arts184-191-definicion",
+                "ev-c28-cnpp-arts194-196-plan-condiciones"
+              ],
+              [
+                "ev-c28-cnpp-arts184-191-definicion",
+                "ev-c28-cnpp-arts194-196-plan-condiciones"
+              ],
+              [
+                "ev-c28-cnpp-arts184-191-definicion",
+                "ev-c28-cnpp-arts194-196-plan-condiciones"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál periodo ordinario puede fijar el juez?",
+            "difficulty": "basic",
+            "options": [
+              "Seis meses a tres años",
+              "Un día a treinta días",
+              "Cinco a diez años"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 195 fija un periodo no menor de seis meses ni mayor de tres años.",
+            "optionExplanations": [
+              "Rango correcto.",
+              "No corresponde.",
+              "Excede el rango."
+            ],
+            "evidenceIds": [
+              "ev-c28-cnpp-arts194-196-plan-condiciones",
+              "ev-c28-a38-l103-121-condiciones-plazo"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c28-cnpp-arts194-196-plan-condiciones",
+                "ev-c28-a38-l103-121-condiciones-plazo"
+              ],
+              [
+                "ev-c28-cnpp-arts194-196-plan-condiciones",
+                "ev-c28-a38-l103-121-condiciones-plazo"
+              ],
+              [
+                "ev-c28-cnpp-arts194-196-plan-condiciones",
+                "ev-c28-a38-l103-121-condiciones-plazo"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c28-cnpp-arts194-196-plan-condiciones",
+              "ev-c28-a38-l103-121-condiciones-plazo"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c28-cnpp-arts194-196-plan-condiciones",
+              "ev-c28-a38-l103-121-condiciones-plazo"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c28-cnpp-arts194-196-plan-condiciones",
+                "ev-c28-a38-l103-121-condiciones-plazo"
+              ],
+              [
+                "ev-c28-cnpp-arts194-196-plan-condiciones",
+                "ev-c28-a38-l103-121-condiciones-plazo"
+              ],
+              [
+                "ev-c28-cnpp-arts194-196-plan-condiciones",
+                "ev-c28-a38-l103-121-condiciones-plazo"
+              ]
+            ]
+          },
+          {
+            "text": "La supervisión reporta una falta. ¿Qué sigue jurídicamente?",
+            "difficulty": "advanced",
+            "options": [
+              "Petición y audiencia ante juez",
+              "Prisión automática",
+              "Extinción automática"
+            ],
+            "correctOption": 0,
+            "explanation": "La revocación exige debate y resolución.",
+            "optionExplanations": [
+              "Respeta contradicción.",
+              "No deriva automáticamente.",
+              "El incumplimiento no extingue."
+            ],
+            "evidenceIds": [
+              "ev-c28-cnpp-arts176-177-supervision",
+              "ev-c28-cnpp-art198-revocacion",
+              "ev-c28-cnpp-arts208-210-reportes",
+              "ev-c28-a38-l185-205-incumplimiento-audiencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c28-cnpp-arts176-177-supervision",
+                "ev-c28-cnpp-art198-revocacion",
+                "ev-c28-cnpp-arts208-210-reportes",
+                "ev-c28-a38-l185-205-incumplimiento-audiencia"
+              ],
+              [
+                "ev-c28-cnpp-arts176-177-supervision",
+                "ev-c28-cnpp-art198-revocacion",
+                "ev-c28-cnpp-arts208-210-reportes",
+                "ev-c28-a38-l185-205-incumplimiento-audiencia"
+              ],
+              [
+                "ev-c28-cnpp-arts176-177-supervision",
+                "ev-c28-cnpp-art198-revocacion",
+                "ev-c28-cnpp-arts208-210-reportes",
+                "ev-c28-a38-l185-205-incumplimiento-audiencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c28-cnpp-arts176-177-supervision",
+              "ev-c28-cnpp-art198-revocacion",
+              "ev-c28-cnpp-arts208-210-reportes",
+              "ev-c28-a38-l185-205-incumplimiento-audiencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c28-cnpp-arts176-177-supervision",
+              "ev-c28-cnpp-art198-revocacion",
+              "ev-c28-cnpp-arts208-210-reportes",
+              "ev-c28-a38-l185-205-incumplimiento-audiencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c28-cnpp-arts176-177-supervision",
+                "ev-c28-cnpp-art198-revocacion",
+                "ev-c28-cnpp-arts208-210-reportes",
+                "ev-c28-a38-l185-205-incumplimiento-audiencia"
+              ],
+              [
+                "ev-c28-cnpp-arts176-177-supervision",
+                "ev-c28-cnpp-art198-revocacion",
+                "ev-c28-cnpp-arts208-210-reportes",
+                "ev-c28-a38-l185-205-incumplimiento-audiencia"
+              ],
+              [
+                "ev-c28-cnpp-arts176-177-supervision",
+                "ev-c28-cnpp-art198-revocacion",
+                "ev-c28-cnpp-arts208-210-reportes",
+                "ev-c28-a38-l185-205-incumplimiento-audiencia"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué puede hacer el juez además de revocar?",
+            "difficulty": "intermediate",
+            "options": [
+              "Ampliar una vez hasta dos años",
+              "Ampliar indefinidamente",
+              "Condenar sin juicio"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 198 permite una extensión única.",
+            "optionExplanations": [
+              "Es la alternativa legal.",
+              "No existe ampliación indefinida.",
+              "Violaría debido proceso."
+            ],
+            "evidenceIds": [
+              "ev-c28-cnpp-art198-revocacion",
+              "ev-c28-a38-l185-205-incumplimiento-audiencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c28-cnpp-art198-revocacion",
+                "ev-c28-a38-l185-205-incumplimiento-audiencia"
+              ],
+              [
+                "ev-c28-cnpp-art198-revocacion",
+                "ev-c28-a38-l185-205-incumplimiento-audiencia"
+              ],
+              [
+                "ev-c28-cnpp-art198-revocacion",
+                "ev-c28-a38-l185-205-incumplimiento-audiencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c28-cnpp-art198-revocacion",
+              "ev-c28-a38-l185-205-incumplimiento-audiencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c28-cnpp-art198-revocacion",
+              "ev-c28-a38-l185-205-incumplimiento-audiencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c28-cnpp-art198-revocacion",
+                "ev-c28-a38-l185-205-incumplimiento-audiencia"
+              ],
+              [
+                "ev-c28-cnpp-art198-revocacion",
+                "ev-c28-a38-l185-205-incumplimiento-audiencia"
+              ],
+              [
+                "ev-c28-cnpp-art198-revocacion",
+                "ev-c28-a38-l185-205-incumplimiento-audiencia"
+              ]
+            ]
+          },
+          {
+            "text": "Si se revoca después de pagos a la víctima, ¿qué ocurre con ellos?",
+            "difficulty": "advanced",
+            "options": [
+              "Se destinan a la indemnización correspondiente",
+              "Se devuelven siempre al imputado",
+              "Desaparecen jurídicamente"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 198 preserva su destino reparador.",
+            "optionExplanations": [
+              "Es el tratamiento legal.",
+              "No es la regla.",
+              "Los pagos no se borran."
+            ],
+            "evidenceIds": [
+              "ev-c28-cnpp-art198-revocacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c28-cnpp-art198-revocacion"
+              ],
+              [
+                "ev-c28-cnpp-art198-revocacion"
+              ],
+              [
+                "ev-c28-cnpp-art198-revocacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c28-cnpp-art198-revocacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c28-cnpp-art198-revocacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c28-cnpp-art198-revocacion"
+              ],
+              [
+                "ev-c28-cnpp-art198-revocacion"
+              ],
+              [
+                "ev-c28-cnpp-art198-revocacion"
+              ]
+            ]
+          },
+          {
+            "text": "Se cumplieron plan y condiciones sin revocación. ¿Qué debe decretar el juez?",
+            "difficulty": "intermediate",
+            "options": [
+              "Sobreseimiento por extinción",
+              "Apertura automática a juicio",
+              "Nueva vinculación"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 199 extingue la acción y ordena sobreseer.",
+            "optionExplanations": [
+              "Es el desenlace correcto.",
+              "El cumplimiento evita continuar.",
+              "No corresponde repetir la etapa."
+            ],
+            "evidenceIds": [
+              "ev-c28-cnpp-art199-cumplimiento"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c28-cnpp-art199-cumplimiento"
+              ],
+              [
+                "ev-c28-cnpp-art199-cumplimiento"
+              ],
+              [
+                "ev-c28-cnpp-art199-cumplimiento"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c28-cnpp-art199-cumplimiento"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c28-cnpp-art199-cumplimiento"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c28-cnpp-art199-cumplimiento"
+              ],
+              [
+                "ev-c28-cnpp-art199-cumplimiento"
+              ],
+              [
+                "ev-c28-cnpp-art199-cumplimiento"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c28-cpeum-arts17-20-soluciones-derechos",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículos 17 y 20; mecanismos alternativos y derechos procesales"
+    },
+    {
+      "id": "ev-c28-cnpp-arts176-177-supervision",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Penales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículos 176 y 177; naturaleza y obligaciones de la autoridad de supervisión"
+    },
+    {
+      "id": "ev-c28-cnpp-arts184-191-definicion",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Penales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículos 184 y 191; clasificación y definición de la suspensión condicional"
+    },
+    {
+      "id": "ev-c28-cnpp-art192-procedencia",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Penales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículo 192, fracciones I a III; solicitantes y requisitos de procedencia"
+    },
+    {
+      "id": "ev-c28-scjn-ai130-2019-invalidez",
+      "kind": "official",
+      "title": "Sentencia de la Acción de Inconstitucionalidad 130/2019 y su acumulada 136/2019",
+      "url": "https://dof.gob.mx/nota_detalle_popup.php?codigo=5766200",
+      "institution": "Diario Oficial de la Federación y Suprema Corte de Justicia de la Nación",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "sentencia publicada DOF 20-08-2025; resolutivo quinto; invalidez por extensión del artículo 192, párrafo tercero, en la porción vinculada con el antiguo artículo 167, párrafo séptimo, fracciones I a III"
+    },
+    {
+      "id": "ev-c28-cnpp-art193-oportunidad",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Penales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículo 193; oportunidad desde vinculación hasta antes de acordarse la apertura de juicio"
+    },
+    {
+      "id": "ev-c28-cnpp-arts194-196-plan-condiciones",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Penales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículos 194 a 196; plan, plazo, condiciones, audiencia y efectos de la información"
+    },
+    {
+      "id": "ev-c28-cnpp-art198-revocacion",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Penales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículo 198; revocación, audiencia, ampliación y destino de pagos"
+    },
+    {
+      "id": "ev-c28-cnpp-art199-cumplimiento",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Penales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículo 199; cumplimiento, extinción de la acción y sobreseimiento"
+    },
+    {
+      "id": "ev-c28-cnpp-art200-antecedentes",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Penales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículo 200; verificación de suspensión condicional previa"
+    },
+    {
+      "id": "ev-c28-cnpp-arts208-210-reportes",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Penales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículos 208 a 210; supervisión, notificación de obligaciones y reporte de incumplimiento"
+    },
+    {
+      "id": "ev-c28-a37-l157-177-introduccion-media",
+      "kind": "transcript",
+      "audioNumber": 37,
+      "locator": {
+        "type": "line_range",
+        "startLine": 157,
+        "endLine": 177
+      }
+    },
+    {
+      "id": "ev-c28-a37-l177-205-suspension-condiciones",
+      "kind": "transcript",
+      "audioNumber": 37,
+      "locator": {
+        "type": "line_range",
+        "startLine": 177,
+        "endLine": 205
+      }
+    },
+    {
+      "id": "ev-c28-a37-l205-227-media-vinculacion",
+      "kind": "transcript",
+      "audioNumber": 37,
+      "locator": {
+        "type": "line_range",
+        "startLine": 205,
+        "endLine": 227
+      }
+    },
+    {
+      "id": "ev-c28-a38-l031-055-procedencia",
+      "kind": "transcript",
+      "audioNumber": 38,
+      "locator": {
+        "type": "line_range",
+        "startLine": 31,
+        "endLine": 55
+      }
+    },
+    {
+      "id": "ev-c28-a38-l059-091-condiciones",
+      "kind": "transcript",
+      "audioNumber": 38,
+      "locator": {
+        "type": "line_range",
+        "startLine": 59,
+        "endLine": 91
+      }
+    },
+    {
+      "id": "ev-c28-a38-l103-121-condiciones-plazo",
+      "kind": "transcript",
+      "audioNumber": 38,
+      "locator": {
+        "type": "line_range",
+        "startLine": 103,
+        "endLine": 121
+      }
+    },
+    {
+      "id": "ev-c28-a38-l139-155-reparacion-supervision",
+      "kind": "transcript",
+      "audioNumber": 38,
+      "locator": {
+        "type": "line_range",
+        "startLine": 139,
+        "endLine": 155
+      }
+    },
+    {
+      "id": "ev-c28-a38-l169-183-seguimiento",
+      "kind": "transcript",
+      "audioNumber": 38,
+      "locator": {
+        "type": "line_range",
+        "startLine": 169,
+        "endLine": 183
+      }
+    },
+    {
+      "id": "ev-c28-a38-l185-205-incumplimiento-audiencia",
+      "kind": "transcript",
+      "audioNumber": 38,
+      "locator": {
+        "type": "line_range",
+        "startLine": 185,
+        "endLine": 205
+      }
+    }
+  ]
 }

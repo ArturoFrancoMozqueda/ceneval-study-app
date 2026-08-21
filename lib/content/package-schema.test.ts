@@ -64,7 +64,7 @@ const legacyPackagePath = path.join(
   process.cwd(),
   "content",
   "packages",
-  "audio-37-acuerdos-reparatorios.json",
+  "audio-03-40-negociacion-mediacion-conciliacion-restaurativa.json",
 );
 
 function readLegacyPackage() {
