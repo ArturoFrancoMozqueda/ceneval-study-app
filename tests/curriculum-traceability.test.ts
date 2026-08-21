@@ -1,0 +1,125 @@
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
+import test from "node:test";
+import {
+  classPackageFileSchema,
+  importableClassPackageSchema,
+} from "../lib/content/package-schema";
+import {
+  assertClassPackageRoundTrip,
+  countClassPackage,
+} from "../lib/content/package-roundtrip";
+
+const traceablePackages = [
+  {
+    code: "C01",
+    fileName: "audio-01-02-orientacion-egel-derecho.json",
+    artifacts: 139,
+    forbiddenClaims: [],
+  },
+  {
+    code: "C02",
+    fileName: "audio-04-05-derecho-sustantivo-adjetivo.json",
+    artifacts: 130,
+    forbiddenClaims: [
+      /código federal de procedimientos civiles/i,
+      /\bCFPC\b/i,
+      /(?:método|proceso|procedimiento)(?:\s+\w+){0,3}\s+(?:de\s+)?siete pasos/i,
+      /\b(?:sucesi(?:ón|ones)|sucesorio|testamentario|intestado|herederos?)\b/i,
+    ],
+  },
+] as const;
+
+function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
+  const result = new Set<string>();
+  if (
+    (key === "evidenceIds" || key.endsWith("EvidenceIds")) &&
+    Array.isArray(value)
+  ) {
+    for (const evidenceId of value) {
+      if (typeof evidenceId === "string") result.add(evidenceId);
+    }
+    return result;
+  }
+  if (!value || typeof value !== "object") return result;
+
+  for (const [childKey, childValue] of Object.entries(value)) {
+    for (const evidenceId of collectUsedEvidenceIds(childValue, childKey)) {
+      result.add(evidenceId);
+    }
+  }
+  return result;
+}
+
+function expectedSourceOrigin(
+  evidenceIds: string[],
+  evidenceKinds: Map<string, "official" | "transcript">,
+) {
+  const kinds = new Set(evidenceIds.map((id) => evidenceKinds.get(id)));
+  assert.ok(!kinds.has(undefined));
+  if (kinds.size === 2) return "mixed";
+  return kinds.has("transcript") ? "class" : "complementary";
+}
+
+for (const expected of traceablePackages) {
+  test(`${expected.code} conserva ${expected.artifacts} artefactos trazables y un round-trip 1.2 íntegro`, async () => {
+    const packagePath = path.join(
+      process.cwd(),
+      "content",
+      "packages",
+      expected.fileName,
+    );
+    const packageFile = classPackageFileSchema.parse(
+      JSON.parse(await readFile(packagePath, "utf8")),
+    );
+    assert.equal(packageFile.packageVersion, "1.2");
+    if (packageFile.packageVersion !== "1.2") {
+      throw new Error(`${expected.code} debe usar el contrato trazable 1.2.`);
+    }
+    assert.equal(packageFile.curriculum.code, expected.code);
+
+    const serializedPackage = JSON.stringify(packageFile);
+    for (const forbiddenClaim of expected.forbiddenClaims) {
+      assert.doesNotMatch(
+        serializedPackage,
+        forbiddenClaim,
+        `${expected.code} reintrodujo una afirmación retirada: ${forbiddenClaim}`,
+      );
+    }
+
+    const cleanedTranscript = packageFile.transcript.cleaned;
+    assert.ok(cleanedTranscript);
+    const bundle = importableClassPackageSchema.parse({
+      ...packageFile,
+      transcript: {
+        original: cleanedTranscript,
+        cleaned: cleanedTranscript,
+      },
+    });
+
+    assert.equal(countClassPackage(bundle).artifacts, expected.artifacts);
+    assert.deepEqual(
+      [...collectUsedEvidenceIds(bundle)].sort(),
+      bundle.evidenceRegistry.map(({ id }) => id).sort(),
+    );
+
+    const evidenceKinds = new Map(
+      bundle.evidenceRegistry.map(({ id, kind }) => [id, kind]),
+    );
+    for (const topic of bundle.topics) {
+      for (const artifact of [...topic.materials, ...topic.flashcards]) {
+        assert.equal(
+          artifact.sourceOrigin,
+          expectedSourceOrigin(artifact.evidenceIds, evidenceKinds),
+        );
+      }
+    }
+
+    const report = assertClassPackageRoundTrip(bundle, bundle, {
+      publicationStatus: "draft",
+      topicApprovalStatuses: bundle.topics.map(() => "pending"),
+    });
+    assert.equal(report.equivalent, true);
+  });
+}

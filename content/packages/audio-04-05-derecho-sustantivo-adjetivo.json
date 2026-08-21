@@ -1,11 +1,17 @@
 {
-  "packageVersion": "1.1",
+  "packageVersion": "1.2",
   "curriculum": {
     "code": "C02",
     "order": 2,
     "audioSources": [
-      {"audioNumber": 4,"fragment": "Audio completo"},
-      {"audioNumber": 5,"fragment": "Primera parte: aplicación de derecho sustantivo y adjetivo"}
+      {
+        "audioNumber": 4,
+        "fragment": "Audio completo"
+      },
+      {
+        "audioNumber": 5,
+        "fragment": "Primera parte: aplicación de derecho sustantivo y adjetivo"
+      }
     ]
   },
   "subject": {
@@ -21,113 +27,355 @@
       "AUDIO 04.txt",
       "AUDIO 05.txt"
     ],
-    "cleaned": "Los Audios 04 y 05 explican la diferencia práctica entre derecho sustantivo y derecho adjetivo. El primero define derechos, obligaciones, estados y consecuencias jurídicas; el segundo regula las vías, etapas, cargas, plazos y medios para pedir su reconocimiento o tutela. La clase usa ejemplos sucesorios, laborales, penales y mercantiles, y destaca que un mismo ordenamiento puede contener disposiciones de ambas naturalezas. Se conservaron la explicación conceptual, los ejemplos útiles y las ideas de proceso, prueba, preclusión y supletoriedad. Se eliminaron promociones, bromas, descalificaciones, anécdotas personales y afirmaciones no verificables. El tramo final del Audio 05 sobre jurisdicción, competencia y división de poderes se reservó para la clase C03. Las referencias al Código Federal de Procedimientos Civiles se actualizaron para advertir la implementación gradual del Código Nacional de Procedimientos Civiles y Familiares, cuyo límite nacional de entrada en vigor es el 1 de abril de 2027."
+    "cleaned": "Los Audios 04 y 05 explican la distinción funcional entre normas de fondo y normas procesales, su complementariedad y ejemplos laborales, penales y mercantiles. También abordan prueba, vía, etapas y preclusión. Los ejemplos sucesorios y las remisiones normativas históricas no se presentan como contenido vigente. Las afirmaciones jurídicas publicables se verificaron en fuentes oficiales el 21 de agosto de 2026."
   },
   "topics": [
     {
       "title": "Distinguir fondo y proceso en un problema jurídico",
       "description": "Identificación y aplicación de normas sustantivas y adjetivas mediante derechos, pretensiones, vías, etapas, cargas y consecuencias procesales.",
       "learningJourney": {
-        "openingPrompt": "Si una persona afirma tener derecho a heredar, ¿esa afirmación basta para disponer jurídicamente de los bienes o necesita además un procedimiento que reconozca y formalice su situación?",
+        "openingPrompt": "Si una norma reconoce una obligación y otra fija el plazo para contestar una demanda, ¿qué función cumple cada una?",
         "quickChecks": [
           {
             "prompt": "¿Qué regula principalmente una norma sustantiva?",
             "answer": "El contenido de derechos, obligaciones, estados jurídicos y consecuencias de fondo.",
-            "feedback": "La pregunta sustantiva suele ser qué derecho existe, quién lo tiene o qué obligación debe cumplirse."
+            "feedback": "La pregunta sustantiva suele ser qué derecho existe, quién lo tiene o qué obligación debe cumplirse.",
+            "evidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso"
+            ]
           },
           {
             "prompt": "¿Qué regula principalmente una norma adjetiva o procesal?",
             "answer": "La vía, competencia, etapas, plazos, cargas, pruebas y recursos para hacer valer el derecho.",
-            "feedback": "La pregunta procesal suele ser cómo, ante quién, cuándo y mediante qué actuación se pide tutela."
+            "feedback": "La pregunta procesal suele ser cómo, ante quién, cuándo y mediante qué actuación se pide tutela.",
+            "evidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso",
+              "ev-c02-a04-l213-221-prueba-procesal",
+              "ev-c02-a04-l247-255-via"
+            ]
           },
           {
             "prompt": "¿Una ley puede contener normas sustantivas y procesales?",
             "answer": "Sí. La clasificación corresponde a la función de cada disposición, no necesariamente al nombre de la ley.",
-            "feedback": "La Ley Federal del Trabajo y el Código de Comercio son ejemplos de ordenamientos con contenidos de fondo y de procedimiento."
+            "feedback": "La Ley Federal del Trabajo y el Código de Comercio son ejemplos de ordenamientos con contenidos de fondo y de procedimiento.",
+            "evidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso",
+              "ev-c02-ccom-fondo-proceso",
+              "ev-c02-a05-l185-187-mercantil",
+              "ev-c02-a05-l197-201-mercantil",
+              "ev-c02-a05-l207-209-mercantil"
+            ]
           }
         ],
         "practicalCase": {
-          "facts": "La madre de Elena falleció sin testamento. Elena es la única hija y sostiene que tiene derecho a heredar, pero el inmueble continúa inscrito a nombre de su madre. Quiere venderlo de inmediato sin promover procedimiento alguno.",
-          "question": "¿Cómo se distinguen en el caso el aspecto sustantivo y el aspecto adjetivo?",
-          "legalRule": "El derecho sucesorio de fondo determina quién puede heredar; las normas procesales establecen la vía y las etapas para declarar a las personas herederas, administrar, partir y adjudicar la herencia.",
-          "reasoning": "La calidad alegada por Elena pertenece al plano sustantivo, pero la inscripción y la transmisión formal del inmueble no se corrigen con una afirmación privada. Debe seguir el procedimiento sucesorio aplicable y obtener las determinaciones necesarias antes de disponer válidamente del bien.",
-          "conclusion": "El derecho sustantivo explica por qué Elena puede ser heredera; el derecho adjetivo indica cómo se reconoce y formaliza esa situación."
+          "facts": "Una norma reconoce una obligación de pago. En el litigio correspondiente, otra disposición fija la vía y la oportunidad para ofrecer pruebas. Una parte deja pasar esa oportunidad.",
+          "question": "¿Qué elementos son sustantivos y cuáles procesales?",
+          "legalRule": "La función de cada norma permite distinguir el contenido de fondo de la regulación del procedimiento.",
+          "reasoning": "La obligación pertenece al fondo; la vía, la prueba y su oportunidad pertenecen al proceso. La jurisprudencia describe la preclusión como extinción o consumación de una oportunidad procesal.",
+          "conclusion": "El derecho de fondo y la oportunidad procesal deben analizarse por separado, aunque operen en el mismo caso.",
+          "evidenceIds": [
+            "ev-c02-scjn-funcion-normas",
+            "ev-c02-a04-l045-047-fondo-proceso",
+            "ev-c02-a04-l213-221-prueba-procesal",
+            "ev-c02-a04-l247-255-via",
+            "ev-c02-scjn-preclusion",
+            "ev-c02-a04-l331-335-preclusion"
+          ]
         },
-        "closingPrompt": "Explica con un ejemplo propio cuál es el derecho de fondo, cuál es la vía para protegerlo y qué consecuencia habría si se incumple un plazo procesal.",
-        "nextActivity": "Recorre el mapa conceptual, estudia la guía de preguntas y respuestas y resuelve los diez casos de práctica."
+        "closingPrompt": "Explica con un ejemplo la diferencia entre una regla de fondo y una oportunidad procesal, sin confundir preclusión con inexistencia del derecho.",
+        "nextActivity": "Recorre el mapa conceptual, estudia la guía de preguntas y respuestas y resuelve los diez casos de práctica.",
+        "openingPromptEvidenceIds": [
+          "ev-c02-scjn-funcion-normas",
+          "ev-c02-a04-l045-047-fondo-proceso"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c02-scjn-funcion-normas",
+          "ev-c02-a04-l045-047-fondo-proceso",
+          "ev-c02-scjn-preclusion",
+          "ev-c02-a04-l331-335-preclusion"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c02-scjn-funcion-normas",
+          "ev-c02-a04-l045-047-fondo-proceso"
+        ]
       },
       "materials": [
         {
           "type": "short_answer",
           "title": "Respuesta corta: sustantivo frente a adjetivo",
           "content": "El derecho sustantivo define qué derechos, obligaciones, estados o consecuencias jurídicas existen. El derecho adjetivo o procesal establece cómo se reclaman, reconocen, prueban, impugnan y ejecutan ante una autoridad. En un reactivo, separa primero el fondo —qué corresponde a quién— del proceso —cómo, cuándo y ante quién se hace valer—.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c02-scjn-funcion-normas",
+            "ev-c02-a04-l045-047-fondo-proceso",
+            "ev-c02-a04-l213-221-prueba-procesal"
+          ]
         },
         {
           "type": "full_explanation",
           "title": "Explicación completa desde cero",
-          "content": "Una norma sustantiva responde preguntas como: ¿quién es titular del derecho?, ¿cuál es la obligación?, ¿qué conducta está prohibida?, ¿qué elementos forman una institución jurídica? Una norma adjetiva responde: ¿qué autoridad conoce?, ¿qué vía procede?, ¿qué plazo existe?, ¿cómo se ofrece una prueba?, ¿qué recurso puede interponerse?\n\nLa diferencia no depende solamente del título del ordenamiento. Una ley puede reunir disposiciones de fondo y de procedimiento. La Ley Federal del Trabajo regula derechos y obligaciones laborales, pero también el procedimiento para resolver conflictos. El Código de Comercio define actos y obligaciones mercantiles y además contiene reglas de juicios mercantiles. En materia penal, los códigos penales describen delitos y penas, mientras el Código Nacional de Procedimientos Penales organiza la investigación y el proceso.\n\nLos planos sustantivo y adjetivo son complementarios. Tener un derecho de fondo no permite ignorar las formalidades necesarias para que una autoridad lo reconozca o proteja. A la inversa, seguir correctamente un procedimiento no crea por sí solo un derecho sustantivo inexistente. El análisis completo requiere identificar pretensión, norma de fondo, vía, autoridad, etapa y consecuencia.\n\nLos artículos 14 y 17 constitucionales sirven como bases del debido proceso y del acceso a una justicia pronta, completa e imparcial. Las formalidades no son simples obstáculos: protegen audiencia, defensa, igualdad procesal y seguridad jurídica. Sin embargo, cada plazo o requisito debe verificarse en el ordenamiento aplicable al caso.\n\nLa preclusión muestra la importancia del derecho adjetivo: una facultad procesal puede perderse cuando no se ejerce en la etapa o plazo correspondiente. No debe confundirse con la inexistencia del derecho sustantivo. Por ejemplo, una persona puede conservar una posición de fondo, pero perjudicar su defensa al no ofrecer oportunamente una prueba o un medio de impugnación.\n\nEn materia civil y familiar existe una transición normativa. El Código Nacional de Procedimientos Civiles y Familiares entra en vigor gradualmente mediante declaratorias y, en todo caso, a más tardar el 1 de abril de 2027. Por eso no es correcto asumir sin verificación que el Código Nacional o el Código Federal rige ya un asunto concreto: deben revisarse territorio, materia, fecha y disposiciones transitorias.",
-          "sourceOrigin": "mixed"
+          "content": "Una norma sustantiva define una situación, derecho, obligación o consecuencia de fondo. Una norma adjetiva regula el proceso para obtener una decisión o tutela. La clasificación atiende a la función de la disposición, no solo al nombre del ordenamiento.\n\nAmbos planos son complementarios. Una pretensión de fondo se plantea mediante una vía y actuaciones sujetas a reglas procesales. La prueba y su oportunidad pertenecen al análisis procesal.\n\nEl artículo 14 constitucional exige juicio ante tribunales previamente establecidos y formalidades esenciales antes de privar libertad, propiedades, posesiones o derechos. El artículo 17 reconoce justicia en los plazos y términos legales, con resoluciones prontas, completas e imparciales.\n\nLa jurisprudencia 1a./J. 21/2002 explica que la preclusión extingue o consume la oportunidad procesal de realizar un acto. Puede actualizarse por no observar el orden u oportunidad, por realizar una actividad incompatible o por haber ejercido válidamente la facultad.\n\nLa LFT y el Código de Comercio muestran que un ordenamiento puede incluir contenido de fondo y reglas procesales. En materia mercantil, el artículo 1054 del Código de Comercio prevé expresamente la aplicación supletoria del CNPCF en el supuesto que regula.\n\nEl CNPCF tiene aplicación gradual mediante declaratorias. Sus transitorios fijan como límite el 1 de abril de 2027 y disponen, como regla, que los procedimientos ya iniciados continúan conforme a la legislación aplicable al comienzo, con la salvedad prevista en el propio transitorio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c02-scjn-funcion-normas",
+            "ev-c02-a04-l045-047-fondo-proceso",
+            "ev-c02-a04-l213-221-prueba-procesal",
+            "ev-c02-a04-l247-255-via",
+            "ev-c02-cpeum-art14",
+            "ev-c02-cpeum-art17",
+            "ev-c02-scjn-preclusion",
+            "ev-c02-a04-l331-335-preclusion",
+            "ev-c02-cnpcf-transitorios",
+            "ev-c02-lft-fondo-proceso",
+            "ev-c02-a05-l031-033-laboral",
+            "ev-c02-ccom-fondo-proceso",
+            "ev-c02-a05-l185-187-mercantil",
+            "ev-c02-a05-l197-201-mercantil",
+            "ev-c02-a05-l207-209-mercantil"
+          ]
         },
         {
           "type": "legal_basis",
           "title": "Fundamento jurídico vigente",
-          "content": "Constitución, artículos 14 y 17: formalidades esenciales, prohibición de privación sin juicio seguido ante tribunales previamente establecidos y derecho a justicia pronta, completa e imparcial. Código Nacional de Procedimientos Civiles y Familiares: reglas nacionales civiles y familiares con entrada en vigor gradual y fecha límite del 1 de abril de 2027. Código Nacional de Procedimientos Penales: procedimiento penal nacional. Ley Federal del Trabajo y Código de Comercio: ejemplos de ordenamientos que contienen reglas sustantivas y procesales. La disposición aplicable siempre debe verificarse en su texto vigente y régimen transitorio.",
-          "sourceOrigin": "complementary"
+          "content": "Constitución, artículos 14 y 17: formalidades esenciales y acceso a justicia pronta, completa e imparcial. Jurisprudencia 1a./J. 21/2002: supuestos de preclusión. CNPCF, transitorios Segundo a Cuarto: aplicación gradual, declaratorias, límite del 1 de abril de 2027 y régimen de procedimientos iniciados. LFT, artículos 20 y 870 a 891, y Código de Comercio, artículos 75 y 1054 a 1055: ejemplos oficiales de contenido de fondo y procesal. Código de Comercio, artículo 1054: supletoriedad expresa del CNPCF en el supuesto mercantil regulado.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c02-scjn-funcion-normas",
+            "ev-c02-a04-l045-047-fondo-proceso",
+            "ev-c02-cpeum-art14",
+            "ev-c02-cpeum-art17",
+            "ev-c02-scjn-preclusion",
+            "ev-c02-a04-l331-335-preclusion",
+            "ev-c02-cnpcf-transitorios",
+            "ev-c02-lft-fondo-proceso",
+            "ev-c02-a05-l031-033-laboral",
+            "ev-c02-ccom-fondo-proceso",
+            "ev-c02-a05-l185-187-mercantil",
+            "ev-c02-a05-l197-201-mercantil",
+            "ev-c02-a05-l207-209-mercantil"
+          ]
         },
         {
           "type": "simple_example",
           "title": "Ejemplo sencillo: deuda y demanda",
-          "content": "Ana prestó dinero a Bruno y el contrato obliga a devolverlo. La existencia de la deuda, sus condiciones y el incumplimiento pertenecen al plano sustantivo. La demanda, la autoridad competente, el emplazamiento, el plazo para contestar, las pruebas y la sentencia pertenecen al plano adjetivo. El contrato no sustituye al proceso y el proceso no inventa una deuda que nunca existió.",
-          "sourceOrigin": "complementary"
+          "content": "En un supuesto didáctico, una regla establece que una persona debe pagar una cantidad y otra fija cuándo puede ofrecer pruebas en el juicio. La primera define el contenido de la obligación; la segunda organiza una oportunidad procesal. Si esa oportunidad se extingue, ello no equivale por sí mismo a declarar inexistente la obligación.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c02-scjn-funcion-normas",
+            "ev-c02-a04-l045-047-fondo-proceso",
+            "ev-c02-scjn-preclusion",
+            "ev-c02-a04-l331-335-preclusion"
+          ]
         },
         {
           "type": "ceneval_example",
           "title": "Cómo aparece en un reactivo tipo EGEL",
-          "content": "Un caso puede mezclar el derecho reclamado con actuaciones procesales. Subraya la tarea: si pregunta quién tiene derecho, qué obligación existe o cuáles son los elementos de una figura, busca la regla sustantiva. Si pregunta vía, plazo, prueba, recurso, competencia o efecto de una actuación tardía, busca la regla adjetiva. Después verifica excepciones y el ordenamiento vigente; no clasifiques solo por el nombre de la ley.",
-          "sourceOrigin": "complementary"
+          "content": "En un reactivo, identifica la función de la disposición. Si define una obligación o consecuencia de fondo, es sustantiva. Si regula vía, etapa, prueba u oportunidad para actuar, es procesal. Después aplica la fuente vigente específica; no clasifiques toda una ley con una sola etiqueta.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c02-scjn-funcion-normas",
+            "ev-c02-a04-l045-047-fondo-proceso",
+            "ev-c02-a04-l213-221-prueba-procesal",
+            "ev-c02-a04-l247-255-via"
+          ]
         },
         {
           "type": "summary",
           "title": "Resumen para repasar",
-          "content": "Sustantivo equivale a contenido jurídico de fondo; adjetivo equivale a tutela y desarrollo procesal. Ambos tienen importancia constitucional y trabajan juntos. Una ley puede contener los dos tipos de normas. Los plazos y etapas protegen el debido proceso; si una facultad no se ejerce oportunamente puede precluir. En civil y familiar debe comprobarse la entrada en vigor territorial del Código Nacional antes de elegir la norma procesal.",
-          "sourceOrigin": "mixed"
+          "content": "Sustantivo describe contenido jurídico de fondo; adjetivo regula el proceso. Los artículos 14 y 17 constitucionales sustentan formalidades esenciales y acceso a la justicia. La preclusión extingue o consume una oportunidad procesal en los supuestos definidos por la jurisprudencia. El CNPCF se aplica gradualmente y exige revisar declaratoria y transitorios.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c02-scjn-funcion-normas",
+            "ev-c02-a04-l045-047-fondo-proceso",
+            "ev-c02-cpeum-art14",
+            "ev-c02-cpeum-art17",
+            "ev-c02-scjn-preclusion",
+            "ev-c02-a04-l331-335-preclusion",
+            "ev-c02-cnpcf-transitorios"
+          ]
         },
         {
           "type": "study_guide",
           "title": "Guía de preguntas y respuestas",
-          "content": "1. ¿Qué es una norma sustantiva? Respuesta: la que define derechos, obligaciones, estados, prohibiciones o consecuencias de fondo.\n2. ¿Qué es una norma adjetiva? Respuesta: la que organiza el procedimiento para hacer valer o proteger una situación jurídica.\n3. ¿Qué palabras suelen anunciar un problema sustantivo? Respuesta: titularidad, obligación, elementos, validez, delito, pena o derecho.\n4. ¿Qué palabras suelen anunciar un problema procesal? Respuesta: vía, competencia, plazo, etapa, prueba, recurso, notificación o ejecución.\n5. ¿Pueden coexistir ambos tipos en una ley? Respuesta: sí; debe clasificarse cada disposición por su función.\n6. ¿Qué plano regula los elementos de un delito? Respuesta: el sustantivo.\n7. ¿Qué plano regula la investigación y el juicio penal? Respuesta: el adjetivo, principalmente mediante el CNPP.\n8. ¿Qué es preclusión? Respuesta: pérdida de una facultad procesal por no ejercerla en la oportunidad correspondiente.\n9. ¿Qué protege el debido proceso? Respuesta: que las decisiones se adopten conforme a reglas previas y formalidades esenciales, con audiencia y defensa.\n10. ¿Por qué debe revisarse la vigencia territorial del CNPCF? Respuesta: porque su implementación es gradual y las reglas transitorias determinan qué código se aplica.\n11. ¿Un trámite correcto garantiza ganar? Respuesta: no; también debe existir y probarse el derecho sustantivo.\n12. ¿Cómo analizar un caso? Respuesta: identifica pretensión, norma de fondo, vía, autoridad, etapa, plazo y consecuencia.",
-          "sourceOrigin": "mixed"
+          "content": "1. ¿Qué función cumple una norma sustantiva? Define una situación, derecho, obligación o consecuencia de fondo. 2. ¿Qué función cumple una norma procesal? Regula vía, etapa, prueba u oportunidad. 3. ¿Pueden coexistir en una ley? Sí; se clasifica cada disposición por su función. 4. ¿Qué protege el artículo 14? El juicio previo y las formalidades esenciales en el supuesto constitucional. 5. ¿Qué reconoce el artículo 17? Justicia en plazos y términos legales, pronta, completa e imparcial. 6. ¿Qué es preclusión? Extinción o consumación de una oportunidad procesal. 7. ¿Qué debe revisarse para aplicar el CNPCF? Declaratoria, territorio, fecha y transitorios. 8. ¿Qué supletoriedad se estudia aquí? La prevista expresamente por el artículo 1054 del Código de Comercio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c02-scjn-funcion-normas",
+            "ev-c02-a04-l045-047-fondo-proceso",
+            "ev-c02-a04-l213-221-prueba-procesal",
+            "ev-c02-a04-l247-255-via",
+            "ev-c02-cpeum-art14",
+            "ev-c02-cpeum-art17",
+            "ev-c02-scjn-preclusion",
+            "ev-c02-a04-l331-335-preclusion",
+            "ev-c02-cnpcf-transitorios",
+            "ev-c02-ccom-fondo-proceso",
+            "ev-c02-a05-l185-187-mercantil",
+            "ev-c02-a05-l197-201-mercantil",
+            "ev-c02-a05-l207-209-mercantil"
+          ]
         },
         {
           "type": "key_concepts",
           "title": "Conceptos clave",
-          "content": "Derecho sustantivo: contenido de fondo. Derecho adjetivo: normas procesales. Pretensión: efecto jurídico solicitado. Acción o vía: cauce para pedir tutela. Debido proceso: garantías y formalidades esenciales. Carga procesal: conducta que conviene realizar para evitar una desventaja. Preclusión: pérdida de una facultad procesal por falta de ejercicio oportuno. Supletoriedad: aplicación autorizada de otro ordenamiento para integrar una regulación insuficiente. Vigencia: obligatoriedad temporal y territorial de una norma.",
-          "sourceOrigin": "mixed"
+          "content": "Norma sustantiva: define contenido de fondo. Norma adjetiva: regula el proceso. Pretensión: efecto jurídico pedido. Formalidades esenciales: garantía del artículo 14 constitucional. Acceso a la justicia: derecho del artículo 17. Preclusión: extinción o consumación de una oportunidad procesal. Supletoriedad mercantil: aplicación del CNPCF en el supuesto expresamente previsto por el artículo 1054 del Código de Comercio. Vigencia: aplicación temporal y territorial de una norma.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c02-scjn-funcion-normas",
+            "ev-c02-a04-l045-047-fondo-proceso",
+            "ev-c02-cpeum-art14",
+            "ev-c02-cpeum-art17",
+            "ev-c02-scjn-preclusion",
+            "ev-c02-a04-l331-335-preclusion",
+            "ev-c02-cnpcf-transitorios",
+            "ev-c02-ccom-fondo-proceso",
+            "ev-c02-a05-l185-187-mercantil",
+            "ev-c02-a05-l197-201-mercantil",
+            "ev-c02-a05-l207-209-mercantil"
+          ]
         },
         {
           "type": "common_errors",
           "title": "Errores comunes",
-          "content": "Confundir sustantivo con importante y adjetivo con secundario; creer que cada código contiene un solo tipo de normas; asumir que tener razón de fondo permite omitir el procedimiento; memorizar plazos sin comprobar materia y vigencia; aplicar supletoriedad sin que la ley la autorice; confundir preclusión con prescripción; atribuir al artículo 17 lo que corresponde al 14; y dar por vigente el CNPCF en todo el país sin revisar declaratoria y disposiciones transitorias.",
-          "sourceOrigin": "mixed"
+          "content": "No clasifiques una ley completa por su título; revisa la función de cada disposición. No reduzcas la preclusión únicamente al vencimiento de un plazo: la jurisprudencia reconoce tres supuestos. No atribuyas al artículo 17 las formalidades esenciales del artículo 14. No apliques el CNPCF sin revisar declaratoria y transitorios. No generalices la supletoriedad mercantil más allá del supuesto del artículo 1054 del Código de Comercio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c02-scjn-funcion-normas",
+            "ev-c02-a04-l045-047-fondo-proceso",
+            "ev-c02-cpeum-art14",
+            "ev-c02-cpeum-art17",
+            "ev-c02-scjn-preclusion",
+            "ev-c02-a04-l331-335-preclusion",
+            "ev-c02-cnpcf-transitorios",
+            "ev-c02-ccom-fondo-proceso",
+            "ev-c02-a05-l185-187-mercantil",
+            "ev-c02-a05-l197-201-mercantil",
+            "ev-c02-a05-l207-209-mercantil"
+          ]
         }
       ],
       "conceptMap": {
         "title": "Mapa visual: fondo y proceso",
         "description": "Relaciona el problema jurídico con el derecho sustantivo, el derecho adjetivo y el análisis integrado del caso.",
         "nodes": [
-          { "id": "caso", "label": "Problema jurídico", "description": "Hechos, sujetos y pretensión." },
-          { "id": "fondo", "label": "Derecho sustantivo", "description": "Determina qué derecho u obligación existe.", "parentId": "caso" },
-          { "id": "titular", "label": "Titularidad", "description": "Quién puede exigir o debe cumplir.", "parentId": "fondo" },
-          { "id": "elementos", "label": "Elementos y consecuencias", "description": "Supuestos, validez, incumplimiento, delito o sanción.", "parentId": "fondo" },
-          { "id": "proceso", "label": "Derecho adjetivo", "description": "Indica cómo obtener tutela jurídica.", "parentId": "caso" },
-          { "id": "via", "label": "Vía y autoridad", "description": "Cauce procesal y órgano competente.", "parentId": "proceso" },
-          { "id": "etapas", "label": "Etapas y plazos", "description": "Orden y oportunidad de las actuaciones.", "parentId": "proceso" },
-          { "id": "prueba", "label": "Prueba y recursos", "description": "Acreditación e impugnación.", "parentId": "proceso" },
-          { "id": "preclusion", "label": "Preclusión", "description": "Consecuencia de no actuar oportunamente.", "parentId": "etapas" },
-          { "id": "integracion", "label": "Análisis integrado", "description": "Fondo válido más procedimiento aplicable.", "parentId": "caso" },
-          { "id": "vigencia", "label": "Vigencia y transición", "description": "Comprueba texto, territorio, fecha y transitorios.", "parentId": "integracion" },
-          { "id": "respuesta", "label": "Respuesta justificada", "description": "Explica regla de fondo y efecto procesal.", "parentId": "integracion" }
+          {
+            "id": "caso",
+            "label": "Problema jurídico",
+            "description": "Hechos, sujetos y pretensión.",
+            "evidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso"
+            ]
+          },
+          {
+            "id": "fondo",
+            "label": "Derecho sustantivo",
+            "description": "Determina qué derecho u obligación existe.",
+            "parentId": "caso",
+            "evidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso"
+            ]
+          },
+          {
+            "id": "titular",
+            "label": "Titularidad",
+            "description": "Situación o sujeto definido por la norma de fondo.",
+            "parentId": "fondo",
+            "evidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso"
+            ]
+          },
+          {
+            "id": "elementos",
+            "label": "Elementos y consecuencias",
+            "description": "Supuestos y consecuencias definidos por la norma.",
+            "parentId": "fondo",
+            "evidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso"
+            ]
+          },
+          {
+            "id": "proceso",
+            "label": "Derecho adjetivo",
+            "description": "Indica cómo obtener tutela jurídica.",
+            "parentId": "caso",
+            "evidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso"
+            ]
+          },
+          {
+            "id": "via",
+            "label": "Vía y autoridad",
+            "description": "Cauce procesal y órgano competente.",
+            "parentId": "proceso",
+            "evidenceIds": [
+              "ev-c02-a04-l247-255-via"
+            ]
+          },
+          {
+            "id": "etapas",
+            "label": "Etapas y plazos",
+            "description": "Orden y oportunidad de las actuaciones.",
+            "parentId": "proceso",
+            "evidenceIds": [
+              "ev-c02-a04-l247-255-via"
+            ]
+          },
+          {
+            "id": "prueba",
+            "label": "Prueba y recursos",
+            "description": "Acreditación e impugnación.",
+            "parentId": "proceso",
+            "evidenceIds": [
+              "ev-c02-a04-l213-221-prueba-procesal"
+            ]
+          },
+          {
+            "id": "preclusion",
+            "label": "Preclusión",
+            "description": "Extinción o consumación de una oportunidad procesal.",
+            "parentId": "etapas",
+            "evidenceIds": [
+              "ev-c02-scjn-preclusion",
+              "ev-c02-a04-l331-335-preclusion"
+            ]
+          },
+          {
+            "id": "integracion",
+            "label": "Análisis integrado",
+            "description": "Fondo válido más procedimiento aplicable.",
+            "parentId": "caso",
+            "evidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso"
+            ]
+          },
+          {
+            "id": "vigencia",
+            "label": "Vigencia y transición",
+            "description": "Comprueba texto, territorio, fecha y transitorios.",
+            "parentId": "integracion",
+            "evidenceIds": [
+              "ev-c02-cnpcf-transitorios"
+            ]
+          },
+          {
+            "id": "respuesta",
+            "label": "Respuesta justificada",
+            "description": "Explica regla de fondo y efecto procesal.",
+            "parentId": "integracion",
+            "evidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso"
+            ]
+          }
         ]
       },
       "references": [
@@ -136,146 +384,977 @@
           "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
           "institution": "Cámara de Diputados del H. Congreso de la Unión",
           "jurisdiction": "México",
-          "citation": "Artículos 14 y 17; texto vigente, última reforma DOF 03-03-2026",
-          "retrievedOn": "2026-08-11",
-          "note": "Base constitucional del debido proceso y acceso a la justicia."
+          "citation": "Texto vigente, últimas reformas DOF 02-06-2026; artículos 14 y 17",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente oficial para formalidades esenciales y acceso a la justicia."
         },
         {
           "title": "Código Nacional de Procedimientos Civiles y Familiares",
-          "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/cnpcf.htm",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
           "institution": "Cámara de Diputados del H. Congreso de la Unión",
           "jurisdiction": "México",
-          "citation": "Texto vigente y disposiciones transitorias sobre entrada gradual",
-          "retrievedOn": "2026-08-11",
-          "note": "Debe verificarse la declaratoria aplicable; fecha límite nacional 01-04-2027."
+          "citation": "Texto vigente, última reforma DOF 15-01-2026; transitorios Segundo a Cuarto",
+          "retrievedOn": "2026-08-21",
+          "note": "Aplicación gradual, declaratorias y régimen transitorio."
         },
         {
-          "title": "Código Nacional de Procedimientos Penales",
-          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
-          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "title": "Preclusión. Es una figura jurídica que extingue o consuma la oportunidad procesal de realizar un acto",
+          "url": "https://sjf2.scjn.gob.mx/detalle/apendice/1013013",
+          "institution": "Suprema Corte de Justicia de la Nación",
           "jurisdiction": "México",
-          "citation": "Texto vigente, última reforma DOF 28-11-2025",
-          "retrievedOn": "2026-08-11",
-          "note": "Fuente oficial de las reglas del procedimiento penal."
+          "citation": "Registro digital 1013013; jurisprudencia 1a./J. 21/2002",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente oficial para definición y supuestos de preclusión."
         },
         {
           "title": "Ley Federal del Trabajo",
           "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/lft.htm",
           "institution": "Cámara de Diputados del H. Congreso de la Unión",
           "jurisdiction": "México",
-          "citation": "Texto vigente, última reforma DOF 15-01-2026",
-          "retrievedOn": "2026-08-11",
-          "note": "Ejemplo de ordenamiento con reglas sustantivas y procesales."
+          "citation": "Texto vigente, última reforma DOF 14-05-2026; artículos 20 y 870-891",
+          "retrievedOn": "2026-08-21",
+          "note": "Ejemplo de disposiciones de fondo y procesales."
         },
         {
           "title": "Código de Comercio",
           "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/ccom.htm",
           "institution": "Cámara de Diputados del H. Congreso de la Unión",
           "jurisdiction": "México",
-          "citation": "Texto vigente y decretos de reforma",
-          "retrievedOn": "2026-08-11",
-          "note": "Ejemplo mercantil de reglas de fondo y de procedimiento."
+          "citation": "Reforma DOF 14-11-2025; cantidades 18-02-2026; artículos 75 y 1054-1055",
+          "retrievedOn": "2026-08-21",
+          "note": "Contenido mercantil y supletoriedad procesal expresa."
+        },
+        {
+          "title": "Código Nacional de Procedimientos Penales",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Texto vigente, última reforma DOF 28-11-2025; artículo 1",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente oficial para el objeto del procedimiento penal."
         }
       ],
       "flashcards": [
-        { "question": "¿Qué responde el derecho sustantivo?", "answer": "Qué derecho, obligación, estado o consecuencia jurídica existe y a quién corresponde.", "sourceOrigin": "mixed" },
-        { "question": "¿Qué responde el derecho adjetivo?", "answer": "Cómo, cuándo, por qué vía y ante qué autoridad se hace valer un derecho.", "sourceOrigin": "mixed" },
-        { "question": "¿Los derechos procesales son secundarios?", "answer": "No. Protegen audiencia, defensa, igualdad, prueba, impugnación y acceso efectivo a la justicia.", "sourceOrigin": "complementary" },
-        { "question": "¿Qué naturaleza tienen los elementos de un delito?", "answer": "Sustantiva, porque definen la conducta prohibida y sus consecuencias.", "sourceOrigin": "class" },
-        { "question": "¿Qué naturaleza tiene el plazo para contestar una demanda?", "answer": "Adjetiva o procesal, porque regula la oportunidad de una actuación en juicio.", "sourceOrigin": "class" },
-        { "question": "¿Qué es la preclusión?", "answer": "La pérdida de una facultad procesal por no ejercerla en la oportunidad legal correspondiente.", "sourceOrigin": "mixed" },
-        { "question": "¿Qué es la supletoriedad?", "answer": "La aplicación autorizada de otro ordenamiento para integrar una regulación que no resuelve expresamente un punto.", "sourceOrigin": "mixed" },
-        { "question": "¿Una ley puede ser sustantiva y adjetiva a la vez?", "answer": "Sí. Cada disposición se clasifica según la función que cumple dentro del caso.", "sourceOrigin": "mixed" },
-        { "question": "¿Qué artículos constitucionales orientan esta clase?", "answer": "Principalmente los artículos 14 y 17, sobre formalidades esenciales y acceso a la justicia.", "sourceOrigin": "complementary" },
-        { "question": "¿Qué debe verificarse antes de aplicar el CNPCF?", "answer": "Su entrada en vigor para el territorio y la materia, junto con las disposiciones transitorias.", "sourceOrigin": "complementary" },
-        { "question": "¿Un procedimiento correcto crea un derecho de fondo?", "answer": "No. El procedimiento tutela o declara derechos existentes conforme a las normas sustantivas aplicables.", "sourceOrigin": "mixed" },
-        { "question": "¿Cuál es la secuencia mínima para analizar un caso?", "answer": "Pretensión, norma sustantiva, vía, autoridad, etapa, plazo y consecuencia procesal.", "sourceOrigin": "complementary" }
+        {
+          "question": "¿Qué responde el derecho sustantivo?",
+          "answer": "Qué derecho, obligación, estado o consecuencia jurídica existe y a quién corresponde.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c02-scjn-funcion-normas",
+            "ev-c02-a04-l045-047-fondo-proceso"
+          ]
+        },
+        {
+          "question": "¿Qué responde el derecho adjetivo?",
+          "answer": "Cómo, cuándo, por qué vía y ante qué autoridad se hace valer un derecho.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c02-scjn-funcion-normas",
+            "ev-c02-a04-l045-047-fondo-proceso",
+            "ev-c02-a04-l247-255-via"
+          ]
+        },
+        {
+          "question": "¿Los derechos procesales son secundarios?",
+          "answer": "No. Protegen audiencia, defensa, igualdad, prueba, impugnación y acceso efectivo a la justicia.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c02-cpeum-art14",
+            "ev-c02-cpeum-art17",
+            "ev-c02-a04-l213-221-prueba-procesal"
+          ]
+        },
+        {
+          "question": "¿Qué naturaleza tienen los elementos de un delito?",
+          "answer": "Sustantiva, porque definen la conducta prohibida y sus consecuencias.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c02-scjn-funcion-normas",
+            "ev-c02-a04-l045-047-fondo-proceso",
+            "ev-c02-cnpp-objeto",
+            "ev-c02-a05-l057-059-penal"
+          ]
+        },
+        {
+          "question": "¿Qué naturaleza tiene el plazo para contestar una demanda?",
+          "answer": "Adjetiva o procesal, porque regula la oportunidad de una actuación en juicio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c02-scjn-funcion-normas",
+            "ev-c02-a04-l045-047-fondo-proceso"
+          ]
+        },
+        {
+          "question": "¿Qué es la preclusión?",
+          "answer": "La extinción o consumación de la oportunidad procesal de realizar un acto, en los supuestos definidos por la jurisprudencia.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c02-scjn-preclusion",
+            "ev-c02-a04-l331-335-preclusion"
+          ]
+        },
+        {
+          "question": "¿Qué supletoriedad mercantil estudia esta clase?",
+          "answer": "La aplicación del CNPCF prevista expresamente en el artículo 1054 del Código de Comercio para el supuesto que regula.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c02-ccom-fondo-proceso"
+          ]
+        },
+        {
+          "question": "¿Una ley puede ser sustantiva y adjetiva a la vez?",
+          "answer": "Sí. Cada disposición se clasifica según la función que cumple dentro del caso.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c02-scjn-funcion-normas",
+            "ev-c02-a04-l045-047-fondo-proceso"
+          ]
+        },
+        {
+          "question": "¿Qué artículos constitucionales orientan esta clase?",
+          "answer": "Principalmente los artículos 14 y 17, sobre formalidades esenciales y acceso a la justicia.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c02-cpeum-art14",
+            "ev-c02-cpeum-art17"
+          ]
+        },
+        {
+          "question": "¿Qué debe verificarse antes de aplicar el CNPCF?",
+          "answer": "Su entrada en vigor para el territorio y la materia, junto con las disposiciones transitorias.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c02-cnpcf-transitorios"
+          ]
+        },
+        {
+          "question": "¿Un procedimiento correcto crea un derecho de fondo?",
+          "answer": "No. El procedimiento tutela o declara derechos existentes conforme a las normas sustantivas aplicables.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c02-scjn-funcion-normas",
+            "ev-c02-a04-l045-047-fondo-proceso"
+          ]
+        },
+        {
+          "question": "¿Cómo se distingue una norma sustantiva de una procesal?",
+          "answer": "Por su función: contenido de fondo frente a regulación de la vía, etapa u oportunidad procesal.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c02-scjn-funcion-normas",
+            "ev-c02-a04-l045-047-fondo-proceso",
+            "ev-c02-a04-l247-255-via"
+          ]
+        }
       ],
       "exam": {
         "title": "Práctica: derecho sustantivo y adjetivo",
         "description": "Diez reactivos originales de tres opciones para distinguir fondo, procedimiento, preclusión, supletoriedad y vigencia normativa.",
         "questions": [
           {
-            "text": "Una disposición determina quiénes tienen derecho a heredar cuando no existe testamento. ¿Cuál es su naturaleza principal?",
+            "text": "Una disposición define el contenido de una obligación de pago. ¿Cuál es su función principal?",
             "difficulty": "basic",
-            "options": ["Sustantiva", "Adjetiva", "Administrativa de organización"],
+            "options": [
+              "Sustantiva",
+              "Procesal",
+              "Transitoria"
+            ],
             "correctOption": 0,
-            "explanation": "La disposición define la titularidad de un derecho sucesorio de fondo, por lo que cumple una función sustantiva.",
-            "optionExplanations": ["Define quién es titular del derecho a heredar.", "No regula una etapa o actuación del procedimiento.", "No organiza una dependencia ni distribuye funciones administrativas."]
+            "explanation": "La disposición define una obligación de fondo, por lo que cumple una función sustantiva.",
+            "optionExplanations": [
+              "Define el contenido de la obligación.",
+              "No regula una vía ni una actuación procesal.",
+              "No establece una regla de entrada en vigor."
+            ],
+            "evidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ],
+              [
+                "ev-c02-a04-l247-255-via"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ]
+            ]
           },
           {
             "text": "Una norma fija el plazo para contestar una demanda y los requisitos del escrito. ¿Qué tipo de norma es?",
             "difficulty": "basic",
-            "options": ["Sustantiva", "Adjetiva", "Orgánica exclusivamente"],
+            "options": [
+              "Sustantiva",
+              "Adjetiva",
+              "Orgánica exclusivamente"
+            ],
             "correctOption": 1,
             "explanation": "El plazo y la forma de contestación regulan el desarrollo del proceso, por lo que son normas adjetivas.",
-            "optionExplanations": ["No define el derecho material discutido.", "Regula oportunidad y forma de una actuación procesal.", "No se limita a organizar internamente un órgano público."]
+            "optionExplanations": [
+              "No define el derecho material discutido.",
+              "Regula oportunidad y forma de una actuación procesal.",
+              "No se limita a organizar internamente un órgano público."
+            ],
+            "evidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ]
+            ]
           },
           {
             "text": "Una trabajadora reclama indemnización por despido. ¿Qué análisis identifica correctamente los dos planos?",
             "difficulty": "intermediate",
-            "options": ["La indemnización es procesal y la audiencia es sustantiva", "La indemnización es sustantiva y la vía laboral es adjetiva", "La indemnización y la vía son exclusivamente sustantivas"],
+            "options": [
+              "La indemnización es procesal y la audiencia es sustantiva",
+              "La indemnización es sustantiva y la vía laboral es adjetiva",
+              "La indemnización y la vía son exclusivamente sustantivas"
+            ],
             "correctOption": 1,
             "explanation": "El derecho a una prestación pertenece al fondo; la vía y las actuaciones para reclamarla pertenecen al procedimiento.",
-            "optionExplanations": ["Invierte la función de cada conjunto de reglas.", "Distingue correctamente prestación y procedimiento.", "Ignora que la vía laboral cumple una función procesal."]
+            "optionExplanations": [
+              "Invierte la función de cada conjunto de reglas.",
+              "Distingue correctamente prestación y procedimiento.",
+              "Ignora que la vía laboral cumple una función procesal."
+            ],
+            "evidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso",
+              "ev-c02-a04-l247-255-via",
+              "ev-c02-lft-fondo-proceso",
+              "ev-c02-a05-l031-033-laboral"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso",
+                "ev-c02-lft-fondo-proceso",
+                "ev-c02-a05-l031-033-laboral"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso",
+                "ev-c02-a04-l247-255-via",
+                "ev-c02-lft-fondo-proceso",
+                "ev-c02-a05-l031-033-laboral"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso",
+                "ev-c02-a04-l247-255-via",
+                "ev-c02-lft-fondo-proceso",
+                "ev-c02-a05-l031-033-laboral"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso",
+              "ev-c02-a04-l247-255-via",
+              "ev-c02-lft-fondo-proceso",
+              "ev-c02-a05-l031-033-laboral"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso",
+              "ev-c02-a04-l247-255-via",
+              "ev-c02-lft-fondo-proceso",
+              "ev-c02-a05-l031-033-laboral"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso",
+                "ev-c02-lft-fondo-proceso",
+                "ev-c02-a05-l031-033-laboral"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso",
+                "ev-c02-a04-l247-255-via",
+                "ev-c02-lft-fondo-proceso",
+                "ev-c02-a05-l031-033-laboral"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso",
+                "ev-c02-a04-l247-255-via",
+                "ev-c02-lft-fondo-proceso",
+                "ev-c02-a05-l031-033-laboral"
+              ]
+            ]
           },
           {
             "text": "Una parte ofrece una prueba después de concluido el plazo legal sin causa que justifique su admisión. ¿Qué figura debe analizarse?",
             "difficulty": "intermediate",
-            "options": ["Preclusión", "Novación", "Tipicidad"],
+            "options": [
+              "Preclusión",
+              "Novación",
+              "Tipicidad"
+            ],
             "correctOption": 0,
-            "explanation": "La preclusión se relaciona con la pérdida de una facultad procesal por no ejercerla en la oportunidad correspondiente.",
-            "optionExplanations": ["Es la consecuencia procesal vinculada con la oportunidad vencida.", "La novación modifica o extingue obligaciones, no plazos procesales.", "La tipicidad pertenece al análisis sustantivo penal."]
+            "explanation": "La jurisprudencia identifica la falta de ejercicio en la oportunidad correspondiente como uno de los supuestos de preclusión.",
+            "optionExplanations": [
+              "Es el supuesto procesal relacionado con la oportunidad vencida.",
+              "No describe la extinción de una oportunidad procesal.",
+              "No describe la oportunidad para ofrecer prueba."
+            ],
+            "evidenceIds": [
+              "ev-c02-scjn-preclusion",
+              "ev-c02-a04-l331-335-preclusion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c02-a04-l213-221-prueba-procesal",
+                "ev-c02-scjn-preclusion",
+                "ev-c02-a04-l331-335-preclusion"
+              ],
+              [
+                "ev-c02-a04-l213-221-prueba-procesal"
+              ],
+              [
+                "ev-c02-a04-l213-221-prueba-procesal",
+                "ev-c02-cnpp-objeto",
+                "ev-c02-a05-l057-059-penal"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c02-a04-l213-221-prueba-procesal",
+              "ev-c02-scjn-preclusion",
+              "ev-c02-a04-l331-335-preclusion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c02-a04-l213-221-prueba-procesal",
+              "ev-c02-scjn-preclusion",
+              "ev-c02-a04-l331-335-preclusion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c02-a04-l213-221-prueba-procesal",
+                "ev-c02-scjn-preclusion",
+                "ev-c02-a04-l331-335-preclusion"
+              ],
+              [
+                "ev-c02-a04-l213-221-prueba-procesal"
+              ],
+              [
+                "ev-c02-a04-l213-221-prueba-procesal",
+                "ev-c02-cnpp-objeto",
+                "ev-c02-a05-l057-059-penal"
+              ]
+            ]
           },
           {
             "text": "El Código de Comercio define actos mercantiles y también regula juicios. ¿Qué conclusión es correcta?",
             "difficulty": "intermediate",
-            "options": ["Todo el código es únicamente sustantivo", "Todo el código es únicamente adjetivo", "Puede contener disposiciones sustantivas y adjetivas"],
+            "options": [
+              "Todo el código es únicamente sustantivo",
+              "Todo el código es únicamente adjetivo",
+              "Puede contener disposiciones sustantivas y adjetivas"
+            ],
             "correctOption": 2,
             "explanation": "La naturaleza se determina por la función de cada disposición, de modo que un mismo ordenamiento puede contener ambas.",
-            "optionExplanations": ["Desconoce las reglas procesales incluidas en el código.", "Desconoce sus reglas sobre actos y obligaciones mercantiles.", "Clasifica cada disposición conforme a su función real."]
+            "optionExplanations": [
+              "Desconoce las reglas procesales incluidas en el código.",
+              "Desconoce sus reglas sobre actos y obligaciones mercantiles.",
+              "Clasifica cada disposición conforme a su función real."
+            ],
+            "evidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso",
+              "ev-c02-ccom-fondo-proceso",
+              "ev-c02-a05-l185-187-mercantil",
+              "ev-c02-a05-l197-201-mercantil",
+              "ev-c02-a05-l207-209-mercantil"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso",
+                "ev-c02-ccom-fondo-proceso",
+                "ev-c02-a05-l185-187-mercantil",
+                "ev-c02-a05-l197-201-mercantil",
+                "ev-c02-a05-l207-209-mercantil"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso",
+                "ev-c02-ccom-fondo-proceso",
+                "ev-c02-a05-l185-187-mercantil",
+                "ev-c02-a05-l197-201-mercantil",
+                "ev-c02-a05-l207-209-mercantil"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso",
+                "ev-c02-ccom-fondo-proceso",
+                "ev-c02-a05-l185-187-mercantil",
+                "ev-c02-a05-l197-201-mercantil",
+                "ev-c02-a05-l207-209-mercantil"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso",
+              "ev-c02-ccom-fondo-proceso",
+              "ev-c02-a05-l185-187-mercantil",
+              "ev-c02-a05-l197-201-mercantil",
+              "ev-c02-a05-l207-209-mercantil"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso",
+              "ev-c02-ccom-fondo-proceso",
+              "ev-c02-a05-l185-187-mercantil",
+              "ev-c02-a05-l197-201-mercantil",
+              "ev-c02-a05-l207-209-mercantil"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso",
+                "ev-c02-ccom-fondo-proceso",
+                "ev-c02-a05-l185-187-mercantil",
+                "ev-c02-a05-l197-201-mercantil",
+                "ev-c02-a05-l207-209-mercantil"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso",
+                "ev-c02-ccom-fondo-proceso",
+                "ev-c02-a05-l185-187-mercantil",
+                "ev-c02-a05-l197-201-mercantil",
+                "ev-c02-a05-l207-209-mercantil"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso",
+                "ev-c02-ccom-fondo-proceso",
+                "ev-c02-a05-l185-187-mercantil",
+                "ev-c02-a05-l197-201-mercantil",
+                "ev-c02-a05-l207-209-mercantil"
+              ]
+            ]
           },
           {
             "text": "Antes de aplicar el Código Nacional de Procedimientos Civiles y Familiares a un caso iniciado en 2026, ¿qué debe comprobarse primero?",
             "difficulty": "advanced",
-            "options": ["La declaratoria de entrada en vigor y el régimen transitorio aplicables", "Solo que el conflicto tenga contenido patrimonial", "Que las partes prefieran usar el Código Nacional"],
+            "options": [
+              "La declaratoria de entrada en vigor y el régimen transitorio aplicables",
+              "Solo que el conflicto tenga contenido patrimonial",
+              "Que las partes prefieran usar el Código Nacional"
+            ],
             "correctOption": 0,
             "explanation": "La implementación del CNPCF es gradual; la norma aplicable depende de la vigencia territorial, temporal y transitoria.",
-            "optionExplanations": ["Permite determinar si el Código Nacional ya rige el procedimiento.", "El contenido patrimonial no resuelve por sí solo la vigencia procesal.", "Las partes no eligen libremente qué legislación procesal está vigente."]
+            "optionExplanations": [
+              "Permite determinar si el Código Nacional ya rige el procedimiento.",
+              "El contenido patrimonial no resuelve por sí solo la vigencia procesal.",
+              "Las partes no eligen libremente qué legislación procesal está vigente."
+            ],
+            "evidenceIds": [
+              "ev-c02-cnpcf-transitorios"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c02-cnpcf-transitorios"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c02-cnpcf-transitorios"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c02-cnpcf-transitorios"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c02-cnpcf-transitorios"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ]
+            ]
           },
           {
             "text": "Una persona tiene un contrato válido, pero demanda ante una autoridad incompetente. ¿Cuál es el diagnóstico adecuado?",
             "difficulty": "intermediate",
-            "options": ["El derecho sustantivo puede existir aunque exista un problema procesal", "La incompetencia elimina automáticamente el contrato", "El contrato vuelve competente a cualquier autoridad"],
+            "options": [
+              "El derecho sustantivo puede existir aunque exista un problema procesal",
+              "La incompetencia elimina automáticamente el contrato",
+              "El contrato vuelve competente a cualquier autoridad"
+            ],
             "correctOption": 0,
             "explanation": "La posible existencia del derecho de fondo debe distinguirse del defecto en la autoridad o vía elegida para hacerlo valer.",
-            "optionExplanations": ["Separa correctamente el fondo de la tutela procesal.", "Un defecto procesal no anula por sí mismo el negocio jurídico.", "La competencia proviene de la ley, no de la existencia del contrato."]
+            "optionExplanations": [
+              "Separa correctamente el fondo de la tutela procesal.",
+              "Un defecto procesal no anula por sí mismo el negocio jurídico.",
+              "La competencia proviene de la ley, no de la existencia del contrato."
+            ],
+            "evidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso",
+              "ev-c02-a04-l247-255-via"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso",
+              "ev-c02-a04-l247-255-via"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso",
+              "ev-c02-a04-l247-255-via"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ]
+            ]
           },
           {
-            "text": "Una ley especial no regula cómo desahogar cierta prueba y remite expresamente a otro código. ¿Qué técnica opera?",
+            "text": "El artículo 1054 del Código de Comercio prevé aplicar otro ordenamiento en defecto de sus reglas. ¿Qué técnica regula?",
             "difficulty": "intermediate",
-            "options": ["Supletoriedad", "Derogación tácita", "Retroactividad"],
+            "options": [
+              "Supletoriedad del CNPCF",
+              "Retroactividad constitucional",
+              "Entrada automática de toda ley"
+            ],
             "correctOption": 0,
-            "explanation": "La supletoriedad permite integrar una regulación mediante otro ordenamiento cuando existe base jurídica para ello.",
-            "optionExplanations": ["Describe la integración autorizada de la regla faltante.", "No se está sustituyendo necesariamente la ley especial.", "No se plantea la aplicación de una norma nueva a hechos pasados."]
+            "explanation": "El artículo 1054 prevé expresamente la aplicación supletoria del CNPCF en el supuesto mercantil regulado.",
+            "optionExplanations": [
+              "Es la remisión expresa contenida en el artículo.",
+              "No se plantea aplicar una norma nueva en perjuicio.",
+              "La regla no vuelve aplicable cualquier ley."
+            ],
+            "evidenceIds": [
+              "ev-c02-ccom-fondo-proceso"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c02-ccom-fondo-proceso"
+              ],
+              [
+                "ev-c02-ccom-fondo-proceso"
+              ],
+              [
+                "ev-c02-ccom-fondo-proceso"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c02-ccom-fondo-proceso"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c02-ccom-fondo-proceso"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c02-ccom-fondo-proceso"
+              ],
+              [
+                "ev-c02-ccom-fondo-proceso"
+              ],
+              [
+                "ev-c02-ccom-fondo-proceso"
+              ]
+            ]
           },
           {
             "text": "Un reactivo pregunta cuáles son los elementos necesarios para que una conducta constituya delito. ¿Qué debe buscarse?",
             "difficulty": "basic",
-            "options": ["La regla penal sustantiva", "El calendario de audiencias", "El plazo para apelar"],
+            "options": [
+              "La regla penal sustantiva",
+              "El calendario de audiencias",
+              "El plazo para apelar"
+            ],
             "correctOption": 0,
             "explanation": "Los elementos de la conducta delictiva definen el supuesto de fondo y pertenecen al derecho penal sustantivo.",
-            "optionExplanations": ["Determina si la conducta encuadra en el tipo penal.", "El calendario organiza actuaciones, no define el delito.", "La apelación es un medio procesal de impugnación."]
+            "optionExplanations": [
+              "Determina si la conducta encuadra en el tipo penal.",
+              "El calendario organiza actuaciones, no define el delito.",
+              "La apelación es un medio procesal de impugnación."
+            ],
+            "evidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso",
+              "ev-c02-cnpp-objeto",
+              "ev-c02-a05-l057-059-penal"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso",
+                "ev-c02-cnpp-objeto",
+                "ev-c02-a05-l057-059-penal"
+              ],
+              [
+                "ev-c02-cnpp-objeto",
+                "ev-c02-a05-l057-059-penal"
+              ],
+              [
+                "ev-c02-cnpp-objeto",
+                "ev-c02-a05-l057-059-penal"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso",
+              "ev-c02-cnpp-objeto",
+              "ev-c02-a05-l057-059-penal"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso",
+              "ev-c02-cnpp-objeto",
+              "ev-c02-a05-l057-059-penal"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso",
+                "ev-c02-cnpp-objeto",
+                "ev-c02-a05-l057-059-penal"
+              ],
+              [
+                "ev-c02-cnpp-objeto",
+                "ev-c02-a05-l057-059-penal"
+              ],
+              [
+                "ev-c02-cnpp-objeto",
+                "ev-c02-a05-l057-059-penal"
+              ]
+            ]
           },
           {
-            "text": "¿Cuál es el mejor método para resolver un caso que mezcla un derecho de fondo con actuaciones judiciales?",
+            "text": "¿Cuál análisis distingue correctamente una norma de fondo de una procesal?",
             "difficulty": "advanced",
-            "options": ["Elegir la opción que cite más artículos", "Separar pretensión y regla sustantiva de vía, etapa, plazo y consecuencia", "Clasificar toda la ley como procesal por aparecer una demanda"],
+            "options": [
+              "Clasificar toda la ley por su título",
+              "Examinar la función de cada disposición",
+              "Contar cuántos artículos cita"
+            ],
             "correctOption": 1,
-            "explanation": "La separación estructurada permite identificar qué parte del caso define el derecho y qué parte regula su tutela procesal.",
-            "optionExplanations": ["La cantidad de citas no demuestra que el razonamiento sea correcto.", "Integra los dos planos sin confundir sus funciones.", "La presencia de una demanda no convierte todas las reglas aplicables en procesales."]
+            "explanation": "La distinción depende de si la disposición define contenido de fondo o regula el proceso.",
+            "optionExplanations": [
+              "Una misma ley puede contener ambas funciones.",
+              "Permite distinguir fondo y proceso.",
+              "La cantidad de citas no determina la función normativa."
+            ],
+            "evidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c02-scjn-funcion-normas",
+              "ev-c02-a04-l045-047-fondo-proceso"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ],
+              [
+                "ev-c02-scjn-funcion-normas",
+                "ev-c02-a04-l045-047-fondo-proceso"
+              ]
+            ]
           }
         ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c02-scjn-funcion-normas",
+      "kind": "official",
+      "title": "Ejecutoria 18258",
+      "url": "https://sjf2.scjn.gob.mx/detalle/ejecutoria/18258",
+      "institution": "Suprema Corte de Justicia de la Nación",
+      "jurisdiction": "México",
+      "locator": "Ejecutoria 18258, distinción por la función sustantiva o adjetiva de la norma",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c02-cpeum-art14",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículo 14, página impresa 19",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c02-cpeum-art17",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículo 17, páginas impresas 21-22",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c02-scjn-preclusion",
+      "kind": "official",
+      "title": "Preclusión. Es una figura jurídica que extingue o consuma la oportunidad procesal de realizar un acto",
+      "url": "https://sjf2.scjn.gob.mx/detalle/apendice/1013013",
+      "institution": "Suprema Corte de Justicia de la Nación",
+      "jurisdiction": "México",
+      "locator": "registro digital 1013013; Primera Sala; jurisprudencia 1a./J. 21/2002",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c02-cnpcf-transitorios",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículos transitorios Segundo a Cuarto, páginas impresas 268-269",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c02-lft-fondo-proceso",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/lft.htm",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026; artículos 20 y 870-891",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c02-ccom-fondo-proceso",
+      "kind": "official",
+      "title": "Código de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/ccom.htm",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, reforma DOF 14-11-2025 y cantidades actualizadas DOF 18-02-2026; artículos 75 y 1054-1055",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c02-cnpp-objeto",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Penales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículo 1, objeto del Código",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c02-a04-l045-047-fondo-proceso",
+      "kind": "transcript",
+      "audioNumber": 4,
+      "locator": {
+        "type": "line_range",
+        "startLine": 45,
+        "endLine": 47
+      }
+    },
+    {
+      "id": "ev-c02-a04-l213-221-prueba-procesal",
+      "kind": "transcript",
+      "audioNumber": 4,
+      "locator": {
+        "type": "line_range",
+        "startLine": 213,
+        "endLine": 221
+      }
+    },
+    {
+      "id": "ev-c02-a04-l247-255-via",
+      "kind": "transcript",
+      "audioNumber": 4,
+      "locator": {
+        "type": "line_range",
+        "startLine": 247,
+        "endLine": 255
+      }
+    },
+    {
+      "id": "ev-c02-a04-l331-335-preclusion",
+      "kind": "transcript",
+      "audioNumber": 4,
+      "locator": {
+        "type": "line_range",
+        "startLine": 331,
+        "endLine": 335
+      }
+    },
+    {
+      "id": "ev-c02-a05-l031-033-laboral",
+      "kind": "transcript",
+      "audioNumber": 5,
+      "locator": {
+        "type": "line_range",
+        "startLine": 31,
+        "endLine": 33
+      }
+    },
+    {
+      "id": "ev-c02-a05-l057-059-penal",
+      "kind": "transcript",
+      "audioNumber": 5,
+      "locator": {
+        "type": "line_range",
+        "startLine": 57,
+        "endLine": 59
+      }
+    },
+    {
+      "id": "ev-c02-a05-l185-187-mercantil",
+      "kind": "transcript",
+      "audioNumber": 5,
+      "locator": {
+        "type": "line_range",
+        "startLine": 185,
+        "endLine": 187
+      }
+    },
+    {
+      "id": "ev-c02-a05-l197-201-mercantil",
+      "kind": "transcript",
+      "audioNumber": 5,
+      "locator": {
+        "type": "line_range",
+        "startLine": 197,
+        "endLine": 201
+      }
+    },
+    {
+      "id": "ev-c02-a05-l207-209-mercantil",
+      "kind": "transcript",
+      "audioNumber": 5,
+      "locator": {
+        "type": "line_range",
+        "startLine": 207,
+        "endLine": 209
       }
     }
   ]

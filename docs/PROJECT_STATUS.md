@@ -86,10 +86,11 @@ anterior, pero esos datos no están presentes en el proyecto CENEVAL conectado:
 | Flashcards | 480 |
 | Preguntas de examen | 400 |
 
-El repositorio conserva C01 como piloto trazable en contrato 1.2, C02–C40
-legibles en contrato 1.1 y una versión retirada en el archivo editorial. C01
-pasa el gate local, pero no se ha importado, revisado ni publicado; C02–C40
-todavía no son publicables bajo el gate trazable 1.2. La siguiente clase planeada es **C41
+El repositorio conserva C01 y C02 como pilotos trazables en contrato 1.2,
+C03–C40 legibles en contrato 1.1 y una versión retirada en el archivo
+editorial. C01 y C02 pasan el gate local, pero no se han importado, revisado ni
+publicado; C03–C40 todavía no son publicables bajo el gate trazable 1.2. La
+siguiente clase planeada es **C41
 — Juicio ejecutivo mercantil oral**, con Audio 54 y la primera parte del Audio
 55. Antes de disponer de esa biblioteca en la aplicación habrá que
 importar C01–C40 en el proyecto CENEVAL correcto.
@@ -207,10 +208,11 @@ El contrato 1.2 añade el gate de confianza editorial:
 - modificar o rechazar contenido invalida la aprobación anterior;
 - la transcripción queda restringida a administración.
 
-Los 40 paquetes C01–C40 tienen código, orden y fuentes portables. C01 ya usa
-1.2: sus 139 artefactos quedaron enlazados a 12 evidencias verificables y pasa
-el gate local sin importar contenido. C02–C40 permanecen en 1.1 y no pasan el
-nuevo gate. El importador acepta exclusivamente 1.2 y delega la escritura a
+Los 40 paquetes C01–C40 tienen código, orden y fuentes portables. C01 y C02 ya
+usan 1.2: sus 139 y 130 artefactos quedaron enlazados a 12 y 17 evidencias
+verificables, respectivamente, y pasan el gate local sin importar contenido.
+C03–C40 permanecen en 1.1 y no pasan el nuevo gate. El importador acepta
+exclusivamente 1.2 y delega la escritura a
 una única RPC transaccional que persiste el registro de
 evidencias, journeys y vínculos editoriales; 1.0 y 1.1 fallan antes de llamar a
 Supabase. La versión sustituida de C14 permanece en el archivo 1.0 no
@@ -221,7 +223,7 @@ migraciones locales se aplicaron desde cero en PostgreSQL 17.6 y el runner
 dinámico comprobó round-trip semántico, 2 evidencias, 118 artefactos, 236
 vínculos, estados `draft`/`pending`, rechazo de duplicados sin residuos y RPC
 denegadas a `anon` y `authenticated`. La migración todavía no está aplicada en
-el proyecto remoto; C01 y C41 no se han importado.
+el proyecto remoto; C01, C02 y C41 no se han importado.
 
 ### Controles editoriales concurrentes
 
@@ -369,8 +371,9 @@ Queda pendiente:
 
 El inventario histórico registra contenido preparado para C01–C40: cada clase
 tiene transcripción conservada, versión depurada, nueve materiales, mapa,
-flashcards, diez reactivos y fuentes. Ese contenido no debe describirse como
-publicable hasta migrarlo y aprobarlo con el gate trazable 1.2.
+flashcards, diez reactivos y fuentes. C01 y C02 pasan el gate local 1.2, pero
+aún requieren revisión y publicación autorizadas; C03–C40 no deben describirse
+como publicables hasta migrarlos y aprobarlos con ese gate.
 
 Orden de producción restante:
 
@@ -410,18 +413,18 @@ Además siguen pendientes tres bancos transversales y 16 exámenes acumulativos.
    registrar el resultado. Esta suite crea y elimina datos remotos; no
    pertenece a CI.
 4. Aplicar la persistencia 1.2 ya aprobada localmente en un proyecto de ensayo;
-   luego migrar C01 con evidencia real verificable.
+   C01 y C02 ya cuentan con evidencia real verificable para ese ensayo.
 
-### Prioridad 1 — Demostrar el pipeline con C01
+### Prioridad 1 — Cerrar el pipeline con C01 y C02
 
-1. Incorporar localizadores reales y migrar C01 al contrato 1.2.
+1. Mantener los localizadores reales y paquetes C01 y C02 en contrato 1.2.
 2. Verificar por round-trip dinámico que el registro de evidencias persiste sin
    pérdidas.
 3. Revisar vigencia jurídica y conteos editoriales.
 4. Publicar solo después de la revisión autorizada.
 5. Comprobar localmente el recorrido borrador, revisión, aprobación y publicación.
 
-### Prioridad 2 — Migrar C02–C40 y después completar C41–C58
+### Prioridad 2 — Migrar C03–C40 y después completar C41–C58
 
 Repetir el pipeline 1.2 con fuentes oficiales, validación, revisión editorial,
 publicación, navegación y un commit por unidad de trabajo.
@@ -460,7 +463,7 @@ publicación, navegación y un commit por unidad de trabajo.
 | 2 | Ejecutar y probar el respaldo documentado | Exportación fechada, copia externa verificada y restauración de ensayo |
 | 3 | Ampliar y ejecutar la suite RLS | Comprobaciones actuales y casos de temas no aprobados aprobados en CENEVAL |
 | 4 | Aplicar la persistencia 1.2 en un proyecto de ensayo | Migración remota de ensayo, round-trip y RLS aprobados antes de producción |
-| 5 | Migrar y aprobar C01 | Recorrido local trazable completo sin evidencia inventada |
+| 5 | Aprobar C01 y C02 | Recorrido trazable completo sin evidencia inventada |
 | 6 | Crear pruebas de navegador | Flujos centrales reproducibles en CI o entorno aislado |
 | 7 | Completar y validar el despliegue privado | Variables persistentes, administradora operativa y URL estable aprobada desde teléfono y computadora |
 
@@ -493,4 +496,4 @@ contenido o escribir en la base remota:
 2. ejecutar y completar el procedimiento de `docs/SUPABASE_BACKUP.md`;
 3. aplicar las migraciones en un proyecto de ensayo y repetir el gate dinámico
    antes de promoverlas a CENEVAL;
-4. obtener localizadores verificables y migrar C01 antes de C41.
+4. continuar la migración trazable desde C03 antes de C41.

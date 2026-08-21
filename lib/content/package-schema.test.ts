@@ -64,7 +64,7 @@ const legacyPackagePath = path.join(
   process.cwd(),
   "content",
   "packages",
-  "audio-04-05-derecho-sustantivo-adjetivo.json",
+  "audio-05-14-15-jurisdiccion-competencia.json",
 );
 
 function readLegacyPackage() {
