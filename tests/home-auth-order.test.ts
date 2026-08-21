@@ -9,7 +9,7 @@ const dashboardSource = readFileSync(
 
 test("autentica antes de consultar datos del inicio", () => {
   const authPosition = dashboardSource.indexOf("await requireUser()"),
-    subjectsPosition = dashboardSource.indexOf("await getSubjects()");
+    subjectsPosition = dashboardSource.indexOf("getSubjects()");
 
   assert.notEqual(authPosition, -1, "Falta la comprobacion de sesion.");
   assert.notEqual(subjectsPosition, -1, "Falta la consulta de materias.");
