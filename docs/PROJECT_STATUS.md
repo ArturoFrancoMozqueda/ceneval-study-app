@@ -2,7 +2,7 @@
 
 Última actualización: 20 de agosto de 2026
 
-Base documental: `origin/main` en `82c507b`
+Base documental: `origin/main` en `772dfd3`
 
 Responsables: Fatima (administración y validación) y Codex (desarrollo y contenido)
 
@@ -25,7 +25,10 @@ Los bloqueos operativos reales siguen siendo:
    comprobable de la base, una copia externa ni una restauración probada;
 3. el esquema y las once migraciones ya están aplicados en CENEVAL, pero la
    suite RLS dinámica de 31 comprobaciones todavía no se ha ejecutado;
-4. la aplicación no está desplegada y solo se usa en `localhost`;
+4. existe un despliegue técnico privado en un proyecto separado de Vercel
+   Hobby, pero faltan persistir los secretos, crear/promover la cuenta
+   administradora y validar el recorrido autenticado; no hay despliegue
+   automático desde Git;
 5. C41–C58 y los bancos acumulativos siguen pendientes.
 
 El historial de Git ya es útil y existe CI. Esos dos hallazgos de la auditoría
@@ -115,6 +118,21 @@ C40 tiene el ID 49; eso no significa que existan 49 clases vigentes.
 Las acciones de terceros están fijadas por SHA, el job tiene permisos de solo
 lectura y no recibe secretos. La CI no se conecta a Supabase ni sustituye las
 pruebas de interfaz o la suite RLS remota.
+
+### Despliegue técnico en Vercel
+
+CENEVAL tiene un despliegue técnico privado en un proyecto separado de Vercel
+sobre Hobby; la cuenta no se cambió a Pro. La publicación responde por HTTPS y
+redirige a la pantalla de acceso, pero todavía no equivale a un servicio
+operativo ni a un lanzamiento comercial: Supabase conserva las once migraciones
+y continúa con 0 usuarios y 0 contenido.
+
+El despliegue actual recibió las variables públicas y `PRIVATE_ACCESS_ONLY`
+durante la compilación. Antes de operar deben persistirse mediante el almacén
+seguro de Vercel `SUPABASE_SECRET_KEY`, `ADMIN_EMAIL` y el resto de variables,
+crear/promover la administradora, configurar las redirecciones de Supabase Auth
+y probar el recorrido autenticado. El proyecto no está conectado a Git; cada
+despliegue es manual y debe registrar el commit publicado.
 
 ### Respaldo de Supabase
 
@@ -359,16 +377,18 @@ publicación, navegación y un commit por unidad de trabajo.
 
 ### Prioridad 4 — Despliegue y operación
 
-1. Vincular Vercel y configurar variables sin exponer secretos.
-2. Configurar redirecciones de Supabase Auth para producción.
-3. Probar una vista previa y promoverla solo tras aprobación.
-4. Añadir monitoreo, manual de operación, respaldo y restauración.
-5. Resolver proveedor, planes/precios, prueba, cancelación, reembolsos,
+1. Persistir y verificar las variables de Vercel sin exponer secretos.
+2. Crear/promover la administradora y configurar las redirecciones de Supabase
+   Auth para producción.
+3. Probar login y rutas privadas desde teléfono y computadora, y revisar logs.
+4. Registrar cada publicación manual y decidir si se habilita integración Git.
+5. Añadir monitoreo, manual de operación, respaldo y restauración.
+6. Resolver proveedor, planes/precios, prueba, cancelación, reembolsos,
    impuestos y soporte antes de implementar registro o pagos.
-6. Seguir los gates incrementales de `SUBSCRIPTION_ARCHITECTURE.md`: dominio y
+7. Seguir los gates incrementales de `SUBSCRIPTION_ARCHITECTURE.md`: dominio y
    autorización sin cobro, sandbox cerrado, piloto privado y solo después
    apertura comercial explícita.
-7. Capturar la línea base de datos definida en `DATA_ARCHITECTURE.md` antes de
+8. Capturar la línea base de datos definida en `DATA_ARCHITECTURE.md` antes de
    añadir caché, réplicas, búsqueda semántica u otro motor.
 
 ## 7. Próximas tareas ejecutables
@@ -381,7 +401,7 @@ publicación, navegación y un commit por unidad de trabajo.
 | 4 | Preparar C41 en contrato 1.1 | `content:check` aprobado |
 | 5 | Importar y publicar C41 | Visible en `/sesiones` y después de C40 |
 | 6 | Crear pruebas de navegador | Flujos centrales reproducibles en CI o entorno aislado |
-| 7 | Desplegar en modo privado | URL estable aprobada desde teléfono y computadora |
+| 7 | Completar y validar el despliegue privado | Variables persistentes, administradora operativa y URL estable aprobada desde teléfono y computadora |
 
 ## 8. Decisiones de producto abiertas
 
