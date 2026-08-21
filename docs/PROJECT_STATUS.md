@@ -2,8 +2,8 @@
 
 Última actualización: 21 de agosto de 2026
 
-Base documental: `origin/main` en `d63d78d`, con trabajo 1.2 en la rama
-`feature/persistencia-evidencia-12`
+Base documental: trabajo local acumulado hasta la rama
+`feature/respaldo-restauracion-local`; su integración remota sigue pendiente.
 
 Responsables: Fatima (administración y validación) y Codex (desarrollo y contenido)
 
@@ -24,8 +24,9 @@ Los bloqueos operativos reales siguen siendo:
 1. los 70 TXT originales ya tienen una primera copia privada verificada con
    SHA-256, pero todavía falta una segunda copia independiente y ensayar su
    restauración;
-2. existe un procedimiento seguro de respaldo, pero todavía no una exportación
-   comprobable de la base, una copia externa ni una restauración probada;
+2. el mecanismo PostgreSQL ya pasó un respaldo y una restauración reales en
+   local, pero todavía no existe una exportación del remoto, una copia externa
+   cifrada ni una restauración de esa copia en un proyecto de ensayo;
 3. el proyecto local aplica quince migraciones y pasó 141 comprobaciones RLS;
    CENEVAL remoto conserva once migraciones y aún requiere ejecutar el mismo
    gate en un entorno de ensayo autorizado antes de promover cambios;
@@ -155,9 +156,13 @@ despliegue es manual y debe registrar el commit publicado.
   proyecto de ensayo.
 
 El mecanismo está versionado y su prueba sintética forma parte de
-`test:local`. **Todavía no se ha generado un respaldo real**, no existe copia
-externa comprobada y no se ha ensayado una restauración. Los SQL pueden contener
-datos privados y están excluidos de Git.
+`test:local`. Además, `npm run test:backup-restore:local` pasó el 21 de agosto
+de 2026 contra PostgreSQL 17 local: creó un dump binario, lo restauró en una
+base temporal, comparó esquema, RLS, datos, evidencia, digests y round-trip 1.2,
+y terminó sin bases, archivos ni datos sintéticos residuales. Esta comprobación
+no equivale a restaurar una exportación de CENEVAL: todavía no se ha generado un
+respaldo remoto real ni existe una copia externa comprobada. Los respaldos
+pueden contener datos privados y están excluidos de Git.
 
 ### Navegación y estados
 
@@ -202,7 +207,7 @@ evidencias, journeys y vínculos editoriales; 1.0 y 1.1 fallan antes de llamar a
 Supabase. La versión sustituida de C14 permanece en el archivo 1.0 no
 importable.
 
-La implementación pasó pruebas unitarias, TypeScript, lint y build. Las trece
+La implementación pasó pruebas unitarias, TypeScript, lint y build. Las quince
 migraciones locales se aplicaron desde cero en PostgreSQL 17.6 y el runner
 dinámico comprobó round-trip semántico, 2 evidencias, 118 artefactos, 236
 vínculos, estados `draft`/`pending`, rechazo de duplicados sin residuos y RPC
