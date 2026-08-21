@@ -40,6 +40,7 @@ No los uses como referencia.
 | `08-visual-design.md` | Define personalidad, colores, tipografía y componentes | Aprobado |
 | `SECURITY_TESTING.md` | Distingue cobertura local, suite remota y última ejecución comprobada | Activo |
 | `SUPABASE_BACKUP.md` | Procedimiento seguro de exportación, verificación y restauración de ensayo | Activo; ejecución real pendiente |
+| `DEPLOYMENT_RUNBOOK.md` | Preflight, publicación manual privada, observación Hobby y rollback de aplicación | Activo; primera ejecución pendiente |
 | `auditoria-2026-08/` | Corte histórico con conciliación vigente en su README | Histórico y referencial |
 | `archivo/` | Documentos históricos que ya no aplican | Archivado |
 | `DEVELOPMENT_WORKFLOW.md` | Establece cómo trabajar en el repositorio | Activo |

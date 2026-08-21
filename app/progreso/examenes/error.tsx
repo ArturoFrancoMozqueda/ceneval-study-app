@@ -11,8 +11,12 @@ export default function ExamHistoryError({
   reset: () => void;
 }) {
   useEffect(() => {
-    console.error(error);
-  }, [error]);
+    const digest = error.digest;
+    console.error(JSON.stringify({
+      event: "exam_history_render_failure",
+      ...(digest && /^[A-Za-z0-9_-]{1,128}$/.test(digest) ? { digest } : {}),
+    }));
+  }, [error.digest]);
 
   return (
     <section aria-labelledby="history-error-title" role="alert">

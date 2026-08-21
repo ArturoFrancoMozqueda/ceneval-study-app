@@ -1,5 +1,7 @@
 import "server-only";
 
+import { writeDependencyFailure } from "@/lib/operations/safe-log";
+
 import { connection } from "next/server";
 import { getCurrentUser, requireUser } from "@/lib/auth";
 import { relationRows } from "@/lib/data/relation-rows";
@@ -224,8 +226,8 @@ type ClassOverviewRow = ClassRow & {
   topics?: Array<{ id: number }> | { id: number } | null;
 };
 
-function fail(operation: string, message: string): never {
-  console.error(`[Supabase] ${operation}: ${message}`);
+function fail(operation: string, error?: unknown): never {
+  writeDependencyFailure({ error, operation });
   throw new Error("No pudimos consultar los datos. Intenta nuevamente.");
 }
 
@@ -270,7 +272,7 @@ export async function getSubjects(): Promise<Subject[]> {
     .select(subjectOverviewSelection)
     .order("name", { ascending: true });
 
-  if (subjectsResult.error) fail("getSubjects", subjectsResult.error.message);
+  if (subjectsResult.error) fail("getSubjects", subjectsResult.error);
 
   return ((subjectsResult.data ?? []) as SubjectRow[]).map((subject) => {
     const subjectClasses = relationRows(subject.classes);
@@ -303,7 +305,7 @@ export async function getClassesForSubject(subjectId: number) {
     .order("created_at", { ascending: false });
 
   if (classesResult.error) {
-    fail("getClassesForSubject", classesResult.error.message);
+    fail("getClassesForSubject", classesResult.error);
   }
 
   return ((classesResult.data ?? []) as ClassOverviewRow[]).map((row) =>
@@ -334,11 +336,11 @@ export async function getClass(classId: number) {
     supabase.from("topics").select("id").eq("class_id", classId),
   ]);
 
-  if (classResult.error) fail("getClass", classResult.error.message);
+  if (classResult.error) fail("getClass", classResult.error);
   if (transcriptResult.error) {
-    fail("getClass transcript", transcriptResult.error.message);
+    fail("getClass transcript", transcriptResult.error);
   }
-  if (topicsResult.error) fail("getClass topics", topicsResult.error.message);
+  if (topicsResult.error) fail("getClass topics", topicsResult.error);
   if (!classResult.data) return null;
 
   return toClass(
@@ -367,10 +369,10 @@ export async function getPublishedSessions(userId: string): Promise<StudySession
         .eq("user_id", userId),
     ]);
 
-  if (classesResult.error) fail("getPublishedSessions", classesResult.error.message);
-  if (subjectsResult.error) fail("getPublishedSessions subjects", subjectsResult.error.message);
-  if (topicsResult.error) fail("getPublishedSessions topics", topicsResult.error.message);
-  if (progressResult.error) fail("getPublishedSessions progress", progressResult.error.message);
+  if (classesResult.error) fail("getPublishedSessions", classesResult.error);
+  if (subjectsResult.error) fail("getPublishedSessions subjects", subjectsResult.error);
+  if (topicsResult.error) fail("getPublishedSessions topics", topicsResult.error);
+  if (progressResult.error) fail("getPublishedSessions progress", progressResult.error);
 
   const subjects = new Map(
     (subjectsResult.data ?? []).map((subject) => [subject.id as number, subject.name as string]),
@@ -406,7 +408,7 @@ export async function getPublishedSessionNeighbors(classId: number) {
     .eq("publication_status", "published")
     .not("curriculum_order", "is", null)
     .order("curriculum_order");
-  if (error) fail("getPublishedSessionNeighbors", error.message);
+  if (error) fail("getPublishedSessionNeighbors", error);
   const sessions = data ?? [];
   const index = sessions.findIndex((item) => item.id === classId);
   if (index < 0) return { previous: null, next: null };
@@ -427,7 +429,7 @@ export async function getTranscript(classId: number): Promise<Transcript | null>
     .eq("class_id", classId)
     .maybeSingle();
 
-  if (error) fail("getTranscript", error.message);
+  if (error) fail("getTranscript", error);
   if (!data) return null;
   return {
     id: data.id as number,
@@ -447,7 +449,7 @@ export async function getTopicsForClass(classId: number): Promise<Topic[]> {
     .eq("class_id", classId)
     .order("position");
 
-  if (error) fail("getTopicsForClass", error.message);
+  if (error) fail("getTopicsForClass", error);
   return (data ?? []).map((row) => ({
     id: row.id as number,
     classId: row.class_id as number,
@@ -472,7 +474,7 @@ export async function getTopic(topicId: number): Promise<Topic | null> {
   }
   const { data, error } = await query.maybeSingle();
 
-  if (error) fail("getTopic", error.message);
+  if (error) fail("getTopic", error);
   if (!data) return null;
   return {
     id: data.id as number,
@@ -505,7 +507,7 @@ export async function getStudyContinuation(
     .maybeSingle();
 
   if (currentError) {
-    fail("getStudyContinuation current topic", currentError.message);
+    fail("getStudyContinuation current topic", currentError);
   }
   if (!currentRow) return { kind: "unavailable" };
 
@@ -543,10 +545,10 @@ export async function getStudyContinuation(
   ]);
 
   if (topicResult.error) {
-    fail("getStudyContinuation next topic", topicResult.error.message);
+    fail("getStudyContinuation next topic", topicResult.error);
   }
   if (classResult.error) {
-    fail("getStudyContinuation next class", classResult.error.message);
+    fail("getStudyContinuation next class", classResult.error);
   }
 
   return deriveStudyContinuation({
@@ -599,7 +601,11 @@ export async function getStudyProgress(
 
   // The feature remains usable before the new migration is applied.
   if (error) {
-    console.warn(`[Supabase] getStudyProgress: ${error.message}`);
+    writeDependencyFailure({
+      error,
+      level: "info",
+      operation: "getStudyProgress",
+    });
     return null;
   }
   if (!data) return null;
@@ -658,11 +664,11 @@ export async function getLessonBundle(
     ]);
 
   if (!studyClass) return null;
-  if (materialsResult.error) fail("lesson materials", materialsResult.error.message);
-  if (mapResult.error) fail("lesson map", mapResult.error.message);
-  if (linksResult.error) fail("lesson references", linksResult.error.message);
-  if (cardsResult.error) fail("lesson flashcards", cardsResult.error.message);
-  if (examsResult.error) fail("lesson exam", examsResult.error.message);
+  if (materialsResult.error) fail("lesson materials", materialsResult.error);
+  if (mapResult.error) fail("lesson map", mapResult.error);
+  if (linksResult.error) fail("lesson references", linksResult.error);
+  if (cardsResult.error) fail("lesson flashcards", cardsResult.error);
+  if (examsResult.error) fail("lesson exam", examsResult.error);
 
   const subject = await getSubject(studyClass.subjectId);
   if (!subject) return null;
@@ -675,7 +681,7 @@ export async function getLessonBundle(
     .limit(1)
     .maybeSingle();
   if (verificationResult.error) {
-    fail("lesson legal verification", verificationResult.error.message);
+    fail("lesson legal verification", verificationResult.error);
   }
   const legalVerifiedOn = verificationResult.data?.legal_verified_on
     ? String(verificationResult.data.legal_verified_on)
@@ -689,7 +695,7 @@ export async function getLessonBundle(
       .select("id,question_text,difficulty,position")
       .eq("exam_id", examsResult.data.id)
       .order("position");
-    if (questionsError) fail("lesson questions", questionsError.message);
+    if (questionsError) fail("lesson questions", questionsError);
     const questionIds = (questions ?? []).map(({ id }) => id as number);
     const { data: options, error: optionsError } = questionIds.length
       ? await supabase
@@ -698,7 +704,7 @@ export async function getLessonBundle(
           .in("question_id", questionIds)
           .order("position")
       : { data: [], error: null };
-    if (optionsError) fail("lesson options", optionsError.message);
+    if (optionsError) fail("lesson options", optionsError);
 
     exam = {
       id: examsResult.data.id as number,
@@ -789,10 +795,10 @@ export async function getReviewOverview(
   ]);
 
   if (reviewsResult.error) {
-    fail("getReviewOverview reviews", reviewsResult.error.message);
+    fail("getReviewOverview reviews", reviewsResult.error);
   }
   if (checksResult.error) {
-    fail("getReviewOverview checks", checksResult.error.message);
+    fail("getReviewOverview checks", checksResult.error);
   }
 
   const reviews: FlashcardReviewRecord[] = (reviewsResult.data ?? []).map(
@@ -821,7 +827,7 @@ export async function getReviewOverview(
         .in("id", flashcardIds)
     : { data: [], error: null };
   if (cardsResult.error) {
-    fail("getReviewOverview flashcards", cardsResult.error.message);
+    fail("getReviewOverview flashcards", cardsResult.error);
   }
 
   const cardRows = (cardsResult.data ?? []).map((row) => ({
@@ -848,7 +854,7 @@ export async function getReviewOverview(
         .eq("classes.publication_status", "published")
     : { data: [], error: null };
   if (topicsResult.error) {
-    fail("getReviewOverview topics", topicsResult.error.message);
+    fail("getReviewOverview topics", topicsResult.error);
   }
 
   const topics = new Map(

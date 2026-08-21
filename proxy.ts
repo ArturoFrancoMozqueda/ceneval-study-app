@@ -1,8 +1,23 @@
-import type { NextRequest } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 import { updateSession } from "@/lib/supabase/proxy";
 
+const healthProbePaths = new Set([
+  "/api/health/live",
+  "/api/health/ready",
+]);
+
+export async function proxyWithSessionUpdater(
+  request: NextRequest,
+  sessionUpdater: typeof updateSession,
+) {
+  if (healthProbePaths.has(request.nextUrl.pathname)) {
+    return NextResponse.next();
+  }
+  return sessionUpdater(request);
+}
+
 export async function proxy(request: NextRequest) {
-  return updateSession(request);
+  return proxyWithSessionUpdater(request, updateSession);
 }
 
 export const config = {

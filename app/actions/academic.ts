@@ -22,6 +22,7 @@ import {
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 import { getTranscriptValidationError } from "@/lib/transcript-validation";
+import { writeDependencyFailure } from "@/lib/operations/safe-log";
 import {
   isPositiveInteger,
   isTopicApprovalStatus,
@@ -45,16 +46,16 @@ function textValue(formData: FormData, name: string) {
   return typeof value === "string" ? value.trim() : "";
 }
 
-function databaseError(operation: string, message: string): ActionResult {
-  console.error(`[Supabase] ${operation}: ${message}`);
+function databaseError(operation: string, error?: unknown): ActionResult {
+  writeDependencyFailure({ error, operation });
   return { error: "No pudimos guardar los cambios. Intenta nuevamente." };
 }
 
 function publicationCheckDatabaseError(
   operation: string,
-  message: string,
+  error?: unknown,
 ): ActionResult {
-  console.error(`[Supabase] ${operation}: ${message}`);
+  writeDependencyFailure({ error, operation });
   return {
     error:
       "No pudimos comprobar los requisitos de publicación. Actualiza la página e intenta nuevamente.",
@@ -70,14 +71,14 @@ type AuthenticatedSupabaseClient = Awaited<
 
 type PublishedTopicCheck =
   | { available: true }
-  | { available: false; databaseMessage?: string };
+  | { available: false; databaseError?: unknown };
 
 function unavailableStudyActivity(
   operation?: string,
-  databaseMessage?: string,
+  databaseError?: unknown,
 ): ActionResult {
-  if (operation && databaseMessage) {
-    console.error(`[Supabase] ${operation}: ${databaseMessage}`);
+  if (operation && databaseError) {
+    writeDependencyFailure({ error: databaseError, operation });
   }
   return { error: studyActivityError };
 }
@@ -92,7 +93,7 @@ async function checkPublishedTopic(
     .eq("id", topicId)
     .maybeSingle();
   if (topicError) {
-    return { available: false, databaseMessage: topicError.message };
+    return { available: false, databaseError: topicError };
   }
   if (!topic) return { available: false };
 
@@ -103,7 +104,7 @@ async function checkPublishedTopic(
     .eq("publication_status", "published")
     .maybeSingle();
   if (classError) {
-    return { available: false, databaseMessage: classError.message };
+    return { available: false, databaseError: classError };
   }
   return studyClass ? { available: true } : { available: false };
 }
@@ -127,7 +128,7 @@ export async function createSubjectAction(formData: FormData) {
   if (error?.code === "23505") {
     return { error: "Ya existe una materia con ese nombre." };
   }
-  if (error) return databaseError("createSubject", error.message);
+  if (error) return databaseError("createSubject", error);
   revalidatePath("/");
   revalidatePath("/materias");
   revalidatePath("/administrar");
@@ -166,7 +167,7 @@ export async function createClassAction(
     .select("id")
     .single();
 
-  if (error) return databaseError("createClass", error.message);
+  if (error) return databaseError("createClass", error);
   revalidatePath("/administrar");
   revalidatePath(`/materias/${subjectId}`);
   return { id: data.id as number };
@@ -201,7 +202,7 @@ export async function updateClassDetailsAction(
     .select("id")
     .maybeSingle();
 
-  if (error) return databaseError("updateClassDetails", error.message);
+  if (error) return databaseError("updateClassDetails", error);
   if (!data) return { error: "No encontramos la clase que quieres editar." };
 
   revalidatePath("/");
@@ -234,7 +235,7 @@ export async function saveTranscriptAction(
   if (error?.code === "23505") {
     return { error: "Esta clase ya tiene una transcripción original." };
   }
-  if (error) return databaseError("saveTranscript", error.message);
+  if (error) return databaseError("saveTranscript", error);
   revalidatePath(`/clases/${classId}`);
   revalidatePath(`/clases/${classId}/transcripcion`);
   return { id: data.id as number };
@@ -266,7 +267,7 @@ export async function createTopicAction(
   );
 
   if (error) {
-    console.error(`[Supabase] createTopic: ${error.message}`);
+    writeDependencyFailure({ error, operation: "createTopic" });
     return { error: topicMutationErrorMessage(error.code) };
   }
   if (!isPositiveInteger(data)) {
@@ -301,7 +302,7 @@ export async function updateTopicStatusAction(
     .select("id")
     .maybeSingle();
   if (error) {
-    console.error(`[Supabase] updateTopicStatus: ${error.message}`);
+    writeDependencyFailure({ error, operation: "updateTopicStatus" });
     return { error: topicMutationErrorMessage(error.code) };
   }
   if (!data) {
@@ -334,7 +335,7 @@ export async function updatePublicationStatusAction(
     .eq("id", classId)
     .maybeSingle();
   if (classError) {
-    return databaseError("loadClassPublicationStatus", classError.message);
+    return databaseError("loadClassPublicationStatus", classError);
   }
   if (!studyClass) {
     return { error: "No encontramos la clase que quieres editar." };
@@ -359,7 +360,7 @@ export async function updatePublicationStatusAction(
     if (topics.error) {
       return publicationCheckDatabaseError(
         "loadApprovedTopicsForPublication",
-        topics.error.message,
+        topics.error,
       );
     }
 
@@ -440,7 +441,7 @@ export async function updatePublicationStatusAction(
     if (failedCheck?.[1]) {
       return publicationCheckDatabaseError(
         failedCheck[0],
-        failedCheck[1].message,
+        failedCheck[1],
       );
     }
 
@@ -506,7 +507,7 @@ export async function updatePublicationStatusAction(
     .eq("publication_status", studyClass.publication_status)
     .select("id")
     .maybeSingle();
-  if (error) return databaseError("updatePublicationStatus", error.message);
+  if (error) return databaseError("updatePublicationStatus", error);
   if (!updatedClass) {
     return {
       error:
@@ -557,7 +558,7 @@ export async function recordEditorialReviewAction(
     .select("id,publication_status,content_version,content_digest")
     .eq("id", classId)
     .maybeSingle();
-  if (classError) return databaseError("loadClassForReview", classError.message);
+  if (classError) return databaseError("loadClassForReview", classError);
   if (!studyClass) return { error: "No encontramos la clase que quieres revisar." };
   if (studyClass.publication_status !== "review") {
     return { error: "La clase debe estar en revisión antes de emitir un dictamen." };
@@ -578,7 +579,7 @@ export async function recordEditorialReviewAction(
         "Esta versión ya tiene una aprobación vigente. Actualiza la página.",
     };
   }
-  if (error) return databaseError("recordEditorialReview", error.message);
+  if (error) return databaseError("recordEditorialReview", error);
 
   revalidatePath(`/administrar/clases/${classId}`);
   revalidatePath(`/clases/${classId}`);
@@ -600,7 +601,7 @@ export async function reviewFlashcardAction(
     .eq("id", input.flashcardId)
     .maybeSingle();
   if (flashcardError) {
-    return unavailableStudyActivity("authorizeFlashcard", flashcardError.message);
+    return unavailableStudyActivity("authorizeFlashcard", flashcardError);
   }
   if (!flashcard) return unavailableStudyActivity();
 
@@ -611,7 +612,7 @@ export async function reviewFlashcardAction(
   if (!topicCheck.available) {
     return unavailableStudyActivity(
       "authorizeFlashcardTopic",
-      topicCheck.databaseMessage,
+      topicCheck.databaseError,
     );
   }
 
@@ -625,7 +626,7 @@ export async function reviewFlashcardAction(
     rating: input.rating,
     next_review_at: nextReview,
   });
-  if (error) return unavailableStudyActivity("reviewFlashcard", error.message);
+  if (error) return unavailableStudyActivity("reviewFlashcard", error);
   revalidatePath("/estudiar");
   return { id: input.flashcardId };
 }
@@ -640,7 +641,7 @@ export async function saveStudyProgressAction(rawInput: unknown) {
   if (!topicCheck.available) {
     return unavailableStudyActivity(
       "authorizeStudyProgress",
-      topicCheck.databaseMessage,
+      topicCheck.databaseError,
     );
   }
 
@@ -656,7 +657,7 @@ export async function saveStudyProgressAction(rawInput: unknown) {
     },
     { onConflict: "user_id,topic_id" },
   );
-  if (error) return unavailableStudyActivity("saveStudyProgress", error.message);
+  if (error) return unavailableStudyActivity("saveStudyProgress", error);
   revalidatePath("/");
   revalidatePath("/estudiar");
   return { id: input.topicId };
@@ -672,7 +673,7 @@ export async function saveQuickCheckAction(rawInput: unknown) {
   if (!topicCheck.available) {
     return unavailableStudyActivity(
       "authorizeQuickCheck",
-      topicCheck.databaseMessage,
+      topicCheck.databaseError,
     );
   }
 
@@ -683,7 +684,7 @@ export async function saveQuickCheckAction(rawInput: unknown) {
     response: input.response,
     needs_review: input.needsReview,
   });
-  if (error) return unavailableStudyActivity("saveQuickCheck", error.message);
+  if (error) return unavailableStudyActivity("saveQuickCheck", error);
   revalidatePath("/estudiar");
   return { id: input.topicId };
 }
@@ -724,7 +725,7 @@ export async function submitExamAction(
     .from("exam_options")
     .select("id,question_id")
     .in("question_id", questionIds);
-  if (optionsError) return databaseError("loadExamOptions", optionsError.message);
+  if (optionsError) return databaseError("loadExamOptions", optionsError);
 
   const optionReferences = (options ?? []).map((option) => ({
     id: option.id as number,
@@ -752,7 +753,7 @@ export async function submitExamAction(
     )
     .in("question_id", questionIds);
   if (keysError || keys?.length !== questionIds.length) {
-    return databaseError("gradeExam", keysError?.message ?? "missing keys");
+    return databaseError("gradeExam", keysError);
   }
 
   const grading = gradeExamSelections(
@@ -780,7 +781,7 @@ export async function submitExamAction(
     })
     .select("id")
     .single();
-  if (attemptError) return databaseError("createAttempt", attemptError.message);
+  if (attemptError) return databaseError("createAttempt", attemptError);
 
   const correctnessByQuestion = new Map(
     grading.review.map(({ questionId, correct }) => [questionId, correct]),
@@ -800,11 +801,12 @@ export async function submitExamAction(
       .eq("id", attempt.id)
       .eq("user_id", user.id);
     if (cleanupError) {
-      console.error(
-        `[Supabase] cleanupExamAttempt: ${cleanupError.message}; attempt=${attempt.id}`,
-      );
+      writeDependencyFailure({
+        error: cleanupError,
+        operation: "cleanupExamAttempt",
+      });
     }
-    return databaseError("saveAnswers", answersError.message);
+    return databaseError("saveAnswers", answersError);
   }
 
   revalidatePath("/");

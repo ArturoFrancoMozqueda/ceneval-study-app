@@ -139,9 +139,16 @@ El despliegue actual recibió las variables públicas y `PRIVATE_ACCESS_ONLY`
 durante la compilación. Antes de operar deben persistirse mediante el almacén
 seguro de Vercel `SUPABASE_SECRET_KEY`, `ADMIN_EMAIL` y el resto de variables,
 ejecutar el procedimiento explícito de `docs/ADMIN_BOOTSTRAP.md`, configurar las
-redirecciones de Supabase Auth y probar el recorrido convencional de registro,
-verificación e inicio de sesión. El proyecto no está conectado a Git; cada
+redirecciones de Supabase Auth y probar la invitación o activación privada,
+confirmación e inicio de sesión de la administradora. El proyecto no está conectado a Git; cada
 despliegue es manual y debe registrar el commit publicado.
+
+`docs/DEPLOYMENT_RUNBOOK.md` ya define un flujo fail-closed para registrar SHA,
+CI, proyecto, deployment anterior, preview, digest del build Production,
+health, recorrido administrativo, logs y rollback de aplicación. Distingue las
+configuraciones Preview/Production porque `NEXT_PUBLIC_*` queda congelado en
+cada build, y no promete rollback de base de datos. El procedimiento todavía no
+se ha ejecutado contra Vercel.
 
 ### Respaldo de Supabase
 
@@ -344,7 +351,9 @@ Con Supabase local activo, `npm run test:content-db-local` prueba el round-trip
 1.2 y `npm run test:e2e:local` prepara usuarios y contenido sintéticos, compila,
 levanta la app y valida en Chromium el acceso privado, login administrativo,
 skip-link, navegación hasta un tema, autosave y persistencia después de
-recargar. Ambos runners rechazan URLs no locales y verifican su limpieza final.
+recargar. El mismo E2E abre además `/administrar`, comprueba el conteo publicado
+y recorre el detalle editorial en modo de solo lectura. Ambos runners rechazan
+URLs no locales y verifican su limpieza final.
 
 Queda pendiente:
 
@@ -427,10 +436,12 @@ publicación, navegación y un commit por unidad de trabajo.
 
 1. Persistir y verificar las variables de Vercel sin exponer secretos.
 2. Configurar las redirecciones de Supabase Auth, ejecutar el bootstrap interno
-   de `ADMIN_BOOTSTRAP.md` y probar registro, verificación e inicio de sesión.
+   de `ADMIN_BOOTSTRAP.md` y probar activación privada, confirmación e inicio de sesión.
 3. Probar login y rutas privadas desde teléfono y computadora, y revisar logs.
-4. Registrar cada publicación manual y decidir si se habilita integración Git.
-5. Añadir monitoreo, manual de operación, respaldo y restauración.
+4. Ejecutar y aprobar el runbook en la siguiente publicación manual y decidir
+   si se habilita integración Git.
+5. Añadir monitoreo continuo; el runbook actual solo cubre observación manual
+   en Hobby, respaldo y restauración.
 6. Resolver proveedor, planes/precios, prueba, cancelación, reembolsos,
    impuestos y soporte antes de implementar registro o pagos.
 7. Seguir los gates incrementales de `SUBSCRIPTION_ARCHITECTURE.md`: dominio y

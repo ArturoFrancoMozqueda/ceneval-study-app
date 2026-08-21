@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";
+import { randomBytes } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
@@ -290,6 +291,7 @@ async function main() {
   const service = createClient(credentials.apiUrl, credentials.secretKey, {
     auth: { autoRefreshToken: false, persistSession: false },
   });
+  const readinessToken = randomBytes(32).toString("base64url");
 
   try {
     await cleanupFixture(service);
@@ -312,6 +314,7 @@ async function main() {
       NEXT_PUBLIC_SITE_URL: baseUrl,
       NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: credentials.publishableKey,
       NEXT_PUBLIC_SUPABASE_URL: credentials.apiUrl,
+      OPS_READINESS_TOKEN: readinessToken,
       PRIVATE_ACCESS_ONLY: "true",
       SUPABASE_LOCAL_DB_URL: credentials.databaseUrl,
       SUPABASE_SECRET_KEY: credentials.secretKey,

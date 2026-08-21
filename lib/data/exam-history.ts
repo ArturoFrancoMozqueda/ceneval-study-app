@@ -4,6 +4,7 @@ import { connection } from "next/server";
 import { requireUser } from "@/lib/auth";
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
+import { writeDependencyFailure } from "@/lib/operations/safe-log";
 import {
   deriveExamAttemptDetail,
   deriveExamHistoryPage,
@@ -16,8 +17,8 @@ import {
   type ExamQuestionRecord,
 } from "@/lib/study/exam-history";
 
-function fail(operation: string, message: string): never {
-  console.error(`[Supabase] ${operation}: ${message}`);
+function fail(operation: string, error?: unknown): never {
+  writeDependencyFailure({ error, operation });
   throw new Error("No pudimos consultar tu historial. Intenta nuevamente.");
 }
 
@@ -71,7 +72,7 @@ async function getExamMetadata(examIds: number[]) {
       "id,title,is_current,topics!inner(id,title,approval_status,classes!inner(id,title,curriculum_code,publication_status))",
     )
     .in("id", [...new Set(examIds)]);
-  if (error) fail("exam history metadata", error.message);
+  if (error) fail("exam history metadata", error);
 
   return (data ?? []).flatMap((row) => {
     const metadata = toMetadata(row as Record<string, unknown>);
@@ -100,7 +101,7 @@ export async function getExamAttemptHistory(cursor?: string) {
   if (cursorId) query = query.lt("id", cursorId);
 
   const { data, error } = await query;
-  if (error) fail("exam history attempts", error.message);
+  if (error) fail("exam history attempts", error);
   const attempts = (data ?? []).map((row) =>
     toAttempt(row as Record<string, unknown>),
   );
@@ -124,7 +125,7 @@ export async function getExamAttemptDetail(attemptRef: string) {
     .eq("id", attemptId)
     .eq("user_id", user.id)
     .maybeSingle();
-  if (attemptError) fail("exam attempt detail", attemptError.message);
+  if (attemptError) fail("exam attempt detail", attemptError);
   if (!attemptRow) return null;
 
   const attempt = toAttempt(attemptRow as Record<string, unknown>);
@@ -135,7 +136,7 @@ export async function getExamAttemptDetail(attemptRef: string) {
     )
     .eq("attempt_id", attemptId)
     .eq("exam_attempts.user_id", user.id);
-  if (answersError) fail("exam attempt answers", answersError.message);
+  if (answersError) fail("exam attempt answers", answersError);
 
   const answers: ExamAnswerRecord[] = (answerRows ?? []).map((row) => ({
     questionId: Number(row.question_id),
@@ -162,10 +163,10 @@ export async function getExamAttemptDetail(attemptRef: string) {
       : Promise.resolve({ data: [], error: null }),
   ]);
   if (questionsResult.error) {
-    fail("exam attempt questions", questionsResult.error.message);
+    fail("exam attempt questions", questionsResult.error);
   }
   if (optionsResult.error) {
-    fail("exam attempt options", optionsResult.error.message);
+    fail("exam attempt options", optionsResult.error);
   }
 
   const questions: ExamQuestionRecord[] = (questionsResult.data ?? []).map(

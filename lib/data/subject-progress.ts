@@ -3,6 +3,7 @@ import "server-only";
 import { connection } from "next/server";
 import { requireUser } from "@/lib/auth";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
+import { writeDependencyFailure } from "@/lib/operations/safe-log";
 import {
   deriveSubjectProgress,
   type PublishedTopic,
@@ -11,8 +12,8 @@ import {
   type TopicQuickCheckRecord,
 } from "@/lib/study/subject-progress";
 
-function fail(operation: string, message: string): never {
-  console.error(`[Supabase] ${operation}: ${message}`);
+function fail(operation: string, error?: unknown): never {
+  writeDependencyFailure({ error, operation });
   throw new Error("No pudimos consultar tu progreso. Intenta nuevamente.");
 }
 
@@ -66,13 +67,13 @@ export async function getSubjectProgressOverview() {
         .eq("exams.topics.classes.publication_status", "published"),
     ]);
 
-  if (topicsResult.error) fail("subject progress topics", topicsResult.error.message);
+  if (topicsResult.error) fail("subject progress topics", topicsResult.error);
   if (progressResult.error) {
-    fail("subject progress activity", progressResult.error.message);
+    fail("subject progress activity", progressResult.error);
   }
-  if (checksResult.error) fail("subject progress checks", checksResult.error.message);
+  if (checksResult.error) fail("subject progress checks", checksResult.error);
   if (attemptsResult.error) {
-    fail("subject progress attempts", attemptsResult.error.message);
+    fail("subject progress attempts", attemptsResult.error);
   }
 
   const topics: PublishedTopic[] = (topicsResult.data ?? []).flatMap((row) => {
