@@ -8,7 +8,7 @@ import {
 } from "../lib/editorial-actions";
 
 const migrationPath = new URL(
-  "../supabase/migrations/20260820234325_create_topic_with_next_position.sql",
+  "../supabase/migrations/20260821021205_create_topic_with_next_position.sql",
   import.meta.url,
 );
 const actionPath = new URL("../app/actions/academic.ts", import.meta.url);

@@ -47,7 +47,7 @@ set curriculum_order = (c.id - 9)::integer,
     curriculum_code = 'C' || lpad((c.id - 9)::text, 2, '0')
 where c.id between 10 and 49;
 
-insert into public.class_audio_sources (class_id, audio_number, fragment, position)
+with historical_audio_sources (class_id, audio_number, fragment, position) as (
 values
   (10,1,'completo',1),(10,2,'completo',2),(11,4,'completo',1),(11,5,'primera parte',2),
   (12,5,'cierre',1),(12,14,'completo',2),(12,15,'completo',3),(13,18,'completo',1),
@@ -64,4 +64,9 @@ values
   (39,40,'segunda parte',1),(40,41,'completo',1),(41,43,'completo',1),(41,3,'panorama',2),
   (42,45,'completo',1),(43,46,'primera parte',1),(44,47,'completo',1),
   (45,50,'primera parte',1),(46,50,'segunda parte',1),(47,51,'primera parte',1),
-  (48,51,'segunda parte',1),(49,53,'completo',1);
+  (48,51,'segunda parte',1),(49,53,'completo',1)
+)
+insert into public.class_audio_sources (class_id, audio_number, fragment, position)
+select sources.class_id, sources.audio_number, sources.fragment, sources.position
+from historical_audio_sources as sources
+join public.classes as classes on classes.id = sources.class_id;

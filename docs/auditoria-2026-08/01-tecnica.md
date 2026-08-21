@@ -42,7 +42,7 @@ Antes de la lista de problemas, hay que decir que **el modelo de seguridad de da
 
 2. **Las respuestas correctas NO se filtran al cliente antes de entregar el examen. VERIFICADO.**
    - `lib/data/academic.ts:552-554` selecciona de `exam_options` únicamente `id, question_id, option_text, position`. Nunca toca `exam_answer_keys`.
-   - `supabase/migrations/20260723232816_editorial_learning_platform.sql:346` habilita RLS en `exam_answer_keys` y **no crea ninguna política**; los `grant` de las líneas 348-355 no incluyen esa tabla para `authenticated` (solo `service_role`, línea 357-362). Resultado: deny-all para cualquier JWT de estudiante.
+    - `supabase/migrations/20260821020733_editorial_learning_platform.sql:346` habilita RLS en `exam_answer_keys` y **no crea ninguna política**; los `grant` de las líneas 348-355 no incluyen esa tabla para `authenticated` (solo `service_role`, línea 357-362). Resultado: deny-all para cualquier JWT de estudiante.
    - `scripts/test-rls.ts:416-424` incluso lo verifica ("Las claves de respuestas no son consultables por estudiantes").
 
 3. **Todos los Server Actions y todas las páginas admin verifican rol. VERIFICADO** (revisión exhaustiva):
@@ -51,9 +51,9 @@ Antes de la lista de problemas, hay que decir que **el modelo de seguridad de da
    Páginas: `/administrar`, `/administrar/clases/[classId]`, `/materias/nueva`, `/materias/[subjectId]/clases/nueva`, `/clases/[classId]/temas`, `/clases/[classId]/transcripcion` → todas con `requireAdmin()`.
 
 4. **El contenido `draft`/`withdrawn` no es legible fuera del panel admin. VERIFICADO por lectura de las políticas.**
-   Todas las tablas de contenido tienen política `..._select_published_or_admin` que exige `classes.publication_status = 'published'` o `private.is_admin()`, incluyendo el encadenamiento transitivo `exam_options → exam_questions → exams → topics → classes` (migración `20260723232816`, líneas 374-533) y `class_audio_sources` (migración `20260812175550`, líneas 32-43). `is_admin()` es `security definer` con `search_path = ''` y `revoke ... from public, anon` (líneas 298-316). Añadir `withdrawn` al CHECK (migración `20260729173650`) oculta la clase automáticamente porque las políticas comparan contra `'published'` literal.
+    Todas las tablas de contenido tienen política `..._select_published_or_admin` que exige `classes.publication_status = 'published'` o `private.is_admin()`, incluyendo el encadenamiento transitivo `exam_options → exam_questions → exams → topics → classes` (migración `20260821020733`, líneas 374-533) y `class_audio_sources` (migración `20260821021153`, líneas 32-43). `is_admin()` es `security definer` con `search_path = ''` y `revoke ... from public, anon` (líneas 298-316). Añadir `withdrawn` al CHECK (migración `20260821020936`) oculta la clase automáticamente porque las políticas comparan contra `'published'` literal.
 
-5. **Un estudiante no puede auto-promoverse a admin. VERIFICADO.** `profiles_update_own` (migración `20260723232816:369-372`) tiene `with check ((select auth.uid()) = id and role = 'student')`.
+5. **Un estudiante no puede auto-promoverse a admin. VERIFICADO.** `profiles_update_own` (migración `20260821020733:369-372`) tiene `with check ((select auth.uid()) = id and role = 'student')`.
 
 6. **`revoke all ... from anon, authenticated` antes de los `grant` explícitos** (migración inicial, líneas 122-129) — patrón correcto de menor privilegio.
 
@@ -187,7 +187,7 @@ No hay `headers()`, es decir: sin `Content-Security-Policy`, sin `Strict-Transpo
 
 ### S7 — `profiles_update_own` impide a la administradora editar su propio perfil · **P2** · VERIFICADO
 
-`supabase/migrations/20260723232816_editorial_learning_platform.sql:369-372`:
+`supabase/migrations/20260821020733_editorial_learning_platform.sql:369-372`:
 
 ```sql
 create policy profiles_update_own on public.profiles for update to authenticated
@@ -211,7 +211,7 @@ No es explotable por sí solo (el email viene de `auth.getUser()`, verificado co
 
 ### IDOR — evaluación
 
-**No encontré IDOR explotable de lectura.** Un punto merece nota defensiva: `lib/data/academic.ts:461-472`, `getStudyProgress(topicId)`, consulta `study_progress` **sin filtrar por `user_id`** y remata con `.maybeSingle()`. Hoy es seguro porque `study_progress_select_own` (migración `20260724010000:52-54`) restringe a `auth.uid() = user_id`, y `scripts/test-rls.ts:252-260` lo verifica. Pero es frágil por dos motivos: (1) si esa política se relajara alguna vez, la función devolvería el progreso de otro usuario sin ningún cambio de código; (2) `.maybeSingle()` **lanza error** si RLS devolviera >1 fila, degradando la lección en vez de fallar seguro. Añadir `.eq("user_id", user.id)` es defensa en profundidad de una línea. **P2.**
+**No encontré IDOR explotable de lectura.** Un punto merece nota defensiva: `lib/data/academic.ts:461-472`, `getStudyProgress(topicId)`, consulta `study_progress` **sin filtrar por `user_id`** y remata con `.maybeSingle()`. Hoy es seguro porque `study_progress_select_own` (migración `20260821020758:52-54`) restringe a `auth.uid() = user_id`, y `scripts/test-rls.ts:252-260` lo verifica. Pero es frágil por dos motivos: (1) si esa política se relajara alguna vez, la función devolvería el progreso de otro usuario sin ningún cambio de código; (2) `.maybeSingle()` **lanza error** si RLS devolviera >1 fila, degradando la lección en vez de fallar seguro. Añadir `.eq("user_id", user.id)` es defensa en profundidad de una línea. **P2.**
 
 ---
 
@@ -219,7 +219,7 @@ No es explotable por sí solo (el email viene de `auth.getUser()`, verificado co
 
 ### C1 — Las clases nuevas nunca aparecerán en `/sesiones` · **P0** · VERIFICADO
 
-`scripts/import-content.ts:47-60` inserta en `classes` **sin** `curriculum_code` ni `curriculum_order`. Esas dos columnas solo se poblaron con un `UPDATE` puntual dentro de la migración `20260812175550_add_curriculum_session_metadata.sql:45-48`:
+`scripts/import-content.ts:47-60` inserta en `classes` **sin** `curriculum_code` ni `curriculum_order`. Esas dos columnas solo se poblaron con un `UPDATE` puntual dentro de la migración `20260821021153_add_curriculum_session_metadata.sql:45-48`:
 
 ```sql
 update public.classes as c
@@ -271,7 +271,7 @@ Tres sitios en desacuerdo:
 
 | Sitio | Límite |
 |---|---|
-| `supabase/migrations/20260811170157_expand_transcript_length.sql:6` | `char_length(original_text) <= 200000` |
+| `supabase/migrations/20260821020940_expand_transcript_length.sql:6` | `char_length(original_text) <= 200000` |
 | `lib/content/package-schema.ts:154` | `.max(200000)` |
 | `app/actions/academic.ts:153` | `if (originalText.length > 50000) return { error: ... }` |
 | `components/transcript-workspace.tsx:14` + `:205` | `MAX_TRANSCRIPT_LENGTH = 50000`, `maxLength={50000}` en el `<textarea>` |
@@ -650,7 +650,7 @@ Ambos pasan **con todos los hallazgos de este informe presentes**, incluido el `
 
 | # | Hallazgo | Ubicación | Estado |
 |---|---|---|---|
-| C1 | Las clases importadas no reciben `curriculum_code`/`curriculum_order` → las 18 pendientes nunca aparecerán en `/sesiones` ni en la navegación anterior/siguiente | `scripts/import-content.ts:47-60` vs `lib/data/academic.ts:339,386` y migración `20260812175550:45-48` | VERIFICADO |
+| C1 | Las clases importadas no reciben `curriculum_code`/`curriculum_order` → las 18 pendientes nunca aparecerán en `/sesiones` ni en la navegación anterior/siguiente | `scripts/import-content.ts:47-60` vs `lib/data/academic.ts:339,386` y migración `20260821021153:45-48` | VERIFICADO |
 | C2 | Los 41 paquetes referencian `F:\TRANSCRIPCIONES CENEVAL\...` → `content:check` y `content:import` solo funcionan en una máquina; CI imposible | `content/packages/*.json` + `lib/content/load-package.ts:34,45` | VERIFICADO |
 
 ### P1 — corregir antes de más contenido
@@ -659,9 +659,9 @@ Ambos pasan **con todos los hallazgos de este informe presentes**, incluido el `
 |---|---|---|---|
 | S1 | Open redirect + fijación de sesión: `safeNext` no bloquea `/\host` | `app/auth/confirm/route.ts:5-7,36` | VERIFICADO (ejecutado) |
 | S2 | `submitExamAction` persiste `selected_option_id` sin validar pertenencia, con el cliente service-role; sin Zod | `app/actions/academic.ts:405,443-450` | VERIFICADO |
-| S3 | El bloqueo de registro es solo de la app; `/auth/v1/signup` de Supabase sigue abierto con la publishable key → cualquiera lee todo el contenido publicado por REST | `lib/access.ts` + migración `20260723232816:348-352` | VERIFICADO (código) / SOSPECHADO (config remota) |
+| S3 | El bloqueo de registro es solo de la app; `/auth/v1/signup` de Supabase sigue abierto con la publishable key → cualquiera lee todo el contenido publicado por REST | `lib/access.ts` + migración `20260821020733:348-352` | VERIFICADO (código) / SOSPECHADO (config remota) |
 | S6 | `next.config.ts` vacío: sin CSP, HSTS, X-Frame-Options, Referrer-Policy | `next.config.ts` | VERIFICADO |
-| C3 | Tope de transcripción 50 000 en acción y UI vs 200 000 en la base → truncado silencioso e irreversible | `academic.ts:153`, `transcript-workspace.tsx:14,205` vs migración `20260811170157:6` | VERIFICADO |
+| C3 | Tope de transcripción 50 000 en acción y UI vs 200 000 en la base → truncado silencioso e irreversible | `academic.ts:153`, `transcript-workspace.tsx:14,205` vs migración `20260821020940:6` | VERIFICADO |
 | C4 | `transcript.cleaned` de los 41 paquetes es una nota editorial, no una transcripción; se muestra como "Versión limpia" | `content/packages/*.json` + `load-package.ts:55` + `transcript-workspace.tsx:139-157` | VERIFICADO |
 | C5 | `ExamPlayer` lanza `TypeError` si el examen no tiene preguntas | `exam-player.tsx:81,108` + `academic.ts:559` | VERIFICADO (lectura) |
 | C6 | Sin `error.tsx`, `not-found.tsx`, `loading.tsx`, `global-error.tsx` ni `Suspense` en toda la app | `app/**` | VERIFICADO |
@@ -683,7 +683,7 @@ Ambos pasan **con todos los hallazgos de este informe presentes**, incluido el `
 |---|---|---|
 | S4 | Un intento cualquiera devuelve la clave de respuestas completa; sin límite de intentos | `academic.ts:455-466` |
 | S5 | Acciones de estudiante aceptan cualquier id existente (oráculo de enumeración, escritura sobre draft) | `academic.ts:298,319,358` |
-| S7 | `profiles_update_own` impide a la administradora editar su propio perfil | migración `20260723232816:369-372` |
+| S7 | `profiles_update_own` impide a la administradora editar su propio perfil | migración `20260821020733:369-372` |
 | S8 | Auto-promoción por `ADMIN_EMAIL` con service-role dentro de cada render | `lib/auth.ts:30-42` |
 | — | `getStudyProgress` sin `.eq("user_id")`: seguro hoy por RLS, frágil por diseño | `academic.ts:461-472` |
 | C9 | `Promise.all([requireUser(), datos()])`: la redirección compite con el error de datos | 4 componentes/páginas |

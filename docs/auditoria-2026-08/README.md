@@ -24,7 +24,7 @@ en `3af446d`:
 
 | Se declaraba pendiente | Realidad encontrada |
 | --- | --- |
-| Migración de orden curricular | Ya existía `20260812175550_add_curriculum_session_metadata.sql`. |
+| Migración de orden curricular | Ya existía `20260821021153_add_curriculum_session_metadata.sql`. |
 | Pantalla `/sesiones` | Ya existía con orden recomendado y por audios. |
 | Navegación anterior/siguiente | Ya existía en el detalle de clase. |
 | `/estudiar` limitada a 12 temas | La consulta nunca tuvo ese límite. |
@@ -59,7 +59,7 @@ de estado volvió a conciliarse después de integrar las ramas del 20 de agosto.
    probado con datos sintéticos, pero falta exportación autorizada, copia
    externa verificable y restauración probada de las 40 clases.
 3. **RLS remota sin evidencia posterior.** La migración
-   `20260820225524_restrict_learning_activity_to_published_content.sql` está en
+   `20260821021203_restrict_learning_activity_to_published_content.sql` está en
    el repositorio, pero la última ejecución remota documentada sigue siendo la
    suite anterior de 20 comprobaciones del 29 de julio.
 4. **Sin despliegue.** CI no es despliegue; la aplicación continúa en

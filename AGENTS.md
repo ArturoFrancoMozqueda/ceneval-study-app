@@ -31,7 +31,9 @@ transcripción → preparación editorial → borrador → revisión → publica
 
 ## Estado real
 
-- 40 de 58 clases publicadas. La siguiente es C41 (juicio ejecutivo mercantil oral).
+- El repositorio conserva 41 paquetes académicos y el plan C01–C58. El proyecto
+  remoto **CENEVAL Study App** fue verificado el 20 de agosto de 2026 con el
+  esquema completo, pero todavía tiene 0 usuarios, 0 materias y 0 clases.
 - La app es **privada**: solo la administradora entra. El registro de
   estudiantes está pospuesto por decisión de producto.
 - El objetivo futuro es ofrecerla mediante **suscripción**, pero todavía no se
@@ -143,22 +145,17 @@ alguna sigue abierta; si corriges una, actualiza esta lista.
 - **Las transcripciones originales solo existen en el disco `F:`.** Los 41
   paquetes apuntan a `F:\TRANSCRIPCIONES CENEVAL\AUDIO NN.txt`, así que
   `content:check` y `content:import` fallan en cualquier otra computadora.
-- **La migración RLS más reciente está versionada, no confirmada en remoto.**
-  `20260820225524_restrict_learning_activity_to_published_content.sql` bloquea
-  actividad sobre contenido no publicado y tiene comprobación estática en CI,
-  pero no hay evidencia en el repositorio de que ya se aplicó al proyecto
-  remoto. No presentes esa capa como activa hasta verificar el historial de
-  migraciones y ejecutar la suite RLS en una ventana autorizada.
-- **La creación concurrente de temas también tiene una migración pendiente de
-  confirmación remota.** `20260820234325_create_topic_with_next_position.sql`
-  asigna la siguiente posición de forma transaccional y su RPC solo puede ser
-  ejecutada por `service_role`. No habilites el código que la invoca hasta que
-  una persona autorizada aplique y verifique esa migración en Supabase.
+- **Las diez migraciones están aplicadas en CENEVAL, pero falta la suite RLS
+  dinámica.** El historial remoto se verificó el 20 de agosto de 2026 y los
+  asesores no mostraron errores de seguridad; el aviso de `exam_answer_keys`
+  sin políticas es el bloqueo deliberado. `npm run security:rls` todavía
+  requiere una ventana autorizada porque crea y publica datos temporales.
 - **Existe el procedimiento, no un respaldo real de Supabase.**
   `docs/SUPABASE_BACKUP.md` y `npm run test:backup` documentan y comprueban el
-  mecanismo con datos sintéticos. Todavía falta una exportación autorizada de
-  las 40 clases, copia externa verificada y restauración en un proyecto de
-  ensayo. Git y CI tampoco sustituyen esos pasos.
+  mecanismo con datos sintéticos. El proyecto remoto actual no contiene
+  usuarios ni contenido que respaldar; antes de importar o abrir el servicio
+  debe establecerse una exportación periódica, copia externa verificada y una
+  restauración en un proyecto de ensayo. Git y CI tampoco sustituyen esos pasos.
 - **No hay despliegue.** La app continúa limitada a `localhost`; no confundas
   CI en GitHub Actions con una publicación en Vercel.
 - **Tres numeraciones distintas.** Audio 01–70 (transcripciones), C01–C58
