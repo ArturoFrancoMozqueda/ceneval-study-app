@@ -216,6 +216,36 @@ const traceablePackages = [
       /No existe una vía única por el solo hecho de que el acto sea federal/i,
     ],
   },
+  {
+    code: "C15",
+    fileName: "audio-20-organismos-descentralizados.json",
+    artifacts: 137,
+    evidence: 12,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /creada por ley o decreto, con personalidad jurídica y patrimonio propios/i,
+      /coordinación sectorial no equivale a subordinación jerárquica/i,
+      /autonomía interna equivale a autonomía constitucional/i,
+      /No generalices el régimen laboral, fiscal ni la vía de defensa/i,
+      /última reforma DOF 07-05-2026/i,
+      /última reforma DOF 16-07-2025/i,
+    ],
+  },
+  {
+    code: "C16",
+    fileName: "audio-22-23-cndh.json",
+    artifacts: 142,
+    evidence: 12,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /regla general es un año.*excepciones razonadas para infracciones graves/i,
+      /recomendación.*pública y no imperativa: por sí misma no repara, no anula actos ni sanciona directamente/i,
+      /negativa debe fundarse, motivarse y hacerse pública/i,
+      /no conoce actos y resoluciones electorales, resoluciones jurisdiccionales/i,
+      /queja no suspende los plazos de otros medios de defensa/i,
+      /artículo 105, fracción II, inciso g\)/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -375,6 +405,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una estructura histórica o regla absoluta como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C15" || expected.code === "C16") {
+      const obsoleteAsCurrent =
+        expected.code === "C15"
+          ? /organismo descentralizado.*subordinado jerárquicamente|patrimonio propio.*recursos privados|autonomía de gestión.*autonomía constitucional/i
+          : /CNDH.*(?:dicta sentencia|encarcela|destituye|anula)|recomendación.*(?:vinculante|repara automáticamente)|queja.*suspende.*plazo/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una generalización retirada como respuesta vigente.`,
         );
       }
     }

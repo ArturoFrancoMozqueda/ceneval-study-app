@@ -1,11 +1,17 @@
 {
-  "packageVersion": "1.1",
+  "packageVersion": "1.2",
   "curriculum": {
     "code": "C15",
     "order": 15,
     "audioSources": [
-      {"audioNumber": 20,"fragment": "Audio completo"},
-      {"audioNumber": 22,"fragment": "Cierre administrativo"}
+      {
+        "audioNumber": 20,
+        "fragment": "Audio completo"
+      },
+      {
+        "audioNumber": 22,
+        "fragment": "Cierre administrativo"
+      }
     ]
   },
   "subject": {
@@ -21,7 +27,7 @@
       "AUDIO 20.txt",
       "AUDIO 22.txt"
     ],
-    "cleaned": "El Audio 20 aporta la explicación principal de descentralización, personalidad, patrimonio, seguridad social y empresas públicas; del Audio 22 se integró solo la comparación con dependencias y órganos desconcentrados. Se eliminaron anuncios, examen dictado, datos personales, propaganda, lenguaje ofensivo y opiniones políticas. Se corrigió que no toda entidad paraestatal es organismo descentralizado; que autonomía técnica o universitaria no equivale a independencia constitucional; que nombre, fuente de financiamiento o tipo de servicio no bastan para clasificar; que el régimen laboral no se deduce automáticamente del carácter descentralizado y debe consultarse en Constitución, ley y norma de creación; y que las facultades fiscales de IMSS, INFONAVIT u otro ente dependen de su legislación especial. También se evitó presentar al ISSSTE como incapaz de ejercer cualquier atribución fiscal, a CONAGUA como organismo descentralizado o a PEMEX y CFE bajo categorías históricas sin revisar su régimen vigente. El bloque CNDH del Audio 22 se reservó para C16."
+    "cleaned": "El Audio 20 aporta la explicación de que los organismos descentralizados son personas jurídicas y pueden crearse por ley o decreto, además de recordar el patrimonio como atributo de una persona moral. Del Audio 22 se conservó únicamente la advertencia de que el régimen laboral no se generaliza y exige revisar la ley o decreto de creación. Se eliminaron anuncios, datos personales, propaganda, lenguaje ofensivo, opiniones políticas, listas históricas y ejemplos institucionales no verificados. La edición oficial precisa que la Administración Pública Federal se divide en centralizada y paraestatal; que el organismo descentralizado tiene personalidad jurídica y patrimonio propios sin independencia absoluta; que coordinación sectorial no equivale a subordinación jerárquica; y que los regímenes laboral, fiscal y de defensa dependen de las normas aplicables a cada entidad y acto."
   },
   "topics": [
     {
@@ -33,17 +39,32 @@
           {
             "prompt": "¿Qué dos atributos exige la LOAPF para reconocer a un organismo descentralizado?",
             "answer": "Personalidad jurídica y patrimonio propios.",
-            "feedback": "La autonomía técnica o el nombre de la institución no bastan; revisa primero su norma de creación y esos dos atributos jurídicos."
+            "feedback": "La autonomía técnica o el nombre de la institución no bastan; revisa primero su norma de creación y esos dos atributos jurídicos.",
+            "evidenceIds": [
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-a20-l009-017-creacion-personalidad",
+              "ev-c15-a20-l111-113-persona-patrimonio"
+            ]
           },
           {
             "prompt": "¿Un organismo descentralizado está jerárquicamente subordinado a una Secretaría como un órgano desconcentrado?",
             "answer": "No. Es una entidad paraestatal con personalidad propia, aunque está sujeta a coordinación, control y evaluación conforme a la ley.",
-            "feedback": "Distingue subordinación jerárquica de coordinación sectorial y control administrativo."
+            "feedback": "Distingue subordinación jerárquica de coordinación sectorial y control administrativo.",
+            "evidenceIds": [
+              "ev-c15-loapf-art17-desconcentrado",
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-loapf-arts48-50-sectorizacion",
+              "ev-c15-lfep-arts1-12-regimen-control"
+            ]
           },
           {
             "prompt": "¿Toda entidad paraestatal es un organismo descentralizado?",
             "answer": "No. El sector paraestatal también comprende otras categorías previstas por la LOAPF.",
-            "feedback": "Organismo descentralizado es una especie dentro del sector paraestatal, no un sinónimo de todo el sector."
+            "feedback": "Organismo descentralizado es una especie dentro del sector paraestatal, no un sinónimo de todo el sector.",
+            "evidenceIds": [
+              "ev-c15-loapf-arts1-3-sector",
+              "ev-c15-loapf-arts45-46-entidades"
+            ]
           }
         ],
         "practicalCase": {
@@ -51,65 +72,186 @@
           "question": "¿Debe clasificarse como órgano desconcentrado u organismo descentralizado?",
           "legalRule": "El artículo 45 de la LOAPF identifica como organismos descentralizados a las entidades creadas por ley o decreto con personalidad jurídica y patrimonio propios; la LFEP precisa sus objetos posibles.",
           "reasoning": "La institución nació como una persona jurídica distinta, cuenta con patrimonio propio y cumple un objeto público. No es una simple unidad interna subordinada a una Secretaría.",
-          "conclusion": "Debe clasificarse como organismo descentralizado de la Administración Pública Federal paraestatal."
+          "conclusion": "Debe clasificarse como organismo descentralizado de la Administración Pública Federal paraestatal.",
+          "evidenceIds": [
+            "ev-c15-cpeum-art90-apf",
+            "ev-c15-loapf-arts45-46-entidades",
+            "ev-c15-lfep-arts1-12-regimen-control",
+            "ev-c15-lfep-arts14-15-objeto-creacion",
+            "ev-c15-lfep-arts17-24-gobierno-direccion"
+          ]
         },
         "closingPrompt": "Explica la diferencia entre desconcentración y descentralización usando creación, jerarquía, personalidad jurídica, patrimonio y forma de control.",
-        "nextActivity": "Abre la guía de preguntas y respuestas, recorre el mapa visual y después resuelve el examen de diez casos."
+        "nextActivity": "Abre la guía de preguntas y respuestas, recorre el mapa visual y después resuelve el examen de diez casos.",
+        "openingPromptEvidenceIds": [
+          "ev-c15-cpeum-art90-apf",
+          "ev-c15-loapf-arts1-3-sector",
+          "ev-c15-loapf-arts45-46-entidades",
+          "ev-c15-lfep-arts14-15-objeto-creacion",
+          "ev-c15-a20-l009-017-creacion-personalidad",
+          "ev-c15-a20-l111-113-persona-patrimonio"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c15-loapf-art17-desconcentrado",
+          "ev-c15-loapf-arts45-46-entidades",
+          "ev-c15-loapf-arts48-50-sectorizacion",
+          "ev-c15-lfep-arts1-12-regimen-control",
+          "ev-c15-lfep-arts14-15-objeto-creacion"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c15-loapf-arts45-46-entidades",
+          "ev-c15-lfep-arts14-15-objeto-creacion"
+        ]
       },
       "materials": [
         {
           "type": "short_answer",
           "title": "Respuesta breve",
           "content": "Un organismo descentralizado es una entidad de la Administración Pública Federal paraestatal creada por ley o decreto, con personalidad jurídica y patrimonio propios, para realizar actividades estratégicas o prioritarias, prestar un servicio público o social, o aplicar recursos a fines de asistencia o seguridad social. No está jerárquicamente subordinado a una Secretaría como un órgano desconcentrado, pero sí permanece sujeto al orden jurídico y a mecanismos de coordinación, control y evaluación.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c15-cpeum-art90-apf",
+            "ev-c15-loapf-arts1-3-sector",
+            "ev-c15-loapf-art17-desconcentrado",
+            "ev-c15-loapf-arts45-46-entidades",
+            "ev-c15-loapf-arts48-50-sectorizacion",
+            "ev-c15-lfep-arts1-12-regimen-control",
+            "ev-c15-lfep-arts14-15-objeto-creacion",
+            "ev-c15-a20-l009-017-creacion-personalidad",
+            "ev-c15-a20-l111-113-persona-patrimonio"
+          ]
         },
         {
           "type": "full_explanation",
           "title": "Explicación completa desde cero",
           "content": "La Constitución dispone que la Administración Pública Federal se divide en centralizada y paraestatal. La primera clase del módulo explicó la estructura centralizada y los órganos desconcentrados. Esta segunda clase estudia una categoría del sector paraestatal: los organismos descentralizados.\n\nLa descentralización crea una persona jurídica diferenciada. Conforme al artículo 45 de la LOAPF, un organismo descentralizado nace por ley o decreto del Congreso de la Unión o por decreto del Ejecutivo Federal y cuenta con personalidad jurídica y patrimonio propios, cualquiera que sea la estructura legal que adopte. La norma de creación debe revisarse siempre: el nombre cotidiano de una institución no determina por sí solo su naturaleza.\n\nLa personalidad jurídica permite que la entidad sea titular de derechos y obligaciones. El patrimonio propio reúne los bienes, recursos, aportaciones e ingresos destinados a cumplir su objeto. Propio no significa privado ni libre de controles: los recursos públicos permanecen sujetos a presupuesto, fiscalización, transparencia, responsabilidades y demás reglas aplicables.\n\nLa LFEP establece tres grandes finalidades para estos organismos: realizar actividades correspondientes a áreas estratégicas o prioritarias; prestar un servicio público o social; y obtener o aplicar recursos para asistencia o seguridad social. Su ley o decreto de creación debe precisar, entre otros elementos, denominación, domicilio, objeto, patrimonio, integración del órgano de gobierno y régimen de dirección.\n\nLa vinculación con el Ejecutivo no opera igual que la subordinación interna de una Secretaría. Puede existir coordinación sectorial, participación del Ejecutivo en órganos de gobierno, control, evaluación y vigilancia. Por eso es incorrecto afirmar que el organismo es independiente del Estado o que su autonomía interna equivale a autonomía constitucional.\n\nTampoco debe confundirse todo el sector paraestatal con los organismos descentralizados. La LOAPF incluye además empresas de participación estatal, instituciones nacionales de crédito y otras entidades financieras, fideicomisos y Empresas Públicas del Estado reguladas por sus leyes. Cada categoría tiene elementos y legislación propios.\n\nPara resolver un caso CENEVAL sigue cinco preguntas: ¿cómo fue creada la institución?, ¿tiene personalidad jurídica propia?, ¿tiene patrimonio propio?, ¿cuál es su objeto legal?, ¿la relación con una Secretaría es de subordinación jerárquica o de coordinación y control? Con esas pistas se evita clasificar por intuición o por el nombre del ente.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c15-cpeum-art90-apf",
+            "ev-c15-loapf-arts1-3-sector",
+            "ev-c15-loapf-art17-desconcentrado",
+            "ev-c15-loapf-arts45-46-entidades",
+            "ev-c15-loapf-arts48-50-sectorizacion",
+            "ev-c15-lfep-arts1-12-regimen-control",
+            "ev-c15-lfep-arts14-15-objeto-creacion",
+            "ev-c15-lfep-arts17-24-gobierno-direccion",
+            "ev-c15-lfep-arts46-65-operacion-control",
+            "ev-c15-a20-l009-017-creacion-personalidad",
+            "ev-c15-a20-l111-113-persona-patrimonio",
+            "ev-c15-a22-l073-077-regimen-laboral"
+          ]
         },
         {
           "type": "legal_basis",
           "title": "Fundamento jurídico vigente",
-          "content": "El artículo 90 constitucional establece que la Administración Pública Federal será centralizada y paraestatal y encarga a la ley orgánica definir las bases de creación y la relación de las entidades paraestatales con el Ejecutivo. Los artículos 1 y 3 de la LOAPF enumeran la integración general del sector paraestatal. El artículo 45 define a los organismos descentralizados por su forma de creación, personalidad jurídica y patrimonio propios; el artículo 46 regula empresas de participación estatal mayoritaria. Los artículos 14 y 15 de la LFEP precisan el objeto posible de los organismos y el contenido mínimo de su ley o decreto de creación. El artículo 5 de la LFEP reconoce que ciertos organismos de seguridad social se rigen también por sus leyes específicas. Consulta oficial realizada el 10 de agosto de 2026.",
-          "sourceOrigin": "complementary"
+          "content": "El artículo 90 constitucional establece la Administración Pública Federal centralizada y paraestatal. Los artículos 1 y 3 de la LOAPF enumeran la integración general del sector paraestatal; el artículo 17 regula la desconcentración; los artículos 45 y 46 distinguen organismos descentralizados y empresas de participación estatal; y los artículos 48 a 50 regulan agrupamiento y coordinación sectorial, control y evaluación. Los artículos 1 a 15 de la LFEP precisan régimen, coordinación, autonomía de gestión sujeta a control, objeto y contenido de la norma de creación; sus artículos 17 a 24 regulan gobierno y dirección. Textos oficiales verificados al 21-08-2026.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c15-cpeum-art90-apf",
+            "ev-c15-loapf-arts1-3-sector",
+            "ev-c15-loapf-arts45-46-entidades",
+            "ev-c15-loapf-arts48-50-sectorizacion",
+            "ev-c15-lfep-arts1-12-regimen-control",
+            "ev-c15-lfep-arts14-15-objeto-creacion",
+            "ev-c15-lfep-arts17-24-gobierno-direccion",
+            "ev-c15-lfep-arts46-65-operacion-control"
+          ]
         },
         {
           "type": "simple_example",
           "title": "Ejemplo sencillo",
           "content": "Imagina que una Secretaría crea internamente una oficina técnica para resolver trámites y esa oficina sigue recibiendo órdenes jerárquicas: es un ejemplo de desconcentración. Ahora imagina que una ley crea una institución distinta, le reconoce personalidad jurídica, le asigna patrimonio y establece un órgano de gobierno para prestar un servicio social: esos datos corresponden a un organismo descentralizado. La comparación es didáctica; la clasificación real siempre depende de la norma vigente de creación.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c15-loapf-art17-desconcentrado",
+            "ev-c15-loapf-arts45-46-entidades",
+            "ev-c15-lfep-arts14-15-objeto-creacion"
+          ]
         },
         {
           "type": "ceneval_example",
           "title": "Caso tipo CENEVAL",
           "content": "Un decreto crea una entidad para administrar un servicio público. El caso indica que posee personalidad jurídica y patrimonio propios y que su órgano de gobierno incluye representantes del sector coordinador. La respuesta correcta es organismo descentralizado. La presencia de coordinación sectorial no lo convierte en órgano desconcentrado, porque la personalidad y el patrimonio propios revelan una persona jurídica diferente. Tampoco es órgano constitucional autónomo: su existencia y relación derivan del régimen de la Administración Pública Federal paraestatal.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c15-cpeum-art90-apf",
+            "ev-c15-loapf-arts45-46-entidades",
+            "ev-c15-loapf-arts48-50-sectorizacion",
+            "ev-c15-lfep-arts1-12-regimen-control",
+            "ev-c15-lfep-arts14-15-objeto-creacion",
+            "ev-c15-lfep-arts17-24-gobierno-direccion"
+          ]
         },
         {
           "type": "summary",
           "title": "Resumen",
           "content": "Los organismos descentralizados pertenecen a la Administración Pública Federal paraestatal. Se crean por ley o decreto y tienen personalidad jurídica y patrimonio propios. Su objeto debe encajar en las finalidades previstas por la LFEP. No son unidades jerárquicamente subordinadas como los órganos desconcentrados, pero tampoco son independientes del Estado: están sujetos a coordinación, control, evaluación y vigilancia. El sector paraestatal contiene otras categorías que deben distinguirse por su norma y estructura.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c15-cpeum-art90-apf",
+            "ev-c15-loapf-arts1-3-sector",
+            "ev-c15-loapf-art17-desconcentrado",
+            "ev-c15-loapf-arts45-46-entidades",
+            "ev-c15-loapf-arts48-50-sectorizacion",
+            "ev-c15-lfep-arts1-12-regimen-control",
+            "ev-c15-lfep-arts14-15-objeto-creacion",
+            "ev-c15-a20-l009-017-creacion-personalidad",
+            "ev-c15-a20-l111-113-persona-patrimonio"
+          ]
         },
         {
           "type": "study_guide",
           "title": "Guía intensiva de preguntas y respuestas",
           "content": "1. ¿Dónde se ubican? Respuesta: en la APF paraestatal. 2. ¿Cómo nacen? Respuesta: por ley o decreto del Congreso o decreto del Ejecutivo. 3. ¿Qué atributos tienen? Respuesta: personalidad jurídica y patrimonio propios. 4. ¿Para qué se crean? Respuesta: áreas estratégicas o prioritarias, servicios públicos o sociales, asistencia o seguridad social. 5. ¿Son independientes del Estado? Respuesta: no; están sujetos a ley y control. 6. ¿Quién los administra? Respuesta: órgano de gobierno y dirección general. 7. ¿Qué contiene su norma de creación? Respuesta: denominación, domicilio, objeto, patrimonio, gobierno y facultades, entre otros. 8. ¿Qué los distingue del desconcentrado? Respuesta: personalidad propia frente a subordinación interna. 9. ¿Toda paraestatal es descentralizada? Respuesta: no. 10. ¿Autonomía técnica equivale a autonomía constitucional? Respuesta: no. 11. ¿Su régimen laboral siempre es apartado A? Respuesta: no; se revisa la norma aplicable. 12. ¿Cómo se resuelve un caso? Respuesta: norma de creación, personalidad, patrimonio, objeto y vínculo con el Ejecutivo.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c15-cpeum-art90-apf",
+            "ev-c15-loapf-arts1-3-sector",
+            "ev-c15-loapf-art17-desconcentrado",
+            "ev-c15-loapf-arts45-46-entidades",
+            "ev-c15-loapf-arts48-50-sectorizacion",
+            "ev-c15-lfep-arts1-12-regimen-control",
+            "ev-c15-lfep-arts14-15-objeto-creacion",
+            "ev-c15-lfep-arts17-24-gobierno-direccion",
+            "ev-c15-a20-l009-017-creacion-personalidad",
+            "ev-c15-a20-l111-113-persona-patrimonio",
+            "ev-c15-a22-l073-077-regimen-laboral"
+          ]
         },
         {
           "type": "key_concepts",
           "title": "Conceptos clave",
           "content": "Entidad paraestatal: persona u organización ubicada en el sector paraestatal conforme a la LOAPF. Organismo descentralizado: entidad creada por ley o decreto con personalidad y patrimonio propios. Personalidad jurídica: aptitud para ser titular de derechos y obligaciones. Patrimonio propio: conjunto de bienes y recursos jurídicamente asignados a la entidad. Objeto: finalidad pública definida en su norma de creación. Coordinación sectorial: relación administrativa para orientar y evaluar políticas sin convertir a la entidad en una oficina interna de la Secretaría. Órgano desconcentrado: unidad subordinada jerárquicamente dentro de una dependencia. Órgano constitucional autónomo: institución cuya autonomía deriva directamente de la Constitución y que no debe confundirse con una entidad paraestatal.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c15-cpeum-art90-apf",
+            "ev-c15-loapf-arts1-3-sector",
+            "ev-c15-loapf-art17-desconcentrado",
+            "ev-c15-loapf-arts45-46-entidades",
+            "ev-c15-loapf-arts48-50-sectorizacion",
+            "ev-c15-lfep-arts1-12-regimen-control",
+            "ev-c15-lfep-arts14-15-objeto-creacion",
+            "ev-c15-lfep-arts17-24-gobierno-direccion",
+            "ev-c15-a20-l009-017-creacion-personalidad",
+            "ev-c15-a20-l111-113-persona-patrimonio"
+          ]
         },
         {
           "type": "common_errors",
           "title": "Errores comunes",
-          "content": "No llames autónomo constitucional a un organismo solo porque tenga autonomía técnica o de gestión. No afirmes que todas las entidades paraestatales son organismos descentralizados. No clasifiques por nombre o ejemplo memorizado: revisa la norma vigente. No confundas patrimonio propio con recursos privados o ausencia de fiscalización. No confundas coordinación sectorial con subordinación jerárquica. No supongas que todo personal de un descentralizado se rige automáticamente por el apartado A: consulta Constitución, ley y norma de creación. No deduzcas facultades fiscales solo por ser descentralizado; IMSS, INFONAVIT y otros entes requieren base especial. CONAGUA es un órgano desconcentrado de SEMARNAT, no un descentralizado. PEMEX y CFE deben clasificarse conforme al régimen vigente de empresas públicas del Estado, no con etiquetas históricas.",
-          "sourceOrigin": "complementary"
+          "content": "No llames autónomo constitucional a un organismo solo porque tenga autonomía de gestión. No afirmes que todas las entidades paraestatales son organismos descentralizados. No clasifiques por nombre o ejemplo memorizado: revisa la norma vigente. No confundas patrimonio propio con recursos privados o ausencia de controles. No confundas coordinación sectorial con subordinación jerárquica. No generalices el régimen laboral, fiscal ni la vía de defensa: la ley o decreto de creación, la legislación especial y el acto concreto determinan las reglas aplicables.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c15-cpeum-art90-apf",
+            "ev-c15-loapf-arts1-3-sector",
+            "ev-c15-loapf-art17-desconcentrado",
+            "ev-c15-loapf-arts45-46-entidades",
+            "ev-c15-loapf-arts48-50-sectorizacion",
+            "ev-c15-lfep-arts1-12-regimen-control",
+            "ev-c15-lfep-arts14-15-objeto-creacion",
+            "ev-c15-lfep-arts46-65-operacion-control",
+            "ev-c15-a22-l073-077-regimen-laboral"
+          ]
         }
       ],
       "conceptMap": {
@@ -119,115 +261,191 @@
           {
             "id": "organismo",
             "label": "Organismo descentralizado",
-            "description": "Entidad de la Administración Pública Federal paraestatal."
+            "description": "Entidad de la Administración Pública Federal paraestatal.",
+            "evidenceIds": [
+              "ev-c15-cpeum-art90-apf",
+              "ev-c15-loapf-arts1-3-sector",
+              "ev-c15-loapf-arts45-46-entidades"
+            ]
           },
           {
             "id": "creacion",
             "label": "1. Nacimiento jurídico",
             "description": "La norma de creación determina su existencia y estructura.",
-            "parentId": "organismo"
+            "parentId": "organismo",
+            "evidenceIds": [
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-lfep-arts14-15-objeto-creacion"
+            ]
           },
           {
             "id": "ley-decreto",
             "label": "Ley o decreto",
             "description": "Congreso o Ejecutivo, en los supuestos de la LOAPF.",
-            "parentId": "creacion"
+            "parentId": "creacion",
+            "evidenceIds": [
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-lfep-arts14-15-objeto-creacion",
+              "ev-c15-a20-l009-017-creacion-personalidad"
+            ]
           },
           {
             "id": "atributos",
             "label": "Personalidad + patrimonio",
             "description": "Son las pistas jurídicas decisivas.",
-            "parentId": "creacion"
+            "parentId": "creacion",
+            "evidenceIds": [
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-a20-l009-017-creacion-personalidad",
+              "ev-c15-a20-l111-113-persona-patrimonio"
+            ]
           },
           {
             "id": "objeto",
             "label": "2. Finalidad pública",
             "description": "Debe corresponder a los objetos permitidos por la LFEP.",
-            "parentId": "organismo"
+            "parentId": "organismo",
+            "evidenceIds": [
+              "ev-c15-lfep-arts14-15-objeto-creacion"
+            ]
           },
           {
             "id": "areas",
             "label": "Áreas estratégicas o prioritarias",
             "description": "Actividades definidas por el orden jurídico.",
-            "parentId": "objeto"
+            "parentId": "objeto",
+            "evidenceIds": [
+              "ev-c15-lfep-arts14-15-objeto-creacion"
+            ]
           },
           {
             "id": "servicios",
             "label": "Servicio público o social",
             "description": "Prestación organizada para una finalidad colectiva.",
-            "parentId": "objeto"
+            "parentId": "objeto",
+            "evidenceIds": [
+              "ev-c15-lfep-arts14-15-objeto-creacion"
+            ]
           },
           {
             "id": "asistencia",
             "label": "Asistencia o seguridad social",
             "description": "Obtención o aplicación de recursos para esos fines.",
-            "parentId": "objeto"
+            "parentId": "objeto",
+            "evidenceIds": [
+              "ev-c15-lfep-arts14-15-objeto-creacion"
+            ]
           },
           {
             "id": "vinculo",
             "label": "3. Relación con el Ejecutivo",
             "description": "No hay independencia absoluta.",
-            "parentId": "organismo"
+            "parentId": "organismo",
+            "evidenceIds": [
+              "ev-c15-loapf-arts48-50-sectorizacion",
+              "ev-c15-lfep-arts1-12-regimen-control"
+            ]
           },
           {
             "id": "coordinacion",
             "label": "Coordinación sectorial",
             "description": "Orienta la política y el desempeño cuando sea aplicable.",
-            "parentId": "vinculo"
+            "parentId": "vinculo",
+            "evidenceIds": [
+              "ev-c15-loapf-arts48-50-sectorizacion",
+              "ev-c15-lfep-arts1-12-regimen-control"
+            ]
           },
           {
             "id": "control",
             "label": "Control y evaluación",
             "description": "Presupuesto, vigilancia, fiscalización y responsabilidades.",
-            "parentId": "vinculo"
+            "parentId": "vinculo",
+            "evidenceIds": [
+              "ev-c15-loapf-arts48-50-sectorizacion",
+              "ev-c15-lfep-arts1-12-regimen-control",
+              "ev-c15-lfep-arts46-65-operacion-control"
+            ]
           },
           {
             "id": "diferencias",
             "label": "4. No confundir",
             "description": "La comparación evita los distractores del examen.",
-            "parentId": "organismo"
+            "parentId": "organismo",
+            "evidenceIds": [
+              "ev-c15-loapf-arts1-3-sector",
+              "ev-c15-loapf-art17-desconcentrado",
+              "ev-c15-loapf-arts45-46-entidades"
+            ]
           },
           {
             "id": "desconcentrado",
             "label": "Órgano desconcentrado",
             "description": "Unidad interna con subordinación jerárquica.",
-            "parentId": "diferencias"
+            "parentId": "diferencias",
+            "evidenceIds": [
+              "ev-c15-loapf-art17-desconcentrado",
+              "ev-c15-loapf-arts45-46-entidades"
+            ]
           },
           {
             "id": "empresa",
             "label": "Empresa estatal",
             "description": "Otra categoría, definida por su legislación y participación pública.",
-            "parentId": "diferencias"
+            "parentId": "diferencias",
+            "evidenceIds": [
+              "ev-c15-loapf-arts45-46-entidades"
+            ]
           },
           {
             "id": "autonomo",
             "label": "Órgano constitucional autónomo",
             "description": "Su autonomía deriva directamente de la Constitución.",
-            "parentId": "diferencias"
+            "parentId": "diferencias",
+            "evidenceIds": [
+              "ev-c15-cpeum-art90-apf",
+              "ev-c15-lfep-arts1-12-regimen-control"
+            ]
           },
           {
             "id": "gobierno",
             "label": "Órgano de gobierno",
             "description": "Junta de gobierno o equivalente.",
-            "parentId": "vinculo"
+            "parentId": "vinculo",
+            "evidenceIds": [
+              "ev-c15-lfep-arts14-15-objeto-creacion",
+              "ev-c15-lfep-arts17-24-gobierno-direccion"
+            ]
           },
           {
             "id": "direccion",
             "label": "Dirección General",
             "description": "Administra y representa conforme a la ley.",
-            "parentId": "vinculo"
+            "parentId": "vinculo",
+            "evidenceIds": [
+              "ev-c15-lfep-arts14-15-objeto-creacion",
+              "ev-c15-lfep-arts17-24-gobierno-direccion"
+            ]
           },
           {
             "id": "regimen-especial",
             "label": "Revisar ley especial",
             "description": "Régimen laboral, fiscal y sectorial no es automático.",
-            "parentId": "diferencias"
+            "parentId": "diferencias",
+            "evidenceIds": [
+              "ev-c15-lfep-arts1-12-regimen-control",
+              "ev-c15-lfep-arts14-15-objeto-creacion",
+              "ev-c15-a22-l073-077-regimen-laboral"
+            ]
           },
           {
             "id": "empresas-publicas",
             "label": "Empresas públicas del Estado",
             "description": "Categoría vigente distinta del organismo.",
-            "parentId": "diferencias"
+            "parentId": "diferencias",
+            "evidenceIds": [
+              "ev-c15-loapf-arts1-3-sector"
+            ]
           }
         ]
       },
@@ -236,90 +454,145 @@
           "title": "Constitución Política de los Estados Unidos Mexicanos",
           "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
           "institution": "Cámara de Diputados del H. Congreso de la Unión",
-          "jurisdiction": "Federal, México",
+          "jurisdiction": "México",
           "citation": "Artículo 90; últimas reformas DOF 02-06-2026",
-          "retrievedOn": "2026-08-10",
+          "retrievedOn": "2026-08-21",
           "note": "Base constitucional de la Administración Pública Federal centralizada y paraestatal."
         },
         {
           "title": "Ley Orgánica de la Administración Pública Federal",
           "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf",
           "institution": "Cámara de Diputados del H. Congreso de la Unión",
-          "jurisdiction": "Federal, México",
-          "citation": "Artículos 1, 3, 45 y 46; última reforma DOF 07-05-2026",
-          "retrievedOn": "2026-08-10",
-          "note": "Define la integración del sector paraestatal y los elementos del organismo descentralizado."
+          "jurisdiction": "México",
+          "citation": "Artículos 1, 3, 17 y 45 a 50; última reforma DOF 07-05-2026",
+          "retrievedOn": "2026-08-21",
+          "note": "Integración del sector, organismos descentralizados, contraste con desconcentración y coordinación sectorial."
         },
         {
           "title": "Ley Federal de las Entidades Paraestatales",
           "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFEP.pdf",
           "institution": "Cámara de Diputados del H. Congreso de la Unión",
-          "jurisdiction": "Federal, México",
-          "citation": "Artículos 1, 5, 14, 15 y correlativos; última reforma DOF 16-07-2025",
-          "retrievedOn": "2026-08-10",
-          "note": "Regula organización, funcionamiento y control y precisa objetos y elementos de creación."
+          "jurisdiction": "México",
+          "citation": "Artículos 1 a 24 y 46 a 65; última reforma DOF 16-07-2025",
+          "retrievedOn": "2026-08-21",
+          "note": "Organización, funcionamiento, coordinación, control, objeto, gobierno y dirección."
         }
       ],
       "flashcards": [
         {
           "question": "¿A qué sector de la Administración Pública Federal pertenece un organismo descentralizado?",
           "answer": "A la Administración Pública Federal paraestatal.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c15-cpeum-art90-apf",
+            "ev-c15-loapf-arts1-3-sector",
+            "ev-c15-loapf-arts45-46-entidades"
+          ]
         },
         {
           "question": "¿Cómo puede crearse un organismo descentralizado federal?",
           "answer": "Por ley o decreto del Congreso de la Unión o por decreto del Ejecutivo Federal, conforme al artículo 45 de la LOAPF.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c15-loapf-arts45-46-entidades",
+            "ev-c15-a20-l009-017-creacion-personalidad"
+          ]
         },
         {
           "question": "¿Cuáles son sus dos atributos jurídicos característicos?",
           "answer": "Personalidad jurídica y patrimonio propios.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c15-loapf-arts45-46-entidades",
+            "ev-c15-a20-l009-017-creacion-personalidad",
+            "ev-c15-a20-l111-113-persona-patrimonio"
+          ]
         },
         {
           "question": "¿Qué significa que tenga personalidad jurídica propia?",
           "answer": "Que es una persona jurídica capaz de ser titular de derechos y obligaciones distinta de una simple oficina interna.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c15-loapf-arts45-46-entidades",
+            "ev-c15-a20-l009-017-creacion-personalidad"
+          ]
         },
         {
           "question": "¿Patrimonio propio significa que sus recursos son privados?",
           "answer": "No. Significa que los recursos están jurídicamente asignados a la entidad y siguen sujetos a controles públicos.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c15-loapf-arts45-46-entidades",
+            "ev-c15-lfep-arts14-15-objeto-creacion",
+            "ev-c15-lfep-arts46-65-operacion-control",
+            "ev-c15-a20-l111-113-persona-patrimonio"
+          ]
         },
         {
           "question": "¿Qué finalidades reconoce el artículo 14 de la LFEP?",
           "answer": "Áreas estratégicas o prioritarias, servicio público o social y fines de asistencia o seguridad social.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c15-lfep-arts14-15-objeto-creacion"
+          ]
         },
         {
           "question": "¿Cuál es la diferencia central frente a un órgano desconcentrado?",
           "answer": "El desconcentrado permanece jerárquicamente dentro de una Secretaría; el descentralizado tiene personalidad y patrimonio propios.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c15-loapf-art17-desconcentrado",
+            "ev-c15-loapf-arts45-46-entidades",
+            "ev-c15-a20-l009-017-creacion-personalidad"
+          ]
         },
         {
           "question": "¿Autonomía técnica equivale a autonomía constitucional?",
           "answer": "No. La autonomía constitucional debe derivar directamente de la Constitución y es una categoría distinta.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c15-cpeum-art90-apf",
+            "ev-c15-lfep-arts1-12-regimen-control"
+          ]
         },
         {
           "question": "¿Toda entidad paraestatal es un organismo descentralizado?",
           "answer": "No. La LOAPF contempla también otras entidades, empresas, instituciones financieras, fideicomisos y Empresas Públicas del Estado.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c15-loapf-arts1-3-sector",
+            "ev-c15-loapf-arts45-46-entidades"
+          ]
         },
         {
           "question": "¿Qué debe revisarse antes de clasificar una institución pública?",
           "answer": "Su ley o decreto de creación y la legislación vigente que define su naturaleza, objeto y estructura.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c15-loapf-arts45-46-entidades",
+            "ev-c15-lfep-arts14-15-objeto-creacion",
+            "ev-c15-a20-l009-017-creacion-personalidad"
+          ]
         },
         {
           "question": "¿Coordinación sectorial significa subordinación jerárquica?",
           "answer": "No. Es una forma de vinculación, orientación y evaluación que no elimina la personalidad jurídica de la entidad.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c15-loapf-arts48-50-sectorizacion",
+            "ev-c15-lfep-arts1-12-regimen-control"
+          ]
         },
         {
           "question": "¿Por qué no debe memorizarse una lista fija de organismos?",
           "answer": "Porque las instituciones pueden crearse, transformarse, sectorizarse o extinguirse mediante reformas y actos jurídicos posteriores.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c15-loapf-arts45-46-entidades",
+            "ev-c15-loapf-arts48-50-sectorizacion",
+            "ev-c15-lfep-arts1-12-regimen-control",
+            "ev-c15-lfep-arts14-15-objeto-creacion"
+          ]
         }
       ],
       "exam": {
@@ -340,6 +613,55 @@
               "Describe una unidad centralizada o desconcentrada.",
               "Es la combinación característica prevista por la LOAPF.",
               "La autonomía constitucional pertenece a otra categoría."
+            ],
+            "evidenceIds": [
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-a20-l009-017-creacion-personalidad",
+              "ev-c15-a20-l111-113-persona-patrimonio"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-a20-l009-017-creacion-personalidad",
+                "ev-c15-a20-l111-113-persona-patrimonio"
+              ],
+              [
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-a20-l009-017-creacion-personalidad",
+                "ev-c15-a20-l111-113-persona-patrimonio"
+              ],
+              [
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-a20-l009-017-creacion-personalidad",
+                "ev-c15-a20-l111-113-persona-patrimonio"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-a20-l009-017-creacion-personalidad",
+              "ev-c15-a20-l111-113-persona-patrimonio"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-a20-l009-017-creacion-personalidad",
+              "ev-c15-a20-l111-113-persona-patrimonio"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-a20-l009-017-creacion-personalidad",
+                "ev-c15-a20-l111-113-persona-patrimonio"
+              ],
+              [
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-a20-l009-017-creacion-personalidad",
+                "ev-c15-a20-l111-113-persona-patrimonio"
+              ],
+              [
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-a20-l009-017-creacion-personalidad",
+                "ev-c15-a20-l111-113-persona-patrimonio"
+              ]
             ]
           },
           {
@@ -356,6 +678,46 @@
               "Faltan personalidad y patrimonio propios.",
               "La subordinación jerárquica es la pista decisiva.",
               "No existe información sobre participación en una sociedad."
+            ],
+            "evidenceIds": [
+              "ev-c15-loapf-art17-desconcentrado",
+              "ev-c15-loapf-arts45-46-entidades"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c15-loapf-art17-desconcentrado",
+                "ev-c15-loapf-arts45-46-entidades"
+              ],
+              [
+                "ev-c15-loapf-art17-desconcentrado",
+                "ev-c15-loapf-arts45-46-entidades"
+              ],
+              [
+                "ev-c15-loapf-art17-desconcentrado",
+                "ev-c15-loapf-arts45-46-entidades"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c15-loapf-art17-desconcentrado",
+              "ev-c15-loapf-arts45-46-entidades"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c15-loapf-art17-desconcentrado",
+              "ev-c15-loapf-arts45-46-entidades"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c15-loapf-art17-desconcentrado",
+                "ev-c15-loapf-arts45-46-entidades"
+              ],
+              [
+                "ev-c15-loapf-art17-desconcentrado",
+                "ev-c15-loapf-arts45-46-entidades"
+              ],
+              [
+                "ev-c15-loapf-art17-desconcentrado",
+                "ev-c15-loapf-arts45-46-entidades"
+              ]
             ]
           },
           {
@@ -369,9 +731,40 @@
             "correctOption": 2,
             "explanation": "El artículo 14 de la LFEP incluye expresamente la prestación de un servicio público o social entre los objetos posibles.",
             "optionExplanations": [
-              "La reforma constitucional sigue su procedimiento propio.",
-              "La función jurisdiccional no es el objeto señalado aquí.",
+              "No coincide con los objetos enumerados por el artículo 14.",
+              "No coincide con los objetos enumerados por el artículo 14.",
               "Es uno de los objetos expresamente permitidos."
+            ],
+            "evidenceIds": [
+              "ev-c15-lfep-arts14-15-objeto-creacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ],
+              [
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ],
+              [
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c15-lfep-arts14-15-objeto-creacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c15-lfep-arts14-15-objeto-creacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ],
+              [
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ],
+              [
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ]
             ]
           },
           {
@@ -385,9 +778,67 @@
             "correctOption": 1,
             "explanation": "Los organismos descentralizados forman parte del sector paraestatal; además, la LFEP contempla fines de asistencia o seguridad social.",
             "optionExplanations": [
-              "La personalidad diferenciada descarta una dependencia central.",
-              "Es la ubicación correspondiente al organismo descentralizado.",
-              "No se trata de un órgano jurisdiccional."
+              "Los atributos descritos no corresponden a una unidad centralizada.",
+              "Es la ubicación del organismo descentralizado.",
+              "Los atributos descritos corresponden a una entidad paraestatal, no a esta opción."
+            ],
+            "evidenceIds": [
+              "ev-c15-cpeum-art90-apf",
+              "ev-c15-loapf-arts1-3-sector",
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-lfep-arts14-15-objeto-creacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c15-cpeum-art90-apf",
+                "ev-c15-loapf-arts1-3-sector",
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ],
+              [
+                "ev-c15-cpeum-art90-apf",
+                "ev-c15-loapf-arts1-3-sector",
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ],
+              [
+                "ev-c15-cpeum-art90-apf",
+                "ev-c15-loapf-arts1-3-sector",
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c15-cpeum-art90-apf",
+              "ev-c15-loapf-arts1-3-sector",
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-lfep-arts14-15-objeto-creacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c15-cpeum-art90-apf",
+              "ev-c15-loapf-arts1-3-sector",
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-lfep-arts14-15-objeto-creacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c15-cpeum-art90-apf",
+                "ev-c15-loapf-arts1-3-sector",
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ],
+              [
+                "ev-c15-cpeum-art90-apf",
+                "ev-c15-loapf-arts1-3-sector",
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ],
+              [
+                "ev-c15-cpeum-art90-apf",
+                "ev-c15-loapf-arts1-3-sector",
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ]
             ]
           },
           {
@@ -404,6 +855,55 @@
               "El patrimonio de una entidad pública no se vuelve privado.",
               "Los mecanismos de control continúan aplicándose.",
               "Expresa correctamente la función del patrimonio propio."
+            ],
+            "evidenceIds": [
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-lfep-arts14-15-objeto-creacion",
+              "ev-c15-lfep-arts46-65-operacion-control"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-lfep-arts14-15-objeto-creacion",
+                "ev-c15-lfep-arts46-65-operacion-control"
+              ],
+              [
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-lfep-arts14-15-objeto-creacion",
+                "ev-c15-lfep-arts46-65-operacion-control"
+              ],
+              [
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-lfep-arts14-15-objeto-creacion",
+                "ev-c15-lfep-arts46-65-operacion-control"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-lfep-arts14-15-objeto-creacion",
+              "ev-c15-lfep-arts46-65-operacion-control"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-lfep-arts14-15-objeto-creacion",
+              "ev-c15-lfep-arts46-65-operacion-control"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-lfep-arts14-15-objeto-creacion",
+                "ev-c15-lfep-arts46-65-operacion-control"
+              ],
+              [
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-lfep-arts14-15-objeto-creacion",
+                "ev-c15-lfep-arts46-65-operacion-control"
+              ],
+              [
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-lfep-arts14-15-objeto-creacion",
+                "ev-c15-lfep-arts46-65-operacion-control"
+              ]
             ]
           },
           {
@@ -420,6 +920,46 @@
               "La autonomía técnica no crea un nuevo poder.",
               "La entidad continúa sujeta al orden jurídico y controles.",
               "Es la distinción jurídicamente correcta."
+            ],
+            "evidenceIds": [
+              "ev-c15-cpeum-art90-apf",
+              "ev-c15-lfep-arts1-12-regimen-control"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c15-cpeum-art90-apf",
+                "ev-c15-lfep-arts1-12-regimen-control"
+              ],
+              [
+                "ev-c15-cpeum-art90-apf",
+                "ev-c15-lfep-arts1-12-regimen-control"
+              ],
+              [
+                "ev-c15-cpeum-art90-apf",
+                "ev-c15-lfep-arts1-12-regimen-control"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c15-cpeum-art90-apf",
+              "ev-c15-lfep-arts1-12-regimen-control"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c15-cpeum-art90-apf",
+              "ev-c15-lfep-arts1-12-regimen-control"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c15-cpeum-art90-apf",
+                "ev-c15-lfep-arts1-12-regimen-control"
+              ],
+              [
+                "ev-c15-cpeum-art90-apf",
+                "ev-c15-lfep-arts1-12-regimen-control"
+              ],
+              [
+                "ev-c15-cpeum-art90-apf",
+                "ev-c15-lfep-arts1-12-regimen-control"
+              ]
             ]
           },
           {
@@ -433,9 +973,40 @@
             "correctOption": 0,
             "explanation": "La LOAPF regula categorías distintas: la empresa se identifica por los supuestos de participación estatal y el organismo por los elementos del artículo 45.",
             "optionExplanations": [
-              "Distingue correctamente los criterios de cada categoría.",
-              "Las empresas estatales no pertenecen por ello al Poder Judicial.",
-              "El organismo sí tiene personalidad jurídica propia."
+              "Distingue los criterios legales de ambas categorías.",
+              "No coincide con los criterios de empresa ni organismo descentralizado.",
+              "Contradice expresamente el artículo 45."
+            ],
+            "evidenceIds": [
+              "ev-c15-loapf-arts45-46-entidades"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c15-loapf-arts45-46-entidades"
+              ],
+              [
+                "ev-c15-loapf-arts45-46-entidades"
+              ],
+              [
+                "ev-c15-loapf-arts45-46-entidades"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c15-loapf-arts45-46-entidades"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c15-loapf-arts45-46-entidades"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c15-loapf-arts45-46-entidades"
+              ],
+              [
+                "ev-c15-loapf-arts45-46-entidades"
+              ],
+              [
+                "ev-c15-loapf-arts45-46-entidades"
+              ]
             ]
           },
           {
@@ -452,6 +1023,46 @@
               "Es una vinculación administrativa prevista por el régimen paraestatal.",
               "Confunde la entidad con una unidad centralizada.",
               "Las instrucciones no sustituyen la norma de creación."
+            ],
+            "evidenceIds": [
+              "ev-c15-loapf-arts48-50-sectorizacion",
+              "ev-c15-lfep-arts1-12-regimen-control"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c15-loapf-arts48-50-sectorizacion",
+                "ev-c15-lfep-arts1-12-regimen-control"
+              ],
+              [
+                "ev-c15-loapf-arts48-50-sectorizacion",
+                "ev-c15-lfep-arts1-12-regimen-control"
+              ],
+              [
+                "ev-c15-loapf-arts48-50-sectorizacion",
+                "ev-c15-lfep-arts1-12-regimen-control"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c15-loapf-arts48-50-sectorizacion",
+              "ev-c15-lfep-arts1-12-regimen-control"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c15-loapf-arts48-50-sectorizacion",
+              "ev-c15-lfep-arts1-12-regimen-control"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c15-loapf-arts48-50-sectorizacion",
+                "ev-c15-lfep-arts1-12-regimen-control"
+              ],
+              [
+                "ev-c15-loapf-arts48-50-sectorizacion",
+                "ev-c15-lfep-arts1-12-regimen-control"
+              ],
+              [
+                "ev-c15-loapf-arts48-50-sectorizacion",
+                "ev-c15-lfep-arts1-12-regimen-control"
+              ]
             ]
           },
           {
@@ -468,6 +1079,46 @@
               "El nombre no determina la categoría jurídica.",
               "Una lista sin vigencia puede estar desactualizada.",
               "Es el método jurídicamente verificable."
+            ],
+            "evidenceIds": [
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-lfep-arts14-15-objeto-creacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ],
+              [
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ],
+              [
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-lfep-arts14-15-objeto-creacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-lfep-arts14-15-objeto-creacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ],
+              [
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ],
+              [
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ]
             ]
           },
           {
@@ -479,14 +1130,212 @@
               "Presupuesto, color institucional, antigüedad y ubicación"
             ],
             "correctOption": 1,
-            "explanation": "La secuencia reúne los elementos jurídicos relevantes para diferenciar organismos, órganos internos y otras entidades paraestatales.",
+            "explanation": "La secuencia reúne los elementos previstos por la LOAPF y la LFEP para diferenciar organismos, órganos internos y otras entidades paraestatales.",
             "optionExplanations": [
-              "Son datos descriptivos, no criterios jurídicos suficientes.",
-              "Contiene los cinco pasos de clasificación explicados en la clase.",
-              "Esos datos no determinan por sí solos la naturaleza legal."
+              "No reúne los criterios jurídicos de clasificación.",
+              "Reúne los elementos normativos relevantes.",
+              "No reúne los criterios jurídicos de clasificación."
+            ],
+            "evidenceIds": [
+              "ev-c15-loapf-art17-desconcentrado",
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-loapf-arts48-50-sectorizacion",
+              "ev-c15-lfep-arts1-12-regimen-control",
+              "ev-c15-lfep-arts14-15-objeto-creacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c15-loapf-art17-desconcentrado",
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-loapf-arts48-50-sectorizacion",
+                "ev-c15-lfep-arts1-12-regimen-control",
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ],
+              [
+                "ev-c15-loapf-art17-desconcentrado",
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-loapf-arts48-50-sectorizacion",
+                "ev-c15-lfep-arts1-12-regimen-control",
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ],
+              [
+                "ev-c15-loapf-art17-desconcentrado",
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-loapf-arts48-50-sectorizacion",
+                "ev-c15-lfep-arts1-12-regimen-control",
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c15-loapf-art17-desconcentrado",
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-loapf-arts48-50-sectorizacion",
+              "ev-c15-lfep-arts1-12-regimen-control",
+              "ev-c15-lfep-arts14-15-objeto-creacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c15-loapf-art17-desconcentrado",
+              "ev-c15-loapf-arts45-46-entidades",
+              "ev-c15-loapf-arts48-50-sectorizacion",
+              "ev-c15-lfep-arts1-12-regimen-control",
+              "ev-c15-lfep-arts14-15-objeto-creacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c15-loapf-art17-desconcentrado",
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-loapf-arts48-50-sectorizacion",
+                "ev-c15-lfep-arts1-12-regimen-control",
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ],
+              [
+                "ev-c15-loapf-art17-desconcentrado",
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-loapf-arts48-50-sectorizacion",
+                "ev-c15-lfep-arts1-12-regimen-control",
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ],
+              [
+                "ev-c15-loapf-art17-desconcentrado",
+                "ev-c15-loapf-arts45-46-entidades",
+                "ev-c15-loapf-arts48-50-sectorizacion",
+                "ev-c15-lfep-arts1-12-regimen-control",
+                "ev-c15-lfep-arts14-15-objeto-creacion"
+              ]
             ]
           }
         ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c15-cpeum-art90-apf",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículo 90, página impresa 92",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c15-loapf-arts1-3-sector",
+      "kind": "official",
+      "title": "Ley Orgánica de la Administración Pública Federal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 07-05-2026; artículos 1 a 3, páginas impresas 1-2",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c15-loapf-art17-desconcentrado",
+      "kind": "official",
+      "title": "Ley Orgánica de la Administración Pública Federal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 07-05-2026; artículo 17, página impresa 5",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c15-loapf-arts45-46-entidades",
+      "kind": "official",
+      "title": "Ley Orgánica de la Administración Pública Federal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 07-05-2026; artículos 45 y 46, página impresa 77",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c15-loapf-arts48-50-sectorizacion",
+      "kind": "official",
+      "title": "Ley Orgánica de la Administración Pública Federal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 07-05-2026; artículos 48 a 50, páginas impresas 77-78",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c15-lfep-arts1-12-regimen-control",
+      "kind": "official",
+      "title": "Ley Federal de las Entidades Paraestatales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFEP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-07-2025; artículos 1 a 12, páginas impresas 1-3",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c15-lfep-arts14-15-objeto-creacion",
+      "kind": "official",
+      "title": "Ley Federal de las Entidades Paraestatales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFEP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-07-2025; artículos 14 y 15, páginas impresas 3-4",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c15-lfep-arts17-24-gobierno-direccion",
+      "kind": "official",
+      "title": "Ley Federal de las Entidades Paraestatales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFEP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-07-2025; artículos 17 a 24, páginas impresas 4-6",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c15-lfep-arts46-65-operacion-control",
+      "kind": "official",
+      "title": "Ley Federal de las Entidades Paraestatales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFEP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-07-2025; artículos 46 a 65, páginas impresas 10-16",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c15-a20-l009-017-creacion-personalidad",
+      "kind": "transcript",
+      "audioNumber": 20,
+      "locator": {
+        "type": "line_range",
+        "startLine": 9,
+        "endLine": 17
+      }
+    },
+    {
+      "id": "ev-c15-a20-l111-113-persona-patrimonio",
+      "kind": "transcript",
+      "audioNumber": 20,
+      "locator": {
+        "type": "line_range",
+        "startLine": 111,
+        "endLine": 113
+      }
+    },
+    {
+      "id": "ev-c15-a22-l073-077-regimen-laboral",
+      "kind": "transcript",
+      "audioNumber": 22,
+      "locator": {
+        "type": "line_range",
+        "startLine": 73,
+        "endLine": 77
       }
     }
   ]

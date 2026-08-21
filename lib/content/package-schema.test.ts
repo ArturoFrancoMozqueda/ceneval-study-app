@@ -64,7 +64,7 @@ const legacyPackagePath = path.join(
   process.cwd(),
   "content",
   "packages",
-  "audio-20-organismos-descentralizados.json",
+  "audio-26-isr-ingresos-retenciones-deducciones.json",
 );
 
 function readLegacyPackage() {
