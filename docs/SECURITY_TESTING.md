@@ -24,6 +24,8 @@ Este comando no usa `.env.local`, Supabase remoto ni el disco `F:`. Incluye:
 - cabeceras de seguridad;
 - entradas válidas de acciones de estudio;
 - estructura de las políticas RLS que limitan actividad a contenido publicado;
+- estructura de las políticas RLS y filtros DAL que limitan la lectura a temas
+  aprobados de clases publicadas, sin retirar el acceso editorial;
 - integridad del procedimiento de respaldo con SQL sintético.
 
 GitHub Actions ejecuta estas pruebas, lint y build en pull requests y pushes a
@@ -33,6 +35,12 @@ La comprobación `test:rls-policies` es estática: confirma que la migración
 versionada contiene ownership, rol `authenticated`, encadenamiento a clase
 publicada y `USING`/`WITH CHECK` para actualizaciones. No demuestra por sí sola
 que la migración ya esté activa en la base remota.
+
+La comprobación `test:topic-approval-policies` revisa de forma local que la
+migración `20260821022138_restrict_reading_to_approved_topics.sql` reemplace de
+manera atómica e idempotente las nueve políticas de lectura, exija tema
+`approved` y clase `published`, preserve `private.is_admin()` y mantenga los
+filtros redundantes de `getTopic` y `getLessonBundle`.
 
 ## Suite RLS remota
 
@@ -72,18 +80,27 @@ Las diez migraciones se aplicaron al proyecto CENEVAL y su historial y catálogo
 se verificaron el 20 de agosto de 2026. La suite ampliada todavía no se ha
 ejecutado allí.
 
+La migración de aprobación de temas creada después de esa verificación es la
+undécima migración local y **no se aplicó en remoto**. La suite dinámica también
+debe ampliarse para comprobar con dos identidades que una estudiante no puede
+leer un tema pendiente o rechazado ni sus descendientes, mientras la
+administradora conserva acceso.
+
 Por lo tanto, la afirmación correcta es:
 
-> Las políticas nuevas están versionadas y aplicadas en CENEVAL; su
-> comportamiento dinámico con las 31 comprobaciones sigue pendiente de una
-> ejecución autorizada.
+> Las primeras diez migraciones están aplicadas en CENEVAL; la undécima solo
+> está versionada. El comportamiento dinámico de ambas capas sigue pendiente
+> de una ejecución autorizada de la suite actualizada.
 
 ## Orden seguro para cerrar la verificación
 
 1. Configurar las credenciales locales exclusivamente para CENEVAL.
-2. Ejecutar `npm run security:rls` una sola vez en una ventana autorizada.
-3. Registrar fecha, commit, conteo y resultado sin copiar secretos.
-4. Crear el primer respaldo verificable después de importar datos reales.
+2. Revisar y aplicar la migración de aprobación de temas en una ventana
+   autorizada, sin mezclarla con otros proyectos.
+3. Ampliar y ejecutar `npm run security:rls` una sola vez para cubrir temas
+   pendientes y rechazados.
+4. Registrar fecha, commit, conteo y resultado sin copiar secretos.
+5. Crear el primer respaldo verificable después de importar datos reales.
 
 ## Auditoría previa de funciones privilegiadas
 
