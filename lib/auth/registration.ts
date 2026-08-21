@@ -1,7 +1,7 @@
 import { z } from "zod";
 
-export const PRIVATE_REGISTRATION_MESSAGE =
-  "Si el correo está autorizado, recibirás un enlace para activar la cuenta.";
+export const REGISTRATION_CONFIRMATION_MESSAGE =
+  "Revisa tu correo para confirmar tu cuenta. El mensaje puede tardar unos minutos.";
 
 const registrationSchema = z.object({
   fullName: z
