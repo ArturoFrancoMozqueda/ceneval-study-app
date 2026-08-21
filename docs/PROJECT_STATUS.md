@@ -315,6 +315,7 @@ ampliar y ejecutar la suite RLS dinámica con temas pendientes y rechazados.
 - derivación de progreso por materia y ausencia explícita de desempeño cuando
   no existen intentos válidos;
 - esquema del paquete académico;
+- honestidad del progreso, autosave, onboarding y semántica accesible;
 - redirecciones permitidas en confirmación de autenticación;
 - validación y mensajes del inicio de sesión;
 - cabeceras de seguridad;
@@ -326,10 +327,16 @@ ampliar y ejecutar la suite RLS dinámica con temas pendientes y rechazados.
 También existen cabeceras de seguridad, redirección de autenticación limitada
 a destinos internos y un aviso educativo/de vigencia en la interfaz.
 
+Con Supabase local activo, `npm run test:content-db-local` prueba el round-trip
+1.2 y `npm run test:e2e:local` prepara usuarios y contenido sintéticos, compila,
+levanta la app y valida en Chromium el acceso privado, login administrativo,
+skip-link, navegación hasta un tema, autosave y persistencia después de
+recargar. Ambos runners rechazan URLs no locales y verifican su limpieza final.
+
 Queda pendiente:
 
 - ampliar y ejecutar la suite RLS dinámica contra el proyecto CENEVAL;
-- pruebas automatizadas de interfaz y recorridos completos;
+- ampliar E2E a examen, tarjetas, progreso, errores y rutas inválidas;
 - auditoría final de accesibilidad en navegador y dispositivos reales;
 - dejar de degradar silenciosamente ciertos errores de progreso a `null`.
 
