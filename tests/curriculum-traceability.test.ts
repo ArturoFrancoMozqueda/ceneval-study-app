@@ -365,6 +365,38 @@ const traceablePackages = [
       /Código Nacional de Procedimientos Penales vigente al 28-11-2025/i,
     ],
   },
+  {
+    code: "C25",
+    fileName: "audio-35-investigacion-detencion-vinculacion.json",
+    artifacts: 152,
+    evidence: 19,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /retención ministerial no puede exceder 48 horas.*duplicarla hasta 96 horas en delincuencia organizada/i,
+      /72 horas desde la puesta a disposición o comparecencia.*144 horas/i,
+      /controla la detención solo cuando corresponde por flagrancia o caso urgente/i,
+      /Vinculación no significa prisión automática/i,
+      /Constitución vigente al 02-06-2026/i,
+      /CNPP vigente al 28-11-2025/i,
+      /Ley Nacional sobre el Uso de la Fuerza vigente al 24-01-2024/i,
+    ],
+  },
+  {
+    code: "C26",
+    fileName: "audio-35-36-investigacion-complementaria-intermedia.json",
+    artifacts: 150,
+    evidence: 21,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /investigación complementaria inicia con la formulación de imputación/i,
+      /máximo es de dos meses.*seis meses/i,
+      /artículo 324 otorga únicamente al Ministerio Público quince días/i,
+      /reapertura del artículo 333 tampoco reinicia libremente la investigación/i,
+      /no puede integrar el tribunal de enjuiciamiento/i,
+      /Constitución vigente al 02-06-2026/i,
+      /CNPP vigente al 28-11-2025/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -604,6 +636,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una generalización retirada como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C25" || expected.code === "C26") {
+      const obsoleteAsCurrent =
+        expected.code === "C25"
+          ? /retención ministerial.*72 horas|control de detención.*(?:toda|cualquier).*(?:comparecencia|audiencia)|vinculación.*(?:culpabilidad|prisión automática)|juez.*solicita.*vinculación|(?:ampliación|plazo).*144 horas.*automát/i
+          : /(?:siempre|en todo caso).*seis meses|quince días.*(?:plazo general|toda la etapa)|reapertura.*(?:libre|reinicia todo)|defensa.*(?:debe|tiene que).*probar.*inocencia|descubrimiento.*idéntic|juez de control.*integra.*tribunal de enjuiciamiento/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una regla procesal absoluta o retirada como respuesta vigente.`,
         );
       }
     }

@@ -116,8 +116,8 @@ red usa `npm run test:backup`. Consulta `docs/SUPABASE_BACKUP.md`.
 
 - Un paquete nuevo solo se importa si usa el contrato 1.2 y pasa
   `content:check`: además de los conteos editoriales, cada dinámica debe tener
-  evidencia concreta y verificable. C01–C24 ya usan 1.2 y pasan el gate local;
-  C25–C40 permanecen en 1.1, son legibles, pero no son importables ni
+  evidencia concreta y verificable. C01–C26 ya usan 1.2 y pasan el gate local;
+  C27–C40 permanecen en 1.1, son legibles, pero no son importables ni
   publicables.
 - Las fuentes jurídicas deben ser primarias y oficiales, con autoridad
   identificada, dominio verificado o allowlist y fecha de consulta. No infieras
@@ -158,11 +158,11 @@ red usa `npm run test:backup`. Consulta `docs/SUPABASE_BACKUP.md`.
 Detectadas en la auditoría de agosto de 2026. Verifica antes de asumir que
 alguna sigue abierta; si corriges una, actualiza esta lista.
 
-- **El contrato publicable es 1.2.** C01–C24 son los pilotos migrados:
+- **El contrato publicable es 1.2.** C01–C26 son los pilotos migrados:
   conservan código, orden y fuentes de audio, y sus 139, 130, 133, 133, 137,
   137, 138, 138, 140, 141, 139, 142, 144, 138, 137, 142, 142, 142, 143, 148,
-  150, 152, 151 y 150 artefactos, respectivamente, enlazan evidencia oficial o
-  localizadores verificables de la transcripción. C25–C40 siguen en 1.1 y solo son legibles:
+  150, 152, 151, 150, 152 y 150 artefactos, respectivamente, enlazan evidencia
+  oficial o localizadores verificables de la transcripción. C27–C40 siguen en 1.1 y solo son legibles:
   deben añadir evidencia antes de importar o publicar.
   La versión retirada 1.0 se conserva fuera de `content/packages/`.
 - **Las transcripciones tienen una primera copia privada verificada.** El 21 de

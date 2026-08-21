@@ -1,11 +1,17 @@
 {
-  "packageVersion": "1.1",
+  "packageVersion": "1.2",
   "curriculum": {
     "code": "C26",
     "order": 26,
     "audioSources": [
-      {"audioNumber": 35,"fragment": "Cierre: investigación complementaria"},
-      {"audioNumber": 36,"fragment": "Audio completo"}
+      {
+        "audioNumber": 35,
+        "fragment": "Cierre: investigación complementaria"
+      },
+      {
+        "audioNumber": 36,
+        "fragment": "Audio completo"
+      }
     ]
   },
   "subject": {
@@ -21,7 +27,7 @@
       "AUDIO 35.txt",
       "AUDIO 36.txt"
     ],
-    "cleaned": "Se conservaron el plazo de investigación complementaria, la solicitud de actos de investigación, la acusación, el descubrimiento probatorio, la coadyuvancia de la víctima, la respuesta de la defensa, la audiencia intermedia, los acuerdos probatorios, la admisión y exclusión de medios y el auto de apertura a juicio. Se eliminaron saludos, bromas, insultos, opiniones políticas, referencias a sobornos, costos de capacitación y ejemplos sin utilidad jurídica. Se corrigió que la defensa puede solicitar actos de investigación al Ministerio Público, pero éste dirige la investigación; que los plazos máximos de investigación complementaria dependen de la pena máxima del delito y la prórroga debe justificarse dentro de esos límites; que la carga de demostrar la culpabilidad corresponde a la parte acusadora y la defensa no tiene que probar inocencia; que los registros y medios reunidos durante la investigación no equivalen automáticamente a prueba de sentencia; que la persona juzgadora de control conduce la etapa intermedia, mientras quien intervino antes del juicio no puede integrar el tribunal de enjuiciamiento; que los peritos pueden ser ofrecidos por las partes y su independencia, metodología y credibilidad se someten a contradicción; y que cada solución alterna o forma de terminación anticipada tiene requisitos y momentos legales propios."
+    "cleaned": "Se conservaron el plazo de investigación complementaria, la solicitud de actos de investigación, el cierre, la reapertura acotada, la acusación, el descubrimiento probatorio, la coadyuvancia de la víctima, la respuesta de la defensa, la audiencia intermedia, los acuerdos probatorios, la admisión y exclusión de medios y el auto de apertura a juicio. Se eliminaron saludos, bromas, insultos, opiniones políticas, referencias a sobornos, costos de capacitación y ejemplos sin utilidad jurídica. Se corrigió que la defensa puede solicitar actos de investigación al Ministerio Público, pero éste dirige la investigación; que los máximos de dos o seis meses dependen de la pena máxima y la prórroga debe justificarse sin rebasarlos; que los quince días del artículo 324 corresponden a la decisión del Ministerio Público después del cierre y no son un plazo universal de la etapa; que la reapertura del artículo 333 solo permite reiterar, antes de la acusación, diligencias específicas previamente solicitadas y rechazadas, con las exclusiones legales; que la carga de demostrar culpabilidad corresponde a la parte acusadora; que dato, medio de prueba y prueba son categorías distintas; que el descubrimiento impone deberes diferenciados a cada interviniente; y que la persona juzgadora que intervino antes del juicio no puede integrar el tribunal de enjuiciamiento."
   },
   "topics": [
     {
@@ -33,17 +39,40 @@
           {
             "prompt": "¿La defensa debe demostrar la inocencia?",
             "answer": "No. La carga de probar la culpabilidad corresponde a la parte acusadora; la defensa puede controvertir, investigar y ofrecer medios sin asumir esa carga.",
-            "feedback": "Presunción de inocencia y carga probatoria no deben invertirse."
+            "feedback": "Presunción de inocencia y carga probatoria no deben invertirse.",
+            "evidenceIds": [
+              "ev-c26-cpeum-art20a-principios-carga",
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l091-103-descubrimiento"
+            ]
           },
           {
             "prompt": "¿Todo registro de investigación ya es prueba para sentencia?",
             "answer": "No. En general se convierte en prueba cuando se incorpora y desahoga en juicio bajo inmediación y contradicción, salvo las excepciones legales.",
-            "feedback": "Distingue dato, medio de prueba y prueba."
+            "feedback": "Distingue dato, medio de prueba y prueba.",
+            "evidenceIds": [
+              "ev-c26-cpeum-art20a-principios-carga",
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-a35-l299-337-datos-medios"
+            ]
           },
           {
             "prompt": "¿Qué depura la etapa intermedia?",
             "answer": "Los hechos controvertidos y los medios que podrán desahogarse en juicio, mediante acuerdos probatorios, debate de admisión o exclusión y el auto de apertura.",
-            "feedback": "No es todavía el juicio ni la sentencia."
+            "feedback": "No es todavía el juicio ni la sentencia.",
+            "evidenceIds": [
+              "ev-c26-cnpp-art211-etapas",
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-cnpp-arts346-347-exclusion-apertura",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ]
           }
         ],
         "practicalCase": {
@@ -51,103 +80,609 @@
           "question": "¿Cómo debe prepararse y depurarse el caso antes del juicio?",
           "legalRule": "Los artículos 334 a 347 del CNPP regulan acusación, descubrimiento, actuación de víctima y defensa, audiencia intermedia, acuerdos probatorios, exclusión y auto de apertura; los artículos 261 a 265 distinguen antecedentes, datos, medios y prueba.",
           "reasoning": "Debe completarse el descubrimiento; la defensa responde y ofrece su dictamen; en audiencia se corrigen defectos, se debaten acuerdos y se excluyen medios ilícitos o manifiestamente sobreabundantes, impertinentes o innecesarios. Lo admitido se identifica en el auto de apertura para su posterior desahogo ante un tribunal distinto.",
-          "conclusion": "La etapa intermedia protege contradicción y economía procesal: no decide culpabilidad, sino qué hechos quedan acordados y qué medios lícitos y pertinentes llegarán a juicio."
+          "conclusion": "La etapa intermedia protege contradicción y economía procesal: no decide culpabilidad, sino qué hechos quedan acordados y qué medios lícitos y pertinentes llegarán a juicio.",
+          "evidenceIds": [
+            "ev-c26-cpeum-art20a-principios-carga",
+            "ev-c26-cnpp-art211-etapas",
+            "ev-c26-cnpp-arts212-220-investigacion",
+            "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+            "ev-c26-cnpp-arts321-325-plazo-cierre",
+            "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+            "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+            "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+            "ev-c26-cnpp-arts346-347-exclusion-apertura",
+            "ev-c26-cnpp-arts3-350-juzgadores",
+            "ev-c26-a36-l007-029-plazo-cierre",
+            "ev-c26-a35-l299-337-datos-medios",
+            "ev-c26-a36-l045-065-etapa-intermedia",
+            "ev-c26-a36-l071-083-fases-acusacion",
+            "ev-c26-a36-l091-103-descubrimiento",
+            "ev-c26-a36-l105-113-acuerdos-depuracion"
+          ]
         },
         "closingPrompt": "Explica la ruta completa desde el cierre de la investigación hasta el auto de apertura a juicio y señala qué función cumple cada participante.",
-        "nextActivity": "Recorre el mapa visual, contesta la guía de doce preguntas y resuelve los diez casos originales."
+        "nextActivity": "Recorre el mapa visual, contesta la guía de doce preguntas y resuelve los diez casos originales.",
+        "openingPromptEvidenceIds": [
+          "ev-c26-cnpp-arts212-220-investigacion",
+          "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+          "ev-c26-cnpp-arts321-325-plazo-cierre",
+          "ev-c26-cnpp-arts3-350-juzgadores",
+          "ev-c26-a36-l007-029-plazo-cierre",
+          "ev-c26-a35-l299-337-datos-medios"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c26-cnpp-art211-etapas",
+          "ev-c26-cnpp-arts212-220-investigacion",
+          "ev-c26-cnpp-arts321-325-plazo-cierre",
+          "ev-c26-cnpp-arts346-347-exclusion-apertura",
+          "ev-c26-a36-l007-029-plazo-cierre",
+          "ev-c26-a36-l105-113-acuerdos-depuracion"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c26-cnpp-arts338-340-coadyuvancia-defensa"
+        ]
       },
       "materials": [
         {
           "type": "short_answer",
           "title": "Respuesta breve",
           "content": "La investigación complementaria permite completar actos después de la vinculación y termina con su cierre. Después, el Ministerio Público debe definir en quince días si pide sobreseimiento, suspensión o acusa. La acusación abre la etapa intermedia: en su fase escrita se presentan acusación, coadyuvancia, descubrimiento y respuesta; en la oral se corrigen defectos, se debaten acuerdos probatorios y se admiten o excluyen medios. El auto de apertura delimita el juicio.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c26-cnpp-art211-etapas",
+            "ev-c26-cnpp-arts212-220-investigacion",
+            "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+            "ev-c26-cnpp-arts321-325-plazo-cierre",
+            "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+            "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+            "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+            "ev-c26-cnpp-arts346-347-exclusion-apertura",
+            "ev-c26-a35-l259-283-investigacion-complementaria",
+            "ev-c26-a36-l007-029-plazo-cierre",
+            "ev-c26-a35-l299-337-datos-medios",
+            "ev-c26-a36-l045-065-etapa-intermedia",
+            "ev-c26-a36-l071-083-fases-acusacion",
+            "ev-c26-a36-l091-103-descubrimiento",
+            "ev-c26-a36-l105-113-acuerdos-depuracion"
+          ]
         },
         {
           "type": "full_explanation",
           "title": "Explicación completa desde cero",
-          "content": "La investigación complementaria inicia después de la formulación de imputación y se desarrolla tras la vinculación a proceso para que las partes reúnan información, soliciten actos y preparen su teoría del caso. El juez de control fija su plazo. Conforme al artículo 321 del CNPP, el máximo es de dos meses cuando la pena máxima no excede de dos años y de seis meses cuando la excede; puede concluir antes y solicitarse prórroga justificada sin rebasar esos máximos. El Ministerio Público dirige la investigación, pero imputado, defensa, víctima y asesor pueden pedir diligencias pertinentes; una negativa ministerial debe atender las reglas legales y puede someterse al control procedente.\n\nAl vencer el plazo, la investigación debe cerrarse conforme a los artículos 322 y 323. Cerrada, el artículo 324 otorga al Ministerio Público quince días para solicitar sobreseimiento total o parcial, pedir suspensión del proceso o formular acusación. Si incumple, el juez informa al superior previsto por el artículo 325 para que se pronuncie en otros quince días; sin pronunciamiento, procede el sobreseimiento.\n\nLa etapa intermedia tiene por objeto ofrecer y admitir medios de prueba, y depurar los hechos controvertidos que irán a juicio. Su fase escrita comienza con la acusación del Ministerio Público y abarca los actos previos a la audiencia. La fase oral comienza con la audiencia intermedia y concluye con el auto de apertura a juicio.\n\nLa acusación debe individualizar personas, defensa y víctima; narrar clara y circunstanciadamente los hechos, su clasificación jurídica y forma de intervención; señalar preceptos, medios ofrecidos, reparación, pena o medida solicitada, decomiso, acuerdos probatorios y, cuando proceda, terminación anticipada. Solo puede referirse a hechos y personas comprendidos en la vinculación, aunque la clasificación jurídica pueda variar.\n\nEl descubrimiento probatorio es recíproco. El Ministerio Público debe permitir acceso y copia de todos los registros y objetos de investigación, incluso los que no ofrecerá; víctima, asesor, acusado y defensa descubren los medios que pretenden llevar a juicio dentro de sus plazos. Los dictámenes periciales se entregan al descubrirse y, si existe causa justificada, dentro del límite legal previo a la audiencia.\n\nLa víctima u ofendido puede, dentro de tres días de la notificación de la acusación, constituirse como coadyuvante, señalar defectos formales, ofrecer medios complementarios y pedir reparación cuantificada. Después de vencer ese plazo, acusado y defensa cuentan con diez días para señalar defectos, responder a la coadyuvancia, ofrecer medios, pedir acumulación o separación y pronunciarse sobre acuerdos probatorios. Esto no invierte la carga: el artículo 20 constitucional mantiene en la acusación la obligación de demostrar culpabilidad.\n\nLa audiencia intermedia se celebra ante juez de control. Allí se exponen resumidamente acusación y defensas, se corrigen defectos, se verifica descubrimiento, se resuelven incidencias y se debaten los medios. El juez que intervino antes del juicio no integra el tribunal de enjuiciamiento. La misma persona juzgadora no tiene que conducir todas las etapas; cada etapa sí respeta inmediación en los términos constitucionales y jurisprudenciales.\n\nLos acuerdos probatorios son convenios entre Ministerio Público y acusado, sin oposición fundada de la víctima, para tener por acreditados determinados hechos o circunstancias. El juez los autoriza si existen antecedentes que los justifiquen. No son negociaciones para inventar hechos ni sustituyen todos los elementos del delito.\n\nUn medio puede excluirse si genera dilación por ser sobreabundante, impertinente o innecesario; si fue obtenido con violación de derechos fundamentales; si fue declarado nulo; o si contraviene las reglas legales. La exclusión de un medio es apelable en los términos del artículo 467. Admitir un medio no significa darle valor definitivo: credibilidad, fiabilidad y fuerza se determinan después de su desahogo contradictorio en juicio.\n\nLos peritos no pertenecen necesariamente al Ministerio Público. Cualquiera de las partes puede ofrecer pericial, acreditar especialidad y descubrir el dictamen. En juicio, metodología, datos, sesgos, conclusiones e imparcialidad pueden ser examinados y contraexaminados; el escrito por sí solo no reemplaza el testimonio pericial cuando la ley exige desahogo.\n\nEl auto de apertura identifica el tribunal competente, acusaciones y hechos, acuerdos probatorios, medios admitidos, medidas de protección y personas a citar. Delimita el objeto del juicio, pero no declara culpabilidad. Para casos CENEVAL, ordena la respuesta así: fase procesal, acto correcto, participante facultado, plazo y consecuencia jurídica.",
-          "sourceOrigin": "mixed"
+          "content": "La investigación complementaria inicia con la formulación de imputación. Después de la vinculación a proceso, el plazo que fija el juez de control permite a las partes completar actos, solicitar diligencias y preparar su teoría del caso. Conforme al artículo 321 del CNPP, el máximo es de dos meses cuando la pena máxima no excede de dos años y de seis meses cuando la excede; puede concluir antes y solicitarse prórroga justificada sin rebasar esos máximos. El Ministerio Público dirige la investigación, pero imputado, defensa, víctima y asesor pueden pedir diligencias pertinentes; una negativa ministerial debe atender las reglas legales y puede someterse al control procedente.\n\nAl vencer el plazo, la investigación debe cerrarse conforme a los artículos 322 y 323. Cerrada, el artículo 324 otorga únicamente al Ministerio Público quince días para solicitar sobreseimiento total o parcial, pedir suspensión del proceso o formular acusación; no es un plazo general para todos los actos de la etapa intermedia. Si incumple, el juez informa al superior previsto por el artículo 325 para que se pronuncie en otros quince días; sin pronunciamiento, procede el sobreseimiento. La reapertura del artículo 333 tampoco reinicia libremente la investigación: hasta antes de presentar la acusación, las partes pueden reiterar diligencias específicas que solicitaron después de la vinculación y que el Ministerio Público rechazó; el juez decide y no ordena actos omitidos por negligencia ni los impertinentes, notorios o dilatorios.\n\nLa etapa intermedia tiene por objeto ofrecer y admitir medios de prueba, y depurar los hechos controvertidos que irán a juicio. Su fase escrita comienza con la acusación del Ministerio Público y abarca los actos previos a la audiencia. La fase oral comienza con la audiencia intermedia y concluye con el auto de apertura a juicio.\n\nLa acusación debe individualizar personas, defensa y víctima; narrar clara y circunstanciadamente los hechos, su clasificación jurídica y forma de intervención; señalar preceptos, medios ofrecidos, reparación, pena o medida solicitada, decomiso, acuerdos probatorios y, cuando proceda, terminación anticipada. Solo puede referirse a hechos y personas comprendidos en la vinculación, aunque la clasificación jurídica pueda variar.\n\nEl descubrimiento probatorio permite contradicción, pero los deberes no son idénticos. El Ministerio Público debe permitir acceso y copia de todos los registros y objetos de investigación, incluso los que no ofrecerá; víctima, asesor, acusado y defensa descubren los medios que pretendan llevar a juicio conforme al artículo 337 y a sus plazos aplicables. Los dictámenes periciales se entregan al descubrirse y, si existe causa justificada, dentro del límite legal previo a la audiencia.\n\nLa víctima u ofendido puede, dentro de tres días de la notificación de la acusación, constituirse como coadyuvante, señalar defectos formales, ofrecer medios complementarios y pedir reparación cuantificada. Después de vencer ese plazo, acusado y defensa cuentan con diez días para señalar defectos, responder a la coadyuvancia, ofrecer medios, pedir acumulación o separación y pronunciarse sobre acuerdos probatorios. Esto no invierte la carga: el artículo 20 constitucional mantiene en la acusación la obligación de demostrar culpabilidad.\n\nLa audiencia intermedia se celebra ante juez de control. Allí se exponen resumidamente acusación y defensas, se corrigen defectos, se verifica descubrimiento, se resuelven incidencias y se debaten los medios. El juez de control que intervino antes del juicio no puede integrar el tribunal de enjuiciamiento, conforme al artículo 350 del CNPP.\n\nLos acuerdos probatorios son convenios entre Ministerio Público y acusado, sin oposición fundada de la víctima, para tener por acreditados determinados hechos o circunstancias. El juez los autoriza si existen antecedentes que los justifiquen. No son negociaciones para inventar hechos ni sustituyen todos los elementos del delito.\n\nUn medio puede excluirse si genera dilación por ser sobreabundante, impertinente o innecesario; si fue obtenido con violación de derechos fundamentales; si fue declarado nulo; o si contraviene las reglas legales. La exclusión de un medio es apelable en los términos del artículo 467. Admitir un medio no significa darle valor definitivo: credibilidad, fiabilidad y fuerza se determinan después de su desahogo contradictorio en juicio.\n\nLos peritos no pertenecen necesariamente al Ministerio Público. Cualquiera de las partes puede ofrecer pericial, acreditar especialidad y descubrir el dictamen. En juicio, metodología, datos, sesgos, conclusiones e imparcialidad pueden ser examinados y contraexaminados; el escrito por sí solo no reemplaza el testimonio pericial cuando la ley exige desahogo.\n\nEl auto de apertura identifica el tribunal competente, acusaciones y hechos, acuerdos probatorios, medios admitidos, medidas de protección y personas a citar. Delimita el objeto del juicio, pero no declara culpabilidad. Para casos CENEVAL, ordena la respuesta así: fase procesal, acto correcto, participante facultado, plazo y consecuencia jurídica.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c26-cpeum-art20a-principios-carga",
+            "ev-c26-cnpp-art211-etapas",
+            "ev-c26-cnpp-arts212-220-investigacion",
+            "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+            "ev-c26-cnpp-arts321-325-plazo-cierre",
+            "ev-c26-cnpp-art333-reapertura",
+            "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+            "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+            "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+            "ev-c26-cnpp-arts346-347-exclusion-apertura",
+            "ev-c26-cnpp-art467-apelacion",
+            "ev-c26-cnpp-arts3-350-juzgadores",
+            "ev-c26-a35-l259-283-investigacion-complementaria",
+            "ev-c26-a36-l007-029-plazo-cierre",
+            "ev-c26-a35-l299-337-datos-medios",
+            "ev-c26-a36-l045-065-etapa-intermedia",
+            "ev-c26-a36-l071-083-fases-acusacion",
+            "ev-c26-a36-l091-103-descubrimiento",
+            "ev-c26-a36-l105-113-acuerdos-depuracion",
+            "ev-c26-cnpp-arts184-207-soluciones-abreviado"
+          ]
         },
         {
           "type": "legal_basis",
           "title": "Fundamento jurídico vigente",
-          "content": "Constitución vigente al 02-06-2026: artículos 20, apartados A y B, sobre acusación, carga probatoria, contradicción e inmediación. CNPP vigente al 28-11-2025: artículos 211, 261 a 265, 321 a 325 y 334 a 347; artículo 467 sobre resoluciones apelables. Consulta oficial realizada el 11 de agosto de 2026.",
-          "sourceOrigin": "complementary"
+          "content": "Constitución vigente al 02-06-2026: artículo 20, apartado A, sobre carga probatoria, contradicción e inmediación. CNPP vigente al 28-11-2025: artículos 3, 211 a 220, 261 a 265, 321 a 325, 333 a 350 y 467. Consulta oficial realizada el 21 de agosto de 2026.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c26-cpeum-art20a-principios-carga",
+            "ev-c26-cnpp-art211-etapas",
+            "ev-c26-cnpp-arts184-207-soluciones-abreviado",
+            "ev-c26-cnpp-arts212-220-investigacion",
+            "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+            "ev-c26-cnpp-arts321-325-plazo-cierre",
+            "ev-c26-cnpp-art333-reapertura",
+            "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+            "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+            "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+            "ev-c26-cnpp-art345-acuerdos",
+            "ev-c26-cnpp-arts346-347-exclusion-apertura",
+            "ev-c26-cnpp-art467-apelacion",
+            "ev-c26-cnpp-arts3-350-juzgadores"
+          ]
         },
         {
           "type": "simple_example",
           "title": "Ejemplo sencillo",
           "content": "La fiscalía ofrece cinco testigos que narran exactamente el mismo hecho. En la etapa intermedia la defensa puede alegar sobreabundancia. El juez puede reducirlos si producirlos solo dilata; todavía no decide si su versión es verdadera.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c26-cnpp-art211-etapas",
+            "ev-c26-cnpp-arts212-220-investigacion",
+            "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+            "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+            "ev-c26-cnpp-arts346-347-exclusion-apertura",
+            "ev-c26-a36-l045-065-etapa-intermedia",
+            "ev-c26-a36-l091-103-descubrimiento"
+          ]
         },
         {
           "type": "ceneval_example",
           "title": "Caso tipo CENEVAL",
           "content": "La defensa descubre que la acusación omitió entregarle un registro de entrevista favorable. La respuesta correcta es exigir el descubrimiento completo y plantearlo ante el juez de control; no asumir que el registro ya es prueba de sentencia ni que la defensa debe demostrar inocencia.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c26-cpeum-art20a-principios-carga",
+            "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+            "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+            "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+            "ev-c26-cnpp-arts3-350-juzgadores",
+            "ev-c26-a35-l299-337-datos-medios",
+            "ev-c26-a36-l071-083-fases-acusacion",
+            "ev-c26-a36-l091-103-descubrimiento"
+          ]
         },
         {
           "type": "summary",
           "title": "Resumen",
-          "content": "Complementaria: actos de investigación dentro del plazo judicial. Cierre: activa quince días para decidir sobreseimiento, suspensión o acusación. Intermedia escrita: acusación, coadyuvancia, respuesta y descubrimiento. Intermedia oral: correcciones, incidencias, acuerdos y admisión o exclusión. Acuerdo probatorio: hecho no controvertido autorizado. Exclusión: ilicitud, nulidad, sobreabundancia, impertinencia, innecesariedad o regla legal. Apertura: delimita el juicio sin prejuzgar culpabilidad.",
-          "sourceOrigin": "mixed"
+          "content": "Complementaria: actos de investigación dentro del plazo judicial. Cierre: activa para el Ministerio Público los quince días del artículo 324 para decidir sobreseimiento, suspensión o acusación; no es un plazo universal. Reapertura: antes de la acusación y solo respecto de diligencias específicas previamente solicitadas y rechazadas, bajo los límites del artículo 333. Intermedia escrita: acusación, coadyuvancia, respuesta y descubrimiento. Intermedia oral: correcciones, incidencias, acuerdos y admisión o exclusión. Acuerdo probatorio: hecho no controvertido autorizado. Exclusión: ilicitud, nulidad, sobreabundancia, impertinencia, innecesariedad o regla legal. Apertura: delimita el juicio sin prejuzgar culpabilidad.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c26-cpeum-art20a-principios-carga",
+            "ev-c26-cnpp-arts212-220-investigacion",
+            "ev-c26-cnpp-arts321-325-plazo-cierre",
+            "ev-c26-cnpp-art333-reapertura",
+            "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+            "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+            "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+            "ev-c26-cnpp-art345-acuerdos",
+            "ev-c26-cnpp-arts346-347-exclusion-apertura",
+            "ev-c26-a35-l259-283-investigacion-complementaria",
+            "ev-c26-a36-l007-029-plazo-cierre",
+            "ev-c26-a36-l045-065-etapa-intermedia",
+            "ev-c26-a36-l071-083-fases-acusacion",
+            "ev-c26-a36-l091-103-descubrimiento",
+            "ev-c26-a36-l105-113-acuerdos-depuracion"
+          ]
         },
         {
           "type": "study_guide",
           "title": "Guía intensiva de preguntas y respuestas",
-          "content": "1. ¿Cuándo inicia la complementaria? Respuesta: después de la formulación de imputación y se desarrolla tras la vinculación. 2. ¿Quién dirige la investigación? Respuesta: el Ministerio Público. 3. ¿Máximos ordinarios? Respuesta: dos o seis meses según la pena máxima. 4. ¿Qué sigue al cierre? Respuesta: en quince días, sobreseimiento, suspensión o acusación. 5. ¿Objeto de la intermedia? Respuesta: depurar hechos y admitir medios para juicio. 6. ¿Fases? Respuesta: escrita y oral. 7. ¿Qué abre la etapa? Respuesta: la acusación. 8. ¿Descubrimiento? Respuesta: acceso recíproco a lo que exige la ley. 9. ¿La defensa prueba inocencia? Respuesta: no; la acusación prueba culpabilidad. 10. ¿Acuerdo probatorio? Respuesta: hecho o circunstancia aceptado y autorizado. 11. ¿Cuándo se excluye? Respuesta: por causas del artículo 346, como ilicitud o impertinencia. 12. ¿Qué cierra la etapa? Respuesta: el auto de apertura a juicio.",
-          "sourceOrigin": "mixed"
+          "content": "1. ¿Cuándo inicia la complementaria? Respuesta: después de la formulación de imputación y se desarrolla tras la vinculación. 2. ¿Quién dirige la investigación? Respuesta: el Ministerio Público. 3. ¿Máximos ordinarios? Respuesta: dos o seis meses según la pena máxima. 4. ¿Qué sigue al cierre? Respuesta: el Ministerio Público dispone de los quince días del artículo 324 para pedir sobreseimiento, suspensión o acusar; no es un plazo universal. 5. ¿Objeto de la intermedia? Respuesta: depurar hechos y admitir medios para juicio. 6. ¿Fases? Respuesta: escrita y oral. 7. ¿Qué abre la etapa? Respuesta: la acusación. 8. ¿Descubrimiento? Respuesta: deberes legales diferenciados: el Ministerio Público da acceso a todos sus registros y objetos, incluso los no ofrecidos; los demás intervinientes descubren los medios que pretendan ofrecer. 9. ¿La defensa prueba inocencia? Respuesta: no; la acusación prueba culpabilidad. 10. ¿Acuerdo probatorio? Respuesta: hecho o circunstancia aceptado y autorizado. 11. ¿Cuándo se excluye? Respuesta: por causas del artículo 346, como ilicitud o impertinencia. 12. ¿Qué cierra la etapa? Respuesta: el auto de apertura a juicio. La reapertura del artículo 333, antes de la acusación, no es un reinicio libre: se limita a diligencias específicas previamente solicitadas y rechazadas.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c26-cpeum-art20a-principios-carga",
+            "ev-c26-cnpp-art211-etapas",
+            "ev-c26-cnpp-arts212-220-investigacion",
+            "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+            "ev-c26-cnpp-arts321-325-plazo-cierre",
+            "ev-c26-cnpp-art333-reapertura",
+            "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+            "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+            "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+            "ev-c26-cnpp-art345-acuerdos",
+            "ev-c26-cnpp-arts346-347-exclusion-apertura",
+            "ev-c26-a35-l259-283-investigacion-complementaria",
+            "ev-c26-a36-l007-029-plazo-cierre",
+            "ev-c26-a35-l299-337-datos-medios",
+            "ev-c26-a36-l045-065-etapa-intermedia",
+            "ev-c26-a36-l071-083-fases-acusacion",
+            "ev-c26-a36-l091-103-descubrimiento",
+            "ev-c26-a36-l105-113-acuerdos-depuracion"
+          ]
         },
         {
           "type": "key_concepts",
           "title": "Conceptos clave",
           "content": "Investigación complementaria: fase para completar actos. Cierre: conclusión formal. Acusación: pretensión punitiva escrita. Descubrimiento: revelación legal y recíproca. Coadyuvancia: intervención de víctima u ofendido. Medio de prueba: fuente ofrecida para juicio. Prueba: información desahogada e incorporada conforme a ley. Acuerdo probatorio: hecho aceptado. Exclusión: impedimento para llevar un medio a juicio. Pertinencia: relación con el objeto. Ilicitud: obtención con violación de derechos. Inmediación: presencia judicial directa. Contradicción: posibilidad de confrontar. Auto de apertura: resolución que delimita juicio.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c26-cpeum-art20a-principios-carga",
+            "ev-c26-cnpp-art211-etapas",
+            "ev-c26-cnpp-arts212-220-investigacion",
+            "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+            "ev-c26-cnpp-arts321-325-plazo-cierre",
+            "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+            "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+            "ev-c26-cnpp-art345-acuerdos",
+            "ev-c26-cnpp-arts346-347-exclusion-apertura",
+            "ev-c26-a35-l259-283-investigacion-complementaria",
+            "ev-c26-a36-l007-029-plazo-cierre",
+            "ev-c26-a35-l299-337-datos-medios",
+            "ev-c26-a36-l071-083-fases-acusacion",
+            "ev-c26-a36-l091-103-descubrimiento",
+            "ev-c26-a36-l105-113-acuerdos-depuracion"
+          ]
         },
         {
           "type": "common_errors",
           "title": "Errores comunes",
-          "content": "No confundas investigación inicial con complementaria. No rebases automáticamente los máximos de dos o seis meses. No digas que toda negativa de prórroga se apela. No conviertas registros en prueba de sentencia. No impongas a la defensa probar inocencia. No confundas coadyuvancia con sustitución del Ministerio Público. No llames acuerdo probatorio a una negociación sobre culpabilidad. No excluyas por simple desacuerdo con el contenido. No confundas admisión con valoración. No supongas que todo perito depende de la fiscalía. No lleves al juez de control al tribunal de enjuiciamiento. No afirmes que todas las salidas alternas tienen idénticos requisitos o plazo.",
-          "sourceOrigin": "complementary"
+          "content": "No confundas investigación inicial con complementaria. No rebases automáticamente los máximos de dos o seis meses. No digas que toda negativa de prórroga se apela. No conviertas registros en prueba de sentencia. No impongas a la defensa probar inocencia. No confundas coadyuvancia con sustitución del Ministerio Público. No llames acuerdo probatorio a una negociación sobre culpabilidad. No excluyas por simple desacuerdo con el contenido. No confundas admisión con valoración. No supongas que todo perito depende de la fiscalía. No lleves al juez de control al tribunal de enjuiciamiento. No afirmes que todas las salidas alternas tienen idénticos requisitos o plazo. No conviertas los quince días del artículo 324 en plazo general de la etapa. No presentes la reapertura como reinicio libre de la investigación. No supongas que el descubrimiento impone obligaciones idénticas a Ministerio Público, víctima y defensa. No trates el procedimiento abreviado como consecuencia automática del cierre o de la etapa intermedia.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c26-cpeum-art20a-principios-carga",
+            "ev-c26-cnpp-art211-etapas",
+            "ev-c26-cnpp-arts212-220-investigacion",
+            "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+            "ev-c26-cnpp-arts321-325-plazo-cierre",
+            "ev-c26-cnpp-art333-reapertura",
+            "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+            "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+            "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+            "ev-c26-cnpp-art345-acuerdos",
+            "ev-c26-cnpp-arts346-347-exclusion-apertura",
+            "ev-c26-cnpp-arts3-350-juzgadores",
+            "ev-c26-cnpp-arts184-207-soluciones-abreviado"
+          ]
         }
       ],
       "conceptMap": {
         "title": "Mapa visual: de la investigación al juicio",
         "description": "Secuencia, participantes y decisiones que depuran el caso antes del juicio oral.",
         "nodes": [
-          {"id":"ruta","label":"Preparación del caso penal","description":"Desde complementaria hasta apertura."},
-          {"id":"complementaria","label":"Investigación complementaria","description":"Completa actos y teoría del caso.","parentId":"ruta"},
-          {"id":"inicio","label":"Después de imputación","description":"Se desarrolla tras la vinculación.","parentId":"complementaria"},
-          {"id":"direccion","label":"Dirección del MP","description":"Conduce jurídicamente la investigación.","parentId":"complementaria"},
-          {"id":"solicitudes","label":"Solicitudes de las partes","description":"Actos pertinentes de investigación.","parentId":"complementaria"},
-          {"id":"plazo","label":"Plazo judicial","description":"Dentro de máximos legales.","parentId":"complementaria"},
-          {"id":"dos","label":"Hasta 2 meses","description":"Pena máxima no mayor de dos años.","parentId":"plazo"},
-          {"id":"seis","label":"Hasta 6 meses","description":"Pena máxima superior a dos años.","parentId":"plazo"},
-          {"id":"cierre","label":"Cierre de investigación","description":"Concluye la fase complementaria.","parentId":"ruta"},
-          {"id":"quince","label":"Decisión en 15 días","description":"Carga temporal del MP.","parentId":"cierre"},
-          {"id":"sobreseimiento","label":"Sobreseimiento","description":"Total o parcial, si procede.","parentId":"quince"},
-          {"id":"suspension","label":"Suspensión","description":"En supuesto legal.","parentId":"quince"},
-          {"id":"acusacion","label":"Acusación","description":"Abre etapa intermedia.","parentId":"quince"},
-          {"id":"intermedia","label":"Etapa intermedia","description":"Depura hechos y medios.","parentId":"ruta"},
-          {"id":"escrita","label":"Fase escrita","description":"Actos previos a audiencia.","parentId":"intermedia"},
-          {"id":"contenido","label":"Contenido de acusación","description":"Hechos, derecho, pena y medios.","parentId":"escrita"},
-          {"id":"descubrimiento","label":"Descubrimiento recíproco","description":"Acceso y entrega conforme a ley.","parentId":"escrita"},
-          {"id":"victima","label":"Víctima coadyuvante","description":"Defectos, medios y reparación.","parentId":"escrita"},
-          {"id":"defensa","label":"Respuesta de defensa","description":"Controvierte y ofrece medios.","parentId":"escrita"},
-          {"id":"carga","label":"Carga de la acusación","description":"Debe demostrar culpabilidad.","parentId":"defensa"},
-          {"id":"oral","label":"Fase oral","description":"Audiencia ante juez de control.","parentId":"intermedia"},
-          {"id":"defectos","label":"Corregir defectos","description":"Sanea planteamientos formales.","parentId":"oral"},
-          {"id":"acuerdos","label":"Acuerdos probatorios","description":"Hechos o circunstancias aceptados.","parentId":"oral"},
-          {"id":"debate","label":"Debate de medios","description":"Pertinencia, licitud y necesidad.","parentId":"oral"},
-          {"id":"admitir","label":"Admisión","description":"El medio podrá ir a juicio.","parentId":"debate"},
-          {"id":"excluir","label":"Exclusión","description":"Impide llevar el medio a juicio.","parentId":"debate"},
-          {"id":"ilicita","label":"Violación de derechos","description":"Causa de exclusión.","parentId":"excluir"},
-          {"id":"dilatoria","label":"Dilación injustificada","description":"Sobreabundante, impertinente o innecesario.","parentId":"excluir"},
-          {"id":"diferencia","label":"Dato, medio y prueba","description":"No son equivalentes.","parentId":"intermedia"},
-          {"id":"pericial","label":"Pericial de cualquier parte","description":"Metodología sujeta a contradicción.","parentId":"diferencia"},
-          {"id":"apertura","label":"Auto de apertura","description":"Cierra etapa y delimita juicio.","parentId":"ruta"},
-          {"id":"tribunal","label":"Tribunal distinto","description":"No intervino antes del juicio.","parentId":"apertura"}
+          {
+            "id": "ruta",
+            "label": "Preparación del caso penal",
+            "description": "Desde complementaria hasta apertura.",
+            "evidenceIds": [
+              "ev-c26-cnpp-art211-etapas",
+              "ev-c26-a35-l259-283-investigacion-complementaria",
+              "ev-c26-a36-l007-029-plazo-cierre",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ]
+          },
+          {
+            "id": "complementaria",
+            "label": "Investigación complementaria",
+            "description": "Completa actos y teoría del caso.",
+            "parentId": "ruta",
+            "evidenceIds": [
+              "ev-c26-cnpp-art211-etapas",
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-a35-l259-283-investigacion-complementaria",
+              "ev-c26-a36-l007-029-plazo-cierre"
+            ]
+          },
+          {
+            "id": "inicio",
+            "label": "Después de imputación",
+            "description": "Se desarrolla tras la vinculación.",
+            "parentId": "complementaria",
+            "evidenceIds": [
+              "ev-c26-cnpp-art211-etapas",
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-a35-l259-283-investigacion-complementaria",
+              "ev-c26-a36-l007-029-plazo-cierre"
+            ]
+          },
+          {
+            "id": "direccion",
+            "label": "Dirección del MP",
+            "description": "Conduce jurídicamente la investigación.",
+            "parentId": "complementaria",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-a35-l259-283-investigacion-complementaria",
+              "ev-c26-a36-l007-029-plazo-cierre"
+            ]
+          },
+          {
+            "id": "solicitudes",
+            "label": "Solicitudes de las partes",
+            "description": "Actos pertinentes de investigación.",
+            "parentId": "complementaria",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-a35-l259-283-investigacion-complementaria",
+              "ev-c26-a36-l007-029-plazo-cierre"
+            ]
+          },
+          {
+            "id": "plazo",
+            "label": "Plazo judicial",
+            "description": "Dentro de máximos legales.",
+            "parentId": "complementaria",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts321-325-plazo-cierre",
+              "ev-c26-a36-l007-029-plazo-cierre"
+            ]
+          },
+          {
+            "id": "dos",
+            "label": "Hasta 2 meses",
+            "description": "Pena máxima no mayor de dos años.",
+            "parentId": "plazo",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts321-325-plazo-cierre",
+              "ev-c26-a36-l007-029-plazo-cierre"
+            ]
+          },
+          {
+            "id": "seis",
+            "label": "Hasta 6 meses",
+            "description": "Pena máxima superior a dos años.",
+            "parentId": "plazo",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts321-325-plazo-cierre",
+              "ev-c26-a36-l007-029-plazo-cierre"
+            ]
+          },
+          {
+            "id": "cierre",
+            "label": "Cierre de investigación",
+            "description": "Concluye la fase complementaria.",
+            "parentId": "ruta",
+            "evidenceIds": [
+              "ev-c26-cnpp-art211-etapas",
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts321-325-plazo-cierre",
+              "ev-c26-a36-l007-029-plazo-cierre",
+              "ev-c26-a36-l071-083-fases-acusacion"
+            ]
+          },
+          {
+            "id": "quince",
+            "label": "Decisión en 15 días",
+            "description": "Carga temporal del MP.",
+            "parentId": "cierre",
+            "evidenceIds": [
+              "ev-c26-cpeum-art20a-principios-carga",
+              "ev-c26-cnpp-arts321-325-plazo-cierre",
+              "ev-c26-a36-l007-029-plazo-cierre"
+            ]
+          },
+          {
+            "id": "sobreseimiento",
+            "label": "Sobreseimiento",
+            "description": "Total o parcial, si procede.",
+            "parentId": "quince",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts321-325-plazo-cierre"
+            ]
+          },
+          {
+            "id": "suspension",
+            "label": "Suspensión",
+            "description": "En supuesto legal.",
+            "parentId": "quince",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts321-325-plazo-cierre"
+            ]
+          },
+          {
+            "id": "acusacion",
+            "label": "Acusación",
+            "description": "Abre etapa intermedia.",
+            "parentId": "quince",
+            "evidenceIds": [
+              "ev-c26-cnpp-art211-etapas",
+              "ev-c26-cnpp-arts321-325-plazo-cierre",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l071-083-fases-acusacion"
+            ]
+          },
+          {
+            "id": "intermedia",
+            "label": "Etapa intermedia",
+            "description": "Depura hechos y medios.",
+            "parentId": "ruta",
+            "evidenceIds": [
+              "ev-c26-cnpp-art211-etapas",
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ]
+          },
+          {
+            "id": "escrita",
+            "label": "Fase escrita",
+            "description": "Actos previos a audiencia.",
+            "parentId": "intermedia",
+            "evidenceIds": [
+              "ev-c26-cnpp-art211-etapas",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l071-083-fases-acusacion"
+            ]
+          },
+          {
+            "id": "contenido",
+            "label": "Contenido de acusación",
+            "description": "Hechos, derecho, pena y medios.",
+            "parentId": "escrita",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l071-083-fases-acusacion"
+            ]
+          },
+          {
+            "id": "descubrimiento",
+            "label": "Descubrimiento recíproco",
+            "description": "Acceso y entrega conforme a ley.",
+            "parentId": "escrita",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-a36-l091-103-descubrimiento"
+            ]
+          },
+          {
+            "id": "victima",
+            "label": "Víctima coadyuvante",
+            "description": "Defectos, medios y reparación.",
+            "parentId": "escrita",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l091-103-descubrimiento"
+            ]
+          },
+          {
+            "id": "defensa",
+            "label": "Respuesta de defensa",
+            "description": "Controvierte y ofrece medios.",
+            "parentId": "escrita",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l091-103-descubrimiento"
+            ]
+          },
+          {
+            "id": "carga",
+            "label": "Carga de la acusación",
+            "description": "Debe demostrar culpabilidad.",
+            "parentId": "defensa",
+            "evidenceIds": [
+              "ev-c26-cpeum-art20a-principios-carga",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+              "ev-c26-a36-l071-083-fases-acusacion",
+              "ev-c26-a36-l091-103-descubrimiento"
+            ]
+          },
+          {
+            "id": "oral",
+            "label": "Fase oral",
+            "description": "Audiencia ante juez de control.",
+            "parentId": "intermedia",
+            "evidenceIds": [
+              "ev-c26-cnpp-art211-etapas",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-cnpp-arts3-350-juzgadores",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l071-083-fases-acusacion"
+            ]
+          },
+          {
+            "id": "defectos",
+            "label": "Corregir defectos",
+            "description": "Sanea planteamientos formales.",
+            "parentId": "oral",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia"
+            ]
+          },
+          {
+            "id": "acuerdos",
+            "label": "Acuerdos probatorios",
+            "description": "Hechos o circunstancias aceptados.",
+            "parentId": "oral",
+            "evidenceIds": [
+              "ev-c26-cnpp-art211-etapas",
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ]
+          },
+          {
+            "id": "debate",
+            "label": "Debate de medios",
+            "description": "Pertinencia, licitud y necesidad.",
+            "parentId": "oral",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-a35-l299-337-datos-medios"
+            ]
+          },
+          {
+            "id": "admitir",
+            "label": "Admisión",
+            "description": "El medio podrá ir a juicio.",
+            "parentId": "debate",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts346-347-exclusion-apertura",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ]
+          },
+          {
+            "id": "excluir",
+            "label": "Exclusión",
+            "description": "Impide llevar el medio a juicio.",
+            "parentId": "debate",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts346-347-exclusion-apertura",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ]
+          },
+          {
+            "id": "ilicita",
+            "label": "Violación de derechos",
+            "description": "Causa de exclusión.",
+            "parentId": "excluir",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts346-347-exclusion-apertura",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ]
+          },
+          {
+            "id": "dilatoria",
+            "label": "Dilación injustificada",
+            "description": "Sobreabundante, impertinente o innecesario.",
+            "parentId": "excluir",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts346-347-exclusion-apertura",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ]
+          },
+          {
+            "id": "diferencia",
+            "label": "Dato, medio y prueba",
+            "description": "No son equivalentes.",
+            "parentId": "intermedia",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l045-065-etapa-intermedia"
+            ]
+          },
+          {
+            "id": "pericial",
+            "label": "Pericial de cualquier parte",
+            "description": "Metodología sujeta a contradicción.",
+            "parentId": "diferencia",
+            "evidenceIds": [
+              "ev-c26-cpeum-art20a-principios-carga"
+            ]
+          },
+          {
+            "id": "apertura",
+            "label": "Auto de apertura",
+            "description": "Cierra etapa y delimita juicio.",
+            "parentId": "ruta",
+            "evidenceIds": [
+              "ev-c26-cnpp-art211-etapas",
+              "ev-c26-cnpp-arts346-347-exclusion-apertura",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ]
+          },
+          {
+            "id": "tribunal",
+            "label": "Tribunal distinto",
+            "description": "No intervino antes del juicio.",
+            "parentId": "apertura",
+            "evidenceIds": [
+              "ev-c26-cnpp-arts3-350-juzgadores",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ]
+          }
         ]
       },
       "references": [
@@ -156,9 +691,9 @@
           "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
           "institution": "Cámara de Diputados del H. Congreso de la Unión",
           "jurisdiction": "Federal, México",
-          "citation": "Artículos 211, 261 a 265, 321 a 325, 334 a 347 y 467; última reforma DOF 28-11-2025",
-          "retrievedOn": "2026-08-11",
-          "note": "Fuente primaria de las fases, plazos, descubrimiento, audiencia, exclusión y apertura."
+          "citation": "Artículos 3, 184 a 220, 261 a 265, 321 a 325, 333 a 350 y 467; última reforma DOF 28-11-2025",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente primaria de investigación, cierre, reapertura, acusación, descubrimiento, audiencia, exclusión, apertura y separación entre personas juzgadoras."
         },
         {
           "title": "Constitución Política de los Estados Unidos Mexicanos",
@@ -166,48 +701,1370 @@
           "institution": "Cámara de Diputados del H. Congreso de la Unión",
           "jurisdiction": "Federal, México",
           "citation": "Artículo 20, apartados A y B; últimas reformas DOF 02-06-2026",
-          "retrievedOn": "2026-08-11",
+          "retrievedOn": "2026-08-21",
           "note": "Fuente primaria de presunción de inocencia, carga de la prueba y principios acusatorios."
-        },
-        {
-          "title": "Principio de inmediación",
-          "url": "https://www.sitios.scjn.gob.mx/cec/editorial/principio-de-inmediacion",
-          "institution": "Suprema Corte de Justicia de la Nación, Centro de Estudios Constitucionales",
-          "jurisdiction": "Federal, México",
-          "citation": "Cuaderno de jurisprudencia, publicación del 03-11-2023; apartados sobre etapa intermedia y permanencia de personas juzgadoras",
-          "retrievedOn": "2026-08-11",
-          "note": "Sistematiza criterios sobre inmediación y separación entre etapas."
         }
       ],
       "flashcards": [
-        {"question":"¿Qué busca la investigación complementaria?","answer":"Completar actos y preparar la teoría del caso dentro del plazo judicial.","sourceOrigin":"mixed"},
-        {"question":"¿Cuáles son los máximos del artículo 321?","answer":"Dos meses si la pena máxima no excede dos años; seis meses si la excede.","sourceOrigin":"complementary"},
-        {"question":"¿Qué opciones tiene el MP tras el cierre?","answer":"Solicitar sobreseimiento, suspensión del proceso o formular acusación.","sourceOrigin":"complementary"},
-        {"question":"¿Qué abre la etapa intermedia?","answer":"La acusación del Ministerio Público.","sourceOrigin":"complementary"},
-        {"question":"¿Cuál es el objeto de la intermedia?","answer":"Ofrecer y admitir medios, y depurar hechos controvertidos para juicio.","sourceOrigin":"complementary"},
-        {"question":"¿Qué es descubrimiento probatorio?","answer":"La revelación y acceso recíproco a registros, objetos y medios conforme a la ley.","sourceOrigin":"mixed"},
-        {"question":"¿Qué puede hacer la víctima al coadyuvar?","answer":"Señalar defectos, ofrecer medios complementarios y solicitar reparación cuantificada.","sourceOrigin":"complementary"},
-        {"question":"¿Quién carga con demostrar culpabilidad?","answer":"La parte acusadora; la defensa no debe probar inocencia.","sourceOrigin":"complementary"},
-        {"question":"¿Qué es un acuerdo probatorio?","answer":"Un acuerdo autorizado para tener por probados ciertos hechos o circunstancias.","sourceOrigin":"complementary"},
-        {"question":"¿Admisión equivale a valor probatorio?","answer":"No. El valor se determina tras el desahogo y contradicción en juicio.","sourceOrigin":"mixed"},
-        {"question":"¿Quién conduce la audiencia intermedia?","answer":"El juez de control.","sourceOrigin":"complementary"},
-        {"question":"¿Qué resolución concluye la etapa intermedia?","answer":"El auto de apertura a juicio.","sourceOrigin":"complementary"}
+        {
+          "question": "¿Qué busca la investigación complementaria?",
+          "answer": "Completar actos y preparar la teoría del caso dentro del plazo judicial.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c26-cnpp-arts212-220-investigacion",
+            "ev-c26-cnpp-arts321-325-plazo-cierre",
+            "ev-c26-a35-l259-283-investigacion-complementaria",
+            "ev-c26-a36-l007-029-plazo-cierre"
+          ]
+        },
+        {
+          "question": "¿Cuáles son los máximos del artículo 321?",
+          "answer": "Dos meses si la pena máxima no excede dos años; seis meses si la excede.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c26-cnpp-arts321-325-plazo-cierre"
+          ]
+        },
+        {
+          "question": "¿Qué opciones tiene el MP tras el cierre?",
+          "answer": "Solicitar sobreseimiento, suspensión del proceso o formular acusación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c26-cnpp-arts321-325-plazo-cierre",
+            "ev-c26-cnpp-arts334-337-acusacion-descubrimiento"
+          ]
+        },
+        {
+          "question": "¿Qué abre la etapa intermedia?",
+          "answer": "La acusación del Ministerio Público.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c26-cnpp-art211-etapas",
+            "ev-c26-cnpp-arts212-220-investigacion",
+            "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+            "ev-c26-cnpp-arts341-344-audiencia-intermedia"
+          ]
+        },
+        {
+          "question": "¿Cuál es el objeto de la intermedia?",
+          "answer": "Ofrecer y admitir medios, y depurar hechos controvertidos para juicio.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+            "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+            "ev-c26-cnpp-arts346-347-exclusion-apertura"
+          ]
+        },
+        {
+          "question": "¿Qué es descubrimiento probatorio?",
+          "answer": "La revelación y acceso recíproco a registros, objetos y medios conforme a la ley.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+            "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+            "ev-c26-a35-l299-337-datos-medios",
+            "ev-c26-a36-l091-103-descubrimiento"
+          ]
+        },
+        {
+          "question": "¿Qué puede hacer la víctima al coadyuvar?",
+          "answer": "Señalar defectos, ofrecer medios complementarios y solicitar reparación cuantificada.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+            "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+            "ev-c26-cnpp-arts341-344-audiencia-intermedia"
+          ]
+        },
+        {
+          "question": "¿Quién carga con demostrar culpabilidad?",
+          "answer": "La parte acusadora; la defensa no debe probar inocencia.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c26-cpeum-art20a-principios-carga",
+            "ev-c26-cnpp-arts338-340-coadyuvancia-defensa"
+          ]
+        },
+        {
+          "question": "¿Qué es un acuerdo probatorio?",
+          "answer": "Un acuerdo autorizado para tener por probados ciertos hechos o circunstancias.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c26-cnpp-art345-acuerdos"
+          ]
+        },
+        {
+          "question": "¿Admisión equivale a valor probatorio?",
+          "answer": "No. El valor se determina tras el desahogo y contradicción en juicio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c26-cpeum-art20a-principios-carga",
+            "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+            "ev-c26-cnpp-arts346-347-exclusion-apertura",
+            "ev-c26-a35-l299-337-datos-medios"
+          ]
+        },
+        {
+          "question": "¿Quién conduce la audiencia intermedia?",
+          "answer": "El juez de control.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+            "ev-c26-cnpp-arts3-350-juzgadores"
+          ]
+        },
+        {
+          "question": "¿Qué resolución concluye la etapa intermedia?",
+          "answer": "El auto de apertura a juicio.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c26-cnpp-art211-etapas",
+            "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+            "ev-c26-cnpp-arts346-347-exclusion-apertura"
+          ]
+        }
       ],
       "exam": {
         "title": "Evaluación: investigación complementaria y etapa intermedia",
         "description": "Diez casos originales para distinguir fases, plazos, participantes y decisiones probatorias.",
         "questions": [
-          {"text":"Un delito tiene pena máxima de dieciocho meses. ¿Cuál es el máximo ordinario de investigación complementaria?","difficulty":"basic","options":["Dos meses","Seis meses","Un año"],"correctOption":0,"explanation":"El artículo 321 fija hasta dos meses cuando la pena máxima no excede de dos años.","optionExplanations":["Corresponde al supuesto.","Aplica cuando la pena máxima supera dos años.","No es el máximo legal de esta regla."]},
-          {"text":"Cerrada la investigación, ¿qué debe hacer el Ministerio Público dentro de quince días?","difficulty":"basic","options":["Pedir sobreseimiento, suspensión o acusar","Dictar sentencia","Integrar el tribunal de juicio"],"correctOption":0,"explanation":"Son las tres vías previstas por el artículo 324.","optionExplanations":["Es la consecuencia legal del cierre.","La sentencia corresponde al órgano jurisdiccional tras el juicio.","La integración judicial no es facultad ministerial."]},
-          {"text":"¿Qué acto inicia la fase escrita de la etapa intermedia?","difficulty":"basic","options":["La acusación","El alegato de clausura","La sentencia"],"correctOption":0,"explanation":"La acusación abre la etapa intermedia y su fase escrita.","optionExplanations":["Es el acto inicial correcto.","Ocurre al final del juicio.","Es posterior al juicio."]},
-          {"text":"La fiscalía oculta una entrevista favorable porque no planea ofrecerla. ¿Qué regla incumple?","difficulty":"intermediate","options":["Descubrimiento probatorio","Acuerdo probatorio","Individualización de sanción"],"correctOption":0,"explanation":"El MP debe permitir acceso a todos los registros, aun los que no pretenda ofrecer.","optionExplanations":["Es la obligación vulnerada.","No existe acuerdo sobre un hecho.","Todavía no se discute sanción."]},
-          {"text":"La víctima desea ofrecer un documento complementario y cuantificar reparación. ¿Qué figura utiliza?","difficulty":"intermediate","options":["Coadyuvancia en la acusación","Sentencia anticipada unilateral","Excusa del tribunal"],"correctOption":0,"explanation":"El artículo 338 permite coadyuvar, ofrecer medios y solicitar reparación.","optionExplanations":["Es la intervención procesal adecuada.","No existe esa vía unilateral.","No trata de impedimentos judiciales."]},
-          {"text":"La defensa no presenta prueba de inocencia. ¿Puede presumirse culpabilidad?","difficulty":"intermediate","options":["No, la acusación conserva la carga probatoria","Sí, siempre que hubo vinculación","Sí, si existe una carpeta de investigación"],"correctOption":0,"explanation":"La presunción de inocencia impide invertir la carga de la prueba.","optionExplanations":["Respeta el artículo 20 constitucional.","Vinculación no equivale a condena.","Los registros no prueban por sí solos culpabilidad."]},
-          {"text":"Fiscalía y acusado aceptan que el automóvil era rojo y la víctima no se opone fundadamente. ¿Qué pueden proponer?","difficulty":"intermediate","options":["Un acuerdo probatorio","Una condena automática","La exclusión de toda la acusación"],"correctOption":0,"explanation":"Pueden pedir que ese hecho no controvertido se tenga por probado si el juez lo autoriza.","optionExplanations":["Es el uso correcto de la figura.","No decide culpabilidad.","El acuerdo no extingue automáticamente la acusación."]},
-          {"text":"Se ofrece evidencia obtenida mediante violación de derechos fundamentales. ¿Qué debe debatirse?","difficulty":"advanced","options":["Su exclusión","Su valor obligatorio","La sustitución del juez por el fiscal"],"correctOption":0,"explanation":"La ilicitud es causa legal de exclusión.","optionExplanations":["Es la consecuencia procesal pertinente.","Ninguna evidencia tiene valor obligatorio por esa razón.","Fiscal y juez cumplen funciones distintas."]},
-          {"text":"Un dictamen fue admitido. ¿Eso obliga al tribunal a aceptar su conclusión?","difficulty":"advanced","options":["No, debe desahogarse y someterse a contradicción","Sí, porque todo perito es neutral","Sí, porque la admisión fija su valor"],"correctOption":0,"explanation":"Admisibilidad y valoración son decisiones distintas.","optionExplanations":["Metodología y credibilidad se examinan en juicio.","La neutralidad no se presume de forma absoluta.","La admisión solo permite su producción."]},
-          {"text":"¿Qué función cumple el auto de apertura a juicio?","difficulty":"advanced","options":["Delimitar acusaciones, hechos, acuerdos y medios admitidos","Declarar culpabilidad definitiva","Reabrir libremente la investigación"],"correctOption":0,"explanation":"El auto organiza y delimita el juicio sin prejuzgar el resultado.","optionExplanations":["Resume el objeto procesal que llegará a juicio.","La culpabilidad se decide tras juicio.","La reapertura tiene reglas y momento distintos."]}
+          {
+            "text": "Un delito tiene pena máxima de dieciocho meses. ¿Cuál es el máximo ordinario de investigación complementaria?",
+            "difficulty": "basic",
+            "options": [
+              "Dos meses",
+              "Seis meses",
+              "Un año"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 321 fija hasta dos meses cuando la pena máxima no excede de dos años.",
+            "optionExplanations": [
+              "Corresponde al supuesto.",
+              "Aplica cuando la pena máxima supera dos años.",
+              "No es el máximo legal de esta regla."
+            ],
+            "evidenceIds": [
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts321-325-plazo-cierre",
+              "ev-c26-a36-l007-029-plazo-cierre"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts321-325-plazo-cierre",
+                "ev-c26-a36-l007-029-plazo-cierre"
+              ],
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts321-325-plazo-cierre",
+                "ev-c26-a36-l007-029-plazo-cierre"
+              ],
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts321-325-plazo-cierre",
+                "ev-c26-a36-l007-029-plazo-cierre"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts321-325-plazo-cierre",
+              "ev-c26-a36-l007-029-plazo-cierre"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts321-325-plazo-cierre",
+              "ev-c26-a36-l007-029-plazo-cierre"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts321-325-plazo-cierre",
+                "ev-c26-a36-l007-029-plazo-cierre"
+              ],
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts321-325-plazo-cierre",
+                "ev-c26-a36-l007-029-plazo-cierre"
+              ],
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts321-325-plazo-cierre",
+                "ev-c26-a36-l007-029-plazo-cierre"
+              ]
+            ]
+          },
+          {
+            "text": "Cerrada la investigación, ¿qué debe hacer el Ministerio Público dentro de quince días?",
+            "difficulty": "basic",
+            "options": [
+              "Pedir sobreseimiento, suspensión o acusar",
+              "Dictar sentencia",
+              "Integrar el tribunal de juicio"
+            ],
+            "correctOption": 0,
+            "explanation": "Son las tres vías previstas por el artículo 324.",
+            "optionExplanations": [
+              "Es la consecuencia legal del cierre.",
+              "La sentencia corresponde al órgano jurisdiccional tras el juicio.",
+              "La integración judicial no es facultad ministerial."
+            ],
+            "evidenceIds": [
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts321-325-plazo-cierre",
+              "ev-c26-cnpp-arts3-350-juzgadores",
+              "ev-c26-a36-l007-029-plazo-cierre"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts321-325-plazo-cierre",
+                "ev-c26-cnpp-arts3-350-juzgadores",
+                "ev-c26-a36-l007-029-plazo-cierre"
+              ],
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts321-325-plazo-cierre",
+                "ev-c26-cnpp-arts3-350-juzgadores",
+                "ev-c26-a36-l007-029-plazo-cierre"
+              ],
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts321-325-plazo-cierre",
+                "ev-c26-cnpp-arts3-350-juzgadores",
+                "ev-c26-a36-l007-029-plazo-cierre"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts321-325-plazo-cierre",
+              "ev-c26-cnpp-arts3-350-juzgadores",
+              "ev-c26-a36-l007-029-plazo-cierre"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts321-325-plazo-cierre",
+              "ev-c26-cnpp-arts3-350-juzgadores",
+              "ev-c26-a36-l007-029-plazo-cierre"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts321-325-plazo-cierre",
+                "ev-c26-cnpp-arts3-350-juzgadores",
+                "ev-c26-a36-l007-029-plazo-cierre"
+              ],
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts321-325-plazo-cierre",
+                "ev-c26-cnpp-arts3-350-juzgadores",
+                "ev-c26-a36-l007-029-plazo-cierre"
+              ],
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts321-325-plazo-cierre",
+                "ev-c26-cnpp-arts3-350-juzgadores",
+                "ev-c26-a36-l007-029-plazo-cierre"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué acto inicia la fase escrita de la etapa intermedia?",
+            "difficulty": "basic",
+            "options": [
+              "La acusación",
+              "El alegato de clausura",
+              "La sentencia"
+            ],
+            "correctOption": 0,
+            "explanation": "La acusación abre la etapa intermedia y su fase escrita.",
+            "optionExplanations": [
+              "Es el acto inicial correcto.",
+              "Ocurre al final del juicio.",
+              "Es posterior al juicio."
+            ],
+            "evidenceIds": [
+              "ev-c26-cnpp-art211-etapas",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l071-083-fases-acusacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c26-cnpp-art211-etapas",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion"
+              ],
+              [
+                "ev-c26-cnpp-art211-etapas",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion"
+              ],
+              [
+                "ev-c26-cnpp-art211-etapas",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c26-cnpp-art211-etapas",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l071-083-fases-acusacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c26-cnpp-art211-etapas",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l071-083-fases-acusacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c26-cnpp-art211-etapas",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion"
+              ],
+              [
+                "ev-c26-cnpp-art211-etapas",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion"
+              ],
+              [
+                "ev-c26-cnpp-art211-etapas",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion"
+              ]
+            ]
+          },
+          {
+            "text": "La fiscalía oculta una entrevista favorable porque no planea ofrecerla. ¿Qué regla incumple?",
+            "difficulty": "intermediate",
+            "options": [
+              "Descubrimiento probatorio",
+              "Acuerdo probatorio",
+              "Individualización de sanción"
+            ],
+            "correctOption": 0,
+            "explanation": "El MP debe permitir acceso a todos los registros, aun los que no pretenda ofrecer.",
+            "optionExplanations": [
+              "Es la obligación vulnerada.",
+              "No existe acuerdo sobre un hecho.",
+              "Todavía no se discute sanción."
+            ],
+            "evidenceIds": [
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-cnpp-art345-acuerdos",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l091-103-descubrimiento",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-cnpp-art345-acuerdos",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l091-103-descubrimiento",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-cnpp-art345-acuerdos",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l091-103-descubrimiento",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-cnpp-art345-acuerdos",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l091-103-descubrimiento",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-cnpp-art345-acuerdos",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l091-103-descubrimiento",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-cnpp-art345-acuerdos",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l091-103-descubrimiento",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-cnpp-art345-acuerdos",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l091-103-descubrimiento",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-cnpp-art345-acuerdos",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l091-103-descubrimiento",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-cnpp-art345-acuerdos",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l091-103-descubrimiento",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ]
+            ]
+          },
+          {
+            "text": "La víctima desea ofrecer un documento complementario y cuantificar reparación. ¿Qué figura utiliza?",
+            "difficulty": "intermediate",
+            "options": [
+              "Coadyuvancia en la acusación",
+              "Sentencia anticipada unilateral",
+              "Excusa del tribunal"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 338 permite coadyuvar, ofrecer medios y solicitar reparación.",
+            "optionExplanations": [
+              "Es la intervención procesal adecuada.",
+              "No existe esa vía unilateral.",
+              "No trata de impedimentos judiciales."
+            ],
+            "evidenceIds": [
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-cnpp-arts3-350-juzgadores",
+              "ev-c26-a36-l007-029-plazo-cierre",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l071-083-fases-acusacion",
+              "ev-c26-a36-l091-103-descubrimiento"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-cnpp-arts3-350-juzgadores",
+                "ev-c26-a36-l007-029-plazo-cierre",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l091-103-descubrimiento"
+              ],
+              [
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-cnpp-arts3-350-juzgadores",
+                "ev-c26-a36-l007-029-plazo-cierre",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l091-103-descubrimiento"
+              ],
+              [
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-cnpp-arts3-350-juzgadores",
+                "ev-c26-a36-l007-029-plazo-cierre",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l091-103-descubrimiento"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-cnpp-arts3-350-juzgadores",
+              "ev-c26-a36-l007-029-plazo-cierre",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l071-083-fases-acusacion",
+              "ev-c26-a36-l091-103-descubrimiento"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-cnpp-arts3-350-juzgadores",
+              "ev-c26-a36-l007-029-plazo-cierre",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l071-083-fases-acusacion",
+              "ev-c26-a36-l091-103-descubrimiento"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-cnpp-arts3-350-juzgadores",
+                "ev-c26-a36-l007-029-plazo-cierre",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l091-103-descubrimiento"
+              ],
+              [
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-cnpp-arts3-350-juzgadores",
+                "ev-c26-a36-l007-029-plazo-cierre",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l091-103-descubrimiento"
+              ],
+              [
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-cnpp-arts3-350-juzgadores",
+                "ev-c26-a36-l007-029-plazo-cierre",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l091-103-descubrimiento"
+              ]
+            ]
+          },
+          {
+            "text": "La defensa no presenta prueba de inocencia. ¿Puede presumirse culpabilidad?",
+            "difficulty": "intermediate",
+            "options": [
+              "No, la acusación conserva la carga probatoria",
+              "Sí, siempre que hubo vinculación",
+              "Sí, si existe una carpeta de investigación"
+            ],
+            "correctOption": 0,
+            "explanation": "La presunción de inocencia impide invertir la carga de la prueba.",
+            "optionExplanations": [
+              "Respeta el artículo 20 constitucional.",
+              "Vinculación no equivale a condena.",
+              "Los registros no prueban por sí solos culpabilidad."
+            ],
+            "evidenceIds": [
+              "ev-c26-cpeum-art20a-principios-carga",
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l071-083-fases-acusacion",
+              "ev-c26-a36-l091-103-descubrimiento"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l091-103-descubrimiento"
+              ],
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l091-103-descubrimiento"
+              ],
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l091-103-descubrimiento"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c26-cpeum-art20a-principios-carga",
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l071-083-fases-acusacion",
+              "ev-c26-a36-l091-103-descubrimiento"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c26-cpeum-art20a-principios-carga",
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l071-083-fases-acusacion",
+              "ev-c26-a36-l091-103-descubrimiento"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l091-103-descubrimiento"
+              ],
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l091-103-descubrimiento"
+              ],
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l091-103-descubrimiento"
+              ]
+            ]
+          },
+          {
+            "text": "Fiscalía y acusado aceptan que el automóvil era rojo y la víctima no se opone fundadamente. ¿Qué pueden proponer?",
+            "difficulty": "intermediate",
+            "options": [
+              "Un acuerdo probatorio",
+              "Una condena automática",
+              "La exclusión de toda la acusación"
+            ],
+            "correctOption": 0,
+            "explanation": "Pueden pedir que ese hecho no controvertido se tenga por probado si el juez lo autoriza.",
+            "optionExplanations": [
+              "Es el uso correcto de la figura.",
+              "No decide culpabilidad.",
+              "El acuerdo no extingue automáticamente la acusación."
+            ],
+            "evidenceIds": [
+              "ev-c26-cpeum-art20a-principios-carga",
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-cnpp-art345-acuerdos",
+              "ev-c26-cnpp-arts346-347-exclusion-apertura",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l071-083-fases-acusacion",
+              "ev-c26-a36-l091-103-descubrimiento",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-cnpp-art345-acuerdos",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l091-103-descubrimiento",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-cnpp-art345-acuerdos",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l091-103-descubrimiento",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-cnpp-art345-acuerdos",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l091-103-descubrimiento",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c26-cpeum-art20a-principios-carga",
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-cnpp-art345-acuerdos",
+              "ev-c26-cnpp-arts346-347-exclusion-apertura",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l071-083-fases-acusacion",
+              "ev-c26-a36-l091-103-descubrimiento",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c26-cpeum-art20a-principios-carga",
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+              "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+              "ev-c26-cnpp-art345-acuerdos",
+              "ev-c26-cnpp-arts346-347-exclusion-apertura",
+              "ev-c26-a36-l045-065-etapa-intermedia",
+              "ev-c26-a36-l071-083-fases-acusacion",
+              "ev-c26-a36-l091-103-descubrimiento",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-cnpp-art345-acuerdos",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l091-103-descubrimiento",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-cnpp-art345-acuerdos",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l091-103-descubrimiento",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+                "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+                "ev-c26-cnpp-art345-acuerdos",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-a36-l045-065-etapa-intermedia",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l091-103-descubrimiento",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ]
+            ]
+          },
+          {
+            "text": "Se ofrece evidencia obtenida mediante violación de derechos fundamentales. ¿Qué debe debatirse?",
+            "difficulty": "advanced",
+            "options": [
+              "Su exclusión",
+              "Su valor obligatorio",
+              "La sustitución del juez por el fiscal"
+            ],
+            "correctOption": 0,
+            "explanation": "La ilicitud es causa legal de exclusión.",
+            "optionExplanations": [
+              "Es la consecuencia procesal pertinente.",
+              "Ninguna evidencia tiene valor obligatorio por esa razón.",
+              "Fiscal y juez cumplen funciones distintas."
+            ],
+            "evidenceIds": [
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts346-347-exclusion-apertura",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts346-347-exclusion-apertura",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts346-347-exclusion-apertura",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ]
+            ]
+          },
+          {
+            "text": "Un dictamen fue admitido. ¿Eso obliga al tribunal a aceptar su conclusión?",
+            "difficulty": "advanced",
+            "options": [
+              "No, debe desahogarse y someterse a contradicción",
+              "Sí, porque todo perito es neutral",
+              "Sí, porque la admisión fija su valor"
+            ],
+            "correctOption": 0,
+            "explanation": "Admisibilidad y valoración son decisiones distintas.",
+            "optionExplanations": [
+              "Metodología y credibilidad se examinan en juicio.",
+              "La neutralidad no se presume de forma absoluta.",
+              "La admisión solo permite su producción."
+            ],
+            "evidenceIds": [
+              "ev-c26-cpeum-art20a-principios-carga",
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts346-347-exclusion-apertura",
+              "ev-c26-cnpp-arts3-350-juzgadores",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-cnpp-arts3-350-juzgadores",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-cnpp-arts3-350-juzgadores",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-cnpp-arts3-350-juzgadores",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c26-cpeum-art20a-principios-carga",
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts346-347-exclusion-apertura",
+              "ev-c26-cnpp-arts3-350-juzgadores",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c26-cpeum-art20a-principios-carga",
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-arts346-347-exclusion-apertura",
+              "ev-c26-cnpp-arts3-350-juzgadores",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-cnpp-arts3-350-juzgadores",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-cnpp-arts3-350-juzgadores",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-cnpp-arts3-350-juzgadores",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué función cumple el auto de apertura a juicio?",
+            "difficulty": "advanced",
+            "options": [
+              "Delimitar acusaciones, hechos, acuerdos y medios admitidos",
+              "Declarar culpabilidad definitiva",
+              "Reabrir libremente la investigación"
+            ],
+            "correctOption": 0,
+            "explanation": "El auto organiza y delimita el juicio sin prejuzgar el resultado.",
+            "optionExplanations": [
+              "Resume el objeto procesal que llegará a juicio.",
+              "La culpabilidad se decide tras juicio.",
+              "La reapertura tiene reglas y momento distintos."
+            ],
+            "evidenceIds": [
+              "ev-c26-cpeum-art20a-principios-carga",
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-art333-reapertura",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts346-347-exclusion-apertura",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l071-083-fases-acusacion",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-art333-reapertura",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-art333-reapertura",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-art333-reapertura",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c26-cpeum-art20a-principios-carga",
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-art333-reapertura",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts346-347-exclusion-apertura",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l071-083-fases-acusacion",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c26-cpeum-art20a-principios-carga",
+              "ev-c26-cnpp-arts212-220-investigacion",
+              "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+              "ev-c26-cnpp-art333-reapertura",
+              "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+              "ev-c26-cnpp-arts346-347-exclusion-apertura",
+              "ev-c26-a35-l299-337-datos-medios",
+              "ev-c26-a36-l071-083-fases-acusacion",
+              "ev-c26-a36-l105-113-acuerdos-depuracion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-art333-reapertura",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-art333-reapertura",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ],
+              [
+                "ev-c26-cpeum-art20a-principios-carga",
+                "ev-c26-cnpp-arts212-220-investigacion",
+                "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+                "ev-c26-cnpp-art333-reapertura",
+                "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+                "ev-c26-cnpp-arts346-347-exclusion-apertura",
+                "ev-c26-a35-l299-337-datos-medios",
+                "ev-c26-a36-l071-083-fases-acusacion",
+                "ev-c26-a36-l105-113-acuerdos-depuracion"
+              ]
+            ]
+          }
         ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c26-cpeum-art20a-principios-carga",
+      "kind": "official",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "retrievedOn": "2026-08-21",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículo 20, apartado A, fracciones I a VI; principios acusatorios y carga de la prueba",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "jurisdiction": "México",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c26-cnpp-art211-etapas",
+      "kind": "official",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "retrievedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículo 211; etapas del procedimiento penal",
+      "title": "Código Nacional de Procedimientos Penales",
+      "jurisdiction": "México",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c26-cnpp-arts184-207-soluciones-abreviado",
+      "kind": "official",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "retrievedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículos 184 a 207; soluciones alternas y procedimiento abreviado con requisitos y momentos propios",
+      "title": "Código Nacional de Procedimientos Penales",
+      "jurisdiction": "México",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c26-cnpp-arts212-220-investigacion",
+      "kind": "official",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "retrievedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículos 212 a 220; investigación y facultades de los intervinientes",
+      "title": "Código Nacional de Procedimientos Penales",
+      "jurisdiction": "México",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c26-cnpp-arts261-265-dato-medio-prueba",
+      "kind": "official",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "retrievedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículos 261 a 265; dato de prueba, medio de prueba, prueba, antecedentes y valoración",
+      "title": "Código Nacional de Procedimientos Penales",
+      "jurisdiction": "México",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c26-cnpp-arts321-325-plazo-cierre",
+      "kind": "official",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "retrievedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículos 321 a 325; plazo, prórroga, cierre y consecuencias posteriores",
+      "title": "Código Nacional de Procedimientos Penales",
+      "jurisdiction": "México",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c26-cnpp-art333-reapertura",
+      "kind": "official",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "retrievedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículo 333; reapertura acotada de la investigación",
+      "title": "Código Nacional de Procedimientos Penales",
+      "jurisdiction": "México",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c26-cnpp-arts334-337-acusacion-descubrimiento",
+      "kind": "official",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "retrievedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículos 334 a 337; objeto, fases, acusación y descubrimiento probatorio",
+      "title": "Código Nacional de Procedimientos Penales",
+      "jurisdiction": "México",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c26-cnpp-arts338-340-coadyuvancia-defensa",
+      "kind": "official",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "retrievedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículos 338 a 340; coadyuvancia, actuación de la víctima y respuesta de la defensa",
+      "title": "Código Nacional de Procedimientos Penales",
+      "jurisdiction": "México",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c26-cnpp-arts341-344-audiencia-intermedia",
+      "kind": "official",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "retrievedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículos 341 a 344; citación, inmediación, desarrollo y unión o separación de acusaciones",
+      "title": "Código Nacional de Procedimientos Penales",
+      "jurisdiction": "México",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c26-cnpp-art345-acuerdos",
+      "kind": "official",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "retrievedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículo 345; acuerdos probatorios",
+      "title": "Código Nacional de Procedimientos Penales",
+      "jurisdiction": "México",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c26-cnpp-arts346-347-exclusion-apertura",
+      "kind": "official",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "retrievedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículos 346 y 347; exclusión de medios y auto de apertura a juicio",
+      "title": "Código Nacional de Procedimientos Penales",
+      "jurisdiction": "México",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c26-cnpp-art467-apelacion",
+      "kind": "official",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "retrievedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículo 467, fracción XI; apelación contra exclusión de algún medio de prueba",
+      "title": "Código Nacional de Procedimientos Penales",
+      "jurisdiction": "México",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c26-cnpp-arts3-350-juzgadores",
+      "kind": "official",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "retrievedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículo 3, fracciones VII y XVI, y artículo 350; juez de control, tribunal de enjuiciamiento y prohibición de intervención previa",
+      "title": "Código Nacional de Procedimientos Penales",
+      "jurisdiction": "México",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c26-a35-l259-283-investigacion-complementaria",
+      "kind": "transcript",
+      "audioNumber": 35,
+      "locator": {
+        "type": "line_range",
+        "startLine": 259,
+        "endLine": 283
+      }
+    },
+    {
+      "id": "ev-c26-a35-l299-337-datos-medios",
+      "kind": "transcript",
+      "audioNumber": 35,
+      "locator": {
+        "type": "line_range",
+        "startLine": 299,
+        "endLine": 337
+      }
+    },
+    {
+      "id": "ev-c26-a36-l007-029-plazo-cierre",
+      "kind": "transcript",
+      "audioNumber": 36,
+      "locator": {
+        "type": "line_range",
+        "startLine": 7,
+        "endLine": 29
+      }
+    },
+    {
+      "id": "ev-c26-a36-l045-065-etapa-intermedia",
+      "kind": "transcript",
+      "audioNumber": 36,
+      "locator": {
+        "type": "line_range",
+        "startLine": 45,
+        "endLine": 65
+      }
+    },
+    {
+      "id": "ev-c26-a36-l071-083-fases-acusacion",
+      "kind": "transcript",
+      "audioNumber": 36,
+      "locator": {
+        "type": "line_range",
+        "startLine": 71,
+        "endLine": 83
+      }
+    },
+    {
+      "id": "ev-c26-a36-l091-103-descubrimiento",
+      "kind": "transcript",
+      "audioNumber": 36,
+      "locator": {
+        "type": "line_range",
+        "startLine": 91,
+        "endLine": 103
+      }
+    },
+    {
+      "id": "ev-c26-a36-l105-113-acuerdos-depuracion",
+      "kind": "transcript",
+      "audioNumber": 36,
+      "locator": {
+        "type": "line_range",
+        "startLine": 105,
+        "endLine": 113
       }
     }
   ]
