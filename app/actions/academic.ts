@@ -14,7 +14,9 @@ import {
   parseStudyProgress,
 } from "@/lib/study-action-input";
 import {
+  canTransitionPublicationStatus,
   derivePublicationDiagnostics,
+  hasCurrentApprovedReview,
   type PublicationReadinessFailure,
 } from "@/lib/publication-readiness";
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
@@ -35,6 +37,8 @@ export type ActionResult = {
   review?: ExamReview[];
   publicationReadiness?: PublicationReadinessFailure;
 };
+
+type EditorialVerdict = "approved" | "rejected";
 
 function textValue(formData: FormData, name: string) {
   const value = formData.get(name);
@@ -337,12 +341,20 @@ export async function updatePublicationStatusAction(
   }
   if (studyClass.publication_status === status) return { id: classId };
 
+  if (!canTransitionPublicationStatus(studyClass.publication_status, status)) {
+    return {
+      error:
+        status === "published"
+          ? "Primero envía la clase a revisión; no se puede publicar directamente desde borrador."
+          : "Ese cambio no pertenece al flujo editorial permitido.",
+    };
+  }
+
   if (status === "published") {
     const topics = await admin
       .from("topics")
-      .select("id,title")
+      .select("id,title,approval_status")
       .eq("class_id", classId)
-      .eq("approval_status", "approved")
       .order("position", { ascending: true });
     if (topics.error) {
       return publicationCheckDatabaseError(
@@ -351,19 +363,39 @@ export async function updatePublicationStatusAction(
       );
     }
 
-    const approvedTopics = (topics.data ?? []).map(({ id, title }) => ({
+    const allTopics = (topics.data ?? []).map(
+      ({ id, title, approval_status }) => ({
       id: id as number,
       title: title as string,
-    }));
-    if (approvedTopics.length === 0) {
+        status: String(approval_status ?? "pending"),
+      }),
+    );
+    if (allTopics.length === 0) {
       return {
-        error: "La clase no tiene temas aprobados para publicar.",
-        publicationReadiness: { reason: "no-approved-topics" },
+        error: "La clase no tiene temas para publicar.",
+        publicationReadiness: { reason: "no-topics" },
       };
     }
 
-    const topicIds = approvedTopics.map(({ id }) => id);
-    const [materials, maps, cards, exams] = await Promise.all([
+    const unapprovedTopics = allTopics.filter(
+      ({ status: topicStatus }) => topicStatus !== "approved",
+    );
+    if (unapprovedTopics.length > 0) {
+      return {
+        error: "Todos los temas deben estar aprobados antes de publicar.",
+        publicationReadiness: {
+          reason: "unapproved-topics",
+          topics: unapprovedTopics.map(({ id, title, status: topicStatus }) => ({
+            topicId: id,
+            topicTitle: title,
+            status: topicStatus,
+          })),
+        },
+      };
+    }
+
+    const topicIds = allTopics.map(({ id }) => id);
+    const [materials, maps, cards, exams, classVersion, review] = await Promise.all([
       admin
         .from("study_materials")
         .select("topic_id,material_type")
@@ -380,6 +412,20 @@ export async function updatePublicationStatusAction(
         .select("id,topic_id,exam_questions(id)")
         .in("topic_id", topicIds)
         .eq("is_current", true),
+      admin
+        .from("classes")
+        .select("content_version,content_digest")
+        .eq("id", classId)
+        .single(),
+      admin
+        .from("class_editorial_reviews")
+        .select(
+          "verdict,content_version,content_digest,legal_verified_on,invalidated_at",
+        )
+        .eq("class_id", classId)
+        .order("reviewed_at", { ascending: false })
+        .limit(1)
+        .maybeSingle(),
     ]);
 
     const checks = [
@@ -387,6 +433,8 @@ export async function updatePublicationStatusAction(
       ["loadConceptMapsForPublication", maps.error],
       ["loadFlashcardsForPublication", cards.error],
       ["loadExamsForPublication", exams.error],
+      ["loadClassVersionForPublication", classVersion.error],
+      ["loadEditorialReviewForPublication", review.error],
     ] as const;
     const failedCheck = checks.find(([, error]) => error);
     if (failedCheck?.[1]) {
@@ -397,7 +445,7 @@ export async function updatePublicationStatusAction(
     }
 
     const diagnostics = derivePublicationDiagnostics({
-      topics: approvedTopics,
+      topics: allTopics,
       materials: materials.data ?? [],
       conceptMaps: maps.data ?? [],
       flashcards: cards.data ?? [],
@@ -410,6 +458,33 @@ export async function updatePublicationStatusAction(
           reason: "incomplete-topics",
           topics: diagnostics,
         },
+      };
+    }
+
+    if (
+      !classVersion.data ||
+      !hasCurrentApprovedReview({
+        classVersion: Number(classVersion.data.content_version),
+        classDigest: String(classVersion.data.content_digest),
+        review: review.data
+          ? {
+              verdict: String(review.data.verdict),
+              contentVersion: Number(review.data.content_version),
+              contentDigest: String(review.data.content_digest),
+              legalVerifiedOn: review.data.legal_verified_on
+                ? String(review.data.legal_verified_on)
+                : null,
+              invalidatedAt: review.data.invalidated_at
+                ? String(review.data.invalidated_at)
+                : null,
+            }
+          : null,
+      })
+    ) {
+      return {
+        error:
+          "Falta una aprobación editorial vigente que coincida con esta versión del contenido.",
+        publicationReadiness: { reason: "missing-current-review" },
       };
     }
   }
@@ -441,6 +516,71 @@ export async function updatePublicationStatusAction(
   revalidatePath("/");
   revalidatePath("/materias");
   revalidatePath("/administrar");
+  revalidatePath(`/clases/${classId}`);
+  return { id: classId };
+}
+
+export async function recordEditorialReviewAction(
+  classId: number,
+  verdict: EditorialVerdict,
+  legalVerifiedOn: string,
+  notes: string,
+): Promise<ActionResult> {
+  const reviewer = await requireAdmin();
+  if (!isPositiveInteger(classId)) {
+    return { error: "La clase seleccionada no es válida." };
+  }
+  if (!(verdict === "approved" || verdict === "rejected")) {
+    return { error: "El dictamen editorial no es válido." };
+  }
+  const cleanNotes = notes.trim();
+  if (cleanNotes.length > 2000) {
+    return { error: "Las notas no pueden superar 2000 caracteres." };
+  }
+  if (verdict === "rejected" && !cleanNotes) {
+    return { error: "Explica en las notas qué debe corregirse." };
+  }
+  if (
+    verdict === "approved" &&
+    (!/^\d{4}-\d{2}-\d{2}$/.test(legalVerifiedOn) ||
+      legalVerifiedOn > new Date().toISOString().slice(0, 10))
+  ) {
+    return {
+      error:
+        "Indica la fecha real de verificación jurídica; no puede ser futura.",
+    };
+  }
+
+  const admin = getSupabaseAdminClient();
+  const { data: studyClass, error: classError } = await admin
+    .from("classes")
+    .select("id,publication_status,content_version,content_digest")
+    .eq("id", classId)
+    .maybeSingle();
+  if (classError) return databaseError("loadClassForReview", classError.message);
+  if (!studyClass) return { error: "No encontramos la clase que quieres revisar." };
+  if (studyClass.publication_status !== "review") {
+    return { error: "La clase debe estar en revisión antes de emitir un dictamen." };
+  }
+
+  const { error } = await admin.from("class_editorial_reviews").insert({
+    class_id: classId,
+    reviewer_id: reviewer.id,
+    verdict,
+    notes: cleanNotes || null,
+    content_version: studyClass.content_version,
+    content_digest: studyClass.content_digest,
+    legal_verified_on: verdict === "approved" ? legalVerifiedOn : null,
+  });
+  if (error?.code === "23505") {
+    return {
+      error:
+        "Esta versión ya tiene una aprobación vigente. Actualiza la página.",
+    };
+  }
+  if (error) return databaseError("recordEditorialReview", error.message);
+
+  revalidatePath(`/administrar/clases/${classId}`);
   revalidatePath(`/clases/${classId}`);
   return { id: classId };
 }

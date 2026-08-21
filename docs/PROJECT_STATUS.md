@@ -82,8 +82,9 @@ anterior, pero esos datos no están presentes en el proyecto CENEVAL conectado:
 | Flashcards | 480 |
 | Preguntas de examen | 400 |
 
-El repositorio conserva 40 paquetes vigentes C01–C40 en contrato 1.1 y una
-versión retirada en el archivo editorial. La siguiente clase planeada es **C41
+El repositorio conserva 40 paquetes C01–C40 legibles en contrato 1.1 y una
+versión retirada en el archivo editorial. Todavía no son publicables bajo el
+gate trazable 1.2. La siguiente clase planeada es **C41
 — Juicio ejecutivo mercantil oral**, con Audio 54 y la primera parte del Audio
 55. Antes de disponer de esa biblioteca en la aplicación habrá que
 importar C01–C40 en el proyecto CENEVAL correcto.
@@ -172,20 +173,22 @@ Esto resuelve los hallazgos generales de ausencia de estados y numeración. No
 equivale todavía a una prueba automática de cada URL inválida o de todos los
 recorridos en navegador.
 
-### Importación y orden curricular
+### Gate editorial e importación
 
-El bloqueo por clases nuevas sin código quedó corregido en el código:
+El contrato 1.2 añade el gate de confianza editorial:
 
-- el contrato actual es `packageVersion: "1.1"`;
-- el importador exige `curriculum.code`, `curriculum.order` y fuentes de audio;
-- escribe `curriculum_code`, `curriculum_order` y `class_audio_sources`;
-- detecta colisiones de código u orden antes de crear la clase;
-- si falla después de crearla, intenta borrar la clase parcial.
+- exige evidencias estables para cada dinámica y localizadores verificables;
+- todo tema nuevo debe comenzar en `pending`;
+- la transición de clase es `draft → review → published`;
+- el dictamen registra administradora, fecha, notas, versión y digest;
+- modificar o rechazar contenido invalida la aprobación anterior;
+- la transcripción queda restringida a administración.
 
-Los 40 paquetes vigentes C01–C40 ya fueron migrados al contrato 1.1, con código,
-orden y fuentes de audio portables. La versión piloto sustituida de C14 se
-conserva en `content/archive/withdrawn/` con contrato 1.0 para trazabilidad y no
-es importable. Cualquier paquete nuevo, incluida C41, debe prepararse en 1.1.
+Los 40 paquetes C01–C40 tienen código, orden y fuentes portables en 1.1, pero
+no pasan el nuevo gate. C01 permanece sin migrar porque faltan localizadores
+verificables; no se inventó evidencia. El importador bloquea paquetes 1.2 antes
+de escribir hasta que `evidenceRegistry` pueda persistirse sin pérdida. La
+versión sustituida de C14 permanece en el archivo 1.0 no importable.
 
 La corrección está probada de forma local a nivel de esquema y código, pero C41
 aún no se ha importado para demostrar el recorrido completo en la base remota.
@@ -317,9 +320,10 @@ Queda pendiente:
 
 ## 5. Contenido terminado y pendiente
 
-El último inventario registra C01–C40 publicadas. Cada clase se preparó con
-transcripción conservada, versión depurada, nueve materiales, mapa conceptual,
-guía, flashcards, diez reactivos y fuentes.
+El inventario histórico registra contenido preparado para C01–C40: cada clase
+tiene transcripción conservada, versión depurada, nueve materiales, mapa,
+flashcards, diez reactivos y fuentes. Ese contenido no debe describirse como
+publicable hasta migrarlo y aprobarlo con el gate trazable 1.2.
 
 Orden de producción restante:
 
@@ -358,19 +362,19 @@ Además siguen pendientes tres bancos transversales y 16 exámenes acumulativos.
 3. Ampliar y ejecutar `npm run security:rls` en el proyecto CENEVAL y
    registrar el resultado. Esta suite crea y elimina datos remotos; no
    pertenece a CI.
-4. Preparar C41 con contrato 1.1 y ejecutar `content:check`.
+4. Completar persistencia 1.2 y migrar C01 con evidencia real verificable.
 
-### Prioridad 1 — Demostrar el pipeline con C41
+### Prioridad 1 — Demostrar el pipeline con C01
 
-1. Importar C41 como borrador.
-2. Confirmar código C41, orden 41 y audios de origen en Supabase.
+1. Incorporar localizadores reales y migrar C01 al contrato 1.2.
+2. Persistir el registro de evidencias sin pérdidas.
 3. Revisar vigencia jurídica y conteos editoriales.
 4. Publicar solo después de la revisión autorizada.
-5. Comprobar que aparece en `/sesiones` y como siguiente de C40.
+5. Comprobar localmente el recorrido borrador, revisión, aprobación y publicación.
 
-### Prioridad 2 — Completar C42–C58
+### Prioridad 2 — Migrar C02–C40 y después completar C41–C58
 
-Repetir el pipeline 1.1 con fuentes oficiales, validación, revisión editorial,
+Repetir el pipeline 1.2 con fuentes oficiales, validación, revisión editorial,
 publicación, navegación y un commit por unidad de trabajo.
 
 ### Prioridad 3 — Calidad de producto
@@ -404,14 +408,14 @@ publicación, navegación y un commit por unidad de trabajo.
 | 1 | Completar el respaldo de transcripciones | Segunda copia independiente y restauración de ensayo |
 | 2 | Ejecutar y probar el respaldo documentado | Exportación fechada, copia externa verificada y restauración de ensayo |
 | 3 | Ampliar y ejecutar la suite RLS | Comprobaciones actuales y casos de temas no aprobados aprobados en CENEVAL |
-| 4 | Preparar C41 en contrato 1.1 | `content:check` aprobado |
-| 5 | Importar y publicar C41 | Visible en `/sesiones` y después de C40 |
+| 4 | Completar persistencia del contrato 1.2 | Evidencias guardadas sin pérdida y pruebas aprobadas |
+| 5 | Migrar y aprobar C01 | Recorrido local trazable completo sin evidencia inventada |
 | 6 | Crear pruebas de navegador | Flujos centrales reproducibles en CI o entorno aislado |
 | 7 | Completar y validar el despliegue privado | Variables persistentes, administradora operativa y URL estable aprobada desde teléfono y computadora |
 
 ## 8. Decisiones de producto abiertas
 
-1. Resolver la contradicción sobre aprobación expresa antes de publicar.
+1. Definir responsables y periodicidad de la revisión jurídica trazable.
 2. Confirmar si el estándar definitivo es de tres o cuatro opciones por reactivo.
 3. Decidir el alcance de los 16 exámenes acumulativos.
 4. Definir responsables del repositorio, Supabase, respaldo y despliegue.
@@ -431,11 +435,10 @@ correspondiente y sus recorridos de alta, cobro, cancelación y soporte.
 
 ## 10. Siguiente acción inmediata
 
-No hace falta reconstruir CI, estados, numeración, repaso, examen ni el soporte
-1.1 del importador: ya están integrados. La siguiente acción es proteger los
-datos y cerrar la diferencia entre código y base remota:
+La siguiente acción es cerrar el gate editorial trazable antes de producir más
+contenido o escribir en la base remota:
 
 1. crear una segunda copia independiente del archivo editorial y ensayar su restauración;
 2. ejecutar y completar el procedimiento de `docs/SUPABASE_BACKUP.md`;
-3. ampliar y ejecutar la suite RLS remota únicamente en CENEVAL;
-4. preparar e importar C41 con contrato 1.1.
+3. persistir `evidenceRegistry` para paquetes 1.2 sin descartar información;
+4. obtener localizadores verificables y migrar C01 antes de C41.

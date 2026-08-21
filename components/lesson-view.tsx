@@ -244,16 +244,17 @@ export function LessonView({
           ← Volver a la sesión
         </button>
         <div className="mt-5 space-y-6">
-          <article className="rounded-2xl border border-border bg-white p-6">
-            <h2 className="text-xl font-semibold">Transcripción original</h2>
-            <p className="mt-2 text-sm text-muted">
-              Se conserva sin modificaciones para consultar lo dicho en clase.
-            </p>
-            <div className="mt-5 max-h-[32rem] overflow-y-auto whitespace-pre-line rounded-xl bg-background p-5 text-sm leading-7">
-              {lesson.transcript?.originalText ??
-                "No hay una transcripción disponible."}
-            </div>
-          </article>
+          {lesson.transcript ? (
+            <article className="rounded-2xl border border-border bg-white p-6">
+              <h2 className="text-xl font-semibold">Transcripción original</h2>
+              <p className="mt-2 text-sm text-muted">
+                Archivo editorial privado visible únicamente para administración.
+              </p>
+              <div className="mt-5 max-h-[32rem] overflow-y-auto whitespace-pre-line rounded-xl bg-background p-5 text-sm leading-7">
+                {lesson.transcript.originalText}
+              </div>
+            </article>
+          ) : null}
           <article>
             <h2 className="text-xl font-semibold">Referencias jurídicas</h2>
             <div className="mt-4 space-y-3">
@@ -271,6 +272,12 @@ export function LessonView({
                   <span className="mt-1 block text-sm text-muted">
                     {reference.institution} · {reference.jurisdiction}
                     {reference.citation ? ` · ${reference.citation}` : ""}
+                  </span>
+                  <span className="mt-2 block text-xs text-muted">
+                    Consultada: {reference.retrievedOn}
+                    {reference.legalVerifiedOn
+                      ? ` · Verificación jurídica: ${reference.legalVerifiedOn}`
+                      : ""}
                   </span>
                 </a>
               ))}
@@ -605,7 +612,9 @@ export function LessonView({
         onClick={() => setShowSources(true)}
         type="button"
       >
-        Consultar transcripción y fuentes jurídicas
+        {lesson.transcript
+          ? "Consultar transcripción privada y fuentes jurídicas"
+          : "Consultar fuentes jurídicas"}
       </button>
     </div>
   );

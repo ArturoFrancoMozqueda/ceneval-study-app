@@ -111,6 +111,7 @@ export type LegalReference = {
   jurisdiction: string;
   citation: string;
   retrievedOn: string;
+  legalVerifiedOn: string;
   note: string;
 };
 
@@ -417,6 +418,8 @@ export async function getPublishedSessionNeighbors(classId: number) {
 
 export async function getTranscript(classId: number): Promise<Transcript | null> {
   await connection();
+  const user = await getCurrentUser();
+  if (user?.role !== "admin") return null;
   const supabase = await createServerSupabaseClient();
   const { data, error } = await supabase
     .from("transcripts")
@@ -663,7 +666,20 @@ export async function getLessonBundle(
 
   const subject = await getSubject(studyClass.subjectId);
   if (!subject) return null;
-  const transcript = await getTranscript(studyClass.id);
+  const transcript = user?.role === "admin" ? await getTranscript(studyClass.id) : null;
+  const verificationResult = await (await createServerSupabaseClient())
+    .from("class_editorial_reviews")
+    .select("legal_verified_on")
+    .eq("class_id", studyClass.id)
+    .order("reviewed_at", { ascending: false })
+    .limit(1)
+    .maybeSingle();
+  if (verificationResult.error) {
+    fail("lesson legal verification", verificationResult.error.message);
+  }
+  const legalVerifiedOn = verificationResult.data?.legal_verified_on
+    ? String(verificationResult.data.legal_verified_on)
+    : "";
 
   let exam: Exam | null = null;
   if (examsResult.data) {
@@ -717,6 +733,7 @@ export async function getLessonBundle(
       jurisdiction: String(row.jurisdiction),
       citation: row.citation ? String(row.citation) : "",
       retrievedOn: String(row.retrieved_on),
+      legalVerifiedOn,
       note: (link.note as string | null) ?? "",
     }];
   });

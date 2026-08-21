@@ -108,10 +108,13 @@ red usa `npm run test:backup`. Consulta `docs/SUPABASE_BACKUP.md`.
 
 **Contenido**
 
-- Un paquete solo se importa si pasa `content:check`: nueve materiales, mapa
-  conceptual, fuente oficial con fecha de consulta, de 10 a 15 flashcards y
-  diez reactivos con explicación por opción.
-- Las fuentes deben ser oficiales (`.gob.mx`) y llevar fecha de consulta.
+- Un paquete nuevo solo se importa si usa el contrato 1.2 y pasa
+  `content:check`: además de los conteos editoriales, cada dinámica debe tener
+  evidencia concreta y verificable. Los paquetes C01–C40 en 1.1 son legibles,
+  pero no pasan este gate y no son importables ni publicables todavía.
+- Las fuentes jurídicas deben ser primarias y oficiales, con autoridad
+  identificada, dominio verificado o allowlist y fecha de consulta. No infieras
+  oficialidad solo por el sufijo: CENEVAL, SCJN y CNDH usan dominios distintos.
 - La legislación cambia. Verifica vigencia antes de publicar: el validador
   comprueba formato, no vigencia.
 - Conserva la transcripción original. Nunca la sustituyas por un resumen.
@@ -148,10 +151,11 @@ red usa `npm run test:backup`. Consulta `docs/SUPABASE_BACKUP.md`.
 Detectadas en la auditoría de agosto de 2026. Verifica antes de asumir que
 alguna sigue abierta; si corriges una, actualiza esta lista.
 
-- **Los paquetes vigentes usan el contrato 1.1.** C01–C40 ya tienen
-  `curriculum_code`, `curriculum_order` y `class_audio_sources`. El importador
-  rechaza colisiones antes de escribir. La versión retirada 1.0 se conserva
-  fuera de `content/packages/` y nunca debe importarse.
+- **El contrato publicable es 1.2.** C01–C40 conservan contrato 1.1, código,
+  orden y fuentes de audio, pero solo son legibles: deben añadir evidencia
+  verificable antes de importar o publicar. C01 se dejó deliberadamente sin
+  migrar porque no tiene localizadores suficientes y nadie debe inventarlos.
+  La versión retirada 1.0 se conserva fuera de `content/packages/`.
 - **Las transcripciones tienen una primera copia privada verificada.** El 21 de
   agosto de 2026 se copiaron los 70 TXT fuera de la memoria USB y se comprobó
   su igualdad con SHA-256. Los 40 paquetes vigentes usan nombres portables

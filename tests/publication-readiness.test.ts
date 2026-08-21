@@ -1,7 +1,9 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
+  canTransitionPublicationStatus,
   derivePublicationDiagnostics,
+  hasCurrentApprovedReview,
   requiredMaterialTypes,
 } from "../lib/publication-readiness";
 
@@ -86,5 +88,46 @@ test("no inventa diagnósticos cuando no hay temas aprobados", () => {
       exams: [],
     }),
     [],
+  );
+});
+
+test("impide publicar un borrador y permite el recorrido revisión a publicación", () => {
+  assert.equal(canTransitionPublicationStatus("draft", "published"), false);
+  assert.equal(canTransitionPublicationStatus("draft", "review"), true);
+  assert.equal(canTransitionPublicationStatus("review", "published"), true);
+});
+
+test("solo acepta una revisión aprobada que coincide con la versión exacta", () => {
+  const currentReview = {
+    verdict: "approved",
+    contentVersion: 4,
+    contentDigest: "abc123",
+    legalVerifiedOn: "2026-08-20",
+    invalidatedAt: null,
+  };
+
+  assert.equal(
+    hasCurrentApprovedReview({
+      classVersion: 4,
+      classDigest: "abc123",
+      review: currentReview,
+    }),
+    true,
+  );
+  assert.equal(
+    hasCurrentApprovedReview({
+      classVersion: 5,
+      classDigest: "def456",
+      review: currentReview,
+    }),
+    false,
+  );
+  assert.equal(
+    hasCurrentApprovedReview({
+      classVersion: 4,
+      classDigest: "abc123",
+      review: { ...currentReview, invalidatedAt: "2026-08-21T00:00:00Z" },
+    }),
+    false,
   );
 });

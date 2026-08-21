@@ -5,6 +5,98 @@ import {
 } from "../transcript-validation";
 
 const sourceOrigin = z.enum(["class", "complementary", "mixed"]);
+const evidenceIdSchema = z
+  .string()
+  .trim()
+  .regex(/^ev-[a-z0-9]+(?:-[a-z0-9]+)*$/, {
+    message:
+      "El ID de evidencia debe ser estable y usar el formato ev-palabras-en-minusculas.",
+  });
+const evidenceIdsSchema = z.array(evidenceIdSchema).min(1).superRefine(
+  (evidenceIds, context) => {
+    const seen = new Set<string>();
+    for (const [index, evidenceId] of evidenceIds.entries()) {
+      if (seen.has(evidenceId)) {
+        context.addIssue({
+          code: "custom",
+          message: `La evidencia ${evidenceId} está repetida en este artefacto.`,
+          path: [index],
+        });
+      }
+      seen.add(evidenceId);
+    }
+  },
+);
+
+const transcriptLocatorSchema = z.discriminatedUnion("type", [
+  z
+    .object({
+      type: z.literal("line_range"),
+      startLine: z.number().int().min(1),
+      endLine: z.number().int().min(1),
+    })
+    .superRefine((locator, context) => {
+      if (locator.endLine < locator.startLine) {
+        context.addIssue({
+          code: "custom",
+          message: "La línea final no puede ser anterior a la línea inicial.",
+          path: ["endLine"],
+        });
+      }
+    }),
+  z
+    .object({
+      type: z.literal("timestamp"),
+      startSecond: z.number().min(0),
+      endSecond: z.number().positive(),
+    })
+    .superRefine((locator, context) => {
+      if (locator.endSecond <= locator.startSecond) {
+        context.addIssue({
+          code: "custom",
+          message: "El segundo final debe ser posterior al segundo inicial.",
+          path: ["endSecond"],
+        });
+      }
+    }),
+]);
+
+const transcriptEvidenceSchema = z.object({
+  id: evidenceIdSchema,
+  kind: z.literal("transcript"),
+  audioNumber: z.number().int().min(1).max(70),
+  locator: transcriptLocatorSchema,
+});
+
+const officialEvidenceSchema = z
+  .object({
+    id: evidenceIdSchema,
+    kind: z.literal("official"),
+    title: z.string().trim().min(1),
+    url: z.url().refine((url) => url.startsWith("https://"), {
+      message: "La evidencia oficial debe usar HTTPS.",
+    }),
+    institution: z.string().trim().min(1),
+    jurisdiction: z.string().trim().min(1),
+    locator: z.string().trim().min(3),
+    retrievedOn: z.iso.date(),
+    verifiedOn: z.iso.date(),
+  })
+  .superRefine((evidence, context) => {
+    if (evidence.verifiedOn < evidence.retrievedOn) {
+      context.addIssue({
+        code: "custom",
+        message:
+          "La fecha de verificación no puede ser anterior a la fecha de consulta.",
+        path: ["verifiedOn"],
+      });
+    }
+  });
+
+export const evidenceSchema = z.discriminatedUnion("kind", [
+  transcriptEvidenceSchema,
+  officialEvidenceSchema,
+]);
 const materialType = z.enum([
   "short_answer",
   "full_explanation",
@@ -138,6 +230,79 @@ const topicSchema = z
     }
   });
 
+const traceableLearningJourneySchema = learningJourneySchema.safeExtend({
+  openingPromptEvidenceIds: evidenceIdsSchema,
+  quickChecks: z
+    .array(
+      z.object({
+        prompt: z.string().trim().min(10),
+        answer: z.string().trim().min(10),
+        feedback: z.string().trim().min(20),
+        evidenceIds: evidenceIdsSchema,
+      }),
+    )
+    .min(2),
+  practicalCase: z.object({
+    facts: z.string().trim().min(30),
+    question: z.string().trim().min(10),
+    legalRule: z.string().trim().min(20),
+    reasoning: z.string().trim().min(30),
+    conclusion: z.string().trim().min(20),
+    evidenceIds: evidenceIdsSchema,
+  }),
+  closingPromptEvidenceIds: evidenceIdsSchema,
+  nextActivityEvidenceIds: evidenceIdsSchema,
+});
+
+const traceableQuestionSchema = questionSchema.safeExtend({
+  evidenceIds: evidenceIdsSchema,
+  optionEvidenceIds: z.array(evidenceIdsSchema).min(3).max(4),
+  correctOptionEvidenceIds: evidenceIdsSchema,
+  explanationEvidenceIds: evidenceIdsSchema,
+  optionExplanationEvidenceIds: z.array(evidenceIdsSchema).min(3).max(4),
+}).superRefine((question, context) => {
+  for (const field of [
+    "optionEvidenceIds",
+    "optionExplanationEvidenceIds",
+  ] as const) {
+    if (question[field].length !== question.options.length) {
+      context.addIssue({
+        code: "custom",
+        message: "Cada opción debe tener sus referencias de evidencia.",
+        path: [field],
+      });
+    }
+  }
+});
+
+const traceableTopicSchema = topicSchema.safeExtend({
+  learningJourney: traceableLearningJourneySchema,
+  materials: z.array(materialSchema.safeExtend({ evidenceIds: evidenceIdsSchema })).length(9),
+  conceptMap: z.object({
+    title: z.string().trim().min(1),
+    description: z.string().trim().min(1),
+    nodes: z
+      .array(mapNodeSchema.safeExtend({ evidenceIds: evidenceIdsSchema }))
+      .min(3),
+  }),
+  flashcards: z
+    .array(
+      z.object({
+        question: z.string().trim().min(10),
+        answer: z.string().trim().min(10),
+        sourceOrigin,
+        evidenceIds: evidenceIdsSchema,
+      }),
+    )
+    .min(10)
+    .max(15),
+  exam: z.object({
+    title: z.string().trim().min(1),
+    description: z.string().trim().min(1),
+    questions: z.array(traceableQuestionSchema).length(10),
+  }),
+});
+
 export const curriculumMetadataSchema = z
   .object({
     code: z
@@ -194,6 +359,10 @@ const packageContent = z.object({
   topics: z.array(topicSchema).min(1),
 });
 
+const traceablePackageContent = packageContent.safeExtend({
+  topics: z.array(traceableTopicSchema).min(1),
+});
+
 const transcriptSchema = z.object({
   original: z
     .string()
@@ -248,14 +417,175 @@ const currentPackageSchema = packageContent.extend({
   curriculum: curriculumMetadataSchema,
 });
 
+const traceablePackageSchema = traceablePackageContent
+  .extend({
+    packageVersion: z.literal("1.2"),
+    curriculum: curriculumMetadataSchema,
+    evidenceRegistry: z.array(evidenceSchema).min(1),
+  })
+  .superRefine((bundle, context) => {
+    const evidenceById = new Map<string, number>();
+    const usedEvidenceIds = new Set<string>();
+    const curriculumAudioNumbers = new Set(
+      bundle.curriculum.audioSources.map(({ audioNumber }) => audioNumber),
+    );
+
+    for (const [index, evidence] of bundle.evidenceRegistry.entries()) {
+      const previousIndex = evidenceById.get(evidence.id);
+      if (previousIndex !== undefined) {
+        context.addIssue({
+          code: "custom",
+          message: `El ID de evidencia ${evidence.id} ya existe en evidenceRegistry[${previousIndex}].`,
+          path: ["evidenceRegistry", index, "id"],
+        });
+      } else {
+        evidenceById.set(evidence.id, index);
+      }
+
+      if (
+        evidence.kind === "transcript" &&
+        !curriculumAudioNumbers.has(evidence.audioNumber)
+      ) {
+        context.addIssue({
+          code: "custom",
+          message: `El Audio ${evidence.audioNumber} no está declarado en curriculum.audioSources.`,
+          path: ["evidenceRegistry", index, "audioNumber"],
+        });
+      }
+    }
+
+    const checkEvidenceIds = (
+      evidenceIds: string[],
+      path: (string | number)[],
+    ) => {
+      for (const [index, evidenceId] of evidenceIds.entries()) {
+        if (!evidenceById.has(evidenceId)) {
+          context.addIssue({
+            code: "custom",
+            message: `La evidencia ${evidenceId} no existe en evidenceRegistry.`,
+            path: [...path, index],
+          });
+        } else {
+          usedEvidenceIds.add(evidenceId);
+        }
+      }
+    };
+
+    for (const [topicIndex, topic] of bundle.topics.entries()) {
+      const topicPath = ["topics", topicIndex] as (string | number)[];
+      checkEvidenceIds(topic.learningJourney.openingPromptEvidenceIds, [
+        ...topicPath,
+        "learningJourney",
+        "openingPromptEvidenceIds",
+      ]);
+      topic.learningJourney.quickChecks.forEach((quickCheck, index) =>
+        checkEvidenceIds(quickCheck.evidenceIds, [
+          ...topicPath,
+          "learningJourney",
+          "quickChecks",
+          index,
+          "evidenceIds",
+        ]),
+      );
+      checkEvidenceIds(topic.learningJourney.practicalCase.evidenceIds, [
+        ...topicPath,
+        "learningJourney",
+        "practicalCase",
+        "evidenceIds",
+      ]);
+      checkEvidenceIds(topic.learningJourney.closingPromptEvidenceIds, [
+        ...topicPath,
+        "learningJourney",
+        "closingPromptEvidenceIds",
+      ]);
+      checkEvidenceIds(topic.learningJourney.nextActivityEvidenceIds, [
+        ...topicPath,
+        "learningJourney",
+        "nextActivityEvidenceIds",
+      ]);
+
+      topic.materials.forEach((material, index) =>
+        checkEvidenceIds(material.evidenceIds, [
+          ...topicPath,
+          "materials",
+          index,
+          "evidenceIds",
+        ]),
+      );
+      topic.conceptMap.nodes.forEach((node, index) =>
+        checkEvidenceIds(node.evidenceIds, [
+          ...topicPath,
+          "conceptMap",
+          "nodes",
+          index,
+          "evidenceIds",
+        ]),
+      );
+      topic.flashcards.forEach((flashcard, index) =>
+        checkEvidenceIds(flashcard.evidenceIds, [
+          ...topicPath,
+          "flashcards",
+          index,
+          "evidenceIds",
+        ]),
+      );
+      topic.exam.questions.forEach((question, questionIndex) => {
+        const questionPath = [
+          ...topicPath,
+          "exam",
+          "questions",
+          questionIndex,
+        ];
+        checkEvidenceIds(question.evidenceIds, [
+          ...questionPath,
+          "evidenceIds",
+        ]);
+        question.optionEvidenceIds.forEach((ids, optionIndex) =>
+          checkEvidenceIds(ids, [
+            ...questionPath,
+            "optionEvidenceIds",
+            optionIndex,
+          ]),
+        );
+        checkEvidenceIds(question.correctOptionEvidenceIds, [
+          ...questionPath,
+          "correctOptionEvidenceIds",
+        ]);
+        checkEvidenceIds(question.explanationEvidenceIds, [
+          ...questionPath,
+          "explanationEvidenceIds",
+        ]);
+        question.optionExplanationEvidenceIds.forEach((ids, optionIndex) =>
+          checkEvidenceIds(ids, [
+            ...questionPath,
+            "optionExplanationEvidenceIds",
+            optionIndex,
+          ]),
+        );
+      });
+    }
+
+    bundle.evidenceRegistry.forEach((evidence, index) => {
+      if (!usedEvidenceIds.has(evidence.id)) {
+        context.addIssue({
+          code: "custom",
+          message: `La evidencia ${evidence.id} no está vinculada con ningún artefacto publicable.`,
+          path: ["evidenceRegistry", index, "id"],
+        });
+      }
+    });
+  });
+
 export const classPackageSchema = z.discriminatedUnion("packageVersion", [
   legacyPackageSchema.extend({ transcript: transcriptSchema }),
   currentPackageSchema.extend({ transcript: transcriptSchema }),
+  traceablePackageSchema.safeExtend({ transcript: transcriptSchema }),
 ]);
 
 export const classPackageFileSchema = z.discriminatedUnion("packageVersion", [
   legacyPackageSchema.extend({ transcript: transcriptFileSchema }),
   currentPackageSchema.extend({ transcript: transcriptFileSchema }),
+  traceablePackageSchema.safeExtend({ transcript: transcriptFileSchema }),
 ]);
 
 export const importableClassPackageSchema = currentPackageSchema.extend({
@@ -277,3 +607,28 @@ export type ClassPackage = z.infer<typeof classPackageSchema>;
 export type ImportableClassPackage = z.infer<
   typeof importableClassPackageSchema
 >;
+
+export type EditorialGateAssessment = {
+  traceable: boolean;
+  publishable: boolean;
+  issues: Array<{ path: string; message: string }>;
+};
+
+export function assessEditorialGate(
+  bundle: { packageVersion: "1.0" | "1.1" | "1.2" },
+): EditorialGateAssessment {
+  if (bundle.packageVersion === "1.2") {
+    return { traceable: true, publishable: true, issues: [] };
+  }
+
+  return {
+    traceable: false,
+    publishable: false,
+    issues: [
+      {
+        path: "packageVersion",
+        message: `El contrato ${bundle.packageVersion} se conserva para lectura, pero no identifica la evidencia de cada artefacto publicable. Migra el paquete a 1.2 después de una revisión editorial verificable.`,
+      },
+    ],
+  };
+}

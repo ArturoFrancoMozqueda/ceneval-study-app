@@ -24,7 +24,7 @@ El procedimiento de respaldo y verificación está en
    npm run content:check -- content/packages/nombre.json
    ```
 
-3. Importar como borrador:
+3. Importar como borrador únicamente cuando el paquete 1.2 pase el gate:
 
    ```powershell
    npm run content:import -- content/packages/nombre.json
@@ -34,16 +34,17 @@ El procedimiento de respaldo y verificación está en
 5. Revisar cada tema.
 6. La administradora confirma y se cambia el estado a `published`.
 
-## Contrato 1.1
+## Contrato editorial
 
-Los paquetes nuevos deben usar `packageVersion: "1.1"` y declarar su lugar en
-el plan y sus audios de origen. El código y el orden deben coincidir; el
-validador rechaza códigos fuera de C01–C58, audios fuera de 01–70 y audios
-repetidos dentro de la misma clase.
+El contrato publicable vigente es `packageVersion: "1.2"`. Además de declarar
+su lugar en el plan y sus audios de origen, registra evidencias estables para
+materiales, mapa, recorrido, flashcards y cada parte de los reactivos. Una
+evidencia apunta a un fragmento localizable de la transcripción privada o a una
+fuente oficial con localizador y fechas de consulta y verificación.
 
 ```json
 {
-  "packageVersion": "1.1",
+  "packageVersion": "1.2",
   "curriculum": {
     "code": "C41",
     "order": 41,
@@ -60,10 +61,11 @@ comprueba que el código o el orden no pertenezcan a otra clase antes de crear
 ningún registro; los índices únicos de PostgreSQL protegen también contra dos
 importaciones simultáneas.
 
-Los 40 paquetes vigentes C01–C40 ya usan el contrato 1.1. Las versiones
-retiradas con contrato 1.0 viven fuera de `content/packages/`, en
-`content/archive/withdrawn/`, y se conservan solo para trazabilidad: no deben
-importarse ni convertirse silenciosamente en clases nuevas.
+Los 40 paquetes C01–C40 todavía usan el contrato 1.1. Son legibles y conservan
+su contenido, pero no demuestran evidencia por dinámica y por ello fallan
+deliberadamente `content:check`: no deben importarse ni publicarse. C01 no se
+migró artificialmente porque faltan localizadores verificables. Las versiones
+retiradas 1.0 viven en `content/archive/withdrawn/` y tampoco son importables.
 
 Cada paquete contiene:
 
@@ -80,8 +82,9 @@ Cada paquete contiene:
 - cuatro opciones y una respuesta correcta por pregunta;
 - explicación general y de cada opción.
 
-Si cualquier parte falta, el validador detiene la importación. Si una escritura
-falla, el importador elimina la clase parcial mediante su relación en cascada.
+Si cualquier parte o evidencia falta, el validador detiene el flujo. Mientras
+la persistencia de `evidenceRegistry` no esté implementada, el importador
+rechaza también paquetes 1.2 antes de cualquier escritura remota.
 
 ## Regla de cobertura total
 

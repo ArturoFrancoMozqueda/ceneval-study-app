@@ -47,11 +47,66 @@ export type PublicationTopicDiagnostic = {
 };
 
 export type PublicationReadinessFailure =
-  | { reason: "no-approved-topics" }
+  | { reason: "no-topics" }
+  | {
+      reason: "unapproved-topics";
+      topics: Array<{ topicId: number; topicTitle: string; status: string }>;
+    }
+  | { reason: "missing-current-review" }
   | {
       reason: "incomplete-topics";
       topics: PublicationTopicDiagnostic[];
     };
+
+export type PublicationWorkflowStatus =
+  | "draft"
+  | "review"
+  | "published"
+  | "withdrawn";
+
+const allowedTransitions: Record<
+  PublicationWorkflowStatus,
+  readonly PublicationWorkflowStatus[]
+> = {
+  draft: ["review", "withdrawn"],
+  review: ["draft", "published", "withdrawn"],
+  published: ["review", "withdrawn"],
+  withdrawn: ["draft", "review"],
+};
+
+export function canTransitionPublicationStatus(
+  current: PublicationWorkflowStatus,
+  target: PublicationWorkflowStatus,
+) {
+  return current === target || allowedTransitions[current].includes(target);
+}
+
+export function hasCurrentApprovedReview({
+  classVersion,
+  classDigest,
+  review,
+}: {
+  classVersion: number;
+  classDigest: string;
+  review:
+    | {
+        verdict: string;
+        contentVersion: number;
+        contentDigest: string;
+        legalVerifiedOn: string | null;
+        invalidatedAt: string | null;
+      }
+    | null;
+}) {
+  return Boolean(
+    review &&
+      review.verdict === "approved" &&
+      review.contentVersion === classVersion &&
+      review.contentDigest === classDigest &&
+      review.legalVerifiedOn &&
+      !review.invalidatedAt,
+  );
+}
 
 export function derivePublicationDiagnostics({
   topics,

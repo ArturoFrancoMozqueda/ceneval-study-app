@@ -1,6 +1,14 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import path from "node:path";
 import test from "node:test";
-import { curriculumMetadataSchema } from "./package-schema";
+import { assertPackageCanReachSupabase } from "./import-gate";
+import {
+  assessEditorialGate,
+  classPackageFileSchema,
+  curriculumMetadataSchema,
+  evidenceSchema,
+} from "./package-schema";
 
 const validCurriculum = {
   code: "C41",
@@ -47,4 +55,208 @@ test("rechaza el mismo audio repetido dentro de una clase", () => {
 
   assert.equal(result.success, false);
   assert.match(result.error?.issues[0]?.message ?? "", /está repetido/);
+});
+
+const c01Path = path.join(
+  process.cwd(),
+  "content",
+  "packages",
+  "audio-01-02-orientacion-egel-derecho.json",
+);
+
+function readC01() {
+  const parsed = classPackageFileSchema.parse(
+    JSON.parse(readFileSync(c01Path, "utf8")),
+  );
+  assert.equal(parsed.packageVersion, "1.1");
+  if (parsed.packageVersion !== "1.1") {
+    throw new Error("La prueba requiere que C01 permanezca en 1.1.");
+  }
+  return parsed;
+}
+
+function createSyntheticTraceablePackage() {
+  const c01 = readC01();
+  const evidenceIds = ["ev-synthetic-source"];
+
+  return {
+    ...c01,
+    packageVersion: "1.2" as const,
+    evidenceRegistry: [
+      {
+        id: "ev-synthetic-source",
+        kind: "transcript" as const,
+        audioNumber: 1,
+        locator: {
+          type: "line_range" as const,
+          startLine: 1,
+          endLine: 1,
+        },
+      },
+    ],
+    topics: c01.topics.map((topic) => ({
+      ...topic,
+      learningJourney: {
+        ...topic.learningJourney,
+        openingPromptEvidenceIds: evidenceIds,
+        quickChecks: topic.learningJourney.quickChecks.map((quickCheck) => ({
+          ...quickCheck,
+          evidenceIds,
+        })),
+        practicalCase: {
+          ...topic.learningJourney.practicalCase,
+          evidenceIds,
+        },
+        closingPromptEvidenceIds: evidenceIds,
+        nextActivityEvidenceIds: evidenceIds,
+      },
+      materials: topic.materials.map((material) => ({
+        ...material,
+        evidenceIds,
+      })),
+      conceptMap: {
+        ...topic.conceptMap,
+        nodes: topic.conceptMap.nodes.map((node) => ({ ...node, evidenceIds })),
+      },
+      flashcards: topic.flashcards.map((flashcard) => ({
+        ...flashcard,
+        evidenceIds,
+      })),
+      exam: {
+        ...topic.exam,
+        questions: topic.exam.questions.map((question) => ({
+          ...question,
+          evidenceIds,
+          optionEvidenceIds: question.options.map(() => evidenceIds),
+          correctOptionEvidenceIds: evidenceIds,
+          explanationEvidenceIds: evidenceIds,
+          optionExplanationEvidenceIds: question.options.map(
+            () => evidenceIds,
+          ),
+        })),
+      },
+    })),
+  };
+}
+
+test("conserva C01 en lectura 1.1 pero lo marca no trazable y no publicable", () => {
+  const assessment = assessEditorialGate(readC01());
+
+  assert.equal(assessment.traceable, false);
+  assert.equal(assessment.publishable, false);
+  assert.deepEqual(assessment.issues.map(({ path }) => path), [
+    "packageVersion",
+  ]);
+  assert.match(assessment.issues[0]?.message ?? "", /Migra el paquete a 1\.2/);
+});
+
+test("el contrato 1.2 señala las rutas de evidencia que faltan", () => {
+  const c01 = readC01();
+  const result = classPackageFileSchema.safeParse({
+    ...c01,
+    packageVersion: "1.2",
+  });
+
+  assert.equal(result.success, false);
+  const paths = result.error?.issues.map((issue) => issue.path.join(".")) ?? [];
+  assert.ok(paths.includes("evidenceRegistry"));
+  assert.ok(paths.includes("topics.0.materials.0.evidenceIds"));
+  assert.ok(
+    paths.includes(
+      "topics.0.exam.questions.0.optionExplanationEvidenceIds",
+    ),
+  );
+});
+
+test("acepta un paquete 1.2 sintético cuando todos los artefactos tienen evidencia", () => {
+  const parsed = classPackageFileSchema.parse(
+    createSyntheticTraceablePackage(),
+  );
+
+  assert.equal(parsed.packageVersion, "1.2");
+  assert.deepEqual(assessEditorialGate(parsed), {
+    traceable: true,
+    publishable: true,
+    issues: [],
+  });
+});
+
+test("el contrato 1.2 ubica una referencia a evidencia inexistente", () => {
+  const fixture = createSyntheticTraceablePackage();
+  fixture.topics[0]!.materials[0]!.evidenceIds = ["ev-does-not-exist"];
+
+  const result = classPackageFileSchema.safeParse(fixture);
+
+  assert.equal(result.success, false);
+  assert.ok(
+    result.error?.issues.some(
+      (issue) =>
+        issue.path.join(".") === "topics.0.materials.0.evidenceIds.0" &&
+        /no existe/.test(issue.message),
+    ),
+  );
+});
+
+test("la evidencia oficial requiere verificación no anterior a la consulta", () => {
+  const result = evidenceSchema.safeParse({
+    id: "ev-official-synthetic",
+    kind: "official",
+    title: "Fuente oficial sintética",
+    url: "https://example.gob.mx/fuente",
+    institution: "Institución de prueba",
+    jurisdiction: "México",
+    locator: "Sección de prueba",
+    retrievedOn: "2026-08-21",
+    verifiedOn: "2026-08-20",
+  });
+
+  assert.equal(result.success, false);
+  assert.equal(result.error?.issues[0]?.path.join("."), "verifiedOn");
+});
+
+test("la evidencia de transcripción debe pertenecer a los audios curriculares", () => {
+  const fixture = createSyntheticTraceablePackage();
+  fixture.evidenceRegistry[0]!.audioNumber = 70;
+
+  const result = classPackageFileSchema.safeParse(fixture);
+
+  assert.equal(result.success, false);
+  assert.ok(
+    result.error?.issues.some(
+      (issue) =>
+        issue.path.join(".") === "evidenceRegistry.0.audioNumber" &&
+        /no está declarado/.test(issue.message),
+    ),
+  );
+});
+
+test("el importador impide que cualquier contrato actual alcance Supabase", () => {
+  assert.throws(
+    () => assertPackageCanReachSupabase({ packageVersion: "1.0" }),
+    /histórico.*no importable.*1\.2/,
+  );
+  assert.throws(
+    () => assertPackageCanReachSupabase({ packageVersion: "1.1" }),
+    /legible.*no es trazable ni importable/,
+  );
+  assert.throws(
+    () => assertPackageCanReachSupabase({ packageVersion: "1.2" }),
+    /evidenceRegistry todavía no se persiste.*ninguna escritura/,
+  );
+});
+
+test("el script aplica el bloqueo antes de crear el cliente y deja temas pendientes", () => {
+  const importScript = readFileSync(
+    path.join(process.cwd(), "scripts", "import-content.ts"),
+    "utf8",
+  );
+  const gatePosition = importScript.indexOf(
+    "assertPackageCanReachSupabase(loadedBundle)",
+  );
+  const clientPosition = importScript.indexOf("const supabase = createClient(");
+
+  assert.ok(gatePosition >= 0);
+  assert.ok(clientPosition > gatePosition);
+  assert.match(importScript, /approval_status: "pending"/);
+  assert.doesNotMatch(importScript, /approval_status: "approved"/);
 });

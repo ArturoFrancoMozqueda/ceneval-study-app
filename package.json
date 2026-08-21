@@ -15,7 +15,7 @@
     "test:academic-queries": "tsx --test tests/academic-query-scope.test.ts",
     "content:check": "tsx --env-file-if-exists=.env.local scripts/check-content.ts",
     "content:test": "tsx --test lib/content/package-schema.test.ts tests/content-curriculum-corpus.test.ts",
-    "test:publication": "tsx --test tests/publication-readiness.test.ts",
+    "test:publication": "tsx --test tests/publication-readiness.test.ts tests/editorial-publication-gate.test.ts",
     "test:continuation": "tsx --test tests/study-continuation.test.ts",
     "test:onboarding": "tsx --test tests/study-onboarding.test.ts",
     "content:import": "tsx --env-file=.env.local scripts/import-content.ts",
