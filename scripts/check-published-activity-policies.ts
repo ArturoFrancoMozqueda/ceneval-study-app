@@ -57,6 +57,31 @@ if (publishedChecks?.length !== 5) {
   );
 }
 
+const legacyGuardPath = join(
+  process.cwd(),
+  "supabase",
+  "migrations",
+  "20260729173157_restrict_rls_auto_enable_execute.sql",
+);
+const legacyGuardSql = readFileSync(legacyGuardPath, "utf8")
+  .replace(/--.*$/gm, "")
+  .replace(/\s+/g, " ")
+  .trim()
+  .toLowerCase();
+
+if (
+  !/to_regprocedure\('public\.rls_auto_enable\(\)'\) is not null/.test(
+    legacyGuardSql,
+  ) ||
+  !/execute 'revoke execute on function public\.rls_auto_enable\(\) '/.test(
+    legacyGuardSql,
+  )
+) {
+  throw new Error(
+    "La migración histórica de RLS no tolera instalaciones nuevas sin el helper.",
+  );
+}
+
 console.log(
-  "✓ Las políticas RLS de actividad exigen propiedad y contenido publicado.",
+  "✓ Las políticas RLS exigen contenido publicado y toleran instalaciones nuevas.",
 );
