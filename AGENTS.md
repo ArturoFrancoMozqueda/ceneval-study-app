@@ -39,7 +39,12 @@ transcripción → preparación editorial → borrador → revisión → publica
 - El objetivo futuro es ofrecerla mediante **suscripción**, pero todavía no se
   han definido proveedor de pagos, precios, planes ni fecha de apertura. No
   implementes registro público o cobros sin una decisión explícita.
-- **No hay despliegue.** Solo corre en `localhost`.
+- Existe un despliegue técnico privado de CENEVAL en un proyecto separado de
+  Vercel sobre el plan Hobby. No es un piloto ni una apertura comercial:
+  Supabase sigue sin usuarios ni contenido y falta completar la identidad
+  administradora y los secretos del entorno.
+- Vercel todavía no está conectado a Git. La CI y los pushes no despliegan por
+  sí solos; las publicaciones actuales son manuales.
 - Hay CI para pruebas unitarias locales, lint y build. Aún no hay pruebas
   automatizadas de interfaz.
 
@@ -57,7 +62,7 @@ transcripción → preparación editorial → borrador → revisión → publica
 ## Stack
 
 Next.js 16.3.1 (App Router) · React 19.2.4 · TypeScript · Tailwind 4 ·
-Supabase (auth, Postgres, RLS) · Zod. Despliegue previsto en Vercel.
+Supabase (auth, Postgres, RLS) · Zod. Despliegue técnico en Vercel Hobby.
 
 ## Comandos
 
@@ -162,8 +167,11 @@ alguna sigue abierta; si corriges una, actualiza esta lista.
   usuarios ni contenido que respaldar; antes de importar o abrir el servicio
   debe establecerse una exportación periódica, copia externa verificada y una
   restauración en un proyecto de ensayo. Git y CI tampoco sustituyen esos pasos.
-- **No hay despliegue.** La app continúa limitada a `localhost`; no confundas
-  CI en GitHub Actions con una publicación en Vercel.
+- **Hay despliegue técnico, no servicio operativo.** CENEVAL usa un proyecto
+  separado en Vercel Hobby, sin cambio a Pro. Supabase sigue vacío y faltan la
+  configuración persistente de secretos, la administradora y la validación
+  autenticada. No hay integración Git automática: CI verde o un push a `main`
+  no publican por sí solos.
 - **Tres numeraciones distintas.** Audio 01–70 (transcripciones), C01–C58
   (orden académico) e ID de Supabase (técnico). No las confundas: C40 tiene el
   ID 49, y eso no significa que existan 49 clases.

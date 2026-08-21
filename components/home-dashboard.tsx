@@ -5,7 +5,8 @@ import { getReviewOverview, getSubjects } from "@/lib/data/academic";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 
 export async function HomeDashboard() {
-  const [user, subjects] = await Promise.all([requireUser(), getSubjects()]);
+  const user = await requireUser();
+  const subjects = await getSubjects();
   const supabase = await createServerSupabaseClient();
   const [attempts, progressResult, reviewOverview] = await Promise.all([
     supabase
