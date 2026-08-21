@@ -1,14 +1,19 @@
 import Link from "next/link";
+import { FirstStudyExperience } from "@/components/first-study-experience";
 import { ArrowRightIcon, BookIcon } from "@/components/icons";
 import { requireUser } from "@/lib/auth";
-import { getReviewOverview, getSubjects } from "@/lib/data/academic";
+import {
+  getPublishedSessions,
+  getReviewOverview,
+  getSubjects,
+} from "@/lib/data/academic";
+import { deriveStudyOnboarding } from "@/lib/study/onboarding";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 
 export async function HomeDashboard() {
   const user = await requireUser();
-  const subjects = await getSubjects();
   const supabase = await createServerSupabaseClient();
-  const [attempts, progressResult, reviewOverview] = await Promise.all([
+  const [attempts, progressResult] = await Promise.all([
     supabase
       .from("exam_attempts")
       .select("score,total_questions")
@@ -20,6 +25,27 @@ export async function HomeDashboard() {
       .order("last_activity_at", { ascending: false })
       .limit(1)
       .maybeSingle(),
+  ]);
+  const progress = progressResult.data;
+  const hasActivity = Boolean(progress || attempts.data?.length);
+
+  if (!hasActivity) {
+    const sessions = await getPublishedSessions(user.id);
+    const onboarding = deriveStudyOnboarding({ hasActivity, sessions });
+
+    if (onboarding.kind !== "returning") {
+      return (
+        <FirstStudyExperience
+          fullName={user.fullName}
+          role={user.role}
+          state={onboarding}
+        />
+      );
+    }
+  }
+
+  const [subjects, reviewOverview] = await Promise.all([
+    getSubjects(),
     getReviewOverview(user.id),
   ]);
   const totalAnswers = (attempts.data ?? []).reduce(
@@ -30,7 +56,6 @@ export async function HomeDashboard() {
     (sum, attempt) => sum + (attempt.score ?? 0),
     0,
   );
-  const progress = progressResult.data;
   const { data: nextTopic } = progress?.topic_id
     ? await supabase
         .from("topics")
