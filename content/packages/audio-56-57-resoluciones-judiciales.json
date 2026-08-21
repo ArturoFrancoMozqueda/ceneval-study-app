@@ -1,11 +1,17 @@
 {
-  "packageVersion": "1.1",
+  "packageVersion": "1.2",
   "curriculum": {
     "code": "C05",
     "order": 5,
     "audioSources": [
-      {"audioNumber": 56,"fragment": "Segunda parte: estructura de la sentencia"},
-      {"audioNumber": 57,"fragment": "Audio completo"}
+      {
+        "audioNumber": 56,
+        "fragment": "Segunda parte: estructura de la sentencia"
+      },
+      {
+        "audioNumber": 57,
+        "fragment": "Audio completo"
+      }
     ]
   },
   "subject": {
@@ -33,17 +39,35 @@
           {
             "prompt": "¿Qué exige la congruencia externa?",
             "answer": "Correspondencia entre lo resuelto y la controversia planteada por las partes, sin omitir ni introducir cuestiones ajenas.",
-            "feedback": "La congruencia interna, en cambio, evita contradicciones dentro de la propia decisión."
+            "feedback": "La congruencia interna, en cambio, evita contradicciones dentro de la propia decisión.",
+            "evidenceIds": [
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-a56-l097-103-definitiva",
+              "ev-c05-scjn-tesis-195706"
+            ]
           },
           {
             "prompt": "¿Qué exige la exhaustividad?",
             "answer": "Resolver integralmente los puntos litigiosos y planteamientos que jurídicamente deban estudiarse.",
-            "feedback": "No exige acumular texto irrelevante; exige que ninguna cuestión decisiva quede sin respuesta."
+            "feedback": "No exige acumular texto irrelevante; exige que ninguna cuestión decisiva quede sin respuesta.",
+            "evidenceIds": [
+              "ev-c05-cpeum-14-17",
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-21398",
+              "ev-c05-scjn-ejecutoria-27403",
+              "ev-c05-a56-l331-341-razones"
+            ]
           },
           {
             "prompt": "¿Fundamentar y motivar significan lo mismo?",
             "answer": "No. Fundamentar identifica la base jurídica; motivar explica hechos, razones y adecuación de la norma al caso.",
-            "feedback": "Una lista de artículos sin razonamiento no muestra por qué la solución se sigue del derecho y de los hechos."
+            "feedback": "Una lista de artículos sin razonamiento no muestra por qué la solución se sigue del derecho y de los hechos.",
+            "evidenceIds": [
+              "ev-c05-cpeum-14-17",
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-21398",
+              "ev-c05-a56-l331-341-razones"
+            ]
           }
         ],
         "practicalCase": {
@@ -51,90 +75,411 @@
           "question": "¿Qué defectos deben examinarse antes de impugnar?",
           "legalRule": "La resolución debe ser congruente con la litis, exhaustiva respecto de los puntos debatidos y estar fundada y motivada mediante razones que conecten hechos, pruebas y normas.",
           "reasoning": "La omisión del reclamo de daños apunta a falta de exhaustividad. La ausencia de explicación sobre una prueba decisiva puede revelar motivación insuficiente. También debe comprobarse que los puntos resolutivos coincidan con las consideraciones y no incorporen una condena ajena a lo pedido.",
-          "conclusion": "La impugnación debe identificar con precisión qué cuestión se omitió, qué razonamiento falta y cómo el defecto trasciende al sentido de la decisión."
+          "conclusion": "La impugnación debe identificar con precisión qué cuestión se omitió, qué razonamiento falta y cómo el defecto trasciende al sentido de la decisión.",
+          "evidenceIds": [
+            "ev-c05-cpeum-14-17",
+            "ev-c05-cnpcf-167-179",
+            "ev-c05-scjn-ejecutoria-21398",
+            "ev-c05-scjn-ejecutoria-27403",
+            "ev-c05-a56-l331-341-razones",
+            "ev-c05-amparo-art74",
+            "ev-c05-a56-l233-263-estructura",
+            "ev-c05-a56-l277-307-identificacion",
+            "ev-c05-scjn-tesis-195706"
+          ]
         },
         "closingPrompt": "Toma una resolución y localiza identificación, controversia, hechos probados, reglas, razonamiento y puntos resolutivos; después evalúa congruencia y exhaustividad.",
-        "nextActivity": "Recorre el mapa visual, contesta la guía y resuelve diez casos sobre estructura, principios, clases y efectos."
+        "nextActivity": "Recorre el mapa visual, contesta la guía y resuelve diez casos sobre estructura, principios, clases y efectos.",
+        "openingPromptEvidenceIds": [
+          "ev-c05-cnpcf-167-179",
+          "ev-c05-a56-l097-103-definitiva",
+          "ev-c05-cpeum-14-17",
+          "ev-c05-scjn-ejecutoria-21398",
+          "ev-c05-scjn-ejecutoria-27403",
+          "ev-c05-a56-l331-341-razones"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c05-cpeum-14-17",
+          "ev-c05-cnpcf-167-179",
+          "ev-c05-scjn-ejecutoria-21398",
+          "ev-c05-scjn-ejecutoria-27403",
+          "ev-c05-a56-l331-341-razones",
+          "ev-c05-amparo-art74",
+          "ev-c05-a56-l233-263-estructura",
+          "ev-c05-a56-l277-307-identificacion"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c05-cnpcf-167-179",
+          "ev-c05-a56-l097-103-definitiva",
+          "ev-c05-cpeum-14-17",
+          "ev-c05-scjn-ejecutoria-21398",
+          "ev-c05-scjn-ejecutoria-27403",
+          "ev-c05-a56-l331-341-razones"
+        ]
       },
       "materials": [
         {
           "type": "short_answer",
           "title": "Respuesta corta: qué debe contener una buena resolución",
           "content": "Una resolución debe identificar el asunto, precisar qué debe decidirse, establecer los hechos relevantes y la valoración probatoria, exponer las normas y razones aplicables y formular puntos resolutivos coherentes. Debe ser clara, precisa, congruente, exhaustiva, fundada y motivada. La denominación y estructura exactas dependen de la materia y la ley aplicable.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c05-cnpcf-167-179",
+            "ev-c05-a56-l097-103-definitiva",
+            "ev-c05-amparo-art74",
+            "ev-c05-a56-l233-263-estructura",
+            "ev-c05-a56-l277-307-identificacion",
+            "ev-c05-a56-l331-341-razones",
+            "ev-c05-cpeum-14-17",
+            "ev-c05-scjn-ejecutoria-21398",
+            "ev-c05-scjn-ejecutoria-27403",
+            "ev-c05-scjn-tesis-195706"
+          ]
         },
         {
           "type": "full_explanation",
           "title": "Explicación completa desde cero",
-          "content": "Resolución judicial es el género de las decisiones emitidas durante un proceso. El CNPCF clasifica decretos, autos, autos provisionales, preparatorios y definitivos, sentencias interlocutorias y sentencias definitivas. Un decreto contiene una determinación simple de trámite; un auto impulsa, ordena o decide aspectos procesales; una interlocutoria resuelve un incidente; y una definitiva resuelve el fondo principal. Esta clasificación es propia del Código Nacional: en otras materias debe consultarse la legislación correspondiente.\n\nUna sentencia puede leerse mediante una estructura funcional. Primero identifica órgano, fecha, expediente, partes y objeto. Después reconstruye antecedentes y fija la controversia. Luego determina hechos y valora pruebas. En la parte justificativa interpreta y aplica normas, principios y precedentes. Finalmente establece decisiones y efectos en los puntos resolutivos. Las expresiones vistos, resultandos y considerandos son frecuentes, pero lo obligatorio es el contenido previsto por la ley, no el uso de títulos rituales.\n\nCongruencia externa significa correspondencia entre lo pedido, defendido y debatido y lo efectivamente resuelto. Congruencia interna exige que argumentos y puntos resolutivos no se contradigan. Exhaustividad obliga a estudiar todos los puntos jurídicamente relevantes. La omisión de una pretensión es, en principio, un problema de exhaustividad; resolver algo nunca pedido puede ser incongruencia externa.\n\nFundamentar supone identificar el orden jurídico que sostiene la decisión. Motivar exige explicar las circunstancias, hechos probados, valoración y razonamiento que conectan la regla con la conclusión. En resoluciones jurisdiccionales el análisis no se reduce a contar citas: debe mostrar una justificación racional, completa y consistente, a la luz de los artículos 14 y 16 constitucionales.\n\nDesde sus efectos, una sentencia puede ser declarativa cuando reconoce una situación preexistente; constitutiva cuando crea, modifica o extingue una relación jurídica; y de condena cuando ordena dar, hacer o no hacer. Es una clasificación doctrinal funcional, no necesariamente excluyente. Una sola sentencia puede declarar un derecho, constituir un nuevo estado jurídico y condenar al cumplimiento de prestaciones.\n\nUna resolución firme produce estabilidad y puede alcanzar autoridad de cosa juzgada según la materia. Firmeza no significa que todas las relaciones sean inmutables: el CNPCF permite modificar ciertas resoluciones familiares cuando cambian las circunstancias. Antes de impugnar debe identificarse el tipo de resolución, el defecto, el recurso previsto, el plazo, los efectos de la impugnación y la trascendencia del agravio.",
-          "sourceOrigin": "mixed"
+          "content": "Resolución judicial es el género de las decisiones emitidas durante un proceso. El CNPCF clasifica decretos, autos, autos provisionales, preparatorios y definitivos, sentencias interlocutorias y sentencias definitivas. Un decreto contiene una determinación simple de trámite; un auto impulsa, ordena o decide aspectos procesales; una interlocutoria resuelve un incidente; y una definitiva resuelve el fondo principal. Esta clasificación es propia del Código Nacional: en otras materias debe consultarse la legislación correspondiente.\n\nUna sentencia puede leerse mediante una estructura funcional. Primero identifica órgano, fecha, expediente, partes y objeto. Después reconstruye antecedentes y fija la controversia. Luego determina hechos y valora pruebas. En la parte justificativa interpreta y aplica normas, principios y precedentes. Finalmente establece decisiones y efectos en los puntos resolutivos. Las expresiones vistos, resultandos y considerandos son frecuentes, pero lo obligatorio es el contenido previsto por la ley, no el uso de títulos rituales.\n\nCongruencia externa significa correspondencia entre lo pedido, defendido y debatido y lo efectivamente resuelto. Congruencia interna exige que argumentos y puntos resolutivos no se contradigan. Exhaustividad obliga a estudiar todos los puntos jurídicamente relevantes. La omisión de una pretensión es, en principio, un problema de exhaustividad; resolver algo nunca pedido puede ser incongruencia externa.\n\nFundamentar supone identificar el orden jurídico que sostiene la decisión. Motivar exige explicar las circunstancias, hechos probados, valoración y razonamiento que conectan la regla con la conclusión. En resoluciones jurisdiccionales el análisis no se reduce a contar citas: debe mostrar una justificación racional, completa y consistente, a la luz de los artículos 14 y 16 constitucionales.\n\nDesde sus efectos, una sentencia puede ser declarativa cuando reconoce una situación preexistente; constitutiva cuando crea, modifica o extingue una relación jurídica; y de condena cuando ordena dar, hacer o no hacer. Es una clasificación doctrinal funcional, no necesariamente excluyente. Una sola sentencia puede declarar un derecho, constituir un nuevo estado jurídico y condenar al cumplimiento de prestaciones.\n\nUna resolución firme produce estabilidad y puede alcanzar autoridad de cosa juzgada según la materia. Firmeza no significa inmutabilidad absoluta: el artículo 976 del CNPCF dispone que ciertas sentencias sobre prestaciones futuras, u otras que por su naturaleza proceda, conservan autoridad de cosa juzgada mientras no cambien las circunstancias y solo pueden modificarse mediante un juicio posterior. Antes de impugnar debe identificarse el tipo de resolución, el defecto, el recurso previsto, el plazo, los efectos de la impugnación y la trascendencia del agravio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c05-cnpcf-167-179",
+            "ev-c05-a56-l097-103-definitiva",
+            "ev-c05-amparo-art74",
+            "ev-c05-a56-l233-263-estructura",
+            "ev-c05-a56-l277-307-identificacion",
+            "ev-c05-a56-l331-341-razones",
+            "ev-c05-cpeum-14-17",
+            "ev-c05-scjn-ejecutoria-21398",
+            "ev-c05-scjn-ejecutoria-27403",
+            "ev-c05-scjn-ejecutoria-26001",
+            "ev-c05-cnpcf-974-976",
+            "ev-c05-scjn-ejecutoria-31635",
+            "ev-c05-scjn-tesis-195706",
+            "ev-c05-a57-l011-011-principios-efectos"
+          ]
         },
         {
           "type": "legal_basis",
           "title": "Fundamento jurídico vigente",
-          "content": "Constitución, artículos 14, 16 y 17: debido proceso, fundamentación, motivación y justicia completa. CNPCF, artículos 167 a 172: clasificación de resoluciones; claridad, precisión y congruencia; decisión de todos los puntos litigiosos; contenido, fundamentación, motivación y aclaración. Ley de Amparo, artículo 74: acto reclamado, conceptos o agravios, pruebas, consideraciones, fundamentos, efectos y puntos resolutivos. La jurisprudencia del Semanario Judicial distingue congruencia interna y externa y relaciona exhaustividad con el estudio integral de lo planteado.",
-          "sourceOrigin": "complementary"
+          "content": "Constitución, artículos 14, 16 y 17: debido proceso, fundamentación, motivación y justicia completa. CNPCF, artículos 167 a 172: clasificación de resoluciones; claridad, precisión y congruencia; decisión de todos los puntos litigiosos; contenido, fundamentación, motivación y aclaración. Ley de Amparo, artículo 74: acto reclamado, conceptos o agravios, pruebas, consideraciones, fundamentos, efectos y puntos resolutivos. La jurisprudencia del Semanario Judicial distingue congruencia interna y externa y relaciona exhaustividad con el estudio integral de lo planteado. Los artículos 974 a 976 del CNPCF regulan cuándo una sentencia causa ejecutoria y el alcance de la cosa juzgada en los supuestos previstos por ese Código.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c05-cpeum-14-17",
+            "ev-c05-cnpcf-167-179",
+            "ev-c05-cnpcf-974-976",
+            "ev-c05-amparo-art74",
+            "ev-c05-scjn-ejecutoria-21398",
+            "ev-c05-scjn-ejecutoria-27403",
+            "ev-c05-scjn-ejecutoria-31635",
+            "ev-c05-scjn-tesis-195706"
+          ]
         },
         {
           "type": "simple_example",
           "title": "Ejemplo sencillo: una misma sentencia con varios efectos",
           "content": "En un juicio, el tribunal reconoce que Clara es propietaria del inmueble, declara rescindido un contrato por incumplimiento y ordena a Daniel devolver la posesión. El primer pronunciamiento es declarativo, el segundo tiene efecto constitutivo y el tercero es de condena. La sentencia no tiene que pertenecer a una sola categoría cuando sus puntos resolutivos producen efectos distintos.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c05-scjn-ejecutoria-26001"
+          ]
         },
         {
           "type": "ceneval_example",
           "title": "Cómo aparece en un reactivo tipo EGEL",
           "content": "El reactivo puede describir lo que la autoridad omitió, añadió o contradijo. Si no respondió una pretensión, busca exhaustividad. Si resolvió fuera de la litis o sus consideraciones contradicen el fallo, analiza congruencia externa o interna. Si no identifica la base jurídica, revisa fundamentación; si no explica la conexión entre hechos, pruebas y regla, revisa motivación. Para clasificar, pregunta si la decisión impulsa el trámite, resuelve un incidente o decide el fondo.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c05-cnpcf-167-179",
+            "ev-c05-a56-l097-103-definitiva",
+            "ev-c05-cpeum-14-17",
+            "ev-c05-scjn-ejecutoria-21398",
+            "ev-c05-scjn-ejecutoria-27403",
+            "ev-c05-a56-l331-341-razones",
+            "ev-c05-scjn-tesis-195706"
+          ]
         },
         {
           "type": "summary",
           "title": "Resumen para repasar",
           "content": "Resolución es género; sentencia es una especie. El CNPCF distingue decretos, varias clases de autos, interlocutorias y definitivas. La estructura funcional comprende identificación, controversia, hechos y pruebas, razonamiento y puntos resolutivos. Congruencia limita y armoniza la decisión; exhaustividad exige resolver todo lo relevante. Fundamentación aporta la base jurídica y motivación justifica su aplicación. Los efectos pueden ser declarativos, constitutivos y de condena, incluso acumulados.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c05-cnpcf-167-179",
+            "ev-c05-a56-l097-103-definitiva",
+            "ev-c05-amparo-art74",
+            "ev-c05-a56-l233-263-estructura",
+            "ev-c05-a56-l277-307-identificacion",
+            "ev-c05-a56-l331-341-razones",
+            "ev-c05-cpeum-14-17",
+            "ev-c05-scjn-ejecutoria-21398",
+            "ev-c05-scjn-ejecutoria-27403",
+            "ev-c05-scjn-ejecutoria-26001",
+            "ev-c05-scjn-tesis-195706",
+            "ev-c05-a57-l011-011-principios-efectos"
+          ]
         },
         {
           "type": "study_guide",
           "title": "Guía de preguntas y respuestas",
           "content": "1. ¿Resolución y sentencia son sinónimos? Respuesta: no; resolución es el género y sentencia una de sus especies.\n2. ¿Qué hace un decreto según el CNPCF? Respuesta: adopta una determinación simple de trámite.\n3. ¿Qué hace un auto? Respuesta: impulsa, desarrolla, ordena o decide una cuestión procesal según su clase.\n4. ¿Qué resuelve una interlocutoria? Respuesta: un incidente antes o después de la definitiva.\n5. ¿Qué resuelve la definitiva? Respuesta: el fondo principal.\n6. ¿Qué es congruencia externa? Respuesta: coincidencia entre litis y decisión.\n7. ¿Qué es congruencia interna? Respuesta: ausencia de contradicciones dentro de la resolución.\n8. ¿Qué es exhaustividad? Respuesta: estudio y decisión de todos los puntos relevantes planteados.\n9. ¿Qué es fundamentación? Respuesta: identificación y aplicación de la base jurídica.\n10. ¿Qué es motivación? Respuesta: explicación racional que conecta hechos, pruebas, normas y conclusión.\n11. ¿Qué efectos puede tener una sentencia? Respuesta: declarativos, constitutivos y de condena, entre otros previstos por la ley.\n12. ¿El esquema vistos-resultandos-considerandos es universal? Respuesta: no; debe atenderse al contenido exigido en cada materia.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c05-cnpcf-167-179",
+            "ev-c05-a56-l097-103-definitiva",
+            "ev-c05-amparo-art74",
+            "ev-c05-a56-l233-263-estructura",
+            "ev-c05-a56-l277-307-identificacion",
+            "ev-c05-a56-l331-341-razones",
+            "ev-c05-cpeum-14-17",
+            "ev-c05-scjn-ejecutoria-21398",
+            "ev-c05-scjn-ejecutoria-27403",
+            "ev-c05-scjn-ejecutoria-26001",
+            "ev-c05-cnpcf-974-976",
+            "ev-c05-scjn-ejecutoria-31635",
+            "ev-c05-scjn-tesis-195706"
+          ]
         },
         {
           "type": "key_concepts",
           "title": "Conceptos clave",
           "content": "Decreto: determinación simple. Auto: decisión de impulso, preparación, provisionalidad o terminación procesal. Interlocutoria: decisión incidental. Definitiva: decisión del fondo. Litis: puntos controvertidos. Congruencia externa: correspondencia con la litis. Congruencia interna: coherencia de la decisión. Exhaustividad: respuesta integral. Fundamentación: base normativa. Motivación: razones de hecho y derecho. Punto resolutivo: mandato o declaración final. Firmeza: imposibilidad ordinaria de modificación. Cosa juzgada: autoridad y estabilidad de lo decidido en sus límites.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c05-cnpcf-167-179",
+            "ev-c05-a56-l097-103-definitiva",
+            "ev-c05-amparo-art74",
+            "ev-c05-a56-l233-263-estructura",
+            "ev-c05-a56-l277-307-identificacion",
+            "ev-c05-a56-l331-341-razones",
+            "ev-c05-cpeum-14-17",
+            "ev-c05-scjn-ejecutoria-21398",
+            "ev-c05-scjn-ejecutoria-27403",
+            "ev-c05-scjn-ejecutoria-26001",
+            "ev-c05-cnpcf-974-976",
+            "ev-c05-scjn-ejecutoria-31635",
+            "ev-c05-scjn-tesis-195706"
+          ]
         },
         {
           "type": "common_errors",
           "title": "Errores comunes",
           "content": "Llamar sentencia a toda decisión; reducir los autos a simples puertas de etapas; creer que toda interlocutoria es apelable; confundir falta de exhaustividad con incongruencia; pensar que citar artículos equivale a motivar; exigir títulos rituales en todas las materias; asumir que una sentencia sólo puede tener un efecto; impugnar sin identificar trascendencia; confundir aclaración con modificación del fondo; y trasladar plazos o recursos del CNPCF a materias donde rige otro código.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c05-cnpcf-167-179",
+            "ev-c05-a56-l097-103-definitiva",
+            "ev-c05-amparo-art74",
+            "ev-c05-a56-l233-263-estructura",
+            "ev-c05-a56-l277-307-identificacion",
+            "ev-c05-a56-l331-341-razones",
+            "ev-c05-cpeum-14-17",
+            "ev-c05-scjn-ejecutoria-21398",
+            "ev-c05-scjn-ejecutoria-27403",
+            "ev-c05-scjn-ejecutoria-26001",
+            "ev-c05-cnpcf-974-976",
+            "ev-c05-scjn-ejecutoria-31635",
+            "ev-c05-scjn-tesis-195706"
+          ]
         }
       ],
       "conceptMap": {
         "title": "Mapa visual de una resolución judicial",
         "description": "Recorre el tipo de decisión, su estructura, sus principios de calidad y los efectos que produce.",
         "nodes": [
-          { "id": "resolucion", "label": "Resolución judicial", "description": "Decisión emitida dentro del proceso." },
-          { "id": "clases", "label": "1. Clase procesal", "description": "Depende de qué decide.", "parentId": "resolucion" },
-          { "id": "decreto", "label": "Decreto", "description": "Determinación simple de trámite.", "parentId": "clases" },
-          { "id": "auto", "label": "Auto", "description": "Impulso, orden o decisión procesal.", "parentId": "clases" },
-          { "id": "interlocutoria", "label": "Interlocutoria", "description": "Resuelve un incidente.", "parentId": "clases" },
-          { "id": "definitiva", "label": "Definitiva", "description": "Resuelve el fondo principal.", "parentId": "clases" },
-          { "id": "estructura", "label": "2. Estructura funcional", "description": "Contenido que permite comprender y controlar la decisión.", "parentId": "resolucion" },
-          { "id": "identificacion", "label": "Identificación y litis", "description": "Órgano, partes, objeto y controversia.", "parentId": "estructura" },
-          { "id": "hechos", "label": "Hechos y pruebas", "description": "Determinación y valoración probatoria.", "parentId": "estructura" },
-          { "id": "razones", "label": "Razones jurídicas", "description": "Normas, interpretación y aplicación.", "parentId": "estructura" },
-          { "id": "resolutivos", "label": "Puntos resolutivos", "description": "Declaraciones, órdenes y efectos.", "parentId": "estructura" },
-          { "id": "principios", "label": "3. Calidad jurídica", "description": "Control de corrección de la decisión.", "parentId": "resolucion" },
-          { "id": "congruencia", "label": "Congruencia", "description": "Coherencia interna y correspondencia externa.", "parentId": "principios" },
-          { "id": "exhaustividad", "label": "Exhaustividad", "description": "Resuelve todos los puntos relevantes.", "parentId": "principios" },
-          { "id": "fundamotiv", "label": "Fundamentación y motivación", "description": "Base jurídica más razones aplicadas al caso.", "parentId": "principios" },
-          { "id": "efectos", "label": "4. Efectos", "description": "Declarar, constituir o condenar.", "parentId": "resolucion" },
-          { "id": "declarativo", "label": "Declarativo", "description": "Reconoce una situación preexistente.", "parentId": "efectos" },
-          { "id": "constitutivo", "label": "Constitutivo", "description": "Crea, modifica o extingue una relación.", "parentId": "efectos" },
-          { "id": "condena", "label": "Condena", "description": "Ordena dar, hacer o no hacer.", "parentId": "efectos" }
+          {
+            "id": "resolucion",
+            "label": "Resolución judicial",
+            "description": "Decisión emitida dentro del proceso.",
+            "evidenceIds": [
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-a56-l097-103-definitiva"
+            ]
+          },
+          {
+            "id": "clases",
+            "label": "1. Clase procesal",
+            "description": "Depende de qué decide.",
+            "parentId": "resolucion",
+            "evidenceIds": [
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-a56-l097-103-definitiva"
+            ]
+          },
+          {
+            "id": "decreto",
+            "label": "Decreto",
+            "description": "Determinación simple de trámite.",
+            "parentId": "clases",
+            "evidenceIds": [
+              "ev-c05-cnpcf-167-179"
+            ]
+          },
+          {
+            "id": "auto",
+            "label": "Auto",
+            "description": "Impulso, orden o decisión procesal.",
+            "parentId": "clases",
+            "evidenceIds": [
+              "ev-c05-cnpcf-167-179"
+            ]
+          },
+          {
+            "id": "interlocutoria",
+            "label": "Interlocutoria",
+            "description": "Resuelve un incidente.",
+            "parentId": "clases",
+            "evidenceIds": [
+              "ev-c05-cnpcf-167-179"
+            ]
+          },
+          {
+            "id": "definitiva",
+            "label": "Definitiva",
+            "description": "Resuelve el fondo principal.",
+            "parentId": "clases",
+            "evidenceIds": [
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-a56-l097-103-definitiva"
+            ]
+          },
+          {
+            "id": "estructura",
+            "label": "2. Estructura funcional",
+            "description": "Contenido que permite comprender y controlar la decisión.",
+            "parentId": "resolucion",
+            "evidenceIds": [
+              "ev-c05-amparo-art74",
+              "ev-c05-a56-l233-263-estructura",
+              "ev-c05-a56-l277-307-identificacion",
+              "ev-c05-a56-l331-341-razones"
+            ]
+          },
+          {
+            "id": "identificacion",
+            "label": "Identificación y litis",
+            "description": "Órgano, partes, objeto y controversia.",
+            "parentId": "estructura",
+            "evidenceIds": [
+              "ev-c05-amparo-art74",
+              "ev-c05-a56-l277-307-identificacion"
+            ]
+          },
+          {
+            "id": "hechos",
+            "label": "Hechos y pruebas",
+            "description": "Determinación y valoración probatoria.",
+            "parentId": "estructura",
+            "evidenceIds": [
+              "ev-c05-amparo-art74",
+              "ev-c05-a56-l331-341-razones"
+            ]
+          },
+          {
+            "id": "razones",
+            "label": "Razones jurídicas",
+            "description": "Normas, interpretación y aplicación.",
+            "parentId": "estructura",
+            "evidenceIds": [
+              "ev-c05-cpeum-14-17",
+              "ev-c05-amparo-art74",
+              "ev-c05-scjn-ejecutoria-21398",
+              "ev-c05-a56-l331-341-razones"
+            ]
+          },
+          {
+            "id": "resolutivos",
+            "label": "Puntos resolutivos",
+            "description": "Declaraciones, órdenes y efectos.",
+            "parentId": "estructura",
+            "evidenceIds": [
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-amparo-art74",
+              "ev-c05-a56-l233-263-estructura"
+            ]
+          },
+          {
+            "id": "principios",
+            "label": "3. Calidad jurídica",
+            "description": "Control de corrección de la decisión.",
+            "parentId": "resolucion",
+            "evidenceIds": [
+              "ev-c05-cpeum-14-17",
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-21398",
+              "ev-c05-scjn-ejecutoria-27403",
+              "ev-c05-a56-l331-341-razones"
+            ]
+          },
+          {
+            "id": "congruencia",
+            "label": "Congruencia",
+            "description": "Coherencia interna y correspondencia externa.",
+            "parentId": "principios",
+            "evidenceIds": [
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-27403",
+              "ev-c05-scjn-tesis-195706"
+            ]
+          },
+          {
+            "id": "exhaustividad",
+            "label": "Exhaustividad",
+            "description": "Resuelve todos los puntos relevantes.",
+            "parentId": "principios",
+            "evidenceIds": [
+              "ev-c05-cpeum-14-17",
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-27403"
+            ]
+          },
+          {
+            "id": "fundamotiv",
+            "label": "Fundamentación y motivación",
+            "description": "Base jurídica más razones aplicadas al caso.",
+            "parentId": "principios",
+            "evidenceIds": [
+              "ev-c05-cpeum-14-17",
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-21398",
+              "ev-c05-a56-l331-341-razones"
+            ]
+          },
+          {
+            "id": "efectos",
+            "label": "4. Efectos",
+            "description": "Declarar, constituir o condenar.",
+            "parentId": "resolucion",
+            "evidenceIds": [
+              "ev-c05-scjn-ejecutoria-26001"
+            ]
+          },
+          {
+            "id": "declarativo",
+            "label": "Declarativo",
+            "description": "Reconoce una situación preexistente.",
+            "parentId": "efectos",
+            "evidenceIds": [
+              "ev-c05-scjn-ejecutoria-26001"
+            ]
+          },
+          {
+            "id": "constitutivo",
+            "label": "Constitutivo",
+            "description": "Crea, modifica o extingue una relación.",
+            "parentId": "efectos",
+            "evidenceIds": [
+              "ev-c05-scjn-ejecutoria-26001"
+            ]
+          },
+          {
+            "id": "condena",
+            "label": "Condena",
+            "description": "Ordena dar, hacer o no hacer.",
+            "parentId": "efectos",
+            "evidenceIds": [
+              "ev-c05-scjn-ejecutoria-26001"
+            ]
+          }
         ]
       },
       "references": [
@@ -143,8 +488,8 @@
           "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
           "institution": "Cámara de Diputados del H. Congreso de la Unión",
           "jurisdiction": "México",
-          "citation": "Artículos 14, 16 y 17; última reforma DOF 02-06-2026",
-          "retrievedOn": "2026-08-11",
+          "citation": "Texto vigente, últimas reformas DOF 02-06-2026; artículos 14, 16 y 17",
+          "retrievedOn": "2026-08-21",
           "note": "Debido proceso, fundamentación, motivación y justicia completa."
         },
         {
@@ -152,51 +497,176 @@
           "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
           "institution": "Cámara de Diputados del H. Congreso de la Unión",
           "jurisdiction": "México",
-          "citation": "Artículos 167 a 172; última reforma DOF 15-01-2026",
-          "retrievedOn": "2026-08-11",
-          "note": "Clasificación, requisitos, contenido y aclaración de resoluciones."
+          "citation": "Texto vigente, última reforma DOF 15-01-2026; artículos 167-179 y 974-976",
+          "retrievedOn": "2026-08-21",
+          "note": "Reglas propias de procesos civiles y familiares, sujetas a aplicación gradual."
         },
         {
           "title": "Ley de Amparo",
           "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
           "institution": "Cámara de Diputados del H. Congreso de la Unión",
           "jurisdiction": "México",
-          "citation": "Artículo 74; última reforma DOF 16-10-2025",
-          "retrievedOn": "2026-08-11",
-          "note": "Contenido específico de las sentencias dictadas en amparo."
+          "citation": "Texto vigente, última reforma DOF 16-10-2025; artículo 74",
+          "retrievedOn": "2026-08-21",
+          "note": "Contenido específico de las sentencias de amparo."
         },
         {
-          "title": "Congruencia externa e interna en toda sentencia",
-          "url": "https://sjf2.scjn.gob.mx/detalle/apendice/1000710",
+          "title": "Ejecutoria 21398 sobre fundamentación de resoluciones jurisdiccionales",
+          "url": "https://sjf2.scjn.gob.mx/detalle/ejecutoria/21398",
           "institution": "Suprema Corte de Justicia de la Nación",
           "jurisdiction": "México",
-          "citation": "Semanario Judicial de la Federación, registro 1000710",
-          "retrievedOn": "2026-08-11",
-          "note": "Criterio oficial para distinguir congruencia externa e interna."
+          "citation": "Registro digital 21398",
+          "retrievedOn": "2026-08-21",
+          "note": "Distingue la motivación jurisdiccional de la formalidad del acto administrativo."
         },
         {
-          "title": "Requisitos internos y sustanciales de la sentencia",
-          "url": "https://sjf2.scjn.gob.mx/detalle/ejecutoria/22318",
+          "title": "Ejecutoria 27403 sobre justicia completa y exhaustividad",
+          "url": "https://sjf2.scjn.gob.mx/detalle/ejecutoria/27403",
           "institution": "Suprema Corte de Justicia de la Nación",
           "jurisdiction": "México",
-          "citation": "Semanario Judicial de la Federación, ejecutoria sobre congruencia, motivación y exhaustividad",
-          "retrievedOn": "2026-08-11",
-          "note": "Explica la relación y diferencia entre congruencia y exhaustividad."
+          "citation": "Registro digital 27403",
+          "retrievedOn": "2026-08-21",
+          "note": "Limita el examen a las cuestiones controvertidas necesarias para decidir."
+        },
+        {
+          "title": "Ejecutoria 31635 sobre cosa juzgada",
+          "url": "https://sjf2.scjn.gob.mx/detalle/ejecutoria/31635",
+          "institution": "Suprema Corte de Justicia de la Nación",
+          "jurisdiction": "México",
+          "citation": "Registro digital 31635, párrafos 54-57",
+          "retrievedOn": "2026-08-21",
+          "note": "Sentencia firme, debido proceso e identidades requeridas para cosa juzgada directa."
+        },
+        {
+          "title": "Ejecutoria 26001 sobre pretensiones y efectos de la sentencia",
+          "url": "https://sjf2.scjn.gob.mx/detalle/ejecutoria/26001",
+          "institution": "Suprema Corte de Justicia de la Nación",
+          "jurisdiction": "México",
+          "citation": "Registro digital 26001",
+          "retrievedOn": "2026-08-21",
+          "note": "Distingue pretensiones declarativas, constitutivas y de condena."
+        },
+        {
+          "title": "Tesis sobre congruencia interna y externa de la sentencia",
+          "url": "https://sjf2.scjn.gob.mx/detalle/tesis/195706",
+          "institution": "Tribunales Colegiados de Circuito, Semanario Judicial de la Federación",
+          "jurisdiction": "México",
+          "citation": "Registro digital 195706; rubro SENTENCIA. CONGRUENCIA INTERNA Y EXTERNA",
+          "retrievedOn": "2026-08-21",
+          "note": "Distingue la coherencia interna de la sentencia y su concordancia externa con la demanda y la contestación."
         }
       ],
       "flashcards": [
-        { "question": "¿Resolución judicial y sentencia son equivalentes?", "answer": "No. Resolución es el género; sentencias, autos y decretos son categorías determinadas por la ley.", "sourceOrigin": "mixed" },
-        { "question": "¿Qué resuelve una sentencia definitiva según el CNPCF?", "answer": "El fondo del asunto en lo principal.", "sourceOrigin": "complementary" },
-        { "question": "¿Qué resuelve una sentencia interlocutoria según el CNPCF?", "answer": "Un incidente promovido antes o después de la sentencia definitiva.", "sourceOrigin": "complementary" },
-        { "question": "¿Qué es congruencia externa?", "answer": "La correspondencia entre la litis planteada y lo que la autoridad decide.", "sourceOrigin": "mixed" },
-        { "question": "¿Qué es congruencia interna?", "answer": "La coherencia entre los argumentos y puntos resolutivos de la propia decisión.", "sourceOrigin": "mixed" },
-        { "question": "¿Qué es exhaustividad?", "answer": "El deber de estudiar y resolver todos los puntos relevantes que integran la controversia.", "sourceOrigin": "mixed" },
-        { "question": "¿Qué significa fundamentar?", "answer": "Identificar e interpretar las normas o principios jurídicos que sostienen la decisión.", "sourceOrigin": "mixed" },
-        { "question": "¿Qué significa motivar?", "answer": "Exponer las razones que conectan hechos, pruebas, normas y conclusión.", "sourceOrigin": "mixed" },
-        { "question": "¿Qué efecto tiene una sentencia declarativa?", "answer": "Reconoce o precisa una situación jurídica preexistente.", "sourceOrigin": "class" },
-        { "question": "¿Qué efecto tiene una sentencia constitutiva?", "answer": "Crea, modifica o extingue una relación o estado jurídico.", "sourceOrigin": "class" },
-        { "question": "¿Qué efecto tiene una sentencia de condena?", "answer": "Impone a una parte una prestación de dar, hacer o no hacer.", "sourceOrigin": "class" },
-        { "question": "¿Una resolución puede combinar efectos?", "answer": "Sí. Sus distintos puntos pueden declarar, constituir y ordenar prestaciones simultáneamente.", "sourceOrigin": "complementary" }
+        {
+          "question": "¿Resolución judicial y sentencia son equivalentes?",
+          "answer": "No. Resolución es el género; sentencias, autos y decretos son categorías determinadas por la ley.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c05-cnpcf-167-179",
+            "ev-c05-a56-l097-103-definitiva"
+          ]
+        },
+        {
+          "question": "¿Qué resuelve una sentencia definitiva según el CNPCF?",
+          "answer": "El fondo del asunto en lo principal.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c05-cnpcf-167-179",
+            "ev-c05-a56-l097-103-definitiva"
+          ]
+        },
+        {
+          "question": "¿Qué resuelve una sentencia interlocutoria según el CNPCF?",
+          "answer": "Un incidente promovido antes o después de la sentencia definitiva.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c05-cnpcf-167-179"
+          ]
+        },
+        {
+          "question": "¿Qué es congruencia externa?",
+          "answer": "La correspondencia entre la litis planteada y lo que la autoridad decide.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c05-cnpcf-167-179",
+            "ev-c05-scjn-ejecutoria-27403",
+            "ev-c05-scjn-tesis-195706"
+          ]
+        },
+        {
+          "question": "¿Qué es congruencia interna?",
+          "answer": "La coherencia entre los argumentos y puntos resolutivos de la propia decisión.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c05-cnpcf-167-179",
+            "ev-c05-scjn-ejecutoria-27403",
+            "ev-c05-scjn-tesis-195706"
+          ]
+        },
+        {
+          "question": "¿Qué es exhaustividad?",
+          "answer": "El deber de estudiar y resolver todos los puntos relevantes que integran la controversia.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c05-cpeum-14-17",
+            "ev-c05-cnpcf-167-179",
+            "ev-c05-scjn-ejecutoria-27403"
+          ]
+        },
+        {
+          "question": "¿Qué significa fundamentar?",
+          "answer": "Identificar e interpretar las normas o principios jurídicos que sostienen la decisión.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c05-cpeum-14-17",
+            "ev-c05-cnpcf-167-179",
+            "ev-c05-scjn-ejecutoria-21398",
+            "ev-c05-a56-l331-341-razones"
+          ]
+        },
+        {
+          "question": "¿Qué significa motivar?",
+          "answer": "Exponer las razones que conectan hechos, pruebas, normas y conclusión.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c05-cpeum-14-17",
+            "ev-c05-cnpcf-167-179",
+            "ev-c05-scjn-ejecutoria-21398",
+            "ev-c05-a56-l331-341-razones"
+          ]
+        },
+        {
+          "question": "¿Qué efecto tiene una sentencia declarativa?",
+          "answer": "Reconoce o precisa una situación jurídica preexistente.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c05-scjn-ejecutoria-26001"
+          ]
+        },
+        {
+          "question": "¿Qué efecto tiene una sentencia constitutiva?",
+          "answer": "Crea, modifica o extingue una relación o estado jurídico.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c05-scjn-ejecutoria-26001"
+          ]
+        },
+        {
+          "question": "¿Qué efecto tiene una sentencia de condena?",
+          "answer": "Impone a una parte una prestación de dar, hacer o no hacer.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c05-scjn-ejecutoria-26001"
+          ]
+        },
+        {
+          "question": "¿Una resolución puede combinar efectos?",
+          "answer": "Sí. Sus distintos puntos pueden declarar, constituir y ordenar prestaciones simultáneamente.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c05-scjn-ejecutoria-26001"
+          ]
+        }
       ],
       "exam": {
         "title": "Práctica: resoluciones judiciales",
@@ -205,84 +675,751 @@
           {
             "text": "Una resolución omite decidir una de las pretensiones oportunamente planteadas. ¿Qué principio incumple principalmente?",
             "difficulty": "basic",
-            "options": ["Exhaustividad", "Publicidad", "Inmediación"],
+            "options": [
+              "Exhaustividad",
+              "Publicidad",
+              "Inmediación"
+            ],
             "correctOption": 0,
             "explanation": "La exhaustividad exige estudiar y decidir todos los puntos litigiosos relevantes sometidos a conocimiento.",
-            "optionExplanations": ["La omisión deja incompleta la decisión.", "La publicidad se refiere al acceso o conocimiento de actuaciones.", "La inmediación se relaciona con contacto directo del juzgador con la actividad procesal."]
+            "optionExplanations": [
+              "La omisión deja incompleta la decisión.",
+              "La publicidad se refiere al acceso o conocimiento de actuaciones.",
+              "La inmediación se relaciona con contacto directo del juzgador con la actividad procesal."
+            ],
+            "evidenceIds": [
+              "ev-c05-cpeum-14-17",
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-27403"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c05-cpeum-14-17",
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-27403"
+              ],
+              [
+                "ev-c05-cpeum-14-17",
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-27403"
+              ],
+              [
+                "ev-c05-cpeum-14-17",
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-27403"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c05-cpeum-14-17",
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-27403"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c05-cpeum-14-17",
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-27403"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c05-cpeum-14-17",
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-27403"
+              ],
+              [
+                "ev-c05-cpeum-14-17",
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-27403"
+              ],
+              [
+                "ev-c05-cpeum-14-17",
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-27403"
+              ]
+            ]
           },
           {
             "text": "La sentencia concede una prestación que ninguna parte solicitó y que no deriva de una facultad oficiosa. ¿Qué defecto presenta?",
             "difficulty": "intermediate",
-            "options": ["Incongruencia externa", "Falta de competencia territorial", "Cosa juzgada refleja"],
+            "options": [
+              "Incongruencia externa",
+              "Falta de competencia territorial",
+              "Cosa juzgada refleja"
+            ],
             "correctOption": 0,
             "explanation": "La decisión se aparta de la litis e introduce una cuestión ajena a las pretensiones debatidas.",
-            "optionExplanations": ["Compara lo resuelto con lo efectivamente planteado.", "El caso no señala un problema geográfico de competencia.", "No se describe el efecto de una sentencia previa sobre otro litigio."]
+            "optionExplanations": [
+              "Compara lo resuelto con lo efectivamente planteado.",
+              "El caso no señala un problema geográfico de competencia.",
+              "No se describe el efecto de una sentencia previa sobre otro litigio."
+            ],
+            "evidenceIds": [
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-27403"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-27403"
+              ],
+              [
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-27403"
+              ],
+              [
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-27403"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-27403"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-27403"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-27403"
+              ],
+              [
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-27403"
+              ],
+              [
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-27403"
+              ]
+            ]
           },
           {
             "text": "Los considerandos afirman que la demanda es improcedente, pero los puntos resolutivos la declaran procedente. ¿Qué falla?",
             "difficulty": "basic",
-            "options": ["Congruencia interna", "Exhaustividad", "Competencia por cuantía"],
+            "options": [
+              "Congruencia interna",
+              "Exhaustividad",
+              "Competencia por cuantía"
+            ],
             "correctOption": 0,
             "explanation": "Existe contradicción dentro de la propia resolución entre sus razones y la decisión final.",
-            "optionExplanations": ["Exige coherencia entre todas las partes de la decisión.", "No se describe una cuestión omitida.", "La cuantía no explica la contradicción argumentativa."]
+            "optionExplanations": [
+              "Exige coherencia entre todas las partes de la decisión.",
+              "No se describe una cuestión omitida.",
+              "La cuantía no explica la contradicción argumentativa."
+            ],
+            "evidenceIds": [
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-27403"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-27403"
+              ],
+              [
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-27403"
+              ],
+              [
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-27403"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-27403"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-27403"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-27403"
+              ],
+              [
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-27403"
+              ],
+              [
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-27403"
+              ]
+            ]
           },
           {
             "text": "Una autoridad cita los artículos aplicables, pero no explica qué hechos probó ni por qué encuadran en ellos. ¿Qué requisito es insuficiente?",
             "difficulty": "intermediate",
-            "options": ["Motivación", "Firma electrónica", "Competencia por grado"],
+            "options": [
+              "Motivación",
+              "Firma electrónica",
+              "Competencia por grado"
+            ],
             "correctOption": 0,
             "explanation": "La motivación exige razones sobre hechos, pruebas y adecuación de la regla al caso, no sólo citas normativas.",
-            "optionExplanations": ["Es la conexión racional faltante.", "El supuesto no cuestiona autenticación del documento.", "No existe problema de instancia."]
+            "optionExplanations": [
+              "Es la conexión racional faltante.",
+              "El supuesto no cuestiona autenticación del documento.",
+              "No existe problema de instancia."
+            ],
+            "evidenceIds": [
+              "ev-c05-cpeum-14-17",
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-21398",
+              "ev-c05-a56-l331-341-razones"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c05-cpeum-14-17",
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-21398",
+                "ev-c05-a56-l331-341-razones"
+              ],
+              [
+                "ev-c05-cpeum-14-17",
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-21398",
+                "ev-c05-a56-l331-341-razones"
+              ],
+              [
+                "ev-c05-cpeum-14-17",
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-21398",
+                "ev-c05-a56-l331-341-razones"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c05-cpeum-14-17",
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-21398",
+              "ev-c05-a56-l331-341-razones"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c05-cpeum-14-17",
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-21398",
+              "ev-c05-a56-l331-341-razones"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c05-cpeum-14-17",
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-21398",
+                "ev-c05-a56-l331-341-razones"
+              ],
+              [
+                "ev-c05-cpeum-14-17",
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-21398",
+                "ev-c05-a56-l331-341-razones"
+              ],
+              [
+                "ev-c05-cpeum-14-17",
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-21398",
+                "ev-c05-a56-l331-341-razones"
+              ]
+            ]
           },
           {
             "text": "Conforme al CNPCF, una decisión que resuelve un incidente se clasifica como:",
             "difficulty": "basic",
-            "options": ["Sentencia interlocutoria", "Decreto", "Sentencia definitiva"],
+            "options": [
+              "Sentencia interlocutoria",
+              "Decreto",
+              "Sentencia definitiva"
+            ],
             "correctOption": 0,
             "explanation": "El artículo 167 define las interlocutorias como decisiones que resuelven incidentes.",
-            "optionExplanations": ["Es la categoría prevista para la decisión incidental.", "El decreto es una determinación simple de trámite.", "La definitiva resuelve el fondo principal."]
+            "optionExplanations": [
+              "Es la categoría prevista para la decisión incidental.",
+              "El decreto es una determinación simple de trámite.",
+              "La definitiva resuelve el fondo principal."
+            ],
+            "evidenceIds": [
+              "ev-c05-cnpcf-167-179"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c05-cnpcf-167-179"
+              ],
+              [
+                "ev-c05-cnpcf-167-179"
+              ],
+              [
+                "ev-c05-cnpcf-167-179"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c05-cnpcf-167-179"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c05-cnpcf-167-179"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c05-cnpcf-167-179"
+              ],
+              [
+                "ev-c05-cnpcf-167-179"
+              ],
+              [
+                "ev-c05-cnpcf-167-179"
+              ]
+            ]
           },
           {
             "text": "Conforme al CNPCF, una decisión que impide continuar el procedimiento y lo concluye totalmente puede ser:",
             "difficulty": "intermediate",
-            "options": ["Auto definitivo", "Auto preparatorio", "Decreto de trámite"],
+            "options": [
+              "Auto definitivo",
+              "Auto preparatorio",
+              "Decreto de trámite"
+            ],
             "correctOption": 0,
             "explanation": "El artículo 167 denomina auto definitivo a la decisión que pone fin a la acción o impide continuar el procedimiento.",
-            "optionExplanations": ["Coincide con el efecto terminativo descrito.", "El preparatorio se relaciona con conocimiento y pruebas.", "El decreto no produce ese efecto procesal."]
+            "optionExplanations": [
+              "Coincide con el efecto terminativo descrito.",
+              "El preparatorio se relaciona con conocimiento y pruebas.",
+              "El decreto no produce ese efecto procesal."
+            ],
+            "evidenceIds": [
+              "ev-c05-cnpcf-167-179"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c05-cnpcf-167-179"
+              ],
+              [
+                "ev-c05-cnpcf-167-179"
+              ],
+              [
+                "ev-c05-cnpcf-167-179"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c05-cnpcf-167-179"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c05-cnpcf-167-179"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c05-cnpcf-167-179"
+              ],
+              [
+                "ev-c05-cnpcf-167-179"
+              ],
+              [
+                "ev-c05-cnpcf-167-179"
+              ]
+            ]
           },
           {
-            "text": "Una sentencia reconoce que una persona ya era heredera desde la apertura de la sucesión. ¿Qué efecto predomina?",
+            "text": "Una sentencia se limita a reconocer la existencia de una relación jurídica que ya existía antes del proceso. ¿Qué efecto predomina?",
             "difficulty": "basic",
-            "options": ["Declarativo", "Constitutivo", "Cautelar"],
+            "options": [
+              "Declarativo",
+              "Constitutivo",
+              "Cautelar"
+            ],
             "correctOption": 0,
             "explanation": "La decisión reconoce una situación jurídica preexistente en lugar de crearla por primera vez.",
-            "optionExplanations": ["Declara o precisa un derecho ya existente.", "No crea por sí sola el hecho jurídico de apertura sucesoria.", "No adopta una medida provisional de aseguramiento."]
+            "optionExplanations": [
+              "Declara o precisa una relación jurídica preexistente.",
+              "No crea ni transforma por sí misma la relación descrita.",
+              "No adopta una medida provisional de aseguramiento."
+            ],
+            "evidenceIds": [
+              "ev-c05-scjn-ejecutoria-26001"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c05-scjn-ejecutoria-26001"
+              ],
+              [
+                "ev-c05-scjn-ejecutoria-26001"
+              ],
+              [
+                "ev-c05-scjn-ejecutoria-26001"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c05-scjn-ejecutoria-26001"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c05-scjn-ejecutoria-26001"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c05-scjn-ejecutoria-26001"
+              ],
+              [
+                "ev-c05-scjn-ejecutoria-26001"
+              ],
+              [
+                "ev-c05-scjn-ejecutoria-26001"
+              ]
+            ]
           },
           {
-            "text": "Una resolución judicial crea un nuevo estado de filiación mediante adopción. ¿Qué efecto describe mejor?",
+            "text": "Una sentencia crea una relación jurídica que no existía antes del proceso. ¿Qué efecto describe mejor?",
             "difficulty": "intermediate",
-            "options": ["Constitutivo", "Declarativo únicamente", "De mero trámite"],
+            "options": [
+              "Constitutivo",
+              "Declarativo únicamente",
+              "De mero trámite"
+            ],
             "correctOption": 0,
             "explanation": "La decisión crea o transforma una relación jurídica y, por ello, presenta efecto constitutivo.",
-            "optionExplanations": ["Produce el nuevo estado jurídico.", "No se limita a reconocer una situación previa idéntica.", "La decisión trasciende el impulso procesal."]
+            "optionExplanations": [
+              "Produce una nueva relación jurídica.",
+              "No se limita a reconocer una situación previa idéntica.",
+              "La decisión trasciende el mero impulso procesal."
+            ],
+            "evidenceIds": [
+              "ev-c05-scjn-ejecutoria-26001"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c05-scjn-ejecutoria-26001"
+              ],
+              [
+                "ev-c05-scjn-ejecutoria-26001"
+              ],
+              [
+                "ev-c05-scjn-ejecutoria-26001"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c05-scjn-ejecutoria-26001"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c05-scjn-ejecutoria-26001"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c05-scjn-ejecutoria-26001"
+              ],
+              [
+                "ev-c05-scjn-ejecutoria-26001"
+              ],
+              [
+                "ev-c05-scjn-ejecutoria-26001"
+              ]
+            ]
           },
           {
             "text": "Una sentencia declara rescindido un contrato y ordena devolver un inmueble. ¿Cómo se clasifican sus efectos?",
             "difficulty": "advanced",
-            "options": ["Puede combinar efecto constitutivo y de condena", "Debe ser únicamente declarativa", "Carece de efectos hasta que otra sentencia lo determine"],
+            "options": [
+              "Puede combinar efecto constitutivo y de condena",
+              "Debe ser únicamente declarativa",
+              "Carece de efectos hasta que otra sentencia lo determine"
+            ],
             "correctOption": 0,
             "explanation": "La rescisión modifica la relación jurídica y la restitución impone una prestación, por lo que pueden coexistir efectos.",
-            "optionExplanations": ["Reconoce la posible pluralidad de efectos por punto resolutivo.", "Reduce indebidamente la decisión a una sola categoría.", "Los efectos derivan de la propia sentencia conforme a su firmeza y ejecución."]
+            "optionExplanations": [
+              "Reconoce la posible pluralidad de efectos por punto resolutivo.",
+              "Reduce indebidamente la decisión a una sola categoría.",
+              "Una misma sentencia puede producir distintas clases de efectos en sus pronunciamientos."
+            ],
+            "evidenceIds": [
+              "ev-c05-scjn-ejecutoria-26001"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c05-scjn-ejecutoria-26001"
+              ],
+              [
+                "ev-c05-scjn-ejecutoria-26001"
+              ],
+              [
+                "ev-c05-scjn-ejecutoria-26001"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c05-scjn-ejecutoria-26001"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c05-scjn-ejecutoria-26001"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c05-scjn-ejecutoria-26001"
+              ],
+              [
+                "ev-c05-scjn-ejecutoria-26001"
+              ],
+              [
+                "ev-c05-scjn-ejecutoria-26001"
+              ]
+            ]
           },
           {
             "text": "¿Cuál método permite evaluar mejor una sentencia antes de impugnarla?",
             "difficulty": "advanced",
-            "options": ["Comparar litis, pruebas, normas, razonamiento y puntos resolutivos", "Contar cuántos artículos y páginas contiene", "Buscar únicamente si usa la palabra considerandos"],
+            "options": [
+              "Comparar litis, pruebas, normas, razonamiento y puntos resolutivos",
+              "Contar cuántos artículos y páginas contiene",
+              "Buscar únicamente si usa la palabra considerandos"
+            ],
             "correctOption": 0,
             "explanation": "La evaluación funcional identifica omisiones, contradicciones, falta de justificación y efectos concretos con posible trascendencia.",
-            "optionExplanations": ["Examina todos los componentes jurídicamente relevantes.", "Extensión y número de citas no prueban calidad argumentativa.", "Un título formal no demuestra cumplimiento sustantivo."]
+            "optionExplanations": [
+              "Examina todos los componentes jurídicamente relevantes.",
+              "Extensión y número de citas no prueban calidad argumentativa.",
+              "Un título formal no demuestra cumplimiento sustantivo."
+            ],
+            "evidenceIds": [
+              "ev-c05-amparo-art74",
+              "ev-c05-a56-l233-263-estructura",
+              "ev-c05-a56-l277-307-identificacion",
+              "ev-c05-a56-l331-341-razones",
+              "ev-c05-cpeum-14-17",
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-21398",
+              "ev-c05-scjn-ejecutoria-27403"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c05-amparo-art74",
+                "ev-c05-a56-l233-263-estructura",
+                "ev-c05-a56-l277-307-identificacion",
+                "ev-c05-a56-l331-341-razones",
+                "ev-c05-cpeum-14-17",
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-21398",
+                "ev-c05-scjn-ejecutoria-27403"
+              ],
+              [
+                "ev-c05-amparo-art74",
+                "ev-c05-a56-l233-263-estructura",
+                "ev-c05-a56-l277-307-identificacion",
+                "ev-c05-a56-l331-341-razones",
+                "ev-c05-cpeum-14-17",
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-21398",
+                "ev-c05-scjn-ejecutoria-27403"
+              ],
+              [
+                "ev-c05-amparo-art74",
+                "ev-c05-a56-l233-263-estructura",
+                "ev-c05-a56-l277-307-identificacion",
+                "ev-c05-a56-l331-341-razones",
+                "ev-c05-cpeum-14-17",
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-21398",
+                "ev-c05-scjn-ejecutoria-27403"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c05-amparo-art74",
+              "ev-c05-a56-l233-263-estructura",
+              "ev-c05-a56-l277-307-identificacion",
+              "ev-c05-a56-l331-341-razones",
+              "ev-c05-cpeum-14-17",
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-21398",
+              "ev-c05-scjn-ejecutoria-27403"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c05-amparo-art74",
+              "ev-c05-a56-l233-263-estructura",
+              "ev-c05-a56-l277-307-identificacion",
+              "ev-c05-a56-l331-341-razones",
+              "ev-c05-cpeum-14-17",
+              "ev-c05-cnpcf-167-179",
+              "ev-c05-scjn-ejecutoria-21398",
+              "ev-c05-scjn-ejecutoria-27403"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c05-amparo-art74",
+                "ev-c05-a56-l233-263-estructura",
+                "ev-c05-a56-l277-307-identificacion",
+                "ev-c05-a56-l331-341-razones",
+                "ev-c05-cpeum-14-17",
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-21398",
+                "ev-c05-scjn-ejecutoria-27403"
+              ],
+              [
+                "ev-c05-amparo-art74",
+                "ev-c05-a56-l233-263-estructura",
+                "ev-c05-a56-l277-307-identificacion",
+                "ev-c05-a56-l331-341-razones",
+                "ev-c05-cpeum-14-17",
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-21398",
+                "ev-c05-scjn-ejecutoria-27403"
+              ],
+              [
+                "ev-c05-amparo-art74",
+                "ev-c05-a56-l233-263-estructura",
+                "ev-c05-a56-l277-307-identificacion",
+                "ev-c05-a56-l331-341-razones",
+                "ev-c05-cpeum-14-17",
+                "ev-c05-cnpcf-167-179",
+                "ev-c05-scjn-ejecutoria-21398",
+                "ev-c05-scjn-ejecutoria-27403"
+              ]
+            ]
           }
         ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c05-cpeum-14-17",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículos 14, 16 y 17, páginas impresas 19-22",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c05-cnpcf-167-179",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículos 167-179, páginas impresas 41-44; aplicación gradual",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c05-cnpcf-974-976",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículos 974-976, páginas impresas 222-223; aplicación gradual",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c05-amparo-art74",
+      "kind": "official",
+      "title": "Ley de Amparo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículo 74, página impresa 29",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c05-scjn-ejecutoria-21398",
+      "kind": "official",
+      "title": "Ejecutoria 21398 sobre fundamentación de resoluciones jurisdiccionales",
+      "url": "https://sjf2.scjn.gob.mx/detalle/ejecutoria/21398",
+      "institution": "Suprema Corte de Justicia de la Nación",
+      "jurisdiction": "México",
+      "locator": "Registro digital 21398",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c05-scjn-ejecutoria-27403",
+      "kind": "official",
+      "title": "Ejecutoria 27403 sobre justicia completa y exhaustividad",
+      "url": "https://sjf2.scjn.gob.mx/detalle/ejecutoria/27403",
+      "institution": "Suprema Corte de Justicia de la Nación",
+      "jurisdiction": "México",
+      "locator": "Registro digital 27403",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c05-scjn-ejecutoria-31635",
+      "kind": "official",
+      "title": "Ejecutoria 31635 sobre cosa juzgada",
+      "url": "https://sjf2.scjn.gob.mx/detalle/ejecutoria/31635",
+      "institution": "Suprema Corte de Justicia de la Nación",
+      "jurisdiction": "México",
+      "locator": "Registro digital 31635, párrafos 54-57",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c05-scjn-ejecutoria-26001",
+      "kind": "official",
+      "title": "Ejecutoria 26001 sobre pretensiones y efectos de la sentencia",
+      "url": "https://sjf2.scjn.gob.mx/detalle/ejecutoria/26001",
+      "institution": "Suprema Corte de Justicia de la Nación",
+      "jurisdiction": "México",
+      "locator": "Registro digital 26001",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c05-scjn-tesis-195706",
+      "kind": "official",
+      "title": "Tesis sobre congruencia interna y externa de la sentencia",
+      "url": "https://sjf2.scjn.gob.mx/detalle/tesis/195706",
+      "institution": "Tribunales Colegiados de Circuito, Semanario Judicial de la Federación",
+      "jurisdiction": "México",
+      "locator": "Registro digital 195706; rubro SENTENCIA. CONGRUENCIA INTERNA Y EXTERNA",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c05-a56-l097-103-definitiva",
+      "kind": "transcript",
+      "audioNumber": 56,
+      "locator": {
+        "type": "line_range",
+        "startLine": 97,
+        "endLine": 103
+      }
+    },
+    {
+      "id": "ev-c05-a56-l233-263-estructura",
+      "kind": "transcript",
+      "audioNumber": 56,
+      "locator": {
+        "type": "line_range",
+        "startLine": 233,
+        "endLine": 263
+      }
+    },
+    {
+      "id": "ev-c05-a56-l277-307-identificacion",
+      "kind": "transcript",
+      "audioNumber": 56,
+      "locator": {
+        "type": "line_range",
+        "startLine": 277,
+        "endLine": 307
+      }
+    },
+    {
+      "id": "ev-c05-a56-l331-341-razones",
+      "kind": "transcript",
+      "audioNumber": 56,
+      "locator": {
+        "type": "line_range",
+        "startLine": 331,
+        "endLine": 341
+      }
+    },
+    {
+      "id": "ev-c05-a57-l011-011-principios-efectos",
+      "kind": "transcript",
+      "audioNumber": 57,
+      "locator": {
+        "type": "line_range",
+        "startLine": 11,
+        "endLine": 11
       }
     }
   ]

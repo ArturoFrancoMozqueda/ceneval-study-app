@@ -18,6 +18,7 @@ const traceablePackages = [
     artifacts: 139,
     evidence: 12,
     forbiddenClaims: [],
+    requiredClaims: [],
   },
   {
     code: "C02",
@@ -30,6 +31,7 @@ const traceablePackages = [
       /(?:método|proceso|procedimiento)(?:\s+\w+){0,3}\s+(?:de\s+)?siete pasos/i,
       /\b(?:sucesi(?:ón|ones)|sucesorio|testamentario|intestado|herederos?)\b/i,
     ],
+    requiredClaims: [],
   },
   {
     code: "C03",
@@ -41,6 +43,7 @@ const traceablePackages = [
       /ejecutoria\s+34098/i,
       /\b(?:todos?|cualquier)\s+(?:los\s+)?incidentes?\s+suspenden?/i,
     ],
+    requiredClaims: [],
   },
   {
     code: "C04",
@@ -52,6 +55,32 @@ const traceablePackages = [
       /ley orgánica del poder judicial del estado de michoacán/i,
       /\b100\s+UMA\b/i,
       /\b(?:toda|cualquier)\s+sentencia\s+(?:es|será)\s+apelable\b/i,
+    ],
+    requiredClaims: [],
+  },
+  {
+    code: "C05",
+    fileName: "audio-56-57-resoluciones-judiciales.json",
+    artifacts: 137,
+    evidence: 14,
+    forbiddenClaims: [/ejecutoria\s+22318/i, /\b1000710\b/],
+    requiredClaims: [
+      /procesos civiles y familiares/i,
+      /aplicación gradual/i,
+      /esta clasificación es propia del código nacional: en otras materias debe consultarse la legislación correspondiente/i,
+      /no es una fórmula obligatoria universal/i,
+    ],
+  },
+  {
+    code: "C06",
+    fileName: "audio-05-06-controversia-constitucional.json",
+    artifacts: 137,
+    evidence: 18,
+    forbiddenClaims: [/última reforma DOF 03-04-2025/i],
+    requiredClaims: [
+      /nueve (?:integrantes|ministras y ministros)/i,
+      /(?:al menos|cuando menos|mayoría de) seis votos/i,
+      /última reforma DOF 14-11-2025/i,
     ],
   },
 ] as const;
@@ -112,6 +141,13 @@ for (const expected of traceablePackages) {
         `${expected.code} reintrodujo una afirmación retirada: ${forbiddenClaim}`,
       );
     }
+    for (const requiredClaim of expected.requiredClaims) {
+      assert.match(
+        serializedPackage,
+        requiredClaim,
+        `${expected.code} perdió una precisión jurídica requerida: ${requiredClaim}`,
+      );
+    }
 
     const cleanedTranscript = packageFile.transcript.cleaned;
     assert.ok(cleanedTranscript);
@@ -122,6 +158,32 @@ for (const expected of traceablePackages) {
         cleaned: cleanedTranscript,
       },
     });
+
+    if (expected.code === "C06") {
+      const questions = bundle.topics.flatMap((topic) => topic.exam.questions);
+      for (const question of questions) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          /(?:once|11) (?:ministros|integrantes)|(?:ocho|8) votos/i,
+          "C06 no puede presentar la integración o votación histórica como respuesta vigente.",
+        );
+      }
+
+      const obsoleteCompositionQuestion = questions.find((question) =>
+        /once ministros/i.test(question.text),
+      );
+      assert.ok(obsoleteCompositionQuestion);
+      assert.match(
+        obsoleteCompositionQuestion.options[
+          obsoleteCompositionQuestion.correctOption
+        ] ?? "",
+        /nueve integrantes.*artículo 94 vigente/i,
+      );
+      assert.match(
+        obsoleteCompositionQuestion.explanation,
+        /desactualizado.*nueve integrantes/i,
+      );
+    }
 
     assert.equal(countClassPackage(bundle).artifacts, expected.artifacts);
     assert.equal(bundle.evidenceRegistry.length, expected.evidence);
