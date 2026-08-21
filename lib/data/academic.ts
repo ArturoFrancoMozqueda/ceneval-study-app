@@ -1,7 +1,7 @@
 import "server-only";
 
 import { connection } from "next/server";
-import { requireUser } from "@/lib/auth";
+import { getCurrentUser, requireUser } from "@/lib/auth";
 import { relationRows } from "@/lib/data/relation-rows";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 import {
@@ -458,12 +458,16 @@ export async function getTopicsForClass(classId: number): Promise<Topic[]> {
 
 export async function getTopic(topicId: number): Promise<Topic | null> {
   await connection();
+  const user = await getCurrentUser();
   const supabase = await createServerSupabaseClient();
-  const { data, error } = await supabase
+  let query = supabase
     .from("topics")
     .select("id,class_id,title,description,position,source_type,approval_status")
-    .eq("id", topicId)
-    .maybeSingle();
+    .eq("id", topicId);
+  if (user?.role !== "admin") {
+    query = query.eq("approval_status", "approved");
+  }
+  const { data, error } = await query.maybeSingle();
 
   if (error) fail("getTopic", error.message);
   if (!data) return null;
@@ -609,8 +613,13 @@ export async function getStudyProgress(
 export async function getLessonBundle(
   topicId: number,
 ): Promise<LessonBundle | null> {
-  const topic = await getTopic(topicId);
-  if (!topic) return null;
+  const [topic, user] = await Promise.all([getTopic(topicId), getCurrentUser()]);
+  if (
+    !topic ||
+    (topic.approvalStatus !== "approved" && user?.role !== "admin")
+  ) {
+    return null;
+  }
 
   const [studyClass, materialsResult, mapResult, linksResult, cardsResult, examsResult] =
     await Promise.all([

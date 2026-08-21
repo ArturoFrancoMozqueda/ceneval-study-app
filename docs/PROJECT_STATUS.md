@@ -25,8 +25,10 @@ Los bloqueos operativos reales siguen siendo:
    comprobable de la base, una copia externa ni una restauración probada;
 3. el esquema y las diez migraciones ya están aplicados en CENEVAL, pero la
    suite RLS dinámica de 31 comprobaciones todavía no se ha ejecutado;
-4. la aplicación no está desplegada y solo se usa en `localhost`;
-5. C41–C58 y los bancos acumulativos siguen pendientes.
+4. la undécima migración local, que restringe la lectura a temas aprobados,
+   está versionada pero no aplicada ni probada en remoto;
+5. la aplicación no está desplegada y solo se usa en `localhost`;
+6. C41–C58 y los bancos acumulativos siguen pendientes.
 
 El historial de Git ya es útil y existe CI. Esos dos hallazgos de la auditoría
 original están resueltos, pero ninguno reemplaza un respaldo de la base.
@@ -236,11 +238,30 @@ misma condición a la Data API para `flashcard_reviews`, `study_progress` y
 `quick_check_responses`. La migración es transaccional y su estructura se
 comprueba localmente en CI.
 
-**Estado de despliegue de esa migración:** no confirmado. El archivo está
-integrado en Git, pero no hay evidencia local de que Supabase remoto lo haya
-aplicado ni de una ejecución posterior de las 31 comprobaciones actuales. La
-última ejecución remota documentada sigue siendo la suite anterior de 20
-comprobaciones, aprobada el 29 de julio de 2026.
+**Estado de despliegue de esa migración:** aplicada en CENEVAL y verificada en
+el historial el 20 de agosto de 2026. Aún no existe una ejecución posterior de
+las 31 comprobaciones actuales; la última ejecución dinámica documentada sigue
+siendo la suite anterior de 20 comprobaciones, aprobada el 29 de julio de 2026.
+
+### Lectura limitada a temas aprobados
+
+La migración
+`20260821022138_restrict_reading_to_approved_topics.sql` corrige una separación
+incompleta entre publicación de clase y aprobación de tema. Para estudiantes,
+un tema ahora debe estar `approved` y pertenecer a una clase `published`. La
+misma cadena protege materiales, mapas, referencias, flashcards, exámenes,
+preguntas y opciones. `private.is_admin()` conserva la visibilidad editorial.
+
+Como defensa adicional, `getTopic` filtra explícitamente por aprobación y
+`getLessonBundle` rechaza cualquier tema que no esté aprobado. La prueba
+`test:topic-approval-policies` verifica localmente la migración y ambos filtros
+sin conectarse a Supabase.
+
+**Gate operativo:** esta undécima migración existe solo en Git. No se aplicó al
+proyecto remoto durante este trabajo. Antes de abrir el acceso estudiantil, una
+persona autorizada debe revisarla, aplicarla únicamente a CENEVAL, confirmar el
+historial, ejecutar los asesores y ampliar la suite RLS dinámica con temas
+pendientes y rechazados.
 
 ## 4. Seguridad y calidad: qué está probado
 
@@ -257,6 +278,7 @@ comprobaciones, aprobada el 29 de julio de 2026.
 - cabeceras de seguridad;
 - entrada de acciones de estudio;
 - estructura esperada de las políticas RLS nuevas;
+- bloqueo de lectura de temas no aprobados y sus descendientes en RLS y DAL;
 - integridad del procedimiento de respaldo con datos sintéticos.
 
 También existen cabeceras de seguridad, redirección de autenticación limitada
@@ -265,6 +287,7 @@ a destinos internos y un aviso educativo/de vigencia en la interfaz.
 Queda pendiente:
 
 - aplicar y probar la migración RLS contra el proyecto remoto;
+- aplicar y probar la migración de lectura limitada a temas aprobados;
 - pruebas automatizadas de interfaz y recorridos completos;
 - repetir asesores de Supabase después de aplicar migraciones;
 - auditoría final de accesibilidad en navegador y dispositivos reales;
@@ -310,9 +333,11 @@ Además siguen pendientes tres bancos transversales y 16 exámenes acumulativos.
    verificarla, copiarla fuera del equipo y restaurarla en un proyecto de ensayo.
 3. Confirmar en el historial remoto si la migración RLS del 20 de agosto está
    aplicada; si no, aplicarla en una ventana autorizada.
-4. Ejecutar `npm run security:rls` después de la migración y registrar el
-   resultado. Esta suite crea y elimina datos remotos; no pertenece a CI.
-5. Preparar C41 con contrato 1.1 y ejecutar `content:check`.
+4. Revisar y aplicar la migración de aprobación de temas únicamente a CENEVAL.
+5. Ampliar y ejecutar `npm run security:rls` después de las migraciones y
+   registrar el resultado. Esta suite crea y elimina datos remotos; no
+   pertenece a CI.
+6. Preparar C41 con contrato 1.1 y ejecutar `content:check`.
 
 ### Prioridad 1 — Demostrar el pipeline con C41
 

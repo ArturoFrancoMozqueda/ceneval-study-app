@@ -150,6 +150,11 @@ alguna sigue abierta; si corriges una, actualiza esta lista.
   asesores no mostraron errores de seguridad; el aviso de `exam_answer_keys`
   sin políticas es el bloqueo deliberado. `npm run security:rls` todavía
   requiere una ventana autorizada porque crea y publica datos temporales.
+- **La protección de lectura por aprobación está versionada, no aplicada.**
+  `20260821022138_restrict_reading_to_approved_topics.sql` impide que una
+  estudiante lea temas pendientes o rechazados, y extiende el bloqueo a sus
+  materiales, mapas, referencias, flashcards y exámenes. No presentes esta
+  capa como activa en remoto hasta verificar la migración y la suite RLS.
 - **Existe el procedimiento, no un respaldo real de Supabase.**
   `docs/SUPABASE_BACKUP.md` y `npm run test:backup` documentan y comprueban el
   mecanismo con datos sintéticos. El proyecto remoto actual no contiene
