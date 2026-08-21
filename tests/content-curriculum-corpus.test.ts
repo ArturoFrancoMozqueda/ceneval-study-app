@@ -6,7 +6,7 @@ import { classPackageFileSchema } from "../lib/content/package-schema";
 
 const packagesDirectory = path.join(process.cwd(), "content", "packages");
 
-test("el catálogo vigente contiene C01–C40 una sola vez y solo paquetes 1.1", async () => {
+test("el catálogo vigente contiene C01–C40 una sola vez y solo contratos legibles", async () => {
   const fileNames = (await readdir(packagesDirectory))
     .filter((fileName) => fileName.endsWith(".json"))
     .sort();
@@ -15,18 +15,36 @@ test("el catálogo vigente contiene C01–C40 una sola vez y solo paquetes 1.1",
 
   const packages = await Promise.all(
     fileNames.map(async (fileName) => {
-      const raw = await readFile(path.join(packagesDirectory, fileName), "utf8");
+      const raw = await readFile(
+        path.join(packagesDirectory, fileName),
+        "utf8",
+      );
       return classPackageFileSchema.parse(JSON.parse(raw));
     }),
   );
 
-  assert.ok(packages.every((packageData) => packageData.packageVersion === "1.1"));
+  const currentPackages = packages.map((packageData) => {
+    if (packageData.packageVersion === "1.0") {
+      throw new Error("El catálogo vigente no admite paquetes retirados 1.0.");
+    }
+    return packageData;
+  });
 
-  const curriculum = packages
-    .map((packageData) => {
-      assert.equal(packageData.packageVersion, "1.1");
-      return packageData.curriculum;
-    })
+  assert.equal(
+    currentPackages.filter(
+      (packageData) => packageData.packageVersion === "1.2",
+    ).length,
+    1,
+  );
+  assert.equal(
+    currentPackages.filter(
+      (packageData) => packageData.packageVersion === "1.1",
+    ).length,
+    39,
+  );
+
+  const curriculum = currentPackages
+    .map((packageData) => packageData.curriculum)
     .sort((left, right) => left.order - right.order);
 
   assert.deepEqual(
@@ -37,7 +55,13 @@ test("el catálogo vigente contiene C01–C40 una sola vez y solo paquetes 1.1",
     })),
   );
 
-  for (const packageData of packages) {
+  assert.equal(
+    currentPackages.find((packageData) => packageData.curriculum.code === "C01")
+      ?.packageVersion,
+    "1.2",
+  );
+
+  for (const packageData of currentPackages) {
     const originalFiles = packageData.transcript.originalFiles ?? [
       packageData.transcript.originalFile,
     ];

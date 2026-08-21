@@ -1,11 +1,17 @@
 {
-  "packageVersion": "1.1",
+  "packageVersion": "1.2",
   "curriculum": {
     "code": "C01",
     "order": 1,
     "audioSources": [
-      {"audioNumber": 1,"fragment": "Audio completo"},
-      {"audioNumber": 2,"fragment": "Audio completo"}
+      {
+        "audioNumber": 1,
+        "fragment": "Audio completo"
+      },
+      {
+        "audioNumber": 2,
+        "fragment": "Audio completo"
+      }
     ]
   },
   "subject": {
@@ -14,324 +20,528 @@
   },
   "class": {
     "title": "Cómo estudiar y resolver el EGEL Plus Derecho",
-    "description": "Primera clase del curso: reconoce la estructura vigente del examen, organiza el estudio por áreas y aplica un método de lectura jurídica para resolver casos sin depender de la memorización."
+    "description": "Primera clase del curso: reconoce la estructura vigente del examen, organiza la preparación y aplica las recomendaciones oficiales de lectura sin depender de la memorización aislada."
   },
   "transcript": {
     "originalFiles": [
       "AUDIO 01.txt",
       "AUDIO 02.txt"
     ],
-    "cleaned": "Los Audios 01 y 02 corresponden a la inducción del curso. Explican que la preparación debe apoyarse en la guía oficial aplicable, el estudio constante y la comprensión de casos, no en preguntas filtradas ni respuestas memorizadas. Presentan las áreas de Función pública, Litigio y Justicia alternativa y fe pública, además de la necesidad de practicar lectura y administración del tiempo. También introducen temas jurídicos como federalismo, división de poderes, amparo y ramas del derecho; esos fragmentos se reservan para sus clases temáticas posteriores. Se eliminaron del material didáctico promociones, bromas, comentarios personales, afirmaciones no verificadas y datos logísticos propios de una aplicación anterior. La estructura y modalidades se actualizaron con la información oficial del Ceneval consultada el 11 de agosto de 2026."
+    "cleaned": "Los Audios 01 y 02 corresponden a la inducción del curso. El Audio 01 aporta una orientación hacia la comprensión y el repaso, en contraste con la memorización aislada. También menciona de forma introductoria temas jurídicos que se reservan para clases posteriores. Las cifras, horarios, modalidades y demás datos operativos de esas grabaciones son históricos y no se presentan como vigentes. La estructura y las recomendaciones incluidas en los artefactos de estudio se verificaron en fuentes oficiales del Ceneval el 21 de agosto de 2026."
   },
   "topics": [
     {
       "title": "Estructura y estrategia para el EGEL Plus Derecho",
-      "description": "Cómo ubicar las secciones y áreas del examen, reconocer un reactivo piloto, leer casos jurídicos con método y convertir los errores de práctica en un plan de estudio ordenado.",
+      "description": "Cómo ubicar las secciones y áreas del examen, comprender el papel de los reactivos piloto y organizar la preparación con recomendaciones oficiales.",
       "learningJourney": {
-        "openingPrompt": "Si un reactivo presenta un caso extenso con datos irrelevantes, ¿qué deberías identificar antes de intentar recordar una ley o elegir una respuesta?",
+        "openingPrompt": "¿Qué cambia en tu preparación cuando distingues la comprensión y aplicación de conocimientos de la memorización aislada?",
         "quickChecks": [
           {
             "prompt": "¿Cuáles son las dos secciones generales del EGEL Plus?",
             "answer": "La sección disciplinar específica de la profesión y la sección transversal de Lenguaje y Comunicación.",
-            "feedback": "La preparación jurídica y las habilidades de lectura y redacción se evalúan como componentes distintos pero complementarios."
+            "feedback": "La preparación jurídica y las habilidades de lectura y redacción se evalúan como componentes distintos pero complementarios.",
+            "evidenceIds": [
+              "ev-ceneval-estructura-derecho",
+              "ev-ceneval-areas-derecho",
+              "ev-ceneval-lenguaje"
+            ]
           },
           {
             "prompt": "¿Cuáles son las tres áreas disciplinares de Derecho?",
             "answer": "Función pública, Litigio y Justicia alternativa y fe pública.",
-            "feedback": "Estas áreas organizan competencias profesionales; no deben confundirse con una lista aislada de materias universitarias."
+            "feedback": "Estas áreas organizan competencias profesionales; no deben confundirse con una lista aislada de materias universitarias.",
+            "evidenceIds": [
+              "ev-ceneval-areas-derecho"
+            ]
           },
           {
             "prompt": "¿Los reactivos piloto cuentan para la calificación?",
-            "answer": "No, pero no están identificados durante la aplicación y deben responderse con el mismo cuidado.",
-            "feedback": "No intentes adivinar cuáles son piloto; administra el tiempo y responde todos los reactivos disponibles."
+            "answer": "No. La guía indica que 15% de los reactivos son piloto y no se consideran para la calificación.",
+            "feedback": "La guía recomienda responder todos los reactivos y volver después a uno difícil si el tiempo lo permite.",
+            "evidenceIds": [
+              "ev-ceneval-estructura-derecho",
+              "ev-ceneval-formato-reactivo",
+              "ev-ceneval-recomendaciones"
+            ]
           }
         ],
         "practicalCase": {
-          "facts": "Una sustentante lee un caso sobre una autoridad municipal. El reactivo describe varios antecedentes, pero pregunta únicamente qué órgano es competente para emitir el acto. Dos opciones mencionan instituciones conocidas y otra coincide con el ámbito territorial y la facultad prevista en el caso.",
-          "question": "¿Qué método debe usar antes de elegir la respuesta?",
-          "legalRule": "En los reactivos de opción múltiple debe identificarse la tarea, seleccionar los hechos jurídicamente relevantes y contrastar cada opción con la regla aplicable.",
-          "reasoning": "La popularidad de una institución no resuelve la competencia. La sustentante debe ubicar el verbo de la instrucción, distinguir ámbito de gobierno y facultad, y eliminar las opciones incompatibles con esos datos.",
-          "conclusion": "Debe elegir la opción respaldada por la competencia y los hechos del caso, no la que simplemente resulte más familiar."
+          "facts": "En una práctica de comprensión lectora, una sustentante revisa un texto jurídico breve y tres opciones. Dos recuperan datos verdaderos pero secundarios; solo una expresa la idea central completa.",
+          "question": "¿Cómo debe elegir la respuesta conforme a la guía oficial?",
+          "legalRule": "La guía indica realizar una lectura completa, volver al texto cuando sea necesario y elegir una respuesta totalmente correcta.",
+          "reasoning": "La sustentante contrasta cada opción con el texto y descarta las que solo son parcialmente correctas o no corresponden con lo solicitado.",
+          "conclusion": "Debe seleccionar la opción que responde íntegramente la tarea y está sustentada por el texto.",
+          "evidenceIds": [
+            "ev-ceneval-lenguaje",
+            "ev-ceneval-formato-reactivo",
+            "ev-ceneval-recomendaciones"
+          ]
         },
-        "closingPrompt": "Explica en voz alta cómo pasarías de un caso desconocido a una respuesta justificada usando tarea, hechos, regla, descarte y verificación.",
-        "nextActivity": "Recorre el mapa visual, contesta la guía de preguntas y respuestas y resuelve los diez reactivos con tres opciones."
+        "closingPrompt": "Explica en voz alta por qué comprender, aplicar y verificar resulta distinto de memorizar respuestas aisladas.",
+        "nextActivity": "Recorre el mapa visual, revisa la guía oficial y resuelve los diez reactivos de práctica.",
+        "openingPromptEvidenceIds": [
+          "ev-ceneval-lenguaje",
+          "ev-ceneval-preparacion",
+          "ev-transcript-comprension"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-transcript-comprension"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-ceneval-formato-reactivo"
+        ]
       },
       "materials": [
         {
           "type": "short_answer",
           "title": "Respuesta breve",
-          "content": "El EGEL Plus Derecho evalúa conocimientos y habilidades disciplinares, así como comprensión lectora y redacción indirecta. La preparación eficaz combina cuatro acciones: conocer la guía oficial correspondiente a la fecha de aplicación, diagnosticar fortalezas y vacíos, estudiar por relaciones y practicar casos con retroalimentación. Para cada reactivo identifica qué te piden, conserva solo los hechos relevantes, formula la regla aplicable, descarta opciones incompatibles y verifica que la respuesta atienda exactamente la pregunta.",
-          "sourceOrigin": "mixed"
+          "content": "El EGEL Plus Derecho evalúa conocimientos y habilidades disciplinares, además de comprensión lectora y redacción indirecta. La guía propone autoevaluar los conocimientos, planear el estudio y monitorear el avance. En comprensión lectora recomienda leer el texto completo, volver a él cuando sea necesario, analizar la plausibilidad de las opciones y elegir una respuesta totalmente correcta.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-areas-derecho",
+            "ev-ceneval-lenguaje",
+            "ev-ceneval-preparacion",
+            "ev-ceneval-recomendaciones"
+          ]
         },
         {
           "type": "full_explanation",
           "title": "Explicación completa desde cero",
-          "content": "El EGEL Plus Derecho no es una repetición literal de un plan de estudios universitario. Ceneval construye un perfil general de egreso y organiza la evaluación en dos secciones. La sección disciplinar reúne tres áreas: Función pública, Litigio y Justicia alternativa y fe pública. La sección transversal evalúa Comprensión lectora y Redacción indirecta. La guía oficial consultada presenta 200 reactivos: 140 disciplinares y 60 transversales, además de un porcentaje de reactivos piloto que no se considera para la calificación. Los reactivos actuales tienen tres opciones y una sola respuesta correcta.\n\nUn área no equivale a una asignatura. Función pública integra competencias, facultades y límites de entes federales, locales y municipales, así como derechos y obligaciones frente a la autoridad. Litigio reúne la intervención en controversias de Derecho público, privado y social. Justicia alternativa y fe pública comprende mecanismos no jurisdiccionales y funciones que otorgan certeza jurídica. Comprensión lectora y redacción indirecta exigen interpretar, evaluar y seleccionar textos adecuados.\n\nLos Audios 01 y 02 contienen una idea pedagógica válida: el examen se resuelve mejor por comprensión que por memorización. Sin embargo, sus cifras, horarios y comentarios sobre aplicaciones pasadas no deben asumirse vigentes. La guía correspondiente al periodo de aplicación, el pase de ingreso y las instrucciones oficiales prevalecen siempre.\n\nEl método de cinco pasos para un reactivo jurídico es: 1) leer primero la instrucción y ubicar el verbo rector; 2) identificar sujetos, autoridad, acto, momento procesal y pretensión; 3) formular la regla o criterio relevante; 4) contrastar y descartar cada opción; 5) verificar que la respuesta resuelva lo preguntado y no otro problema cercano. Si el caso resulta muy técnico, evita quedarte bloqueada: marca la mejor respuesta razonada dentro del tiempo disponible y continúa conforme a las reglas de tu modalidad.\n\nEl estudio también necesita un ciclo. Comienza con un diagnóstico por áreas; convierte cada error en una categoría concreta; elige una fuente vigente; estudia un bloque breve; practica casos; explica por qué cada distractor falla; y vuelve a medir. Un registro de errores es más útil que releer sin propósito porque revela patrones: norma confundida, etapa procesal equivocada, lectura incompleta, excepción ignorada o manejo deficiente del tiempo.\n\nLa ética forma parte de la preparación. Ceneval publica versiones diferentes y no avala cursos ni instituciones asesoras. Utiliza materiales propios, fuentes oficiales y práctica original. Nunca dependas de filtraciones, suplantaciones o bancos presentados como preguntas reales. El objetivo es desarrollar criterio jurídico transferible al examen y al ejercicio profesional.",
-          "sourceOrigin": "mixed"
+          "content": "El EGEL Plus Derecho se organiza en dos secciones. La disciplinar reúne Función pública, Litigio y Justicia alternativa y fe pública; la transversal evalúa Comprensión lectora y Redacción indirecta. La guía presenta 200 reactivos: 140 disciplinares y 60 transversales. También señala que 15% son reactivos piloto y no se consideran para la calificación. Los reactivos de opción múltiple tienen tres opciones y una sola respuesta correcta.\n\nFunción pública comprende competencias, facultades y límites de entes federales, locales y municipales. Litigio comprende la intervención en controversias de Derecho público, privado y social. Justicia alternativa y fe pública comprende mecanismos no jurisdiccionales y funciones que aportan certeza jurídica.\n\nEl Audio 01 aporta una orientación pedagógica acotada: privilegiar la comprensión frente a la memorización aislada. La estructura y los datos vigentes se consultan en la guía oficial aplicable.\n\nLa guía propone autoevaluar los conocimientos, planear actividades y monitorear el avance. También recomienda responder todos los reactivos y, si alguno resulta difícil, marcarlo y volver después si hay tiempo.\n\nLa preparación debe respetar integridad, honestidad y responsabilidad. Ceneval prohíbe sustraer o compartir reactivos y utilizar apoyos indebidos.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-ceneval-estructura-derecho",
+            "ev-ceneval-areas-derecho",
+            "ev-ceneval-lenguaje",
+            "ev-ceneval-formato-reactivo",
+            "ev-ceneval-preparacion",
+            "ev-ceneval-recomendaciones",
+            "ev-ceneval-etica",
+            "ev-transcript-comprension"
+          ]
         },
         {
           "type": "legal_basis",
           "title": "Base oficial vigente",
-          "content": "La fuente rectora de esta clase es la información oficial del Ceneval, no una disposición jurídica. Para el EGEL Plus Derecho, la guía vigente debe elegirse según la fecha de aplicación. La estructura oficial consultada distingue una sección disciplinar con Función pública, Litigio y Justicia alternativa y fe pública, y una sección transversal con Comprensión lectora y Redacción indirecta. La guía señala 140 reactivos disciplinares y 60 transversales, tres opciones por reactivo y un porcentaje de reactivos piloto no calificados. Las modalidades, horarios, materiales permitidos, requerimientos técnicos y reglas operativas deben confirmarse en la guía y el pase de ingreso de cada sustentante. Consulta realizada el 11 de agosto de 2026.",
-          "sourceOrigin": "complementary"
+          "content": "La fuente rectora de esta clase es la información oficial de Ceneval, no una disposición jurídica. La página oficial identifica para Derecho una guía vigente del 13 de abril al 3 de diciembre de 2026, aplicable a exámenes del 28 de agosto al 3 de diciembre de 2026. La guía distingue dos secciones y cinco áreas; señala 140 reactivos disciplinares, 60 transversales, tres opciones por reactivo y 15% de reactivos piloto no calificados. Consulta y verificación: 21 de agosto de 2026.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-periodo-derecho",
+            "ev-ceneval-estructura-derecho",
+            "ev-ceneval-areas-derecho",
+            "ev-ceneval-lenguaje",
+            "ev-ceneval-formato-reactivo"
+          ]
         },
         {
           "type": "simple_example",
           "title": "Ejemplo sencillo: leer antes de recordar",
-          "content": "El caso dice que una persona fue notificada el lunes, presentó un escrito el viernes y pregunta si actuó dentro de un plazo de cinco días. Antes de buscar una respuesta, subraya cuatro datos: fecha inicial, acto de notificación, plazo indicado y fecha de presentación. Después pregunta qué regla de cómputo aplica y si existen días inhábiles. Este orden evita elegir una opción solo porque menciona cinco días. El reactivo evalúa la aplicación de la regla a los hechos, no la repetición aislada del número.",
-          "sourceOrigin": "complementary"
+          "content": "Un texto breve contiene una tesis, dos razones y un dato secundario. La pregunta pide identificar la idea central. Primero se lee el texto completo; después se vuelve al pasaje pertinente y se contrastan las tres opciones. La correcta debe expresar la tesis completa, no solo repetir una frase verdadera pero secundaria.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-lenguaje",
+            "ev-ceneval-formato-reactivo"
+          ]
         },
         {
           "type": "ceneval_example",
-          "title": "Caso tipo EGEL: competencia y distractores",
-          "content": "Una autoridad estatal pretende resolver un asunto que la Constitución reserva expresamente a la Federación. La instrucción pide identificar el problema jurídico principal. Opción A: falta de competencia; opción B: error de redacción; opción C: incumplimiento contractual. El método correcto localiza primero la tarea —identificar el problema principal— y después el hecho decisivo —la reserva federal—. La respuesta es falta de competencia. Los otros datos pueden ser verosímiles, pero no explican la invalidez central descrita en el caso.",
-          "sourceOrigin": "mixed"
+          "title": "Caso tipo EGEL: idea central y opciones",
+          "content": "Un texto de práctica explica una controversia y después pregunta por su idea central. Opción A reproduce un dato secundario; opción B expresa la conclusión completa; opción C agrega una consecuencia que el texto no contiene. La estrategia indicada en la guía es leer de forma completa, volver al texto, valorar la plausibilidad y seleccionar la opción totalmente correcta. Corresponde la opción B.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-lenguaje",
+            "ev-ceneval-recomendaciones"
+          ]
         },
         {
           "type": "summary",
           "title": "Resumen de la primera clase",
-          "content": "El examen integra una sección disciplinar y otra transversal. Derecho se organiza en Función pública, Litigio y Justicia alternativa y fe pública; Lenguaje y Comunicación comprende lectura y redacción indirecta. Los reactivos plantean problemas con tres opciones y una respuesta correcta. Los reactivos piloto no se distinguen ni califican, por lo que todos deben atenderse. La estrategia central es estudiar con fuentes vigentes, practicar casos, justificar descartes y registrar errores. Los datos logísticos siempre se verifican en la guía correspondiente y en el pase de ingreso.",
-          "sourceOrigin": "mixed"
+          "content": "El examen integra una sección disciplinar y otra transversal. Derecho se organiza en Función pública, Litigio y Justicia alternativa y fe pública; Lenguaje y Comunicación comprende lectura y redacción indirecta. Los reactivos de opción múltiple tienen tres opciones y una respuesta correcta. La guía indica que 15% son piloto y no cuentan para la calificación; también recomienda responder todos los reactivos.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-estructura-derecho",
+            "ev-ceneval-areas-derecho",
+            "ev-ceneval-lenguaje",
+            "ev-ceneval-formato-reactivo",
+            "ev-ceneval-recomendaciones"
+          ]
         },
         {
           "type": "study_guide",
           "title": "Guía de preguntas y respuestas",
-          "content": "1. ¿Qué evalúa el EGEL Plus Derecho? Conocimientos y habilidades disciplinares, comprensión lectora y redacción indirecta. 2. ¿Cuáles son las áreas disciplinares? Función pública, Litigio y Justicia alternativa y fe pública. 3. ¿Cuáles son las áreas transversales? Comprensión lectora y Redacción indirecta. 4. ¿Cuántas opciones tiene cada reactivo oficial? Tres, con una sola respuesta correcta. 5. ¿Qué es un reactivo piloto? Una pregunta usada para obtener información técnica que no cuenta para la calificación. 6. ¿Puede identificarse durante el examen? No. 7. ¿Qué se lee primero? La instrucción y su verbo rector. 8. ¿Qué hechos deben conservarse? Solo los que modifican la solución jurídica. 9. ¿Cómo se usa un distractor? Se explica qué regla, etapa o dato contradice. 10. ¿Qué se hace con cada error? Se clasifica y se convierte en una tarea de estudio. 11. ¿Debes memorizar bancos filtrados? No; practica reactivos originales y fuentes oficiales. 12. ¿Qué documento manda sobre horarios y modalidad? La guía aplicable y el pase de ingreso.",
-          "sourceOrigin": "mixed"
+          "content": "1. ¿Cuáles son las áreas disciplinares? Función pública, Litigio y Justicia alternativa y fe pública. 2. ¿Cuáles son las áreas transversales? Comprensión lectora y Redacción indirecta. 3. ¿Cuántas opciones tiene un reactivo? Tres, con una correcta. 4. ¿Qué proporción es piloto? La guía señala 15%; no cuenta para la calificación. 5. ¿Qué hacer ante un reactivo difícil? Marcarlo, continuar y volver si hay tiempo. 6. ¿Cómo orientar el estudio? Mediante autoevaluación, planeación y monitoreo. 7. ¿Qué exige la ética? No sustraer ni compartir reactivos.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-estructura-derecho",
+            "ev-ceneval-areas-derecho",
+            "ev-ceneval-lenguaje",
+            "ev-ceneval-formato-reactivo",
+            "ev-ceneval-preparacion",
+            "ev-ceneval-recomendaciones",
+            "ev-ceneval-etica"
+          ]
         },
         {
           "type": "key_concepts",
           "title": "Conceptos clave",
-          "content": "Sección disciplinar: conocimientos y habilidades propios de Derecho. Sección transversal: comprensión lectora y redacción indirecta comunes a las profesiones. Área: conjunto de competencias profesionales relacionadas. Reactivo: problema explícito acompañado de opciones de respuesta. Reactivo piloto: pregunta no calificada utilizada para obtener evidencia técnica. Verbo rector: acción exigida por la instrucción, como identificar, determinar o seleccionar. Hecho relevante: dato que cambia la aplicación de la regla. Distractor: opción plausible pero jurídicamente incompatible con la tarea o los hechos. Diagnóstico: medición inicial de fortalezas y vacíos. Registro de errores: bitácora que vincula cada fallo con su causa y la acción correctiva.",
-          "sourceOrigin": "mixed"
+          "content": "Sección disciplinar: conocimientos y habilidades propios de Derecho. Sección transversal: comprensión lectora y redacción indirecta. Reactivo de opción múltiple: problema explícito con tres opciones y una respuesta correcta. Reactivo piloto: reactivo incluido entre el 15% que la guía indica que no se considera para la calificación. Autoevaluación: revisión de conocimientos antes de planear. Monitoreo: seguimiento del avance. Integridad académica: conducta que excluye sustraer, compartir o usar reactivos indebidos.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-estructura-derecho",
+            "ev-ceneval-areas-derecho",
+            "ev-ceneval-lenguaje",
+            "ev-ceneval-formato-reactivo",
+            "ev-ceneval-preparacion",
+            "ev-ceneval-etica"
+          ]
         },
         {
           "type": "common_errors",
           "title": "Errores comunes y cómo evitarlos",
-          "content": "No uses como vigentes los horarios o cifras escuchados en una grabación antigua; consulta la guía de tu periodo. No confundas área con materia universitaria. No intentes descubrir qué reactivo es piloto. No elijas una opción por contener una palabra conocida. No leas primero todas las opciones sin saber qué pide la instrucción. No agregues hechos que el caso no proporciona. No selecciones una regla general cuando el caso activa una excepción. No estudies solo releyendo: practica, explica distractores y registra errores. No uses preguntas supuestamente filtradas ni confundas un curso privado con material avalado por Ceneval.",
-          "sourceOrigin": "mixed"
+          "content": "Verifica en la página oficial cuál guía corresponde al periodo de aplicación. No confundas las áreas del examen con una lista de materias universitarias. No abandones un reactivo por su dificultad: la guía recomienda marcarlo, continuar y volver si el tiempo lo permite. En comprensión lectora no elijas una opción solo por parecer plausible; debe ser totalmente correcta. No sustraigas, compartas ni uses reactivos obtenidos de forma indebida.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-periodo-derecho",
+            "ev-ceneval-areas-derecho",
+            "ev-ceneval-lenguaje",
+            "ev-ceneval-formato-reactivo",
+            "ev-ceneval-recomendaciones",
+            "ev-ceneval-etica"
+          ]
         }
       ],
       "conceptMap": {
         "title": "Mapa visual para dominar el EGEL Plus Derecho",
-        "description": "Parte del examen al centro y recorre sus ramas: estructura, reactivos, método de resolución y ciclo de estudio.",
+        "description": "Parte del examen al centro y recorre sus ramas: estructura, formato de reactivos, resolución y preparación.",
         "nodes": [
           {
             "id": "egel",
             "label": "EGEL Plus Derecho",
-            "description": "Evaluación disciplinar y transversal del perfil general de egreso."
+            "description": "Evaluación disciplinar y transversal del perfil general de egreso.",
+            "evidenceIds": [
+              "ev-ceneval-areas-derecho",
+              "ev-ceneval-lenguaje"
+            ]
           },
           {
             "id": "estructura",
             "label": "1. Estructura",
             "description": "Dos secciones y cinco áreas.",
-            "parentId": "egel"
+            "parentId": "egel",
+            "evidenceIds": [
+              "ev-ceneval-estructura-derecho"
+            ]
           },
           {
             "id": "disciplinar",
             "label": "Sección disciplinar",
             "description": "140 reactivos en la guía consultada.",
-            "parentId": "estructura"
+            "parentId": "estructura",
+            "evidenceIds": [
+              "ev-ceneval-estructura-derecho",
+              "ev-ceneval-areas-derecho",
+              "ev-ceneval-formato-reactivo"
+            ]
           },
           {
             "id": "funcion",
             "label": "Función pública",
             "description": "Entes, competencias, límites, derechos y obligaciones.",
-            "parentId": "disciplinar"
+            "parentId": "disciplinar",
+            "evidenceIds": [
+              "ev-ceneval-areas-derecho"
+            ]
           },
           {
             "id": "litigio",
             "label": "Litigio",
             "description": "Controversias de Derecho público, privado y social.",
-            "parentId": "disciplinar"
+            "parentId": "disciplinar",
+            "evidenceIds": [
+              "ev-ceneval-areas-derecho"
+            ]
           },
           {
             "id": "alternativa",
             "label": "Justicia alternativa y fe pública",
             "description": "Soluciones no jurisdiccionales y certeza jurídica.",
-            "parentId": "disciplinar"
+            "parentId": "disciplinar",
+            "evidenceIds": [
+              "ev-ceneval-areas-derecho"
+            ]
           },
           {
             "id": "transversal",
             "label": "Lenguaje y Comunicación",
             "description": "60 reactivos en la guía consultada.",
-            "parentId": "estructura"
+            "parentId": "estructura",
+            "evidenceIds": [
+              "ev-ceneval-estructura-derecho",
+              "ev-ceneval-formato-reactivo"
+            ]
           },
           {
             "id": "lectura",
             "label": "Comprensión lectora",
             "description": "Identificar, interpretar y evaluar información.",
-            "parentId": "transversal"
+            "parentId": "transversal",
+            "evidenceIds": [
+              "ev-ceneval-lenguaje"
+            ]
           },
           {
             "id": "redaccion",
             "label": "Redacción indirecta",
             "description": "Seleccionar el texto adecuado para una situación.",
-            "parentId": "transversal"
+            "parentId": "transversal",
+            "evidenceIds": [
+              "ev-ceneval-lenguaje"
+            ]
           },
           {
             "id": "reactivo",
             "label": "2. Reactivo",
             "description": "Problema explícito, tres opciones y una correcta.",
-            "parentId": "egel"
+            "parentId": "egel",
+            "evidenceIds": [
+              "ev-ceneval-formato-reactivo"
+            ]
           },
           {
             "id": "piloto",
             "label": "Piloto",
-            "description": "No se identifica y no cuenta para la calificación.",
-            "parentId": "reactivo"
+            "description": "La guía señala 15% de reactivos piloto no calificados.",
+            "parentId": "reactivo",
+            "evidenceIds": [
+              "ev-ceneval-estructura-derecho",
+              "ev-ceneval-formato-reactivo"
+            ]
           },
           {
             "id": "metodo",
-            "label": "3. Método de cinco pasos",
-            "description": "Proceso reproducible para resolver casos.",
-            "parentId": "egel"
+            "label": "3. Resolución",
+            "description": "Recomendaciones oficiales para abordar los reactivos.",
+            "parentId": "egel",
+            "evidenceIds": [
+              "ev-ceneval-formato-reactivo"
+            ]
           },
           {
             "id": "tarea",
-            "label": "Tarea",
-            "description": "Ubica la instrucción y el verbo rector.",
-            "parentId": "metodo"
+            "label": "Lectura completa",
+            "description": "Lee todo el texto antes de responder.",
+            "parentId": "metodo",
+            "evidenceIds": [
+              "ev-ceneval-lenguaje"
+            ]
           },
           {
             "id": "hechos",
-            "label": "Hechos relevantes",
-            "description": "Separa datos decisivos de información secundaria.",
-            "parentId": "metodo"
+            "label": "Regreso al texto",
+            "description": "Vuelve al pasaje cuando sea necesario.",
+            "parentId": "metodo",
+            "evidenceIds": [
+              "ev-ceneval-lenguaje"
+            ]
           },
           {
             "id": "regla",
-            "label": "Regla aplicable",
-            "description": "Relaciona hechos con norma, principio o criterio.",
-            "parentId": "metodo"
+            "label": "Plausibilidad",
+            "description": "Contrasta las opciones con el contenido.",
+            "parentId": "metodo",
+            "evidenceIds": [
+              "ev-ceneval-lenguaje",
+              "ev-ceneval-recomendaciones"
+            ]
           },
           {
             "id": "descarte",
-            "label": "Descarte",
-            "description": "Explica por qué falla cada distractor.",
-            "parentId": "metodo"
+            "label": "Respuesta completa",
+            "description": "Descarta respuestas solo parcialmente correctas.",
+            "parentId": "metodo",
+            "evidenceIds": [
+              "ev-ceneval-lenguaje"
+            ]
           },
           {
             "id": "verificacion",
-            "label": "Verificación",
-            "description": "Confirma que respondes exactamente lo preguntado.",
-            "parentId": "metodo"
+            "label": "Administración",
+            "description": "Marca lo difícil y vuelve si queda tiempo.",
+            "parentId": "metodo",
+            "evidenceIds": [
+              "ev-ceneval-recomendaciones"
+            ]
           },
           {
             "id": "ciclo",
-            "label": "4. Ciclo de estudio",
-            "description": "Mejora continua basada en evidencia.",
-            "parentId": "egel"
+            "label": "4. Preparación",
+            "description": "Autoevaluación, planeación y monitoreo.",
+            "parentId": "egel",
+            "evidenceIds": [
+              "ev-ceneval-preparacion"
+            ]
           },
           {
             "id": "diagnostico",
-            "label": "Diagnosticar",
-            "description": "Mide por área y detecta patrones.",
-            "parentId": "ciclo"
+            "label": "Autoevaluar",
+            "description": "Identifica conocimientos y habilidades por fortalecer.",
+            "parentId": "ciclo",
+            "evidenceIds": [
+              "ev-ceneval-preparacion"
+            ]
           },
           {
             "id": "practica",
-            "label": "Estudiar + practicar",
-            "description": "Usa fuentes vigentes y casos originales.",
-            "parentId": "ciclo"
+            "label": "Planear",
+            "description": "Organiza actividades y tiempo de estudio.",
+            "parentId": "ciclo",
+            "evidenceIds": [
+              "ev-ceneval-preparacion",
+              "ev-ceneval-recomendaciones"
+            ]
           },
           {
             "id": "retroalimentar",
-            "label": "Retroalimentar",
-            "description": "Convierte cada error en una acción concreta.",
-            "parentId": "ciclo"
+            "label": "Monitorear",
+            "description": "Revisa el avance y ajusta el plan.",
+            "parentId": "ciclo",
+            "evidenceIds": [
+              "ev-ceneval-preparacion"
+            ]
           }
         ]
       },
       "references": [
         {
-          "title": "EGEL Plus — Examen General para el Egreso de la Licenciatura",
+          "title": "Exámenes para el egreso de la licenciatura, EGEL",
           "url": "https://ceneval.edu.mx/examenes-egreso-egel/",
           "institution": "Centro Nacional de Evaluación para la Educación Superior, A.C.",
           "jurisdiction": "México",
-          "citation": "Estructura, modalidades, guías por periodo y preguntas frecuentes del EGEL Plus",
-          "retrievedOn": "2026-08-11",
-          "note": "Página oficial para elegir la guía correspondiente a la fecha de aplicación."
+          "citation": "Guías agosto 2026 > Derecho y preguntas frecuentes",
+          "retrievedOn": "2026-08-21",
+          "note": "La página oficial enlaza la guía de Derecho y declara su periodo de vigencia."
         },
         {
-          "title": "Guía para el sustentante EGEL Plus Derecho — julio de 2026",
-          "url": "https://online.flippingbook.com/view/900977387/",
+          "title": "Guía para el sustentante EGEL Plus Derecho",
+          "url": "https://ceneval.edu.mx/wp-content/uploads/2023/01/GUIA-EGEL-DERE.pdf",
           "institution": "Centro Nacional de Evaluación para la Educación Superior, A.C.",
           "jurisdiction": "México",
-          "citation": "Guía para aplicaciones entre el 28 de agosto y el 3 de diciembre de 2026",
-          "retrievedOn": "2026-08-11",
-          "note": "Fuente oficial vigente para estructura y preparación del EGEL Plus Derecho en ese periodo."
+          "citation": "Secciones 2.1-2.6, 3.1 y 4; páginas impresas 10-22, 35 y 40-46",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente oficial primaria para estructura, áreas, formato y preparación."
         },
         {
-          "title": "Reportes para sustentantes EGEL Plus",
-          "url": "https://ceneval.edu.mx/reportes-egel/",
+          "title": "Comportamiento ético del sustentante",
+          "url": "https://ceneval.edu.mx/comportamiento-etico-del-sustentante/",
           "institution": "Centro Nacional de Evaluación para la Educación Superior, A.C.",
           "jurisdiction": "México",
-          "citation": "Niveles de desempeño e interpretación de resultados",
-          "retrievedOn": "2026-08-11",
-          "note": "Explica que el desempeño se reporta por área, sección y resultado global."
+          "citation": "Principio de equidad y acciones indebidas",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente oficial para integridad y prohibición de sustraer o compartir reactivos."
         }
       ],
       "flashcards": [
         {
           "question": "¿Cuáles son las dos secciones del EGEL Plus?",
           "answer": "La sección disciplinar específica de la profesión y la sección transversal de Lenguaje y Comunicación.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-estructura-derecho",
+            "ev-ceneval-areas-derecho",
+            "ev-ceneval-lenguaje"
+          ]
         },
         {
           "question": "¿Cuáles son las tres áreas disciplinares del EGEL Plus Derecho?",
           "answer": "Función pública, Litigio y Justicia alternativa y fe pública.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-areas-derecho"
+          ]
         },
         {
           "question": "¿Qué áreas integran Lenguaje y Comunicación?",
           "answer": "Comprensión lectora y Redacción indirecta.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-lenguaje"
+          ]
         },
         {
           "question": "¿Cuántas opciones contiene un reactivo oficial del EGEL Plus?",
           "answer": "Tres opciones, de las cuales solo una es correcta.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-formato-reactivo"
+          ]
         },
         {
           "question": "¿Qué es un reactivo piloto?",
-          "answer": "Una pregunta utilizada para obtener evidencia técnica que no se considera para la calificación.",
-          "sourceOrigin": "mixed"
+          "answer": "Un reactivo incluido entre el 15% que la guía indica que no se considera para la calificación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-estructura-derecho",
+            "ev-ceneval-formato-reactivo"
+          ]
         },
         {
-          "question": "¿Puedes saber durante el examen qué reactivo es piloto?",
-          "answer": "No. Los reactivos piloto no se identifican y deben responderse con el mismo cuidado.",
-          "sourceOrigin": "mixed"
+          "question": "¿Qué recomienda la guía ante un reactivo difícil?",
+          "answer": "Marcarlo, continuar y volver después si el tiempo lo permite.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-formato-reactivo",
+            "ev-ceneval-recomendaciones"
+          ]
         },
         {
-          "question": "¿Cuál es el primer paso al resolver un caso?",
-          "answer": "Leer la instrucción e identificar el verbo rector que define la tarea.",
-          "sourceOrigin": "mixed"
+          "question": "¿Qué recomienda la guía para comprensión lectora?",
+          "answer": "Leer el texto completo, volver a él y elegir una respuesta totalmente correcta.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-lenguaje",
+            "ev-ceneval-recomendaciones"
+          ]
         },
         {
-          "question": "¿Qué es un hecho jurídicamente relevante?",
-          "answer": "Un dato del caso que modifica la regla aplicable o la conclusión jurídica.",
-          "sourceOrigin": "complementary"
+          "question": "¿Qué significa autoevaluar la preparación?",
+          "answer": "Identificar los conocimientos y habilidades que se dominan y los que requieren estudio.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-preparacion"
+          ]
         },
         {
-          "question": "¿Cómo se aprovecha un distractor durante la práctica?",
-          "answer": "Explicando qué hecho, regla, excepción o etapa lo vuelve incorrecto.",
-          "sourceOrigin": "complementary"
+          "question": "¿Cómo se monitorea la preparación?",
+          "answer": "Se revisa el avance de las actividades planeadas y se ajusta el estudio.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-preparacion"
+          ]
         },
         {
-          "question": "¿Por qué conviene llevar un registro de errores?",
-          "answer": "Porque transforma fallos repetidos en tareas específicas de estudio y permite medir el progreso.",
-          "sourceOrigin": "mixed"
+          "question": "¿Qué orientación pedagógica aporta el Audio 01?",
+          "answer": "Privilegiar la comprensión y el repaso frente a la memorización aislada.",
+          "sourceOrigin": "class",
+          "evidenceIds": [
+            "ev-transcript-comprension",
+            "ev-transcript-repaso"
+          ]
         },
         {
-          "question": "¿Qué documento prevalece sobre la logística mencionada en una clase grabada?",
-          "answer": "La guía oficial correspondiente al periodo y el pase de ingreso de la persona sustentante.",
-          "sourceOrigin": "complementary"
+          "question": "¿Dónde se confirma la guía aplicable en 2026?",
+          "answer": "En la página oficial de EGEL, que enlaza la guía de Derecho y señala su periodo de vigencia.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-periodo-derecho"
+          ]
         },
         {
           "question": "¿Ceneval avala instituciones o cursos de preparación?",
-          "answer": "No. Ceneval se presenta como instancia evaluadora y no recomienda ni vincula entidades asesoras.",
-          "sourceOrigin": "complementary"
+          "answer": "No. Ceneval indica que no ofrece capacitación ni tiene vínculos con entidades que ofrecen cursos o materiales de preparación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-ceneval-cursos"
+          ]
         }
       ],
       "exam": {
@@ -352,54 +562,196 @@
               "Agrupa correctamente las tres áreas profesionales de Derecho.",
               "La sección transversal comprende lectura y redacción indirecta.",
               "El cuestionario de contexto no evalúa esas áreas disciplinares."
+            ],
+            "evidenceIds": [
+              "ev-ceneval-areas-derecho",
+              "ev-ceneval-lenguaje"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-ceneval-areas-derecho"
+              ],
+              [
+                "ev-ceneval-areas-derecho",
+                "ev-ceneval-lenguaje"
+              ],
+              [
+                "ev-ceneval-areas-derecho",
+                "ev-ceneval-lenguaje"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-ceneval-areas-derecho"
+            ],
+            "explanationEvidenceIds": [
+              "ev-ceneval-areas-derecho"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-ceneval-areas-derecho"
+              ],
+              [
+                "ev-ceneval-areas-derecho",
+                "ev-ceneval-lenguaje"
+              ],
+              [
+                "ev-ceneval-areas-derecho",
+                "ev-ceneval-lenguaje"
+              ]
             ]
           },
           {
             "text": "Durante el examen aparece una pregunta mucho más técnica que las anteriores. ¿Cuál es la actuación más adecuada?",
             "difficulty": "basic",
             "options": [
-              "Dejar de responder porque seguramente es piloto",
-              "Responderla con el mejor análisis posible y continuar administrando el tiempo",
-              "Buscar en internet si la pregunta cuenta para la calificación"
+              "Dejar de responderla por su dificultad",
+              "Marcarla, continuar y volver después si el tiempo lo permite",
+              "Buscar en internet una respuesta"
             ],
             "correctOption": 1,
-            "explanation": "Los reactivos piloto no están identificados; se debe responder cada pregunta y conservar el control del tiempo.",
+            "explanation": "La guía recomienda responder todos los reactivos y administrar el tiempo volviendo después a los difíciles.",
             "optionExplanations": [
-              "No es posible confirmar que sea piloto durante la aplicación.",
-              "Mantiene una estrategia válida frente a cualquier reactivo.",
-              "El uso de internet contraviene las condiciones de aplicación."
+              "La dificultad no justifica abandonar el reactivo.",
+              "Es la recomendación de administración indicada en la guía.",
+              "Consultar internet constituye un apoyo indebido durante la aplicación."
+            ],
+            "evidenceIds": [
+              "ev-ceneval-formato-reactivo",
+              "ev-ceneval-recomendaciones",
+              "ev-ceneval-etica"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-ceneval-formato-reactivo",
+                "ev-ceneval-recomendaciones"
+              ],
+              [
+                "ev-ceneval-formato-reactivo",
+                "ev-ceneval-recomendaciones"
+              ],
+              [
+                "ev-ceneval-formato-reactivo",
+                "ev-ceneval-recomendaciones",
+                "ev-ceneval-etica"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-ceneval-formato-reactivo",
+              "ev-ceneval-recomendaciones"
+            ],
+            "explanationEvidenceIds": [
+              "ev-ceneval-formato-reactivo",
+              "ev-ceneval-recomendaciones"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-ceneval-formato-reactivo"
+              ],
+              [
+                "ev-ceneval-recomendaciones"
+              ],
+              [
+                "ev-ceneval-etica"
+              ]
             ]
           },
           {
-            "text": "Un caso contiene nombres, fechas, cargos y antecedentes, pero pregunta cuál autoridad es competente. ¿Qué debe localizarse primero?",
+            "text": "En comprensión lectora, dos opciones recuperan datos verdaderos pero solo una responde por completo. ¿Cuál debe elegirse?",
             "difficulty": "basic",
             "options": [
-              "La opción con el nombre de la institución más conocida",
-              "El verbo de la instrucción y los hechos que determinan la competencia",
-              "La respuesta más extensa porque contiene más información"
+              "La opción más extensa",
+              "La respuesta totalmente correcta conforme al texto",
+              "Cualquier opción con una frase verdadera"
             ],
             "correctOption": 1,
-            "explanation": "La tarea y los hechos jurídicamente relevantes orientan la regla de competencia y permiten descartar datos secundarios.",
+            "explanation": "La guía señala que no hay respuestas parcialmente correctas y pide elegir la opción plenamente sustentada.",
             "optionExplanations": [
-              "La familiaridad del nombre no demuestra competencia.",
-              "Es el inicio correcto del método de resolución.",
-              "La extensión de una opción no demuestra que sea correcta."
+              "La extensión no determina corrección.",
+              "Atiende íntegramente la tarea y el texto.",
+              "Un dato verdadero puede ser insuficiente para responder."
+            ],
+            "evidenceIds": [
+              "ev-ceneval-lenguaje"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-ceneval-lenguaje"
+              ],
+              [
+                "ev-ceneval-lenguaje"
+              ],
+              [
+                "ev-ceneval-lenguaje"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-ceneval-lenguaje"
+            ],
+            "explanationEvidenceIds": [
+              "ev-ceneval-lenguaje"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-ceneval-lenguaje"
+              ],
+              [
+                "ev-ceneval-lenguaje"
+              ],
+              [
+                "ev-ceneval-lenguaje"
+              ]
             ]
           },
           {
-            "text": "Una estudiante relee toda la legislación cada semana, pero repite los mismos errores en casos prácticos. ¿Qué ajuste es más útil?",
+            "text": "Una estudiante no sabe qué contenidos domina antes de iniciar su preparación. ¿Qué paso recomienda la guía?",
             "difficulty": "intermediate",
             "options": [
-              "Releer más rápido sin revisar las respuestas",
-              "Memorizar únicamente las letras de un banco de respuestas",
-              "Clasificar cada error, estudiar la regla asociada y practicar un caso equivalente"
+              "Autoevaluar sus conocimientos y habilidades",
+              "Memorizar letras de respuestas",
+              "Ignorar las áreas que resulten difíciles"
             ],
-            "correctOption": 2,
-            "explanation": "La retroalimentación debe convertir el error en una causa identificable y en una acción concreta de estudio y práctica.",
+            "correctOption": 0,
+            "explanation": "La guía propone la autoevaluación como base para identificar fortalezas y necesidades de estudio.",
             "optionExplanations": [
-              "La velocidad no corrige la causa del error.",
-              "Memorizar letras no desarrolla criterio transferible.",
-              "Cierra correctamente el ciclo de diagnóstico y mejora."
+              "Permite planear con base en un diagnóstico propio.",
+              "No permite comprobar comprensión ni aplicación.",
+              "Evitar las dificultades impide atender las necesidades detectadas."
+            ],
+            "evidenceIds": [
+              "ev-ceneval-lenguaje",
+              "ev-ceneval-preparacion",
+              "ev-ceneval-recomendaciones"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-ceneval-preparacion"
+              ],
+              [
+                "ev-ceneval-preparacion"
+              ],
+              [
+                "ev-ceneval-preparacion",
+                "ev-ceneval-recomendaciones"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-ceneval-preparacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-ceneval-preparacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-ceneval-preparacion"
+              ],
+              [
+                "ev-ceneval-lenguaje",
+                "ev-ceneval-preparacion"
+              ],
+              [
+                "ev-ceneval-preparacion",
+                "ev-ceneval-recomendaciones"
+              ]
             ]
           },
           {
@@ -416,38 +768,141 @@
               "Ambas son áreas disciplinares de Derecho.",
               "Es la integración oficial de Lenguaje y Comunicación.",
               "Forman conjuntamente una de las áreas disciplinares."
+            ],
+            "evidenceIds": [
+              "ev-ceneval-areas-derecho",
+              "ev-ceneval-lenguaje"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-ceneval-areas-derecho",
+                "ev-ceneval-lenguaje"
+              ],
+              [
+                "ev-ceneval-lenguaje"
+              ],
+              [
+                "ev-ceneval-areas-derecho",
+                "ev-ceneval-lenguaje"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-ceneval-lenguaje"
+            ],
+            "explanationEvidenceIds": [
+              "ev-ceneval-lenguaje"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-ceneval-areas-derecho",
+                "ev-ceneval-lenguaje"
+              ],
+              [
+                "ev-ceneval-lenguaje"
+              ],
+              [
+                "ev-ceneval-areas-derecho",
+                "ev-ceneval-lenguaje"
+              ]
             ]
           },
           {
-            "text": "Una grabación antigua afirma una duración concreta, pero el pase de ingreso vigente muestra otra organización. ¿Qué información debe seguirse?",
+            "text": "¿Dónde debe verificarse qué guía de Derecho corresponde a una aplicación de agosto a diciembre de 2026?",
             "difficulty": "intermediate",
             "options": [
-              "La grabación, porque contiene la explicación del docente",
-              "El promedio de comentarios publicados en redes sociales",
-              "La guía aplicable y el pase de ingreso vigente"
+              "En publicaciones sin autoridad identificada",
+              "En una fuente que no identifica el periodo vigente",
+              "En la página oficial de EGEL de Ceneval"
             ],
             "correctOption": 2,
-            "explanation": "Las condiciones operativas pueden actualizarse; los documentos oficiales vinculados con la aplicación concreta prevalecen.",
+            "explanation": "La página oficial de EGEL identifica la guía de Derecho y el periodo para el que se encuentra vigente.",
             "optionExplanations": [
-              "Una grabación puede conservar datos de un periodo anterior.",
-              "Los comentarios no sustituyen instrucciones oficiales.",
-              "Son las fuentes que regulan la aplicación correspondiente."
+              "Una publicación sin autoridad no acredita vigencia.",
+              "Una fuente sin periodo verificable no acredita la vigencia de la guía.",
+              "La página oficial vincula la guía y declara su periodo."
+            ],
+            "evidenceIds": [
+              "ev-ceneval-periodo-derecho"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-ceneval-periodo-derecho"
+              ],
+              [
+                "ev-ceneval-periodo-derecho"
+              ],
+              [
+                "ev-ceneval-periodo-derecho"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-ceneval-periodo-derecho"
+            ],
+            "explanationEvidenceIds": [
+              "ev-ceneval-periodo-derecho"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-ceneval-periodo-derecho"
+              ],
+              [
+                "ev-ceneval-periodo-derecho"
+              ],
+              [
+                "ev-ceneval-periodo-derecho"
+              ]
             ]
           },
           {
-            "text": "En un reactivo, dos opciones contienen reglas verdaderas, pero solo una responde la cuestión procesal planteada. ¿Cómo debe elegirse?",
+            "text": "Al contestar una pregunta de comprensión, ¿qué secuencia coincide con la guía?",
             "difficulty": "advanced",
             "options": [
-              "Elegir cualquiera porque ambas reglas existen",
-              "Seleccionar la regla vinculada con la tarea, etapa y hechos del caso",
-              "Elegir siempre la regla más general"
+              "Elegir la primera frase conocida",
+              "Leer completo, volver al texto y valorar las opciones",
+              "Responder sin consultar nuevamente el texto"
             ],
             "correctOption": 1,
-            "explanation": "Una afirmación verdadera puede funcionar como distractor si no resuelve el problema específico presentado.",
+            "explanation": "La guía recomienda una lectura completa, regresar al texto y analizar la plausibilidad de las opciones.",
             "optionExplanations": [
-              "La existencia de una regla no demuestra su pertinencia.",
-              "Integra correctamente instrucción, contexto procesal y hechos.",
-              "Una regla general puede ceder ante una especial o excepción."
+              "La familiaridad no demuestra una respuesta completa.",
+              "Reproduce las recomendaciones de la guía.",
+              "La guía permite y recomienda volver al texto."
+            ],
+            "evidenceIds": [
+              "ev-ceneval-lenguaje",
+              "ev-ceneval-recomendaciones"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-ceneval-lenguaje"
+              ],
+              [
+                "ev-ceneval-lenguaje",
+                "ev-ceneval-recomendaciones"
+              ],
+              [
+                "ev-ceneval-lenguaje"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-ceneval-lenguaje",
+              "ev-ceneval-recomendaciones"
+            ],
+            "explanationEvidenceIds": [
+              "ev-ceneval-lenguaje"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-ceneval-lenguaje"
+              ],
+              [
+                "ev-ceneval-lenguaje",
+                "ev-ceneval-recomendaciones"
+              ],
+              [
+                "ev-ceneval-lenguaje",
+                "ev-ceneval-recomendaciones"
+              ]
             ]
           },
           {
@@ -464,41 +919,292 @@
               "Identifica tanto el riesgo pedagógico como el ético.",
               "No existe garantía de que contenga explicaciones oficiales.",
               "Ningún banco de ese tipo garantiza un nivel de desempeño."
+            ],
+            "evidenceIds": [
+              "ev-ceneval-lenguaje",
+              "ev-ceneval-etica",
+              "ev-transcript-comprension",
+              "ev-transcript-etica"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-ceneval-lenguaje",
+                "ev-ceneval-etica",
+                "ev-transcript-comprension",
+                "ev-transcript-etica"
+              ],
+              [
+                "ev-ceneval-lenguaje",
+                "ev-ceneval-etica",
+                "ev-transcript-comprension",
+                "ev-transcript-etica"
+              ],
+              [
+                "ev-ceneval-lenguaje",
+                "ev-ceneval-etica",
+                "ev-transcript-comprension",
+                "ev-transcript-etica"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-ceneval-lenguaje",
+              "ev-ceneval-etica",
+              "ev-transcript-comprension",
+              "ev-transcript-etica"
+            ],
+            "explanationEvidenceIds": [
+              "ev-ceneval-lenguaje",
+              "ev-ceneval-etica",
+              "ev-transcript-comprension",
+              "ev-transcript-etica"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-ceneval-etica",
+                "ev-transcript-etica"
+              ],
+              [
+                "ev-ceneval-etica",
+                "ev-transcript-etica"
+              ],
+              [
+                "ev-ceneval-etica",
+                "ev-transcript-etica"
+              ]
             ]
           },
           {
-            "text": "Después de una práctica, una estudiante anota: “fallé porque confundí la autoridad competente”. ¿Cuál es el siguiente paso más preciso?",
+            "text": "Después de planear su estudio, una sustentante quiere comprobar si avanza. ¿Qué acción corresponde?",
             "difficulty": "advanced",
             "options": [
-              "Registrar la letra correcta y no volver al tema",
-              "Estudiar criterios de competencia y resolver casos comparables",
-              "Cambiar de área cada vez que aparezca una dificultad"
+              "Monitorear el cumplimiento y ajustar las actividades",
+              "Conservar el plan aunque no funcione",
+              "Sustituir el estudio por un banco de respuestas"
             ],
-            "correctOption": 1,
-            "explanation": "Un registro de errores sirve cuando conecta la causa con una acción medible de estudio y práctica posterior.",
+            "correctOption": 0,
+            "explanation": "La guía incluye el monitoreo del avance como parte de una preparación organizada.",
             "optionExplanations": [
-              "La letra no explica la regla ni previene la repetición.",
-              "Convierte el diagnóstico en una intervención concreta.",
-              "Evitar el área mantiene el vacío detectado."
+              "Permite revisar y ajustar el proceso.",
+              "Ignora la información producida por el seguimiento.",
+              "No demuestra dominio ni respeta una preparación verificable."
+            ],
+            "evidenceIds": [
+              "ev-ceneval-preparacion",
+              "ev-ceneval-etica",
+              "ev-transcript-etica"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-ceneval-preparacion"
+              ],
+              [
+                "ev-ceneval-preparacion"
+              ],
+              [
+                "ev-ceneval-preparacion",
+                "ev-ceneval-etica",
+                "ev-transcript-etica"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-ceneval-preparacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-ceneval-preparacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-ceneval-preparacion"
+              ],
+              [
+                "ev-ceneval-preparacion"
+              ],
+              [
+                "ev-ceneval-preparacion",
+                "ev-ceneval-etica",
+                "ev-transcript-etica"
+              ]
             ]
           },
           {
-            "text": "¿Cuál secuencia representa mejor el método completo de resolución enseñado en esta clase?",
+            "text": "¿Cuál secuencia resume mejor la preparación propuesta por la guía oficial?",
             "difficulty": "advanced",
             "options": [
-              "Leer opciones, recordar una palabra, adivinar y continuar",
-              "Memorizar, copiar, comparar longitud y elegir",
-              "Identificar tarea, seleccionar hechos, formular regla, descartar y verificar"
+              "Autoevaluar, planear y monitorear",
+              "Memorizar, copiar y repetir",
+              "Improvisar, omitir y adivinar"
             ],
-            "correctOption": 2,
-            "explanation": "La secuencia conecta la instrucción con los hechos y la regla, somete las opciones a contraste y verifica la respuesta final.",
+            "correctOption": 0,
+            "explanation": "La guía estructura la preparación mediante autoevaluación, planeación de actividades y monitoreo del avance.",
             "optionExplanations": [
-              "La familiaridad verbal no sustituye el razonamiento jurídico.",
-              "La memorización y la longitud no son criterios de validez.",
-              "Reproduce los cinco pasos de análisis de la clase."
+              "Integra los tres componentes descritos en la guía.",
+              "No corresponde con la preparación recomendada.",
+              "No ofrece un proceso de estudio verificable."
+            ],
+            "evidenceIds": [
+              "ev-ceneval-preparacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-ceneval-preparacion"
+              ],
+              [
+                "ev-ceneval-preparacion"
+              ],
+              [
+                "ev-ceneval-preparacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-ceneval-preparacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-ceneval-preparacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-ceneval-preparacion"
+              ],
+              [
+                "ev-ceneval-preparacion"
+              ],
+              [
+                "ev-ceneval-preparacion"
+              ]
             ]
           }
         ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-ceneval-periodo-derecho",
+      "kind": "official",
+      "title": "Exámenes para el egreso de la licenciatura, EGEL",
+      "url": "https://ceneval.edu.mx/examenes-egreso-egel/",
+      "institution": "Centro Nacional de Evaluación para la Educación Superior, A.C.",
+      "jurisdiction": "México",
+      "locator": "Guías agosto 2026 > Ciencias Sociales y Humanidades > Derecho; vigencia 13 de abril a 3 de diciembre de 2026; aplicaciones 28 de agosto a 3 de diciembre de 2026",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-ceneval-estructura-derecho",
+      "kind": "official",
+      "title": "Guía para el sustentante EGEL Plus Derecho",
+      "url": "https://ceneval.edu.mx/wp-content/uploads/2023/01/GUIA-EGEL-DERE.pdf",
+      "institution": "Centro Nacional de Evaluación para la Educación Superior, A.C.",
+      "jurisdiction": "México",
+      "locator": "página impresa 10, sección 2.1, Estructura general del examen",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-ceneval-areas-derecho",
+      "kind": "official",
+      "title": "Guía para el sustentante EGEL Plus Derecho",
+      "url": "https://ceneval.edu.mx/wp-content/uploads/2023/01/GUIA-EGEL-DERE.pdf",
+      "institution": "Centro Nacional de Evaluación para la Educación Superior, A.C.",
+      "jurisdiction": "México",
+      "locator": "páginas impresas 11-12, secciones 2.2 y 2.3, Sección disciplinar y Definición de las áreas disciplinares",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-ceneval-lenguaje",
+      "kind": "official",
+      "title": "Guía para el sustentante EGEL Plus Derecho",
+      "url": "https://ceneval.edu.mx/wp-content/uploads/2023/01/GUIA-EGEL-DERE.pdf",
+      "institution": "Centro Nacional de Evaluación para la Educación Superior, A.C.",
+      "jurisdiction": "México",
+      "locator": "páginas impresas 20-22, sección 2.6, Sección de Lenguaje y Comunicación",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-ceneval-formato-reactivo",
+      "kind": "official",
+      "title": "Guía para el sustentante EGEL Plus Derecho",
+      "url": "https://ceneval.edu.mx/wp-content/uploads/2023/01/GUIA-EGEL-DERE.pdf",
+      "institution": "Centro Nacional de Evaluación para la Educación Superior, A.C.",
+      "jurisdiction": "México",
+      "locator": "página impresa 35, sección 3.1, Formatos de reactivos del examen",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-ceneval-preparacion",
+      "kind": "official",
+      "title": "Guía para el sustentante EGEL Plus Derecho",
+      "url": "https://ceneval.edu.mx/wp-content/uploads/2023/01/GUIA-EGEL-DERE.pdf",
+      "institution": "Centro Nacional de Evaluación para la Educación Superior, A.C.",
+      "jurisdiction": "México",
+      "locator": "páginas impresas 40-42, sección 4, Sugerencias para prepararse para la aplicación",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-ceneval-recomendaciones",
+      "kind": "official",
+      "title": "Guía para el sustentante EGEL Plus Derecho",
+      "url": "https://ceneval.edu.mx/wp-content/uploads/2023/01/GUIA-EGEL-DERE.pdf",
+      "institution": "Centro Nacional de Evaluación para la Educación Superior, A.C.",
+      "jurisdiction": "México",
+      "locator": "página impresa 46, recomendaciones para contestar el examen",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-ceneval-etica",
+      "kind": "official",
+      "title": "Comportamiento ético del sustentante",
+      "url": "https://ceneval.edu.mx/comportamiento-etico-del-sustentante/",
+      "institution": "Centro Nacional de Evaluación para la Educación Superior, A.C.",
+      "jurisdiction": "México",
+      "locator": "Principio de equidad y acciones indebidas: sustraer o compartir reactivos y utilizar apoyos indebidos",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-ceneval-cursos",
+      "kind": "official",
+      "title": "Exámenes para el egreso de la licenciatura, EGEL",
+      "url": "https://ceneval.edu.mx/examenes-egreso-egel/",
+      "institution": "Centro Nacional de Evaluación para la Educación Superior, A.C.",
+      "jurisdiction": "México",
+      "locator": "Preguntas frecuentes > ¿El Ceneval recomienda alguna institución asesora durante las etapas del proceso de evaluación?",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-transcript-comprension",
+      "kind": "transcript",
+      "audioNumber": 1,
+      "locator": {
+        "type": "line_range",
+        "startLine": 51,
+        "endLine": 51
+      }
+    },
+    {
+      "id": "ev-transcript-repaso",
+      "kind": "transcript",
+      "audioNumber": 1,
+      "locator": {
+        "type": "line_range",
+        "startLine": 47,
+        "endLine": 47
+      }
+    },
+    {
+      "id": "ev-transcript-etica",
+      "kind": "transcript",
+      "audioNumber": 1,
+      "locator": {
+        "type": "line_range",
+        "startLine": 17,
+        "endLine": 19
       }
     }
   ]

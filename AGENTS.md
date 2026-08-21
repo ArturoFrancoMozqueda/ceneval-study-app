@@ -116,8 +116,8 @@ red usa `npm run test:backup`. Consulta `docs/SUPABASE_BACKUP.md`.
 
 - Un paquete nuevo solo se importa si usa el contrato 1.2 y pasa
   `content:check`: además de los conteos editoriales, cada dinámica debe tener
-  evidencia concreta y verificable. Los paquetes C01–C40 en 1.1 son legibles,
-  pero no pasan este gate y no son importables ni publicables todavía.
+  evidencia concreta y verificable. C01 ya usa 1.2 y pasa el gate local; C02–C40
+  permanecen en 1.1, son legibles, pero no son importables ni publicables.
 - Las fuentes jurídicas deben ser primarias y oficiales, con autoridad
   identificada, dominio verificado o allowlist y fecha de consulta. No infieras
   oficialidad solo por el sufijo: CENEVAL, SCJN y CNDH usan dominios distintos.
@@ -157,10 +157,10 @@ red usa `npm run test:backup`. Consulta `docs/SUPABASE_BACKUP.md`.
 Detectadas en la auditoría de agosto de 2026. Verifica antes de asumir que
 alguna sigue abierta; si corriges una, actualiza esta lista.
 
-- **El contrato publicable es 1.2.** C01–C40 conservan contrato 1.1, código,
-  orden y fuentes de audio, pero solo son legibles: deben añadir evidencia
-  verificable antes de importar o publicar. C01 se dejó deliberadamente sin
-  migrar porque no tiene localizadores suficientes y nadie debe inventarlos.
+- **El contrato publicable es 1.2.** C01 es el primer piloto migrado: conserva
+  código, orden y fuentes de audio, y sus 139 artefactos enlazan evidencia
+  oficial o localizadores verificables de la transcripción. C02–C40 siguen en
+  1.1 y solo son legibles: deben añadir evidencia antes de importar o publicar.
   La versión retirada 1.0 se conserva fuera de `content/packages/`.
 - **Las transcripciones tienen una primera copia privada verificada.** El 21 de
   agosto de 2026 se copiaron los 70 TXT fuera de la memoria USB y se comprobó

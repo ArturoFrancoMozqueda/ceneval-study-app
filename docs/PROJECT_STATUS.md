@@ -86,9 +86,10 @@ anterior, pero esos datos no están presentes en el proyecto CENEVAL conectado:
 | Flashcards | 480 |
 | Preguntas de examen | 400 |
 
-El repositorio conserva 40 paquetes C01–C40 legibles en contrato 1.1 y una
-versión retirada en el archivo editorial. Todavía no son publicables bajo el
-gate trazable 1.2. La siguiente clase planeada es **C41
+El repositorio conserva C01 como piloto trazable en contrato 1.2, C02–C40
+legibles en contrato 1.1 y una versión retirada en el archivo editorial. C01
+pasa el gate local, pero no se ha importado, revisado ni publicado; C02–C40
+todavía no son publicables bajo el gate trazable 1.2. La siguiente clase planeada es **C41
 — Juicio ejecutivo mercantil oral**, con Audio 54 y la primera parte del Audio
 55. Antes de disponer de esa biblioteca en la aplicación habrá que
 importar C01–C40 en el proyecto CENEVAL correcto.
@@ -206,10 +207,11 @@ El contrato 1.2 añade el gate de confianza editorial:
 - modificar o rechazar contenido invalida la aprobación anterior;
 - la transcripción queda restringida a administración.
 
-Los 40 paquetes C01–C40 tienen código, orden y fuentes portables en 1.1, pero
-no pasan el nuevo gate. C01 permanece sin migrar porque faltan localizadores
-verificables; no se inventó evidencia. El importador acepta exclusivamente 1.2
-y delega la escritura a una única RPC transaccional que persiste el registro de
+Los 40 paquetes C01–C40 tienen código, orden y fuentes portables. C01 ya usa
+1.2: sus 139 artefactos quedaron enlazados a 12 evidencias verificables y pasa
+el gate local sin importar contenido. C02–C40 permanecen en 1.1 y no pasan el
+nuevo gate. El importador acepta exclusivamente 1.2 y delega la escritura a
+una única RPC transaccional que persiste el registro de
 evidencias, journeys y vínculos editoriales; 1.0 y 1.1 fallan antes de llamar a
 Supabase. La versión sustituida de C14 permanece en el archivo 1.0 no
 importable.

@@ -20,7 +20,10 @@ const validCurriculum = {
 };
 
 test("acepta código, orden y audios coherentes", () => {
-  assert.deepEqual(curriculumMetadataSchema.parse(validCurriculum), validCurriculum);
+  assert.deepEqual(
+    curriculumMetadataSchema.parse(validCurriculum),
+    validCurriculum,
+  );
 });
 
 test("rechaza un código que no coincide con el orden", () => {
@@ -57,36 +60,36 @@ test("rechaza el mismo audio repetido dentro de una clase", () => {
   assert.match(result.error?.issues[0]?.message ?? "", /está repetido/);
 });
 
-const c01Path = path.join(
+const legacyPackagePath = path.join(
   process.cwd(),
   "content",
   "packages",
-  "audio-01-02-orientacion-egel-derecho.json",
+  "audio-04-05-derecho-sustantivo-adjetivo.json",
 );
 
-function readC01() {
+function readLegacyPackage() {
   const parsed = classPackageFileSchema.parse(
-    JSON.parse(readFileSync(c01Path, "utf8")),
+    JSON.parse(readFileSync(legacyPackagePath, "utf8")),
   );
   assert.equal(parsed.packageVersion, "1.1");
   if (parsed.packageVersion !== "1.1") {
-    throw new Error("La prueba requiere que C01 permanezca en 1.1.");
+    throw new Error("La prueba requiere un paquete legado en 1.1.");
   }
   return parsed;
 }
 
 function createSyntheticTraceablePackage() {
-  const c01 = readC01();
+  const legacyPackage = readLegacyPackage();
   const evidenceIds = ["ev-synthetic-source"];
 
   return {
-    ...c01,
+    ...legacyPackage,
     packageVersion: "1.2" as const,
     evidenceRegistry: [
       {
         id: "ev-synthetic-source",
         kind: "transcript" as const,
-        audioNumber: 1,
+        audioNumber: legacyPackage.curriculum.audioSources[0]!.audioNumber,
         locator: {
           type: "line_range" as const,
           startLine: 1,
@@ -94,7 +97,7 @@ function createSyntheticTraceablePackage() {
         },
       },
     ],
-    topics: c01.topics.map((topic) => ({
+    topics: legacyPackage.topics.map((topic) => ({
       ...topic,
       learningJourney: {
         ...topic.learningJourney,
@@ -130,30 +133,29 @@ function createSyntheticTraceablePackage() {
           optionEvidenceIds: question.options.map(() => evidenceIds),
           correctOptionEvidenceIds: evidenceIds,
           explanationEvidenceIds: evidenceIds,
-          optionExplanationEvidenceIds: question.options.map(
-            () => evidenceIds,
-          ),
+          optionExplanationEvidenceIds: question.options.map(() => evidenceIds),
         })),
       },
     })),
   };
 }
 
-test("conserva C01 en lectura 1.1 pero lo marca no trazable y no publicable", () => {
-  const assessment = assessEditorialGate(readC01());
+test("conserva lectura 1.1 pero la marca no trazable y no publicable", () => {
+  const assessment = assessEditorialGate(readLegacyPackage());
 
   assert.equal(assessment.traceable, false);
   assert.equal(assessment.publishable, false);
-  assert.deepEqual(assessment.issues.map(({ path }) => path), [
-    "packageVersion",
-  ]);
+  assert.deepEqual(
+    assessment.issues.map(({ path }) => path),
+    ["packageVersion"],
+  );
   assert.match(assessment.issues[0]?.message ?? "", /Migra el paquete a 1\.2/);
 });
 
 test("el contrato 1.2 señala las rutas de evidencia que faltan", () => {
-  const c01 = readC01();
+  const legacyPackage = readLegacyPackage();
   const result = classPackageFileSchema.safeParse({
-    ...c01,
+    ...legacyPackage,
     packageVersion: "1.2",
   });
 
@@ -162,9 +164,7 @@ test("el contrato 1.2 señala las rutas de evidencia que faltan", () => {
   assert.ok(paths.includes("evidenceRegistry"));
   assert.ok(paths.includes("topics.0.materials.0.evidenceIds"));
   assert.ok(
-    paths.includes(
-      "topics.0.exam.questions.0.optionExplanationEvidenceIds",
-    ),
+    paths.includes("topics.0.exam.questions.0.optionExplanationEvidenceIds"),
   );
 });
 
