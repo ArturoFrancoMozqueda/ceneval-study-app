@@ -1,10 +1,13 @@
 {
-  "packageVersion": "1.1",
+  "packageVersion": "1.2",
   "curriculum": {
     "code": "C12",
     "order": 12,
     "audioSources": [
-      {"audioNumber": 13,"fragment": "Audio completo"}
+      {
+        "audioNumber": 13,
+        "fragment": "Audio completo"
+      }
     ]
   },
   "subject": {
@@ -24,97 +27,1420 @@
       "title": "Cómo determinar si procede el amparo indirecto",
       "description": "Supuestos legales, interés jurídico o legítimo, autoridad responsable, acto reclamado y protección cautelar.",
       "learningJourney": {
-        "openingPrompt": "Una persona teme que quizá exista una orden en su contra, pero no aporta ningún dato objetivo. ¿Ese temor basta para promover amparo indirecto?",
+        "openingPrompt": "Una persona teme que quizá exista una orden en su contra, pero no aporta ningún dato objetivo. ¿Ese temor basta para acreditar la existencia o inminencia del acto y obtener suspensión?",
         "quickChecks": [
-          {"prompt":"¿Procede contra cualquier acto que parezca injusto?","answer":"No. El acto debe encajar en un supuesto legal de procedencia y superar los demás requisitos del juicio.","feedback":"El artículo 107 de la Ley de Amparo contiene la clasificación básica."},
-          {"prompt":"¿Todo particular puede ser autoridad responsable?","answer":"No. Debe realizar actos equivalentes a los de autoridad, afectar derechos y ejercer funciones determinadas por una norma general.","feedback":"Una relación familiar o contractual ordinaria no basta."},
-          {"prompt":"¿Toda suspensión se concede automáticamente?","answer":"No. Hay casos de oficio y de plano; en los demás se solicita y se ponderan los requisitos legales.","feedback":"No confundas la protección urgente excepcional con la regla general."}
+          {
+            "prompt": "¿Procede contra cualquier acto que parezca injusto?",
+            "answer": "No. El acto debe encajar en un supuesto legal de procedencia y superar los demás requisitos del juicio.",
+            "feedback": "El artículo 107 de la Ley de Amparo contiene la clasificación básica.",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia"
+            ]
+          },
+          {
+            "prompt": "¿Todo particular puede ser autoridad responsable?",
+            "answer": "No. Debe realizar actos equivalentes a los de autoridad, afectar derechos y ejercer funciones determinadas por una norma general.",
+            "feedback": "Una relación familiar o contractual ordinaria no basta.",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia",
+              "ev-c12-la-art5-partes-interes"
+            ]
+          },
+          {
+            "prompt": "¿Toda suspensión se concede automáticamente?",
+            "answer": "No. Hay casos de oficio y de plano; en los demás se solicita y se ponderan los requisitos legales.",
+            "feedback": "No confundas la protección urgente excepcional con la regla general.",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-arts125-129-suspension"
+            ]
+          }
         ],
         "practicalCase": {
-          "facts": "Un ayuntamiento clausura sin audiencia un pequeño negocio. El sello impide de inmediato la actividad y la ley local no ofrece un recurso con suspensión automática. La propietaria acredita su licencia y la posesión del local.",
+          "facts": "Un ayuntamiento clausura sin audiencia un pequeño negocio. El sello impide de inmediato la actividad y la ley local no prevé un medio capaz de modificar, revocar o anular el acto con suspensión de los mismos alcances y sin mayores requisitos que la Ley de Amparo. La propietaria acredita su licencia y la posesión del local.",
           "question": "¿Qué elementos deben analizarse para promover amparo indirecto y pedir suspensión?",
-          "legalRule": "El artículo 107, fracción II, de la Ley de Amparo contempla actos de autoridades no jurisdiccionales; los artículos 5, 108 y 128 exigen legitimación, identificación del acto y autoridad, y requisitos cautelares.",
-          "reasoning": "Existe un acto concreto de autoridad administrativa, una afectación actual y personal respaldada por documentos y una posible lesión de audiencia. La demanda debe identificar a quien ordenó y a quien ejecutó la clausura. La suspensión no es automática: debe pedirse y el órgano jurisdiccional ponderará existencia o inminencia del acto, interés suspensional, interés social, orden público y apariencia del buen derecho.",
-          "conclusion": "En principio puede proceder el amparo indirecto y solicitarse suspensión, sin que ello anticipe la concesión de fondo."
+          "legalRule": "El artículo 107, fracción II, de la Ley de Amparo contempla actos de autoridades no jurisdiccionales; los artículos 5, 108 y 128 exigen legitimación, identificación del acto y autoridad, y requisitos cautelares. La fracción XX del artículo 61 obliga además a revisar si existe un medio ordinario eficaz y si se actualiza alguna excepción a definitividad.",
+          "reasoning": "Existe un acto concreto de autoridad administrativa, una afectación actual y personal respaldada por documentos y una posible lesión de audiencia. La demanda debe identificar a quien ordenó y a quien ejecutó la clausura. La suspensión no es automática: debe pedirse y el órgano jurisdiccional ponderará existencia o inminencia del acto, interés suspensional, interés social, orden público y apariencia del buen derecho. También debe documentarse por qué no existe un recurso eficaz que deba agotarse o cuál excepción legal opera.",
+          "conclusion": "En principio puede proceder el amparo indirecto y solicitarse suspensión, sin que ello anticipe la concesión de fondo.",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art107-procedencia",
+            "ev-c12-la-art5-partes-interes",
+            "ev-c12-la-art61-definitividad",
+            "ev-c12-la-arts108-110-demanda",
+            "ev-c12-la-arts125-129-suspension"
+          ]
         },
-        "closingPrompt": "Antes de elegir la vía pregunta: ¿qué norma, acto u omisión reclamo?, ¿quién lo emitió o ejecutó?, ¿en qué fracción del artículo 107 encaja?, ¿qué interés acredito y qué medio ordinario existe?",
-        "nextActivity": "Recorre el mapa conceptual, estudia la guía de doce preguntas y resuelve los diez casos tipo EGEL."
+        "closingPrompt": "Antes de elegir la vía pregunta: ¿directo o indirecto?, ¿qué norma, acto u omisión reclamo?, ¿en qué fracción del artículo 107 encaja?, ¿qué interés acredito?, ¿qué plazo corre?, ¿qué medio ordinario existe y qué órgano es competente?",
+        "nextActivity": "Recorre el mapa conceptual, estudia la guía de doce preguntas y resuelve los diez casos tipo EGEL.",
+        "openingPromptEvidenceIds": [
+          "ev-c12-cpeum-arts103-107-amparo",
+          "ev-c12-la-art107-procedencia",
+          "ev-c12-la-arts125-129-suspension"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c12-cpeum-arts103-107-amparo",
+          "ev-c12-la-art107-procedencia",
+          "ev-c12-la-art5-partes-interes",
+          "ev-c12-la-art17-plazos",
+          "ev-c12-la-arts33-39-competencia",
+          "ev-c12-la-art61-definitividad"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c12-cpeum-arts103-107-amparo",
+          "ev-c12-la-art107-procedencia"
+        ]
       },
       "materials": [
-        {"type":"short_answer","title":"Respuesta corta: qué es el amparo indirecto","content":"Es el juicio constitucional que se tramita, por regla, ante un Juzgado de Distrito contra normas generales, actos u omisiones incluidos en el artículo 107 de la Ley de Amparo: entre otros, actos de autoridades no jurisdiccionales, actos irreparables dentro de juicio, actos fuera o después de juicio y afectaciones a personas extrañas.","sourceOrigin":"mixed"},
-        {"type":"full_explanation","title":"Explicación completa desde cero","content":"El amparo indirecto protege frente a normas, actos u omisiones que encajan en los supuestos legales. No es una vía universal contra cualquier injusticia ni una herramienta para investigar si quizá existe un acto. Primero se identifica con precisión qué se reclama, quién lo ordenó o ejecutó, cuándo se conoció y cómo afecta a la persona.\n\nEl artículo 107 de la Ley de Amparo incluye nueve grupos: normas generales autoaplicativas o por primer acto de aplicación; actos u omisiones de autoridades distintas de tribunales; actuaciones de procedimientos administrativos seguidos en forma de juicio; actos de tribunales fuera de juicio o después de concluido; actos en juicio de imposible reparación; afectaciones a personas extrañas; omisiones y ciertas decisiones del Ministerio Público; decisiones de inhibición o declinación competencial; y determinados actos de COFECE e IFT. Cada grupo tiene condiciones propias.\n\nLa persona quejosa debe acreditar un derecho subjetivo afectado o un interés legítimo individual o colectivo con lesión real, actual y diferenciada. El interés simple nunca basta. Si el acto proviene de un tribunal, normalmente se exige un derecho subjetivo lesionado de manera personal y directa. El interés jurídico suele apoyarse en títulos, licencias, propiedad, posesión o una relación normativa concreta; aparecer en un documento puede ser evidencia, pero no es su definición.\n\nUna autoridad responsable dicta, ordena, ejecuta o trata de ejecutar el acto, u omite lo debido. Un particular solo se equipara a autoridad si realiza actos equivalentes que afectan derechos y sus funciones están determinadas por una norma general. Una madre, un padre, un patrón o una empresa no son autoridad por su sola calidad.\n\nEl acto reclamado puede ser positivo u omisivo, presente o de realización inminente. Un acto futuro meramente posible o especulativo no basta. Para la tutela cautelar, la ley exige que exista, haya certeza de su inminente realización o una presunción razonable sobre su existencia. El amparo puede promoverse antes o después de una detención según las circunstancias; no debe enseñarse que solo sirve antes.\n\nLa demanda ordinaria se formula por escrito o por medios electrónicos autorizados y debe contener los elementos del artículo 108. En situaciones extremas del artículo 15, cualquier persona puede promover por quien está imposibilitado; además, el artículo 20 permite escrito, comparecencia o medio electrónico en cualquier día y hora. Esto no convierte WhatsApp en vía general.\n\nUna persona menor de edad puede pedir amparo por sí o por otra persona en su nombre cuando su representante esté ausente, sea desconocido, esté impedido o se niegue; el órgano designa representación especial y, desde los catorce años, puede designarla en la demanda. Esa regla protege sus propios derechos y no autoriza representar sin límites cualquier agravio de un tercero.\n\nLa suspensión conserva la materia y evita daños mientras se resuelve. Es de oficio y de plano frente a peligro de vida, ataques a libertad fuera de procedimiento, incomunicación, deportación o expulsión, proscripción o destierro, extradición, desaparición forzada, actos prohibidos por el artículo 22 constitucional e incorporación militar forzosa, además del supuesto agrario legal. En los demás casos se pide y se ponderan existencia del acto, interés suspensional, interés social, orden público y apariencia del buen derecho.\n\nAl analizar órdenes de aprehensión o cateos hay que distinguir autoridad ordenadora y ejecutora. Una orden judicial legal no viola por sí sola la presunción de inocencia; el examen depende de competencia, fundamentación, motivación, requisitos constitucionales y forma de ejecución. Deportación, expulsión y extradición también son figuras diferentes y no deben intercambiarse.","sourceOrigin":"mixed"},
-        {"type":"legal_basis","title":"Fundamento jurídico vigente","content":"Constitución, artículos 1, 14, 16, 103 y 107. Ley de Amparo: artículos 3, 5, 8, 15, 17 y 20; 107 y 108 sobre procedencia y demanda; 125 a 128 sobre suspensión; y reglas especiales aplicables a actos que afectan la libertad. Texto consultado con última reforma DOF 16-10-2025.","sourceOrigin":"complementary"},
-        {"type":"simple_example","title":"Ejemplo sencillo: acto administrativo","content":"Una autoridad municipal clausura un local. La persona titular acredita licencia y afectación actual. Puede analizar amparo indirecto por acto de autoridad no jurisdiccional, identificar tanto a quien ordenó como a quien ejecutó y, si procede, pedir suspensión. No basta decir que la clausura es injusta: debe construir interés, acto y conceptos de violación.","sourceOrigin":"mixed"},
-        {"type":"ceneval_example","title":"Cómo aparece en un reactivo tipo EGEL","content":"Localiza cuatro datos: naturaleza del acto, etapa procesal, calidad de quien reclama y posibilidad de reparación. Descarta opciones absolutas como 'todo acto va a indirecto', 'todo particular es autoridad', 'el temor prueba una orden' o 'la suspensión siempre es automática'. Después ubica la fracción aplicable del artículo 107.","sourceOrigin":"complementary"},
-        {"type":"summary","title":"Resumen para repasar","content":"Indirecto no significa universal. Procedencia: artículo 107. Legitimación: derecho subjetivo o interés legítimo; interés simple no basta. Particular-autoridad: acto equivalente, afectación y función definida por norma general. Acto futuro: debe ser inminente o razonablemente presumible. Demanda: escrita o electrónica autorizada; comparecencia solo en supuestos legales urgentes. Suspensión: de oficio y de plano en casos extremos; en los demás, a petición y con ponderación.","sourceOrigin":"mixed"},
-        {"type":"study_guide","title":"Guía de preguntas y respuestas","content":"1. ¿Qué controla el amparo indirecto? Respuesta: normas, actos u omisiones incluidos en el artículo 107.\n2. ¿Procede contra cualquier injusticia? Respuesta: no, debe actualizarse un supuesto legal.\n3. ¿Qué exige legitimación? Respuesta: derecho subjetivo o interés legítimo con afectación real, actual y diferenciada.\n4. ¿Basta el interés simple? Respuesta: nunca.\n5. ¿Cuándo un particular es autoridad? Respuesta: cuando realiza actos equivalentes que afectan derechos y su función deriva de norma general.\n6. ¿Qué es el acto reclamado? Respuesta: la norma, acto u omisión atribuida a cada responsable.\n7. ¿Basta un temor abstracto? Respuesta: no; el acto futuro debe ser inminente o razonablemente presumible.\n8. ¿Cómo se presenta ordinariamente? Respuesta: por escrito o medio electrónico autorizado.\n9. ¿WhatsApp es vía general? Respuesta: no.\n10. ¿Puede una persona menor promover? Respuesta: sí, bajo las condiciones y representación especial del artículo 8.\n11. ¿Cuándo hay suspensión de oficio y de plano? Respuesta: en los actos extremos del artículo 126 y el supuesto agrario previsto.\n12. ¿Qué se pondera al solicitarla? Respuesta: acto existente o inminente, interés suspensional, interés social, orden público y apariencia del buen derecho.","sourceOrigin":"mixed"},
-        {"type":"key_concepts","title":"Conceptos clave","content":"Procedencia: encuadre legal. Quejosa: persona afectada. Interés jurídico: derecho subjetivo lesionado. Interés legítimo: afectación diferenciada real y actual. Interés simple: preocupación insuficiente. Autoridad responsable: quien ordena, ejecuta u omite. Particular equivalente: función pública normativa y afectación unilateral. Acto reclamado: conducta concreta impugnada. Imposible reparación: afectación material a derecho sustantivo. Suspensión: tutela cautelar provisional.","sourceOrigin":"mixed"},
-        {"type":"common_errors","title":"Errores comunes y correcciones","content":"Error: procede contra todo acto. Corrección: debe encajar en el artículo 107. Error: una madre o empresa siempre es autoridad. Corrección: se exigen los elementos del artículo 5. Error: interés jurídico significa aparecer en una orden. Corrección: es una relación jurídica concreta afectada. Error: cualquier temor prueba un acto futuro. Corrección: se requieren datos de inminencia o presunción razonable. Error: se promueve siempre por WhatsApp. Corrección: la ley regula escrito, medios electrónicos autorizados y comparecencia urgente. Error: toda suspensión es automática. Corrección: solo ciertos actos reciben suspensión de oficio y de plano.","sourceOrigin":"mixed"}
+        {
+          "type": "short_answer",
+          "title": "Respuesta corta: qué es el amparo indirecto",
+          "content": "Es el juicio constitucional que se tramita, por regla, ante un Juzgado de Distrito contra normas generales, actos u omisiones incluidos en el artículo 107 de la Ley de Amparo: entre otros, actos de autoridades no jurisdiccionales, actos irreparables dentro de juicio, actos fuera o después de juicio y afectaciones a personas extrañas.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art107-procedencia",
+            "ev-c12-la-art5-partes-interes",
+            "ev-c12-la-arts33-39-competencia",
+            "ev-c12-a13-l19-31-naturaleza"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "El amparo indirecto protege frente a normas, actos u omisiones que encajan en los supuestos legales. No es una vía universal contra cualquier injusticia ni una herramienta para investigar si quizá existe un acto. Primero se identifica con precisión qué se reclama, quién lo ordenó o ejecutó, cuándo se conoció y cómo afecta a la persona.\n\nEl amparo directo corresponde, en términos generales, a sentencias definitivas, laudos y resoluciones que ponen fin al juicio; el indirecto no es una apelación anticipada contra cualquier determinación procesal. El artículo 107 de la Ley de Amparo incluye nueve grupos: normas generales autoaplicativas o por primer acto de aplicación; actos u omisiones de autoridades distintas de tribunales; actuaciones de procedimientos administrativos seguidos en forma de juicio; actos de tribunales fuera de juicio o después de concluido; actos en juicio de imposible reparación; afectaciones a personas extrañas; omisiones y ciertas decisiones del Ministerio Público; decisiones de inhibición o declinación competencial; y determinados actos de COFECE e IFT. Cada grupo tiene condiciones propias.\n\nLa persona quejosa debe acreditar un derecho subjetivo afectado o un interés legítimo individual o colectivo con lesión real, actual y diferenciada, de modo que la anulación produzca un beneficio cierto y no meramente hipotético o eventual. El interés simple nunca basta. Si el acto proviene de un tribunal, normalmente se exige un derecho subjetivo lesionado de manera personal y directa. El interés jurídico suele apoyarse en títulos, licencias, propiedad, posesión o una relación normativa concreta; aparecer en un documento puede ser evidencia, pero no es su definición.\n\nUna autoridad responsable dicta, ordena, ejecuta o trata de ejecutar el acto, u omite lo debido. Un particular solo se equipara a autoridad si realiza actos equivalentes que afectan derechos y sus funciones están determinadas por una norma general. Una madre, un padre, un patrón o una empresa no son autoridad por su sola calidad.\n\nEl acto reclamado puede ser positivo u omisivo, presente o de realización inminente. Un acto futuro meramente posible o especulativo no basta. Para la tutela cautelar, la ley exige que exista, haya certeza de su inminente realización o una presunción razonable sobre su existencia. El amparo puede promoverse antes o después de una detención según las circunstancias; no debe enseñarse que solo sirve antes.\n\nAntes de acudir al amparo debe revisarse la definitividad. Frente a resoluciones de tribunales o actos administrativos, por regla general se agota el recurso o medio ordinario eficaz; las fracciones XVIII y XX del artículo 61 contienen excepciones, entre ellas ciertos actos que afectan la libertad, personas extrañas, violaciones constitucionales directas y actos sin fundamentación. No existe una excepción universal.\n\nEl plazo ordinario del artículo 17 es de quince días. Es de treinta días para normas autoaplicativas y extradición; la ley fija además hasta ocho años para sentencia penal condenatoria con prisión, siete años para determinados actos agrarios y cualquier tiempo para los actos extremos enumerados en la fracción IV. El plazo depende del acto y no debe memorizarse uno solo para todos los casos.\n\nEl amparo indirecto corresponde a juzgados de distrito y, en el supuesto específico del artículo 36, a tribunales colegiados de apelación contra actos de otros tribunales de la misma naturaleza. La competencia territorial se determina por el lugar de ejecución conforme al artículo 37. La denominación vigente es tribunal colegiado de apelación, no tribunal unitario.\n\nLa demanda ordinaria se formula por escrito o por medios electrónicos autorizados y debe contener los elementos del artículo 108. En situaciones extremas del artículo 15, cualquier persona puede promover por quien está imposibilitado; además, el artículo 20 permite escrito, comparecencia o medio electrónico en cualquier día y hora. Esto no convierte WhatsApp en vía general.\n\nUna persona menor de edad puede pedir amparo por sí o por otra persona en su nombre cuando su representante esté ausente, sea desconocido, esté impedido o se niegue; el órgano designa representación especial y, desde los catorce años, puede designarla en la demanda. Esa regla protege sus propios derechos y no autoriza representar sin límites cualquier agravio de un tercero.\n\nLa suspensión conserva la materia y evita daños mientras se resuelve. Es de oficio y de plano frente a peligro de vida, ataques a libertad fuera de procedimiento, incomunicación, deportación o expulsión, proscripción o destierro, extradición, desaparición forzada, actos prohibidos por el artículo 22 constitucional e incorporación militar forzosa, además del supuesto agrario legal. En los demás casos se pide y se ponderan existencia del acto, interés suspensional, interés social, orden público y apariencia del buen derecho.\n\nAl analizar órdenes de aprehensión o cateos hay que distinguir autoridad ordenadora y ejecutora. Una orden judicial legal no viola por sí sola la presunción de inocencia; el examen depende de competencia, fundamentación, motivación, requisitos constitucionales y forma de ejecución. Deportación, expulsión y extradición también son figuras diferentes y no deben intercambiarse.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art107-procedencia",
+            "ev-c12-la-art5-partes-interes",
+            "ev-c12-la-arts8-15-20-urgencia",
+            "ev-c12-la-art17-plazos",
+            "ev-c12-la-arts33-39-competencia",
+            "ev-c12-la-art61-definitividad",
+            "ev-c12-la-arts108-110-demanda",
+            "ev-c12-la-arts125-129-suspension",
+            "ev-c12-cpeum-arts14-16-actos",
+            "ev-c12-cnpp-ordenes-cateo",
+            "ev-c12-a13-l19-31-naturaleza",
+            "ev-c12-a13-l107-113-suspension",
+            "ev-c12-a13-l119-123-interes",
+            "ev-c12-a13-l129-actos-procesales"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Constitución, artículos 14, 16, 103 y 107. Ley de Amparo vigente: artículos 5 y 8 sobre partes e interés; 15, 17 y 20 sobre urgencia y plazos diferenciados; 33 a 39 sobre competencia; 61, fracciones XVIII y XX, sobre definitividad y excepciones; 107 y 108 sobre procedencia y demanda; y 125 a 129 sobre suspensión. Texto consultado con última reforma DOF 16-10-2025.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art107-procedencia",
+            "ev-c12-la-art5-partes-interes",
+            "ev-c12-la-arts8-15-20-urgencia",
+            "ev-c12-la-art17-plazos",
+            "ev-c12-la-arts33-39-competencia",
+            "ev-c12-la-art61-definitividad",
+            "ev-c12-la-arts108-110-demanda",
+            "ev-c12-la-arts125-129-suspension"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo: acto administrativo",
+          "content": "Una autoridad municipal clausura un local. La persona titular acredita licencia y afectación actual. Puede analizar amparo indirecto por acto de autoridad no jurisdiccional, identificar tanto a quien ordenó como a quien ejecutó y, si procede, pedir suspensión. No basta decir que la clausura es injusta: debe construir interés, acto y conceptos de violación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art107-procedencia",
+            "ev-c12-la-art5-partes-interes",
+            "ev-c12-la-arts125-129-suspension"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Cómo aparece en un reactivo tipo EGEL",
+          "content": "Localiza cuatro datos: naturaleza del acto, etapa procesal, calidad de quien reclama y posibilidad de reparación. Descarta opciones absolutas como 'todo acto va a indirecto', 'todo particular es autoridad', 'el temor prueba una orden' o 'la suspensión siempre es automática'. Después ubica la fracción aplicable del artículo 107.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art107-procedencia",
+            "ev-c12-la-art5-partes-interes",
+            "ev-c12-la-arts125-129-suspension"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen para repasar",
+          "content": "Indirecto no significa universal. Procedencia: artículo 107. Legitimación: derecho subjetivo o interés legítimo; interés simple no basta. Particular-autoridad: acto equivalente, afectación y función definida por norma general. Acto futuro: debe ser inminente o razonablemente presumible. Demanda: escrita o electrónica autorizada; comparecencia solo en supuestos legales urgentes. Suspensión: de oficio y de plano en casos extremos; en los demás, a petición y con ponderación. Directo e indirecto no son intercambiables. Definitividad: revisar recurso eficaz y excepción legal. Plazo ordinario: quince días, con excepciones expresas del artículo 17. Competencia vigente: juzgado de distrito y, en el caso legal específico, tribunal colegiado de apelación; no tribunal unitario.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art107-procedencia",
+            "ev-c12-la-art5-partes-interes",
+            "ev-c12-la-arts8-15-20-urgencia",
+            "ev-c12-la-art17-plazos",
+            "ev-c12-la-arts33-39-competencia",
+            "ev-c12-la-art61-definitividad",
+            "ev-c12-la-arts108-110-demanda",
+            "ev-c12-la-arts125-129-suspension",
+            "ev-c12-a13-l19-31-naturaleza"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de preguntas y respuestas",
+          "content": "1. ¿Qué controla el amparo indirecto? Respuesta: normas, actos u omisiones incluidos en el artículo 107.\n2. ¿Qué distingue directo e indirecto? Respuesta: el directo combate resoluciones terminales en los casos constitucionales; el indirecto procede solo en los supuestos del artículo 107 legal.\n3. ¿Qué exige legitimación? Respuesta: derecho subjetivo o interés legítimo con lesión real, actual y diferenciada que permita obtener un beneficio cierto con la anulación.\n4. ¿Basta el interés simple? Respuesta: nunca.\n5. ¿Cuándo un particular es autoridad? Respuesta: cuando realiza actos equivalentes que afectan derechos y su función deriva de norma general.\n6. ¿Qué es el acto reclamado? Respuesta: la norma, acto u omisión atribuida a cada responsable.\n7. ¿Cuál es el plazo ordinario? Respuesta: quince días, sin desplazar las excepciones expresas del artículo 17.\n8. ¿Cómo se presenta ordinariamente? Respuesta: por escrito o medio electrónico autorizado.\n9. ¿Siempre debe agotarse un recurso? Respuesta: se revisa definitividad y las excepciones de las fracciones XVIII y XX del artículo 61.\n10. ¿Puede una persona menor promover? Respuesta: sí, bajo las condiciones y representación especial del artículo 8.\n11. ¿Quién conoce del indirecto? Respuesta: juzgados de distrito y, en el supuesto del artículo 36, tribunales colegiados de apelación.\n12. ¿Qué se pondera al solicitar suspensión? Respuesta: acto existente o inminente, interés suspensional, interés social, orden público y apariencia del buen derecho.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art107-procedencia",
+            "ev-c12-la-art5-partes-interes",
+            "ev-c12-la-arts8-15-20-urgencia",
+            "ev-c12-la-art17-plazos",
+            "ev-c12-la-arts33-39-competencia",
+            "ev-c12-la-art61-definitividad",
+            "ev-c12-la-arts108-110-demanda",
+            "ev-c12-la-arts125-129-suspension"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Procedencia: encuadre legal. Quejosa: persona afectada. Interés jurídico: derecho subjetivo lesionado. Interés legítimo: afectación diferenciada real y actual. Interés simple: preocupación insuficiente. Autoridad responsable: quien ordena, ejecuta u omite. Particular equivalente: función pública normativa y afectación unilateral. Acto reclamado: conducta concreta impugnada. Imposible reparación: afectación material a derecho sustantivo. Suspensión: tutela cautelar provisional. Definitividad: exigencia de agotar el medio ordinario eficaz salvo excepción legal. Amparo directo: control de resoluciones terminales en los supuestos constitucionales. Competencia vigente: juzgado de distrito o tribunal colegiado de apelación en el caso específico de la ley.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art107-procedencia",
+            "ev-c12-la-art5-partes-interes",
+            "ev-c12-la-arts33-39-competencia",
+            "ev-c12-la-art61-definitividad",
+            "ev-c12-la-arts125-129-suspension"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes y correcciones",
+          "content": "Error: procede contra todo acto. Corrección: debe encajar en el artículo 107. Error: una madre o empresa siempre es autoridad. Corrección: se exigen los elementos del artículo 5. Error: interés jurídico significa aparecer en una orden. Corrección: es una relación jurídica concreta afectada. Error: cualquier temor prueba un acto futuro. Corrección: se requieren datos de inminencia o presunción razonable. Error: toda demanda puede enviarse por WhatsApp. Corrección: la vía ordinaria es escrita o electrónica autorizada y la comparecencia se limita a casos legales. Error: toda suspensión es automática. Corrección: solo ciertos actos reciben suspensión de oficio y de plano. Error: usar tribunal unitario como denominación vigente. Corrección: la ley vigente habla de tribunal colegiado de apelación. Error: aplicar quince días a todo acto. Corrección: el artículo 17 contiene plazos diferenciados.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art107-procedencia",
+            "ev-c12-la-art5-partes-interes",
+            "ev-c12-la-arts8-15-20-urgencia",
+            "ev-c12-la-art17-plazos",
+            "ev-c12-la-arts33-39-competencia",
+            "ev-c12-la-arts108-110-demanda",
+            "ev-c12-la-arts125-129-suspension",
+            "ev-c12-a13-l33-35-medios-error"
+          ]
+        }
       ],
       "conceptMap": {
         "title": "Mapa visual del amparo indirecto",
         "description": "Ruta desde el acto hasta la protección cautelar.",
         "nodes": [
-          {"id":"indirecto","label":"Amparo indirecto","description":"Control constitucional en supuestos legales."},
-          {"id":"procedencia","label":"1. Procedencia","description":"Artículo 107.","parentId":"indirecto"},
-          {"id":"normas","label":"Normas generales","description":"Entrada en vigor o primer acto.","parentId":"procedencia"},
-          {"id":"administrativa","label":"Autoridad no jurisdiccional","description":"Acto u omisión administrativa.","parentId":"procedencia"},
-          {"id":"juicio","label":"Actos vinculados con juicio","description":"Fuera, después o irreparables.","parentId":"procedencia"},
-          {"id":"extrana","label":"Persona extraña","description":"Afectación dentro o fuera de juicio.","parentId":"procedencia"},
-          {"id":"mp","label":"Ministerio Público","description":"Omisiones y decisiones previstas.","parentId":"procedencia"},
-          {"id":"legitimacion","label":"2. Legitimación","description":"Vínculo con la afectación.","parentId":"indirecto"},
-          {"id":"juridico","label":"Interés jurídico","description":"Derecho subjetivo lesionado.","parentId":"legitimacion"},
-          {"id":"legitimo","label":"Interés legítimo","description":"Posición diferenciada real y actual.","parentId":"legitimacion"},
-          {"id":"simple","label":"Interés simple","description":"Nunca es suficiente.","parentId":"legitimacion"},
-          {"id":"acto","label":"3. Acto reclamado","description":"Norma, acto u omisión.","parentId":"indirecto"},
-          {"id":"actual","label":"Actual","description":"Existe y afecta.","parentId":"acto"},
-          {"id":"inminente","label":"Futuro inminente","description":"Certeza o presunción razonable.","parentId":"acto"},
-          {"id":"responsable","label":"4. Responsable","description":"Ordena, ejecuta u omite.","parentId":"indirecto"},
-          {"id":"ordenadora","label":"Ordenadora","description":"Emite el mandato.","parentId":"responsable"},
-          {"id":"ejecutora","label":"Ejecutora","description":"Materializa el acto.","parentId":"responsable"},
-          {"id":"particular","label":"Particular equivalente","description":"Solo con requisitos del artículo 5.","parentId":"responsable"},
-          {"id":"demanda","label":"5. Demanda","description":"Artículo 108.","parentId":"indirecto"},
-          {"id":"forma","label":"Escrita o electrónica","description":"Medio legal autorizado.","parentId":"demanda"},
-          {"id":"urgencia","label":"Urgencia excepcional","description":"Comparecencia y promoción por tercero.","parentId":"demanda"},
-          {"id":"suspension","label":"6. Suspensión","description":"Conserva la materia.","parentId":"indirecto"},
-          {"id":"oficio","label":"De oficio y de plano","description":"Casos extremos del artículo 126.","parentId":"suspension"},
-          {"id":"peticion","label":"A petición","description":"Requisitos y ponderación.","parentId":"suspension"}
+          {
+            "id": "indirecto",
+            "label": "Amparo indirecto",
+            "description": "Control constitucional en supuestos legales.",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia"
+            ]
+          },
+          {
+            "id": "procedencia",
+            "label": "1. Procedencia",
+            "description": "Artículo 107.",
+            "parentId": "indirecto",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia"
+            ]
+          },
+          {
+            "id": "normas",
+            "label": "Normas generales",
+            "description": "Entrada en vigor o primer acto.",
+            "parentId": "procedencia",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia"
+            ]
+          },
+          {
+            "id": "administrativa",
+            "label": "Autoridad no jurisdiccional",
+            "description": "Acto u omisión administrativa.",
+            "parentId": "procedencia",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art5-partes-interes"
+            ]
+          },
+          {
+            "id": "juicio",
+            "label": "Actos vinculados con juicio",
+            "description": "Fuera, después o irreparables.",
+            "parentId": "procedencia",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia"
+            ]
+          },
+          {
+            "id": "extrana",
+            "label": "Persona extraña",
+            "description": "Afectación dentro o fuera de juicio.",
+            "parentId": "procedencia",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia",
+              "ev-c12-la-art5-partes-interes"
+            ]
+          },
+          {
+            "id": "mp",
+            "label": "Ministerio Público",
+            "description": "Omisiones y decisiones previstas.",
+            "parentId": "procedencia",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia",
+              "ev-c12-la-art5-partes-interes"
+            ]
+          },
+          {
+            "id": "legitimacion",
+            "label": "2. Legitimación",
+            "description": "Vínculo con la afectación.",
+            "parentId": "indirecto",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art5-partes-interes"
+            ]
+          },
+          {
+            "id": "juridico",
+            "label": "Interés jurídico",
+            "description": "Derecho subjetivo lesionado.",
+            "parentId": "legitimacion",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art5-partes-interes"
+            ]
+          },
+          {
+            "id": "legitimo",
+            "label": "Interés legítimo",
+            "description": "Lesión diferenciada y beneficio cierto con la anulación.",
+            "parentId": "legitimacion",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art5-partes-interes"
+            ]
+          },
+          {
+            "id": "simple",
+            "label": "Interés simple",
+            "description": "Nunca es suficiente.",
+            "parentId": "legitimacion",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art5-partes-interes"
+            ]
+          },
+          {
+            "id": "acto",
+            "label": "3. Acto reclamado",
+            "description": "Norma, acto u omisión.",
+            "parentId": "indirecto",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia",
+              "ev-c12-la-art5-partes-interes"
+            ]
+          },
+          {
+            "id": "actual",
+            "label": "Actual",
+            "description": "Existe y afecta.",
+            "parentId": "acto",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo"
+            ]
+          },
+          {
+            "id": "inminente",
+            "label": "Futuro inminente",
+            "description": "Certeza o presunción razonable.",
+            "parentId": "acto",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo"
+            ]
+          },
+          {
+            "id": "responsable",
+            "label": "4. Responsable",
+            "description": "Ordena, ejecuta u omite.",
+            "parentId": "indirecto",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art5-partes-interes"
+            ]
+          },
+          {
+            "id": "ordenadora",
+            "label": "Ordenadora",
+            "description": "Emite el mandato.",
+            "parentId": "responsable",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art5-partes-interes"
+            ]
+          },
+          {
+            "id": "ejecutora",
+            "label": "Ejecutora",
+            "description": "Materializa el acto.",
+            "parentId": "responsable",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo"
+            ]
+          },
+          {
+            "id": "particular",
+            "label": "Particular equivalente",
+            "description": "Solo con requisitos del artículo 5.",
+            "parentId": "responsable",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art5-partes-interes"
+            ]
+          },
+          {
+            "id": "demanda",
+            "label": "5. Demanda",
+            "description": "Artículo 108.",
+            "parentId": "indirecto",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-arts108-110-demanda"
+            ]
+          },
+          {
+            "id": "forma",
+            "label": "Escrita o electrónica",
+            "description": "Medio legal autorizado.",
+            "parentId": "demanda",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-arts108-110-demanda"
+            ]
+          },
+          {
+            "id": "urgencia",
+            "label": "Urgencia excepcional",
+            "description": "Comparecencia y promoción por tercero.",
+            "parentId": "demanda",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-arts8-15-20-urgencia"
+            ]
+          },
+          {
+            "id": "suspension",
+            "label": "6. Suspensión",
+            "description": "Conserva la materia.",
+            "parentId": "indirecto",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-arts125-129-suspension"
+            ]
+          },
+          {
+            "id": "oficio",
+            "label": "De oficio y de plano",
+            "description": "Casos extremos del artículo 126.",
+            "parentId": "suspension",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo"
+            ]
+          },
+          {
+            "id": "peticion",
+            "label": "A petición",
+            "description": "Requisitos y ponderación.",
+            "parentId": "suspension",
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo"
+            ]
+          }
         ]
       },
       "references": [
-        {"title":"Constitución Política de los Estados Unidos Mexicanos","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"México","citation":"Artículos 1, 14, 16, 103 y 107; últimas reformas DOF 02-06-2026","retrievedOn":"2026-08-11","note":"Derechos, actos de molestia y fundamento constitucional del amparo."},
-        {"title":"Ley de Amparo","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"México","citation":"Artículos 3, 5, 8, 15, 17, 20, 107, 108 y 125 a 128; última reforma DOF 16-10-2025","retrievedOn":"2026-08-11","note":"Procedencia, partes, demanda y suspensión del amparo indirecto."},
-        {"title":"Código Nacional de Procedimientos Penales","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"México","citation":"Reglas sobre órdenes judiciales y técnicas de investigación; texto vigente","retrievedOn":"2026-08-11","note":"Contexto para distinguir orden y ejecución en ejemplos penales."}
+        {
+          "title": "Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 14, 16, 103 y 107; últimas reformas DOF 02-06-2026",
+          "retrievedOn": "2026-08-21",
+          "note": "Derechos, actos de molestia y fundamento constitucional del amparo.",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-cpeum-arts14-16-actos"
+          ]
+        },
+        {
+          "title": "Ley de Amparo",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 5, 8, 15, 17, 20, 33 a 39, 61, 107, 108 y 125 a 129; última reforma DOF 16-10-2025",
+          "retrievedOn": "2026-08-21",
+          "note": "Procedencia, partes, demanda y suspensión del amparo indirecto.",
+          "evidenceIds": [
+            "ev-c12-la-art5-partes-interes",
+            "ev-c12-la-arts8-15-20-urgencia",
+            "ev-c12-la-art17-plazos",
+            "ev-c12-la-arts33-39-competencia",
+            "ev-c12-la-art61-definitividad",
+            "ev-c12-la-art107-procedencia",
+            "ev-c12-la-arts108-110-demanda",
+            "ev-c12-la-arts125-129-suspension"
+          ]
+        },
+        {
+          "title": "Código Nacional de Procedimientos Penales",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 141 a 143 y 282 a 289; última reforma DOF 28-11-2025",
+          "retrievedOn": "2026-08-21",
+          "note": "Contexto para distinguir orden y ejecución en ejemplos penales.",
+          "evidenceIds": [
+            "ev-c12-cnpp-ordenes-cateo"
+          ]
+        }
       ],
       "flashcards": [
-        {"question":"¿Dónde se clasifican los supuestos de indirecto?","answer":"En el artículo 107 de la Ley de Amparo.","sourceOrigin":"complementary"},
-        {"question":"¿Qué es interés jurídico?","answer":"La afectación personal y directa a un derecho subjetivo.","sourceOrigin":"mixed"},
-        {"question":"¿Qué es interés legítimo?","answer":"Una lesión real y actual vinculada con una posición diferenciada.","sourceOrigin":"complementary"},
-        {"question":"¿Sirve el interés simple?","answer":"No; nunca basta para promover amparo.","sourceOrigin":"complementary"},
-        {"question":"¿Todo particular es autoridad?","answer":"No; debe reunir los requisitos de equivalencia y fuente normativa.","sourceOrigin":"mixed"},
-        {"question":"¿Qué debe atribuirse a cada responsable?","answer":"La norma, acto u omisión concreta que ordena, ejecuta o deja de realizar.","sourceOrigin":"mixed"},
-        {"question":"¿Basta un acto futuro posible?","answer":"No; debe existir certeza de inminencia o presunción razonable.","sourceOrigin":"complementary"},
-        {"question":"¿La demanda ordinaria puede ser electrónica?","answer":"Sí, mediante los sistemas autorizados por la ley.","sourceOrigin":"complementary"},
-        {"question":"¿WhatsApp es vía general?","answer":"No; deben utilizarse los medios legalmente autorizados.","sourceOrigin":"mixed"},
-        {"question":"¿Puede una persona menor pedir amparo?","answer":"Sí, en los supuestos del artículo 8 y con representación especial.","sourceOrigin":"mixed"},
-        {"question":"¿Qué actos reciben suspensión de oficio y de plano?","answer":"Los extremos del artículo 126, como peligro de vida, desaparición o extradición.","sourceOrigin":"complementary"},
-        {"question":"¿Qué protege la suspensión?","answer":"La materia del juicio y la posibilidad de restitución, sin resolver todavía el fondo.","sourceOrigin":"mixed"}
+        {
+          "question": "¿Dónde se clasifican los supuestos de indirecto?",
+          "answer": "En el artículo 107 de la Ley de Amparo.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art107-procedencia"
+          ]
+        },
+        {
+          "question": "¿Qué es interés jurídico?",
+          "answer": "La afectación personal y directa a un derecho subjetivo.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art5-partes-interes"
+          ]
+        },
+        {
+          "question": "¿Qué es interés legítimo?",
+          "answer": "Una lesión real, actual y diferenciada cuya anulación produzca un beneficio cierto.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art5-partes-interes"
+          ]
+        },
+        {
+          "question": "¿Sirve el interés simple?",
+          "answer": "No; nunca basta para promover amparo.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art5-partes-interes"
+          ]
+        },
+        {
+          "question": "¿Todo particular es autoridad?",
+          "answer": "No; debe reunir los requisitos de equivalencia y fuente normativa.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art107-procedencia",
+            "ev-c12-la-art5-partes-interes"
+          ]
+        },
+        {
+          "question": "¿Qué debe atribuirse a cada responsable?",
+          "answer": "La norma, acto u omisión concreta que ordena, ejecuta o deja de realizar.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art107-procedencia",
+            "ev-c12-la-art5-partes-interes"
+          ]
+        },
+        {
+          "question": "¿Cuál es el plazo ordinario para demandar amparo?",
+          "answer": "Quince días, salvo los plazos diferenciados del artículo 17.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art17-plazos",
+            "ev-c12-la-arts108-110-demanda"
+          ]
+        },
+        {
+          "question": "¿La demanda ordinaria puede ser electrónica?",
+          "answer": "Sí, mediante los sistemas autorizados por la ley.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-arts108-110-demanda"
+          ]
+        },
+        {
+          "question": "¿La definitividad exige siempre agotar un recurso?",
+          "answer": "Es la regla, pero deben revisarse las excepciones expresas de las fracciones XVIII y XX del artículo 61.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art61-definitividad"
+          ]
+        },
+        {
+          "question": "¿Puede una persona menor pedir amparo?",
+          "answer": "Sí, en los supuestos del artículo 8 y con representación especial.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-arts8-15-20-urgencia"
+          ]
+        },
+        {
+          "question": "¿Qué actos reciben suspensión de oficio y de plano?",
+          "answer": "Los extremos del artículo 126, como peligro de vida, desaparición o extradición.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-arts8-15-20-urgencia",
+            "ev-c12-la-arts125-129-suspension"
+          ]
+        },
+        {
+          "question": "¿Qué órganos conocen del amparo indirecto?",
+          "answer": "Juzgados de distrito y, en el caso específico del artículo 36, tribunales colegiados de apelación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c12-cpeum-arts103-107-amparo",
+            "ev-c12-la-art107-procedencia",
+            "ev-c12-la-arts33-39-competencia"
+          ]
+        }
       ],
       "exam": {
         "title": "Examen: procedencia del amparo indirecto",
         "description": "Diez casos originales sobre procedencia, legitimación, acto reclamado, autoridad y suspensión.",
         "questions": [
-          {"text":"Una ley causa perjuicio por su sola entrada en vigor. ¿Qué vía puede proceder?","difficulty":"basic","options":["Amparo indirecto","Amparo directo","Juicio político"],"correctOption":0,"explanation":"El artículo 107, fracción I, contempla normas generales autoaplicativas.","optionExplanations":["Es el supuesto legal.","No existe resolución terminal de tribunal.","No se analiza responsabilidad política."]},
-          {"text":"Un municipio clausura un local mediante acto administrativo. ¿Qué fracción orienta el análisis?","difficulty":"basic","options":["Actos de autoridad distinta de tribunales","Sentencia definitiva","Acción electoral partidista"],"correctOption":0,"explanation":"La clausura proviene de autoridad administrativa no jurisdiccional.","optionExplanations":["Corresponde a la fracción II.","No hay sentencia.","No es materia electoral."]},
-          {"text":"Una persona solo afirma que le preocupa una política pública, sin afectación diferenciada. ¿Qué falta?","difficulty":"intermediate","options":["Interés jurídico o legítimo","Una recomendación de CNDH","Mayoría legislativa"],"correctOption":0,"explanation":"El interés simple no basta para acreditar la legitimación exigida.","optionExplanations":["Se requiere vínculo real con la lesión.","No sustituye legitimación.","No corresponde a un juicio individual."]},
-          {"text":"Una empresa privada presta un servicio, pero el caso no muestra función impuesta por norma general ni poder unilateral. ¿Es autoridad responsable?","difficulty":"intermediate","options":["No por esos datos","Sí, toda empresa lo es","Sí, si tiene muchos clientes"],"correctOption":0,"explanation":"Faltan los elementos legales del particular equivalente.","optionExplanations":["Aplica el artículo 5.","La calidad privada no basta.","El tamaño no define autoridad."]},
-          {"text":"Alguien teme una orden de aprehensión porque tuvo una discusión, sin citatorio ni dato oficial. ¿Existe acto reclamado acreditado?","difficulty":"advanced","options":["No, el temor es especulativo","Sí, todo temor basta","Sí, porque el amparo descubre investigaciones"],"correctOption":0,"explanation":"Un acto futuro requiere inminencia o presunción razonable.","optionExplanations":["Es el filtro correcto.","Confunde posibilidad con inminencia.","El amparo no es mecanismo de pesquisa."]},
-          {"text":"Una adolescente de quince años carece de representante dispuesto a protegerla. ¿Puede promover?","difficulty":"intermediate","options":["Sí, y puede designar representante en la demanda","No hasta cumplir dieciocho","Solo mediante mensaje informal"],"correctOption":0,"explanation":"El artículo 8 permite la promoción y designación desde los catorce años.","optionExplanations":["Es la regla especial.","Niega protección legal.","No es vía general autorizada."]},
-          {"text":"Una persona imposibilitada enfrenta desaparición forzada. ¿Quién puede promover en su nombre?","difficulty":"basic","options":["Cualquier persona, incluso menor","Solo un notario","Nadie hasta que aparezca"],"correctOption":0,"explanation":"El artículo 15 establece legitimación urgente extraordinaria.","optionExplanations":["Protege frente al acto extremo.","No existe exclusividad notarial.","Frustraría la tutela urgente."]},
-          {"text":"Se reclama extradición. ¿Cómo opera la suspensión inicial?","difficulty":"intermediate","options":["De oficio y de plano","Nunca procede","Solo después de sentencia final"],"correctOption":0,"explanation":"La extradición aparece expresamente en el artículo 126.","optionExplanations":["Es la protección legal inmediata.","Contradice la ley.","La cautela perdería finalidad."]},
-          {"text":"En una clausura ordinaria se pide suspensión. ¿Qué debe analizar el órgano?","difficulty":"advanced","options":["Acto, interés suspensional, interés social y apariencia del buen derecho","Solo la voluntad de la persona","Únicamente el monto de la multa"],"correctOption":0,"explanation":"El artículo 128 exige una ponderación cautelar expresa.","optionExplanations":["Integra los requisitos pertinentes.","La voluntad no basta.","El monto no agota el análisis."]},
-          {"text":"Una orden de cateo es emitida por juez y ejecutada por policía. ¿Qué debe hacer la demanda?","difficulty":"intermediate","options":["Distinguir autoridades y acto atribuido a cada una","Llamar autoridad solo a la policía","Afirmar que todo cateo viola presunción de inocencia"],"correctOption":0,"explanation":"Orden y ejecución son actuaciones diferentes que deben precisarse.","optionExplanations":["Permite fijar correctamente la litis.","Omite a quien ordenó.","Una orden constitucionalmente válida no viola por sí sola ese principio."]}
+          {
+            "text": "Una ley causa perjuicio por su sola entrada en vigor. ¿Qué vía puede proceder?",
+            "difficulty": "basic",
+            "options": [
+              "Amparo indirecto",
+              "Amparo directo",
+              "Juicio político"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 107, fracción I, contempla normas generales autoaplicativas.",
+            "optionExplanations": [
+              "Es el supuesto legal.",
+              "No existe resolución terminal de tribunal.",
+              "No se analiza responsabilidad política."
+            ],
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia"
+              ]
+            ]
+          },
+          {
+            "text": "Un municipio clausura un local mediante acto administrativo. ¿Qué fracción orienta el análisis?",
+            "difficulty": "basic",
+            "options": [
+              "Actos de autoridad distinta de tribunales",
+              "Sentencia definitiva",
+              "Acción electoral partidista"
+            ],
+            "correctOption": 0,
+            "explanation": "La clausura proviene de autoridad administrativa no jurisdiccional.",
+            "optionExplanations": [
+              "Corresponde a la fracción II.",
+              "No hay sentencia.",
+              "No es materia electoral."
+            ],
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia"
+              ]
+            ]
+          },
+          {
+            "text": "Una persona solo afirma que le preocupa una política pública, sin afectación diferenciada. ¿Qué falta?",
+            "difficulty": "intermediate",
+            "options": [
+              "Interés jurídico o legítimo",
+              "Una recomendación de CNDH",
+              "Mayoría legislativa"
+            ],
+            "correctOption": 0,
+            "explanation": "El interés simple no basta para acreditar la legitimación exigida.",
+            "optionExplanations": [
+              "Se requiere vínculo real con la lesión.",
+              "No sustituye legitimación.",
+              "No corresponde a un juicio individual."
+            ],
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia",
+              "ev-c12-la-art5-partes-interes"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art5-partes-interes"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art5-partes-interes"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art5-partes-interes"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia",
+              "ev-c12-la-art5-partes-interes"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia",
+              "ev-c12-la-art5-partes-interes"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art5-partes-interes"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art5-partes-interes"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia",
+                "ev-c12-la-art5-partes-interes"
+              ]
+            ]
+          },
+          {
+            "text": "Una empresa privada presta un servicio, pero el caso no muestra función impuesta por norma general ni poder unilateral. ¿Es autoridad responsable?",
+            "difficulty": "intermediate",
+            "options": [
+              "No por esos datos",
+              "Sí, toda empresa lo es",
+              "Sí, si tiene muchos clientes"
+            ],
+            "correctOption": 0,
+            "explanation": "Faltan los elementos legales del particular equivalente.",
+            "optionExplanations": [
+              "Aplica el artículo 5.",
+              "La calidad privada no basta.",
+              "El tamaño no define autoridad."
+            ],
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia",
+              "ev-c12-la-art5-partes-interes"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia",
+                "ev-c12-la-art5-partes-interes"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia",
+                "ev-c12-la-art5-partes-interes"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia",
+                "ev-c12-la-art5-partes-interes"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia",
+              "ev-c12-la-art5-partes-interes"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia",
+              "ev-c12-la-art5-partes-interes"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia",
+                "ev-c12-la-art5-partes-interes"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia",
+                "ev-c12-la-art5-partes-interes"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia",
+                "ev-c12-la-art5-partes-interes"
+              ]
+            ]
+          },
+          {
+            "text": "Una resolución intraprocesal admite un recurso ordinario eficaz que puede revocarla y no aparece una excepción legal. ¿Qué debe revisarse antes del amparo?",
+            "difficulty": "intermediate",
+            "options": [
+              "El principio de definitividad",
+              "La iniciativa preferente",
+              "La acción de inconstitucionalidad"
+            ],
+            "correctOption": 0,
+            "explanation": "Por regla general debe agotarse el medio ordinario eficaz, sin perder de vista las excepciones expresas del artículo 61.",
+            "optionExplanations": [
+              "Es el filtro aplicable.",
+              "No corresponde al juicio de amparo.",
+              "Es un medio de control distinto."
+            ],
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art61-definitividad"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art61-definitividad"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art61-definitividad"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art61-definitividad"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art61-definitividad"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art61-definitividad"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art61-definitividad"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art61-definitividad"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art61-definitividad"
+              ]
+            ]
+          },
+          {
+            "text": "Una adolescente de quince años carece de representante dispuesto a protegerla. ¿Puede promover?",
+            "difficulty": "intermediate",
+            "options": [
+              "Sí, y puede designar representante en la demanda",
+              "No hasta cumplir dieciocho",
+              "Solo mediante mensaje informal"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 8 permite la promoción y designación desde los catorce años.",
+            "optionExplanations": [
+              "Es la regla especial.",
+              "Niega protección legal.",
+              "No es vía general autorizada."
+            ],
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-arts8-15-20-urgencia",
+              "ev-c12-la-art17-plazos",
+              "ev-c12-la-arts108-110-demanda"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts8-15-20-urgencia",
+                "ev-c12-la-art17-plazos",
+                "ev-c12-la-arts108-110-demanda"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts8-15-20-urgencia",
+                "ev-c12-la-art17-plazos"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts8-15-20-urgencia",
+                "ev-c12-la-art17-plazos"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-arts8-15-20-urgencia",
+              "ev-c12-la-art17-plazos",
+              "ev-c12-la-arts108-110-demanda"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-arts8-15-20-urgencia",
+              "ev-c12-la-art17-plazos",
+              "ev-c12-la-arts108-110-demanda"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts8-15-20-urgencia",
+                "ev-c12-la-art17-plazos"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts8-15-20-urgencia",
+                "ev-c12-la-art17-plazos"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts8-15-20-urgencia",
+                "ev-c12-la-art17-plazos"
+              ]
+            ]
+          },
+          {
+            "text": "Una persona imposibilitada enfrenta desaparición forzada. ¿Quién puede promover en su nombre?",
+            "difficulty": "basic",
+            "options": [
+              "Cualquier persona, incluso menor",
+              "Solo un notario",
+              "Nadie hasta que aparezca"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 15 establece legitimación urgente extraordinaria.",
+            "optionExplanations": [
+              "Protege frente al acto extremo.",
+              "No existe exclusividad notarial.",
+              "Frustraría la tutela urgente."
+            ],
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-arts8-15-20-urgencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts8-15-20-urgencia"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts8-15-20-urgencia"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts8-15-20-urgencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-arts8-15-20-urgencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-arts8-15-20-urgencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts8-15-20-urgencia"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts8-15-20-urgencia"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts8-15-20-urgencia"
+              ]
+            ]
+          },
+          {
+            "text": "Se reclama extradición. ¿Cómo opera la suspensión inicial?",
+            "difficulty": "intermediate",
+            "options": [
+              "De oficio y de plano",
+              "Nunca procede",
+              "Solo después de sentencia final"
+            ],
+            "correctOption": 0,
+            "explanation": "La extradición aparece expresamente en el artículo 126.",
+            "optionExplanations": [
+              "Es la protección legal inmediata.",
+              "Contradice la ley.",
+              "La cautela perdería finalidad."
+            ],
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia",
+              "ev-c12-la-arts125-129-suspension"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts125-129-suspension"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art107-procedencia",
+                "ev-c12-la-arts125-129-suspension"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts125-129-suspension"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia",
+              "ev-c12-la-arts125-129-suspension"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art107-procedencia",
+              "ev-c12-la-arts125-129-suspension"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts125-129-suspension"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts125-129-suspension"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts125-129-suspension"
+              ]
+            ]
+          },
+          {
+            "text": "En una clausura ordinaria se pide suspensión. ¿Qué debe analizar el órgano?",
+            "difficulty": "advanced",
+            "options": [
+              "Acto, interés suspensional, interés social y apariencia del buen derecho",
+              "Solo la voluntad de la persona",
+              "Únicamente el monto de la multa"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 128 exige una ponderación cautelar expresa.",
+            "optionExplanations": [
+              "Integra los requisitos pertinentes.",
+              "La voluntad no basta.",
+              "El monto no agota el análisis."
+            ],
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art5-partes-interes",
+              "ev-c12-la-arts125-129-suspension"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art5-partes-interes",
+                "ev-c12-la-arts125-129-suspension"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts125-129-suspension"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts125-129-suspension"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art5-partes-interes",
+              "ev-c12-la-arts125-129-suspension"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art5-partes-interes",
+              "ev-c12-la-arts125-129-suspension"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts125-129-suspension"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts125-129-suspension"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-arts125-129-suspension"
+              ]
+            ]
+          },
+          {
+            "text": "Una orden de cateo es emitida por juez y ejecutada por policía. ¿Qué debe hacer la demanda?",
+            "difficulty": "intermediate",
+            "options": [
+              "Distinguir autoridades y acto atribuido a cada una",
+              "Llamar autoridad solo a la policía",
+              "Afirmar que todo cateo viola presunción de inocencia"
+            ],
+            "correctOption": 0,
+            "explanation": "Orden y ejecución son actuaciones diferentes que deben precisarse.",
+            "optionExplanations": [
+              "Permite fijar correctamente la litis.",
+              "Omite a quien ordenó.",
+              "Una orden constitucionalmente válida no viola por sí sola ese principio."
+            ],
+            "evidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art5-partes-interes",
+              "ev-c12-la-arts108-110-demanda",
+              "ev-c12-cpeum-arts14-16-actos",
+              "ev-c12-cnpp-ordenes-cateo"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art5-partes-interes",
+                "ev-c12-la-arts108-110-demanda",
+                "ev-c12-cpeum-arts14-16-actos",
+                "ev-c12-cnpp-ordenes-cateo"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art5-partes-interes",
+                "ev-c12-la-arts108-110-demanda",
+                "ev-c12-cpeum-arts14-16-actos",
+                "ev-c12-cnpp-ordenes-cateo"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art5-partes-interes",
+                "ev-c12-la-arts108-110-demanda",
+                "ev-c12-cpeum-arts14-16-actos",
+                "ev-c12-cnpp-ordenes-cateo"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art5-partes-interes",
+              "ev-c12-la-arts108-110-demanda",
+              "ev-c12-cpeum-arts14-16-actos",
+              "ev-c12-cnpp-ordenes-cateo"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c12-cpeum-arts103-107-amparo",
+              "ev-c12-la-art5-partes-interes",
+              "ev-c12-la-arts108-110-demanda",
+              "ev-c12-cpeum-arts14-16-actos",
+              "ev-c12-cnpp-ordenes-cateo"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art5-partes-interes",
+                "ev-c12-la-arts108-110-demanda",
+                "ev-c12-cpeum-arts14-16-actos",
+                "ev-c12-cnpp-ordenes-cateo"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art5-partes-interes",
+                "ev-c12-la-arts108-110-demanda",
+                "ev-c12-cpeum-arts14-16-actos",
+                "ev-c12-cnpp-ordenes-cateo"
+              ],
+              [
+                "ev-c12-cpeum-arts103-107-amparo",
+                "ev-c12-la-art5-partes-interes",
+                "ev-c12-la-arts108-110-demanda",
+                "ev-c12-cpeum-arts14-16-actos",
+                "ev-c12-cnpp-ordenes-cateo"
+              ]
+            ]
+          }
         ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c12-cpeum-arts103-107-amparo",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículos 103 y 107, páginas impresas 108 y 112-115",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c12-cpeum-arts14-16-actos",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículos 14 y 16, páginas impresas 16-22",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c12-la-art5-partes-interes",
+      "kind": "official",
+      "title": "Ley de Amparo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículo 5, páginas impresas 4-5",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c12-la-arts8-15-20-urgencia",
+      "kind": "official",
+      "title": "Ley de Amparo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículos 8, 15 y 20, páginas impresas 5, 7-8 y 9-10",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c12-la-art17-plazos",
+      "kind": "official",
+      "title": "Ley de Amparo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículo 17, páginas impresas 8-9",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c12-la-arts33-39-competencia",
+      "kind": "official",
+      "title": "Ley de Amparo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículos 33 a 39, páginas impresas 16-18",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c12-la-art61-definitividad",
+      "kind": "official",
+      "title": "Ley de Amparo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículo 61, fracciones XVIII y XX, páginas impresas 25-26",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c12-la-art107-procedencia",
+      "kind": "official",
+      "title": "Ley de Amparo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículo 107, fracciones I a IX, páginas impresas 38-40",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c12-la-arts108-110-demanda",
+      "kind": "official",
+      "title": "Ley de Amparo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículos 108 a 110, páginas impresas 40-41",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c12-la-arts125-129-suspension",
+      "kind": "official",
+      "title": "Ley de Amparo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículos 125 a 129, páginas impresas 46-49",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c12-cnpp-ordenes-cateo",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Penales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículos 141 a 143 y 282 a 289",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c12-a13-l19-31-naturaleza",
+      "kind": "transcript",
+      "audioNumber": 13,
+      "locator": {
+        "type": "line_range",
+        "startLine": 19,
+        "endLine": 31
+      }
+    },
+    {
+      "id": "ev-c12-a13-l33-35-medios-error",
+      "kind": "transcript",
+      "audioNumber": 13,
+      "locator": {
+        "type": "line_range",
+        "startLine": 33,
+        "endLine": 35
+      }
+    },
+    {
+      "id": "ev-c12-a13-l107-113-suspension",
+      "kind": "transcript",
+      "audioNumber": 13,
+      "locator": {
+        "type": "line_range",
+        "startLine": 107,
+        "endLine": 113
+      }
+    },
+    {
+      "id": "ev-c12-a13-l119-123-interes",
+      "kind": "transcript",
+      "audioNumber": 13,
+      "locator": {
+        "type": "line_range",
+        "startLine": 119,
+        "endLine": 123
+      }
+    },
+    {
+      "id": "ev-c12-a13-l129-actos-procesales",
+      "kind": "transcript",
+      "audioNumber": 13,
+      "locator": {
+        "type": "line_range",
+        "startLine": 129,
+        "endLine": 129
       }
     }
   ]

@@ -155,6 +155,40 @@ const traceablePackages = [
       /última reforma DOF 14-11-2025/i,
     ],
   },
+  {
+    code: "C11",
+    fileName: "audio-12-amparo-directo.json",
+    artifacts: 139,
+    evidence: 21,
+    forbiddenClaims: [
+      /Tribunal Unitario/i,
+      /(?:siempre|únicamente) (?:se )?presenta (?:directamente )?ante (?:el )?Tribunal Colegiado/i,
+    ],
+    requiredClaims: [
+      /plazo general es de quince días, pero no es universal/i,
+      /treinta días para norma autoaplicativa o extradición/i,
+      /hasta ocho años contra sentencia penal definitiva con prisión/i,
+      /amparo adhesivo.*quince días.*notificación del acuerdo de admisión/i,
+      /revisión ante la Suprema Corte solo procede.*interés excepcional/i,
+      /contar solo tres excepciones.*artículo 17 vigente contiene cuatro fracciones/i,
+    ],
+  },
+  {
+    code: "C12",
+    fileName: "audio-13-amparo-indirecto-procedencia.json",
+    artifacts: 142,
+    evidence: 16,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /nueve grupos: normas generales autoaplicativas/i,
+      /beneficio cierto y no meramente hipotético o eventual/i,
+      /imposible reparación.*derecho sustantivo/i,
+      /tribunal colegiado de apelación, no tribunal unitario/i,
+      /Esto no convierte WhatsApp en vía general/i,
+      /El amparo puede promoverse antes o después de una detención/i,
+      /plazos diferenciados/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -282,6 +316,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una regla retirada como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C11" || expected.code === "C12") {
+      const obsoleteAsCurrent =
+        expected.code === "C11"
+          ? /quince días sin excepciones|tres excepciones|revisión ordinaria.*(?:SCJN|Corte)/i
+          : /Tribunal Unitario|WhatsApp|solo antes de (?:la )?detención|(?:madre|padre|familiar).*autoridad/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una regla histórica o absoluta como respuesta vigente.`,
         );
       }
     }
