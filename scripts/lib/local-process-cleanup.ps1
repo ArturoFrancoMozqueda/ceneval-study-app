@@ -1,3 +1,25 @@
+function Resolve-ComparableProcessPath {
+  param([Parameter(Mandatory)] [string] $Path)
+
+  if ($Path -match '^(?<drive>[A-Za-z]):[\\/](?<rest>.*)$') {
+    $segments = [System.Collections.Generic.List[string]]::new()
+    foreach ($segment in ($Matches["rest"] -split '[\\/]+')) {
+      if ([string]::IsNullOrWhiteSpace($segment) -or $segment -eq ".") {
+        continue
+      }
+      if ($segment -eq "..") {
+        if ($segments.Count -eq 0) { throw "Ruta fuera de la raíz de unidad." }
+        $segments.RemoveAt($segments.Count - 1)
+        continue
+      }
+      $segments.Add($segment)
+    }
+    return "$($Matches["drive"]):\$($segments -join '\')"
+  }
+
+  return [IO.Path]::GetFullPath($Path)
+}
+
 function Test-ExactWorkspaceNextStart {
   param(
     [Parameter(Mandatory)] $Process,
@@ -19,8 +41,8 @@ function Test-ExactWorkspaceNextStart {
     $match.Groups["bare"].Value
   }
   try {
-    $resolvedCli = [IO.Path]::GetFullPath($cliToken.Replace("/", "\"))
-    $resolvedExpected = [IO.Path]::GetFullPath($ExpectedNextCli.Replace("/", "\"))
+    $resolvedCli = Resolve-ComparableProcessPath -Path $cliToken
+    $resolvedExpected = Resolve-ComparableProcessPath -Path $ExpectedNextCli
   } catch {
     return $false
   }

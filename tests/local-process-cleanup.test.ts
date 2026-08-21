@@ -24,7 +24,8 @@ test("resuelve workspace y binario Next antes de tomar el snapshot", () => {
 test("el filtro exige proceso nuevo, node del workspace y argumentos exactos", () => {
   assert.match(helper, /-not \$PreexistingPids\.Contains/);
   assert.match(helper, /Name -notin @\("node\.exe", "node"\)/);
-  assert.match(helper, /\[IO\.Path\]::GetFullPath\(\$cliToken/);
+  assert.match(helper, /Resolve-ComparableProcessPath -Path \$cliToken/);
+  assert.match(helper, /Ruta fuera de la raíz de unidad/);
   assert.match(helper, /OrdinalIgnoreCase/);
   assert.match(helper, /--hostname\\s\+127\\\.0\\\.0\\\.1/);
   assert.ok(helper.includes("--port\\s+3000\\s*$"));
