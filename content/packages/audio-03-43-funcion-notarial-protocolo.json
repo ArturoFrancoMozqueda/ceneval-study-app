@@ -1,106 +1,1673 @@
 {
-  "packageVersion":"1.1",
-  "curriculum":{
-    "code":"C32",
-    "order":32,
-    "audioSources":[
-      {"audioNumber":43,"fragment":"Audio completo"},
-      {"audioNumber":3,"fragment":"Panorama de función notarial"}
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C32",
+    "order": 32,
+    "audioSources": [
+      {
+        "audioNumber": 43,
+        "fragment": "Audio completo"
+      },
+      {
+        "audioNumber": 3,
+        "fragment": "Panorama de función notarial"
+      }
     ]
   },
-  "subject":{"name":"Derecho Notarial y Registral","description":"Fe pública, instrumentos notariales, protocolo, representación, actuaciones y efectos registrales."},
-  "class":{"title":"Función notarial: protocolo, apéndice, índice y sello","description":"Trigésima segunda clase del plan académico: fe pública, matricidad, protocolo ordinario y digital, documentos de apoyo, control e identificación del notario."},
-  "transcript":{"originalFiles":["AUDIO 03.txt","AUDIO 43.txt"],"cleaned":"Se conservaron el panorama de la función notarial del Audio 03 y el desarrollo del Audio 43 sobre fe pública, protocolo, apéndice, índice, sello, archivo y documentos relacionados con instrumentos. Los bloques registrales del Audio 03 permanecen asignados a otras clases y el examen parcial anunciado al final del Audio 43 se integra después como banco interdisciplinario. Se eliminaron saludos, historias laborales, insultos, datos personales, consejos de cobro, opiniones políticas y afirmaciones discriminatorias. Se corrigió que la legislación notarial es local y los números de folios, libros, autoridades y plazos no son universales; que el protocolo no es simplemente un libro para guardar escrituras, pues comprende matrices, actas, instrumentos no pasados, apéndices y, en Ciudad de México, modalidades ordinaria, de cotejos y digital; que el apéndice contiene los documentos vinculados a cada instrumento, pero no existe una lista idéntica para todo acto ni siempre son obligatorios constancia fiscal y certificado de gravámenes; que el índice no es una libreta general de visitantes, sino un registro estructurado de instrumentos; que un gravamen no vuelve necesariamente imposible una transmisión, por lo que debe analizarse el acto y su tratamiento; que sello y firma integran la autorización en soporte físico, mientras la firma electrónica notarial tiene equivalencia legal en actuación digital; y que la pérdida, deterioro y reposición del sello siguen procedimientos distintos conforme a la ley local."},
-  "topics":[{
-    "title":"Elementos documentales de la fe pública notarial",
-    "description":"Cómo protocolo, apéndice, índice y sello preservan autenticidad, integridad, localización y matricidad.",
-    "learningJourney":{
-      "openingPrompt":"Una escritura está autorizada, pero sus documentos de identidad no aparecen en el texto y después debe localizarse la matriz. ¿Qué función cumplen protocolo, apéndice, índice y sello?",
-      "quickChecks":[
-        {"prompt":"¿El protocolo contiene únicamente escrituras?","answer":"No. Según la legislación local comprende escrituras, actas, instrumentos que no pasaron, apéndices y modalidades físicas o digitales.","feedback":"Piensa en la matriz documental completa, no solo en un libro."},
-        {"prompt":"¿El índice es la libreta donde se registran visitantes?","answer":"No. Es el registro ordenado de los instrumentos y datos que la ley exige para localizarlos y controlarlos.","feedback":"Distingue administración de acceso y control jurídico del protocolo."},
-        {"prompt":"¿El sello físico basta por sí solo para probar cualquier acto?","answer":"No. Se analiza instrumento, firma o autorización, competencia y formalidades; en actuación digital opera la firma electrónica notarial con equivalencia legal.","feedback":"El sello es elemento autentificador, no sustituto del instrumento completo."}
+  "subject": {
+    "name": "Derecho Notarial y Registral",
+    "description": "Fe pública, instrumentos notariales, protocolo, representación, actuaciones y efectos registrales."
+  },
+  "class": {
+    "title": "Función notarial: protocolo, apéndice, índice y sello",
+    "description": "Trigésima segunda clase del plan académico: fe pública, matricidad, protocolo ordinario y digital, documentos de apoyo, control e identificación del notario."
+  },
+  "transcript": {
+    "originalFiles": [
+      "AUDIO 03.txt",
+      "AUDIO 43.txt"
+    ],
+    "cleaned": "Se conservaron el panorama notarial del Audio 03 y el desarrollo del Audio 43 sobre protocolo, apéndice, índice y sello. El contenido se contrastó exclusivamente con el modelo normativo de Ciudad de México. Se retiraron datos personales, comentarios ajenos al aprendizaje y cifras, autoridades, listas documentales o consecuencias presentadas como universales. El paquete distingue protocolo ordinario, registro de cotejos y protocolo digital; matriz y apéndice; índice electrónico; escritura y acta; autorización física y electrónica; custodia y archivo; y los procedimientos diferenciados de pérdida, alteración o deterioro del sello. Una afirmación sobre gravámenes se conserva únicamente como advertencia metodológica: la Ley del Notariado local no permite deducir por sí sola una consecuencia única para toda transmisión."
+  },
+  "topics": [
+    {
+      "title": "Elementos documentales de la fe pública notarial",
+      "description": "Cómo protocolo, apéndice, índice y sello preservan autenticidad, integridad, localización y matricidad.",
+      "learningJourney": {
+        "openingPrompt": "Una escritura está autorizada, pero sus documentos de identidad no aparecen en el texto y después debe localizarse la matriz. ¿Qué función cumplen protocolo, apéndice, índice y sello?",
+        "quickChecks": [
+          {
+            "prompt": "¿El protocolo contiene únicamente escrituras?",
+            "answer": "No. En el modelo de Ciudad de México comprende escrituras, actas, instrumentos que no pasaron, apéndices y modalidades físicas o digitales.",
+            "feedback": "Piensa en la matriz documental completa, no solo en un libro.",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts1-7-44-funcion-fe",
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+              "ev-c32-a43-l011-apendice-indice",
+              "ev-c32-cdmx-arts101-138-instrumentos",
+              "ev-c32-cdmx-art2-definiciones-digitales",
+              "ev-c32-cdmx-arts100bis-100noviesdecies-digital"
+            ]
+          },
+          {
+            "prompt": "¿El índice es la libreta donde se registran visitantes?",
+            "answer": "No. Es el registro ordenado de los instrumentos y datos que la ley exige para localizarlos y controlarlos.",
+            "feedback": "Distingue administración de acceso y control jurídico del protocolo.",
+            "evidenceIds": [
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-a43-l011-elementos-protocolo",
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+              "ev-c32-a43-l011-apendice-indice",
+              "ev-c32-cdmx-arts101-138-instrumentos",
+              "ev-c32-a43-l011-generalizaciones-corregidas"
+            ]
+          },
+          {
+            "prompt": "¿El sello físico basta por sí solo para probar cualquier acto?",
+            "answer": "No. Se analiza instrumento, firma o autorización, competencia y formalidades; en actuación digital opera la firma electrónica notarial con equivalencia legal.",
+            "feedback": "El sello es elemento autentificador, no sustituto del instrumento completo.",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts1-7-44-funcion-fe",
+              "ev-c32-cdmx-arts101-138-instrumentos",
+              "ev-c32-cdmx-art2-definiciones-digitales",
+              "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+              "ev-c32-cdmx-arts69-75-sello",
+              "ev-c32-a43-l011-sello-reposicion"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una notaría debe localizar una compraventa de años atrás. El índice remite al instrumento y el apéndice conserva documentos relacionados. Luego se detecta que el sello físico usado en nuevas copias se había reportado extraviado.",
+          "question": "¿Qué función cumple cada elemento y qué ocurre con el sello anterior?",
+          "legalRule": "La Ley del Notariado para la Ciudad de México regula el sello en los artículos 69 a 75; las modalidades del protocolo, apéndices e índices en los artículos 76 a 98; y el Archivo General de Notarías en los artículos 248 y 249.",
+          "reasoning": "El índice permite identificar y ubicar la matriz; el protocolo conserva el instrumento original; el apéndice lo complementa con documentos vinculados. Un sello reportado como perdido no recupera vigencia si aparece: debe entregarse al Archivo para destrucción conforme a la ley aplicable y usarse la reposición diferenciada.",
+          "conclusion": "En Ciudad de México, protocolo, apéndice, índice y autorización cumplen funciones complementarias; el soporte ordinario o digital y la fase de conservación determinan la regla concreta.",
+          "evidenceIds": [
+            "ev-c32-cdmx-arts1-7-44-funcion-fe",
+            "ev-c32-a03-l067-075-panorama-cdmx",
+            "ev-c32-cdmx-arts76-81-protocolo",
+            "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+            "ev-c32-a43-l011-apendice-indice",
+            "ev-c32-cdmx-arts101-138-instrumentos",
+            "ev-c32-cdmx-art2-definiciones-digitales",
+            "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+            "ev-c32-cdmx-arts69-75-sello",
+            "ev-c32-a43-l011-sello-reposicion",
+            "ev-c32-cdmx-arts96-97-248-249-archivo",
+            "ev-c32-a43-l011-generalizaciones-corregidas"
+          ]
+        },
+        "closingPrompt": "Construye la cadena fe pública → instrumento matriz → apéndice → índice → autorización → conservación y explica qué aporta cada elemento.",
+        "nextActivity": "Recorre el mapa visual, contesta la guía de doce preguntas y respuestas y resuelve los diez casos originales.",
+        "openingPromptEvidenceIds": [
+          "ev-c32-a03-l067-075-panorama-cdmx",
+          "ev-c32-cdmx-arts76-81-protocolo",
+          "ev-c32-a43-l011-elementos-protocolo",
+          "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+          "ev-c32-a43-l011-apendice-indice",
+          "ev-c32-cdmx-arts101-138-instrumentos",
+          "ev-c32-cdmx-arts69-75-sello",
+          "ev-c32-a43-l011-sello-reposicion"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c32-cdmx-arts1-7-44-funcion-fe",
+          "ev-c32-cdmx-arts76-81-protocolo",
+          "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+          "ev-c32-a43-l011-apendice-indice",
+          "ev-c32-cdmx-arts101-138-instrumentos",
+          "ev-c32-cdmx-arts96-97-248-249-archivo"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c32-cdmx-arts1-7-44-funcion-fe",
+          "ev-c32-cdmx-arts76-81-protocolo"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "La función notarial dota de certeza jurídica a actos y hechos mediante una persona investida de fe pública. El protocolo conserva la matriz; el apéndice reúne documentos relacionados; el índice registra datos para control y localización; y el sello, junto con firma o autorización correspondiente, exterioriza la actuación en soporte físico. En actuación digital, la firma electrónica notarial cumple la equivalencia prevista por la ley local.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c32-cdmx-arts1-7-44-funcion-fe",
+            "ev-c32-a03-l067-075-panorama-cdmx",
+            "ev-c32-cdmx-arts76-81-protocolo",
+            "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+            "ev-c32-a43-l011-apendice-indice",
+            "ev-c32-cdmx-arts101-138-instrumentos",
+            "ev-c32-cdmx-art2-definiciones-digitales",
+            "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+            "ev-c32-cdmx-arts69-75-sello",
+            "ev-c32-a43-l011-sello-reposicion"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "La función notarial se regula localmente. Este paquete estudia exclusivamente el modelo de Ciudad de México y no convierte sus autoridades, folios, plazos o formalidades en reglas nacionales.\n\nEn Ciudad de México, la función notarial es una actividad de orden público y el notario es profesional del Derecho investido de fe pública. La autenticidad y certeza que aporta operan dentro de su competencia y de las formalidades legales; el sello aislado no subsana un instrumento defectuoso.\n\nLa matricidad exige conservar la fuente original. El protocolo en sentido amplio comprende el protocolo ordinario, el Libro de Registro de Cotejos con sus apéndices electrónicos, el protocolo digital con su Libro de Extractos, los índices y demás accesorios. En sentido estricto contiene los instrumentos públicos matrices, autorizados o no pasados, con sus apéndices.\n\nEl protocolo ordinario se integra con folios numerados y sellados donde se asientan instrumentos físicos. La escritura hace constar actos jurídicos; el acta documenta hechos que el notario presencia o conoce en los supuestos legales. El registro de cotejos no es el protocolo ordinario: registra cotejos y conserva sus documentos electrónicos conforme a los artículos 76 y 98.\n\nEl protocolo digital aloja matrices electrónicas dentro del Sistema Informático y utiliza firma electrónica notarial. Esa firma tiene el valor jurídico que la ley equipara a la firma autógrafa y al sello; un PDF o una firma comercial común no sustituyen el sistema notarial.\n\nEl apéndice conserva documentos relacionados con cada instrumento. Su integración depende del acto y de la norma aplicable: no existe una lista idéntica de identificaciones, poderes, permisos, comprobantes o certificados para todo asunto. El índice electrónico registra datos estructurados para control y localización; no sustituye la matriz ni es una libreta administrativa de visitantes.\n\nEl sello de autorizar expresa el poder autentificador en soporte físico. La ley capitalina distingue pérdida o alteración, deterioro y reposición. Si un sello reportado perdido reaparece, no recupera vigencia: se entrega al Archivo para su destrucción conforme al procedimiento legal.\n\nLa notaría conserva cada decena durante cinco años contados desde la certificación de su cierre y después la entrega al Archivo General de Notarías para custodia definitiva. Ese plazo no significa que el notario pueda elegir conservar cierto número de libros.\n\nAnte una transmisión con gravamen no existe una respuesta automática derivada solo de la Ley del Notariado. Deben identificarse el derecho inscrito, el acto, el título y las normas civiles o registrales aplicables al caso. Para resolver cualquier reactivo, primero fija entidad, ley, soporte, matriz, apéndice, índice, forma de autorización y fase de conservación.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c32-cdmx-arts1-7-44-funcion-fe",
+            "ev-c32-a03-l067-075-panorama-cdmx",
+            "ev-c32-cdmx-arts76-81-protocolo",
+            "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+            "ev-c32-a43-l011-apendice-indice",
+            "ev-c32-cdmx-arts101-138-instrumentos",
+            "ev-c32-cdmx-art2-definiciones-digitales",
+            "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+            "ev-c32-cdmx-arts69-75-sello",
+            "ev-c32-a43-l011-sello-reposicion",
+            "ev-c32-cdmx-arts96-97-248-249-archivo",
+            "ev-c32-a43-l011-generalizaciones-corregidas"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Ley del Notariado para la Ciudad de México, texto oficial del Congreso local verificado el 21-08-2026, última reforma GOCDMX 04-08-2021: artículos 1 a 7 y 44 sobre función y fe pública; 69 a 75 sobre sello; 76 a 98 sobre modalidades del protocolo, apéndices, índice y registro de cotejos; 100 Bis a 100 Noviesdecies sobre actuación digital; 101 a 138 sobre escrituras, actas y autorización; y 248 a 249 sobre el Archivo General de Notarías. El alcance del paquete es Ciudad de México.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c32-cdmx-arts1-7-44-funcion-fe",
+            "ev-c32-a03-l067-075-panorama-cdmx",
+            "ev-c32-cdmx-arts76-81-protocolo",
+            "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+            "ev-c32-a43-l011-apendice-indice",
+            "ev-c32-cdmx-arts101-138-instrumentos",
+            "ev-c32-cdmx-art2-definiciones-digitales",
+            "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+            "ev-c32-cdmx-arts69-75-sello",
+            "ev-c32-a43-l011-sello-reposicion",
+            "ev-c32-cdmx-arts96-97-248-249-archivo"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "En una escritura de compraventa, la matriz contiene el acto y declaraciones; el apéndice incorpora identificaciones, poderes y certificados aplicables; el índice permite ubicar número y participantes; y la autorización física se exterioriza con firma y sello. Cada elemento cumple una función diferente.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c32-cdmx-arts76-81-protocolo",
+            "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+            "ev-c32-a43-l011-apendice-indice",
+            "ev-c32-cdmx-arts101-138-instrumentos",
+            "ev-c32-cdmx-arts69-75-sello",
+            "ev-c32-a43-l011-sello-reposicion"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo CENEVAL",
+          "content": "Si un reactivo afirma que el protocolo es solo una carpeta de documentos anexos, es falso: esa función corresponde al apéndice. Si dice que el índice sustituye la escritura, también es falso: localiza y controla, mientras la matriz se conserva en el protocolo.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c32-a03-l067-075-panorama-cdmx",
+            "ev-c32-cdmx-arts76-81-protocolo",
+            "ev-c32-a43-l011-elementos-protocolo",
+            "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+            "ev-c32-a43-l011-apendice-indice",
+            "ev-c32-cdmx-arts101-138-instrumentos"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Fe pública: certeza jurídica conferida por ley. Matricidad: conservación de la fuente original. Protocolo: sistema de matrices, actas, escrituras y apéndices; puede ser ordinario o digital. Apéndice: documentos vinculados. Índice: control y localización. Sello: exterioriza autorización física con la firma. Firma electrónica notarial: equivalente en actuación digital. Archivo: custodia definitiva. Las cantidades, plazos y autoridades cambian por entidad.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c32-cdmx-arts1-7-44-funcion-fe",
+            "ev-c32-a03-l067-075-panorama-cdmx",
+            "ev-c32-cdmx-arts76-81-protocolo",
+            "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+            "ev-c32-a43-l011-apendice-indice",
+            "ev-c32-cdmx-arts101-138-instrumentos",
+            "ev-c32-cdmx-art2-definiciones-digitales",
+            "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+            "ev-c32-cdmx-arts69-75-sello",
+            "ev-c32-a43-l011-sello-reposicion",
+            "ev-c32-cdmx-arts96-97-248-249-archivo"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía intensiva de preguntas y respuestas",
+          "content": "1. ¿Qué jurisdicción estudia este paquete? Respuesta: Ciudad de México. 2. ¿Qué es fe pública? Respuesta: potestad legal de autenticar actos y hechos. 3. ¿Qué es matricidad? Respuesta: conservación de la fuente original. 4. ¿Protocolo ordinario? Respuesta: folios donde se asientan instrumentos. 5. ¿Protocolo digital? Respuesta: matriz electrónica dentro del sistema autorizado. 6. ¿Qué contiene el apéndice? Respuesta: documentos vinculados al instrumento. 7. ¿Misma lista para todo acto? Respuesta: no. 8. ¿Para qué sirve el índice? Respuesta: control y localización de instrumentos. 9. ¿Es libreta de visitantes? Respuesta: no. 10. ¿Qué expresa el sello? Respuesta: poder autentificador en soporte físico. 11. ¿Qué autoriza digitalmente? Respuesta: firma electrónica notarial. 12. ¿Sello perdido reaparece? Respuesta: no se reutiliza; se entrega para destrucción conforme a la ley capitalina.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c32-cdmx-arts1-7-44-funcion-fe",
+            "ev-c32-a03-l067-075-panorama-cdmx",
+            "ev-c32-cdmx-arts76-81-protocolo",
+            "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+            "ev-c32-a43-l011-apendice-indice",
+            "ev-c32-cdmx-arts101-138-instrumentos",
+            "ev-c32-cdmx-art2-definiciones-digitales",
+            "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+            "ev-c32-cdmx-arts69-75-sello",
+            "ev-c32-a43-l011-sello-reposicion",
+            "ev-c32-cdmx-arts96-97-248-249-archivo",
+            "ev-c32-a43-l011-generalizaciones-corregidas"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Función notarial: actividad jurídica regulada localmente. Fe pública: autenticación conferida. Competencia: límite territorial y material. Instrumento: documento notarial matriz. Escritura: acto jurídico. Acta: hecho jurídico. Matricidad: conservación original. Protocolo amplio: conjunto de modalidades y accesorios. Protocolo estricto: matrices ordenadas. Folio: soporte autorizado. Apéndice: complemento documental. Índice electrónico: registro uniforme. Sello de autorizar: símbolo autentificador. Firma autógrafa: suscripción física. Firma electrónica notarial: autorización digital equivalente. Archivo General: custodia definitiva. Testimonio: reproducción autorizada de la matriz.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c32-cdmx-arts1-7-44-funcion-fe",
+            "ev-c32-a03-l067-075-panorama-cdmx",
+            "ev-c32-cdmx-arts76-81-protocolo",
+            "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+            "ev-c32-a43-l011-apendice-indice",
+            "ev-c32-cdmx-arts101-138-instrumentos",
+            "ev-c32-cdmx-art2-definiciones-digitales",
+            "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+            "ev-c32-cdmx-arts69-75-sello",
+            "ev-c32-a43-l011-sello-reposicion",
+            "ev-c32-cdmx-arts96-97-248-249-archivo"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "No trates una ley local como nacional. No memorices 100 folios o cinco libros sin jurisdicción. No reduzcas protocolo a libro de escrituras. No confundas escritura con acta. No confundas apéndice con protocolo completo. No supongas idénticos anexos para todo acto. No llames índice a la libreta de visitantes. No afirmes que todo gravamen impide siempre transmitir. No equipares sello aislado con instrumento válido. No ignores firma electrónica notarial. No reutilices sello reportado perdido. No confundas cinco años desde cierre con cantidad de libros guardables.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c32-cdmx-arts1-7-44-funcion-fe",
+            "ev-c32-a03-l067-075-panorama-cdmx",
+            "ev-c32-cdmx-arts76-81-protocolo",
+            "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+            "ev-c32-a43-l011-apendice-indice",
+            "ev-c32-cdmx-arts101-138-instrumentos",
+            "ev-c32-cdmx-art2-definiciones-digitales",
+            "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+            "ev-c32-cdmx-arts69-75-sello",
+            "ev-c32-a43-l011-sello-reposicion",
+            "ev-c32-cdmx-arts96-97-248-249-archivo",
+            "ev-c32-a43-l011-generalizaciones-corregidas"
+          ]
+        }
       ],
-      "practicalCase":{"facts":"Una notaría debe localizar una compraventa de años atrás. El índice remite al instrumento y el apéndice conserva documentos relacionados. Luego se detecta que el sello físico usado en nuevas copias se había reportado extraviado.","question":"¿Qué función cumple cada elemento y qué ocurre con el sello anterior?","legalRule":"La Ley del Notariado para la Ciudad de México regula sello en los artículos 69 a 75 y protocolo e índices desde los artículos 76, 76 Bis, 76 Ter y 97; la ley michoacana contiene reglas propias en sus artículos 29 a 46.","reasoning":"El índice permite identificar y ubicar la matriz; el protocolo conserva el instrumento original; el apéndice lo complementa con documentos vinculados. Un sello reportado como perdido no recupera vigencia si aparece: debe entregarse al Archivo para destrucción conforme a la ley aplicable y usarse la reposición diferenciada.","conclusion":"Los cuatro elementos trabajan juntos, pero sus requisitos concretos dependen de la entidad federativa y del soporte ordinario o digital."},
-      "closingPrompt":"Construye la cadena fe pública → instrumento matriz → apéndice → índice → autorización → conservación y explica qué aporta cada elemento.",
-      "nextActivity":"Recorre el mapa visual, contesta la guía de doce preguntas y respuestas y resuelve los diez casos originales."
+      "conceptMap": {
+        "title": "Mapa visual: sistema documental notarial",
+        "description": "Cómo se conectan certeza, matriz, anexos, localización, autorización y archivo.",
+        "nodes": [
+          {
+            "id": "funcion",
+            "label": "Función notarial",
+            "description": "Certeza jurídica regulada localmente.",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts1-7-44-funcion-fe",
+              "ev-c32-a03-l067-075-panorama-cdmx"
+            ]
+          },
+          {
+            "id": "jurisdiccion",
+            "label": "Ley local",
+            "description": "El modelo estudiado proviene de la ley de Ciudad de México y no se presenta como regla nacional.",
+            "parentId": "funcion",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts1-7-44-funcion-fe",
+              "ev-c32-a03-l067-075-panorama-cdmx"
+            ]
+          },
+          {
+            "id": "competencia",
+            "label": "Competencia",
+            "description": "Límites materiales y territoriales.",
+            "parentId": "jurisdiccion",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts1-7-44-funcion-fe"
+            ]
+          },
+          {
+            "id": "fe",
+            "label": "Fe pública",
+            "description": "Potestad autentificadora.",
+            "parentId": "funcion",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts1-7-44-funcion-fe",
+              "ev-c32-cdmx-arts69-75-sello",
+              "ev-c32-a43-l011-sello-reposicion"
+            ]
+          },
+          {
+            "id": "certeza",
+            "label": "Certeza",
+            "description": "Autenticidad y certeza jurídica.",
+            "parentId": "fe",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts1-7-44-funcion-fe"
+            ]
+          },
+          {
+            "id": "matricidad",
+            "label": "Matricidad",
+            "description": "Conserva fuente original.",
+            "parentId": "fe",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts76-81-protocolo"
+            ]
+          },
+          {
+            "id": "protocolo",
+            "label": "Protocolo",
+            "description": "Sistema matriz de instrumentos.",
+            "parentId": "funcion",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-a43-l011-elementos-protocolo",
+              "ev-c32-cdmx-arts101-138-instrumentos"
+            ]
+          },
+          {
+            "id": "amplio",
+            "label": "Sentido amplio",
+            "description": "Modalidades, índices y accesorios.",
+            "parentId": "protocolo",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+              "ev-c32-a43-l011-apendice-indice"
+            ]
+          },
+          {
+            "id": "estricto",
+            "label": "Sentido estricto",
+            "description": "Matrices y apéndices ordenados.",
+            "parentId": "protocolo",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+              "ev-c32-a43-l011-apendice-indice"
+            ]
+          },
+          {
+            "id": "ordinario",
+            "label": "Protocolo ordinario",
+            "description": "Libros y folios autorizados.",
+            "parentId": "amplio",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-a43-l011-elementos-protocolo"
+            ]
+          },
+          {
+            "id": "digital",
+            "label": "Protocolo digital",
+            "description": "Matrices electrónicas seguras.",
+            "parentId": "amplio",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-cdmx-art2-definiciones-digitales",
+              "ev-c32-cdmx-arts100bis-100noviesdecies-digital"
+            ]
+          },
+          {
+            "id": "escritura",
+            "label": "Escritura",
+            "description": "Hace constar actos jurídicos.",
+            "parentId": "estricto",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts101-138-instrumentos"
+            ]
+          },
+          {
+            "id": "acta",
+            "label": "Acta",
+            "description": "Hace constar hechos.",
+            "parentId": "estricto",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts101-138-instrumentos"
+            ]
+          },
+          {
+            "id": "nopaso",
+            "label": "No pasó",
+            "description": "Instrumento sin conclusión.",
+            "parentId": "estricto",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-cdmx-arts101-138-instrumentos"
+            ]
+          },
+          {
+            "id": "apendice",
+            "label": "Apéndice",
+            "description": "Documentos relacionados.",
+            "parentId": "protocolo",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+              "ev-c32-a43-l011-apendice-indice"
+            ]
+          },
+          {
+            "id": "identidad",
+            "label": "Identidad y capacidad",
+            "description": "Soportes cuando correspondan.",
+            "parentId": "apendice",
+            "evidenceIds": [
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts101-138-instrumentos"
+            ]
+          },
+          {
+            "id": "poderes",
+            "label": "Poderes y antecedentes",
+            "description": "Representación y titularidad.",
+            "parentId": "apendice",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice"
+            ]
+          },
+          {
+            "id": "certificados",
+            "label": "Certificados y permisos",
+            "description": "Según el acto concreto.",
+            "parentId": "apendice",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice"
+            ]
+          },
+          {
+            "id": "fiscales",
+            "label": "Comprobantes fiscales",
+            "description": "Solo cuando sean aplicables.",
+            "parentId": "apendice",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts101-138-instrumentos"
+            ]
+          },
+          {
+            "id": "indice",
+            "label": "Índice",
+            "description": "Registro estructurado.",
+            "parentId": "funcion",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+              "ev-c32-a43-l011-apendice-indice"
+            ]
+          },
+          {
+            "id": "datos",
+            "label": "Datos del instrumento",
+            "description": "Número, fecha y participantes.",
+            "parentId": "indice",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+              "ev-c32-cdmx-arts101-138-instrumentos"
+            ]
+          },
+          {
+            "id": "localiza",
+            "label": "Localización",
+            "description": "Conecta registro con matriz.",
+            "parentId": "indice",
+            "evidenceIds": [
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice"
+            ]
+          },
+          {
+            "id": "electronico",
+            "label": "Índice electrónico",
+            "description": "Captura uniforme en sistema.",
+            "parentId": "indice",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+              "ev-c32-a43-l011-apendice-indice",
+              "ev-c32-cdmx-art2-definiciones-digitales",
+              "ev-c32-cdmx-arts100bis-100noviesdecies-digital"
+            ]
+          },
+          {
+            "id": "autorizacion",
+            "label": "Autorización",
+            "description": "Exterioriza actuación válida.",
+            "parentId": "funcion",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts101-138-instrumentos"
+            ]
+          },
+          {
+            "id": "sello",
+            "label": "Sello físico",
+            "description": "Símbolo autentificador.",
+            "parentId": "autorizacion",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts69-75-sello",
+              "ev-c32-a43-l011-sello-reposicion"
+            ]
+          },
+          {
+            "id": "firma",
+            "label": "Firma autógrafa",
+            "description": "Integra autorización ordinaria.",
+            "parentId": "autorizacion",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts101-138-instrumentos"
+            ]
+          },
+          {
+            "id": "firmae",
+            "label": "Firma electrónica notarial",
+            "description": "Equivalencia en actuación digital.",
+            "parentId": "autorizacion",
+            "evidenceIds": [
+              "ev-c32-cdmx-art2-definiciones-digitales",
+              "ev-c32-cdmx-arts100bis-100noviesdecies-digital"
+            ]
+          },
+          {
+            "id": "perdida",
+            "label": "Pérdida del sello",
+            "description": "Avisos y reposición diferenciada.",
+            "parentId": "sello",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts69-75-sello",
+              "ev-c32-a43-l011-sello-reposicion"
+            ]
+          },
+          {
+            "id": "antiguo",
+            "label": "Sello anterior",
+            "description": "No se reutiliza si aparece.",
+            "parentId": "perdida",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts69-75-sello",
+              "ev-c32-a43-l011-sello-reposicion"
+            ]
+          },
+          {
+            "id": "conservacion",
+            "label": "Conservación",
+            "description": "Continuidad documental.",
+            "parentId": "funcion",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts96-97-248-249-archivo"
+            ]
+          },
+          {
+            "id": "notario",
+            "label": "Custodia inicial",
+            "description": "Durante plazo legal local.",
+            "parentId": "conservacion",
+            "evidenceIds": [
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts96-97-248-249-archivo"
+            ]
+          },
+          {
+            "id": "archivo",
+            "label": "Archivo General",
+            "description": "Custodia definitiva.",
+            "parentId": "conservacion",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts96-97-248-249-archivo"
+            ]
+          },
+          {
+            "id": "testimonio",
+            "label": "Testimonio o copia",
+            "description": "Reproducción de la matriz.",
+            "parentId": "conservacion",
+            "evidenceIds": [
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-cdmx-arts101-138-instrumentos",
+              "ev-c32-cdmx-arts96-97-248-249-archivo"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Ley del Notariado para la Ciudad de México",
+          "url": "https://www.congresocdmx.gob.mx/media/documentos/ef679acbbf3f25f083e72a593437826b39d742c8.pdf",
+          "institution": "Congreso de la Ciudad de México",
+          "jurisdiction": "Ciudad de México",
+          "citation": "Texto vigente; última reforma GOCDMX 04-08-2021; artículos 1 a 7, 44, 69 a 100 Noviesdecies, 101 a 138 y 248 a 249",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente primaria local usada para el modelo completo. No se extrapola a otras entidades federativas."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué jurisdicción notarial estudia este paquete?",
+          "answer": "Ciudad de México; sus reglas no se presentan como una norma nacional.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c32-cdmx-arts1-7-44-funcion-fe",
+            "ev-c32-a03-l067-075-panorama-cdmx"
+          ]
+        },
+        {
+          "question": "¿Qué es fe pública notarial?",
+          "answer": "Potestad legal para autenticar y dar certeza a actos y hechos dentro de competencia.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c32-cdmx-arts1-7-44-funcion-fe"
+          ]
+        },
+        {
+          "question": "¿Qué es matricidad?",
+          "answer": "Principio de conservación de la fuente original del instrumento.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c32-cdmx-arts76-81-protocolo",
+            "ev-c32-cdmx-arts101-138-instrumentos",
+            "ev-c32-cdmx-arts96-97-248-249-archivo"
+          ]
+        },
+        {
+          "question": "¿Qué integra el protocolo estricto?",
+          "answer": "Escrituras, actas, instrumentos que no pasaron y sus apéndices ordenados.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c32-cdmx-arts76-81-protocolo",
+            "ev-c32-a43-l011-elementos-protocolo",
+            "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+            "ev-c32-a43-l011-apendice-indice",
+            "ev-c32-cdmx-arts101-138-instrumentos"
+          ]
+        },
+        {
+          "question": "¿Qué es protocolo ordinario?",
+          "answer": "Conjunto de libros y folios autorizados donde se asientan instrumentos físicos.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c32-cdmx-arts76-81-protocolo",
+            "ev-c32-a43-l011-elementos-protocolo",
+            "ev-c32-cdmx-arts101-138-instrumentos"
+          ]
+        },
+        {
+          "question": "¿Qué es protocolo digital?",
+          "answer": "Matriz electrónica alojada y autorizada en el sistema notarial previsto por ley.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c32-cdmx-arts76-81-protocolo",
+            "ev-c32-cdmx-art2-definiciones-digitales",
+            "ev-c32-cdmx-arts100bis-100noviesdecies-digital"
+          ]
+        },
+        {
+          "question": "¿Para qué sirve el apéndice?",
+          "answer": "Para conservar documentos y elementos relacionados con cada instrumento.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+            "ev-c32-a43-l011-apendice-indice",
+            "ev-c32-cdmx-arts101-138-instrumentos"
+          ]
+        },
+        {
+          "question": "¿Todos los actos llevan idénticos anexos?",
+          "answer": "No; dependen del acto, participantes y normativa aplicable.",
+          "sourceOrigin": "class",
+          "evidenceIds": [
+            "ev-c32-a43-l011-generalizaciones-corregidas"
+          ]
+        },
+        {
+          "question": "¿Para qué sirve el índice?",
+          "answer": "Para controlar y localizar los instrumentos mediante datos estructurados.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c32-a03-l067-075-panorama-cdmx",
+            "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+            "ev-c32-a43-l011-apendice-indice",
+            "ev-c32-cdmx-arts101-138-instrumentos"
+          ]
+        },
+        {
+          "question": "¿Qué expresa el sello?",
+          "answer": "El poder autentificador y carácter público de la función en soporte físico.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+            "ev-c32-cdmx-arts69-75-sello",
+            "ev-c32-a43-l011-sello-reposicion"
+          ]
+        },
+        {
+          "question": "¿Qué equivale a firma y sello en actuación digital?",
+          "answer": "La firma electrónica notarial en los supuestos legales.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c32-cdmx-art2-definiciones-digitales",
+            "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+            "ev-c32-cdmx-arts69-75-sello",
+            "ev-c32-a43-l011-sello-reposicion"
+          ]
+        },
+        {
+          "question": "¿Puede reutilizarse un sello perdido si aparece?",
+          "answer": "No; debe entregarse para destrucción conforme a la ley aplicable.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c32-cdmx-arts69-75-sello",
+            "ev-c32-a43-l011-sello-reposicion",
+            "ev-c32-a43-l011-generalizaciones-corregidas"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación: elementos de la función notarial",
+        "description": "Diez casos originales sobre jurisdicción, protocolo, apéndice, índice, sello y archivo.",
+        "questions": [
+          {
+            "text": "Un reactivo aplica a todo México las cifras de folios y libros de la ley de Ciudad de México. ¿Es correcto?",
+            "difficulty": "basic",
+            "options": [
+              "No; la fuente solo regula Ciudad de México",
+              "Sí, por ley federal única",
+              "Sí, por el Código de Comercio"
+            ],
+            "correctOption": 0,
+            "explanation": "La fuente estudiada tiene jurisdicción de Ciudad de México y no prueba una regla nacional.",
+            "optionExplanations": [
+              "Respeta el alcance territorial de la fuente.",
+              "No existe esa ley federal única.",
+              "El Código no uniforma protocolos locales."
+            ],
+            "evidenceIds": [
+              "ev-c32-cdmx-arts1-7-44-funcion-fe",
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-a43-l011-elementos-protocolo",
+              "ev-c32-a43-l011-generalizaciones-corregidas"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c32-cdmx-arts1-7-44-funcion-fe",
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-a43-l011-elementos-protocolo",
+              "ev-c32-a43-l011-generalizaciones-corregidas"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c32-cdmx-arts1-7-44-funcion-fe",
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-a43-l011-elementos-protocolo",
+              "ev-c32-a43-l011-generalizaciones-corregidas"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-a43-l011-elementos-protocolo",
+                "ev-c32-a43-l011-generalizaciones-corregidas"
+              ],
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-a43-l011-elementos-protocolo",
+                "ev-c32-a43-l011-generalizaciones-corregidas"
+              ],
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-a43-l011-elementos-protocolo"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-a43-l011-elementos-protocolo",
+                "ev-c32-a43-l011-generalizaciones-corregidas"
+              ],
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-a43-l011-elementos-protocolo",
+                "ev-c32-a43-l011-generalizaciones-corregidas"
+              ],
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-a43-l011-elementos-protocolo"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué principio explica que se conserve el instrumento original en el protocolo?",
+            "difficulty": "basic",
+            "options": [
+              "Matricidad",
+              "Publicidad comercial",
+              "Oralidad"
+            ],
+            "correctOption": 0,
+            "explanation": "La matricidad preserva la fuente o matriz.",
+            "optionExplanations": [
+              "Es el principio aplicable.",
+              "La publicidad tiene otra función.",
+              "No describe conservación documental."
+            ],
+            "evidenceIds": [
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-a43-l011-elementos-protocolo",
+              "ev-c32-cdmx-arts101-138-instrumentos",
+              "ev-c32-cdmx-arts96-97-248-249-archivo"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-a43-l011-elementos-protocolo",
+              "ev-c32-cdmx-arts101-138-instrumentos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-a43-l011-elementos-protocolo",
+              "ev-c32-cdmx-arts101-138-instrumentos"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-a43-l011-elementos-protocolo",
+                "ev-c32-cdmx-arts101-138-instrumentos"
+              ],
+              [
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-a43-l011-elementos-protocolo",
+                "ev-c32-cdmx-arts101-138-instrumentos"
+              ],
+              [
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-a43-l011-elementos-protocolo",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-arts96-97-248-249-archivo"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-a43-l011-elementos-protocolo",
+                "ev-c32-cdmx-arts101-138-instrumentos"
+              ],
+              [
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-a43-l011-elementos-protocolo",
+                "ev-c32-cdmx-arts101-138-instrumentos"
+              ],
+              [
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-a43-l011-elementos-protocolo",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-arts96-97-248-249-archivo"
+              ]
+            ]
+          },
+          {
+            "text": "Una carpeta contiene identificaciones, poderes y certificados vinculados a una escritura. ¿Qué es?",
+            "difficulty": "basic",
+            "options": [
+              "Apéndice",
+              "Índice",
+              "Sello"
+            ],
+            "correctOption": 0,
+            "explanation": "El apéndice reúne documentos relacionados.",
+            "optionExplanations": [
+              "Complementa el instrumento.",
+              "El índice registra datos.",
+              "El sello autentifica."
+            ],
+            "evidenceIds": [
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+              "ev-c32-a43-l011-apendice-indice",
+              "ev-c32-cdmx-arts101-138-instrumentos",
+              "ev-c32-cdmx-arts69-75-sello",
+              "ev-c32-a43-l011-sello-reposicion"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+              "ev-c32-a43-l011-apendice-indice",
+              "ev-c32-cdmx-arts101-138-instrumentos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+              "ev-c32-a43-l011-apendice-indice",
+              "ev-c32-cdmx-arts101-138-instrumentos"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+                "ev-c32-a43-l011-apendice-indice",
+                "ev-c32-cdmx-arts101-138-instrumentos"
+              ],
+              [
+                "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+                "ev-c32-a43-l011-apendice-indice",
+                "ev-c32-cdmx-arts101-138-instrumentos"
+              ],
+              [
+                "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-arts69-75-sello",
+                "ev-c32-a43-l011-sello-reposicion"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+                "ev-c32-a43-l011-apendice-indice",
+                "ev-c32-cdmx-arts101-138-instrumentos"
+              ],
+              [
+                "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+                "ev-c32-a43-l011-apendice-indice",
+                "ev-c32-cdmx-arts101-138-instrumentos"
+              ],
+              [
+                "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-arts69-75-sello",
+                "ev-c32-a43-l011-sello-reposicion"
+              ]
+            ]
+          },
+          {
+            "text": "La oficina usa una lista con número, fecha, otorgantes y tipo de instrumento para localizar matrices. ¿Qué elemento es?",
+            "difficulty": "intermediate",
+            "options": [
+              "Índice",
+              "Apéndice",
+              "Testimonio"
+            ],
+            "correctOption": 0,
+            "explanation": "El índice cumple control y localización.",
+            "optionExplanations": [
+              "Relaciona datos con la matriz.",
+              "Conserva documentos anexos.",
+              "Es una reproducción autorizada."
+            ],
+            "evidenceIds": [
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+              "ev-c32-a43-l011-apendice-indice",
+              "ev-c32-cdmx-arts101-138-instrumentos",
+              "ev-c32-cdmx-arts96-97-248-249-archivo"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+              "ev-c32-a43-l011-apendice-indice",
+              "ev-c32-cdmx-arts101-138-instrumentos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+              "ev-c32-a43-l011-apendice-indice",
+              "ev-c32-cdmx-arts101-138-instrumentos"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+                "ev-c32-a43-l011-apendice-indice",
+                "ev-c32-cdmx-arts101-138-instrumentos"
+              ],
+              [
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+                "ev-c32-a43-l011-apendice-indice",
+                "ev-c32-cdmx-arts101-138-instrumentos"
+              ],
+              [
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-arts96-97-248-249-archivo"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+                "ev-c32-a43-l011-apendice-indice",
+                "ev-c32-cdmx-arts101-138-instrumentos"
+              ],
+              [
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+                "ev-c32-a43-l011-apendice-indice",
+                "ev-c32-cdmx-arts101-138-instrumentos"
+              ],
+              [
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-arts96-97-248-249-archivo"
+              ]
+            ]
+          },
+          {
+            "text": "Una norma de Ciudad de México incluye protocolo ordinario, cotejos, protocolo digital e índices. ¿Qué concepto describe?",
+            "difficulty": "intermediate",
+            "options": [
+              "Protocolo en sentido amplio",
+              "Solo escritura pública",
+              "Registro de visitantes"
+            ],
+            "correctOption": 0,
+            "explanation": "El sentido amplio abarca modalidades y accesorios.",
+            "optionExplanations": [
+              "Coincide con el artículo 76.",
+              "Es una parte, no el conjunto.",
+              "No tiene función jurídica equivalente."
+            ],
+            "evidenceIds": [
+              "ev-c32-cdmx-arts1-7-44-funcion-fe",
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+              "ev-c32-a43-l011-apendice-indice",
+              "ev-c32-cdmx-arts101-138-instrumentos",
+              "ev-c32-cdmx-art2-definiciones-digitales",
+              "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+              "ev-c32-a43-l011-generalizaciones-corregidas"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c32-cdmx-arts1-7-44-funcion-fe",
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+              "ev-c32-a43-l011-apendice-indice",
+              "ev-c32-cdmx-art2-definiciones-digitales",
+              "ev-c32-cdmx-arts100bis-100noviesdecies-digital"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c32-cdmx-arts1-7-44-funcion-fe",
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+              "ev-c32-a43-l011-apendice-indice",
+              "ev-c32-cdmx-art2-definiciones-digitales",
+              "ev-c32-cdmx-arts100bis-100noviesdecies-digital"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+                "ev-c32-a43-l011-apendice-indice",
+                "ev-c32-cdmx-art2-definiciones-digitales",
+                "ev-c32-cdmx-arts100bis-100noviesdecies-digital"
+              ],
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+                "ev-c32-a43-l011-apendice-indice",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-art2-definiciones-digitales",
+                "ev-c32-cdmx-arts100bis-100noviesdecies-digital"
+              ],
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+                "ev-c32-a43-l011-apendice-indice",
+                "ev-c32-cdmx-art2-definiciones-digitales",
+                "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+                "ev-c32-a43-l011-generalizaciones-corregidas"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+                "ev-c32-a43-l011-apendice-indice",
+                "ev-c32-cdmx-art2-definiciones-digitales",
+                "ev-c32-cdmx-arts100bis-100noviesdecies-digital"
+              ],
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+                "ev-c32-a43-l011-apendice-indice",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-art2-definiciones-digitales",
+                "ev-c32-cdmx-arts100bis-100noviesdecies-digital"
+              ],
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+                "ev-c32-a43-l011-apendice-indice",
+                "ev-c32-cdmx-art2-definiciones-digitales",
+                "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+                "ev-c32-a43-l011-generalizaciones-corregidas"
+              ]
+            ]
+          },
+          {
+            "text": "Un archivo PDF se firma con una firma comercial común y se denomina protocolo digital. ¿Basta?",
+            "difficulty": "advanced",
+            "options": [
+              "No, requiere sistema y firma electrónica notarial legales",
+              "Sí, cualquier firma electrónica basta",
+              "Sí, si se imprime después"
+            ],
+            "correctOption": 0,
+            "explanation": "La actuación digital exige infraestructura y credenciales normativas.",
+            "optionExplanations": [
+              "Respeta seguridad y equivalencia legal.",
+              "Ignora requisitos especiales.",
+              "Imprimir no subsana el origen."
+            ],
+            "evidenceIds": [
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-cdmx-art2-definiciones-digitales",
+              "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+              "ev-c32-cdmx-arts96-97-248-249-archivo",
+              "ev-c32-a43-l011-generalizaciones-corregidas"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-cdmx-art2-definiciones-digitales",
+              "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+              "ev-c32-cdmx-arts96-97-248-249-archivo",
+              "ev-c32-a43-l011-generalizaciones-corregidas"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-cdmx-art2-definiciones-digitales",
+              "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+              "ev-c32-cdmx-arts96-97-248-249-archivo",
+              "ev-c32-a43-l011-generalizaciones-corregidas"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-cdmx-art2-definiciones-digitales",
+                "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+                "ev-c32-cdmx-arts96-97-248-249-archivo",
+                "ev-c32-a43-l011-generalizaciones-corregidas"
+              ],
+              [
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-cdmx-art2-definiciones-digitales",
+                "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+                "ev-c32-cdmx-arts96-97-248-249-archivo",
+                "ev-c32-a43-l011-generalizaciones-corregidas"
+              ],
+              [
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-cdmx-art2-definiciones-digitales",
+                "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+                "ev-c32-cdmx-arts96-97-248-249-archivo",
+                "ev-c32-a43-l011-generalizaciones-corregidas"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-cdmx-art2-definiciones-digitales",
+                "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+                "ev-c32-cdmx-arts96-97-248-249-archivo",
+                "ev-c32-a43-l011-generalizaciones-corregidas"
+              ],
+              [
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-cdmx-art2-definiciones-digitales",
+                "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+                "ev-c32-cdmx-arts96-97-248-249-archivo",
+                "ev-c32-a43-l011-generalizaciones-corregidas"
+              ],
+              [
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-cdmx-art2-definiciones-digitales",
+                "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+                "ev-c32-cdmx-arts96-97-248-249-archivo",
+                "ev-c32-a43-l011-generalizaciones-corregidas"
+              ]
+            ]
+          },
+          {
+            "text": "Una escritura lleva sello, pero el notario actuó fuera de competencia. ¿El sello sana el defecto?",
+            "difficulty": "advanced",
+            "options": [
+              "No",
+              "Sí, siempre",
+              "Solo si el cliente acepta"
+            ],
+            "correctOption": 0,
+            "explanation": "El sello no sustituye competencia ni demás formalidades.",
+            "optionExplanations": [
+              "La actuación debe ser integralmente válida.",
+              "Atribuye efecto absoluto inexistente.",
+              "La competencia no depende del consentimiento."
+            ],
+            "evidenceIds": [
+              "ev-c32-cdmx-arts1-7-44-funcion-fe",
+              "ev-c32-cdmx-arts101-138-instrumentos",
+              "ev-c32-cdmx-arts69-75-sello",
+              "ev-c32-a43-l011-sello-reposicion",
+              "ev-c32-a43-l011-generalizaciones-corregidas"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c32-cdmx-arts1-7-44-funcion-fe",
+              "ev-c32-cdmx-arts101-138-instrumentos",
+              "ev-c32-cdmx-arts69-75-sello",
+              "ev-c32-a43-l011-sello-reposicion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c32-cdmx-arts1-7-44-funcion-fe",
+              "ev-c32-cdmx-arts101-138-instrumentos",
+              "ev-c32-cdmx-arts69-75-sello",
+              "ev-c32-a43-l011-sello-reposicion",
+              "ev-c32-a43-l011-generalizaciones-corregidas"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-arts69-75-sello",
+                "ev-c32-a43-l011-sello-reposicion"
+              ],
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-arts69-75-sello",
+                "ev-c32-a43-l011-sello-reposicion"
+              ],
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-arts69-75-sello",
+                "ev-c32-a43-l011-sello-reposicion"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-arts69-75-sello",
+                "ev-c32-a43-l011-sello-reposicion"
+              ],
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-arts69-75-sello",
+                "ev-c32-a43-l011-sello-reposicion"
+              ],
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-arts69-75-sello",
+                "ev-c32-a43-l011-sello-reposicion"
+              ]
+            ]
+          },
+          {
+            "text": "Un sello reportado perdido aparece después de emitirse uno nuevo diferenciado. ¿Puede retomarse?",
+            "difficulty": "intermediate",
+            "options": [
+              "No, se entrega para destrucción",
+              "Sí, pueden alternarse",
+              "Sí, si conserva el escudo"
+            ],
+            "correctOption": 0,
+            "explanation": "El antiguo queda inutilizable aunque aparezca.",
+            "optionExplanations": [
+              "Previene dobles instrumentos.",
+              "Generaría inseguridad.",
+              "El contenido gráfico no revive su vigencia."
+            ],
+            "evidenceIds": [
+              "ev-c32-cdmx-arts101-138-instrumentos",
+              "ev-c32-cdmx-arts69-75-sello",
+              "ev-c32-a43-l011-sello-reposicion"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c32-cdmx-arts101-138-instrumentos",
+              "ev-c32-cdmx-arts69-75-sello",
+              "ev-c32-a43-l011-sello-reposicion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c32-cdmx-arts69-75-sello",
+              "ev-c32-a43-l011-sello-reposicion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-arts69-75-sello",
+                "ev-c32-a43-l011-sello-reposicion"
+              ],
+              [
+                "ev-c32-cdmx-arts69-75-sello",
+                "ev-c32-a43-l011-sello-reposicion"
+              ],
+              [
+                "ev-c32-cdmx-arts69-75-sello",
+                "ev-c32-a43-l011-sello-reposicion"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-arts69-75-sello",
+                "ev-c32-a43-l011-sello-reposicion"
+              ],
+              [
+                "ev-c32-cdmx-arts69-75-sello",
+                "ev-c32-a43-l011-sello-reposicion"
+              ],
+              [
+                "ev-c32-cdmx-arts69-75-sello",
+                "ev-c32-a43-l011-sello-reposicion"
+              ]
+            ]
+          },
+          {
+            "text": "Un inmueble tiene gravamen. ¿La única regla posible es que jamás pueda transmitirse?",
+            "difficulty": "advanced",
+            "options": [
+              "No; debe identificarse el derecho, el acto y la normativa aplicable",
+              "Sí, todo gravamen impide transmitir",
+              "Sí, el sello cancela el gravamen"
+            ],
+            "correctOption": 0,
+            "explanation": "La Ley del Notariado de la Ciudad de México no produce por sí sola una consecuencia única para toda transmisión gravada; el caso exige identificar el derecho inscrito, el título y las normas civiles o registrales aplicables.",
+            "optionExplanations": [
+              "Evita una conclusión automática sin la norma sustantiva aplicable.",
+              "Universaliza un efecto que no deriva de la sola función notarial.",
+              "El sello autentica; no cancela derechos inscritos."
+            ],
+            "evidenceIds": [
+              "ev-c32-cdmx-arts1-7-44-funcion-fe",
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts101-138-instrumentos",
+              "ev-c32-cdmx-arts69-75-sello",
+              "ev-c32-a43-l011-sello-reposicion",
+              "ev-c32-a43-l011-generalizaciones-corregidas"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c32-cdmx-arts101-138-instrumentos",
+              "ev-c32-a43-l011-generalizaciones-corregidas"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c32-cdmx-arts1-7-44-funcion-fe",
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts101-138-instrumentos",
+              "ev-c32-a43-l011-generalizaciones-corregidas"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-a43-l011-generalizaciones-corregidas"
+              ],
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-a43-l011-generalizaciones-corregidas"
+              ],
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-arts69-75-sello",
+                "ev-c32-a43-l011-sello-reposicion",
+                "ev-c32-a43-l011-generalizaciones-corregidas"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-a43-l011-generalizaciones-corregidas"
+              ],
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-a43-l011-generalizaciones-corregidas"
+              ],
+              [
+                "ev-c32-cdmx-arts1-7-44-funcion-fe",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-arts69-75-sello",
+                "ev-c32-a43-l011-sello-reposicion",
+                "ev-c32-a43-l011-generalizaciones-corregidas"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué ocurre cuando el protocolo cumple el plazo local de custodia inicial?",
+            "difficulty": "intermediate",
+            "options": [
+              "Pasa a custodia definitiva del Archivo conforme a la ley",
+              "Se destruye automáticamente",
+              "Se entrega a cualquier otorgante"
+            ],
+            "correctOption": 0,
+            "explanation": "El Archivo preserva la matricidad documental.",
+            "optionExplanations": [
+              "Es la fase institucional de conservación.",
+              "Contradice la preservación.",
+              "Los particulares reciben testimonios, no la matriz."
+            ],
+            "evidenceIds": [
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-a43-l011-elementos-protocolo",
+              "ev-c32-cdmx-arts101-138-instrumentos",
+              "ev-c32-cdmx-arts96-97-248-249-archivo"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-a43-l011-elementos-protocolo",
+              "ev-c32-cdmx-arts96-97-248-249-archivo"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c32-a03-l067-075-panorama-cdmx",
+              "ev-c32-cdmx-arts76-81-protocolo",
+              "ev-c32-a43-l011-elementos-protocolo",
+              "ev-c32-cdmx-arts96-97-248-249-archivo"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-a43-l011-elementos-protocolo",
+                "ev-c32-cdmx-arts96-97-248-249-archivo"
+              ],
+              [
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-a43-l011-elementos-protocolo",
+                "ev-c32-cdmx-arts96-97-248-249-archivo"
+              ],
+              [
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-a43-l011-elementos-protocolo",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-arts96-97-248-249-archivo"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-a43-l011-elementos-protocolo",
+                "ev-c32-cdmx-arts96-97-248-249-archivo"
+              ],
+              [
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-a43-l011-elementos-protocolo",
+                "ev-c32-cdmx-arts96-97-248-249-archivo"
+              ],
+              [
+                "ev-c32-a03-l067-075-panorama-cdmx",
+                "ev-c32-cdmx-arts76-81-protocolo",
+                "ev-c32-a43-l011-elementos-protocolo",
+                "ev-c32-cdmx-arts101-138-instrumentos",
+                "ev-c32-cdmx-arts96-97-248-249-archivo"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c32-cdmx-arts1-7-44-funcion-fe",
+      "kind": "official",
+      "title": "Ley del Notariado para la Ciudad de México",
+      "url": "https://www.congresocdmx.gob.mx/media/documentos/ef679acbbf3f25f083e72a593437826b39d742c8.pdf",
+      "institution": "Congreso de la Ciudad de México",
+      "jurisdiction": "Ciudad de México",
+      "locator": "texto vigente, última reforma GOCDMX 04-08-2021; artículos 1 a 7 y 44",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
     },
-    "materials":[
-      {"type":"short_answer","title":"Respuesta breve","content":"La función notarial dota de certeza jurídica a actos y hechos mediante una persona investida de fe pública. El protocolo conserva la matriz; el apéndice reúne documentos relacionados; el índice registra datos para control y localización; y el sello, junto con firma o autorización correspondiente, exterioriza la actuación en soporte físico. En actuación digital, la firma electrónica notarial cumple la equivalencia prevista por la ley local.","sourceOrigin":"mixed"},
-      {"type":"full_explanation","title":"Explicación completa desde cero","content":"La función notarial es de regulación local. Cada entidad federativa determina requisitos, organización, autoridades, territorio, folios, conservación y archivo. Por eso una cifra o autoridad de Michoacán no debe memorizarse como regla nacional. Para el estudio CENEVAL resulta útil el modelo de Ciudad de México y su comparación con la ley del lugar del caso.\n\nLa fe pública notarial es una potestad jurídica conferida para autenticar y dotar de certeza a actos y hechos dentro de competencia. No significa que lo consignado sea absolutamente inatacable ni que el notario pueda actuar fuera de sus atribuciones. Produce presunciones y efectos probatorios conforme a la ley, sujetos a impugnación por las vías correspondientes.\n\nEl principio de matricidad exige conservar una fuente original o matriz de la actuación. En Ciudad de México el protocolo en sentido amplio incluye protocolo ordinario, libro de registro de cotejos y apéndices electrónicos, protocolo digital con libro de extractos, índices electrónicos y accesorios. En sentido estricto reúne instrumentos públicos matrices: escrituras, actas, los que no pasaron y sus apéndices.\n\nEl protocolo ordinario se forma con folios numerados y sellados donde se asientan y autorizan escrituras y actas. Escritura hace constar uno o más actos jurídicos; acta, hechos presenciados o conocidos por el notario en los términos legales. No debe definirse el protocolo como un depósito de escrituras ya terminadas: es el sistema matriz en que se documenta, ordena y conserva la actuación.\n\nEl protocolo digital aloja instrumentos electrónicos y sus apéndices dentro del sistema autorizado. La firma electrónica notarial tiene valor equivalente a la firma autógrafa y sello en los supuestos legales. Digital no significa enviar cualquier PDF ni usar una firma comercial común; requiere infraestructura, identidad, conservación y controles previstos por la legislación.\n\nEl apéndice integra documentos y elementos relacionados con cada escritura o acta: identificaciones, poderes, permisos, certificados, comprobantes fiscales, planos o antecedentes cuando el acto los exige. Es complemento de los juicios y fe documental. Los documentos se vinculan al instrumento y se ordenan conforme a la ley. No todo negocio requiere exactamente la misma lista.\n\nLa transcripción generaliza constancia de situación fiscal y certificado de inexistencia de gravámenes. Ambos pueden ser necesarios en operaciones concretas, pero su exigencia depende del acto, inmueble, situación fiscal, normativa y trámites solicitados. Además, un certificado puede revelar gravámenes existentes; su finalidad no es afirmar anticipadamente que siempre está libre. Una transmisión con gravamen exige análisis jurídico, consentimiento o cancelación cuando proceda, no una regla automática única.\n\nEl índice registra uniformemente los datos de instrumentos para control, búsqueda y relación con libros o folios. En Ciudad de México es electrónico y se captura mediante el sistema notarial conforme al artículo 97. No es el registro informal de quién entra a la oficina. Permite localizar número, fecha, otorgantes y clase de acto conforme a datos legalmente exigidos, sin sustituir la matriz.\n\nEl sello de autorizar expresa el poder autentificador y carácter público de la función. En el régimen capitalino es metálico, circular, incorpora escudo nacional, Ciudad de México, nombre y número de notaría; se imprime en folios e instrumentos señalados. Su impresión no cura falta de competencia, voluntad o formalidad. La autorización física normalmente involucra sello y firma; la actuación digital se autoriza mediante firma electrónica notarial.\n\nSi el sello se pierde o altera, la ley capitalina exige avisos a autoridad, Archivo, Registro y Colegio y, por pérdida, acta ante Ministerio Público. El sello de reposición tiene signo especial. Si aparece el anterior, no puede reutilizarse y debe destruirse en el Archivo en presencia del notario. El deterioro sigue una ruta distinta que no requiere acta ministerial. Otras entidades establecen su propio procedimiento.\n\nLa conservación culmina en el Archivo General de Notarías. En Ciudad de México el Archivo custodia definitivamente el protocolo que alcanza cinco años desde la razón de cierre; este plazo no equivale a decir que el notario puede guardar arbitrariamente cinco libros. En Michoacán, volumen, folios, entrega y autoridades siguen reglas distintas.\n\nPara resolver un caso identifica: entidad y ley aplicable; acto o hecho; soporte ordinario o digital; matriz; documentos del apéndice; datos de índice; forma de autorización; y fase de conservación. Si el reactivo ofrece una cifra o autoridad, nunca la conviertas en regla nacional sin ubicar jurisdicción.","sourceOrigin":"mixed"},
-      {"type":"legal_basis","title":"Fundamento jurídico vigente","content":"Ley del Notariado para la Ciudad de México, texto oficial consultado el 11-08-2026: artículos 2, 69 a 76 Ter, 97, 98, 100 Bis y 101, además de 248 y 249 sobre archivo; incorpora actuación digital, protocolo e índices electrónicos. Ley del Notariado del Estado de Michoacán, última reforma informada por el Congreso local al 28-03-2022: artículos 29 a 46 sobre sello, protocolo, apéndice, folios, cierre y archivo. Las reglas concretas deben confirmarse en la entidad del caso.","sourceOrigin":"complementary"},
-      {"type":"simple_example","title":"Ejemplo sencillo","content":"En una escritura de compraventa, la matriz contiene el acto y declaraciones; el apéndice incorpora identificaciones, poderes y certificados aplicables; el índice permite ubicar número y participantes; y la autorización física se exterioriza con firma y sello. Cada elemento cumple una función diferente.","sourceOrigin":"mixed"},
-      {"type":"ceneval_example","title":"Caso tipo CENEVAL","content":"Si un reactivo afirma que el protocolo es solo una carpeta de documentos anexos, es falso: esa función corresponde al apéndice. Si dice que el índice sustituye la escritura, también es falso: localiza y controla, mientras la matriz se conserva en el protocolo.","sourceOrigin":"mixed"},
-      {"type":"summary","title":"Resumen","content":"Fe pública: certeza jurídica conferida por ley. Matricidad: conservación de la fuente original. Protocolo: sistema de matrices, actas, escrituras y apéndices; puede ser ordinario o digital. Apéndice: documentos vinculados. Índice: control y localización. Sello: exterioriza autorización física con la firma. Firma electrónica notarial: equivalente en actuación digital. Archivo: custodia definitiva. Las cantidades, plazos y autoridades cambian por entidad.","sourceOrigin":"mixed"},
-      {"type":"study_guide","title":"Guía intensiva de preguntas y respuestas","content":"1. ¿Quién regula la función notarial? Respuesta: cada entidad federativa. 2. ¿Qué es fe pública? Respuesta: potestad legal de autenticar actos y hechos. 3. ¿Qué es matricidad? Respuesta: conservación de la fuente original. 4. ¿Protocolo ordinario? Respuesta: folios donde se asientan instrumentos. 5. ¿Protocolo digital? Respuesta: matriz electrónica dentro del sistema autorizado. 6. ¿Qué contiene el apéndice? Respuesta: documentos vinculados al instrumento. 7. ¿Misma lista para todo acto? Respuesta: no. 8. ¿Para qué sirve el índice? Respuesta: control y localización de instrumentos. 9. ¿Es libreta de visitantes? Respuesta: no. 10. ¿Qué expresa el sello? Respuesta: poder autentificador en soporte físico. 11. ¿Qué autoriza digitalmente? Respuesta: firma electrónica notarial. 12. ¿Sello perdido reaparece? Respuesta: no se reutiliza; se entrega para destrucción conforme a la ley.","sourceOrigin":"mixed"},
-      {"type":"key_concepts","title":"Conceptos clave","content":"Función notarial: actividad jurídica regulada localmente. Fe pública: autenticación conferida. Competencia: límite territorial y material. Instrumento: documento notarial matriz. Escritura: acto jurídico. Acta: hecho jurídico. Matricidad: conservación original. Protocolo amplio: conjunto de modalidades y accesorios. Protocolo estricto: matrices ordenadas. Folio: soporte autorizado. Apéndice: complemento documental. Índice electrónico: registro uniforme. Sello de autorizar: símbolo autentificador. Firma autógrafa: suscripción física. Firma electrónica notarial: autorización digital equivalente. Archivo General: custodia definitiva. Testimonio: reproducción autorizada de la matriz.","sourceOrigin":"mixed"},
-      {"type":"common_errors","title":"Errores comunes","content":"No trates una ley local como nacional. No memorices 100 folios o cinco libros sin jurisdicción. No reduzcas protocolo a libro de escrituras. No confundas escritura con acta. No confundas apéndice con protocolo completo. No supongas idénticos anexos para todo acto. No llames índice a la libreta de visitantes. No afirmes que todo gravamen impide siempre transmitir. No equipares sello aislado con instrumento válido. No ignores firma electrónica notarial. No reutilices sello reportado perdido. No confundas cinco años desde cierre con cantidad de libros guardables.","sourceOrigin":"complementary"}
-    ],
-    "conceptMap":{"title":"Mapa visual: sistema documental notarial","description":"Cómo se conectan certeza, matriz, anexos, localización, autorización y archivo.","nodes":[
-      {"id":"funcion","label":"Función notarial","description":"Certeza jurídica regulada localmente."},
-      {"id":"jurisdiccion","label":"Ley local","description":"Reglas dependen de la entidad.","parentId":"funcion"},
-      {"id":"competencia","label":"Competencia","description":"Límites materiales y territoriales.","parentId":"jurisdiccion"},
-      {"id":"fe","label":"Fe pública","description":"Potestad autentificadora.","parentId":"funcion"},
-      {"id":"certeza","label":"Certeza","description":"Presunción y prueba legal.","parentId":"fe"},
-      {"id":"matricidad","label":"Matricidad","description":"Conserva fuente original.","parentId":"fe"},
-      {"id":"protocolo","label":"Protocolo","description":"Sistema matriz de instrumentos.","parentId":"funcion"},
-      {"id":"amplio","label":"Sentido amplio","description":"Modalidades, índices y accesorios.","parentId":"protocolo"},
-      {"id":"estricto","label":"Sentido estricto","description":"Matrices y apéndices ordenados.","parentId":"protocolo"},
-      {"id":"ordinario","label":"Protocolo ordinario","description":"Libros y folios autorizados.","parentId":"amplio"},
-      {"id":"digital","label":"Protocolo digital","description":"Matrices electrónicas seguras.","parentId":"amplio"},
-      {"id":"escritura","label":"Escritura","description":"Hace constar actos jurídicos.","parentId":"estricto"},
-      {"id":"acta","label":"Acta","description":"Hace constar hechos.","parentId":"estricto"},
-      {"id":"nopaso","label":"No pasó","description":"Instrumento sin conclusión.","parentId":"estricto"},
-      {"id":"apendice","label":"Apéndice","description":"Documentos relacionados.","parentId":"protocolo"},
-      {"id":"identidad","label":"Identidad y capacidad","description":"Soportes cuando correspondan.","parentId":"apendice"},
-      {"id":"poderes","label":"Poderes y antecedentes","description":"Representación y titularidad.","parentId":"apendice"},
-      {"id":"certificados","label":"Certificados y permisos","description":"Según el acto concreto.","parentId":"apendice"},
-      {"id":"fiscales","label":"Comprobantes fiscales","description":"Solo cuando sean aplicables.","parentId":"apendice"},
-      {"id":"indice","label":"Índice","description":"Registro estructurado.","parentId":"funcion"},
-      {"id":"datos","label":"Datos del instrumento","description":"Número, fecha y participantes.","parentId":"indice"},
-      {"id":"localiza","label":"Localización","description":"Conecta registro con matriz.","parentId":"indice"},
-      {"id":"electronico","label":"Índice electrónico","description":"Captura uniforme en sistema.","parentId":"indice"},
-      {"id":"autorizacion","label":"Autorización","description":"Exterioriza actuación válida.","parentId":"funcion"},
-      {"id":"sello","label":"Sello físico","description":"Símbolo autentificador.","parentId":"autorizacion"},
-      {"id":"firma","label":"Firma autógrafa","description":"Integra autorización ordinaria.","parentId":"autorizacion"},
-      {"id":"firmae","label":"Firma electrónica notarial","description":"Equivalencia en actuación digital.","parentId":"autorizacion"},
-      {"id":"perdida","label":"Pérdida del sello","description":"Avisos y reposición diferenciada.","parentId":"sello"},
-      {"id":"antiguo","label":"Sello anterior","description":"No se reutiliza si aparece.","parentId":"perdida"},
-      {"id":"conservacion","label":"Conservación","description":"Continuidad documental.","parentId":"funcion"},
-      {"id":"notario","label":"Custodia inicial","description":"Durante plazo legal local.","parentId":"conservacion"},
-      {"id":"archivo","label":"Archivo General","description":"Custodia definitiva.","parentId":"conservacion"},
-      {"id":"testimonio","label":"Testimonio o copia","description":"Reproducción de la matriz.","parentId":"conservacion"}
-    ]},
-    "references":[
-      {"title":"Ley del Notariado para la Ciudad de México","url":"https://www.congresocdmx.gob.mx/media/documentos/ef679acbbf3f25f083e72a593437826b39d742c8.pdf","institution":"Congreso de la Ciudad de México","jurisdiction":"Ciudad de México","citation":"Artículos 2, 69 a 76 Ter, 97 a 101, 248 y 249; texto oficial consultado el 11-08-2026","retrievedOn":"2026-08-11","note":"Modelo de fe pública, sello, protocolo ordinario y digital, apéndice, índice y archivo."},
-      {"title":"Ley del Notariado del Estado de Michoacán","url":"https://congresomich.gob.mx/file/LEY-DEL-NOTARIADO-DEL-ESTADO-REF-29-DIC-2016.pdf","institution":"Congreso del Estado de Michoacán de Ocampo","jurisdiction":"Michoacán","citation":"Artículos 29 a 46; última reforma indicada por el Congreso local 28-03-2022","retrievedOn":"2026-08-11","note":"Contraste local para sello, protocolo, folios, apéndice, cierre y Archivo General."},
-      {"title":"Ley Registral para la Ciudad de México","url":"https://paot.org.mx/centro/leyes-normas-htmls/ley-registral-para-2072.html","institution":"Procuraduría Ambiental y del Ordenamiento Territorial de la Ciudad de México","jurisdiction":"Ciudad de México","citation":"Artículos 1, 2, 39 y 40; última reforma GOCDMX 21-11-2025","retrievedOn":"2026-08-11","note":"Relación entre instrumento notarial, firma electrónica, publicidad e ingreso registral."}
-    ],
-    "flashcards":[
-      {"question":"¿La función notarial es federal?","answer":"No; su regulación corresponde principalmente a cada entidad federativa.","sourceOrigin":"mixed"},
-      {"question":"¿Qué es fe pública notarial?","answer":"Potestad legal para autenticar y dar certeza a actos y hechos dentro de competencia.","sourceOrigin":"mixed"},
-      {"question":"¿Qué es matricidad?","answer":"Principio de conservación de la fuente original del instrumento.","sourceOrigin":"complementary"},
-      {"question":"¿Qué integra el protocolo estricto?","answer":"Escrituras, actas, instrumentos que no pasaron y sus apéndices ordenados.","sourceOrigin":"complementary"},
-      {"question":"¿Qué es protocolo ordinario?","answer":"Conjunto de libros y folios autorizados donde se asientan instrumentos físicos.","sourceOrigin":"complementary"},
-      {"question":"¿Qué es protocolo digital?","answer":"Matriz electrónica alojada y autorizada en el sistema notarial previsto por ley.","sourceOrigin":"complementary"},
-      {"question":"¿Para qué sirve el apéndice?","answer":"Para conservar documentos y elementos relacionados con cada instrumento.","sourceOrigin":"mixed"},
-      {"question":"¿Todos los actos llevan idénticos anexos?","answer":"No; dependen del acto, participantes y normativa aplicable.","sourceOrigin":"mixed"},
-      {"question":"¿Para qué sirve el índice?","answer":"Para controlar y localizar los instrumentos mediante datos estructurados.","sourceOrigin":"mixed"},
-      {"question":"¿Qué expresa el sello?","answer":"El poder autentificador y carácter público de la función en soporte físico.","sourceOrigin":"complementary"},
-      {"question":"¿Qué equivale a firma y sello en actuación digital?","answer":"La firma electrónica notarial en los supuestos legales.","sourceOrigin":"complementary"},
-      {"question":"¿Puede reutilizarse un sello perdido si aparece?","answer":"No; debe entregarse para destrucción conforme a la ley aplicable.","sourceOrigin":"complementary"}
-    ],
-    "exam":{"title":"Evaluación: elementos de la función notarial","description":"Diez casos originales sobre jurisdicción, protocolo, apéndice, índice, sello y archivo.","questions":[
-      {"text":"Un reactivo afirma que todas las notarías mexicanas usan el mismo número de folios y libros. ¿Es correcto?","difficulty":"basic","options":["No, depende de legislación local","Sí, por ley federal única","Sí, por el Código de Comercio"],"correctOption":0,"explanation":"La función notarial se regula localmente.","optionExplanations":["Exige ubicar la entidad.","No existe esa ley federal única.","El Código no uniforma protocolos locales."]},
-      {"text":"¿Qué principio explica que se conserve el instrumento original en el protocolo?","difficulty":"basic","options":["Matricidad","Publicidad comercial","Oralidad"],"correctOption":0,"explanation":"La matricidad preserva la fuente o matriz.","optionExplanations":["Es el principio aplicable.","La publicidad tiene otra función.","No describe conservación documental."]},
-      {"text":"Una carpeta contiene identificaciones, poderes y certificados vinculados a una escritura. ¿Qué es?","difficulty":"basic","options":["Apéndice","Índice","Sello"],"correctOption":0,"explanation":"El apéndice reúne documentos relacionados.","optionExplanations":["Complementa el instrumento.","El índice registra datos.","El sello autentifica."]},
-      {"text":"La oficina usa una lista con número, fecha, otorgantes y tipo de instrumento para localizar matrices. ¿Qué elemento es?","difficulty":"intermediate","options":["Índice","Apéndice","Testimonio"],"correctOption":0,"explanation":"El índice cumple control y localización.","optionExplanations":["Relaciona datos con la matriz.","Conserva documentos anexos.","Es una reproducción autorizada."]},
-      {"text":"Una norma de Ciudad de México incluye protocolo ordinario, cotejos, protocolo digital e índices. ¿Qué concepto describe?","difficulty":"intermediate","options":["Protocolo en sentido amplio","Solo escritura pública","Registro de visitantes"],"correctOption":0,"explanation":"El sentido amplio abarca modalidades y accesorios.","optionExplanations":["Coincide con el artículo 76.","Es una parte, no el conjunto.","No tiene función jurídica equivalente."]},
-      {"text":"Un archivo PDF se firma con una firma comercial común y se denomina protocolo digital. ¿Basta?","difficulty":"advanced","options":["No, requiere sistema y firma electrónica notarial legales","Sí, cualquier firma electrónica basta","Sí, si se imprime después"],"correctOption":0,"explanation":"La actuación digital exige infraestructura y credenciales normativas.","optionExplanations":["Respeta seguridad y equivalencia legal.","Ignora requisitos especiales.","Imprimir no subsana el origen."]},
-      {"text":"Una escritura lleva sello, pero el notario actuó fuera de competencia. ¿El sello sana el defecto?","difficulty":"advanced","options":["No","Sí, siempre","Solo si el cliente acepta"],"correctOption":0,"explanation":"El sello no sustituye competencia ni demás formalidades.","optionExplanations":["La actuación debe ser integralmente válida.","Atribuye efecto absoluto inexistente.","La competencia no depende del consentimiento."]},
-      {"text":"Un sello reportado perdido aparece después de emitirse uno nuevo diferenciado. ¿Puede retomarse?","difficulty":"intermediate","options":["No, se entrega para destrucción","Sí, pueden alternarse","Sí, si conserva el escudo"],"correctOption":0,"explanation":"El antiguo queda inutilizable aunque aparezca.","optionExplanations":["Previene dobles instrumentos.","Generaría inseguridad.","El contenido gráfico no revive su vigencia."]},
-      {"text":"Un inmueble tiene gravamen. ¿La única regla posible es que jamás pueda transmitirse?","difficulty":"advanced","options":["No, debe analizarse gravamen, acto y requisitos","Sí, toda transmisión es nula","Sí, el índice lo prohíbe"],"correctOption":0,"explanation":"La consecuencia depende del derecho, consentimiento y posible cancelación.","optionExplanations":["Evita una generalización falsa.","No todos los supuestos producen nulidad.","El índice no decide transmisiones."]},
-      {"text":"¿Qué ocurre cuando el protocolo cumple el plazo local de custodia inicial?","difficulty":"intermediate","options":["Pasa a custodia definitiva del Archivo conforme a la ley","Se destruye automáticamente","Se entrega a cualquier otorgante"],"correctOption":0,"explanation":"El Archivo preserva la matricidad documental.","optionExplanations":["Es la fase institucional de conservación.","Contradice la preservación.","Los particulares reciben testimonios, no la matriz."]}
-    ]}
-  }]
+    {
+      "id": "ev-c32-cdmx-art2-definiciones-digitales",
+      "kind": "official",
+      "title": "Ley del Notariado para la Ciudad de México",
+      "url": "https://www.congresocdmx.gob.mx/media/documentos/ef679acbbf3f25f083e72a593437826b39d742c8.pdf",
+      "institution": "Congreso de la Ciudad de México",
+      "jurisdiction": "Ciudad de México",
+      "locator": "texto vigente, última reforma GOCDMX 04-08-2021; artículo 2, definiciones de firma electrónica notarial, índice electrónico, instrumento electrónico y matricidad electrónica",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c32-cdmx-arts69-75-sello",
+      "kind": "official",
+      "title": "Ley del Notariado para la Ciudad de México",
+      "url": "https://www.congresocdmx.gob.mx/media/documentos/ef679acbbf3f25f083e72a593437826b39d742c8.pdf",
+      "institution": "Congreso de la Ciudad de México",
+      "jurisdiction": "Ciudad de México",
+      "locator": "texto vigente, última reforma GOCDMX 04-08-2021; artículos 69 a 75, sello de autorizar, pérdida, alteración, deterioro y reposición",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c32-cdmx-arts76-81-protocolo",
+      "kind": "official",
+      "title": "Ley del Notariado para la Ciudad de México",
+      "url": "https://www.congresocdmx.gob.mx/media/documentos/ef679acbbf3f25f083e72a593437826b39d742c8.pdf",
+      "institution": "Congreso de la Ciudad de México",
+      "jurisdiction": "Ciudad de México",
+      "locator": "texto vigente, última reforma GOCDMX 04-08-2021; artículos 76, 76 Bis, 76 Ter y 77 a 81, protocolo amplio, estricto y ordinario",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c32-cdmx-arts82-98-folios-apendice-indice",
+      "kind": "official",
+      "title": "Ley del Notariado para la Ciudad de México",
+      "url": "https://www.congresocdmx.gob.mx/media/documentos/ef679acbbf3f25f083e72a593437826b39d742c8.pdf",
+      "institution": "Congreso de la Ciudad de México",
+      "jurisdiction": "Ciudad de México",
+      "locator": "texto vigente, última reforma GOCDMX 04-08-2021; artículos 82 a 98, folios, libros, apéndices, cierre, índice y registro de cotejos",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c32-cdmx-arts100bis-100noviesdecies-digital",
+      "kind": "official",
+      "title": "Ley del Notariado para la Ciudad de México",
+      "url": "https://www.congresocdmx.gob.mx/media/documentos/ef679acbbf3f25f083e72a593437826b39d742c8.pdf",
+      "institution": "Congreso de la Ciudad de México",
+      "jurisdiction": "Ciudad de México",
+      "locator": "texto vigente, última reforma GOCDMX 04-08-2021; artículos 100 Bis a 100 Noviesdecies, actuación, protocolo, índice, libro de extractos y archivo electrónicos",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c32-cdmx-arts101-138-instrumentos",
+      "kind": "official",
+      "title": "Ley del Notariado para la Ciudad de México",
+      "url": "https://www.congresocdmx.gob.mx/media/documentos/ef679acbbf3f25f083e72a593437826b39d742c8.pdf",
+      "institution": "Congreso de la Ciudad de México",
+      "jurisdiction": "Ciudad de México",
+      "locator": "texto vigente, última reforma GOCDMX 04-08-2021; artículos 101 a 138, escrituras, actas y autorización de instrumentos",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c32-cdmx-arts96-97-248-249-archivo",
+      "kind": "official",
+      "title": "Ley del Notariado para la Ciudad de México",
+      "url": "https://www.congresocdmx.gob.mx/media/documentos/ef679acbbf3f25f083e72a593437826b39d742c8.pdf",
+      "institution": "Congreso de la Ciudad de México",
+      "jurisdiction": "Ciudad de México",
+      "locator": "texto vigente, última reforma GOCDMX 04-08-2021; artículos 96, 97, 248 y 249, índice, entrega y custodia del protocolo por el Archivo General de Notarías",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c32-a03-l067-075-panorama-cdmx",
+      "kind": "transcript",
+      "audioNumber": 3,
+      "locator": {
+        "type": "line_range",
+        "startLine": 67,
+        "endLine": 75
+      }
+    },
+    {
+      "id": "ev-c32-a43-l011-elementos-protocolo",
+      "kind": "transcript",
+      "audioNumber": 43,
+      "locator": {
+        "type": "line_range",
+        "startLine": 11,
+        "endLine": 11
+      }
+    },
+    {
+      "id": "ev-c32-a43-l011-apendice-indice",
+      "kind": "transcript",
+      "audioNumber": 43,
+      "locator": {
+        "type": "line_range",
+        "startLine": 11,
+        "endLine": 11
+      }
+    },
+    {
+      "id": "ev-c32-a43-l011-sello-reposicion",
+      "kind": "transcript",
+      "audioNumber": 43,
+      "locator": {
+        "type": "line_range",
+        "startLine": 11,
+        "endLine": 11
+      }
+    },
+    {
+      "id": "ev-c32-a43-l011-generalizaciones-corregidas",
+      "kind": "transcript",
+      "audioNumber": 43,
+      "locator": {
+        "type": "line_range",
+        "startLine": 11,
+        "endLine": 11
+      }
+    }
+  ]
 }

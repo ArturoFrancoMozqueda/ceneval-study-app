@@ -469,6 +469,42 @@ const traceablePackages = [
       /Acuerdo DOF 18-02-2026.*no constituye una reforma del régimen arbitral/i,
     ],
   },
+  {
+    code: "C31",
+    fileName: "audio-41-procedimiento-conciliatorio-profeco.json",
+    artifacts: 151,
+    evidence: 15,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /carta poder firmada ante dos testigos/i,
+      /medida de apremio y se cita a segunda audiencia.*diez días/i,
+      /Solo si tampoco asiste a la segunda.*presume cierto/i,
+      /archivo provisional durante diez días naturales.*solo si no justifica.*desistido/i,
+      /convenio aprobado.*fuerza de cosa juzgada.*trae aparejada ejecución/i,
+      /no convierte el convenio en pagaré/i,
+      /título ejecutivo no negociable.*cierta, exigible y líquida/i,
+      /Concilianet.*proveedores adheridos/i,
+      /última reforma DOF 12-12-2025/i,
+      /Acuerdo DOF 23-12-2025.*no se trata de una reforma sustantiva/i,
+    ],
+  },
+  {
+    code: "C32",
+    fileName: "audio-03-43-funcion-notarial-protocolo.json",
+    artifacts: 151,
+    evidence: 13,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /exclusivamente el modelo de Ciudad de México/i,
+      /protocolo ordinario, el Libro de Registro de Cotejos.*protocolo digital/i,
+      /no existe una lista idéntica.*para todo asunto/i,
+      /índice electrónico.*control y localización/i,
+      /firma electrónica notarial.*firma autógrafa y al sello/i,
+      /sello reportado perdido reaparece, no recupera vigencia/i,
+      /transmisión con gravamen no existe una respuesta automática/i,
+      /última reforma GOCDMX 04-08-2021/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -756,6 +792,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una generalización del mecanismo o del arbitraje como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C31" || expected.code === "C32") {
+      const obsoleteAsCurrent =
+        expected.code === "C31"
+          ? /primera inasistencia.*(?:presume|presunción)|inasistencia del consumidor.*(?:desistimiento|archivo definitivo|termina)|(?:todo|cualquier) (?:acto|documento|convenio).*(?:título ejecutivo|trae aparejada ejecución)|convenio.*(?:es|equivale a|convierte).*(?:pagaré|título de crédito)|arbitraje.*(?:obligatorio|automático)|Concilianet.*(?:todos|cualquier) (?:los )?proveedores|persona física.*carta poder.*sin testigos/i
+          : /(?:modelo|régimen|ley) (?:nacional|universal)|Michoacán|protocolo.*(?:solo|únicamente).*(?:libro|carpeta)|(?:mismos|idénticos) documentos.*(?:todos|cualquier) (?:los )?actos|índice.*visitantes|(?:todo|cualquier) gravamen.*(?:impide|bloquea)|sello.*(?:por sí solo|solo).*(?:valida|autoriza)|sello perdido.*(?:reutiliza|recupera vigencia)|(?:100|cien) folios.*(?:5|cinco) libros.*(?:regla|universal)/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una regla conciliatoria o notarial absoluta como respuesta vigente.`,
         );
       }
     }
