@@ -40,30 +40,6 @@ function ExamEvidence({ subject }: { subject: SubjectProgress }) {
   );
 }
 
-function QuickCheckEvidence({ subject }: { subject: SubjectProgress }) {
-  if (!subject.checkedTopics) {
-    return (
-      <>
-        <dd className="mt-1 text-base font-semibold">Sin comprobaciones</dd>
-        <dd className="mt-1 text-xs leading-5 text-muted">
-          Aún no hay autoevaluaciones guardadas.
-        </dd>
-      </>
-    );
-  }
-
-  return (
-    <>
-      <dd className="mt-1 text-base font-semibold">
-        {subject.needsReviewTopics} de {subject.checkedTopics} por repasar
-      </dd>
-      <dd className="mt-1 text-xs leading-5 text-muted">
-        Última autoevaluación de cada tema comprobado.
-      </dd>
-    </>
-  );
-}
-
 export function SubjectProgressOverview({
   overview,
 }: {
@@ -122,8 +98,7 @@ export function SubjectProgressOverview({
           El total incluye solo temas aprobados de clases publicadas. “Con
           actividad” significa que existe progreso guardado; “finalizado”, que
           completaste sus cinco pasos. Los exámenes cuentan aciertos y preguntas
-          de intentos finalizados del examen vigente. Las comprobaciones rápidas
-          son autoevaluaciones: no se presentan como calificación.
+          de intentos finalizados del examen vigente.
         </p>
       </aside>
 
@@ -182,7 +157,7 @@ export function SubjectProgressOverview({
                       </progress>
                     </div>
 
-                    <dl className="mt-6 grid gap-4 border-t border-border pt-5 sm:grid-cols-3">
+                    <dl className="mt-6 grid gap-4 border-t border-border pt-5 sm:grid-cols-2">
                       <div>
                         <dt className="text-xs font-semibold uppercase tracking-[0.08em] text-muted">
                           Actividad de estudio
@@ -193,12 +168,6 @@ export function SubjectProgressOverview({
                         <dd className="mt-1 text-xs leading-5 text-muted">
                           El denominador es todo el contenido publicado.
                         </dd>
-                      </div>
-                      <div>
-                        <dt className="text-xs font-semibold uppercase tracking-[0.08em] text-muted">
-                          Comprobación rápida
-                        </dt>
-                        <QuickCheckEvidence subject={subject} />
                       </div>
                       <div>
                         <dt className="text-xs font-semibold uppercase tracking-[0.08em] text-muted">

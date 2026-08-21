@@ -37,7 +37,7 @@ export function FlashcardsDeck({
   const [saveError, setSaveError] = useState("");
   const [ratingsCount, setRatingsCount] = useState({
     review: 0,
-    mastered: 0,
+    remembered: 0,
   });
   const card = cards[index];
 
@@ -51,7 +51,8 @@ export function FlashcardsDeck({
           Repaso completado
         </h2>
         <p className="mt-2 text-muted">
-          {ratingsCount.mastered} dominadas · {ratingsCount.review} para repasar.
+          {ratingsCount.remembered} recordadas en esta ronda ·{" "}
+          {ratingsCount.review} para repasar.
         </p>
         <div className="mt-5 flex flex-wrap justify-center gap-3">
           {allowRestart ? (
@@ -61,7 +62,7 @@ export function FlashcardsDeck({
                 setIndex(0);
                 setRevealed(false);
                 setFinished(false);
-                setRatingsCount({ review: 0, mastered: 0 });
+                setRatingsCount({ review: 0, remembered: 0 });
               }}
               type="button"
             >
@@ -103,8 +104,8 @@ export function FlashcardsDeck({
       setRatingsCount((current) => ({
         review:
           current.review + (value === "again" || value === "hard" ? 1 : 0),
-        mastered:
-          current.mastered + (value === "good" || value === "easy" ? 1 : 0),
+        remembered:
+          current.remembered + (value === "good" || value === "easy" ? 1 : 0),
       }));
       if (index === cards.length - 1) {
         setFinished(true);

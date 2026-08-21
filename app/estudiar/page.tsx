@@ -3,6 +3,7 @@ import Link from "next/link";
 import { EmptyState } from "@/components/empty-state";
 import { requireUser } from "@/lib/auth";
 import { getReviewOverview } from "@/lib/data/academic";
+import { getTopicJourneyStatus } from "@/lib/study/progress-presentation";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = { title: "Estudiar" };
@@ -72,9 +73,9 @@ export default async function StudyPage() {
           ) : null}
         </article>
         <article className="rounded-2xl border border-border bg-white p-6">
-          <h2 className="text-xl font-semibold">Sesiones de 5, 10 o 15 min</h2>
+          <h2 className="text-xl font-semibold">Recorrido flexible</h2>
           <p className="mt-1 text-sm text-muted">
-            Elige el tiempo disponible dentro de cualquier tema
+            Avanza una actividad a la vez y retoma desde tu último cambio guardado.
           </p>
         </article>
       </section>
@@ -84,12 +85,7 @@ export default async function StudyPage() {
           <div className="mt-5 grid gap-4 md:grid-cols-2">
             {(topics ?? []).map((topic) => {
               const completed = progressByTopic.get(topic.id as number) ?? 0;
-              const status =
-                completed >= 5
-                  ? "Dominado"
-                  : completed > 0
-                    ? "En práctica"
-                    : "Por comenzar";
+              const status = getTopicJourneyStatus(completed);
               return (
                 <Link
                   className="rounded-2xl border border-border bg-white p-5 hover:border-brand/30"

@@ -64,7 +64,11 @@ export function AppShell({
 
   if (isAuthPage) {
     return (
-      <main className="grid min-h-screen place-items-center bg-background px-5 py-10">
+      <main
+        className="grid min-h-screen place-items-center bg-background px-5 py-10"
+        id="contenido-principal"
+        tabIndex={-1}
+      >
         {children}
       </main>
     );
@@ -72,6 +76,12 @@ export function AppShell({
 
   return (
     <div className="min-h-screen lg:grid lg:grid-cols-[240px_1fr]">
+      <a
+        className="fixed left-4 top-4 z-50 -translate-y-24 rounded-xl bg-foreground px-4 py-3 font-semibold text-background shadow-lg transition-transform focus:translate-y-0"
+        href="#contenido-principal"
+      >
+        Saltar al contenido principal
+      </a>
       <aside className="fixed inset-y-0 left-0 z-20 hidden w-60 flex-col border-r border-border/80 bg-surface/90 px-4 py-6 backdrop-blur lg:flex">
         <div className="px-2">
           <Brand />
@@ -164,7 +174,11 @@ export function AppShell({
             </details>
           ) : null}
         </header>
-        <main className="mx-auto w-full max-w-[1200px] px-5 pb-28 pt-7 sm:px-8 sm:pt-10 lg:px-10 lg:pb-12 lg:pt-12">
+        <main
+          className="mx-auto w-full max-w-[1200px] px-5 pb-28 pt-7 sm:px-8 sm:pt-10 lg:px-10 lg:pb-12 lg:pt-12"
+          id="contenido-principal"
+          tabIndex={-1}
+        >
           {children}
         </main>
         <footer className="mx-auto w-full max-w-[1200px] px-5 pb-28 sm:px-8 lg:px-10 lg:pb-10">

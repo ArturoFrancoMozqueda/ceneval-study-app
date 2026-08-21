@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | CENEVAL Study App",
   },
   description:
-    "Organiza tus materias, clases y transcripciones para preparar el CENEVAL de Derecho.",
+    "Estudia para el CENEVAL de Derecho con clases editoriales revisadas, práctica guiada y fuentes verificables.",
 };
 
 export default async function RootLayout({

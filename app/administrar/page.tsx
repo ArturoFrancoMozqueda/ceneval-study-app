@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { EmptyState } from "@/components/empty-state";
 import { requireAdmin } from "@/lib/auth";
 import { getClassesForSubject, getSubjects } from "@/lib/data/academic";
+import { deriveEditorialOnboarding } from "@/lib/editorial-onboarding";
 import {
   publicationStatusLabels,
   publicationStatusPluralLabels,
@@ -21,6 +21,9 @@ export default async function AdminPage() {
   const classes = groups.flatMap(({ classes: subjectClasses, subject }) =>
     subjectClasses.map((studyClass) => ({ ...studyClass, subject })),
   );
+  const onboarding = !classes.length
+    ? deriveEditorialOnboarding(subjects)
+    : null;
 
   return (
     <div>
@@ -30,9 +33,33 @@ export default async function AdminPage() {
           Panel editorial
         </h1>
         <p className="mt-3 max-w-2xl leading-7 text-muted">
-          Revisa los paquetes preparados antes de mostrarlos a los estudiantes.
+          Importa paquetes 1.2 validados, revisa su evidencia y publica solo el
+          contenido aprobado.
         </p>
       </header>
+      {onboarding ? (
+        <section
+          aria-labelledby="primer-paso-editorial"
+          className="mt-8 rounded-2xl border border-brand/15 bg-brand-soft p-5 sm:p-6"
+        >
+          <p className="text-sm font-semibold text-success">Empieza aquí</p>
+          <h2
+            className="mt-2 text-xl font-semibold"
+            id="primer-paso-editorial"
+          >
+            {onboarding.title}
+          </h2>
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
+            {onboarding.description}
+          </p>
+          <Link
+            className="mt-4 inline-flex min-h-11 items-center rounded-xl bg-brand px-4 text-sm font-semibold text-white"
+            href={onboarding.actionHref}
+          >
+            {onboarding.actionLabel}
+          </Link>
+        </section>
+      ) : null}
       <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {(["draft", "review", "published", "withdrawn"] as const).map((status) => (
           <article
@@ -76,15 +103,9 @@ export default async function AdminPage() {
             ))}
           </div>
         ) : (
-          <div className="mt-5">
-            <EmptyState
-              actionHref="/materias/nueva"
-              actionLabel="Crear la primera materia"
-              description="Crea una materia y agrega su primera clase para iniciar el flujo de revisión y publicación."
-              headingLevel="h3"
-              title="Aún no hay clases para revisar"
-            />
-          </div>
+          <p className="mt-5 rounded-2xl border border-dashed border-border bg-surface p-6 text-sm leading-6 text-muted">
+            {onboarding?.emptyListDescription}
+          </p>
         )}
       </section>
     </div>

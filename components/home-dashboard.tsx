@@ -8,6 +8,7 @@ import {
   getSubjects,
 } from "@/lib/data/academic";
 import { deriveStudyOnboarding } from "@/lib/study/onboarding";
+import { getTopicJourneyStatus } from "@/lib/study/progress-presentation";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 
 export async function HomeDashboard() {
@@ -66,12 +67,7 @@ export async function HomeDashboard() {
   const completedCount = Array.isArray(progress?.completed_steps)
     ? progress.completed_steps.length
     : 0;
-  const mastery =
-    completedCount >= 5
-      ? "Dominado"
-      : completedCount > 0
-        ? "En práctica"
-        : "Por comenzar";
+  const journeyStatus = getTopicJourneyStatus(completedCount);
 
   return (
     <div>
@@ -97,7 +93,7 @@ export async function HomeDashboard() {
         </h2>
         <p className="mt-2 max-w-2xl leading-7 text-white/80">
           {nextTopic
-            ? `${mastery}: retoma exactamente donde pausaste.`
+            ? `${journeyStatus}: retoma exactamente donde pausaste.`
             : "Elige un tema y avanza con preguntas, casos y repaso activo."}
         </p>
         <Link
@@ -110,7 +106,7 @@ export async function HomeDashboard() {
 
       <section className="mt-8 grid gap-4 sm:grid-cols-3">
         {[
-          { label: "Estado del último tema", value: mastery },
+          { label: "Recorrido del último tema", value: journeyStatus },
           {
             label: "Conceptos para repasar",
             value: reviewOverview.currentDifficultCount,
@@ -142,8 +138,8 @@ export async function HomeDashboard() {
             Mira tu avance materia por materia
           </h2>
           <p className="mt-2 text-sm leading-6 text-foreground/75">
-            Compara temas iniciados y finalizados, autoevaluaciones y resultados
-            reales de exámenes.
+            Compara temas iniciados y finalizados con resultados reales de
+            exámenes.
           </p>
         </div>
         <div className="flex shrink-0 flex-col gap-3 self-start sm:self-auto">

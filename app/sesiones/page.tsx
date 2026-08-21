@@ -96,7 +96,11 @@ export default async function SessionsPage({
                   </p>
                   <div
                     aria-label={`Progreso ${percent}%`}
+                    aria-valuemax={100}
+                    aria-valuemin={0}
+                    aria-valuenow={percent}
                     className="mt-4 h-2 overflow-hidden rounded-full bg-background"
+                    role="progressbar"
                   >
                     <div
                       className="h-full rounded-full bg-brand"

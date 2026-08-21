@@ -1,11 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useTransition } from "react";
-import {
-  saveQuickCheckAction,
-  saveStudyProgressAction,
-} from "@/app/actions/academic";
+import { useRef, useState, useTransition } from "react";
+import { saveStudyProgressAction } from "@/app/actions/academic";
 import { ConceptMap } from "@/components/concept-map";
 import { ExamPlayer } from "@/components/exam-player";
 import { FlashcardsDeck } from "@/components/flashcards-deck";
@@ -15,6 +12,10 @@ import type {
   StudyProgress,
 } from "@/lib/data/academic";
 import type { StudyContinuation } from "@/lib/study/continuation";
+import {
+  getProgressSaveFeedback,
+  type ProgressSaveState,
+} from "@/lib/study/progress-presentation";
 
 const steps = [
   { id: "discover", label: "Descubre" },
@@ -147,9 +148,7 @@ export function LessonView({
   const [materialIndex, setMaterialIndex] = useState(
     initialProgress?.materialIndex ?? 0,
   );
-  const [sessionMinutes, setSessionMinutes] = useState<5 | 10 | 15>(
-    initialProgress?.sessionMinutes ?? 10,
-  );
+  const sessionMinutes = initialProgress?.sessionMinutes ?? 10;
   const [completed, setCompleted] = useState<StepId[]>(
     initialProgress?.completedSteps ?? [],
   );
@@ -157,9 +156,9 @@ export function LessonView({
     initialProgress?.completedSteps.includes("check") ?? false,
   );
   const [showSources, setShowSources] = useState(false);
-  const [quickCheckRevealed, setQuickCheckRevealed] = useState(false);
-  const [quickCheckSaved, setQuickCheckSaved] = useState(false);
-  const [isSaving, startSaving] = useTransition();
+  const [saveState, setSaveState] = useState<ProgressSaveState>("idle");
+  const saveSequence = useRef(0);
+  const [, startSaving] = useTransition();
 
   const conceptual = lesson.materials.filter(
     ({ materialType }) =>
@@ -180,7 +179,6 @@ export function LessonView({
   const closing = lesson.materials.find(
     ({ materialType }) => materialType === "summary",
   );
-  const quickCard = lesson.flashcards[0];
   const safeMaterialIndex = Math.min(
     materialIndex,
     Math.max(conceptual.length - 1, 0),
@@ -190,16 +188,25 @@ export function LessonView({
     nextStep: StepId,
     nextIndex: number,
     nextCompleted = completed,
-    minutes = sessionMinutes,
   ) {
+    const sequence = saveSequence.current + 1;
+    saveSequence.current = sequence;
+    setSaveState("saving");
     startSaving(async () => {
-      await saveStudyProgressAction({
-        topicId: lesson.topic.id,
-        currentStep: nextStep,
-        materialIndex: nextIndex,
-        sessionMinutes: minutes,
-        completedSteps: nextCompleted,
-      });
+      try {
+        const result = await saveStudyProgressAction({
+          topicId: lesson.topic.id,
+          currentStep: nextStep,
+          materialIndex: nextIndex,
+          sessionMinutes,
+          completedSteps: nextCompleted,
+        });
+        if (saveSequence.current === sequence) {
+          setSaveState(result.error ? "error" : "saved");
+        }
+      } catch {
+        if (saveSequence.current === sequence) setSaveState("error");
+      }
     });
   }
 
@@ -220,17 +227,6 @@ export function LessonView({
     setActiveStep(nextStep);
     setMaterialIndex(0);
     persist(nextStep, 0, nextCompleted);
-  }
-
-  async function saveQuickCheck(needsReview: boolean) {
-    if (!quickCard) return;
-    const result = await saveQuickCheckAction({
-      topicId: lesson.topic.id,
-      prompt: quickCard.question,
-      response: needsReview ? "Necesito repasarlo" : "Lo comprendí",
-      needsReview,
-    });
-    if (!result.error) setQuickCheckSaved(true);
   }
 
   if (showSources) {
@@ -294,39 +290,16 @@ export function LessonView({
         aria-labelledby="session-title"
         className="rounded-3xl border border-border bg-surface p-5 sm:p-7"
       >
-        <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+        <div>
           <div>
             <p className="text-sm font-semibold text-success">Tu sesión</p>
             <h2 className="mt-1 text-2xl font-semibold" id="session-title">
-              Elige cómo avanzar hoy
+              Elige qué practicar ahora
             </h2>
             <p className="mt-2 text-sm text-muted">
-              Tu posición se guarda automáticamente. No hay rachas ni puntos.
+              Avanza una actividad a la vez. No hay rachas ni puntos.
             </p>
           </div>
-          <fieldset>
-            <legend className="text-sm font-semibold">Tiempo disponible</legend>
-            <div className="mt-2 flex gap-2">
-              {([5, 10, 15] as const).map((minutes) => (
-                <button
-                  aria-pressed={sessionMinutes === minutes}
-                  className={`min-h-11 rounded-xl border px-4 text-sm font-semibold ${
-                    sessionMinutes === minutes
-                      ? "border-brand bg-brand text-white"
-                      : "border-border bg-white"
-                  }`}
-                  key={minutes}
-                  onClick={() => {
-                    setSessionMinutes(minutes);
-                    persist(activeStep, materialIndex, completed, minutes);
-                  }}
-                  type="button"
-                >
-                  {minutes} min
-                </button>
-              ))}
-            </div>
-          </fieldset>
         </div>
         <div className="mt-6 grid gap-3 md:grid-cols-3">
           {[
@@ -371,8 +344,14 @@ export function LessonView({
             </li>
           ))}
         </ol>
-        <p aria-live="polite" className="mt-2 text-right text-xs text-muted">
-          {isSaving ? "Guardando avance…" : "Avance guardado automáticamente"}
+        <p
+          aria-live={saveState === "error" ? "assertive" : "polite"}
+          className={`mt-2 text-right text-xs ${
+            saveState === "error" ? "font-semibold text-danger" : "text-muted"
+          }`}
+          role={saveState === "error" ? "alert" : "status"}
+        >
+          {getProgressSaveFeedback(saveState)}
         </p>
       </nav>
 
@@ -514,53 +493,11 @@ export function LessonView({
             {cases.map((material) => (
               <Material key={material.id} material={material} />
             ))}
-            {quickCard ? (
-              <article className="rounded-2xl border border-brand/20 bg-white p-6">
-                <p className="text-sm font-semibold text-success">
-                  Comprobación rápida · no afecta tu calificación
-                </p>
-                <h3 className="mt-3 text-lg font-semibold">
-                  {quickCard.question}
-                </h3>
-                {quickCheckRevealed ? (
-                  <>
-                    <p className="mt-4 rounded-xl bg-background p-4 leading-7">
-                      {quickCard.answer}
-                    </p>
-                    {!quickCheckSaved ? (
-                      <div className="mt-4 flex flex-wrap gap-3">
-                        <button
-                          className="min-h-11 rounded-xl border border-border px-4 font-semibold"
-                          onClick={() => saveQuickCheck(true)}
-                          type="button"
-                        >
-                          Necesito repasarlo
-                        </button>
-                        <button
-                          className="min-h-11 rounded-xl bg-success px-4 font-semibold text-white"
-                          onClick={() => saveQuickCheck(false)}
-                          type="button"
-                        >
-                          Lo comprendí
-                        </button>
-                      </div>
-                    ) : (
-                      <p className="mt-4 text-sm font-semibold text-success">
-                        Respuesta guardada para orientar tu próximo repaso.
-                      </p>
-                    )}
-                  </>
-                ) : (
-                  <button
-                    className="mt-4 min-h-11 rounded-xl bg-brand px-4 font-semibold text-white"
-                    onClick={() => setQuickCheckRevealed(true)}
-                    type="button"
-                  >
-                    Ver explicación
-                  </button>
-                )}
-              </article>
-            ) : null}
+            <p className="rounded-2xl border border-success/25 bg-success-soft p-5 text-sm leading-6">
+              El repaso activo continúa con tarjetas que registran qué
+              conceptos necesitas reforzar. Después, el examen comprueba tus
+              respuestas sin mostrarte la solución por adelantado.
+            </p>
             <button
               className="min-h-12 rounded-xl bg-brand px-5 font-semibold text-white"
               onClick={() => completeAndContinue("apply")}

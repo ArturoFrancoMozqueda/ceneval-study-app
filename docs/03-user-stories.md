@@ -2,13 +2,15 @@
 
 ## Historias del modelo editorial
 
-### US-064 Acceder como estudiante
+### US-064 Acceder como estudiante (futuro condicionado)
 
-Como estudiante quiero crear una cuenta e iniciar sesión para conservar mi
-avance.
+Cuando exista una apertura comercial aprobada, como estudiante quiero acceder
+con una cuenta autorizada para conservar mi avance.
 
-**Aceptación:** el correo se confirma, la sesión se conserva de forma segura y
-puedo recuperar mi contraseña.
+**Aceptación futura:** el alta pública solo se habilita después de definir el
+modelo comercial y aprobar su seguridad; la sesión se conserva de forma segura
+y puedo recuperar mi contraseña. Esta historia no autoriza registro público en
+la versión privada actual.
 
 ### US-065 Encontrar clases terminadas
 
@@ -31,8 +33,8 @@ incompleta no se publica.
 Como estudiante quiero distinguir lo dicho en clase de la explicación
 complementaria y consultar fuentes oficiales.
 
-**Aceptación:** cada sección indica su origen y la transcripción original
-permanece disponible.
+**Aceptación:** cada sección indica su origen, enlaza evidencia verificable y
+la transcripción original se conserva en el archivo editorial privado.
 
 ### US-068 Estudiar con varios recursos
 
@@ -48,16 +50,28 @@ personas puedan verlos.
 
 **Aceptación:** RLS limita cada registro a su propietario.
 
-## Objetivo
+## Modelo vigente y objetivo
 
-Este documento describe cómo una persona que se prepara para el CENEVAL de Derecho utilizará la aplicación.
+La aplicación sigue un modelo editorial, no autoservicio:
+
+`transcripción privada → paquete 1.2 → borrador → revisión → publicación`
+
+- La **administradora editorial** prepara o importa la estructura académica,
+  revisa la evidencia, aprueba los temas y publica.
+- La **estudiante consumidora** abre clases ya publicadas, practica y conserva
+  su progreso privado. No carga transcripciones ni genera materiales propios.
+- En la versión actual solo accede la administradora. El alta de estudiantes,
+  el registro público y los pagos permanecen fuera de alcance.
+
+Este documento conserva requisitos útiles de preparación editorial y consumo,
+pero no convierte el procesamiento editorial en una función pública de la app.
 
 ## Formato
 
 Cada historia contiene:
 
 - identificador;
-- necesidad del estudiante;
+- necesidad de la administradora editorial o de la estudiante consumidora;
 - beneficio;
 - criterios de aceptación;
 - prioridad.
@@ -68,7 +82,7 @@ Cada historia contiene:
 
 ## US-001 Crear una materia
 
-Como estudiante, quiero crear una materia para organizar mis clases según el área de Derecho correspondiente.
+Como administradora editorial, quiero crear una materia para organizar las clases publicables según el área de Derecho correspondiente.
 
 **Prioridad:** P0
 
@@ -82,20 +96,20 @@ Como estudiante, quiero crear una materia para organizar mis clases según el á
 
 ## US-002 Consultar materias
 
-Como estudiante, quiero ver todas mis materias para saber qué áreas estoy estudiando.
+Como estudiante, quiero ver la biblioteca de materias publicadas para elegir qué área estudiar.
 
 **Prioridad:** P0
 
 ### Criterios de aceptación
 
-- Se muestran todas las materias guardadas.
+- Solo se muestran materias que contienen contenido publicado y aprobado.
 - Cada materia muestra nombre y número de clases.
 - El usuario puede abrir una materia.
 - Si no existen materias, se muestra un estado vacío comprensible.
 
 ## US-003 Editar una materia
 
-Como estudiante, quiero editar una materia para corregir o actualizar su información.
+Como administradora editorial, quiero editar una materia para corregir o actualizar su información.
 
 **Prioridad:** P1
 
@@ -108,7 +122,7 @@ Como estudiante, quiero editar una materia para corregir o actualizar su informa
 
 ## US-004 Eliminar una materia
 
-Como estudiante, quiero eliminar una materia para retirar contenido que ya no necesito.
+Como administradora editorial, quiero retirar una materia incorrecta sin eliminarla accidentalmente.
 
 **Prioridad:** P1
 
@@ -138,7 +152,7 @@ Como estudiante, quiero ver mi progreso por materia para identificar dónde nece
 
 ## US-006 Crear una clase
 
-Como estudiante, quiero crear una clase dentro de una materia para guardar una sesión de estudio.
+Como administradora editorial, quiero crear una clase dentro de una materia para preparar un borrador publicable.
 
 **Prioridad:** P0
 
@@ -152,20 +166,20 @@ Como estudiante, quiero crear una clase dentro de una materia para guardar una s
 
 ## US-007 Consultar clases
 
-Como estudiante, quiero consultar las clases de una materia para regresar a contenido anterior.
+Como estudiante, quiero consultar las clases publicadas de una materia para continuar mi estudio.
 
 **Prioridad:** P0
 
 ### Criterios de aceptación
 
-- Se muestran las clases de la materia.
+- A estudiantes solo se muestran las clases publicadas con temas aprobados.
 - Cada clase muestra título y fecha.
 - El usuario puede abrir cualquier clase.
 - Existe un estado vacío cuando no hay clases.
 
 ## US-008 Editar una clase
 
-Como estudiante, quiero editar una clase para corregir su información.
+Como administradora editorial, quiero editar una clase en borrador para corregir su información.
 
 **Prioridad:** P1
 
@@ -177,7 +191,7 @@ Como estudiante, quiero editar una clase para corregir su información.
 
 ## US-009 Eliminar una clase
 
-Como estudiante, quiero eliminar una clase incorrecta o duplicada.
+Como administradora editorial, quiero retirar una clase incorrecta o duplicada.
 
 **Prioridad:** P1
 
@@ -190,7 +204,7 @@ Como estudiante, quiero eliminar una clase incorrecta o duplicada.
 
 ## US-010 Mover una clase
 
-Como estudiante, quiero mover una clase a otra materia para corregir su organización.
+Como administradora editorial, quiero mover una clase no publicada a otra materia para corregir su organización.
 
 **Prioridad:** P1
 
@@ -205,23 +219,25 @@ Como estudiante, quiero mover una clase a otra materia para corregir su organiza
 
 # Épica 3: Transcripciones
 
-## US-011 Pegar una transcripción
+## US-011 Importar una transcripción en el proceso editorial
 
-Como estudiante, quiero pegar la transcripción de una clase para convertirla en material de estudio.
+Como administradora editorial, quiero asociar una transcripción privada a una
+clase durante la preparación del paquete para conservar su fuente primaria.
 
 **Prioridad:** P0
 
 ### Criterios de aceptación
 
-- El campo acepta texto largo.
-- El usuario puede revisar antes de guardar.
+- La importación acepta el texto completo sin resumirlo ni truncarlo.
+- El equipo editorial puede revisarlo antes de importar el paquete.
 - La transcripción se asocia a una clase.
 - Se informa cuando el campo está vacío.
-- El texto permanece guardado.
+- El texto permanece conservado en almacenamiento privado; no se incluye en
+  Git ni se solicita a la estudiante.
 
 ## US-012 Conservar la transcripción original
 
-Como estudiante, quiero conservar el texto original para verificar lo que realmente se dijo.
+Como administradora editorial, quiero conservar el texto original para verificar lo que realmente se dijo.
 
 **Prioridad:** P0
 
@@ -232,9 +248,9 @@ Como estudiante, quiero conservar el texto original para verificar lo que realme
 - El usuario puede consultarla.
 - Las regeneraciones no la reemplazan.
 
-## US-013 Generar una versión limpia
+## US-013 Preparar una versión limpia
 
-Como estudiante, quiero limpiar la transcripción para leerla con mayor claridad.
+Como editora, quiero preparar una versión limpia fuera del flujo de consumo para revisarla con mayor claridad.
 
 **Prioridad:** P0
 
@@ -248,7 +264,7 @@ Como estudiante, quiero limpiar la transcripción para leerla con mayor claridad
 
 ## US-014 Comparar versiones
 
-Como estudiante, quiero comparar el texto original y el limpio para detectar cambios incorrectos.
+Como revisora editorial, quiero comparar el texto original y el limpio para detectar cambios incorrectos.
 
 **Prioridad:** P1
 
@@ -261,7 +277,7 @@ Como estudiante, quiero comparar el texto original y el limpio para detectar cam
 
 ## US-015 Editar la versión limpia
 
-Como estudiante, quiero corregir la versión limpia para asegurar que representa correctamente la clase.
+Como revisora editorial, quiero corregir la versión limpia para asegurar que representa correctamente la clase.
 
 **Prioridad:** P1
 
@@ -278,7 +294,7 @@ Como estudiante, quiero corregir la versión limpia para asegurar que representa
 
 ## US-016 Detectar temas
 
-Como estudiante, quiero que la aplicación detecte los temas de una clase para no organizarlos desde cero.
+Como editora, quiero proponer temas durante la preparación del paquete para no organizarlos desde cero.
 
 **Prioridad:** P0
 
@@ -292,7 +308,7 @@ Como estudiante, quiero que la aplicación detecte los temas de una clase para n
 
 ## US-017 Aprobar temas propuestos
 
-Como estudiante, quiero aprobar, editar o rechazar temas para controlar la organización final.
+Como administradora editorial, quiero aprobar, editar o rechazar temas para controlar la organización final.
 
 **Prioridad:** P0
 
@@ -305,7 +321,7 @@ Como estudiante, quiero aprobar, editar o rechazar temas para controlar la organ
 
 ## US-018 Crear un tema manualmente
 
-Como estudiante, quiero crear un tema que la aplicación no detectó.
+Como administradora editorial, quiero agregar al borrador un tema que faltó en la preparación.
 
 **Prioridad:** P1
 
@@ -318,7 +334,7 @@ Como estudiante, quiero crear un tema que la aplicación no detectó.
 
 ## US-019 Editar un tema
 
-Como estudiante, quiero editar un tema para corregir su nombre o descripción.
+Como administradora editorial, quiero editar un tema pendiente para corregir su nombre o descripción.
 
 **Prioridad:** P1
 
@@ -330,7 +346,7 @@ Como estudiante, quiero editar un tema para corregir su nombre o descripción.
 
 ## US-020 Eliminar un tema
 
-Como estudiante, quiero eliminar un tema incorrecto.
+Como administradora editorial, quiero retirar un tema incorrecto.
 
 **Prioridad:** P1
 
@@ -342,7 +358,7 @@ Como estudiante, quiero eliminar un tema incorrecto.
 
 ## US-021 Reordenar temas
 
-Como estudiante, quiero reordenar los temas para seguir una secuencia lógica.
+Como administradora editorial, quiero reordenar los temas antes de publicar para seguir una secuencia lógica.
 
 **Prioridad:** P1
 
@@ -356,9 +372,9 @@ Como estudiante, quiero reordenar los temas para seguir una secuencia lógica.
 
 # Épica 5: Material de estudio
 
-## US-022 Generar una respuesta breve
+## US-022 Preparar una respuesta breve
 
-Como estudiante, quiero una respuesta corta para repasar rápidamente la idea principal.
+Como editora, quiero preparar una respuesta corta para que la estudiante repase rápidamente la idea principal.
 
 **Prioridad:** P0
 
@@ -369,9 +385,9 @@ Como estudiante, quiero una respuesta corta para repasar rápidamente la idea pr
 - No contradice la transcripción.
 - Puede editarse.
 
-## US-023 Generar una explicación completa
+## US-023 Preparar una explicación completa
 
-Como estudiante, quiero una explicación completa desde cero para comprender el tema.
+Como editora, quiero preparar una explicación completa y verificable para que la estudiante comprenda el tema.
 
 **Prioridad:** P0
 
@@ -391,12 +407,12 @@ Además:
 
 - utiliza lenguaje claro;
 - diferencia información de la clase y explicación complementaria;
-- puede editarse;
-- muestra error cuando no puede generarse.
+- puede editarse antes de publicar;
+- no se publica si falta evidencia o si la preparación falla.
 
-## US-024 Generar un ejemplo cotidiano
+## US-024 Preparar un ejemplo cotidiano
 
-Como estudiante, quiero un ejemplo sencillo para conectar la teoría con una situación fácil de entender.
+Como editora, quiero preparar un ejemplo sencillo para conectar la teoría con una situación fácil de entender.
 
 **Prioridad:** P0
 
@@ -405,11 +421,11 @@ Como estudiante, quiero un ejemplo sencillo para conectar la teoría con una sit
 - El ejemplo corresponde al concepto.
 - Usa lenguaje sencillo.
 - No sustituye la definición jurídica.
-- Puede regenerarse.
+- Puede revisarse o descartarse antes de publicar.
 
-## US-025 Generar un ejemplo tipo CENEVAL
+## US-025 Preparar un ejemplo tipo CENEVAL
 
-Como estudiante, quiero un ejemplo tipo examen para practicar la aplicación del concepto.
+Como editora, quiero preparar un ejemplo tipo examen para que la estudiante practique la aplicación del concepto.
 
 **Prioridad:** P0
 
@@ -421,9 +437,9 @@ Como estudiante, quiero un ejemplo tipo examen para practicar la aplicación del
 - Identifica la respuesta correcta.
 - Explica el razonamiento.
 
-## US-026 Generar un resumen
+## US-026 Preparar un resumen
 
-Como estudiante, quiero un resumen para repasar las ideas esenciales.
+Como editora, quiero preparar un resumen para que la estudiante repase las ideas esenciales.
 
 **Prioridad:** P0
 
@@ -432,11 +448,11 @@ Como estudiante, quiero un resumen para repasar las ideas esenciales.
 - Contiene las ideas principales.
 - Evita detalles secundarios.
 - Es más corto que la explicación.
-- Puede editarse o regenerarse.
+- Puede editarse antes de publicar.
 
-## US-027 Generar una tabla comparativa
+## US-027 Preparar una tabla comparativa
 
-Como estudiante, quiero comparar conceptos similares para no confundirlos.
+Como editora, quiero preparar una comparación de conceptos similares para evitar confusiones.
 
 **Prioridad:** P1
 
@@ -447,9 +463,9 @@ Como estudiante, quiero comparar conceptos similares para no confundirlos.
 - Incluye palabras clave.
 - Puede leerse correctamente en pantalla pequeña.
 
-## US-028 Generar una regla mnemotécnica
+## US-028 Preparar una regla mnemotécnica
 
-Como estudiante, quiero una técnica de memoria para recordar elementos importantes.
+Como editora, quiero preparar una técnica de memoria para ayudar a recordar elementos importantes.
 
 **Prioridad:** P1
 
@@ -458,11 +474,11 @@ Como estudiante, quiero una técnica de memoria para recordar elementos importan
 - La técnica se relaciona con el tema.
 - Es fácil de recordar.
 - No contiene información jurídica incorrecta.
-- Puede editarse o descartarse.
+- Puede editarse o descartarse antes de publicar.
 
 ## US-029 Identificar errores comunes
 
-Como estudiante, quiero conocer errores frecuentes para evitarlos en el examen.
+Como editora, quiero documentar errores frecuentes para que la estudiante los evite en el examen.
 
 **Prioridad:** P1
 
@@ -474,7 +490,7 @@ Como estudiante, quiero conocer errores frecuentes para evitarlos en el examen.
 
 ## US-030 Mostrar dificultad e importancia
 
-Como estudiante, quiero conocer la dificultad e importancia estimadas para organizar mi tiempo.
+Como editora, quiero etiquetar dificultad e importancia para orientar el tiempo de estudio sin presentarlas como datos oficiales.
 
 **Prioridad:** P1
 
@@ -485,9 +501,9 @@ Como estudiante, quiero conocer la dificultad e importancia estimadas para organ
 - Se indica que la frecuencia del examen es una estimación cuando no existe fuente oficial.
 - El usuario puede modificar las etiquetas.
 
-## US-031 Regenerar una sección
+## US-031 Rehacer una sección en preparación editorial
 
-Como estudiante, quiero regenerar una parte específica sin perder el resto del material.
+Como editora, quiero rehacer una sección específica antes de publicar sin perder el resto del material.
 
 **Prioridad:** P1
 
@@ -498,9 +514,9 @@ Como estudiante, quiero regenerar una parte específica sin perder el resto del 
 - Puede comparar antes de aceptar.
 - Puede conservar la versión anterior.
 
-## US-032 Editar contenido generado
+## US-032 Editar contenido preparado
 
-Como estudiante, quiero editar el contenido para corregir o personalizar mis apuntes.
+Como editora, quiero corregir el contenido preparado antes de someterlo a revisión.
 
 **Prioridad:** P0
 
@@ -515,9 +531,9 @@ Como estudiante, quiero editar el contenido para corregir o personalizar mis apu
 
 # Épica 6: Flashcards
 
-## US-033 Generar flashcards
+## US-033 Preparar flashcards
 
-Como estudiante, quiero generar flashcards para memorizar conceptos.
+Como editora, quiero preparar flashcards verificables para que la estudiante memorice conceptos.
 
 **Prioridad:** P0
 
@@ -528,9 +544,9 @@ Como estudiante, quiero generar flashcards para memorizar conceptos.
 - Se pueden revisar antes de guardar.
 - No se generan tarjetas duplicadas evidentes.
 
-## US-034 Crear una flashcard manual
+## US-034 Agregar una flashcard editorial
 
-Como estudiante, quiero crear una flashcard para agregar algo que considero importante.
+Como editora, quiero agregar una flashcard al borrador cuando detecto un concepto importante.
 
 **Prioridad:** P1
 
@@ -582,22 +598,22 @@ Como estudiante, quiero recibir primero las tarjetas más difíciles.
 
 # Épica 7: Exámenes
 
-## US-038 Generar un mini examen
+## US-038 Preparar un mini examen
 
-Como estudiante, quiero generar un mini examen para medir mi comprensión.
+Como editora, quiero preparar un banco de preguntas verificables para que la estudiante mida su comprensión.
 
 **Prioridad:** P0
 
 ### Criterios de aceptación
 
-- El usuario selecciona un tema.
-- La aplicación genera preguntas relacionadas.
+- Las preguntas se asocian a un tema aprobado.
+- Cada respuesta correcta se guarda solo en el área protegida del servidor.
 - Cada pregunta tiene instrucciones claras.
-- Se identifica cuando la generación falla.
+- El paquete no se publica si faltan preguntas, opciones, explicación o evidencia.
 
 ## US-039 Configurar dificultad y cantidad
 
-Como estudiante, quiero elegir dificultad y número de preguntas para adaptar la práctica.
+Como estudiante, quiero elegir dificultad y número de preguntas del banco publicado para adaptar la práctica.
 
 **Prioridad:** P0
 
@@ -669,7 +685,7 @@ Como estudiante, quiero repetir un examen para comprobar si mejoré.
 - Se crea un nuevo intento.
 - El anterior permanece.
 - Se puede comparar el resultado.
-- Existe opción de generar preguntas nuevas.
+- Puede iniciar otro intento con preguntas disponibles del banco publicado.
 
 ---
 
@@ -713,18 +729,19 @@ Como estudiante, quiero detectar temas donde cometo errores para repasarlos.
 - No se clasifica con datos insuficientes sin indicarlo.
 - Se ofrece una acción de repaso.
 
-## US-048 Identificar temas dominados
+## US-048 Consultar evidencia de avance y desempeño
 
-Como estudiante, quiero identificar temas dominados para distribuir mejor mi tiempo.
+Como estudiante, quiero consultar mi actividad y desempeño por tema para
+distribuir mejor mi tiempo sin confundir recorrido completado con dominio.
 
 **Prioridad:** P1
 
 ### Criterios de aceptación
 
-- El dominio se basa en reglas documentadas.
-- El usuario puede ver la evidencia.
-- El estado puede cambiar con resultados posteriores.
-- Existe ajuste manual cuando sea necesario.
+- El recorrido completado se informa solo como avance de lectura o práctica.
+- El desempeño se basa en intentos de examen reales y muestra la evidencia.
+- Con datos insuficientes no se atribuye dominio y se explica la limitación.
+- Los indicadores cambian cuando existe actividad o resultados posteriores.
 
 ## US-049 Consultar errores recurrentes
 
@@ -795,7 +812,11 @@ Como estudiante, quiero abrir el resultado correcto para consultar su contenido.
 
 ---
 
-# Épica 10: Calendario
+# Épica 10: Calendario (futuro condicionado)
+
+Estas historias se habilitan para estudiantes únicamente después de levantar
+la restricción de acceso privado de ADR-014. No forman parte del primer valor
+editorial actual.
 
 ## US-054 Programar una sesión
 
@@ -861,7 +882,12 @@ Como estudiante, quiero ver qué debo repasar hoy para seguir un plan claro.
 
 ---
 
-# Épica 11: Tutor de IA
+# Épica 11: Tutor de IA (futuro condicionado)
+
+Conforme a ADR-013, OpenAI no forma parte del runtime actual. Estas historias
+describen una ayuda dinámica futura y requieren una decisión explícita para
+habilitarse. No autorizan generación jurídica sin evidencia, acceso a las
+transcripciones privadas ni respuestas fuera del contenido editorial aprobado.
 
 ## US-059 Hacer una pregunta
 
@@ -940,15 +966,20 @@ Como estudiante, quiero que el tutor recuerde la materia, clase y tema actuales.
 
 ## Primera entrega
 
-- US-001, US-002
-- US-006, US-007
-- US-011, US-012, US-013
-- US-016, US-017
+- US-066: revisar el borrador antes de publicar.
+- US-001, US-003: crear y corregir la estructura editorial.
+- US-006, US-008: crear y corregir clases como borradores.
+- US-011, US-012: importar sin pérdida y conservar la transcripción privada.
+- US-016, US-017: preparar, revisar y aprobar temas.
 - US-022, US-023, US-024, US-025, US-026, US-032
-- US-033, US-035
-- US-038, US-039, US-040, US-041, US-042
-- US-047
-- US-051, US-053
+- US-033, US-038: preparar flashcards y preguntas con evidencia.
+- US-065, US-067, US-068: consumir una clase terminada y rastreable.
+- US-002, US-007, US-035, US-039, US-040, US-041, US-042
+- US-047, US-051, US-053
+
+El acceso público de US-064 no forma parte de esta entrega. La comprobación del
+flujo de estudiante se realiza con cuentas privadas de ensayo hasta que exista
+una decisión de apertura.
 
 ## Segunda entrega
 
@@ -964,9 +995,11 @@ Como estudiante, quiero que el tutor recuerde la materia, clase y tema actuales.
 
 ## Futuro
 
-- carga de audios;
-- transcripción automática;
-- múltiples usuarios;
+- herramientas internas para preparar audios y transcripciones, siempre fuera
+  del flujo de estudiante y conservando el original;
+- registro y múltiples estudiantes, condicionados a una decisión comercial y
+  de seguridad explícita;
+- tutor dinámico limitado al corpus editorial publicado y con citas;
 - profesores;
 - contenido compartido;
 - aplicación móvil;
@@ -974,13 +1007,16 @@ Como estudiante, quiero que el tutor recuerde la materia, clase y tema actuales.
 
 ## Estado de validación
 
-**Estado:** Aprobado por la usuaria el 2026-07-23.
+**Estado:** reconciliado con el modelo editorial privado el 2026-08-21.
 
-La usuaria confirmó:
+La validación del 2026-07-23 confirmó las necesidades educativas originales.
+La reconciliación posterior conserva esas necesidades, pero reemplaza el flujo
+autoservicio por preparación editorial y consumo de contenido publicado:
 
 - que las épicas representan su idea;
 - que no falta una función esencial;
-- que la primera entrega contiene el flujo mínimo correcto;
-- que las funciones futuras están correctamente pospuestas.
+- que la primera entrega debe probar el flujo editorial completo;
+- que registro, pagos, generación por estudiantes y tutor dinámico están
+  correctamente pospuestos.
 
 La siguiente etapa es revisar y aprobar `04-navigation-and-screens.md`.

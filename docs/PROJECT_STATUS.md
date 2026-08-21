@@ -170,6 +170,13 @@ datos privados y están excluidos de Git.
 - Los estados editoriales se traducen mediante `lib/status-labels.ts`.
 - La cuenta móvil permite cambiar contraseña y cerrar sesión.
 - El foco visible usa un anillo opaco de alto contraste.
+- La navegación ofrece un enlace para saltar al contenido y el progreso expone
+  semántica ARIA.
+- La interfaz solo confirma el guardado después de recibir éxito del servidor y
+  muestra un error cuando falla.
+- Los pasos completados describen el recorrido, no afirman dominio académico;
+  se retiraron el selector de minutos sin efecto y la falsa comprobación que
+  repetía una flashcard.
 
 Esto resuelve los hallazgos generales de ausencia de estados y numeración. No
 equivale todavía a una prueba automática de cada URL inválida o de todos los
