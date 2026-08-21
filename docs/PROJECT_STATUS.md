@@ -2,7 +2,7 @@
 
 Última actualización: 20 de agosto de 2026
 
-Base documental: `origin/main` en `be3f110`
+Base documental: `origin/main` en `82c507b`
 
 Responsables: Fatima (administración y validación) y Codex (desarrollo y contenido)
 
@@ -49,10 +49,16 @@ webhooks, RLS, conciliación, entornos y recuperación. Es diseño, no
 funcionalidad integrada: no existe proveedor, checkout, webhook ni tabla de
 suscripciones.
 
+La decisión de datos y su roadmap están documentados en
+[`DATA_ARCHITECTURE.md`](DATA_ARCHITECTURE.md) y ADR-016. Supabase PostgreSQL se
+mantiene como fuente única de verdad; NoSQL, Redis, búsqueda vectorial,
+particionado y réplicas solo se evaluarán al cruzar umbrales medidos. Esta
+decisión no añade infraestructura ni reemplaza los gates operativos vigentes.
+
 ## 2. Inventario académico conocido
 
 La lectura del proyecto remoto **CENEVAL Study App** realizada el 20 de agosto
-de 2026 confirmó **0 usuarios, 0 materias, 0 clases y 0 temas**. Sus diez
+de 2026 confirmó **0 usuarios, 0 materias, 0 clases y 0 temas**. Sus once
 migraciones están aplicadas y todas las tablas públicas tienen RLS.
 
 La auditoría del 12 de agosto registró el siguiente inventario en una base
@@ -254,10 +260,10 @@ Como defensa adicional, `getTopic` filtra explícitamente por aprobación y
 sin conectarse a Supabase.
 
 **Estado remoto:** esta undécima migración se aplicó en CENEVAL y se verificó
-en el historial el 20 de agosto de 2026. Antes de abrir el acceso estudiantil, una
-persona autorizada debe revisarla, aplicarla únicamente a CENEVAL, confirmar el
-historial, ejecutar los asesores y ampliar la suite RLS dinámica con temas
-pendientes y rechazados.
+en el historial el 20 de agosto de 2026. Los asesores no mostraron errores de
+seguridad; el aviso de `exam_answer_keys` sin políticas es el bloqueo
+deliberado. Antes de abrir el acceso estudiantil, una persona autorizada debe
+ampliar y ejecutar la suite RLS dinámica con temas pendientes y rechazados.
 
 ## 4. Seguridad y calidad: qué está probado
 
@@ -282,10 +288,8 @@ a destinos internos y un aviso educativo/de vigencia en la interfaz.
 
 Queda pendiente:
 
-- aplicar y probar la migración RLS contra el proyecto remoto;
-- aplicar y probar la migración de lectura limitada a temas aprobados;
+- ampliar y ejecutar la suite RLS dinámica contra el proyecto CENEVAL;
 - pruebas automatizadas de interfaz y recorridos completos;
-- repetir asesores de Supabase después de aplicar migraciones;
 - auditoría final de accesibilidad en navegador y dispositivos reales;
 - dejar de degradar silenciosamente ciertos errores de progreso a `null`.
 
@@ -327,13 +331,10 @@ Además siguen pendientes tres bancos transversales y 16 exámenes acumulativos.
 1. Copiar las transcripciones fuera del disco `F:` y verificar la copia.
 2. Seguir `docs/SUPABASE_BACKUP.md`: generar una exportación autorizada,
    verificarla, copiarla fuera del equipo y restaurarla en un proyecto de ensayo.
-3. Confirmar en el historial remoto si la migración RLS del 20 de agosto está
-   aplicada; si no, aplicarla en una ventana autorizada.
-4. Revisar y aplicar la migración de aprobación de temas únicamente a CENEVAL.
-5. Ampliar y ejecutar `npm run security:rls` después de las migraciones y
+3. Ampliar y ejecutar `npm run security:rls` en el proyecto CENEVAL y
    registrar el resultado. Esta suite crea y elimina datos remotos; no
    pertenece a CI.
-6. Preparar C41 con contrato 1.1 y ejecutar `content:check`.
+4. Preparar C41 con contrato 1.1 y ejecutar `content:check`.
 
 ### Prioridad 1 — Demostrar el pipeline con C41
 
@@ -367,6 +368,8 @@ publicación, navegación y un commit por unidad de trabajo.
 6. Seguir los gates incrementales de `SUBSCRIPTION_ARCHITECTURE.md`: dominio y
    autorización sin cobro, sandbox cerrado, piloto privado y solo después
    apertura comercial explícita.
+7. Capturar la línea base de datos definida en `DATA_ARCHITECTURE.md` antes de
+   añadir caché, réplicas, búsqueda semántica u otro motor.
 
 ## 7. Próximas tareas ejecutables
 
@@ -374,7 +377,7 @@ publicación, navegación y un commit por unidad de trabajo.
 | ---: | --- | --- |
 | 1 | Respaldar las transcripciones | Copia verificada fuera de `F:` |
 | 2 | Ejecutar y probar el respaldo documentado | Exportación fechada, copia externa verificada y restauración de ensayo |
-| 3 | Aplicar/verificar la migración RLS | Historial remoto y suite de 31 comprobaciones aprobada |
+| 3 | Ampliar y ejecutar la suite RLS | Comprobaciones actuales y casos de temas no aprobados aprobados en CENEVAL |
 | 4 | Preparar C41 en contrato 1.1 | `content:check` aprobado |
 | 5 | Importar y publicar C41 | Visible en `/sesiones` y después de C40 |
 | 6 | Crear pruebas de navegador | Flujos centrales reproducibles en CI o entorno aislado |
@@ -408,5 +411,5 @@ datos y cerrar la diferencia entre código y base remota:
 
 1. respaldar `F:`;
 2. ejecutar y completar el procedimiento de `docs/SUPABASE_BACKUP.md`;
-3. verificar/aplicar la migración RLS y ejecutar la suite remota;
+3. ampliar y ejecutar la suite RLS remota únicamente en CENEVAL;
 4. preparar e importar C41 con contrato 1.1.

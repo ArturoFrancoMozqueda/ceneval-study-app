@@ -153,8 +153,9 @@ alguna sigue abierta; si corriges una, actualiza esta lista.
 - **La protección de lectura por aprobación está aplicada en CENEVAL.**
   `20260821023330_restrict_reading_to_approved_topics.sql` impide que una
   estudiante lea temas pendientes o rechazados, y extiende el bloqueo a sus
-  materiales, mapas, referencias, flashcards y exámenes. No presentes esta
-  capa quedó verificada en el historial remoto; aún falta ejecutar la suite RLS.
+  materiales, mapas, referencias, flashcards y exámenes. Su aplicación quedó
+  verificada en el historial remoto, pero su comportamiento dinámico aún
+  requiere ejecutar la suite RLS ampliada.
 - **Existe el procedimiento, no un respaldo real de Supabase.**
   `docs/SUPABASE_BACKUP.md` y `npm run test:backup` documentan y comprueban el
   mecanismo con datos sintéticos. El proyecto remoto actual no contiene
