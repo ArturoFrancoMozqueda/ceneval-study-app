@@ -432,6 +432,43 @@ const traceablePackages = [
       /CNPP vigente al 28-11-2025/i,
     ],
   },
+  {
+    code: "C29",
+    fileName: "audio-03-40-negociacion-mediacion-conciliacion-restaurativa.json",
+    artifacts: 151,
+    evidence: 15,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /Constitución no contiene por sí sola una lista completa de técnicas o principios/i,
+      /negociación.*por sí mismas, con o sin intermediarios/i,
+      /En materia penal puede proponer soluciones/i,
+      /justicia restaurativa no es exclusiva de materia penal/i,
+      /comunidad no es obligatoria en todos los casos/i,
+      /confidencialidad.*No es absoluta/i,
+      /mecanismo con resultado/i,
+      /LGMASC: nueva ley DOF 26-01-2024, sin reformas/i,
+      /LNMASCMP vigente al 01-04-2024/i,
+    ],
+  },
+  {
+    code: "C30",
+    fileName: "audio-40-arbitraje-mercantil.json",
+    artifacts: 151,
+    evidence: 16,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /artículos 1424, 1425 y 1461 a 1463 también operan cuando el lugar del arbitraje está fuera de México/i,
+      /no existe una formalidad única/i,
+      /primer escrito sobre la sustancia del asunto/i,
+      /regla supletoria es un árbitro.*no reserva el cargo a corredores públicos/i,
+      /corrección, interpretación o laudo adicional/i,
+      /La nulidad judicial es tasada/i,
+      /irrecurribilidad específica no autoriza a afirmar que toda decisión vinculada con un arbitraje carece de medio de impugnación/i,
+      /no declara secreto automático para todo arbitraje mercantil/i,
+      /última reforma legal DOF 14-11-2025/i,
+      /Acuerdo DOF 18-02-2026.*no constituye una reforma del régimen arbitral/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -703,6 +740,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una exclusión invalidada o efecto automático como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C29" || expected.code === "C30") {
+      const obsoleteAsCurrent =
+        expected.code === "C29"
+          ? /artículo 17.*(?:enumera|establece).*(?:principios|mediación|conciliación)|negociación.*(?:siempre|solo).*sin intermediarios|comunidad.*(?:siempre|obligatoria)|confidencialidad.*(?:absoluta|sin excepciones)|(?:mediación|firma).*(?:equivale|convierte).*acuerdo reparatorio/i
+          : /(?:corredor público|tres árbitros).*(?:obligatorio|regla)|(?:institución|sede|confidencialidad).*(?:obligatoria|automática)|nulidad (?:es|equivale a|permite).*(?:apelación|revisar.*fondo)|nulidad del contrato.*(?:anula|elimina).*cláusula|toda.*(?:decisión|resolución).*irrecurrible/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una generalización del mecanismo o del arbitraje como respuesta vigente.`,
         );
       }
     }

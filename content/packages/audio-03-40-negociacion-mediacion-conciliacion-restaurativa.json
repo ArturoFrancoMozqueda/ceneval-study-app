@@ -1,96 +1,1465 @@
 {
-  "packageVersion":"1.1",
-  "curriculum":{
-    "code":"C29",
-    "order":29,
-    "audioSources":[
-      {"audioNumber":3,"fragment":"Panorama de mecanismos alternativos"},
-      {"audioNumber":40,"fragment":"Primera parte: mediación, conciliación y justicia restaurativa"}
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C29",
+    "order": 29,
+    "audioSources": [
+      {
+        "audioNumber": 3,
+        "fragment": "Panorama de mecanismos alternativos"
+      },
+      {
+        "audioNumber": 40,
+        "fragment": "Primera parte: mediación, conciliación y justicia restaurativa"
+      }
     ]
   },
-  "subject":{"name":"Mecanismos Alternativos y Solución de Conflictos","description":"Negociación, mediación, conciliación, justicia restaurativa, arbitraje y procedimientos especializados de solución de controversias."},
-  "class":{"title":"Negociación, mediación, conciliación y justicia restaurativa","description":"Vigesimonovena clase del plan académico: selección del mecanismo, funciones de las partes y de la persona facilitadora, principios, confidencialidad y resultados restaurativos."},
-  "transcript":{"originalFiles":["AUDIO 03.txt","AUDIO 40.txt"],"cleaned":"Se conservaron el panorama constitucional, la diferencia funcional entre negociación, mediación y conciliación, la confidencialidad, la relación entre mecanismos y soluciones alternas penales, y la finalidad restaurativa. El bloque de arbitraje del Audio 40 se reservó para C30; los bloques notariales y registrales del Audio 03 permanecen asignados a sus materias. Se eliminaron saludos, insultos, opiniones políticas, estereotipos, datos personales, historias de clientes, consejos de cobro y ejemplos discriminatorios. Se corrigió que el artículo 17 constitucional ordena que las leyes prevean mecanismos alternativos, pero no enumera por sí solo todos sus principios; que la negociación de la Ley General puede realizarse por las partes con o sin intermediarios; que mediación implica asistencia imparcial sin imposición de propuestas y conciliación una participación activa que puede incluir alternativas; que la justicia restaurativa no es exclusiva de materia penal bajo el marco general de 2024, aunque la junta restaurativa penal tiene reglas especiales; que la comunidad afectada participa en la junta penal solo en su caso, no forzosamente siempre; que confidencialidad tiene excepciones legales; y que un mecanismo es el proceso para construir una solución, mientras un acuerdo reparatorio es un posible resultado penal con requisitos propios."},
-  "topics":[{
-    "title":"Elegir y conducir el mecanismo alternativo adecuado",
-    "description":"Diferencias entre diálogo directo, facilitación neutral, propuestas conciliatorias y procesos restaurativos.",
-    "learningJourney":{"openingPrompt":"Dos personas desean resolver un conflicto sin juicio, pero no saben si necesitan dialogar directamente, recibir facilitación, escuchar propuestas o reparar daños colectivos. ¿Qué mecanismo corresponde?","quickChecks":[{"prompt":"¿La negociación siempre excluye intermediarios?","answer":"No. La Ley General de 2024 permite que las partes negocien por sí mismas, con o sin intermediarios.","feedback":"Identifica quién conserva la decisión, no solo quién está presente."},{"prompt":"¿La persona mediadora propone la solución?","answer":"No debe imponerla: facilita comunicación para que las partes construyan opciones. En conciliación sí existe participación activa y pueden presentarse alternativas.","feedback":"La diferencia está en la intensidad de intervención."},{"prompt":"¿Toda información es absolutamente confidencial?","answer":"No. La regla es confidencialidad, pero existen excepciones legales, como información sobre un delito en curso o inminente que pone en peligro integridad o vida en materia penal.","feedback":"Nunca memorices un principio sin revisar sus límites."}],"practicalCase":{"facts":"Una empresa y un proveedor desean renegociar entregas; dos copropietarios no logran comunicarse; y en otro caso penal un hecho afectó a víctima, imputado y vecindario.","question":"¿Qué ruta puede corresponder a cada conflicto?","legalRule":"El artículo 4 de la LGMASC distingue negociación, mediación y conciliación; los artículos 21, 25 a 29 de la LNMASCMP regulan mediación, conciliación y junta restaurativa penal.","reasoning":"Empresa y proveedor pueden negociar directamente o con intermediarios. Los copropietarios pueden usar mediación si necesitan ordenar comunicación sin propuestas externas, o conciliación si requieren opciones objetivas. El asunto penal puede ir a junta restaurativa si es legalmente procedente, existe autonomía y resulta adecuada la participación de la comunidad afectada.","conclusion":"Se selecciona por materia, disponibilidad de derechos, necesidades, equilibrio, tipo de intervención y resultado buscado; nunca solo por el nombre usado por las partes."},"closingPrompt":"Compara negociación, mediación, conciliación y proceso restaurativo indicando participantes, función del tercero, resultado y límites.","nextActivity":"Recorre el mapa conceptual visual, responde la guía de doce preguntas y resuelve los diez casos originales."},
-    "materials":[
-      {"type":"short_answer","title":"Respuesta breve","content":"Negociación: las partes plantean soluciones mediante diálogo, con o sin intermediarios. Mediación: una persona facilitadora imparcial ayuda a comunicarse, pero las partes construyen la solución. Conciliación: la persona facilitadora participa activamente y puede proponer alternativas. Justicia restaurativa: atiende daño, necesidades, responsabilidades, reparación y no repetición; en materia penal, la junta puede incluir a víctima, imputado y, en su caso, comunidad afectada.","sourceOrigin":"mixed"},
-      {"type":"full_explanation","title":"Explicación completa desde cero","content":"El artículo 17 constitucional ordena que las leyes prevean mecanismos alternativos de solución de controversias y, en materia penal, regulen su aplicación, aseguren reparación y establezcan supervisión judicial cuando corresponda. La Constitución no contiene por sí sola una lista completa de técnicas o principios: estos se desarrollan en la Ley General de Mecanismos Alternativos de Solución de Controversias de 2024 y en la ley nacional especializada en materia penal.\n\nUn mecanismo alternativo es un proceso para gestionar o resolver una controversia fuera o dentro de un procedimiento jurisdiccional según la ley. No garantiza acuerdo y no permite disponer de cualquier derecho. La LGMASC exige que el asunto no sea contrario al orden jurídico o interés público y no verse sobre derechos indisponibles. Siempre se revisan materia, competencia, capacidad, seguridad y posibilidad legal de convenir.\n\nLa negociación es el proceso en que las partes plantean soluciones a través del diálogo. La ley permite hacerlo por sí mismas, con o sin intermediarios. Lo decisivo es que las partes conservan el control de propuestas y resultado. Oferta y contraoferta son herramientas, pero una negociación responsable identifica intereses, alternativas, criterios objetivos y límites legales; no equivale a amenazar ni ocultar información esencial.\n\nLa mediación es voluntaria y cuenta con una persona tercera imparcial facilitadora. Esta ordena el diálogo, aclara mensajes, identifica intereses y ayuda a generar opciones, sin decidir ni imponer el contenido. Puede existir comediación con dos o más facilitadores. Las partes son autoras de la solución.\n\nLa conciliación también es voluntaria, pero la persona facilitadora tiene participación activa. En materia penal puede proponer soluciones basadas en escenarios posibles y discernir alternativas idóneas, respetando autonomía y principios. Una propuesta no obliga: las partes aceptan, modifican o rechazan. Por eso mediación y conciliación no se distinguen por la mera presencia de un tercero, sino por su función.\n\nLa justicia restaurativa es un enfoque que busca reconocimiento de responsabilidades, reparación, restitución, servicio a la comunidad, reintegración y no repetición. La LGMASC permite procesos y prácticas restaurativas fuera del ámbito penal; por ello es incorrecto afirmar que solo existen en materia penal. En lo penal, la LNMASCMP regula específicamente la junta restaurativa: víctima u ofendido, imputado y, en su caso, comunidad afectada construyen opciones que atienden necesidades y responsabilidades individuales y colectivas y recomponen el tejido social. La comunidad no es obligatoria en todos los casos.\n\nLa persona facilitadora penal realiza sesiones preparatorias, explica alcance y reglas, identifica necesidades, evalúa disposición y seguridad, y determina si es viable una sesión conjunta. La reunión no debe usarse para confrontar o revictimizar. El reconocimiento y la reparación pueden incluir obligaciones de dar, hacer o no hacer, restitución, disculpa, compromiso de no repetición o servicio, dentro de la ley.\n\nLos principios penales son voluntariedad, información, confidencialidad, flexibilidad y simplicidad, imparcialidad, equidad y honestidad. La ley general añade un marco amplio de acceso a justicia alternativa, autonomía de la voluntad, buena fe, legalidad, neutralidad, accesibilidad y otros. Deben existir ajustes razonables y apoyos para personas con discapacidad, adultas mayores o en vulnerabilidad.\n\nLa confidencialidad permite hablar con libertad y, como regla, impide divulgar o usar la información en perjuicio de las partes. No es absoluta. En materia penal, si la información revela un delito en curso o inminente que pone en peligro la integridad física o vida, la persona facilitadora debe comunicarlo al Ministerio Público. La ley general también exceptúa información sobre delito en curso o inminente.\n\nNo confundas mecanismo con resultado. Mediación, conciliación o junta restaurativa son caminos. Un convenio es el documento resultante y sus efectos dependen de registro, materia y ley. El acuerdo reparatorio es una solución alterna penal específica: puede construirse mediante un mecanismo, pero requiere procedencia, aprobación y cumplimiento conforme al CNPP.\n\nPara CENEVAL identifica cuatro datos: quién propone, si hay tercero, qué puede hacer ese tercero y qué resultado se busca. Después aplica límites: disponibilidad del derecho, voluntariedad, igualdad, confidencialidad y materia. Si el tercero decide, probablemente no estás ante mediación o conciliación, sino ante arbitraje o jurisdicción, tema de la clase siguiente.","sourceOrigin":"mixed"},
-      {"type":"legal_basis","title":"Fundamento jurídico vigente","content":"Constitución vigente al 02-06-2026: artículo 17. LGMASC publicada DOF 26-01-2024, sin reformas: artículos 1 a 8, 31, 82 a 85 y reglas de convenios. LNMASCMP vigente al 01-04-2024: artículos 1 a 7 y 21 a 30. CNPP vigente al 28-11-2025: artículos 184 y 186 a 190 para distinguir mecanismos y acuerdo reparatorio. Consulta oficial: 11 de agosto de 2026.","sourceOrigin":"complementary"},
-      {"type":"simple_example","title":"Ejemplo sencillo","content":"Dos vecinos discuten por ruido. Si hablan y presentan propuestas entre sí, negocian. Si una facilitadora organiza el diálogo sin sugerir resultado, median. Si además plantea horarios y medidas objetivas como opciones, concilian. En todos los casos, ellos deciden si aceptan.","sourceOrigin":"mixed"},
-      {"type":"ceneval_example","title":"Caso tipo CENEVAL","content":"Un caso describe a un tercero que escucha, reformula y ayuda a que las partes generen sus propias opciones, sin proponer ni decidir. La respuesta es mediación. Si el tercero ofrece alternativas viables sin imponerlas, es conciliación; si dicta una decisión vinculante, no es ninguna de las dos.","sourceOrigin":"mixed"},
-      {"type":"summary","title":"Resumen","content":"Negociación: diálogo con o sin intermediarios. Mediación: facilitación imparcial, solución de las partes. Conciliación: facilitación activa con propuestas no obligatorias. Restaurativa: responsabilidad, reparación, reintegración y no repetición. Principios: voluntad, información, confidencialidad limitada, flexibilidad, imparcialidad, equidad, honestidad, legalidad y accesibilidad. Mecanismo es camino; convenio o acuerdo reparatorio es resultado jurídico.","sourceOrigin":"mixed"},
-      {"type":"study_guide","title":"Guía intensiva de preguntas y respuestas","content":"1. ¿Base constitucional? Respuesta: artículo 17. 2. ¿Negociación? Respuesta: diálogo con o sin intermediarios. 3. ¿Quién decide en negociación? Respuesta: las partes. 4. ¿Mediación? Respuesta: facilitador imparcial sin imponer solución. 5. ¿Comediación? Respuesta: dos o más facilitadores. 6. ¿Conciliación? Respuesta: facilitador activo que puede proponer. 7. ¿Propuesta obliga? Respuesta: no. 8. ¿Restaurativa? Respuesta: responsabilidad, reparación y no repetición. 9. ¿Junta penal? Respuesta: víctima, imputado y, en su caso, comunidad. 10. ¿Confidencialidad absoluta? Respuesta: no, tiene excepciones legales. 11. ¿Todo derecho es negociable? Respuesta: no, se excluyen derechos indisponibles. 12. ¿Mecanismo y acuerdo reparatorio son iguales? Respuesta: no; el primero es camino y el segundo una solución penal específica.","sourceOrigin":"mixed"},
-      {"type":"key_concepts","title":"Conceptos clave","content":"MASC: vía alterna de gestión. Negociación: propuestas por diálogo. Intermediario: apoyo que no desplaza decisión. Mediación: facilitación imparcial. Comediación: pluralidad de facilitadores. Conciliación: intervención activa y propuestas. Facilitador: tercero certificado. Autonomía: decisión libre. Confidencialidad: reserva con excepciones. Equidad: equilibrio entre partes. Derecho disponible: susceptible de convenio. Justicia restaurativa: reparación y responsabilidad. Junta restaurativa: mecanismo penal especializado. Convenio: resultado documentado. Acuerdo reparatorio: solución alterna penal.","sourceOrigin":"mixed"},
-      {"type":"common_errors","title":"Errores comunes","content":"No atribuyas todos los principios al texto constitucional. No digas que negociar siempre excluye intermediarios. No confundas mediador con conciliador. No permitas que facilitador imponga. No llames arbitraje a una propuesta conciliatoria. No afirmes que justicia restaurativa solo existe en penal. No exijas siempre comunidad en junta penal. No fuerces encuentro directo cuando existe riesgo. No trates confidencialidad como absoluta. No convenir derechos indisponibles. No confundir mecanismo con convenio. No confundir mediación penal con acuerdo reparatorio ya aprobado.","sourceOrigin":"complementary"}
+  "subject": {
+    "name": "Mecanismos Alternativos y Solución de Conflictos",
+    "description": "Negociación, mediación, conciliación, justicia restaurativa, arbitraje y procedimientos especializados de solución de controversias."
+  },
+  "class": {
+    "title": "Negociación, mediación, conciliación y justicia restaurativa",
+    "description": "Vigesimonovena clase del plan académico: selección del mecanismo, funciones de las partes y de la persona facilitadora, principios, confidencialidad y resultados restaurativos."
+  },
+  "transcript": {
+    "originalFiles": [
+      "AUDIO 03.txt",
+      "AUDIO 40.txt"
     ],
-    "conceptMap":{"title":"Mapa visual: elegir el mecanismo alternativo","description":"Participantes, grado de intervención y resultado de cada ruta.","nodes":[
-      {"id":"masc","label":"Solución alternativa","description":"Acceso a justicia por diálogo."},
-      {"id":"filtro","label":"Filtro de admisibilidad","description":"Antes de elegir mecanismo.","parentId":"masc"},
-      {"id":"materia","label":"Materia y competencia","description":"Aplicar la ley especializada.","parentId":"filtro"},
-      {"id":"disponible","label":"Derecho disponible","description":"No contrariar orden o interés público.","parentId":"filtro"},
-      {"id":"seguridad","label":"Seguridad y equilibrio","description":"Evitar coacción y revictimización.","parentId":"filtro"},
-      {"id":"negociacion","label":"Negociación","description":"Diálogo y propuestas de las partes.","parentId":"masc"},
-      {"id":"directa","label":"Por sí mismas","description":"Sin asistencia necesaria.","parentId":"negociacion"},
-      {"id":"intermediarios","label":"Con intermediarios","description":"La ley también lo permite.","parentId":"negociacion"},
-      {"id":"oferta","label":"Oferta y contraoferta","description":"Herramientas de diálogo.","parentId":"negociacion"},
-      {"id":"mediacion","label":"Mediación","description":"Facilitación imparcial.","parentId":"masc"},
-      {"id":"mediador","label":"Persona facilitadora","description":"Ordena y aclara comunicación.","parentId":"mediacion"},
-      {"id":"sin-proponer","label":"Sin imponer propuesta","description":"Partes construyen solución.","parentId":"mediacion"},
-      {"id":"comediacion","label":"Comediación","description":"Dos o más facilitadores.","parentId":"mediacion"},
-      {"id":"conciliacion","label":"Conciliación","description":"Participación activa.","parentId":"masc"},
-      {"id":"conciliador","label":"Facilitador activo","description":"Analiza escenarios.","parentId":"conciliacion"},
-      {"id":"propuestas","label":"Propone alternativas","description":"Objetivas y no obligatorias.","parentId":"conciliacion"},
-      {"id":"decision-partes","label":"Deciden las partes","description":"Aceptan, modifican o rechazan.","parentId":"conciliacion"},
-      {"id":"restaurativa","label":"Justicia restaurativa","description":"Atiende daño y relaciones.","parentId":"masc"},
-      {"id":"responsabilidad","label":"Responsabilidad","description":"Reconocer efectos del conflicto.","parentId":"restaurativa"},
-      {"id":"reparacion","label":"Reparación y restitución","description":"Dar, hacer o no hacer.","parentId":"restaurativa"},
-      {"id":"no-repeticion","label":"No repetición","description":"Prevenir nuevo daño.","parentId":"restaurativa"},
-      {"id":"junta","label":"Junta restaurativa penal","description":"Regulación especializada.","parentId":"restaurativa"},
-      {"id":"victima","label":"Víctima u ofendido","description":"Expone daño y necesidades.","parentId":"junta"},
-      {"id":"imputado","label":"Imputado","description":"Propone acciones reparadoras.","parentId":"junta"},
-      {"id":"comunidad","label":"Comunidad, en su caso","description":"Participa si fue afectada.","parentId":"junta"},
-      {"id":"principios","label":"Principios","description":"Protegen el proceso.","parentId":"masc"},
-      {"id":"voluntad","label":"Voluntariedad e información","description":"Decisión libre y comprendida.","parentId":"principios"},
-      {"id":"confidencialidad","label":"Confidencialidad limitada","description":"Reserva con excepciones legales.","parentId":"principios"},
-      {"id":"imparcialidad","label":"Imparcialidad y equidad","description":"Sin ventajas indebidas.","parentId":"principios"},
-      {"id":"accesibilidad","label":"Accesibilidad","description":"Ajustes y apoyos necesarios.","parentId":"principios"},
-      {"id":"resultado","label":"Resultado posible","description":"Puede haber acuerdo o no.","parentId":"masc"},
-      {"id":"convenio","label":"Convenio","description":"Efectos según registro y materia.","parentId":"resultado"},
-      {"id":"acuerdo-penal","label":"Acuerdo reparatorio penal","description":"Requiere procedencia, aprobación y cumplimiento.","parentId":"resultado"}
-    ]},
-    "references":[
-      {"title":"Constitución Política de los Estados Unidos Mexicanos","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Federal, México","citation":"Artículo 17; últimas reformas DOF 02-06-2026","retrievedOn":"2026-08-11","note":"Fundamento constitucional de los mecanismos alternativos."},
-      {"title":"Ley General de Mecanismos Alternativos de Solución de Controversias","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/LGMASC.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Nacional, México","citation":"Artículos 1 a 8, 31 y 82 a 85; nueva ley DOF 26-01-2024, sin reformas","retrievedOn":"2026-08-11","note":"Definiciones generales, principios, admisibilidad, accesibilidad y procesos restaurativos."},
-      {"title":"Ley Nacional de Mecanismos Alternativos de Solución de Controversias en Materia Penal","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/LNMASCMP.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Nacional, México","citation":"Artículos 1 a 7 y 21 a 30; última reforma DOF 01-04-2024","retrievedOn":"2026-08-11","note":"Regulación especializada de mediación, conciliación y junta restaurativa penal."}
-    ],
-    "flashcards":[
-      {"question":"¿Qué ordena el artículo 17?","answer":"Que las leyes prevean mecanismos alternativos de solución de controversias.","sourceOrigin":"complementary"},
-      {"question":"¿La negociación admite intermediarios?","answer":"Sí. Puede realizarse por las partes con o sin intermediarios.","sourceOrigin":"complementary"},
-      {"question":"¿Quién construye la solución en mediación?","answer":"Las propias partes con asistencia de una persona facilitadora imparcial.","sourceOrigin":"complementary"},
-      {"question":"¿Qué es comediación?","answer":"Mediación con dos o más personas facilitadoras.","sourceOrigin":"complementary"},
-      {"question":"¿Qué distingue a la conciliación?","answer":"La participación activa del facilitador, que puede proponer alternativas.","sourceOrigin":"complementary"},
-      {"question":"¿Una propuesta conciliatoria obliga?","answer":"No. Las partes conservan autonomía para aceptarla o rechazarla.","sourceOrigin":"mixed"},
-      {"question":"¿Qué busca la justicia restaurativa?","answer":"Responsabilidad, reparación, restitución, reintegración y no repetición.","sourceOrigin":"complementary"},
-      {"question":"¿Quién integra la junta penal?","answer":"Víctima u ofendido, imputado y, en su caso, comunidad afectada.","sourceOrigin":"complementary"},
-      {"question":"¿Confidencialidad es absoluta?","answer":"No. Existen excepciones legales por delito en curso o inminente.","sourceOrigin":"complementary"},
-      {"question":"¿Puede convenirse un derecho indisponible?","answer":"No. La admisibilidad exige que el derecho pueda ser objeto de convenio.","sourceOrigin":"complementary"},
-      {"question":"¿Mecanismo equivale a convenio?","answer":"No. El mecanismo es el proceso y el convenio es un posible resultado.","sourceOrigin":"mixed"},
-      {"question":"¿Mediación equivale a acuerdo reparatorio?","answer":"No. La mediación puede conducir a él, pero el acuerdo tiene requisitos penales propios.","sourceOrigin":"mixed"}
-    ],
-    "exam":{"title":"Evaluación: negociación, mediación, conciliación y restaurativa","description":"Diez casos originales para seleccionar la vía y aplicar sus principios.","questions":[
-      {"text":"Dos comerciantes intercambian ofertas directamente. ¿Qué mecanismo utilizan?","difficulty":"basic","options":["Negociación","Mediación","Arbitraje"],"correctOption":0,"explanation":"Las propias partes plantean soluciones mediante diálogo.","optionExplanations":["Describe negociación directa.","Falta una persona facilitadora imparcial.","Nadie dicta un laudo."]},
-      {"text":"Un abogado transmite propuestas sin sustituir la decisión de las partes. ¿Sigue siendo negociación?","difficulty":"intermediate","options":["Sí, la ley admite intermediarios","No, siempre se vuelve mediación","No, se convierte en arbitraje"],"correctOption":0,"explanation":"La definición general permite negociación con o sin intermediarios.","optionExplanations":["Conservan control de propuestas y resultado.","Un intermediario no es necesariamente facilitador certificado.","No existe decisión arbitral."]},
-      {"text":"La tercera persona reformula mensajes y ordena el diálogo sin sugerir soluciones. ¿Qué es?","difficulty":"basic","options":["Mediación","Conciliación","Sentencia"],"correctOption":0,"explanation":"La facilitación imparcial sin propuesta caracteriza la mediación.","optionExplanations":["Es la función descrita.","En conciliación hay participación activa con alternativas.","No hay decisión jurisdiccional."]},
-      {"text":"La facilitadora presenta tres opciones objetivas, pero deja la decisión a las partes. ¿Qué mecanismo corresponde?","difficulty":"intermediate","options":["Conciliación","Mediación pura","Arbitraje"],"correctOption":0,"explanation":"La conciliación autoriza propuestas no vinculantes de solución.","optionExplanations":["Coincide con intervención activa.","La mediación no se centra en propuestas del tercero.","El árbitro resuelve mediante laudo."]},
-      {"text":"En un conflicto penal se afectó también al vecindario. Víctima, imputado y representantes desean reparar el tejido social. ¿Qué vía encaja?","difficulty":"intermediate","options":["Junta restaurativa","Negociación bursátil","Recurso de apelación"],"correctOption":0,"explanation":"La junta penal atiende necesidades individuales, colectivas y reintegración.","optionExplanations":["Es el diseño legal adecuado.","No tiene relación con el daño penal comunitario.","No busca construir reparación consensuada."]},
-      {"text":"¿La comunidad debe acudir a toda junta restaurativa penal?","difficulty":"advanced","options":["No, participa en su caso","Sí, siempre es obligatoria","Solo si decide el imputado"],"correctOption":0,"explanation":"El artículo 27 usa expresamente la fórmula «en su caso».","optionExplanations":["Depende de afectación y viabilidad.","La ley no establece universalidad.","No depende unilateralmente del imputado."]},
-      {"text":"Durante mediación penal se revela un delito inminente que amenaza la vida. ¿Debe guardarse silencio absoluto?","difficulty":"advanced","options":["No, opera la excepción legal","Sí, sin excepción","Solo si las partes firman otro convenio"],"correctOption":0,"explanation":"La confidencialidad cede ante el supuesto de peligro previsto por la ley.","optionExplanations":["Protege integridad y vida.","Ignora la excepción expresa.","La obligación legal no depende de un pacto nuevo."]},
-      {"text":"Las partes quieren negociar un derecho que legalmente no pueden disponer. ¿Es admisible?","difficulty":"intermediate","options":["No","Sí, por autonomía absoluta","Sí, si hay facilitador"],"correctOption":0,"explanation":"La autonomía opera dentro de la ley y excluye derechos indisponibles.","optionExplanations":["Es el límite correcto.","La autonomía no supera orden público.","El facilitador no vuelve disponible el derecho."]},
-      {"text":"Una mediación penal produce un texto firmado. ¿Ya es automáticamente acuerdo reparatorio eficaz?","difficulty":"advanced","options":["No, requiere procedencia, aprobación y cumplimiento","Sí, toda firma extingue la acción","Sí, aunque el delito no lo permita"],"correctOption":0,"explanation":"El mecanismo puede construir el contenido, pero el CNPP determina eficacia penal.","optionExplanations":["Distingue camino y resultado jurídico.","La firma no basta.","La procedencia es indispensable."]},
-      {"text":"Dos partes mayores con discapacidad requieren participar. ¿Qué debe garantizarse?","difficulty":"advanced","options":["Ajustes razonables y apoyos de accesibilidad","Sustitución automática de su voluntad","Exclusión del mecanismo"],"correctOption":0,"explanation":"La LGMASC exige accesibilidad y ejercicio pleno de capacidad jurídica.","optionExplanations":["Facilita participación efectiva.","Los apoyos no sustituyen voluntad automáticamente.","La discapacidad no justifica excluir."]}
-    ]}
-  }]
+    "cleaned": "Se conservaron el panorama constitucional, la diferencia funcional entre negociación, mediación y conciliación, la confidencialidad, la relación entre mecanismos y soluciones alternas penales, y la finalidad restaurativa. El bloque de arbitraje del Audio 40 se reservó para C30; los bloques notariales y registrales del Audio 03 permanecen asignados a sus materias. Se eliminaron saludos, insultos, opiniones políticas, estereotipos, datos personales, historias de clientes, consejos de cobro y ejemplos discriminatorios. Se corrigió que el artículo 17 constitucional ordena que las leyes prevean mecanismos alternativos, pero no enumera por sí solo todos sus principios; que la negociación de la Ley General puede realizarse por las partes con o sin intermediarios; que mediación implica asistencia imparcial sin imposición de propuestas y conciliación una participación activa que puede incluir alternativas; que la justicia restaurativa no es exclusiva de materia penal bajo el marco general de 2024, aunque la junta restaurativa penal tiene reglas especiales; que la comunidad afectada participa en la junta penal solo en su caso, no forzosamente siempre; que confidencialidad tiene excepciones legales; y que un mecanismo es el proceso para construir una solución, mientras un acuerdo reparatorio es un posible resultado penal con requisitos propios."
+  },
+  "topics": [
+    {
+      "title": "Elegir y conducir el mecanismo alternativo adecuado",
+      "description": "Diferencias entre diálogo directo, facilitación neutral, propuestas conciliatorias y procesos restaurativos.",
+      "learningJourney": {
+        "openingPrompt": "Dos personas desean resolver un conflicto sin juicio, pero no saben si necesitan dialogar directamente, recibir facilitación, escuchar propuestas o reparar daños colectivos. ¿Qué mecanismo corresponde?",
+        "quickChecks": [
+          {
+            "prompt": "¿La negociación siempre excluye intermediarios?",
+            "answer": "No. La Ley General de 2024 permite que las partes negocien por sí mismas, con o sin intermediarios.",
+            "feedback": "Identifica quién conserva la decisión, no solo quién está presente.",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-a40-l023-027-negociacion-directa"
+            ]
+          },
+          {
+            "prompt": "¿La persona mediadora propone la solución?",
+            "answer": "No debe imponerla: facilita comunicación para que las partes construyan opciones. En conciliación sí existe participación activa y pueden presentarse alternativas.",
+            "feedback": "La diferencia está en la intensidad de intervención.",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+              "ev-c29-a40-l007-015-mediacion-conciliacion"
+            ]
+          },
+          {
+            "prompt": "¿Toda información es absolutamente confidencial?",
+            "answer": "No. La regla es confidencialidad, pero existen excepciones legales, como información sobre un delito en curso o inminente que pone en peligro integridad o vida en materia penal.",
+            "feedback": "Nunca memorices un principio sin revisar sus límites.",
+            "evidenceIds": [
+              "ev-c29-lgmasc-art6-principios",
+              "ev-c29-lnmascmp-arts1-6-principios"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una empresa y un proveedor desean renegociar entregas; dos copropietarios no logran comunicarse; y en otro caso penal un hecho afectó a víctima, imputado y vecindario.",
+          "question": "¿Qué ruta puede corresponder a cada conflicto?",
+          "legalRule": "El artículo 4 de la LGMASC distingue negociación, mediación y conciliación; los artículos 21, 25 a 29 de la LNMASCMP regulan mediación, conciliación y junta restaurativa penal.",
+          "reasoning": "Empresa y proveedor pueden negociar directamente o con intermediarios. Los copropietarios pueden usar mediación si necesitan ordenar comunicación sin propuestas externas, o conciliación si requieren opciones objetivas. El asunto penal puede ir a junta restaurativa si es legalmente procedente, existe autonomía y resulta adecuada la participación de la comunidad afectada.",
+          "conclusion": "Se selecciona por materia, disponibilidad de derechos, necesidades, equilibrio, tipo de intervención y resultado buscado; nunca solo por el nombre usado por las partes.",
+          "evidenceIds": [
+            "ev-c29-lgmasc-arts1-5-definiciones",
+            "ev-c29-lgmasc-arts7-79-limites",
+            "ev-c29-lgmasc-arts81-85-restaurativa",
+            "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+            "ev-c29-lnmascmp-arts27-30-junta",
+            "ev-c29-a40-l007-015-mediacion-conciliacion",
+            "ev-c29-a40-l023-027-negociacion-directa"
+          ]
+        },
+        "closingPrompt": "Compara negociación, mediación, conciliación y proceso restaurativo indicando participantes, función del tercero, resultado y límites.",
+        "nextActivity": "Recorre el mapa conceptual visual, responde la guía de doce preguntas y resuelve los diez casos originales.",
+        "openingPromptEvidenceIds": [
+          "ev-c29-lgmasc-arts1-5-definiciones",
+          "ev-c29-lgmasc-arts81-85-restaurativa",
+          "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+          "ev-c29-lnmascmp-arts27-30-junta"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c29-lgmasc-arts1-5-definiciones",
+          "ev-c29-lgmasc-art6-principios",
+          "ev-c29-lgmasc-arts7-79-limites",
+          "ev-c29-lgmasc-arts81-85-restaurativa",
+          "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+          "ev-c29-lnmascmp-arts27-30-junta",
+          "ev-c29-lnmascmp-arts33-35-acuerdo",
+          "ev-c29-cnpp-arts184-190-acuerdo-reparatorio"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c29-lgmasc-arts1-5-definiciones",
+          "ev-c29-lgmasc-arts81-85-restaurativa",
+          "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+          "ev-c29-lnmascmp-arts27-30-junta"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "Negociación: las partes plantean soluciones mediante diálogo, con o sin intermediarios. Mediación: una persona facilitadora imparcial ayuda a comunicarse, pero las partes construyen la solución. Conciliación: la persona facilitadora participa activamente y, en materia penal, puede proponer alternativas. Justicia restaurativa: atiende daño, necesidades, responsabilidades, reparación y no repetición; en materia penal, la junta puede incluir a víctima, imputado y, en su caso, comunidad afectada.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c29-lgmasc-arts1-5-definiciones",
+            "ev-c29-lgmasc-arts81-85-restaurativa",
+            "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+            "ev-c29-lnmascmp-arts27-30-junta",
+            "ev-c29-a03-l023-031-panorama",
+            "ev-c29-a40-l007-015-mediacion-conciliacion",
+            "ev-c29-a40-l023-027-negociacion-directa"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "El artículo 17 constitucional ordena que las leyes prevean mecanismos alternativos de solución de controversias y, en materia penal, regulen su aplicación, aseguren reparación y establezcan supervisión judicial cuando corresponda. La Constitución no contiene por sí sola una lista completa de técnicas o principios: estos se desarrollan en la Ley General de Mecanismos Alternativos de Solución de Controversias de 2024 y en la ley nacional especializada en materia penal.\n\nUn mecanismo alternativo es un proceso para gestionar o resolver una controversia fuera o dentro de un procedimiento jurisdiccional según la ley. No garantiza acuerdo y no permite disponer de cualquier derecho. La LGMASC exige que el asunto no sea contrario al orden jurídico o interés público y no verse sobre derechos indisponibles. Siempre se revisan materia, competencia, capacidad, seguridad y posibilidad legal de convenir.\n\nLa negociación es el proceso en que las partes plantean soluciones a través del diálogo. La ley permite hacerlo por sí mismas, con o sin intermediarios. Lo decisivo es que las partes conservan el control de propuestas y resultado. Oferta y contraoferta son formas posibles de diálogo; la participación de intermediarios no desplaza por sí sola el control de las partes.\n\nLa mediación es voluntaria y cuenta con una persona tercera imparcial facilitadora. Esta ordena el diálogo, aclara mensajes, identifica intereses y ayuda a generar opciones, sin decidir ni imponer el contenido. Puede existir comediación con dos o más facilitadores. Las partes son autoras de la solución.\n\nLa conciliación también es voluntaria, pero la persona facilitadora tiene participación activa. En materia penal puede proponer soluciones basadas en escenarios posibles y discernir alternativas idóneas, respetando autonomía y principios. Una propuesta no obliga: las partes aceptan, modifican o rechazan. Por eso mediación y conciliación no se distinguen por la mera presencia de un tercero, sino por su función.\n\nLa justicia restaurativa es un enfoque que busca reconocimiento de responsabilidades, reparación, restitución, servicio a la comunidad, reintegración y no repetición. La LGMASC permite procesos y prácticas restaurativas fuera del ámbito penal; por ello es incorrecto afirmar que solo existen en materia penal. En lo penal, la LNMASCMP regula específicamente la junta restaurativa: víctima u ofendido, imputado y, en su caso, comunidad afectada construyen opciones que atienden necesidades y responsabilidades individuales y colectivas y recomponen el tejido social. La comunidad no es obligatoria en todos los casos.\n\nLa persona facilitadora penal realiza sesiones preparatorias, explica alcance y reglas, identifica necesidades y evalúa la disposición, la posibilidad y las condiciones de una sesión conjunta. El reconocimiento y la reparación pueden incluir obligaciones de dar, hacer o no hacer, restitución, disculpa, compromiso de no repetición o servicio, dentro de la ley.\n\nLos principios penales son voluntariedad, información, confidencialidad, flexibilidad y simplicidad, imparcialidad, equidad y honestidad. La ley general añade un marco amplio de acceso a justicia alternativa, autonomía de la voluntad, buena fe, legalidad, neutralidad, accesibilidad y otros. Deben existir ajustes razonables y apoyos para personas con discapacidad, adultas mayores o en vulnerabilidad.\n\nLa confidencialidad permite hablar con libertad y, como regla, impide divulgar o usar la información en perjuicio de las partes. No es absoluta. En materia penal, si la información revela un delito en curso o inminente que pone en peligro la integridad física o vida, la persona facilitadora debe comunicarlo al Ministerio Público. La ley general también exceptúa información sobre delito en curso o inminente.\n\nNo confundas mecanismo con resultado. Mediación, conciliación o junta restaurativa son caminos. Un convenio es el documento resultante y sus efectos dependen de registro, materia y ley. El acuerdo reparatorio es una solución alterna penal específica: puede construirse mediante un mecanismo, pero requiere procedencia, aprobación y cumplimiento conforme al CNPP.\n\nPara CENEVAL identifica cuatro datos: quién propone, si hay tercero, qué puede hacer ese tercero y qué resultado se busca. Después aplica límites: disponibilidad del derecho, voluntariedad, igualdad, confidencialidad y materia. Si el tercero decide, probablemente no estás ante mediación o conciliación, sino ante arbitraje o jurisdicción, tema de la clase siguiente.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c29-cpeum-art17-masc",
+            "ev-c29-lgmasc-arts1-5-definiciones",
+            "ev-c29-lgmasc-art6-principios",
+            "ev-c29-lgmasc-arts7-79-limites",
+            "ev-c29-lgmasc-art31-accesibilidad",
+            "ev-c29-lgmasc-arts81-85-restaurativa",
+            "ev-c29-lnmascmp-arts1-6-principios",
+            "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+            "ev-c29-lnmascmp-arts27-30-junta",
+            "ev-c29-lnmascmp-arts33-35-acuerdo",
+            "ev-c29-cnpp-arts184-190-acuerdo-reparatorio",
+            "ev-c29-a03-l023-031-panorama",
+            "ev-c29-a40-l007-015-mediacion-conciliacion",
+            "ev-c29-a40-l023-027-negociacion-directa",
+            "ev-c29-a40-l053-055-mecanismo-resultado"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Constitución vigente al 02-06-2026: artículo 17. LGMASC: nueva ley DOF 26-01-2024, sin reformas; artículos 1 a 7, 31, 79 y 81 a 85. LNMASCMP vigente al 01-04-2024: artículos 1 a 6, 21 a 30 y 33 a 35. CNPP vigente al 28-11-2025: artículos 184 y 186 a 190 para distinguir mecanismos y acuerdo reparatorio. Consulta oficial: 21 de agosto de 2026.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c29-cpeum-art17-masc",
+            "ev-c29-lgmasc-arts1-5-definiciones",
+            "ev-c29-lgmasc-art6-principios",
+            "ev-c29-lgmasc-arts7-79-limites",
+            "ev-c29-lgmasc-art31-accesibilidad",
+            "ev-c29-lgmasc-arts81-85-restaurativa",
+            "ev-c29-lnmascmp-arts1-6-principios",
+            "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+            "ev-c29-lnmascmp-arts27-30-junta",
+            "ev-c29-lnmascmp-arts33-35-acuerdo",
+            "ev-c29-cnpp-arts184-190-acuerdo-reparatorio"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Dos vecinos discuten por ruido. Si hablan y presentan propuestas entre sí, negocian. Si una facilitadora organiza el diálogo sin sugerir resultado, median. Si participa activamente para explorar horarios y medidas objetivas, concilian. En todos los casos, ellos deciden si aceptan.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c29-lgmasc-arts1-5-definiciones",
+            "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+            "ev-c29-a40-l007-015-mediacion-conciliacion",
+            "ev-c29-a40-l023-027-negociacion-directa"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo CENEVAL",
+          "content": "Un caso describe a un tercero que escucha, reformula y ayuda a que las partes generen sus propias opciones, sin proponer ni decidir. La respuesta es mediación. En materia penal, si el facilitador ofrece alternativas viables sin imponerlas, es conciliación; si dicta una decisión vinculante, no es ninguna de las dos.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c29-lgmasc-arts1-5-definiciones",
+            "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+            "ev-c29-a40-l007-015-mediacion-conciliacion"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Negociación: diálogo con o sin intermediarios. Mediación: facilitación imparcial, solución de las partes. Conciliación: facilitación activa; en materia penal puede incluir propuestas no obligatorias. Restaurativa: responsabilidad, reparación, reintegración y no repetición. Principios: voluntad, información, confidencialidad limitada, flexibilidad, imparcialidad, equidad, honestidad, legalidad y accesibilidad. Mecanismo es camino; convenio o acuerdo reparatorio es resultado jurídico.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c29-lgmasc-arts1-5-definiciones",
+            "ev-c29-lgmasc-art6-principios",
+            "ev-c29-lgmasc-arts7-79-limites",
+            "ev-c29-lgmasc-arts81-85-restaurativa",
+            "ev-c29-lnmascmp-arts1-6-principios",
+            "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+            "ev-c29-lnmascmp-arts27-30-junta",
+            "ev-c29-lnmascmp-arts33-35-acuerdo",
+            "ev-c29-cnpp-arts184-190-acuerdo-reparatorio",
+            "ev-c29-a03-l023-031-panorama",
+            "ev-c29-a40-l007-015-mediacion-conciliacion",
+            "ev-c29-a40-l023-027-negociacion-directa",
+            "ev-c29-a40-l053-055-mecanismo-resultado"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía intensiva de preguntas y respuestas",
+          "content": "1. ¿Base constitucional? Respuesta: artículo 17. 2. ¿Negociación? Respuesta: diálogo con o sin intermediarios. 3. ¿Quién decide en negociación? Respuesta: las partes. 4. ¿Mediación? Respuesta: facilitador imparcial sin imponer solución. 5. ¿Comediación? Respuesta: dos o más facilitadores. 6. ¿Conciliación? Respuesta: facilitador activo; en materia penal puede proponer. 7. ¿Propuesta obliga? Respuesta: no. 8. ¿Restaurativa? Respuesta: responsabilidad, reparación y no repetición. 9. ¿Junta penal? Respuesta: víctima, imputado y, en su caso, comunidad. 10. ¿Confidencialidad absoluta? Respuesta: no, tiene excepciones legales. 11. ¿Todo derecho es negociable? Respuesta: no, se excluyen derechos indisponibles. 12. ¿Mecanismo y acuerdo reparatorio son iguales? Respuesta: no; el primero es camino y el segundo una solución penal específica.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c29-cpeum-art17-masc",
+            "ev-c29-lgmasc-arts1-5-definiciones",
+            "ev-c29-lgmasc-art6-principios",
+            "ev-c29-lgmasc-arts7-79-limites",
+            "ev-c29-lgmasc-art31-accesibilidad",
+            "ev-c29-lgmasc-arts81-85-restaurativa",
+            "ev-c29-lnmascmp-arts1-6-principios",
+            "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+            "ev-c29-lnmascmp-arts27-30-junta",
+            "ev-c29-lnmascmp-arts33-35-acuerdo",
+            "ev-c29-cnpp-arts184-190-acuerdo-reparatorio",
+            "ev-c29-a03-l023-031-panorama",
+            "ev-c29-a40-l007-015-mediacion-conciliacion",
+            "ev-c29-a40-l023-027-negociacion-directa",
+            "ev-c29-a40-l053-055-mecanismo-resultado"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "MASC: vía alterna de gestión. Negociación: propuestas por diálogo. Intermediario: apoyo que no desplaza decisión. Mediación: facilitación imparcial. Comediación: pluralidad de facilitadores. Conciliación: intervención activa; en materia penal admite propuestas. Facilitador: tercero certificado. Autonomía: decisión libre. Confidencialidad: reserva con excepciones. Equidad: equilibrio entre partes. Derecho disponible: susceptible de convenio. Justicia restaurativa: reparación y responsabilidad. Junta restaurativa: mecanismo penal especializado. Convenio: resultado documentado. Acuerdo reparatorio: solución alterna penal.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c29-lgmasc-arts1-5-definiciones",
+            "ev-c29-lgmasc-art6-principios",
+            "ev-c29-lgmasc-arts7-79-limites",
+            "ev-c29-lgmasc-art31-accesibilidad",
+            "ev-c29-lgmasc-arts81-85-restaurativa",
+            "ev-c29-lnmascmp-arts1-6-principios",
+            "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+            "ev-c29-lnmascmp-arts27-30-junta",
+            "ev-c29-lnmascmp-arts33-35-acuerdo",
+            "ev-c29-cnpp-arts184-190-acuerdo-reparatorio",
+            "ev-c29-a40-l007-015-mediacion-conciliacion",
+            "ev-c29-a40-l023-027-negociacion-directa",
+            "ev-c29-a40-l053-055-mecanismo-resultado"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "No atribuyas todos los principios al texto constitucional. No digas que negociar siempre excluye intermediarios. No confundas mediador con conciliador. No permitas que facilitador imponga. No llames arbitraje a una propuesta conciliatoria. No afirmes que justicia restaurativa solo existe en penal. No exijas siempre comunidad en junta penal. No des por hecha la reunión conjunta: la ley penal exige evaluar su posibilidad y condiciones. No trates confidencialidad como absoluta. No convenir derechos indisponibles. No confundir mecanismo con convenio. No confundir mediación penal con acuerdo reparatorio ya aprobado.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c29-cpeum-art17-masc",
+            "ev-c29-lgmasc-arts1-5-definiciones",
+            "ev-c29-lgmasc-art6-principios",
+            "ev-c29-lgmasc-arts7-79-limites",
+            "ev-c29-lgmasc-arts81-85-restaurativa",
+            "ev-c29-lnmascmp-arts1-6-principios",
+            "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+            "ev-c29-lnmascmp-arts27-30-junta",
+            "ev-c29-lnmascmp-arts33-35-acuerdo",
+            "ev-c29-cnpp-arts184-190-acuerdo-reparatorio"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual: elegir el mecanismo alternativo",
+        "description": "Participantes, grado de intervención y resultado de cada ruta.",
+        "nodes": [
+          {
+            "id": "masc",
+            "label": "Solución alternativa",
+            "description": "Acceso a justicia por diálogo.",
+            "evidenceIds": [
+              "ev-c29-cpeum-art17-masc",
+              "ev-c29-lgmasc-arts1-5-definiciones"
+            ]
+          },
+          {
+            "id": "filtro",
+            "label": "Filtro de admisibilidad",
+            "description": "Antes de elegir mecanismo.",
+            "parentId": "masc",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts7-79-limites",
+              "ev-c29-lnmascmp-arts1-6-principios"
+            ]
+          },
+          {
+            "id": "materia",
+            "label": "Materia y competencia",
+            "description": "Aplicar la ley especializada.",
+            "parentId": "filtro",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts7-79-limites",
+              "ev-c29-lnmascmp-arts1-6-principios"
+            ]
+          },
+          {
+            "id": "disponible",
+            "label": "Derecho disponible",
+            "description": "No contrariar orden o interés público.",
+            "parentId": "filtro",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts7-79-limites"
+            ]
+          },
+          {
+            "id": "seguridad",
+            "label": "Seguridad y equilibrio",
+            "description": "Evitar coacción y revictimización.",
+            "parentId": "filtro",
+            "evidenceIds": [
+              "ev-c29-lgmasc-art6-principios",
+              "ev-c29-lnmascmp-arts1-6-principios",
+              "ev-c29-lnmascmp-arts27-30-junta"
+            ]
+          },
+          {
+            "id": "negociacion",
+            "label": "Negociación",
+            "description": "Diálogo y propuestas de las partes.",
+            "parentId": "masc",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-a40-l023-027-negociacion-directa"
+            ]
+          },
+          {
+            "id": "directa",
+            "label": "Por sí mismas",
+            "description": "Sin asistencia necesaria.",
+            "parentId": "negociacion",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-a40-l023-027-negociacion-directa"
+            ]
+          },
+          {
+            "id": "intermediarios",
+            "label": "Con intermediarios",
+            "description": "La ley también lo permite.",
+            "parentId": "negociacion",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones"
+            ]
+          },
+          {
+            "id": "oferta",
+            "label": "Oferta y contraoferta",
+            "description": "Herramientas de diálogo.",
+            "parentId": "negociacion",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-a40-l023-027-negociacion-directa"
+            ]
+          },
+          {
+            "id": "mediacion",
+            "label": "Mediación",
+            "description": "Facilitación imparcial.",
+            "parentId": "masc",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+              "ev-c29-a40-l007-015-mediacion-conciliacion"
+            ]
+          },
+          {
+            "id": "mediador",
+            "label": "Persona facilitadora",
+            "description": "Ordena y aclara comunicación.",
+            "parentId": "mediacion",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+              "ev-c29-a40-l007-015-mediacion-conciliacion"
+            ]
+          },
+          {
+            "id": "sin-proponer",
+            "label": "Sin imponer propuesta",
+            "description": "Partes construyen solución.",
+            "parentId": "mediacion",
+            "evidenceIds": [
+              "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+              "ev-c29-a40-l007-015-mediacion-conciliacion"
+            ]
+          },
+          {
+            "id": "comediacion",
+            "label": "Comediación",
+            "description": "Dos o más facilitadores.",
+            "parentId": "mediacion",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones"
+            ]
+          },
+          {
+            "id": "conciliacion",
+            "label": "Conciliación",
+            "description": "Participación activa.",
+            "parentId": "masc",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+              "ev-c29-a40-l007-015-mediacion-conciliacion"
+            ]
+          },
+          {
+            "id": "conciliador",
+            "label": "Facilitador activo",
+            "description": "Analiza escenarios.",
+            "parentId": "conciliacion",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+              "ev-c29-a40-l007-015-mediacion-conciliacion"
+            ]
+          },
+          {
+            "id": "propuestas",
+            "label": "Propone alternativas",
+            "description": "Objetivas y no obligatorias.",
+            "parentId": "conciliacion",
+            "evidenceIds": [
+              "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+              "ev-c29-a40-l007-015-mediacion-conciliacion"
+            ]
+          },
+          {
+            "id": "decision-partes",
+            "label": "Deciden las partes",
+            "description": "Aceptan, modifican o rechazan.",
+            "parentId": "conciliacion",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion"
+            ]
+          },
+          {
+            "id": "restaurativa",
+            "label": "Justicia restaurativa",
+            "description": "Atiende daño y relaciones.",
+            "parentId": "masc",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts81-85-restaurativa",
+              "ev-c29-lnmascmp-arts27-30-junta"
+            ]
+          },
+          {
+            "id": "responsabilidad",
+            "label": "Responsabilidad",
+            "description": "Reconocer efectos del conflicto.",
+            "parentId": "restaurativa",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts81-85-restaurativa",
+              "ev-c29-lnmascmp-arts27-30-junta"
+            ]
+          },
+          {
+            "id": "reparacion",
+            "label": "Reparación y restitución",
+            "description": "Dar, hacer o no hacer.",
+            "parentId": "restaurativa",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts81-85-restaurativa",
+              "ev-c29-lnmascmp-arts27-30-junta"
+            ]
+          },
+          {
+            "id": "no-repeticion",
+            "label": "No repetición",
+            "description": "Prevenir nuevo daño.",
+            "parentId": "restaurativa",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts81-85-restaurativa",
+              "ev-c29-lnmascmp-arts27-30-junta"
+            ]
+          },
+          {
+            "id": "junta",
+            "label": "Junta restaurativa penal",
+            "description": "Regulación especializada.",
+            "parentId": "restaurativa",
+            "evidenceIds": [
+              "ev-c29-lnmascmp-arts27-30-junta"
+            ]
+          },
+          {
+            "id": "victima",
+            "label": "Víctima u ofendido",
+            "description": "Expone daño y necesidades.",
+            "parentId": "junta",
+            "evidenceIds": [
+              "ev-c29-lnmascmp-arts27-30-junta"
+            ]
+          },
+          {
+            "id": "imputado",
+            "label": "Imputado",
+            "description": "Propone acciones reparadoras.",
+            "parentId": "junta",
+            "evidenceIds": [
+              "ev-c29-lnmascmp-arts27-30-junta"
+            ]
+          },
+          {
+            "id": "comunidad",
+            "label": "Comunidad, en su caso",
+            "description": "Participa si fue afectada.",
+            "parentId": "junta",
+            "evidenceIds": [
+              "ev-c29-lnmascmp-arts27-30-junta"
+            ]
+          },
+          {
+            "id": "principios",
+            "label": "Principios",
+            "description": "Protegen el proceso.",
+            "parentId": "masc",
+            "evidenceIds": [
+              "ev-c29-lgmasc-art6-principios",
+              "ev-c29-lnmascmp-arts1-6-principios"
+            ]
+          },
+          {
+            "id": "voluntad",
+            "label": "Voluntariedad e información",
+            "description": "Decisión libre y comprendida.",
+            "parentId": "principios",
+            "evidenceIds": [
+              "ev-c29-lgmasc-art6-principios",
+              "ev-c29-lnmascmp-arts1-6-principios"
+            ]
+          },
+          {
+            "id": "confidencialidad",
+            "label": "Confidencialidad limitada",
+            "description": "Reserva con excepciones legales.",
+            "parentId": "principios",
+            "evidenceIds": [
+              "ev-c29-lgmasc-art6-principios",
+              "ev-c29-lnmascmp-arts1-6-principios"
+            ]
+          },
+          {
+            "id": "imparcialidad",
+            "label": "Imparcialidad y equidad",
+            "description": "Sin ventajas indebidas.",
+            "parentId": "principios",
+            "evidenceIds": [
+              "ev-c29-lgmasc-art6-principios",
+              "ev-c29-lnmascmp-arts1-6-principios"
+            ]
+          },
+          {
+            "id": "accesibilidad",
+            "label": "Accesibilidad",
+            "description": "Ajustes y apoyos necesarios.",
+            "parentId": "principios",
+            "evidenceIds": [
+              "ev-c29-lgmasc-art31-accesibilidad"
+            ]
+          },
+          {
+            "id": "resultado",
+            "label": "Resultado posible",
+            "description": "Puede haber acuerdo o no.",
+            "parentId": "masc",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-lnmascmp-arts33-35-acuerdo",
+              "ev-c29-cnpp-arts184-190-acuerdo-reparatorio"
+            ]
+          },
+          {
+            "id": "convenio",
+            "label": "Convenio",
+            "description": "Efectos según registro y materia.",
+            "parentId": "resultado",
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-lnmascmp-arts33-35-acuerdo"
+            ]
+          },
+          {
+            "id": "acuerdo-penal",
+            "label": "Acuerdo reparatorio penal",
+            "description": "Requiere procedencia, aprobación y cumplimiento.",
+            "parentId": "resultado",
+            "evidenceIds": [
+              "ev-c29-lnmascmp-arts33-35-acuerdo",
+              "ev-c29-cnpp-arts184-190-acuerdo-reparatorio",
+              "ev-c29-a40-l053-055-mecanismo-resultado"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Artículo 17; últimas reformas DOF 02-06-2026",
+          "retrievedOn": "2026-08-21",
+          "note": "Fundamento constitucional; los principios y técnicas se desarrollan en las leyes aplicables."
+        },
+        {
+          "title": "Ley General de Mecanismos Alternativos de Solución de Controversias",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGMASC.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Nacional, México",
+          "citation": "Artículos 1 a 7, 31, 79 y 81 a 85; nueva ley DOF 26-01-2024, sin reformas",
+          "retrievedOn": "2026-08-21",
+          "note": "Régimen general de definiciones, principios, límites, accesibilidad y procesos restaurativos."
+        },
+        {
+          "title": "Ley Nacional de Mecanismos Alternativos de Solución de Controversias en Materia Penal",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LNMASCMP.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Nacional, México",
+          "citation": "Artículos 1 a 6, 21 a 30 y 33 a 35; última reforma DOF 01-04-2024",
+          "retrievedOn": "2026-08-21",
+          "note": "Régimen especializado de mediación, conciliación, junta restaurativa y acuerdos en materia penal."
+        },
+        {
+          "title": "Código Nacional de Procedimientos Penales",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Nacional, México",
+          "citation": "Artículos 184 y 186 a 190; última reforma DOF 28-11-2025",
+          "retrievedOn": "2026-08-21",
+          "note": "Distingue los mecanismos del acuerdo reparatorio y fija su procedencia, aprobación y efectos."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué ordena el artículo 17?",
+          "answer": "Que las leyes prevean mecanismos alternativos de solución de controversias.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c29-cpeum-art17-masc",
+            "ev-c29-lgmasc-arts1-5-definiciones"
+          ]
+        },
+        {
+          "question": "¿La negociación admite intermediarios?",
+          "answer": "Sí. Puede realizarse por las partes con o sin intermediarios.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c29-lgmasc-arts1-5-definiciones"
+          ]
+        },
+        {
+          "question": "¿Quién construye la solución en mediación?",
+          "answer": "Las propias partes con asistencia de una persona facilitadora imparcial.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c29-lgmasc-arts1-5-definiciones"
+          ]
+        },
+        {
+          "question": "¿Qué es comediación?",
+          "answer": "Mediación con dos o más personas facilitadoras.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c29-lgmasc-arts1-5-definiciones"
+          ]
+        },
+        {
+          "question": "¿Qué distingue a la conciliación?",
+          "answer": "La participación activa del facilitador; en materia penal puede proponer alternativas.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c29-lgmasc-arts1-5-definiciones",
+            "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion"
+          ]
+        },
+        {
+          "question": "¿Una propuesta conciliatoria obliga?",
+          "answer": "No. Las partes conservan autonomía para aceptarla o rechazarla.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c29-lgmasc-art6-principios",
+            "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion"
+          ]
+        },
+        {
+          "question": "¿Qué busca la justicia restaurativa?",
+          "answer": "Responsabilidad, reparación, restitución, reintegración y no repetición.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c29-lgmasc-arts81-85-restaurativa",
+            "ev-c29-lnmascmp-arts27-30-junta"
+          ]
+        },
+        {
+          "question": "¿Quién integra la junta penal?",
+          "answer": "Víctima u ofendido, imputado y, en su caso, comunidad afectada.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c29-lnmascmp-arts27-30-junta"
+          ]
+        },
+        {
+          "question": "¿Confidencialidad es absoluta?",
+          "answer": "No. Existen excepciones legales por delito en curso o inminente.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c29-lgmasc-art6-principios",
+            "ev-c29-lnmascmp-arts1-6-principios"
+          ]
+        },
+        {
+          "question": "¿Puede convenirse un derecho indisponible?",
+          "answer": "No. La admisibilidad exige que el derecho pueda ser objeto de convenio.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c29-lgmasc-arts7-79-limites"
+          ]
+        },
+        {
+          "question": "¿Mecanismo equivale a convenio?",
+          "answer": "No. El mecanismo es el proceso y el convenio es un posible resultado.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c29-lnmascmp-arts33-35-acuerdo",
+            "ev-c29-cnpp-arts184-190-acuerdo-reparatorio",
+            "ev-c29-a40-l053-055-mecanismo-resultado"
+          ]
+        },
+        {
+          "question": "¿Mediación equivale a acuerdo reparatorio?",
+          "answer": "No. La mediación puede conducir a él, pero el acuerdo tiene requisitos penales propios.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c29-lnmascmp-arts33-35-acuerdo",
+            "ev-c29-cnpp-arts184-190-acuerdo-reparatorio"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación: negociación, mediación, conciliación y restaurativa",
+        "description": "Diez casos originales para seleccionar la vía y aplicar sus principios.",
+        "questions": [
+          {
+            "text": "Dos comerciantes intercambian ofertas directamente. ¿Qué mecanismo utilizan?",
+            "difficulty": "basic",
+            "options": [
+              "Negociación",
+              "Mediación",
+              "Arbitraje"
+            ],
+            "correctOption": 0,
+            "explanation": "Las propias partes plantean soluciones mediante diálogo.",
+            "optionExplanations": [
+              "Describe negociación directa.",
+              "Falta una persona facilitadora imparcial.",
+              "Nadie dicta un laudo."
+            ],
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-a40-l023-027-negociacion-directa"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-a40-l023-027-negociacion-directa"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-a40-l023-027-negociacion-directa"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones",
+                "ev-c29-a40-l023-027-negociacion-directa"
+              ],
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones",
+                "ev-c29-a40-l023-027-negociacion-directa"
+              ],
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones",
+                "ev-c29-a40-l023-027-negociacion-directa"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones",
+                "ev-c29-a40-l023-027-negociacion-directa"
+              ],
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones",
+                "ev-c29-a40-l023-027-negociacion-directa"
+              ],
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones",
+                "ev-c29-a40-l023-027-negociacion-directa"
+              ]
+            ]
+          },
+          {
+            "text": "Un abogado transmite propuestas sin sustituir la decisión de las partes. ¿Sigue siendo negociación?",
+            "difficulty": "intermediate",
+            "options": [
+              "Sí, la ley admite intermediarios",
+              "No, siempre se vuelve mediación",
+              "No, se convierte en arbitraje"
+            ],
+            "correctOption": 0,
+            "explanation": "La definición general permite negociación con o sin intermediarios.",
+            "optionExplanations": [
+              "Conservan control de propuestas y resultado.",
+              "Un intermediario no es necesariamente facilitador certificado.",
+              "No existe decisión arbitral."
+            ],
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones"
+              ],
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones"
+              ],
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones"
+              ],
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones"
+              ],
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones"
+              ]
+            ]
+          },
+          {
+            "text": "La tercera persona reformula mensajes y ordena el diálogo sin sugerir soluciones. ¿Qué es?",
+            "difficulty": "basic",
+            "options": [
+              "Mediación",
+              "Conciliación",
+              "Sentencia"
+            ],
+            "correctOption": 0,
+            "explanation": "La facilitación imparcial sin propuesta caracteriza la mediación.",
+            "optionExplanations": [
+              "Es la función descrita.",
+              "En conciliación hay participación activa con alternativas.",
+              "No hay decisión jurisdiccional."
+            ],
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+              "ev-c29-a40-l007-015-mediacion-conciliacion"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+              "ev-c29-a40-l007-015-mediacion-conciliacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+              "ev-c29-a40-l007-015-mediacion-conciliacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones",
+                "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+                "ev-c29-a40-l007-015-mediacion-conciliacion"
+              ],
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones",
+                "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+                "ev-c29-a40-l007-015-mediacion-conciliacion"
+              ],
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones",
+                "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+                "ev-c29-a40-l007-015-mediacion-conciliacion"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones",
+                "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+                "ev-c29-a40-l007-015-mediacion-conciliacion"
+              ],
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones",
+                "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+                "ev-c29-a40-l007-015-mediacion-conciliacion"
+              ],
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones",
+                "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+                "ev-c29-a40-l007-015-mediacion-conciliacion"
+              ]
+            ]
+          },
+          {
+            "text": "En un conflicto penal, la facilitadora presenta tres opciones objetivas, pero deja la decisión a las partes. ¿Qué mecanismo corresponde?",
+            "difficulty": "intermediate",
+            "options": [
+              "Conciliación",
+              "Mediación pura",
+              "Arbitraje"
+            ],
+            "correctOption": 0,
+            "explanation": "La conciliación autoriza propuestas no vinculantes de solución.",
+            "optionExplanations": [
+              "Coincide con intervención activa.",
+              "La mediación no se centra en propuestas del tercero.",
+              "El árbitro resuelve mediante laudo."
+            ],
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+              "ev-c29-a40-l007-015-mediacion-conciliacion"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+              "ev-c29-a40-l007-015-mediacion-conciliacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c29-lgmasc-arts1-5-definiciones",
+              "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+              "ev-c29-a40-l007-015-mediacion-conciliacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones",
+                "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+                "ev-c29-a40-l007-015-mediacion-conciliacion"
+              ],
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones",
+                "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+                "ev-c29-a40-l007-015-mediacion-conciliacion"
+              ],
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones",
+                "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+                "ev-c29-a40-l007-015-mediacion-conciliacion"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones",
+                "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+                "ev-c29-a40-l007-015-mediacion-conciliacion"
+              ],
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones",
+                "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+                "ev-c29-a40-l007-015-mediacion-conciliacion"
+              ],
+              [
+                "ev-c29-lgmasc-arts1-5-definiciones",
+                "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+                "ev-c29-a40-l007-015-mediacion-conciliacion"
+              ]
+            ]
+          },
+          {
+            "text": "En un conflicto penal se afectó también al vecindario. Víctima, imputado y representantes desean reparar el tejido social. ¿Qué vía encaja?",
+            "difficulty": "intermediate",
+            "options": [
+              "Junta restaurativa",
+              "Negociación bursátil",
+              "Recurso de apelación"
+            ],
+            "correctOption": 0,
+            "explanation": "La junta penal atiende necesidades individuales, colectivas y reintegración.",
+            "optionExplanations": [
+              "Es el diseño legal adecuado.",
+              "No tiene relación con el daño penal comunitario.",
+              "No busca construir reparación consensuada."
+            ],
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts81-85-restaurativa",
+              "ev-c29-lnmascmp-arts27-30-junta"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c29-lgmasc-arts81-85-restaurativa",
+              "ev-c29-lnmascmp-arts27-30-junta"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c29-lgmasc-arts81-85-restaurativa",
+              "ev-c29-lnmascmp-arts27-30-junta"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c29-lgmasc-arts81-85-restaurativa",
+                "ev-c29-lnmascmp-arts27-30-junta"
+              ],
+              [
+                "ev-c29-lgmasc-arts81-85-restaurativa",
+                "ev-c29-lnmascmp-arts27-30-junta"
+              ],
+              [
+                "ev-c29-lgmasc-arts81-85-restaurativa",
+                "ev-c29-lnmascmp-arts27-30-junta"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c29-lgmasc-arts81-85-restaurativa",
+                "ev-c29-lnmascmp-arts27-30-junta"
+              ],
+              [
+                "ev-c29-lgmasc-arts81-85-restaurativa",
+                "ev-c29-lnmascmp-arts27-30-junta"
+              ],
+              [
+                "ev-c29-lgmasc-arts81-85-restaurativa",
+                "ev-c29-lnmascmp-arts27-30-junta"
+              ]
+            ]
+          },
+          {
+            "text": "¿La comunidad debe acudir a toda junta restaurativa penal?",
+            "difficulty": "advanced",
+            "options": [
+              "No, participa en su caso",
+              "Sí, siempre es obligatoria",
+              "Solo si decide el imputado"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 27 usa expresamente la fórmula «en su caso».",
+            "optionExplanations": [
+              "Depende de afectación y viabilidad.",
+              "La ley no establece universalidad.",
+              "No depende unilateralmente del imputado."
+            ],
+            "evidenceIds": [
+              "ev-c29-lnmascmp-arts27-30-junta"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c29-lnmascmp-arts27-30-junta"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c29-lnmascmp-arts27-30-junta"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c29-lnmascmp-arts27-30-junta"
+              ],
+              [
+                "ev-c29-lnmascmp-arts27-30-junta"
+              ],
+              [
+                "ev-c29-lnmascmp-arts27-30-junta"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c29-lnmascmp-arts27-30-junta"
+              ],
+              [
+                "ev-c29-lnmascmp-arts27-30-junta"
+              ],
+              [
+                "ev-c29-lnmascmp-arts27-30-junta"
+              ]
+            ]
+          },
+          {
+            "text": "Durante mediación penal se revela un delito inminente que amenaza la vida. ¿Debe guardarse silencio absoluto?",
+            "difficulty": "advanced",
+            "options": [
+              "No, opera la excepción legal",
+              "Sí, sin excepción",
+              "Solo si las partes firman otro convenio"
+            ],
+            "correctOption": 0,
+            "explanation": "La confidencialidad cede ante el supuesto de peligro previsto por la ley.",
+            "optionExplanations": [
+              "Protege integridad y vida.",
+              "Ignora la excepción expresa.",
+              "La obligación legal no depende de un pacto nuevo."
+            ],
+            "evidenceIds": [
+              "ev-c29-lnmascmp-arts1-6-principios"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c29-lnmascmp-arts1-6-principios"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c29-lnmascmp-arts1-6-principios"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c29-lnmascmp-arts1-6-principios"
+              ],
+              [
+                "ev-c29-lnmascmp-arts1-6-principios"
+              ],
+              [
+                "ev-c29-lnmascmp-arts1-6-principios"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c29-lnmascmp-arts1-6-principios"
+              ],
+              [
+                "ev-c29-lnmascmp-arts1-6-principios"
+              ],
+              [
+                "ev-c29-lnmascmp-arts1-6-principios"
+              ]
+            ]
+          },
+          {
+            "text": "Las partes quieren negociar un derecho que legalmente no pueden disponer. ¿Es admisible?",
+            "difficulty": "intermediate",
+            "options": [
+              "No",
+              "Sí, por autonomía absoluta",
+              "Sí, si hay facilitador"
+            ],
+            "correctOption": 0,
+            "explanation": "La autonomía opera dentro de la ley y excluye derechos indisponibles.",
+            "optionExplanations": [
+              "Es el límite correcto.",
+              "La autonomía no supera orden público.",
+              "El facilitador no vuelve disponible el derecho."
+            ],
+            "evidenceIds": [
+              "ev-c29-lgmasc-arts7-79-limites"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c29-lgmasc-arts7-79-limites"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c29-lgmasc-arts7-79-limites"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c29-lgmasc-arts7-79-limites"
+              ],
+              [
+                "ev-c29-lgmasc-arts7-79-limites"
+              ],
+              [
+                "ev-c29-lgmasc-arts7-79-limites"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c29-lgmasc-arts7-79-limites"
+              ],
+              [
+                "ev-c29-lgmasc-arts7-79-limites"
+              ],
+              [
+                "ev-c29-lgmasc-arts7-79-limites"
+              ]
+            ]
+          },
+          {
+            "text": "Una mediación penal produce un texto firmado. ¿Ya es automáticamente acuerdo reparatorio eficaz?",
+            "difficulty": "advanced",
+            "options": [
+              "No, requiere procedencia, aprobación y cumplimiento",
+              "Sí, toda firma extingue la acción",
+              "Sí, aunque el delito no lo permita"
+            ],
+            "correctOption": 0,
+            "explanation": "El mecanismo puede construir el contenido, pero el CNPP determina eficacia penal.",
+            "optionExplanations": [
+              "Distingue camino y resultado jurídico.",
+              "La firma no basta.",
+              "La procedencia es indispensable."
+            ],
+            "evidenceIds": [
+              "ev-c29-lnmascmp-arts33-35-acuerdo",
+              "ev-c29-cnpp-arts184-190-acuerdo-reparatorio",
+              "ev-c29-a40-l053-055-mecanismo-resultado"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c29-lnmascmp-arts33-35-acuerdo",
+              "ev-c29-cnpp-arts184-190-acuerdo-reparatorio",
+              "ev-c29-a40-l053-055-mecanismo-resultado"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c29-lnmascmp-arts33-35-acuerdo",
+              "ev-c29-cnpp-arts184-190-acuerdo-reparatorio",
+              "ev-c29-a40-l053-055-mecanismo-resultado"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c29-lnmascmp-arts33-35-acuerdo",
+                "ev-c29-cnpp-arts184-190-acuerdo-reparatorio",
+                "ev-c29-a40-l053-055-mecanismo-resultado"
+              ],
+              [
+                "ev-c29-lnmascmp-arts33-35-acuerdo",
+                "ev-c29-cnpp-arts184-190-acuerdo-reparatorio",
+                "ev-c29-a40-l053-055-mecanismo-resultado"
+              ],
+              [
+                "ev-c29-lnmascmp-arts33-35-acuerdo",
+                "ev-c29-cnpp-arts184-190-acuerdo-reparatorio",
+                "ev-c29-a40-l053-055-mecanismo-resultado"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c29-lnmascmp-arts33-35-acuerdo",
+                "ev-c29-cnpp-arts184-190-acuerdo-reparatorio",
+                "ev-c29-a40-l053-055-mecanismo-resultado"
+              ],
+              [
+                "ev-c29-lnmascmp-arts33-35-acuerdo",
+                "ev-c29-cnpp-arts184-190-acuerdo-reparatorio",
+                "ev-c29-a40-l053-055-mecanismo-resultado"
+              ],
+              [
+                "ev-c29-lnmascmp-arts33-35-acuerdo",
+                "ev-c29-cnpp-arts184-190-acuerdo-reparatorio",
+                "ev-c29-a40-l053-055-mecanismo-resultado"
+              ]
+            ]
+          },
+          {
+            "text": "Dos partes mayores con discapacidad requieren participar. ¿Qué debe garantizarse?",
+            "difficulty": "advanced",
+            "options": [
+              "Ajustes razonables y apoyos de accesibilidad",
+              "Sustitución automática de su voluntad",
+              "Exclusión del mecanismo"
+            ],
+            "correctOption": 0,
+            "explanation": "La LGMASC exige accesibilidad y ejercicio pleno de capacidad jurídica.",
+            "optionExplanations": [
+              "Facilita participación efectiva.",
+              "Los apoyos no sustituyen voluntad automáticamente.",
+              "La discapacidad no justifica excluir."
+            ],
+            "evidenceIds": [
+              "ev-c29-lgmasc-art31-accesibilidad"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c29-lgmasc-art31-accesibilidad"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c29-lgmasc-art31-accesibilidad"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c29-lgmasc-art31-accesibilidad"
+              ],
+              [
+                "ev-c29-lgmasc-art31-accesibilidad"
+              ],
+              [
+                "ev-c29-lgmasc-art31-accesibilidad"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c29-lgmasc-art31-accesibilidad"
+              ],
+              [
+                "ev-c29-lgmasc-art31-accesibilidad"
+              ],
+              [
+                "ev-c29-lgmasc-art31-accesibilidad"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c29-cpeum-art17-masc",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículo 17, párrafo sobre mecanismos alternativos, reparación penal y supervisión judicial"
+    },
+    {
+      "id": "ev-c29-lgmasc-arts1-5-definiciones",
+      "kind": "official",
+      "title": "Ley General de Mecanismos Alternativos de Solución de Controversias",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGMASC.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente; nueva ley DOF 26-01-2024, sin reforma posterior; artículos 1 a 5, definiciones de negociación, mediación, conciliación, arbitraje, facilitador, convenio y MASC"
+    },
+    {
+      "id": "ev-c29-lgmasc-art6-principios",
+      "kind": "official",
+      "title": "Ley General de Mecanismos Alternativos de Solución de Controversias",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGMASC.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente; nueva ley DOF 26-01-2024; artículo 6, principios y excepción expresa a la confidencialidad"
+    },
+    {
+      "id": "ev-c29-lgmasc-arts7-79-limites",
+      "kind": "official",
+      "title": "Ley General de Mecanismos Alternativos de Solución de Controversias",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGMASC.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente; nueva ley DOF 26-01-2024; artículos 7 y 79, orden público, interés público, derechos indisponibles, renunciables y de terceros"
+    },
+    {
+      "id": "ev-c29-lgmasc-art31-accesibilidad",
+      "kind": "official",
+      "title": "Ley General de Mecanismos Alternativos de Solución de Controversias",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGMASC.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente; nueva ley DOF 26-01-2024; artículo 31, ajustes razonables, formatos alternativos, apoyos y capacidad jurídica plena"
+    },
+    {
+      "id": "ev-c29-lgmasc-arts81-85-restaurativa",
+      "kind": "official",
+      "title": "Ley General de Mecanismos Alternativos de Solución de Controversias",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGMASC.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente; nueva ley DOF 26-01-2024; artículos 81 a 85, objetivos, resultados y participación posible en procesos restaurativos"
+    },
+    {
+      "id": "ev-c29-lnmascmp-arts1-6-principios",
+      "kind": "official",
+      "title": "Ley Nacional de Mecanismos Alternativos de Solución de Controversias en Materia Penal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LNMASCMP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 01-04-2024; artículos 1 a 6, objeto, mecanismos penales, principios, confidencialidad, procedencia y oportunidad"
+    },
+    {
+      "id": "ev-c29-lnmascmp-arts21-26-mediacion-conciliacion",
+      "kind": "official",
+      "title": "Ley Nacional de Mecanismos Alternativos de Solución de Controversias en Materia Penal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LNMASCMP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 01-04-2024; artículos 21 a 26, mediación y conciliación penal"
+    },
+    {
+      "id": "ev-c29-lnmascmp-arts27-30-junta",
+      "kind": "official",
+      "title": "Ley Nacional de Mecanismos Alternativos de Solución de Controversias en Materia Penal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LNMASCMP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 01-04-2024; artículos 27 a 30, junta restaurativa, participación en su caso, preparación, reparación y sustitución"
+    },
+    {
+      "id": "ev-c29-lnmascmp-arts33-35-acuerdo",
+      "kind": "official",
+      "title": "Ley Nacional de Mecanismos Alternativos de Solución de Controversias en Materia Penal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LNMASCMP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 01-04-2024; artículos 33 a 35, requisitos, efectos y cumplimiento del acuerdo"
+    },
+    {
+      "id": "ev-c29-cnpp-arts184-190-acuerdo-reparatorio",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Penales",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21",
+      "locator": "texto vigente, última reforma DOF 28-11-2025; artículos 184 y 186 a 190, naturaleza, procedencia, oportunidad, trámite y efectos del acuerdo reparatorio"
+    },
+    {
+      "id": "ev-c29-a03-l023-031-panorama",
+      "kind": "transcript",
+      "audioNumber": 3,
+      "locator": {
+        "type": "line_range",
+        "startLine": 23,
+        "endLine": 31
+      }
+    },
+    {
+      "id": "ev-c29-a40-l007-015-mediacion-conciliacion",
+      "kind": "transcript",
+      "audioNumber": 40,
+      "locator": {
+        "type": "line_range",
+        "startLine": 7,
+        "endLine": 15
+      }
+    },
+    {
+      "id": "ev-c29-a40-l023-027-negociacion-directa",
+      "kind": "transcript",
+      "audioNumber": 40,
+      "locator": {
+        "type": "line_range",
+        "startLine": 23,
+        "endLine": 27
+      }
+    },
+    {
+      "id": "ev-c29-a40-l053-055-mecanismo-resultado",
+      "kind": "transcript",
+      "audioNumber": 40,
+      "locator": {
+        "type": "line_range",
+        "startLine": 53,
+        "endLine": 55
+      }
+    }
+  ]
 }
