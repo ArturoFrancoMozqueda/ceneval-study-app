@@ -2,6 +2,7 @@ import "server-only";
 
 import { connection } from "next/server";
 import { requireUser } from "@/lib/auth";
+import { relationRows } from "@/lib/data/relation-rows";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 import {
   getLatestFlashcardReviews,
@@ -187,6 +188,16 @@ type SubjectRow = {
   id: number;
   name: string;
   description: string | null;
+  classes?:
+    | Array<{
+        id: number;
+        topics?: Array<{ id: number }> | { id: number } | null;
+      }>
+    | {
+        id: number;
+        topics?: Array<{ id: number }> | { id: number } | null;
+      }
+    | null;
 };
 
 type ClassRow = {
@@ -205,6 +216,11 @@ type ClassRow = {
     fragment: string | null;
     position: number;
   }> | null;
+};
+
+type ClassOverviewRow = ClassRow & {
+  transcripts?: Array<{ id: number }> | { id: number } | null;
+  topics?: Array<{ id: number }> | { id: number } | null;
 };
 
 function fail(operation: string, message: string): never {
@@ -240,42 +256,32 @@ function toClass(
 
 const classSelection =
   "id,subject_id,title,class_date,teacher,description,publication_status,published_at,curriculum_code,curriculum_order,class_audio_sources(audio_number,fragment,position)";
+const subjectOverviewSelection =
+  "id,name,description,classes(id,topics(id))";
+const classOverviewSelection =
+  `${classSelection},transcripts(id),topics(id)`;
 
 export async function getSubjects(): Promise<Subject[]> {
   await connection();
   const supabase = await createServerSupabaseClient();
-  const [subjectsResult, classesResult, topicsResult] = await Promise.all([
-    supabase
-      .from("subjects")
-      .select("id,name,description")
-      .order("name", { ascending: true }),
-    supabase.from("classes").select("id,subject_id"),
-    supabase.from("topics").select("class_id"),
-  ]);
+  const subjectsResult = await supabase
+    .from("subjects")
+    .select(subjectOverviewSelection)
+    .order("name", { ascending: true });
 
   if (subjectsResult.error) fail("getSubjects", subjectsResult.error.message);
-  if (classesResult.error) {
-    fail("getSubjects classes", classesResult.error.message);
-  }
-  if (topicsResult.error) fail("getSubjects topics", topicsResult.error.message);
-
-  const classes = (classesResult.data ?? []) as {
-    id: number;
-    subject_id: number;
-  }[];
-  const topics = (topicsResult.data ?? []) as { class_id: number }[];
 
   return ((subjectsResult.data ?? []) as SubjectRow[]).map((subject) => {
-    const subjectClasses = classes.filter(
-      (studyClass) => studyClass.subject_id === subject.id,
-    );
-    const classIds = new Set(subjectClasses.map(({ id }) => id));
+    const subjectClasses = relationRows(subject.classes);
     return {
       id: subject.id,
       name: subject.name,
       description: subject.description ?? "",
       classCount: subjectClasses.length,
-      topicCount: topics.filter(({ class_id }) => classIds.has(class_id)).length,
+      topicCount: subjectClasses.reduce(
+        (total, studyClass) => total + relationRows(studyClass.topics).length,
+        0,
+      ),
     };
   });
 }
@@ -288,39 +294,22 @@ export async function getSubject(subjectId: number) {
 export async function getClassesForSubject(subjectId: number) {
   await connection();
   const supabase = await createServerSupabaseClient();
-  const [classesResult, transcriptsResult, topicsResult] = await Promise.all([
-    supabase
-      .from("classes")
-      .select(
-        classSelection,
-      )
-      .eq("subject_id", subjectId)
-      .order("published_at", { ascending: false, nullsFirst: false })
-      .order("created_at", { ascending: false }),
-    supabase.from("transcripts").select("class_id"),
-    supabase.from("topics").select("class_id"),
-  ]);
+  const classesResult = await supabase
+    .from("classes")
+    .select(classOverviewSelection)
+    .eq("subject_id", subjectId)
+    .order("published_at", { ascending: false, nullsFirst: false })
+    .order("created_at", { ascending: false });
 
   if (classesResult.error) {
     fail("getClassesForSubject", classesResult.error.message);
   }
-  if (transcriptsResult.error) {
-    fail("getClassesForSubject transcripts", transcriptsResult.error.message);
-  }
-  if (topicsResult.error) {
-    fail("getClassesForSubject topics", topicsResult.error.message);
-  }
 
-  const transcriptIds = new Set(
-    (transcriptsResult.data ?? []).map(({ class_id }) => class_id as number),
-  );
-  const topics = (topicsResult.data ?? []) as { class_id: number }[];
-
-  return ((classesResult.data ?? []) as ClassRow[]).map((row) =>
+  return ((classesResult.data ?? []) as ClassOverviewRow[]).map((row) =>
     toClass(
       row,
-      topics.filter(({ class_id }) => class_id === row.id).length,
-      transcriptIds.has(row.id),
+      relationRows(row.topics).length,
+      relationRows(row.transcripts).length > 0,
     ),
   );
 }
