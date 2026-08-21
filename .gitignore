@@ -16,6 +16,9 @@
 # database backups (may contain private user and study data)
 /backups/supabase/
 
+# local Supabase CLI runtime (generated containers, secrets and bundles)
+/supabase/.temp/
+
 # next.js
 /.next/
 /out/

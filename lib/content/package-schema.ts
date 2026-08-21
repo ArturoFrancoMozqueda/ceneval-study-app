@@ -588,7 +588,7 @@ export const classPackageFileSchema = z.discriminatedUnion("packageVersion", [
   traceablePackageSchema.safeExtend({ transcript: transcriptFileSchema }),
 ]);
 
-export const importableClassPackageSchema = currentPackageSchema.extend({
+export const importableClassPackageSchema = traceablePackageSchema.safeExtend({
   transcript: z.object({
     original: z
       .string()

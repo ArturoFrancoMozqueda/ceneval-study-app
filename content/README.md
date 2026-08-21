@@ -82,9 +82,11 @@ Cada paquete contiene:
 - cuatro opciones y una respuesta correcta por pregunta;
 - explicación general y de cada opción.
 
-Si cualquier parte o evidencia falta, el validador detiene el flujo. Mientras
-la persistencia de `evidenceRegistry` no esté implementada, el importador
-rechaza también paquetes 1.2 antes de cualquier escritura remota.
+Si cualquier parte o evidencia falta, el validador detiene el flujo. El
+importador acepta exclusivamente paquetes 1.2 validados y delega toda la
+escritura a una sola RPC transaccional; 1.0 y 1.1 fallan antes de cualquier
+llamada remota. La importación real requiere aplicar primero la migración en un
+proyecto de ensayo autorizado.
 
 ## Regla de cobertura total
 

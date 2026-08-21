@@ -230,7 +230,7 @@ test("la evidencia de transcripción debe pertenecer a los audios curriculares",
   );
 });
 
-test("el importador impide que cualquier contrato actual alcance Supabase", () => {
+test("el importador permite solo el contrato trazable 1.2", () => {
   assert.throws(
     () => assertPackageCanReachSupabase({ packageVersion: "1.0" }),
     /histórico.*no importable.*1\.2/,
@@ -239,24 +239,23 @@ test("el importador impide que cualquier contrato actual alcance Supabase", () =
     () => assertPackageCanReachSupabase({ packageVersion: "1.1" }),
     /legible.*no es trazable ni importable/,
   );
-  assert.throws(
-    () => assertPackageCanReachSupabase({ packageVersion: "1.2" }),
-    /evidenceRegistry todavía no se persiste.*ninguna escritura/,
+  assert.doesNotThrow(() =>
+    assertPackageCanReachSupabase({ packageVersion: "1.2" }),
   );
 });
 
-test("el script aplica el bloqueo antes de crear el cliente y deja temas pendientes", () => {
+test("el script valida 1.2 antes de crear el cliente y usa una sola RPC", () => {
   const importScript = readFileSync(
     path.join(process.cwd(), "scripts", "import-content.ts"),
     "utf8",
   );
   const gatePosition = importScript.indexOf(
-    "assertPackageCanReachSupabase(loadedBundle)",
+    "parseImportableClassPackage(loadedBundle)",
   );
   const clientPosition = importScript.indexOf("const supabase = createClient(");
 
   assert.ok(gatePosition >= 0);
   assert.ok(clientPosition > gatePosition);
-  assert.match(importScript, /approval_status: "pending"/);
-  assert.doesNotMatch(importScript, /approval_status: "approved"/);
+  assert.match(importScript, /importClassPackage/);
+  assert.doesNotMatch(importScript, /\.from\(/);
 });

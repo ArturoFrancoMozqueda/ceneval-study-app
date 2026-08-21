@@ -1,8 +1,9 @@
 # Estado actual y siguientes pasos — CENEVAL Study App
 
-Última actualización: 20 de agosto de 2026
+Última actualización: 21 de agosto de 2026
 
-Base documental: `origin/main` en `772dfd3`
+Base documental: `origin/main` en `d63d78d`, con trabajo 1.2 en la rama
+`feature/persistencia-evidencia-12`
 
 Responsables: Fatima (administración y validación) y Codex (desarrollo y contenido)
 
@@ -62,9 +63,10 @@ decisión no añade infraestructura ni reemplaza los gates operativos vigentes.
 
 ## 2. Inventario académico conocido
 
-La lectura del proyecto remoto **CENEVAL Study App** realizada el 20 de agosto
-de 2026 confirmó **0 usuarios, 0 materias, 0 clases y 0 temas**. Sus once
-migraciones están aplicadas y todas las tablas públicas tienen RLS.
+La lectura del proyecto remoto **CENEVAL Study App** realizada el 21 de agosto
+de 2026 confirmó **1 fila en `profiles`, 0 materias, 0 clases y 0 temas**. Esa
+fila no demuestra por sí sola que el acceso administrativo esté operativo. Sus
+once migraciones están aplicadas y todas las tablas públicas tienen RLS.
 
 La auditoría del 12 de agosto registró el siguiente inventario en una base
 anterior, pero esos datos no están presentes en el proyecto CENEVAL conectado:
@@ -186,12 +188,18 @@ El contrato 1.2 añade el gate de confianza editorial:
 
 Los 40 paquetes C01–C40 tienen código, orden y fuentes portables en 1.1, pero
 no pasan el nuevo gate. C01 permanece sin migrar porque faltan localizadores
-verificables; no se inventó evidencia. El importador bloquea paquetes 1.2 antes
-de escribir hasta que `evidenceRegistry` pueda persistirse sin pérdida. La
-versión sustituida de C14 permanece en el archivo 1.0 no importable.
+verificables; no se inventó evidencia. El importador acepta exclusivamente 1.2
+y delega la escritura a una única RPC transaccional que persiste el registro de
+evidencias, journeys y vínculos editoriales; 1.0 y 1.1 fallan antes de llamar a
+Supabase. La versión sustituida de C14 permanece en el archivo 1.0 no
+importable.
 
-La corrección está probada de forma local a nivel de esquema y código, pero C41
-aún no se ha importado para demostrar el recorrido completo en la base remota.
+La implementación pasó pruebas unitarias, TypeScript, lint y build. Las trece
+migraciones locales se aplicaron desde cero en PostgreSQL 17.6 y el runner
+dinámico comprobó round-trip semántico, 2 evidencias, 118 artefactos, 236
+vínculos, estados `draft`/`pending`, rechazo de duplicados sin residuos y RPC
+denegadas a `anon` y `authenticated`. La migración todavía no está aplicada en
+el proyecto remoto; C01 y C41 no se han importado.
 
 ### Controles editoriales concurrentes
 
@@ -362,12 +370,14 @@ Además siguen pendientes tres bancos transversales y 16 exámenes acumulativos.
 3. Ampliar y ejecutar `npm run security:rls` en el proyecto CENEVAL y
    registrar el resultado. Esta suite crea y elimina datos remotos; no
    pertenece a CI.
-4. Completar persistencia 1.2 y migrar C01 con evidencia real verificable.
+4. Aplicar la persistencia 1.2 ya aprobada localmente en un proyecto de ensayo;
+   luego migrar C01 con evidencia real verificable.
 
 ### Prioridad 1 — Demostrar el pipeline con C01
 
 1. Incorporar localizadores reales y migrar C01 al contrato 1.2.
-2. Persistir el registro de evidencias sin pérdidas.
+2. Verificar por round-trip dinámico que el registro de evidencias persiste sin
+   pérdidas.
 3. Revisar vigencia jurídica y conteos editoriales.
 4. Publicar solo después de la revisión autorizada.
 5. Comprobar localmente el recorrido borrador, revisión, aprobación y publicación.
@@ -408,7 +418,7 @@ publicación, navegación y un commit por unidad de trabajo.
 | 1 | Completar el respaldo de transcripciones | Segunda copia independiente y restauración de ensayo |
 | 2 | Ejecutar y probar el respaldo documentado | Exportación fechada, copia externa verificada y restauración de ensayo |
 | 3 | Ampliar y ejecutar la suite RLS | Comprobaciones actuales y casos de temas no aprobados aprobados en CENEVAL |
-| 4 | Completar persistencia del contrato 1.2 | Evidencias guardadas sin pérdida y pruebas aprobadas |
+| 4 | Aplicar la persistencia 1.2 en un proyecto de ensayo | Migración remota de ensayo, round-trip y RLS aprobados antes de producción |
 | 5 | Migrar y aprobar C01 | Recorrido local trazable completo sin evidencia inventada |
 | 6 | Crear pruebas de navegador | Flujos centrales reproducibles en CI o entorno aislado |
 | 7 | Completar y validar el despliegue privado | Variables persistentes, administradora operativa y URL estable aprobada desde teléfono y computadora |
@@ -440,5 +450,6 @@ contenido o escribir en la base remota:
 
 1. crear una segunda copia independiente del archivo editorial y ensayar su restauración;
 2. ejecutar y completar el procedimiento de `docs/SUPABASE_BACKUP.md`;
-3. persistir `evidenceRegistry` para paquetes 1.2 sin descartar información;
+3. aplicar las migraciones en un proyecto de ensayo y repetir el gate dinámico
+   antes de promoverlas a CENEVAL;
 4. obtener localizadores verificables y migrar C01 antes de C41.

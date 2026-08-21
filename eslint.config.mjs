@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Supabase CLI materializes bundled third-party services here.
+    "supabase/.temp/**",
   ]),
 ]);
 
