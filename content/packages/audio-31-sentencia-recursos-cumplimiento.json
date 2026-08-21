@@ -1,10 +1,13 @@
 {
-  "packageVersion": "1.1",
+  "packageVersion": "1.2",
   "curriculum": {
     "code": "C23",
     "order": 23,
     "audioSources": [
-      {"audioNumber": 31,"fragment": "Audio completo"}
+      {
+        "audioNumber": 31,
+        "fragment": "Audio completo"
+      }
     ]
   },
   "subject": {
@@ -26,149 +29,1731 @@
       "learningJourney": {
         "openingPrompt": "El TFJA anula un crédito fiscal, la autoridad emite otro acto que repite el vicio y la persona afectada quiere defenderse. ¿Debe interponer reclamación, queja, revisión o amparo directo?",
         "quickChecks": [
-          {"prompt": "¿Toda revocación administrativa produce sobreseimiento?", "answer": "No. Si la autoridad deja sin efecto el acto, el sobreseimiento exige que también satisfaga la pretensión de la persona demandante.", "feedback": "Distingue desaparición formal del acto y satisfacción material de lo pedido."},
-          {"prompt": "¿La queja del artículo 58 sustituye al amparo directo?", "answer": "No. La queja asegura el cumplimiento del fallo; el amparo directo controla una sentencia definitiva o resolución que pone fin al juicio.", "feedback": "Identifica siempre el acto que se combate y quién lo emitió."},
-          {"prompt": "¿La autoridad puede interponer revisión contra cualquier sentencia?", "answer": "No. Debe encuadrar el asunto en alguno de los supuestos del artículo 63 de la LFPCA.", "feedback": "La calidad de autoridad no vuelve automática la procedencia."}
+          {
+            "prompt": "¿Toda revocación administrativa produce sobreseimiento?",
+            "answer": "No. Si la autoridad deja sin efecto el acto, el sobreseimiento exige que también satisfaga la pretensión de la persona demandante.",
+            "feedback": "Distingue desaparición formal del acto y satisfacción material de lo pedido.",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-art9-sobreseimiento",
+              "ev-c23-a31-l065-069-sobreseimiento",
+              "ev-c23-lfpca-arts51-52-nulidad",
+              "ev-c23-lfpca-art63-revision",
+              "ev-c23-a31-l193-203-revision-queja"
+            ]
+          },
+          {
+            "prompt": "¿La queja del artículo 58 sustituye al amparo directo?",
+            "answer": "No. La queja asegura el cumplimiento del fallo; el amparo directo controla una sentencia definitiva o resolución que pone fin al juicio.",
+            "feedback": "Identifica siempre el acto que se combate y quién lo emitió.",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo",
+              "ev-c23-lamp-arts61xx-170-amparo-directo",
+              "ev-c23-a31-l011-015-particular-autoridad",
+              "ev-c23-a31-l279-287-queja-amparo"
+            ]
+          },
+          {
+            "prompt": "¿La autoridad puede interponer revisión contra cualquier sentencia?",
+            "answer": "No. Debe encuadrar el asunto en alguno de los supuestos del artículo 63 de la LFPCA.",
+            "feedback": "La calidad de autoridad no vuelve automática la procedencia.",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lfpca-art63-revision",
+              "ev-c23-a31-l193-203-revision-queja"
+            ]
+          }
         ],
         "practicalCase": {
           "facts": "Una Sala del TFJA declara la nulidad para efectos de un crédito fiscal y ordena emitir una nueva resolución. La sentencia queda firme. La autoridad emite dentro del plazo un nuevo acto, pero repite indebidamente lo anulado.",
           "question": "¿Qué mecanismo procede y qué debe demostrar la persona afectada?",
           "legalRule": "El artículo 58, fracción II, de la LFPCA permite queja contra la repetición indebida del acto anulado y contra exceso o defecto en el cumplimiento; por regla general se presenta dentro de quince días desde que surte efectos la notificación del acto que la provoca.",
           "reasoning": "La controversia no se dirige contra una mera actuación de trámite ni contra la sentencia original, sino contra la forma en que la autoridad pretende cumplirla. Debe compararse el fallo firme con el nuevo acto e identificar la repetición, el exceso o el defecto.",
-          "conclusion": "Procede la queja de cumplimiento ante el órgano del TFJA que dictó la sentencia, sin confundirla con reclamación, revisión fiscal o amparo directo."
+          "conclusion": "Procede la queja de cumplimiento ante el órgano del TFJA que dictó la sentencia, sin confundirla con reclamación, recurso de revisión del artículo 63 o amparo directo.",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-arts49-53-sentencia",
+            "ev-c23-lfpca-arts51-52-nulidad",
+            "ev-c23-lfpca-arts57-58-cumplimiento",
+            "ev-c23-a31-l253-259-queja-organo",
+            "ev-c23-lfpca-arts59-62-reclamacion",
+            "ev-c23-a31-l083-113-reclamacion-amparo",
+            "ev-c23-lfpca-art63-revision",
+            "ev-c23-a31-l193-203-revision-queja",
+            "ev-c23-lamp-arts61xx-170-amparo-directo",
+            "ev-c23-a31-l011-015-particular-autoridad",
+            "ev-c23-a31-l279-287-queja-amparo"
+          ]
         },
         "closingPrompt": "Construye una ruta de decisión que empiece con el acto combatido: acuerdo intraprocesal, sentencia desfavorable, recurso de autoridad o incumplimiento del fallo.",
-        "nextActivity": "Revisa el mapa visual, contesta la guía de doce preguntas y resuelve los diez casos originales."
+        "nextActivity": "Revisa el mapa visual, contesta la guía de doce preguntas y resuelve los diez casos originales.",
+        "openingPromptEvidenceIds": [
+          "ev-c23-lotfja-arts1-3-tfja",
+          "ev-c23-lfpca-arts57-58-cumplimiento",
+          "ev-c23-a31-l253-259-queja-organo",
+          "ev-c23-lfpca-arts59-62-reclamacion",
+          "ev-c23-a31-l083-113-reclamacion-amparo",
+          "ev-c23-lfpca-art63-revision",
+          "ev-c23-a31-l193-203-revision-queja",
+          "ev-c23-lamp-arts61xx-170-amparo-directo",
+          "ev-c23-a31-l011-015-particular-autoridad",
+          "ev-c23-a31-l279-287-queja-amparo"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c23-lotfja-arts1-3-tfja",
+          "ev-c23-lfpca-arts49-53-sentencia",
+          "ev-c23-lfpca-arts57-58-cumplimiento",
+          "ev-c23-a31-l253-259-queja-organo",
+          "ev-c23-lfpca-arts59-62-reclamacion",
+          "ev-c23-a31-l083-113-reclamacion-amparo",
+          "ev-c23-lfpca-art63-revision",
+          "ev-c23-a31-l193-203-revision-queja"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c23-lotfja-arts1-3-tfja",
+          "ev-c23-lfpca-arts49-53-sentencia",
+          "ev-c23-lfpca-arts51-52-nulidad"
+        ]
       },
       "materials": [
         {
           "type": "short_answer",
           "title": "Respuesta breve",
           "content": "La sentencia del TFJA puede reconocer validez, declarar nulidad o, cuando la ley lo permite, reconocer derechos y condenar a su cumplimiento. La reclamación combate determinados acuerdos intraprocesales; la revisión del artículo 63 es una vía de la autoridad sujeta a causales; el particular puede promover amparo directo contra la sentencia definitiva o resolución que pone fin al juicio; y la queja del artículo 58 sirve para exigir el cumplimiento correcto del fallo.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-arts49-53-sentencia",
+            "ev-c23-lfpca-arts51-52-nulidad",
+            "ev-c23-lfpca-arts57-58-cumplimiento",
+            "ev-c23-a31-l253-259-queja-organo",
+            "ev-c23-lfpca-arts59-62-reclamacion",
+            "ev-c23-a31-l083-113-reclamacion-amparo",
+            "ev-c23-lfpca-art63-revision",
+            "ev-c23-a31-l193-203-revision-queja",
+            "ev-c23-lamp-arts61xx-170-amparo-directo",
+            "ev-c23-a31-l011-015-particular-autoridad",
+            "ev-c23-a31-l279-287-queja-amparo"
+          ]
         },
         {
           "type": "full_explanation",
           "title": "Explicación completa desde cero",
-          "content": "La sentencia es la decisión jurisdiccional que resuelve la controversia después del cierre de instrucción. En una Sala, se pronuncia por unanimidad o mayoría dentro de los cuarenta y cinco días siguientes al cierre; el proyecto se formula dentro de treinta días. El sobreseimiento puede resolverse sin esperar el cierre cuando aparece una causa legal.\n\nSobreseer no equivale a decidir que el acto es válido o inválido: significa terminar total o parcialmente el juicio sin resolver el fondo. Si la autoridad deja sin efecto el acto impugnado, el artículo 9 exige además que satisfaga la pretensión de la persona demandante. Una revocación meramente aparente no basta.\n\nEl artículo 51 agrupa las causales de ilegalidad: incompetencia; omisión formal que afecte defensas y trascienda; vicios de procedimiento con ese impacto; hechos inexistentes, distintos o mal apreciados, o violación de las disposiciones de fondo; y desvío de poder en facultades discrecionales. La sentencia debe vincular causal, pretensión y efecto.\n\nConforme al artículo 52, el TFJA puede reconocer la validez, declarar la nulidad, ordenar reposición o nueva resolución por determinados vicios y, cuando corresponda, reconocer un derecho, restituirlo o condenar a una obligación. No toda nulidad es lisa y llana ni toda nulidad autoriza repetir el acto. Por incompetencia, la autoridad competente puede iniciar procedimiento o dictar nueva resolución si sus facultades no caducaron y sin violar el fallo. Por vicio formal o procedimental puede reponer desde el punto afectado. Si prospera desvío de poder, queda impedida para resolver nuevamente sobre los mismos hechos salvo reposición ordenada.\n\nCuando la sentencia obliga a realizar un acto o iniciar un procedimiento, el plazo general es cuatro meses en juicio ordinario y un mes en sumario, contados desde que queda firme. La propia sentencia debe precisar forma y plazos cuando existe condena. Si se interpone amparo o revisión, sus efectos se suspenden hasta que termine esa controversia.\n\nLa reclamación del artículo 59 procede contra resoluciones de la magistratura instructora que admitan, desechen o tengan por no presentada demanda, contestación, ampliación o prueba; contra sobreseimiento decretado o negado antes del cierre; y contra decisiones sobre intervención de tercero. Se presenta en diez días. Para resoluciones sobre medidas cautelares, el artículo 62 prevé reclamación en cinco días y la sola interposición suspende la ejecución del acto impugnado mientras se resuelve.\n\nLa suspensión es una medida cautelar destinada a preservar la materia del juicio y evitar daños mientras se decide. No nace por el simple hecho de pagar o garantizar. Deben satisfacerse procedencia, solicitud, interés social, orden público y, cuando se impugna cobro de contribuciones, las reglas de garantía del interés fiscal. La garantía puede ser requisito, pero no reemplaza el análisis cautelar.\n\nLa revisión prevista en el artículo 63 puede ser interpuesta por la autoridad, por conducto de su defensa jurídica, ante el Tribunal Colegiado de Circuito. El escrito se presenta ante la responsable dentro de quince días desde los efectos de la notificación y el asunto debe ubicarse en alguno de los supuestos legales. No es un recurso universal para toda derrota de la autoridad.\n\nPara la persona particular, el amparo directo procede contra sentencias definitivas y resoluciones de tribunales administrativos que ponen fin al juicio. Deben agotarse previamente los recursos ordinarios capaces de modificar o revocar la resolución, salvo excepción legal. Por ello no debe llamarse amparo indirecto a la vía normal contra la sentencia definitiva del TFJA.\n\nUna vez firme la sentencia, todas las autoridades relacionadas deben cumplirla. El TFJA puede actuar de oficio: requerir informe, determinar incumplimiento, imponer multas, requerir a la superioridad jerárquica e incluso ejecutar cuando la naturaleza del acto lo permita. A petición de parte, la queja procede por repetición indebida, exceso o defecto, resolución tardía en los supuestos legales, omisión de cumplimiento o desacato a la suspensión definitiva.\n\nLa queja se presenta ante la Sala, Sección o Pleno que dictó el fallo. Por regla general, el plazo es quince días desde los efectos de la notificación del acto que la provoca; si se reclama omisión de cumplimiento puede promoverse en cualquier tiempo mientras el derecho no prescriba. El escrito debe comparar exactamente la sentencia con la conducta de la autoridad. Esa comparación evita confundir una ejecución defectuosa con una nueva controversia autónoma.",
-          "sourceOrigin": "mixed"
+          "content": "La sentencia es la decisión jurisdiccional que resuelve la controversia después del cierre de instrucción. En una Sala, se pronuncia por unanimidad o mayoría dentro de los cuarenta y cinco días siguientes al cierre; el proyecto se formula dentro de treinta días. El sobreseimiento puede resolverse sin esperar el cierre cuando aparece una causa legal.\n\nSobreseer no equivale a decidir que el acto es válido o inválido: significa terminar total o parcialmente el juicio sin resolver el fondo. Si la autoridad deja sin efecto el acto impugnado, el artículo 9 exige además que satisfaga la pretensión de la persona demandante. Una revocación meramente aparente no basta.\n\nEl artículo 51 agrupa las causales de ilegalidad: incompetencia; omisión formal que afecte defensas y trascienda; vicios de procedimiento con ese impacto; hechos inexistentes, distintos o mal apreciados, o violación de las disposiciones de fondo; y desvío de poder en facultades discrecionales. La sentencia debe vincular causal, pretensión y efecto.\n\nConforme al artículo 52, el TFJA puede reconocer la validez, declarar la nulidad, ordenar reposición o nueva resolución por determinados vicios y, cuando corresponda, reconocer un derecho, restituirlo o condenar a una obligación. No toda nulidad es lisa y llana ni toda nulidad autoriza repetir el acto. Por incompetencia, la autoridad competente puede iniciar procedimiento o dictar nueva resolución si sus facultades no caducaron y sin violar el fallo. Por vicio formal o procedimental puede reponer desde el punto afectado. Si prospera desvío de poder, queda impedida para resolver nuevamente sobre los mismos hechos salvo reposición ordenada.\n\nCuando la sentencia obliga a realizar un acto o iniciar un procedimiento, el plazo general es cuatro meses en juicio ordinario y un mes en sumario, contados desde que queda firme. La propia sentencia debe precisar forma y plazos cuando existe condena. Si se interpone amparo o revisión, el cómputo de esos plazos de cumplimiento se suspende hasta que termine esa controversia.\n\nLa reclamación del artículo 59 procede contra resoluciones de la magistratura instructora que admitan, desechen o tengan por no presentada demanda, contestación, ampliación o prueba; contra sobreseimiento decretado o negado antes del cierre; y contra decisiones sobre intervención de tercero. Se presenta en diez días. Para resoluciones sobre medidas cautelares, el artículo 62 prevé reclamación en cinco días y la sola interposición suspende la ejecución del acto impugnado mientras se resuelve.\n\nLa suspensión es una medida cautelar destinada a preservar la materia del juicio y evitar daños mientras se decide. No nace por el simple hecho de pagar o garantizar. Deben satisfacerse procedencia, solicitud, interés social, orden público y, cuando se impugna cobro de contribuciones, las reglas de garantía del interés fiscal. La garantía puede ser requisito, pero no reemplaza el análisis cautelar.\n\nLa revisión prevista en el artículo 63 puede ser interpuesta por la autoridad, por conducto de su defensa jurídica, ante el Tribunal Colegiado de Circuito. El escrito se presenta ante la responsable dentro de quince días desde los efectos de la notificación y el asunto debe ubicarse en alguno de los supuestos legales. No es un recurso universal para toda derrota de la autoridad.\n\nPara la persona particular, el amparo directo procede contra sentencias definitivas y resoluciones de tribunales administrativos que ponen fin al juicio. Deben agotarse previamente los recursos ordinarios capaces de modificar o revocar la resolución, salvo excepción legal. Por ello no debe llamarse amparo indirecto a la vía normal contra la sentencia definitiva del TFJA.\n\nUna vez firme la sentencia, todas las autoridades relacionadas deben cumplirla. El TFJA puede actuar de oficio: requerir informe, determinar incumplimiento, imponer multas, requerir a la superioridad jerárquica e incluso ejecutar cuando la naturaleza del acto lo permita. A petición de parte, la queja procede por repetición indebida, exceso o defecto, resolución tardía en los supuestos legales, omisión de cumplimiento o desacato a la suspensión definitiva.\n\nLa queja se presenta ante la Sala, Sección o Pleno que dictó el fallo. Por regla general, el plazo es quince días desde los efectos de la notificación del acto que la provoca; si se reclama omisión de cumplimiento puede promoverse en cualquier tiempo mientras el derecho no prescriba. El escrito debe comparar exactamente la sentencia con la conducta de la autoridad. Esa comparación evita confundir una ejecución defectuosa con una nueva controversia autónoma.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-art9-sobreseimiento",
+            "ev-c23-a31-l065-069-sobreseimiento",
+            "ev-c23-lfpca-arts49-53-sentencia",
+            "ev-c23-lfpca-arts51-52-nulidad",
+            "ev-c23-lfpca-arts24-28-cautelares",
+            "ev-c23-a31-l151-171-suspension",
+            "ev-c23-lfpca-arts57-58-cumplimiento",
+            "ev-c23-a31-l253-259-queja-organo",
+            "ev-c23-lfpca-arts59-62-reclamacion",
+            "ev-c23-a31-l083-113-reclamacion-amparo",
+            "ev-c23-lfpca-art63-revision",
+            "ev-c23-a31-l193-203-revision-queja",
+            "ev-c23-lamp-arts61xx-170-amparo-directo",
+            "ev-c23-a31-l011-015-particular-autoridad"
+          ]
         },
         {
           "type": "legal_basis",
           "title": "Fundamento jurídico vigente",
-          "content": "LFPCA vigente, reforma DOF 09-06-2026: artículos 9, 49 a 53, 57 y 58, 59 a 63. Ley de Amparo vigente: artículo 170, procedencia del amparo directo contra sentencias definitivas y resoluciones de tribunales administrativos que ponen fin al juicio. Consulta oficial realizada el 11 de agosto de 2026. Deben atenderse los transitorios de la reforma de 2026 para actuaciones sujetas a entrada en vigor diferida.",
-          "sourceOrigin": "complementary"
+          "content": "LFPCA vigente, reforma integral DOF 09-06-2026: artículos 9, 24 a 28, 49 a 53 y 57 a 63. Ley Orgánica del TFJA vigente, última reforma DOF 16-10-2025: artículos 1 a 3. Ley de Amparo vigente, última reforma DOF 16-10-2025: artículos 61, fracción XX, y 170. Fuentes oficiales verificadas el 21 de agosto de 2026.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c23-lfpca-art9-sobreseimiento",
+            "ev-c23-lfpca-arts49-53-sentencia",
+            "ev-c23-lfpca-arts51-52-nulidad",
+            "ev-c23-lfpca-arts24-28-cautelares",
+            "ev-c23-lfpca-arts57-58-cumplimiento",
+            "ev-c23-lfpca-arts59-62-reclamacion",
+            "ev-c23-lfpca-art63-revision",
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lamp-arts61xx-170-amparo-directo"
+          ]
         },
         {
           "type": "simple_example",
           "title": "Ejemplo sencillo",
           "content": "La magistratura instructora desecha una prueba antes del cierre. La vía inmediata es reclamación dentro de diez días. Si, en cambio, ya existe sentencia firme y la autoridad la cumple defectuosamente, la vía es queja de cumplimiento. El nombre del medio cambia porque cambia el acto combatido.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-arts49-53-sentencia",
+            "ev-c23-lfpca-arts57-58-cumplimiento",
+            "ev-c23-a31-l253-259-queja-organo",
+            "ev-c23-lfpca-arts59-62-reclamacion",
+            "ev-c23-a31-l083-113-reclamacion-amparo",
+            "ev-c23-lfpca-art63-revision",
+            "ev-c23-a31-l193-203-revision-queja"
+          ]
         },
         {
           "type": "ceneval_example",
           "title": "Caso tipo CENEVAL",
           "content": "Una persona particular pierde mediante sentencia definitiva del TFJA y pretende impugnarla. Debe identificar el amparo directo, porque la resolución decide el juicio principal. Si quien pretende combatirla es la autoridad, debe verificar si se actualiza un supuesto del artículo 63 para revisión; no basta que el fallo le sea adverso.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-arts49-53-sentencia",
+            "ev-c23-lfpca-art63-revision",
+            "ev-c23-a31-l193-203-revision-queja",
+            "ev-c23-lamp-arts61xx-170-amparo-directo",
+            "ev-c23-a31-l011-015-particular-autoridad"
+          ]
         },
         {
           "type": "summary",
           "title": "Resumen",
           "content": "Sentencia: validez, nulidad, restitución o condena según causal y pretensión. Sobreseimiento: termina sin fondo; revocación exige satisfacción de la pretensión. Reclamación: acuerdos intraprocesales, diez días; cautelares, cinco. Revisión: autoridad, quince días y causales del artículo 63. Amparo directo: particular contra sentencia definitiva o resolución que termina el juicio. Cumplimiento: cuatro meses ordinario o uno sumario cuando se ordena acto o procedimiento. Queja: repetición, exceso, defecto, tardanza, omisión o desacato a suspensión.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-art9-sobreseimiento",
+            "ev-c23-a31-l065-069-sobreseimiento",
+            "ev-c23-lfpca-arts49-53-sentencia",
+            "ev-c23-lfpca-arts51-52-nulidad",
+            "ev-c23-lfpca-arts24-28-cautelares",
+            "ev-c23-a31-l151-171-suspension",
+            "ev-c23-lfpca-arts57-58-cumplimiento",
+            "ev-c23-a31-l253-259-queja-organo",
+            "ev-c23-lfpca-arts59-62-reclamacion",
+            "ev-c23-a31-l083-113-reclamacion-amparo",
+            "ev-c23-lfpca-art63-revision",
+            "ev-c23-a31-l193-203-revision-queja",
+            "ev-c23-lamp-arts61xx-170-amparo-directo",
+            "ev-c23-a31-l011-015-particular-autoridad",
+            "ev-c23-a31-l279-287-queja-amparo"
+          ]
         },
         {
           "type": "study_guide",
           "title": "Guía intensiva de preguntas y respuestas",
           "content": "1. ¿Cuándo se dicta sentencia de Sala? Respuesta: dentro de 45 días posteriores al cierre; el proyecto, en 30. 2. ¿Qué es sobreseimiento? Respuesta: terminación sin resolver el fondo. 3. ¿Revocar siempre permite sobreseer? Respuesta: no; debe satisfacerse la pretensión. 4. ¿Cuáles son las cinco causales generales de ilegalidad? Respuesta: incompetencia, forma trascendente, procedimiento trascendente, fondo y desvío de poder. 5. ¿Qué puede decidir la sentencia? Respuesta: validez, nulidad y, según el caso, reposición, restitución, reconocimiento o condena. 6. ¿Plazo general de cumplimiento? Respuesta: cuatro meses en ordinario y uno en sumario. 7. ¿Qué combate la reclamación? Respuesta: acuerdos intraprocesales expresamente previstos. 8. ¿Plazo ordinario de reclamación? Respuesta: diez días; cinco para cautelares. 9. ¿Quién interpone revisión del artículo 63? Respuesta: la autoridad, si existe supuesto legal, en quince días. 10. ¿Qué usa el particular contra sentencia definitiva? Respuesta: amparo directo. 11. ¿Qué combate la queja? Respuesta: incumplimiento, repetición, exceso, defecto, ciertos actos tardíos o desacato a suspensión. 12. ¿Plazo de queja? Respuesta: quince días como regla; omisión, mientras no prescriba el derecho.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-art9-sobreseimiento",
+            "ev-c23-a31-l065-069-sobreseimiento",
+            "ev-c23-lfpca-arts49-53-sentencia",
+            "ev-c23-lfpca-arts51-52-nulidad",
+            "ev-c23-lfpca-arts24-28-cautelares",
+            "ev-c23-a31-l151-171-suspension",
+            "ev-c23-lfpca-arts57-58-cumplimiento",
+            "ev-c23-a31-l253-259-queja-organo",
+            "ev-c23-lfpca-arts59-62-reclamacion",
+            "ev-c23-a31-l083-113-reclamacion-amparo",
+            "ev-c23-lfpca-art63-revision",
+            "ev-c23-a31-l193-203-revision-queja",
+            "ev-c23-lamp-arts61xx-170-amparo-directo",
+            "ev-c23-a31-l011-015-particular-autoridad",
+            "ev-c23-a31-l279-287-queja-amparo"
+          ]
         },
         {
           "type": "key_concepts",
           "title": "Conceptos clave",
           "content": "Sentencia definitiva: decisión del fondo. Sobreseimiento: terminación sin pronunciamiento de fondo. Causal de ilegalidad: vicio que sustenta la nulidad. Validez: confirmación del acto. Nulidad para efectos: orden de reponer o emitir otro acto. Nulidad lisa y llana: eliminación sin reposición ordenada, sujeta a los efectos legales concretos. Firmeza: imposibilidad de impugnación ordinaria pendiente. Reclamación: recurso contra acuerdos intraprocesales previstos. Suspensión: cautela que preserva materia. Revisión: recurso excepcional de autoridad. Amparo directo: control constitucional de sentencia final. Cumplimiento: ejecución exacta del fallo. Queja: instancia por ejecución irregular u omisión. Repetición: reproducción indebida del acto anulado. Exceso: cumplimiento que rebasa el fallo. Defecto: cumplimiento incompleto.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-art9-sobreseimiento",
+            "ev-c23-a31-l065-069-sobreseimiento",
+            "ev-c23-lfpca-arts49-53-sentencia",
+            "ev-c23-lfpca-arts51-52-nulidad",
+            "ev-c23-lfpca-arts24-28-cautelares",
+            "ev-c23-a31-l151-171-suspension",
+            "ev-c23-lfpca-arts57-58-cumplimiento",
+            "ev-c23-a31-l253-259-queja-organo",
+            "ev-c23-lfpca-arts59-62-reclamacion",
+            "ev-c23-a31-l083-113-reclamacion-amparo",
+            "ev-c23-lfpca-art63-revision",
+            "ev-c23-a31-l193-203-revision-queja",
+            "ev-c23-lamp-arts61xx-170-amparo-directo",
+            "ev-c23-a31-l011-015-particular-autoridad",
+            "ev-c23-a31-l279-287-queja-amparo"
+          ]
         },
         {
           "type": "common_errors",
           "title": "Errores comunes",
           "content": "No confundas sobreseimiento con validez. No aceptes revocación aparente si la pretensión sigue insatisfecha. No llames reclamación a toda inconformidad. No confundas queja de cumplimiento con recurso contra sentencia. No afirmes que toda nulidad impide un nuevo acto: revisa causal, caducidad y efecto. No supongas que la autoridad siempre puede revisar. No uses amparo indirecto como regla contra sentencia definitiva del TFJA. No creas que garantizar el interés fiscal concede por sí solo suspensión. No cuentes plazos desde la fecha equivocada: la ley suele partir de los efectos de la notificación. No omitas agotar recursos ordinarios procedentes antes del amparo directo. No incluyas sobornos ni influencias como estrategia jurídica.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-art9-sobreseimiento",
+            "ev-c23-a31-l065-069-sobreseimiento",
+            "ev-c23-lfpca-arts49-53-sentencia",
+            "ev-c23-lfpca-arts51-52-nulidad",
+            "ev-c23-lfpca-arts24-28-cautelares",
+            "ev-c23-a31-l151-171-suspension",
+            "ev-c23-lfpca-arts57-58-cumplimiento",
+            "ev-c23-a31-l253-259-queja-organo",
+            "ev-c23-lfpca-arts59-62-reclamacion",
+            "ev-c23-a31-l083-113-reclamacion-amparo",
+            "ev-c23-lfpca-art63-revision",
+            "ev-c23-a31-l193-203-revision-queja",
+            "ev-c23-lamp-arts61xx-170-amparo-directo",
+            "ev-c23-a31-l011-015-particular-autoridad",
+            "ev-c23-a31-l279-287-queja-amparo"
+          ]
         }
       ],
       "conceptMap": {
         "title": "Mapa visual: de la sentencia a su cumplimiento",
         "description": "Árbol de decisión para distinguir efectos, impugnación y ejecución.",
         "nodes": [
-          {"id":"decision","label":"Decisión del TFJA","description":"Resultado jurisdiccional."},
-          {"id":"sobreseimiento","label":"Sobreseimiento","description":"Termina sin resolver fondo.","parentId":"decision"},
-          {"id":"revocacion","label":"Acto dejado sin efecto","description":"No basta por sí solo.","parentId":"sobreseimiento"},
-          {"id":"satisfaccion","label":"Pretensión satisfecha","description":"Requisito para sobreseer por revocación.","parentId":"revocacion"},
-          {"id":"sentencia","label":"Sentencia de fondo","description":"Examina legalidad y pretensión.","parentId":"decision"},
-          {"id":"validez","label":"Reconoce validez","description":"Mantiene el acto.","parentId":"sentencia"},
-          {"id":"nulidad","label":"Declara nulidad","description":"El efecto depende de la causal.","parentId":"sentencia"},
-          {"id":"forma","label":"Forma o procedimiento","description":"Puede ordenar reposición.","parentId":"nulidad"},
-          {"id":"fondo","label":"Vicio de fondo","description":"Puede eliminar el acto y reconocer derecho.","parentId":"nulidad"},
-          {"id":"incompetencia","label":"Incompetencia","description":"Autoridad competente puede actuar si conserva facultades.","parentId":"nulidad"},
-          {"id":"desvio","label":"Desvío de poder","description":"Impide nuevo acto sobre mismos hechos, salvo reposición ordenada.","parentId":"nulidad"},
-          {"id":"restitucion","label":"Restitución o condena","description":"Reconoce derecho y ordena obligación.","parentId":"sentencia"},
-          {"id":"impugnacion","label":"¿Qué se impugna?","description":"Selecciona la vía por acto y sujeto.","parentId":"decision"},
-          {"id":"acuerdo","label":"Acuerdo intraprocesal","description":"Supuestos expresos.","parentId":"impugnacion"},
-          {"id":"reclamacion","label":"Reclamación","description":"Regla: 10 días.","parentId":"acuerdo"},
-          {"id":"cautelar","label":"Medida cautelar","description":"Concede, niega, modifica o revoca.","parentId":"impugnacion"},
-          {"id":"reclamacion5","label":"Reclamación cautelar","description":"5 días.","parentId":"cautelar"},
-          {"id":"final-particular","label":"Sentencia desfavorable al particular","description":"Resolución final del TFJA.","parentId":"impugnacion"},
-          {"id":"amparo","label":"Amparo directo","description":"Previo agotamiento ordinario.","parentId":"final-particular"},
-          {"id":"final-autoridad","label":"Sentencia desfavorable a autoridad","description":"Debe probar procedencia legal.","parentId":"impugnacion"},
-          {"id":"revision","label":"Revisión artículo 63","description":"15 días y supuesto específico.","parentId":"final-autoridad"},
-          {"id":"firme","label":"Sentencia firme","description":"Inicia ejecución obligatoria.","parentId":"decision"},
-          {"id":"plazo","label":"Plazo de cumplimiento","description":"4 meses ordinario; 1 sumario.","parentId":"firme"},
-          {"id":"oficio","label":"Control de oficio","description":"Informe, multa, superioridad y ejecución.","parentId":"firme"},
-          {"id":"incumplimiento","label":"Cumplimiento irregular","description":"Conducta posterior al fallo.","parentId":"firme"},
-          {"id":"queja","label":"Queja artículo 58","description":"Ante el órgano que sentenció.","parentId":"incumplimiento"},
-          {"id":"repeticion","label":"Repetición","description":"Reproduce indebidamente acto anulado.","parentId":"queja"},
-          {"id":"exceso","label":"Exceso","description":"Rebasa lo ordenado.","parentId":"queja"},
-          {"id":"defecto","label":"Defecto","description":"Cumple de manera incompleta.","parentId":"queja"},
-          {"id":"omision","label":"Omisión","description":"No cumple el fallo.","parentId":"queja"},
-          {"id":"suspension","label":"Desacato a suspensión","description":"Incumple cautela definitiva.","parentId":"queja"},
-          {"id":"quince","label":"15 días","description":"Regla desde efectos de notificación.","parentId":"queja"},
-          {"id":"cualquier-tiempo","label":"Omisión: mientras no prescriba","description":"Excepción temporal.","parentId":"omision"}
+          {
+            "id": "decision",
+            "label": "Decisión del TFJA",
+            "description": "Resultado jurisdiccional.",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lfpca-arts51-52-nulidad"
+            ]
+          },
+          {
+            "id": "sobreseimiento",
+            "label": "Sobreseimiento",
+            "description": "Termina sin resolver fondo.",
+            "parentId": "decision",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-art9-sobreseimiento",
+              "ev-c23-a31-l065-069-sobreseimiento",
+              "ev-c23-lfpca-arts51-52-nulidad"
+            ]
+          },
+          {
+            "id": "revocacion",
+            "label": "Acto dejado sin efecto",
+            "description": "No basta por sí solo.",
+            "parentId": "sobreseimiento",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lfpca-arts51-52-nulidad"
+            ]
+          },
+          {
+            "id": "satisfaccion",
+            "label": "Pretensión satisfecha",
+            "description": "Requisito para sobreseer por revocación.",
+            "parentId": "revocacion",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-art9-sobreseimiento",
+              "ev-c23-a31-l065-069-sobreseimiento"
+            ]
+          },
+          {
+            "id": "sentencia",
+            "label": "Sentencia de fondo",
+            "description": "Examina legalidad y pretensión.",
+            "parentId": "decision",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-art9-sobreseimiento",
+              "ev-c23-a31-l065-069-sobreseimiento",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lfpca-arts51-52-nulidad"
+            ]
+          },
+          {
+            "id": "validez",
+            "label": "Reconoce validez",
+            "description": "Mantiene el acto.",
+            "parentId": "sentencia",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia"
+            ]
+          },
+          {
+            "id": "nulidad",
+            "label": "Declara nulidad",
+            "description": "El efecto depende de la causal.",
+            "parentId": "sentencia",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts51-52-nulidad"
+            ]
+          },
+          {
+            "id": "forma",
+            "label": "Forma o procedimiento",
+            "description": "Puede ordenar reposición.",
+            "parentId": "nulidad",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts51-52-nulidad"
+            ]
+          },
+          {
+            "id": "fondo",
+            "label": "Vicio de fondo",
+            "description": "Puede eliminar el acto y reconocer derecho.",
+            "parentId": "nulidad",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts51-52-nulidad"
+            ]
+          },
+          {
+            "id": "incompetencia",
+            "label": "Incompetencia",
+            "description": "Autoridad competente puede actuar si conserva facultades.",
+            "parentId": "nulidad",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts51-52-nulidad",
+              "ev-c23-lfpca-art63-revision",
+              "ev-c23-a31-l193-203-revision-queja"
+            ]
+          },
+          {
+            "id": "desvio",
+            "label": "Desvío de poder",
+            "description": "Impide nuevo acto sobre mismos hechos, salvo reposición ordenada.",
+            "parentId": "nulidad",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts51-52-nulidad"
+            ]
+          },
+          {
+            "id": "restitucion",
+            "label": "Restitución o condena",
+            "description": "Reconoce derecho y ordena obligación.",
+            "parentId": "sentencia",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts51-52-nulidad"
+            ]
+          },
+          {
+            "id": "impugnacion",
+            "label": "¿Qué se impugna?",
+            "description": "Selecciona la vía por acto y sujeto.",
+            "parentId": "decision",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lfpca-arts51-52-nulidad"
+            ]
+          },
+          {
+            "id": "acuerdo",
+            "label": "Acuerdo intraprocesal",
+            "description": "Supuestos expresos.",
+            "parentId": "impugnacion",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts59-62-reclamacion",
+              "ev-c23-a31-l083-113-reclamacion-amparo"
+            ]
+          },
+          {
+            "id": "reclamacion",
+            "label": "Reclamación",
+            "description": "Regla: 10 días.",
+            "parentId": "acuerdo",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts59-62-reclamacion",
+              "ev-c23-a31-l083-113-reclamacion-amparo"
+            ]
+          },
+          {
+            "id": "cautelar",
+            "label": "Medida cautelar",
+            "description": "Concede, niega, modifica o revoca.",
+            "parentId": "impugnacion",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-art9-sobreseimiento",
+              "ev-c23-a31-l065-069-sobreseimiento",
+              "ev-c23-lfpca-arts24-28-cautelares",
+              "ev-c23-a31-l151-171-suspension"
+            ]
+          },
+          {
+            "id": "reclamacion5",
+            "label": "Reclamación cautelar",
+            "description": "5 días.",
+            "parentId": "cautelar",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts24-28-cautelares",
+              "ev-c23-a31-l151-171-suspension",
+              "ev-c23-lfpca-arts59-62-reclamacion",
+              "ev-c23-a31-l083-113-reclamacion-amparo"
+            ]
+          },
+          {
+            "id": "final-particular",
+            "label": "Sentencia desfavorable al particular",
+            "description": "Resolución final del TFJA.",
+            "parentId": "impugnacion",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lamp-arts61xx-170-amparo-directo",
+              "ev-c23-a31-l011-015-particular-autoridad"
+            ]
+          },
+          {
+            "id": "amparo",
+            "label": "Amparo directo",
+            "description": "Previo agotamiento ordinario.",
+            "parentId": "final-particular",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lamp-arts61xx-170-amparo-directo",
+              "ev-c23-a31-l011-015-particular-autoridad"
+            ]
+          },
+          {
+            "id": "final-autoridad",
+            "label": "Sentencia desfavorable a autoridad",
+            "description": "Debe probar procedencia legal.",
+            "parentId": "impugnacion",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lfpca-art63-revision",
+              "ev-c23-a31-l193-203-revision-queja"
+            ]
+          },
+          {
+            "id": "revision",
+            "label": "Revisión artículo 63",
+            "description": "15 días y supuesto específico.",
+            "parentId": "final-autoridad",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-art63-revision",
+              "ev-c23-a31-l193-203-revision-queja"
+            ]
+          },
+          {
+            "id": "firme",
+            "label": "Sentencia firme",
+            "description": "Inicia ejecución obligatoria.",
+            "parentId": "decision",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia"
+            ]
+          },
+          {
+            "id": "plazo",
+            "label": "Plazo de cumplimiento",
+            "description": "4 meses ordinario; 1 sumario.",
+            "parentId": "firme",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo"
+            ]
+          },
+          {
+            "id": "oficio",
+            "label": "Control de oficio",
+            "description": "Informe, multa, superioridad y ejecución.",
+            "parentId": "firme",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lfpca-arts51-52-nulidad"
+            ]
+          },
+          {
+            "id": "incumplimiento",
+            "label": "Cumplimiento irregular",
+            "description": "Conducta posterior al fallo.",
+            "parentId": "firme",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo"
+            ]
+          },
+          {
+            "id": "queja",
+            "label": "Queja artículo 58",
+            "description": "Ante el órgano que sentenció.",
+            "parentId": "incumplimiento",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo"
+            ]
+          },
+          {
+            "id": "repeticion",
+            "label": "Repetición",
+            "description": "Reproduce indebidamente acto anulado.",
+            "parentId": "queja",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo"
+            ]
+          },
+          {
+            "id": "exceso",
+            "label": "Exceso",
+            "description": "Rebasa lo ordenado.",
+            "parentId": "queja",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo"
+            ]
+          },
+          {
+            "id": "defecto",
+            "label": "Defecto",
+            "description": "Cumple de manera incompleta.",
+            "parentId": "queja",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo"
+            ]
+          },
+          {
+            "id": "omision",
+            "label": "Omisión",
+            "description": "No cumple el fallo.",
+            "parentId": "queja",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo"
+            ]
+          },
+          {
+            "id": "suspension",
+            "label": "Desacato a suspensión",
+            "description": "Incumple cautela definitiva.",
+            "parentId": "queja",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts24-28-cautelares",
+              "ev-c23-a31-l151-171-suspension",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo"
+            ]
+          },
+          {
+            "id": "quince",
+            "label": "15 días",
+            "description": "Regla desde efectos de notificación.",
+            "parentId": "queja",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lfpca-arts51-52-nulidad"
+            ]
+          },
+          {
+            "id": "cualquier-tiempo",
+            "label": "Omisión: mientras no prescriba",
+            "description": "Excepción temporal.",
+            "parentId": "omision",
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo"
+            ]
+          }
         ]
       },
       "references": [
-        {"title":"Ley Federal de Procedimiento Contencioso Administrativo","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPCA.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Federal, México","citation":"Artículos 9, 49–53 y 57–63; última reforma DOF 09-06-2026","retrievedOn":"2026-08-11","note":"Fuente primaria sobre sentencia, efectos, cumplimiento, queja, reclamación y revisión."},
-        {"title":"Ley de Amparo, Reglamentaria de los artículos 103 y 107 constitucionales","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Federal, México","citation":"Artículo 170 y disposiciones relacionadas; texto vigente consultado el 11-08-2026","retrievedOn":"2026-08-11","note":"Fuente primaria sobre procedencia del amparo directo."},
-        {"title":"Tribunal Federal de Justicia Administrativa","url":"https://www.tfja.gob.mx/","institution":"Tribunal Federal de Justicia Administrativa","jurisdiction":"Federal, México","citation":"Portal institucional y servicios jurisdiccionales","retrievedOn":"2026-08-11","note":"Fuente institucional complementaria para identificar al órgano jurisdiccional y sus servicios."}
+        {
+          "title": "Ley Federal de Procedimiento Contencioso Administrativo",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPCA.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Artículos 9, 24–28, 49–53 y 57–63; reforma integral DOF 09-06-2026",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente primaria sobre sentencia, nulidad, cautelares, cumplimiento, queja, reclamación y revisión.",
+          "evidenceIds": [
+            "ev-c23-lfpca-art9-sobreseimiento",
+            "ev-c23-lfpca-arts49-53-sentencia",
+            "ev-c23-lfpca-arts51-52-nulidad",
+            "ev-c23-lfpca-arts24-28-cautelares",
+            "ev-c23-lfpca-arts57-58-cumplimiento",
+            "ev-c23-lfpca-arts59-62-reclamacion",
+            "ev-c23-lfpca-art63-revision"
+          ]
+        },
+        {
+          "title": "Ley de Amparo, Reglamentaria de los artículos 103 y 107 constitucionales",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Artículos 61, fracción XX, y 170; última reforma DOF 16-10-2025",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente primaria sobre definitividad y procedencia del amparo directo.",
+          "evidenceIds": [
+            "ev-c23-lamp-arts61xx-170-amparo-directo"
+          ]
+        },
+        {
+          "title": "Ley Orgánica del Tribunal Federal de Justicia Administrativa",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LOTFJA.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Artículos 1 a 3; última reforma DOF 16-10-2025",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente primaria sobre naturaleza y competencia del TFJA.",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja"
+          ]
+        }
       ],
       "flashcards": [
-        {"question":"¿Qué es el sobreseimiento?","answer":"Terminación total o parcial del juicio sin resolver el fondo.","sourceOrigin":"mixed"},
-        {"question":"¿Cuándo permite sobreseer que la autoridad deje sin efecto el acto?","answer":"Cuando además se satisface la pretensión de la persona demandante.","sourceOrigin":"complementary"},
-        {"question":"¿Cuáles son los resultados básicos de sentencia?","answer":"Reconocer validez, declarar nulidad y, según el caso, ordenar reposición, restitución, reconocimiento o condena.","sourceOrigin":"mixed"},
-        {"question":"¿Cuánto tiene la Sala para sentenciar tras el cierre?","answer":"Cuarenta y cinco días; el proyecto se formula en treinta.","sourceOrigin":"complementary"},
-        {"question":"¿Qué combate la reclamación del artículo 59?","answer":"Determinadas resoluciones intraprocesales de la magistratura instructora.","sourceOrigin":"mixed"},
-        {"question":"¿Plazo general de reclamación?","answer":"Diez días desde que surte efectos la notificación.","sourceOrigin":"complementary"},
-        {"question":"¿Plazo de reclamación sobre cautelares?","answer":"Cinco días.","sourceOrigin":"complementary"},
-        {"question":"¿Quién interpone la revisión del artículo 63?","answer":"La autoridad por conducto de su unidad de defensa, si se actualiza un supuesto legal.","sourceOrigin":"mixed"},
-        {"question":"¿Qué vía usa el particular contra sentencia definitiva del TFJA?","answer":"Amparo directo, previo agotamiento de recursos ordinarios procedentes.","sourceOrigin":"complementary"},
-        {"question":"¿Qué es la queja del artículo 58?","answer":"Instancia para corregir incumplimiento, repetición, exceso, defecto y otros supuestos de ejecución.","sourceOrigin":"mixed"},
-        {"question":"¿Plazo general para cumplir una sentencia para efectos?","answer":"Cuatro meses en ordinario y un mes en sumario desde que quede firme.","sourceOrigin":"complementary"},
-        {"question":"¿Plazo general de queja por acto de cumplimiento?","answer":"Quince días; por omisión puede promoverse mientras el derecho no prescriba.","sourceOrigin":"complementary"}
+        {
+          "question": "¿Qué es el sobreseimiento?",
+          "answer": "Terminación total o parcial del juicio sin resolver el fondo.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-art9-sobreseimiento",
+            "ev-c23-a31-l065-069-sobreseimiento",
+            "ev-c23-lfpca-arts51-52-nulidad"
+          ]
+        },
+        {
+          "question": "¿Cuándo permite sobreseer que la autoridad deje sin efecto el acto?",
+          "answer": "Cuando además se satisface la pretensión de la persona demandante.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-art9-sobreseimiento",
+            "ev-c23-a31-l065-069-sobreseimiento",
+            "ev-c23-lfpca-art63-revision",
+            "ev-c23-a31-l193-203-revision-queja"
+          ]
+        },
+        {
+          "question": "¿Cuáles son los resultados básicos de sentencia?",
+          "answer": "Reconocer validez, declarar nulidad y, según el caso, ordenar reposición, restitución, reconocimiento o condena.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-arts49-53-sentencia",
+            "ev-c23-lfpca-arts51-52-nulidad"
+          ]
+        },
+        {
+          "question": "¿Cuánto tiene la Sala para sentenciar tras el cierre?",
+          "answer": "Cuarenta y cinco días; el proyecto se formula en treinta.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-arts49-53-sentencia",
+            "ev-c23-lfpca-arts59-62-reclamacion",
+            "ev-c23-a31-l083-113-reclamacion-amparo"
+          ]
+        },
+        {
+          "question": "¿Qué combate la reclamación del artículo 59?",
+          "answer": "Determinadas resoluciones intraprocesales de la magistratura instructora.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-arts59-62-reclamacion",
+            "ev-c23-a31-l083-113-reclamacion-amparo"
+          ]
+        },
+        {
+          "question": "¿Plazo general de reclamación?",
+          "answer": "Diez días desde que surte efectos la notificación.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-arts59-62-reclamacion",
+            "ev-c23-a31-l083-113-reclamacion-amparo"
+          ]
+        },
+        {
+          "question": "¿Plazo de reclamación sobre cautelares?",
+          "answer": "Cinco días.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-arts24-28-cautelares",
+            "ev-c23-a31-l151-171-suspension",
+            "ev-c23-lfpca-arts59-62-reclamacion",
+            "ev-c23-a31-l083-113-reclamacion-amparo"
+          ]
+        },
+        {
+          "question": "¿Quién interpone la revisión del artículo 63?",
+          "answer": "La autoridad por conducto de su unidad de defensa, si se actualiza un supuesto legal.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-art63-revision",
+            "ev-c23-a31-l193-203-revision-queja"
+          ]
+        },
+        {
+          "question": "¿Qué vía usa el particular contra sentencia definitiva del TFJA?",
+          "answer": "Amparo directo, previo agotamiento de recursos ordinarios procedentes.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-arts49-53-sentencia",
+            "ev-c23-lamp-arts61xx-170-amparo-directo",
+            "ev-c23-a31-l011-015-particular-autoridad"
+          ]
+        },
+        {
+          "question": "¿Qué es la queja del artículo 58?",
+          "answer": "Instancia para corregir incumplimiento, repetición, exceso, defecto y otros supuestos de ejecución.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-arts57-58-cumplimiento",
+            "ev-c23-a31-l253-259-queja-organo"
+          ]
+        },
+        {
+          "question": "¿Plazo general para cumplir una sentencia para efectos?",
+          "answer": "Cuatro meses en ordinario y un mes en sumario desde que quede firme.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-arts49-53-sentencia",
+            "ev-c23-lfpca-arts57-58-cumplimiento",
+            "ev-c23-a31-l253-259-queja-organo"
+          ]
+        },
+        {
+          "question": "¿Plazo general de queja por acto de cumplimiento?",
+          "answer": "Quince días; por omisión puede promoverse mientras el derecho no prescriba.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c23-lotfja-arts1-3-tfja",
+            "ev-c23-lfpca-arts57-58-cumplimiento",
+            "ev-c23-a31-l253-259-queja-organo",
+            "ev-c23-lfpca-art63-revision",
+            "ev-c23-a31-l193-203-revision-queja"
+          ]
+        }
       ],
       "exam": {
         "title": "Examen: sentencia, recursos y cumplimiento",
         "description": "Diez casos originales para seleccionar el efecto o medio de defensa correcto.",
         "questions": [
-          {"text":"La autoridad deja sin efecto el acto, pero no entrega la devolución solicitada. ¿Debe sobreseerse automáticamente?","difficulty":"intermediate","options":["No, falta satisfacer la pretensión","Sí, basta retirar formalmente el acto","Sí, porque desaparece toda competencia judicial"],"correctOption":0,"explanation":"El artículo 9, fracción IV, exige que la pretensión quede satisfecha.","optionExplanations":["Aplica ambos requisitos legales.","Ignora el requisito material.","La Sala conserva facultad para examinar el sobreseimiento."]},
-          {"text":"¿Cuál es una causal de ilegalidad del artículo 51?","difficulty":"basic","options":["Incompetencia de quien dictó, ordenó o tramitó","Inconformidad política con la autoridad","Preferencia personal de la parte"],"correctOption":0,"explanation":"La incompetencia es causal expresa.","optionExplanations":["Es la fracción I.","No constituye causal jurídica.","No demuestra ilegalidad."]},
-          {"text":"La nulidad deriva de un vicio de procedimiento trascendente. ¿Qué efecto es congruente?","difficulty":"intermediate","options":["Reposición desde el acto viciado","Validez automática","Prisión de la persona funcionaria"],"correctOption":0,"explanation":"Los artículos 52 y 57 permiten reponer el procedimiento.","optionExplanations":["Corrige el tramo afectado.","Contradice la nulidad declarada.","No es efecto del juicio contencioso."]},
-          {"text":"Antes del cierre, la magistratura desecha una prueba ofrecida. ¿Qué medio procede?","difficulty":"basic","options":["Reclamación","Queja de cumplimiento","Revisión fiscal de la persona particular"],"correctOption":0,"explanation":"El desechamiento de prueba es supuesto del artículo 59.","optionExplanations":["Es el recurso intraprocesal correcto.","Aún no existe sentencia por cumplir.","La revisión corresponde a la autoridad y tiene otros supuestos."]},
-          {"text":"Se niega una suspensión cautelar. ¿En cuánto se promueve reclamación?","difficulty":"intermediate","options":["Cinco días","Diez años","Cuatro meses"],"correctOption":0,"explanation":"El artículo 62 fija cinco días para medidas cautelares.","optionExplanations":["Es el plazo especial.","No existe ese plazo.","Corresponde a ciertos cumplimientos de sentencia."]},
-          {"text":"Una autoridad pierde el juicio. ¿Puede interponer revisión sin justificar otra cosa?","difficulty":"advanced","options":["No, debe actualizar un supuesto del artículo 63","Sí, toda derrota la hace procedente","Solo si el particular acepta"],"correctOption":0,"explanation":"La revisión fiscal es de procedencia tasada.","optionExplanations":["Exige encuadre legal.","Convierte indebidamente el recurso en universal.","La procedencia no depende de consentimiento."]},
-          {"text":"Una persona particular combate la sentencia definitiva del TFJA. ¿Cuál es la vía normal?","difficulty":"basic","options":["Amparo directo","Amparo indirecto por regla general","Reclamación del artículo 59"],"correctOption":0,"explanation":"El artículo 170 de la Ley de Amparo cubre sentencias definitivas de tribunales administrativos.","optionExplanations":["Es la vía correcta.","Confunde la vía contra actos fuera o después del juicio.","La reclamación combate acuerdos intraprocesales."]},
-          {"text":"La sentencia firme ordena emitir nueva resolución en juicio ordinario. ¿Plazo general?","difficulty":"intermediate","options":["Cuatro meses","Un día","Cinco años"],"correctOption":0,"explanation":"El artículo 52 fija cuatro meses para juicio ordinario.","optionExplanations":["Es la regla general.","No es plazo legal.","Confunde lesividad."]},
-          {"text":"La autoridad repite indebidamente el acto anulado al cumplir. ¿Qué procede?","difficulty":"intermediate","options":["Queja ante el órgano que sentenció","Nueva reclamación contra prueba","Recurso administrativo obligatorio ante la misma autoridad"],"correctOption":0,"explanation":"La repetición indebida es supuesto del artículo 58.","optionExplanations":["Controla la ejecución del fallo.","No guarda relación con prueba.","No sustituye la instancia jurisdiccional de cumplimiento."]},
-          {"text":"La autoridad simplemente omite cumplir la sentencia. ¿Cuándo puede promoverse queja?","difficulty":"advanced","options":["En cualquier tiempo mientras el derecho no prescriba","Solo dentro de cinco horas","Nunca, porque el TFJA perdió competencia"],"correctOption":0,"explanation":"La omisión tiene la excepción temporal del artículo 58.","optionExplanations":["Es la regla especial.","No existe ese plazo.","El Tribunal conserva potestades de ejecución."]}
+          {
+            "text": "La autoridad deja sin efecto el acto, pero no entrega la devolución solicitada. ¿Debe sobreseerse automáticamente?",
+            "difficulty": "intermediate",
+            "options": [
+              "No, falta satisfacer la pretensión",
+              "Sí, basta retirar formalmente el acto",
+              "Sí, porque desaparece toda competencia judicial"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 9, fracción IV, exige que la pretensión quede satisfecha.",
+            "optionExplanations": [
+              "Aplica ambos requisitos legales.",
+              "Ignora el requisito material.",
+              "La Sala conserva facultad para examinar el sobreseimiento."
+            ],
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-art9-sobreseimiento",
+              "ev-c23-a31-l065-069-sobreseimiento",
+              "ev-c23-lfpca-art63-revision",
+              "ev-c23-a31-l193-203-revision-queja"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-art9-sobreseimiento",
+                "ev-c23-a31-l065-069-sobreseimiento",
+                "ev-c23-lfpca-art63-revision",
+                "ev-c23-a31-l193-203-revision-queja"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-art9-sobreseimiento",
+                "ev-c23-a31-l065-069-sobreseimiento",
+                "ev-c23-lfpca-arts51-52-nulidad",
+                "ev-c23-lfpca-art63-revision",
+                "ev-c23-a31-l193-203-revision-queja"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-art9-sobreseimiento",
+                "ev-c23-a31-l065-069-sobreseimiento",
+                "ev-c23-lfpca-art63-revision",
+                "ev-c23-a31-l193-203-revision-queja"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-art9-sobreseimiento",
+              "ev-c23-a31-l065-069-sobreseimiento",
+              "ev-c23-lfpca-art63-revision",
+              "ev-c23-a31-l193-203-revision-queja"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-art9-sobreseimiento",
+              "ev-c23-a31-l065-069-sobreseimiento"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-art9-sobreseimiento",
+                "ev-c23-a31-l065-069-sobreseimiento"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts51-52-nulidad"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-art9-sobreseimiento",
+                "ev-c23-a31-l065-069-sobreseimiento"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál es una causal de ilegalidad del artículo 51?",
+            "difficulty": "basic",
+            "options": [
+              "Incompetencia de quien dictó, ordenó o tramitó",
+              "Inconformidad política con la autoridad",
+              "Preferencia personal de la parte"
+            ],
+            "correctOption": 0,
+            "explanation": "La incompetencia es causal expresa.",
+            "optionExplanations": [
+              "Es la fracción I.",
+              "No constituye causal jurídica.",
+              "No demuestra ilegalidad."
+            ],
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts51-52-nulidad"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts51-52-nulidad"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts51-52-nulidad",
+                "ev-c23-lfpca-art63-revision",
+                "ev-c23-a31-l193-203-revision-queja"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts51-52-nulidad"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts51-52-nulidad"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts51-52-nulidad"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts51-52-nulidad"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-art63-revision",
+                "ev-c23-a31-l193-203-revision-queja"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts51-52-nulidad"
+              ]
+            ]
+          },
+          {
+            "text": "La nulidad deriva de un vicio de procedimiento trascendente. ¿Qué efecto es congruente?",
+            "difficulty": "intermediate",
+            "options": [
+              "Reposición desde el acto viciado",
+              "Validez automática",
+              "Prisión de la persona funcionaria"
+            ],
+            "correctOption": 0,
+            "explanation": "Los artículos 52 y 57 permiten reponer el procedimiento.",
+            "optionExplanations": [
+              "Corrige el tramo afectado.",
+              "Contradice la nulidad declarada.",
+              "No es efecto del juicio contencioso."
+            ],
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts51-52-nulidad"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts51-52-nulidad"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts51-52-nulidad"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts51-52-nulidad"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts51-52-nulidad"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts51-52-nulidad"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts51-52-nulidad"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts51-52-nulidad"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts51-52-nulidad"
+              ]
+            ]
+          },
+          {
+            "text": "Antes del cierre, la magistratura desecha una prueba ofrecida. ¿Qué medio procede?",
+            "difficulty": "basic",
+            "options": [
+              "Reclamación",
+              "Queja de cumplimiento",
+              "Revisión fiscal de la persona particular"
+            ],
+            "correctOption": 0,
+            "explanation": "El desechamiento de prueba es supuesto del artículo 59.",
+            "optionExplanations": [
+              "Es el recurso intraprocesal correcto.",
+              "Aún no existe sentencia por cumplir.",
+              "La revisión corresponde a la autoridad y tiene otros supuestos."
+            ],
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lfpca-arts59-62-reclamacion",
+              "ev-c23-a31-l083-113-reclamacion-amparo"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts59-62-reclamacion",
+                "ev-c23-a31-l083-113-reclamacion-amparo"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts57-58-cumplimiento",
+                "ev-c23-a31-l253-259-queja-organo",
+                "ev-c23-lfpca-arts59-62-reclamacion",
+                "ev-c23-a31-l083-113-reclamacion-amparo"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts59-62-reclamacion",
+                "ev-c23-a31-l083-113-reclamacion-amparo",
+                "ev-c23-lfpca-art63-revision",
+                "ev-c23-a31-l193-203-revision-queja",
+                "ev-c23-lamp-arts61xx-170-amparo-directo",
+                "ev-c23-a31-l011-015-particular-autoridad"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lfpca-arts59-62-reclamacion",
+              "ev-c23-a31-l083-113-reclamacion-amparo"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts59-62-reclamacion",
+              "ev-c23-a31-l083-113-reclamacion-amparo"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts59-62-reclamacion",
+                "ev-c23-a31-l083-113-reclamacion-amparo"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts57-58-cumplimiento",
+                "ev-c23-a31-l253-259-queja-organo"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-art63-revision",
+                "ev-c23-a31-l193-203-revision-queja",
+                "ev-c23-lamp-arts61xx-170-amparo-directo",
+                "ev-c23-a31-l011-015-particular-autoridad"
+              ]
+            ]
+          },
+          {
+            "text": "Se niega una suspensión cautelar. ¿En cuánto se promueve reclamación?",
+            "difficulty": "intermediate",
+            "options": [
+              "Cinco días",
+              "Diez años",
+              "Cuatro meses"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 62 fija cinco días para medidas cautelares.",
+            "optionExplanations": [
+              "Es el plazo especial.",
+              "No existe ese plazo.",
+              "Corresponde a ciertos cumplimientos de sentencia."
+            ],
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts24-28-cautelares",
+              "ev-c23-a31-l151-171-suspension",
+              "ev-c23-lfpca-arts59-62-reclamacion",
+              "ev-c23-a31-l083-113-reclamacion-amparo"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts24-28-cautelares",
+                "ev-c23-a31-l151-171-suspension",
+                "ev-c23-lfpca-arts59-62-reclamacion",
+                "ev-c23-a31-l083-113-reclamacion-amparo"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts24-28-cautelares",
+                "ev-c23-a31-l151-171-suspension",
+                "ev-c23-lfpca-arts59-62-reclamacion",
+                "ev-c23-a31-l083-113-reclamacion-amparo"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts24-28-cautelares",
+                "ev-c23-a31-l151-171-suspension",
+                "ev-c23-lfpca-arts57-58-cumplimiento",
+                "ev-c23-a31-l253-259-queja-organo",
+                "ev-c23-lfpca-arts59-62-reclamacion",
+                "ev-c23-a31-l083-113-reclamacion-amparo"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts24-28-cautelares",
+              "ev-c23-a31-l151-171-suspension",
+              "ev-c23-lfpca-arts59-62-reclamacion",
+              "ev-c23-a31-l083-113-reclamacion-amparo"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts24-28-cautelares",
+              "ev-c23-a31-l151-171-suspension",
+              "ev-c23-lfpca-arts59-62-reclamacion",
+              "ev-c23-a31-l083-113-reclamacion-amparo"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts59-62-reclamacion",
+                "ev-c23-a31-l083-113-reclamacion-amparo"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts51-52-nulidad"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts57-58-cumplimiento",
+                "ev-c23-a31-l253-259-queja-organo"
+              ]
+            ]
+          },
+          {
+            "text": "Una autoridad pierde el juicio. ¿Puede interponer revisión sin justificar otra cosa?",
+            "difficulty": "advanced",
+            "options": [
+              "No, debe actualizar un supuesto del artículo 63",
+              "Sí, toda derrota la hace procedente",
+              "Solo si el particular acepta"
+            ],
+            "correctOption": 0,
+            "explanation": "El recurso de revisión del artículo 63 es de procedencia tasada.",
+            "optionExplanations": [
+              "Exige encuadre legal.",
+              "Convierte indebidamente el recurso en universal.",
+              "La procedencia no depende de consentimiento."
+            ],
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-art63-revision",
+              "ev-c23-a31-l193-203-revision-queja"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-art63-revision",
+                "ev-c23-a31-l193-203-revision-queja"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-art63-revision",
+                "ev-c23-a31-l193-203-revision-queja"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-art63-revision",
+                "ev-c23-a31-l193-203-revision-queja",
+                "ev-c23-lamp-arts61xx-170-amparo-directo",
+                "ev-c23-a31-l011-015-particular-autoridad"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-art63-revision",
+              "ev-c23-a31-l193-203-revision-queja"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-art63-revision",
+              "ev-c23-a31-l193-203-revision-queja"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-art63-revision",
+                "ev-c23-a31-l193-203-revision-queja"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts51-52-nulidad"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lamp-arts61xx-170-amparo-directo",
+                "ev-c23-a31-l011-015-particular-autoridad"
+              ]
+            ]
+          },
+          {
+            "text": "Una persona particular combate la sentencia definitiva del TFJA. ¿Cuál es la vía normal?",
+            "difficulty": "basic",
+            "options": [
+              "Amparo directo",
+              "Amparo indirecto por regla general",
+              "Reclamación del artículo 59"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 170 de la Ley de Amparo cubre sentencias definitivas de tribunales administrativos.",
+            "optionExplanations": [
+              "Es la vía correcta.",
+              "Confunde la vía contra actos fuera o después del juicio.",
+              "La reclamación combate acuerdos intraprocesales."
+            ],
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lamp-arts61xx-170-amparo-directo",
+              "ev-c23-a31-l011-015-particular-autoridad"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lamp-arts61xx-170-amparo-directo",
+                "ev-c23-a31-l011-015-particular-autoridad"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lamp-arts61xx-170-amparo-directo",
+                "ev-c23-a31-l011-015-particular-autoridad"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts59-62-reclamacion",
+                "ev-c23-a31-l083-113-reclamacion-amparo",
+                "ev-c23-lamp-arts61xx-170-amparo-directo",
+                "ev-c23-a31-l011-015-particular-autoridad"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lamp-arts61xx-170-amparo-directo",
+              "ev-c23-a31-l011-015-particular-autoridad"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lamp-arts61xx-170-amparo-directo",
+              "ev-c23-a31-l011-015-particular-autoridad"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lamp-arts61xx-170-amparo-directo",
+                "ev-c23-a31-l011-015-particular-autoridad"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lamp-arts61xx-170-amparo-directo",
+                "ev-c23-a31-l011-015-particular-autoridad"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts59-62-reclamacion",
+                "ev-c23-a31-l083-113-reclamacion-amparo"
+              ]
+            ]
+          },
+          {
+            "text": "La sentencia firme ordena emitir nueva resolución en juicio ordinario. ¿Plazo general?",
+            "difficulty": "intermediate",
+            "options": [
+              "Cuatro meses",
+              "Un día",
+              "Cinco años"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 52 fija cuatro meses para juicio ordinario.",
+            "optionExplanations": [
+              "Es la regla general.",
+              "No es plazo legal.",
+              "Confunde lesividad."
+            ],
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts57-58-cumplimiento",
+                "ev-c23-a31-l253-259-queja-organo"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts57-58-cumplimiento",
+                "ev-c23-a31-l253-259-queja-organo"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts51-52-nulidad"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts51-52-nulidad"
+              ]
+            ]
+          },
+          {
+            "text": "La autoridad repite indebidamente el acto anulado al cumplir. ¿Qué procede?",
+            "difficulty": "intermediate",
+            "options": [
+              "Queja ante el órgano que sentenció",
+              "Nueva reclamación contra prueba",
+              "Recurso administrativo obligatorio ante la misma autoridad"
+            ],
+            "correctOption": 0,
+            "explanation": "La repetición indebida es supuesto del artículo 58.",
+            "optionExplanations": [
+              "Controla la ejecución del fallo.",
+              "No guarda relación con prueba.",
+              "No sustituye la instancia jurisdiccional de cumplimiento."
+            ],
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo",
+              "ev-c23-lfpca-art63-revision",
+              "ev-c23-a31-l193-203-revision-queja"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts57-58-cumplimiento",
+                "ev-c23-a31-l253-259-queja-organo",
+                "ev-c23-lfpca-art63-revision",
+                "ev-c23-a31-l193-203-revision-queja"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts57-58-cumplimiento",
+                "ev-c23-a31-l253-259-queja-organo",
+                "ev-c23-lfpca-arts59-62-reclamacion",
+                "ev-c23-a31-l083-113-reclamacion-amparo",
+                "ev-c23-lfpca-art63-revision",
+                "ev-c23-a31-l193-203-revision-queja"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts57-58-cumplimiento",
+                "ev-c23-a31-l253-259-queja-organo",
+                "ev-c23-lfpca-art63-revision",
+                "ev-c23-a31-l193-203-revision-queja"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo",
+              "ev-c23-lfpca-art63-revision",
+              "ev-c23-a31-l193-203-revision-queja"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts57-58-cumplimiento",
+                "ev-c23-a31-l253-259-queja-organo"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts59-62-reclamacion",
+                "ev-c23-a31-l083-113-reclamacion-amparo"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts57-58-cumplimiento",
+                "ev-c23-a31-l253-259-queja-organo",
+                "ev-c23-lfpca-art63-revision",
+                "ev-c23-a31-l193-203-revision-queja"
+              ]
+            ]
+          },
+          {
+            "text": "La autoridad simplemente omite cumplir la sentencia. ¿Cuándo puede promoverse queja?",
+            "difficulty": "advanced",
+            "options": [
+              "En cualquier tiempo mientras el derecho no prescriba",
+              "Solo dentro de cinco horas",
+              "Nunca, porque el TFJA perdió competencia"
+            ],
+            "correctOption": 0,
+            "explanation": "La omisión tiene la excepción temporal del artículo 58.",
+            "optionExplanations": [
+              "Es la regla especial.",
+              "No existe ese plazo.",
+              "El Tribunal conserva potestades de ejecución."
+            ],
+            "evidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo",
+              "ev-c23-lfpca-art63-revision",
+              "ev-c23-a31-l193-203-revision-queja"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts57-58-cumplimiento",
+                "ev-c23-a31-l253-259-queja-organo",
+                "ev-c23-lfpca-art63-revision",
+                "ev-c23-a31-l193-203-revision-queja"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts57-58-cumplimiento",
+                "ev-c23-a31-l253-259-queja-organo",
+                "ev-c23-lfpca-art63-revision",
+                "ev-c23-a31-l193-203-revision-queja"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts57-58-cumplimiento",
+                "ev-c23-a31-l253-259-queja-organo",
+                "ev-c23-lfpca-art63-revision",
+                "ev-c23-a31-l193-203-revision-queja"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts49-53-sentencia",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo",
+              "ev-c23-lfpca-art63-revision",
+              "ev-c23-a31-l193-203-revision-queja"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c23-lotfja-arts1-3-tfja",
+              "ev-c23-lfpca-arts57-58-cumplimiento",
+              "ev-c23-a31-l253-259-queja-organo"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts57-58-cumplimiento",
+                "ev-c23-a31-l253-259-queja-organo"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts51-52-nulidad"
+              ],
+              [
+                "ev-c23-lotfja-arts1-3-tfja",
+                "ev-c23-lfpca-arts49-53-sentencia",
+                "ev-c23-lfpca-arts51-52-nulidad"
+              ]
+            ]
+          }
         ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c23-lfpca-art9-sobreseimiento",
+      "kind": "official",
+      "title": "Ley Federal de Procedimiento Contencioso Administrativo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPCA.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, reforma integral DOF 09-06-2026; artículo 9, fracción IV",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c23-lfpca-arts49-53-sentencia",
+      "kind": "official",
+      "title": "Ley Federal de Procedimiento Contencioso Administrativo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPCA.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, reforma integral DOF 09-06-2026; artículos 49 a 53",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c23-lfpca-arts51-52-nulidad",
+      "kind": "official",
+      "title": "Ley Federal de Procedimiento Contencioso Administrativo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPCA.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, reforma integral DOF 09-06-2026; artículos 51 y 52",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c23-lfpca-arts24-28-cautelares",
+      "kind": "official",
+      "title": "Ley Federal de Procedimiento Contencioso Administrativo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPCA.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, reforma integral DOF 09-06-2026; artículos 24 a 28",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c23-lfpca-arts57-58-cumplimiento",
+      "kind": "official",
+      "title": "Ley Federal de Procedimiento Contencioso Administrativo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPCA.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, reforma integral DOF 09-06-2026; artículos 57 y 58",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c23-lfpca-arts59-62-reclamacion",
+      "kind": "official",
+      "title": "Ley Federal de Procedimiento Contencioso Administrativo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPCA.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, reforma integral DOF 09-06-2026; artículos 59 a 62",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c23-lfpca-art63-revision",
+      "kind": "official",
+      "title": "Ley Federal de Procedimiento Contencioso Administrativo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPCA.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, reforma integral DOF 09-06-2026; artículo 63",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c23-lotfja-arts1-3-tfja",
+      "kind": "official",
+      "title": "Ley Orgánica del Tribunal Federal de Justicia Administrativa",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LOTFJA.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículos 1 a 3",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c23-lamp-arts61xx-170-amparo-directo",
+      "kind": "official",
+      "title": "Ley de Amparo, Reglamentaria de los artículos 103 y 107 de la Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículos 61, fracción XX, y 170",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c23-a31-l011-015-particular-autoridad",
+      "kind": "transcript",
+      "audioNumber": 31,
+      "locator": {
+        "type": "line_range",
+        "startLine": 11,
+        "endLine": 15
+      }
+    },
+    {
+      "id": "ev-c23-a31-l065-069-sobreseimiento",
+      "kind": "transcript",
+      "audioNumber": 31,
+      "locator": {
+        "type": "line_range",
+        "startLine": 65,
+        "endLine": 69
+      }
+    },
+    {
+      "id": "ev-c23-a31-l083-113-reclamacion-amparo",
+      "kind": "transcript",
+      "audioNumber": 31,
+      "locator": {
+        "type": "line_range",
+        "startLine": 83,
+        "endLine": 113
+      }
+    },
+    {
+      "id": "ev-c23-a31-l151-171-suspension",
+      "kind": "transcript",
+      "audioNumber": 31,
+      "locator": {
+        "type": "line_range",
+        "startLine": 151,
+        "endLine": 171
+      }
+    },
+    {
+      "id": "ev-c23-a31-l193-203-revision-queja",
+      "kind": "transcript",
+      "audioNumber": 31,
+      "locator": {
+        "type": "line_range",
+        "startLine": 193,
+        "endLine": 203
+      }
+    },
+    {
+      "id": "ev-c23-a31-l253-259-queja-organo",
+      "kind": "transcript",
+      "audioNumber": 31,
+      "locator": {
+        "type": "line_range",
+        "startLine": 253,
+        "endLine": 259
+      }
+    },
+    {
+      "id": "ev-c23-a31-l279-287-queja-amparo",
+      "kind": "transcript",
+      "audioNumber": 31,
+      "locator": {
+        "type": "line_range",
+        "startLine": 279,
+        "endLine": 287
       }
     }
   ]

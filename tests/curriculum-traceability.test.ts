@@ -336,6 +336,35 @@ const traceablePackages = [
       /con o sin alegatos, la instrucción queda cerrada automáticamente/i,
     ],
   },
+  {
+    code: "C23",
+    fileName: "audio-31-sentencia-recursos-cumplimiento.json",
+    artifacts: 151,
+    evidence: 16,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /cuatro meses en ordinario y uno en sumario/i,
+      /quince días; por omisión puede promoverse mientras el derecho no prescriba/i,
+      /diez días; cinco para cautelares/i,
+      /recurso de revisión del artículo 63 es de procedencia tasada/i,
+      /Amparo directo, previo agotamiento de recursos ordinarios procedentes/i,
+    ],
+  },
+  {
+    code: "C24",
+    fileName: "audio-34-derechos-victima-asesoria.json",
+    artifacts: 150,
+    evidence: 19,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /calidad victimal no depende de que se conozca, detenga o condene/i,
+      /asesor no es defensor del imputado ni sustituye al Ministerio Público/i,
+      /inscripción.*no equivale por sí sola a conceder automáticamente una compensación/i,
+      /asesoría federal y las locales actúan dentro de sus competencias/i,
+      /Constitución vigente al 02-06-2026/i,
+      /Código Nacional de Procedimientos Penales vigente al 28-11-2025/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -559,6 +588,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una regla procesal retirada como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C23" || expected.code === "C24") {
+      const obsoleteAsCurrent =
+        expected.code === "C23"
+          ? /toda nulidad.*lisa y llana|autoridad.*siempre.*revisión|amparo indirecto.*sentencia definitiva|queja.*recurso contra sentencia|garantía.*suspensión automática/i
+          : /asesor.*(?:defensor del imputado|sustituye.*Ministerio Público)|registro.*(?:reparación|compensación) automática|toda persona familiar.*víctima indirecta|sentencia.*requisito.*víctima|asesoría federal.*todo asunto local/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una generalización retirada como respuesta vigente.`,
         );
       }
     }
