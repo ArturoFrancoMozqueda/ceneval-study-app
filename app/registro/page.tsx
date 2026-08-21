@@ -10,18 +10,18 @@ export default async function SignUpPage({
 }: {
   searchParams: Promise<{ error?: string; field?: string }>;
 }) {
-  if (isPrivateAccessOnly()) {
-    redirect(
-      "/iniciar-sesion?message=El registro está desactivado porque esta aplicación es privada.",
-    );
-  }
   if (await getCurrentUser()) redirect("/");
   const { error, field } = await searchParams;
+  const privateAccessOnly = isPrivateAccessOnly();
 
   return (
     <AuthCard
       action={signUpAction}
-      description="Crea una cuenta gratuita para guardar tu progreso."
+      description={
+        privateAccessOnly
+          ? "Activa la cuenta administradora con el correo autorizado. Si recibiste una invitación, abre primero el enlace del correo."
+          : "Crea una cuenta para guardar tu progreso."
+      }
       error={field ? undefined : error}
       fields={
         <>
@@ -42,7 +42,7 @@ export default async function SignUpPage({
           />
           <AuthField
             autoComplete="new-password"
-            description="Usa al menos 8 caracteres; puedes apoyarte en un gestor de contraseñas."
+            description="Usa de 12 a 128 caracteres e incluye al menos una letra y un número. Puedes apoyarte en un gestor de contraseñas."
             error={field === "password" ? error : undefined}
             label="Contraseña"
             name="password"
@@ -61,8 +61,8 @@ export default async function SignUpPage({
           </Link>
         </>
       }
-      submitLabel="Crear cuenta"
-      title="Comienza a estudiar"
+      submitLabel={privateAccessOnly ? "Solicitar activación" : "Crear cuenta"}
+      title={privateAccessOnly ? "Activa tu acceso privado" : "Comienza a estudiar"}
     />
   );
 }

@@ -75,7 +75,15 @@ export function SignInForm({
       }
       footer={
         privateAccessOnly ? (
-          <>Acceso privado para la administradora.</>
+          <>
+            Acceso privado para la administradora. ¿Es tu primer acceso?{" "}
+            <Link
+              className="inline-flex min-h-11 items-center font-semibold text-brand"
+              href="/registro"
+            >
+              Activa tu cuenta
+            </Link>
+          </>
         ) : (
           <>
             ¿Aún no tienes cuenta?{" "}
