@@ -50,6 +50,7 @@ de estado volvió a conciliarse después de integrar las ramas del 20 de agosto.
 | Acciones de estudio aceptaban recursos no publicados. | **Corregido en Server Actions.** Validan entrada y disponibilidad mediante el cliente autenticado. |
 | La Data API permitía actividad sobre borradores o retiradas. | **Migración integrada, despliegue no confirmado.** La nueva política tiene prueba estática en CI, pero no hay evidencia de aplicación remota. |
 | Dependencias con vulnerabilidades conocidas. | **Corregido en el árbol versionado.** Next.js está en 16.3.1 y la rama registró auditoría limpia antes de integrarse. |
+| La autopromoción por `ADMIN_EMAIL` escribía durante cada render. | **Corregido en código.** El rol ya no cambia al visitar páginas; `docs/ADMIN_BOOTSTRAP.md` define una invitación/promoción explícita, confirmada y verificable desde una terminal confiable. Su ejecución remota sigue pendiente. |
 
 ## Bloqueos que siguen abiertos
 

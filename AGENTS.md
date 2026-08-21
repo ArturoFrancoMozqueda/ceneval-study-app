@@ -43,6 +43,9 @@ transcripción → preparación editorial → borrador → revisión → publica
   Vercel sobre el plan Hobby. No es un piloto ni una apertura comercial:
   Supabase sigue sin usuarios ni contenido y falta completar la identidad
   administradora y los secretos del entorno.
+- La administradora se crea mediante `docs/ADMIN_BOOTSTRAP.md`. No restaures la
+  autopromoción basada en `ADMIN_EMAIL` ni promociones usuarios dentro del
+  render o de una petición GET.
 - Vercel todavía no está conectado a Git. La CI y los pushes no despliegan por
   sí solos; las publicaciones actuales son manuales.
 - Hay CI para pruebas unitarias locales, lint y build. Aún no hay pruebas
@@ -172,6 +175,9 @@ alguna sigue abierta; si corriges una, actualiza esta lista.
   configuración persistente de secretos, la administradora y la validación
   autenticada. No hay integración Git automática: CI verde o un push a `main`
   no publican por sí solos.
+- **El bootstrap administrativo existe, pero no se ha ejecutado.** El comando
+  `npm run admin:bootstrap` invita o promueve de forma explícita y verifica el
+  rol. Escribe en Supabase y requiere autorización; nunca pertenece a CI.
 - **Tres numeraciones distintas.** Audio 01–70 (transcripciones), C01–C58
   (orden académico) e ID de Supabase (técnico). No las confundas: C40 tiene el
   ID 49, y eso no significa que existan 49 clases.
