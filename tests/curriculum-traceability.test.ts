@@ -83,6 +83,42 @@ const traceablePackages = [
       /última reforma DOF 14-11-2025/i,
     ],
   },
+  {
+    code: "C07",
+    fileName: "audio-07-accion-inconstitucionalidad.json",
+    artifacts: 138,
+    evidence: 10,
+    forbiddenClaims: [/última reforma DOF 03-04-2025/i],
+    requiredClaims: [
+      /treinta días naturales/i,
+      /(?:al menos|cuando menos|mayoría de) seis votos/i,
+      /nueve integrantes/i,
+      /treinta y tres por ciento de la Cámara de Diputados puede impugnar leyes federales/i,
+      /mismo porcentaje del Senado, leyes federales o tratados/i,
+      /no suspende la norma/i,
+    ],
+  },
+  {
+    code: "C08",
+    fileName: "audio-10-juicio-politico.json",
+    artifacts: 138,
+    evidence: 15,
+    forbiddenClaims: [
+      /cualquier persona (?:puede|podrá) (?:presentar|formular) (?:una )?denuncia/i,
+      /artículos 5 a 45/i,
+      /presidente.*sujeto.*juicio político ordinario/i,
+      /Consejo de la Judicatura Federal/i,
+    ],
+    requiredClaims: [
+      /cualquier ciudadano/i,
+      /destitución.*inhabilitación/i,
+      /Ley General de Responsabilidades Administrativas: régimen distinto para faltas administrativas/i,
+      /declaración de procedencia es autónoma/i,
+      /Tribunal de Disciplina Judicial/i,
+      /órgano de administración judicial/i,
+      /última reforma DOF 01-04-2024/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -159,30 +195,43 @@ for (const expected of traceablePackages) {
       },
     });
 
-    if (expected.code === "C06") {
+    if (expected.code === "C06" || expected.code === "C07") {
       const questions = bundle.topics.flatMap((topic) => topic.exam.questions);
       for (const question of questions) {
         assert.doesNotMatch(
           question.options[question.correctOption] ?? "",
           /(?:once|11) (?:ministros|integrantes)|(?:ocho|8) votos/i,
-          "C06 no puede presentar la integración o votación histórica como respuesta vigente.",
+          `${expected.code} no puede presentar la integración o votación histórica como respuesta vigente.`,
         );
       }
 
-      const obsoleteCompositionQuestion = questions.find((question) =>
-        /once ministros/i.test(question.text),
+      const obsoleteCompositionQuestion = questions.find(
+        (question) =>
+          /(?:once|11) (?:ministros|integrantes)/i.test(question.text) ||
+          question.options.some((option) =>
+            /(?:once|11) (?:ministros|integrantes)/i.test(option),
+          ),
       );
       assert.ok(obsoleteCompositionQuestion);
       assert.match(
         obsoleteCompositionQuestion.options[
           obsoleteCompositionQuestion.correctOption
         ] ?? "",
-        /nueve integrantes.*artículo 94 vigente/i,
+        expected.code === "C06"
+          ? /nueve integrantes.*artículo 94 vigente/i
+          : /nueve integrantes.*seis votos/i,
       );
-      assert.match(
-        obsoleteCompositionQuestion.explanation,
-        /desactualizado.*nueve integrantes/i,
-      );
+      if (expected.code === "C06") {
+        assert.match(
+          obsoleteCompositionQuestion.explanation,
+          /desactualizado.*nueve integrantes/i,
+        );
+      } else {
+        assert.match(
+          JSON.stringify(obsoleteCompositionQuestion.optionExplanations),
+          /cifras anteriores a la reforma/i,
+        );
+      }
     }
 
     assert.equal(countClassPackage(bundle).artifacts, expected.artifacts);

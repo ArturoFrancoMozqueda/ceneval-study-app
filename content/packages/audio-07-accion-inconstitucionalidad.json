@@ -1,10 +1,13 @@
 {
-  "packageVersion": "1.1",
+  "packageVersion": "1.2",
   "curriculum": {
     "code": "C07",
     "order": 7,
     "audioSources": [
-      {"audioNumber": 7,"fragment": "Audio completo"}
+      {
+        "audioNumber": 7,
+        "fragment": "Audio completo"
+      }
     ]
   },
   "subject": {
@@ -26,91 +29,1250 @@
       "learningJourney": {
         "openingPrompt": "Si una ley acaba de publicarse y todavía no se aplica a nadie, ¿puede revisarse su contradicción con la Constitución?",
         "quickChecks": [
-          {"prompt": "¿Qué se impugna mediante esta acción?", "answer": "Una norma general posiblemente contraria a la Constitución.", "feedback": "Es control abstracto: no exige demostrar un acto individual de aplicación."},
-          {"prompt": "¿Puede promoverla cualquier persona?", "answer": "No. Solo los sujetos expresamente legitimados por el artículo 105, fracción II, dentro del ámbito asignado.", "feedback": "La legitimación depende tanto del sujeto como del tipo y origen de la norma."},
-          {"prompt": "¿Qué ocurre si solo cinco integrantes votan por invalidar?", "answer": "No se alcanza la mayoría mínima de seis; el Pleno desestima la acción y archiva el asunto.", "feedback": "La invalidez de la norma exige cuando menos seis votos."}
+          {
+            "prompt": "¿Qué se impugna mediante esta acción?",
+            "answer": "Una norma general posiblemente contraria a la Constitución.",
+            "feedback": "Es control abstracto: no exige demostrar un acto individual de aplicación.",
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-scjn-ar134-abstracto"
+            ]
+          },
+          {
+            "prompt": "¿Puede promoverla cualquier persona?",
+            "answer": "No. Solo los sujetos expresamente legitimados por el artículo 105, fracción II, dentro del ámbito asignado.",
+            "feedback": "La legitimación depende tanto del sujeto como del tipo y origen de la norma.",
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-lr105-arts59-64-plazo-demanda",
+              "ev-c07-a07-l159-161-legitimacion"
+            ]
+          },
+          {
+            "prompt": "¿Qué ocurre si solo cinco integrantes votan por invalidar?",
+            "answer": "No se alcanza la mayoría mínima de seis; el Pleno desestima la acción y archiva el asunto.",
+            "feedback": "La invalidez de la norma exige cuando menos seis votos.",
+            "evidenceIds": [
+              "ev-c07-cpeum-art94-integracion",
+              "ev-c07-cpeum-art105ii-efectos-suspension",
+              "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+            ]
+          }
         ],
         "practicalCase": {
           "facts": "Una legislatura estatal publica una ley que restringe de forma amplia la libertad de expresión. El cuarenta por ciento de sus integrantes busca impugnarla veinte días después de la publicación.",
           "question": "¿Qué vía y elementos deben analizarse?",
           "legalRule": "El treinta y tres por ciento de una legislatura local puede promover acción de inconstitucionalidad contra leyes expedidas por el propio órgano, dentro de treinta días naturales desde el día siguiente a su publicación.",
           "reasoning": "El objeto es una norma general local; el porcentaje supera el mínimo; quienes promueven pertenecen al órgano que la expidió; el plazo todavía corre; y la contradicción se plantea frente a la Constitución y los derechos humanos aplicables. La admisión no suspenderá la norma.",
-          "conclusion": "La acción de inconstitucionalidad es procedente en principio. Para invalidar la norma, la sentencia debe obtener al menos seis votos."
+          "conclusion": "La acción de inconstitucionalidad es procedente en principio. Para invalidar la norma, la sentencia debe obtener al menos seis votos.",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-objeto-legitimacion",
+            "ev-c07-lr105-arts59-64-plazo-demanda",
+            "ev-c07-cpeum-art105ii-efectos-suspension",
+            "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+          ]
         },
         "closingPrompt": "Resuelve cada caso con cuatro filtros: sujeto legitimado, norma que puede impugnar, plazo de treinta días naturales y votación para invalidar.",
-        "nextActivity": "Estudia el mapa visual, responde la guía y completa diez reactivos de legitimación y efectos."
+        "nextActivity": "Estudia el mapa visual, responde la guía y completa diez reactivos de legitimación y efectos.",
+        "openingPromptEvidenceIds": [
+          "ev-c07-cpeum-art105ii-objeto-legitimacion",
+          "ev-c07-scjn-ar134-abstracto"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c07-cpeum-art105ii-objeto-legitimacion",
+          "ev-c07-lr105-arts59-64-plazo-demanda",
+          "ev-c07-cpeum-art94-integracion",
+          "ev-c07-cpeum-art105ii-efectos-suspension",
+          "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c07-cpeum-art105ii-objeto-legitimacion",
+          "ev-c07-scjn-ar134-abstracto",
+          "ev-c07-lr105-arts59-64-plazo-demanda",
+          "ev-c07-cpeum-art94-integracion",
+          "ev-c07-cpeum-art105ii-efectos-suspension",
+          "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+        ]
       },
       "materials": [
-        {"type": "short_answer", "title": "Respuesta corta: qué es la acción de inconstitucionalidad", "content": "Es un medio de control abstracto que permite a sujetos constitucionalmente legitimados pedir a la Suprema Corte que examine la posible contradicción entre una norma general y la Constitución. No requiere demostrar un agravio individual ni un acto de aplicación, pero sí respetar sujeto, objeto y plazo.", "sourceOrigin": "mixed"},
-        {"type": "full_explanation", "title": "Explicación completa desde cero", "content": "La acción de inconstitucionalidad controla normas generales en abstracto. La pregunta central no es si una autoridad invadió la competencia de otra en un acto concreto, sino si el contenido de una ley o tratado es compatible con la Constitución. Por eso puede promoverse desde su publicación, aunque todavía no exista una persona afectada por un acto de aplicación.\n\nLa legitimación es cerrada. El treinta y tres por ciento de la Cámara de Diputados puede impugnar leyes federales; el mismo porcentaje del Senado, leyes federales o tratados; el Ejecutivo Federal, por medio de la Consejería Jurídica, normas generales federales o locales; y el treinta y tres por ciento de una legislatura local, leyes expedidas por esa propia legislatura. Los partidos nacionales pueden impugnar leyes electorales federales o locales; los partidos con registro local, solo leyes electorales de la entidad que les otorgó registro. La CNDH puede combatir leyes federales o locales y tratados que vulneren derechos humanos; los organismos locales equivalentes, leyes de sus legislaturas. La FGR puede hacerlo respecto de leyes penales, procesales penales o relacionadas con sus funciones.\n\nEl plazo es de treinta días naturales desde el día siguiente a la publicación oficial. Si el último día es inhábil, la ley permite presentar el primer día hábil siguiente; en materia electoral todos los días son hábiles. La demanda identifica promoventes, órganos emisor y promulgador, norma, publicación, parámetros constitucionales o convencionales y conceptos de invalidez. En las minorías legislativas debe firmarla cuando menos el treinta y tres por ciento.\n\nLa admisión nunca suspende la norma cuestionada. Después de los informes y alegatos, la ministra o ministro instructor presenta proyecto al Pleno. La Corte puede corregir citas y suplir conceptos de invalidez, incluso con base en derechos humanos de tratados; en leyes electorales, la sentencia solo puede atender los preceptos expresamente señalados.\n\nPara declarar inválida la norma se requieren al menos seis votos. Si no se alcanza esa mayoría, el Pleno desestima la acción y archiva. La invalidez puede tener efectos generales y, por regla constitucional, no retroactivos, salvo en materia penal. La fecha y alcance se fijan en la sentencia.\n\nLa grabación usa cifras anteriores: hoy la SCJN tiene nueve integrantes y el umbral es seis votos. Además, la sentencia de una acción declara la invalidez de la norma impugnada; no debe confundirse con la declaratoria general de inconstitucionalidad que pertenece a reglas específicas del amparo.", "sourceOrigin": "mixed"},
-        {"type": "legal_basis", "title": "Fundamento jurídico vigente", "content": "Constitución, artículos 94 y 105, fracción II: integración de la SCJN, objeto, legitimados, plazo, materia electoral, mayoría de seis votos, no retroactividad, prohibición de suspensión e improcedencia contra reformas constitucionales. Ley Reglamentaria del artículo 105, artículos 59 a 73: plazo, demanda, firmas del treinta y tres por ciento, informes, alegatos, reglas electorales, suplencia, sentencia y desestimación.", "sourceOrigin": "complementary"},
-        {"type": "simple_example", "title": "Ejemplo sencillo: minoría legislativa", "content": "En un congreso local de 40 integrantes, 14 legisladores impugnan una ley expedida por ese mismo congreso dentro del plazo. Catorce representan 35%, por lo que superan el mínimo de 33%. Si fueran 13, representarían 32.5% y no alcanzarían el porcentaje constitucional.", "sourceOrigin": "complementary"},
-        {"type": "ceneval_example", "title": "Cómo aparece en un reactivo tipo EGEL", "content": "Primero empareja promovente y norma: Senado-tratado; minoría local-ley de su propio congreso; partido-ley electoral; CNDH-norma que vulnera derechos humanos; FGR-materia penal o funciones. Después revisa treinta días naturales, ausencia de suspensión y seis votos. Los distractores suelen intercambiar competencias entre sujetos o usar las cifras antiguas de once y ocho.", "sourceOrigin": "complementary"},
-        {"type": "summary", "title": "Resumen para repasar", "content": "La acción confronta una norma general con la Constitución sin exigir aplicación concreta. Solo promueven sujetos enumerados y cada uno tiene ámbito propio. El plazo es de treinta días naturales. La norma no se suspende. La SCJN tiene nueve integrantes; se necesitan seis votos para invalidar. Sin seis, se desestima. La invalidez tiene alcance general y no retroactivo, salvo materia penal.", "sourceOrigin": "mixed"},
-        {"type": "study_guide", "title": "Guía de preguntas y respuestas", "content": "1. ¿Qué controla la acción de inconstitucionalidad? Respuesta: la compatibilidad de una norma general con la Constitución.\n2. ¿Es necesario un acto de aplicación? Respuesta: no, porque es control abstracto.\n3. ¿Puede promover cualquier ciudadano? Respuesta: no; solo los sujetos del artículo 105, fracción II.\n4. ¿Qué porcentaje legislativo se exige? Respuesta: al menos treinta y tres por ciento del órgano correspondiente.\n5. ¿Qué puede impugnar el Senado? Respuesta: leyes federales o tratados internacionales.\n6. ¿Qué impugnan los partidos? Respuesta: leyes electorales dentro del ámbito de su registro.\n7. ¿Qué puede impugnar la CNDH? Respuesta: leyes federales o locales y tratados que vulneren derechos humanos.\n8. ¿Cuál es el plazo? Respuesta: treinta días naturales desde el día siguiente a la publicación.\n9. ¿La admisión suspende la norma? Respuesta: no.\n10. ¿Cuántos votos invalidan? Respuesta: al menos seis.\n11. ¿Qué pasa sin seis votos? Respuesta: se desestima la acción y se archiva.\n12. ¿La invalidez es retroactiva? Respuesta: por regla no; la excepción constitucional es la materia penal.", "sourceOrigin": "mixed"},
-        {"type": "key_concepts", "title": "Conceptos clave", "content": "Control abstracto: revisión sin agravio ni aplicación individual. Norma general: regla abstracta e impersonal. Legitimación cerrada: solo sujetos enumerados. Minoría legislativa: al menos 33% del órgano. Concepto de invalidez: argumento de contradicción constitucional. Informe: defensa de la validez por órganos emisor y promulgador. Desestimación: terminación sin invalidez por no reunir seis votos. Efectos generales: exclusión de la norma inválida con el alcance fijado por la sentencia.", "sourceOrigin": "mixed"},
-        {"type": "common_errors", "title": "Errores comunes y correcciones", "content": "Error: pedir un agravio personal. Corrección: es control abstracto. Error: creer que cualquier 33% puede impugnar cualquier norma. Corrección: debe existir correspondencia entre órgano y norma. Error: contar días hábiles. Corrección: son treinta naturales; en electoral todos son hábiles. Error: creer que la admisión suspende. Corrección: la norma sigue vigente. Error: memorizar once ministros y ocho votos. Corrección: derecho vigente, nueve y seis. Error: llamar declaratoria general de amparo a la sentencia. Corrección: aquí se declara invalidez en acción de inconstitucionalidad.", "sourceOrigin": "mixed"}
+        {
+          "type": "short_answer",
+          "title": "Respuesta corta: qué es la acción de inconstitucionalidad",
+          "content": "Es un medio de control abstracto que permite a sujetos constitucionalmente legitimados pedir a la Suprema Corte que examine la posible contradicción entre una norma general y la Constitución. No requiere demostrar un agravio individual ni un acto de aplicación, pero sí respetar sujeto, objeto y plazo.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-objeto-legitimacion",
+            "ev-c07-scjn-ar134-abstracto",
+            "ev-c07-lr105-arts59-64-plazo-demanda"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "La acción de inconstitucionalidad controla normas generales en abstracto. A diferencia de la controversia constitucional, su legitimación no parte de un conflicto entre entes públicos: la acción pregunta en abstracto si una norma general es compatible con la Constitución. Por eso puede promoverse desde su publicación, aunque todavía no exista una persona afectada por un acto de aplicación.\n\nLa legitimación es cerrada. El treinta y tres por ciento de la Cámara de Diputados puede impugnar leyes federales; el mismo porcentaje del Senado, leyes federales o tratados; el Ejecutivo Federal, por medio de la Consejería Jurídica, normas generales federales o locales; y el treinta y tres por ciento de una legislatura local, leyes expedidas por esa propia legislatura. Los partidos nacionales pueden impugnar leyes electorales federales o locales; los partidos con registro local, solo leyes electorales de la entidad que les otorgó registro. La CNDH puede combatir leyes federales o locales y tratados que vulneren derechos humanos; los organismos locales equivalentes, leyes de sus legislaturas. La FGR puede hacerlo respecto de leyes penales, procesales penales o relacionadas con sus funciones.\n\nEl plazo es de treinta días naturales desde el día siguiente a la publicación oficial. Si el último día es inhábil, la ley permite presentar el primer día hábil siguiente; en materia electoral todos los días son hábiles. La demanda identifica promoventes, órganos emisor y promulgador, norma, publicación, parámetros constitucionales o convencionales y conceptos de invalidez. En las minorías legislativas debe firmarla cuando menos el treinta y tres por ciento.\n\nLa admisión nunca suspende la norma cuestionada. Después de los informes y alegatos, la ministra o ministro instructor presenta proyecto al Pleno. La Corte puede corregir citas y suplir conceptos de invalidez, incluso con base en derechos humanos de tratados; en leyes electorales, la sentencia solo puede atender los preceptos expresamente señalados.\n\nPara declarar inválida la norma se requieren al menos seis votos. Si no se alcanza esa mayoría, el Pleno desestima la acción y archiva. La invalidez puede tener efectos generales y, por regla constitucional, no retroactivos, salvo en materia penal. La fecha y alcance se fijan en la sentencia.\n\nLa grabación usa cifras anteriores: hoy la SCJN tiene nueve integrantes y el umbral es seis votos. Además, la sentencia de una acción declara la invalidez de la norma impugnada; no debe confundirse con la declaratoria general de inconstitucionalidad que pertenece a reglas específicas del amparo.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-objeto-legitimacion",
+            "ev-c07-scjn-ar134-abstracto",
+            "ev-c07-lr105-arts59-64-plazo-demanda",
+            "ev-c07-cpeum-art94-integracion",
+            "ev-c07-cpeum-art105ii-efectos-suspension",
+            "ev-c07-lr105-arts64-73-procedimiento-sentencia",
+            "ev-c07-a07-l005-007-cifras-historicas",
+            "ev-c07-a07-l105-109-efectos-amparo",
+            "ev-c07-a07-l159-161-legitimacion",
+            "ev-c07-a07-l203-205-porcentaje"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Constitución, artículos 94 y 105, fracción II: integración de la SCJN, objeto, legitimados, plazo, materia electoral, mayoría de seis votos, no retroactividad, prohibición de suspensión e improcedencia contra reformas constitucionales. Ley Reglamentaria del artículo 105, artículos 59 a 73: plazo, demanda, firmas del treinta y tres por ciento, informes, alegatos, reglas electorales, suplencia, sentencia y desestimación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-objeto-legitimacion",
+            "ev-c07-scjn-ar134-abstracto",
+            "ev-c07-lr105-arts59-64-plazo-demanda",
+            "ev-c07-cpeum-art94-integracion",
+            "ev-c07-cpeum-art105ii-efectos-suspension",
+            "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo: minoría legislativa",
+          "content": "En un congreso local de 40 integrantes, 14 legisladores impugnan una ley expedida por ese mismo congreso dentro del plazo. Catorce representan 35%, por lo que superan el mínimo de 33%. Si fueran 13, representarían 32.5% y no alcanzarían el porcentaje constitucional.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-objeto-legitimacion",
+            "ev-c07-lr105-arts59-64-plazo-demanda"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Cómo aparece en un reactivo tipo EGEL",
+          "content": "Primero empareja promovente y norma: Senado-tratado; minoría local-ley de su propio congreso; partido-ley electoral; CNDH-norma que vulnera derechos humanos; FGR-materia penal o funciones. Después revisa treinta días naturales, ausencia de suspensión y seis votos. Los distractores suelen intercambiar competencias entre sujetos o usar las cifras antiguas de once y ocho.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-objeto-legitimacion",
+            "ev-c07-lr105-arts59-64-plazo-demanda",
+            "ev-c07-cpeum-art94-integracion",
+            "ev-c07-cpeum-art105ii-efectos-suspension",
+            "ev-c07-lr105-arts64-73-procedimiento-sentencia",
+            "ev-c07-a07-l005-007-cifras-historicas"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen para repasar",
+          "content": "La acción confronta una norma general con la Constitución sin exigir aplicación concreta. Solo promueven sujetos enumerados y cada uno tiene ámbito propio. El plazo es de treinta días naturales. La norma no se suspende. La SCJN tiene nueve integrantes; se necesitan seis votos para invalidar. Sin seis, se desestima. La invalidez tiene alcance general y no retroactivo, salvo materia penal.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-objeto-legitimacion",
+            "ev-c07-scjn-ar134-abstracto",
+            "ev-c07-lr105-arts59-64-plazo-demanda",
+            "ev-c07-cpeum-art94-integracion",
+            "ev-c07-cpeum-art105ii-efectos-suspension",
+            "ev-c07-lr105-arts64-73-procedimiento-sentencia",
+            "ev-c07-a07-l105-109-efectos-amparo",
+            "ev-c07-a07-l159-161-legitimacion",
+            "ev-c07-a07-l203-205-porcentaje"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de preguntas y respuestas",
+          "content": "1. ¿Qué controla la acción de inconstitucionalidad? Respuesta: la compatibilidad de una norma general con la Constitución.\n2. ¿Es necesario un acto de aplicación? Respuesta: no, porque es control abstracto.\n3. ¿Puede promover cualquier ciudadano? Respuesta: no; solo los sujetos del artículo 105, fracción II.\n4. ¿Qué porcentaje legislativo se exige? Respuesta: al menos treinta y tres por ciento del órgano correspondiente.\n5. ¿Qué puede impugnar el Senado? Respuesta: leyes federales o tratados internacionales.\n6. ¿Qué impugnan los partidos? Respuesta: leyes electorales dentro del ámbito de su registro.\n7. ¿Qué puede impugnar la CNDH? Respuesta: leyes federales o locales y tratados que vulneren derechos humanos.\n8. ¿Cuál es el plazo? Respuesta: treinta días naturales desde el día siguiente a la publicación.\n9. ¿La admisión suspende la norma? Respuesta: no.\n10. ¿Cuántos votos invalidan? Respuesta: al menos seis.\n11. ¿Qué pasa sin seis votos? Respuesta: se desestima la acción y se archiva.\n12. ¿La invalidez es retroactiva? Respuesta: por regla no; la excepción constitucional es la materia penal.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-objeto-legitimacion",
+            "ev-c07-scjn-ar134-abstracto",
+            "ev-c07-lr105-arts59-64-plazo-demanda",
+            "ev-c07-cpeum-art94-integracion",
+            "ev-c07-cpeum-art105ii-efectos-suspension",
+            "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Control abstracto: revisión sin agravio ni aplicación individual. Norma general: regla abstracta e impersonal. Legitimación cerrada: solo sujetos enumerados. Minoría legislativa: al menos 33% del órgano. Concepto de invalidez: argumento de contradicción constitucional. Informe: defensa de la validez por órganos emisor y promulgador. Desestimación: terminación sin invalidez por no reunir seis votos. Efectos generales: exclusión de la norma inválida con el alcance fijado por la sentencia.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-objeto-legitimacion",
+            "ev-c07-scjn-ar134-abstracto",
+            "ev-c07-lr105-arts59-64-plazo-demanda",
+            "ev-c07-cpeum-art94-integracion",
+            "ev-c07-cpeum-art105ii-efectos-suspension",
+            "ev-c07-lr105-arts64-73-procedimiento-sentencia",
+            "ev-c07-a07-l159-161-legitimacion",
+            "ev-c07-a07-l203-205-porcentaje"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes y correcciones",
+          "content": "Error: pedir un agravio personal. Corrección: es control abstracto. Error: creer que cualquier 33% puede impugnar cualquier norma. Corrección: debe existir correspondencia entre órgano y norma. Error: contar días hábiles. Corrección: son treinta naturales; en electoral todos son hábiles. Error: creer que la admisión suspende. Corrección: la norma sigue vigente. Error: memorizar once ministros y ocho votos. Corrección: derecho vigente, nueve y seis. Error: llamar declaratoria general de amparo a la sentencia. Corrección: aquí se declara invalidez en acción de inconstitucionalidad.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-objeto-legitimacion",
+            "ev-c07-scjn-ar134-abstracto",
+            "ev-c07-lr105-arts59-64-plazo-demanda",
+            "ev-c07-cpeum-art94-integracion",
+            "ev-c07-cpeum-art105ii-efectos-suspension",
+            "ev-c07-lr105-arts64-73-procedimiento-sentencia",
+            "ev-c07-a07-l005-007-cifras-historicas",
+            "ev-c07-a07-l105-109-efectos-amparo"
+          ]
+        }
       ],
       "conceptMap": {
         "title": "Mapa visual de la acción de inconstitucionalidad",
         "description": "Del control abstracto a la declaración de invalidez.",
         "nodes": [
-          {"id":"accion","label":"Acción de inconstitucionalidad","description":"Norma general frente a Constitución."},
-          {"id":"objeto","label":"1. Objeto","description":"Control abstracto.","parentId":"accion"},
-          {"id":"norma","label":"Norma general","description":"Ley o tratado según el legitimado.","parentId":"objeto"},
-          {"id":"sinacto","label":"Sin acto de aplicación","description":"No exige agravio individual.","parentId":"objeto"},
-          {"id":"legitimados","label":"2. Legitimados","description":"Lista cerrada del artículo 105.","parentId":"accion"},
-          {"id":"minorias","label":"Minorías legislativas","description":"33% de Cámara, Senado o legislatura local.","parentId":"legitimados"},
-          {"id":"ejecutivo","label":"Ejecutivo Federal","description":"Por la Consejería Jurídica.","parentId":"legitimados"},
-          {"id":"partidos","label":"Partidos políticos","description":"Leyes electorales según registro.","parentId":"legitimados"},
-          {"id":"ddhh","label":"CNDH y organismos locales","description":"Normas que vulneren derechos humanos.","parentId":"legitimados"},
-          {"id":"fgr","label":"FGR","description":"Materia penal, procesal penal y funciones.","parentId":"legitimados"},
-          {"id":"plazo","label":"3. Plazo","description":"Treinta días naturales.","parentId":"accion"},
-          {"id":"publicacion","label":"Publicación oficial","description":"El cómputo inicia al día siguiente.","parentId":"plazo"},
-          {"id":"electoral","label":"Materia electoral","description":"Todos los días son hábiles.","parentId":"plazo"},
-          {"id":"proceso","label":"4. Procedimiento","description":"Demanda, informes, alegatos y proyecto.","parentId":"accion"},
-          {"id":"nosusp","label":"Sin suspensión","description":"La admisión no suspende la norma.","parentId":"proceso"},
-          {"id":"pleno","label":"Pleno de la SCJN","description":"Nueve integrantes conforme al artículo 94.","parentId":"proceso"},
-          {"id":"resultado","label":"5. Resultado","description":"Votación define invalidez.","parentId":"accion"},
-          {"id":"seis","label":"Seis votos o más","description":"Declaración de invalidez.","parentId":"resultado"},
-          {"id":"menos","label":"Menos de seis","description":"Desestimación y archivo.","parentId":"resultado"},
-          {"id":"efectos","label":"Efectos generales","description":"No retroactivos, salvo materia penal.","parentId":"resultado"}
+          {
+            "id": "accion",
+            "label": "Acción de inconstitucionalidad",
+            "description": "Norma general frente a Constitución.",
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-scjn-ar134-abstracto"
+            ]
+          },
+          {
+            "id": "objeto",
+            "label": "1. Objeto",
+            "description": "Control abstracto.",
+            "parentId": "accion",
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-scjn-ar134-abstracto"
+            ]
+          },
+          {
+            "id": "norma",
+            "label": "Norma general",
+            "description": "Ley o tratado según el legitimado.",
+            "parentId": "objeto",
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion"
+            ]
+          },
+          {
+            "id": "sinacto",
+            "label": "Sin acto de aplicación",
+            "description": "No exige agravio individual.",
+            "parentId": "objeto",
+            "evidenceIds": [
+              "ev-c07-scjn-ar134-abstracto"
+            ]
+          },
+          {
+            "id": "legitimados",
+            "label": "2. Legitimados",
+            "description": "Lista cerrada del artículo 105.",
+            "parentId": "accion",
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-lr105-arts59-64-plazo-demanda"
+            ]
+          },
+          {
+            "id": "minorias",
+            "label": "Minorías legislativas",
+            "description": "33% de Cámara, Senado o legislatura local.",
+            "parentId": "legitimados",
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-lr105-arts59-64-plazo-demanda",
+              "ev-c07-a07-l203-205-porcentaje"
+            ]
+          },
+          {
+            "id": "ejecutivo",
+            "label": "Ejecutivo Federal",
+            "description": "Por la Consejería Jurídica.",
+            "parentId": "legitimados",
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion"
+            ]
+          },
+          {
+            "id": "partidos",
+            "label": "Partidos políticos",
+            "description": "Leyes electorales según registro.",
+            "parentId": "legitimados",
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-lr105-arts59-64-plazo-demanda"
+            ]
+          },
+          {
+            "id": "ddhh",
+            "label": "CNDH y organismos locales",
+            "description": "Normas que vulneren derechos humanos.",
+            "parentId": "legitimados",
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion"
+            ]
+          },
+          {
+            "id": "fgr",
+            "label": "FGR",
+            "description": "Materia penal, procesal penal y funciones.",
+            "parentId": "legitimados",
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion"
+            ]
+          },
+          {
+            "id": "plazo",
+            "label": "3. Plazo",
+            "description": "Treinta días naturales.",
+            "parentId": "accion",
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-lr105-arts59-64-plazo-demanda"
+            ]
+          },
+          {
+            "id": "publicacion",
+            "label": "Publicación oficial",
+            "description": "El cómputo inicia al día siguiente.",
+            "parentId": "plazo",
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-lr105-arts59-64-plazo-demanda"
+            ]
+          },
+          {
+            "id": "electoral",
+            "label": "Materia electoral",
+            "description": "Todos los días son hábiles.",
+            "parentId": "plazo",
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-lr105-arts59-64-plazo-demanda"
+            ]
+          },
+          {
+            "id": "proceso",
+            "label": "4. Procedimiento",
+            "description": "Demanda, informes, alegatos y proyecto.",
+            "parentId": "accion",
+            "evidenceIds": [
+              "ev-c07-lr105-arts59-64-plazo-demanda",
+              "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+            ]
+          },
+          {
+            "id": "nosusp",
+            "label": "Sin suspensión",
+            "description": "La admisión no suspende la norma.",
+            "parentId": "proceso",
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-efectos-suspension",
+              "ev-c07-lr105-arts59-64-plazo-demanda"
+            ]
+          },
+          {
+            "id": "pleno",
+            "label": "Pleno de la SCJN",
+            "description": "Nueve integrantes conforme al artículo 94.",
+            "parentId": "proceso",
+            "evidenceIds": [
+              "ev-c07-cpeum-art94-integracion",
+              "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+            ]
+          },
+          {
+            "id": "resultado",
+            "label": "5. Resultado",
+            "description": "Votación define invalidez.",
+            "parentId": "accion",
+            "evidenceIds": [
+              "ev-c07-cpeum-art94-integracion",
+              "ev-c07-cpeum-art105ii-efectos-suspension",
+              "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+            ]
+          },
+          {
+            "id": "seis",
+            "label": "Seis votos o más",
+            "description": "Declaración de invalidez.",
+            "parentId": "resultado",
+            "evidenceIds": [
+              "ev-c07-cpeum-art94-integracion",
+              "ev-c07-cpeum-art105ii-efectos-suspension",
+              "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+            ]
+          },
+          {
+            "id": "menos",
+            "label": "Menos de seis",
+            "description": "Desestimación y archivo.",
+            "parentId": "resultado",
+            "evidenceIds": [
+              "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+            ]
+          },
+          {
+            "id": "efectos",
+            "label": "Efectos generales",
+            "description": "No retroactivos, salvo materia penal.",
+            "parentId": "resultado",
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-efectos-suspension",
+              "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+            ]
+          }
         ]
       },
       "references": [
-        {"title":"Constitución Política de los Estados Unidos Mexicanos","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"México","citation":"Artículos 94 y 105, fracción II; últimas reformas DOF 02-06-2026","retrievedOn":"2026-08-11","note":"Objeto, legitimación, plazo, integración, votación y efectos."},
-        {"title":"Ley Reglamentaria de las Fracciones I y II del Artículo 105 Constitucional","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/LRFIyII_Art105.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"México","citation":"Artículos 59 a 73; última reforma DOF 14-11-2025","retrievedOn":"2026-08-11","note":"Procedimiento y sentencia de las acciones de inconstitucionalidad."},
-        {"title":"Acciones de inconstitucionalidad","url":"https://www.diputados.gob.mx/LeyesBiblio/compila/inconst.htm","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"México","citation":"Compilación oficial de acciones de inconstitucionalidad","retrievedOn":"2026-08-11","note":"Consulta de resoluciones y materias controladas."}
+        {
+          "title": "Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Texto vigente, últimas reformas DOF 02-06-2026; artículos 94 y 105, fracción II",
+          "retrievedOn": "2026-08-21",
+          "note": "Integración de la SCJN, objeto, legitimación, plazo, suspensión, votación y efectos."
+        },
+        {
+          "title": "Ley Reglamentaria de las Fracciones I y II del Artículo 105 Constitucional",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LRFIyII_Art105.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Texto vigente, última reforma DOF 14-11-2025; artículos 59 a 73",
+          "retrievedOn": "2026-08-21",
+          "note": "Procedimiento y sentencia de las acciones de inconstitucionalidad."
+        },
+        {
+          "title": "Amparo en revisión 134/2021",
+          "url": "https://www.scjn.gob.mx/sites/default/files/listas/documento_dos/2022-02/AR-134-2021-09022022.pdf",
+          "institution": "Suprema Corte de Justicia de la Nación",
+          "jurisdiction": "México",
+          "citation": "Sentencia de la Primera Sala, párrafos 99-100",
+          "retrievedOn": "2026-08-21",
+          "note": "Explica el carácter abstracto y la ausencia de agravio personal o afectación directa."
+        }
       ],
       "flashcards": [
-        {"question":"¿Qué tipo de control ejerce la acción?","answer":"Control abstracto de una norma general frente a la Constitución.","sourceOrigin":"mixed"},
-        {"question":"¿Exige acto de aplicación?","answer":"No; es un control abstracto de la norma.","sourceOrigin":"complementary"},
-        {"question":"¿Cuál es el porcentaje de minoría legislativa?","answer":"Cuando menos 33% del órgano correspondiente.","sourceOrigin":"mixed"},
-        {"question":"¿Cuál es el plazo?","answer":"Treinta días naturales desde el día siguiente a la publicación.","sourceOrigin":"complementary"},
-        {"question":"¿Qué puede impugnar el Senado?","answer":"Leyes federales o tratados internacionales.","sourceOrigin":"complementary"},
-        {"question":"¿Qué puede impugnar una minoría local?","answer":"Leyes expedidas por su propia legislatura.","sourceOrigin":"complementary"},
-        {"question":"¿Qué impugnan los partidos nacionales?","answer":"Leyes electorales federales o locales.","sourceOrigin":"complementary"},
-        {"question":"¿Qué impugna la FGR?","answer":"Leyes penales, procesales penales o relacionadas con sus funciones.","sourceOrigin":"complementary"},
-        {"question":"¿La admisión suspende la norma?","answer":"No; la norma continúa vigente durante el proceso.","sourceOrigin":"complementary"},
-        {"question":"¿Cuántos votos se requieren para invalidar?","answer":"Al menos seis.","sourceOrigin":"complementary"},
-        {"question":"¿Qué ocurre con cinco votos por invalidar?","answer":"Se desestima la acción y se archiva.","sourceOrigin":"complementary"},
-        {"question":"¿La invalidez tiene retroactividad?","answer":"Por regla no; puede tenerla en materia penal.","sourceOrigin":"complementary"}
+        {
+          "question": "¿Qué tipo de control ejerce la acción?",
+          "answer": "Control abstracto de una norma general frente a la Constitución.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-objeto-legitimacion",
+            "ev-c07-scjn-ar134-abstracto"
+          ]
+        },
+        {
+          "question": "¿Exige acto de aplicación?",
+          "answer": "No; es un control abstracto de la norma.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c07-scjn-ar134-abstracto"
+          ]
+        },
+        {
+          "question": "¿Cuál es el porcentaje de minoría legislativa?",
+          "answer": "Cuando menos 33% del órgano correspondiente.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-objeto-legitimacion",
+            "ev-c07-lr105-arts59-64-plazo-demanda",
+            "ev-c07-a07-l203-205-porcentaje"
+          ]
+        },
+        {
+          "question": "¿Cuál es el plazo?",
+          "answer": "Treinta días naturales desde el día siguiente a la publicación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-objeto-legitimacion",
+            "ev-c07-lr105-arts59-64-plazo-demanda"
+          ]
+        },
+        {
+          "question": "¿Qué puede impugnar el Senado?",
+          "answer": "Leyes federales o tratados internacionales.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-objeto-legitimacion"
+          ]
+        },
+        {
+          "question": "¿Qué puede impugnar una minoría local?",
+          "answer": "Leyes expedidas por su propia legislatura.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-objeto-legitimacion"
+          ]
+        },
+        {
+          "question": "¿Qué impugnan los partidos nacionales?",
+          "answer": "Leyes electorales federales o locales.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-objeto-legitimacion",
+            "ev-c07-lr105-arts59-64-plazo-demanda"
+          ]
+        },
+        {
+          "question": "¿Qué impugna la FGR?",
+          "answer": "Leyes penales, procesales penales o relacionadas con sus funciones.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-objeto-legitimacion"
+          ]
+        },
+        {
+          "question": "¿La admisión suspende la norma?",
+          "answer": "No; la norma continúa vigente durante el proceso.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-efectos-suspension",
+            "ev-c07-lr105-arts59-64-plazo-demanda"
+          ]
+        },
+        {
+          "question": "¿Cuántos votos se requieren para invalidar?",
+          "answer": "Al menos seis.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c07-cpeum-art94-integracion",
+            "ev-c07-cpeum-art105ii-efectos-suspension",
+            "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+          ]
+        },
+        {
+          "question": "¿Qué ocurre con cinco votos por invalidar?",
+          "answer": "Se desestima la acción y se archiva.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+          ]
+        },
+        {
+          "question": "¿La invalidez tiene retroactividad?",
+          "answer": "Por regla no; puede tenerla en materia penal.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c07-cpeum-art105ii-efectos-suspension",
+            "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+          ]
+        }
       ],
       "exam": {
         "title": "Examen: acción de inconstitucionalidad",
         "description": "Diez reactivos originales sobre objeto, legitimación, plazo y efectos.",
         "questions": [
-          {"text":"Una ley federal se publicó hace diez días. El 34% de la Cámara de Diputados busca impugnarla. ¿Qué vía corresponde?","difficulty":"basic","options":["Acción de inconstitucionalidad","Controversia promovida por particulares","Apelación ordinaria"],"correctOption":0,"explanation":"La minoría supera 33%, impugna ley federal y está dentro del plazo.","optionExplanations":["Coinciden sujeto, objeto y tiempo.","Los particulares no promueven controversia por este supuesto.","No se impugna una sentencia ordinaria."]},
-          {"text":"El 33% de una legislatura estatal pretende impugnar una ley expedida por otra entidad. ¿Qué falla?","difficulty":"intermediate","options":["La correspondencia entre legitimado y norma","El porcentaje","La existencia de control abstracto"],"correctOption":0,"explanation":"La minoría local solo impugna leyes expedidas por su propio órgano.","optionExplanations":["El ámbito objetivo no corresponde.","El 33% sí satisface el mínimo.","La acción sí es control abstracto."]},
-          {"text":"Una norma fue publicada hace treinta y cinco días naturales. No existe regla especial aplicable. ¿Qué problema aparece?","difficulty":"basic","options":["Extemporaneidad","Falta de acto de aplicación","Ausencia de perjuicio personal"],"correctOption":0,"explanation":"El plazo ordinario es de treinta días naturales.","optionExplanations":["La demanda se presenta fuera de plazo.","No se requiere aplicación.","No se requiere agravio individual."]},
-          {"text":"Un partido con registro únicamente estatal impugna una ley electoral de otra entidad. ¿Está legitimado?","difficulty":"intermediate","options":["No, solo respecto de leyes electorales de la entidad que le otorgó registro","Sí, respecto de cualquier ley local","Sí, si obtiene firmas ciudadanas"],"correctOption":0,"explanation":"La Constitución limita territorialmente la legitimación del partido local.","optionExplanations":["Es la correspondencia constitucional correcta.","Su registro local no le da alcance nacional.","Las firmas no sustituyen la legitimación."]},
-          {"text":"La CNDH impugna un tratado por considerar que vulnera derechos humanos. ¿Qué afirmación es correcta?","difficulty":"intermediate","options":["Está dentro de su ámbito constitucional","Solo el Senado puede impugnar tratados","Debe esperar un acto individual"],"correctOption":0,"explanation":"La CNDH está legitimada frente a tratados que vulneren derechos humanos.","optionExplanations":["El inciso g lo prevé.","El Senado no es el único sujeto legitimado.","El control es abstracto."]},
-          {"text":"Admitida una acción contra una ley fiscal, se pide suspender inmediatamente toda aplicación. ¿Qué debe resolver la Corte?","difficulty":"basic","options":["La admisión no suspende la norma","La suspensión es automática","La suspensión depende de una garantía particular"],"correctOption":0,"explanation":"En acciones contra normas generales no existe suspensión por admisión.","optionExplanations":["Es la prohibición constitucional y legal.","No hay automatismo.","La garantía de un particular no corresponde a esta vía."]},
-          {"text":"Cinco integrantes del Pleno votan por invalidar y cuatro en contra. ¿Cuál es el resultado legal?","difficulty":"intermediate","options":["Desestimación y archivo","Invalidez por mayoría simple","Suspensión provisional"],"correctOption":0,"explanation":"Aunque cinco sean mayoría de nueve, la Constitución exige al menos seis votos para invalidar.","optionExplanations":["No se alcanza el umbral calificado.","La mayoría simple es insuficiente.","La votación es de sentencia, no cautelar."]},
-          {"text":"La FGR impugna una ley local de urbanismo sin conexión con materia penal ni sus funciones. ¿Qué debe examinarse principalmente?","difficulty":"advanced","options":["Falta de legitimación material","Falta de publicación","Necesidad de 33% de fiscales"],"correctOption":0,"explanation":"La legitimación de la FGR está limitada a materia penal, procesal penal y su ámbito funcional.","optionExplanations":["La materia queda fuera del ámbito descrito.","El caso no indica falta de publicación.","La FGR no opera mediante porcentaje."]},
-          {"text":"Una sentencia invalida una norma no penal. ¿Desde cuándo produce efectos?","difficulty":"intermediate","options":["Desde la fecha que determine la Corte, sin retroactividad como regla","Siempre desde antes de su publicación","Solo después de ratificación legislativa"],"correctOption":0,"explanation":"La Corte fija la fecha y la invalidez no es retroactiva salvo materia penal.","optionExplanations":["Combina la regla legal y constitucional.","La retroactividad general está prohibida.","No requiere ratificación."]},
-          {"text":"¿Qué combinación refleja el derecho vigente en 2026?","difficulty":"basic","options":["Nueve integrantes y seis votos para invalidar","Once integrantes y ocho votos","Nueve integrantes y cinco votos"],"correctOption":0,"explanation":"Los artículos 94 y 105 vigentes establecen esas cifras.","optionExplanations":["Es la combinación vigente.","Son cifras anteriores a la reforma.","Cinco no alcanzan el umbral constitucional."]}
+          {
+            "text": "Una ley federal se publicó hace diez días. El 34% de la Cámara de Diputados busca impugnarla. ¿Qué vía corresponde?",
+            "difficulty": "basic",
+            "options": [
+              "Acción de inconstitucionalidad",
+              "Controversia promovida por particulares",
+              "Apelación ordinaria"
+            ],
+            "correctOption": 0,
+            "explanation": "La minoría supera 33%, impugna ley federal y está dentro del plazo.",
+            "optionExplanations": [
+              "Coinciden sujeto, objeto y tiempo.",
+              "No es la vía que el artículo 105, fracción II, asigna a esta minoría legislativa.",
+              "El supuesto plantea el control abstracto de una ley, no la revisión de una sentencia ordinaria."
+            ],
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-lr105-arts59-64-plazo-demanda",
+              "ev-c07-scjn-ar134-abstracto"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-lr105-arts59-64-plazo-demanda",
+                "ev-c07-scjn-ar134-abstracto"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-lr105-arts59-64-plazo-demanda",
+                "ev-c07-scjn-ar134-abstracto"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-lr105-arts59-64-plazo-demanda",
+                "ev-c07-scjn-ar134-abstracto"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-lr105-arts59-64-plazo-demanda",
+              "ev-c07-scjn-ar134-abstracto"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-lr105-arts59-64-plazo-demanda",
+              "ev-c07-scjn-ar134-abstracto"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-lr105-arts59-64-plazo-demanda",
+                "ev-c07-scjn-ar134-abstracto"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-lr105-arts59-64-plazo-demanda",
+                "ev-c07-scjn-ar134-abstracto"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-lr105-arts59-64-plazo-demanda",
+                "ev-c07-scjn-ar134-abstracto"
+              ]
+            ]
+          },
+          {
+            "text": "El 33% de una legislatura estatal pretende impugnar una ley expedida por otra entidad. ¿Qué falla?",
+            "difficulty": "intermediate",
+            "options": [
+              "La correspondencia entre legitimado y norma",
+              "El porcentaje",
+              "La existencia de control abstracto"
+            ],
+            "correctOption": 0,
+            "explanation": "La minoría local solo impugna leyes expedidas por su propio órgano.",
+            "optionExplanations": [
+              "El ámbito objetivo no corresponde.",
+              "El 33% sí satisface el mínimo.",
+              "La acción sí es control abstracto."
+            ],
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-scjn-ar134-abstracto"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-scjn-ar134-abstracto"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-scjn-ar134-abstracto"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-scjn-ar134-abstracto"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-scjn-ar134-abstracto"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-scjn-ar134-abstracto"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-scjn-ar134-abstracto"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-scjn-ar134-abstracto"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-scjn-ar134-abstracto"
+              ]
+            ]
+          },
+          {
+            "text": "Una norma fue publicada hace treinta y cinco días naturales. No existe regla especial aplicable. ¿Qué problema aparece?",
+            "difficulty": "basic",
+            "options": [
+              "Extemporaneidad",
+              "Falta de acto de aplicación",
+              "Ausencia de perjuicio personal"
+            ],
+            "correctOption": 0,
+            "explanation": "El plazo ordinario es de treinta días naturales.",
+            "optionExplanations": [
+              "La demanda se presenta fuera de plazo.",
+              "No se requiere aplicación.",
+              "No se requiere agravio individual."
+            ],
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-lr105-arts59-64-plazo-demanda",
+              "ev-c07-scjn-ar134-abstracto"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-lr105-arts59-64-plazo-demanda",
+                "ev-c07-scjn-ar134-abstracto"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-lr105-arts59-64-plazo-demanda",
+                "ev-c07-scjn-ar134-abstracto"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-lr105-arts59-64-plazo-demanda",
+                "ev-c07-scjn-ar134-abstracto"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-lr105-arts59-64-plazo-demanda",
+              "ev-c07-scjn-ar134-abstracto"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-lr105-arts59-64-plazo-demanda",
+              "ev-c07-scjn-ar134-abstracto"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-lr105-arts59-64-plazo-demanda",
+                "ev-c07-scjn-ar134-abstracto"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-lr105-arts59-64-plazo-demanda",
+                "ev-c07-scjn-ar134-abstracto"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-lr105-arts59-64-plazo-demanda",
+                "ev-c07-scjn-ar134-abstracto"
+              ]
+            ]
+          },
+          {
+            "text": "Un partido con registro únicamente estatal impugna una ley electoral de otra entidad. ¿Está legitimado?",
+            "difficulty": "intermediate",
+            "options": [
+              "No, solo respecto de leyes electorales de la entidad que le otorgó registro",
+              "Sí, respecto de cualquier ley local",
+              "Sí, si obtiene firmas ciudadanas"
+            ],
+            "correctOption": 0,
+            "explanation": "La Constitución limita territorialmente la legitimación del partido local.",
+            "optionExplanations": [
+              "Es la correspondencia constitucional correcta.",
+              "Su registro local no le da alcance nacional.",
+              "Las firmas no sustituyen la legitimación."
+            ],
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-lr105-arts59-64-plazo-demanda"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-lr105-arts59-64-plazo-demanda"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-lr105-arts59-64-plazo-demanda"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-lr105-arts59-64-plazo-demanda"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-lr105-arts59-64-plazo-demanda"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-lr105-arts59-64-plazo-demanda"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-lr105-arts59-64-plazo-demanda"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-lr105-arts59-64-plazo-demanda"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-lr105-arts59-64-plazo-demanda"
+              ]
+            ]
+          },
+          {
+            "text": "La CNDH impugna un tratado por considerar que vulnera derechos humanos. ¿Qué afirmación es correcta?",
+            "difficulty": "intermediate",
+            "options": [
+              "Está dentro de su ámbito constitucional",
+              "Solo el Senado puede impugnar tratados",
+              "Debe esperar un acto individual"
+            ],
+            "correctOption": 0,
+            "explanation": "La CNDH está legitimada frente a tratados que vulneren derechos humanos.",
+            "optionExplanations": [
+              "El inciso g lo prevé.",
+              "El Senado no es el único sujeto legitimado.",
+              "El control es abstracto."
+            ],
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-scjn-ar134-abstracto"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-scjn-ar134-abstracto"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-scjn-ar134-abstracto"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-scjn-ar134-abstracto"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-scjn-ar134-abstracto"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion",
+              "ev-c07-scjn-ar134-abstracto"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-scjn-ar134-abstracto"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-scjn-ar134-abstracto"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion",
+                "ev-c07-scjn-ar134-abstracto"
+              ]
+            ]
+          },
+          {
+            "text": "Admitida una acción contra una ley fiscal, se pide suspender inmediatamente toda aplicación. ¿Qué debe resolver la Corte?",
+            "difficulty": "basic",
+            "options": [
+              "La admisión no suspende la norma",
+              "La suspensión es automática",
+              "La suspensión depende de una garantía particular"
+            ],
+            "correctOption": 0,
+            "explanation": "En acciones contra normas generales no existe suspensión por admisión.",
+            "optionExplanations": [
+              "Es la prohibición constitucional y legal.",
+              "No hay automatismo.",
+              "La garantía de un particular no corresponde a esta vía."
+            ],
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-efectos-suspension",
+              "ev-c07-lr105-arts59-64-plazo-demanda"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts59-64-plazo-demanda"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts59-64-plazo-demanda"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts59-64-plazo-demanda"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c07-cpeum-art105ii-efectos-suspension",
+              "ev-c07-lr105-arts59-64-plazo-demanda"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c07-cpeum-art105ii-efectos-suspension",
+              "ev-c07-lr105-arts59-64-plazo-demanda"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts59-64-plazo-demanda"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts59-64-plazo-demanda"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts59-64-plazo-demanda"
+              ]
+            ]
+          },
+          {
+            "text": "Cinco integrantes del Pleno votan por invalidar y cuatro en contra. ¿Cuál es el resultado legal?",
+            "difficulty": "intermediate",
+            "options": [
+              "Desestimación y archivo",
+              "Invalidez por mayoría simple",
+              "Suspensión provisional"
+            ],
+            "correctOption": 0,
+            "explanation": "Aunque cinco sean mayoría de nueve, la Constitución exige al menos seis votos para invalidar.",
+            "optionExplanations": [
+              "No se alcanza el umbral calificado.",
+              "La mayoría simple es insuficiente.",
+              "La votación es de sentencia, no cautelar."
+            ],
+            "evidenceIds": [
+              "ev-c07-cpeum-art94-integracion",
+              "ev-c07-cpeum-art105ii-efectos-suspension",
+              "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c07-cpeum-art94-integracion",
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+              ],
+              [
+                "ev-c07-cpeum-art94-integracion",
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+              ],
+              [
+                "ev-c07-cpeum-art94-integracion",
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c07-cpeum-art94-integracion",
+              "ev-c07-cpeum-art105ii-efectos-suspension",
+              "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c07-cpeum-art94-integracion",
+              "ev-c07-cpeum-art105ii-efectos-suspension",
+              "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c07-cpeum-art94-integracion",
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+              ],
+              [
+                "ev-c07-cpeum-art94-integracion",
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+              ],
+              [
+                "ev-c07-cpeum-art94-integracion",
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+              ]
+            ]
+          },
+          {
+            "text": "La FGR impugna una ley local de urbanismo sin conexión con materia penal ni sus funciones. ¿Qué debe examinarse principalmente?",
+            "difficulty": "advanced",
+            "options": [
+              "Falta de legitimación material",
+              "Falta de publicación",
+              "Necesidad de 33% de fiscales"
+            ],
+            "correctOption": 0,
+            "explanation": "La legitimación de la FGR está limitada a materia penal, procesal penal y su ámbito funcional.",
+            "optionExplanations": [
+              "La materia queda fuera del ámbito descrito.",
+              "El caso no indica falta de publicación.",
+              "La FGR no opera mediante porcentaje."
+            ],
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c07-cpeum-art105ii-objeto-legitimacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-objeto-legitimacion"
+              ]
+            ]
+          },
+          {
+            "text": "Una sentencia invalida una norma no penal. ¿Desde cuándo produce efectos?",
+            "difficulty": "intermediate",
+            "options": [
+              "Desde la fecha que determine la Corte, sin retroactividad como regla",
+              "Siempre desde antes de su publicación",
+              "Solo después de ratificación legislativa"
+            ],
+            "correctOption": 0,
+            "explanation": "La Corte fija la fecha y la invalidez no es retroactiva salvo materia penal.",
+            "optionExplanations": [
+              "Combina la regla legal y constitucional.",
+              "La retroactividad general está prohibida.",
+              "No requiere ratificación."
+            ],
+            "evidenceIds": [
+              "ev-c07-cpeum-art105ii-efectos-suspension",
+              "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c07-cpeum-art105ii-efectos-suspension",
+              "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c07-cpeum-art105ii-efectos-suspension",
+              "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+              ],
+              [
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts64-73-procedimiento-sentencia"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué combinación refleja el derecho vigente en 2026?",
+            "difficulty": "basic",
+            "options": [
+              "Nueve integrantes y seis votos para invalidar",
+              "Once integrantes y ocho votos",
+              "Nueve integrantes y cinco votos"
+            ],
+            "correctOption": 0,
+            "explanation": "Los artículos 94 y 105 vigentes establecen esas cifras.",
+            "optionExplanations": [
+              "Es la combinación vigente.",
+              "Son cifras anteriores a la reforma.",
+              "Cinco no alcanzan el umbral constitucional."
+            ],
+            "evidenceIds": [
+              "ev-c07-cpeum-art94-integracion",
+              "ev-c07-cpeum-art105ii-efectos-suspension",
+              "ev-c07-lr105-arts64-73-procedimiento-sentencia",
+              "ev-c07-a07-l005-007-cifras-historicas"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c07-cpeum-art94-integracion",
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts64-73-procedimiento-sentencia",
+                "ev-c07-a07-l005-007-cifras-historicas"
+              ],
+              [
+                "ev-c07-cpeum-art94-integracion",
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts64-73-procedimiento-sentencia",
+                "ev-c07-a07-l005-007-cifras-historicas"
+              ],
+              [
+                "ev-c07-cpeum-art94-integracion",
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts64-73-procedimiento-sentencia",
+                "ev-c07-a07-l005-007-cifras-historicas"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c07-cpeum-art94-integracion",
+              "ev-c07-cpeum-art105ii-efectos-suspension",
+              "ev-c07-lr105-arts64-73-procedimiento-sentencia",
+              "ev-c07-a07-l005-007-cifras-historicas"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c07-cpeum-art94-integracion",
+              "ev-c07-cpeum-art105ii-efectos-suspension",
+              "ev-c07-lr105-arts64-73-procedimiento-sentencia",
+              "ev-c07-a07-l005-007-cifras-historicas"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c07-cpeum-art94-integracion",
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts64-73-procedimiento-sentencia",
+                "ev-c07-a07-l005-007-cifras-historicas"
+              ],
+              [
+                "ev-c07-cpeum-art94-integracion",
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts64-73-procedimiento-sentencia",
+                "ev-c07-a07-l005-007-cifras-historicas"
+              ],
+              [
+                "ev-c07-cpeum-art94-integracion",
+                "ev-c07-cpeum-art105ii-efectos-suspension",
+                "ev-c07-lr105-arts64-73-procedimiento-sentencia",
+                "ev-c07-a07-l005-007-cifras-historicas"
+              ]
+            ]
+          }
         ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c07-cpeum-art94-integracion",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículo 94, página impresa 93",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c07-cpeum-art105ii-objeto-legitimacion",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículo 105, fracción II, incisos a)-i), páginas impresas 110-111",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c07-cpeum-art105ii-efectos-suspension",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículo 105, fracción II y párrafos finales, páginas impresas 111-112",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c07-lr105-arts59-64-plazo-demanda",
+      "kind": "official",
+      "title": "Ley Reglamentaria de las Fracciones I y II del Artículo 105 Constitucional",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LRFIyII_Art105.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 14-11-2025; artículos 59-64, páginas impresas 14-15",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c07-lr105-arts64-73-procedimiento-sentencia",
+      "kind": "official",
+      "title": "Ley Reglamentaria de las Fracciones I y II del Artículo 105 Constitucional",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LRFIyII_Art105.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 14-11-2025; artículos 64-73, páginas impresas 15-17",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c07-scjn-ar134-abstracto",
+      "kind": "official",
+      "title": "Amparo en revisión 134/2021",
+      "url": "https://www.scjn.gob.mx/sites/default/files/listas/documento_dos/2022-02/AR-134-2021-09022022.pdf",
+      "institution": "Suprema Corte de Justicia de la Nación",
+      "jurisdiction": "México",
+      "locator": "sentencia de la Primera Sala, párrafos 99-100, página impresa 42",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c07-a07-l005-007-cifras-historicas",
+      "kind": "transcript",
+      "audioNumber": 7,
+      "locator": {
+        "type": "line_range",
+        "startLine": 5,
+        "endLine": 7
+      }
+    },
+    {
+      "id": "ev-c07-a07-l105-109-efectos-amparo",
+      "kind": "transcript",
+      "audioNumber": 7,
+      "locator": {
+        "type": "line_range",
+        "startLine": 105,
+        "endLine": 109
+      }
+    },
+    {
+      "id": "ev-c07-a07-l159-161-legitimacion",
+      "kind": "transcript",
+      "audioNumber": 7,
+      "locator": {
+        "type": "line_range",
+        "startLine": 159,
+        "endLine": 161
+      }
+    },
+    {
+      "id": "ev-c07-a07-l203-205-porcentaje",
+      "kind": "transcript",
+      "audioNumber": 7,
+      "locator": {
+        "type": "line_range",
+        "startLine": 203,
+        "endLine": 205
       }
     }
   ]

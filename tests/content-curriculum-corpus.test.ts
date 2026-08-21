@@ -34,13 +34,13 @@ test("el catálogo vigente contiene C01–C40 una sola vez y solo contratos legi
     currentPackages.filter(
       (packageData) => packageData.packageVersion === "1.2",
     ).length,
-    6,
+    8,
   );
   assert.equal(
     currentPackages.filter(
       (packageData) => packageData.packageVersion === "1.1",
     ).length,
-    34,
+    32,
   );
 
   const curriculum = currentPackages
@@ -82,6 +82,16 @@ test("el catálogo vigente contiene C01–C40 una sola vez y solo contratos legi
   );
   assert.equal(
     currentPackages.find((packageData) => packageData.curriculum.code === "C06")
+      ?.packageVersion,
+    "1.2",
+  );
+  assert.equal(
+    currentPackages.find((packageData) => packageData.curriculum.code === "C07")
+      ?.packageVersion,
+    "1.2",
+  );
+  assert.equal(
+    currentPackages.find((packageData) => packageData.curriculum.code === "C08")
       ?.packageVersion,
     "1.2",
   );

@@ -64,7 +64,7 @@ const legacyPackagePath = path.join(
   process.cwd(),
   "content",
   "packages",
-  "audio-07-accion-inconstitucionalidad.json",
+  "audio-22-procedimiento-legislativo-federal.json",
 );
 
 function readLegacyPackage() {
