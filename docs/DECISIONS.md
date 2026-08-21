@@ -215,3 +215,35 @@ legales/fiscales descritos en
 **Consecuencias:** habrá más estados y trabajo operativo que en un booleano
 `is_paid`, pero se obtienen revocación explicable, reintentos seguros,
 conciliación y una frontera auditable entre administración y acceso comercial.
+
+---
+
+## ADR-016 — PostgreSQL como fuente única de verdad y escala por evidencia
+
+**Fecha:** 2026-08-20
+
+**Estado:** Aceptada
+
+CENEVAL Study App mantendrá Supabase PostgreSQL como fuente única de verdad
+para contenido editorial, progreso, exámenes y los futuros entitlements. No se
+migrará el núcleo a Firestore, MongoDB u otra base no relacional sin un ADR
+nuevo respaldado por mediciones.
+
+La arquitectura podrá usar servicios especializados como almacenamiento de
+objetos, CDN o caché, pero sus datos serán derivados y reemplazables. Las
+optimizaciones seguirán el orden consultas, índices, RLS, caché segura,
+capacidad y réplicas. Otro motor solo se evaluará para un caso de uso acotado
+que cruce los umbrales versionados en
+[`DATA_ARCHITECTURE.md`](DATA_ARCHITECTURE.md).
+
+**Razón:** el dominio ya depende de relaciones, integridad referencial,
+transacciones, historial y aislamiento por fila. Una migración NoSQL
+trasladaría esas garantías a la aplicación y obligaría a reescribir el modelo,
+la seguridad y las pruebas sin que el volumen actual lo justifique.
+
+**Consecuencias:** se evita complejidad prematura y se conserva la portabilidad
+del núcleo PostgreSQL. Supabase Auth, Storage, Data API y sus helpers crean un
+acoplamiento moderado, por lo que el plan de salida exige migraciones
+versionadas, respaldos restaurables e inventario de extensiones y políticas.
+Los precios y umbrales se revisarán antes del piloto y trimestralmente cuando
+existan usuarias de pago.

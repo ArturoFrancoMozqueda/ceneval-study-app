@@ -16,10 +16,11 @@ El punto de entrada del repositorio es [`AGENTS.md`](../AGENTS.md), en la raíz.
 6. `TEACHING_STYLE.md`
 7. `05-system-architecture.md`
 8. `SUBSCRIPTION_ARCHITECTURE.md` — diseño futuro; no autoriza cobros.
-9. `06-database-design.md`
-10. `08-visual-design.md`
-11. `CODING_STANDARDS.md`
-12. `DECISIONS.md`
+9. `DATA_ARCHITECTURE.md` — decisión PostgreSQL, costos y umbrales de escala.
+10. `06-database-design.md`
+11. `08-visual-design.md`
+12. `CODING_STANDARDS.md`
+13. `DECISIONS.md`
 
 `archivo/` guarda documentos históricos que **ya no describen el producto**.
 No los uses como referencia.
@@ -34,6 +35,7 @@ No los uses como referencia.
 | `04-navigation-and-screens.md` | Define navegación, páginas y flujos | Aprobado |
 | `05-system-architecture.md` | Describe la arquitectura técnica acordada | Aprobado |
 | `SUBSCRIPTION_ARCHITECTURE.md` | Separa rol y entitlement y define gates para una suscripción futura | Diseño objetivo; sin proveedor ni implementación |
+| `DATA_ARCHITECTURE.md` | Registra la elección PostgreSQL frente a NoSQL, arquitectura híbrida y umbrales medibles de optimización | Activo |
 | `06-database-design.md` | Define entidades, relaciones y reglas de datos | Aprobado |
 | `08-visual-design.md` | Define personalidad, colores, tipografía y componentes | Aprobado |
 | `SECURITY_TESTING.md` | Distingue cobertura local, suite remota y última ejecución comprobada | Activo |
