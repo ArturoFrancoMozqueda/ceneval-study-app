@@ -64,7 +64,7 @@ const legacyPackagePath = path.join(
   process.cwd(),
   "content",
   "packages",
-  "audio-16-amparo-indirecto-audiencia-sentencia-revision.json",
+  "audio-20-organismos-descentralizados.json",
 );
 
 function readLegacyPackage() {

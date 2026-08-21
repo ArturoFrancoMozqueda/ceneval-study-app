@@ -189,6 +189,33 @@ const traceablePackages = [
       /plazos diferenciados/i,
     ],
   },
+  {
+    code: "C13",
+    fileName: "audio-16-amparo-indirecto-audiencia-sentencia-revision.json",
+    artifacts: 144,
+    evidence: 12,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /fallo debe dictarse en un plazo máximo de noventa días naturales/i,
+      /sobreseer no declara constitucional el acto/i,
+      /revisión.*dentro de diez días.*por conducto del órgano que dictó la resolución/i,
+      /nueve integrantes y funcionamiento en Pleno, con posibilidad de dos secciones/i,
+      /antiguas cifras de cinco integrantes en Primera Sala y once en Pleno/i,
+    ],
+  },
+  {
+    code: "C14",
+    fileName: "audio-19-22-poder-ejecutivo-apf-centralizada.json",
+    artifacts: 138,
+    evidence: 12,
+    forbiddenClaims: [/última reforma DOF 16-07-2025/i],
+    requiredClaims: [
+      /última reforma DOF 07-05-2026/i,
+      /Secretarías de Estado y la Consejería Jurídica son dependencias centralizadas/i,
+      /órganos administrativos desconcentrados jerárquicamente subordinados/i,
+      /No existe una vía única por el solo hecho de que el acto sea federal/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -332,6 +359,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una regla histórica o absoluta como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C13" || expected.code === "C14") {
+      const obsoleteAsCurrent =
+        expected.code === "C13"
+          ? /once integrantes|Primera Sala.*cinco|toda revisión.*Suprema Corte/i
+          : /centralizada.*desconcentrada.*descentralizada|todo acto federal.*misma vía|órgano desconcentrado.*independiente/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una estructura histórica o regla absoluta como respuesta vigente.`,
         );
       }
     }

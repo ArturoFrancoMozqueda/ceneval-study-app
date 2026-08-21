@@ -1,10 +1,13 @@
 {
-  "packageVersion": "1.1",
+  "packageVersion": "1.2",
   "curriculum": {
     "code": "C13",
     "order": 13,
     "audioSources": [
-      {"audioNumber": 16,"fragment": "Audio completo"}
+      {
+        "audioNumber": 16,
+        "fragment": "Audio completo"
+      }
     ]
   },
   "subject": {
@@ -26,97 +29,1174 @@
       "learningJourney": {
         "openingPrompt": "La autoridad niega el acto, pero no rinde informe justificado y la persona quejosa aporta documentos. ¿Puede el órgano simplemente concluir que el acto no existe?",
         "quickChecks": [
-          {"prompt":"¿Qué ocurre al admitir la demanda?","answer":"Se fija la audiencia, se pide informe justificado, se emplaza a la persona tercera interesada y, en su caso, se tramita la suspensión.","feedback":"La admisión abre una secuencia procesal, no decide el fondo."},
-          {"prompt":"¿Sobreseer equivale a negar el amparo?","answer":"No. El sobreseimiento termina sin decidir la constitucionalidad; la negativa sí resuelve el fondo en contra de la pretensión.","feedback":"La diferencia es frecuente en casos tipo EGEL."},
-          {"prompt":"¿Toda revisión de indirecto llega a la Suprema Corte?","answer":"No. El tribunal colegiado conoce los casos no reservados a la Corte por el artículo 83.","feedback":"La atracción tampoco es automática."}
+          {
+            "prompt": "¿Qué ocurre al admitir la demanda?",
+            "answer": "Se fija la audiencia, se pide informe justificado, se emplaza a la persona tercera interesada y, en su caso, se tramita la suspensión.",
+            "feedback": "La admisión abre una secuencia procesal, no decide el fondo.",
+            "evidenceIds": [
+              "ev-c13-lamp-arts113-118-admision-informe"
+            ]
+          },
+          {
+            "prompt": "¿Sobreseer equivale a negar el amparo?",
+            "answer": "No. El sobreseimiento termina sin decidir la constitucionalidad; la negativa sí resuelve el fondo en contra de la pretensión.",
+            "feedback": "La diferencia es frecuente en casos tipo EGEL.",
+            "evidenceIds": [
+              "ev-c13-lamp-arts61-65-sobreseimiento",
+              "ev-c13-lamp-arts73-79-sentencia-efectos",
+              "ev-c13-a16-l043-045-existencia-sobreseimiento"
+            ]
+          },
+          {
+            "prompt": "¿Toda revisión de indirecto llega a la Suprema Corte?",
+            "answer": "No. El tribunal colegiado conoce los casos no reservados a la Corte por el artículo 83.",
+            "feedback": "La atracción tampoco es automática.",
+            "evidenceIds": [
+              "ev-c13-lamp-arts81-86-revision",
+              "ev-c13-lamp-art80bis-atraccion",
+              "ev-c13-a16-l203-205-atraccion-revisiones"
+            ]
+          }
         ],
         "practicalCase": {
           "facts": "Una autoridad clausura un negocio y en su informe justificado acepta la clausura, pero sostiene que fue constitucional. La propietaria ofrece licencia y acta de inspección. En la audiencia se desahogan las pruebas y no aparece causal de improcedencia.",
           "question": "¿Qué debe resolver el órgano y cómo puede impugnarse la sentencia?",
           "legalRule": "Los artículos 117, 119, 124, 74 y 77 de la Ley de Amparo regulan informe, pruebas, audiencia y sentencia; los artículos 81, 83, 84 y 86 regulan revisión.",
           "reasoning": "La existencia del acto está reconocida, por lo que corresponde examinar los conceptos de violación, valorar pruebas y decidir si se concede o niega. Si concede, debe precisar medidas restitutorias. La parte agraviada puede interponer revisión en diez días ante el órgano que dictó la sentencia; ordinariamente conocerá un tribunal colegiado, salvo cuestión constitucional reservada a la Suprema Corte.",
-          "conclusion": "Debe existir una sentencia de fondo congruente y con efectos precisos; la revisión sigue la distribución competencial legal."
+          "conclusion": "Debe existir una sentencia de fondo congruente y con efectos precisos; la revisión sigue la distribución competencial legal.",
+          "evidenceIds": [
+            "ev-c13-lamp-arts113-118-admision-informe",
+            "ev-c13-lamp-arts119-123-pruebas",
+            "ev-c13-lamp-art124-audiencia-fallo",
+            "ev-c13-lamp-arts73-79-sentencia-efectos",
+            "ev-c13-lamp-arts81-86-revision"
+          ]
         },
         "closingPrompt": "Al leer una resolución distingue: ¿terminó por sobreseimiento?, ¿negó o concedió?, ¿qué efectos fijó?, ¿qué agravio causa y qué órgano debe revisar?",
-        "nextActivity": "Estudia el mapa visual, responde la guía de doce preguntas y resuelve diez casos originales."
+        "nextActivity": "Estudia el mapa visual, responde la guía de doce preguntas y resuelve diez casos originales.",
+        "openingPromptEvidenceIds": [
+          "ev-c13-lamp-arts113-118-admision-informe",
+          "ev-c13-lamp-arts61-65-sobreseimiento",
+          "ev-c13-a16-l043-045-existencia-sobreseimiento"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c13-lamp-arts61-65-sobreseimiento",
+          "ev-c13-lamp-arts73-79-sentencia-efectos",
+          "ev-c13-lamp-arts81-86-revision"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c13-lamp-arts113-118-admision-informe",
+          "ev-c13-lamp-arts73-79-sentencia-efectos",
+          "ev-c13-lamp-arts81-86-revision"
+        ]
       },
       "materials": [
-        {"type":"short_answer","title":"Respuesta corta: cómo termina el amparo indirecto","content":"Después de integrar el expediente, la audiencia constitucional relaciona constancias y videograbaciones, desahoga pruebas pendientes y recibe alegatos escritos. La resolución puede sobreseer, negar o conceder el amparo. La sentencia de la audiencia constitucional puede impugnarse mediante revisión en diez días por conducto del órgano que la dictó.","sourceOrigin":"mixed"},
-        {"type":"full_explanation","title":"Explicación completa desde cero","content":"Si no existe prevención o ya fue cumplida, el órgano jurisdiccional admite la demanda, señala audiencia constitucional dentro de los treinta días siguientes —prorrogables por causa fundada hasta otros treinta—, pide informe justificado, emplaza a la persona tercera interesada y tramita, si corresponde, el incidente de suspensión.\n\nLa autoridad responsable rinde informe justificado en quince días, ampliables hasta diez según el caso. Deben mediar al menos ocho días entre la notificación del informe a la persona quejosa y la audiencia. Si no se rinde, se presume cierto el acto salvo prueba en contrario; aun así, cuando el acto no sea violatorio por sí mismo, la persona quejosa debe demostrar su inconstitucionalidad. El informe normalmente no puede mejorar el acto, con la regla especial para actos materialmente administrativos prevista en el artículo 117.\n\nSon admisibles todas las pruebas salvo la confesional por posiciones. Documentales pueden presentarse antes. Testimonial, pericial, inspección u otras de desahogo posterior se ofrecen, por regla, cinco días hábiles antes de la audiencia, sin contar el día del ofrecimiento ni el de la audiencia. Las pruebas se desahogan en la audiencia, salvo recepción anticipada o fuera de la sede conforme a la ley.\n\nLa audiencia constitucional es pública. Se relacionan constancias y videograbaciones analizadas, se reciben por orden las pruebas pendientes y los alegatos escritos. En los actos extremos señalados por el artículo 124, la persona quejosa puede alegar verbalmente. El fallo debe dictarse en un plazo máximo de noventa días naturales; por eso es incorrecto afirmar que necesariamente se pronuncia y ejecuta en el mismo instante de la audiencia.\n\nAntes del fondo se examinan de oficio las causales de improcedencia. Si aparece claramente que el acto no existe o no se prueba en la audiencia, procede sobreseer. También se sobresee cuando sobreviene una causal de improcedencia. Sobreseer no declara constitucional el acto ni significa que la autoridad tenía razón: termina el juicio sin análisis de fondo.\n\nLa consumación no siempre vuelve improcedente el amparo. La fracción XVI del artículo 61 se refiere a actos consumados de modo irreparable. Si todavía es jurídica y materialmente posible restituir el derecho, deben estudiarse los efectos; no basta decir que el acto ocurrió. Tampoco toda reposición procesal es una victoria incompleta: depende del vicio y del efecto necesario para restituir.\n\nSi no hay obstáculo procesal, la sentencia fija claramente el acto, analiza conceptos de violación, valora pruebas y expone fundamentos para negar o conceder. La negativa resuelve que no se acreditó la violación examinada. La concesión, ante acto positivo, restituye al estado previo; ante omisión o acto negativo, obliga a respetar el derecho y realizar lo exigido. El último considerando debe precisar medidas de cumplimiento. Como regla, la protección favorece a quien promovió en el caso concreto y no produce efectos generales.\n\nLa revisión procede, entre otros supuestos de indirecto, contra la suspensión definitiva, ciertos autos de modificación, la reposición de constancias, el sobreseimiento fuera de audiencia y las sentencias dictadas en audiencia constitucional. Se interpone por escrito, con agravios, dentro de diez días y por conducto del órgano que dictó la resolución; presentarla ante otro no interrumpe el plazo.\n\nLa Suprema Corte conoce revisión contra sentencias de audiencia cuando subsiste el problema de constitucionalidad de normas generales o de interpretación directa constitucional descrito por el artículo 83. Los tribunales colegiados conocen los demás casos y su sentencia no admite recurso. Además, la Corte puede atraer recursos cuando su interés y trascendencia lo ameriten, de oficio o a petición fundada de los sujetos autorizados. No todo asunto relevante llega a la Corte ni el colegiado 'atrae' para después enviarlo.\n\nLa estructura explicada en la transcripción quedó desactualizada. La Constitución vigente en 2026 establece nueve integrantes y funcionamiento en Pleno, con posibilidad de dos secciones aprobadas por este. Por ello no deben memorizarse las antiguas cifras de cinco integrantes en Primera Sala y once en Pleno. La revisión excepcional del amparo directo es distinta y está limitada a cuestiones constitucionales de interés excepcional.","sourceOrigin":"mixed"},
-        {"type":"legal_basis","title":"Fundamento jurídico vigente","content":"Ley de Amparo: artículos 61 a 65 sobre improcedencia y sobreseimiento; 73 a 79 sobre sentencia y efectos; 80 Bis y 81 a 96 sobre revisión; 113 a 124 sobre admisión, informe, pruebas y audiencia constitucional. Constitución: artículos 94, 103 y 107. Se aplican los textos vigentes consultados al 11-08-2026.","sourceOrigin":"complementary"},
-        {"type":"simple_example","title":"Ejemplo sencillo: inexistencia y fondo","content":"Si la autoridad niega una supuesta orden y ninguna constancia demuestra que exista, se sobresee sin estudiar constitucionalidad. Si la autoridad reconoce la orden y el expediente la acredita, el órgano debe revisar procedencia y, si no hay obstáculo, analizar si la orden viola derechos para negar o conceder.","sourceOrigin":"mixed"},
-        {"type":"ceneval_example","title":"Cómo aparece en un reactivo tipo EGEL","content":"Separa tres niveles: presupuesto procesal, fondo y recurso. Inexistencia o improcedencia conducen a sobreseimiento; ausencia de violación conduce a negativa; violación acreditada conduce a concesión con efectos. Para revisión busca resolución impugnable, plazo de diez días, presentación ante el órgano emisor y competencia entre colegiado y Suprema Corte.","sourceOrigin":"complementary"},
-        {"type":"summary","title":"Resumen para repasar","content":"Admisión: audiencia, informe, tercero y suspensión. Informe: 15 días, ampliable 10; mínimo 8 días para conocerlo antes de audiencia. Pruebas: todas salvo confesional por posiciones. Audiencia pública: constancias, pruebas, alegatos y fallo hasta en 90 días naturales. Sobreseer: sin fondo. Negar: no se acredita violación. Conceder: restituir o exigir cumplimiento. Revisión: 10 días ante órgano emisor. Corte: cuestiones del artículo 83; colegiado: demás casos. Atracción: excepcional, no automática.","sourceOrigin":"mixed"},
-        {"type":"study_guide","title":"Guía de preguntas y respuestas","content":"1. ¿Qué ordena la admisión? Respuesta: audiencia, informe, emplazamiento y, en su caso, suspensión.\n2. ¿Cuándo se celebra la audiencia? Respuesta: dentro de treinta días, ampliables por causa fundada hasta otros treinta.\n3. ¿Cuál es el plazo del informe? Respuesta: quince días, ampliable hasta diez.\n4. ¿Qué ocurre si falta informe? Respuesta: se presume cierto el acto, salvo prueba en contrario, con las precisiones del artículo 117.\n5. ¿Qué prueba está excluida? Respuesta: la confesional por posiciones.\n6. ¿Qué integra la audiencia? Respuesta: constancias, videograbaciones, pruebas y alegatos.\n7. ¿Cuándo debe dictarse el fallo? Respuesta: en un máximo de noventa días naturales.\n8. ¿Qué es sobreseimiento? Respuesta: terminación sin decidir la constitucionalidad.\n9. ¿Qué diferencia negativa y concesión? Respuesta: la negativa rechaza el fondo; la concesión reconoce violación y fija restitución.\n10. ¿Cuál es el plazo de revisión? Respuesta: diez días.\n11. ¿Dónde se presenta? Respuesta: por conducto del órgano que dictó la resolución.\n12. ¿Quién resuelve? Respuesta: la Suprema Corte en los supuestos del artículo 83 y el tribunal colegiado en los demás.","sourceOrigin":"mixed"},
-        {"type":"key_concepts","title":"Conceptos clave","content":"Informe justificado: defensa documentada del acto. Audiencia constitucional: etapa de pruebas, alegatos y decisión. Improcedencia: obstáculo legal al estudio. Sobreseimiento: terminación sin fondo. Negativa: decisión de fondo adversa. Concesión: protección con efectos. Restitución: restablecimiento del derecho. Agravio: razón de impugnación. Revisión: recurso contra resoluciones enumeradas. Atracción: competencia excepcional por interés y trascendencia.","sourceOrigin":"mixed"},
-        {"type":"common_errors","title":"Errores comunes y correcciones","content":"Error: la audiencia solo verifica existencia. Corrección: también integra pruebas, alegatos y decisión. Error: inexistencia significa perder el fondo. Corrección: produce sobreseimiento sin juzgar constitucionalidad. Error: todo acto consumado es irreparable. Corrección: debe ser imposible restituir. Error: la sentencia se dicta siempre al instante. Corrección: el máximo vigente es 90 días naturales. Error: toda revisión llega a la Corte. Corrección: el colegiado resuelve los casos no reservados. Error: el colegiado ejerce atracción. Corrección: la Corte atrae bajo requisitos. Error: Corte de 11 y Primera Sala de 5. Corrección: nueve integrantes, Pleno y posibles secciones en 2026.","sourceOrigin":"mixed"}
+        {
+          "type": "short_answer",
+          "title": "Respuesta corta: cómo termina el amparo indirecto",
+          "content": "Después de integrar el expediente, la audiencia constitucional relaciona constancias y videograbaciones, desahoga pruebas pendientes y recibe alegatos escritos. La resolución puede sobreseer, negar o conceder el amparo. La sentencia de la audiencia constitucional puede impugnarse mediante revisión en diez días por conducto del órgano que la dictó.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c13-lamp-art124-audiencia-fallo",
+            "ev-c13-lamp-arts73-79-sentencia-efectos",
+            "ev-c13-lamp-arts81-86-revision",
+            "ev-c13-a16-l051-055-sentencia-revision"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "Si no existe prevención o ya fue cumplida, el órgano jurisdiccional admite la demanda, señala audiencia constitucional dentro de los treinta días siguientes —prorrogables por causa fundada hasta otros treinta—, pide informe justificado, emplaza a la persona tercera interesada y tramita, si corresponde, el incidente de suspensión.\n\nLa autoridad responsable rinde informe justificado en quince días, ampliables hasta diez según el caso. Deben mediar al menos ocho días entre la notificación del informe a la persona quejosa y la audiencia. Si no se rinde, se presume cierto el acto salvo prueba en contrario; aun así, cuando el acto no sea violatorio por sí mismo, la persona quejosa debe demostrar su inconstitucionalidad. El informe normalmente no puede mejorar el acto, con la regla especial para actos materialmente administrativos prevista en el artículo 117.\n\nSon admisibles todas las pruebas salvo la confesional por posiciones. Documentales pueden presentarse antes. Testimonial, pericial, inspección u otras de desahogo posterior se ofrecen, por regla, cinco días hábiles antes de la audiencia, sin contar el día del ofrecimiento ni el de la audiencia. Las pruebas se desahogan en la audiencia, salvo recepción anticipada o fuera de la sede conforme a la ley.\n\nLa audiencia constitucional es pública. Se relacionan constancias y videograbaciones analizadas, se reciben por orden las pruebas pendientes y los alegatos escritos. En los actos extremos señalados por el artículo 124, la persona quejosa puede alegar verbalmente. El fallo debe dictarse en un plazo máximo de noventa días naturales; por eso es incorrecto afirmar que necesariamente se pronuncia y ejecuta en el mismo instante de la audiencia.\n\nAntes del fondo se examinan de oficio las causales de improcedencia. Si aparece claramente que el acto no existe o no se prueba en la audiencia, procede sobreseer. También se sobresee cuando sobreviene una causal de improcedencia. Sobreseer no declara constitucional el acto ni significa que la autoridad tenía razón: termina el juicio sin análisis de fondo.\n\nLa consumación no siempre vuelve improcedente el amparo. La fracción XVI del artículo 61 se refiere a actos consumados de modo irreparable. Si todavía es jurídica y materialmente posible restituir el derecho, deben estudiarse los efectos; no basta decir que el acto ocurrió. Tampoco toda reposición procesal es una victoria incompleta: depende del vicio y del efecto necesario para restituir.\n\nSi no hay obstáculo procesal, la sentencia fija claramente el acto, analiza conceptos de violación, valora pruebas y expone fundamentos para negar o conceder. La negativa resuelve que no se acreditó la violación examinada. La concesión, ante acto positivo, restituye al estado previo; ante omisión o acto negativo, obliga a respetar el derecho y realizar lo exigido. El último considerando debe precisar medidas de cumplimiento. Como regla, la protección favorece a quien promovió en el caso concreto y no produce efectos generales.\n\nLa revisión procede, entre otros supuestos de indirecto, contra la suspensión definitiva, ciertos autos de modificación, la reposición de constancias, el sobreseimiento fuera de audiencia y las sentencias dictadas en audiencia constitucional. Se interpone por escrito, con agravios, dentro de diez días y por conducto del órgano que dictó la resolución; presentarla ante otro no interrumpe el plazo.\n\nLa Suprema Corte conoce revisión contra sentencias de audiencia cuando subsiste el problema de constitucionalidad de normas generales o de interpretación directa constitucional descrito por el artículo 83. Los tribunales colegiados conocen los demás casos y su sentencia no admite recurso. Además, la Corte puede atraer recursos cuando su interés y trascendencia lo ameriten, de oficio o a petición fundada de los sujetos autorizados. No todo asunto relevante llega a la Corte ni el colegiado 'atrae' para después enviarlo.\n\nLa estructura explicada en la transcripción quedó desactualizada. La Constitución vigente en 2026 establece nueve integrantes y funcionamiento en Pleno, con posibilidad de dos secciones aprobadas por este. Por ello no deben memorizarse las antiguas cifras de cinco integrantes en Primera Sala y once en Pleno. La revisión excepcional del amparo directo es distinta y está limitada a cuestiones constitucionales de interés excepcional.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c13-lamp-arts113-118-admision-informe",
+            "ev-c13-lamp-arts119-123-pruebas",
+            "ev-c13-lamp-art124-audiencia-fallo",
+            "ev-c13-lamp-arts61-65-sobreseimiento",
+            "ev-c13-lamp-arts73-79-sentencia-efectos",
+            "ev-c13-lamp-art80bis-atraccion",
+            "ev-c13-lamp-arts81-86-revision",
+            "ev-c13-cpeum-art94-corte",
+            "ev-c13-a16-l043-045-existencia-sobreseimiento",
+            "ev-c13-a16-l051-055-sentencia-revision",
+            "ev-c13-a16-l203-205-atraccion-revisiones"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Ley de Amparo: artículos 61 a 65 sobre improcedencia y sobreseimiento; 73 a 79 sobre sentencia y efectos; 80 Bis y 81 a 96 sobre revisión; 113 a 124 sobre admisión, informe, pruebas y audiencia constitucional. Constitución: artículos 94, 103 y 107. Se aplican los textos vigentes verificados al 21-08-2026.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c13-cpeum-arts103-107-amparo",
+            "ev-c13-cpeum-art94-corte",
+            "ev-c13-lamp-arts61-65-sobreseimiento",
+            "ev-c13-lamp-arts73-79-sentencia-efectos",
+            "ev-c13-lamp-art80bis-atraccion",
+            "ev-c13-lamp-arts81-86-revision",
+            "ev-c13-lamp-arts113-118-admision-informe",
+            "ev-c13-lamp-arts119-123-pruebas",
+            "ev-c13-lamp-art124-audiencia-fallo"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo: inexistencia y fondo",
+          "content": "Si la autoridad niega una supuesta orden y ninguna constancia demuestra que exista, se sobresee sin estudiar constitucionalidad. Si la autoridad reconoce la orden y el expediente la acredita, el órgano debe revisar procedencia y, si no hay obstáculo, analizar si la orden viola derechos para negar o conceder.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c13-lamp-arts61-65-sobreseimiento",
+            "ev-c13-lamp-arts73-79-sentencia-efectos",
+            "ev-c13-a16-l043-045-existencia-sobreseimiento"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Cómo aparece en un reactivo tipo EGEL",
+          "content": "Separa tres niveles: presupuesto procesal, fondo y recurso. Inexistencia o improcedencia conducen a sobreseimiento; ausencia de violación conduce a negativa; violación acreditada conduce a concesión con efectos. Para revisión busca resolución impugnable, plazo de diez días, presentación ante el órgano emisor y competencia entre colegiado y Suprema Corte.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c13-lamp-arts61-65-sobreseimiento",
+            "ev-c13-lamp-arts73-79-sentencia-efectos",
+            "ev-c13-lamp-arts81-86-revision",
+            "ev-c13-lamp-arts113-118-admision-informe"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen para repasar",
+          "content": "Admisión: audiencia, informe, tercero y suspensión. Informe: 15 días, ampliable 10; mínimo 8 días para conocerlo antes de audiencia. Pruebas: todas salvo confesional por posiciones. Audiencia pública: constancias, pruebas, alegatos y fallo hasta en 90 días naturales. Sobreseer: sin fondo. Negar: no se acredita violación. Conceder: restituir o exigir cumplimiento. Revisión: 10 días ante órgano emisor. Corte: cuestiones del artículo 83; colegiado: demás casos. Atracción: excepcional, no automática.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c13-lamp-arts113-118-admision-informe",
+            "ev-c13-lamp-arts119-123-pruebas",
+            "ev-c13-lamp-art124-audiencia-fallo",
+            "ev-c13-lamp-arts61-65-sobreseimiento",
+            "ev-c13-lamp-arts73-79-sentencia-efectos",
+            "ev-c13-lamp-art80bis-atraccion",
+            "ev-c13-lamp-arts81-86-revision",
+            "ev-c13-a16-l043-045-existencia-sobreseimiento",
+            "ev-c13-a16-l051-055-sentencia-revision",
+            "ev-c13-a16-l203-205-atraccion-revisiones"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de preguntas y respuestas",
+          "content": "1. ¿Qué ordena la admisión? Respuesta: audiencia, informe, emplazamiento y, en su caso, suspensión.\n2. ¿Cuándo se celebra la audiencia? Respuesta: dentro de treinta días, ampliables por causa fundada hasta otros treinta.\n3. ¿Cuál es el plazo del informe? Respuesta: quince días, ampliable hasta diez.\n4. ¿Qué ocurre si falta informe? Respuesta: se presume cierto el acto, salvo prueba en contrario, con las precisiones del artículo 117.\n5. ¿Qué prueba está excluida? Respuesta: la confesional por posiciones.\n6. ¿Qué integra la audiencia? Respuesta: constancias, videograbaciones, pruebas y alegatos.\n7. ¿Cuándo debe dictarse el fallo? Respuesta: en un máximo de noventa días naturales.\n8. ¿Qué es sobreseimiento? Respuesta: terminación sin decidir la constitucionalidad.\n9. ¿Qué diferencia negativa y concesión? Respuesta: la negativa rechaza el fondo; la concesión reconoce violación y fija restitución.\n10. ¿Cuál es el plazo de revisión? Respuesta: diez días.\n11. ¿Dónde se presenta? Respuesta: por conducto del órgano que dictó la resolución.\n12. ¿Quién resuelve? Respuesta: la Suprema Corte en los supuestos del artículo 83 y el tribunal colegiado en los demás.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c13-lamp-arts113-118-admision-informe",
+            "ev-c13-lamp-arts119-123-pruebas",
+            "ev-c13-lamp-art124-audiencia-fallo",
+            "ev-c13-lamp-arts61-65-sobreseimiento",
+            "ev-c13-lamp-arts73-79-sentencia-efectos",
+            "ev-c13-lamp-arts81-86-revision",
+            "ev-c13-a16-l043-045-existencia-sobreseimiento",
+            "ev-c13-a16-l051-055-sentencia-revision"
+          ]
+        },
+      {
+        "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Informe justificado: defensa documentada del acto. Audiencia constitucional: etapa de pruebas, alegatos y decisión. Improcedencia: obstáculo legal al estudio. Sobreseimiento: terminación sin fondo. Negativa: decisión de fondo adversa. Concesión: protección con efectos. Restitución: restablecimiento del derecho. Agravio: razón de impugnación. Revisión: recurso contra resoluciones enumeradas. Atracción: competencia excepcional por interés y trascendencia.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c13-lamp-arts61-65-sobreseimiento",
+            "ev-c13-lamp-arts73-79-sentencia-efectos",
+            "ev-c13-lamp-art80bis-atraccion",
+            "ev-c13-lamp-arts81-86-revision",
+            "ev-c13-lamp-arts113-118-admision-informe",
+            "ev-c13-lamp-art124-audiencia-fallo"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes y correcciones",
+          "content": "Error: la audiencia solo verifica existencia. Corrección: también integra pruebas, alegatos y decisión. Error: inexistencia significa perder el fondo. Corrección: produce sobreseimiento sin juzgar constitucionalidad. Error: todo acto consumado es irreparable. Corrección: debe ser imposible restituir. Error: la sentencia se dicta siempre al instante. Corrección: el máximo vigente es 90 días naturales. Error: toda revisión llega a la Corte. Corrección: el colegiado resuelve los casos no reservados. Error: el colegiado ejerce atracción. Corrección: la Corte atrae bajo requisitos. Error: Corte de 11 y Primera Sala de 5. Corrección: nueve integrantes, Pleno y posibles secciones en 2026.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c13-cpeum-art94-corte",
+            "ev-c13-lamp-arts61-65-sobreseimiento",
+            "ev-c13-lamp-arts73-79-sentencia-efectos",
+            "ev-c13-lamp-art80bis-atraccion",
+            "ev-c13-lamp-arts81-86-revision",
+            "ev-c13-lamp-art124-audiencia-fallo",
+            "ev-c13-a16-l043-045-existencia-sobreseimiento",
+            "ev-c13-a16-l203-205-atraccion-revisiones"
+          ]
+        }
       ],
       "conceptMap": {
         "title": "Mapa visual: audiencia, sentencia y revisión",
         "description": "Secuencia del expediente hasta el órgano revisor.",
         "nodes": [
-          {"id":"tramite","label":"Amparo indirecto","description":"Trámite principal y revisión."},
-          {"id":"admision","label":"1. Admisión","description":"Inicia la integración.","parentId":"tramite"},
-          {"id":"fecha","label":"Audiencia: 30 días","description":"Ampliable por otros 30.","parentId":"admision"},
-          {"id":"informe","label":"Informe justificado","description":"15 días, ampliable 10.","parentId":"admision"},
-          {"id":"tercero","label":"Tercera interesada","description":"Recibe traslado.","parentId":"admision"},
-          {"id":"pruebas","label":"2. Pruebas","description":"Construyen el expediente.","parentId":"tramite"},
-          {"id":"documental","label":"Documental","description":"Puede presentarse antes.","parentId":"pruebas"},
-          {"id":"especiales","label":"Testimonial, pericial, inspección","description":"Regla de 5 días hábiles.","parentId":"pruebas"},
-          {"id":"excluida","label":"Confesional por posiciones","description":"No es admisible.","parentId":"pruebas"},
-          {"id":"audiencia","label":"3. Audiencia pública","description":"Artículo 124.","parentId":"tramite"},
-          {"id":"constancias","label":"Constancias y videos","description":"Relación y análisis.","parentId":"audiencia"},
-          {"id":"desahogo","label":"Desahogo pendiente","description":"Recepción por orden.","parentId":"audiencia"},
-          {"id":"alegatos","label":"Alegatos","description":"Escritos; oralidad excepcional.","parentId":"audiencia"},
-          {"id":"fallo","label":"Fallo hasta en 90 días","description":"Plazo máximo vigente.","parentId":"audiencia"},
-          {"id":"sentidos","label":"4. Sentidos","description":"Resultado procesal o de fondo.","parentId":"tramite"},
-          {"id":"sobresee","label":"Sobresee","description":"No estudia constitucionalidad.","parentId":"sentidos"},
-          {"id":"niega","label":"Niega","description":"No acredita violación.","parentId":"sentidos"},
-          {"id":"concede","label":"Concede","description":"Reconoce lesión.","parentId":"sentidos"},
-          {"id":"efectos","label":"5. Efectos precisos","description":"Artículo 77.","parentId":"concede"},
-          {"id":"positivo","label":"Acto positivo","description":"Restituir al estado previo.","parentId":"efectos"},
-          {"id":"omision","label":"Omisión","description":"Obligar a cumplir el derecho.","parentId":"efectos"},
-          {"id":"revision","label":"6. Revisión","description":"Recurso con agravios.","parentId":"tramite"},
-          {"id":"plazo","label":"10 días","description":"Ante el órgano emisor.","parentId":"revision"},
-          {"id":"colegiado","label":"Tribunal Colegiado","description":"Casos no reservados.","parentId":"revision"},
-          {"id":"corte","label":"Suprema Corte","description":"Supuestos constitucionales del artículo 83.","parentId":"revision"},
-          {"id":"atraccion","label":"Atracción excepcional","description":"Interés y trascendencia.","parentId":"corte"}
+          {
+            "id": "tramite",
+            "label": "Amparo indirecto",
+            "description": "Trámite principal y revisión.",
+            "evidenceIds": [
+              "ev-c13-cpeum-arts103-107-amparo"
+            ]
+          },
+          {
+            "id": "admision",
+            "label": "1. Admisión",
+            "description": "Inicia la integración.",
+            "parentId": "tramite",
+            "evidenceIds": [
+              "ev-c13-lamp-arts113-118-admision-informe"
+            ]
+          },
+          {
+            "id": "fecha",
+            "label": "Audiencia: 30 días",
+            "description": "Ampliable por otros 30.",
+            "parentId": "admision",
+            "evidenceIds": [
+              "ev-c13-lamp-arts113-118-admision-informe"
+            ]
+          },
+          {
+            "id": "informe",
+            "label": "Informe justificado",
+            "description": "15 días, ampliable 10.",
+            "parentId": "admision",
+            "evidenceIds": [
+              "ev-c13-lamp-arts113-118-admision-informe"
+            ]
+          },
+          {
+            "id": "tercero",
+            "label": "Tercera interesada",
+            "description": "Recibe traslado.",
+            "parentId": "admision",
+            "evidenceIds": [
+              "ev-c13-lamp-arts113-118-admision-informe"
+            ]
+          },
+          {
+            "id": "pruebas",
+            "label": "2. Pruebas",
+            "description": "Construyen el expediente.",
+            "parentId": "tramite",
+            "evidenceIds": [
+              "ev-c13-lamp-arts119-123-pruebas"
+            ]
+          },
+          {
+            "id": "documental",
+            "label": "Documental",
+            "description": "Puede presentarse antes.",
+            "parentId": "pruebas",
+            "evidenceIds": [
+              "ev-c13-lamp-arts119-123-pruebas"
+            ]
+          },
+          {
+            "id": "especiales",
+            "label": "Testimonial, pericial, inspección",
+            "description": "Regla de 5 días hábiles.",
+            "parentId": "pruebas",
+            "evidenceIds": [
+              "ev-c13-lamp-arts119-123-pruebas"
+            ]
+          },
+          {
+            "id": "excluida",
+            "label": "Confesional por posiciones",
+            "description": "No es admisible.",
+            "parentId": "pruebas",
+            "evidenceIds": [
+              "ev-c13-lamp-arts119-123-pruebas"
+            ]
+          },
+          {
+            "id": "audiencia",
+            "label": "3. Audiencia pública",
+            "description": "Artículo 124.",
+            "parentId": "tramite",
+            "evidenceIds": [
+              "ev-c13-lamp-art124-audiencia-fallo"
+            ]
+          },
+          {
+            "id": "constancias",
+            "label": "Constancias y videos",
+            "description": "Relación y análisis.",
+            "parentId": "audiencia",
+            "evidenceIds": [
+              "ev-c13-lamp-art124-audiencia-fallo"
+            ]
+          },
+          {
+            "id": "desahogo",
+            "label": "Desahogo pendiente",
+            "description": "Recepción por orden.",
+            "parentId": "audiencia",
+            "evidenceIds": [
+              "ev-c13-lamp-art124-audiencia-fallo",
+              "ev-c13-lamp-arts119-123-pruebas"
+            ]
+          },
+          {
+            "id": "alegatos",
+            "label": "Alegatos",
+            "description": "Escritos; oralidad excepcional.",
+            "parentId": "audiencia",
+            "evidenceIds": [
+              "ev-c13-lamp-art124-audiencia-fallo"
+            ]
+          },
+          {
+            "id": "fallo",
+            "label": "Fallo hasta en 90 días",
+            "description": "Plazo máximo vigente.",
+            "parentId": "audiencia",
+            "evidenceIds": [
+              "ev-c13-lamp-art124-audiencia-fallo"
+            ]
+          },
+          {
+            "id": "sentidos",
+            "label": "4. Sentidos",
+            "description": "Resultado procesal o de fondo.",
+            "parentId": "tramite",
+            "evidenceIds": [
+              "ev-c13-lamp-arts61-65-sobreseimiento",
+              "ev-c13-lamp-arts73-79-sentencia-efectos"
+            ]
+          },
+          {
+            "id": "sobresee",
+            "label": "Sobresee",
+            "description": "No estudia constitucionalidad.",
+            "parentId": "sentidos",
+            "evidenceIds": [
+              "ev-c13-lamp-arts61-65-sobreseimiento",
+              "ev-c13-a16-l043-045-existencia-sobreseimiento"
+            ]
+          },
+          {
+            "id": "niega",
+            "label": "Niega",
+            "description": "No acredita violación.",
+            "parentId": "sentidos",
+            "evidenceIds": [
+              "ev-c13-lamp-arts73-79-sentencia-efectos"
+            ]
+          },
+          {
+            "id": "concede",
+            "label": "Concede",
+            "description": "Reconoce lesión.",
+            "parentId": "sentidos",
+            "evidenceIds": [
+              "ev-c13-lamp-arts73-79-sentencia-efectos"
+            ]
+          },
+          {
+            "id": "efectos",
+            "label": "5. Efectos precisos",
+            "description": "Artículo 77.",
+            "parentId": "concede",
+            "evidenceIds": [
+              "ev-c13-lamp-arts73-79-sentencia-efectos"
+            ]
+          },
+          {
+            "id": "positivo",
+            "label": "Acto positivo",
+            "description": "Restituir al estado previo.",
+            "parentId": "efectos",
+            "evidenceIds": [
+              "ev-c13-lamp-arts73-79-sentencia-efectos"
+            ]
+          },
+          {
+            "id": "omision",
+            "label": "Omisión",
+            "description": "Obligar a cumplir el derecho.",
+            "parentId": "efectos",
+            "evidenceIds": [
+              "ev-c13-lamp-arts73-79-sentencia-efectos"
+            ]
+          },
+          {
+            "id": "revision",
+            "label": "6. Revisión",
+            "description": "Recurso con agravios.",
+            "parentId": "tramite",
+            "evidenceIds": [
+              "ev-c13-lamp-arts81-86-revision",
+              "ev-c13-a16-l051-055-sentencia-revision"
+            ]
+          },
+          {
+            "id": "plazo",
+            "label": "10 días",
+            "description": "Ante el órgano emisor.",
+            "parentId": "revision",
+            "evidenceIds": [
+              "ev-c13-lamp-arts81-86-revision"
+            ]
+          },
+          {
+            "id": "colegiado",
+            "label": "Tribunal Colegiado",
+            "description": "Casos no reservados.",
+            "parentId": "revision",
+            "evidenceIds": [
+              "ev-c13-lamp-arts81-86-revision"
+            ]
+          },
+          {
+            "id": "corte",
+            "label": "Suprema Corte",
+            "description": "Supuestos constitucionales del artículo 83.",
+            "parentId": "revision",
+            "evidenceIds": [
+              "ev-c13-lamp-arts81-86-revision"
+            ]
+          },
+          {
+            "id": "atraccion",
+            "label": "Atracción excepcional",
+            "description": "Interés y trascendencia.",
+            "parentId": "corte",
+            "evidenceIds": [
+              "ev-c13-lamp-art80bis-atraccion",
+              "ev-c13-a16-l203-205-atraccion-revisiones"
+            ]
+          }
         ]
       },
       "references": [
-        {"title":"Constitución Política de los Estados Unidos Mexicanos","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"México","citation":"Artículos 94, 103 y 107; últimas reformas DOF 02-06-2026","retrievedOn":"2026-08-11","note":"Estructura vigente de la Suprema Corte y bases del amparo."},
-        {"title":"Ley de Amparo","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"México","citation":"Artículos 61 a 96 y 113 a 124; última reforma DOF 16-10-2025","retrievedOn":"2026-08-11","note":"Improcedencia, sentencia, revisión y audiencia constitucional."},
-        {"title":"Ley Orgánica del Poder Judicial de la Federación","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/LOPJF.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"México","citation":"Organización vigente del Poder Judicial de la Federación","retrievedOn":"2026-08-11","note":"Marco orgánico de Suprema Corte, tribunales colegiados y juzgados de distrito."}
+        {
+          "title": "Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 94, 103 y 107; últimas reformas DOF 02-06-2026",
+          "retrievedOn": "2026-08-21",
+          "note": "Estructura vigente de la Suprema Corte y bases del amparo."
+        },
+        {
+          "title": "Ley de Amparo",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 61 a 96 y 113 a 124; última reforma DOF 16-10-2025",
+          "retrievedOn": "2026-08-21",
+          "note": "Improcedencia, sentencia, revisión y audiencia constitucional."
+        }
       ],
       "flashcards": [
-        {"question":"¿Qué sucede al admitir?","answer":"Se fija audiencia, se pide informe, se emplaza al tercero y se tramita suspensión si procede.","sourceOrigin":"mixed"},
-        {"question":"¿Plazo ordinario de audiencia?","answer":"Treinta días, ampliables por causa fundada hasta otros treinta.","sourceOrigin":"complementary"},
-        {"question":"¿Plazo del informe justificado?","answer":"Quince días, ampliable hasta diez días más.","sourceOrigin":"complementary"},
-        {"question":"¿Efecto de faltar el informe?","answer":"Presunción de certeza del acto, salvo prueba en contrario, con las precisiones legales.","sourceOrigin":"complementary"},
-        {"question":"¿Qué prueba no se admite?","answer":"La confesional por posiciones.","sourceOrigin":"complementary"},
-        {"question":"¿La audiencia es pública?","answer":"Sí, conforme al artículo 124 de la Ley de Amparo.","sourceOrigin":"complementary"},
-        {"question":"¿Plazo máximo actual del fallo?","answer":"Noventa días naturales después de la audiencia.","sourceOrigin":"complementary"},
-        {"question":"¿Qué hace el sobreseimiento?","answer":"Termina el juicio sin decidir constitucionalidad o legalidad del acto.","sourceOrigin":"mixed"},
-        {"question":"¿Efecto ante acto positivo?","answer":"Restituir a la persona en el goce del derecho violado.","sourceOrigin":"complementary"},
-        {"question":"¿Plazo de revisión?","answer":"Diez días por conducto del órgano que dictó la resolución.","sourceOrigin":"mixed"},
-        {"question":"¿Quién resuelve normalmente?","answer":"El tribunal colegiado, salvo los supuestos reservados a la Suprema Corte.","sourceOrigin":"mixed"},
-        {"question":"¿Cómo se integra la Corte en 2026?","answer":"Nueve integrantes; funciona en Pleno y puede hacerlo en dos secciones.","sourceOrigin":"complementary"}
+        {
+          "question": "¿Qué sucede al admitir?",
+          "answer": "Se fija audiencia, se pide informe, se emplaza al tercero y se tramita suspensión si procede.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c13-lamp-arts113-118-admision-informe"
+          ]
+        },
+        {
+          "question": "¿Plazo ordinario de audiencia?",
+          "answer": "Treinta días, ampliables por causa fundada hasta otros treinta.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c13-lamp-arts113-118-admision-informe"
+          ]
+        },
+        {
+          "question": "¿Plazo del informe justificado?",
+          "answer": "Quince días, ampliable hasta diez días más.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c13-lamp-arts113-118-admision-informe"
+          ]
+        },
+        {
+          "question": "¿Efecto de faltar el informe?",
+          "answer": "Presunción de certeza del acto, salvo prueba en contrario, con las precisiones legales.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c13-lamp-arts113-118-admision-informe"
+          ]
+        },
+        {
+          "question": "¿Qué prueba no se admite?",
+          "answer": "La confesional por posiciones.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c13-lamp-arts119-123-pruebas"
+          ]
+        },
+        {
+          "question": "¿La audiencia es pública?",
+          "answer": "Sí, conforme al artículo 124 de la Ley de Amparo.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c13-lamp-art124-audiencia-fallo"
+          ]
+        },
+        {
+          "question": "¿Plazo máximo actual del fallo?",
+          "answer": "Noventa días naturales después de la audiencia.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c13-lamp-art124-audiencia-fallo"
+          ]
+        },
+        {
+          "question": "¿Qué hace el sobreseimiento?",
+          "answer": "Termina el juicio sin decidir constitucionalidad o legalidad del acto.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c13-lamp-arts61-65-sobreseimiento",
+            "ev-c13-a16-l043-045-existencia-sobreseimiento"
+          ]
+        },
+        {
+          "question": "¿Efecto ante acto positivo?",
+          "answer": "Restituir a la persona en el goce del derecho violado.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c13-lamp-arts73-79-sentencia-efectos"
+          ]
+        },
+        {
+          "question": "¿Plazo de revisión?",
+          "answer": "Diez días por conducto del órgano que dictó la resolución.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c13-lamp-arts81-86-revision",
+            "ev-c13-a16-l051-055-sentencia-revision"
+          ]
+        },
+        {
+          "question": "¿Quién resuelve normalmente?",
+          "answer": "El tribunal colegiado, salvo los supuestos reservados a la Suprema Corte.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c13-lamp-arts81-86-revision"
+          ]
+        },
+        {
+          "question": "¿Cómo se integra la Corte en 2026?",
+          "answer": "Nueve integrantes; funciona en Pleno y puede hacerlo en dos secciones.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c13-cpeum-art94-corte"
+          ]
+        }
       ],
       "exam": {
         "title": "Examen: audiencia, sentencia y revisión",
         "description": "Diez casos originales sobre integración, prueba, decisión, efectos y competencia revisora.",
         "questions": [
-          {"text":"Se admite una demanda de amparo indirecto. ¿Qué actuación corresponde?","difficulty":"basic","options":["Señalar audiencia y pedir informe justificado","Enviar siempre a la Suprema Corte","Conceder el fondo sin pruebas"],"correctOption":0,"explanation":"El artículo 115 establece la integración inicial del expediente.","optionExplanations":["Es la secuencia legal.","La Corte no recibe toda demanda.","La admisión no decide el fondo."]},
-          {"text":"El informe se notifica solo dos días antes de la audiencia. La persona quejosa pide tiempo. ¿Qué procede?","difficulty":"intermediate","options":["Diferir o suspender la audiencia","Ignorar la petición","Sobreseer automáticamente"],"correctOption":0,"explanation":"Deben mediar al menos ocho días para conocer el informe.","optionExplanations":["Protege la posibilidad de defensa.","Contradice el artículo 117.","La cercanía temporal no causa sobreseimiento."]},
-          {"text":"Una parte ofrece confesional por posiciones en el amparo. ¿Debe admitirse?","difficulty":"basic","options":["No","Sí, siempre","Solo si la autoridad acepta"],"correctOption":0,"explanation":"Es la única clase de prueba expresamente excluida por el artículo 119.","optionExplanations":["Aplica la exclusión legal.","Desconoce la excepción.","La autoridad no elimina la prohibición."]},
-          {"text":"No existe informe justificado. ¿Cuál es la regla inicial sobre el acto?","difficulty":"intermediate","options":["Se presume cierto salvo prueba en contrario","Se presume inexistente","Se concede automáticamente el amparo"],"correctOption":0,"explanation":"La falta de informe genera presunción de certeza, no concesión automática.","optionExplanations":["Es el efecto del artículo 117.","Invierte la regla.","Todavía debe analizarse la violación."]},
-          {"text":"Las constancias demuestran claramente que nunca existió la orden reclamada. ¿Qué sentido procede?","difficulty":"intermediate","options":["Sobreseimiento","Negativa de fondo","Concesión restitutoria"],"correctOption":0,"explanation":"La inexistencia acreditada actualiza el artículo 63, fracción IV.","optionExplanations":["Termina sin examinar constitucionalidad.","La negativa requeriría fondo.","No hay acto que restituir."]},
-          {"text":"El acto ya ocurrió, pero sus efectos todavía pueden revertirse material y jurídicamente. ¿Es irreparable por definición?","difficulty":"advanced","options":["No","Sí, todo acto ejecutado lo es","Sí, si la autoridad lo afirma"],"correctOption":0,"explanation":"La consumación solo causa improcedencia cuando la restitución resulta imposible.","optionExplanations":["Distingue consumación de irreparabilidad.","Generaliza indebidamente.","La afirmación no decide la causal."]},
-          {"text":"Se concede amparo contra una omisión. ¿Qué efecto debe precisarse?","difficulty":"basic","options":["Obligar a respetar el derecho y cumplir lo exigido","Imponer siempre prisión a la autoridad","Invalidar toda norma del país"],"correctOption":0,"explanation":"El artículo 77 regula el efecto restitutorio de actos negativos u omisiones.","optionExplanations":["Es el efecto legal.","No es sanción automática.","La sentencia no tiene ese alcance general."]},
-          {"text":"Una parte impugna la sentencia de audiencia constitucional doce días después. ¿Qué problema existe?","difficulty":"basic","options":["Extemporaneidad","Falta de audiencia incidental","Incompetencia electoral"],"correctOption":0,"explanation":"La revisión debe interponerse dentro de diez días.","optionExplanations":["El plazo ya transcurrió.","No define el plazo del recurso.","La materia no es electoral."]},
-          {"text":"La revisión no conserva cuestión de constitucionalidad de norma ni interpretación directa constitucional. ¿Quién conoce normalmente?","difficulty":"intermediate","options":["Tribunal Colegiado de Circuito","Suprema Corte en todo caso","Congreso de la Unión"],"correctOption":0,"explanation":"Los colegiados conocen los casos no previstos en el artículo 83.","optionExplanations":["Es la distribución del artículo 84.","La competencia de la Corte es delimitada.","No es órgano revisor judicial."]},
-          {"text":"¿Qué afirmación refleja la Suprema Corte vigente en 2026?","difficulty":"basic","options":["Nueve integrantes, Pleno y posibles dos secciones","Once integrantes y dos Salas de cinco","Cinco integrantes en una Sala única"],"correctOption":0,"explanation":"El artículo 94 constitucional vigente contiene esa integración.","optionExplanations":["Es la estructura actual.","Describe el esquema anterior.","No corresponde a la Constitución vigente."]}
+          {
+            "text": "Se admite una demanda de amparo indirecto. ¿Qué actuación corresponde?",
+            "difficulty": "basic",
+            "options": [
+              "Señalar audiencia y pedir informe justificado",
+              "Enviar siempre a la Suprema Corte",
+              "Conceder el fondo sin pruebas"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 115 establece la integración inicial del expediente.",
+            "optionExplanations": [
+              "Es la secuencia legal.",
+              "La Corte no recibe toda demanda.",
+              "La admisión no decide el fondo."
+            ],
+            "evidenceIds": [
+              "ev-c13-lamp-arts113-118-admision-informe"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c13-lamp-arts113-118-admision-informe"
+              ],
+              [
+                "ev-c13-lamp-arts113-118-admision-informe"
+              ],
+              [
+                "ev-c13-lamp-arts113-118-admision-informe"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c13-lamp-arts113-118-admision-informe"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c13-lamp-arts113-118-admision-informe"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c13-lamp-arts113-118-admision-informe"
+              ],
+              [
+                "ev-c13-lamp-arts113-118-admision-informe"
+              ],
+              [
+                "ev-c13-lamp-arts113-118-admision-informe"
+              ]
+            ]
+          },
+          {
+            "text": "El informe se notifica solo dos días antes de la audiencia. La persona quejosa pide tiempo. ¿Qué procede?",
+            "difficulty": "intermediate",
+            "options": [
+              "Diferir o suspender la audiencia",
+              "Ignorar la petición",
+              "Sobreseer automáticamente"
+            ],
+            "correctOption": 0,
+            "explanation": "Deben mediar al menos ocho días para conocer el informe.",
+            "optionExplanations": [
+              "Protege la posibilidad de defensa.",
+              "Contradice el artículo 117.",
+              "La cercanía temporal no causa sobreseimiento."
+            ],
+            "evidenceIds": [
+              "ev-c13-lamp-arts113-118-admision-informe"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c13-lamp-arts113-118-admision-informe"
+              ],
+              [
+                "ev-c13-lamp-arts113-118-admision-informe"
+              ],
+              [
+                "ev-c13-lamp-arts113-118-admision-informe"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c13-lamp-arts113-118-admision-informe"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c13-lamp-arts113-118-admision-informe"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c13-lamp-arts113-118-admision-informe"
+              ],
+              [
+                "ev-c13-lamp-arts113-118-admision-informe"
+              ],
+              [
+                "ev-c13-lamp-arts113-118-admision-informe"
+              ]
+            ]
+          },
+          {
+            "text": "Una parte ofrece confesional por posiciones en el amparo. ¿Debe admitirse?",
+            "difficulty": "basic",
+            "options": [
+              "No",
+              "Sí, siempre",
+              "Solo si la autoridad acepta"
+            ],
+            "correctOption": 0,
+            "explanation": "Es la única clase de prueba expresamente excluida por el artículo 119.",
+            "optionExplanations": [
+              "Aplica la exclusión legal.",
+              "Desconoce la excepción.",
+              "La autoridad no elimina la prohibición."
+            ],
+            "evidenceIds": [
+              "ev-c13-lamp-arts119-123-pruebas"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c13-lamp-arts119-123-pruebas"
+              ],
+              [
+                "ev-c13-lamp-arts119-123-pruebas"
+              ],
+              [
+                "ev-c13-lamp-arts119-123-pruebas"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c13-lamp-arts119-123-pruebas"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c13-lamp-arts119-123-pruebas"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c13-lamp-arts119-123-pruebas"
+              ],
+              [
+                "ev-c13-lamp-arts119-123-pruebas"
+              ],
+              [
+                "ev-c13-lamp-arts119-123-pruebas"
+              ]
+            ]
+          },
+          {
+            "text": "No existe informe justificado. ¿Cuál es la regla inicial sobre el acto?",
+            "difficulty": "intermediate",
+            "options": [
+              "Se presume cierto salvo prueba en contrario",
+              "Se presume inexistente",
+              "Se concede automáticamente el amparo"
+            ],
+            "correctOption": 0,
+            "explanation": "La falta de informe genera presunción de certeza, no concesión automática.",
+            "optionExplanations": [
+              "Es el efecto del artículo 117.",
+              "Invierte la regla.",
+              "Todavía debe analizarse la violación."
+            ],
+            "evidenceIds": [
+              "ev-c13-lamp-arts113-118-admision-informe"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c13-lamp-arts113-118-admision-informe"
+              ],
+              [
+                "ev-c13-lamp-arts113-118-admision-informe"
+              ],
+              [
+                "ev-c13-lamp-arts113-118-admision-informe"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c13-lamp-arts113-118-admision-informe"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c13-lamp-arts113-118-admision-informe"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c13-lamp-arts113-118-admision-informe"
+              ],
+              [
+                "ev-c13-lamp-arts113-118-admision-informe"
+              ],
+              [
+                "ev-c13-lamp-arts113-118-admision-informe"
+              ]
+            ]
+          },
+          {
+            "text": "Las constancias demuestran claramente que nunca existió la orden reclamada. ¿Qué sentido procede?",
+            "difficulty": "intermediate",
+            "options": [
+              "Sobreseimiento",
+              "Negativa de fondo",
+              "Concesión restitutoria"
+            ],
+            "correctOption": 0,
+            "explanation": "La inexistencia acreditada actualiza el artículo 63, fracción IV.",
+            "optionExplanations": [
+              "Termina sin examinar constitucionalidad.",
+              "La negativa requeriría fondo.",
+              "No hay acto que restituir."
+            ],
+            "evidenceIds": [
+              "ev-c13-lamp-arts61-65-sobreseimiento"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c13-lamp-arts61-65-sobreseimiento"
+              ],
+              [
+                "ev-c13-lamp-arts61-65-sobreseimiento"
+              ],
+              [
+                "ev-c13-lamp-arts61-65-sobreseimiento"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c13-lamp-arts61-65-sobreseimiento"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c13-lamp-arts61-65-sobreseimiento"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c13-lamp-arts61-65-sobreseimiento"
+              ],
+              [
+                "ev-c13-lamp-arts61-65-sobreseimiento"
+              ],
+              [
+                "ev-c13-lamp-arts61-65-sobreseimiento"
+              ]
+            ]
+          },
+          {
+            "text": "El acto ya ocurrió, pero sus efectos todavía pueden revertirse material y jurídicamente. ¿Es irreparable por definición?",
+            "difficulty": "advanced",
+            "options": [
+              "No",
+              "Sí, todo acto ejecutado lo es",
+              "Sí, si la autoridad lo afirma"
+            ],
+            "correctOption": 0,
+            "explanation": "La consumación solo causa improcedencia cuando la restitución resulta imposible.",
+            "optionExplanations": [
+              "Distingue consumación de irreparabilidad.",
+              "Generaliza indebidamente.",
+              "La afirmación no decide la causal."
+            ],
+            "evidenceIds": [
+              "ev-c13-lamp-arts61-65-sobreseimiento"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c13-lamp-arts61-65-sobreseimiento"
+              ],
+              [
+                "ev-c13-lamp-arts61-65-sobreseimiento"
+              ],
+              [
+                "ev-c13-lamp-arts61-65-sobreseimiento"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c13-lamp-arts61-65-sobreseimiento"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c13-lamp-arts61-65-sobreseimiento"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c13-lamp-arts61-65-sobreseimiento"
+              ],
+              [
+                "ev-c13-lamp-arts61-65-sobreseimiento"
+              ],
+              [
+                "ev-c13-lamp-arts61-65-sobreseimiento"
+              ]
+            ]
+          },
+          {
+            "text": "Se concede amparo contra una omisión. ¿Qué efecto debe precisarse?",
+            "difficulty": "basic",
+            "options": [
+              "Obligar a respetar el derecho y cumplir lo exigido",
+              "Imponer siempre prisión a la autoridad",
+              "Invalidar toda norma del país"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 77 regula el efecto restitutorio de actos negativos u omisiones.",
+            "optionExplanations": [
+              "Es el efecto legal.",
+              "No es sanción automática.",
+              "La sentencia no tiene ese alcance general."
+            ],
+            "evidenceIds": [
+              "ev-c13-lamp-arts73-79-sentencia-efectos"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c13-lamp-arts73-79-sentencia-efectos"
+              ],
+              [
+                "ev-c13-lamp-arts73-79-sentencia-efectos"
+              ],
+              [
+                "ev-c13-lamp-arts73-79-sentencia-efectos"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c13-lamp-arts73-79-sentencia-efectos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c13-lamp-arts73-79-sentencia-efectos"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c13-lamp-arts73-79-sentencia-efectos"
+              ],
+              [
+                "ev-c13-lamp-arts73-79-sentencia-efectos"
+              ],
+              [
+                "ev-c13-lamp-arts73-79-sentencia-efectos"
+              ]
+            ]
+          },
+          {
+            "text": "Una parte impugna la sentencia de audiencia constitucional doce días después. ¿Qué problema existe?",
+            "difficulty": "basic",
+            "options": [
+              "Extemporaneidad",
+              "Falta de audiencia incidental",
+              "Incompetencia electoral"
+            ],
+            "correctOption": 0,
+            "explanation": "La revisión debe interponerse dentro de diez días.",
+            "optionExplanations": [
+              "El plazo ya transcurrió.",
+              "No define el plazo del recurso.",
+              "La materia no es electoral."
+            ],
+            "evidenceIds": [
+              "ev-c13-lamp-arts81-86-revision"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c13-lamp-arts81-86-revision"
+              ],
+              [
+                "ev-c13-lamp-arts81-86-revision"
+              ],
+              [
+                "ev-c13-lamp-arts81-86-revision"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c13-lamp-arts81-86-revision"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c13-lamp-arts81-86-revision"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c13-lamp-arts81-86-revision"
+              ],
+              [
+                "ev-c13-lamp-arts81-86-revision"
+              ],
+              [
+                "ev-c13-lamp-arts81-86-revision"
+              ]
+            ]
+          },
+          {
+            "text": "La revisión no conserva cuestión de constitucionalidad de norma ni interpretación directa constitucional. ¿Quién conoce normalmente?",
+            "difficulty": "intermediate",
+            "options": [
+              "Tribunal Colegiado de Circuito",
+              "Suprema Corte en todo caso",
+              "Congreso de la Unión"
+            ],
+            "correctOption": 0,
+            "explanation": "Los colegiados conocen los casos no previstos en el artículo 83.",
+            "optionExplanations": [
+              "Es la distribución del artículo 84.",
+              "La competencia de la Corte es delimitada.",
+              "No es órgano revisor judicial."
+            ],
+            "evidenceIds": [
+              "ev-c13-lamp-arts81-86-revision"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c13-lamp-arts81-86-revision"
+              ],
+              [
+                "ev-c13-lamp-arts81-86-revision"
+              ],
+              [
+                "ev-c13-lamp-arts81-86-revision"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c13-lamp-arts81-86-revision"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c13-lamp-arts81-86-revision"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c13-lamp-arts81-86-revision"
+              ],
+              [
+                "ev-c13-lamp-arts81-86-revision"
+              ],
+              [
+                "ev-c13-lamp-arts81-86-revision"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué afirmación refleja la Suprema Corte vigente en 2026?",
+            "difficulty": "basic",
+            "options": [
+              "Nueve integrantes, Pleno y posibles dos secciones",
+              "Once integrantes y dos Salas de cinco",
+              "Cinco integrantes en una Sala única"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 94 constitucional vigente contiene esa integración.",
+            "optionExplanations": [
+              "Es la estructura actual.",
+              "Describe el esquema anterior.",
+              "No corresponde a la Constitución vigente."
+            ],
+            "evidenceIds": [
+              "ev-c13-cpeum-art94-corte"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c13-cpeum-art94-corte"
+              ],
+              [
+                "ev-c13-cpeum-art94-corte"
+              ],
+              [
+                "ev-c13-cpeum-art94-corte"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c13-cpeum-art94-corte"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c13-cpeum-art94-corte"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c13-cpeum-art94-corte"
+              ],
+              [
+                "ev-c13-cpeum-art94-corte"
+              ],
+              [
+                "ev-c13-cpeum-art94-corte"
+              ]
+            ]
+          }
         ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c13-cpeum-arts103-107-amparo",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículos 103 y 107, páginas impresas 108 y 112-115",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c13-cpeum-art94-corte",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículo 94, página impresa 93",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c13-lamp-arts61-65-sobreseimiento",
+      "kind": "official",
+      "title": "Ley de Amparo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículos 61 a 65, páginas impresas 23-27",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c13-lamp-arts73-79-sentencia-efectos",
+      "kind": "official",
+      "title": "Ley de Amparo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículos 73 a 79, páginas impresas 29-31",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c13-lamp-art80bis-atraccion",
+      "kind": "official",
+      "title": "Ley de Amparo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículo 80 Bis, página impresa 32",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c13-lamp-arts81-86-revision",
+      "kind": "official",
+      "title": "Ley de Amparo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículos 81 a 86, páginas impresas 32-34",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c13-lamp-arts113-118-admision-informe",
+      "kind": "official",
+      "title": "Ley de Amparo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículos 113 a 118, páginas impresas 42-44",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c13-lamp-arts119-123-pruebas",
+      "kind": "official",
+      "title": "Ley de Amparo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículos 119 a 123, páginas impresas 44-45",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c13-lamp-art124-audiencia-fallo",
+      "kind": "official",
+      "title": "Ley de Amparo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículo 124, páginas impresas 45-46",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c13-a16-l043-045-existencia-sobreseimiento",
+      "kind": "transcript",
+      "audioNumber": 16,
+      "locator": {
+        "type": "line_range",
+        "startLine": 43,
+        "endLine": 45
+      }
+    },
+    {
+      "id": "ev-c13-a16-l051-055-sentencia-revision",
+      "kind": "transcript",
+      "audioNumber": 16,
+      "locator": {
+        "type": "line_range",
+        "startLine": 51,
+        "endLine": 55
+      }
+    },
+    {
+      "id": "ev-c13-a16-l203-205-atraccion-revisiones",
+      "kind": "transcript",
+      "audioNumber": 16,
+      "locator": {
+        "type": "line_range",
+        "startLine": 203,
+        "endLine": 205
       }
     }
   ]

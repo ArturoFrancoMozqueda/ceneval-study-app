@@ -1,93 +1,1366 @@
 {
-  "packageVersion":"1.1",
-  "curriculum":{
-    "code":"C14",
-    "order":14,
-    "audioSources":[
-      {"audioNumber":19,"fragment":"Audio completo"},
-      {"audioNumber":22,"fragment":"Cierre administrativo"}
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C14",
+    "order": 14,
+    "audioSources": [
+      {
+        "audioNumber": 19,
+        "fragment": "Audio completo"
+      },
+      {
+        "audioNumber": 22,
+        "fragment": "Cierre administrativo"
+      }
     ]
   },
-  "subject":{"name":"Derecho Administrativo","description":"Organización, actividad y control de la administración pública mexicana."},
-  "class":{"title":"Poder Ejecutivo y APF centralizada y desconcentrada","description":"Decimocuarta clase del curso: distingue Presidencia, dependencias, Secretarías, Consejería Jurídica, órganos desconcentrados, competencia y control de actos administrativos federales."},
-  "transcript":{"originalFiles":["AUDIO 19.txt","AUDIO 22.txt"],"cleaned":"Del Audio 19 se conservó la introducción al Poder Ejecutivo, los artículos 89 y 90 constitucionales, la LOAPF y la distinción entre centralización y desconcentración. Del Audio 22 se integraron únicamente las aclaraciones sobre autoridades federales, actos administrativos y subordinación de órganos desconcentrados; el procedimiento legislativo quedó en C09, la descentralización detallada se reservó para C15 y la CNDH para C16. Se eliminaron publicidad, saludos, datos personales, comentarios políticos, bromas, lenguaje ofensivo y listas institucionales desactualizadas. Se corrigió que la APF no se reduce a tres tipos de órganos; constitucionalmente se divide en centralizada y paraestatal. También se corrigió que las Secretarías y la Consejería Jurídica son dependencias de la administración centralizada, que un órgano desconcentrado permanece jerárquicamente subordinado, que la competencia territorial no transforma su naturaleza, que las denominaciones deben verificarse en la LOAPF vigente y que no todo acto administrativo federal se combate automáticamente por una sola vía: deben revisarse acto, ley especial, definitividad y competencia."},
-  "topics":[{
-    "title":"Cómo ubicar dependencias y órganos desconcentrados federales",
-    "description":"Titularidad del Ejecutivo, APF centralizada, jerarquía, competencia, desconcentración y control jurídico.",
-    "learningJourney":{
-      "openingPrompt":"Una oficina federal tiene facultades técnicas propias y sedes regionales, pero está adscrita y subordinada a una Secretaría. ¿Es una entidad descentralizada?",
-      "quickChecks":[
-        {"prompt":"¿Quién encabeza el Poder Ejecutivo Federal?","answer":"La persona titular de la Presidencia de la República.","feedback":"La APF es el aparato organizado que auxilia al Ejecutivo; no es un cuarto poder."},
-        {"prompt":"¿Qué integra la administración centralizada?","answer":"Las Secretarías de Estado y la Consejería Jurídica; las Secretarías pueden contar con órganos desconcentrados.","feedback":"La lista concreta de Secretarías debe revisarse en el artículo 26 vigente."},
-        {"prompt":"¿Tener oficina estatal vuelve local a un órgano federal?","answer":"No. Su ámbito territorial no altera por sí mismo la adscripción federal.","feedback":"Busca la norma de competencia y la dependencia a la que está adscrito."}
+  "subject": {
+    "name": "Derecho Administrativo",
+    "description": "Organización, actividad y control de la administración pública mexicana."
+  },
+  "class": {
+    "title": "Poder Ejecutivo y APF centralizada y desconcentrada",
+    "description": "Decimocuarta clase del curso: distingue Presidencia, dependencias, Secretarías, Consejería Jurídica, órganos desconcentrados, competencia y control de actos administrativos federales."
+  },
+  "transcript": {
+    "originalFiles": [
+      "AUDIO 19.txt",
+      "AUDIO 22.txt"
+    ],
+    "cleaned": "Del Audio 19 se conservó la introducción al Poder Ejecutivo y la ubicación de los artículos 89 y 90 constitucionales. Del Audio 22 se conservó únicamente el planteamiento sobre actos administrativos federales para corregir la generalización de que todos siguen una vía única; el procedimiento legislativo quedó en C09, la descentralización detallada se reservó para C15 y la CNDH para C16. Se eliminaron publicidad, saludos, datos personales, comentarios políticos, bromas, lenguaje ofensivo y listas institucionales desactualizadas. Se corrigió que la APF no se reduce a tres tipos de órganos; constitucionalmente se divide en centralizada y paraestatal. También se corrigió que las Secretarías y la Consejería Jurídica son dependencias de la administración centralizada, que un órgano desconcentrado permanece jerárquicamente subordinado, que la competencia territorial no transforma su naturaleza, que las denominaciones deben verificarse en la LOAPF vigente y que no todo acto administrativo federal se combate automáticamente por una sola vía: deben revisarse acto, ley especial, definitividad y competencia."
+  },
+  "topics": [
+    {
+      "title": "Cómo ubicar dependencias y órganos desconcentrados federales",
+      "description": "Titularidad del Ejecutivo, APF centralizada, jerarquía, competencia, desconcentración y control jurídico.",
+      "learningJourney": {
+        "openingPrompt": "Una oficina federal tiene facultades técnicas propias y sedes regionales, pero está adscrita y subordinada a una Secretaría. ¿Es una entidad descentralizada?",
+        "quickChecks": [
+          {
+            "prompt": "¿Quién encabeza el Poder Ejecutivo Federal?",
+            "answer": "La persona titular de la Presidencia de la República.",
+            "feedback": "La APF es el aparato organizado que auxilia al Ejecutivo; no es un cuarto poder.",
+            "evidenceIds": [
+              "ev-c14-cpeum-art80-ejecutivo",
+              "ev-c14-cpeum-art90-apf",
+              "ev-c14-loapf-arts10-18-organizacion"
+            ]
+          },
+          {
+            "prompt": "¿Qué dependencias integran la administración centralizada?",
+            "answer": "Las Secretarías de Estado y la Consejería Jurídica; las Secretarías pueden contar con órganos desconcentrados.",
+            "feedback": "La lista concreta de Secretarías debe revisarse en el artículo 26 vigente.",
+            "evidenceIds": [
+              "ev-c14-loapf-arts1-3-integracion",
+              "ev-c14-loapf-art17-desconcentracion",
+              "ev-c14-loapf-art26-secretarias"
+            ]
+          },
+          {
+            "prompt": "¿Tener oficina estatal vuelve local a un órgano federal?",
+            "answer": "No. Su ámbito territorial no altera por sí mismo la adscripción federal.",
+            "feedback": "Busca la norma de competencia y la dependencia a la que está adscrito.",
+            "evidenceIds": [
+              "ev-c14-loapf-arts1-3-integracion",
+              "ev-c14-loapf-arts10-18-organizacion",
+              "ev-c14-loapf-art17-desconcentracion",
+              "ev-c14-cpeum-arts14-16-legalidad"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una comisión técnica está adscrita a una Secretaría federal. Su reglamento le permite resolver permisos en varias regiones, pero no le reconoce personalidad jurídica diferenciada y conserva subordinación jerárquica.",
+          "question": "¿Cómo se clasifica y qué debe verificarse frente a uno de sus actos?",
+          "legalRule": "El artículo 17 de la LOAPF permite a las Secretarías contar con órganos administrativos desconcentrados jerárquicamente subordinados y con facultades específicas.",
+          "reasoning": "La especialización y cobertura regional no rompen la relación jerárquica. Para impugnar un permiso o sanción debe identificarse la autoridad exacta, la competencia material y territorial, la ley especial y los medios ordinarios aplicables.",
+          "conclusion": "Es un órgano desconcentrado de la administración centralizada; la vía de defensa no se elige solo por su nombre.",
+          "evidenceIds": [
+            "ev-c14-cpeum-arts14-16-legalidad",
+            "ev-c14-cpeum-art90-apf",
+            "ev-c14-loapf-arts1-3-integracion",
+            "ev-c14-loapf-arts10-18-organizacion",
+            "ev-c14-loapf-art17-desconcentracion"
+          ]
+        },
+        "closingPrompt": "Ante cualquier oficina federal pregunta: ¿qué norma la crea?, ¿a qué dependencia está adscrita?, ¿tiene subordinación?, ¿qué facultad concreta ejerce y en qué territorio?",
+        "nextActivity": "Recorre el mapa visual, estudia la guía de doce respuestas y resuelve diez casos tipo EGEL.",
+        "openingPromptEvidenceIds": [
+          "ev-c14-loapf-arts1-3-integracion",
+          "ev-c14-loapf-arts10-18-organizacion",
+          "ev-c14-loapf-art17-desconcentracion"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c14-loapf-arts1-3-integracion",
+          "ev-c14-loapf-arts10-18-organizacion"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c14-cpeum-art90-apf",
+          "ev-c14-loapf-art17-desconcentracion"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta corta: Ejecutivo y APF centralizada",
+          "content": "El Poder Ejecutivo Federal se deposita en la persona titular de la Presidencia. La Administración Pública Federal es la organización mediante la cual atiende los asuntos administrativos. La Constitución la divide en centralizada y paraestatal; dentro de la centralizada están Secretarías y Consejería Jurídica, y las Secretarías pueden contar con órganos desconcentrados subordinados.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c14-cpeum-art80-ejecutivo",
+            "ev-c14-cpeum-art90-apf",
+            "ev-c14-loapf-arts1-3-integracion",
+            "ev-c14-loapf-arts10-18-organizacion",
+            "ev-c14-loapf-art17-desconcentracion",
+            "ev-c14-a19-l043-apf-estructura"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "El artículo 80 constitucional deposita el Poder Ejecutivo Federal en una sola persona: la Presidencia. El artículo 89 enumera facultades y obligaciones presidenciales, y el artículo 90 ordena que la Administración Pública Federal sea centralizada y paraestatal y remite a la ley orgánica.\n\nLa Presidencia y la APF no son sinónimos. La primera encabeza el Ejecutivo; la segunda organiza el despacho administrativo mediante dependencias y entidades. Tampoco constituye un poder adicional. Cada autoridad solo puede actuar dentro de atribuciones conferidas por una norma, con fundamentación y motivación.\n\nLa LOAPF distingue dependencias de la administración centralizada y entidades de la paraestatal. Conforme a sus artículos 1 y 2, las Secretarías de Estado y la Consejería Jurídica son dependencias centralizadas. El artículo 26 contiene la relación vigente de Secretarías; debe consultarse su texto actualizado, no memorizar una cifra o lista histórica. La naturaleza y competencias detalladas de las entidades paraestatales pertenecen al módulo correspondiente.\n\nLa organización centralizada opera mediante relaciones jerárquicas y una distribución normativa de atribuciones. La jerarquía no crea competencia: Presidencia, Secretarías y unidades solo pueden ejercer las facultades que les confieren la Constitución, la LOAPF, leyes especiales y reglamentos aplicables.\n\nLa desconcentración es una técnica dentro de la administración centralizada. El artículo 17 permite a las Secretarías contar con órganos administrativos desconcentrados jerárquicamente subordinados, con facultades específicas sobre una materia y dentro del ámbito territorial que se determine. La especialización no los convierte por sí sola en entidades paraestatales ni en organismos constitucionales autónomos.\n\nUna oficina regional sigue siendo federal si pertenece a una dependencia federal. El lugar físico y denominaciones como comisión, instituto o agencia no determinan la naturaleza jurídica: deben revisarse norma de creación, adscripción, subordinación y competencia material y territorial.\n\nLos actos de autoridad deben provenir de órgano competente y satisfacer las exigencias constitucionales aplicables. No existe una vía única por el solo hecho de que el acto sea federal: el medio de defensa depende del acto, la ley especial, los recursos previstos, la definitividad y la autoridad competente. El estudio detallado de entidades paraestatales, responsabilidades y regímenes laborales corresponde a otros módulos.\n\nPara resolver el caso identifica orden de gobierno, norma de creación, adscripción, jerarquía, competencia y acto concreto; solo después analiza la vía que prevea el ordenamiento aplicable.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c14-cpeum-art80-ejecutivo",
+            "ev-c14-cpeum-art89-facultades",
+            "ev-c14-cpeum-art90-apf",
+            "ev-c14-loapf-arts1-3-integracion",
+            "ev-c14-loapf-arts10-18-organizacion",
+            "ev-c14-loapf-art17-desconcentracion",
+            "ev-c14-loapf-art26-secretarias",
+            "ev-c14-cpeum-arts14-16-legalidad",
+            "ev-c14-a19-l027-029-ejecutivo-articulos",
+            "ev-c14-a19-l043-apf-estructura"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Constitución: artículos 14 y 16 sobre legalidad, fundamentación y motivación; 80, 89 y 90 sobre titularidad, facultades y organización de la APF. LOAPF: artículos 1 a 3 sobre integración; 10 a 18 sobre organización centralizada y desconcentración; 26 sobre la relación vigente de Secretarías. Texto de la LOAPF con última reforma DOF 07-05-2026.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c14-cpeum-arts14-16-legalidad",
+            "ev-c14-cpeum-art80-ejecutivo",
+            "ev-c14-cpeum-art89-facultades",
+            "ev-c14-cpeum-art90-apf",
+            "ev-c14-loapf-arts1-3-integracion",
+            "ev-c14-loapf-arts10-18-organizacion",
+            "ev-c14-loapf-art17-desconcentracion",
+            "ev-c14-loapf-art26-secretarias"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo: especialización sin independencia",
+          "content": "Una Secretaría crea, conforme a la ley y reglamento, una unidad especializada para resolver permisos en materia técnica. Aunque la unidad firma resoluciones y tiene oficinas regionales, sigue subordinada a la Secretaría. Es desconcentración: se distribuye competencia internamente sin crear por ello una entidad descentralizada.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c14-loapf-arts1-3-integracion",
+            "ev-c14-loapf-arts10-18-organizacion",
+            "ev-c14-loapf-art17-desconcentracion",
+            "ev-c14-cpeum-arts14-16-legalidad"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Cómo aparece en un reactivo tipo EGEL",
+          "content": "Las palabras decisivas suelen ser 'adscrito', 'subordinado' y 'facultades específicas': apuntan a desconcentración. 'Secretaría de Estado' o 'Consejería Jurídica' apuntan a dependencia centralizada. Descarta respuestas que clasifiquen por el nombre, la ubicación de oficinas o una supuesta autonomía técnica sin revisar la norma.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c14-loapf-arts1-3-integracion",
+            "ev-c14-loapf-arts10-18-organizacion",
+            "ev-c14-loapf-art17-desconcentracion"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen para repasar",
+          "content": "Ejecutivo Federal: Presidencia. APF: organización centralizada y paraestatal. Dependencias centralizadas: Secretarías y Consejería Jurídica. Desconcentrado: órgano jerárquicamente subordinado a una Secretaría, con facultades específicas por materia y territorio. Regla de oro: nombre y ubicación no bastan; revisa norma, adscripción, jerarquía y competencia. La defensa depende del acto y del ordenamiento aplicable.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c14-cpeum-art80-ejecutivo",
+            "ev-c14-cpeum-art90-apf",
+            "ev-c14-loapf-arts1-3-integracion",
+            "ev-c14-loapf-arts10-18-organizacion",
+            "ev-c14-loapf-art17-desconcentracion",
+            "ev-c14-cpeum-arts14-16-legalidad",
+            "ev-c14-a19-l043-apf-estructura"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de preguntas y respuestas",
+          "content": "1. ¿Quién encabeza el Ejecutivo Federal? Respuesta: la persona titular de la Presidencia.\n2. ¿Qué regula el artículo 89? Respuesta: facultades y obligaciones presidenciales.\n3. ¿Qué dispone el artículo 90? Respuesta: APF centralizada y paraestatal.\n4. ¿La APF es otro poder? Respuesta: no, auxilia al Ejecutivo.\n5. ¿Qué dependencias integran la centralizada? Respuesta: Secretarías y Consejería Jurídica.\n6. ¿Dónde se enumeran las Secretarías? Respuesta: artículo 26 de la LOAPF vigente.\n7. ¿Qué es centralización? Respuesta: organización bajo relaciones jerárquicas legales.\n8. ¿Qué es desconcentración? Respuesta: distribución interna de facultades especializadas.\n9. ¿Se rompe la jerarquía? Respuesta: no; el órgano sigue subordinado.\n10. ¿Una sede estatal vuelve local al órgano? Respuesta: no.\n11. ¿El nombre determina naturaleza? Respuesta: no; se revisa la norma.\n12. ¿Toda multa federal va por la misma vía? Respuesta: no; depende del acto, ley y definitividad.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c14-cpeum-art80-ejecutivo",
+            "ev-c14-cpeum-art89-facultades",
+            "ev-c14-cpeum-art90-apf",
+            "ev-c14-loapf-arts1-3-integracion",
+            "ev-c14-loapf-arts10-18-organizacion",
+            "ev-c14-loapf-art17-desconcentracion",
+            "ev-c14-loapf-art26-secretarias",
+            "ev-c14-cpeum-arts14-16-legalidad",
+            "ev-c14-a19-l027-029-ejecutivo-articulos",
+            "ev-c14-a19-l043-apf-estructura"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Ejecutivo Federal: poder encabezado por Presidencia. APF: organización administrativa. Dependencia: Secretaría o Consejería Jurídica. Centralización: jerarquía dentro del Ejecutivo. Desconcentración: competencia especializada interna. Adscripción: vínculo orgánico. Subordinación: sujeción jerárquica. Competencia: atribución normativa. Fundamentación: norma aplicable. Motivación: razones y hechos. Acto administrativo: decisión unilateral sujeta a control.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c14-cpeum-art80-ejecutivo",
+            "ev-c14-cpeum-art90-apf",
+            "ev-c14-loapf-arts1-3-integracion",
+            "ev-c14-loapf-arts10-18-organizacion",
+            "ev-c14-loapf-art17-desconcentracion",
+            "ev-c14-cpeum-arts14-16-legalidad"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes y correcciones",
+          "content": "Error del audio: presentar centralizada, desconcentrada y descentralizada como tres ramas constitucionales equivalentes. Corrección: el artículo 90 distingue centralizada y paraestatal; la desconcentración del artículo 17 LOAPF opera dentro de la centralizada. Error: APF es un cuarto poder. Corrección: forma parte del Ejecutivo. Error: todo órgano desconcentrado es independiente. Corrección: sigue jerárquicamente subordinado. Error: memorizar un número histórico de Secretarías. Corrección: consultar el artículo 26 vigente. Error: sede estatal significa autoridad local. Corrección: la adscripción puede seguir siendo federal. Error planteado en el audio: toda actuación federal sigue automáticamente una misma vía. Corrección: deben revisarse acto, ley especial, recursos, definitividad y competencia.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c14-cpeum-art80-ejecutivo",
+            "ev-c14-cpeum-art90-apf",
+            "ev-c14-loapf-arts1-3-integracion",
+            "ev-c14-loapf-arts10-18-organizacion",
+            "ev-c14-loapf-art17-desconcentracion",
+            "ev-c14-loapf-art26-secretarias",
+            "ev-c14-cpeum-arts14-16-legalidad",
+            "ev-c14-a19-l043-apf-estructura",
+            "ev-c14-a19-l085-091-clasificacion-a-corregir",
+            "ev-c14-a22-l019-023-via-a-corregir"
+          ]
+        }
       ],
-      "practicalCase":{"facts":"Una comisión técnica está adscrita a una Secretaría federal. Su reglamento le permite resolver permisos en varias regiones, pero no le reconoce personalidad jurídica diferenciada y conserva subordinación jerárquica.","question":"¿Cómo se clasifica y qué debe verificarse frente a uno de sus actos?","legalRule":"El artículo 17 de la LOAPF permite a las Secretarías contar con órganos administrativos desconcentrados jerárquicamente subordinados y con facultades específicas.","reasoning":"La especialización y cobertura regional no rompen la relación jerárquica. Para impugnar un permiso o sanción debe identificarse la autoridad exacta, la competencia material y territorial, la ley especial y los medios ordinarios aplicables.","conclusion":"Es un órgano desconcentrado de la administración centralizada; la vía de defensa no se elige solo por su nombre."},
-      "closingPrompt":"Ante cualquier oficina federal pregunta: ¿qué norma la crea?, ¿a qué dependencia está adscrita?, ¿tiene subordinación?, ¿qué facultad concreta ejerce y en qué territorio?",
-      "nextActivity":"Recorre el mapa visual, estudia la guía de doce respuestas y resuelve diez casos tipo EGEL."
+      "conceptMap": {
+        "title": "Mapa visual de la APF centralizada",
+        "description": "De la Presidencia a la actuación del órgano desconcentrado.",
+        "nodes": [
+          {
+            "id": "ejecutivo",
+            "label": "Poder Ejecutivo Federal",
+            "description": "Artículo 80 constitucional.",
+            "evidenceIds": [
+              "ev-c14-cpeum-art80-ejecutivo"
+            ]
+          },
+          {
+            "id": "presidencia",
+            "label": "Presidencia",
+            "description": "Titular del Ejecutivo.",
+            "parentId": "ejecutivo",
+            "evidenceIds": [
+              "ev-c14-cpeum-art80-ejecutivo",
+              "ev-c14-loapf-arts10-18-organizacion"
+            ]
+          },
+          {
+            "id": "facultades",
+            "label": "Facultades presidenciales",
+            "description": "Artículo 89.",
+            "parentId": "presidencia",
+            "evidenceIds": [
+              "ev-c14-cpeum-art80-ejecutivo",
+              "ev-c14-cpeum-art89-facultades",
+              "ev-c14-a19-l027-029-ejecutivo-articulos"
+            ]
+          },
+          {
+            "id": "apf",
+            "label": "Administración Pública Federal",
+            "description": "Organización auxiliar.",
+            "parentId": "ejecutivo",
+            "evidenceIds": [
+              "ev-c14-cpeum-art80-ejecutivo",
+              "ev-c14-cpeum-art90-apf"
+            ]
+          },
+          {
+            "id": "division",
+            "label": "Artículo 90",
+            "description": "Centralizada y paraestatal.",
+            "parentId": "apf",
+            "evidenceIds": [
+              "ev-c14-cpeum-art90-apf",
+              "ev-c14-loapf-arts1-3-integracion",
+              "ev-c14-a19-l043-apf-estructura"
+            ]
+          },
+          {
+            "id": "centralizada",
+            "label": "APF centralizada",
+            "description": "Relación jerárquica.",
+            "parentId": "division",
+            "evidenceIds": [
+              "ev-c14-cpeum-art90-apf"
+            ]
+          },
+          {
+            "id": "secretarias",
+            "label": "Secretarías de Estado",
+            "description": "Dependencias por materia.",
+            "parentId": "centralizada",
+            "evidenceIds": [
+              "ev-c14-loapf-arts1-3-integracion"
+            ]
+          },
+          {
+            "id": "consejeria",
+            "label": "Consejería Jurídica",
+            "description": "Dependencia centralizada.",
+            "parentId": "centralizada",
+            "evidenceIds": [
+              "ev-c14-loapf-arts1-3-integracion"
+            ]
+          },
+          {
+            "id": "art26",
+            "label": "Artículo 26 LOAPF",
+            "description": "Lista vigente de Secretarías.",
+            "parentId": "secretarias",
+            "evidenceIds": [
+              "ev-c14-cpeum-art90-apf",
+              "ev-c14-loapf-arts1-3-integracion",
+              "ev-c14-loapf-art26-secretarias"
+            ]
+          },
+          {
+            "id": "competencia",
+            "label": "Competencia",
+            "description": "Solo facultades normativas.",
+            "parentId": "centralizada",
+            "evidenceIds": [
+              "ev-c14-cpeum-arts14-16-legalidad"
+            ]
+          },
+          {
+            "id": "materia",
+            "label": "Materia",
+            "description": "Sector administrativo asignado.",
+            "parentId": "competencia",
+            "evidenceIds": [
+              "ev-c14-cpeum-arts14-16-legalidad"
+            ]
+          },
+          {
+            "id": "territorio",
+            "label": "Territorio",
+            "description": "Ámbito geográfico.",
+            "parentId": "competencia",
+            "evidenceIds": [
+              "ev-c14-cpeum-arts14-16-legalidad"
+            ]
+          },
+          {
+            "id": "desconcentracion",
+            "label": "Desconcentración",
+            "description": "Técnica interna del artículo 17.",
+            "parentId": "centralizada",
+            "evidenceIds": [
+              "ev-c14-loapf-art17-desconcentracion"
+            ]
+          },
+          {
+            "id": "adscripcion",
+            "label": "Adscripción",
+            "description": "Pertenece a una Secretaría.",
+            "parentId": "desconcentracion",
+            "evidenceIds": [
+              "ev-c14-loapf-arts1-3-integracion",
+              "ev-c14-loapf-arts10-18-organizacion",
+              "ev-c14-loapf-art17-desconcentracion"
+            ]
+          },
+          {
+            "id": "subordinacion",
+            "label": "Subordinación jerárquica",
+            "description": "No hay independencia plena.",
+            "parentId": "desconcentracion",
+            "evidenceIds": [
+              "ev-c14-loapf-arts1-3-integracion",
+              "ev-c14-loapf-art17-desconcentracion"
+            ]
+          },
+          {
+            "id": "especialidad",
+            "label": "Facultades específicas",
+            "description": "Materia y territorio definidos.",
+            "parentId": "desconcentracion",
+            "evidenceIds": [
+              "ev-c14-loapf-art17-desconcentracion"
+            ]
+          },
+          {
+            "id": "acto",
+            "label": "Acto administrativo",
+            "description": "Permiso, multa o clausura.",
+            "parentId": "apf",
+            "evidenceIds": [
+              "ev-c14-cpeum-art90-apf",
+              "ev-c14-cpeum-arts14-16-legalidad"
+            ]
+          },
+          {
+            "id": "legalidad",
+            "label": "Legalidad",
+            "description": "Competencia, fundamento y motivo.",
+            "parentId": "acto",
+            "evidenceIds": [
+              "ev-c14-cpeum-arts14-16-legalidad"
+            ]
+          },
+          {
+            "id": "defensa",
+            "label": "Medio de defensa",
+            "description": "Depende de ley y definitividad.",
+            "parentId": "acto",
+            "evidenceIds": [
+              "ev-c14-cpeum-arts14-16-legalidad"
+            ]
+          },
+          {
+            "id": "filtros",
+            "label": "Ruta CENEVAL",
+            "description": "Norma → adscripción → competencia → acto.",
+            "parentId": "apf",
+            "evidenceIds": [
+              "ev-c14-cpeum-art90-apf",
+              "ev-c14-loapf-arts10-18-organizacion",
+              "ev-c14-cpeum-arts14-16-legalidad"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 14, 16, 80, 89 y 90; últimas reformas DOF 02-06-2026",
+          "retrievedOn": "2026-08-21",
+          "note": "Titularidad, facultades y bases constitucionales de la APF.",
+      "evidenceIds": [
+        "ev-c14-cpeum-arts14-16-legalidad",
+        "ev-c14-cpeum-art80-ejecutivo",
+        "ev-c14-cpeum-art89-facultades",
+        "ev-c14-cpeum-art90-apf",
+        "ev-c14-a19-l027-029-ejecutivo-articulos",
+        "ev-c14-a19-l043-apf-estructura"
+          ]
+        },
+        {
+          "title": "Ley Orgánica de la Administración Pública Federal",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 1 a 3, 10 a 18, 26 y correlativos; última reforma DOF 07-05-2026",
+          "retrievedOn": "2026-08-21",
+          "note": "Dependencias, órganos desconcentrados y competencias vigentes.",
+      "evidenceIds": [
+        "ev-c14-loapf-arts1-3-integracion",
+        "ev-c14-loapf-arts10-18-organizacion",
+        "ev-c14-loapf-art17-desconcentracion",
+        "ev-c14-loapf-art26-secretarias"
+          ]
+        },
+        {
+          "title": "Ley Orgánica de la Administración Pública Federal: reformas",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/loapf.htm",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Historial oficial de reformas; consulta de vigencia al 21-08-2026",
+          "retrievedOn": "2026-08-21",
+          "note": "Control de vigencia de nombres y atribuciones.",
+      "evidenceIds": [
+        "ev-c14-loapf-art26-secretarias"
+      ]
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿En quién se deposita el Ejecutivo Federal?",
+          "answer": "En la persona titular de la Presidencia de la República.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c14-cpeum-art80-ejecutivo",
+            "ev-c14-loapf-arts10-18-organizacion"
+          ]
+        },
+        {
+          "question": "¿Qué artículo contiene facultades presidenciales?",
+          "answer": "El artículo 89 constitucional.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c14-cpeum-art80-ejecutivo",
+            "ev-c14-cpeum-art89-facultades",
+            "ev-c14-a19-l027-029-ejecutivo-articulos"
+          ]
+        },
+        {
+          "question": "¿Cómo divide la Constitución a la APF?",
+          "answer": "En administración centralizada y paraestatal.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c14-cpeum-art90-apf",
+            "ev-c14-loapf-arts1-3-integracion",
+            "ev-c14-a19-l043-apf-estructura"
+          ]
+        },
+        {
+          "question": "¿Qué dependencias integran la administración centralizada?",
+          "answer": "Secretarías de Estado y Consejería Jurídica.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c14-loapf-arts1-3-integracion"
+          ]
+        },
+        {
+          "question": "¿Dónde está la lista vigente de Secretarías?",
+          "answer": "En el artículo 26 de la LOAPF.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c14-cpeum-art90-apf",
+            "ev-c14-loapf-arts1-3-integracion",
+            "ev-c14-loapf-art26-secretarias"
+          ]
+        },
+        {
+          "question": "¿Qué caracteriza la centralización?",
+          "answer": "La organización y subordinación jerárquica dentro del Ejecutivo.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c14-cpeum-art80-ejecutivo",
+            "ev-c14-loapf-arts10-18-organizacion"
+          ]
+        },
+        {
+          "question": "¿Qué permite el artículo 17 de la LOAPF?",
+          "answer": "Que las Secretarías cuenten con órganos administrativos desconcentrados.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c14-cpeum-art90-apf",
+            "ev-c14-loapf-arts1-3-integracion",
+            "ev-c14-loapf-art17-desconcentracion"
+          ]
+        },
+        {
+          "question": "¿El desconcentrado sigue subordinado?",
+          "answer": "Sí, jerárquicamente a la Secretaría correspondiente.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c14-loapf-arts1-3-integracion",
+            "ev-c14-loapf-art17-desconcentracion"
+          ]
+        },
+        {
+          "question": "¿La especialidad crea personalidad propia?",
+          "answer": "No por sí sola; debe revisarse la norma de creación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c14-cpeum-art90-apf",
+            "ev-c14-loapf-arts1-3-integracion"
+          ]
+        },
+        {
+          "question": "¿Una oficina regional deja de ser federal?",
+          "answer": "No; la ubicación no altera por sí misma su adscripción.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c14-loapf-arts10-18-organizacion",
+            "ev-c14-loapf-art17-desconcentracion"
+          ]
+        },
+        {
+          "question": "¿Cómo se determina la competencia?",
+          "answer": "Por Constitución, ley, reglamento y demás normas aplicables.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c14-cpeum-arts14-16-legalidad"
+          ]
+        },
+        {
+          "question": "¿Cómo se elige la defensa contra un acto?",
+          "answer": "Revisando autoridad, acto, ley especial, recursos y definitividad.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c14-cpeum-arts14-16-legalidad"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Examen: Ejecutivo y APF centralizada",
+        "description": "Diez casos originales sobre estructura, jerarquía, competencia y control.",
+        "questions": [
+          {
+            "text": "¿En quién se deposita el Poder Ejecutivo Federal?",
+            "difficulty": "basic",
+            "options": [
+              "Presidencia de la República",
+              "Congreso de la Unión",
+              "Suprema Corte"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 80 constitucional establece la titularidad unipersonal del Ejecutivo.",
+            "optionExplanations": [
+              "Es la respuesta constitucional.",
+              "No es la persona en quien el artículo 80 deposita el Ejecutivo.",
+              "No es la persona en quien el artículo 80 deposita el Ejecutivo."
+            ],
+            "evidenceIds": [
+              "ev-c14-cpeum-art80-ejecutivo",
+              "ev-c14-loapf-arts10-18-organizacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c14-cpeum-art80-ejecutivo",
+                "ev-c14-loapf-arts10-18-organizacion"
+              ],
+              [
+                "ev-c14-cpeum-art80-ejecutivo",
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ],
+              [
+                "ev-c14-cpeum-art80-ejecutivo",
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c14-cpeum-art80-ejecutivo",
+              "ev-c14-loapf-arts10-18-organizacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c14-cpeum-art80-ejecutivo",
+              "ev-c14-loapf-arts10-18-organizacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c14-cpeum-art80-ejecutivo",
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ],
+              [
+                "ev-c14-cpeum-art80-ejecutivo",
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ],
+              [
+                "ev-c14-cpeum-art80-ejecutivo",
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué artículo establece APF centralizada y paraestatal?",
+            "difficulty": "basic",
+            "options": [
+              "Artículo 90",
+              "Artículo 115",
+              "Artículo 123"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 90 contiene la base de organización de la APF.",
+            "optionExplanations": [
+              "Es la norma aplicable.",
+              "No es el artículo que establece esa base de la APF.",
+              "No es el artículo que establece esa base de la APF."
+            ],
+            "evidenceIds": [
+              "ev-c14-cpeum-art90-apf",
+              "ev-c14-loapf-arts1-3-integracion",
+              "ev-c14-a19-l043-apf-estructura"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-a19-l043-apf-estructura"
+              ],
+              [
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-a19-l043-apf-estructura"
+              ],
+              [
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-a19-l043-apf-estructura"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c14-cpeum-art90-apf",
+              "ev-c14-loapf-arts1-3-integracion",
+              "ev-c14-a19-l043-apf-estructura"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c14-cpeum-art90-apf",
+              "ev-c14-a19-l043-apf-estructura"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-a19-l043-apf-estructura"
+              ],
+              [
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-a19-l043-apf-estructura"
+              ],
+              [
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-a19-l043-apf-estructura"
+              ]
+            ]
+          },
+          {
+            "text": "Una oficina está subordinada a una Secretaría y tiene facultades técnicas específicas. ¿Qué es?",
+            "difficulty": "intermediate",
+            "options": [
+              "Órgano desconcentrado",
+              "Organismo descentralizado necesariamente",
+              "Poder autónomo"
+            ],
+            "correctOption": 0,
+            "explanation": "Subordinación más especialización corresponde a desconcentración.",
+            "optionExplanations": [
+              "Coincide con el artículo 17.",
+              "Faltan personalidad y marco propio.",
+              "No existe autonomía constitucional."
+            ],
+            "evidenceIds": [
+              "ev-c14-loapf-arts1-3-integracion",
+              "ev-c14-loapf-art17-desconcentracion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-art17-desconcentracion"
+              ],
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-art17-desconcentracion",
+                "ev-c14-cpeum-art90-apf"
+              ],
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-art17-desconcentracion",
+                "ev-c14-cpeum-art90-apf"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c14-loapf-arts1-3-integracion",
+              "ev-c14-loapf-art17-desconcentracion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c14-loapf-art17-desconcentracion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-art17-desconcentracion",
+                "ev-c14-cpeum-art90-apf"
+              ],
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-art17-desconcentracion",
+                "ev-c14-cpeum-art90-apf"
+              ],
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-art17-desconcentracion",
+                "ev-c14-cpeum-art90-apf"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué dato NO basta para clasificar un órgano?",
+            "difficulty": "basic",
+            "options": [
+              "Su nombre",
+              "Su norma de creación",
+              "Su adscripción"
+            ],
+            "correctOption": 0,
+            "explanation": "Denominaciones como comisión o instituto no determinan naturaleza jurídica.",
+            "optionExplanations": [
+              "Puede ser engañoso.",
+              "Es un dato decisivo.",
+              "Revela su vínculo orgánico."
+            ],
+            "evidenceIds": [
+              "ev-c14-cpeum-art90-apf",
+              "ev-c14-loapf-arts1-3-integracion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ],
+              [
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ],
+              [
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-arts10-18-organizacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c14-cpeum-art90-apf",
+              "ev-c14-loapf-arts1-3-integracion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c14-cpeum-art90-apf",
+              "ev-c14-loapf-arts1-3-integracion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ],
+              [
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ],
+              [
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-arts10-18-organizacion"
+              ]
+            ]
+          },
+          {
+            "text": "Una representación de Secretaría federal opera en Jalisco. ¿Se vuelve autoridad estatal?",
+            "difficulty": "intermediate",
+            "options": [
+              "No",
+              "Sí, por ubicación",
+              "Sí, si atiende población local"
+            ],
+            "correctOption": 0,
+            "explanation": "El ámbito territorial no cambia por sí solo la adscripción federal.",
+            "optionExplanations": [
+              "Debe revisarse la norma federal.",
+              "Confunde sede con orden de gobierno.",
+              "El público atendido no decide naturaleza."
+            ],
+            "evidenceIds": [
+              "ev-c14-loapf-arts1-3-integracion",
+              "ev-c14-loapf-arts10-18-organizacion",
+              "ev-c14-loapf-art17-desconcentracion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-loapf-art17-desconcentracion",
+                "ev-c14-cpeum-art90-apf"
+              ],
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-loapf-art17-desconcentracion",
+                "ev-c14-cpeum-art90-apf"
+              ],
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-loapf-art17-desconcentracion",
+                "ev-c14-cpeum-art90-apf"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c14-loapf-arts1-3-integracion",
+              "ev-c14-loapf-arts10-18-organizacion",
+              "ev-c14-loapf-art17-desconcentracion",
+              "ev-c14-cpeum-art90-apf"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c14-loapf-arts10-18-organizacion",
+              "ev-c14-loapf-art17-desconcentracion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-loapf-art17-desconcentracion",
+                "ev-c14-cpeum-art90-apf"
+              ],
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-loapf-art17-desconcentracion",
+                "ev-c14-cpeum-art90-apf"
+              ],
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-loapf-art17-desconcentracion",
+                "ev-c14-cpeum-art90-apf"
+              ]
+            ]
+          },
+          {
+            "text": "Una Secretaría pretende sancionar una materia que ninguna norma le atribuye. ¿Qué se vulnera?",
+            "difficulty": "basic",
+            "options": [
+              "Principio de legalidad",
+              "Libertad testamentaria",
+              "Relatividad del amparo"
+            ],
+            "correctOption": 0,
+            "explanation": "Toda autoridad requiere competencia normativa para actuar válidamente.",
+            "optionExplanations": [
+              "Es el principio directamente comprometido.",
+              "No es el principio comprometido por la falta de competencia.",
+              "No define la competencia administrativa."
+            ],
+            "evidenceIds": [
+              "ev-c14-loapf-arts1-3-integracion",
+              "ev-c14-cpeum-arts14-16-legalidad"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-cpeum-arts14-16-legalidad"
+              ],
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-cpeum-arts14-16-legalidad",
+                "ev-c14-cpeum-art90-apf"
+              ],
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-cpeum-arts14-16-legalidad",
+                "ev-c14-cpeum-art90-apf"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c14-loapf-arts1-3-integracion",
+              "ev-c14-cpeum-arts14-16-legalidad"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c14-cpeum-arts14-16-legalidad"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-cpeum-arts14-16-legalidad",
+                "ev-c14-cpeum-art90-apf"
+              ],
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-cpeum-arts14-16-legalidad",
+                "ev-c14-cpeum-art90-apf"
+              ],
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-cpeum-arts14-16-legalidad",
+                "ev-c14-cpeum-art90-apf"
+              ]
+            ]
+          },
+          {
+            "text": "Una estudiante memoriza como permanente una lista antigua de Secretarías. ¿Cuál es la corrección?",
+            "difficulty": "intermediate",
+            "options": [
+              "Consultar el artículo 26 vigente",
+              "Conservar la lista aunque cambie la ley",
+              "Contar solo edificios federales"
+            ],
+            "correctOption": 0,
+            "explanation": "El Congreso puede modificar denominaciones, cantidad y competencias.",
+            "optionExplanations": [
+              "Asegura vigencia.",
+              "Puede quedar desactualizada.",
+              "No es criterio jurídico."
+            ],
+            "evidenceIds": [
+              "ev-c14-loapf-arts1-3-integracion",
+              "ev-c14-loapf-art26-secretarias",
+              "ev-c14-cpeum-arts14-16-legalidad"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-art26-secretarias",
+                "ev-c14-cpeum-arts14-16-legalidad"
+              ],
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-art26-secretarias",
+                "ev-c14-cpeum-arts14-16-legalidad",
+                "ev-c14-cpeum-art90-apf"
+              ],
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-art26-secretarias",
+                "ev-c14-cpeum-arts14-16-legalidad",
+                "ev-c14-cpeum-art90-apf"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c14-loapf-arts1-3-integracion",
+              "ev-c14-loapf-art26-secretarias",
+              "ev-c14-cpeum-arts14-16-legalidad"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c14-cpeum-arts14-16-legalidad"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-art26-secretarias",
+                "ev-c14-cpeum-arts14-16-legalidad",
+                "ev-c14-cpeum-art90-apf"
+              ],
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-art26-secretarias",
+                "ev-c14-cpeum-arts14-16-legalidad",
+                "ev-c14-cpeum-art90-apf"
+              ],
+              [
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-art26-secretarias",
+                "ev-c14-cpeum-arts14-16-legalidad",
+                "ev-c14-cpeum-art90-apf"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué relación conserva un órgano desconcentrado?",
+            "difficulty": "basic",
+            "options": [
+              "Subordinación jerárquica",
+              "Soberanía propia",
+              "Independencia constitucional"
+            ],
+            "correctOption": 0,
+            "explanation": "La desconcentración distribuye facultades sin romper la jerarquía.",
+            "optionExplanations": [
+              "Es su rasgo central.",
+              "Los órganos no son soberanos.",
+              "Requeriría base constitucional distinta."
+            ],
+            "evidenceIds": [
+              "ev-c14-loapf-arts10-18-organizacion",
+              "ev-c14-loapf-art17-desconcentracion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-loapf-art17-desconcentracion",
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ],
+              [
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-loapf-art17-desconcentracion",
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ],
+              [
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-loapf-art17-desconcentracion",
+                "ev-c14-loapf-arts1-3-integracion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c14-loapf-arts10-18-organizacion",
+              "ev-c14-loapf-art17-desconcentracion",
+              "ev-c14-cpeum-art90-apf",
+              "ev-c14-loapf-arts1-3-integracion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c14-loapf-arts10-18-organizacion",
+              "ev-c14-loapf-art17-desconcentracion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-loapf-art17-desconcentracion",
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ],
+              [
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-loapf-art17-desconcentracion",
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ],
+              [
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-loapf-art17-desconcentracion",
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-cpeum-art90-apf"
+              ]
+            ]
+          },
+          {
+            "text": "Una multa proviene de autoridad federal. ¿Debe promoverse siempre y directamente el mismo juicio?",
+            "difficulty": "advanced",
+            "options": [
+              "No; se revisan ley, recurso y definitividad",
+              "Sí; toda multa sigue ruta idéntica",
+              "Sí; nunca importa la autoridad exacta"
+            ],
+            "correctOption": 0,
+            "explanation": "La vía depende del régimen jurídico y del carácter del acto.",
+            "optionExplanations": [
+              "Integra los filtros correctos.",
+              "Generaliza indebidamente.",
+              "La autoridad y competencia son esenciales."
+            ],
+            "evidenceIds": [
+              "ev-c14-cpeum-arts14-16-legalidad"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c14-cpeum-arts14-16-legalidad"
+              ],
+              [
+                "ev-c14-cpeum-arts14-16-legalidad"
+              ],
+              [
+                "ev-c14-cpeum-arts14-16-legalidad",
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c14-cpeum-arts14-16-legalidad"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c14-cpeum-arts14-16-legalidad"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c14-cpeum-arts14-16-legalidad",
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ],
+              [
+                "ev-c14-cpeum-arts14-16-legalidad",
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ],
+              [
+                "ev-c14-cpeum-arts14-16-legalidad",
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál es la ruta correcta para clasificar una oficina federal?",
+            "difficulty": "advanced",
+            "options": [
+              "Norma, adscripción, jerarquía y competencia",
+              "Nombre, tamaño y antigüedad",
+              "Ubicación y número de empleados"
+            ],
+            "correctOption": 0,
+            "explanation": "La naturaleza se determina mediante elementos normativos y orgánicos.",
+            "optionExplanations": [
+              "Es el método jurídico.",
+              "Son datos insuficientes.",
+              "No define la categoría."
+            ],
+            "evidenceIds": [
+              "ev-c14-cpeum-art90-apf",
+              "ev-c14-loapf-arts1-3-integracion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-cpeum-arts14-16-legalidad"
+              ],
+              [
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ],
+              [
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c14-cpeum-art90-apf",
+              "ev-c14-loapf-arts1-3-integracion",
+              "ev-c14-loapf-arts10-18-organizacion",
+              "ev-c14-cpeum-arts14-16-legalidad"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c14-cpeum-art90-apf",
+              "ev-c14-loapf-arts1-3-integracion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion",
+                "ev-c14-loapf-arts10-18-organizacion",
+                "ev-c14-cpeum-arts14-16-legalidad"
+              ],
+              [
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ],
+              [
+                "ev-c14-cpeum-art90-apf",
+                "ev-c14-loapf-arts1-3-integracion"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c14-cpeum-arts14-16-legalidad",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículos 14 y 16, páginas impresas 17-19",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
     },
-    "materials":[
-      {"type":"short_answer","title":"Respuesta corta: Ejecutivo y APF centralizada","content":"El Poder Ejecutivo Federal se deposita en la persona titular de la Presidencia. La Administración Pública Federal es la organización mediante la cual atiende los asuntos administrativos. La Constitución la divide en centralizada y paraestatal; dentro de la centralizada están Secretarías y Consejería Jurídica, y las Secretarías pueden contar con órganos desconcentrados subordinados.","sourceOrigin":"mixed"},
-      {"type":"full_explanation","title":"Explicación completa desde cero","content":"El artículo 80 constitucional deposita el Poder Ejecutivo Federal en una sola persona: la Presidencia. El artículo 89 enumera facultades y obligaciones presidenciales, como promulgar y ejecutar leyes y dirigir la política exterior en los términos constitucionales. El artículo 90 ordena que la Administración Pública Federal sea centralizada y paraestatal y remite a la ley orgánica.\n\nLa Presidencia y la APF no son sinónimos. La primera encabeza el Ejecutivo; la segunda es una estructura de dependencias y entidades que ejerce competencias administrativas. Tampoco constituye un poder adicional. Cada órgano solo puede actuar dentro de atribuciones conferidas por una norma, conforme al principio de legalidad.\n\nLa LOAPF señala que las dependencias de la administración centralizada son las Secretarías de Estado y la Consejería Jurídica. Al frente de cada Secretaría hay una persona titular auxiliada por las unidades que dispongan su reglamento interior y otras normas. El artículo 26 contiene la lista vigente de Secretarías: en 2026 incluye, entre otras, Gobernación, Relaciones Exteriores, Hacienda, Anticorrupción y Buen Gobierno, las Mujeres y la Agencia de Transformación Digital y Telecomunicaciones. No conviene memorizar una cifra histórica porque la ley cambia.\n\nCentralización significa que existe una organización jerárquica: dirección, coordinación, supervisión y distribución interna de competencias. Esto no autoriza a la Presidencia o a una Secretaría a actuar sin norma; la jerarquía opera dentro del marco legal. Las competencias de cada Secretaría se consultan en la LOAPF, leyes especiales y reglamentos interiores.\n\nLa desconcentración es una técnica interna. El artículo 17 permite que las Secretarías cuenten con órganos administrativos desconcentrados jerárquicamente subordinados y con facultades específicas sobre determinada materia y territorio. Su especialidad agiliza decisiones, pero no lo convierte por ese solo hecho en una persona jurídica separada ni en organismo constitucional autónomo.\n\nUna oficina de representación en un estado sigue siendo federal si pertenece a una dependencia federal. El lugar físico no decide la naturaleza. Deben revisarse adscripción, fuente normativa, materia, grado y territorio. Tampoco el nombre 'comisión', 'instituto' o 'agencia' basta: distintos entes pueden usar denominaciones parecidas con naturalezas diferentes.\n\nLos actos administrativos —multas, clausuras, permisos o negativas— deben provenir de autoridad competente, estar fundados y motivados y respetar las formalidades aplicables. No todo acto de una autoridad federal se impugna automáticamente de la misma manera. Puede existir recurso administrativo, juicio contencioso o amparo según la ley especial, el carácter definitivo del acto y las excepciones legales.\n\nEl Audio 22 también formula reglas laborales generales sobre personal de dependencias y entidades. No deben memorizarse como absolutas: el régimen depende de la Constitución, la ley, el decreto o ley de creación y la relación concreta. El análisis laboral detallado corresponde a su módulo.\n\nPara resolver casos CENEVAL sigue una ruta: identifica orden de gobierno; localiza la norma de creación; decide si es dependencia u órgano interno; verifica subordinación y facultades; determina el acto concreto; y solo entonces selecciona el medio de defensa.","sourceOrigin":"mixed"},
-      {"type":"legal_basis","title":"Fundamento jurídico vigente","content":"Constitución: artículos 80, 89 y 90; además, artículos 14 y 16 para legalidad, fundamentación y motivación. LOAPF: artículos 1 a 3 sobre integración; 10 a 18 sobre estructura centralizada, titulares, delegación y desconcentración; 26 y correlativos sobre Secretarías y competencias. Texto de la LOAPF con última reforma DOF 07-05-2026.","sourceOrigin":"complementary"},
-      {"type":"simple_example","title":"Ejemplo sencillo: especialización sin independencia","content":"Una Secretaría crea, conforme a la ley y reglamento, una unidad especializada para resolver permisos en materia técnica. Aunque la unidad firma resoluciones y tiene oficinas regionales, sigue subordinada a la Secretaría. Es desconcentración: se distribuye competencia internamente sin crear por ello una entidad descentralizada.","sourceOrigin":"mixed"},
-      {"type":"ceneval_example","title":"Cómo aparece en un reactivo tipo EGEL","content":"Las palabras decisivas suelen ser 'adscrito', 'subordinado' y 'facultades específicas': apuntan a desconcentración. 'Secretaría de Estado' o 'Consejería Jurídica' apuntan a dependencia centralizada. Descarta respuestas que clasifiquen por el nombre, la ubicación de oficinas o una supuesta autonomía técnica sin revisar la norma.","sourceOrigin":"complementary"},
-      {"type":"summary","title":"Resumen para repasar","content":"Ejecutivo: Presidencia. APF: estructura auxiliar, centralizada y paraestatal. Centralizada: Secretarías y Consejería Jurídica. Desconcentrado: órgano de una Secretaría, subordinado, especializado y con competencia material o territorial específica. Regla de oro: nombre y ubicación no bastan; revisa norma, adscripción, jerarquía y competencia. Defensa: depende del acto y de la ley aplicable.","sourceOrigin":"mixed"},
-      {"type":"study_guide","title":"Guía de preguntas y respuestas","content":"1. ¿Quién encabeza el Ejecutivo Federal? Respuesta: la persona titular de la Presidencia.\n2. ¿Qué regula el artículo 89? Respuesta: facultades y obligaciones presidenciales.\n3. ¿Qué dispone el artículo 90? Respuesta: APF centralizada y paraestatal.\n4. ¿La APF es otro poder? Respuesta: no, auxilia al Ejecutivo.\n5. ¿Qué dependencias integran la centralizada? Respuesta: Secretarías y Consejería Jurídica.\n6. ¿Dónde se enumeran las Secretarías? Respuesta: artículo 26 de la LOAPF vigente.\n7. ¿Qué es centralización? Respuesta: organización bajo relaciones jerárquicas legales.\n8. ¿Qué es desconcentración? Respuesta: distribución interna de facultades especializadas.\n9. ¿Se rompe la jerarquía? Respuesta: no; el órgano sigue subordinado.\n10. ¿Una sede estatal vuelve local al órgano? Respuesta: no.\n11. ¿El nombre determina naturaleza? Respuesta: no; se revisa la norma.\n12. ¿Toda multa federal va por la misma vía? Respuesta: no; depende del acto, ley y definitividad.","sourceOrigin":"mixed"},
-      {"type":"key_concepts","title":"Conceptos clave","content":"Ejecutivo Federal: poder encabezado por Presidencia. APF: organización administrativa. Dependencia: Secretaría o Consejería Jurídica. Centralización: jerarquía dentro del Ejecutivo. Desconcentración: competencia especializada interna. Adscripción: vínculo orgánico. Subordinación: sujeción jerárquica. Competencia: atribución normativa. Fundamentación: norma aplicable. Motivación: razones y hechos. Acto administrativo: decisión unilateral sujeta a control.","sourceOrigin":"mixed"},
-      {"type":"common_errors","title":"Errores comunes y correcciones","content":"Error: APF es un cuarto poder. Corrección: forma parte del Ejecutivo. Error: centralizada, desconcentrada y descentralizada son tres ramas constitucionales equivalentes. Corrección: las ramas son centralizada y paraestatal; la desconcentración es interna. Error: todo órgano desconcentrado es independiente. Corrección: sigue subordinado. Error: memorizar 18 Secretarías. Corrección: revisar artículo 26 vigente. Error: sede en Jalisco significa autoridad local. Corrección: la adscripción puede seguir siendo federal. Error: toda multa federal va directo a nulidad. Corrección: revisar ley especial, recursos, definitividad y competencia.","sourceOrigin":"mixed"}
-    ],
-    "conceptMap":{"title":"Mapa visual de la APF centralizada","description":"De la Presidencia a la actuación del órgano desconcentrado.","nodes":[
-      {"id":"ejecutivo","label":"Poder Ejecutivo Federal","description":"Artículo 80 constitucional."},
-      {"id":"presidencia","label":"Presidencia","description":"Titular del Ejecutivo.","parentId":"ejecutivo"},
-      {"id":"facultades","label":"Facultades presidenciales","description":"Artículo 89.","parentId":"presidencia"},
-      {"id":"apf","label":"Administración Pública Federal","description":"Organización auxiliar.","parentId":"ejecutivo"},
-      {"id":"division","label":"Artículo 90","description":"Centralizada y paraestatal.","parentId":"apf"},
-      {"id":"centralizada","label":"APF centralizada","description":"Relación jerárquica.","parentId":"division"},
-      {"id":"secretarias","label":"Secretarías de Estado","description":"Dependencias por materia.","parentId":"centralizada"},
-      {"id":"consejeria","label":"Consejería Jurídica","description":"Dependencia centralizada.","parentId":"centralizada"},
-      {"id":"art26","label":"Artículo 26 LOAPF","description":"Lista vigente de Secretarías.","parentId":"secretarias"},
-      {"id":"competencia","label":"Competencia","description":"Solo facultades normativas.","parentId":"centralizada"},
-      {"id":"materia","label":"Materia","description":"Sector administrativo asignado.","parentId":"competencia"},
-      {"id":"territorio","label":"Territorio","description":"Ámbito geográfico.","parentId":"competencia"},
-      {"id":"desconcentracion","label":"Desconcentración","description":"Técnica interna del artículo 17.","parentId":"centralizada"},
-      {"id":"adscripcion","label":"Adscripción","description":"Pertenece a una Secretaría.","parentId":"desconcentracion"},
-      {"id":"subordinacion","label":"Subordinación jerárquica","description":"No hay independencia plena.","parentId":"desconcentracion"},
-      {"id":"especialidad","label":"Facultades específicas","description":"Materia y territorio definidos.","parentId":"desconcentracion"},
-      {"id":"acto","label":"Acto administrativo","description":"Permiso, multa o clausura.","parentId":"apf"},
-      {"id":"legalidad","label":"Legalidad","description":"Competencia, fundamento y motivo.","parentId":"acto"},
-      {"id":"defensa","label":"Medio de defensa","description":"Depende de ley y definitividad.","parentId":"acto"},
-      {"id":"filtros","label":"Ruta CENEVAL","description":"Norma → adscripción → competencia → acto.","parentId":"apf"}
-    ]},
-    "references":[
-      {"title":"Constitución Política de los Estados Unidos Mexicanos","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"México","citation":"Artículos 14, 16, 80, 89 y 90; últimas reformas DOF 02-06-2026","retrievedOn":"2026-08-11","note":"Titularidad, facultades y bases constitucionales de la APF."},
-      {"title":"Ley Orgánica de la Administración Pública Federal","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"México","citation":"Artículos 1 a 3, 10 a 18, 26 y correlativos; última reforma DOF 07-05-2026","retrievedOn":"2026-08-11","note":"Dependencias, órganos desconcentrados y competencias vigentes."},
-      {"title":"Ley Orgánica de la Administración Pública Federal: reformas","url":"https://www.diputados.gob.mx/LeyesBiblio/ref/loapf.htm","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"México","citation":"Historial oficial de reformas","retrievedOn":"2026-08-11","note":"Control de vigencia de nombres y atribuciones."}
-    ],
-    "flashcards":[
-      {"question":"¿En quién se deposita el Ejecutivo Federal?","answer":"En la persona titular de la Presidencia de la República.","sourceOrigin":"complementary"},
-      {"question":"¿Qué artículo contiene facultades presidenciales?","answer":"El artículo 89 constitucional.","sourceOrigin":"mixed"},
-      {"question":"¿Cómo divide la Constitución a la APF?","answer":"En administración centralizada y paraestatal.","sourceOrigin":"mixed"},
-      {"question":"¿Qué integra la administración centralizada?","answer":"Secretarías de Estado y Consejería Jurídica.","sourceOrigin":"complementary"},
-      {"question":"¿Dónde está la lista vigente de Secretarías?","answer":"En el artículo 26 de la LOAPF.","sourceOrigin":"complementary"},
-      {"question":"¿Qué caracteriza la centralización?","answer":"La organización y subordinación jerárquica dentro del Ejecutivo.","sourceOrigin":"mixed"},
-      {"question":"¿Qué permite el artículo 17 de la LOAPF?","answer":"Que las Secretarías cuenten con órganos administrativos desconcentrados.","sourceOrigin":"complementary"},
-      {"question":"¿El desconcentrado sigue subordinado?","answer":"Sí, jerárquicamente a la Secretaría correspondiente.","sourceOrigin":"mixed"},
-      {"question":"¿La especialidad crea personalidad propia?","answer":"No por sí sola; debe revisarse la norma de creación.","sourceOrigin":"mixed"},
-      {"question":"¿Una oficina regional deja de ser federal?","answer":"No; la ubicación no altera por sí misma su adscripción.","sourceOrigin":"mixed"},
-      {"question":"¿Cómo se determina la competencia?","answer":"Por Constitución, ley, reglamento y demás normas aplicables.","sourceOrigin":"complementary"},
-      {"question":"¿Cómo se elige la defensa contra un acto?","answer":"Revisando autoridad, acto, ley especial, recursos y definitividad.","sourceOrigin":"mixed"}
-    ],
-    "exam":{"title":"Examen: Ejecutivo y APF centralizada","description":"Diez casos originales sobre estructura, jerarquía, competencia y control.","questions":[
-      {"text":"¿En quién se deposita el Poder Ejecutivo Federal?","difficulty":"basic","options":["Presidencia de la República","Congreso de la Unión","Suprema Corte"],"correctOption":0,"explanation":"El artículo 80 constitucional establece la titularidad unipersonal del Ejecutivo.","optionExplanations":["Es la respuesta constitucional.","Es el Poder Legislativo.","Encabeza el Poder Judicial federal."]},
-      {"text":"¿Qué artículo establece APF centralizada y paraestatal?","difficulty":"basic","options":["Artículo 90","Artículo 115","Artículo 123"],"correctOption":0,"explanation":"El artículo 90 contiene la base de organización de la APF.","optionExplanations":["Es la norma aplicable.","Regula principalmente municipio libre.","Regula trabajo y previsión social."]},
-      {"text":"Una oficina está subordinada a una Secretaría y tiene facultades técnicas específicas. ¿Qué es?","difficulty":"intermediate","options":["Órgano desconcentrado","Organismo descentralizado necesariamente","Poder autónomo"],"correctOption":0,"explanation":"Subordinación más especialización corresponde a desconcentración.","optionExplanations":["Coincide con el artículo 17.","Faltan personalidad y marco propio.","No existe autonomía constitucional."]},
-      {"text":"¿Qué dato NO basta para clasificar un órgano?","difficulty":"basic","options":["Su nombre","Su norma de creación","Su adscripción"],"correctOption":0,"explanation":"Denominaciones como comisión o instituto no determinan naturaleza jurídica.","optionExplanations":["Puede ser engañoso.","Es un dato decisivo.","Revela su vínculo orgánico."]},
-      {"text":"Una representación de Secretaría federal opera en Jalisco. ¿Se vuelve autoridad estatal?","difficulty":"intermediate","options":["No","Sí, por ubicación","Sí, si atiende población local"],"correctOption":0,"explanation":"El ámbito territorial no cambia por sí solo la adscripción federal.","optionExplanations":["Debe revisarse la norma federal.","Confunde sede con orden de gobierno.","El público atendido no decide naturaleza."]},
-      {"text":"Una Secretaría pretende sancionar una materia que ninguna norma le atribuye. ¿Qué se vulnera?","difficulty":"basic","options":["Principio de legalidad","Libertad testamentaria","Relatividad del amparo"],"correctOption":0,"explanation":"Toda autoridad requiere competencia normativa para actuar válidamente.","optionExplanations":["Es el principio directamente comprometido.","Es materia sucesoria.","No define la competencia administrativa."]},
-      {"text":"Una estudiante memoriza que siempre existen 18 Secretarías. ¿Cuál es la corrección?","difficulty":"intermediate","options":["Consultar el artículo 26 vigente","Mantener siempre la cifra","Contar solo edificios federales"],"correctOption":0,"explanation":"El Congreso puede modificar denominaciones, cantidad y competencias.","optionExplanations":["Asegura vigencia.","Puede quedar desactualizada.","No es criterio jurídico."]},
-      {"text":"¿Qué relación conserva un órgano desconcentrado?","difficulty":"basic","options":["Subordinación jerárquica","Soberanía propia","Independencia constitucional"],"correctOption":0,"explanation":"La desconcentración distribuye facultades sin romper la jerarquía.","optionExplanations":["Es su rasgo central.","Los órganos no son soberanos.","Requeriría base constitucional distinta."]},
-      {"text":"Una multa proviene de autoridad federal. ¿Debe promoverse siempre y directamente el mismo juicio?","difficulty":"advanced","options":["No; se revisan ley, recurso y definitividad","Sí; toda multa sigue ruta idéntica","Sí; nunca importa la autoridad exacta"],"correctOption":0,"explanation":"La vía depende del régimen jurídico y del carácter del acto.","optionExplanations":["Integra los filtros correctos.","Generaliza indebidamente.","La autoridad y competencia son esenciales."]},
-      {"text":"¿Cuál es la ruta correcta para clasificar una oficina federal?","difficulty":"advanced","options":["Norma, adscripción, jerarquía y competencia","Nombre, tamaño y antigüedad","Ubicación y número de empleados"],"correctOption":0,"explanation":"La naturaleza se determina mediante elementos normativos y orgánicos.","optionExplanations":["Es el método jurídico.","Son datos insuficientes.","No define la categoría."]}
-    ]}
-  }]
+    {
+      "id": "ev-c14-cpeum-art80-ejecutivo",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículo 80, página impresa 87",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c14-cpeum-art89-facultades",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículo 89, páginas impresas 90-92",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c14-cpeum-art90-apf",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículo 90, página impresa 92",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c14-loapf-arts1-3-integracion",
+      "kind": "official",
+      "title": "Ley Orgánica de la Administración Pública Federal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 07-05-2026; artículos 1 a 3, páginas impresas 1-2",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c14-loapf-arts10-18-organizacion",
+      "kind": "official",
+      "title": "Ley Orgánica de la Administración Pública Federal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 07-05-2026; artículos 10 a 18, páginas impresas 3-6",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c14-loapf-art17-desconcentracion",
+      "kind": "official",
+      "title": "Ley Orgánica de la Administración Pública Federal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 07-05-2026; artículo 17, página impresa 5",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c14-loapf-art26-secretarias",
+      "kind": "official",
+      "title": "Ley Orgánica de la Administración Pública Federal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LOAPF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 07-05-2026; artículo 26, páginas impresas 9-10",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c14-a19-l027-029-ejecutivo-articulos",
+      "kind": "transcript",
+      "audioNumber": 19,
+      "locator": {
+        "type": "line_range",
+        "startLine": 27,
+        "endLine": 29
+      }
+    },
+    {
+      "id": "ev-c14-a19-l043-apf-estructura",
+      "kind": "transcript",
+      "audioNumber": 19,
+      "locator": {
+        "type": "line_range",
+        "startLine": 43,
+        "endLine": 43
+      }
+    },
+    {
+      "id": "ev-c14-a19-l085-091-clasificacion-a-corregir",
+      "kind": "transcript",
+      "audioNumber": 19,
+      "locator": {
+        "type": "line_range",
+        "startLine": 85,
+        "endLine": 91
+      }
+    },
+    {
+      "id": "ev-c14-a22-l019-023-via-a-corregir",
+      "kind": "transcript",
+      "audioNumber": 22,
+      "locator": {
+        "type": "line_range",
+        "startLine": 19,
+        "endLine": 23
+      }
+    }
+  ]
 }
