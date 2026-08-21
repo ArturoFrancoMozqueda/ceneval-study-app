@@ -1,10 +1,13 @@
 {
-  "packageVersion": "1.1",
+  "packageVersion": "1.2",
   "curriculum": {
     "code": "C04",
     "order": 4,
     "audioSources": [
-      {"audioNumber": 18,"fragment": "Audio completo"}
+      {
+        "audioNumber": 18,
+        "fragment": "Audio completo"
+      }
     ]
   },
   "subject": {
@@ -13,120 +16,385 @@
   },
   "class": {
     "title": "Poder Judicial local, instancias y conflictos de competencia",
-    "description": "Cuarta clase del curso: comprende la justicia de las entidades federativas, distingue primera y segunda instancia y determina cómo verificar recursos y conflictos competenciales."
+    "description": "Cuarta clase del curso: distingue las bases federales de la organización judicial local y verifica competencia, instancia, recursos y contiendas conforme a la norma aplicable."
   },
   "transcript": {
     "originalFile": "AUDIO 18.txt",
-    "cleaned": "El Audio 18 presenta la organización judicial de las entidades federativas, la relación entre órganos de primera y segunda instancia, la posible existencia de juzgados de menor cuantía o especializados, la apelación y los conflictos de competencia. Se conservaron los ejemplos que permiten reconocer materia, grado, territorio y cuantía. Se eliminaron promociones, bromas, comentarios personales, cifras salariales y opiniones políticas. Se corrigieron afirmaciones absolutas: la denominación y estructura de los órganos locales no es idéntica en todo México; la existencia de juzgados menores, sus materias, cuantías y recursos depende de la constitución, ley orgánica y legislación procesal aplicables; tampoco toda sentencia de primera instancia es apelable. La explicación se actualizó con los artículos 17 y 116 de la Constitución federal, el CNPCF y, como ejemplo de consulta local, el catálogo legislativo oficial de Michoacán."
+    "cleaned": "El Audio 18 introduce el federalismo judicial y distingue órganos de origen y revisión, cuantía, recursos y competencia. Sus nombres de órganos, montos, estructuras y afirmaciones absolutas no se presentan como reglas nacionales vigentes. Los artefactos conservan únicamente las ideas auditables de variación local, consulta de la ley orgánica y dependencia legal de los recursos; el contenido jurídico se verificó en fuentes federales oficiales vigentes al 21 de agosto de 2026."
   },
   "topics": [
     {
-      "title": "Cómo ubicar el órgano judicial local y la instancia correcta",
-      "description": "Método para leer la organización judicial de cada entidad, identificar órganos de origen y alzada y resolver preguntas sobre recursos y competencia.",
+      "title": "Cómo verificar órgano, competencia e instancia en justicia local",
+      "description": "Método de verificación basado en entidad, materia, grado, territorio, ley orgánica, norma procesal vigente y recurso expresamente procedente.",
       "learningJourney": {
-        "openingPrompt": "Si un asunto familiar comienza ante un órgano local, ¿puedes asumir que la autoridad y el recurso se llaman igual en todas las entidades federativas?",
+        "openingPrompt": "Si dos entidades organizan de manera distinta sus órganos judiciales, ¿qué normas debes consultar antes de elegir autoridad o recurso?",
+        "openingPromptEvidenceIds": [
+          "ev-c04-cpeum-art116",
+          "ev-c04-a18-l011-013-federalismo-local",
+          "ev-c04-a18-l063-063-ley-organica"
+        ],
         "quickChecks": [
           {
-            "prompt": "¿Quién define la estructura concreta del Poder Judicial de una entidad?",
-            "answer": "La Constitución federal fija bases; la constitución local, la ley orgánica y las leyes procesales concretan órganos y atribuciones.",
-            "feedback": "El federalismo permite variantes locales, por lo que los nombres y competencias deben verificarse."
+            "prompt": "¿Quién concreta la estructura del Poder Judicial de un estado?",
+            "answer": "La constitución y la ley orgánica de la entidad, dentro de las bases de la Constitución federal.",
+            "feedback": "El artículo 116 remite a los tribunales establecidos por cada constitución estatal; no autoriza un organigrama nacional único.",
+            "evidenceIds": [
+              "ev-c04-cpeum-art116",
+              "ev-c04-a18-l011-013-federalismo-local",
+              "ev-c04-a18-l063-063-ley-organica"
+            ]
           },
           {
-            "prompt": "¿Qué diferencia existe entre primera y segunda instancia?",
-            "answer": "La primera conoce originalmente del litigio; la segunda revisa las resoluciones impugnables en los términos de la ley.",
-            "feedback": "La segunda instancia no aparece automáticamente: depende de que exista un recurso procedente."
+            "prompt": "¿Qué distingue al grado de origen de la segunda instancia?",
+            "answer": "El primero conoce inicialmente; la segunda instancia tramita y resuelve la revisión prevista por la ley.",
+            "feedback": "El CNPCF regula la autoridad de primera instancia y la autoridad de segunda instancia sin imponer el mismo nombre orgánico en cada entidad.",
+            "evidenceIds": [
+              "ev-c04-cnpcf-art77-competencia",
+              "ev-c04-cnpcf-arts908-920-apelacion",
+              "ev-c04-a18-l107-107-instancias"
+            ]
           },
           {
-            "prompt": "¿Toda sentencia local admite apelación?",
-            "answer": "No. La procedencia depende de la materia, tipo de procedimiento, resolución, cuantía y legislación aplicable.",
-            "feedback": "Si la apelación no procede, aún debe analizarse si existe otra defensa o juicio de amparo, sin asumirlo automáticamente."
+            "prompt": "¿Toda resolución admite apelación?",
+            "answer": "No. Debe comprobarse que la norma aplicable prevea la apelación para esa resolución.",
+            "feedback": "El desacuerdo de una parte no crea por sí solo un recurso; deben verificarse procedencia, plazo y autoridad.",
+            "evidenceIds": [
+              "ev-c04-cnpcf-arts908-920-apelacion",
+              "ev-c04-a18-l181-181-apelacion-depende"
+            ]
           }
         ],
         "practicalCase": {
-          "facts": "Una persona recibe una sentencia en un juicio local de cuantía reducida. La transcripción afirma que los asuntos menores nunca son apelables, pero la legislación orgánica y procesal de la entidad contiene reglas propias sobre órganos, cuantías y recursos.",
-          "question": "¿Cómo debe decidirse si procede la apelación y quién la resuelve?",
-          "legalRule": "La procedencia del recurso y el órgano de alzada se determinan mediante la legislación vigente aplicable al tipo de juicio, resolución y organización judicial de la entidad.",
-          "reasoning": "No es válido trasladar una regla observada en un estado a todo el país. Deben identificarse la entidad, materia, procedimiento, resolución y cuantía; después se consulta el código procesal y la ley orgánica para saber si existe apelación y qué órgano tiene competencia para resolverla.",
-          "conclusion": "La respuesta correcta surge de la norma local y procesal vigente, no de una regla general memorizada sobre juzgados menores."
+          "facts": "Una persona recibe una resolución en un procedimiento civil local. Conoce la cuantía del asunto, pero no ha verificado si el CNPCF ya rige, qué órgano define la ley orgánica ni si esa resolución es apelable.",
+          "question": "¿Qué debe verificar antes de elegir órgano y recurso?",
+          "legalRule": "En procesos civiles y familiares sujetos al CNPCF, la competencia se determina por materia, grado y territorio; la cuantía opera solo si la ley orgánica establece órganos con ese criterio. La apelación procede en los supuestos regulados por la norma vigente.",
+          "reasoning": "Primero se identifica la entidad y la vigencia procesal. Después se consultan la ley orgánica y la regla de competencia. Finalmente se localiza la disposición que autoriza o excluye el recurso para la resolución concreta.",
+          "conclusion": "La respuesta depende del marco orgánico y procesal vigente, no de un nombre de órgano o una cuantía memorizados.",
+          "evidenceIds": [
+            "ev-c04-cpeum-art116",
+            "ev-c04-cnpcf-art77-competencia",
+            "ev-c04-cnpcf-arts908-920-apelacion",
+            "ev-c04-cnpcf-transitorios",
+            "ev-c04-a18-l049-049-cuantia-local",
+            "ev-c04-a18-l063-063-ley-organica",
+            "ev-c04-a18-l181-181-apelacion-depende"
+          ]
         },
-        "closingPrompt": "Describe el recorrido de un asunto desde el órgano de origen hasta una posible segunda instancia, señalando en qué momento verificarías competencia y procedencia del recurso.",
-        "nextActivity": "Recorre el mapa visual, responde la guía y resuelve los diez casos sobre órganos locales, instancias, recursos y conflictos."
+        "closingPrompt": "Explica cómo verificarías entidad, vigencia, materia, grado, territorio, órgano y recurso en un caso local.",
+        "closingPromptEvidenceIds": [
+          "ev-c04-cpeum-art116",
+          "ev-c04-cnpcf-art77-competencia",
+          "ev-c04-cnpcf-arts908-920-apelacion",
+          "ev-c04-cnpcf-transitorios"
+        ],
+        "nextActivity": "Recorre el mapa, estudia las fuentes oficiales y resuelve los diez casos de práctica.",
+        "nextActivityEvidenceIds": [
+          "ev-c04-cpeum-art116",
+          "ev-c04-cnpcf-art77-competencia",
+          "ev-c04-cnpcf-arts908-920-apelacion"
+        ]
       },
       "materials": [
         {
           "type": "short_answer",
           "title": "Respuesta corta: justicia local",
-          "content": "Los poderes judiciales locales resuelven las controversias que las constituciones y leyes asignan al orden común. La Constitución federal establece bases de independencia y organización, pero cada entidad concreta sus órganos, especializaciones, distritos, instancias y competencias. Para resolver un caso deben consultarse la constitución local, la ley orgánica y la norma procesal vigente.",
-          "sourceOrigin": "mixed"
+          "content": "La Constitución federal fija bases, pero cada estado concreta sus tribunales en su constitución y ley orgánica. En procesos civiles y familiares regidos por el CNPCF, para elegir autoridad se verifican materia, grado y territorio; la cuantía solo cuenta si la ley orgánica crea órganos definidos por ese criterio. El recurso debe estar previsto para la resolución concreta.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c04-cpeum-art116",
+            "ev-c04-cnpcf-art77-competencia",
+            "ev-c04-cnpcf-arts908-920-apelacion",
+            "ev-c04-a18-l011-013-federalismo-local",
+            "ev-c04-a18-l063-063-ley-organica"
+          ]
         },
         {
           "type": "full_explanation",
           "title": "Explicación completa desde cero",
-          "content": "México es una federación. Por ello existen órganos jurisdiccionales federales y poderes judiciales en las entidades federativas. El artículo 116 constitucional dispone que el Poder Judicial de los estados se ejerce por los tribunales establecidos en sus constituciones y fija bases sobre independencia, integración y funcionamiento. Esa regla no impone un organigrama idéntico para todas las entidades.\n\nEn términos generales existe un órgano o conjunto de órganos que conocen inicialmente del litigio y órganos que revisan determinadas decisiones. Pueden existir juzgados civiles, familiares, penales, laborales, mercantiles por competencia concurrente, especializados, mixtos, comunales o de menor cuantía, pero sus nombres y atribuciones dependen de cada entidad. El tribunal superior o supremo tribunal local puede organizarse en pleno, salas unitarias o colegiadas conforme a su normativa.\n\nLa primera instancia es el grado en que normalmente se inicia y desarrolla el litigio. La segunda instancia revisa una resolución mediante el recurso legalmente procedente. No toda decisión ni todo procedimiento admite apelación. El análisis exige identificar materia, procedimiento, tipo de resolución, cuantía si la ley la utiliza, oportunidad y reglas transitorias. Tampoco puede afirmarse que todos los juzgados menores del país sean inapelables.\n\nEl CNPCF unifica gradualmente reglas procesales civiles y familiares, pero conserva la importancia de las leyes orgánicas para distribuir competencias. Su artículo 77 establece materia, grado y territorio, y permite usar cuantía únicamente cuando la ley orgánica respectiva define órganos con ese criterio. Durante la transición debe comprobarse si el Código Nacional ya entró en vigor en la entidad y para el asunto analizado.\n\nUn conflicto de competencia aparece cuando dos órganos discrepan sobre quién debe conocer. Puede ser positivo si ambos se consideran competentes o negativo si ambos rechazan el asunto. La autoridad que lo resuelve no se elige por intuición: la determina la ley según los órganos involucrados, su materia, grado y ámbito territorial. A veces será un órgano superior local; si intervienen ámbitos o circuitos distintos, puede operar otra regla.\n\nDespués de agotar o no existir recursos ordinarios, una resolución local puede ser combatida mediante amparo si se cumplen sus requisitos. El amparo directo corresponde, en términos generales, contra sentencias definitivas, laudos o resoluciones que ponen fin al juicio, conforme a los artículos 170 y siguientes de la Ley de Amparo. No debe usarse como sustituto automático de una apelación procedente ni suponerse que cualquier auto se combate por esa vía.",
-          "sourceOrigin": "mixed"
+          "content": "El artículo 116, fracción III, de la Constitución dispone que el Poder Judicial de los estados se ejerce por los tribunales que establezcan sus constituciones. Por ello no existe un nombre, integración ni organigrama único que pueda trasladarse a todas las entidades.\n\nPara los procesos civiles y familiares de su ámbito, el artículo 77 del CNPCF determina la competencia por materia, grado y territorio. La cuantía solo opera cuando la ley orgánica respectiva establece órganos jurisdiccionales definidos con ese criterio. El análisis debe identificar entidad, vigencia procesal y ley orgánica antes de elegir autoridad.\n\nEn ese mismo ámbito, el CNPCF distingue autoridades de primera y segunda instancia y regula la apelación en sus artículos 908 a 920. La apelación permite confirmar, revocar o modificar una resolución, pero su procedencia depende de los supuestos expresamente regulados. No toda resolución es apelable por el solo desacuerdo de una parte.\n\nLas contiendas de competencia civiles y familiares se promueven por inhibitoria o declinatoria conforme a los artículos 94 a 101 del CNPCF. Cuando dos o más autoridades locales de la misma jurisdicción se niegan a conocer, el artículo 100 prevé acudir ante la autoridad de segunda instancia en turno. No debe sustituirse esa regla por la fórmula general de que cualquier superior resuelve cualquier conflicto.\n\nLa vigencia del CNPCF es gradual y exige revisar declaratorias y transitorios. Para el amparo directo, el artículo 170 de la Ley de Amparo contempla sentencias definitivas, laudos y resoluciones que ponen fin al juicio, además del agotamiento previo de los recursos ordinarios aplicables, salvo excepción legal.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c04-cpeum-art17",
+            "ev-c04-cpeum-art116",
+            "ev-c04-cnpcf-art77-competencia",
+            "ev-c04-cnpcf-arts94-101-contiendas",
+            "ev-c04-cnpcf-arts908-920-apelacion",
+            "ev-c04-cnpcf-transitorios",
+            "ev-c04-amparo-art170",
+            "ev-c04-a18-l011-013-federalismo-local",
+            "ev-c04-a18-l049-049-cuantia-local",
+            "ev-c04-a18-l063-063-ley-organica",
+            "ev-c04-a18-l107-107-instancias",
+            "ev-c04-a18-l181-181-apelacion-depende"
+          ]
         },
         {
           "type": "legal_basis",
           "title": "Fundamento jurídico vigente",
-          "content": "Constitución federal, artículos 17 y 116, fracción III: acceso a la justicia y bases de los poderes judiciales de los estados. CNPCF, artículos 77 y siguientes: competencia objetiva por materia, grado y territorio; cuantía condicionada a la ley orgánica; reglas para conflictos competenciales y recursos. Ley de Amparo, artículos 170 y siguientes: procedencia general del amparo directo. Para un caso concreto deben añadirse la constitución y ley orgánica de la entidad, además del código procesal vigente y sus transitorios.",
-          "sourceOrigin": "complementary"
+          "content": "Constitución federal, artículos 17 y 116, fracción III: acceso a la justicia y tribunales definidos por las constituciones estatales. CNPCF, artículo 77: materia, grado, territorio y cuantía condicionada a la ley orgánica; artículos 94 a 101: inhibitoria, declinatoria y decisión de competencias; artículos 908 a 920: apelación; transitorios Segundo a Cuarto: vigencia gradual. Ley de Amparo, artículo 170: procedencia general del amparo directo y agotamiento de recursos ordinarios.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c04-cpeum-art17",
+            "ev-c04-cpeum-art116",
+            "ev-c04-cnpcf-art77-competencia",
+            "ev-c04-cnpcf-arts94-101-contiendas",
+            "ev-c04-cnpcf-arts908-920-apelacion",
+            "ev-c04-cnpcf-transitorios",
+            "ev-c04-amparo-art170"
+          ]
         },
         {
           "type": "simple_example",
-          "title": "Ejemplo sencillo: ruta de un asunto familiar",
-          "content": "Una demanda de alimentos se presenta ante el órgano local que la ley declara competente. Ese órgano conoce en primera instancia. Si dicta una resolución que la ley permite apelar, el recurso será revisado por el órgano de segunda instancia designado localmente. Si la norma no concede apelación, no puede inventarse; debe analizarse la defensa procedente y, en su momento, si se actualizan los requisitos del amparo.",
-          "sourceOrigin": "complementary"
+          "title": "Ejemplo sencillo: ruta de un asunto civil",
+          "content": "Una demanda civil debe presentarse ante la autoridad que resulte competente por materia, grado y territorio. Si la ley orgánica distribuye órganos por cuantía, también se aplica ese criterio. Si después se dicta una resolución, solo se interpone apelación cuando el CNPCF o la norma vigente la autoriza.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c04-cnpcf-art77-competencia",
+            "ev-c04-cnpcf-arts908-920-apelacion"
+          ]
         },
         {
           "type": "ceneval_example",
           "title": "Cómo aparece en un reactivo tipo EGEL",
-          "content": "El caso suele proporcionar entidad federativa, materia, órgano que dictó la resolución, tipo de juicio y medio de defensa intentado. Primero determina si el asunto es local o federal. Después ubica materia y grado. Finalmente verifica si la resolución es recurrible y qué órgano señala la ley. Descarta respuestas que conviertan una práctica local en regla nacional o que supongan apelación por el solo hecho de existir una sentencia.",
-          "sourceOrigin": "complementary"
+          "content": "En un caso identifica primero la entidad y la vigencia del CNPCF. Después separa materia, grado, territorio y, solo si la ley orgánica lo utiliza, cuantía. Si existe una discrepancia competencial, distingue declinatoria, inhibitoria o negativa concurrente a conocer. Para un recurso, localiza la regla expresa de procedencia.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c04-cpeum-art116",
+            "ev-c04-cnpcf-art77-competencia",
+            "ev-c04-cnpcf-arts94-101-contiendas",
+            "ev-c04-cnpcf-arts908-920-apelacion",
+            "ev-c04-cnpcf-transitorios",
+            "ev-c04-amparo-art170"
+          ]
         },
         {
           "type": "summary",
           "title": "Resumen para repasar",
-          "content": "Los poderes judiciales locales se rigen por bases federales y normas propias. Su estructura no es uniforme. Primera instancia significa conocimiento original; segunda instancia, revisión mediante recurso procedente. Materia, grado y territorio son factores centrales; la cuantía sólo opera si la ley orgánica la emplea. La apelación nunca debe presumirse. Los conflictos de competencia los resuelve el órgano previsto por la ley. El amparo directo tiene supuestos propios y no sustituye automáticamente recursos ordinarios.",
-          "sourceOrigin": "mixed"
+          "content": "La organización judicial estatal depende de la constitución y ley orgánica de cada entidad. En procesos civiles y familiares, el CNPCF usa materia, grado y territorio; la cuantía es condicional. En ese ámbito, la apelación revisa resoluciones en los supuestos previstos. Las competencias se tramitan por inhibitoria o declinatoria y existe una regla específica cuando varias autoridades locales se niegan a conocer. La vigencia gradual y el agotamiento de recursos deben verificarse.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c04-cpeum-art116",
+            "ev-c04-cnpcf-art77-competencia",
+            "ev-c04-cnpcf-arts94-101-contiendas",
+            "ev-c04-cnpcf-arts908-920-apelacion",
+            "ev-c04-cnpcf-transitorios",
+            "ev-c04-amparo-art170",
+            "ev-c04-a18-l011-013-federalismo-local",
+            "ev-c04-a18-l049-049-cuantia-local",
+            "ev-c04-a18-l181-181-apelacion-depende"
+          ]
         },
         {
           "type": "study_guide",
           "title": "Guía de preguntas y respuestas",
-          "content": "1. ¿Por qué existen poderes judiciales locales? Respuesta: por la organización federal y la distribución constitucional de asuntos.\n2. ¿Son idénticos en todas las entidades? Respuesta: no; cada constitución y ley orgánica local concreta su estructura.\n3. ¿Qué es primera instancia? Respuesta: el grado en que normalmente se conoce originalmente del litigio.\n4. ¿Qué es segunda instancia? Respuesta: la revisión de una resolución mediante el recurso que la ley autoriza.\n5. ¿Toda sentencia se apela? Respuesta: no; depende del procedimiento y legislación aplicable.\n6. ¿Qué función tiene una ley orgánica judicial? Respuesta: organiza órganos, distritos, especializaciones y competencias.\n7. ¿Cuándo opera la cuantía? Respuesta: cuando la ley orgánica establece órganos definidos por ese criterio.\n8. ¿Qué es un conflicto positivo? Respuesta: dos órganos se consideran competentes.\n9. ¿Qué es un conflicto negativo? Respuesta: dos órganos rechazan conocer del mismo asunto.\n10. ¿Quién resuelve el conflicto? Respuesta: el órgano señalado por la norma aplicable según materia y relación entre tribunales.\n11. ¿Cuándo se analiza amparo directo? Respuesta: ante sentencias definitivas, laudos o resoluciones que ponen fin al juicio, bajo requisitos legales.\n12. ¿Qué cinco datos deben identificarse? Respuesta: entidad, materia, órgano de origen, resolución y recurso previsto.",
-          "sourceOrigin": "mixed"
+          "content": "1. ¿Qué fija el artículo 116? Que los tribunales estatales son los establecidos por sus constituciones. 2. ¿Qué norma concreta el organigrama? La ley orgánica correspondiente. 3. ¿Qué factores usa el artículo 77? Materia, grado y territorio. 4. ¿Cuándo opera cuantía? Si la ley orgánica crea órganos definidos por ella. 5. ¿Qué hace la apelación? Permite confirmar, revocar o modificar una resolución impugnada. 6. ¿Toda resolución se apela? No; se requiere procedencia legal. 7. ¿Cómo se promueve una contienda? Por inhibitoria o declinatoria. 8. ¿Qué ocurre si varias autoridades locales se niegan? Se sigue la regla del artículo 100. 9. ¿Qué vigencia debe comprobarse? Declaratoria y transitorios del CNPCF. 10. ¿Qué exige el amparo directo? El supuesto del artículo 170 y, como regla, agotar recursos ordinarios. 11. ¿Puede copiarse un organigrama estatal? No. 12. ¿Qué secuencia es segura? Entidad, vigencia, materia, grado, territorio, ley orgánica y recurso.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c04-cpeum-art17",
+            "ev-c04-cpeum-art116",
+            "ev-c04-cnpcf-art77-competencia",
+            "ev-c04-cnpcf-arts94-101-contiendas",
+            "ev-c04-cnpcf-arts908-920-apelacion",
+            "ev-c04-cnpcf-transitorios",
+            "ev-c04-amparo-art170",
+            "ev-c04-a18-l011-013-federalismo-local",
+            "ev-c04-a18-l049-049-cuantia-local",
+            "ev-c04-a18-l063-063-ley-organica",
+            "ev-c04-a18-l107-107-instancias",
+            "ev-c04-a18-l181-181-apelacion-depende"
+          ]
         },
         {
           "type": "key_concepts",
           "title": "Conceptos clave",
-          "content": "Federalismo judicial: coexistencia de jurisdicciones federal y locales. Poder Judicial local: órganos de justicia de una entidad. Ley orgánica: norma que estructura y distribuye competencias. Primera instancia: conocimiento original. Segunda instancia: revisión mediante recurso. Tribunal de alzada: órgano que resuelve la impugnación correspondiente. Cuantía: criterio económico sólo cuando la organización judicial lo contempla. Conflicto positivo: ambos órganos aceptan competencia. Conflicto negativo: ambos la rechazan. Amparo directo: control constitucional contra ciertas resoluciones finales.",
-          "sourceOrigin": "mixed"
+          "content": "Federalismo judicial: coexistencia de justicia federal y estatal. Ley orgánica: norma que organiza órganos y distribuye atribuciones. Materia, grado y territorio: factores del artículo 77. Cuantía condicionada: criterio aplicable solo si la ley orgánica lo adopta. Primera instancia: autoridad de origen. Segunda instancia: autoridad que conoce la revisión prevista. Declinatoria: petición ante quien se considera incompetente. Inhibitoria: petición ante quien se considera competente. Apelación: recurso para confirmar, revocar o modificar. Amparo directo: control contra las resoluciones finales previstas en el artículo 170.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c04-cpeum-art17",
+            "ev-c04-cpeum-art116",
+            "ev-c04-cnpcf-art77-competencia",
+            "ev-c04-cnpcf-arts94-101-contiendas",
+            "ev-c04-cnpcf-arts908-920-apelacion",
+            "ev-c04-cnpcf-transitorios",
+            "ev-c04-amparo-art170",
+            "ev-c04-a18-l011-013-federalismo-local",
+            "ev-c04-a18-l049-049-cuantia-local",
+            "ev-c04-a18-l063-063-ley-organica",
+            "ev-c04-a18-l107-107-instancias",
+            "ev-c04-a18-l181-181-apelacion-depende"
+          ]
         },
         {
           "type": "common_errors",
           "title": "Errores comunes",
-          "content": "Creer que todos los tribunales locales tienen el mismo nombre; copiar la estructura de un estado a otro; confundir primera instancia con órgano de menor cuantía; afirmar que todo juez menor es inapelable; asumir que toda sentencia admite apelación; aplicar cuantía sin consultar la ley orgánica; enviar automáticamente todo conflicto al tribunal superior; confundir alzada con amparo; omitir la transición del CNPCF; y memorizar cifras locales que pueden reformarse.",
-          "sourceOrigin": "mixed"
+          "content": "Copiar el organigrama o nombre de órganos de una entidad a otra; usar cuantía sin revisar la ley orgánica; afirmar que todo órgano de primera instancia o de menor cuantía admite o excluye apelación; llamar positivo o negativo a un conflicto sin identificar el procedimiento legal; enviar toda contienda a cualquier superior; omitir declaratoria y transitorios del CNPCF; y tratar el amparo como sustituto automático de un recurso ordinario.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c04-cpeum-art17",
+            "ev-c04-cpeum-art116",
+            "ev-c04-cnpcf-art77-competencia",
+            "ev-c04-cnpcf-arts94-101-contiendas",
+            "ev-c04-cnpcf-arts908-920-apelacion",
+            "ev-c04-cnpcf-transitorios",
+            "ev-c04-amparo-art170",
+            "ev-c04-a18-l011-013-federalismo-local",
+            "ev-c04-a18-l049-049-cuantia-local",
+            "ev-c04-a18-l063-063-ley-organica",
+            "ev-c04-a18-l107-107-instancias",
+            "ev-c04-a18-l181-181-apelacion-depende"
+          ]
         }
       ],
       "conceptMap": {
         "title": "Mapa visual del Poder Judicial local",
         "description": "Parte del federalismo y recorre normas organizativas, órganos, instancias, recursos y conflictos de competencia.",
         "nodes": [
-          { "id": "federalismo", "label": "Federalismo judicial", "description": "Coexisten justicia federal y local." },
-          { "id": "local", "label": "Poder Judicial local", "description": "Resuelve asuntos asignados al orden común.", "parentId": "federalismo" },
-          { "id": "bases", "label": "Bases federales", "description": "Artículos 17 y 116 constitucionales.", "parentId": "local" },
-          { "id": "normas", "label": "Normas de la entidad", "description": "Constitución, ley orgánica y leyes procesales.", "parentId": "local" },
-          { "id": "organos", "label": "Órganos variables", "description": "Nombres y especializaciones dependen de cada entidad.", "parentId": "normas" },
-          { "id": "primera", "label": "Primera instancia", "description": "Conocimiento original del asunto.", "parentId": "organos" },
-          { "id": "alzada", "label": "Segunda instancia", "description": "Revisión sólo si procede un recurso.", "parentId": "organos" },
-          { "id": "factores", "label": "Competencia", "description": "Selecciona el órgano correcto.", "parentId": "local" },
-          { "id": "materia", "label": "Materia", "description": "Civil, familiar, penal, laboral u otra.", "parentId": "factores" },
-          { "id": "grado", "label": "Grado", "description": "Instancia procesal.", "parentId": "factores" },
-          { "id": "territorio", "label": "Territorio", "description": "Punto de conexión geográfica.", "parentId": "factores" },
-          { "id": "cuantia", "label": "Cuantía condicionada", "description": "Opera si la ley orgánica la adopta.", "parentId": "factores" },
-          { "id": "conflicto", "label": "Conflicto competencial", "description": "Dos órganos aceptan o rechazan conocer.", "parentId": "factores" },
-          { "id": "recurso", "label": "Recurso ordinario", "description": "Procede únicamente cuando la ley lo autoriza.", "parentId": "alzada" },
-          { "id": "amparo", "label": "Control constitucional", "description": "Se analiza después conforme a sus propios requisitos.", "parentId": "recurso" }
+          {
+            "id": "federalismo",
+            "label": "Federalismo judicial",
+            "description": "Coexisten justicia federal y local.",
+            "evidenceIds": [
+              "ev-c04-cpeum-art116",
+              "ev-c04-a18-l011-013-federalismo-local"
+            ]
+          },
+          {
+            "id": "local",
+            "label": "Poder Judicial local",
+            "description": "Resuelve asuntos asignados al orden común.",
+            "parentId": "federalismo",
+            "evidenceIds": [
+              "ev-c04-cpeum-art116",
+              "ev-c04-a18-l011-013-federalismo-local"
+            ]
+          },
+          {
+            "id": "bases",
+            "label": "Bases federales",
+            "description": "Artículos 17 y 116 constitucionales.",
+            "parentId": "local",
+            "evidenceIds": [
+              "ev-c04-cpeum-art17",
+              "ev-c04-cpeum-art116"
+            ]
+          },
+          {
+            "id": "normas",
+            "label": "Normas de la entidad",
+            "description": "Constitución, ley orgánica y leyes procesales.",
+            "parentId": "local",
+            "evidenceIds": [
+              "ev-c04-cpeum-art116",
+              "ev-c04-cnpcf-art77-competencia",
+              "ev-c04-a18-l063-063-ley-organica"
+            ]
+          },
+          {
+            "id": "organos",
+            "label": "Órganos variables",
+            "description": "Nombres y especializaciones dependen de cada entidad.",
+            "parentId": "normas",
+            "evidenceIds": [
+              "ev-c04-cpeum-art116",
+              "ev-c04-a18-l011-013-federalismo-local",
+              "ev-c04-a18-l063-063-ley-organica"
+            ]
+          },
+          {
+            "id": "primera",
+            "label": "Primera instancia",
+            "description": "Conocimiento original del asunto.",
+            "parentId": "organos",
+            "evidenceIds": [
+              "ev-c04-cnpcf-art77-competencia",
+              "ev-c04-a18-l107-107-instancias"
+            ]
+          },
+          {
+            "id": "alzada",
+            "label": "Segunda instancia",
+            "description": "Revisión sólo si procede un recurso.",
+            "parentId": "organos",
+            "evidenceIds": [
+              "ev-c04-cnpcf-arts908-920-apelacion",
+              "ev-c04-a18-l107-107-instancias",
+              "ev-c04-a18-l181-181-apelacion-depende"
+            ]
+          },
+          {
+            "id": "factores",
+            "label": "Competencia",
+            "description": "Selecciona el órgano correcto.",
+            "parentId": "local",
+            "evidenceIds": [
+              "ev-c04-cnpcf-art77-competencia"
+            ]
+          },
+          {
+            "id": "materia",
+            "label": "Materia",
+            "description": "Naturaleza civil o familiar del asunto sujeto al CNPCF.",
+            "parentId": "factores",
+            "evidenceIds": [
+              "ev-c04-cnpcf-art77-competencia"
+            ]
+          },
+          {
+            "id": "grado",
+            "label": "Grado",
+            "description": "Instancia procesal.",
+            "parentId": "factores",
+            "evidenceIds": [
+              "ev-c04-cnpcf-art77-competencia"
+            ]
+          },
+          {
+            "id": "territorio",
+            "label": "Territorio",
+            "description": "Punto de conexión geográfica.",
+            "parentId": "factores",
+            "evidenceIds": [
+              "ev-c04-cnpcf-art77-competencia"
+            ]
+          },
+          {
+            "id": "cuantia",
+            "label": "Cuantía condicionada",
+            "description": "Opera si la ley orgánica la adopta.",
+            "parentId": "factores",
+            "evidenceIds": [
+              "ev-c04-cnpcf-art77-competencia",
+              "ev-c04-a18-l049-049-cuantia-local"
+            ]
+          },
+          {
+            "id": "conflicto",
+            "label": "Conflicto competencial",
+            "description": "Inhibitoria, declinatoria o negativa concurrente a conocer.",
+            "parentId": "factores",
+            "evidenceIds": [
+              "ev-c04-cnpcf-arts94-101-contiendas"
+            ]
+          },
+          {
+            "id": "recurso",
+            "label": "Recurso ordinario",
+            "description": "Procede únicamente cuando la ley lo autoriza.",
+            "parentId": "alzada",
+            "evidenceIds": [
+              "ev-c04-cnpcf-arts908-920-apelacion",
+              "ev-c04-a18-l181-181-apelacion-depende"
+            ]
+          },
+          {
+            "id": "amparo",
+            "label": "Control constitucional",
+            "description": "Se analiza después conforme a sus propios requisitos.",
+            "parentId": "recurso",
+            "evidenceIds": [
+              "ev-c04-amparo-art170"
+            ]
+          }
         ]
       },
       "references": [
@@ -135,137 +403,878 @@
           "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
           "institution": "Cámara de Diputados del H. Congreso de la Unión",
           "jurisdiction": "México",
-          "citation": "Artículos 17 y 116, fracción III; última reforma DOF 02-06-2026",
-          "retrievedOn": "2026-08-11",
-          "note": "Bases constitucionales del acceso a la justicia y de los poderes judiciales locales."
+          "citation": "Artículos 17 y 116, fracción III; últimas reformas DOF 02-06-2026",
+          "retrievedOn": "2026-08-21",
+          "note": "Bases del acceso a la justicia y de los poderes judiciales estatales."
         },
         {
           "title": "Código Nacional de Procedimientos Civiles y Familiares",
           "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
           "institution": "Cámara de Diputados del H. Congreso de la Unión",
           "jurisdiction": "México",
-          "citation": "Artículos 77 y siguientes; última reforma DOF 15-01-2026",
-          "retrievedOn": "2026-08-11",
-          "note": "Competencia, recursos y conflictos en la transición procesal nacional."
+          "citation": "Artículos 77, 94-101 y 908-920; transitorios Segundo a Cuarto; última reforma DOF 15-01-2026",
+          "retrievedOn": "2026-08-21",
+          "note": "Competencia, contiendas, apelación y aplicación gradual."
         },
         {
           "title": "Ley de Amparo",
           "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
           "institution": "Cámara de Diputados del H. Congreso de la Unión",
           "jurisdiction": "México",
-          "citation": "Artículos 170 y siguientes; última reforma DOF 16-10-2025",
-          "retrievedOn": "2026-08-11",
-          "note": "Supuestos generales del amparo directo contra resoluciones finales."
-        },
-        {
-          "title": "Leyes del Estado de Michoacán",
-          "url": "https://congresomich.gob.mx/leyes/",
-          "institution": "Congreso del Estado de Michoacán de Ocampo",
-          "jurisdiction": "Michoacán, México",
-          "citation": "Catálogo oficial: Constitución local y Ley Orgánica del Poder Judicial",
-          "retrievedOn": "2026-08-11",
-          "note": "Ejemplo de la consulta local obligatoria para organización y competencia."
+          "citation": "Artículo 170; última reforma DOF 16-10-2025",
+          "retrievedOn": "2026-08-21",
+          "note": "Procedencia general del amparo directo y agotamiento de recursos ordinarios."
         }
       ],
       "flashcards": [
-        { "question": "¿Qué norma federal fija bases para los poderes judiciales estatales?", "answer": "El artículo 116, fracción III, de la Constitución Política de los Estados Unidos Mexicanos.", "sourceOrigin": "complementary" },
-        { "question": "¿La estructura judicial local es idéntica en todo México?", "answer": "No. Las entidades concretan órganos y competencias mediante sus propias constituciones y leyes.", "sourceOrigin": "mixed" },
-        { "question": "¿Qué es la primera instancia?", "answer": "El grado en el que normalmente se conoce originalmente y se decide el litigio.", "sourceOrigin": "mixed" },
-        { "question": "¿Qué es la segunda instancia?", "answer": "La revisión de una resolución por el órgano de alzada mediante un recurso procedente.", "sourceOrigin": "mixed" },
-        { "question": "¿Toda sentencia local admite apelación?", "answer": "No. Debe existir una disposición que autorice el recurso para ese procedimiento y resolución.", "sourceOrigin": "complementary" },
-        { "question": "¿Qué documento organiza los juzgados de una entidad?", "answer": "Principalmente su ley orgánica judicial, en armonía con las constituciones federal y local.", "sourceOrigin": "mixed" },
-        { "question": "¿Cuándo puede distribuir competencia la cuantía?", "answer": "Cuando la ley orgánica respectiva establece órganos definidos por el valor del asunto.", "sourceOrigin": "complementary" },
-        { "question": "¿Qué es un conflicto positivo de competencia?", "answer": "El supuesto en que dos órganos sostienen que les corresponde conocer del asunto.", "sourceOrigin": "mixed" },
-        { "question": "¿Qué es un conflicto negativo de competencia?", "answer": "El supuesto en que dos órganos rechazan conocer del mismo asunto.", "sourceOrigin": "mixed" },
-        { "question": "¿Quién resuelve un conflicto competencial?", "answer": "El órgano que señale la legislación aplicable según materia, grado y tribunales involucrados.", "sourceOrigin": "complementary" },
-        { "question": "¿Qué resoluciones son objeto general del amparo directo?", "answer": "Sentencias definitivas, laudos y resoluciones que ponen fin al juicio, bajo los requisitos de la Ley de Amparo.", "sourceOrigin": "complementary" },
-        { "question": "¿Qué debes identificar en un caso de justicia local?", "answer": "Entidad, materia, órgano de origen, grado, resolución, recurso y normas vigentes.", "sourceOrigin": "mixed" }
+        {
+          "question": "¿Qué norma federal fija bases para los poderes judiciales estatales?",
+          "answer": "El artículo 116, fracción III, de la Constitución federal.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c04-cpeum-art116"
+          ]
+        },
+        {
+          "question": "¿La estructura judicial local es idéntica en todo México?",
+          "answer": "No. Cada estado concreta sus tribunales mediante su constitución y ley orgánica.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c04-cpeum-art116",
+            "ev-c04-a18-l011-013-federalismo-local"
+          ]
+        },
+        {
+          "question": "¿Qué identifica el grado de primera instancia?",
+          "answer": "La autoridad que conoce originalmente del procedimiento.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c04-cnpcf-art77-competencia",
+            "ev-c04-a18-l107-107-instancias"
+          ]
+        },
+        {
+          "question": "¿Qué identifica la segunda instancia?",
+          "answer": "La autoridad que tramita y resuelve la revisión legalmente procedente.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c04-cnpcf-arts908-920-apelacion",
+            "ev-c04-a18-l107-107-instancias",
+            "ev-c04-a18-l181-181-apelacion-depende"
+          ]
+        },
+        {
+          "question": "¿Toda resolución admite apelación?",
+          "answer": "No. La procedencia debe estar prevista para la resolución concreta.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c04-cnpcf-arts908-920-apelacion",
+            "ev-c04-a18-l181-181-apelacion-depende"
+          ]
+        },
+        {
+          "question": "¿Qué documento concreta los órganos judiciales de una entidad?",
+          "answer": "Su constitución y su ley orgánica judicial, dentro de las bases federales.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c04-cpeum-art116",
+            "ev-c04-a18-l063-063-ley-organica"
+          ]
+        },
+        {
+          "question": "¿Cuándo puede utilizarse la cuantía como factor de competencia?",
+          "answer": "Cuando la ley orgánica establece órganos definidos con ese criterio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c04-cnpcf-art77-competencia",
+            "ev-c04-a18-l049-049-cuantia-local"
+          ]
+        },
+        {
+          "question": "¿Dónde se promueve la declinatoria?",
+          "answer": "Ante la autoridad que se considera incompetente, para que deje de conocer y remita los autos.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c04-cnpcf-arts94-101-contiendas"
+          ]
+        },
+        {
+          "question": "¿Qué ocurre si varias autoridades locales de la misma jurisdicción se niegan a conocer?",
+          "answer": "La persona perjudicada sigue el procedimiento del artículo 100 ante la autoridad de segunda instancia en turno.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c04-cnpcf-arts94-101-contiendas"
+          ]
+        },
+        {
+          "question": "¿Quién decide una contienda de competencia civil o familiar?",
+          "answer": "La autoridad que resulte de los artículos 94 a 101 y de la ley orgánica aplicable.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c04-cnpcf-arts94-101-contiendas"
+          ]
+        },
+        {
+          "question": "¿Qué resoluciones contempla en general el amparo directo?",
+          "answer": "Sentencias definitivas, laudos y resoluciones que ponen fin al juicio, con los requisitos del artículo 170.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c04-amparo-art170"
+          ]
+        },
+        {
+          "question": "¿Qué debes identificar en un caso de justicia local?",
+          "answer": "Entidad, vigencia, materia, grado, territorio, ley orgánica, resolución y recurso previsto.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c04-cpeum-art116",
+            "ev-c04-cnpcf-art77-competencia",
+            "ev-c04-cnpcf-arts908-920-apelacion",
+            "ev-c04-cnpcf-transitorios",
+            "ev-c04-a18-l063-063-ley-organica",
+            "ev-c04-a18-l181-181-apelacion-depende"
+          ]
+        }
       ],
       "exam": {
         "title": "Práctica: Poder Judicial local e instancias",
         "description": "Diez reactivos originales de tres opciones sobre federalismo judicial, organización local, alzada, cuantía y conflictos competenciales.",
         "questions": [
           {
-            "text": "¿Qué conjunto normativo debe consultarse para conocer la organización concreta del Poder Judicial de una entidad?",
+            "text": "¿Qué conjunto normativo concreta la organización judicial de un estado?",
             "difficulty": "basic",
-            "options": ["Constitución local y ley orgánica judicial", "Únicamente la Constitución federal", "Sólo el Código Penal Federal"],
+            "options": [
+              "Su constitución y ley orgánica judicial",
+              "Únicamente la Constitución federal",
+              "Un organigrama de cualquier otra entidad"
+            ],
             "correctOption": 0,
-            "explanation": "La Constitución federal fija bases, mientras las normas locales concretan órganos, distritos y atribuciones.",
-            "optionExplanations": ["Contiene la organización específica de la entidad.", "Fija bases, pero no agota el diseño local.", "No organiza todos los órganos judiciales estatales."]
+            "explanation": "El artículo 116 fija bases y remite a los tribunales establecidos por las constituciones estatales.",
+            "optionExplanations": [
+              "Concretan la estructura estatal.",
+              "La norma federal no agota el diseño local.",
+              "Otra entidad no determina su organización."
+            ],
+            "evidenceIds": [
+              "ev-c04-cpeum-art116",
+              "ev-c04-a18-l011-013-federalismo-local",
+              "ev-c04-a18-l063-063-ley-organica"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c04-cpeum-art116",
+                "ev-c04-a18-l011-013-federalismo-local",
+                "ev-c04-a18-l063-063-ley-organica"
+              ],
+              [
+                "ev-c04-cpeum-art116",
+                "ev-c04-a18-l011-013-federalismo-local",
+                "ev-c04-a18-l063-063-ley-organica"
+              ],
+              [
+                "ev-c04-cpeum-art116",
+                "ev-c04-a18-l011-013-federalismo-local",
+                "ev-c04-a18-l063-063-ley-organica"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c04-cpeum-art116",
+              "ev-c04-a18-l011-013-federalismo-local",
+              "ev-c04-a18-l063-063-ley-organica"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c04-cpeum-art116",
+              "ev-c04-a18-l011-013-federalismo-local",
+              "ev-c04-a18-l063-063-ley-organica"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c04-cpeum-art116",
+                "ev-c04-a18-l011-013-federalismo-local",
+                "ev-c04-a18-l063-063-ley-organica"
+              ],
+              [
+                "ev-c04-cpeum-art116",
+                "ev-c04-a18-l011-013-federalismo-local",
+                "ev-c04-a18-l063-063-ley-organica"
+              ],
+              [
+                "ev-c04-cpeum-art116",
+                "ev-c04-a18-l011-013-federalismo-local",
+                "ev-c04-a18-l063-063-ley-organica"
+              ]
+            ]
           },
           {
-            "text": "Una sala revisa una sentencia mediante apelación autorizada por la ley. ¿En qué grado actúa?",
+            "text": "Una autoridad de segunda instancia revisa una resolución apelada. ¿Qué función realiza?",
             "difficulty": "basic",
-            "options": ["Segunda instancia", "Primera instancia", "Jurisdicción voluntaria"],
+            "options": [
+              "Revisión en alzada",
+              "Conocimiento original",
+              "Emisión de la ley orgánica"
+            ],
             "correctOption": 0,
-            "explanation": "La revisión de una resolución de origen mediante apelación corresponde a la segunda instancia.",
-            "optionExplanations": ["Es el grado de revisión o alzada.", "La primera instancia conoció originalmente.", "La jurisdicción voluntaria no describe el grado de revisión."]
+            "explanation": "La segunda instancia conoce la revisión conforme a las reglas de apelación.",
+            "optionExplanations": [
+              "Corresponde a la revisión impugnativa.",
+              "El conocimiento original pertenece a la autoridad de origen.",
+              "La autoridad jurisdiccional no legisla la organización judicial."
+            ],
+            "evidenceIds": [
+              "ev-c04-cnpcf-art77-competencia",
+              "ev-c04-cnpcf-arts908-920-apelacion",
+              "ev-c04-a18-l107-107-instancias"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c04-cnpcf-art77-competencia",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-a18-l107-107-instancias"
+              ],
+              [
+                "ev-c04-cnpcf-art77-competencia",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-a18-l107-107-instancias"
+              ],
+              [
+                "ev-c04-cnpcf-art77-competencia",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-a18-l107-107-instancias"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c04-cnpcf-art77-competencia",
+              "ev-c04-cnpcf-arts908-920-apelacion",
+              "ev-c04-a18-l107-107-instancias"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c04-cnpcf-art77-competencia",
+              "ev-c04-cnpcf-arts908-920-apelacion",
+              "ev-c04-a18-l107-107-instancias"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c04-cnpcf-art77-competencia",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-a18-l107-107-instancias"
+              ],
+              [
+                "ev-c04-cnpcf-art77-competencia",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-a18-l107-107-instancias"
+              ],
+              [
+                "ev-c04-cnpcf-art77-competencia",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-a18-l107-107-instancias"
+              ]
+            ]
           },
           {
-            "text": "Un caso afirma que todos los juzgados menores del país son inapelables. ¿Cómo debe evaluarse esa afirmación?",
+            "text": "Un caso afirma que una resolución es inapelable sólo por provenir de un órgano denominado menor. ¿Cómo se evalúa?",
             "difficulty": "intermediate",
-            "options": ["Es incorrecta porque debe revisarse la legislación aplicable", "Es una regla constitucional absoluta", "Es correcta siempre que el litigio sea civil"],
+            "options": [
+              "Debe verificarse la regla de procedencia aplicable",
+              "Es una prohibición constitucional nacional",
+              "El nombre del órgano basta para decidir"
+            ],
             "correctOption": 0,
-            "explanation": "La existencia, competencia y recursos de esos órganos dependen de las normas de cada entidad y procedimiento.",
-            "optionExplanations": ["Evita convertir una regla local en nacional.", "La Constitución no establece esa prohibición universal.", "La materia civil no vuelve universal la inapelabilidad."]
+            "explanation": "La procedencia depende de la norma vigente y de la resolución, no de una etiqueta aislada.",
+            "optionExplanations": [
+              "Exige localizar la regla específica.",
+              "La Constitución no contiene esa prohibición general.",
+              "La denominación no sustituye la ley."
+            ],
+            "evidenceIds": [
+              "ev-c04-cpeum-art116",
+              "ev-c04-cnpcf-arts908-920-apelacion",
+              "ev-c04-a18-l011-013-federalismo-local",
+              "ev-c04-a18-l181-181-apelacion-depende"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c04-cpeum-art116",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-a18-l011-013-federalismo-local",
+                "ev-c04-a18-l181-181-apelacion-depende"
+              ],
+              [
+                "ev-c04-cpeum-art116",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-a18-l011-013-federalismo-local",
+                "ev-c04-a18-l181-181-apelacion-depende"
+              ],
+              [
+                "ev-c04-cpeum-art116",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-a18-l011-013-federalismo-local",
+                "ev-c04-a18-l181-181-apelacion-depende"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c04-cpeum-art116",
+              "ev-c04-cnpcf-arts908-920-apelacion",
+              "ev-c04-a18-l011-013-federalismo-local",
+              "ev-c04-a18-l181-181-apelacion-depende"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c04-cpeum-art116",
+              "ev-c04-cnpcf-arts908-920-apelacion",
+              "ev-c04-a18-l011-013-federalismo-local",
+              "ev-c04-a18-l181-181-apelacion-depende"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c04-cpeum-art116",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-a18-l011-013-federalismo-local",
+                "ev-c04-a18-l181-181-apelacion-depende"
+              ],
+              [
+                "ev-c04-cpeum-art116",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-a18-l011-013-federalismo-local",
+                "ev-c04-a18-l181-181-apelacion-depende"
+              ],
+              [
+                "ev-c04-cpeum-art116",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-a18-l011-013-federalismo-local",
+                "ev-c04-a18-l181-181-apelacion-depende"
+              ]
+            ]
           },
           {
-            "text": "¿Qué dato debe comprobarse para utilizar la cuantía como factor de competencia conforme al CNPCF?",
+            "text": "¿Qué debe existir para que la cuantía distribuya competencia conforme al artículo 77 del CNPCF?",
             "difficulty": "intermediate",
-            "options": ["Que la ley orgánica defina órganos mediante cuantía", "Que exista cualquier cantidad en la demanda", "Que el actor prefiera un juzgado menor"],
+            "options": [
+              "Órganos definidos por cuantía en la ley orgánica",
+              "Cualquier cantidad mencionada en la demanda",
+              "La preferencia unilateral de la parte actora"
+            ],
             "correctOption": 0,
-            "explanation": "El artículo 77 condiciona ese criterio a la organización judicial establecida en la ley orgánica respectiva.",
-            "optionExplanations": ["Es el requisito normativo expreso.", "Una suma reclamada no basta por sí sola.", "La voluntad unilateral no crea competencia."]
+            "explanation": "El artículo 77 condiciona la cuantía al diseño de la ley orgánica respectiva.",
+            "optionExplanations": [
+              "Es la condición normativa expresa.",
+              "Una cantidad no activa por sí sola el criterio.",
+              "La voluntad de una parte no crea competencia."
+            ],
+            "evidenceIds": [
+              "ev-c04-cnpcf-art77-competencia",
+              "ev-c04-a18-l049-049-cuantia-local"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c04-cnpcf-art77-competencia",
+                "ev-c04-a18-l049-049-cuantia-local"
+              ],
+              [
+                "ev-c04-cnpcf-art77-competencia",
+                "ev-c04-a18-l049-049-cuantia-local"
+              ],
+              [
+                "ev-c04-cnpcf-art77-competencia",
+                "ev-c04-a18-l049-049-cuantia-local"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c04-cnpcf-art77-competencia",
+              "ev-c04-a18-l049-049-cuantia-local"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c04-cnpcf-art77-competencia",
+              "ev-c04-a18-l049-049-cuantia-local"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c04-cnpcf-art77-competencia",
+                "ev-c04-a18-l049-049-cuantia-local"
+              ],
+              [
+                "ev-c04-cnpcf-art77-competencia",
+                "ev-c04-a18-l049-049-cuantia-local"
+              ],
+              [
+                "ev-c04-cnpcf-art77-competencia",
+                "ev-c04-a18-l049-049-cuantia-local"
+              ]
+            ]
           },
           {
-            "text": "Dos juzgados locales sostienen que ambos deben conocer del mismo litigio. ¿Qué tipo de conflicto existe?",
+            "text": "Una parte sostiene que la autoridad demandada carece de competencia. ¿Qué mecanismo puede promover ante ella?",
             "difficulty": "basic",
-            "options": ["Positivo de competencia", "Negativo de competencia", "Conflicto de cosa juzgada"],
+            "options": [
+              "Declinatoria",
+              "Apelación automática",
+              "Amparo directo inmediato"
+            ],
             "correctOption": 0,
-            "explanation": "El conflicto es positivo porque ambos órganos afirman tener competencia.",
-            "optionExplanations": ["Ambos aceptan conocer del asunto.", "Sería negativo si ambos lo rechazaran.", "No se discute la repetición de un litigio ya resuelto."]
+            "explanation": "La declinatoria se plantea ante la autoridad considerada incompetente para que deje de conocer.",
+            "optionExplanations": [
+              "Es una vía para plantear la competencia.",
+              "La apelación tiene objeto y procedencia distintos.",
+              "La contienda no conduce automáticamente al amparo directo."
+            ],
+            "evidenceIds": [
+              "ev-c04-cnpcf-arts94-101-contiendas"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c04-cnpcf-arts94-101-contiendas"
+              ],
+              [
+                "ev-c04-cnpcf-arts94-101-contiendas"
+              ],
+              [
+                "ev-c04-cnpcf-arts94-101-contiendas"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c04-cnpcf-arts94-101-contiendas"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c04-cnpcf-arts94-101-contiendas"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c04-cnpcf-arts94-101-contiendas"
+              ],
+              [
+                "ev-c04-cnpcf-arts94-101-contiendas"
+              ],
+              [
+                "ev-c04-cnpcf-arts94-101-contiendas"
+              ]
+            ]
           },
           {
-            "text": "Dos órganos rechazan un asunto y cada uno sostiene que corresponde al otro. ¿Qué debe hacerse?",
+            "text": "Dos autoridades locales de la misma jurisdicción se niegan a conocer del asunto. ¿Qué corresponde?",
             "difficulty": "intermediate",
-            "options": ["Aplicar el procedimiento legal para resolver el conflicto negativo", "Permitir que el actor elija sin límites", "Archivar definitivamente el derecho reclamado"],
+            "options": [
+              "Seguir el procedimiento del artículo 100 ante la segunda instancia en turno",
+              "Permitir que una parte elija sin reglas",
+              "Dar por terminado el asunto sin seguir el procedimiento"
+            ],
             "correctOption": 0,
-            "explanation": "La legislación establece qué órgano dirime el conflicto negativo y determina quién debe conocer.",
-            "optionExplanations": ["Canaliza la discrepancia mediante la autoridad competente.", "La elección de parte no sustituye todas las reglas.", "El conflicto no extingue automáticamente el derecho sustantivo."]
+            "explanation": "El artículo 100 regula la negativa concurrente y la intervención de la segunda instancia en turno.",
+            "optionExplanations": [
+              "Aplica la regla específica de competencia.",
+              "La elección libre no sustituye el procedimiento.",
+              "El artículo 100 establece un procedimiento distinto."
+            ],
+            "evidenceIds": [
+              "ev-c04-cnpcf-arts94-101-contiendas"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c04-cnpcf-arts94-101-contiendas"
+              ],
+              [
+                "ev-c04-cnpcf-arts94-101-contiendas"
+              ],
+              [
+                "ev-c04-cnpcf-arts94-101-contiendas"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c04-cnpcf-arts94-101-contiendas"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c04-cnpcf-arts94-101-contiendas"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c04-cnpcf-arts94-101-contiendas"
+              ],
+              [
+                "ev-c04-cnpcf-arts94-101-contiendas"
+              ],
+              [
+                "ev-c04-cnpcf-arts94-101-contiendas"
+              ]
+            ]
           },
           {
-            "text": "Una persona desea apelar cualquier resolución porque considera injusta la decisión. ¿Cuál es la respuesta correcta?",
+            "text": "Una parte desea apelar una resolución sólo porque discrepa de ella. ¿Qué debe comprobar primero?",
             "difficulty": "intermediate",
-            "options": ["Debe verificar si la ley declara apelable esa resolución", "Toda resolución es apelable por acceso a la justicia", "La apelación depende sólo del desacuerdo personal"],
+            "options": [
+              "Que la apelación proceda contra esa resolución",
+              "Que cualquier desacuerdo crea un recurso",
+              "Que la Constitución elimina los requisitos procesales"
+            ],
             "correctOption": 0,
-            "explanation": "Los recursos son medios legalmente configurados y su procedencia depende del supuesto previsto.",
-            "optionExplanations": ["Parte de la regulación específica del recurso.", "El acceso a la justicia no elimina los requisitos legales razonables.", "El agravio no crea por sí mismo un recurso inexistente."]
+            "explanation": "La apelación está configurada por la ley y no nace del desacuerdo por sí solo.",
+            "optionExplanations": [
+              "Parte de la regla expresa de procedencia.",
+              "El desacuerdo no crea medios de defensa.",
+              "El acceso a la justicia admite reglas procesales legales."
+            ],
+            "evidenceIds": [
+              "ev-c04-cpeum-art17",
+              "ev-c04-cnpcf-arts908-920-apelacion",
+              "ev-c04-a18-l181-181-apelacion-depende"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c04-cpeum-art17",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-a18-l181-181-apelacion-depende"
+              ],
+              [
+                "ev-c04-cpeum-art17",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-a18-l181-181-apelacion-depende"
+              ],
+              [
+                "ev-c04-cpeum-art17",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-a18-l181-181-apelacion-depende"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c04-cpeum-art17",
+              "ev-c04-cnpcf-arts908-920-apelacion",
+              "ev-c04-a18-l181-181-apelacion-depende"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c04-cpeum-art17",
+              "ev-c04-cnpcf-arts908-920-apelacion",
+              "ev-c04-a18-l181-181-apelacion-depende"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c04-cpeum-art17",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-a18-l181-181-apelacion-depende"
+              ],
+              [
+                "ev-c04-cpeum-art17",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-a18-l181-181-apelacion-depende"
+              ],
+              [
+                "ev-c04-cpeum-art17",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-a18-l181-181-apelacion-depende"
+              ]
+            ]
           },
           {
-            "text": "¿Qué efecto produce la entrada gradual del CNPCF al analizar un asunto local en 2026?",
+            "text": "¿Qué exige la entrada gradual del CNPCF al estudiar un caso local en 2026?",
             "difficulty": "advanced",
-            "options": ["Obliga a verificar declaratoria y régimen transitorio", "Hace inaplicable toda legislación procesal local desde 2023", "Permite elegir libremente entre cualquier código"],
+            "options": [
+              "Verificar declaratoria y régimen transitorio",
+              "Descartar toda legislación previa desde 2023",
+              "Elegir libremente cualquier código"
+            ],
             "correctOption": 0,
-            "explanation": "La transición exige comprobar cuándo entró en vigor el Código Nacional para la entidad y el procedimiento.",
-            "optionExplanations": ["Determina correctamente la norma temporalmente aplicable.", "La expedición no produjo sustitución inmediata en todo el país.", "La vigencia no depende de una elección libre de las partes."]
+            "explanation": "La vigencia se determina mediante las declaratorias y disposiciones transitorias aplicables.",
+            "optionExplanations": [
+              "Permite identificar el régimen vigente.",
+              "La expedición no produjo sustitución inmediata nacional.",
+              "La vigencia no depende de elección privada."
+            ],
+            "evidenceIds": [
+              "ev-c04-cnpcf-transitorios"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c04-cnpcf-transitorios"
+              ],
+              [
+                "ev-c04-cnpcf-transitorios"
+              ],
+              [
+                "ev-c04-cnpcf-transitorios"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c04-cnpcf-transitorios"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c04-cnpcf-transitorios"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c04-cnpcf-transitorios"
+              ],
+              [
+                "ev-c04-cnpcf-transitorios"
+              ],
+              [
+                "ev-c04-cnpcf-transitorios"
+              ]
+            ]
           },
           {
-            "text": "Una sentencia definitiva local pone fin al juicio y no existe recurso ordinario procedente. ¿Qué análisis sigue?",
+            "text": "Una sentencia definitiva pone fin al juicio y ya se agotaron los recursos ordinarios aplicables. ¿Qué análisis sigue?",
             "difficulty": "advanced",
-            "options": ["Revisar si cumple los requisitos del amparo directo", "Interponer apelación aunque la ley no la permita", "Presentar automáticamente amparo indirecto"],
+            "options": [
+              "Verificar los requisitos del amparo directo",
+              "Inventar una apelación no prevista",
+              "Promover automáticamente cualquier amparo"
+            ],
             "correctOption": 0,
-            "explanation": "La Ley de Amparo permite analizar el amparo directo contra ciertas resoluciones finales, sujeto a sus requisitos.",
-            "optionExplanations": ["Identifica la vía constitucional potencial sin darla por concedida.", "No puede inventarse un recurso ordinario.", "La resolución final no conduce automáticamente al amparo indirecto."]
+            "explanation": "El artículo 170 permite analizar el amparo directo bajo sus supuestos y requisitos.",
+            "optionExplanations": [
+              "Identifica la vía potencial sin darla por concedida.",
+              "No puede crearse un recurso inexistente.",
+              "La procedencia constitucional nunca es automática."
+            ],
+            "evidenceIds": [
+              "ev-c04-amparo-art170"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c04-amparo-art170"
+              ],
+              [
+                "ev-c04-amparo-art170"
+              ],
+              [
+                "ev-c04-amparo-art170"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c04-amparo-art170"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c04-amparo-art170"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c04-amparo-art170"
+              ],
+              [
+                "ev-c04-amparo-art170"
+              ],
+              [
+                "ev-c04-amparo-art170"
+              ]
+            ]
           },
           {
-            "text": "¿Cuál es el método más seguro para elegir órgano y recurso en un caso local?",
+            "text": "¿Cuál es la secuencia más segura para elegir órgano y recurso en un caso local?",
             "difficulty": "advanced",
-            "options": ["Identificar entidad, materia, grado, resolución y normas vigentes", "Usar siempre el organigrama de Michoacán", "Elegir la respuesta con el nombre de tribunal más conocido"],
+            "options": [
+              "Entidad, vigencia, materia, grado, territorio, ley orgánica y regla del recurso",
+              "El organigrama que resulte más familiar",
+              "El nombre de tribunal más conocido"
+            ],
             "correctOption": 0,
-            "explanation": "El método conecta los hechos con la distribución constitucional, orgánica y procesal aplicable.",
-            "optionExplanations": ["Incluye los datos jurídicamente determinantes.", "Una entidad no representa automáticamente a las demás.", "La familiaridad del nombre no demuestra competencia."]
+            "explanation": "La secuencia conecta los hechos con las normas orgánicas, competenciales y procesales vigentes.",
+            "optionExplanations": [
+              "Reúne los datos jurídicamente determinantes.",
+              "La familiaridad no acredita competencia.",
+              "El nombre no sustituye la norma aplicable."
+            ],
+            "evidenceIds": [
+              "ev-c04-cpeum-art116",
+              "ev-c04-cnpcf-art77-competencia",
+              "ev-c04-cnpcf-arts908-920-apelacion",
+              "ev-c04-cnpcf-transitorios",
+              "ev-c04-a18-l063-063-ley-organica",
+              "ev-c04-a18-l181-181-apelacion-depende"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c04-cpeum-art116",
+                "ev-c04-cnpcf-art77-competencia",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-cnpcf-transitorios",
+                "ev-c04-a18-l063-063-ley-organica",
+                "ev-c04-a18-l181-181-apelacion-depende"
+              ],
+              [
+                "ev-c04-cpeum-art116",
+                "ev-c04-cnpcf-art77-competencia",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-cnpcf-transitorios",
+                "ev-c04-a18-l063-063-ley-organica",
+                "ev-c04-a18-l181-181-apelacion-depende"
+              ],
+              [
+                "ev-c04-cpeum-art116",
+                "ev-c04-cnpcf-art77-competencia",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-cnpcf-transitorios",
+                "ev-c04-a18-l063-063-ley-organica",
+                "ev-c04-a18-l181-181-apelacion-depende"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c04-cpeum-art116",
+              "ev-c04-cnpcf-art77-competencia",
+              "ev-c04-cnpcf-arts908-920-apelacion",
+              "ev-c04-cnpcf-transitorios",
+              "ev-c04-a18-l063-063-ley-organica",
+              "ev-c04-a18-l181-181-apelacion-depende"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c04-cpeum-art116",
+              "ev-c04-cnpcf-art77-competencia",
+              "ev-c04-cnpcf-arts908-920-apelacion",
+              "ev-c04-cnpcf-transitorios",
+              "ev-c04-a18-l063-063-ley-organica",
+              "ev-c04-a18-l181-181-apelacion-depende"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c04-cpeum-art116",
+                "ev-c04-cnpcf-art77-competencia",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-cnpcf-transitorios",
+                "ev-c04-a18-l063-063-ley-organica",
+                "ev-c04-a18-l181-181-apelacion-depende"
+              ],
+              [
+                "ev-c04-cpeum-art116",
+                "ev-c04-cnpcf-art77-competencia",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-cnpcf-transitorios",
+                "ev-c04-a18-l063-063-ley-organica",
+                "ev-c04-a18-l181-181-apelacion-depende"
+              ],
+              [
+                "ev-c04-cpeum-art116",
+                "ev-c04-cnpcf-art77-competencia",
+                "ev-c04-cnpcf-arts908-920-apelacion",
+                "ev-c04-cnpcf-transitorios",
+                "ev-c04-a18-l063-063-ley-organica",
+                "ev-c04-a18-l181-181-apelacion-depende"
+              ]
+            ]
           }
         ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c04-cpeum-art17",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículo 17, páginas impresas 21-22",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c04-cpeum-art116",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículo 116, fracción III, páginas impresas 136-138",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c04-cnpcf-art77-competencia",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículo 77, páginas impresas 17-18",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c04-cnpcf-arts94-101-contiendas",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículos 94-101, páginas impresas 21-23",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c04-cnpcf-arts908-920-apelacion",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículos 908-920, páginas impresas 206-210",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c04-cnpcf-transitorios",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; transitorios Segundo a Cuarto, páginas impresas 268-269",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c04-amparo-art170",
+      "kind": "official",
+      "title": "Ley de Amparo, Reglamentaria de los artículos 103 y 107 de la Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 16-10-2025; artículo 170, páginas impresas 55-56",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c04-a18-l011-013-federalismo-local",
+      "kind": "transcript",
+      "audioNumber": 18,
+      "locator": {
+        "type": "line_range",
+        "startLine": 11,
+        "endLine": 13
+      }
+    },
+    {
+      "id": "ev-c04-a18-l049-049-cuantia-local",
+      "kind": "transcript",
+      "audioNumber": 18,
+      "locator": {
+        "type": "line_range",
+        "startLine": 49,
+        "endLine": 49
+      }
+    },
+    {
+      "id": "ev-c04-a18-l063-063-ley-organica",
+      "kind": "transcript",
+      "audioNumber": 18,
+      "locator": {
+        "type": "line_range",
+        "startLine": 63,
+        "endLine": 63
+      }
+    },
+    {
+      "id": "ev-c04-a18-l107-107-instancias",
+      "kind": "transcript",
+      "audioNumber": 18,
+      "locator": {
+        "type": "line_range",
+        "startLine": 107,
+        "endLine": 107
+      }
+    },
+    {
+      "id": "ev-c04-a18-l181-181-apelacion-depende",
+      "kind": "transcript",
+      "audioNumber": 18,
+      "locator": {
+        "type": "line_range",
+        "startLine": 181,
+        "endLine": 181
       }
     }
   ]

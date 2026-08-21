@@ -16,17 +16,42 @@ const traceablePackages = [
     code: "C01",
     fileName: "audio-01-02-orientacion-egel-derecho.json",
     artifacts: 139,
+    evidence: 12,
     forbiddenClaims: [],
   },
   {
     code: "C02",
     fileName: "audio-04-05-derecho-sustantivo-adjetivo.json",
     artifacts: 130,
+    evidence: 17,
     forbiddenClaims: [
       /código federal de procedimientos civiles/i,
       /\bCFPC\b/i,
       /(?:método|proceso|procedimiento)(?:\s+\w+){0,3}\s+(?:de\s+)?siete pasos/i,
       /\b(?:sucesi(?:ón|ones)|sucesorio|testamentario|intestado|herederos?)\b/i,
+    ],
+  },
+  {
+    code: "C03",
+    fileName: "audio-05-14-15-jurisdiccion-competencia.json",
+    artifacts: 133,
+    evidence: 12,
+    forbiddenClaims: [
+      /no pueden interpretar la constitución/i,
+      /ejecutoria\s+34098/i,
+      /\b(?:todos?|cualquier)\s+(?:los\s+)?incidentes?\s+suspenden?/i,
+    ],
+  },
+  {
+    code: "C04",
+    fileName: "audio-18-poder-judicial-local.json",
+    artifacts: 133,
+    evidence: 12,
+    forbiddenClaims: [
+      /michoacán/i,
+      /ley orgánica del poder judicial del estado de michoacán/i,
+      /\b100\s+UMA\b/i,
+      /\b(?:toda|cualquier)\s+sentencia\s+(?:es|será)\s+apelable\b/i,
     ],
   },
 ] as const;
@@ -99,6 +124,7 @@ for (const expected of traceablePackages) {
     });
 
     assert.equal(countClassPackage(bundle).artifacts, expected.artifacts);
+    assert.equal(bundle.evidenceRegistry.length, expected.evidence);
     assert.deepEqual(
       [...collectUsedEvidenceIds(bundle)].sort(),
       bundle.evidenceRegistry.map(({ id }) => id).sort(),

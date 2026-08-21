@@ -1,12 +1,21 @@
 {
-  "packageVersion": "1.1",
+  "packageVersion": "1.2",
   "curriculum": {
     "code": "C03",
     "order": 3,
     "audioSources": [
-      {"audioNumber": 5,"fragment": "Cierre: transición a jurisdicción y competencia"},
-      {"audioNumber": 14,"fragment": "Audio completo"},
-      {"audioNumber": 15,"fragment": "Audio completo"}
+      {
+        "audioNumber": 5,
+        "fragment": "Cierre: transición a jurisdicción y competencia"
+      },
+      {
+        "audioNumber": 14,
+        "fragment": "Audio completo"
+      },
+      {
+        "audioNumber": 15,
+        "fragment": "Audio completo"
+      }
     ]
   },
   "subject": {
@@ -23,116 +32,406 @@
       "AUDIO 14.txt",
       "AUDIO 15.txt"
     ],
-    "cleaned": "El cierre del Audio 05 introduce la jurisdicción como función estatal y la relaciona con la división de poderes. Los Audios 14 y 15 desarrollan jurisdicción ordinaria, constitucional y convencional; competencia por materia, grado, territorio y cuantía; órganos federales; clases de resoluciones e incidentes. Se conservaron los conceptos y ejemplos útiles, pero se eliminaron promociones, bromas, comentarios políticos, descalificaciones y anécdotas ajenas al aprendizaje. Se corrigió la afirmación de que las personas juzgadoras ordinarias no pueden interpretar la Constitución: dentro de su competencia y de las reglas procesales pueden ejercer control difuso, aunque no declaran la invalidez general de una norma. También se evitó presentar como universales las denominaciones de resoluciones o los efectos de todo incidente, porque dependen de la legislación aplicable. La estructura federal se actualizó con la Constitución y la Ley Orgánica del Poder Judicial de la Federación vigentes en agosto de 2026."
+    "cleaned": "El cierre del Audio 05 introduce la jurisdicción como función estatal para resolver conflictos. Los Audios 14 y 15 abordan competencia por grado y una explicación didáctica de resoluciones e incidentes. Se retiraron generalizaciones territoriales, organizacionales y afirmaciones incompatibles con el control difuso vigente. Los artefactos distinguen expresamente las reglas civiles y familiares del CNPCF de las reglas que deben verificarse en cada materia."
   },
   "topics": [
     {
       "title": "Del poder de juzgar al órgano competente",
-      "description": "Jurisdicción como función estatal, competencia como límite legal y método para elegir autoridad, vía, instancia, territorio y materia.",
+      "description": "Jurisdicción como función estatal, competencia como atribución legal y reglas civiles y familiares para analizar materia, grado, territorio y cuantía.",
       "learningJourney": {
         "openingPrompt": "Si dos jueces ejercen jurisdicción, ¿significa que ambos pueden resolver cualquier controversia o la ley reserva cada asunto a un órgano determinado?",
         "quickChecks": [
           {
             "prompt": "¿Cuál es la relación entre jurisdicción y competencia?",
             "answer": "La jurisdicción es la función estatal de resolver controversias; la competencia delimita qué asuntos puede conocer cada órgano.",
-            "feedback": "Puede pensarse en la jurisdicción como el género y en la competencia como la porción atribuida por la ley."
+            "feedback": "Puede pensarse en la jurisdicción como el género y en la competencia como la porción atribuida por la ley.",
+            "evidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia"
+            ]
           },
           {
             "prompt": "¿Qué factores básicos determinan la competencia objetiva?",
-            "answer": "Materia, grado y territorio; la cuantía opera cuando la ley orgánica correspondiente la utiliza.",
-            "feedback": "El artículo 77 del CNPCF formula expresamente esta regla y condiciona la cuantía a la organización judicial aplicable."
+            "answer": "En procesos civiles y familiares regidos por el CNPCF: materia, grado y territorio; la cuantía sólo cuando la ley orgánica correspondiente la utiliza.",
+            "feedback": "El artículo 77 del CNPCF contiene esa regla para su ámbito civil y familiar; otras materias exigen consultar su legislación propia.",
+            "evidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cnpcf-competencia",
+              "ev-c03-a14-l199-201-grado"
+            ]
           },
           {
             "prompt": "¿Una persona juzgadora ordinaria puede ejercer control difuso?",
             "answer": "Sí, dentro de su competencia y de las reglas procesales, con efectos en el caso concreto.",
-            "feedback": "Esto no equivale a un proceso de control concentrado ni autoriza a declarar invalidez general."
+            "feedback": "Esto no equivale a un proceso de control concentrado ni autoriza a declarar invalidez general.",
+            "evidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cpeum-control",
+              "ev-c03-scjn-control-difuso",
+              "ev-c03-cnpcf-resoluciones",
+              "ev-c03-a15-l191-195-resoluciones",
+              "ev-c03-a15-l239-265-autos"
+            ]
           }
         ],
         "practicalCase": {
           "facts": "Una empresa presenta una demanda civil ante un juzgado situado en otra entidad. El contrato señala un lugar de cumplimiento distinto, el demandado vive en una tercera ciudad y la cuantía sólo es relevante si la ley orgánica distribuye juzgados con ese criterio.",
           "question": "¿Puede decidirse la competencia únicamente porque el juzgado elegido ejerce jurisdicción civil?",
-          "legalRule": "Toda demanda debe presentarse ante autoridad competente. Deben revisarse materia, grado, territorio y, cuando corresponda conforme a la ley orgánica, cuantía, además de reglas especiales y pactos legalmente válidos.",
+          "legalRule": "Para el supuesto civil y familiar del CNPCF, toda demanda debe presentarse ante autoridad competente y se revisan materia, grado y territorio; la cuantía sólo opera cuando la ley orgánica respectiva la contempla.",
           "reasoning": "Que un órgano ejerza jurisdicción civil no basta para atribuirle el caso. Es necesario identificar la pretensión, la instancia, los puntos de conexión territorial y la regla orgánica sobre cuantía. Sólo después puede justificarse el órgano competente.",
-          "conclusion": "La jurisdicción habilita la función de juzgar; la competencia selecciona legalmente al órgano que puede conocer del litigio concreto."
+          "conclusion": "La jurisdicción habilita la función de juzgar; la competencia selecciona legalmente al órgano que puede conocer del litigio concreto.",
+          "evidenceIds": [
+            "ev-c03-cpeum-competencia",
+            "ev-c03-a05-l283-295-jurisdiccion",
+            "ev-c03-a14-l177-181-competencia",
+            "ev-c03-cnpcf-competencia",
+            "ev-c03-a14-l199-201-grado",
+            "ev-c03-cnpcf-resoluciones",
+            "ev-c03-a15-l191-195-resoluciones",
+            "ev-c03-a15-l239-265-autos"
+          ]
         },
-        "closingPrompt": "Explica por qué la competencia protege seguridad jurídica y cómo revisarías materia, grado, territorio y cuantía antes de presentar una demanda.",
-        "nextActivity": "Estudia el mapa visual, responde la guía y resuelve los diez casos de competencia, control judicial y resoluciones."
+        "closingPrompt": "Explica por qué jurisdicción y competencia no son sinónimos y cómo aplicarías el artículo 77 del CNPCF únicamente a un asunto civil o familiar dentro de su vigencia.",
+        "nextActivity": "Estudia el mapa visual, responde la guía y resuelve los diez casos de competencia, control judicial y resoluciones.",
+        "openingPromptEvidenceIds": [
+          "ev-c03-cpeum-competencia",
+          "ev-c03-a05-l283-295-jurisdiccion",
+          "ev-c03-a14-l177-181-competencia"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c03-cpeum-competencia",
+          "ev-c03-a05-l283-295-jurisdiccion",
+          "ev-c03-a14-l177-181-competencia",
+          "ev-c03-cnpcf-competencia"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c03-cpeum-competencia",
+          "ev-c03-a05-l283-295-jurisdiccion",
+          "ev-c03-a14-l177-181-competencia",
+          "ev-c03-cnpcf-resoluciones",
+          "ev-c03-a15-l191-195-resoluciones",
+          "ev-c03-a15-l239-265-autos"
+        ]
       },
       "materials": [
         {
           "type": "short_answer",
           "title": "Respuesta corta: jurisdicción y competencia",
-          "content": "La jurisdicción es la función pública de conocer, resolver y, en su caso, ejecutar controversias mediante la aplicación del derecho. La competencia es el límite jurídico que distribuye esa función entre órganos concretos. No basta que una autoridad sea juzgadora: debe tener atribución por materia, grado, territorio y, cuando la ley lo prevea, cuantía.",
-          "sourceOrigin": "mixed"
+          "content": "La jurisdicción es una función estatal para resolver conflictos jurídicos. La competencia identifica la atribución legal de un órgano para conocer un asunto. En el ámbito civil y familiar del CNPCF, el artículo 77 usa materia, grado y territorio; la cuantía sólo cuando la ley orgánica respectiva define órganos con ese criterio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cpeum-competencia",
+            "ev-c03-a05-l283-295-jurisdiccion",
+            "ev-c03-a14-l177-181-competencia",
+            "ev-c03-cnpcf-competencia",
+            "ev-c03-a14-l199-201-grado"
+          ]
         },
         {
           "type": "full_explanation",
           "title": "Explicación completa desde cero",
-          "content": "La jurisdicción pertenece al Estado y se materializa mediante órganos que conocen controversias, conducen procedimientos, dictan decisiones y hacen posible su cumplimiento. La competencia no es sinónimo: es la suma de facultades que la ley confiere a cada órgano para conocer una clase determinada de asuntos. Por eso la competencia limita la jurisdicción y constituye una garantía de legalidad y seguridad jurídica vinculada con el artículo 16 constitucional.\n\nPara ubicar al órgano correcto se analiza primero la materia: civil, familiar, penal, laboral, administrativa, mercantil, electoral, agraria o constitucional, entre otras. Luego se identifica el grado o instancia. Después se aplican los puntos de conexión territorial. La cuantía sólo distribuye asuntos cuando la ley orgánica correspondiente establece órganos definidos mediante ese criterio. También pueden existir reglas de especialización, prevención, turno, acumulación o conexidad según la legislación.\n\nLa jurisdicción ordinaria resuelve la controversia principal mediante legislación sustantiva y procesal aplicable. La justicia constitucional concentrada conoce procesos cuyo objeto incluye el control constitucional, como el amparo dentro de las competencias que asignan la Constitución y la ley. Sin embargo, la distinción no significa que los jueces ordinarios ignoren la Constitución. Todas las autoridades deben respetar derechos humanos y las personas juzgadoras pueden ejercer control difuso dentro de su competencia y reglas procesales, privilegiando interpretación conforme y, cuando proceda, inaplicando una norma en el caso concreto. No pueden expulsarla del sistema con efectos generales por esa vía.\n\nEl control de convencionalidad exige contrastar la norma aplicable con los derechos reconocidos en tratados internacionales de los que México es parte. Debe realizarse dentro del marco competencial y procesal del órgano. El principio pro persona orienta a favorecer la protección más amplia, pero no crea competencia inexistente ni permite ignorar indiscriminadamente requisitos procesales.\n\nLas resoluciones judiciales reciben distintas denominaciones según materia y código. De manera didáctica pueden distinguirse acuerdos o autos que impulsan o deciden cuestiones del trámite, sentencias interlocutorias que resuelven determinadas cuestiones incidentales y sentencias definitivas que deciden la controversia principal. La clasificación exacta, el recurso y los efectos deben comprobarse en la ley aplicable.\n\nUn incidente es una cuestión accesoria relacionada con el proceso principal que requiere decisión propia. Algunos pueden suspender el avance por disposición expresa; otros se tramitan sin detenerlo. No todo imprevisto es automáticamente incidente y no todos tienen idéntico trámite. Para resolver un reactivo deben identificarse la materia, la norma, la cuestión planteada, la resolución procedente y el medio de impugnación previsto.",
-          "sourceOrigin": "mixed"
+          "content": "La jurisdicción es una función estatal ejercida por órganos facultados para resolver conflictos jurídicos. La competencia determina qué órgano puede conocer un asunto concreto. El artículo 16 constitucional exige autoridad competente; el artículo 17 reconoce justicia en los plazos y términos legales.\n\nEl artículo 77 del CNPCF regula la competencia objetiva en procesos civiles y familiares: materia, grado y territorio; la cuantía sólo cuando la ley orgánica respectiva establece órganos definidos por ese criterio. Esta fórmula no debe trasladarse automáticamente a materias penal, laboral, administrativa o electoral.\n\nEl control difuso se ejerce incidentalmente dentro de un caso de la competencia del órgano. La ejecutoria 31886 sostiene que el control ex officio debe respetar competencia y procedimiento y que la inaplicación se limita al acto concreto; no implica expulsar la norma con efectos generales.\n\nEl control de convencionalidad también se ejerce dentro de las respectivas competencias y regulaciones procesales. El principio pro persona no crea competencia inexistente.\n\nPara procesos civiles y familiares, el artículo 167 del CNPCF clasifica decretos, diversas clases de autos, sentencias interlocutorias y definitivas. No es correcto universalizar esa nomenclatura a todas las materias. La norma procesal aplicable determina además el trámite y efecto de cada incidente.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cpeum-competencia",
+            "ev-c03-a05-l283-295-jurisdiccion",
+            "ev-c03-a14-l177-181-competencia",
+            "ev-c03-cnpcf-competencia",
+            "ev-c03-a14-l199-201-grado",
+            "ev-c03-cpeum-control",
+            "ev-c03-scjn-control-difuso",
+            "ev-c03-scjn-convencionalidad",
+            "ev-c03-cnpcf-resoluciones",
+            "ev-c03-a15-l191-195-resoluciones",
+            "ev-c03-a15-l239-265-autos",
+            "ev-c03-a15-l273-283-incidentes"
+          ]
         },
         {
           "type": "legal_basis",
           "title": "Fundamento jurídico vigente",
-          "content": "Constitución, artículos 1, 16, 17, 94, 103, 104, 107 y 133: derechos humanos, autoridad competente, acceso a la justicia, Poder Judicial federal, controversias federales, amparo y supremacía normativa. CNPCF, artículo 77: competencia por materia, grado y territorio, y por cuantía cuando la ley orgánica la contemple. Ley Orgánica del Poder Judicial de la Federación: integración y atribuciones vigentes de órganos federales. Ley de Amparo, artículos 33 a 40: órganos y reglas de competencia en amparo. Los criterios de la SCJN distinguen jurisdicción y competencia y reconocen control difuso dentro del marco competencial.",
-          "sourceOrigin": "complementary"
+          "content": "Constitución, artículos 16 y 17: autoridad competente y acceso a justicia en plazos y términos legales. Constitución, artículos 1 y 133, expediente Varios 912/2010 y ejecutoria 31886: control constitucional y convencional dentro de competencias y reglas procesales, con inaplicación concreta cuando proceda. CNPCF, artículo 77: competencia objetiva civil y familiar. CNPCF, artículo 167: clasificación de resoluciones para ese Código.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cpeum-competencia",
+            "ev-c03-a05-l283-295-jurisdiccion",
+            "ev-c03-a14-l177-181-competencia",
+            "ev-c03-cnpcf-competencia",
+            "ev-c03-cpeum-control",
+            "ev-c03-scjn-control-difuso",
+            "ev-c03-scjn-convencionalidad",
+            "ev-c03-cnpcf-resoluciones",
+            "ev-c03-a15-l191-195-resoluciones",
+            "ev-c03-a15-l239-265-autos"
+          ]
         },
         {
           "type": "simple_example",
           "title": "Ejemplo sencillo: el mapa y la dirección",
           "content": "La jurisdicción se parece a la función general de una red de hospitales para prestar atención médica. La competencia se parece a la asignación del caso: pediatría, urgencias, especialidad, sede y nivel de atención. Que todas las unidades pertenezcan al sistema no significa que cualquiera atienda cualquier asunto. En justicia, la ley determina esa distribución y no la preferencia de las partes.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cpeum-competencia",
+            "ev-c03-a05-l283-295-jurisdiccion",
+            "ev-c03-a14-l177-181-competencia",
+            "ev-c03-cnpcf-competencia"
+          ]
         },
         {
           "type": "ceneval_example",
           "title": "Cómo aparece en un reactivo tipo EGEL",
-          "content": "Un reactivo suele proporcionar domicilio de las partes, lugar del acto, naturaleza de la pretensión, órgano que emitió la decisión e instancia procesal. Antes de elegir, clasifica cada dato: materia, grado, territorio, cuantía o regla especial. Si pregunta por amparo, distingue directo e indirecto y revisa el acto reclamado. Si pregunta por una resolución, identifica si decide el fondo, una cuestión incidental o sólo conduce el procedimiento.",
-          "sourceOrigin": "complementary"
+          "content": "Primero identifica la materia y la ley procesal aplicable. Sólo si el asunto civil o familiar está regido por el CNPCF usa su artículo 77 para revisar materia, grado, territorio y, cuando la ley orgánica lo prevea, cuantía. Para control difuso, distingue interpretación conforme de inaplicación concreta; para resoluciones, no traslades automáticamente la clasificación del CNPCF a otra materia.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cnpcf-competencia",
+            "ev-c03-a14-l199-201-grado",
+            "ev-c03-cpeum-control",
+            "ev-c03-scjn-control-difuso",
+            "ev-c03-cnpcf-resoluciones",
+            "ev-c03-a15-l191-195-resoluciones",
+            "ev-c03-a15-l239-265-autos"
+          ]
         },
         {
           "type": "summary",
           "title": "Resumen para repasar",
-          "content": "Jurisdicción es función estatal; competencia es su límite legal para el caso concreto. Los factores centrales son materia, grado y territorio; la cuantía depende de la ley orgánica. Los órganos ordinarios pueden realizar control difuso dentro de su competencia, pero no invalidar normas con efectos generales. El control convencional opera dentro del mismo marco. Autos, interlocutorias y definitivas deben clasificarse conforme al código aplicable. Los incidentes son cuestiones accesorias con efectos y trámite legalmente determinados.",
-          "sourceOrigin": "mixed"
+          "content": "Jurisdicción es función estatal; competencia es atribución legal para el caso. El artículo 77 del CNPCF regula materia, grado, territorio y cuantía sólo en su ámbito civil y familiar. El control difuso puede culminar en inaplicación al caso, no invalidez general. El artículo 167 clasifica resoluciones para el CNPCF; otras materias requieren su propia norma.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cpeum-competencia",
+            "ev-c03-a05-l283-295-jurisdiccion",
+            "ev-c03-a14-l177-181-competencia",
+            "ev-c03-cnpcf-competencia",
+            "ev-c03-a14-l199-201-grado",
+            "ev-c03-cpeum-control",
+            "ev-c03-scjn-control-difuso",
+            "ev-c03-cnpcf-resoluciones",
+            "ev-c03-a15-l191-195-resoluciones",
+            "ev-c03-a15-l239-265-autos"
+          ]
         },
         {
           "type": "study_guide",
           "title": "Guía de preguntas y respuestas",
-          "content": "1. ¿Qué es jurisdicción? Respuesta: la función estatal de conocer, resolver y ejecutar controversias mediante el derecho.\n2. ¿Qué es competencia? Respuesta: la porción de jurisdicción atribuida legalmente a un órgano para ciertos asuntos.\n3. ¿Qué factor atiende a la naturaleza del litigio? Respuesta: la materia.\n4. ¿Qué factor atiende a la instancia? Respuesta: el grado.\n5. ¿Qué factor usa puntos geográficos de conexión? Respuesta: el territorio.\n6. ¿Cuándo opera la cuantía? Respuesta: cuando la ley orgánica define órganos por el valor del asunto.\n7. ¿Qué exige el artículo 16? Respuesta: que el acto provenga de autoridad competente y esté fundado y motivado.\n8. ¿Qué garantiza el artículo 17? Respuesta: justicia pronta, completa, imparcial y gratuita en los términos legales.\n9. ¿Qué es control difuso? Respuesta: examen de regularidad que una persona juzgadora realiza dentro de un caso y de su competencia.\n10. ¿Puede un juez ordinario declarar invalidez general? Respuesta: no mediante control difuso; sus efectos se limitan al caso.\n11. ¿Qué es un incidente? Respuesta: una cuestión accesoria que requiere resolución dentro o vinculada con el proceso.\n12. ¿Qué decide una sentencia definitiva? Respuesta: la controversia principal, salvo la clasificación específica de la ley aplicable.",
-          "sourceOrigin": "mixed"
+          "content": "1. ¿Qué es jurisdicción? Función estatal para resolver conflictos jurídicos. 2. ¿Qué es competencia? Atribución legal de un órgano para conocer un asunto. 3. ¿Qué regula el artículo 77 del CNPCF? Competencia objetiva civil y familiar por materia, grado y territorio. 4. ¿Cuándo usa cuantía? Cuando la ley orgánica respectiva lo dispone. 5. ¿Qué exige el artículo 16? Autoridad competente, fundamentación y motivación. 6. ¿Qué es control difuso? Examen incidental dentro de un caso. 7. ¿Qué efecto tiene la inaplicación? Se limita al caso concreto. 8. ¿Qué exige el control convencional? Respetar competencia y regulación procesal. 9. ¿Qué clasifica el artículo 167? Resoluciones dentro del CNPCF.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cpeum-competencia",
+            "ev-c03-a05-l283-295-jurisdiccion",
+            "ev-c03-a14-l177-181-competencia",
+            "ev-c03-cnpcf-competencia",
+            "ev-c03-a14-l199-201-grado",
+            "ev-c03-cpeum-control",
+            "ev-c03-scjn-control-difuso",
+            "ev-c03-scjn-convencionalidad",
+            "ev-c03-cnpcf-resoluciones",
+            "ev-c03-a15-l191-195-resoluciones",
+            "ev-c03-a15-l239-265-autos",
+            "ev-c03-a15-l273-283-incidentes"
+          ]
         },
         {
           "type": "key_concepts",
           "title": "Conceptos clave",
-          "content": "Jurisdicción: función de impartir justicia. Competencia: límite legal para conocer un asunto. Materia: naturaleza jurídica del conflicto. Grado: instancia procesal. Territorio: conexión geográfica. Cuantía: valor como criterio orgánico excepcional. Control concentrado: proceso con objeto constitucional específico. Control difuso: técnica aplicada dentro de un caso. Convencionalidad: contraste con tratados de derechos humanos. Auto: resolución de trámite o decisión procesal según la ley. Interlocutoria: resolución de determinada cuestión incidental. Definitiva: decisión del fondo. Incidente: cuestión accesoria del proceso.",
-          "sourceOrigin": "mixed"
+          "content": "Jurisdicción: función estatal de resolver conflictos jurídicos. Competencia: atribución legal para conocer un asunto. Materia, grado y territorio: factores del artículo 77 del CNPCF para su ámbito civil y familiar. Cuantía: criterio condicionado a la ley orgánica. Control difuso: examen incidental con posibles efectos en el caso. Convencionalidad: contraste dentro de competencia y reglas procesales. Auto, interlocutoria y definitiva: categorías que el artículo 167 define para el CNPCF.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cpeum-competencia",
+            "ev-c03-a05-l283-295-jurisdiccion",
+            "ev-c03-a14-l177-181-competencia",
+            "ev-c03-cnpcf-competencia",
+            "ev-c03-a14-l199-201-grado",
+            "ev-c03-cpeum-control",
+            "ev-c03-scjn-control-difuso",
+            "ev-c03-scjn-convencionalidad",
+            "ev-c03-cnpcf-resoluciones",
+            "ev-c03-a15-l191-195-resoluciones",
+            "ev-c03-a15-l239-265-autos",
+            "ev-c03-a15-l273-283-incidentes"
+          ]
         },
         {
           "type": "common_errors",
           "title": "Errores comunes",
-          "content": "Usar jurisdicción y competencia como sinónimos; elegir tribunal sólo por cercanía; aplicar siempre la cuantía aunque la ley orgánica no la contemple; confundir fuero federal con gravedad del asunto; afirmar que un juez ordinario no puede interpretar la Constitución; creer que control difuso produce invalidez general; usar principio pro persona para ignorar competencia; suponer que todo incidente suspende el juicio; y memorizar nombres de resoluciones sin revisar materia, código, efectos y recurso procedente.",
-          "sourceOrigin": "mixed"
+          "content": "Usar jurisdicción y competencia como sinónimos; aplicar el artículo 77 del CNPCF fuera de su ámbito civil y familiar; usar cuantía sin revisar la ley orgánica; afirmar que el control difuso produce invalidez general; usar principio pro persona para crear competencia; y universalizar las categorías o efectos de resoluciones e incidentes sin consultar la norma procesal aplicable.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cpeum-competencia",
+            "ev-c03-a05-l283-295-jurisdiccion",
+            "ev-c03-a14-l177-181-competencia",
+            "ev-c03-cnpcf-competencia",
+            "ev-c03-cpeum-control",
+            "ev-c03-scjn-control-difuso",
+            "ev-c03-scjn-convencionalidad",
+            "ev-c03-cnpcf-resoluciones",
+            "ev-c03-a15-l191-195-resoluciones",
+            "ev-c03-a15-l239-265-autos",
+            "ev-c03-a15-l273-283-incidentes"
+          ]
         }
       ],
       "conceptMap": {
         "title": "Mapa visual: de la jurisdicción al caso competente",
         "description": "Sigue la función estatal, sus límites, los controles y las decisiones que aparecen dentro del proceso.",
         "nodes": [
-          { "id": "justicia", "label": "Impartición de justicia", "description": "Función estatal sometida a Constitución y ley." },
-          { "id": "jurisdiccion", "label": "Jurisdicción", "description": "Conocer, resolver y ejecutar controversias.", "parentId": "justicia" },
-          { "id": "competencia", "label": "Competencia", "description": "Límite legal de la jurisdicción.", "parentId": "jurisdiccion" },
-          { "id": "materia", "label": "Materia", "description": "Naturaleza del litigio.", "parentId": "competencia" },
-          { "id": "grado", "label": "Grado", "description": "Instancia o nivel de conocimiento.", "parentId": "competencia" },
-          { "id": "territorio", "label": "Territorio", "description": "Puntos geográficos de conexión.", "parentId": "competencia" },
-          { "id": "cuantia", "label": "Cuantía", "description": "Sólo si la organización judicial la utiliza.", "parentId": "competencia" },
-          { "id": "controles", "label": "Regularidad jurídica", "description": "Legalidad, constitucionalidad y convencionalidad.", "parentId": "justicia" },
-          { "id": "ordinario", "label": "Litigio ordinario", "description": "Resuelve la controversia principal.", "parentId": "controles" },
-          { "id": "concentrado", "label": "Control concentrado", "description": "Proceso constitucional específico.", "parentId": "controles" },
-          { "id": "difuso", "label": "Control difuso", "description": "Técnica dentro del caso y la competencia.", "parentId": "controles" },
-          { "id": "resoluciones", "label": "Resoluciones", "description": "Decisiones durante y al final del proceso.", "parentId": "justicia" },
-          { "id": "autos", "label": "Acuerdos o autos", "description": "Impulsan o deciden cuestiones procesales.", "parentId": "resoluciones" },
-          { "id": "interlocutoria", "label": "Interlocutoria", "description": "Resuelve una cuestión incidental prevista.", "parentId": "resoluciones" },
-          { "id": "definitiva", "label": "Definitiva", "description": "Decide la controversia principal.", "parentId": "resoluciones" }
+          {
+            "id": "justicia",
+            "label": "Impartición de justicia",
+            "description": "Función estatal sometida a Constitución y ley.",
+            "evidenceIds": [
+              "ev-c03-cpeum-competencia"
+            ]
+          },
+          {
+            "id": "jurisdiccion",
+            "label": "Jurisdicción",
+            "description": "Conocer, resolver y ejecutar controversias.",
+            "parentId": "justicia",
+            "evidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia"
+            ]
+          },
+          {
+            "id": "competencia",
+            "label": "Competencia",
+            "description": "Límite legal de la jurisdicción.",
+            "parentId": "jurisdiccion",
+            "evidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia"
+            ]
+          },
+          {
+            "id": "materia",
+            "label": "Materia",
+            "description": "Naturaleza del litigio.",
+            "parentId": "competencia",
+            "evidenceIds": [
+              "ev-c03-cnpcf-competencia"
+            ]
+          },
+          {
+            "id": "grado",
+            "label": "Grado",
+            "description": "Instancia o nivel de conocimiento.",
+            "parentId": "competencia",
+            "evidenceIds": [
+              "ev-c03-cnpcf-competencia",
+              "ev-c03-a14-l199-201-grado"
+            ]
+          },
+          {
+            "id": "territorio",
+            "label": "Territorio",
+            "description": "Puntos geográficos de conexión.",
+            "parentId": "competencia",
+            "evidenceIds": [
+              "ev-c03-cnpcf-competencia"
+            ]
+          },
+          {
+            "id": "cuantia",
+            "label": "Cuantía",
+            "description": "En el CNPCF, sólo si la ley orgánica la utiliza.",
+            "parentId": "competencia",
+            "evidenceIds": [
+              "ev-c03-cnpcf-competencia"
+            ]
+          },
+          {
+            "id": "controles",
+            "label": "Regularidad jurídica",
+            "description": "Legalidad, constitucionalidad y convencionalidad.",
+            "parentId": "justicia",
+            "evidenceIds": [
+              "ev-c03-cpeum-control",
+              "ev-c03-scjn-convencionalidad"
+            ]
+          },
+          {
+            "id": "ordinario",
+            "label": "Litigio ordinario",
+            "description": "Resuelve la controversia principal.",
+            "parentId": "controles",
+            "evidenceIds": [
+              "ev-c03-cpeum-competencia"
+            ]
+          },
+          {
+            "id": "concentrado",
+            "label": "Control concentrado",
+            "description": "Proceso constitucional específico.",
+            "parentId": "controles",
+            "evidenceIds": [
+              "ev-c03-cpeum-competencia"
+            ]
+          },
+          {
+            "id": "difuso",
+            "label": "Control difuso",
+            "description": "Técnica dentro del caso y la competencia.",
+            "parentId": "controles",
+            "evidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cpeum-control",
+              "ev-c03-scjn-control-difuso"
+            ]
+          },
+          {
+            "id": "resoluciones",
+            "label": "Resoluciones",
+            "description": "Decisiones durante y al final del proceso.",
+            "parentId": "justicia",
+            "evidenceIds": [
+              "ev-c03-cnpcf-resoluciones",
+              "ev-c03-a15-l191-195-resoluciones",
+              "ev-c03-a15-l239-265-autos"
+            ]
+          },
+          {
+            "id": "autos",
+            "label": "Acuerdos o autos",
+            "description": "Categoría definida por la ley procesal aplicable.",
+            "parentId": "resoluciones",
+            "evidenceIds": [
+              "ev-c03-cnpcf-resoluciones",
+              "ev-c03-a15-l191-195-resoluciones",
+              "ev-c03-a15-l239-265-autos"
+            ]
+          },
+          {
+            "id": "interlocutoria",
+            "label": "Interlocutoria",
+            "description": "En el CNPCF, resuelve un incidente.",
+            "parentId": "resoluciones",
+            "evidenceIds": [
+              "ev-c03-cnpcf-resoluciones",
+              "ev-c03-a15-l191-195-resoluciones",
+              "ev-c03-a15-l239-265-autos",
+              "ev-c03-a15-l273-283-incidentes"
+            ]
+          },
+          {
+            "id": "definitiva",
+            "label": "Definitiva",
+            "description": "Decide la controversia principal.",
+            "parentId": "resoluciones",
+            "evidenceIds": [
+              "ev-c03-cnpcf-resoluciones",
+              "ev-c03-a15-l191-195-resoluciones",
+              "ev-c03-a15-l239-265-autos"
+            ]
+          }
         ]
       },
       "references": [
@@ -141,60 +440,168 @@
           "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
           "institution": "Cámara de Diputados del H. Congreso de la Unión",
           "jurisdiction": "México",
-          "citation": "Artículos 1, 16, 17, 94, 103, 104, 107 y 133; última reforma DOF 02-06-2026",
-          "retrievedOn": "2026-08-11",
-          "note": "Fundamento de competencia, acceso a la justicia y controles constitucionales."
+          "citation": "Texto vigente, últimas reformas DOF 02-06-2026; artículos 1, 16, 17 y 133",
+          "retrievedOn": "2026-08-21",
+          "note": "Competencia, acceso a justicia y parámetro de regularidad."
         },
         {
           "title": "Código Nacional de Procedimientos Civiles y Familiares",
           "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
           "institution": "Cámara de Diputados del H. Congreso de la Unión",
           "jurisdiction": "México",
-          "citation": "Artículos 77 y siguientes; última reforma DOF 15-01-2026",
-          "retrievedOn": "2026-08-11",
-          "note": "Factores de competencia y reglas sobre resoluciones e incidentes."
+          "citation": "Texto vigente, última reforma DOF 15-01-2026; artículos 77 y 167",
+          "retrievedOn": "2026-08-21",
+          "note": "Competencia objetiva y resoluciones en procesos civiles y familiares."
         },
         {
-          "title": "Ley Orgánica del Poder Judicial de la Federación",
-          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LOPJF.pdf",
-          "institution": "Cámara de Diputados del H. Congreso de la Unión",
-          "jurisdiction": "México",
-          "citation": "Texto vigente, última reforma DOF 28-11-2025",
-          "retrievedOn": "2026-08-11",
-          "note": "Organización y competencias vigentes de los órganos judiciales federales."
-        },
-        {
-          "title": "Ley de Amparo",
-          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf",
-          "institution": "Cámara de Diputados del H. Congreso de la Unión",
-          "jurisdiction": "México",
-          "citation": "Artículos 33 a 40; última reforma DOF 16-10-2025",
-          "retrievedOn": "2026-08-11",
-          "note": "Órganos y reglas de competencia para amparo directo e indirecto."
-        },
-        {
-          "title": "Competencia como límite de la jurisdicción",
-          "url": "https://sjf2.scjn.gob.mx/detalle/ejecutoria/34098",
+          "title": "Ejecutoria 31886 sobre control ex officio",
+          "url": "https://sjf2.scjn.gob.mx/detalle/ejecutoria/31886",
           "institution": "Suprema Corte de Justicia de la Nación",
           "jurisdiction": "México",
-          "citation": "Semanario Judicial de la Federación, ejecutoria sobre jurisdicción, competencia y seguridad jurídica",
-          "retrievedOn": "2026-08-11",
-          "note": "Criterio oficial empleado para precisar la relación entre ambos conceptos."
+          "citation": "Ejecutoria 31886",
+          "retrievedOn": "2026-08-21",
+          "note": "Interpretación conforme, inaplicación concreta y efectos entre partes."
+        },
+        {
+          "title": "Expediente Varios 912/2010",
+          "url": "https://www.scjn.gob.mx/sites/default/files/estrado_electronico_notificaciones/documento/2018-08/SENTENCIA-EXP-VARIOS-912-2010-PLENO.pdf",
+          "institution": "Suprema Corte de Justicia de la Nación",
+          "jurisdiction": "México",
+          "citation": "Página impresa 51",
+          "retrievedOn": "2026-08-21",
+          "note": "Control convencional dentro de competencias y reglas procesales."
         }
       ],
       "flashcards": [
-        { "question": "¿Qué es la jurisdicción?", "answer": "La función estatal de conocer, resolver y, cuando corresponda, ejecutar controversias mediante el derecho.", "sourceOrigin": "mixed" },
-        { "question": "¿Qué es la competencia?", "answer": "El conjunto de facultades legales que delimita qué asuntos puede conocer un órgano jurisdiccional.", "sourceOrigin": "mixed" },
-        { "question": "¿Cómo se relacionan jurisdicción y competencia?", "answer": "La jurisdicción es el género; la competencia es la porción legalmente asignada a cada órgano.", "sourceOrigin": "complementary" },
-        { "question": "¿Qué determina la competencia por materia?", "answer": "La naturaleza jurídica de la controversia o de la pretensión planteada.", "sourceOrigin": "class" },
-        { "question": "¿Qué determina la competencia por grado?", "answer": "La instancia o nivel en que un órgano conoce del asunto o de su impugnación.", "sourceOrigin": "class" },
-        { "question": "¿Qué determina la competencia territorial?", "answer": "Los puntos de conexión geográfica previstos en la legislación aplicable.", "sourceOrigin": "mixed" },
-        { "question": "¿Cuándo es relevante la cuantía conforme al CNPCF?", "answer": "Cuando la ley orgánica respectiva establece órganos cuya competencia se define por ese criterio.", "sourceOrigin": "complementary" },
-        { "question": "¿Qué es control difuso?", "answer": "Una técnica de regularidad constitucional o convencional ejercida dentro de un caso y de la competencia del órgano.", "sourceOrigin": "complementary" },
-        { "question": "¿Qué efecto tiene normalmente la inaplicación en control difuso?", "answer": "Se limita al caso concreto y no expulsa la norma del orden jurídico con efectos generales.", "sourceOrigin": "complementary" },
-        { "question": "¿Qué es una cuestión incidental?", "answer": "Una controversia accesoria vinculada con el proceso principal que requiere una decisión específica.", "sourceOrigin": "mixed" },
-        { "question": "¿Qué suele resolver una sentencia interlocutoria?", "answer": "Una cuestión incidental o intermedia que la ley ordena decidir separadamente del fondo.", "sourceOrigin": "mixed" },
-        { "question": "¿Qué debe revisarse antes de elegir tribunal?", "answer": "Pretensión, materia, grado, territorio, cuantía cuando proceda y cualquier regla especial aplicable.", "sourceOrigin": "complementary" }
+        {
+          "question": "¿Qué es la jurisdicción?",
+          "answer": "La función estatal de conocer, resolver y, cuando corresponda, ejecutar controversias mediante el derecho.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cpeum-competencia",
+            "ev-c03-a05-l283-295-jurisdiccion",
+            "ev-c03-a14-l177-181-competencia"
+          ]
+        },
+        {
+          "question": "¿Qué es la competencia?",
+          "answer": "El conjunto de facultades legales que delimita qué asuntos puede conocer un órgano jurisdiccional.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cpeum-competencia",
+            "ev-c03-a05-l283-295-jurisdiccion",
+            "ev-c03-a14-l177-181-competencia"
+          ]
+        },
+        {
+          "question": "¿Cómo se relacionan jurisdicción y competencia?",
+          "answer": "La jurisdicción es una función estatal; la competencia identifica la atribución legal del órgano para el asunto.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cpeum-competencia",
+            "ev-c03-a05-l283-295-jurisdiccion",
+            "ev-c03-a14-l177-181-competencia"
+          ]
+        },
+        {
+          "question": "¿Qué determina la competencia por materia?",
+          "answer": "La naturaleza jurídica de la controversia o de la pretensión planteada.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cpeum-competencia",
+            "ev-c03-a05-l283-295-jurisdiccion",
+            "ev-c03-a14-l177-181-competencia",
+            "ev-c03-cnpcf-competencia"
+          ]
+        },
+        {
+          "question": "¿Qué determina la competencia por grado?",
+          "answer": "La instancia o nivel en que un órgano conoce del asunto o de su impugnación.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cpeum-competencia",
+            "ev-c03-a05-l283-295-jurisdiccion",
+            "ev-c03-a14-l177-181-competencia",
+            "ev-c03-cnpcf-competencia",
+            "ev-c03-a14-l199-201-grado"
+          ]
+        },
+        {
+          "question": "¿Qué determina la competencia territorial?",
+          "answer": "Los puntos de conexión geográfica previstos en la legislación aplicable.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cpeum-competencia",
+            "ev-c03-a05-l283-295-jurisdiccion",
+            "ev-c03-a14-l177-181-competencia",
+            "ev-c03-cnpcf-competencia"
+          ]
+        },
+        {
+          "question": "¿Cuándo es relevante la cuantía conforme al artículo 77 del CNPCF?",
+          "answer": "Cuando la ley orgánica respectiva establece órganos cuya competencia se define por ese criterio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cpeum-competencia",
+            "ev-c03-a05-l283-295-jurisdiccion",
+            "ev-c03-a14-l177-181-competencia",
+            "ev-c03-cnpcf-competencia"
+          ]
+        },
+        {
+          "question": "¿Qué es control difuso?",
+          "answer": "Una técnica de regularidad constitucional o convencional ejercida dentro de un caso y de la competencia del órgano.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cpeum-competencia",
+            "ev-c03-a05-l283-295-jurisdiccion",
+            "ev-c03-a14-l177-181-competencia",
+            "ev-c03-cpeum-control",
+            "ev-c03-scjn-control-difuso",
+            "ev-c03-scjn-convencionalidad"
+          ]
+        },
+        {
+          "question": "¿Qué efecto tiene normalmente la inaplicación en control difuso?",
+          "answer": "Se limita al caso concreto y no expulsa la norma del orden jurídico con efectos generales.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c03-cpeum-control",
+            "ev-c03-scjn-control-difuso"
+          ]
+        },
+        {
+          "question": "¿Qué es una cuestión incidental?",
+          "answer": "Una cuestión accesoria cuyo trámite y resolución dependen de la norma procesal aplicable.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cnpcf-resoluciones",
+            "ev-c03-a15-l191-195-resoluciones",
+            "ev-c03-a15-l239-265-autos",
+            "ev-c03-a15-l273-283-incidentes"
+          ]
+        },
+        {
+          "question": "¿Qué suele resolver una sentencia interlocutoria?",
+          "answer": "En el CNPCF, una decisión que resuelve un incidente; otras materias exigen revisar su legislación.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cnpcf-competencia",
+            "ev-c03-cnpcf-resoluciones",
+            "ev-c03-a15-l191-195-resoluciones",
+            "ev-c03-a15-l239-265-autos",
+            "ev-c03-a15-l273-283-incidentes"
+          ]
+        },
+        {
+          "question": "¿Qué debe revisarse antes de elegir tribunal?",
+          "answer": "Materia, grado y territorio; además, cuantía sólo cuando la ley orgánica respectiva defina órganos mediante ese criterio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c03-cnpcf-competencia",
+            "ev-c03-a14-l199-201-grado"
+          ]
+        }
       ],
       "exam": {
         "title": "Práctica: jurisdicción y competencia",
@@ -203,84 +610,844 @@
           {
             "text": "Un tribunal tiene la función estatal de impartir justicia, pero la ley reserva el litigio familiar a otro órgano. ¿Qué concepto impide que conozca?",
             "difficulty": "basic",
-            "options": ["Competencia", "Jurisdicción", "Legitimación de la parte"],
+            "options": [
+              "Competencia",
+              "Jurisdicción",
+              "Legitimación de la parte"
+            ],
             "correctOption": 0,
             "explanation": "Aunque el tribunal ejerza jurisdicción, carece de la atribución legal específica para conocer la materia familiar.",
-            "optionExplanations": ["Delimita qué asuntos conoce cada órgano.", "La función general de juzgar sí existe, pero no basta.", "La legitimación se refiere a la relación de las partes con la pretensión."]
+            "optionExplanations": [
+              "Delimita qué asuntos conoce cada órgano.",
+              "La función general de juzgar sí existe, pero no basta.",
+              "La legitimación se refiere a la relación de las partes con la pretensión."
+            ],
+            "evidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cnpcf-competencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia",
+                "ev-c03-cnpcf-competencia"
+              ],
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia",
+                "ev-c03-cnpcf-competencia"
+              ],
+              [
+                "ev-c03-cnpcf-competencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cnpcf-competencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cnpcf-competencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia",
+                "ev-c03-cnpcf-competencia"
+              ],
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia",
+                "ev-c03-cnpcf-competencia"
+              ],
+              [
+                "ev-c03-cnpcf-competencia"
+              ]
+            ]
           },
           {
-            "text": "Una controversia se asigna a un juzgado mercantil por la naturaleza del acto reclamado. ¿Qué factor se aplicó?",
+            "text": "Una controversia civil se asigna a un órgano especializado por la naturaleza de la pretensión. ¿Qué factor se aplicó?",
             "difficulty": "basic",
-            "options": ["Materia", "Grado", "Territorio"],
+            "options": [
+              "Materia",
+              "Grado",
+              "Territorio"
+            ],
             "correctOption": 0,
-            "explanation": "La naturaleza mercantil de la controversia determina la competencia por materia.",
-            "optionExplanations": ["Clasifica el litigio según su naturaleza jurídica.", "El grado se refiere a la instancia.", "El territorio se refiere a conexiones geográficas."]
+            "explanation": "En el ámbito civil y familiar del CNPCF, la naturaleza de la controversia determina la competencia por materia.",
+            "optionExplanations": [
+              "Clasifica el litigio según su naturaleza jurídica.",
+              "El grado se refiere a la instancia.",
+              "El territorio se refiere a conexiones geográficas."
+            ],
+            "evidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cnpcf-competencia",
+              "ev-c03-a14-l199-201-grado"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c03-cnpcf-competencia"
+              ],
+              [
+                "ev-c03-cnpcf-competencia",
+                "ev-c03-a14-l199-201-grado"
+              ],
+              [
+                "ev-c03-cnpcf-competencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cnpcf-competencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cnpcf-competencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c03-cnpcf-competencia"
+              ],
+              [
+                "ev-c03-cnpcf-competencia",
+                "ev-c03-a14-l199-201-grado"
+              ],
+              [
+                "ev-c03-cnpcf-competencia"
+              ]
+            ]
           },
           {
-            "text": "Un tribunal revisa mediante apelación una resolución de primera instancia. ¿Qué factor explica su intervención?",
+            "text": "Un órgano jurisdiccional conoce un asunto en segunda instancia. ¿Qué factor explica su intervención?",
             "difficulty": "basic",
-            "options": ["Grado", "Cuantía", "Turno"],
+            "options": [
+              "Grado",
+              "Cuantía",
+              "Turno"
+            ],
             "correctOption": 0,
-            "explanation": "La revisión por un órgano de segunda instancia corresponde a la competencia por grado.",
-            "optionExplanations": ["Identifica el nivel o instancia procesal.", "El valor del asunto no explica por sí solo la apelación.", "El turno distribuye asuntos entre órganos equivalentes."]
+            "explanation": "El conocimiento de un asunto en primera o segunda instancia corresponde a la competencia por grado.",
+            "optionExplanations": [
+              "Identifica el nivel o instancia procesal.",
+              "El valor del asunto no explica por sí solo la segunda instancia.",
+              "El turno distribuye asuntos entre órganos equivalentes."
+            ],
+            "evidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cnpcf-competencia",
+              "ev-c03-a14-l199-201-grado",
+              "ev-c03-cnpcf-resoluciones",
+              "ev-c03-a15-l191-195-resoluciones",
+              "ev-c03-a15-l239-265-autos"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c03-cnpcf-competencia",
+                "ev-c03-a14-l199-201-grado",
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l191-195-resoluciones",
+                "ev-c03-a15-l239-265-autos"
+              ],
+              [
+                "ev-c03-cnpcf-competencia",
+                "ev-c03-a14-l199-201-grado",
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l191-195-resoluciones",
+                "ev-c03-a15-l239-265-autos"
+              ],
+              [
+                "ev-c03-cnpcf-competencia",
+                "ev-c03-a14-l199-201-grado",
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l191-195-resoluciones",
+                "ev-c03-a15-l239-265-autos"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cnpcf-competencia",
+              "ev-c03-a14-l199-201-grado",
+              "ev-c03-cnpcf-resoluciones",
+              "ev-c03-a15-l191-195-resoluciones",
+              "ev-c03-a15-l239-265-autos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cnpcf-competencia",
+              "ev-c03-a14-l199-201-grado",
+              "ev-c03-cnpcf-resoluciones",
+              "ev-c03-a15-l191-195-resoluciones",
+              "ev-c03-a15-l239-265-autos"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c03-cnpcf-competencia",
+                "ev-c03-a14-l199-201-grado",
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l191-195-resoluciones",
+                "ev-c03-a15-l239-265-autos"
+              ],
+              [
+                "ev-c03-cnpcf-competencia",
+                "ev-c03-a14-l199-201-grado",
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l191-195-resoluciones",
+                "ev-c03-a15-l239-265-autos"
+              ],
+              [
+                "ev-c03-cnpcf-competencia",
+                "ev-c03-a14-l199-201-grado",
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l191-195-resoluciones",
+                "ev-c03-a15-l239-265-autos"
+              ]
+            ]
           },
           {
-            "text": "Conforme al artículo 77 del CNPCF, ¿cuándo debe usarse la cuantía para determinar competencia?",
+            "text": "En un proceso civil o familiar regido por el CNPCF, ¿cuándo debe usarse la cuantía para determinar competencia?",
             "difficulty": "intermediate",
-            "options": ["Siempre que exista una cantidad reclamada", "Sólo si la ley orgánica define órganos mediante ese criterio", "Únicamente si ambas partes lo solicitan"],
+            "options": [
+              "Siempre que exista una cantidad reclamada",
+              "Sólo si la ley orgánica define órganos mediante ese criterio",
+              "Únicamente si ambas partes lo solicitan"
+            ],
             "correctOption": 1,
-            "explanation": "El CNPCF condiciona la competencia por cuantía a que la ley orgánica correspondiente establezca órganos definidos así.",
-            "optionExplanations": ["La sola existencia de una suma no activa necesariamente el criterio.", "Es la condición establecida por el artículo 77.", "La competencia no depende únicamente del acuerdo de las partes."]
+            "explanation": "El artículo 77 del CNPCF condiciona la cuantía a que la ley orgánica correspondiente establezca órganos definidos por ese criterio.",
+            "optionExplanations": [
+              "La sola existencia de una suma no activa necesariamente el criterio.",
+              "Es la condición establecida por el artículo 77.",
+              "La competencia no depende únicamente del acuerdo de las partes."
+            ],
+            "evidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cnpcf-competencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia",
+                "ev-c03-cnpcf-competencia"
+              ],
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia",
+                "ev-c03-cnpcf-competencia"
+              ],
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia",
+                "ev-c03-cnpcf-competencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cnpcf-competencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cnpcf-competencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia",
+                "ev-c03-cnpcf-competencia"
+              ],
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia",
+                "ev-c03-cnpcf-competencia"
+              ],
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia",
+                "ev-c03-cnpcf-competencia"
+              ]
+            ]
           },
           {
             "text": "Una persona juzgadora ordinaria advierte que una norma aplicable vulnera derechos humanos. ¿Cuál actuación describe correctamente el control difuso?",
             "difficulty": "advanced",
-            "options": ["Puede analizarla dentro de su competencia y, si procede, inaplicarla al caso", "Debe declararla inválida para toda la población", "Debe ignorar la Constitución porque sólo resuelve legalidad"],
+            "options": [
+              "Puede analizarla dentro de su competencia y, si procede, inaplicarla al caso",
+              "Debe declararla inválida para toda la población",
+              "Debe ignorar la Constitución porque sólo resuelve legalidad"
+            ],
             "correctOption": 0,
             "explanation": "El control difuso se ejerce dentro del caso, de la competencia y de las reglas procesales, con efectos concretos.",
-            "optionExplanations": ["Respeta el alcance individual y el marco competencial.", "La invalidez general no deriva del control difuso ordinario.", "Todas las autoridades judiciales están vinculadas por la Constitución y los derechos humanos."]
+            "optionExplanations": [
+              "Respeta el alcance individual y el marco competencial.",
+              "La invalidez general no deriva del control difuso ordinario.",
+              "Todas las autoridades judiciales están vinculadas por la Constitución y los derechos humanos."
+            ],
+            "evidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cpeum-control",
+              "ev-c03-scjn-control-difuso",
+              "ev-c03-cnpcf-resoluciones",
+              "ev-c03-a15-l191-195-resoluciones",
+              "ev-c03-a15-l239-265-autos"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia",
+                "ev-c03-cpeum-control",
+                "ev-c03-scjn-control-difuso"
+              ],
+              [
+                "ev-c03-cpeum-control",
+                "ev-c03-scjn-control-difuso"
+              ],
+              [
+                "ev-c03-cpeum-control",
+                "ev-c03-scjn-control-difuso"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cpeum-control",
+              "ev-c03-scjn-control-difuso"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cpeum-control",
+              "ev-c03-scjn-control-difuso"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia",
+                "ev-c03-cpeum-control",
+                "ev-c03-scjn-control-difuso"
+              ],
+              [
+                "ev-c03-cpeum-control",
+                "ev-c03-scjn-control-difuso"
+              ],
+              [
+                "ev-c03-cpeum-control",
+                "ev-c03-scjn-control-difuso",
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l191-195-resoluciones",
+                "ev-c03-a15-l239-265-autos"
+              ]
+            ]
           },
           {
             "text": "¿Cuál afirmación distingue mejor control concentrado y control difuso?",
             "difficulty": "advanced",
-            "options": ["El concentrado tiene un proceso constitucional específico; el difuso opera como técnica dentro del caso", "El difuso siempre produce efectos generales", "El concentrado puede ejercerlo cualquier particular"],
+            "options": [
+              "El concentrado tiene un proceso constitucional específico; el difuso opera como técnica dentro del caso",
+              "El difuso siempre produce efectos generales",
+              "El concentrado puede ejercerlo cualquier particular"
+            ],
             "correctOption": 0,
             "explanation": "La diferencia central está en el objeto y vía del control, la competencia del órgano y los efectos de la decisión.",
-            "optionExplanations": ["Distingue correctamente proceso específico y técnica incidental.", "El control difuso normalmente tiene efectos en el caso concreto.", "El control jurisdiccional corresponde a órganos facultados, no a particulares."]
+            "optionExplanations": [
+              "Distingue correctamente proceso específico y técnica incidental.",
+              "El control difuso normalmente tiene efectos en el caso concreto.",
+              "El control jurisdiccional corresponde a órganos facultados, no a particulares."
+            ],
+            "evidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cpeum-control",
+              "ev-c03-scjn-control-difuso",
+              "ev-c03-cnpcf-resoluciones",
+              "ev-c03-a15-l273-283-incidentes"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c03-cpeum-control",
+                "ev-c03-scjn-control-difuso"
+              ],
+              [
+                "ev-c03-cpeum-control",
+                "ev-c03-scjn-control-difuso"
+              ],
+              [
+                "ev-c03-cpeum-control",
+                "ev-c03-scjn-control-difuso"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cpeum-control",
+              "ev-c03-scjn-control-difuso"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cpeum-control",
+              "ev-c03-scjn-control-difuso"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c03-cpeum-control",
+                "ev-c03-scjn-control-difuso",
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l273-283-incidentes"
+              ],
+              [
+                "ev-c03-cpeum-control",
+                "ev-c03-scjn-control-difuso"
+              ],
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia",
+                "ev-c03-cpeum-control",
+                "ev-c03-scjn-control-difuso"
+              ]
+            ]
           },
           {
             "text": "Durante un juicio surge una controversia accesoria sobre nulidad de una notificación. ¿Cómo debe clasificarse inicialmente?",
             "difficulty": "intermediate",
-            "options": ["Cuestión incidental", "Sentencia definitiva", "Nuevo derecho sustantivo autónomo"],
+            "options": [
+              "Cuestión incidental",
+              "Sentencia definitiva",
+              "Nuevo derecho sustantivo autónomo"
+            ],
             "correctOption": 0,
-            "explanation": "La validez de una actuación dentro del juicio es una cuestión accesoria cuyo trámite y efecto determina la ley procesal.",
-            "optionExplanations": ["Se vincula con el proceso principal y requiere decisión propia.", "La cuestión no decide por sí misma el fondo del litigio.", "No crea un derecho sustantivo separado del procedimiento."]
+            "explanation": "La validez de una actuación dentro del juicio puede plantear una cuestión accesoria; su trámite y efecto los determina la ley procesal aplicable.",
+            "optionExplanations": [
+              "Se vincula con el proceso principal y requiere decisión propia.",
+              "La cuestión no decide por sí misma el fondo del litigio.",
+              "No crea un derecho sustantivo separado del procedimiento."
+            ],
+            "evidenceIds": [
+              "ev-c03-cnpcf-resoluciones",
+              "ev-c03-a15-l191-195-resoluciones",
+              "ev-c03-a15-l239-265-autos",
+              "ev-c03-a15-l273-283-incidentes"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l273-283-incidentes"
+              ],
+              [
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l191-195-resoluciones",
+                "ev-c03-a15-l239-265-autos"
+              ],
+              [
+                "ev-c03-cpeum-competencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c03-cnpcf-resoluciones",
+              "ev-c03-a15-l273-283-incidentes"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c03-cpeum-competencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l273-283-incidentes"
+              ],
+              [
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l191-195-resoluciones",
+                "ev-c03-a15-l239-265-autos"
+              ],
+              [
+                "ev-c03-cpeum-competencia"
+              ]
+            ]
           },
           {
             "text": "¿Qué debe hacerse para saber si un incidente suspende el procedimiento principal?",
             "difficulty": "intermediate",
-            "options": ["Revisar la norma procesal aplicable", "Suponer que todos lo suspenden", "Preguntar cuál parte lo promovió"],
+            "options": [
+              "Revisar la norma procesal aplicable",
+              "Suponer que todos lo suspenden",
+              "Preguntar cuál parte lo promovió"
+            ],
             "correctOption": 0,
             "explanation": "Los efectos del incidente dependen de su regulación expresa; no existe una regla universal de suspensión.",
-            "optionExplanations": ["La ley define trámite, efectos y resolución.", "Muchos incidentes continúan por cuerda separada o sin suspensión.", "La identidad del promovente no determina por sí sola el efecto."]
+            "optionExplanations": [
+              "La ley define trámite, efectos y resolución.",
+              "No existe una regla universal; cada legislación determina si el incidente suspende.",
+              "La identidad del promovente no determina por sí sola el efecto."
+            ],
+            "evidenceIds": [
+              "ev-c03-cnpcf-resoluciones",
+              "ev-c03-a15-l191-195-resoluciones",
+              "ev-c03-a15-l239-265-autos",
+              "ev-c03-a15-l273-283-incidentes"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l273-283-incidentes"
+              ],
+              [
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l273-283-incidentes"
+              ],
+              [
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l273-283-incidentes"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c03-cnpcf-resoluciones",
+              "ev-c03-a15-l273-283-incidentes"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c03-cnpcf-resoluciones",
+              "ev-c03-a15-l273-283-incidentes"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l191-195-resoluciones",
+                "ev-c03-a15-l239-265-autos",
+                "ev-c03-a15-l273-283-incidentes"
+              ],
+              [
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l273-283-incidentes"
+              ],
+              [
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l273-283-incidentes"
+              ]
+            ]
           },
           {
             "text": "Una resolución decide finalmente la pretensión principal después del proceso. ¿Cuál es su clasificación general?",
             "difficulty": "basic",
-            "options": ["Sentencia definitiva", "Acuerdo de mero trámite", "Incidente de competencia"],
+            "options": [
+              "Sentencia definitiva",
+              "Acuerdo de mero trámite",
+              "Incidente de competencia"
+            ],
             "correctOption": 0,
             "explanation": "La sentencia definitiva resuelve la controversia principal, sin perjuicio de la terminología particular de cada materia.",
-            "optionExplanations": ["Decide el fondo o pretensión principal.", "Un trámite sólo impulsa el procedimiento.", "El incidente es una cuestión accesoria, no la decisión final del fondo."]
+            "optionExplanations": [
+              "Decide el fondo o pretensión principal.",
+              "Un trámite sólo impulsa el procedimiento.",
+              "El incidente es una cuestión accesoria, no la decisión final del fondo."
+            ],
+            "evidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cnpcf-competencia",
+              "ev-c03-cnpcf-resoluciones",
+              "ev-c03-a15-l191-195-resoluciones",
+              "ev-c03-a15-l239-265-autos",
+              "ev-c03-a15-l273-283-incidentes"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l191-195-resoluciones",
+                "ev-c03-a15-l239-265-autos"
+              ],
+              [
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l191-195-resoluciones",
+                "ev-c03-a15-l239-265-autos"
+              ],
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia",
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l191-195-resoluciones",
+                "ev-c03-a15-l239-265-autos",
+                "ev-c03-a15-l273-283-incidentes"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c03-cnpcf-competencia",
+              "ev-c03-cnpcf-resoluciones",
+              "ev-c03-a15-l191-195-resoluciones",
+              "ev-c03-a15-l239-265-autos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c03-cnpcf-competencia",
+              "ev-c03-cnpcf-resoluciones",
+              "ev-c03-a15-l191-195-resoluciones",
+              "ev-c03-a15-l239-265-autos"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l191-195-resoluciones",
+                "ev-c03-a15-l239-265-autos"
+              ],
+              [
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l191-195-resoluciones",
+                "ev-c03-a15-l239-265-autos"
+              ],
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia",
+                "ev-c03-cnpcf-resoluciones",
+                "ev-c03-a15-l191-195-resoluciones",
+                "ev-c03-a15-l239-265-autos",
+                "ev-c03-a15-l273-283-incidentes"
+              ]
+            ]
           },
           {
             "text": "Antes de presentar una demanda, ¿qué secuencia ofrece el análisis competencial más completo?",
             "difficulty": "advanced",
-            "options": ["Elegir el tribunal más cercano y después adaptar la pretensión", "Identificar pretensión, materia, grado, territorio, cuantía aplicable y reglas especiales", "Elegir siempre un juzgado federal porque tiene mayor jerarquía"],
+            "options": [
+              "Elegir el tribunal más cercano y después adaptar la pretensión",
+              "Identificar pretensión, materia, grado, territorio, cuantía aplicable y reglas especiales",
+              "Elegir siempre un juzgado federal porque tiene mayor jerarquía"
+            ],
             "correctOption": 1,
             "explanation": "La competencia se justifica mediante la pretensión y todos los factores y reglas legales relevantes, no por conveniencia o jerarquía aparente.",
-            "optionExplanations": ["La cercanía no sustituye las reglas legales.", "Integra los factores necesarios en orden lógico.", "La competencia federal depende de la Constitución y las leyes, no de una preferencia general."]
+            "optionExplanations": [
+              "La cercanía no sustituye las reglas legales.",
+              "Integra los factores necesarios en orden lógico.",
+              "La competencia federal depende de la Constitución y las leyes, no de una preferencia general."
+            ],
+            "evidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cnpcf-competencia",
+              "ev-c03-a14-l199-201-grado"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia"
+              ],
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia",
+                "ev-c03-cnpcf-competencia",
+                "ev-c03-a14-l199-201-grado"
+              ],
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia",
+              "ev-c03-cnpcf-competencia",
+              "ev-c03-a14-l199-201-grado"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c03-cpeum-competencia",
+              "ev-c03-a05-l283-295-jurisdiccion",
+              "ev-c03-a14-l177-181-competencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia"
+              ],
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia",
+                "ev-c03-cnpcf-competencia",
+                "ev-c03-a14-l199-201-grado"
+              ],
+              [
+                "ev-c03-cpeum-competencia",
+                "ev-c03-a05-l283-295-jurisdiccion",
+                "ev-c03-a14-l177-181-competencia"
+              ]
+            ]
           }
         ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c03-cpeum-competencia",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículos 16 y 17",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c03-cpeum-control",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículos 1 y 133",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c03-cnpcf-competencia",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículo 77, competencia objetiva civil y familiar",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c03-cnpcf-resoluciones",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículo 167, página impresa 41",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c03-scjn-control-difuso",
+      "kind": "official",
+      "title": "Ejecutoria 31886 sobre control ex officio",
+      "url": "https://sjf2.scjn.gob.mx/detalle/ejecutoria/31886",
+      "institution": "Suprema Corte de Justicia de la Nación",
+      "jurisdiction": "México",
+      "locator": "ejecutoria 31886; control dentro de competencia y procedimiento, con inaplicación en el acto concreto",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c03-scjn-convencionalidad",
+      "kind": "official",
+      "title": "Expediente Varios 912/2010",
+      "url": "https://www.scjn.gob.mx/sites/default/files/estrado_electronico_notificaciones/documento/2018-08/SENTENCIA-EXP-VARIOS-912-2010-PLENO.pdf",
+      "institution": "Suprema Corte de Justicia de la Nación",
+      "jurisdiction": "México",
+      "locator": "página impresa 51; control de convencionalidad en respectivas competencias y regulaciones procesales",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c03-a05-l283-295-jurisdiccion",
+      "kind": "transcript",
+      "audioNumber": 5,
+      "locator": {
+        "type": "line_range",
+        "startLine": 283,
+        "endLine": 295
+      }
+    },
+    {
+      "id": "ev-c03-a14-l177-181-competencia",
+      "kind": "transcript",
+      "audioNumber": 14,
+      "locator": {
+        "type": "line_range",
+        "startLine": 177,
+        "endLine": 181
+      }
+    },
+    {
+      "id": "ev-c03-a14-l199-201-grado",
+      "kind": "transcript",
+      "audioNumber": 14,
+      "locator": {
+        "type": "line_range",
+        "startLine": 199,
+        "endLine": 201
+      }
+    },
+    {
+      "id": "ev-c03-a15-l191-195-resoluciones",
+      "kind": "transcript",
+      "audioNumber": 15,
+      "locator": {
+        "type": "line_range",
+        "startLine": 191,
+        "endLine": 195
+      }
+    },
+    {
+      "id": "ev-c03-a15-l239-265-autos",
+      "kind": "transcript",
+      "audioNumber": 15,
+      "locator": {
+        "type": "line_range",
+        "startLine": 239,
+        "endLine": 265
+      }
+    },
+    {
+      "id": "ev-c03-a15-l273-283-incidentes",
+      "kind": "transcript",
+      "audioNumber": 15,
+      "locator": {
+        "type": "line_range",
+        "startLine": 273,
+        "endLine": 283
       }
     }
   ]

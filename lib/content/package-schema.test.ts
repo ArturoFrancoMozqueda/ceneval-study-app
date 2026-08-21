@@ -64,7 +64,7 @@ const legacyPackagePath = path.join(
   process.cwd(),
   "content",
   "packages",
-  "audio-05-14-15-jurisdiccion-competencia.json",
+  "audio-56-57-resoluciones-judiciales.json",
 );
 
 function readLegacyPackage() {
