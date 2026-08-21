@@ -64,7 +64,7 @@ const legacyPackagePath = path.join(
   process.cwd(),
   "content",
   "packages",
-  "audio-67-obligaciones-fiscales-regimen.json",
+  "audio-29-recurso-revocacion-fiscal.json",
 );
 
 function readLegacyPackage() {

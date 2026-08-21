@@ -279,6 +279,35 @@ const traceablePackages = [
       /cuotas actualizadas DOF 22-12-2025/i,
     ],
   },
+  {
+    code: "C19",
+    fileName: "audio-67-obligaciones-fiscales-regimen.json",
+    artifacts: 143,
+    evidence: 18,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /no se afirma que toda persona inscrita tenga exactamente la misma obligación/i,
+      /salarios que excedan 400,000 pesos/i,
+      /No uses 500,000 pesos como umbral salarial vigente/i,
+      /primera modificación (?:del )?9 de julio de 2026/i,
+    ],
+  },
+  {
+    code: "C20",
+    fileName: "audio-28-29-visita-domiciliaria.json",
+    artifacts: 148,
+    evidence: 15,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /artículo 42, fracción III.*practicar visitas.*revisión de gabinete de la fracción II/i,
+      /revisión electrónica de la fracción IX.*visitas de verificación de la fracción V/i,
+      /aseguramiento tampoco es una consecuencia ordinaria de cualquier visita/i,
+      /doce meses.*excepciones y suspensiones/i,
+      /seis meses desde el acta final, sujeto a suspensiones/i,
+      /acuerdo conclusivo.*PRODECON/i,
+      /recurso de revocación.*optativo antes de acudir al tribunal/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -470,6 +499,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una cifra obsoleta o generalización retirada como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C19" || expected.code === "C20") {
+      const obsoleteAsCurrent =
+        expected.code === "C19"
+          ? /500[,.]?000 pesos|toda AC.*exenta|trabajador.*no (?:hace|presenta) nada|toda persona.*Buzón/i
+          : /crédito fiscal.*(?:es|equivale).*multa|siempre.*dos visitadores|aseguramiento automático|toda revisión.*(?:doce meses|cinco ejercicios)|(?:acuerdo conclusivo|recurso de revocación).*siempre/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una generalización fiscal retirada como respuesta vigente.`,
         );
       }
     }
