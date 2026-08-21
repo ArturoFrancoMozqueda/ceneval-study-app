@@ -67,26 +67,23 @@ La última ejecución remota documentada fue el **29 de julio de 2026**:
 - recorrido editorial básico aprobado.
 
 Desde entonces, el código amplió la suite a 31 comprobaciones y añadió la
-migración
-`20260820225524_restrict_learning_activity_to_published_content.sql`. No existe
-evidencia en el repositorio de que esa migración se haya aplicado a Supabase ni
-de que la suite ampliada se haya ejecutado allí.
+migración `20260821021203_restrict_learning_activity_to_published_content.sql`.
+Las diez migraciones se aplicaron al proyecto CENEVAL y su historial y catálogo
+se verificaron el 20 de agosto de 2026. La suite ampliada todavía no se ha
+ejecutado allí.
 
 Por lo tanto, la afirmación correcta es:
 
-> Las políticas nuevas están versionadas y comprobadas de forma estática; su
-> aplicación y comportamiento en Supabase remoto siguen pendientes de
-> verificación autorizada.
+> Las políticas nuevas están versionadas y aplicadas en CENEVAL; su
+> comportamiento dinámico con las 31 comprobaciones sigue pendiente de una
+> ejecución autorizada.
 
 ## Orden seguro para cerrar la verificación
 
-1. Completar el procedimiento autorizado de `docs/SUPABASE_BACKUP.md` y
-   conservar una exportación verificable fuera del equipo.
-2. Consultar el historial de migraciones del proyecto remoto.
-3. Aplicar la migración pendiente, si corresponde, en una ventana autorizada.
-4. Ejecutar `npm run security:rls` una sola vez después de aplicarla.
-5. Registrar fecha, commit, conteo y resultado sin copiar secretos.
-6. Repetir los asesores de seguridad y rendimiento de Supabase.
+1. Configurar las credenciales locales exclusivamente para CENEVAL.
+2. Ejecutar `npm run security:rls` una sola vez en una ventana autorizada.
+3. Registrar fecha, commit, conteo y resultado sin copiar secretos.
+4. Crear el primer respaldo verificable después de importar datos reales.
 
 ## Auditoría previa de funciones privilegiadas
 
@@ -98,16 +95,15 @@ El 29 de julio se revisaron las funciones declaradas entonces:
 - `private.is_admin()` usa `security definer`, compara con `auth.uid()` y solo
   puede ser invocada por `authenticated` para resolver políticas RLS.
 
-También se restringió la ejecución de `public.rls_auto_enable()` mediante
-`20260729173157_restrict_rls_auto_enable_execute.sql`. Esta evidencia pertenece
-a esa fecha y no sustituye una nueva corrida de asesores tras las migraciones
-posteriores.
+La migración `20260821020934_restrict_rls_auto_enable_execute.sql` es portable:
+revoca `public.rls_auto_enable()` solo cuando esa función existe. Los asesores
+se ejecutaron después de aplicar todas las migraciones; el único aviso de
+seguridad fue `exam_answer_keys` con RLS sin políticas, que es deliberado.
 
 ## Cobertura pendiente
 
 - cuenta registrada pero todavía no verificada;
 - pruebas de interfaz y recorridos reales en navegador;
-- confirmar la migración del 20 de agosto en remoto;
-- repetir la suite actual de 31 comprobaciones y asesores;
+- ejecutar la suite actual de 31 comprobaciones;
 - activar protección contra contraseñas filtradas si el plan de Supabase lo
   permite en el futuro.

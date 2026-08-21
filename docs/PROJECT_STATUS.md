@@ -2,7 +2,7 @@
 
 Última actualización: 20 de agosto de 2026
 
-Base documental: `origin/main` en `3a1fe92`
+Base documental: `origin/main` en `be3f110`
 
 Responsables: Fatima (administración y validación) y Codex (desarrollo y contenido)
 
@@ -23,8 +23,8 @@ Los bloqueos operativos reales siguen siendo:
 1. las transcripciones originales dependen del disco `F:`;
 2. existe un procedimiento seguro de respaldo, pero todavía no una exportación
    comprobable de la base, una copia externa ni una restauración probada;
-3. la migración RLS del 20 de agosto está en Git, pero no hay evidencia de que
-   ya se aplicó a Supabase remoto;
+3. el esquema y las diez migraciones ya están aplicados en CENEVAL, pero la
+   suite RLS dinámica de 31 comprobaciones todavía no se ha ejecutado;
 4. la aplicación no está desplegada y solo se usa en `localhost`;
 5. C41–C58 y los bancos acumulativos siguen pendientes.
 
@@ -51,8 +51,12 @@ suscripciones.
 
 ## 2. Inventario académico conocido
 
-La última lectura documentada de la base remota, realizada el 12 de agosto de
-2026, registró:
+La lectura del proyecto remoto **CENEVAL Study App** realizada el 20 de agosto
+de 2026 confirmó **0 usuarios, 0 materias, 0 clases y 0 temas**. Sus diez
+migraciones están aplicadas y todas las tablas públicas tienen RLS.
+
+La auditoría del 12 de agosto registró el siguiente inventario en una base
+anterior, pero esos datos no están presentes en el proyecto CENEVAL conectado:
 
 | Elemento | Último dato conocido |
 | --- | ---: |
@@ -67,9 +71,10 @@ La última lectura documentada de la base remota, realizada el 12 de agosto de
 | Flashcards | 480 |
 | Preguntas de examen | 400 |
 
-La siguiente clase académica es **C41 — Juicio ejecutivo mercantil oral**,
-con Audio 54 y la primera parte del Audio 55. Antes de afirmar que los conteos
-siguen iguales, deben verificarse de nuevo en Supabase.
+El repositorio conserva 41 paquetes históricos y la siguiente clase planeada es
+**C41 — Juicio ejecutivo mercantil oral**, con Audio 54 y la primera parte del
+Audio 55. Antes de disponer de esa biblioteca en la aplicación habrá que
+recuperar/importar C01–C40 en el proyecto CENEVAL correcto.
 
 Existen tres identificadores distintos:
 
@@ -166,7 +171,7 @@ Server Actions vuelven a validar rol, identificadores y estado, y no devuelven
 detalles internos de Supabase.
 
 La migración
-`20260820234325_create_topic_with_next_position.sql` reemplaza el cálculo
+`20260821021205_create_topic_with_next_position.sql` reemplaza el cálculo
 separado de `count + 1` por una función transaccional. Un bloqueo asesor por
 clase serializa únicamente las altas que compiten por la siguiente posición;
 la función usa `security invoker` y solo concede ejecución a `service_role`.
@@ -226,7 +231,7 @@ Las acciones de revisión, progreso y comprobación rápida:
 - devuelven mensajes que no permiten enumerar borradores o IDs inexistentes.
 
 La migración
-`20260820225524_restrict_learning_activity_to_published_content.sql` añade la
+`20260821021203_restrict_learning_activity_to_published_content.sql` añade la
 misma condición a la Data API para `flashcard_reviews`, `study_progress` y
 `quick_check_responses`. La migración es transaccional y su estructura se
 comprueba localmente en CI.

@@ -5,7 +5,7 @@ const migrationPath = join(
   process.cwd(),
   "supabase",
   "migrations",
-  "20260820225524_restrict_learning_activity_to_published_content.sql",
+  "20260821021203_restrict_learning_activity_to_published_content.sql",
 );
 const sql = readFileSync(migrationPath, "utf8")
   .replace(/--.*$/gm, "")
@@ -61,7 +61,7 @@ const legacyGuardPath = join(
   process.cwd(),
   "supabase",
   "migrations",
-  "20260729173157_restrict_rls_auto_enable_execute.sql",
+  "20260821020934_restrict_rls_auto_enable_execute.sql",
 );
 const legacyGuardSql = readFileSync(legacyGuardPath, "utf8")
   .replace(/--.*$/gm, "")
