@@ -145,16 +145,16 @@ alguna sigue abierta; si corriges una, actualiza esta lista.
 - **Las transcripciones originales solo existen en el disco `F:`.** Los 41
   paquetes apuntan a `F:\TRANSCRIPCIONES CENEVAL\AUDIO NN.txt`, así que
   `content:check` y `content:import` fallan en cualquier otra computadora.
-- **Las diez migraciones están aplicadas en CENEVAL, pero falta la suite RLS
+- **Las once migraciones están aplicadas en CENEVAL, pero falta la suite RLS
   dinámica.** El historial remoto se verificó el 20 de agosto de 2026 y los
   asesores no mostraron errores de seguridad; el aviso de `exam_answer_keys`
   sin políticas es el bloqueo deliberado. `npm run security:rls` todavía
   requiere una ventana autorizada porque crea y publica datos temporales.
-- **La protección de lectura por aprobación está versionada, no aplicada.**
-  `20260821022138_restrict_reading_to_approved_topics.sql` impide que una
+- **La protección de lectura por aprobación está aplicada en CENEVAL.**
+  `20260821023330_restrict_reading_to_approved_topics.sql` impide que una
   estudiante lea temas pendientes o rechazados, y extiende el bloqueo a sus
   materiales, mapas, referencias, flashcards y exámenes. No presentes esta
-  capa como activa en remoto hasta verificar la migración y la suite RLS.
+  capa quedó verificada en el historial remoto; aún falta ejecutar la suite RLS.
 - **Existe el procedimiento, no un respaldo real de Supabase.**
   `docs/SUPABASE_BACKUP.md` y `npm run test:backup` documentan y comprueban el
   mecanismo con datos sintéticos. El proyecto remoto actual no contiene

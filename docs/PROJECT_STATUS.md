@@ -23,12 +23,10 @@ Los bloqueos operativos reales siguen siendo:
 1. las transcripciones originales dependen del disco `F:`;
 2. existe un procedimiento seguro de respaldo, pero todavía no una exportación
    comprobable de la base, una copia externa ni una restauración probada;
-3. el esquema y las diez migraciones ya están aplicados en CENEVAL, pero la
+3. el esquema y las once migraciones ya están aplicados en CENEVAL, pero la
    suite RLS dinámica de 31 comprobaciones todavía no se ha ejecutado;
-4. la undécima migración local, que restringe la lectura a temas aprobados,
-   está versionada pero no aplicada ni probada en remoto;
-5. la aplicación no está desplegada y solo se usa en `localhost`;
-6. C41–C58 y los bancos acumulativos siguen pendientes.
+4. la aplicación no está desplegada y solo se usa en `localhost`;
+5. C41–C58 y los bancos acumulativos siguen pendientes.
 
 El historial de Git ya es útil y existe CI. Esos dos hallazgos de la auditoría
 original están resueltos, pero ninguno reemplaza un respaldo de la base.
@@ -178,12 +176,10 @@ separado de `count + 1` por una función transaccional. Un bloqueo asesor por
 clase serializa únicamente las altas que compiten por la siguiente posición;
 la función usa `security invoker` y solo concede ejecución a `service_role`.
 
-**Gate operativo:** la migración está versionada y tiene comprobación estática
-local, pero no se aplicó ni se verificó contra Supabase remoto en este trabajo.
-Antes de crear temas con este código, una persona autorizada debe revisar y
-aplicar la migración, confirmar su historial y ejecutar los asesores de base.
-No debe habilitarse la nueva Server Action en un entorno cuya migración siga
-pendiente.
+**Estado remoto:** la migración está aplicada en CENEVAL y se verificó en su
+historial. La comprobación estática local también forma parte de CI. La función
+puede usarse en ese proyecto; una instalación nueva debe aplicar todas las
+migraciones antes de habilitar la Server Action.
 
 ### Examen y retroalimentación
 
@@ -246,7 +242,7 @@ siendo la suite anterior de 20 comprobaciones, aprobada el 29 de julio de 2026.
 ### Lectura limitada a temas aprobados
 
 La migración
-`20260821022138_restrict_reading_to_approved_topics.sql` corrige una separación
+`20260821023330_restrict_reading_to_approved_topics.sql` corrige una separación
 incompleta entre publicación de clase y aprobación de tema. Para estudiantes,
 un tema ahora debe estar `approved` y pertenecer a una clase `published`. La
 misma cadena protege materiales, mapas, referencias, flashcards, exámenes,
@@ -257,8 +253,8 @@ Como defensa adicional, `getTopic` filtra explícitamente por aprobación y
 `test:topic-approval-policies` verifica localmente la migración y ambos filtros
 sin conectarse a Supabase.
 
-**Gate operativo:** esta undécima migración existe solo en Git. No se aplicó al
-proyecto remoto durante este trabajo. Antes de abrir el acceso estudiantil, una
+**Estado remoto:** esta undécima migración se aplicó en CENEVAL y se verificó
+en el historial el 20 de agosto de 2026. Antes de abrir el acceso estudiantil, una
 persona autorizada debe revisarla, aplicarla únicamente a CENEVAL, confirmar el
 historial, ejecutar los asesores y ampliar la suite RLS dinámica con temas
 pendientes y rechazados.
