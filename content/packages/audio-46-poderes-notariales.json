@@ -1,10 +1,13 @@
 {
-  "packageVersion": "1.1",
+  "packageVersion": "1.2",
   "curriculum": {
     "code": "C34",
     "order": 34,
     "audioSources": [
-      {"audioNumber": 46,"fragment": "Primera parte: poderes notariales"}
+      {
+        "audioNumber": 46,
+        "fragment": "Primera parte: poderes notariales"
+      }
     ]
   },
   "subject": {
@@ -17,193 +20,1518 @@
   },
   "transcript": {
     "originalFile": "AUDIO 46.txt",
-    "cleaned": "Se conservó la primera parte del Audio 46 sobre poderes para actos de dominio, administración y pleitos y cobranzas. El bloque posterior sobre capitulaciones matrimoniales se reservó para la clase familiar correspondiente. Se eliminaron conversaciones personales, precios, bromas, expresiones discriminatorias, anécdotas sin valor académico y afirmaciones de práctica local no acreditadas. Se corrigió que las tres categorías del artículo 2554 del Código Civil Federal son facultades diferenciadas y que un poder de dominio no incorpora automáticamente administración o litigio; que comprar, vender, donar, gravar, contratar personal, operar cuentas, suscribir títulos y comparecer a juicio exigen revisar el texto del poder y la norma especial; que los poderes generales no necesariamente deben constar siempre en escritura pública porque el código también contempla carta poder con firmas ratificadas; que la inscripción registral no es requisito universal para todo poder ni convalida facultades inexistentes; que un poder otorgado en otra entidad no pierde autenticidad por ese solo hecho; y que no existe una duración general obligatoria de tres años en el Código Civil Federal ni en los artículos michoacanos consultados, pues el plazo puede pactarse y el mandato también termina por revocación, renuncia, muerte, incapacidad, vencimiento o conclusión del negocio conforme a la legislación aplicable."
+    "cleaned": "Se conservó exclusivamente el bloque inicial del Audio 46 dedicado a poderes generales para dominio, administración y pleitos y cobranzas. El segmento posterior corresponde a otra clase. Se retiraron datos personales, precios, recomendaciones locales y afirmaciones no acreditadas. El contenido se corrigió con el Código Civil Federal vigente: mandato, representación y poder no son términos intercambiables; las tres categorías generales del artículo 2554 deben leerse por separado; dominio no acumula automáticamente administración y litigio; forma e inscripción dependen de la norma y del acto; no existe una vigencia federal automática de tres o cinco años; y revocación, terminación y protección de terceros tienen reglas específicas."
   },
-  "topics": [{
-    "title": "Elegir y acreditar el poder según el acto",
-    "description": "Método para distinguir facultades de dominio, administración, pleitos y cobranzas y poderes especiales.",
-    "learningJourney": {
-      "openingPrompt": "Una gerente puede contratar personal, firmar cheques, vender un inmueble y desistirse de una demanda solo porque administra la empresa?",
-      "quickChecks": [
+  "topics": [
+    {
+      "title": "Elegir y acreditar el poder según el acto",
+      "description": "Método para distinguir facultades de dominio, administración, pleitos y cobranzas y poderes especiales.",
+      "learningJourney": {
+        "openingPrompt": "Una gerente puede contratar personal, celebrar cualquier contrato, vender un inmueble y desistirse de una demanda solo porque administra la empresa?",
+        "quickChecks": [
+          {
+            "prompt": "Un poder de dominio incluye automáticamente pleitos y cobranzas?",
+            "answer": "No. Las categorías son distintas; deben leerse las facultades efectivamente conferidas y las cláusulas especiales exigidas.",
+            "feedback": "No construyas una jerarquía automática entre poderes.",
+            "evidenceIds": [
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-sjf-255038-pleitos-alcance",
+              "ev-c34-a46-l023-049-administracion-generalizacion",
+              "ev-c34-a46-l079-095-pleitos-clausulas"
+            ]
+          },
+          {
+            "prompt": "Todo poder general debe constar necesariamente en escritura pública?",
+            "answer": "No bajo la regla federal: puede constar en escritura pública o carta poder con dos testigos y firmas ratificadas, sin perjuicio de normas especiales.",
+            "feedback": "Distingue instrumento público de carta poder ratificada.",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2555-2559-forma"
+            ]
+          },
+          {
+            "prompt": "Ser gerente basta para acreditar cualquier facultad representativa?",
+            "answer": "No. Deben revisarse los estatutos, el nombramiento, el poder y las facultades exigidas para el acto concreto.",
+            "feedback": "El cargo y la representación no siempre tienen igual alcance.",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-sjf-182953-representacion",
+              "ev-c34-a46-l023-049-administracion-generalizacion"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una sociedad quiere que su gerente contrate personal y servicios, pague contribuciones, celebre cualquier contrato, venda un inmueble y se desista de una demanda. El documento solo dice poder general para actos de administración.",
+          "question": "Qué actos puede realizar con seguridad y cuáles requieren revisar o ampliar facultades?",
+          "legalRule": "Los artículos 2553 y 2554 del Código Civil Federal separan los poderes generales; los artículos 2555 y 2556 regulan forma; el artículo 2587 exige facultades especiales en actos judiciales; y los artículos 2595 a 2604 regulan terminación y terceros.",
+          "reasoning": "Contratar servicios o personal y atender pagos ordinarios puede encajar en administración si corresponde al giro y a los límites escritos. El cargo no prueba facultades para cualquier contrato. Vender el inmueble es acto de dominio y desistirse requiere facultad procesal especial.",
+          "conclusion": "Debe diseñarse un poder por funciones y riesgos, no confiar en el nombre del cargo ni en una supuesta inclusión automática de categorías.",
+          "evidenceIds": [
+            "ev-c34-ccf-arts2546-2553-mandato-clases",
+            "ev-c34-sjf-182953-representacion",
+            "ev-c34-ccf-arts2560-2585-efectos",
+            "ev-c34-ccf-art2554-poderes-generales",
+            "ev-c34-ccf-arts2555-2559-forma",
+            "ev-c34-ccf-arts2586-2594-mandato-judicial",
+            "ev-c34-sjf-255038-pleitos-alcance",
+            "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+            "ev-c34-a46-l009-015-categorias",
+            "ev-c34-a46-l023-049-administracion-generalizacion",
+            "ev-c34-a46-l079-095-pleitos-clausulas"
+          ]
+        },
+        "closingPrompt": "Clasifica cada acto por dominio, administración, litigio o facultad especial y explica qué documento acreditaría la representación.",
+        "nextActivity": "Estudia el mapa visual, responde la guía de doce preguntas y resuelve los diez casos originales.",
+        "openingPromptEvidenceIds": [
+          "ev-c34-ccf-arts2546-2553-mandato-clases",
+          "ev-c34-ccf-art2554-poderes-generales",
+          "ev-c34-ccf-arts2586-2594-mandato-judicial",
+          "ev-c34-sjf-255038-pleitos-alcance",
+          "ev-c34-a46-l009-015-categorias",
+          "ev-c34-a46-l023-049-administracion-generalizacion",
+          "ev-c34-a46-l079-095-pleitos-clausulas"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c34-ccf-arts2546-2553-mandato-clases",
+          "ev-c34-sjf-182953-representacion",
+          "ev-c34-ccf-arts2560-2585-efectos",
+          "ev-c34-ccf-art2554-poderes-generales",
+          "ev-c34-a46-l009-015-categorias",
+          "ev-c34-a46-l023-049-administracion-generalizacion"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c34-ccf-arts2546-2553-mandato-clases",
+          "ev-c34-ccf-art2554-poderes-generales"
+        ]
+      },
+      "materials": [
         {
-          "prompt": "Un poder de dominio incluye automáticamente pleitos y cobranzas?",
-          "answer": "No. Las categorías son distintas; deben leerse las facultades efectivamente conferidas y las cláusulas especiales exigidas.",
-          "feedback": "No construyas una jerarquía automática entre poderes."
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "Pleitos y cobranzas permite representación judicial y de cobro dentro de las facultades otorgadas; administración cubre conservación y gestión ordinaria de bienes o negocios; dominio confiere facultades de dueño para disponer y defender bienes. Un poder especial confiere facultades delimitadas fuera de las tres categorías generales y puede referirse a uno o más actos o negocios determinados. Las categorías no se acumulan automáticamente: hay que leer objeto, límites, cláusulas especiales, forma, vigencia y norma aplicable.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c34-ccf-arts2546-2553-mandato-clases",
+            "ev-c34-sjf-182953-representacion",
+            "ev-c34-ccf-arts2560-2585-efectos",
+            "ev-c34-ccf-art2554-poderes-generales",
+            "ev-c34-ccf-arts2555-2559-forma",
+            "ev-c34-ccf-arts2586-2594-mandato-judicial",
+            "ev-c34-sjf-255038-pleitos-alcance",
+            "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+            "ev-c34-a46-l009-015-categorias",
+            "ev-c34-a46-l023-049-administracion-generalizacion",
+            "ev-c34-a46-l079-095-pleitos-clausulas",
+            "ev-c34-a46-l097-105-plazos-locales-corregidos"
+          ]
         },
         {
-          "prompt": "Todo poder general debe constar necesariamente en escritura pública?",
-          "answer": "No bajo la regla federal: puede constar en escritura pública o carta poder con dos testigos y firmas ratificadas, sin perjuicio de normas especiales.",
-          "feedback": "Distingue instrumento público de carta poder ratificada."
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "El mandato es el contrato por el que el mandatario se obliga a ejecutar por cuenta del mandante los actos jurídicos encomendados. Para estudiar el poder conviene separar ese vínculo interno de la representación: esta última es la aptitud para realizar actos jurídicos a nombre y por cuenta de otra persona. El documento puede contener ambas dimensiones, pero el encargo no prueba por sí solo toda facultad frente a terceros.\n\nEl artículo 2553 del Código Civil Federal clasifica el mandato como general o especial. Son generales únicamente las tres categorías de los primeros párrafos del artículo 2554: pleitos y cobranzas, administración y dominio. Cualquier otro mandato es especial; además, un poder general puede contener limitaciones expresas.\n\nPleitos y cobranzas cubre controversias y gestiones de cobro dentro de su finalidad. No confiere por sí mismo administración o dominio. En mandato judicial, los artículos 2586 y 2587 regulan la forma y exigen poder o cláusula especial para actos como desistirse, transigir, comprometer en árbitros, absolver posiciones, ceder bienes, recusar o recibir pagos.\n\nAdministración comprende facultades administrativas sobre bienes, pero la etiqueta no autoriza cualquier acto imaginable. Deben revisarse el texto, sus límites, el giro, las instrucciones y cualquier norma especial. Ser gerente o tener acceso operativo no sustituye la representación suficiente.\n\nDominio confiere las facultades de dueño sobre los bienes y las gestiones necesarias para defenderlos, dentro del poder y la ley. Ello no significa que el documento otorgue automáticamente las otras dos categorías. Si se quieren pleitos, administración y dominio, el instrumento debe expresar las facultades correspondientes o permitir una conclusión jurídicamente válida en el caso concreto.\n\nLa forma no se reduce a escritura pública. Los artículos 2551, 2555 y 2556 contemplan escritura, escrito privado con testigos y ratificación o carta poder, según el carácter general, la naturaleza y el valor del negocio. Un acto que deba constar en instrumento público activa la formalidad correspondiente. El mandato judicial tiene además la regla del artículo 2586.\n\nNo existe inscripción universal para todo poder. El registro puede ser exigido por la legislación especial o por el acto concreto, pero no crea facultades ausentes. El criterio con registro digital 223427 confirma, en su supuesto de litigio de arrendamiento, que un poder para pleitos y cobranzas no necesitaba inscripción para ejercer esa acción.\n\nEl Código Civil Federal tampoco fija una duración general automática de tres o cinco años. Debe leerse el plazo pactado y las causas del artículo 2595: revocación, renuncia, muerte, interdicción, vencimiento y conclusión del negocio, además de los casos allí remitidos. La revocación tiene límites excepcionales en el artículo 2596.\n\nFrente a terceros importa comunicar el fin del poder. Cuando el mandato se dio para tratar con una persona determinada, el artículo 2597 exige notificarle la revocación; también procede recuperar el instrumento y documentos. La buena fe del tercero no se resuelve con una fórmula única, sino con los artículos 2597 a 2604 y los hechos.\n\nEl CNPCF no debe usarse como regla procesal uniforme sin comprobar la declaratoria aplicable: su entrada en vigor es gradual y no puede exceder del 1 de abril de 2027. Para un caso, identifica primero jurisdicción, procedimiento y fecha.\n\nResuelve cada reactivo con esta secuencia: acto concreto; persona por cuya cuenta se realiza; categoría y límites; cláusula especial; forma; norma procesal o especial vigente; plazo o revocación; y efectos frente al tercero.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c34-ccf-arts2546-2553-mandato-clases",
+            "ev-c34-sjf-182953-representacion",
+            "ev-c34-ccf-arts2560-2585-efectos",
+            "ev-c34-ccf-art2554-poderes-generales",
+            "ev-c34-ccf-arts2555-2559-forma",
+            "ev-c34-ccf-arts2586-2594-mandato-judicial",
+            "ev-c34-sjf-255038-pleitos-alcance",
+            "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+            "ev-c34-sjf-223427-inscripcion-no-universal",
+            "ev-c34-cnpcf-transitorio-segundo-gradualidad",
+            "ev-c34-a46-l009-015-categorias",
+            "ev-c34-a46-l023-049-administracion-generalizacion",
+            "ev-c34-a46-l079-095-pleitos-clausulas",
+            "ev-c34-a46-l097-105-plazos-locales-corregidos",
+            "ev-c34-a46-l107-113-inscripcion-costos-corregidos"
+          ]
         },
         {
-          "prompt": "Ser gerente basta para disponer de una cuenta bancaria?",
-          "answer": "No necesariamente. Deben revisarse estatutos, nombramiento, poder, facultades de títulos de crédito y requisitos de la institución.",
-          "feedback": "El cargo y la representación no siempre tienen igual alcance."
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Código Civil Federal, texto vigente y última reforma DOF 14-11-2025: artículos 2546 a 2559 sobre mandato, clases y forma; 2560 a 2585 sobre obligaciones y efectos; 2586 a 2594 sobre mandato judicial; y 2595 a 2604 sobre terminación y terceros. Semanario Judicial de la Federación, registros digitales 182953, 255038 y 223427, para representación y alcance no acumulativo ni registral universal. El CNPCF tiene implementación gradual conforme a su Segundo Transitorio; antes de aplicarlo debe comprobarse la declaratoria y materia vigentes.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c34-ccf-arts2546-2553-mandato-clases",
+            "ev-c34-ccf-art2554-poderes-generales",
+            "ev-c34-ccf-arts2555-2559-forma",
+            "ev-c34-ccf-arts2560-2585-efectos",
+            "ev-c34-ccf-arts2586-2594-mandato-judicial",
+            "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+            "ev-c34-sjf-182953-representacion",
+            "ev-c34-sjf-255038-pleitos-alcance",
+            "ev-c34-sjf-223427-inscripcion-no-universal",
+            "ev-c34-cnpcf-transitorio-segundo-gradualidad"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Lucía recibe poder de administración para contratar mantenimiento y pagar servicios de un hotel. Puede realizar esas gestiones ordinarias dentro de los límites escritos. No puede asumir que también puede vender el hotel o desistirse de una demanda: el primer acto es de dominio y el segundo exige revisar facultades procesales especiales.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c34-ccf-arts2546-2553-mandato-clases",
+            "ev-c34-ccf-art2554-poderes-generales",
+            "ev-c34-ccf-arts2586-2594-mandato-judicial",
+            "ev-c34-sjf-255038-pleitos-alcance",
+            "ev-c34-a46-l009-015-categorias",
+            "ev-c34-a46-l023-049-administracion-generalizacion",
+            "ev-c34-a46-l079-095-pleitos-clausulas"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo CENEVAL",
+          "content": "Una persona moral otorga a su gerente poder general para administrar bienes. El gerente pretende vender una bodega y transigir un juicio. La mejor respuesta es revisar y ampliar el instrumento: la venta requiere dominio y la transacción exige facultad o cláusula especial; el cargo de gerente no corrige la falta.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c34-ccf-arts2546-2553-mandato-clases",
+            "ev-c34-ccf-art2554-poderes-generales",
+            "ev-c34-ccf-arts2586-2594-mandato-judicial",
+            "ev-c34-sjf-255038-pleitos-alcance",
+            "ev-c34-a46-l009-015-categorias",
+            "ev-c34-a46-l023-049-administracion-generalizacion",
+            "ev-c34-a46-l079-095-pleitos-clausulas"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Poder general: pleitos y cobranzas, administración o dominio. Poder especial: acto concreto. Las categorías son separadas. Administración gestiona; dominio dispone; pleitos representa en controversias. Algunos actos procesales requieren cláusula especial. La forma puede ser escritura o carta poder ratificada según la ley. Inscripción y plazo no son universales. Siempre verifica otorgante, acto, facultades, forma, publicidad, vigencia y revocación.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c34-ccf-arts2546-2553-mandato-clases",
+            "ev-c34-sjf-182953-representacion",
+            "ev-c34-ccf-arts2560-2585-efectos",
+            "ev-c34-ccf-art2554-poderes-generales",
+            "ev-c34-ccf-arts2555-2559-forma",
+            "ev-c34-ccf-arts2586-2594-mandato-judicial",
+            "ev-c34-sjf-255038-pleitos-alcance",
+            "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+            "ev-c34-sjf-223427-inscripcion-no-universal",
+            "ev-c34-a46-l009-015-categorias",
+            "ev-c34-a46-l023-049-administracion-generalizacion",
+            "ev-c34-a46-l079-095-pleitos-clausulas",
+            "ev-c34-a46-l097-105-plazos-locales-corregidos",
+            "ev-c34-a46-l107-113-inscripcion-costos-corregidos"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía intensiva de preguntas y respuestas",
+          "content": "1. ¿Qué es mandato? Respuesta: contrato para ejecutar actos jurídicos por cuenta del mandante. 2. ¿Qué es representación? Respuesta: aptitud para actuar a nombre y por cuenta de otra persona. 3. ¿Cuáles son los poderes generales del artículo 2554? Respuesta: pleitos y cobranzas, administración y dominio. 4. ¿Qué es mandato especial? Respuesta: cualquiera distinto de esas categorías o uno delimitado al caso. 5. ¿Administración permite vender? Respuesta: no por sí sola. 6. ¿Dominio incluye todo litigio? Respuesta: no automáticamente. 7. ¿Qué cubre pleitos y cobranzas? Respuesta: controversias y cobro dentro de sus cláusulas. 8. ¿Transigir requiere algo adicional? Respuesta: poder o cláusula especial. 9. ¿Todo poder general va solo en escritura? Respuesta: no; el CCF contempla formas alternativas con requisitos. 10. ¿Todo poder se inscribe? Respuesta: no. 11. ¿Dura siempre tres o cinco años? Respuesta: no existe ese máximo federal automático. 12. ¿Cómo termina? Respuesta: por las causas del artículo 2595 y correlativos.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c34-ccf-arts2546-2553-mandato-clases",
+            "ev-c34-sjf-182953-representacion",
+            "ev-c34-ccf-arts2560-2585-efectos",
+            "ev-c34-ccf-art2554-poderes-generales",
+            "ev-c34-ccf-arts2555-2559-forma",
+            "ev-c34-ccf-arts2586-2594-mandato-judicial",
+            "ev-c34-sjf-255038-pleitos-alcance",
+            "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+            "ev-c34-sjf-223427-inscripcion-no-universal",
+            "ev-c34-a46-l009-015-categorias",
+            "ev-c34-a46-l023-049-administracion-generalizacion",
+            "ev-c34-a46-l079-095-pleitos-clausulas",
+            "ev-c34-a46-l097-105-plazos-locales-corregidos",
+            "ev-c34-a46-l107-113-inscripcion-costos-corregidos"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Mandante: quien encarga. Mandatario: quien acepta el encargo. Poderdante: quien confiere representación. Apoderado: quien actúa a nombre de otra persona. Poder general: pleitos y cobranzas, administración o dominio. Mandato especial: el distinto de las tres categorías generales o expresamente delimitado. Pleitos y cobranzas: controversias y cobro. Administración: gestión de bienes. Dominio: facultades de dueño sobre bienes. Cláusula especial: autorización expresa exigida. Escritura pública: una forma legal. Carta poder ratificada: forma prevista en los supuestos legales. Mandato judicial: representación sometida a los artículos 2586 y siguientes. Revocación: causa de terminación con efectos que pueden requerir notificación. Tercero de buena fe: sujeto cuya posición exige analizar la comunicación y circunstancias.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c34-ccf-arts2546-2553-mandato-clases",
+            "ev-c34-sjf-182953-representacion",
+            "ev-c34-ccf-arts2560-2585-efectos",
+            "ev-c34-ccf-art2554-poderes-generales",
+            "ev-c34-ccf-arts2555-2559-forma",
+            "ev-c34-ccf-arts2586-2594-mandato-judicial",
+            "ev-c34-sjf-255038-pleitos-alcance",
+            "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+            "ev-c34-a46-l009-015-categorias",
+            "ev-c34-a46-l023-049-administracion-generalizacion",
+            "ev-c34-a46-l079-095-pleitos-clausulas"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "No confundas mandato, poder y representación. No conviertas el cargo de gerente en facultad suficiente. No supongas que dominio acumula administración y pleitos. No atribuyas a administración cualquier disposición. No omitas cláusulas especiales para desistir, transigir o recibir pagos. No afirmes que todo poder general exige exclusivamente escritura. No exijas inscripción universal. No inventes vigencia automática de tres o cinco años. No uses costos o prácticas locales como derecho federal. No apliques el CNPCF sin revisar su entrada gradual. No ignores límites, revocación ni efectos frente a terceros.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c34-ccf-arts2546-2553-mandato-clases",
+            "ev-c34-sjf-182953-representacion",
+            "ev-c34-ccf-arts2560-2585-efectos",
+            "ev-c34-ccf-art2554-poderes-generales",
+            "ev-c34-ccf-arts2555-2559-forma",
+            "ev-c34-ccf-arts2586-2594-mandato-judicial",
+            "ev-c34-sjf-255038-pleitos-alcance",
+            "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+            "ev-c34-sjf-223427-inscripcion-no-universal",
+            "ev-c34-cnpcf-transitorio-segundo-gradualidad",
+            "ev-c34-a46-l009-015-categorias",
+            "ev-c34-a46-l023-049-administracion-generalizacion",
+            "ev-c34-a46-l079-095-pleitos-clausulas",
+            "ev-c34-a46-l097-105-plazos-locales-corregidos",
+            "ev-c34-a46-l107-113-inscripcion-costos-corregidos"
+          ]
         }
       ],
-      "practicalCase": {
-        "facts": "Una sociedad quiere que su gerente contrate personal y servicios, pague contribuciones, firme cheques, venda un inmueble y se desista de una demanda. El documento solo dice poder general para actos de administración.",
-        "question": "Qué actos puede realizar con seguridad y cuáles requieren revisar o ampliar facultades?",
-        "legalRule": "El artículo 2554 CCF distingue pleitos y cobranzas, administración y dominio; el 2587 exige poder o cláusula especial para actos procesales determinados. La suscripción de títulos de crédito y la disposición de bienes se rigen además por normas especiales.",
-        "reasoning": "Contratar servicios o personal y atender pagos ordinarios puede encajar en administración si corresponde al giro. Vender el inmueble es acto de dominio. Desistirse requiere facultad procesal especial. Firmar cheques no se presume por el cargo: debe existir facultad y cumplir requisitos bancarios y cambiarios.",
-        "conclusion": "Debe diseñarse un poder por funciones y riesgos, no confiar en el nombre del cargo ni en una supuesta inclusión automática de categorías."
+      "conceptMap": {
+        "title": "Mapa visual: seleccionar un poder",
+        "description": "Del acto concreto a la categoría, formalidad y vigencia necesarias.",
+        "nodes": [
+          {
+            "id": "poder",
+            "label": "Poder y mandato",
+            "description": "Representación para actos jurídicos.",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-sjf-182953-representacion",
+              "ev-c34-ccf-arts2560-2585-efectos"
+            ]
+          },
+          {
+            "id": "sujetos",
+            "label": "Sujetos",
+            "description": "Quién otorga y quién actúa.",
+            "parentId": "poder",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases"
+            ]
+          },
+          {
+            "id": "mandante",
+            "label": "Mandante o poderdante",
+            "description": "Define encargo y facultades.",
+            "parentId": "sujetos",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-sjf-182953-representacion",
+              "ev-c34-ccf-arts2560-2585-efectos"
+            ]
+          },
+          {
+            "id": "mandatario",
+            "label": "Mandatario o apoderado",
+            "description": "Actúa dentro de límites.",
+            "parentId": "sujetos",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-sjf-182953-representacion",
+              "ev-c34-ccf-arts2560-2585-efectos"
+            ]
+          },
+          {
+            "id": "clasificacion",
+            "label": "Clasificación",
+            "description": "General o especial.",
+            "parentId": "poder",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-art2554-poderes-generales"
+            ]
+          },
+          {
+            "id": "general",
+            "label": "Poder general",
+            "description": "Tres categorías legales.",
+            "parentId": "clasificacion",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-a46-l009-015-categorias"
+            ]
+          },
+          {
+            "id": "especial",
+            "label": "Poder especial",
+            "description": "Facultades delimitadas para uno o más actos o negocios determinados.",
+            "parentId": "clasificacion",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-art2554-poderes-generales"
+            ]
+          },
+          {
+            "id": "pleitos",
+            "label": "Pleitos y cobranzas",
+            "description": "Representación y cobro.",
+            "parentId": "general",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-sjf-182953-representacion",
+              "ev-c34-ccf-arts2560-2585-efectos",
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-a46-l079-095-pleitos-clausulas"
+            ]
+          },
+          {
+            "id": "juicio",
+            "label": "Comparecer en juicio",
+            "description": "Acreditar personalidad.",
+            "parentId": "pleitos",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-arts2586-2594-mandato-judicial",
+              "ev-c34-sjf-255038-pleitos-alcance"
+            ]
+          },
+          {
+            "id": "cobro",
+            "label": "Gestionar cobros",
+            "description": "Dentro del encargo.",
+            "parentId": "pleitos",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases"
+            ]
+          },
+          {
+            "id": "clausula",
+            "label": "Cláusula especial",
+            "description": "Desistir, transigir y otros.",
+            "parentId": "pleitos",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-ccf-arts2586-2594-mandato-judicial",
+              "ev-c34-sjf-255038-pleitos-alcance",
+              "ev-c34-a46-l079-095-pleitos-clausulas"
+            ]
+          },
+          {
+            "id": "administracion",
+            "label": "Administración",
+            "description": "Gestión y conservación.",
+            "parentId": "general",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-a46-l009-015-categorias",
+              "ev-c34-a46-l023-049-administracion-generalizacion"
+            ]
+          },
+          {
+            "id": "personal",
+            "label": "Personal y servicios",
+            "description": "Actos ordinarios del giro.",
+            "parentId": "administracion",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-a46-l023-049-administracion-generalizacion"
+            ]
+          },
+          {
+            "id": "pagos",
+            "label": "Pagos y contribuciones",
+            "description": "Según facultades y giro.",
+            "parentId": "administracion",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases"
+            ]
+          },
+          {
+            "id": "bancos",
+            "label": "Acto concreto",
+            "description": "Revisar el alcance específico.",
+            "parentId": "administracion",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases"
+            ]
+          },
+          {
+            "id": "dominio",
+            "label": "Dominio",
+            "description": "Facultades de dueño.",
+            "parentId": "general",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-a46-l009-015-categorias"
+            ]
+          },
+          {
+            "id": "venta",
+            "label": "Enajenar",
+            "description": "Transmitir bienes.",
+            "parentId": "dominio",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-art2554-poderes-generales"
+            ]
+          },
+          {
+            "id": "gravamen",
+            "label": "Gravar",
+            "description": "Constituir garantía o derecho real.",
+            "parentId": "dominio",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-art2554-poderes-generales"
+            ]
+          },
+          {
+            "id": "defensa",
+            "label": "Defender bienes",
+            "description": "Gestiones vinculadas al dominio.",
+            "parentId": "dominio",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-a46-l009-015-categorias"
+            ]
+          },
+          {
+            "id": "separadas",
+            "label": "Categorías separadas",
+            "description": "No se incluyen automáticamente.",
+            "parentId": "general",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-sjf-255038-pleitos-alcance",
+              "ev-c34-a46-l023-049-administracion-generalizacion",
+              "ev-c34-a46-l079-095-pleitos-clausulas"
+            ]
+          },
+          {
+            "id": "forma",
+            "label": "Forma",
+            "description": "Depende de tipo y acto.",
+            "parentId": "poder",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-arts2555-2559-forma"
+            ]
+          },
+          {
+            "id": "escritura",
+            "label": "Escritura pública",
+            "description": "Una forma posible o exigida.",
+            "parentId": "forma",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-arts2555-2559-forma"
+            ]
+          },
+          {
+            "id": "carta",
+            "label": "Carta poder ratificada",
+            "description": "Alternativa prevista por CCF.",
+            "parentId": "forma",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-arts2555-2559-forma"
+            ]
+          },
+          {
+            "id": "instrumento",
+            "label": "Acto en instrumento público",
+            "description": "Exige forma congruente.",
+            "parentId": "forma",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-arts2555-2559-forma"
+            ]
+          },
+          {
+            "id": "publicidad",
+            "label": "Publicidad",
+            "description": "Solo cuando corresponda.",
+            "parentId": "poder",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-sjf-223427-inscripcion-no-universal"
+            ]
+          },
+          {
+            "id": "registro",
+            "label": "Inscripción registral",
+            "description": "No es requisito universal.",
+            "parentId": "publicidad",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-sjf-223427-inscripcion-no-universal",
+              "ev-c34-a46-l107-113-inscripcion-costos-corregidos"
+            ]
+          },
+          {
+            "id": "otraentidad",
+            "label": "Uso en otra entidad",
+            "description": "No crea inscripción universal.",
+            "parentId": "publicidad",
+            "evidenceIds": [
+              "ev-c34-sjf-223427-inscripcion-no-universal",
+              "ev-c34-a46-l107-113-inscripcion-costos-corregidos"
+            ]
+          },
+          {
+            "id": "control",
+            "label": "Control de vigencia",
+            "description": "Confirmar eficacia actual.",
+            "parentId": "poder",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+              "ev-c34-a46-l097-105-plazos-locales-corregidos"
+            ]
+          },
+          {
+            "id": "plazo",
+            "label": "Plazo pactado",
+            "description": "No hay máximo federal general de tres años.",
+            "parentId": "control",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+              "ev-c34-a46-l097-105-plazos-locales-corregidos"
+            ]
+          },
+          {
+            "id": "revocacion",
+            "label": "Revocación",
+            "description": "Retiro y notificación.",
+            "parentId": "control",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-arts2595-2604-terminacion-terceros"
+            ]
+          },
+          {
+            "id": "renuncia",
+            "label": "Renuncia",
+            "description": "Decisión del mandatario.",
+            "parentId": "control",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-arts2595-2604-terminacion-terceros"
+            ]
+          },
+          {
+            "id": "terminacion",
+            "label": "Otras causas",
+            "description": "Muerte, incapacidad o conclusión.",
+            "parentId": "control",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-arts2595-2604-terminacion-terceros"
+            ]
+          },
+          {
+            "id": "metodo",
+            "label": "Método CENEVAL",
+            "description": "Acto, facultad, forma y vigencia.",
+            "parentId": "poder",
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-arts2555-2559-forma",
+              "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+              "ev-c34-a46-l097-105-plazos-locales-corregidos"
+            ]
+          }
+        ]
       },
-      "closingPrompt": "Clasifica cada acto por dominio, administración, litigio o facultad especial y explica qué documento acreditaría la representación.",
-      "nextActivity": "Estudia el mapa visual, responde la guía de doce preguntas y resuelve los diez casos originales."
-    },
-    "materials": [
-      {
-        "type": "short_answer",
-        "title": "Respuesta breve",
-        "content": "Pleitos y cobranzas permite representación judicial y de cobro dentro de las facultades otorgadas; administración cubre conservación y gestión ordinaria de bienes o negocios; dominio confiere facultades de dueño para disponer y defender bienes. Un poder especial se limita a un acto o negocio. Las categorías no se acumulan automáticamente: hay que leer objeto, límites, cláusulas especiales, forma, vigencia y norma aplicable.",
-        "sourceOrigin": "mixed"
-      },
-      {
-        "type": "full_explanation",
-        "title": "Explicación completa desde cero",
-        "content": "El mandato es el contrato por el que una persona encarga a otra la realización de actos jurídicos por su cuenta. El poder es la manifestación que legitima al apoderado para actuar frente a terceros. En la práctica suelen documentarse juntos, pero conviene distinguir la relación interna de encargo y la representación externa.\n\nEl artículo 2553 del Código Civil Federal clasifica el mandato en general o especial. Son generales los tres primeros supuestos del artículo 2554: pleitos y cobranzas, administración y dominio. Cualquier otro mandato es especial. El poder especial identifica un acto, bien, procedimiento o finalidad determinada; también pueden limitarse expresamente las facultades de un poder general.\n\nPleitos y cobranzas sirve para representar en controversias y gestiones de cobro, pero la frase general no elimina todas las exigencias. El artículo 2587 enumera actos que requieren poder o cláusula especial, como desistirse, transigir, comprometer en árbitros, absolver posiciones, hacer cesión de bienes, recusar y recibir pagos. Además deben revisarse la materia y la norma procesal vigente. El CNPCF reconoce la comparecencia de personas físicas mediante representantes autorizados y de personas jurídicas conforme a ley, estatutos, poderes o mandatos; su implementación es gradual hasta el 1 de abril de 2027.\n\nAdministrar consiste en conservar, aprovechar y gestionar bienes o una empresa sin transmitir su sustancia. Puede abarcar contratación ordinaria de personal y servicios, cobros, pagos, contribuciones y actos propios del giro. Sin embargo, no todo acto de una gerencia se presume autorizado. Estatutos, acuerdos corporativos, límites monetarios, instrucciones y normas especiales pueden exigir autorización adicional.\n\nFirmar cheques, pagarés u otros títulos no debe resolverse solo con la etiqueta administración. La facultad para suscribir títulos de crédito tiene regulación especial; el documento y los registros de la institución financiera deben comprobarse. El reactivo correcto separa administrar una operación de asumir una obligación cambiaria o disponer de fondos.\n\nDominio permite ejercer facultades de dueño respecto de bienes y realizar gestiones para defenderlos. Comprende típicamente enajenar, donar, gravar o constituir derechos reales cuando el poder y la ley lo permiten. Comprar no siempre se clasifica mecánicamente como dominio: debe analizarse si es adquisición extraordinaria, acto del giro, inversión administrativa o si implica financiación y gravamen.\n\nEs incorrecto enseñar que dominio incluye siempre administración y pleitos. El artículo 2554 describe tres poderes generales separados. Un instrumento puede otorgar los tres, pero debe decirlo o desprenderse válidamente de su texto y régimen aplicable. Para examen, identifica la facultad principal de cada conducta y evita inferencias no escritas.\n\nLa forma depende del tipo y del valor o naturaleza del negocio. Conforme a los artículos 2551 y 2555 CCF, el mandato escrito puede constar en escritura pública, escrito privado con dos testigos y firmas ratificadas o carta poder; cuando es general, supera el umbral legal o autoriza un acto que debe constar en instrumento público, se requiere escritura pública o carta poder con testigos y firmas ratificadas. Por ello, no es exacto decir que todo poder general exige exclusivamente escritura. Una norma local o especial puede establecer algo diferente.\n\nTampoco existe inscripción universal de todos los poderes. La publicidad registral puede ser necesaria o útil en ciertos actos, personas morales o registros, pero no sustituye la forma ni crea facultades. Un poder otorgado en Michoacán puede usarse en Querétaro si satisface las reglas aplicables; pueden requerirse testimonio, certificación, inscripción o comprobación adicional según acto y registro, pero el cambio de entidad no lo vuelve falso.\n\nLa duración debe leerse en el instrumento y la ley. El CCF no establece un máximo general de tres años. El artículo 2595 dispone terminación por revocación, renuncia, muerte, interdicción, vencimiento del plazo, conclusión del negocio y otros casos. En Michoacán los artículos 1714 a 1716 regulan categorías y forma, sin imponer en esos preceptos un plazo universal trienal. Una práctica notarial o un plazo escrito no debe presentarse como regla nacional.\n\nLa revocación debe comunicarse de forma eficaz. Si el mandato era para tratar con persona determinada, el artículo 2597 CCF exige notificarle la revocación para evitar que actos posteriores de un mandatario produzcan efectos frente a quien actuó de buena fe. También conviene recuperar testimonios y avisar a instituciones y registros pertinentes.\n\nPara resolver casos CENEVAL usa cinco preguntas: quién otorga y con qué capacidad; qué acto concreto realizará el apoderado; qué categoría y cláusulas especiales necesita; qué forma y publicidad exige la ley; y si el poder sigue vigente y no fue revocado. Después compara el acto ejecutado con el texto, sin dejarte llevar solo por el cargo de gerente o representante legal.",
-        "sourceOrigin": "mixed"
-      },
-      {
-        "type": "legal_basis",
-        "title": "Fundamento jurídico vigente",
-        "content": "Código Civil Federal, última reforma DOF 14-11-2025: artículos 2546 a 2557 sobre mandato, clases y forma; 2586 y 2587 sobre mandato judicial y cláusulas especiales; 2592 y 2595 a 2604 sobre terminación y efectos. Código Civil para el Estado de Michoacán de Ocampo, texto oficial con última reforma informada 30-11-2023: artículos 1714 a 1716 y correlativos. Código Nacional de Procedimientos Civiles y Familiares, última reforma DOF 15-01-2026: artículos 4 y 128 sobre representación, sujeto a entrada en vigor gradual. Deben añadirse la norma corporativa, registral, bancaria o cambiaria específica del acto.",
-        "sourceOrigin": "complementary"
-      },
-      {
-        "type": "simple_example",
-        "title": "Ejemplo sencillo",
-        "content": "Lucía recibe poder de administración para contratar mantenimiento y pagar servicios de un hotel. Puede realizar esas gestiones ordinarias dentro de los límites escritos. No puede asumir que también puede vender el hotel o desistirse de una demanda: el primer acto es de dominio y el segundo exige revisar facultades procesales especiales.",
-        "sourceOrigin": "mixed"
-      },
-      {
-        "type": "ceneval_example",
-        "title": "Caso tipo CENEVAL",
-        "content": "Una persona moral otorga a su gerente poder general para administrar bienes. El gerente pretende vender una bodega y transigir un juicio. La mejor respuesta es revisar y ampliar el instrumento: la venta requiere dominio y la transacción exige facultad o cláusula especial; el cargo de gerente no corrige la falta.",
-        "sourceOrigin": "mixed"
-      },
-      {
-        "type": "summary",
-        "title": "Resumen",
-        "content": "Poder general: pleitos y cobranzas, administración o dominio. Poder especial: acto concreto. Las categorías son separadas. Administración gestiona; dominio dispone; pleitos representa en controversias. Algunos actos procesales requieren cláusula especial. La forma puede ser escritura o carta poder ratificada según la ley. Inscripción y plazo no son universales. Siempre verifica otorgante, acto, facultades, forma, publicidad, vigencia y revocación.",
-        "sourceOrigin": "mixed"
-      },
-      {
-        "type": "study_guide",
-        "title": "Guía intensiva de preguntas y respuestas",
-        "content": "1. Qué es mandato? Respuesta: encargo de actos jurídicos. 2. Qué es poder? Respuesta: facultad de representación frente a terceros. 3. Cuáles son los poderes generales? Respuesta: pleitos y cobranzas, administración y dominio. 4. Qué es poder especial? Respuesta: el limitado a un acto o negocio. 5. Administración permite vender? Respuesta: no por sí sola. 6. Dominio incluye litigio? Respuesta: no automáticamente. 7. Qué cubre pleitos y cobranzas? Respuesta: representación litigiosa y cobro dentro de sus cláusulas. 8. Desistirse requiere algo adicional? Respuesta: cláusula o poder especial conforme a la ley. 9. Todo poder general va solo en escritura? Respuesta: no; la regla federal también admite carta poder ratificada. 10. Todo poder se inscribe? Respuesta: no, depende del acto y registro. 11. Dura siempre tres años? Respuesta: no existe ese máximo general federal. 12. Cómo termina? Respuesta: entre otras causas, revocación, renuncia, muerte, incapacidad, plazo o conclusión del negocio.",
-        "sourceOrigin": "mixed"
-      },
-      {
-        "type": "key_concepts",
-        "title": "Conceptos clave",
-        "content": "Mandante: quien encarga. Mandatario: quien acepta el encargo. Poderdante: quien confiere representación. Apoderado: quien actúa frente a terceros. Poder general: categoría amplia legal. Poder especial: acto determinado. Pleitos y cobranzas: defensa y cobro. Administración: gestión y conservación. Dominio: disposición como dueño. Cláusula especial: autorización expresa exigida. Testimonio: copia autorizada del instrumento. Ratificación: confirmación formal de firmas. Publicidad registral: oponibilidad o difusión cuando proceda. Vigencia: periodo eficaz. Revocación: retiro del poder. Sustitución: designación de otro representante cuando se autoriza. Exceso de poder: acto fuera de facultades.",
-        "sourceOrigin": "mixed"
-      },
-      {
-        "type": "common_errors",
-        "title": "Errores comunes",
-        "content": "No confundas cargo laboral con representación. No supongas que dominio incluye administración y litigio. No clasifiques toda compra como dominio sin analizar el giro. No equipares administrar con firmar cualquier título de crédito. No afirmes que todos los poderes generales requieren exclusivamente escritura pública. No exijas inscripción universal. No rechaces un poder solo porque procede de otra entidad. No inventes un máximo nacional de tres años. No olvides límites monetarios, temporales o territoriales. No omitas cláusulas especiales para desistir, transigir o recibir pagos. No confundas autenticidad con suficiencia de facultades. No uses un poder revocado o vencido.",
-        "sourceOrigin": "complementary"
+      "references": [
+        {
+          "title": "Código Civil Federal",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCF.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Título Noveno, artículos 2546 a 2604; última reforma DOF 14-11-2025",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente primaria del mandato federal. Las formalidades, procedimientos y registros especiales deben verificarse por separado."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "Qué diferencia mandato y poder?",
+          "answer": "El mandato regula el encargo interno; el poder legitima la representación frente a terceros.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c34-ccf-arts2546-2553-mandato-clases",
+            "ev-c34-sjf-182953-representacion"
+          ]
+        },
+        {
+          "question": "Cuáles son los tres poderes generales?",
+          "answer": "Pleitos y cobranzas, administración y dominio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c34-ccf-art2554-poderes-generales",
+            "ev-c34-a46-l009-015-categorias",
+            "ev-c34-a46-l023-049-administracion-generalizacion",
+            "ev-c34-a46-l079-095-pleitos-clausulas"
+          ]
+        },
+        {
+          "question": "Qué caracteriza al poder especial?",
+          "answer": "Confiere facultades delimitadas para uno o más actos, bienes, procedimientos o negocios determinados.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c34-ccf-arts2546-2553-mandato-clases"
+          ]
+        },
+        {
+          "question": "Qué permite administración?",
+          "answer": "Gestionar y conservar bienes o negocios dentro del giro y de los límites escritos.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c34-ccf-art2554-poderes-generales",
+            "ev-c34-a46-l023-049-administracion-generalizacion"
+          ]
+        },
+        {
+          "question": "Qué permite dominio?",
+          "answer": "Ejercer facultades de dueño, incluida disposición, cuando el texto y la ley lo autorizan.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c34-ccf-art2554-poderes-generales",
+            "ev-c34-a46-l009-015-categorias"
+          ]
+        },
+        {
+          "question": "Dominio incluye siempre pleitos?",
+          "answer": "No, las categorías del poder general son distintas.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c34-ccf-art2554-poderes-generales",
+            "ev-c34-sjf-255038-pleitos-alcance",
+            "ev-c34-a46-l023-049-administracion-generalizacion",
+            "ev-c34-a46-l079-095-pleitos-clausulas"
+          ]
+        },
+        {
+          "question": "Qué exige desistirse de un juicio?",
+          "answer": "Poder o cláusula especial conforme a la legislación aplicable.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c34-ccf-arts2586-2594-mandato-judicial",
+            "ev-c34-a46-l079-095-pleitos-clausulas"
+          ]
+        },
+        {
+          "question": "Ser gerente basta para acreditar cualquier facultad representativa?",
+          "answer": "No; se revisan estatutos, nombramiento, poder y el acto concreto.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c34-ccf-arts2546-2553-mandato-clases",
+            "ev-c34-a46-l023-049-administracion-generalizacion"
+          ]
+        },
+        {
+          "question": "Todo poder general exige solo escritura?",
+          "answer": "No; el CCF también contempla carta poder con testigos y firmas ratificadas.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c34-ccf-arts2555-2559-forma"
+          ]
+        },
+        {
+          "question": "Todo poder debe inscribirse?",
+          "answer": "No; la publicidad registral depende del acto y del régimen aplicable.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c34-sjf-223427-inscripcion-no-universal",
+            "ev-c34-a46-l107-113-inscripcion-costos-corregidos"
+          ]
+        },
+        {
+          "question": "Existe vigencia federal máxima de tres años?",
+          "answer": "No; debe revisarse el plazo pactado y las causas legales de terminación.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+            "ev-c34-a46-l097-105-plazos-locales-corregidos"
+          ]
+        },
+        {
+          "question": "Cuándo exige el artículo 2597 notificar una revocación?",
+          "answer": "Cuando el mandato se otorgó para tratar con una persona determinada, debe notificarse la revocación a esa persona.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c34-ccf-arts2595-2604-terminacion-terceros"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación: poderes y representación",
+        "description": "Diez casos originales para elegir facultad, forma y control de vigencia.",
+        "questions": [
+          {
+            "text": "Una apoderada debe vender un inmueble de su representado. Qué facultad principal requiere?",
+            "difficulty": "basic",
+            "options": [
+              "Actos de dominio",
+              "Actos de administración",
+              "Solo pleitos y cobranzas"
+            ],
+            "correctOption": 0,
+            "explanation": "Enajenar un inmueble es un acto dispositivo propio del dominio.",
+            "optionExplanations": [
+              "Permite disposición como dueño dentro de límites.",
+              "La administración ordinaria no basta para vender.",
+              "Litigar no autoriza enajenar."
+            ],
+            "evidenceIds": [
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-a46-l009-015-categorias"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-a46-l009-015-categorias"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-a46-l009-015-categorias"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-a46-l009-015-categorias"
+              ],
+              [
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-a46-l009-015-categorias"
+              ],
+              [
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-a46-l009-015-categorias"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-a46-l009-015-categorias"
+              ],
+              [
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-a46-l009-015-categorias"
+              ],
+              [
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-a46-l009-015-categorias"
+              ]
+            ]
+          },
+          {
+            "text": "El apoderado contratará mantenimiento y pagará servicios ordinarios de un hotel. Qué poder corresponde?",
+            "difficulty": "basic",
+            "options": [
+              "Administración",
+              "Dominio exclusivamente",
+              "Pleitos y cobranzas"
+            ],
+            "correctOption": 0,
+            "explanation": "Son actos ordinarios de gestión y conservación del negocio.",
+            "optionExplanations": [
+              "Coincide con la finalidad administrativa.",
+              "No se transmite ni grava el hotel.",
+              "No existe controversia o cobro judicial."
+            ],
+            "evidenceIds": [
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-a46-l023-049-administracion-generalizacion"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-a46-l023-049-administracion-generalizacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-a46-l023-049-administracion-generalizacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-a46-l023-049-administracion-generalizacion"
+              ],
+              [
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-a46-l023-049-administracion-generalizacion"
+              ],
+              [
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-a46-l023-049-administracion-generalizacion"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-a46-l023-049-administracion-generalizacion"
+              ],
+              [
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-a46-l023-049-administracion-generalizacion"
+              ],
+              [
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-a46-l023-049-administracion-generalizacion"
+              ]
+            ]
+          },
+          {
+            "text": "Un poder dice únicamente actos de dominio. Puede presumirse que también autoriza cualquier litigio?",
+            "difficulty": "intermediate",
+            "options": [
+              "No, deben revisarse facultades separadas",
+              "Sí, siempre incluye todos los poderes",
+              "Sí, porque defender bienes equivale a todo juicio"
+            ],
+            "correctOption": 0,
+            "explanation": "Las categorías del artículo 2554 son diferenciadas y el instrumento debe interpretarse por su texto.",
+            "optionExplanations": [
+              "Evita una inclusión automática inexistente.",
+              "Confunde amplitud con acumulación.",
+              "La defensa del bien no sustituye toda cláusula procesal."
+            ],
+            "evidenceIds": [
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-ccf-arts2586-2594-mandato-judicial",
+              "ev-c34-sjf-255038-pleitos-alcance",
+              "ev-c34-a46-l023-049-administracion-generalizacion",
+              "ev-c34-a46-l079-095-pleitos-clausulas"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-ccf-arts2586-2594-mandato-judicial",
+              "ev-c34-sjf-255038-pleitos-alcance",
+              "ev-c34-a46-l023-049-administracion-generalizacion",
+              "ev-c34-a46-l079-095-pleitos-clausulas"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-ccf-arts2586-2594-mandato-judicial",
+              "ev-c34-sjf-255038-pleitos-alcance",
+              "ev-c34-a46-l023-049-administracion-generalizacion",
+              "ev-c34-a46-l079-095-pleitos-clausulas"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-ccf-arts2586-2594-mandato-judicial",
+                "ev-c34-sjf-255038-pleitos-alcance",
+                "ev-c34-a46-l023-049-administracion-generalizacion",
+                "ev-c34-a46-l079-095-pleitos-clausulas"
+              ],
+              [
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-ccf-arts2586-2594-mandato-judicial",
+                "ev-c34-sjf-255038-pleitos-alcance",
+                "ev-c34-a46-l023-049-administracion-generalizacion",
+                "ev-c34-a46-l079-095-pleitos-clausulas"
+              ],
+              [
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-ccf-arts2586-2594-mandato-judicial",
+                "ev-c34-sjf-255038-pleitos-alcance",
+                "ev-c34-a46-l023-049-administracion-generalizacion",
+                "ev-c34-a46-l079-095-pleitos-clausulas"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-ccf-arts2586-2594-mandato-judicial",
+                "ev-c34-sjf-255038-pleitos-alcance",
+                "ev-c34-a46-l023-049-administracion-generalizacion",
+                "ev-c34-a46-l079-095-pleitos-clausulas"
+              ],
+              [
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-ccf-arts2586-2594-mandato-judicial",
+                "ev-c34-sjf-255038-pleitos-alcance",
+                "ev-c34-a46-l023-049-administracion-generalizacion",
+                "ev-c34-a46-l079-095-pleitos-clausulas"
+              ],
+              [
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-ccf-arts2586-2594-mandato-judicial",
+                "ev-c34-sjf-255038-pleitos-alcance",
+                "ev-c34-a46-l023-049-administracion-generalizacion",
+                "ev-c34-a46-l079-095-pleitos-clausulas"
+              ]
+            ]
+          },
+          {
+            "text": "La mandataria pretende transigir una demanda con poder de pleitos sin facultad especial. Qué debe hacerse?",
+            "difficulty": "advanced",
+            "options": [
+              "Verificar y conferir cláusula especial",
+              "Permitirlo por ser abogada",
+              "Repetir el mismo poder sin cláusula especial"
+            ],
+            "correctOption": 0,
+            "explanation": "Transigir es uno de los actos que requieren poder o cláusula especial.",
+            "optionExplanations": [
+              "Atiende la exigencia del artículo 2587.",
+              "La profesión no amplía el poder.",
+              "Repetir el documento no agrega la facultad omitida."
+            ],
+            "evidenceIds": [
+              "ev-c34-ccf-arts2586-2594-mandato-judicial",
+              "ev-c34-a46-l079-095-pleitos-clausulas"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c34-ccf-arts2586-2594-mandato-judicial",
+              "ev-c34-a46-l079-095-pleitos-clausulas"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c34-ccf-arts2586-2594-mandato-judicial",
+              "ev-c34-a46-l079-095-pleitos-clausulas"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c34-ccf-arts2586-2594-mandato-judicial",
+                "ev-c34-a46-l079-095-pleitos-clausulas"
+              ],
+              [
+                "ev-c34-ccf-arts2586-2594-mandato-judicial",
+                "ev-c34-a46-l079-095-pleitos-clausulas"
+              ],
+              [
+                "ev-c34-ccf-arts2586-2594-mandato-judicial",
+                "ev-c34-a46-l079-095-pleitos-clausulas"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c34-ccf-arts2586-2594-mandato-judicial",
+                "ev-c34-a46-l079-095-pleitos-clausulas"
+              ],
+              [
+                "ev-c34-ccf-arts2586-2594-mandato-judicial",
+                "ev-c34-a46-l079-095-pleitos-clausulas"
+              ],
+              [
+                "ev-c34-ccf-arts2586-2594-mandato-judicial",
+                "ev-c34-a46-l079-095-pleitos-clausulas"
+              ]
+            ]
+          },
+          {
+            "text": "El Código Civil Federal exige forma para un poder general. Cuál opción refleja su regla?",
+            "difficulty": "intermediate",
+            "options": [
+              "Escritura pública o carta poder con testigos y firmas ratificadas",
+              "Únicamente escritura pública en todos los casos",
+              "Siempre puede ser verbal"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 2555 contempla esas dos formas para el mandato general.",
+            "optionExplanations": [
+              "Reproduce la alternativa legal.",
+              "Elimina indebidamente la carta ratificada.",
+              "El mandato general no queda en la excepción verbal."
+            ],
+            "evidenceIds": [
+              "ev-c34-ccf-arts2555-2559-forma"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c34-ccf-arts2555-2559-forma"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c34-ccf-arts2555-2559-forma"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c34-ccf-arts2555-2559-forma"
+              ],
+              [
+                "ev-c34-ccf-arts2555-2559-forma"
+              ],
+              [
+                "ev-c34-ccf-arts2555-2559-forma"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c34-ccf-arts2555-2559-forma"
+              ],
+              [
+                "ev-c34-ccf-arts2555-2559-forma"
+              ],
+              [
+                "ev-c34-ccf-arts2555-2559-forma"
+              ]
+            ]
+          },
+          {
+            "text": "Un poder para pleitos y cobranzas se usa únicamente para promover una controversia de arrendamiento y alguien exige inscripción registral en todos los casos. ¿Qué conclusión es correcta?",
+            "difficulty": "intermediate",
+            "options": [
+              "No existe inscripción universal; debe revisarse el acto y la norma aplicable",
+              "Todo poder debe inscribirse",
+              "La inscripción agrega facultades de dominio"
+            ],
+            "correctOption": 0,
+            "explanation": "El registro digital 223427 descartó la inscripción para ejercer pleitos y cobranzas en su supuesto concreto; no puede deducirse una exigencia universal.",
+            "optionExplanations": [
+              "Es la respuesta acotada al acto y su régimen.",
+              "Generaliza sin fuente.",
+              "La publicidad no crea facultades ausentes."
+            ],
+            "evidenceIds": [
+              "ev-c34-sjf-223427-inscripcion-no-universal",
+              "ev-c34-a46-l079-095-pleitos-clausulas",
+              "ev-c34-a46-l107-113-inscripcion-costos-corregidos"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c34-sjf-223427-inscripcion-no-universal",
+              "ev-c34-a46-l079-095-pleitos-clausulas",
+              "ev-c34-a46-l107-113-inscripcion-costos-corregidos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c34-sjf-223427-inscripcion-no-universal",
+              "ev-c34-a46-l079-095-pleitos-clausulas",
+              "ev-c34-a46-l107-113-inscripcion-costos-corregidos"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c34-sjf-223427-inscripcion-no-universal",
+                "ev-c34-a46-l079-095-pleitos-clausulas",
+                "ev-c34-a46-l107-113-inscripcion-costos-corregidos"
+              ],
+              [
+                "ev-c34-sjf-223427-inscripcion-no-universal",
+                "ev-c34-a46-l079-095-pleitos-clausulas",
+                "ev-c34-a46-l107-113-inscripcion-costos-corregidos"
+              ],
+              [
+                "ev-c34-sjf-223427-inscripcion-no-universal",
+                "ev-c34-a46-l079-095-pleitos-clausulas",
+                "ev-c34-a46-l107-113-inscripcion-costos-corregidos"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c34-sjf-223427-inscripcion-no-universal",
+                "ev-c34-a46-l079-095-pleitos-clausulas",
+                "ev-c34-a46-l107-113-inscripcion-costos-corregidos"
+              ],
+              [
+                "ev-c34-sjf-223427-inscripcion-no-universal",
+                "ev-c34-a46-l079-095-pleitos-clausulas",
+                "ev-c34-a46-l107-113-inscripcion-costos-corregidos"
+              ],
+              [
+                "ev-c34-sjf-223427-inscripcion-no-universal",
+                "ev-c34-a46-l079-095-pleitos-clausulas",
+                "ev-c34-a46-l107-113-inscripcion-costos-corregidos"
+              ]
+            ]
+          },
+          {
+            "text": "Una gerente tiene acceso operativo a la empresa, pero su poder solo cubre actos ordinarios de administración. Puede celebrar cualquier contrato sin revisar su objeto y límites?",
+            "difficulty": "advanced",
+            "options": [
+              "No, debe verificarse la facultad para el acto concreto",
+              "Sí, por su cargo",
+              "Sí, porque administrar incluye toda obligación"
+            ],
+            "correctOption": 0,
+            "explanation": "El cargo y el acceso operativo no amplían el poder: deben revisarse el acto concreto, el objeto y los límites escritos.",
+            "optionExplanations": [
+              "Separa la gestión ordinaria de los actos que exceden el poder.",
+              "El puesto no acredita facultad suficiente.",
+              "La administración tiene límites."
+            ],
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-a46-l023-049-administracion-generalizacion"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-a46-l023-049-administracion-generalizacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-a46-l023-049-administracion-generalizacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c34-ccf-arts2546-2553-mandato-clases",
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-a46-l023-049-administracion-generalizacion"
+              ],
+              [
+                "ev-c34-ccf-arts2546-2553-mandato-clases",
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-a46-l023-049-administracion-generalizacion"
+              ],
+              [
+                "ev-c34-ccf-arts2546-2553-mandato-clases",
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-a46-l023-049-administracion-generalizacion"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c34-ccf-arts2546-2553-mandato-clases",
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-a46-l023-049-administracion-generalizacion"
+              ],
+              [
+                "ev-c34-ccf-arts2546-2553-mandato-clases",
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-a46-l023-049-administracion-generalizacion"
+              ],
+              [
+                "ev-c34-ccf-arts2546-2553-mandato-clases",
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-a46-l023-049-administracion-generalizacion"
+              ]
+            ]
+          },
+          {
+            "text": "El documento federal no fija plazo y alguien afirma que todo poder vence automáticamente a los tres años. ¿Es correcta la afirmación?",
+            "difficulty": "intermediate",
+            "options": [
+              "No; debe revisarse el instrumento y las causas legales de terminación",
+              "Sí, todo poder dura tres años",
+              "Sí, aunque el negocio concluya antes"
+            ],
+            "correctOption": 0,
+            "explanation": "El CCF no establece ese máximo general; el artículo 2595 contempla plazo pactado y otras causas de terminación.",
+            "optionExplanations": [
+              "Distingue voluntad y causas legales.",
+              "Inventaría una regla federal.",
+              "La conclusión del negocio también puede terminar el mandato."
+            ],
+            "evidenceIds": [
+              "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+              "ev-c34-a46-l097-105-plazos-locales-corregidos"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+              "ev-c34-a46-l097-105-plazos-locales-corregidos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+              "ev-c34-a46-l097-105-plazos-locales-corregidos"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+                "ev-c34-a46-l097-105-plazos-locales-corregidos"
+              ],
+              [
+                "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+                "ev-c34-a46-l097-105-plazos-locales-corregidos"
+              ],
+              [
+                "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+                "ev-c34-a46-l097-105-plazos-locales-corregidos"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+                "ev-c34-a46-l097-105-plazos-locales-corregidos"
+              ],
+              [
+                "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+                "ev-c34-a46-l097-105-plazos-locales-corregidos"
+              ],
+              [
+                "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+                "ev-c34-a46-l097-105-plazos-locales-corregidos"
+              ]
+            ]
+          },
+          {
+            "text": "El mandante revoca un poder dado para negociar con un proveedor específico. Qué medida protege frente a actos posteriores?",
+            "difficulty": "advanced",
+            "options": [
+              "Notificar la revocación al proveedor",
+              "Guardar la revocación en privado",
+              "Esperar a que el apoderado la mencione"
+            ],
+            "correctOption": 0,
+            "explanation": "La notificación evita que el tercero determinado siga confiando de buena fe.",
+            "optionExplanations": [
+              "Cumple la lógica del artículo 2597.",
+              "No informa al tercero expuesto.",
+              "Deja el control al representante revocado."
+            ],
+            "evidenceIds": [
+              "ev-c34-ccf-arts2595-2604-terminacion-terceros"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c34-ccf-arts2595-2604-terminacion-terceros"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c34-ccf-arts2595-2604-terminacion-terceros"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c34-ccf-arts2595-2604-terminacion-terceros"
+              ],
+              [
+                "ev-c34-ccf-arts2595-2604-terminacion-terceros"
+              ],
+              [
+                "ev-c34-ccf-arts2595-2604-terminacion-terceros"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c34-ccf-arts2595-2604-terminacion-terceros"
+              ],
+              [
+                "ev-c34-ccf-arts2595-2604-terminacion-terceros"
+              ],
+              [
+                "ev-c34-ccf-arts2595-2604-terminacion-terceros"
+              ]
+            ]
+          },
+          {
+            "text": "Una persona solo necesita que otra firme una escritura de venta determinada. Qué diseño reduce el riesgo?",
+            "difficulty": "advanced",
+            "options": [
+              "Poder especial con bien, acto y límites",
+              "Poder general ilimitado para todo",
+              "Nombramiento verbal sin ratificación"
+            ],
+            "correctOption": 0,
+            "explanation": "La especialidad ajusta la representación al negocio concreto y evita facultades innecesarias.",
+            "optionExplanations": [
+              "Define con precisión objeto y alcance.",
+              "Otorga más facultades de las necesarias.",
+              "No satisface la forma del acto pretendido."
+            ],
+            "evidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-ccf-arts2555-2559-forma",
+              "ev-c34-a46-l009-015-categorias"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-ccf-arts2555-2559-forma",
+              "ev-c34-a46-l009-015-categorias"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c34-ccf-arts2546-2553-mandato-clases",
+              "ev-c34-ccf-art2554-poderes-generales",
+              "ev-c34-ccf-arts2555-2559-forma",
+              "ev-c34-a46-l009-015-categorias"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c34-ccf-arts2546-2553-mandato-clases",
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-ccf-arts2555-2559-forma",
+                "ev-c34-a46-l009-015-categorias"
+              ],
+              [
+                "ev-c34-ccf-arts2546-2553-mandato-clases",
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-ccf-arts2555-2559-forma",
+                "ev-c34-a46-l009-015-categorias"
+              ],
+              [
+                "ev-c34-ccf-arts2546-2553-mandato-clases",
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-ccf-arts2555-2559-forma",
+                "ev-c34-a46-l009-015-categorias"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c34-ccf-arts2546-2553-mandato-clases",
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-ccf-arts2555-2559-forma",
+                "ev-c34-a46-l009-015-categorias"
+              ],
+              [
+                "ev-c34-ccf-arts2546-2553-mandato-clases",
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-ccf-arts2555-2559-forma",
+                "ev-c34-a46-l009-015-categorias"
+              ],
+              [
+                "ev-c34-ccf-arts2546-2553-mandato-clases",
+                "ev-c34-ccf-art2554-poderes-generales",
+                "ev-c34-ccf-arts2555-2559-forma",
+                "ev-c34-a46-l009-015-categorias"
+              ]
+            ]
+          }
+        ]
       }
-    ],
-    "conceptMap": {
-      "title": "Mapa visual: seleccionar un poder",
-      "description": "Del acto concreto a la categoría, formalidad y vigencia necesarias.",
-      "nodes": [
-        {"id":"poder","label":"Poder y mandato","description":"Representación para actos jurídicos."},
-        {"id":"sujetos","label":"Sujetos","description":"Quién otorga y quién actúa.","parentId":"poder"},
-        {"id":"mandante","label":"Mandante o poderdante","description":"Define encargo y facultades.","parentId":"sujetos"},
-        {"id":"mandatario","label":"Mandatario o apoderado","description":"Actúa dentro de límites.","parentId":"sujetos"},
-        {"id":"clasificacion","label":"Clasificación","description":"General o especial.","parentId":"poder"},
-        {"id":"general","label":"Poder general","description":"Tres categorías legales.","parentId":"clasificacion"},
-        {"id":"especial","label":"Poder especial","description":"Acto o negocio determinado.","parentId":"clasificacion"},
-        {"id":"pleitos","label":"Pleitos y cobranzas","description":"Representación y cobro.","parentId":"general"},
-        {"id":"juicio","label":"Comparecer en juicio","description":"Acreditar personalidad.","parentId":"pleitos"},
-        {"id":"cobro","label":"Gestionar cobros","description":"Dentro del encargo.","parentId":"pleitos"},
-        {"id":"clausula","label":"Cláusula especial","description":"Desistir, transigir y otros.","parentId":"pleitos"},
-        {"id":"administracion","label":"Administración","description":"Gestión y conservación.","parentId":"general"},
-        {"id":"personal","label":"Personal y servicios","description":"Actos ordinarios del giro.","parentId":"administracion"},
-        {"id":"pagos","label":"Pagos y contribuciones","description":"Según facultades y giro.","parentId":"administracion"},
-        {"id":"bancos","label":"Operación bancaria","description":"Revisar facultad específica.","parentId":"administracion"},
-        {"id":"dominio","label":"Dominio","description":"Facultades de dueño.","parentId":"general"},
-        {"id":"venta","label":"Enajenar","description":"Transmitir bienes.","parentId":"dominio"},
-        {"id":"gravamen","label":"Gravar","description":"Constituir garantía o derecho real.","parentId":"dominio"},
-        {"id":"defensa","label":"Defender bienes","description":"Gestiones vinculadas al dominio.","parentId":"dominio"},
-        {"id":"separadas","label":"Categorías separadas","description":"No se incluyen automáticamente.","parentId":"general"},
-        {"id":"forma","label":"Forma","description":"Depende de tipo y acto.","parentId":"poder"},
-        {"id":"escritura","label":"Escritura pública","description":"Una forma posible o exigida.","parentId":"forma"},
-        {"id":"carta","label":"Carta poder ratificada","description":"Alternativa prevista por CCF.","parentId":"forma"},
-        {"id":"instrumento","label":"Acto en instrumento público","description":"Exige forma congruente.","parentId":"forma"},
-        {"id":"publicidad","label":"Publicidad","description":"Solo cuando corresponda.","parentId":"poder"},
-        {"id":"registro","label":"Inscripción registral","description":"No es requisito universal.","parentId":"publicidad"},
-        {"id":"otraentidad","label":"Uso en otra entidad","description":"Revisar certificación y ley.","parentId":"publicidad"},
-        {"id":"control","label":"Control de vigencia","description":"Confirmar eficacia actual.","parentId":"poder"},
-        {"id":"plazo","label":"Plazo pactado","description":"No hay máximo federal general de tres años.","parentId":"control"},
-        {"id":"revocacion","label":"Revocación","description":"Retiro y notificación.","parentId":"control"},
-        {"id":"renuncia","label":"Renuncia","description":"Decisión del mandatario.","parentId":"control"},
-        {"id":"terminacion","label":"Otras causas","description":"Muerte, incapacidad o conclusión.","parentId":"control"},
-        {"id":"metodo","label":"Método CENEVAL","description":"Acto, facultad, forma y vigencia.","parentId":"poder"}
-      ]
-    },
-    "references": [
-      {
-        "title": "Código Civil Federal",
-        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCF.pdf",
-        "institution": "Cámara de Diputados del H. Congreso de la Unión",
-        "jurisdiction": "Federal, México",
-        "citation": "Artículos 2546 a 2557, 2586 a 2587 y 2592 a 2604; última reforma DOF 14-11-2025",
-        "retrievedOn": "2026-08-11",
-        "note": "Clases, alcance, forma, cláusulas especiales y terminación del mandato."
-      },
-      {
-        "title": "Código Civil para el Estado de Michoacán de Ocampo",
-        "url": "https://congresomich.gob.mx/leyes/",
-        "institution": "Congreso del Estado de Michoacán de Ocampo",
-        "jurisdiction": "Michoacán",
-        "citation": "Artículos 1714 a 1716 y correlativos; última reforma informada 30-11-2023",
-        "retrievedOn": "2026-08-11",
-        "note": "Regulación local de poderes generales, especiales y su forma."
-      },
-      {
-        "title": "Código Nacional de Procedimientos Civiles y Familiares",
-        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
-        "institution": "Cámara de Diputados del H. Congreso de la Unión",
-        "jurisdiction": "Nacional, México",
-        "citation": "Artículos 4 y 128 y transitorios; última reforma DOF 15-01-2026",
-        "retrievedOn": "2026-08-11",
-        "note": "Representación procesal e implementación gradual del código nacional."
-      }
-    ],
-    "flashcards": [
-      {"question":"Qué diferencia mandato y poder?","answer":"El mandato regula el encargo interno; el poder legitima la representación frente a terceros.","sourceOrigin":"complementary"},
-      {"question":"Cuáles son los tres poderes generales?","answer":"Pleitos y cobranzas, administración y dominio.","sourceOrigin":"mixed"},
-      {"question":"Qué caracteriza al poder especial?","answer":"Se limita a un acto, bien, procedimiento o negocio determinado.","sourceOrigin":"complementary"},
-      {"question":"Qué permite administración?","answer":"Gestionar y conservar bienes o negocios dentro del giro y de los límites escritos.","sourceOrigin":"mixed"},
-      {"question":"Qué permite dominio?","answer":"Ejercer facultades de dueño, incluida disposición, cuando el texto y la ley lo autorizan.","sourceOrigin":"mixed"},
-      {"question":"Dominio incluye siempre pleitos?","answer":"No, las categorías del poder general son distintas.","sourceOrigin":"complementary"},
-      {"question":"Qué exige desistirse de un juicio?","answer":"Poder o cláusula especial conforme a la legislación aplicable.","sourceOrigin":"complementary"},
-      {"question":"Ser gerente basta para firmar cheques?","answer":"No; se revisan estatutos, poder, facultad cambiaria y requisitos bancarios.","sourceOrigin":"mixed"},
-      {"question":"Todo poder general exige solo escritura?","answer":"No; el CCF también contempla carta poder con testigos y firmas ratificadas.","sourceOrigin":"complementary"},
-      {"question":"Todo poder debe inscribirse?","answer":"No; la publicidad registral depende del acto y del régimen aplicable.","sourceOrigin":"complementary"},
-      {"question":"Existe vigencia federal máxima de tres años?","answer":"No; debe revisarse el plazo pactado y las causas legales de terminación.","sourceOrigin":"complementary"},
-      {"question":"Por qué se notifica la revocación?","answer":"Para impedir que terceros de buena fe confíen en una representación ya retirada.","sourceOrigin":"complementary"}
-    ],
-    "exam": {
-      "title": "Evaluación: poderes y representación",
-      "description": "Diez casos originales para elegir facultad, forma y control de vigencia.",
-      "questions": [
-        {"text":"Una apoderada debe vender un inmueble de su representado. Qué facultad principal requiere?","difficulty":"basic","options":["Actos de dominio","Actos de administración","Solo pleitos y cobranzas"],"correctOption":0,"explanation":"Enajenar un inmueble es un acto dispositivo propio del dominio.","optionExplanations":["Permite disposición como dueño dentro de límites.","La administración ordinaria no basta para vender.","Litigar no autoriza enajenar."]},
-        {"text":"El apoderado contratará mantenimiento y pagará servicios ordinarios de un hotel. Qué poder corresponde?","difficulty":"basic","options":["Administración","Dominio exclusivamente","Pleitos y cobranzas"],"correctOption":0,"explanation":"Son actos ordinarios de gestión y conservación del negocio.","optionExplanations":["Coincide con la finalidad administrativa.","No se transmite ni grava el hotel.","No existe controversia o cobro judicial."]},
-        {"text":"Un poder dice únicamente actos de dominio. Puede presumirse que también autoriza cualquier litigio?","difficulty":"intermediate","options":["No, deben revisarse facultades separadas","Sí, siempre incluye todos los poderes","Sí, porque defender bienes equivale a todo juicio"],"correctOption":0,"explanation":"Las categorías del artículo 2554 son diferenciadas y el instrumento debe interpretarse por su texto.","optionExplanations":["Evita una inclusión automática inexistente.","Confunde amplitud con acumulación.","La defensa del bien no sustituye toda cláusula procesal."]},
-        {"text":"La mandataria pretende transigir una demanda con poder de pleitos sin facultad especial. Qué debe hacerse?","difficulty":"advanced","options":["Verificar y conferir cláusula especial","Permitirlo por ser abogada","Inscribir el poder y nada más"],"correctOption":0,"explanation":"Transigir es uno de los actos que requieren poder o cláusula especial.","optionExplanations":["Atiende la exigencia del artículo 2587.","La profesión no amplía el poder.","La inscripción no crea una facultad omitida."]},
-        {"text":"El Código Civil Federal exige forma para un poder general. Cuál opción refleja su regla?","difficulty":"intermediate","options":["Escritura pública o carta poder con testigos y firmas ratificadas","Únicamente escritura pública en todos los casos","Siempre puede ser verbal"],"correctOption":0,"explanation":"El artículo 2555 contempla esas dos formas para el mandato general.","optionExplanations":["Reproduce la alternativa legal.","Elimina indebidamente la carta ratificada.","El mandato general no queda en la excepción verbal."]},
-        {"text":"Un poder fue otorgado en Michoacán y se presentará en Querétaro. Qué conclusión es correcta?","difficulty":"intermediate","options":["Revisar forma, certificación y requisitos del acto","Es inválido por provenir de otro estado","Debe rehacerse siempre ante el juez local"],"correctOption":0,"explanation":"El origen territorial no produce falsedad automática; importa cumplir el régimen aplicable.","optionExplanations":["Es el control jurídico pertinente.","Federalismo no implica invalidez automática.","No hay regla universal de repetición judicial."]},
-        {"text":"Una gerente tiene acceso operativo a la empresa, pero el poder no menciona títulos de crédito. Puede firmar pagarés sin más?","difficulty":"advanced","options":["No, debe verificarse facultad específica","Sí, por su cargo","Sí, porque administrar incluye toda obligación"],"correctOption":0,"explanation":"La suscripción cambiaria requiere revisar la autorización especial y la norma aplicable.","optionExplanations":["Separa gestión ordinaria de obligación cambiaria.","El puesto no acredita facultad suficiente.","La administración tiene límites."]},
-        {"text":"El documento no fija plazo y alguien afirma que todo poder michoacano vence en tres años. Es correcta la afirmación?","difficulty":"intermediate","options":["No, no es una regla universal","Sí, todos vencen exactamente a los tres años","Sí, aunque el negocio termine antes"],"correctOption":0,"explanation":"Debe leerse el instrumento y las causas legales; los preceptos consultados no fijan ese máximo general.","optionExplanations":["Distingue práctica, pacto y ley.","Generaliza una duración no universal.","La conclusión del negocio también puede terminarlo."]},
-        {"text":"El mandante revoca un poder dado para negociar con un proveedor específico. Qué medida protege frente a actos posteriores?","difficulty":"advanced","options":["Notificar la revocación al proveedor","Guardar la revocación en privado","Esperar a que el apoderado la mencione"],"correctOption":0,"explanation":"La notificación evita que el tercero determinado siga confiando de buena fe.","optionExplanations":["Cumple la lógica del artículo 2597.","No informa al tercero expuesto.","Deja el control al representante revocado."]},
-        {"text":"Una persona solo necesita que otra firme una escritura de venta determinada. Qué diseño reduce el riesgo?","difficulty":"advanced","options":["Poder especial con bien, acto y límites","Poder general ilimitado para todo","Nombramiento verbal sin ratificación"],"correctOption":0,"explanation":"La especialidad ajusta la representación al negocio concreto y evita facultades innecesarias.","optionExplanations":["Define con precisión objeto y alcance.","Otorga más facultades de las necesarias.","No satisface la forma del acto pretendido."]}
-      ]
     }
-  }]
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c34-ccf-arts2546-2553-mandato-clases",
+      "kind": "official",
+      "title": "Código Civil Federal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-11-2025; artículos 2546 a 2553, páginas impresas 243 y 244",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c34-ccf-art2554-poderes-generales",
+      "kind": "official",
+      "title": "Código Civil Federal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-11-2025; artículo 2554, página impresa 244",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c34-ccf-arts2555-2559-forma",
+      "kind": "official",
+      "title": "Código Civil Federal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-11-2025; artículos 2555 a 2559, páginas impresas 244 y 245",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c34-ccf-arts2560-2585-efectos",
+      "kind": "official",
+      "title": "Código Civil Federal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-11-2025; artículos 2560 a 2585, páginas impresas 245 a 247",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c34-ccf-arts2586-2594-mandato-judicial",
+      "kind": "official",
+      "title": "Código Civil Federal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-11-2025; artículos 2586 a 2594, páginas impresas 247 y 248",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c34-ccf-arts2595-2604-terminacion-terceros",
+      "kind": "official",
+      "title": "Código Civil Federal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-11-2025; artículos 2595 a 2604, páginas impresas 248 y 249",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c34-sjf-182953-representacion",
+      "kind": "official",
+      "title": "Representación legal de las personas morales en el juicio contencioso administrativo federal",
+      "url": "https://sjf2.scjn.gob.mx/detalle/tesis/182953",
+      "institution": "Suprema Corte de Justicia de la Nación, Semanario Judicial de la Federación",
+      "jurisdiction": "Federal, México",
+      "locator": "registro digital 182953; definición de representación como aptitud para actuar a nombre y por cuenta de otra persona",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c34-sjf-255038-pleitos-alcance",
+      "kind": "official",
+      "title": "Poder general para pleitos y cobranzas. Alcance de las facultades del mandatario",
+      "url": "https://sjf2.scjn.gob.mx/detalle/tesis/255038",
+      "institution": "Suprema Corte de Justicia de la Nación, Semanario Judicial de la Federación",
+      "jurisdiction": "Federal, México",
+      "locator": "registro digital 255038; las facultades de pleitos y cobranzas no confieren por sí mismas administración o dominio",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c34-sjf-223427-inscripcion-no-universal",
+      "kind": "official",
+      "title": "Poderes. Es innecesaria su inscripción ante el Registro Público en controversia de arrendamiento",
+      "url": "https://sjf2.scjn.gob.mx/detalle/tesis/223427",
+      "institution": "Suprema Corte de Justicia de la Nación, Semanario Judicial de la Federación",
+      "jurisdiction": "Federal, México",
+      "locator": "registro digital 223427; supuesto específico que descarta inscripción universal para ejercer pleitos y cobranzas",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c34-cnpcf-transitorio-segundo-gradualidad",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Nacional, México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículo Segundo Transitorio, entrada gradual mediante declaratorias y límite 01-04-2027",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c34-a46-l009-015-categorias",
+      "kind": "transcript",
+      "audioNumber": 46,
+      "locator": {
+        "type": "line_range",
+        "startLine": 9,
+        "endLine": 15
+      }
+    },
+    {
+      "id": "ev-c34-a46-l023-049-administracion-generalizacion",
+      "kind": "transcript",
+      "audioNumber": 46,
+      "locator": {
+        "type": "line_range",
+        "startLine": 23,
+        "endLine": 49
+      }
+    },
+    {
+      "id": "ev-c34-a46-l079-095-pleitos-clausulas",
+      "kind": "transcript",
+      "audioNumber": 46,
+      "locator": {
+        "type": "line_range",
+        "startLine": 79,
+        "endLine": 95
+      }
+    },
+    {
+      "id": "ev-c34-a46-l097-105-plazos-locales-corregidos",
+      "kind": "transcript",
+      "audioNumber": 46,
+      "locator": {
+        "type": "line_range",
+        "startLine": 97,
+        "endLine": 105
+      }
+    },
+    {
+      "id": "ev-c34-a46-l107-113-inscripcion-costos-corregidos",
+      "kind": "transcript",
+      "audioNumber": 46,
+      "locator": {
+        "type": "line_range",
+        "startLine": 107,
+        "endLine": 113
+      }
+    }
+  ]
 }

@@ -505,6 +505,41 @@ const traceablePackages = [
       /última reforma GOCDMX 04-08-2021/i,
     ],
   },
+  {
+    code: "C33",
+    fileName: "audio-45-actuaciones-notariales.json",
+    artifacts: 151,
+    evidence: 13,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /La distinción depende de la legislación local/i,
+      /no garantiza.*automáticamente acción ejecutiva/i,
+      /no demuestra que la relación contractual haya quedado modificada/i,
+      /treinta días después de la interpelación judicial o extrajudicial ante notario o dos testigos/i,
+      /No es correcto afirmar automáticamente nulidad absoluta/i,
+      /protestar conserva indefinidamente un pagaré o reinicia automáticamente la prescripción/i,
+      /última reforma GOCDMX 04-08-2021/i,
+      /última reforma DOF 14-11-2025/i,
+      /última reforma DOF 26-03-2024/i,
+    ],
+  },
+  {
+    code: "C34",
+    fileName: "audio-46-poderes-notariales.json",
+    artifacts: 151,
+    evidence: 15,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /separar ese vínculo interno de la representación/i,
+      /No confiere por sí mismo administración o dominio/i,
+      /no significa que el documento otorgue automáticamente las otras dos categorías/i,
+      /No existe inscripción universal para todo poder/i,
+      /tampoco fija una duración general automática de tres o cinco años/i,
+      /mandato se dio para tratar con una persona determinada.*notificarle la revocación/i,
+      /entrada en vigor es gradual.*1 de abril de 2027/i,
+      /última reforma DOF 14-11-2025/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -808,6 +843,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una regla conciliatoria o notarial absoluta como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C33" || expected.code === "C34") {
+      const obsoleteAsCurrent =
+        expected.code === "C33"
+          ? /ratificaci[oó]n.*(?:ejecutiv|pagaré).*(?:automátic|siempre)|notificaci[oó]n.*(?:modifica|adendum).*(?:por sí sola|automátic)|interpelaci[oó]n.*(?:obliga|fuerza).*(?:responder|contestar)|omitir.*derecho al tanto.*nulidad absoluta.*(?:siempre|automátic)|protesto.*(?:reinicia|renueva|interrumpe).*(?:prescripci[oó]n|tres años)/i
+          : /dominio.*(?:incluye|acumula|comprende).*(?:administraci[oó]n|pleitos)|(?:todo|cualquier) poder.*(?:debe|requiere).*(?:inscrib|Registro Público)|(?:todo|cualquier) poder.*(?:vence|dura|vigencia).*(?:tres|cinco) años|administraci[oó]n.*(?:permite|autoriza).*(?:cualquier|todo) acto|CNPCF.*(?:vigente|aplica).*(?:uniforme|todo el país)|cargo de gerente.*(?:basta|suficiente)/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una generalización notarial o representativa como respuesta vigente.`,
         );
       }
     }

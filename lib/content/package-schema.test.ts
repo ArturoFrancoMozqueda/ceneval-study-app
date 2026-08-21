@@ -64,7 +64,7 @@ const legacyPackagePath = path.join(
   process.cwd(),
   "content",
   "packages",
-  "audio-45-actuaciones-notariales.json",
+  "audio-47-sociedades-mercantiles.json",
 );
 
 function readLegacyPackage() {

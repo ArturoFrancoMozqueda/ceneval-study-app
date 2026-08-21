@@ -1,106 +1,1711 @@
 {
-  "packageVersion":"1.1",
-  "curriculum":{
-    "code":"C33",
-    "order":33,
-    "audioSources":[
-      {"audioNumber":45,"fragment":"Audio completo"}
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C33",
+    "order": 33,
+    "audioSources": [
+      {
+        "audioNumber": 45,
+        "fragment": "Audio completo"
+      }
     ]
   },
-  "subject":{"name":"Derecho Notarial y Registral","description":"Fe pública, instrumentos notariales, protocolo, representación, actuaciones y efectos registrales."},
-  "class":{"title":"Actuaciones notariales: ratificación, notificación, requerimiento e interpelación","description":"Trigésima tercera clase del plan académico: actas notariales para reconocer firmas y contenidos, comunicar, exigir e interrogar, con sus alcances probatorios y límites."},
-  "transcript":{"originalFile":"AUDIO 45.txt","cleaned":"Se conservaron las explicaciones sobre ratificación de firmas y contenido, notificaciones, requerimientos, interpelaciones, actas, diligencias fuera de notaría y utilidad probatoria. Los fragmentos sobre divorcio y sucesiones se reservaron para las clases familiar y sucesoria, pues su procedencia depende de la legislación local y requisitos específicos. Se eliminaron historias profesionales, política, insultos, precios, promoción de servicios, instrucciones antiguas del examen y consejos de confrontación. Se corrigió que ratificar acredita comparecencia, identidad, firma y contenido conforme a la ley, pero no convierte automáticamente todo contrato en título ejecutivo; que la notificación comunica y deja constancia, pero no modifica unilateralmente un contrato ni perfecciona cualquier acto; que un requerimiento documenta una exigencia y respuesta o negativa, pero no faculta al notario para desalojar, embargar o resolver el conflicto; que la interpelación puede ser pregunta o exigencia formal y producir consecuencias previstas por el derecho de obligaciones, pero el destinatario no queda obligado a contestar solo por la presencia notarial; que el acta acredita los hechos percibidos y manifestaciones asentadas, no la verdad jurídica de todas las afirmaciones; y que el protesto de un título no reinicia por sí mismo la prescripción de tres años de la acción cambiaria."},
-  "topics":[{
-    "title":"Actas para autenticar, comunicar, exigir y preguntar",
-    "description":"Selección de la actuación notarial según el objetivo y evaluación de su verdadero efecto jurídico.",
-    "learningJourney":{
-      "openingPrompt":"Una parte quiere acreditar una firma, otra necesita comunicar la terminación de un contrato y una tercera exige el pago de una obligación sin fecha. ¿Es la misma actuación notarial?",
-      "quickChecks":[
-        {"prompt":"¿Ratificar vuelve ejecutivo cualquier documento?","answer":"No. Acredita firma, identidad, capacidad y ratificación de contenido; la vía ejecutiva depende de que la ley procesal otorgue ese carácter y de que la obligación reúna sus requisitos.","feedback":"Separa fuerza probatoria de fuerza ejecutiva."},
-        {"prompt":"¿Un requerimiento notarial permite retirar por la fuerza a un ocupante?","answer":"No. Documenta la exigencia y lo ocurrido; la desocupación coactiva requiere acuerdo cumplido o autoridad competente.","feedback":"La fe de hechos no sustituye jurisdicción."},
-        {"prompt":"¿El destinatario debe contestar una interpelación?","answer":"No por la sola presencia del notario. El acta registra respuesta, silencio o negativa y la ley determina sus efectos.","feedback":"El notario constata; no obliga a declarar."}
+  "subject": {
+    "name": "Derecho Notarial y Registral",
+    "description": "Fe pública, instrumentos notariales, protocolo, representación, actuaciones y efectos registrales."
+  },
+  "class": {
+    "title": "Actuaciones notariales: ratificación, notificación, requerimiento e interpelación",
+    "description": "Trigésima tercera clase del plan académico: actas notariales para reconocer firmas y contenidos, comunicar, exigir e interrogar, con sus alcances probatorios y límites."
+  },
+  "transcript": {
+    "originalFile": "AUDIO 45.txt",
+    "cleaned": "Se conservaron las explicaciones sobre ratificación de firmas y contenido, notificaciones, requerimientos, interpelaciones, actas, diligencias fuera de notaría y utilidad probatoria. Los fragmentos sobre divorcio y sucesiones se reservaron para las clases familiar y sucesoria, pues su procedencia depende de la legislación local y requisitos específicos. Se eliminaron historias profesionales, política, insultos, precios, promoción de servicios, instrucciones antiguas del examen y consejos de confrontación. Se corrigió que ratificar acredita comparecencia, identidad, firma y contenido conforme a la ley, pero no convierte automáticamente todo contrato en título ejecutivo; que la notificación comunica y deja constancia, pero no modifica unilateralmente un contrato ni perfecciona cualquier acto; que un requerimiento documenta una exigencia y respuesta o negativa, pero no faculta al notario para desalojar, embargar o resolver el conflicto; que la interpelación puede ser pregunta o exigencia formal y producir consecuencias previstas por el derecho de obligaciones, pero el destinatario no queda obligado a contestar solo por la presencia notarial; que el acta acredita los hechos percibidos y manifestaciones asentadas, no la verdad jurídica de todas las afirmaciones; y que el protesto de un título no reinicia por sí mismo la prescripción de tres años de la acción cambiaria."
+  },
+  "topics": [
+    {
+      "title": "Actas para autenticar, comunicar, exigir y preguntar",
+      "description": "Selección de la actuación notarial según el objetivo y evaluación de su verdadero efecto jurídico.",
+      "learningJourney": {
+        "openingPrompt": "Una parte quiere acreditar una firma, otra necesita comunicar la terminación de un contrato y una tercera exige el pago de una obligación sin fecha. ¿Es la misma actuación notarial?",
+        "quickChecks": [
+          {
+            "prompt": "¿Ratificar vuelve ejecutivo cualquier documento?",
+            "answer": "No. Acredita firma, identidad, capacidad y ratificación de contenido; la vía ejecutiva depende de que la ley procesal otorgue ese carácter y de que la obligación reúna sus requisitos.",
+            "feedback": "Separa fuerza probatoria de fuerza ejecutiva.",
+            "evidenceIds": [
+              "ev-c33-mich-vigencia-local",
+              "ev-c33-cdmx-arts137-138-ratificacion",
+              "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-lgtoc-arts139-149-protesto",
+              "ev-c33-lgtoc-arts160-174-acciones-pagare",
+              "ev-c33-a45-l057-protesto-prescripcion-corregida"
+            ]
+          },
+          {
+            "prompt": "¿Un requerimiento notarial permite retirar por la fuerza a un ocupante?",
+            "answer": "No. Documenta la exigencia y lo ocurrido; la desocupación coactiva requiere acuerdo cumplido o autoridad competente.",
+            "feedback": "La fe de hechos no sustituye jurisdicción.",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-mich-vigencia-local",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion"
+            ]
+          },
+          {
+            "prompt": "¿El destinatario debe contestar una interpelación?",
+            "answer": "No por la sola presencia del notario. El acta registra respuesta, silencio o negativa y la ley determina sus efectos.",
+            "feedback": "El notario constata; no obliga a declarar.",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Un contrato no fija fecha para devolver una suma. El acreedor solicita a un notario que exija el pago y entregue un documento. El destinatario recibe el instructivo, se niega a responder y no paga.",
+          "question": "¿Qué actuación existe y qué puede probar?",
+          "legalRule": "Los artículos 131 a 138 de la Ley del Notariado capitalina regulan actas de notificación, interpelación, requerimiento y reconocimiento de firmas; el artículo 2080 del Código Civil Federal prevé interpelación extrajudicial ante notario o dos testigos para obligaciones de dar sin plazo.",
+          "reasoning": "La diligencia puede combinar entrega, notificación y requerimiento. El notario identifica objeto, domicilio, fecha, forma de entrega y negativa, sin decidir si la deuda existe. Si resulta aplicable la regla civil y se cumplen sus presupuestos, la interpelación activa el plazo legal; la acción posterior todavía debe probar obligación y procedencia.",
+          "conclusion": "El acta crea constancia auténtica de la diligencia, pero sus consecuencias provienen de la norma sustantiva y procesal aplicable, no del nombre elegido por el solicitante.",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts128-131-actas",
+            "ev-c33-mich-vigencia-local",
+            "ev-c33-cdmx-arts137-138-ratificacion",
+            "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+            "ev-c33-a45-l023-029-firma-notificacion",
+            "ev-c33-cdmx-arts132-136-notificacion",
+            "ev-c33-a45-l039-055-notificacion-modificacion",
+            "ev-c33-cdmx-art144-identificacion",
+            "ev-c33-ccf-art2080-interpelacion",
+            "ev-c33-a45-l057-requerimiento-interpelacion",
+            "ev-c33-lgtoc-arts139-149-protesto",
+            "ev-c33-lgtoc-arts160-174-acciones-pagare",
+            "ev-c33-a45-l057-protesto-prescripcion-corregida"
+          ]
+        },
+        "closingPrompt": "Compara ratificación, notificación, requerimiento e interpelación por objeto, conducta del notario, posible respuesta y efectos.",
+        "nextActivity": "Recorre el mapa visual, responde la guía de doce preguntas y resuelve los diez casos originales.",
+        "openingPromptEvidenceIds": [
+          "ev-c33-cdmx-arts137-138-ratificacion",
+          "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+          "ev-c33-a45-l023-029-firma-notificacion",
+          "ev-c33-cdmx-arts132-136-notificacion",
+          "ev-c33-a45-l039-055-notificacion-modificacion",
+          "ev-c33-cdmx-arts128-131-actas",
+          "ev-c33-ccf-art2080-interpelacion",
+          "ev-c33-a45-l057-requerimiento-interpelacion"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c33-cdmx-arts128-131-actas",
+          "ev-c33-cdmx-arts137-138-ratificacion",
+          "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+          "ev-c33-a45-l023-029-firma-notificacion",
+          "ev-c33-cdmx-arts132-136-notificacion",
+          "ev-c33-a45-l039-055-notificacion-modificacion",
+          "ev-c33-ccf-art2080-interpelacion",
+          "ev-c33-a45-l057-requerimiento-interpelacion"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c33-cdmx-arts128-131-actas",
+          "ev-c33-cdmx-arts137-138-ratificacion",
+          "ev-c33-cdmx-arts132-136-notificacion"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "Ratificación: una persona reconoce firma y contenido ante notario. Notificación: se comunica información o entrega un documento. Requerimiento: se exige una conducta, pago o entrega. Interpelación: se formula pregunta o exigencia formal que puede producir efectos legales. Todas se documentan en acta cuando la ley lo permite; ninguna convierte al notario en juez ni hace coactivo por sí solo el cumplimiento.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts128-131-actas",
+            "ev-c33-cdmx-arts137-138-ratificacion",
+            "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+            "ev-c33-a45-l023-029-firma-notificacion",
+            "ev-c33-cdmx-arts132-136-notificacion",
+            "ev-c33-a45-l039-055-notificacion-modificacion",
+            "ev-c33-ccf-art2080-interpelacion",
+            "ev-c33-a45-l057-requerimiento-interpelacion"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "Un acta notarial es el instrumento original en que el notario relaciona hechos que presencia, percibe o conoce dentro de sus atribuciones. A diferencia de la escritura, centrada en actos jurídicos y voluntad negocial, el acta documenta hechos como notificaciones, interpelaciones, requerimientos, entrega de documentos, reconocimiento de firmas y declaraciones. La distinción depende de la legislación local.\n\nLa ratificación o reconocimiento de firma exige comparecencia e identificación. En Ciudad de México el notario hace constar lo sucedido, identidad y capacidad; puede comprender firma autógrafa o electrónica y ratificación de contenido. En firma electrónica se declara el medio convenido para atribuir autoría, plataforma y tipo de firma cuando se conozcan. No puede afirmarse una ratificación de contenido cuando el documento carece de contenido: el acta debe hacer constar la firma o su reconocimiento y el contenido efectivamente ratificado.\n\nRatificar fortalece la atribución del documento y reduce controversias sobre autoría o fecha de reconocimiento, pero no garantiza que cada cláusula sea válida, que los hechos narrados sean ciertos ni que exista automáticamente acción ejecutiva. La ejecutividad requiere disposición legal y una obligación con características exigidas. Un arrendamiento ratificado no es por esa sola circunstancia equivalente universalmente a un pagaré.\n\nNotificar significa comunicar formalmente información, voluntad o documento. Puede servir para avisar terminación conforme a contrato, convocatoria, ejercicio de preferencia, revocación o propuesta. La notificación acredita una comunicación, pero por sí sola no demuestra que la relación contractual haya quedado modificada; ese efecto depende del acuerdo, el contrato y la normativa aplicables. Tampoco prueba automáticamente que la pretensión comunicada sea jurídicamente correcta; prueba la diligencia y lo percibido.\n\nEn Ciudad de México, si el destinatario no aparece en la primera búsqueda y el notario se cerciora del domicilio, puede entregar instructivo a persona en el lugar o al servicio del edificio. Si no es posible, puede fijarlo en lugar visible o depositarlo en el inmueble. El acta debe expresar forma, fecha, hora, objeto y, cuando se proporcione, persona con quien se entendió. Estas reglas no deben trasladarse sin revisión a otro estado.\n\nEl destinatario capitalino puede acudir dentro de cinco días hábiles para conocer el acta, conformarse, firmarla u ofrecer observaciones por escrito que se agregan al apéndice. Si se expide copia durante ese plazo, debe señalarse esa circunstancia. Negarse a identificarse no impide por sí sola la diligencia exterior bajo las reglas locales.\n\nRequerir es exigir una prestación o conducta: pagar, entregar mercancía, devolver llaves, cesar una acción o cumplir un contrato. El notario registra la exigencia, respuesta, silencio, negativa y hechos percibidos. No embarga, desaloja ni condena. El acta puede preparar prueba y mostrar gestión previa, pero la buena fe o el derecho sustantivo se valoran en el procedimiento correspondiente.\n\nInterpelar es dirigirse formalmente a una persona para preguntarle o exigirle algo. En obligaciones sin fecha, el artículo 2080 del Código Civil Federal dispone que las de dar no se exigen sino treinta días después de la interpelación judicial o extrajudicial ante notario o dos testigos; para hacer, después del tiempo necesario desde la exigencia. Debe revisarse el código aplicable. La interpelación no obliga a contestar ni crea una deuda inexistente.\n\nUna diligencia puede tener más de un componente: entregar una carta, notificar su contenido e interpelar o requerir una respuesta. La calificación depende del objeto real, no del título del documento. El acta puede levantarse después de realizados los hechos dentro del plazo y condiciones de la ley local.\n\nEl derecho al tanto ilustra la utilidad de notificar, pero las consecuencias de omitirlo varían. No es correcto afirmar automáticamente nulidad absoluta en todo caso: deben revisarse código, copropiedad, plazo, forma de venta y acción disponible. Igualmente, convocar a una asamblea requiere seguir estatutos y ley; la notificación notarial prueba comunicación, pero no subsana una convocatoria inválida.\n\nEl protesto es una diligencia cambiaria especial. La LGTOC regula plazos y contenido para falta de aceptación o pago. No debe enseñarse que protestar conserva indefinidamente un pagaré o reinicia automáticamente la prescripción: la acción cambiaria prescribe conforme a los artículos aplicables y la demanda es una causa expresa de interrupción. Además, muchas obligaciones cambiarias pueden estar dispensadas de protesto.\n\nAntes de solicitar actuación se define objetivo, norma, destinatario, domicilio, documento, facultades del solicitante, seguridad y efecto buscado. Después se distingue: lo que el notario percibió; lo que otra persona declaró; y la conclusión jurídica, que el acta no decide. Para CENEVAL busca verbos: reconocer, comunicar, exigir o preguntar.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts128-131-actas",
+            "ev-c33-mich-vigencia-local",
+            "ev-c33-cdmx-arts137-138-ratificacion",
+            "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+            "ev-c33-a45-l023-029-firma-notificacion",
+            "ev-c33-cdmx-arts132-136-notificacion",
+            "ev-c33-a45-l039-055-notificacion-modificacion",
+            "ev-c33-cdmx-art144-identificacion",
+            "ev-c33-ccf-art2080-interpelacion",
+            "ev-c33-a45-l057-requerimiento-interpelacion",
+            "ev-c33-lgtoc-arts139-149-protesto",
+            "ev-c33-lgtoc-arts160-174-acciones-pagare",
+            "ev-c33-a45-l057-protesto-prescripcion-corregida"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Ciudad de México: Ley del Notariado para la Ciudad de México, texto vigente y última reforma GOCDMX 04-08-2021, artículos 128 a 138 y 144. Michoacán cuenta con un régimen notarial local distinto, cuya ficha legislativa oficial informa última reforma 28-03-2022; sus reglas no se usan para resolver supuestos capitalinos. Código Civil Federal, artículo 2080, última reforma DOF 14-11-2025. Ley General de Títulos y Operaciones de Crédito, artículos 139 a 149 y 160 a 174, última reforma DOF 26-03-2024. Cada caso exige fijar jurisdicción, acto y norma sustantiva aplicable.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts128-131-actas",
+            "ev-c33-cdmx-arts132-136-notificacion",
+            "ev-c33-cdmx-arts137-138-ratificacion",
+            "ev-c33-cdmx-art144-identificacion",
+            "ev-c33-mich-vigencia-local",
+            "ev-c33-ccf-art2080-interpelacion",
+            "ev-c33-lgtoc-arts139-149-protesto",
+            "ev-c33-lgtoc-arts160-174-acciones-pagare"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Ana firma un contrato privado y luego comparece ante notario, se identifica y reconoce firma y contenido: ratificación. Si el notario lleva una carta al arrendatario para avisar que el contrato concluirá: notificación. Si además exige devolver llaves en la fecha pactada: requerimiento.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts128-131-actas",
+            "ev-c33-cdmx-arts137-138-ratificacion",
+            "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+            "ev-c33-a45-l023-029-firma-notificacion",
+            "ev-c33-cdmx-arts132-136-notificacion",
+            "ev-c33-a45-l039-055-notificacion-modificacion",
+            "ev-c33-ccf-art2080-interpelacion",
+            "ev-c33-a45-l057-requerimiento-interpelacion"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo CENEVAL",
+          "content": "Si el reactivo describe que el notario entrega un cuestionario y registra que la persona se negó a contestar, se trata de interpelación documentada. La negativa puede constar, pero no autoriza al notario a obligar una respuesta ni a decidir el conflicto.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts128-131-actas",
+            "ev-c33-cdmx-arts132-136-notificacion",
+            "ev-c33-a45-l023-029-firma-notificacion",
+            "ev-c33-a45-l039-055-notificacion-modificacion",
+            "ev-c33-ccf-art2080-interpelacion",
+            "ev-c33-a45-l057-requerimiento-interpelacion"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Acta: constancia notarial de hechos. Ratificación: reconoce firma y contenido. Notificación: comunica. Requerimiento: exige cumplimiento. Interpelación: pregunta o exige formalmente y puede activar efectos legales. El notario acredita lo percibido, no resuelve derechos. Ratificación no implica ejecutividad universal. Notificación por sí sola no demuestra modificación contractual. Requerimiento no permite coacción. Protesto no reinicia automáticamente prescripción.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts128-131-actas",
+            "ev-c33-cdmx-arts137-138-ratificacion",
+            "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+            "ev-c33-a45-l023-029-firma-notificacion",
+            "ev-c33-cdmx-arts132-136-notificacion",
+            "ev-c33-a45-l039-055-notificacion-modificacion",
+            "ev-c33-ccf-art2080-interpelacion",
+            "ev-c33-a45-l057-requerimiento-interpelacion",
+            "ev-c33-lgtoc-arts139-149-protesto",
+            "ev-c33-lgtoc-arts160-174-acciones-pagare",
+            "ev-c33-a45-l057-protesto-prescripcion-corregida"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía intensiva de preguntas y respuestas",
+          "content": "1. ¿Qué documenta un acta? Respuesta: hechos percibidos o diligencias. 2. ¿Ratificación? Respuesta: reconocimiento de firma y contenido. 3. ¿Documento firmado sin contenido? Respuesta: no acredita una ratificación de contenido inexistente; debe identificarse qué firma y contenido fueron efectivamente reconocidos. 4. ¿Ejecutividad automática? Respuesta: no. 5. ¿Notificación? Respuesta: comunicación formal. 6. ¿Modifica contrato? Respuesta: no por sí sola. 7. ¿Requerimiento? Respuesta: exigencia de conducta o prestación. 8. ¿Autoriza coacción? Respuesta: no. 9. ¿Interpelación? Respuesta: pregunta o exigencia formal. 10. ¿Debe responderse? Respuesta: no por la sola presencia notarial. 11. ¿Qué prueba el acta? Respuesta: diligencia y hechos percibidos. 12. ¿Protesto renueva prescripción? Respuesta: no automáticamente.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts128-131-actas",
+            "ev-c33-cdmx-arts137-138-ratificacion",
+            "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+            "ev-c33-a45-l023-029-firma-notificacion",
+            "ev-c33-cdmx-arts132-136-notificacion",
+            "ev-c33-a45-l039-055-notificacion-modificacion",
+            "ev-c33-cdmx-art144-identificacion",
+            "ev-c33-ccf-art2080-interpelacion",
+            "ev-c33-a45-l057-requerimiento-interpelacion",
+            "ev-c33-lgtoc-arts139-149-protesto",
+            "ev-c33-lgtoc-arts160-174-acciones-pagare",
+            "ev-c33-a45-l057-protesto-prescripcion-corregida"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Acta notarial: matriz de hechos. Compareciente: persona ante notario. Identidad: verificación personal. Capacidad: aptitud jurídica apreciada. Ratificación: reconocimiento de autoría y contenido. Firma autógrafa: trazo físico. Firma electrónica: medio de atribución digital. Notificación: comunicación. Instructivo: documento de diligencia. Destinatario: receptor. Requerimiento: exigencia formal. Interpelación: pregunta o demanda formal. Manifestación: declaración asentada. Negativa: rechazo documentado. Mora: retraso jurídicamente relevante. Protesto: diligencia cambiaria. Fuerza probatoria: aptitud para demostrar. Fuerza ejecutiva: aptitud legal para ejecución.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts128-131-actas",
+            "ev-c33-mich-vigencia-local",
+            "ev-c33-cdmx-arts137-138-ratificacion",
+            "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+            "ev-c33-a45-l023-029-firma-notificacion",
+            "ev-c33-cdmx-arts132-136-notificacion",
+            "ev-c33-a45-l039-055-notificacion-modificacion",
+            "ev-c33-cdmx-art144-identificacion",
+            "ev-c33-ccf-art2080-interpelacion",
+            "ev-c33-a45-l057-requerimiento-interpelacion",
+            "ev-c33-lgtoc-arts139-149-protesto",
+            "ev-c33-lgtoc-arts160-174-acciones-pagare",
+            "ev-c33-a45-l057-protesto-prescripcion-corregida"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "No confundas escritura y acta. No atribuyas ratificación de contenido a un documento que carecía de contenido. No equipares ratificación con validez total. No supongas título ejecutivo automático. No creas que una notificación crea un adendum. No uses reglas de instructivo de una entidad como universales. No confundas requerir con desalojar o embargar. No atribuyas al acta verdad de todas las declaraciones. No obligues a responder una interpelación. No conviertas silencio en aceptación sin norma. No declares nulidad absoluta automática por omitir derecho al tanto. No digas que protestar renueva por sí solo tres años.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts128-131-actas",
+            "ev-c33-mich-vigencia-local",
+            "ev-c33-cdmx-arts137-138-ratificacion",
+            "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+            "ev-c33-a45-l023-029-firma-notificacion",
+            "ev-c33-cdmx-arts132-136-notificacion",
+            "ev-c33-a45-l039-055-notificacion-modificacion",
+            "ev-c33-ccf-art2080-interpelacion",
+            "ev-c33-a45-l057-requerimiento-interpelacion",
+            "ev-c33-lgtoc-arts139-149-protesto",
+            "ev-c33-lgtoc-arts160-174-acciones-pagare",
+            "ev-c33-a45-l057-protesto-prescripcion-corregida"
+          ]
+        }
       ],
-      "practicalCase":{"facts":"Un contrato no fija fecha para devolver una suma. El acreedor solicita a un notario que exija el pago y entregue un documento. El destinatario recibe el instructivo, se niega a responder y no paga.","question":"¿Qué actuación existe y qué puede probar?","legalRule":"Los artículos 131 a 138 de la Ley del Notariado capitalina regulan actas de notificación, interpelación, requerimiento y reconocimiento de firmas; el artículo 2080 del Código Civil Federal prevé interpelación extrajudicial ante notario o dos testigos para obligaciones de dar sin plazo.","reasoning":"La diligencia puede combinar entrega, notificación y requerimiento. El notario identifica objeto, domicilio, fecha, forma de entrega y negativa, sin decidir si la deuda existe. Si resulta aplicable la regla civil y se cumplen sus presupuestos, la interpelación activa el plazo legal; la acción posterior todavía debe probar obligación y procedencia.","conclusion":"El acta crea constancia auténtica de la diligencia, pero sus consecuencias provienen de la norma sustantiva y procesal aplicable, no del nombre elegido por el solicitante."},
-      "closingPrompt":"Compara ratificación, notificación, requerimiento e interpelación por objeto, conducta del notario, posible respuesta y efectos.",
-      "nextActivity":"Recorre el mapa visual, responde la guía de doce preguntas y resuelve los diez casos originales."
+      "conceptMap": {
+        "title": "Mapa visual: elegir la actuación notarial",
+        "description": "Objetivo, diligencia, constancia y efecto de cada acta.",
+        "nodes": [
+          {
+            "id": "actuaciones",
+            "label": "Actuaciones notariales",
+            "description": "Fe pública sobre hechos y diligencias.",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-cdmx-art144-identificacion"
+            ]
+          },
+          {
+            "id": "filtro",
+            "label": "Filtro inicial",
+            "description": "Objetivo, ley y competencia.",
+            "parentId": "actuaciones",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas"
+            ]
+          },
+          {
+            "id": "jurisdiccion",
+            "label": "Ley local",
+            "description": "Forma depende de entidad.",
+            "parentId": "filtro",
+            "evidenceIds": [
+              "ev-c33-mich-vigencia-local"
+            ]
+          },
+          {
+            "id": "objetivo",
+            "label": "Verbo objetivo",
+            "description": "Reconocer, comunicar, exigir o preguntar.",
+            "parentId": "filtro",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts137-138-ratificacion",
+              "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion",
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion"
+            ]
+          },
+          {
+            "id": "ratificacion",
+            "label": "Ratificación",
+            "description": "Reconoce firma y contenido.",
+            "parentId": "actuaciones",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts137-138-ratificacion",
+              "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+              "ev-c33-a45-l023-029-firma-notificacion"
+            ]
+          },
+          {
+            "id": "identidad",
+            "label": "Identidad",
+            "description": "Compareciente identificado.",
+            "parentId": "ratificacion",
+            "evidenceIds": [
+              "ev-c33-mich-vigencia-local",
+              "ev-c33-cdmx-arts137-138-ratificacion",
+              "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+              "ev-c33-a45-l023-029-firma-notificacion"
+            ]
+          },
+          {
+            "id": "capacidad",
+            "label": "Capacidad",
+            "description": "Apreciación notarial.",
+            "parentId": "ratificacion",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts137-138-ratificacion",
+              "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+              "ev-c33-a45-l023-029-firma-notificacion"
+            ]
+          },
+          {
+            "id": "firmaauto",
+            "label": "Firma autógrafa",
+            "description": "Reconocimiento físico.",
+            "parentId": "ratificacion",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts137-138-ratificacion",
+              "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+              "ev-c33-a45-l023-029-firma-notificacion"
+            ]
+          },
+          {
+            "id": "firmaelectronica",
+            "label": "Firma electrónica",
+            "description": "Medio y plataforma declarados.",
+            "parentId": "ratificacion",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts137-138-ratificacion",
+              "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+              "ev-c33-a45-l023-029-firma-notificacion"
+            ]
+          },
+          {
+            "id": "noblanco",
+            "label": "Nunca firma en blanco",
+            "description": "Contenido debe existir.",
+            "parentId": "ratificacion",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts137-138-ratificacion",
+              "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+              "ev-c33-a45-l023-029-firma-notificacion"
+            ]
+          },
+          {
+            "id": "notificacion",
+            "label": "Notificación",
+            "description": "Comunica voluntad o documento.",
+            "parentId": "actuaciones",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion"
+            ]
+          },
+          {
+            "id": "domicilio",
+            "label": "Domicilio",
+            "description": "Lugar de búsqueda.",
+            "parentId": "notificacion",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion"
+            ]
+          },
+          {
+            "id": "entrega",
+            "label": "Entrega personal",
+            "description": "Destinatario localizado.",
+            "parentId": "notificacion",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion"
+            ]
+          },
+          {
+            "id": "instructivo",
+            "label": "Instructivo",
+            "description": "Regla local si no aparece.",
+            "parentId": "notificacion",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion"
+            ]
+          },
+          {
+            "id": "constancia",
+            "label": "Forma, fecha y hora",
+            "description": "Datos de la diligencia.",
+            "parentId": "notificacion",
+            "evidenceIds": [
+              "ev-c33-cdmx-art144-identificacion"
+            ]
+          },
+          {
+            "id": "observaciones",
+            "label": "Observaciones",
+            "description": "Derecho local del destinatario.",
+            "parentId": "notificacion",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion"
+            ]
+          },
+          {
+            "id": "requerimiento",
+            "label": "Requerimiento",
+            "description": "Exige prestación o conducta.",
+            "parentId": "actuaciones",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion"
+            ]
+          },
+          {
+            "id": "pago",
+            "label": "Pago",
+            "description": "Exigencia de deuda.",
+            "parentId": "requerimiento",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion"
+            ]
+          },
+          {
+            "id": "entregabien",
+            "label": "Entrega",
+            "description": "Bien, mercancía o llaves.",
+            "parentId": "requerimiento",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion"
+            ]
+          },
+          {
+            "id": "respuesta",
+            "label": "Respuesta o negativa",
+            "description": "Se asienta lo ocurrido.",
+            "parentId": "requerimiento",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas"
+            ]
+          },
+          {
+            "id": "sincoaccion",
+            "label": "Sin coacción",
+            "description": "Notario no ejecuta.",
+            "parentId": "requerimiento",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas"
+            ]
+          },
+          {
+            "id": "interpelacion",
+            "label": "Interpelación",
+            "description": "Pregunta o exigencia formal.",
+            "parentId": "actuaciones",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion"
+            ]
+          },
+          {
+            "id": "cuestionario",
+            "label": "Cuestionario",
+            "description": "Puede entregarse y formularse.",
+            "parentId": "interpelacion",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion"
+            ]
+          },
+          {
+            "id": "silencio",
+            "label": "Silencio",
+            "description": "No equivale siempre a aceptación.",
+            "parentId": "interpelacion",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas"
+            ]
+          },
+          {
+            "id": "mora",
+            "label": "Efecto sustantivo",
+            "description": "Puede activar plazo o mora.",
+            "parentId": "interpelacion",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion"
+            ]
+          },
+          {
+            "id": "acta",
+            "label": "Acta notarial",
+            "description": "Resultado documental.",
+            "parentId": "actuaciones",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas"
+            ]
+          },
+          {
+            "id": "percibido",
+            "label": "Hechos percibidos",
+            "description": "Cubiertos por fe pública.",
+            "parentId": "acta",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas"
+            ]
+          },
+          {
+            "id": "declarado",
+            "label": "Manifestaciones",
+            "description": "Se atribuyen a quien declara.",
+            "parentId": "acta",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas"
+            ]
+          },
+          {
+            "id": "noconclusion",
+            "label": "No decide derechos",
+            "description": "No es sentencia.",
+            "parentId": "acta",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas"
+            ]
+          },
+          {
+            "id": "efectos",
+            "label": "Efectos",
+            "description": "Dependen de otra norma.",
+            "parentId": "actuaciones",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas"
+            ]
+          },
+          {
+            "id": "prueba",
+            "label": "Fuerza probatoria",
+            "description": "Acredita diligencia.",
+            "parentId": "efectos",
+            "evidenceIds": [
+              "ev-c33-cdmx-art144-identificacion"
+            ]
+          },
+          {
+            "id": "ejecutiva",
+            "label": "Ejecutividad excepcional",
+            "description": "Solo si ley la concede.",
+            "parentId": "efectos",
+            "evidenceIds": [
+              "ev-c33-lgtoc-arts139-149-protesto",
+              "ev-c33-lgtoc-arts160-174-acciones-pagare",
+              "ev-c33-a45-l057-protesto-prescripcion-corregida"
+            ]
+          },
+          {
+            "id": "juicio",
+            "label": "Vía posterior",
+            "description": "Autoridad resuelve conflicto.",
+            "parentId": "efectos",
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Ley del Notariado para la Ciudad de México",
+          "url": "https://www.congresocdmx.gob.mx/media/documentos/ef679acbbf3f25f083e72a593437826b39d742c8.pdf",
+          "institution": "Congreso de la Ciudad de México",
+          "jurisdiction": "Ciudad de México",
+          "citation": "Artículos 128 a 138 y 144; última reforma GOCDMX 04-08-2021",
+          "retrievedOn": "2026-08-21",
+          "note": "Actas, diligencias, notificación, observaciones y reconocimiento o puesta de firmas."
+        },
+        {
+          "title": "Leyes del Estado de Michoacán",
+          "url": "https://congresomich.gob.mx/leyes/",
+          "institution": "Congreso del Estado de Michoacán de Ocampo",
+          "jurisdiction": "Michoacán",
+          "citation": "Entrada “Ley del Notariado del Estado de Michoacán”; última reforma informada 28-03-2022",
+          "retrievedOn": "2026-08-21",
+          "note": "Referencia de vigencia y jurisdicción separada; no sustenta reglas de Ciudad de México."
+        },
+        {
+          "title": "Código Civil Federal",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCF.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Artículo 2080; última reforma DOF 14-11-2025",
+          "retrievedOn": "2026-08-21",
+          "note": "Interpelación para obligaciones sin tiempo fijado, dentro de su ámbito de aplicación."
+        },
+        {
+          "title": "Ley General de Títulos y Operaciones de Crédito",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGTOC.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Artículos 139 a 149 y 160 a 174; última reforma DOF 26-03-2024",
+          "retrievedOn": "2026-08-21",
+          "note": "Protesto, caducidad, prescripción, interrupción y pagaré; no convierte el protesto en reinicio general del plazo."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué es un acta notarial?",
+          "answer": "Instrumento matriz que relaciona hechos percibidos o diligencias realizadas por el notario.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts128-131-actas",
+            "ev-c33-cdmx-art144-identificacion"
+          ]
+        },
+        {
+          "question": "¿Qué se ratifica?",
+          "answer": "La firma o su reconocimiento y el contenido del documento.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts137-138-ratificacion",
+            "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+            "ev-c33-a45-l023-029-firma-notificacion"
+          ]
+        },
+        {
+          "question": "¿Una firma puesta en una hoja sin contenido acredita ratificación de contenido?",
+          "answer": "No; el acta debe hacer constar la firma o su reconocimiento y el contenido efectivamente ratificado.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts128-131-actas",
+            "ev-c33-cdmx-arts137-138-ratificacion",
+            "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+            "ev-c33-a45-l023-029-firma-notificacion"
+          ]
+        },
+        {
+          "question": "¿Ratificación equivale siempre a título ejecutivo?",
+          "answer": "No; la ejecutividad debe provenir de la ley aplicable.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts137-138-ratificacion",
+            "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+            "ev-c33-a45-l023-029-firma-notificacion",
+            "ev-c33-lgtoc-arts139-149-protesto",
+            "ev-c33-lgtoc-arts160-174-acciones-pagare",
+            "ev-c33-a45-l057-protesto-prescripcion-corregida"
+          ]
+        },
+        {
+          "question": "¿Qué hace una notificación?",
+          "answer": "Comunica formalmente información, voluntad o un documento.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts132-136-notificacion",
+            "ev-c33-a45-l023-029-firma-notificacion",
+            "ev-c33-a45-l039-055-notificacion-modificacion"
+          ]
+        },
+        {
+          "question": "¿Notificar un cambio modifica el contrato?",
+          "answer": "No por la sola comunicación; el efecto depende del acuerdo, el contrato y las formalidades aplicables.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts132-136-notificacion",
+            "ev-c33-a45-l023-029-firma-notificacion",
+            "ev-c33-a45-l039-055-notificacion-modificacion"
+          ]
+        },
+        {
+          "question": "¿Qué hace un requerimiento?",
+          "answer": "Exige formalmente pago, entrega, hacer o abstención.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts132-136-notificacion",
+            "ev-c33-a45-l023-029-firma-notificacion",
+            "ev-c33-a45-l039-055-notificacion-modificacion",
+            "ev-c33-cdmx-arts128-131-actas",
+            "ev-c33-ccf-art2080-interpelacion",
+            "ev-c33-a45-l057-requerimiento-interpelacion"
+          ]
+        },
+        {
+          "question": "¿Puede el notario embargar al requerido?",
+          "answer": "No; solo documenta la diligencia dentro de su función.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts128-131-actas",
+            "ev-c33-cdmx-art144-identificacion",
+            "ev-c33-ccf-art2080-interpelacion",
+            "ev-c33-a45-l057-requerimiento-interpelacion"
+          ]
+        },
+        {
+          "question": "¿Qué es interpelar?",
+          "answer": "Preguntar o exigir formalmente, con posibles efectos previstos por ley.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts128-131-actas",
+            "ev-c33-ccf-art2080-interpelacion",
+            "ev-c33-a45-l057-requerimiento-interpelacion"
+          ]
+        },
+        {
+          "question": "¿Silencio equivale siempre a aceptación?",
+          "answer": "No; requiere una norma o acuerdo que le atribuya ese efecto.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts128-131-actas"
+          ]
+        },
+        {
+          "question": "¿Qué cubre la fe del acta?",
+          "answer": "Los hechos percibidos y la atribución de declaraciones, no toda conclusión jurídica.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c33-cdmx-arts128-131-actas"
+          ]
+        },
+        {
+          "question": "¿El protesto reinicia siempre la prescripción del pagaré?",
+          "answer": "No; deben aplicarse las causas de interrupción previstas por la ley.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c33-lgtoc-arts139-149-protesto",
+            "ev-c33-lgtoc-arts160-174-acciones-pagare",
+            "ev-c33-a45-l057-protesto-prescripcion-corregida"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación: actuaciones notariales",
+        "description": "Diez casos originales para distinguir diligencia, prueba y efecto.",
+        "questions": [
+          {
+            "text": "Una persona comparece, se identifica y reconoce firma y contenido de un contrato. ¿Qué actuación es?",
+            "difficulty": "basic",
+            "options": [
+              "Ratificación",
+              "Notificación",
+              "Interpelación"
+            ],
+            "correctOption": 0,
+            "explanation": "Reconocer autoría y contenido caracteriza la ratificación.",
+            "optionExplanations": [
+              "Coincide con el supuesto.",
+              "Comunicaría a un destinatario.",
+              "Formularía pregunta o exigencia."
+            ],
+            "evidenceIds": [
+              "ev-c33-cdmx-arts137-138-ratificacion",
+              "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion",
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ],
+              [
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ],
+              [
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion",
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-ccf-art2080-interpelacion",
+                "ev-c33-a45-l057-requerimiento-interpelacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c33-cdmx-arts137-138-ratificacion",
+              "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c33-cdmx-arts137-138-ratificacion",
+              "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ],
+              [
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ],
+              [
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion",
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-ccf-art2080-interpelacion",
+                "ev-c33-a45-l057-requerimiento-interpelacion"
+              ]
+            ]
+          },
+          {
+            "text": "Se exhibe una hoja firmada pero sin contenido y se pretende ratificar también su contenido. ¿Qué debe concluirse?",
+            "difficulty": "intermediate",
+            "options": [
+              "No existe contenido que pueda tenerse por ratificado",
+              "Sí, toda firma ratifica cualquier texto agregado después",
+              "Sí, si luego se llena sin nueva comparecencia"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 138 exige que el acta haga constar el reconocimiento o puesta de firma y la respectiva ratificación del contenido efectivamente presentado.",
+            "optionExplanations": [
+              "La firma y el contenido deben quedar individualizados en la actuación.",
+              "La comparecencia no autoriza texto futuro indeterminado.",
+              "Agregar contenido después no demuestra que ese contenido fue ratificado."
+            ],
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-cdmx-arts137-138-ratificacion",
+              "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion"
+              ],
+              [
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion"
+              ],
+              [
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c33-cdmx-arts137-138-ratificacion",
+              "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+              "ev-c33-a45-l023-029-firma-notificacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-cdmx-arts137-138-ratificacion",
+              "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion"
+              ],
+              [
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion"
+              ],
+              [
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion"
+              ]
+            ]
+          },
+          {
+            "text": "Un arrendamiento se ratifica y contiene una obligación discutida e ilíquida. ¿Es ejecutivo automáticamente?",
+            "difficulty": "advanced",
+            "options": [
+              "No, depende de ley y requisitos",
+              "Sí, por la sola firma notarial",
+              "Sí, como si fuera pagaré"
+            ],
+            "correctOption": 0,
+            "explanation": "Autenticidad y ejecutividad son categorías distintas.",
+            "optionExplanations": [
+              "Exige base procesal y obligación apta.",
+              "La ratificación no basta.",
+              "No cambia la naturaleza documental."
+            ],
+            "evidenceIds": [
+              "ev-c33-cdmx-arts137-138-ratificacion",
+              "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion",
+              "ev-c33-lgtoc-arts139-149-protesto",
+              "ev-c33-lgtoc-arts160-174-acciones-pagare",
+              "ev-c33-a45-l057-protesto-prescripcion-corregida"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-ccf-art2080-interpelacion",
+                "ev-c33-a45-l057-requerimiento-interpelacion",
+                "ev-c33-lgtoc-arts139-149-protesto",
+                "ev-c33-lgtoc-arts160-174-acciones-pagare",
+                "ev-c33-a45-l057-protesto-prescripcion-corregida"
+              ],
+              [
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-lgtoc-arts139-149-protesto",
+                "ev-c33-lgtoc-arts160-174-acciones-pagare",
+                "ev-c33-a45-l057-protesto-prescripcion-corregida"
+              ],
+              [
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-lgtoc-arts139-149-protesto",
+                "ev-c33-lgtoc-arts160-174-acciones-pagare",
+                "ev-c33-a45-l057-protesto-prescripcion-corregida"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c33-cdmx-arts137-138-ratificacion",
+              "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion",
+              "ev-c33-lgtoc-arts139-149-protesto",
+              "ev-c33-lgtoc-arts160-174-acciones-pagare",
+              "ev-c33-a45-l057-protesto-prescripcion-corregida"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c33-cdmx-arts137-138-ratificacion",
+              "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-lgtoc-arts139-149-protesto",
+              "ev-c33-lgtoc-arts160-174-acciones-pagare",
+              "ev-c33-a45-l057-protesto-prescripcion-corregida"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-ccf-art2080-interpelacion",
+                "ev-c33-a45-l057-requerimiento-interpelacion",
+                "ev-c33-lgtoc-arts139-149-protesto",
+                "ev-c33-lgtoc-arts160-174-acciones-pagare",
+                "ev-c33-a45-l057-protesto-prescripcion-corregida"
+              ],
+              [
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-lgtoc-arts139-149-protesto",
+                "ev-c33-lgtoc-arts160-174-acciones-pagare",
+                "ev-c33-a45-l057-protesto-prescripcion-corregida"
+              ],
+              [
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-lgtoc-arts139-149-protesto",
+                "ev-c33-lgtoc-arts160-174-acciones-pagare",
+                "ev-c33-a45-l057-protesto-prescripcion-corregida"
+              ]
+            ]
+          },
+          {
+            "text": "Una parte envía mediante notario una propuesta de aumento de precio. ¿El contrato queda modificado?",
+            "difficulty": "intermediate",
+            "options": [
+              "No por la sola entrega; debe revisarse acuerdo, contrato y norma aplicable",
+              "Sí, desde la entrega",
+              "Sí, aunque la otra parte rechace"
+            ],
+            "correctOption": 0,
+            "explanation": "La diligencia acredita la comunicación de la propuesta, no prueba por sí sola una modificación contractual.",
+            "optionExplanations": [
+              "La comunicación y la modificación son cuestiones distintas.",
+              "Entrega no equivale a aceptación.",
+              "La negativa excluye acuerdo."
+            ],
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion",
+              "ev-c33-cdmx-art144-identificacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion",
+              "ev-c33-cdmx-art144-identificacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ]
+            ]
+          },
+          {
+            "text": "El arrendador pide al notario exigir devolución de llaves. ¿Qué actuación principal hay?",
+            "difficulty": "basic",
+            "options": [
+              "Requerimiento",
+              "Ratificación",
+              "Protocolización"
+            ],
+            "correctOption": 0,
+            "explanation": "Se exige una conducta de entrega.",
+            "optionExplanations": [
+              "Es el verbo jurídico correcto.",
+              "No se reconoce firma.",
+              "No se incorpora otro documento al protocolo."
+            ],
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-cdmx-arts137-138-ratificacion",
+              "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-ccf-art2080-interpelacion",
+                "ev-c33-a45-l057-requerimiento-interpelacion"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-ccf-art2080-interpelacion",
+                "ev-c33-a45-l057-requerimiento-interpelacion"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-ccf-art2080-interpelacion",
+                "ev-c33-a45-l057-requerimiento-interpelacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-ccf-art2080-interpelacion",
+                "ev-c33-a45-l057-requerimiento-interpelacion"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-cdmx-arts137-138-ratificacion",
+                "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-ccf-art2080-interpelacion",
+                "ev-c33-a45-l057-requerimiento-interpelacion"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-ccf-art2080-interpelacion",
+                "ev-c33-a45-l057-requerimiento-interpelacion"
+              ]
+            ]
+          },
+          {
+            "text": "El ocupante se niega a entregar el inmueble ante el notario. ¿Puede éste desalojarlo?",
+            "difficulty": "intermediate",
+            "options": [
+              "No, debe constatar la negativa",
+              "Sí, mediante el sello",
+              "Sí, sin orden judicial"
+            ],
+            "correctOption": 0,
+            "explanation": "La función fedataria no incluye coacción jurisdiccional.",
+            "optionExplanations": [
+              "El acta conserva evidencia.",
+              "El sello no confiere fuerza pública.",
+              "Se requiere vía competente."
+            ],
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-mich-vigencia-local",
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-mich-vigencia-local",
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ]
+            ]
+          },
+          {
+            "text": "Se entrega un cuestionario y el destinatario guarda silencio. ¿Qué debe asentarse?",
+            "difficulty": "intermediate",
+            "options": [
+              "La interpelación y el silencio",
+              "Una confesión automática",
+              "Una sentencia favorable"
+            ],
+            "correctOption": 0,
+            "explanation": "El notario registra lo ocurrido sin inventar efectos.",
+            "optionExplanations": [
+              "Refleja el hecho percibido.",
+              "El silencio no siempre confiesa.",
+              "El notario no sentencia."
+            ],
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion",
+                "ev-c33-ccf-art2080-interpelacion",
+                "ev-c33-a45-l057-requerimiento-interpelacion"
+              ],
+              [
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion",
+                "ev-c33-ccf-art2080-interpelacion",
+                "ev-c33-a45-l057-requerimiento-interpelacion"
+              ],
+              [
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion"
+              ]
+            ]
+          },
+          {
+            "text": "Una obligación de dar no tiene fecha y aplica el artículo 2080 CCF. ¿Qué puede activar el plazo de treinta días?",
+            "difficulty": "advanced",
+            "options": [
+              "Interpelación judicial o extrajudicial ante notario o dos testigos",
+              "Cualquier comentario informal",
+              "El sello sin entrega"
+            ],
+            "correctOption": 0,
+            "explanation": "Es el mecanismo previsto por la norma.",
+            "optionExplanations": [
+              "Cumple la forma legal.",
+              "No acredita interpelación formal.",
+              "Falta diligencia al deudor."
+            ],
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-cdmx-arts132-136-notificacion",
+              "ev-c33-a45-l023-029-firma-notificacion",
+              "ev-c33-a45-l039-055-notificacion-modificacion",
+              "ev-c33-cdmx-art144-identificacion",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-ccf-art2080-interpelacion",
+                "ev-c33-a45-l057-requerimiento-interpelacion"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-ccf-art2080-interpelacion",
+                "ev-c33-a45-l057-requerimiento-interpelacion"
+              ],
+              [
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion",
+                "ev-c33-cdmx-art144-identificacion",
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-ccf-art2080-interpelacion",
+                "ev-c33-a45-l057-requerimiento-interpelacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas",
+              "ev-c33-ccf-art2080-interpelacion",
+              "ev-c33-a45-l057-requerimiento-interpelacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-ccf-art2080-interpelacion",
+                "ev-c33-a45-l057-requerimiento-interpelacion"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-ccf-art2080-interpelacion",
+                "ev-c33-a45-l057-requerimiento-interpelacion"
+              ],
+              [
+                "ev-c33-cdmx-arts132-136-notificacion",
+                "ev-c33-a45-l023-029-firma-notificacion",
+                "ev-c33-a45-l039-055-notificacion-modificacion",
+                "ev-c33-cdmx-art144-identificacion",
+                "ev-c33-cdmx-arts128-131-actas",
+                "ev-c33-ccf-art2080-interpelacion",
+                "ev-c33-a45-l057-requerimiento-interpelacion"
+              ]
+            ]
+          },
+          {
+            "text": "El acta reproduce que el solicitante afirmó ser propietario. ¿El notario decidió la propiedad?",
+            "difficulty": "advanced",
+            "options": [
+              "No, atribuyó una declaración",
+              "Sí, definitivamente",
+              "Sí, sin revisar títulos"
+            ],
+            "correctOption": 0,
+            "explanation": "La fe cubre manifestación y hechos percibidos, no su verdad jurídica automática.",
+            "optionExplanations": [
+              "Distingue declaración y conclusión.",
+              "Solo un procedimiento competente resuelve disputa.",
+              "Omitir títulos no crea dominio."
+            ],
+            "evidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c33-cdmx-arts128-131-actas"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c33-cdmx-arts128-131-actas"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c33-cdmx-arts128-131-actas"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas"
+              ],
+              [
+                "ev-c33-cdmx-arts128-131-actas"
+              ]
+            ]
+          },
+          {
+            "text": "Se protesta un pagaré cercano a tres años para reiniciar automáticamente todo el plazo. ¿Es correcta esa estrategia?",
+            "difficulty": "advanced",
+            "options": [
+              "No, el protesto no es por sí solo causa general de interrupción",
+              "Sí, siempre concede otros tres años",
+              "Sí, aunque la acción ya prescribió"
+            ],
+            "correctOption": 0,
+            "explanation": "La prescripción e interrupción se rigen por las causas legales, incluida la demanda.",
+            "optionExplanations": [
+              "Evita el error de la transcripción.",
+              "No existe renovación universal.",
+              "El protesto no revive acción prescrita."
+            ],
+            "evidenceIds": [
+              "ev-c33-lgtoc-arts139-149-protesto",
+              "ev-c33-lgtoc-arts160-174-acciones-pagare",
+              "ev-c33-a45-l057-protesto-prescripcion-corregida"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c33-lgtoc-arts139-149-protesto",
+                "ev-c33-lgtoc-arts160-174-acciones-pagare",
+                "ev-c33-a45-l057-protesto-prescripcion-corregida"
+              ],
+              [
+                "ev-c33-lgtoc-arts139-149-protesto",
+                "ev-c33-lgtoc-arts160-174-acciones-pagare",
+                "ev-c33-a45-l057-protesto-prescripcion-corregida"
+              ],
+              [
+                "ev-c33-lgtoc-arts139-149-protesto",
+                "ev-c33-lgtoc-arts160-174-acciones-pagare",
+                "ev-c33-a45-l057-protesto-prescripcion-corregida"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c33-lgtoc-arts139-149-protesto",
+              "ev-c33-lgtoc-arts160-174-acciones-pagare",
+              "ev-c33-a45-l057-protesto-prescripcion-corregida"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c33-lgtoc-arts139-149-protesto",
+              "ev-c33-lgtoc-arts160-174-acciones-pagare",
+              "ev-c33-a45-l057-protesto-prescripcion-corregida"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c33-lgtoc-arts139-149-protesto",
+                "ev-c33-lgtoc-arts160-174-acciones-pagare",
+                "ev-c33-a45-l057-protesto-prescripcion-corregida"
+              ],
+              [
+                "ev-c33-lgtoc-arts139-149-protesto",
+                "ev-c33-lgtoc-arts160-174-acciones-pagare",
+                "ev-c33-a45-l057-protesto-prescripcion-corregida"
+              ],
+              [
+                "ev-c33-lgtoc-arts139-149-protesto",
+                "ev-c33-lgtoc-arts160-174-acciones-pagare",
+                "ev-c33-a45-l057-protesto-prescripcion-corregida"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c33-cdmx-arts128-131-actas",
+      "kind": "official",
+      "title": "Ley del Notariado para la Ciudad de México",
+      "url": "https://www.congresocdmx.gob.mx/media/documentos/ef679acbbf3f25f083e72a593437826b39d742c8.pdf",
+      "institution": "Congreso de la Ciudad de México",
+      "jurisdiction": "Ciudad de México",
+      "locator": "texto vigente, última reforma GOCDMX 04-08-2021; artículos 128 a 131, páginas impresas 61 y 62: acta, hechos, diligencias, notificaciones, interpelaciones, requerimientos, protestos, firmas y declaraciones",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
     },
-    "materials":[
-      {"type":"short_answer","title":"Respuesta breve","content":"Ratificación: una persona reconoce firma y contenido ante notario. Notificación: se comunica información o entrega un documento. Requerimiento: se exige una conducta, pago o entrega. Interpelación: se formula pregunta o exigencia formal que puede producir efectos legales. Todas se documentan en acta cuando la ley lo permite; ninguna convierte al notario en juez ni hace coactivo por sí solo el cumplimiento.","sourceOrigin":"mixed"},
-      {"type":"full_explanation","title":"Explicación completa desde cero","content":"Un acta notarial es el instrumento original en que el notario relaciona hechos que presencia, percibe o conoce dentro de sus atribuciones. A diferencia de la escritura, centrada en actos jurídicos y voluntad negocial, el acta documenta hechos como notificaciones, interpelaciones, requerimientos, entrega de documentos, reconocimiento de firmas y declaraciones. La distinción depende de la legislación local.\n\nLa ratificación o reconocimiento de firma exige comparecencia e identificación. En Ciudad de México el notario hace constar lo sucedido, identidad y capacidad; puede comprender firma autógrafa o electrónica y ratificación de contenido. En firma electrónica se declara el medio convenido para atribuir autoría, plataforma y tipo de firma cuando se conozcan. Nunca se autoriza firma en blanco.\n\nRatificar fortalece la atribución del documento y reduce controversias sobre autoría o fecha de reconocimiento, pero no garantiza que cada cláusula sea válida, que los hechos narrados sean ciertos ni que exista automáticamente acción ejecutiva. La ejecutividad requiere disposición legal y una obligación con características exigidas. Un arrendamiento ratificado no es por esa sola circunstancia equivalente universalmente a un pagaré.\n\nNotificar significa comunicar formalmente información, voluntad o documento. Puede servir para avisar terminación conforme a contrato, convocatoria, ejercicio de preferencia, revocación o propuesta. La notificación no modifica unilateralmente un contrato: un adendum requiere consentimiento y formalidades. Tampoco prueba automáticamente que la pretensión comunicada sea jurídicamente correcta; prueba la diligencia y lo percibido.\n\nEn Ciudad de México, si el destinatario no aparece en la primera búsqueda y el notario se cerciora del domicilio, puede entregar instructivo a persona en el lugar o al servicio del edificio. Si no es posible, puede fijarlo en lugar visible o depositarlo en el inmueble. El acta debe expresar forma, fecha, hora, objeto y, cuando se proporcione, persona con quien se entendió. Estas reglas no deben trasladarse sin revisión a otro estado.\n\nEl destinatario capitalino puede acudir dentro de cinco días hábiles para conocer el acta, conformarse, firmarla u ofrecer observaciones por escrito que se agregan al apéndice. Si se expide copia durante ese plazo, debe señalarse esa circunstancia. Negarse a identificarse no impide por sí sola la diligencia exterior bajo las reglas locales.\n\nRequerir es exigir una prestación o conducta: pagar, entregar mercancía, devolver llaves, cesar una acción o cumplir un contrato. El notario registra la exigencia, respuesta, silencio, negativa y hechos percibidos. No embarga, desaloja ni condena. El acta puede preparar prueba y mostrar gestión previa, pero la buena fe o el derecho sustantivo se valoran en el procedimiento correspondiente.\n\nInterpelar es dirigirse formalmente a una persona para preguntarle o exigirle algo. En obligaciones sin fecha, el artículo 2080 del Código Civil Federal dispone que las de dar no se exigen sino treinta días después de la interpelación judicial o extrajudicial ante notario o dos testigos; para hacer, después del tiempo necesario desde la exigencia. Debe revisarse el código aplicable. La interpelación no obliga a contestar ni crea una deuda inexistente.\n\nUna diligencia puede tener más de un componente: entregar una carta, notificar su contenido e interpelar o requerir una respuesta. La calificación depende del objeto real, no del título del documento. El acta puede levantarse después de realizados los hechos dentro del plazo y condiciones de la ley local.\n\nEl derecho al tanto ilustra la utilidad de notificar, pero las consecuencias de omitirlo varían. No es correcto afirmar automáticamente nulidad absoluta en todo caso: deben revisarse código, copropiedad, plazo, forma de venta y acción disponible. Igualmente, convocar a una asamblea requiere seguir estatutos y ley; la notificación notarial prueba comunicación, pero no subsana una convocatoria inválida.\n\nEl protesto es una diligencia cambiaria especial. La LGTOC regula plazos y contenido para falta de aceptación o pago. No debe enseñarse que protestar conserva indefinidamente un pagaré o reinicia automáticamente la prescripción: la acción cambiaria prescribe conforme a los artículos aplicables y la demanda es una causa expresa de interrupción. Además, muchas obligaciones cambiarias pueden estar dispensadas de protesto.\n\nAntes de solicitar actuación se define objetivo, norma, destinatario, domicilio, documento, facultades del solicitante, seguridad y efecto buscado. Después se distingue: lo que el notario percibió; lo que otra persona declaró; y la conclusión jurídica, que el acta no decide. Para CENEVAL busca verbos: reconocer, comunicar, exigir o preguntar.","sourceOrigin":"mixed"},
-      {"type":"legal_basis","title":"Fundamento jurídico vigente","content":"Ley del Notariado para la Ciudad de México, texto consultado el 11-08-2026: artículos 129 a 138, especialmente 131 fracciones I y II, 132 a 136 y 138. Ley del Notariado de Michoacán, última reforma informada al 28-03-2022: artículos 87 a 93. Código Civil Federal, artículo 2080, última reforma DOF 14-11-2025. LGTOC, artículos 139 a 149, 165 a 174, última reforma DOF 26-03-2024. Cada caso requiere la ley local y sustantiva aplicable.","sourceOrigin":"complementary"},
-      {"type":"simple_example","title":"Ejemplo sencillo","content":"Ana firma un contrato privado y luego comparece ante notario, se identifica y reconoce firma y contenido: ratificación. Si el notario lleva una carta al arrendatario para avisar que el contrato concluirá: notificación. Si además exige devolver llaves en la fecha pactada: requerimiento.","sourceOrigin":"mixed"},
-      {"type":"ceneval_example","title":"Caso tipo CENEVAL","content":"Si el reactivo describe que el notario entrega un cuestionario y registra que la persona se negó a contestar, se trata de interpelación documentada. La negativa puede constar, pero no autoriza al notario a obligar una respuesta ni a decidir el conflicto.","sourceOrigin":"mixed"},
-      {"type":"summary","title":"Resumen","content":"Acta: constancia notarial de hechos. Ratificación: reconoce firma y contenido. Notificación: comunica. Requerimiento: exige cumplimiento. Interpelación: pregunta o exige formalmente y puede activar efectos legales. El notario acredita lo percibido, no resuelve derechos. Ratificación no implica ejecutividad universal. Notificación no modifica contratos. Requerimiento no permite coacción. Protesto no reinicia automáticamente prescripción.","sourceOrigin":"mixed"},
-      {"type":"study_guide","title":"Guía intensiva de preguntas y respuestas","content":"1. ¿Qué documenta un acta? Respuesta: hechos percibidos o diligencias. 2. ¿Ratificación? Respuesta: reconocimiento de firma y contenido. 3. ¿Firma en blanco? Respuesta: no puede reconocerse. 4. ¿Ejecutividad automática? Respuesta: no. 5. ¿Notificación? Respuesta: comunicación formal. 6. ¿Modifica contrato? Respuesta: no por sí sola. 7. ¿Requerimiento? Respuesta: exigencia de conducta o prestación. 8. ¿Autoriza coacción? Respuesta: no. 9. ¿Interpelación? Respuesta: pregunta o exigencia formal. 10. ¿Debe responderse? Respuesta: no por la sola presencia notarial. 11. ¿Qué prueba el acta? Respuesta: diligencia y hechos percibidos. 12. ¿Protesto renueva prescripción? Respuesta: no automáticamente.","sourceOrigin":"mixed"},
-      {"type":"key_concepts","title":"Conceptos clave","content":"Acta notarial: matriz de hechos. Compareciente: persona ante notario. Identidad: verificación personal. Capacidad: aptitud jurídica apreciada. Ratificación: reconocimiento de autoría y contenido. Firma autógrafa: trazo físico. Firma electrónica: medio de atribución digital. Notificación: comunicación. Instructivo: documento de diligencia. Destinatario: receptor. Requerimiento: exigencia formal. Interpelación: pregunta o demanda formal. Manifestación: declaración asentada. Negativa: rechazo documentado. Mora: retraso jurídicamente relevante. Protesto: diligencia cambiaria. Fuerza probatoria: aptitud para demostrar. Fuerza ejecutiva: aptitud legal para ejecución.","sourceOrigin":"mixed"},
-      {"type":"common_errors","title":"Errores comunes","content":"No confundas escritura y acta. No ratifiques firma en blanco. No equipares ratificación con validez total. No supongas título ejecutivo automático. No creas que una notificación crea un adendum. No uses reglas de instructivo de una entidad como universales. No confundas requerir con desalojar o embargar. No atribuyas al acta verdad de todas las declaraciones. No obligues a responder una interpelación. No conviertas silencio en aceptación sin norma. No declares nulidad absoluta automática por omitir derecho al tanto. No digas que protestar renueva por sí solo tres años.","sourceOrigin":"complementary"}
-    ],
-    "conceptMap":{"title":"Mapa visual: elegir la actuación notarial","description":"Objetivo, diligencia, constancia y efecto de cada acta.","nodes":[
-      {"id":"actuaciones","label":"Actuaciones notariales","description":"Fe pública sobre hechos y diligencias."},
-      {"id":"filtro","label":"Filtro inicial","description":"Objetivo, ley y competencia.","parentId":"actuaciones"},
-      {"id":"jurisdiccion","label":"Ley local","description":"Forma depende de entidad.","parentId":"filtro"},
-      {"id":"objetivo","label":"Verbo objetivo","description":"Reconocer, comunicar, exigir o preguntar.","parentId":"filtro"},
-      {"id":"ratificacion","label":"Ratificación","description":"Reconoce firma y contenido.","parentId":"actuaciones"},
-      {"id":"identidad","label":"Identidad","description":"Compareciente identificado.","parentId":"ratificacion"},
-      {"id":"capacidad","label":"Capacidad","description":"Apreciación notarial.","parentId":"ratificacion"},
-      {"id":"firmaauto","label":"Firma autógrafa","description":"Reconocimiento físico.","parentId":"ratificacion"},
-      {"id":"firmaelectronica","label":"Firma electrónica","description":"Medio y plataforma declarados.","parentId":"ratificacion"},
-      {"id":"noblanco","label":"Nunca firma en blanco","description":"Contenido debe existir.","parentId":"ratificacion"},
-      {"id":"notificacion","label":"Notificación","description":"Comunica voluntad o documento.","parentId":"actuaciones"},
-      {"id":"domicilio","label":"Domicilio","description":"Lugar de búsqueda.","parentId":"notificacion"},
-      {"id":"entrega","label":"Entrega personal","description":"Destinatario localizado.","parentId":"notificacion"},
-      {"id":"instructivo","label":"Instructivo","description":"Regla local si no aparece.","parentId":"notificacion"},
-      {"id":"constancia","label":"Forma, fecha y hora","description":"Datos de la diligencia.","parentId":"notificacion"},
-      {"id":"observaciones","label":"Observaciones","description":"Derecho local del destinatario.","parentId":"notificacion"},
-      {"id":"requerimiento","label":"Requerimiento","description":"Exige prestación o conducta.","parentId":"actuaciones"},
-      {"id":"pago","label":"Pago","description":"Exigencia de deuda.","parentId":"requerimiento"},
-      {"id":"entregabien","label":"Entrega","description":"Bien, mercancía o llaves.","parentId":"requerimiento"},
-      {"id":"respuesta","label":"Respuesta o negativa","description":"Se asienta lo ocurrido.","parentId":"requerimiento"},
-      {"id":"sincoaccion","label":"Sin coacción","description":"Notario no ejecuta.","parentId":"requerimiento"},
-      {"id":"interpelacion","label":"Interpelación","description":"Pregunta o exigencia formal.","parentId":"actuaciones"},
-      {"id":"cuestionario","label":"Cuestionario","description":"Puede entregarse y formularse.","parentId":"interpelacion"},
-      {"id":"silencio","label":"Silencio","description":"No equivale siempre a aceptación.","parentId":"interpelacion"},
-      {"id":"mora","label":"Efecto sustantivo","description":"Puede activar plazo o mora.","parentId":"interpelacion"},
-      {"id":"acta","label":"Acta notarial","description":"Resultado documental.","parentId":"actuaciones"},
-      {"id":"percibido","label":"Hechos percibidos","description":"Cubiertos por fe pública.","parentId":"acta"},
-      {"id":"declarado","label":"Manifestaciones","description":"Se atribuyen a quien declara.","parentId":"acta"},
-      {"id":"noconclusion","label":"No decide derechos","description":"No es sentencia.","parentId":"acta"},
-      {"id":"efectos","label":"Efectos","description":"Dependen de otra norma.","parentId":"actuaciones"},
-      {"id":"prueba","label":"Fuerza probatoria","description":"Acredita diligencia.","parentId":"efectos"},
-      {"id":"ejecutiva","label":"Ejecutividad excepcional","description":"Solo si ley la concede.","parentId":"efectos"},
-      {"id":"juicio","label":"Vía posterior","description":"Autoridad resuelve conflicto.","parentId":"efectos"}
-    ]},
-    "references":[
-      {"title":"Ley del Notariado para la Ciudad de México","url":"https://www.congresocdmx.gob.mx/media/documentos/ef679acbbf3f25f083e72a593437826b39d742c8.pdf","institution":"Congreso de la Ciudad de México","jurisdiction":"Ciudad de México","citation":"Artículos 129 a 138; texto oficial consultado el 11-08-2026","retrievedOn":"2026-08-11","note":"Actas, notificaciones, instructivos, observaciones y reconocimiento de firmas."},
-      {"title":"Ley del Notariado del Estado de Michoacán","url":"https://congresomich.gob.mx/file/LEY-DEL-NOTARIADO-DEL-ESTADO-REF-29-DIC-2016.pdf","institution":"Congreso del Estado de Michoacán de Ocampo","jurisdiction":"Michoacán","citation":"Artículos 87 a 93; última reforma informada 28-03-2022","retrievedOn":"2026-08-11","note":"Reconocimiento de firmas, actas destacadas, requerimientos e interpelaciones."},
-      {"title":"Código Civil Federal","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/CCF.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Federal, México","citation":"Artículo 2080; última reforma DOF 14-11-2025","retrievedOn":"2026-08-11","note":"Efecto de interpelación en obligaciones sin plazo."},
-      {"title":"Ley General de Títulos y Operaciones de Crédito","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/LGTOC.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Federal, México","citation":"Artículos 139 a 149, 165 a 174; última reforma DOF 26-03-2024","retrievedOn":"2026-08-11","note":"Protesto, acción cambiaria y prescripción de títulos."}
-    ],
-    "flashcards":[
-      {"question":"¿Qué es un acta notarial?","answer":"Instrumento matriz que relaciona hechos percibidos o diligencias realizadas por el notario.","sourceOrigin":"mixed"},
-      {"question":"¿Qué se ratifica?","answer":"La firma o su reconocimiento y el contenido del documento.","sourceOrigin":"mixed"},
-      {"question":"¿Puede reconocerse firma en blanco?","answer":"No, está legalmente prohibido.","sourceOrigin":"complementary"},
-      {"question":"¿Ratificación equivale siempre a título ejecutivo?","answer":"No; la ejecutividad debe provenir de la ley aplicable.","sourceOrigin":"mixed"},
-      {"question":"¿Qué hace una notificación?","answer":"Comunica formalmente información, voluntad o un documento.","sourceOrigin":"mixed"},
-      {"question":"¿Notificar un cambio modifica el contrato?","answer":"No; la modificación requiere consentimiento y formalidades aplicables.","sourceOrigin":"mixed"},
-      {"question":"¿Qué hace un requerimiento?","answer":"Exige formalmente pago, entrega, hacer o abstención.","sourceOrigin":"mixed"},
-      {"question":"¿Puede el notario embargar al requerido?","answer":"No; solo documenta la diligencia dentro de su función.","sourceOrigin":"mixed"},
-      {"question":"¿Qué es interpelar?","answer":"Preguntar o exigir formalmente, con posibles efectos previstos por ley.","sourceOrigin":"mixed"},
-      {"question":"¿Silencio equivale siempre a aceptación?","answer":"No; requiere una norma o acuerdo que le atribuya ese efecto.","sourceOrigin":"complementary"},
-      {"question":"¿Qué cubre la fe del acta?","answer":"Los hechos percibidos y la atribución de declaraciones, no toda conclusión jurídica.","sourceOrigin":"mixed"},
-      {"question":"¿El protesto reinicia siempre la prescripción del pagaré?","answer":"No; deben aplicarse las causas de interrupción previstas por la ley.","sourceOrigin":"complementary"}
-    ],
-    "exam":{"title":"Evaluación: actuaciones notariales","description":"Diez casos originales para distinguir diligencia, prueba y efecto.","questions":[
-      {"text":"Una persona comparece, se identifica y reconoce firma y contenido de un contrato. ¿Qué actuación es?","difficulty":"basic","options":["Ratificación","Notificación","Interpelación"],"correctOption":0,"explanation":"Reconocer autoría y contenido caracteriza la ratificación.","optionExplanations":["Coincide con el supuesto.","Comunicaría a un destinatario.","Formularía pregunta o exigencia."]},
-      {"text":"Se pide reconocer una hoja ya firmada pero sin contenido. ¿Puede autorizarse?","difficulty":"intermediate","options":["No, es firma en blanco","Sí, siempre","Sí, si luego se llena"],"correctOption":0,"explanation":"La ley impide reconocimiento de firma en blanco.","optionExplanations":["Protege integridad y voluntad.","Desconoce la prohibición.","Permitir llenado posterior crea riesgo."]},
-      {"text":"Un arrendamiento se ratifica y contiene una obligación discutida e ilíquida. ¿Es ejecutivo automáticamente?","difficulty":"advanced","options":["No, depende de ley y requisitos","Sí, por la sola firma notarial","Sí, como si fuera pagaré"],"correctOption":0,"explanation":"Autenticidad y ejecutividad son categorías distintas.","optionExplanations":["Exige base procesal y obligación apta.","La ratificación no basta.","No cambia la naturaleza documental."]},
-      {"text":"Una parte envía mediante notario una propuesta de aumento de precio. ¿El contrato queda modificado?","difficulty":"intermediate","options":["No, hace falta acuerdo","Sí, desde la entrega","Sí, aunque la otra parte rechace"],"correctOption":0,"explanation":"La notificación comunica; no crea consentimiento bilateral.","optionExplanations":["Distingue aviso y modificación.","Entrega no equivale a aceptación.","La negativa excluye acuerdo."]},
-      {"text":"El arrendador pide al notario exigir devolución de llaves. ¿Qué actuación principal hay?","difficulty":"basic","options":["Requerimiento","Ratificación","Protocolización"],"correctOption":0,"explanation":"Se exige una conducta de entrega.","optionExplanations":["Es el verbo jurídico correcto.","No se reconoce firma.","No se incorpora otro documento al protocolo."]},
-      {"text":"El ocupante se niega a entregar el inmueble ante el notario. ¿Puede éste desalojarlo?","difficulty":"intermediate","options":["No, debe constatar la negativa","Sí, mediante el sello","Sí, sin orden judicial"],"correctOption":0,"explanation":"La función fedataria no incluye coacción jurisdiccional.","optionExplanations":["El acta conserva evidencia.","El sello no confiere fuerza pública.","Se requiere vía competente."]},
-      {"text":"Se entrega un cuestionario y el destinatario guarda silencio. ¿Qué debe asentarse?","difficulty":"intermediate","options":["La interpelación y el silencio","Una confesión automática","Una sentencia favorable"],"correctOption":0,"explanation":"El notario registra lo ocurrido sin inventar efectos.","optionExplanations":["Refleja el hecho percibido.","El silencio no siempre confiesa.","El notario no sentencia."]},
-      {"text":"Una obligación de dar no tiene fecha y aplica el artículo 2080 CCF. ¿Qué puede activar el plazo de treinta días?","difficulty":"advanced","options":["Interpelación judicial o extrajudicial ante notario o dos testigos","Cualquier comentario informal","El sello sin entrega"],"correctOption":0,"explanation":"Es el mecanismo previsto por la norma.","optionExplanations":["Cumple la forma legal.","No acredita interpelación formal.","Falta diligencia al deudor."]},
-      {"text":"El acta reproduce que el solicitante afirmó ser propietario. ¿El notario decidió la propiedad?","difficulty":"advanced","options":["No, atribuyó una declaración","Sí, definitivamente","Sí, sin revisar títulos"],"correctOption":0,"explanation":"La fe cubre manifestación y hechos percibidos, no su verdad jurídica automática.","optionExplanations":["Distingue declaración y conclusión.","Solo un procedimiento competente resuelve disputa.","Omitir títulos no crea dominio."]},
-      {"text":"Se protesta un pagaré cercano a tres años para reiniciar automáticamente todo el plazo. ¿Es correcta esa estrategia?","difficulty":"advanced","options":["No, el protesto no es por sí solo causa general de interrupción","Sí, siempre concede otros tres años","Sí, aunque la acción ya prescribió"],"correctOption":0,"explanation":"La prescripción e interrupción se rigen por las causas legales, incluida la demanda.","optionExplanations":["Evita el error de la transcripción.","No existe renovación universal.","El protesto no revive acción prescrita."]}
-    ]}
-  }]
+    {
+      "id": "ev-c33-cdmx-arts132-136-notificacion",
+      "kind": "official",
+      "title": "Ley del Notariado para la Ciudad de México",
+      "url": "https://www.congresocdmx.gob.mx/media/documentos/ef679acbbf3f25f083e72a593437826b39d742c8.pdf",
+      "institution": "Congreso de la Ciudad de México",
+      "jurisdiction": "Ciudad de México",
+      "locator": "texto vigente, última reforma GOCDMX 04-08-2021; artículos 132 a 136, páginas impresas 62 y 63: identidad, observaciones, primera búsqueda, instructivo y constancia de la diligencia",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c33-cdmx-arts137-138-ratificacion",
+      "kind": "official",
+      "title": "Ley del Notariado para la Ciudad de México",
+      "url": "https://www.congresocdmx.gob.mx/media/documentos/ef679acbbf3f25f083e72a593437826b39d742c8.pdf",
+      "institution": "Congreso de la Ciudad de México",
+      "jurisdiction": "Ciudad de México",
+      "locator": "texto vigente, última reforma GOCDMX 04-08-2021; artículos 137 y 138, página impresa 64: firmas de actas, reconocimiento de firmas, ratificación de contenido, identidad, capacidad y firma electrónica",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c33-cdmx-art144-identificacion",
+      "kind": "official",
+      "title": "Ley del Notariado para la Ciudad de México",
+      "url": "https://www.congresocdmx.gob.mx/media/documentos/ef679acbbf3f25f083e72a593437826b39d742c8.pdf",
+      "institution": "Congreso de la Ciudad de México",
+      "jurisdiction": "Ciudad de México",
+      "locator": "texto vigente, última reforma GOCDMX 04-08-2021; artículo 144, página impresa 65: identificación del notario y comunicación del motivo de la diligencia cuando proceda",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c33-mich-vigencia-local",
+      "kind": "official",
+      "title": "Leyes del Estado de Michoacán",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán",
+      "locator": "entrada “Ley del Notariado del Estado de Michoacán”; última reforma informada 28-03-2022; confirma un régimen local distinto, sin trasladar sus reglas a Ciudad de México",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c33-ccf-art2080-interpelacion",
+      "kind": "official",
+      "title": "Código Civil Federal",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 14-11-2025; artículo 2080, página impresa 201: obligaciones sin tiempo fijado e interpelación judicial o extrajudicial",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c33-lgtoc-arts139-149-protesto",
+      "kind": "official",
+      "title": "Ley General de Títulos y Operaciones de Crédito",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGTOC.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 26-03-2024; artículos 139 a 149, páginas impresas 22 y 23: objeto, dispensa, autoridad, plazos y acta de protesto de letra de cambio",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c33-lgtoc-arts160-174-acciones-pagare",
+      "kind": "official",
+      "title": "Ley General de Títulos y Operaciones de Crédito",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGTOC.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 26-03-2024; artículos 160 a 174, páginas impresas 26 a 28: caducidad, prescripción, interrupción, ejecutividad y reglas del pagaré",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c33-a45-l011-015-ratificacion-ejecutividad",
+      "kind": "transcript",
+      "audioNumber": 45,
+      "locator": {
+        "type": "line_range",
+        "startLine": 11,
+        "endLine": 15
+      }
+    },
+    {
+      "id": "ev-c33-a45-l023-029-firma-notificacion",
+      "kind": "transcript",
+      "audioNumber": 45,
+      "locator": {
+        "type": "line_range",
+        "startLine": 23,
+        "endLine": 29
+      }
+    },
+    {
+      "id": "ev-c33-a45-l039-055-notificacion-modificacion",
+      "kind": "transcript",
+      "audioNumber": 45,
+      "locator": {
+        "type": "line_range",
+        "startLine": 39,
+        "endLine": 55
+      }
+    },
+    {
+      "id": "ev-c33-a45-l057-requerimiento-interpelacion",
+      "kind": "transcript",
+      "audioNumber": 45,
+      "locator": {
+        "type": "line_range",
+        "startLine": 57,
+        "endLine": 57
+      }
+    },
+    {
+      "id": "ev-c33-a45-l057-protesto-prescripcion-corregida",
+      "kind": "transcript",
+      "audioNumber": 45,
+      "locator": {
+        "type": "line_range",
+        "startLine": 57,
+        "endLine": 57
+      }
+    }
+  ]
 }
