@@ -119,6 +119,42 @@ const traceablePackages = [
       /última reforma DOF 01-04-2024/i,
     ],
   },
+  {
+    code: "C09",
+    fileName: "audio-22-procedimiento-legislativo-federal.json",
+    artifacts: 140,
+    evidence: 13,
+    forbiddenClaims: [
+      /energía (?:e hidrocarburos )?(?:debe|deberá|tiene que) iniciar en (?:la Cámara de )?Diputados/i,
+      /(?:toda|cualquier) iniciativa (?:debe|deberá) (?:dictaminarse|votarse|aprobarse) en treinta días/i,
+    ],
+    requiredClaims: [
+      /máximo de treinta días naturales en cada Cámara; (?:es una regla especial, )?no (?:es )?un plazo general/i,
+      /no aplica a reformas constitucionales/i,
+      /empréstitos, contribuciones o impuestos y reclutamiento de tropas/i,
+      /fecha prevista en transitorios o conforme a la regla supletoria aplicable/i,
+      /veto significa dejar el asunto para otro periodo.*Corrección: es devolución con observaciones/i,
+    ],
+  },
+  {
+    code: "C10",
+    fileName: "audio-11-12-derechos-electorales.json",
+    artifacts: 141,
+    evidence: 18,
+    forbiddenClaims: [
+      /Ley General de los Medios de Impugnación en Materia Electoral/i,
+      /per saltum (?:siempre|automáticamente) (?:procede|está disponible)/i,
+    ],
+    requiredClaims: [
+      /plazo general de cuatro días/i,
+      /per saltum es excepcional/i,
+      /dentro del plazo (?:que regía para|del) medio previo/i,
+      /recurso de reconsideración.*supuestos extraordinarios/i,
+      /organismos públicos locales electorales.*autonomía/i,
+      /No\. La competencia entre Sala Superior y salas regionales depende/i,
+      /última reforma DOF 14-11-2025/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -230,6 +266,22 @@ for (const expected of traceablePackages) {
         assert.match(
           JSON.stringify(obsoleteCompositionQuestion.optionExplanations),
           /cifras anteriores a la reforma/i,
+        );
+      }
+    }
+
+    if (expected.code === "C09" || expected.code === "C10") {
+      const obsoleteAsCurrent =
+        expected.code === "C09"
+          ? /energía.*iniciar en Diputados|veto.*(?:siguiente|otro) periodo|toda iniciativa.*treinta días/i
+          : /todo asunto federal.*Sala Superior|OPLE.*(?:depende|subordinad).*INE|per saltum.*siempre/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una regla retirada como respuesta vigente.`,
         );
       }
     }
