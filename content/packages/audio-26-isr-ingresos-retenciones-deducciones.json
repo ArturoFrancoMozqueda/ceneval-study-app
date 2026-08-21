@@ -1,10 +1,13 @@
 {
-  "packageVersion": "1.1",
+  "packageVersion": "1.2",
   "curriculum": {
     "code": "C17",
     "order": 17,
     "audioSources": [
-      {"audioNumber": 26,"fragment": "Audio completo"}
+      {
+        "audioNumber": 26,
+        "fragment": "Audio completo"
+      }
     ]
   },
   "subject": {
@@ -17,7 +20,7 @@
   },
   "transcript": {
     "originalFile": "AUDIO 26.txt",
-    "cleaned": "Se conservó la explicación útil sobre ingresos, gastos vinculados con la actividad, CFDI, pagos provisionales, retenciones y respaldo material de operaciones. Se eliminaron anuncios, datos personales, expresiones ofensivas, comentarios discriminatorios, consejos de negocios, relatos no verificables y alusiones que normalizaban ocultar ingresos o adquirir facturas. Se corrigió que el régimen fiscal depende de la actividad y no de crear necesariamente una sociedad; que el umbral de 500 mil pesos no es una regla general para presentar declaración anual; que la inscripción al RFC de una persona mayor de edad sin actividad económica no genera por sí sola obligaciones fiscales; que un depósito no siempre es ingreso gravado, pero debe identificarse y documentarse; que un CFDI no vuelve automáticamente deducible un gasto; que útiles escolares, comidas o gastos familiares no se convierten en deducción empresarial por el concepto escrito en la factura; que las deducciones exigen autorización legal, estricta indispensabilidad y demás requisitos; y que ocultar ingresos, simular operaciones o usar comprobantes de operaciones inexistentes puede producir consecuencias fiscales y penales."
+    "cleaned": "Se conservaron del Audio 26 únicamente las ideas generales de que el tratamiento depende del régimen, que no todo movimiento bancario tiene la misma naturaleza, que el CFDI participa en la comprobación y que una operación debe ser real y trazable. Se eliminaron anuncios, datos personales, lenguaje ofensivo, cifras de negocios, anécdotas, ejemplos no verificables y expresiones que normalizaban ocultar ingresos o adquirir comprobantes. La edición oficial corrige el umbral de 500 mil pesos presentado como regla universal; distingue salarios, honorarios y otros capítulos; limita la retención de 10% al supuesto del artículo 106; y aclara que ingreso, acumulación, deducción, CFDI, pago provisional, declaración anual y RFC dependen de los artículos y del ejercicio aplicables."
   },
   "topics": [
     {
@@ -26,9 +29,37 @@
       "learningJourney": {
         "openingPrompt": "Una abogada independiente cobra honorarios, compra equipo y recibe una transferencia familiar. ¿Qué conceptos acumula, cuáles puede deducir y qué debe documentar?",
         "quickChecks": [
-          {"prompt": "¿Tener CFDI basta para deducir un gasto?", "answer": "No. Además debe ser una deducción autorizada, cumplir requisitos y ser estrictamente indispensable para la actividad cuando así lo exige la ley.", "feedback": "Comprueba realidad, relación con la actividad, pago, CFDI y demás requisitos aplicables."},
-          {"prompt": "¿La retención de ISR a un profesionista siempre es el impuesto definitivo?", "answer": "No. En el régimen general, la retención prevista por el artículo 106 es un pago provisional acreditable.", "feedback": "Distingue retención, pago provisional e impuesto anual."},
-          {"prompt": "¿Toda transferencia bancaria es automáticamente ingreso gravado?", "answer": "No. Su naturaleza jurídica determina el tratamiento, pero debe poder identificarse y probarse.", "feedback": "Un préstamo, traspaso entre cuentas o reembolso necesita evidencia; el nombre del movimiento no basta."
+          {
+            "prompt": "¿Tener CFDI basta para deducir un gasto?",
+            "answer": "No. Además debe ser una deducción autorizada, cumplir requisitos y ser estrictamente indispensable para la actividad cuando así lo exige la ley.",
+            "feedback": "Comprueba realidad, relación con la actividad, pago, CFDI y demás requisitos aplicables.",
+            "evidenceIds": [
+              "ev-c17-lisr-arts103-105-deducciones",
+              "ev-c17-lisr-arts28-151-limites-personales",
+              "ev-c17-cff-arts29-29a-cfdi",
+              "ev-c17-cff-art30-conservacion",
+              "ev-c17-a26-l079-081-cfdi-gasto",
+              "ev-c17-a26-l251-253-materialidad-pago"
+            ]
+          },
+          {
+            "prompt": "¿La retención de ISR a un profesionista siempre es el impuesto definitivo?",
+            "answer": "No. En el régimen general, la retención prevista por el artículo 106 es un pago provisional acreditable.",
+            "feedback": "Distingue retención, pago provisional e impuesto anual.",
+            "evidenceIds": [
+              "ev-c17-lisr-art106-provisionales-retencion",
+              "ev-c17-a26-l025-029-regimen-retenciones"
+            ]
+          },
+          {
+            "prompt": "¿Toda transferencia bancaria es automáticamente ingreso gravado?",
+            "answer": "No. Su naturaleza jurídica determina el tratamiento, pero debe poder identificarse y probarse.",
+            "feedback": "Un préstamo, traspaso entre cuentas o reembolso necesita evidencia; el nombre del movimiento no basta.",
+            "evidenceIds": [
+              "ev-c17-lisr-arts90-100-102-ingresos",
+              "ev-c17-cff-art30-conservacion",
+              "ev-c17-a26-l035-deposito-ingreso"
+            ]
           }
         ],
         "practicalCase": {
@@ -36,132 +67,1279 @@
           "question": "¿Cómo debe separar ingresos, retención y deducciones?",
           "legalRule": "Los honorarios efectivamente percibidos son ingresos de la actividad; la persona moral retiene el ISR previsto en el artículo 106. Solo proceden deducciones autorizadas que cumplan estricta indispensabilidad y requisitos. Un préstamo documentado no se transforma por sí mismo en honorario.",
           "reasoning": "Debe acumular los honorarios, considerar acreditable la retención y analizar renta y papelería conforme a su relación real con el despacho. La fiesta familiar sigue siendo personal aunque exista CFDI. El préstamo debe conservar contrato, transferencia y trazabilidad.",
-          "conclusion": "La determinación parte de la naturaleza real de cada operación, no del simple movimiento bancario ni de poseer una factura."
+          "conclusion": "La determinación parte de la naturaleza real de cada operación, no del simple movimiento bancario ni de poseer una factura.",
+          "evidenceIds": [
+            "ev-c17-lisr-arts90-100-102-ingresos",
+            "ev-c17-lisr-arts103-105-deducciones",
+            "ev-c17-lisr-art106-provisionales-retencion",
+            "ev-c17-cff-arts29-29a-cfdi",
+            "ev-c17-cff-art30-conservacion",
+            "ev-c17-a26-l035-deposito-ingreso",
+            "ev-c17-a26-l251-253-materialidad-pago"
+          ]
         },
         "closingPrompt": "Construye la fórmula del pago provisional y explica qué documentación sostendría cada ingreso, deducción y retención.",
-        "nextActivity": "Revisa el mapa visual, estudia la guía de doce preguntas y resuelve los diez casos de clasificación fiscal."
+        "nextActivity": "Revisa el mapa visual, estudia la guía de doce preguntas y resuelve los diez casos de clasificación fiscal.",
+        "openingPromptEvidenceIds": [
+          "ev-c17-lisr-arts90-100-102-ingresos",
+          "ev-c17-lisr-arts103-105-deducciones",
+          "ev-c17-cff-arts29-29a-cfdi",
+          "ev-c17-cff-art30-conservacion",
+          "ev-c17-a26-l035-deposito-ingreso",
+          "ev-c17-a26-l251-253-materialidad-pago"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c17-lisr-arts90-100-102-ingresos",
+          "ev-c17-lisr-arts103-105-deducciones",
+          "ev-c17-lisr-art106-provisionales-retencion",
+          "ev-c17-cff-arts29-29a-cfdi",
+          "ev-c17-cff-art30-conservacion"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c17-lisr-arts90-100-102-ingresos",
+          "ev-c17-lisr-arts103-105-deducciones",
+          "ev-c17-lisr-art106-provisionales-retencion"
+        ]
       },
       "materials": [
         {
           "type": "short_answer",
           "title": "Respuesta breve",
           "content": "El ISR grava los ingresos en los supuestos de la ley. Para una persona física en el régimen general de actividades empresariales y servicios profesionales, los pagos provisionales se calculan a partir de ingresos efectivamente percibidos menos deducciones autorizadas y otros conceptos legales; después se aplica la tarifa y se acreditan pagos previos y retenciones. Una deducción requiere mucho más que un CFDI: debe ser real, autorizada, vinculada con la actividad y cumplir los requisitos fiscales.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c17-lisr-art1-sujetos",
+            "ev-c17-lisr-arts90-100-102-ingresos",
+            "ev-c17-lisr-arts103-105-deducciones",
+            "ev-c17-lisr-art106-provisionales-retencion",
+            "ev-c17-lisr-arts109-150-152-anual",
+            "ev-c17-cff-arts29-29a-cfdi",
+            "ev-c17-cff-art30-conservacion",
+            "ev-c17-a26-l025-029-regimen-retenciones",
+            "ev-c17-a26-l035-deposito-ingreso",
+            "ev-c17-a26-l079-081-cfdi-gasto",
+            "ev-c17-a26-l251-253-materialidad-pago"
+          ]
         },
         {
           "type": "full_explanation",
           "title": "Explicación completa desde cero",
-          "content": "El ISR es un impuesto directo que atiende a la obtención de ingresos. El artículo 1 de la LISR determina quiénes están obligados: residentes en México por sus ingresos con independencia de la fuente, y residentes en el extranjero en los casos previstos. Para resolver un caso primero identifica a la persona, residencia, tipo de ingreso y régimen aplicable.\n\nEsta clase se concentra en personas físicas con actividades empresariales y servicios profesionales. El artículo 100 comprende actividades comerciales, industriales, agrícolas, ganaderas, pesqueras o silvícolas, y servicios personales independientes que no sean salarios. Una misma persona puede recibir salarios y honorarios, pero debe tratar cada ingreso en el capítulo que corresponda y atender las reglas de acumulación anual.\n\nEn este régimen general predominan flujos de efectivo: el ingreso se acumula cuando se recibe efectivamente en efectivo, bienes o servicios, incluso mediante anticipos, depósitos o cualquier otro concepto, con las precisiones del artículo 102. Esto no significa que todo abono bancario sea automáticamente ingreso gravado. Un traspaso propio, préstamo o reembolso puede tener otra naturaleza, pero el contribuyente debe conservar evidencia coherente que la demuestre.\n\nEl artículo 103 enumera deducciones autorizadas: devoluciones, descuentos, mercancías y materias primas, gastos, inversiones bajo sus reglas, ciertos intereses, cuotas patronales del IMSS y determinados impuestos locales. La palabra gasto no crea una autorización ilimitada. El artículo 105 exige, entre otros puntos, erogación efectiva, estricta indispensabilidad, deducción una sola vez, tratamiento correcto de inversiones, requisitos particulares y CFDI oportuno. También son aplicables prohibiciones y límites del artículo 28.\n\nPor ello, un CFDI es necesario en muchos casos, pero no suficiente. Deben coincidir operación real, proveedor, objeto, forma de pago, contabilidad y relación con la actividad. Papelería usada en un despacho puede superar el análisis; útiles escolares de la familia no se convierten en gasto empresarial por facturarlos como papelería. Una comida tampoco es deducible solo por mencionar a un cliente: consumos en restaurantes y viáticos tienen límites y requisitos específicos.\n\nEl artículo 106 ordena pagos provisionales mensuales en el régimen general. De forma simplificada: ingresos acumulados desde enero menos deducciones autorizadas del mismo periodo, PTU pagada y pérdidas aplicables; al resultado se aplica la tarifa acumulada y se restan pagos provisionales anteriores y retenciones acreditables. La cifra exacta depende del ejercicio y de la información del contribuyente.\n\nCuando una persona moral paga servicios profesionales a una persona física de este régimen, debe retener 10% sobre el pago sin deducción, documentarlo y enterarlo. Esa retención se acredita contra el pago provisional; no es, por esa sola razón, una deducción ni necesariamente el impuesto final. Otros regímenes, como RESICO o plataformas, tienen reglas distintas y no deben mezclarse.\n\nEl impuesto anual de la actividad se calcula conforme a los artículos 109, 150 y 152. Las personas físicas presentan, como regla general, la declaración anual en abril, con excepciones legales. El umbral de 400,000 pesos corresponde a ciertos casos de salarios; no debe inventarse una regla general de 500,000 para honorarios. La mención de 500,000 en el artículo 150 tiene otra función informativa y no crea la regla descrita en el audio.\n\nFinalmente, la mayoría de edad exige solicitar inscripción al RFC, pero la persona sin actividad económica queda inscrita sin obligaciones fiscales hasta que se incorpore a una actividad. Al iniciar, cambiar o cesar actividades debe actualizar su situación conforme a las reglas aplicables. La estrategia correcta es registrar operaciones reales y declarar conforme al régimen, nunca ocultar ingresos ni simular gastos.",
-          "sourceOrigin": "mixed"
+          "content": "El ISR grava ingresos en los supuestos de la ley. El artículo 1 de la LISR determina quiénes están obligados: residentes en México por sus ingresos con independencia de la fuente, y residentes en el extranjero en los casos previstos. Para resolver un caso primero identifica a la persona, residencia, tipo de ingreso y régimen aplicable.\n\nEsta clase se concentra en personas físicas con actividades empresariales y servicios profesionales. El artículo 100 comprende actividades comerciales, industriales, agrícolas, ganaderas, pesqueras o silvícolas, y servicios personales independientes que no sean salarios. Una misma persona puede recibir salarios y honorarios, pero debe tratar cada ingreso en el capítulo que corresponda y atender las reglas de acumulación anual.\n\nEn este régimen general predominan flujos de efectivo: el ingreso se acumula cuando se recibe efectivamente en efectivo, bienes o servicios, incluso mediante anticipos, depósitos o cualquier otro concepto, con las precisiones del artículo 102. Esto no significa que todo abono bancario sea automáticamente ingreso gravado. Un traspaso propio, préstamo o reembolso puede tener otra naturaleza, pero el contribuyente debe conservar evidencia coherente que la demuestre.\n\nEl artículo 103 enumera deducciones autorizadas: devoluciones, descuentos, mercancías y materias primas, gastos, inversiones bajo sus reglas, ciertos intereses, cuotas patronales del IMSS y determinados impuestos locales. La palabra gasto no crea una autorización ilimitada. El artículo 105 exige, entre otros puntos, erogación efectiva, estricta indispensabilidad, deducción una sola vez, tratamiento correcto de inversiones, requisitos particulares y CFDI oportuno. También son aplicables prohibiciones y límites del artículo 28.\n\nPor ello, un CFDI es necesario en muchos casos, pero no suficiente. Deben coincidir operación real, proveedor, objeto, forma de pago, contabilidad y relación con la actividad. Papelería usada en un despacho puede superar el análisis; útiles escolares de la familia no se convierten en gasto empresarial por facturarlos como papelería. Una comida tampoco es deducible solo por mencionar a un cliente: consumos en restaurantes y viáticos tienen límites y requisitos específicos.\n\nEl artículo 106 ordena pagos provisionales mensuales en el régimen general. De forma simplificada: ingresos acumulados desde enero menos deducciones autorizadas del mismo periodo, PTU pagada y pérdidas aplicables; al resultado se aplica la tarifa acumulada y se restan pagos provisionales anteriores y retenciones acreditables. La cifra exacta depende del ejercicio y de la información del contribuyente.\n\nCuando una persona moral paga servicios profesionales a una persona física de este régimen, debe retener 10% sobre el pago sin deducción, documentarlo y enterarlo. Esa retención se acredita contra el pago provisional; no es, por esa sola razón, una deducción ni necesariamente el impuesto final. Otros regímenes, como RESICO o plataformas, tienen reglas distintas y no deben mezclarse.\n\nEl impuesto anual de la actividad se calcula conforme a los artículos 109, 150 y 152. Las personas físicas presentan, como regla general, la declaración anual en abril, con excepciones legales. Los supuestos de declaración anual para salarios están en el artículo 98 y no se trasladan automáticamente a honorarios. La mención de 500,000 pesos en el artículo 150 cumple una función informativa distinta y no crea la regla general descrita en el audio.\n\nFinalmente, la mayoría de edad exige solicitar inscripción al RFC, pero la persona sin actividad económica queda inscrita sin obligaciones fiscales hasta que se incorpore a una actividad. Al iniciar, cambiar o cesar actividades debe actualizar su situación conforme a las reglas aplicables. La estrategia correcta es registrar operaciones reales y declarar conforme al régimen, nunca ocultar ingresos ni simular gastos.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c17-lisr-art1-sujetos",
+            "ev-c17-lisr-arts90-100-102-ingresos",
+            "ev-c17-lisr-art98-salarios-anual",
+            "ev-c17-lisr-arts103-105-deducciones",
+            "ev-c17-lisr-art106-provisionales-retencion",
+            "ev-c17-lisr-arts109-150-152-anual",
+            "ev-c17-lisr-arts28-151-limites-personales",
+            "ev-c17-cff-art27-rfc",
+            "ev-c17-cff-arts29-29a-cfdi",
+            "ev-c17-cff-art30-conservacion",
+            "ev-c17-a26-l025-029-regimen-retenciones",
+            "ev-c17-a26-l035-deposito-ingreso",
+            "ev-c17-a26-l079-081-cfdi-gasto",
+            "ev-c17-a26-l213-215-deduccion-simulada",
+            "ev-c17-a26-l251-253-materialidad-pago"
+          ]
         },
         {
           "type": "legal_basis",
           "title": "Fundamento jurídico vigente",
-          "content": "La LISR regula sujetos en el artículo 1 y personas físicas en los artículos 90 y 150. Para actividades empresariales y profesionales, los artículos 100 a 102 definen sujetos e ingresos; los artículos 103 a 105 regulan deducciones y requisitos; el artículo 106 establece pagos provisionales y retención por honorarios pagados por personas morales; los artículos 109 y 152 regulan utilidad e impuesto anual; los artículos 28 y 151 permiten distinguir límites empresariales y deducciones personales. El CFF, artículos 27, 29, 29-A y 30, regula RFC, CFDI y conservación documental. Consulta oficial realizada el 11 de agosto de 2026; verifica también la Resolución Miscelánea y tarifas del ejercicio aplicable.",
-          "sourceOrigin": "complementary"
+          "content": "LISR vigente: artículo 1 sobre sujetos; artículos 90 y 100 a 102 sobre personas físicas, actividades empresariales, servicios profesionales e ingresos; artículo 98 sobre supuestos de declaración anual por salarios; artículos 103 a 105 sobre deducciones y requisitos; artículo 106 sobre pagos provisionales y retención en su supuesto exacto; artículos 109, 150 y 152 sobre determinación y anual; artículos 28 y 151 para distinguir límites empresariales y deducciones personales. CFF vigente: artículos 27, 29, 29-A y 30 sobre RFC, CFDI y conservación. Textos oficiales verificados al 21-08-2026.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c17-lisr-art1-sujetos",
+            "ev-c17-lisr-arts90-100-102-ingresos",
+            "ev-c17-lisr-art98-salarios-anual",
+            "ev-c17-lisr-arts103-105-deducciones",
+            "ev-c17-lisr-art106-provisionales-retencion",
+            "ev-c17-lisr-arts109-150-152-anual",
+            "ev-c17-lisr-arts28-151-limites-personales",
+            "ev-c17-cff-art27-rfc",
+            "ev-c17-cff-arts29-29a-cfdi",
+            "ev-c17-cff-art30-conservacion"
+          ]
         },
         {
           "type": "simple_example",
           "title": "Ejemplo sencillo",
           "content": "Una diseñadora cobra 30,000 pesos y compra por 6,000 una tableta usada exclusivamente en su trabajo. El cobro es ingreso de la actividad. La tableta no se resta automáticamente como cualquier gasto: debe analizarse como inversión, aplicar el porcentaje correspondiente, contar con operación real, CFDI y forma de pago exigida. Si además compra un videojuego para uso familiar con factura, ese CFDI no lo vuelve estrictamente indispensable.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c17-lisr-arts103-105-deducciones",
+            "ev-c17-cff-arts29-29a-cfdi",
+            "ev-c17-cff-art30-conservacion"
+          ]
         },
         {
           "type": "ceneval_example",
           "title": "Caso tipo CENEVAL",
           "content": "Una persona moral paga 50,000 pesos de honorarios a una abogada persona física del régimen general. La opción correcta es que la persona moral retenga 10% de ISR sin deducción y que la profesionista acredite esa retención contra su pago provisional. El monto retenido no sustituye el cálculo completo de ingresos y deducciones ni vuelve definitivo el impuesto por sí solo.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c17-lisr-art106-provisionales-retencion"
+          ]
         },
         {
           "type": "summary",
           "title": "Resumen",
           "content": "Clasifica primero persona, ingreso y régimen. En actividad empresarial o profesional general, se acumulan ingresos efectivamente percibidos y solo se restan deducciones autorizadas que cumplan requisitos. CFDI no equivale a deducibilidad. Los pagos provisionales son mensuales y las retenciones acreditables reducen el impuesto por pagar. Una persona moral retiene 10% al pagar honorarios en el supuesto del artículo 106. La declaración anual y sus umbrales dependen del tipo de ingreso. RFC sin actividad no genera por sí solo impuesto.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c17-lisr-arts90-100-102-ingresos",
+            "ev-c17-lisr-arts103-105-deducciones",
+            "ev-c17-lisr-art106-provisionales-retencion",
+            "ev-c17-lisr-arts109-150-152-anual",
+            "ev-c17-cff-art27-rfc",
+            "ev-c17-cff-arts29-29a-cfdi",
+            "ev-c17-a26-l025-029-regimen-retenciones",
+            "ev-c17-a26-l035-deposito-ingreso",
+            "ev-c17-a26-l079-081-cfdi-gasto"
+          ]
         },
         {
           "type": "study_guide",
           "title": "Guía intensiva de preguntas y respuestas",
           "content": "1. ¿Qué grava el ISR? Respuesta: ingresos en los supuestos de la LISR. 2. ¿Qué es actividad empresarial? Respuesta: actividad comercial, industrial, agrícola, ganadera, pesquera o silvícola. 3. ¿Qué es servicio profesional? Respuesta: servicio personal independiente no tratado como salario. 4. ¿Cuándo se acumula en el régimen general? Respuesta: al percibirse efectivamente, con las reglas legales. 5. ¿Todo depósito es ingreso? Respuesta: no; se determina por su naturaleza y evidencia. 6. ¿Qué es deducción autorizada? Respuesta: concepto permitido por la ley que cumple requisitos. 7. ¿Basta el CFDI? Respuesta: no. 8. ¿Qué significa estrictamente indispensable? Respuesta: relación necesaria con la obtención de ingresos de la actividad. 9. ¿Cómo se tratan inversiones? Respuesta: mediante porcentajes y reglas específicas, no siempre de una vez. 10. ¿Qué retiene una persona moral por honorarios del régimen general? Respuesta: 10% sobre el pago, sin deducción. 11. ¿La retención es definitiva? Respuesta: normalmente es pago provisional acreditable en este supuesto. 12. ¿RFC sin actividad genera impuesto? Respuesta: no por sí solo; las obligaciones cambian al iniciar actividad.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c17-lisr-arts90-100-102-ingresos",
+            "ev-c17-lisr-arts103-105-deducciones",
+            "ev-c17-lisr-art106-provisionales-retencion",
+            "ev-c17-lisr-arts109-150-152-anual",
+            "ev-c17-lisr-art98-salarios-anual",
+            "ev-c17-cff-art27-rfc",
+            "ev-c17-cff-arts29-29a-cfdi",
+            "ev-c17-a26-l025-029-regimen-retenciones",
+            "ev-c17-a26-l035-deposito-ingreso",
+            "ev-c17-a26-l079-081-cfdi-gasto"
+          ]
         },
         {
           "type": "key_concepts",
           "title": "Conceptos clave",
           "content": "Ingreso acumulable: ingreso que se suma para determinar ISR. Percepción efectiva: momento de cobro conforme a la ley. Deducción autorizada: disminución permitida expresamente. Estricta indispensabilidad: vínculo necesario del gasto con la actividad gravada. CFDI: comprobante fiscal digital; no prueba por sí solo toda la deducibilidad. Inversión: activo sujeto a reglas de deducción porcentual. Retención: impuesto descontado y enterado por quien paga en los casos legales. Acreditamiento: resta de pagos o retenciones contra impuesto determinado. Pago provisional: anticipo periódico a cuenta del anual. Utilidad fiscal: resultado legal de ingresos menos deducciones y ajustes aplicables. Discrepancia fiscal: procedimiento relacionado con erogaciones superiores a ingresos declarados en los términos legales.",
-          "sourceOrigin": "mixed"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c17-lisr-arts90-100-102-ingresos",
+            "ev-c17-lisr-arts103-105-deducciones",
+            "ev-c17-lisr-art106-provisionales-retencion",
+            "ev-c17-lisr-arts109-150-152-anual",
+            "ev-c17-cff-arts29-29a-cfdi",
+            "ev-c17-cff-art30-conservacion",
+            "ev-c17-a26-l035-deposito-ingreso",
+            "ev-c17-a26-l079-081-cfdi-gasto",
+            "ev-c17-a26-l251-253-materialidad-pago"
+          ]
         },
         {
           "type": "common_errors",
           "title": "Errores comunes",
           "content": "No uses 500,000 pesos como umbral universal de declaración. No confundas salarios con honorarios. No supongas que todo depósito es ingreso ni que basta llamarlo préstamo: documenta su naturaleza. No deduzcas gastos personales por obtener CFDI. No afirmes que comida, gasolina o papelería siempre son deducibles; revisa indispensabilidad, límites y forma de pago. No restes de golpe una inversión cuando la ley exige porcentajes. No confundas retención con impuesto definitivo. No mezcles régimen general con RESICO o plataformas. No inventes, compres ni simules facturas. No omitas avisos al cambiar o cesar actividades. No concluyas que inscripción al RFC sin actividad equivale a tener impuesto a cargo.",
-          "sourceOrigin": "complementary"
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c17-lisr-arts90-100-102-ingresos",
+            "ev-c17-lisr-art98-salarios-anual",
+            "ev-c17-lisr-arts103-105-deducciones",
+            "ev-c17-lisr-art106-provisionales-retencion",
+            "ev-c17-lisr-arts109-150-152-anual",
+            "ev-c17-lisr-arts28-151-limites-personales",
+            "ev-c17-cff-art27-rfc",
+            "ev-c17-cff-arts29-29a-cfdi",
+            "ev-c17-cff-art30-conservacion",
+            "ev-c17-a26-l213-215-deduccion-simulada",
+            "ev-c17-a26-l251-253-materialidad-pago"
+          ]
         }
       ],
       "conceptMap": {
         "title": "Mapa visual del ISR para profesionistas y negocios",
         "description": "Recorre de izquierda a derecha: clasificación, ingreso, deducción, cálculo y cumplimiento.",
         "nodes": [
-          {"id":"isr","label":"ISR de persona física","description":"El tratamiento depende del ingreso y del régimen."},
-          {"id":"clasificar","label":"1. Clasificar","description":"Identifica contribuyente, actividad y régimen.","parentId":"isr"},
-          {"id":"empresarial","label":"Actividad empresarial","description":"Comercio, industria y actividades primarias.","parentId":"clasificar"},
-          {"id":"profesional","label":"Servicio profesional","description":"Trabajo personal independiente.","parentId":"clasificar"},
-          {"id":"otros","label":"Otros ingresos","description":"Salarios, arrendamiento, plataformas u otros capítulos.","parentId":"clasificar"},
-          {"id":"ingresos","label":"2. Ingresos","description":"Determina cuáles se acumulan.","parentId":"isr"},
-          {"id":"percibidos","label":"Efectivamente percibidos","description":"Regla de flujo para el régimen general.","parentId":"ingresos"},
-          {"id":"naturaleza","label":"Naturaleza real","description":"No todo depósito tiene el mismo tratamiento.","parentId":"ingresos"},
-          {"id":"evidencia","label":"Trazabilidad","description":"Contrato, transferencia, CFDI y contabilidad coherentes.","parentId":"ingresos"},
-          {"id":"deducciones","label":"3. Deducciones","description":"Solo conceptos autorizados y comprobados.","parentId":"isr"},
-          {"id":"autorizada","label":"Autorización legal","description":"Artículo 103 y reglas relacionadas.","parentId":"deducciones"},
-          {"id":"indispensable","label":"Estrictamente indispensable","description":"Vínculo con la obtención del ingreso.","parentId":"deducciones"},
-          {"id":"real","label":"Operación real","description":"El CFDI aislado no es suficiente.","parentId":"deducciones"},
-          {"id":"pago","label":"Pago y requisitos","description":"Forma, fecha, proveedor y documentación.","parentId":"deducciones"},
-          {"id":"inversion","label":"Inversión","description":"Se deduce mediante reglas y porcentajes.","parentId":"deducciones"},
-          {"id":"calculo","label":"4. Cálculo","description":"Pagos provisionales a cuenta del anual.","parentId":"isr"},
-          {"id":"base","label":"Ingresos − deducciones","description":"Con PTU y pérdidas cuando procedan.","parentId":"calculo"},
-          {"id":"tarifa","label":"Tarifa","description":"Se aplica la correspondiente al periodo.","parentId":"calculo"},
-          {"id":"retenciones","label":"Retenciones acreditables","description":"Reducen el pago determinado.","parentId":"calculo"},
-          {"id":"honorarios","label":"Honorarios a persona moral","description":"Retención de 10% en el régimen general.","parentId":"retenciones"},
-          {"id":"cumplimiento","label":"5. Cumplimiento","description":"Obligaciones formales y sustantivas.","parentId":"isr"},
-          {"id":"rfc","label":"RFC actualizado","description":"Actividad y obligaciones correctas.","parentId":"cumplimiento"},
-          {"id":"cfdi","label":"Expedir y conservar CFDI","description":"Ingresos y operaciones respaldadas.","parentId":"cumplimiento"},
-          {"id":"declaraciones","label":"Mensuales + anual","description":"Según régimen y ejercicio aplicable.","parentId":"cumplimiento"}
+          {
+            "id": "isr",
+            "label": "ISR de persona física",
+            "description": "El tratamiento depende del ingreso y del régimen.",
+            "evidenceIds": [
+              "ev-c17-lisr-art1-sujetos",
+              "ev-c17-lisr-arts90-100-102-ingresos"
+            ]
+          },
+          {
+            "id": "clasificar",
+            "label": "1. Clasificar",
+            "description": "Identifica contribuyente, actividad y régimen.",
+            "parentId": "isr",
+            "evidenceIds": [
+              "ev-c17-lisr-art1-sujetos",
+              "ev-c17-lisr-arts90-100-102-ingresos",
+              "ev-c17-a26-l025-029-regimen-retenciones"
+            ]
+          },
+          {
+            "id": "empresarial",
+            "label": "Actividad empresarial",
+            "description": "Comercio, industria y actividades primarias.",
+            "parentId": "clasificar",
+            "evidenceIds": [
+              "ev-c17-lisr-arts90-100-102-ingresos"
+            ]
+          },
+          {
+            "id": "profesional",
+            "label": "Servicio profesional",
+            "description": "Trabajo personal independiente.",
+            "parentId": "clasificar",
+            "evidenceIds": [
+              "ev-c17-lisr-arts90-100-102-ingresos"
+            ]
+          },
+          {
+            "id": "otros",
+            "label": "Otros ingresos",
+            "description": "Salarios, arrendamiento, plataformas u otros capítulos.",
+            "parentId": "clasificar",
+            "evidenceIds": [
+              "ev-c17-lisr-arts90-100-102-ingresos",
+              "ev-c17-lisr-art98-salarios-anual",
+              "ev-c17-lisr-arts109-150-152-anual"
+            ]
+          },
+          {
+            "id": "ingresos",
+            "label": "2. Ingresos",
+            "description": "Determina cuáles se acumulan.",
+            "parentId": "isr",
+            "evidenceIds": [
+              "ev-c17-lisr-arts90-100-102-ingresos"
+            ]
+          },
+          {
+            "id": "percibidos",
+            "label": "Efectivamente percibidos",
+            "description": "Regla de flujo para el régimen general.",
+            "parentId": "ingresos",
+            "evidenceIds": [
+              "ev-c17-lisr-arts90-100-102-ingresos"
+            ]
+          },
+          {
+            "id": "naturaleza",
+            "label": "Naturaleza real",
+            "description": "No todo depósito tiene el mismo tratamiento.",
+            "parentId": "ingresos",
+            "evidenceIds": [
+              "ev-c17-lisr-arts90-100-102-ingresos",
+              "ev-c17-a26-l035-deposito-ingreso"
+            ]
+          },
+          {
+            "id": "evidencia",
+            "label": "Trazabilidad",
+            "description": "Contrato, transferencia, CFDI y contabilidad coherentes.",
+            "parentId": "ingresos",
+            "evidenceIds": [
+              "ev-c17-cff-arts29-29a-cfdi",
+              "ev-c17-cff-art30-conservacion",
+              "ev-c17-a26-l251-253-materialidad-pago"
+            ]
+          },
+          {
+            "id": "deducciones",
+            "label": "3. Deducciones",
+            "description": "Solo conceptos autorizados y comprobados.",
+            "parentId": "isr",
+            "evidenceIds": [
+              "ev-c17-lisr-arts103-105-deducciones",
+              "ev-c17-lisr-arts28-151-limites-personales"
+            ]
+          },
+          {
+            "id": "autorizada",
+            "label": "Autorización legal",
+            "description": "Artículo 103 y reglas relacionadas.",
+            "parentId": "deducciones",
+            "evidenceIds": [
+              "ev-c17-lisr-arts103-105-deducciones"
+            ]
+          },
+          {
+            "id": "indispensable",
+            "label": "Estrictamente indispensable",
+            "description": "Vínculo con la obtención del ingreso.",
+            "parentId": "deducciones",
+            "evidenceIds": [
+              "ev-c17-lisr-arts103-105-deducciones"
+            ]
+          },
+          {
+            "id": "real",
+            "label": "Operación real",
+            "description": "El CFDI aislado no es suficiente.",
+            "parentId": "deducciones",
+            "evidenceIds": [
+              "ev-c17-lisr-arts103-105-deducciones",
+              "ev-c17-cff-arts29-29a-cfdi",
+              "ev-c17-cff-art30-conservacion",
+              "ev-c17-a26-l251-253-materialidad-pago"
+            ]
+          },
+          {
+            "id": "pago",
+            "label": "Pago y requisitos",
+            "description": "Forma, fecha, proveedor y documentación.",
+            "parentId": "deducciones",
+            "evidenceIds": [
+              "ev-c17-lisr-arts103-105-deducciones",
+              "ev-c17-cff-arts29-29a-cfdi",
+              "ev-c17-cff-art30-conservacion"
+            ]
+          },
+          {
+            "id": "inversion",
+            "label": "Inversión",
+            "description": "Se deduce mediante reglas y porcentajes.",
+            "parentId": "deducciones",
+            "evidenceIds": [
+              "ev-c17-lisr-arts103-105-deducciones"
+            ]
+          },
+          {
+            "id": "calculo",
+            "label": "4. Cálculo",
+            "description": "Pagos provisionales a cuenta del anual.",
+            "parentId": "isr",
+            "evidenceIds": [
+              "ev-c17-lisr-art106-provisionales-retencion",
+              "ev-c17-lisr-arts109-150-152-anual"
+            ]
+          },
+          {
+            "id": "base",
+            "label": "Ingresos − deducciones",
+            "description": "Con PTU y pérdidas cuando procedan.",
+            "parentId": "calculo",
+            "evidenceIds": [
+              "ev-c17-lisr-art106-provisionales-retencion"
+            ]
+          },
+          {
+            "id": "tarifa",
+            "label": "Tarifa",
+            "description": "Se aplica la correspondiente al periodo.",
+            "parentId": "calculo",
+            "evidenceIds": [
+              "ev-c17-lisr-art106-provisionales-retencion"
+            ]
+          },
+          {
+            "id": "retenciones",
+            "label": "Retenciones acreditables",
+            "description": "Reducen el pago determinado.",
+            "parentId": "calculo",
+            "evidenceIds": [
+              "ev-c17-lisr-art106-provisionales-retencion"
+            ]
+          },
+          {
+            "id": "honorarios",
+            "label": "Honorarios a persona moral",
+            "description": "Retención de 10% en el régimen general.",
+            "parentId": "retenciones",
+            "evidenceIds": [
+              "ev-c17-lisr-art106-provisionales-retencion"
+            ]
+          },
+          {
+            "id": "cumplimiento",
+            "label": "5. Cumplimiento",
+            "description": "Obligaciones formales y sustantivas.",
+            "parentId": "isr",
+            "evidenceIds": [
+              "ev-c17-cff-art27-rfc",
+              "ev-c17-cff-arts29-29a-cfdi",
+              "ev-c17-cff-art30-conservacion"
+            ]
+          },
+          {
+            "id": "rfc",
+            "label": "RFC actualizado",
+            "description": "Actividad y obligaciones correctas.",
+            "parentId": "cumplimiento",
+            "evidenceIds": [
+              "ev-c17-cff-art27-rfc"
+            ]
+          },
+          {
+            "id": "cfdi",
+            "label": "Expedir y conservar CFDI",
+            "description": "Ingresos y operaciones respaldadas.",
+            "parentId": "cumplimiento",
+            "evidenceIds": [
+              "ev-c17-cff-arts29-29a-cfdi",
+              "ev-c17-cff-art30-conservacion"
+            ]
+          },
+          {
+            "id": "declaraciones",
+            "label": "Mensuales + anual",
+            "description": "Según régimen y ejercicio aplicable.",
+            "parentId": "cumplimiento",
+            "evidenceIds": [
+              "ev-c17-lisr-art98-salarios-anual",
+              "ev-c17-lisr-art106-provisionales-retencion",
+              "ev-c17-lisr-arts109-150-152-anual"
+            ]
+          }
         ]
       },
       "references": [
-        {"title":"Ley del Impuesto sobre la Renta","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/LISR.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Federal, México","citation":"Artículos 1, 28, 90, 100 a 110, 150 a 152; última reforma DOF 01-04-2024","retrievedOn":"2026-08-11","note":"Fuente primaria sobre sujetos, ingresos, deducciones, retenciones, pagos provisionales y anual."},
-        {"title":"Código Fiscal de la Federación","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Federal, México","citation":"Artículos 27, 29, 29-A, 30 y correlativos; última reforma DOF 09-04-2026","retrievedOn":"2026-08-11","note":"Regula RFC, comprobantes, contabilidad y conservación de documentación."},
-        {"title":"Declaración Anual 2025 Personas","url":"https://www.sat.gob.mx/minisitio/DeclaracionAnual/Personas/quienes_deben_presentarla.html","institution":"Servicio de Administración Tributaria","jurisdiction":"Federal, México","citation":"Orientación oficial para la declaración presentada en abril de 2026","retrievedOn":"2026-08-11","note":"Distingue supuestos de salarios, servicios profesionales y actividades empresariales; la ley prevalece."
+        {
+          "title": "Ley del Impuesto sobre la Renta",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LISR.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 1, 28, 90, 98, 100 a 109 y 150 a 152; última reforma DOF 01-04-2024",
+          "retrievedOn": "2026-08-21",
+          "note": "Sujetos, regímenes, ingresos, deducciones, pagos, retenciones y anual."
+        },
+        {
+          "title": "Código Fiscal de la Federación",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Artículos 27, 29, 29-A y 30; última reforma DOF 09-04-2026",
+          "retrievedOn": "2026-08-21",
+          "note": "RFC, comprobantes fiscales y conservación documental."
         }
       ],
       "flashcards": [
-        {"question":"¿Qué actividades comprende la categoría empresarial del artículo 100?","answer":"Comerciales, industriales, agrícolas, ganaderas, pesqueras y silvícolas.","sourceOrigin":"complementary"},
-        {"question":"¿Qué caracteriza al servicio profesional?","answer":"Es un servicio personal independiente cuyos ingresos no se tratan como salarios.","sourceOrigin":"mixed"},
-        {"question":"¿Cuándo se acumula normalmente el ingreso en este régimen general?","answer":"Cuando es efectivamente percibido conforme al artículo 102.","sourceOrigin":"complementary"},
-        {"question":"¿Todo depósito bancario es ingreso gravado?","answer":"No necesariamente; su naturaleza debe identificarse y documentarse.","sourceOrigin":"mixed"},
-        {"question":"¿Qué dos filtros centrales debe superar una deducción?","answer":"Estar autorizada por la ley y cumplir los requisitos, incluida estricta indispensabilidad cuando corresponda.","sourceOrigin":"mixed"},
-        {"question":"¿Un CFDI garantiza la deducción?","answer":"No. Deben acreditarse operación real, relación con la actividad y demás requisitos.","sourceOrigin":"mixed"},
-        {"question":"¿Cómo se deduce normalmente un activo fijo?","answer":"Como inversión, aplicando reglas y porcentajes legales, no necesariamente en una sola exhibición.","sourceOrigin":"complementary"},
-        {"question":"¿Cada cuándo se realizan pagos provisionales del régimen general?","answer":"Mensualmente, como pagos a cuenta del impuesto del ejercicio.","sourceOrigin":"complementary"},
-        {"question":"¿Qué retención aplica una persona moral al pagar honorarios del régimen general?","answer":"10% sobre el pago sin deducción, conforme al artículo 106.","sourceOrigin":"complementary"},
-        {"question":"¿Qué hace el profesionista con esa retención?","answer":"La acredita contra el ISR que resulte en sus pagos provisionales.","sourceOrigin":"complementary"},
-        {"question":"¿Cuál es el mes general de declaración anual de personas físicas?","answer":"Abril del año siguiente, con las excepciones legales aplicables.","sourceOrigin":"complementary"},
-        {"question":"¿La inscripción al RFC sin actividad económica genera obligaciones fiscales?","answer":"No por sí misma; las obligaciones se actualizan al incorporarse a una actividad.","sourceOrigin":"complementary"}
+        {
+          "question": "¿Qué actividades comprende la categoría empresarial del artículo 100?",
+          "answer": "Comerciales, industriales, agrícolas, ganaderas, pesqueras y silvícolas.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c17-lisr-arts90-100-102-ingresos"
+          ]
+        },
+        {
+          "question": "¿Qué caracteriza al servicio profesional?",
+          "answer": "Es un servicio personal independiente cuyos ingresos no se tratan como salarios.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c17-lisr-arts90-100-102-ingresos",
+            "ev-c17-a26-l025-029-regimen-retenciones"
+          ]
+        },
+        {
+          "question": "¿Cuándo se acumula normalmente el ingreso en este régimen general?",
+          "answer": "Cuando es efectivamente percibido conforme al artículo 102.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c17-lisr-arts90-100-102-ingresos"
+          ]
+        },
+        {
+          "question": "¿Todo depósito bancario es ingreso gravado?",
+          "answer": "No necesariamente; su naturaleza debe identificarse y documentarse.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c17-lisr-arts90-100-102-ingresos",
+            "ev-c17-cff-art30-conservacion",
+            "ev-c17-a26-l035-deposito-ingreso"
+          ]
+        },
+        {
+          "question": "¿Qué dos filtros centrales debe superar una deducción?",
+          "answer": "Estar autorizada por la ley y cumplir los requisitos, incluida estricta indispensabilidad cuando corresponda.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c17-lisr-arts103-105-deducciones",
+            "ev-c17-lisr-arts28-151-limites-personales",
+            "ev-c17-a26-l079-081-cfdi-gasto"
+          ]
+        },
+        {
+          "question": "¿Un CFDI garantiza la deducción?",
+          "answer": "No. Deben acreditarse operación real, relación con la actividad y demás requisitos.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c17-lisr-arts103-105-deducciones",
+            "ev-c17-cff-arts29-29a-cfdi",
+            "ev-c17-cff-art30-conservacion",
+            "ev-c17-a26-l079-081-cfdi-gasto",
+            "ev-c17-a26-l251-253-materialidad-pago"
+          ]
+        },
+        {
+          "question": "¿Cómo se deduce normalmente un activo fijo?",
+          "answer": "Como inversión, aplicando reglas y porcentajes legales, no necesariamente en una sola exhibición.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c17-lisr-arts103-105-deducciones"
+          ]
+        },
+        {
+          "question": "¿Cada cuándo se realizan pagos provisionales del régimen general?",
+          "answer": "Mensualmente, como pagos a cuenta del impuesto del ejercicio.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c17-lisr-art106-provisionales-retencion"
+          ]
+        },
+        {
+          "question": "¿Qué retención aplica una persona moral al pagar honorarios del régimen general?",
+          "answer": "10% sobre el pago sin deducción, conforme al artículo 106.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c17-lisr-art106-provisionales-retencion"
+          ]
+        },
+        {
+          "question": "¿Qué hace el profesionista con esa retención?",
+          "answer": "La acredita contra el ISR que resulte en sus pagos provisionales.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c17-lisr-art106-provisionales-retencion"
+          ]
+        },
+        {
+          "question": "¿Cuál es el mes general de declaración anual de personas físicas?",
+          "answer": "Abril del año siguiente, con las excepciones legales aplicables.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c17-lisr-arts109-150-152-anual"
+          ]
+        },
+        {
+          "question": "¿La inscripción al RFC sin actividad económica genera obligaciones fiscales?",
+          "answer": "No por sí misma; las obligaciones se actualizan al incorporarse a una actividad.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c17-cff-art27-rfc"
+          ]
+        }
       ],
       "exam": {
-        "title":"Examen: ISR de actividades empresariales y profesionales",
-        "description":"Diez casos originales sobre ingresos, deducciones, retenciones, pagos y cumplimiento.",
-        "questions":[
-          {"text":"Una abogada presta servicios por cuenta propia y cobra honorarios. ¿Cómo se clasifica el ingreso?","difficulty":"basic","options":["Servicio profesional independiente","Salario subordinado necesariamente","Premio exento"],"correctOption":0,"explanation":"El artículo 100 ubica las remuneraciones por servicios personales independientes en servicios profesionales.","optionExplanations":["Es la clasificación correcta.","No existe subordinación por el solo dato dado.","El honorario no es un premio."]},
-          {"text":"Un profesionista recibe un traspaso entre dos cuentas propias. ¿Cuál es el análisis correcto?","difficulty":"intermediate","options":["Siempre acumularlo como honorario","Identificar su naturaleza y conservar trazabilidad","Deducirlo como gasto"],"correctOption":1,"explanation":"El movimiento bancario no cambia la naturaleza jurídica; debe demostrarse que es un traspaso y no un ingreso omitido.","optionExplanations":["No todo abono es honorario.","Es el método correcto.","Un traspaso no es gasto deducible."]},
-          {"text":"Una persona obtiene CFDI por una fiesta familiar y pretende deducirla de su despacho. ¿Qué falta?","difficulty":"basic","options":["Nada, el CFDI basta","Estricto vínculo con la actividad y autorización legal","Cambiar el color del comprobante"],"correctOption":1,"explanation":"El comprobante no transforma un gasto personal en estrictamente indispensable.","optionExplanations":["El CFDI es insuficiente.","Son requisitos sustantivos esenciales.","El formato visual es irrelevante."]},
-          {"text":"Una persona moral paga 40,000 pesos de honorarios a una persona física del régimen general. ¿Qué retención de ISR prevé el artículo 106?","difficulty":"basic","options":["10% sobre el pago sin deducción","30% sobre la utilidad anual","Ninguna en todos los casos"],"correctOption":0,"explanation":"La persona moral debe retener 10% en el supuesto legal y enterarlo.","optionExplanations":["Es la regla aplicable.","Confunde tasa y base anual.","Ignora la obligación de retener."]},
-          {"text":"¿Cómo trata la persona física la retención anterior?","difficulty":"intermediate","options":["Como pago provisional acreditable","Como gasto de papelería","Como multa definitiva"],"correctOption":0,"explanation":"La retención se acredita contra el ISR del pago provisional.","optionExplanations":["Es su función legal.","No es una adquisición.","No es sanción."]},
-          {"text":"Una computadora se usa durante varios años en la actividad. ¿Qué tratamiento debe analizarse?","difficulty":"intermediate","options":["Inversión sujeta a porcentajes","Deducción personal médica","Ingreso exento"],"correctOption":0,"explanation":"Un activo fijo se analiza bajo las reglas de inversiones de los artículos 104 y relacionados.","optionExplanations":["Es la categoría adecuada.","No es gasto médico.","Es una erogación, no ingreso."]},
-          {"text":"¿Cuál fórmula simplificada describe mejor el pago provisional acumulado?","difficulty":"advanced","options":["Ingresos menos deducciones y conceptos legales, tarifa, menos pagos previos y retenciones","Depósitos por 30% sin ajustes","CFDI emitidos menos RFC registrados"],"correctOption":0,"explanation":"Resume la mecánica del artículo 106 sin sustituir la tarifa y reglas del ejercicio.","optionExplanations":["Contiene los componentes esenciales.","No es la mecánica legal.","Mezcla documentos con base fiscal."]},
-          {"text":"Una persona mayor de edad está inscrita en RFC sin actividad económica. ¿Qué conclusión es correcta?","difficulty":"intermediate","options":["Debe pagar ISR aunque no tenga ingreso","La inscripción no genera por sí sola obligaciones hasta iniciar actividad","Queda autorizada a simular gastos"],"correctOption":1,"explanation":"El CFF prevé inscripción sin obligaciones fiscales para quien no realiza actividad económica.","optionExplanations":["Sin el hecho gravado no surge ISR por la mera inscripción.","Es la regla correcta.","Ninguna inscripción autoriza simulación."]},
-          {"text":"Un asalariado escucha que solo declara al superar 500,000 pesos. ¿Qué debe responderse?","difficulty":"advanced","options":["Es un umbral universal","Debe revisar los supuestos del artículo 98; para salarios aparece 400,000 y otras causas","Nunca presenta anual"],"correctOption":1,"explanation":"La obligación anual depende del tipo de ingreso; el audio confunde cifras con funciones legales distintas.","optionExplanations":["No existe esa regla universal.","Es el análisis normativo correcto.","Hay múltiples supuestos de obligación."]},
-          {"text":"Un contribuyente compra CFDI de operaciones inexistentes para reducir ISR. ¿Cuál es la valoración correcta?","difficulty":"advanced","options":["Estrategia permitida si paga en efectivo","Simulación ilícita con posibles consecuencias fiscales y penales","Deducción válida por tener folio"],"correctOption":1,"explanation":"La deducción exige operaciones reales; simular o documentar operaciones inexistentes no es planeación fiscal lícita.","optionExplanations":["La forma de pago no legitima la simulación.","Es la consecuencia jurídicamente correcta.","El folio no prueba materialidad."]}
+        "title": "Examen: ISR de actividades empresariales y profesionales",
+        "description": "Diez casos originales sobre ingresos, deducciones, retenciones, pagos y cumplimiento.",
+        "questions": [
+          {
+            "text": "Una abogada presta servicios por cuenta propia y cobra honorarios. ¿Cómo se clasifica el ingreso?",
+            "difficulty": "basic",
+            "options": [
+              "Servicio profesional independiente",
+              "Salario subordinado necesariamente",
+              "Premio exento"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 100 ubica las remuneraciones por servicios personales independientes en servicios profesionales.",
+            "optionExplanations": [
+              "Es la clasificación correcta.",
+              "No existe subordinación por el solo dato dado.",
+              "El honorario no es un premio."
+            ],
+            "evidenceIds": [
+              "ev-c17-lisr-arts90-100-102-ingresos"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c17-lisr-arts90-100-102-ingresos"
+              ],
+              [
+                "ev-c17-lisr-arts90-100-102-ingresos"
+              ],
+              [
+                "ev-c17-lisr-arts90-100-102-ingresos"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c17-lisr-arts90-100-102-ingresos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c17-lisr-arts90-100-102-ingresos"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c17-lisr-arts90-100-102-ingresos"
+              ],
+              [
+                "ev-c17-lisr-arts90-100-102-ingresos"
+              ],
+              [
+                "ev-c17-lisr-arts90-100-102-ingresos"
+              ]
+            ]
+          },
+          {
+            "text": "Un profesionista recibe un traspaso entre dos cuentas propias. ¿Cuál es el análisis correcto?",
+            "difficulty": "intermediate",
+            "options": [
+              "Siempre acumularlo como honorario",
+              "Identificar su naturaleza y conservar trazabilidad",
+              "Deducirlo como gasto"
+            ],
+            "correctOption": 1,
+            "explanation": "El movimiento bancario no cambia la naturaleza jurídica; debe demostrarse que es un traspaso y no un ingreso omitido.",
+            "optionExplanations": [
+              "No todo abono es honorario.",
+              "Es el método correcto.",
+              "Un traspaso no es gasto deducible."
+            ],
+            "evidenceIds": [
+              "ev-c17-lisr-arts90-100-102-ingresos",
+              "ev-c17-cff-art30-conservacion",
+              "ev-c17-a26-l035-deposito-ingreso"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c17-lisr-arts90-100-102-ingresos",
+                "ev-c17-cff-art30-conservacion",
+                "ev-c17-a26-l035-deposito-ingreso"
+              ],
+              [
+                "ev-c17-lisr-arts90-100-102-ingresos",
+                "ev-c17-cff-art30-conservacion",
+                "ev-c17-a26-l035-deposito-ingreso"
+              ],
+              [
+                "ev-c17-lisr-arts90-100-102-ingresos",
+                "ev-c17-cff-art30-conservacion",
+                "ev-c17-a26-l035-deposito-ingreso"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c17-lisr-arts90-100-102-ingresos",
+              "ev-c17-cff-art30-conservacion",
+              "ev-c17-a26-l035-deposito-ingreso"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c17-lisr-arts90-100-102-ingresos",
+              "ev-c17-cff-art30-conservacion",
+              "ev-c17-a26-l035-deposito-ingreso"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c17-lisr-arts90-100-102-ingresos",
+                "ev-c17-cff-art30-conservacion",
+                "ev-c17-a26-l035-deposito-ingreso"
+              ],
+              [
+                "ev-c17-lisr-arts90-100-102-ingresos",
+                "ev-c17-cff-art30-conservacion",
+                "ev-c17-a26-l035-deposito-ingreso"
+              ],
+              [
+                "ev-c17-lisr-arts90-100-102-ingresos",
+                "ev-c17-cff-art30-conservacion",
+                "ev-c17-a26-l035-deposito-ingreso"
+              ]
+            ]
+          },
+          {
+            "text": "Una persona obtiene CFDI por una fiesta familiar y pretende deducirla de su despacho. ¿Qué falta?",
+            "difficulty": "basic",
+            "options": [
+              "Nada, el CFDI basta",
+              "Estricto vínculo con la actividad y autorización legal",
+              "Cambiar el color del comprobante"
+            ],
+            "correctOption": 1,
+            "explanation": "El comprobante no transforma un gasto personal en estrictamente indispensable.",
+            "optionExplanations": [
+              "El CFDI es insuficiente.",
+              "Son requisitos sustantivos esenciales.",
+              "El formato visual es irrelevante."
+            ],
+            "evidenceIds": [
+              "ev-c17-lisr-arts103-105-deducciones",
+              "ev-c17-lisr-arts28-151-limites-personales",
+              "ev-c17-cff-arts29-29a-cfdi"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c17-lisr-arts103-105-deducciones",
+                "ev-c17-lisr-arts28-151-limites-personales",
+                "ev-c17-cff-arts29-29a-cfdi"
+              ],
+              [
+                "ev-c17-lisr-arts103-105-deducciones",
+                "ev-c17-lisr-arts28-151-limites-personales",
+                "ev-c17-cff-arts29-29a-cfdi"
+              ],
+              [
+                "ev-c17-lisr-arts103-105-deducciones",
+                "ev-c17-lisr-arts28-151-limites-personales",
+                "ev-c17-cff-arts29-29a-cfdi"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c17-lisr-arts103-105-deducciones",
+              "ev-c17-lisr-arts28-151-limites-personales",
+              "ev-c17-cff-arts29-29a-cfdi"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c17-lisr-arts103-105-deducciones",
+              "ev-c17-lisr-arts28-151-limites-personales",
+              "ev-c17-cff-arts29-29a-cfdi"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c17-lisr-arts103-105-deducciones",
+                "ev-c17-lisr-arts28-151-limites-personales",
+                "ev-c17-cff-arts29-29a-cfdi"
+              ],
+              [
+                "ev-c17-lisr-arts103-105-deducciones",
+                "ev-c17-lisr-arts28-151-limites-personales",
+                "ev-c17-cff-arts29-29a-cfdi"
+              ],
+              [
+                "ev-c17-lisr-arts103-105-deducciones",
+                "ev-c17-lisr-arts28-151-limites-personales",
+                "ev-c17-cff-arts29-29a-cfdi"
+              ]
+            ]
+          },
+          {
+            "text": "Una persona moral paga 40,000 pesos de honorarios a una persona física del régimen general. ¿Qué retención de ISR prevé el artículo 106?",
+            "difficulty": "basic",
+            "options": [
+              "10% sobre el pago sin deducción",
+              "Una tasa elegida por quien paga",
+              "Ninguna en todos los casos"
+            ],
+            "correctOption": 0,
+            "explanation": "La persona moral debe retener 10% en el supuesto legal y enterarlo.",
+            "optionExplanations": [
+              "Es la regla aplicable.",
+              "El artículo 106 fija la retención aplicable; no queda a elección.",
+              "Ignora la obligación de retener."
+            ],
+            "evidenceIds": [
+              "ev-c17-lisr-art106-provisionales-retencion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c17-lisr-art106-provisionales-retencion"
+              ],
+              [
+                "ev-c17-lisr-art106-provisionales-retencion"
+              ],
+              [
+                "ev-c17-lisr-art106-provisionales-retencion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c17-lisr-art106-provisionales-retencion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c17-lisr-art106-provisionales-retencion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c17-lisr-art106-provisionales-retencion"
+              ],
+              [
+                "ev-c17-lisr-art106-provisionales-retencion"
+              ],
+              [
+                "ev-c17-lisr-art106-provisionales-retencion"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cómo trata la persona física la retención anterior?",
+            "difficulty": "intermediate",
+            "options": [
+              "Como pago provisional acreditable",
+              "Como gasto de papelería",
+              "Como multa definitiva"
+            ],
+            "correctOption": 0,
+            "explanation": "La retención se acredita contra el ISR del pago provisional.",
+            "optionExplanations": [
+              "Es su función legal.",
+              "No es una adquisición.",
+              "No es sanción."
+            ],
+            "evidenceIds": [
+              "ev-c17-lisr-art106-provisionales-retencion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c17-lisr-art106-provisionales-retencion"
+              ],
+              [
+                "ev-c17-lisr-art106-provisionales-retencion"
+              ],
+              [
+                "ev-c17-lisr-art106-provisionales-retencion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c17-lisr-art106-provisionales-retencion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c17-lisr-art106-provisionales-retencion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c17-lisr-art106-provisionales-retencion"
+              ],
+              [
+                "ev-c17-lisr-art106-provisionales-retencion"
+              ],
+              [
+                "ev-c17-lisr-art106-provisionales-retencion"
+              ]
+            ]
+          },
+          {
+            "text": "Una computadora se usa durante varios años en la actividad. ¿Qué tratamiento debe analizarse?",
+            "difficulty": "intermediate",
+            "options": [
+              "Inversión sujeta a porcentajes",
+              "Deducción personal médica",
+              "Ingreso exento"
+            ],
+            "correctOption": 0,
+            "explanation": "Un activo fijo se analiza bajo las reglas de inversiones de los artículos 104 y relacionados.",
+            "optionExplanations": [
+              "Es la categoría adecuada.",
+              "No es gasto médico.",
+              "Es una erogación, no ingreso."
+            ],
+            "evidenceIds": [
+              "ev-c17-lisr-arts103-105-deducciones"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c17-lisr-arts103-105-deducciones"
+              ],
+              [
+                "ev-c17-lisr-arts103-105-deducciones"
+              ],
+              [
+                "ev-c17-lisr-arts103-105-deducciones"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c17-lisr-arts103-105-deducciones"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c17-lisr-arts103-105-deducciones"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c17-lisr-arts103-105-deducciones"
+              ],
+              [
+                "ev-c17-lisr-arts103-105-deducciones"
+              ],
+              [
+                "ev-c17-lisr-arts103-105-deducciones"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál fórmula simplificada describe mejor el pago provisional acumulado?",
+            "difficulty": "advanced",
+            "options": [
+              "Ingresos menos deducciones y conceptos legales, tarifa, menos pagos previos y retenciones",
+              "Aplicar un porcentaje fijo sin considerar las reglas del periodo",
+              "CFDI emitidos menos RFC registrados"
+            ],
+            "correctOption": 0,
+            "explanation": "Resume la mecánica del artículo 106 sin sustituir la tarifa y reglas del ejercicio.",
+            "optionExplanations": [
+              "Contiene los componentes esenciales.",
+              "No es la mecánica legal.",
+              "Mezcla documentos con base fiscal."
+            ],
+            "evidenceIds": [
+              "ev-c17-lisr-art106-provisionales-retencion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c17-lisr-art106-provisionales-retencion"
+              ],
+              [
+                "ev-c17-lisr-art106-provisionales-retencion"
+              ],
+              [
+                "ev-c17-lisr-art106-provisionales-retencion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c17-lisr-art106-provisionales-retencion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c17-lisr-art106-provisionales-retencion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c17-lisr-art106-provisionales-retencion"
+              ],
+              [
+                "ev-c17-lisr-art106-provisionales-retencion"
+              ],
+              [
+                "ev-c17-lisr-art106-provisionales-retencion"
+              ]
+            ]
+          },
+          {
+            "text": "Una persona mayor de edad está inscrita en RFC sin actividad económica. ¿Qué conclusión es correcta?",
+            "difficulty": "intermediate",
+            "options": [
+              "Debe pagar ISR aunque no tenga ingreso",
+              "La inscripción no genera por sí sola obligaciones hasta iniciar actividad",
+              "Queda autorizada a simular gastos"
+            ],
+            "correctOption": 1,
+            "explanation": "El CFF prevé inscripción sin obligaciones fiscales para quien no realiza actividad económica.",
+            "optionExplanations": [
+              "Sin el hecho gravado no surge ISR por la mera inscripción.",
+              "Es la regla correcta.",
+              "Ninguna inscripción autoriza simulación."
+            ],
+            "evidenceIds": [
+              "ev-c17-cff-art27-rfc"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c17-cff-art27-rfc"
+              ],
+              [
+                "ev-c17-cff-art27-rfc"
+              ],
+              [
+                "ev-c17-cff-art27-rfc"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c17-cff-art27-rfc"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c17-cff-art27-rfc"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c17-cff-art27-rfc"
+              ],
+              [
+                "ev-c17-cff-art27-rfc"
+              ],
+              [
+                "ev-c17-cff-art27-rfc"
+              ]
+            ]
+          },
+          {
+            "text": "Un asalariado escucha que solo declara al superar 500,000 pesos. ¿Qué debe responderse?",
+            "difficulty": "advanced",
+            "options": [
+              "Es un umbral universal",
+              "Debe revisar los supuestos específicos de los artículos 98 y 150",
+              "Nunca presenta anual"
+            ],
+            "correctOption": 1,
+            "explanation": "La obligación anual depende del tipo de ingreso; los artículos 98 y 150 asignan funciones distintas a sus supuestos y cifras.",
+            "optionExplanations": [
+              "La ley no establece esa regla universal.",
+              "Es el análisis normativo correcto.",
+              "La ley sí prevé diversos supuestos de declaración."
+            ],
+            "evidenceIds": [
+              "ev-c17-lisr-art98-salarios-anual",
+              "ev-c17-lisr-arts109-150-152-anual"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c17-lisr-art98-salarios-anual",
+                "ev-c17-lisr-arts109-150-152-anual"
+              ],
+              [
+                "ev-c17-lisr-art98-salarios-anual",
+                "ev-c17-lisr-arts109-150-152-anual"
+              ],
+              [
+                "ev-c17-lisr-art98-salarios-anual",
+                "ev-c17-lisr-arts109-150-152-anual"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c17-lisr-art98-salarios-anual",
+              "ev-c17-lisr-arts109-150-152-anual"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c17-lisr-art98-salarios-anual",
+              "ev-c17-lisr-arts109-150-152-anual"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c17-lisr-art98-salarios-anual",
+                "ev-c17-lisr-arts109-150-152-anual"
+              ],
+              [
+                "ev-c17-lisr-art98-salarios-anual",
+                "ev-c17-lisr-arts109-150-152-anual"
+              ],
+              [
+                "ev-c17-lisr-art98-salarios-anual",
+                "ev-c17-lisr-arts109-150-152-anual"
+              ]
+            ]
+          },
+          {
+            "text": "Un contribuyente compra CFDI de operaciones inexistentes para reducir ISR. ¿Cuál es la valoración correcta?",
+            "difficulty": "advanced",
+            "options": [
+              "Deducción válida por pagar en efectivo",
+              "Operación no deducible por falta de realidad y requisitos",
+              "Deducción válida por tener folio"
+            ],
+            "correctOption": 1,
+            "explanation": "La deducción exige una operación real y los requisitos legales; el CFDI aislado no demuestra por sí mismo la materialidad.",
+            "optionExplanations": [
+              "La forma de pago no sustituye la realidad y los requisitos.",
+              "Es la valoración fiscal sustentada.",
+              "El folio no prueba por sí solo la operación."
+            ],
+            "evidenceIds": [
+              "ev-c17-lisr-arts103-105-deducciones",
+              "ev-c17-cff-arts29-29a-cfdi",
+              "ev-c17-cff-art30-conservacion",
+              "ev-c17-a26-l213-215-deduccion-simulada",
+              "ev-c17-a26-l251-253-materialidad-pago"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c17-lisr-arts103-105-deducciones",
+                "ev-c17-cff-arts29-29a-cfdi",
+                "ev-c17-cff-art30-conservacion",
+                "ev-c17-a26-l213-215-deduccion-simulada",
+                "ev-c17-a26-l251-253-materialidad-pago"
+              ],
+              [
+                "ev-c17-lisr-arts103-105-deducciones",
+                "ev-c17-cff-arts29-29a-cfdi",
+                "ev-c17-cff-art30-conservacion",
+                "ev-c17-a26-l213-215-deduccion-simulada",
+                "ev-c17-a26-l251-253-materialidad-pago"
+              ],
+              [
+                "ev-c17-lisr-arts103-105-deducciones",
+                "ev-c17-cff-arts29-29a-cfdi",
+                "ev-c17-cff-art30-conservacion",
+                "ev-c17-a26-l213-215-deduccion-simulada",
+                "ev-c17-a26-l251-253-materialidad-pago"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c17-lisr-arts103-105-deducciones",
+              "ev-c17-cff-arts29-29a-cfdi",
+              "ev-c17-cff-art30-conservacion",
+              "ev-c17-a26-l213-215-deduccion-simulada",
+              "ev-c17-a26-l251-253-materialidad-pago"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c17-lisr-arts103-105-deducciones",
+              "ev-c17-cff-arts29-29a-cfdi",
+              "ev-c17-cff-art30-conservacion",
+              "ev-c17-a26-l213-215-deduccion-simulada",
+              "ev-c17-a26-l251-253-materialidad-pago"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c17-lisr-arts103-105-deducciones",
+                "ev-c17-cff-arts29-29a-cfdi",
+                "ev-c17-cff-art30-conservacion",
+                "ev-c17-a26-l213-215-deduccion-simulada",
+                "ev-c17-a26-l251-253-materialidad-pago"
+              ],
+              [
+                "ev-c17-lisr-arts103-105-deducciones",
+                "ev-c17-cff-arts29-29a-cfdi",
+                "ev-c17-cff-art30-conservacion",
+                "ev-c17-a26-l213-215-deduccion-simulada",
+                "ev-c17-a26-l251-253-materialidad-pago"
+              ],
+              [
+                "ev-c17-lisr-arts103-105-deducciones",
+                "ev-c17-cff-arts29-29a-cfdi",
+                "ev-c17-cff-art30-conservacion",
+                "ev-c17-a26-l213-215-deduccion-simulada",
+                "ev-c17-a26-l251-253-materialidad-pago"
+              ]
+            ]
+          }
         ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c17-lisr-art1-sujetos",
+      "kind": "official",
+      "title": "Ley del Impuesto sobre la Renta",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LISR.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 01-04-2024; artículo 1",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c17-lisr-arts90-100-102-ingresos",
+      "kind": "official",
+      "title": "Ley del Impuesto sobre la Renta",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LISR.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 01-04-2024; artículos 90 y 100 a 102",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c17-lisr-art98-salarios-anual",
+      "kind": "official",
+      "title": "Ley del Impuesto sobre la Renta",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LISR.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 01-04-2024; artículo 98, fracción III",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c17-lisr-arts103-105-deducciones",
+      "kind": "official",
+      "title": "Ley del Impuesto sobre la Renta",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LISR.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 01-04-2024; artículos 103 a 105",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c17-lisr-art106-provisionales-retencion",
+      "kind": "official",
+      "title": "Ley del Impuesto sobre la Renta",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LISR.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 01-04-2024; artículo 106",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c17-lisr-arts109-150-152-anual",
+      "kind": "official",
+      "title": "Ley del Impuesto sobre la Renta",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LISR.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 01-04-2024; artículos 109, 150 y 152",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c17-lisr-arts28-151-limites-personales",
+      "kind": "official",
+      "title": "Ley del Impuesto sobre la Renta",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LISR.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 01-04-2024; artículos 28 y 151",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c17-cff-art27-rfc",
+      "kind": "official",
+      "title": "Código Fiscal de la Federación",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 09-04-2026; artículo 27",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c17-cff-arts29-29a-cfdi",
+      "kind": "official",
+      "title": "Código Fiscal de la Federación",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 09-04-2026; artículos 29 y 29-A",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c17-cff-art30-conservacion",
+      "kind": "official",
+      "title": "Código Fiscal de la Federación",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 09-04-2026; artículo 30",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c17-a26-l025-029-regimen-retenciones",
+      "kind": "transcript",
+      "audioNumber": 26,
+      "locator": {
+        "type": "line_range",
+        "startLine": 25,
+        "endLine": 29
+      }
+    },
+    {
+      "id": "ev-c17-a26-l035-deposito-ingreso",
+      "kind": "transcript",
+      "audioNumber": 26,
+      "locator": {
+        "type": "line_range",
+        "startLine": 35,
+        "endLine": 35
+      }
+    },
+    {
+      "id": "ev-c17-a26-l079-081-cfdi-gasto",
+      "kind": "transcript",
+      "audioNumber": 26,
+      "locator": {
+        "type": "line_range",
+        "startLine": 79,
+        "endLine": 81
+      }
+    },
+    {
+      "id": "ev-c17-a26-l213-215-deduccion-simulada",
+      "kind": "transcript",
+      "audioNumber": 26,
+      "locator": {
+        "type": "line_range",
+        "startLine": 213,
+        "endLine": 215
+      }
+    },
+    {
+      "id": "ev-c17-a26-l251-253-materialidad-pago",
+      "kind": "transcript",
+      "audioNumber": 26,
+      "locator": {
+        "type": "line_range",
+        "startLine": 251,
+        "endLine": 253
       }
     }
   ]

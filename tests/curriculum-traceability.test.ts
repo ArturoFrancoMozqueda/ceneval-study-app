@@ -246,6 +246,39 @@ const traceablePackages = [
       /artículo 105, fracción II, inciso g\)/i,
     ],
   },
+  {
+    code: "C17",
+    fileName: "audio-26-isr-ingresos-retenciones-deducciones.json",
+    artifacts: 142,
+    evidence: 15,
+    forbiddenClaims: [
+      /(?:umbral|límite) (?:general|universal) de (?:400|500)[,.]?000 pesos/i,
+      /tasa fija (?:general )?de 30%/i,
+    ],
+    requiredClaims: [
+      /persona moral paga servicios profesionales a una persona física de este régimen, debe retener 10%/i,
+      /CFDI es necesario en muchos casos, pero no suficiente/i,
+      /500,000 pesos.*función informativa distinta.*no crea la regla general/i,
+      /última reforma DOF 09-04-2026/i,
+    ],
+  },
+  {
+    code: "C18",
+    fileName: "audio-27-iva-ieps.json",
+    artifacts: 142,
+    evidence: 10,
+    forbiddenClaims: [
+      /tasa general (?:del )?IVA (?:es|de) 14%/i,
+      /IEPS significa impuesto especial sobre productos y servicios/i,
+    ],
+    requiredClaims: [
+      /tasa general es 16%; también existen actos a tasa 0%, exentos y no objeto/i,
+      /acreditarlo contra IVA de meses siguientes.*solicitar devolución/i,
+      /estímulos fronterizos no crean una tasa general de 14%/i,
+      /tasas porcentuales y cuotas/i,
+      /cuotas actualizadas DOF 22-12-2025/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -421,6 +454,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una generalización retirada como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C17" || expected.code === "C18") {
+      const obsoleteAsCurrent =
+        expected.code === "C17"
+          ? /(?:400|500)[,.]?000 pesos.*(?:umbral|límite) (?:general|universal)|tasa fija.*30%|CFDI.*(?:basta|garantiza).*deducci/i
+          : /tasa (?:general )?(?:de )?14%|saldo a favor.*compens.*ISR|destruir inventario.*devolución|todo servicio extranjero.*IEPS/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una cifra obsoleta o generalización retirada como respuesta vigente.`,
         );
       }
     }

@@ -64,7 +64,7 @@ const legacyPackagePath = path.join(
   process.cwd(),
   "content",
   "packages",
-  "audio-26-isr-ingresos-retenciones-deducciones.json",
+  "audio-67-obligaciones-fiscales-regimen.json",
 );
 
 function readLegacyPackage() {
