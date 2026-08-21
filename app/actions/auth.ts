@@ -1,8 +1,14 @@
 "use server";
 
-import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { isPrivateAccessOnly } from "@/lib/access";
+import {
+  authCallbackUrl,
+  isAuthorizedPrivateRegistration,
+  PRIVATE_REGISTRATION_MESSAGE,
+  validatePasswordInput,
+  validateRegistrationInput,
+} from "@/lib/auth/registration";
 import {
   invalidCredentialsState,
   type SignInState,
@@ -61,54 +67,60 @@ export async function signInAction(
 }
 
 export async function signUpAction(formData: FormData) {
-  if (isPrivateAccessOnly()) {
-    authError(
-      "/iniciar-sesion",
-      "El registro está desactivado porque esta aplicación es privada.",
-    );
-  }
-
   const fullName = value(formData, "fullName");
   const email = value(formData, "email").toLowerCase();
   const password = value(formData, "password");
+  const validation = validateRegistrationInput({ fullName, email, password });
 
-  if (fullName.length < 2) {
-    authError("/registro", "Escribe tu nombre.", "fullName");
+  if (!validation.success) {
+    authError("/registro", validation.message, validation.field);
   }
-  if (!email.includes("@")) {
-    authError("/registro", "Escribe un correo válido.", "email");
-  }
-  if (password.length < 8) {
-    authError(
-      "/registro",
-      "La contraseña debe tener al menos 8 caracteres.",
-      "password",
+
+  const privateAccessOnly = isPrivateAccessOnly();
+  if (
+    privateAccessOnly &&
+    !isAuthorizedPrivateRegistration(
+      validation.data.email,
+      process.env.ADMIN_EMAIL,
+    )
+  ) {
+    redirect(
+      `/iniciar-sesion?message=${encodeURIComponent(PRIVATE_REGISTRATION_MESSAGE)}`,
     );
   }
 
-  const headerStore = await headers();
-  const origin =
-    headerStore.get("origin") ??
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    "http://localhost:3000";
   const supabase = await createServerSupabaseClient();
   const { error } = await supabase.auth.signUp({
-    email,
-    password,
+    email: validation.data.email,
+    password: validation.data.password,
     options: {
-      data: { full_name: fullName },
-      emailRedirectTo: `${origin}/auth/confirm`,
+      data: { full_name: validation.data.fullName },
+      emailRedirectTo: authCallbackUrl(
+        "/auth/confirm",
+        process.env.NEXT_PUBLIC_SITE_URL,
+      ),
     },
   });
 
   if (error) {
+    if (privateAccessOnly) {
+      redirect(
+        `/iniciar-sesion?message=${encodeURIComponent(PRIVATE_REGISTRATION_MESSAGE)}`,
+      );
+    }
     authError(
       "/registro",
       "No pudimos crear la cuenta. Revisa los datos o intenta nuevamente.",
     );
   }
 
-  redirect("/iniciar-sesion?message=Revisa tu correo para confirmar la cuenta.");
+  redirect(
+    `/iniciar-sesion?message=${encodeURIComponent(
+      privateAccessOnly
+        ? PRIVATE_REGISTRATION_MESSAGE
+        : "Revisa tu correo para confirmar la cuenta.",
+    )}`,
+  );
 }
 
 export async function requestPasswordResetAction(formData: FormData) {
@@ -121,22 +133,13 @@ export async function requestPasswordResetAction(formData: FormData) {
     );
   }
 
-  const headerStore = await headers();
-  const origin =
-    headerStore.get("origin") ??
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    "http://localhost:3000";
   const supabase = await createServerSupabaseClient();
-  const { error } = await supabase.auth.resetPasswordForEmail(email, {
-    redirectTo: `${origin}/auth/confirm?next=/actualizar-contrasena`,
+  await supabase.auth.resetPasswordForEmail(email, {
+    redirectTo: authCallbackUrl(
+      "/auth/confirm?next=/actualizar-contrasena",
+      process.env.NEXT_PUBLIC_SITE_URL,
+    ),
   });
-
-  if (error) {
-    authError(
-      "/recuperar-contrasena",
-      "No pudimos enviar el correo. Intenta nuevamente.",
-    );
-  }
 
   redirect(
     "/iniciar-sesion?message=Si el correo existe, recibirás un enlace para cambiar tu contraseña.",
@@ -145,16 +148,19 @@ export async function requestPasswordResetAction(formData: FormData) {
 
 export async function updatePasswordAction(formData: FormData) {
   const password = value(formData, "password");
-  if (password.length < 8) {
+  const validation = validatePasswordInput(password);
+  if (!validation.success) {
     authError(
       "/actualizar-contrasena",
-      "La contraseña debe tener al menos 8 caracteres.",
+      validation.message,
       "password",
     );
   }
 
   const supabase = await createServerSupabaseClient();
-  const { error } = await supabase.auth.updateUser({ password });
+  const { error } = await supabase.auth.updateUser({
+    password: validation.password,
+  });
 
   if (error) {
     authError(

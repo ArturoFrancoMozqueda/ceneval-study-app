@@ -13,12 +13,12 @@ export default async function UpdatePasswordPage({
   return (
     <AuthCard
       action={updatePasswordAction}
-      description="Elige una contraseña segura de al menos 8 caracteres."
+      description="Elige una contraseña segura de 12 a 128 caracteres."
       error={field ? undefined : error}
       fields={
         <AuthField
           autoComplete="new-password"
-          description="Usa al menos 8 caracteres; puedes apoyarte en un gestor de contraseñas."
+          description="Incluye al menos una letra y un número; puedes apoyarte en un gestor de contraseñas."
           error={field === "password" ? error : undefined}
           label="Nueva contraseña"
           name="password"
