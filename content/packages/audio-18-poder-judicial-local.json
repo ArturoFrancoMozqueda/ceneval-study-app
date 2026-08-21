@@ -1,5 +1,12 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C04",
+    "order": 4,
+    "audioSources": [
+      {"audioNumber": 18,"fragment": "Audio completo"}
+    ]
+  },
   "subject": {
     "name": "Teoría procesal y organización judicial",
     "description": "Bases del ejercicio jurisdiccional, competencia, resoluciones judiciales y estructura de los órganos que imparten justicia."
@@ -9,7 +16,7 @@
     "description": "Cuarta clase del curso: comprende la justicia de las entidades federativas, distingue primera y segunda instancia y determina cómo verificar recursos y conflictos competenciales."
   },
   "transcript": {
-    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 18.txt",
+    "originalFile": "AUDIO 18.txt",
     "cleaned": "El Audio 18 presenta la organización judicial de las entidades federativas, la relación entre órganos de primera y segunda instancia, la posible existencia de juzgados de menor cuantía o especializados, la apelación y los conflictos de competencia. Se conservaron los ejemplos que permiten reconocer materia, grado, territorio y cuantía. Se eliminaron promociones, bromas, comentarios personales, cifras salariales y opiniones políticas. Se corrigieron afirmaciones absolutas: la denominación y estructura de los órganos locales no es idéntica en todo México; la existencia de juzgados menores, sus materias, cuantías y recursos depende de la constitución, ley orgánica y legislación procesal aplicables; tampoco toda sentencia de primera instancia es apelable. La explicación se actualizó con los artículos 17 y 116 de la Constitución federal, el CNPCF y, como ejemplo de consulta local, el catálogo legislativo oficial de Michoacán."
   },
   "topics": [

@@ -1,8 +1,15 @@
 {
-  "packageVersion":"1.0",
+  "packageVersion":"1.1",
+  "curriculum":{
+    "code":"C18",
+    "order":18,
+    "audioSources":[
+      {"audioNumber":27,"fragment":"Audio completo"}
+    ]
+  },
   "subject":{"name":"Derecho Fiscal","description":"Contribuciones, obligaciones fiscales y medios de defensa en México."},
   "class":{"title":"IVA e IEPS: traslado, acreditamiento y diferencias","description":"Decimoctava clase del curso: actos gravados, traslado, retención, acreditamiento y saldos a favor de IVA, además de sujetos, tasas y cuotas del IEPS."},
-  "transcript":{"originalFile":"F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 27.txt","cleaned":"Se conservaron las ideas útiles sobre impuestos indirectos, cadena económica, traslado, acreditamiento, saldo a favor e IEPS. Se eliminaron anuncios, datos personales, expresiones ofensivas, opiniones partidistas, relatos sobre adicciones, consejos para eludir controles aduaneros y afirmaciones médicas no verificadas. Se corrigió que la tasa general de IVA es 16% y que los estímulos fronterizos no crean una tasa general de 14%; que el IVA acreditable exige los requisitos del artículo 5; que un saldo a favor puede acreditarse contra IVA futuro o solicitarse en devolución, pero no compensarse libremente contra ISR; que no existe una obligación general de entregar o destruir inventario para obtener devolución; que la persona moral receptora, y no el profesionista, retiene IVA en los supuestos legales; que IEPS significa Impuesto Especial sobre Producción y Servicios; que usa tasas y cuotas según el bien o servicio; que no grava exclusivamente productos nocivos; que contratar a una persona extranjera no causa IEPS por sí mismo; y que la coexistencia de IVA e IEPS no es automáticamente inconstitucional."},
+  "transcript":{"originalFile":"AUDIO 27.txt","cleaned":"Se conservaron las ideas útiles sobre impuestos indirectos, cadena económica, traslado, acreditamiento, saldo a favor e IEPS. Se eliminaron anuncios, datos personales, expresiones ofensivas, opiniones partidistas, relatos sobre adicciones, consejos para eludir controles aduaneros y afirmaciones médicas no verificadas. Se corrigió que la tasa general de IVA es 16% y que los estímulos fronterizos no crean una tasa general de 14%; que el IVA acreditable exige los requisitos del artículo 5; que un saldo a favor puede acreditarse contra IVA futuro o solicitarse en devolución, pero no compensarse libremente contra ISR; que no existe una obligación general de entregar o destruir inventario para obtener devolución; que la persona moral receptora, y no el profesionista, retiene IVA en los supuestos legales; que IEPS significa Impuesto Especial sobre Producción y Servicios; que usa tasas y cuotas según el bien o servicio; que no grava exclusivamente productos nocivos; que contratar a una persona extranjera no causa IEPS por sí mismo; y que la coexistencia de IVA e IEPS no es automáticamente inconstitucional."},
   "topics":[{
     "title":"Mecánica del IVA y estructura del IEPS",
     "description":"Cómo distinguir objeto, traslado, acreditamiento, retención y saldo a favor de IVA, y cuándo un bien o servicio se ubica en IEPS.",

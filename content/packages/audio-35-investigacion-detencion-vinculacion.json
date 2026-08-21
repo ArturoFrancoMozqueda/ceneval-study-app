@@ -1,8 +1,15 @@
 {
-  "packageVersion":"1.0",
+  "packageVersion":"1.1",
+  "curriculum":{
+    "code":"C25",
+    "order":25,
+    "audioSources":[
+      {"audioNumber":35,"fragment":"Primera parte: investigación inicial y vinculación"}
+    ]
+  },
   "subject":{"name":"Derecho Penal y Procesal Penal","description":"Teoría del delito, derechos de las partes, investigación, proceso penal acusatorio y soluciones alternas."},
   "class":{"title":"Investigación inicial, detención, imputación y vinculación","description":"Vigesimoquinta clase del plan académico: fases de investigación, flagrancia, retención ministerial, audiencia inicial, imputación y auto de vinculación."},
-  "transcript":{"originalFile":"F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 35.txt","cleaned":"Se conservaron las explicaciones sobre investigación inicial, flagrancia, Informe Policial Homologado, retención ministerial, control judicial, formulación de imputación, declaración y vinculación a proceso. Se eliminaron bromas, insultos, precios de servicios, datos personales, opiniones políticas, relatos de violencia y afirmaciones que normalizaban golpes, tortura, fabricación de indicios o relaciones indebidas. Se corrigió que el uso de la fuerza solo puede ser legal, necesario, preventivo, proporcional, racional y oportuno; que la tortura y el maltrato están prohibidos; que la investigación inicial comienza con denuncia, querella u requisito equivalente y termina cuando la persona queda a disposición del juez para formular imputación; que la complementaria comienza con la formulación; que una detención ilegal produce libertad con reservas de ley, pero no extingue por sí sola la investigación; que imputación comunica hechos investigados y no equivale a acusación ni condena; que vinculación exige los cuatro requisitos del artículo 316 del CNPP; y que el plazo constitucional de 72 horas puede ampliarse a 144 únicamente a petición del imputado."},
+  "transcript":{"originalFile":"AUDIO 35.txt","cleaned":"Se conservaron las explicaciones sobre investigación inicial, flagrancia, Informe Policial Homologado, retención ministerial, control judicial, formulación de imputación, declaración y vinculación a proceso. Se eliminaron bromas, insultos, precios de servicios, datos personales, opiniones políticas, relatos de violencia y afirmaciones que normalizaban golpes, tortura, fabricación de indicios o relaciones indebidas. Se corrigió que el uso de la fuerza solo puede ser legal, necesario, preventivo, proporcional, racional y oportuno; que la tortura y el maltrato están prohibidos; que la investigación inicial comienza con denuncia, querella u requisito equivalente y termina cuando la persona queda a disposición del juez para formular imputación; que la complementaria comienza con la formulación; que una detención ilegal produce libertad con reservas de ley, pero no extingue por sí sola la investigación; que imputación comunica hechos investigados y no equivale a acusación ni condena; que vinculación exige los cuatro requisitos del artículo 316 del CNPP; y que el plazo constitucional de 72 horas puede ampliarse a 144 únicamente a petición del imputado."},
   "topics":[{
     "title":"De la noticia criminal al auto de vinculación",
     "description":"Secuencia y controles que transforman una investigación en un proceso sujeto a hechos definidos.",

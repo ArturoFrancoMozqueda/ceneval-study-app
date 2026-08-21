@@ -20,7 +20,9 @@ navegación, accesibilidad, estados de interfaz, dependencias y CI.
 
 Los bloqueos operativos reales siguen siendo:
 
-1. las transcripciones originales dependen del disco `F:`;
+1. los 70 TXT originales ya tienen una primera copia privada verificada con
+   SHA-256, pero todavía falta una segunda copia independiente y ensayar su
+   restauración;
 2. existe un procedimiento seguro de respaldo, pero todavía no una exportación
    comprobable de la base, una copia externa ni una restauración probada;
 3. el esquema y las once migraciones ya están aplicados en CENEVAL, pero la
@@ -80,10 +82,11 @@ anterior, pero esos datos no están presentes en el proyecto CENEVAL conectado:
 | Flashcards | 480 |
 | Preguntas de examen | 400 |
 
-El repositorio conserva 41 paquetes históricos y la siguiente clase planeada es
-**C41 — Juicio ejecutivo mercantil oral**, con Audio 54 y la primera parte del
-Audio 55. Antes de disponer de esa biblioteca en la aplicación habrá que
-recuperar/importar C01–C40 en el proyecto CENEVAL correcto.
+El repositorio conserva 40 paquetes vigentes C01–C40 en contrato 1.1 y una
+versión retirada en el archivo editorial. La siguiente clase planeada es **C41
+— Juicio ejecutivo mercantil oral**, con Audio 54 y la primera parte del Audio
+55. Antes de disponer de esa biblioteca en la aplicación habrá que
+importar C01–C40 en el proyecto CENEVAL correcto.
 
 Existen tres identificadores distintos:
 
@@ -179,10 +182,10 @@ El bloqueo por clases nuevas sin código quedó corregido en el código:
 - detecta colisiones de código u orden antes de crear la clase;
 - si falla después de crearla, intenta borrar la clase parcial.
 
-Los 41 paquetes existentes continúan en contrato 1.0 y se conservan como
-históricos. El importador los rechaza de forma explícita: cualquier paquete
-nuevo, incluida C41, debe prepararse en 1.1. Los paquetes 1.0 deben migrarse si
-alguna vez se pretende reimportarlos.
+Los 40 paquetes vigentes C01–C40 ya fueron migrados al contrato 1.1, con código,
+orden y fuentes de audio portables. La versión piloto sustituida de C14 se
+conserva en `content/archive/withdrawn/` con contrato 1.0 para trazabilidad y no
+es importable. Cualquier paquete nuevo, incluida C41, debe prepararse en 1.1.
 
 La corrección está probada de forma local a nivel de esquema y código, pero C41
 aún no se ha importado para demostrar el recorrido completo en la base remota.
@@ -347,7 +350,9 @@ Además siguen pendientes tres bancos transversales y 16 exámenes acumulativos.
 
 ### Prioridad 0 — Proteger y comprobar
 
-1. Copiar las transcripciones fuera del disco `F:` y verificar la copia.
+1. Crear una segunda copia independiente de las 70 transcripciones y verificarla
+   contra el manifiesto privado; la primera copia ya fue comprobada el 21 de
+   agosto de 2026 sin diferencias.
 2. Seguir `docs/SUPABASE_BACKUP.md`: generar una exportación autorizada,
    verificarla, copiarla fuera del equipo y restaurarla en un proyecto de ensayo.
 3. Ampliar y ejecutar `npm run security:rls` en el proyecto CENEVAL y
@@ -396,7 +401,7 @@ publicación, navegación y un commit por unidad de trabajo.
 
 | # | Tarea | Evidencia para cerrarla |
 | ---: | --- | --- |
-| 1 | Respaldar las transcripciones | Copia verificada fuera de `F:` |
+| 1 | Completar el respaldo de transcripciones | Segunda copia independiente y restauración de ensayo |
 | 2 | Ejecutar y probar el respaldo documentado | Exportación fechada, copia externa verificada y restauración de ensayo |
 | 3 | Ampliar y ejecutar la suite RLS | Comprobaciones actuales y casos de temas no aprobados aprobados en CENEVAL |
 | 4 | Preparar C41 en contrato 1.1 | `content:check` aprobado |
@@ -430,7 +435,7 @@ No hace falta reconstruir CI, estados, numeración, repaso, examen ni el soporte
 1.1 del importador: ya están integrados. La siguiente acción es proteger los
 datos y cerrar la diferencia entre código y base remota:
 
-1. respaldar `F:`;
+1. crear una segunda copia independiente del archivo editorial y ensayar su restauración;
 2. ejecutar y completar el procedimiento de `docs/SUPABASE_BACKUP.md`;
 3. ampliar y ejecutar la suite RLS remota únicamente en CENEVAL;
 4. preparar e importar C41 con contrato 1.1.

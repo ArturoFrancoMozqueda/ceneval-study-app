@@ -1,5 +1,12 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C12",
+    "order": 12,
+    "audioSources": [
+      {"audioNumber": 13,"fragment": "Audio completo"}
+    ]
+  },
   "subject": {
     "name": "Derecho electoral y juicio de amparo",
     "description": "Derechos político-electorales, sistema de medios de impugnación y mecanismos constitucionales de protección."
@@ -9,7 +16,7 @@
     "description": "Duodécima clase del curso: reconoce los supuestos del amparo indirecto, la legitimación, el acto reclamado, las autoridades responsables y las reglas esenciales de suspensión."
   },
   "transcript": {
-    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 13.txt",
+    "originalFile": "AUDIO 13.txt",
     "cleaned": "Se conservó el bloque académico del Audio 13 y se eliminaron anuncios, repeticiones, bromas, datos personales y afirmaciones sin sustento. Se corrigió que el amparo indirecto solo procede en los supuestos del artículo 107 de la Ley de Amparo; que una persona particular únicamente puede ser autoridad responsable si realiza actos equivalentes a los de autoridad con funciones determinadas por una norma general; y que madres, padres o acreedores alimentarios no adquieren automáticamente esa calidad. También se precisó que la presentación por comparecencia tiene reglas excepcionales y que WhatsApp no es una vía general de promoción; que una persona menor puede pedir amparo bajo las condiciones del artículo 8, pero no representar libremente cualquier agravio ajeno; que el interés jurídico no se reduce a aparecer en una orden; que los actos futuros requieren certeza de inminencia o una presunción razonable; y que la suspensión puede ser de oficio o a petición según el caso. La audiencia, sentencia y revisión se reservan para la clase siguiente basada en el Audio 16."
   },
   "topics": [

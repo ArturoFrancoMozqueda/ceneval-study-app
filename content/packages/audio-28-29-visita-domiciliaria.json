@@ -1,8 +1,16 @@
 {
-  "packageVersion":"1.0",
+  "packageVersion":"1.1",
+  "curriculum":{
+    "code":"C20",
+    "order":20,
+    "audioSources":[
+      {"audioNumber":28,"fragment":"Audio completo"},
+      {"audioNumber":29,"fragment":"Primera parte: actas y crédito fiscal"}
+    ]
+  },
   "subject":{"name":"Derecho Fiscal","description":"Contribuciones, obligaciones fiscales, facultades de comprobación y medios de defensa en México."},
   "class":{"title":"Visita domiciliaria y determinación del crédito fiscal","description":"Vigésima clase del plan académico: requisitos de la orden, inicio y desarrollo de la visita fiscal, actas, oportunidad para desvirtuar y resolución determinante."},
-  "transcript":{"originalFiles":["F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 28.txt","F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 29.txt"],"cleaned":"Se integró el AUDIO 28 y únicamente el bloque inicial del AUDIO 29 que concluye la visita domiciliaria; el desarrollo del recurso de revocación queda reservado para C21. Se eliminaron saludos, bromas, lenguaje ofensivo, opiniones partidistas, generalizaciones sobre autoridades y sugerencias de fabricar documentos o corromper servidores públicos. Se corrigió que el artículo 42 enumera facultades de comprobación y la visita para revisar contabilidad, bienes y mercancías está en su fracción III; que la orden suma los requisitos de los artículos 38 y 43 del CFF; que los visitadores pueden actuar conjunta o separadamente y no existe una regla universal de dos visitadores; que la negativa a firmar no invalida por sí sola el acta; que entre la última acta parcial y la final deben transcurrir al menos veinte días, ampliables quince si se revisa más de un ejercicio y se presenta aviso; que el plazo ordinario para concluir la visita es doce meses, con excepciones y suspensiones; que la resolución determinante se notifica dentro de seis meses desde el acta final; que un crédito fiscal no equivale únicamente a multa; y que la caducidad del artículo 67 no autoriza a describir toda revisión como cinco ejercicios anteriores ni se confunde con el plazo de cobro."},
+  "transcript":{"originalFiles":["AUDIO 28.txt","AUDIO 29.txt"],"cleaned":"Se integró el AUDIO 28 y únicamente el bloque inicial del AUDIO 29 que concluye la visita domiciliaria; el desarrollo del recurso de revocación queda reservado para C21. Se eliminaron saludos, bromas, lenguaje ofensivo, opiniones partidistas, generalizaciones sobre autoridades y sugerencias de fabricar documentos o corromper servidores públicos. Se corrigió que el artículo 42 enumera facultades de comprobación y la visita para revisar contabilidad, bienes y mercancías está en su fracción III; que la orden suma los requisitos de los artículos 38 y 43 del CFF; que los visitadores pueden actuar conjunta o separadamente y no existe una regla universal de dos visitadores; que la negativa a firmar no invalida por sí sola el acta; que entre la última acta parcial y la final deben transcurrir al menos veinte días, ampliables quince si se revisa más de un ejercicio y se presenta aviso; que el plazo ordinario para concluir la visita es doce meses, con excepciones y suspensiones; que la resolución determinante se notifica dentro de seis meses desde el acta final; que un crédito fiscal no equivale únicamente a multa; y que la caducidad del artículo 67 no autoriza a describir toda revisión como cinco ejercicios anteriores ni se confunde con el plazo de cobro."},
   "topics":[{
     "title":"Orden, actas y resolución en la visita fiscal",
     "description":"Secuencia constitucional y legal para comprobar obligaciones en el domicilio y, en su caso, determinar contribuciones omitidas.",

@@ -1,8 +1,15 @@
 {
-  "packageVersion":"1.0",
+  "packageVersion":"1.1",
+  "curriculum":{
+    "code":"C21",
+    "order":21,
+    "audioSources":[
+      {"audioNumber":29,"fragment":"Segunda parte: recurso de revocación"}
+    ]
+  },
   "subject":{"name":"Derecho Fiscal","description":"Contribuciones, obligaciones fiscales, facultades de comprobación y medios de defensa en México."},
   "class":{"title":"Recurso de revocación en materia fiscal","description":"Vigésima primera clase del plan académico: procedencia, opción de vía, presentación, agravios, pruebas, resolución y efectos del recurso administrativo fiscal."},
-  "transcript":{"originalFile":"F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 29.txt","cleaned":"Se utilizó exclusivamente el bloque del AUDIO 29 posterior a la determinación fiscal; el tramo sobre visita domiciliaria ya quedó integrado en C20. Se eliminaron saludos, bromas, lenguaje ofensivo, datos personales, opiniones subjetivas sobre el SAT y consejos de litigación engañosa. Se corrigió que el recurso de revocación es un medio administrativo optativo previo al juicio contencioso, no un juicio ni una simple petición informal; que procede contra los actos y resoluciones enumerados en el artículo 117 del CFF, no contra cualquier actuación fiscal; que el plazo general es de treinta días siguientes a aquel en que surta efectos la notificación, con excepciones; que se presenta por Buzón Tributario o medios autorizados, no indistintamente en papel; que el escrito debe cumplir los artículos 18 y 122 y acompañar los documentos del 123; que se admite toda clase de pruebas salvo testimonial y confesión de autoridades mediante absolución de posiciones; que pueden anunciarse pruebas adicionales y presentarse supervenientes; que la autoridad resuelve y notifica en un máximo de tres meses; que su silencio significa confirmación ficta; y que la resolución puede desechar, confirmar, reponer, dejar sin efectos o modificar el acto."},
+  "transcript":{"originalFile":"AUDIO 29.txt","cleaned":"Se utilizó exclusivamente el bloque del AUDIO 29 posterior a la determinación fiscal; el tramo sobre visita domiciliaria ya quedó integrado en C20. Se eliminaron saludos, bromas, lenguaje ofensivo, datos personales, opiniones subjetivas sobre el SAT y consejos de litigación engañosa. Se corrigió que el recurso de revocación es un medio administrativo optativo previo al juicio contencioso, no un juicio ni una simple petición informal; que procede contra los actos y resoluciones enumerados en el artículo 117 del CFF, no contra cualquier actuación fiscal; que el plazo general es de treinta días siguientes a aquel en que surta efectos la notificación, con excepciones; que se presenta por Buzón Tributario o medios autorizados, no indistintamente en papel; que el escrito debe cumplir los artículos 18 y 122 y acompañar los documentos del 123; que se admite toda clase de pruebas salvo testimonial y confesión de autoridades mediante absolución de posiciones; que pueden anunciarse pruebas adicionales y presentarse supervenientes; que la autoridad resuelve y notifica en un máximo de tres meses; que su silencio significa confirmación ficta; y que la resolución puede desechar, confirmar, reponer, dejar sin efectos o modificar el acto."},
   "topics":[{
     "title":"Procedencia, trámite y resolución del recurso de revocación",
     "description":"Cómo decidir y construir el medio administrativo federal sin confundirlo con el juicio de nulidad.",

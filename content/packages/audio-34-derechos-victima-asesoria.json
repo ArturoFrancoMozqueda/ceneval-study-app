@@ -1,8 +1,15 @@
 {
-  "packageVersion":"1.0",
+  "packageVersion":"1.1",
+  "curriculum":{
+    "code":"C24",
+    "order":24,
+    "audioSources":[
+      {"audioNumber":34,"fragment":"Audio completo"}
+    ]
+  },
   "subject":{"name":"Derecho Penal y Procesal Penal","description":"Teoría del delito, derechos de las partes, investigación, proceso penal acusatorio y soluciones alternas."},
   "class":{"title":"Derechos de la víctima y asesoría jurídica victimal","description":"Vigesimocuarta clase del plan académico: calidad victimal, derechos constitucionales, atención, protección, reparación integral y funciones de la asesoría jurídica."},
-  "transcript":{"originalFile":"F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 34.txt","cleaned":"Se conservaron la clasificación de víctimas, los derechos constitucionales, la asesoría jurídica, las medidas de protección, la atención médica y psicológica y la reparación. Se eliminaron saludos, bromas, insultos, opiniones políticas, estereotipos, datos personales, precios sin fuente y narraciones no verificadas. Se corrigió que víctima potencial es quien se encuentra en riesgo por asistir a una víctima para impedir o detener el delito o la violación de derechos, no cualquier persona que critique públicamente a una autoridad; que la víctima indirecta no es automáticamente cualquier familiar, sino familiares o personas a cargo con relación inmediata; que la calidad no depende de identificar o condenar al responsable; que la Constitución reconoce atención médica y psicológica de urgencia sin imponer una prioridad universal entre ambas; que las medidas de protección deben ser idóneas, fundadas y motivadas ante riesgo inminente; que nunca debe provocarse al agresor ni fabricar un incumplimiento; y que la reparación integral no se reduce a una suma ni depende solo de dictámenes periciales."},
+  "transcript":{"originalFile":"AUDIO 34.txt","cleaned":"Se conservaron la clasificación de víctimas, los derechos constitucionales, la asesoría jurídica, las medidas de protección, la atención médica y psicológica y la reparación. Se eliminaron saludos, bromas, insultos, opiniones políticas, estereotipos, datos personales, precios sin fuente y narraciones no verificadas. Se corrigió que víctima potencial es quien se encuentra en riesgo por asistir a una víctima para impedir o detener el delito o la violación de derechos, no cualquier persona que critique públicamente a una autoridad; que la víctima indirecta no es automáticamente cualquier familiar, sino familiares o personas a cargo con relación inmediata; que la calidad no depende de identificar o condenar al responsable; que la Constitución reconoce atención médica y psicológica de urgencia sin imponer una prioridad universal entre ambas; que las medidas de protección deben ser idóneas, fundadas y motivadas ante riesgo inminente; que nunca debe provocarse al agresor ni fabricar un incumplimiento; y que la reparación integral no se reduce a una suma ni depende solo de dictámenes periciales."},
   "topics":[{
     "title":"Calidad victimal, protección y representación jurídica",
     "description":"Quién es víctima y cómo se activan sus derechos de información, participación, atención, protección y reparación.",

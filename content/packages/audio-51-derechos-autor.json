@@ -1,5 +1,12 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C39",
+    "order": 39,
+    "audioSources": [
+      {"audioNumber": 51,"fragment": "Segunda parte: derechos de autor"}
+    ]
+  },
   "subject": {
     "name": "Propiedad Intelectual",
     "description": "Protección de signos distintivos, invenciones, diseños industriales y obras autorales."
@@ -9,7 +16,7 @@
     "description": "Trigésima novena clase del plan académico: nacimiento de la protección, obras, derechos morales y patrimoniales, transmisión, registro, ISBN e ISSN."
   },
   "transcript": {
-    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 51.txt",
+    "originalFile": "AUDIO 51.txt",
     "cleaned": "Se conservó la segunda parte del Audio 51 dedicada a derechos de autor. Se eliminaron conversaciones personales, lenguaje ofensivo, afirmaciones discriminatorias, recomendaciones comerciales y relatos ajenos al aprendizaje. Se corrigió que la autoridad es el Instituto Nacional del Derecho de Autor, INDAUTOR, no INPI; que la protección nace con la fijación de una obra original y no con su registro; que autor solo puede ser una persona física; que los derechos morales no duran cien años, sino que son perpetuos y están unidos al autor; que los derechos patrimoniales duran, por regla general, la vida del autor y cien años después de su muerte; que el ejercicio hereditario de derechos morales tiene límites; que registrar una adaptación no autoriza explotar la obra primigenia; y que ISBN e ISSN son identificadores normalizados de libros y publicaciones periódicas, no registros constitutivos de derecho de autor."
   },
   "topics": [{

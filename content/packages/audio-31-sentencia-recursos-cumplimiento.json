@@ -1,5 +1,12 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C23",
+    "order": 23,
+    "audioSources": [
+      {"audioNumber": 31,"fragment": "Audio completo"}
+    ]
+  },
   "subject": {
     "name": "Derecho Fiscal y Justicia Administrativa",
     "description": "Control de legalidad de actos administrativos federales, medios de defensa y justicia fiscal y administrativa."
@@ -9,7 +16,7 @@
     "description": "Vigesimotercera clase del plan académico: sentencia del TFJA, efectos de la nulidad, reclamación, revisión, amparo directo y mecanismos de cumplimiento."
   },
   "transcript": {
-    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 31.txt",
+    "originalFile": "AUDIO 31.txt",
     "cleaned": "Se conservaron las explicaciones útiles sobre sentencia, sobreseimiento, reclamación, suspensión, revisión y cumplimiento. Se eliminaron saludos, bromas, lenguaje ofensivo, opiniones políticas, alusiones a sobornos y afirmaciones sin sustento. El contenido se actualizó a la LFPCA vigente con reforma DOF 09-06-2026 y a la Ley de Amparo vigente. Se corrigió que dejar sin efecto el acto solo permite sobreseer si se satisface la pretensión de la persona demandante; que la reclamación combate determinadas resoluciones intraprocesales y tiene plazos específicos; que la queja del artículo 58 es un mecanismo de cumplimiento, no un recurso genérico; que la revisión del artículo 63 corresponde a la autoridad y solo procede en supuestos legales; que la persona particular combate sentencias definitivas o resoluciones que ponen fin al juicio mediante amparo directo, previo agotamiento de recursos ordinarios procedentes; que garantizar el interés fiscal no sustituye los requisitos para obtener suspensión; y que los efectos de nulidad y la posibilidad de emitir un nuevo acto dependen de la causal y de lo ordenado en la sentencia."
   },
   "topics": [

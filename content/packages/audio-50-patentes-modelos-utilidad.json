@@ -1,5 +1,12 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C37",
+    "order": 37,
+    "audioSources": [
+      {"audioNumber": 50,"fragment": "Segunda parte: patentes y modelos de utilidad"}
+    ]
+  },
   "subject": {
     "name": "Propiedad Intelectual",
     "description": "Protección de signos distintivos, invenciones, diseños industriales y obras autorales."
@@ -9,7 +16,7 @@
     "description": "Trigésima séptima clase del plan académico: requisitos, alcance, vigencia, trámite y diferencias entre patente y modelo de utilidad."
   },
   "transcript": {
-    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 50.txt",
+    "originalFile": "AUDIO 50.txt",
     "cleaned": "Se conservó la segunda parte del Audio 50, dedicada a patentes y modelos de utilidad. El Audio 51 comienza con diseños industriales y se reservó para C38. Se eliminaron instrucciones de examen, comentarios políticos, afirmaciones conspirativas, anécdotas no verificables y ejemplos que confundían innovación con patentabilidad. Se corrigió que la patente no exige una idea vagamente ‘totalmente nueva’, sino novedad frente al estado de la técnica, actividad inventiva y aplicación industrial; que los programas de computación reclamados como tales no se consideran invenciones; que la vigencia de la patente es de veinte años improrrogables desde la fecha de presentación reconocida y la del modelo de utilidad es de quince años improrrogables desde la solicitud, ambas sujetas a anualidades; y que un modelo de utilidad protege objetos, utensilios, aparatos o herramientas cuya modificación produzca función diferente o ventaja de utilidad."
   },
   "topics": [{

@@ -1,5 +1,13 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C02",
+    "order": 2,
+    "audioSources": [
+      {"audioNumber": 4,"fragment": "Audio completo"},
+      {"audioNumber": 5,"fragment": "Primera parte: aplicación de derecho sustantivo y adjetivo"}
+    ]
+  },
   "subject": {
     "name": "Fundamentos jurídicos",
     "description": "Conceptos transversales para identificar derechos, normas, procesos y vías de tutela en casos jurídicos."
@@ -10,8 +18,8 @@
   },
   "transcript": {
     "originalFiles": [
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 04.txt",
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 05.txt"
+      "AUDIO 04.txt",
+      "AUDIO 05.txt"
     ],
     "cleaned": "Los Audios 04 y 05 explican la diferencia práctica entre derecho sustantivo y derecho adjetivo. El primero define derechos, obligaciones, estados y consecuencias jurídicas; el segundo regula las vías, etapas, cargas, plazos y medios para pedir su reconocimiento o tutela. La clase usa ejemplos sucesorios, laborales, penales y mercantiles, y destaca que un mismo ordenamiento puede contener disposiciones de ambas naturalezas. Se conservaron la explicación conceptual, los ejemplos útiles y las ideas de proceso, prueba, preclusión y supletoriedad. Se eliminaron promociones, bromas, descalificaciones, anécdotas personales y afirmaciones no verificables. El tramo final del Audio 05 sobre jurisdicción, competencia y división de poderes se reservó para la clase C03. Las referencias al Código Federal de Procedimientos Civiles se actualizaron para advertir la implementación gradual del Código Nacional de Procedimientos Civiles y Familiares, cuyo límite nacional de entrada en vigor es el 1 de abril de 2027."
   },

@@ -1,5 +1,12 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C11",
+    "order": 11,
+    "audioSources": [
+      {"audioNumber": 12,"fragment": "Segunda parte: amparo directo"}
+    ]
+  },
   "subject": {
     "name": "Derecho electoral y juicio de amparo",
     "description": "Derechos político-electorales, sistema de medios de impugnación y mecanismos constitucionales de protección."
@@ -9,7 +16,7 @@
     "description": "Undécima clase del curso: identifica el acto reclamado, definitividad, violaciones procesales, presentación ante la responsable, trámite, suspensión y revisión excepcional."
   },
   "transcript": {
-    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 12.txt",
+    "originalFile": "AUDIO 12.txt",
     "cleaned": "Se utilizó el fragmento del Audio 12 que comienza con la explicación del amparo directo; las líneas iniciales electorales quedaron en C10. Se eliminaron promociones, datos personales, bromas, expresiones ofensivas y ejemplos imprecisos. Se corrigió que el amparo directo no procede contra cualquier resolución, sino contra sentencias definitivas, laudos y resoluciones que pongan fin al juicio; que la definitividad tiene excepciones; que la presentación puede ser impresa o electrónica; y que la suspensión no surge automáticamente en todas las materias. También se precisaron el plazo general, las tareas de la autoridad responsable, la competencia del Tribunal Colegiado de Circuito y la revisión excepcional ante la Suprema Corte."
   },
   "topics": [

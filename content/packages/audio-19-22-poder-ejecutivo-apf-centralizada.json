@@ -1,8 +1,16 @@
 {
-  "packageVersion":"1.0",
+  "packageVersion":"1.1",
+  "curriculum":{
+    "code":"C14",
+    "order":14,
+    "audioSources":[
+      {"audioNumber":19,"fragment":"Audio completo"},
+      {"audioNumber":22,"fragment":"Cierre administrativo"}
+    ]
+  },
   "subject":{"name":"Derecho Administrativo","description":"Organización, actividad y control de la administración pública mexicana."},
   "class":{"title":"Poder Ejecutivo y APF centralizada y desconcentrada","description":"Decimocuarta clase del curso: distingue Presidencia, dependencias, Secretarías, Consejería Jurídica, órganos desconcentrados, competencia y control de actos administrativos federales."},
-  "transcript":{"originalFiles":["F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 19.txt","F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 22.txt"],"cleaned":"Del Audio 19 se conservó la introducción al Poder Ejecutivo, los artículos 89 y 90 constitucionales, la LOAPF y la distinción entre centralización y desconcentración. Del Audio 22 se integraron únicamente las aclaraciones sobre autoridades federales, actos administrativos y subordinación de órganos desconcentrados; el procedimiento legislativo quedó en C09, la descentralización detallada se reservó para C15 y la CNDH para C16. Se eliminaron publicidad, saludos, datos personales, comentarios políticos, bromas, lenguaje ofensivo y listas institucionales desactualizadas. Se corrigió que la APF no se reduce a tres tipos de órganos; constitucionalmente se divide en centralizada y paraestatal. También se corrigió que las Secretarías y la Consejería Jurídica son dependencias de la administración centralizada, que un órgano desconcentrado permanece jerárquicamente subordinado, que la competencia territorial no transforma su naturaleza, que las denominaciones deben verificarse en la LOAPF vigente y que no todo acto administrativo federal se combate automáticamente por una sola vía: deben revisarse acto, ley especial, definitividad y competencia."},
+  "transcript":{"originalFiles":["AUDIO 19.txt","AUDIO 22.txt"],"cleaned":"Del Audio 19 se conservó la introducción al Poder Ejecutivo, los artículos 89 y 90 constitucionales, la LOAPF y la distinción entre centralización y desconcentración. Del Audio 22 se integraron únicamente las aclaraciones sobre autoridades federales, actos administrativos y subordinación de órganos desconcentrados; el procedimiento legislativo quedó en C09, la descentralización detallada se reservó para C15 y la CNDH para C16. Se eliminaron publicidad, saludos, datos personales, comentarios políticos, bromas, lenguaje ofensivo y listas institucionales desactualizadas. Se corrigió que la APF no se reduce a tres tipos de órganos; constitucionalmente se divide en centralizada y paraestatal. También se corrigió que las Secretarías y la Consejería Jurídica son dependencias de la administración centralizada, que un órgano desconcentrado permanece jerárquicamente subordinado, que la competencia territorial no transforma su naturaleza, que las denominaciones deben verificarse en la LOAPF vigente y que no todo acto administrativo federal se combate automáticamente por una sola vía: deben revisarse acto, ley especial, definitividad y competencia."},
   "topics":[{
     "title":"Cómo ubicar dependencias y órganos desconcentrados federales",
     "description":"Titularidad del Ejecutivo, APF centralizada, jerarquía, competencia, desconcentración y control jurídico.",

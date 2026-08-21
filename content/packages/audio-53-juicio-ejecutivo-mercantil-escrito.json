@@ -1,5 +1,12 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C40",
+    "order": 40,
+    "audioSources": [
+      {"audioNumber": 53,"fragment": "Audio completo"}
+    ]
+  },
   "subject": {
     "name": "Derecho Procesal Mercantil",
     "description": "Vías, etapas, defensas, prueba, sentencia y ejecución de controversias mercantiles."
@@ -9,7 +16,7 @@
     "description": "Cuadragésima clase del plan académico: título ejecutivo, procedencia de la vía escrita, demanda, requerimiento, embargo, emplazamiento, excepciones, prueba, sentencia y remate."
   },
   "transcript": {
-    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 53.txt",
+    "originalFile": "AUDIO 53.txt",
     "cleaned": "Se conservó el bloque académico del Audio 53 sobre títulos de crédito, demanda y juicio ejecutivo mercantil escrito. Se eliminaron conversaciones personales, lenguaje ofensivo, recomendaciones ajenas al estudio y generalizaciones sin sustento. Se corrigió la expresión técnica a documento que trae aparejada ejecución; se distinguió el embargo ejecutivo de una medida precautoria genérica; se precisó que el documento debe contener una obligación exigible y, cuando corresponda, líquida; se sustituyó la falsa regla de un interés máximo mensual de dos o tres por ciento por el control judicial de usura según las circunstancias; se aclaró que gastos, costas y daños no se conceden automáticamente; y se explicó que la prescripción de la acción cambiaria y la posible acción causal tienen presupuestos propios. Como la transcripción termina a mitad de la explicación, las etapas restantes se completaron con el Código de Comercio y la LGTOC vigentes."
   },
   "topics": [

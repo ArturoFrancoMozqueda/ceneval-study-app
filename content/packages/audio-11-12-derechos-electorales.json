@@ -1,5 +1,13 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C10",
+    "order": 10,
+    "audioSources": [
+      {"audioNumber": 11,"fragment": "Audio completo"},
+      {"audioNumber": 12,"fragment": "Primera parte: bloque electoral"}
+    ]
+  },
   "subject": {
     "name": "Derecho electoral y juicio de amparo",
     "description": "Derechos político-electorales, sistema de medios de impugnación y mecanismos constitucionales de protección."
@@ -10,8 +18,8 @@
   },
   "transcript": {
     "originalFiles": [
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 11.txt",
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 12.txt"
+      "AUDIO 11.txt",
+      "AUDIO 12.txt"
     ],
     "cleaned": "Se integró el contenido electoral del Audio 11 y únicamente el cierre electoral de las líneas iniciales del Audio 12; el bloque posterior sobre amparo directo se reservó para C11. Se eliminaron promociones, datos personales, bromas, expresiones ofensivas, opiniones partidistas y ejemplos no verificables. Se conservaron los problemas sobre voto pasivo, afiliación, sistemas normativos indígenas y decisiones electorales locales. Se corrigió que los organismos públicos locales electorales no son dependencias del INE; que no todo asunto federal corresponde a Sala Superior; que el juicio de revisión constitucional electoral solo puede promoverse por partidos políticos mediante representantes legítimos; y que sus requisitos incluyen determinancia, reparabilidad y agotamiento de instancias. También se actualizaron la protección de cargos judiciales electos, los principios rectores y la denominación incluyente de juicio de la ciudadanía conforme a la legislación vigente."
   },

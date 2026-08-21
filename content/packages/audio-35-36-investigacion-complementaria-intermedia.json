@@ -1,5 +1,13 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C26",
+    "order": 26,
+    "audioSources": [
+      {"audioNumber": 35,"fragment": "Cierre: investigación complementaria"},
+      {"audioNumber": 36,"fragment": "Audio completo"}
+    ]
+  },
   "subject": {
     "name": "Derecho Penal y Procesal Penal",
     "description": "Teoría del delito, derechos de las partes, investigación, proceso penal acusatorio y soluciones alternas."
@@ -10,8 +18,8 @@
   },
   "transcript": {
     "originalFiles": [
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 35.txt",
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 36.txt"
+      "AUDIO 35.txt",
+      "AUDIO 36.txt"
     ],
     "cleaned": "Se conservaron el plazo de investigación complementaria, la solicitud de actos de investigación, la acusación, el descubrimiento probatorio, la coadyuvancia de la víctima, la respuesta de la defensa, la audiencia intermedia, los acuerdos probatorios, la admisión y exclusión de medios y el auto de apertura a juicio. Se eliminaron saludos, bromas, insultos, opiniones políticas, referencias a sobornos, costos de capacitación y ejemplos sin utilidad jurídica. Se corrigió que la defensa puede solicitar actos de investigación al Ministerio Público, pero éste dirige la investigación; que los plazos máximos de investigación complementaria dependen de la pena máxima del delito y la prórroga debe justificarse dentro de esos límites; que la carga de demostrar la culpabilidad corresponde a la parte acusadora y la defensa no tiene que probar inocencia; que los registros y medios reunidos durante la investigación no equivalen automáticamente a prueba de sentencia; que la persona juzgadora de control conduce la etapa intermedia, mientras quien intervino antes del juicio no puede integrar el tribunal de enjuiciamiento; que los peritos pueden ser ofrecidos por las partes y su independencia, metodología y credibilidad se someten a contradicción; y que cada solución alterna o forma de terminación anticipada tiene requisitos y momentos legales propios."
   },

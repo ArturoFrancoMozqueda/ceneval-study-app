@@ -1,5 +1,12 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C09",
+    "order": 9,
+    "audioSources": [
+      {"audioNumber": 22,"fragment": "Fragmento: procedimiento legislativo federal"}
+    ]
+  },
   "subject": {
     "name": "Derecho constitucional y proceso legislativo",
     "description": "Organización del Congreso, formación de leyes federales, participación del Ejecutivo y reforma constitucional en México."
@@ -9,7 +16,7 @@
     "description": "Novena clase del curso: identifica quién puede iniciar, distingue cámara de origen y revisora, resuelve los posibles recorridos del proyecto y separa ley ordinaria de reforma constitucional."
   },
   "transcript": {
-    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 22.txt",
+    "originalFile": "AUDIO 22.txt",
     "cleaned": "Esta clase utiliza únicamente el fragmento legislativo del Audio 22, que inicia con la explicación del procedimiento para crear una ley. El bloque inicial sobre órganos centralizados, desconcentrados y descentralizados se reservó para la clase C14 de Administración Pública Federal. Se eliminaron pausas, bromas, expresiones ofensivas, comentarios políticos, promociones y ejemplos no verificables. Se corrigió que ambas Cámaras discuten y aprueban el proyecto, no solamente la revisora; que los asuntos energéticos no integran por sí mismos la lista constitucional de inicio obligatorio en Diputados; que las excepciones son empréstitos, contribuciones o impuestos y reclutamiento de tropas; y que el llamado veto consiste en devolver el proyecto con observaciones dentro del plazo constitucional, no en posponerlo automáticamente a otro periodo. También se precisaron los plazos de aprobación tácita, promulgación y publicación, y se sustituyó la afirmación desactualizada sobre impugnar reformas constitucionales por el texto vigente de los artículos 105 y 107."
   },
   "topics": [

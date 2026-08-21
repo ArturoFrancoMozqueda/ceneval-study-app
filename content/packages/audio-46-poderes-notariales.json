@@ -1,5 +1,12 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C34",
+    "order": 34,
+    "audioSources": [
+      {"audioNumber": 46,"fragment": "Primera parte: poderes notariales"}
+    ]
+  },
   "subject": {
     "name": "Derecho Notarial y Registral",
     "description": "Fe pública, instrumentos notariales, protocolo, representación, actuaciones y efectos registrales."
@@ -9,7 +16,7 @@
     "description": "Trigésima cuarta clase del plan académico: alcance, forma, límites, uso y terminación de los poderes generales y especiales."
   },
   "transcript": {
-    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 46.txt",
+    "originalFile": "AUDIO 46.txt",
     "cleaned": "Se conservó la primera parte del Audio 46 sobre poderes para actos de dominio, administración y pleitos y cobranzas. El bloque posterior sobre capitulaciones matrimoniales se reservó para la clase familiar correspondiente. Se eliminaron conversaciones personales, precios, bromas, expresiones discriminatorias, anécdotas sin valor académico y afirmaciones de práctica local no acreditadas. Se corrigió que las tres categorías del artículo 2554 del Código Civil Federal son facultades diferenciadas y que un poder de dominio no incorpora automáticamente administración o litigio; que comprar, vender, donar, gravar, contratar personal, operar cuentas, suscribir títulos y comparecer a juicio exigen revisar el texto del poder y la norma especial; que los poderes generales no necesariamente deben constar siempre en escritura pública porque el código también contempla carta poder con firmas ratificadas; que la inscripción registral no es requisito universal para todo poder ni convalida facultades inexistentes; que un poder otorgado en otra entidad no pierde autenticidad por ese solo hecho; y que no existe una duración general obligatoria de tres años en el Código Civil Federal ni en los artículos michoacanos consultados, pues el plazo puede pactarse y el mandato también termina por revocación, renuncia, muerte, incapacidad, vencimiento o conclusión del negocio conforme a la legislación aplicable."
   },
   "topics": [{

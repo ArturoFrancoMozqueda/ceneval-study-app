@@ -1,5 +1,12 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C38",
+    "order": 38,
+    "audioSources": [
+      {"audioNumber": 51,"fragment": "Primera parte: diseños industriales y denominaciones de origen"}
+    ]
+  },
   "subject": {
     "name": "Propiedad Intelectual",
     "description": "Protección de signos distintivos, invenciones, diseños industriales y obras autorales."
@@ -9,7 +16,7 @@
     "description": "Trigésima octava clase del plan académico: protección de la apariencia de productos y de productos vinculados con una zona geográfica."
   },
   "transcript": {
-    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 51.txt",
+    "originalFile": "AUDIO 51.txt",
     "cleaned": "Se conservó el bloque inicial del Audio 51 sobre diseños industriales y denominaciones de origen; el bloque posterior de derechos de autor se reservó para C39. Se eliminaron conversaciones personales, lenguaje ofensivo, opiniones discriminatorias, publicidad y ejemplos imprecisos. Se corrigió que el diseño industrial comprende dibujos ornamentales y modelos tridimensionales sin efectos técnicos, exige novedad y aplicación industrial, y dura cinco años desde la solicitud, renovable por periodos iguales hasta veinticinco años. También se corrigió que no es la denominación de origen la que se renueva cada diez años: la declaración de protección subsiste mientras permanezcan sus condiciones; la autorización individual para usar una denominación de origen o indicación geográfica dura diez años desde su solicitud y puede renovarse. Se agregó la diferencia vigente entre denominación de origen e indicación geográfica."
   },
   "topics": [{

@@ -1,5 +1,12 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C30",
+    "order": 30,
+    "audioSources": [
+      {"audioNumber": 40,"fragment": "Segunda parte: arbitraje mercantil"}
+    ]
+  },
   "subject": {
     "name": "Mecanismos Alternativos y Solución de Conflictos",
     "description": "Negociación, mediación, conciliación, justicia restaurativa, arbitraje y procedimientos especializados de solución de controversias."
@@ -9,7 +16,7 @@
     "description": "Trigésima clase del plan académico: acuerdo arbitral, autonomía de las partes, tribunal arbitral, procedimiento, laudo, nulidad, reconocimiento y ejecución."
   },
   "transcript": {
-    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 40.txt",
+    "originalFile": "AUDIO 40.txt",
     "cleaned": "Se conservó el bloque académico sobre arbitraje del Audio 40 y se enlazó con la clase anterior sobre mecanismos autocompositivos. Se eliminaron saludos, opiniones políticas, expresiones discriminatorias, afirmaciones personales, ejemplos sin soporte y contenido ajeno al examen. Se corrigió que el arbitraje es heterocompositivo porque un tercero decide mediante laudo; que el árbitro no tiene que ser corredor público, sino la persona o tribunal designado conforme al convenio y la ley; que la autonomía de la voluntad está limitada por igualdad procesal, arbitrabilidad y orden público; que el convenio arbitral debe constar por escrito en las formas admitidas; que la cláusula arbitral es separable del contrato principal y el tribunal puede decidir sobre su competencia; que la confidencialidad no nace automáticamente para todo arbitraje mercantil del Código de Comercio, sino que depende del acuerdo, reglamento institucional o norma aplicable; y que el laudo es obligatorio, pero su nulidad no funciona como una apelación sobre el fondo."
   },
   "topics": [

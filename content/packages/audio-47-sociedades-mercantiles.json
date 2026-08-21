@@ -1,5 +1,12 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C35",
+    "order": 35,
+    "audioSources": [
+      {"audioNumber": 47,"fragment": "Audio completo"}
+    ]
+  },
   "subject": {
     "name": "Derecho Mercantil Societario",
     "description": "Constitución, organización, decisiones, transformación y terminación de sociedades mercantiles."
@@ -9,7 +16,7 @@
     "description": "Trigésima quinta clase del plan académico: nacimiento de la sociedad, estatutos, administración y decisiones ordinarias y extraordinarias."
   },
   "transcript": {
-    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 47.txt",
+    "originalFile": "AUDIO 47.txt",
     "cleaned": "Se conservaron las explicaciones sobre constitución de sociedades mercantiles, estatutos, Registro Público de Comercio, administración, informe anual, asambleas ordinarias y extraordinarias, capital, transformación, fusión y disolución. Se eliminaron conversaciones sobre el examen, anécdotas comerciales, precios, lenguaje ofensivo, publicidad y consejos empresariales no jurídicos. Se corrigió que no toda persona moral persigue lucro ni toda sociedad mercantil se define únicamente por obtener ganancias; que la sociedad mercantil deriva de una forma reconocida por la LGSM y puede realizar actos necesarios para su objeto; que la sociedad por acciones simplificada tiene un procedimiento electrónico especial; que el RPC opera mediante una plataforma nacional pero las oficinas y derechos registrales involucran a las entidades; que las asambleas ordinarias de la sociedad anónima no deben celebrarse siempre ante notario ni inscribirse cada año, pues sus actas se asientan en el libro social; que las extraordinarias sí deben protocolizarse e inscribirse; que las asambleas pueden celebrarse por medios electrónicos si los estatutos lo prevén y se preservan identidad, participación y voto; que un aumento de capital no es siempre extraordinario en cualquier tipo y modalidad social sin revisar estatutos y parte fija o variable; y que disolución, liquidación, cancelación fiscal y liberación de denominación son etapas o trámites distintos, sin extinción automática de deudas."
   },
   "topics": [{

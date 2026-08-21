@@ -1,8 +1,16 @@
 {
-  "packageVersion":"1.0",
+  "packageVersion":"1.1",
+  "curriculum":{
+    "code":"C28",
+    "order":28,
+    "audioSources":[
+      {"audioNumber":37,"fragment":"Cierre: introducción a la suspensión condicional"},
+      {"audioNumber":38,"fragment":"Audio completo"}
+    ]
+  },
   "subject":{"name":"Derecho Penal y Procesal Penal","description":"Teoría del delito, derechos de las partes, investigación, proceso penal acusatorio y soluciones alternas."},
   "class":{"title":"Suspensión condicional del proceso","description":"Vigesimoctava clase del plan académico: procedencia, plan de reparación, condiciones, supervisión, revocación y sobreseimiento."},
-  "transcript":{"originalFiles":["F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 37.txt","F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 38.txt"],"cleaned":"Se conservaron el inicio después de la vinculación, la media aritmética, el plan de reparación, la oposición fundada, las condiciones, la supervisión, la revocación y el efecto del cumplimiento. Se eliminaron saludos, insultos, estereotipos, historias personales, afirmaciones pseudopsicológicas, datos de víctimas, opiniones sobre sexualidad, adicciones, música, armas y ciudades. Se corrigió que no debe afirmarse que ciertos delitos concretos admiten la suspensión sin revisar el tipo y la pena aplicables; que la oposición de la víctima debe ser fundada; que la solicitud corresponde al imputado o al Ministerio Público con acuerdo de aquél; que la revocación no es automática y exige petición, audiencia y decisión judicial; que el incumplimiento no produce por sí solo reaprehensión ni prisión; que el juez puede ampliar una sola vez hasta dos años; que los pagos recibidos se destinan a la indemnización si se revoca; que la autoridad de supervisión informa incumplimientos, pero el juez resuelve; y que, cumplidos plan y condiciones sin revocación, se extingue la acción y se decreta sobreseimiento."},
+  "transcript":{"originalFiles":["AUDIO 37.txt","AUDIO 38.txt"],"cleaned":"Se conservaron el inicio después de la vinculación, la media aritmética, el plan de reparación, la oposición fundada, las condiciones, la supervisión, la revocación y el efecto del cumplimiento. Se eliminaron saludos, insultos, estereotipos, historias personales, afirmaciones pseudopsicológicas, datos de víctimas, opiniones sobre sexualidad, adicciones, música, armas y ciudades. Se corrigió que no debe afirmarse que ciertos delitos concretos admiten la suspensión sin revisar el tipo y la pena aplicables; que la oposición de la víctima debe ser fundada; que la solicitud corresponde al imputado o al Ministerio Público con acuerdo de aquél; que la revocación no es automática y exige petición, audiencia y decisión judicial; que el incumplimiento no produce por sí solo reaprehensión ni prisión; que el juez puede ampliar una sola vez hasta dos años; que los pagos recibidos se destinan a la indemnización si se revoca; que la autoridad de supervisión informa incumplimientos, pero el juez resuelve; y que, cumplidos plan y condiciones sin revocación, se extingue la acción y se decreta sobreseimiento."},
   "topics":[{
     "title":"Plan, condiciones y control de la suspensión condicional",
     "description":"Requisitos y ruta de supervisión para suspender un proceso y alcanzar el sobreseimiento.",

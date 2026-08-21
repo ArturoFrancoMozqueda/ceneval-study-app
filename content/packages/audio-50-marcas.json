@@ -1,5 +1,12 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C36",
+    "order": 36,
+    "audioSources": [
+      {"audioNumber": 50,"fragment": "Primera parte: marcas"}
+    ]
+  },
   "subject": {
     "name": "Propiedad Intelectual",
     "description": "Protección de signos distintivos, invenciones, diseños industriales y obras autorales."
@@ -9,7 +16,7 @@
     "description": "Trigésima sexta clase del plan académico: distintividad, solicitud, vigencia, uso efectivo, licencias, transmisión y gravámenes."
   },
   "transcript": {
-    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 50.txt",
+    "originalFile": "AUDIO 50.txt",
     "cleaned": "Se conservó la primera parte del Audio 50 dedicada a la marca como activo intangible, signos distintivos, búsqueda de antecedentes, registro, vigencia, renovación, licencias, transmisión, regalías y gravámenes. El bloque de patentes y modelos de utilidad se reservó para C37. Se eliminaron instrucciones del examen, historias personales, comentarios políticos, lenguaje ofensivo, precios, datos médicos riesgosos y afirmaciones conspirativas. Se corrigió que la autoridad es el Instituto Mexicano de la Propiedad Industrial, IMPI, no INPI; que marca no es simplemente un símbolo sino cualquier signo perceptible por los sentidos, representable de modo claro y preciso y capaz de distinguir productos o servicios; que la ley admite denominaciones, elementos figurativos, colores, hologramas, formas tridimensionales, nombres, sonidos, olores, imagen comercial y combinaciones; que una búsqueda previa reduce riesgo pero no garantiza concesión; que el registro dura diez años desde su otorgamiento, no desde cualquier pago; que el uso exclusivo nace del registro, mientras el uso no registrado puede existir sin igual protección; que debe declararse uso real y efectivo tras el tercer año y al renovar; y que licencias, transmisiones y gravámenes tienen efectos y requisitos propios, incluida inscripción frente a terceros para transmisión o gravamen."
   },
   "topics": [{

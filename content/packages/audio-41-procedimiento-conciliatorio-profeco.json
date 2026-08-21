@@ -1,8 +1,15 @@
 {
-  "packageVersion":"1.0",
+  "packageVersion":"1.1",
+  "curriculum":{
+    "code":"C31",
+    "order":31,
+    "audioSources":[
+      {"audioNumber":41,"fragment":"Audio completo"}
+    ]
+  },
   "subject":{"name":"Mecanismos Alternativos y Solución de Conflictos","description":"Negociación, mediación, conciliación, justicia restaurativa, arbitraje y procedimientos especializados de solución de controversias."},
   "class":{"title":"Procedimiento conciliatorio ante PROFECO","description":"Trigésima primera clase del plan académico: reclamación de consumo, personalidad, audiencia, comparecencia, convenio, dictamen, arbitraje y derechos posteriores."},
-  "transcript":{"originalFile":"F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 41.txt","cleaned":"Se conservó todo el contenido académico sobre reclamación, comparecencia, representación de personas físicas y morales, audiencia, consecuencias de inasistencia y fuerza ejecutiva del convenio. Se eliminaron instrucciones antiguas del examen CENEVAL, historias personales, insultos, consejos agresivos de litigio, publicidad profesional y comentarios ajenos. Se corrigió que Concilianet funciona en una sala virtual semejante a un chat, no necesariamente por Zoom, y solo respecto de proveedores adheridos; que la carta poder de persona física debe firmarse ante dos testigos; que la falta del consumidor no produce de inmediato que la queja se tenga por no presentada, sino desistimiento si no justifica fehacientemente dentro de diez días; que la primera ausencia o falta de informe del proveedor genera medida de apremio y segunda audiencia, no presunción inmediata; que el procedimiento sigue siendo legalmente conciliatorio aunque las partes lleguen con una propuesta; que el conciliador sí puede presentar opciones sin prejuzgar; que un convenio aprobado no es un pagaré, aunque tiene fuerza de cosa juzgada y trae aparejada ejecución; y que el dictamen, no cualquier documento del expediente, puede constituir título ejecutivo no negociable bajo condiciones legales."},
+  "transcript":{"originalFile":"AUDIO 41.txt","cleaned":"Se conservó todo el contenido académico sobre reclamación, comparecencia, representación de personas físicas y morales, audiencia, consecuencias de inasistencia y fuerza ejecutiva del convenio. Se eliminaron instrucciones antiguas del examen CENEVAL, historias personales, insultos, consejos agresivos de litigio, publicidad profesional y comentarios ajenos. Se corrigió que Concilianet funciona en una sala virtual semejante a un chat, no necesariamente por Zoom, y solo respecto de proveedores adheridos; que la carta poder de persona física debe firmarse ante dos testigos; que la falta del consumidor no produce de inmediato que la queja se tenga por no presentada, sino desistimiento si no justifica fehacientemente dentro de diez días; que la primera ausencia o falta de informe del proveedor genera medida de apremio y segunda audiencia, no presunción inmediata; que el procedimiento sigue siendo legalmente conciliatorio aunque las partes lleguen con una propuesta; que el conciliador sí puede presentar opciones sin prejuzgar; que un convenio aprobado no es un pagaré, aunque tiene fuerza de cosa juzgada y trae aparejada ejecución; y que el dictamen, no cualquier documento del expediente, puede constituir título ejecutivo no negociable bajo condiciones legales."},
   "topics":[{
     "title":"De la reclamación al convenio ejecutable",
     "description":"Trámite, representación, audiencia, resultados y efectos del procedimiento conciliatorio de consumo.",

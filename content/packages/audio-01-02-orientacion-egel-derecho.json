@@ -1,5 +1,13 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C01",
+    "order": 1,
+    "audioSources": [
+      {"audioNumber": 1,"fragment": "Audio completo"},
+      {"audioNumber": 2,"fragment": "Audio completo"}
+    ]
+  },
   "subject": {
     "name": "Orientación EGEL Derecho",
     "description": "Estructura oficial del EGEL Plus Derecho, estrategia de estudio y resolución razonada de reactivos."
@@ -10,8 +18,8 @@
   },
   "transcript": {
     "originalFiles": [
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 01.txt",
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 02.txt"
+      "AUDIO 01.txt",
+      "AUDIO 02.txt"
     ],
     "cleaned": "Los Audios 01 y 02 corresponden a la inducción del curso. Explican que la preparación debe apoyarse en la guía oficial aplicable, el estudio constante y la comprensión de casos, no en preguntas filtradas ni respuestas memorizadas. Presentan las áreas de Función pública, Litigio y Justicia alternativa y fe pública, además de la necesidad de practicar lectura y administración del tiempo. También introducen temas jurídicos como federalismo, división de poderes, amparo y ramas del derecho; esos fragmentos se reservan para sus clases temáticas posteriores. Se eliminaron del material didáctico promociones, bromas, comentarios personales, afirmaciones no verificadas y datos logísticos propios de una aplicación anterior. La estructura y modalidades se actualizaron con la información oficial del Ceneval consultada el 11 de agosto de 2026."
   },

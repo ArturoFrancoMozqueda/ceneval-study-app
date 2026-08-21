@@ -1,5 +1,12 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C19",
+    "order": 19,
+    "audioSources": [
+      {"audioNumber": 67,"fragment": "Primera parte: obligaciones por régimen fiscal"}
+    ]
+  },
   "subject": {
     "name": "Derecho Fiscal",
     "description": "Contribuciones, obligaciones fiscales y medios de defensa en México."
@@ -9,7 +16,7 @@
     "description": "Decimonovena clase del curso: obligaciones transversales y diferencias esenciales entre RESICO, actividad empresarial, salarios, personas morales lucrativas y entidades sin fines de lucro."
   },
   "transcript": {
-    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 67.txt",
+    "originalFile": "AUDIO 67.txt",
     "cleaned": "Se utilizó únicamente la primera parte fiscal del Audio 67; el bloque de divorcio se reservó para las clases de derecho familiar. Se eliminaron anuncios, examen dictado, datos personales, lenguaje ofensivo, consejos de negocios y afirmaciones sin sustento. Se corrigió que e.firma y Buzón Tributario son herramientas distintas; que los avisos a medios de contacto no sustituyen la notificación depositada en el Buzón; que la inscripción al RFC sin actividad económica no genera por sí sola declaraciones o pago; que cada régimen tiene obligaciones propias y no basta una lista universal; que RESICO exige CFDI por ingresos efectivamente cobrados, pago mensual y obligaciones del artículo 113-G, sin confundir las facilidades de la Resolución Miscelánea del ejercicio; que la persona moral no declara simplemente ingresos y egresos, sino que determina impuestos y cumple declaraciones, retenciones, contabilidad y CFDI; que la persona asalariada puede estar obligada a presentar anual en los supuestos del artículo 98; que los asimilados son categorías legales y no autorizan encubrir subordinación; que el umbral salarial relevante es 400,000 pesos, no 500,000; y que no toda asociación civil es no contribuyente ni todo donativo es deducible: se requiere ubicación legal y, cuando corresponda, donataria autorizada y requisitos."
   },
   "topics": [

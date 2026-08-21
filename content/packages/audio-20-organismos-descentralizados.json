@@ -1,5 +1,13 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C15",
+    "order": 15,
+    "audioSources": [
+      {"audioNumber": 20,"fragment": "Audio completo"},
+      {"audioNumber": 22,"fragment": "Cierre administrativo"}
+    ]
+  },
   "subject": {
     "name": "Derecho Administrativo",
     "description": "Organización, actividad y control de la administración pública mexicana."
@@ -10,8 +18,8 @@
   },
   "transcript": {
     "originalFiles": [
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 20.txt",
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 22.txt"
+      "AUDIO 20.txt",
+      "AUDIO 22.txt"
     ],
     "cleaned": "El Audio 20 aporta la explicación principal de descentralización, personalidad, patrimonio, seguridad social y empresas públicas; del Audio 22 se integró solo la comparación con dependencias y órganos desconcentrados. Se eliminaron anuncios, examen dictado, datos personales, propaganda, lenguaje ofensivo y opiniones políticas. Se corrigió que no toda entidad paraestatal es organismo descentralizado; que autonomía técnica o universitaria no equivale a independencia constitucional; que nombre, fuente de financiamiento o tipo de servicio no bastan para clasificar; que el régimen laboral no se deduce automáticamente del carácter descentralizado y debe consultarse en Constitución, ley y norma de creación; y que las facultades fiscales de IMSS, INFONAVIT u otro ente dependen de su legislación especial. También se evitó presentar al ISSSTE como incapaz de ejercer cualquier atribución fiscal, a CONAGUA como organismo descentralizado o a PEMEX y CFE bajo categorías históricas sin revisar su régimen vigente. El bloque CNDH del Audio 22 se reservó para C16."
   },

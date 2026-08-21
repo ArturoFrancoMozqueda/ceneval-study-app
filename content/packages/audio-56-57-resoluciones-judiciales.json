@@ -1,5 +1,13 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C05",
+    "order": 5,
+    "audioSources": [
+      {"audioNumber": 56,"fragment": "Segunda parte: estructura de la sentencia"},
+      {"audioNumber": 57,"fragment": "Audio completo"}
+    ]
+  },
   "subject": {
     "name": "Teoría procesal y organización judicial",
     "description": "Bases del ejercicio jurisdiccional, competencia, resoluciones judiciales y estructura de los órganos que imparten justicia."
@@ -10,8 +18,8 @@
   },
   "transcript": {
     "originalFiles": [
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 56.txt",
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 57.txt"
+      "AUDIO 56.txt",
+      "AUDIO 57.txt"
     ],
     "cleaned": "Los Audios 56 y 57 cierran la explicación del juicio ordinario mercantil e introducen las resoluciones judiciales. Describen la identificación, antecedentes, razonamiento y puntos resolutivos; los principios de congruencia, exhaustividad, fundamentación y motivación; las categorías de autos, interlocutorias y sentencias definitivas; y los efectos declarativos, constitutivos y de condena. Se eliminaron promociones, bromas, casos personales, afirmaciones absolutas sobre recursos y referencias ofensivas. Se corrigió que la estructura vistos-resultandos-considerandos-resolutivos no es una fórmula obligatoria universal: cada materia y ordenamiento fija contenido y forma. También se precisó que la clasificación del CNPCF incluye decretos y distintas clases de autos, que no toda interlocutoria o auto es apelable y que una resolución puede acumular varios efectos. El contenido se actualizó con los artículos 14, 16 y 17 constitucionales, los artículos 167 a 172 del CNPCF, el artículo 74 de la Ley de Amparo y criterios oficiales sobre congruencia y exhaustividad."
   },

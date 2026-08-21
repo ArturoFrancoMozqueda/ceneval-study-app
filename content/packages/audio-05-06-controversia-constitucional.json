@@ -1,5 +1,13 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C06",
+    "order": 6,
+    "audioSources": [
+      {"audioNumber": 6,"fragment": "Audio completo"},
+      {"audioNumber": 5,"fragment": "Fundamento inicial sobre competencia constitucional"}
+    ]
+  },
   "subject": {
     "name": "Derecho constitucional y responsabilidad pública",
     "description": "Control constitucional, distribución del poder público, federalismo y responsabilidades de las autoridades en México."
@@ -10,8 +18,8 @@
   },
   "transcript": {
     "originalFiles": [
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 05.txt",
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 06.txt"
+      "AUDIO 05.txt",
+      "AUDIO 06.txt"
     ],
     "cleaned": "El cierre del Audio 05 presenta la jurisdicción como función estatal para resolver conflictos y conecta la distribución de competencias con el control constitucional. El Audio 06 explica el federalismo, las facultades federales, estatales y municipales y la controversia constitucional como vía para proteger las esferas competenciales de entes públicos. Se conservaron los ejemplos didácticos de invasión de atribuciones, pero se eliminaron promociones, bromas, expresiones ofensivas, datos personales y ejemplos médicos imprecisos. Se corrigió la afirmación desactualizada de que la Suprema Corte se integra por once ministros: el artículo 94 constitucional vigente al 2 de junio de 2026 establece nueve integrantes. También se precisaron los sujetos, objetos, plazos, suspensión y efectos conforme al artículo 105 constitucional y a la Ley Reglamentaria vigente al 14 de noviembre de 2025."
   },

@@ -1,5 +1,12 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C07",
+    "order": 7,
+    "audioSources": [
+      {"audioNumber": 7,"fragment": "Audio completo"}
+    ]
+  },
   "subject": {
     "name": "Derecho constitucional y responsabilidad pública",
     "description": "Control constitucional, distribución del poder público, federalismo y responsabilidades de las autoridades en México."
@@ -9,7 +16,7 @@
     "description": "Séptima clase del curso: aprende quién puede impugnar una norma general, en qué plazo, contra qué normas y con qué efectos ante la Suprema Corte."
   },
   "transcript": {
-    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 07.txt",
+    "originalFile": "AUDIO 07.txt",
     "cleaned": "El Audio 07 explica la acción de inconstitucionalidad como control abstracto de normas generales, su función democrática para minorías legislativas y otros sujetos legitimados, y sus efectos frente a la relatividad tradicional del amparo. Se eliminaron promociones, discusiones partidistas circunstanciales, expresiones ofensivas, datos personales y ejemplos no verificables. Se corrigieron datos modificados por la reforma judicial: la SCJN vigente se integra por nueve personas y la invalidez requiere al menos seis votos, no once integrantes y ocho votos. Se precisó que el objeto es una norma general, que el plazo es de treinta días naturales, que no hay suspensión de la norma, que cada sujeto solo puede impugnar dentro del ámbito que le atribuye el artículo 105, fracción II, y que la declaración de invalidez de este proceso no debe confundirse con la declaratoria general de inconstitucionalidad del régimen de amparo."
   },
   "topics": [

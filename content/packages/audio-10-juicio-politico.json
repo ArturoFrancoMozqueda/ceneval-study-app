@@ -1,5 +1,12 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C08",
+    "order": 8,
+    "audioSources": [
+      {"audioNumber": 10,"fragment": "Audio completo"}
+    ]
+  },
   "subject": {
     "name": "Derecho constitucional y responsabilidad pública",
     "description": "Control constitucional, distribución del poder público, federalismo y responsabilidades de las autoridades en México."
@@ -9,7 +16,7 @@
     "description": "Octava clase del curso: distingue responsabilidad política, declaración de procedencia y responsabilidad penal, e identifica sujetos, causas, etapas, votaciones y sanciones."
   },
   "transcript": {
-    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 10.txt",
+    "originalFile": "AUDIO 10.txt",
     "cleaned": "El Audio 10 presenta el juicio político como procedimiento constitucional extraordinario para exigir responsabilidad a determinadas personas servidoras públicas. Explica la intervención diferenciada de las Cámaras de Diputados y Senadores, la audiencia y la posibilidad de destitución e inhabilitación. Se eliminaron promociones, bromas, expresiones ofensivas, comentarios partidistas, datos personales y ejemplos no verificables. Se corrigió que el Senado no impone multas mediante juicio político: las sanciones constitucionales son destitución e inhabilitación. También se corrigió que juicio político y declaración de procedencia no forman una secuencia obligatoria; son procedimientos autónomos con finalidades distintas. Se actualizaron los sujetos del artículo 110 tras la reforma judicial, la regla especial para autoridades locales, las votaciones, los plazos y la diferencia entre responsabilidad política, administrativa y penal."
   },
   "topics": [

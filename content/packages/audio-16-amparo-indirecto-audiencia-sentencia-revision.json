@@ -1,5 +1,12 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C13",
+    "order": 13,
+    "audioSources": [
+      {"audioNumber": 16,"fragment": "Audio completo"}
+    ]
+  },
   "subject": {
     "name": "Derecho electoral y juicio de amparo",
     "description": "Derechos político-electorales, sistema de medios de impugnación y mecanismos constitucionales de protección."
@@ -9,7 +16,7 @@
     "description": "Decimotercera clase del curso: explica la admisión, informe justificado, pruebas, audiencia constitucional, sentidos de la sentencia y recurso de revisión conforme al régimen vigente."
   },
   "transcript": {
-    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 16.txt",
+    "originalFile": "AUDIO 16.txt",
     "cleaned": "Se conservó la explicación académica sobre audiencia constitucional, sentencia y revisión. Se eliminaron saludos, anuncios del examen, datos personales, lenguaje ofensivo, relatos sexuales, estereotipos, opiniones sobre matrimonio y ejemplos familiares no verificables. Se corrigió que la audiencia no se limita a preguntar si existe el acto: integra constancias, pruebas y alegatos; que la sentencia puede emitirse en un plazo máximo de noventa días naturales conforme a la reforma de 2025; que la inexistencia del acto produce sobreseimiento y no una decisión de fondo; que un acto consumado solo es irreparable cuando la restitución jurídica o material ya no es posible; y que la concesión debe fijar efectos precisos. Se precisó que la revisión se interpone en diez días por conducto del órgano que dictó la resolución; que los tribunales colegiados resuelven los casos no reservados a la Suprema Corte; y que la Corte puede atraer recursos de interés y trascendencia, pero la atracción no es un paso automático. Se descartó la referencia a una Primera Sala de cinco integrantes y a un Pleno de once: en 2026 la Suprema Corte se compone de nueve integrantes, funciona en Pleno y puede funcionar en dos secciones."
   },
   "topics": [

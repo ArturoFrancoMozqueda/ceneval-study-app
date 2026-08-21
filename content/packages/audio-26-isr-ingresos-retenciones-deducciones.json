@@ -1,5 +1,12 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C17",
+    "order": 17,
+    "audioSources": [
+      {"audioNumber": 26,"fragment": "Audio completo"}
+    ]
+  },
   "subject": {
     "name": "Derecho Fiscal",
     "description": "Contribuciones, obligaciones fiscales y medios de defensa en México."
@@ -9,7 +16,7 @@
     "description": "Decimoséptima clase del curso: régimen de personas físicas con actividades empresariales y profesionales, ingresos acumulables, deducciones autorizadas, retenciones, pagos provisionales y declaración anual."
   },
   "transcript": {
-    "originalFile": "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 26.txt",
+    "originalFile": "AUDIO 26.txt",
     "cleaned": "Se conservó la explicación útil sobre ingresos, gastos vinculados con la actividad, CFDI, pagos provisionales, retenciones y respaldo material de operaciones. Se eliminaron anuncios, datos personales, expresiones ofensivas, comentarios discriminatorios, consejos de negocios, relatos no verificables y alusiones que normalizaban ocultar ingresos o adquirir facturas. Se corrigió que el régimen fiscal depende de la actividad y no de crear necesariamente una sociedad; que el umbral de 500 mil pesos no es una regla general para presentar declaración anual; que la inscripción al RFC de una persona mayor de edad sin actividad económica no genera por sí sola obligaciones fiscales; que un depósito no siempre es ingreso gravado, pero debe identificarse y documentarse; que un CFDI no vuelve automáticamente deducible un gasto; que útiles escolares, comidas o gastos familiares no se convierten en deducción empresarial por el concepto escrito en la factura; que las deducciones exigen autorización legal, estricta indispensabilidad y demás requisitos; y que ocultar ingresos, simular operaciones o usar comprobantes de operaciones inexistentes puede producir consecuencias fiscales y penales."
   },
   "topics": [

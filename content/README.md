@@ -8,6 +8,15 @@ encuentra en [`curriculum-plan.md`](./curriculum-plan.md).
 
 ## Flujo
 
+Las transcripciones originales viven en un archivo editorial privado, fuera de
+Git y del entorno publicado. Configura `CENEVAL_TRANSCRIPTS_DIR` en
+`.env.local` con la carpeta que contiene `AUDIO 01.txt` a `AUDIO 70.txt`. Los
+paquetes históricos pueden conservar sus rutas antiguas: el cargador usa el
+nombre del archivo dentro de la raíz configurada.
+
+El procedimiento de respaldo y verificación está en
+[`docs/TRANSCRIPT_ARCHIVE.md`](../docs/TRANSCRIPT_ARCHIVE.md).
+
 1. Guardar el paquete JSON en `content/packages`.
 2. Validar:
 
@@ -51,9 +60,10 @@ comprueba que el código o el orden no pertenezcan a otra clase antes de crear
 ningún registro; los índices únicos de PostgreSQL protegen también contra dos
 importaciones simultáneas.
 
-Los paquetes históricos con contrato 1.0 todavía pueden validarse para
-conservar su contenido, pero no pueden volver a importarse hasta migrarlos al
-contrato 1.1.
+Los 40 paquetes vigentes C01–C40 ya usan el contrato 1.1. Las versiones
+retiradas con contrato 1.0 viven fuera de `content/packages/`, en
+`content/archive/withdrawn/`, y se conservan solo para trazabilidad: no deben
+importarse ni convertirse silenciosamente en clases nuevas.
 
 Cada paquete contiene:
 

@@ -1,8 +1,15 @@
 {
-  "packageVersion":"1.0",
+  "packageVersion":"1.1",
+  "curriculum":{
+    "code":"C27",
+    "order":27,
+    "audioSources":[
+      {"audioNumber":37,"fragment":"Primera parte: acuerdos reparatorios"}
+    ]
+  },
   "subject":{"name":"Derecho Penal y Procesal Penal","description":"Teoría del delito, derechos de las partes, investigación, proceso penal acusatorio y soluciones alternas."},
   "class":{"title":"Acuerdos reparatorios","description":"Vigesimoséptima clase del plan académico: procedencia, oportunidad, aprobación, contenido, cumplimiento e incumplimiento de los acuerdos reparatorios."},
-  "transcript":{"originalFile":"F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 37.txt","cleaned":"Se conservó únicamente el bloque sobre acuerdos reparatorios; el inicio de suspensión condicional se reservó para la clase siguiente. Se eliminaron saludos, insultos, bromas, datos personales, relatos de robos, opiniones sociales y recomendaciones extrajurídicas. Se corrigió que el acuerdo no es simplemente un contrato civil ni una decisión unilateral: es una solución alterna penal celebrada voluntariamente entre víctima u ofendido e imputado, sujeta a aprobación y cumplimiento; que procede en tres categorías legales, pero tiene exclusiones expresas; que puede promoverse desde la denuncia o querella hasta antes del auto de apertura a juicio; que la autoridad aprobadora depende de la etapa; que si el cumplimiento diferido no fija plazo se entiende un año; que el incumplimiento injustificado reactiva el procedimiento como si no hubiera acuerdo, sin afirmar que toda prestación parcial se pierde automáticamente; que el cumplimiento total extingue la acción penal; y que un antecedente no impide cualquier acuerdo futuro, sino los supuestos específicos del artículo 187 vigente."},
+  "transcript":{"originalFile":"AUDIO 37.txt","cleaned":"Se conservó únicamente el bloque sobre acuerdos reparatorios; el inicio de suspensión condicional se reservó para la clase siguiente. Se eliminaron saludos, insultos, bromas, datos personales, relatos de robos, opiniones sociales y recomendaciones extrajurídicas. Se corrigió que el acuerdo no es simplemente un contrato civil ni una decisión unilateral: es una solución alterna penal celebrada voluntariamente entre víctima u ofendido e imputado, sujeta a aprobación y cumplimiento; que procede en tres categorías legales, pero tiene exclusiones expresas; que puede promoverse desde la denuncia o querella hasta antes del auto de apertura a juicio; que la autoridad aprobadora depende de la etapa; que si el cumplimiento diferido no fija plazo se entiende un año; que el incumplimiento injustificado reactiva el procedimiento como si no hubiera acuerdo, sin afirmar que toda prestación parcial se pierde automáticamente; que el cumplimiento total extingue la acción penal; y que un antecedente no impide cualquier acuerdo futuro, sino los supuestos específicos del artículo 187 vigente."},
   "topics":[{
     "title":"Procedencia, negociación y efectos del acuerdo reparatorio",
     "description":"Cómo identificar si un caso admite acuerdo, quién lo aprueba y qué ocurre al cumplirse o incumplirse.",

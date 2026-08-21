@@ -1,5 +1,13 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C16",
+    "order": 16,
+    "audioSources": [
+      {"audioNumber": 22,"fragment": "Fragmento: introducción a la CNDH"},
+      {"audioNumber": 23,"fragment": "Audio completo"}
+    ]
+  },
   "subject": {
     "name": "Derecho Administrativo",
     "description": "Organización, actividad y control de la administración pública mexicana."
@@ -10,8 +18,8 @@
   },
   "transcript": {
     "originalFiles": [
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 22.txt",
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 23.txt"
+      "AUDIO 22.txt",
+      "AUDIO 23.txt"
     ],
     "cleaned": "Se integró el bloque final del Audio 22 y el contenido académico del Audio 23. Se eliminaron anuncios, examen dictado, nombres y datos personales, lenguaje ofensivo, comentarios sexuales, opiniones partidistas, anécdotas no verificables y ejemplos que podían estigmatizar. Se corrigió que la base constitucional de la CNDH está en el artículo 102, apartado B; que la prohibición de atender consultas interpretativas no impide a su Presidencia promover acciones de inconstitucionalidad conforme a los artículos 105 constitucional y 15 de la Ley de la CNDH; que una recomendación es pública y no vinculatoria, pero exige respuesta y justificación pública ante la negativa; que no anula actos, impone prisión ni destituye por sí misma; que la queja no suspende los plazos de otros medios de defensa; y que la competencia federal, local, electoral, jurisdiccional y respecto del Poder Judicial de la Federación debe analizarse con precisión."
   },

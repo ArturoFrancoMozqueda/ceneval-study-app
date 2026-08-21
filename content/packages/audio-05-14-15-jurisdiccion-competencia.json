@@ -1,5 +1,14 @@
 {
-  "packageVersion": "1.0",
+  "packageVersion": "1.1",
+  "curriculum": {
+    "code": "C03",
+    "order": 3,
+    "audioSources": [
+      {"audioNumber": 5,"fragment": "Cierre: transición a jurisdicción y competencia"},
+      {"audioNumber": 14,"fragment": "Audio completo"},
+      {"audioNumber": 15,"fragment": "Audio completo"}
+    ]
+  },
   "subject": {
     "name": "Teoría procesal y organización judicial",
     "description": "Bases del ejercicio jurisdiccional, competencia, resoluciones judiciales y estructura de los órganos que imparten justicia."
@@ -10,9 +19,9 @@
   },
   "transcript": {
     "originalFiles": [
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 05.txt",
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 14.txt",
-      "F:\\TRANSCRIPCIONES CENEVAL\\AUDIO 15.txt"
+      "AUDIO 05.txt",
+      "AUDIO 14.txt",
+      "AUDIO 15.txt"
     ],
     "cleaned": "El cierre del Audio 05 introduce la jurisdicción como función estatal y la relaciona con la división de poderes. Los Audios 14 y 15 desarrollan jurisdicción ordinaria, constitucional y convencional; competencia por materia, grado, territorio y cuantía; órganos federales; clases de resoluciones e incidentes. Se conservaron los conceptos y ejemplos útiles, pero se eliminaron promociones, bromas, comentarios políticos, descalificaciones y anécdotas ajenas al aprendizaje. Se corrigió la afirmación de que las personas juzgadoras ordinarias no pueden interpretar la Constitución: dentro de su competencia y de las reglas procesales pueden ejercer control difuso, aunque no declaran la invalidez general de una norma. También se evitó presentar como universales las denominaciones de resoluciones o los efectos de todo incidente, porque dependen de la legislación aplicable. La estructura federal se actualizó con la Constitución y la Ley Orgánica del Poder Judicial de la Federación vigentes en agosto de 2026."
   },

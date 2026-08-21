@@ -31,7 +31,8 @@ transcripción → preparación editorial → borrador → revisión → publica
 
 ## Estado real
 
-- El repositorio conserva 41 paquetes académicos y el plan C01–C58. El proyecto
+- El repositorio conserva 40 paquetes académicos vigentes (C01–C40), una
+  versión retirada en el archivo editorial y el plan C01–C58. El proyecto
   remoto **CENEVAL Study App** fue verificado el 20 de agosto de 2026 con el
   esquema completo, pero todavía tiene 0 usuarios, 0 materias y 0 clases.
 - La app es **privada**: solo la administradora entra. El registro de
@@ -134,7 +135,8 @@ red usa `npm run test:backup`. Consulta `docs/SUPABASE_BACKUP.md`.
 | `lib/access.ts`, `lib/auth.ts` | Control de acceso y sesión. |
 | `lib/content/` | Esquema Zod y carga de paquetes. |
 | `supabase/migrations/` | Migraciones SQL, incluidas las políticas RLS. |
-| `content/packages/` | Los 41 paquetes académicos en JSON. |
+| `content/packages/` | Los 40 paquetes académicos vigentes C01–C40 en JSON. |
+| `content/archive/withdrawn/` | Versiones retiradas; nunca se importan. |
 | `content/batches/` | Clasificación de los audios originales. |
 | `scripts/` | Validador, importador y suite de permisos. |
 | `proxy.ts` | Equivalente al antiguo `middleware.ts` en Next.js 16. |
@@ -146,13 +148,16 @@ red usa `npm run test:backup`. Consulta `docs/SUPABASE_BACKUP.md`.
 Detectadas en la auditoría de agosto de 2026. Verifica antes de asumir que
 alguna sigue abierta; si corriges una, actualiza esta lista.
 
-- **Los paquetes nuevos deben usar el contrato 1.1.** El importador ya asigna
-  `curriculum_code`, `curriculum_order` y `class_audio_sources`, y rechaza
-  colisiones antes de escribir. Los paquetes históricos 1.0 se conservan para
-  consulta, pero deben migrarse a 1.1 antes de volver a importarlos.
-- **Las transcripciones originales solo existen en el disco `F:`.** Los 41
-  paquetes apuntan a `F:\TRANSCRIPCIONES CENEVAL\AUDIO NN.txt`, así que
-  `content:check` y `content:import` fallan en cualquier otra computadora.
+- **Los paquetes vigentes usan el contrato 1.1.** C01–C40 ya tienen
+  `curriculum_code`, `curriculum_order` y `class_audio_sources`. El importador
+  rechaza colisiones antes de escribir. La versión retirada 1.0 se conserva
+  fuera de `content/packages/` y nunca debe importarse.
+- **Las transcripciones tienen una primera copia privada verificada.** El 21 de
+  agosto de 2026 se copiaron los 70 TXT fuera de la memoria USB y se comprobó
+  su igualdad con SHA-256. Los 40 paquetes vigentes usan nombres portables
+  `AUDIO NN.txt`; el cargador los resuelve desde `CENEVAL_TRANSCRIPTS_DIR`.
+  Falta una segunda copia independiente y una restauración ensayada; los
+  originales nunca se agregan a Git ni a Vercel.
 - **Las once migraciones están aplicadas en CENEVAL, pero falta la suite RLS
   dinámica.** El historial remoto se verificó el 20 de agosto de 2026 y los
   asesores no mostraron errores de seguridad; el aviso de `exam_answer_keys`
