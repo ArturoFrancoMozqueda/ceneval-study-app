@@ -145,8 +145,8 @@ Los conceptos registrales aislados de los audios 03, 45, 46 y bancos de práctic
 
 | ID | Clase | Fuentes | Estado editorial |
 | --- | --- | --- | --- |
-| C49 | Jurisdicción voluntaria: consignación e información ad perpetuam | Audio 62 | Planificada |
-| C50 | Arrendamiento inmobiliario: procedimiento especial oral | primera parte del Audio 69 | Planificada; condicionada a implementación territorial del código nacional |
+| C49 | Jurisdicción voluntaria: consignación e información ad perpetuam | Audio 62, líneas 19, 33–37, 161–163 y 267–269; los dos últimos rangos sólo como contraste de generalizaciones retiradas | Paquete 1.2 trazable preparado localmente; régimen de Michoacán delimitado y afirmaciones no universales del audio retiradas; no importado ni publicado |
+| C50 | Arrendamiento inmobiliario: procedimiento especial oral | Audio 69, líneas 15–19 y 21–25; líneas 27–31 excluidas y 33 en adelante fuera del bloque | Paquete 1.2 trazable preparado localmente sobre el modelo del CNPCF, condicionado a declaratoria territorial; no se afirma vigencia actual en Michoacán; no importado ni publicado |
 
 El Audio 66 se archiva como transcripción defectuosa. Su fragmento sobre acción reivindicatoria podrá alimentar un complemento futuro únicamente después de reconstruir el tema con fuentes oficiales; no genera C51 ni altera la numeración.
 

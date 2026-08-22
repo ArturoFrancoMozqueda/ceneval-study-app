@@ -1,0 +1,1343 @@
+{
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C50",
+    "order": 50,
+    "audioSources": [
+      {
+        "audioNumber": 69,
+        "fragment": "Líneas 15 a 25: presentación del modelo nacional de arrendamiento inmobiliario oral"
+      }
+    ]
+  },
+  "subject": {
+    "name": "Derecho Procesal Civil",
+    "description": "Procedimientos civiles orales y aplicación territorial gradual del Código Nacional."
+  },
+  "class": {
+    "title": "Arrendamiento inmobiliario: procedimiento especial oral",
+    "description": "Modelo nacional, etapas, prueba, audiencia, rentas y recursos, sujeto a declaratoria territorial de vigencia."
+  },
+  "transcript": {
+    "originalFile": "AUDIO 69.txt",
+    "cleaned": "Se utilizaron únicamente las líneas físicas 15 a 25 como introducción al modelo nacional, al plazo de contestación y a la concentración en una audiencia de juicio. Se excluyeron las comparaciones con divorcio y mercantil de las líneas 27 a 29 y la generalización de la línea 31. Las líneas 33 en adelante, relativas a hipotecario y otros temas, quedaron totalmente fuera. Las reglas y su aplicación territorial se verificaron en el CNPCF oficial y en fuentes institucionales; no se afirma vigencia actual en Michoacán sin declaratoria."
+  },
+  "topics": [
+    {
+      "title": "Juicio especial de arrendamiento inmobiliario oral",
+      "description": "Ámbito, fase escrita, audiencia única, prueba, rentas y control de vigencia territorial.",
+      "learningJourney": {
+        "openingPrompt": "Antes de aplicar los artículos 520 a 529, ¿qué dos preguntas deben resolverse sobre materia y vigencia territorial?",
+        "quickChecks": [
+          {
+            "prompt": "¿El CNPCF ya sustituyó automáticamente el código procesal de Michoacán?",
+            "answer": "No puede afirmarse sin la declaratoria local y su fecha de entrada en vigor; las fuentes oficiales consultadas describen una implementación todavía en preparación.",
+            "feedback": "Primero verifica la declaratoria aplicable al territorio y fecha del asunto.",
+            "evidenceIds": [
+              "ev-c50-cnpcf-transitorios-vigencia",
+              "ev-c50-pjmich-implementacion-2026"
+            ]
+          },
+          {
+            "prompt": "¿El plazo de quince días es para terminar todo el juicio?",
+            "answer": "No. Es el plazo para contestar y, en su caso, reconvenir; también se concede para contestar la reconvención.",
+            "feedback": "Relaciona cada plazo con su actuación concreta.",
+            "evidenceIds": [
+              "ev-c50-cnpcf-522-contestacion-audiencia",
+              "ev-c50-a69-l021-025-plazo-audiencia"
+            ]
+          },
+          {
+            "prompt": "¿Dos meses de rentas atrasadas producen lanzamiento automático?",
+            "answer": "No. El artículo 525 regula una solicitud de acreditación de pago y, si no se acredita, embargo suficiente; no convierte ese dato por sí solo en lanzamiento.",
+            "feedback": "Distingue medida patrimonial, pretensión posesoria y ejecución.",
+            "evidenceIds": [
+              "ev-c50-cnpcf-525-rentas"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una arrendadora afirma dos meses de rentas vencidas y pretende usar el juicio especial oral en Michoacán. Acompaña contrato escrito y pide que la sola falta de recibos produzca desocupación inmediata.",
+          "question": "¿Qué debe verificar la autoridad y qué efectos permite el capítulo nacional?",
+          "legalRule": "La vigencia territorial depende del artículo segundo transitorio. Los artículos 520 a 529 regulan ámbito, escritos, audiencia, prueba, rentas, incidentes y apelación.",
+          "reasoning": "Primero debe comprobarse si existe declaratoria vigente para el territorio y fecha; sin ella no se presupone sustitución del régimen local. Bajo el modelo nacional, el contrato escrito acompaña la demanda, la contestación tiene quince días y existe audiencia de juicio concentrada. Para dos o más meses, el artículo 525 permite requerir comprobantes y embargar bienes si no se acredita pago; la desocupación no surge automáticamente de esa medida.",
+          "conclusion": "La vía, la medida por rentas y cualquier efecto sobre posesión o ejecución deben justificarse por separado.",
+          "evidenceIds": [
+            "ev-c50-cnpcf-transitorios-vigencia",
+            "ev-c50-cnpcf-520-alcance",
+            "ev-c50-cnpcf-521-escritos-pruebas",
+            "ev-c50-cnpcf-522-contestacion-audiencia",
+            "ev-c50-cnpcf-525-rentas",
+            "ev-c50-cnpcf-526-529-domicilio-recursos",
+            "ev-c50-pjmich-implementacion-2026"
+          ]
+        },
+        "closingPrompt": "Explica en orden: declaratoria territorial, ámbito del artículo 520, demanda y pruebas, contestación/reconvención, audiencia, regla de rentas, sentencia y apelación.",
+        "nextActivity": "Recorre el mapa, estudia las doce tarjetas y resuelve los diez reactivos verificando siempre territorio y fecha.",
+        "openingPromptEvidenceIds": [
+          "ev-c50-cnpcf-transitorios-vigencia",
+          "ev-c50-cnpcf-520-alcance",
+          "ev-c50-pjmich-implementacion-2026",
+          "ev-c50-a69-l015-019-introduccion"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c50-cnpcf-transitorios-vigencia",
+          "ev-c50-cnpcf-235-251-reglas-generales",
+          "ev-c50-cnpcf-520-alcance",
+          "ev-c50-cnpcf-521-escritos-pruebas",
+          "ev-c50-cnpcf-522-contestacion-audiencia",
+          "ev-c50-cnpcf-523-pruebas",
+          "ev-c50-cnpcf-524-audiencia-sentencia",
+          "ev-c50-cnpcf-525-rentas",
+          "ev-c50-cnpcf-526-529-domicilio-recursos",
+          "ev-c50-pjmich-implementacion-2026",
+          "ev-c50-a69-l015-019-introduccion",
+          "ev-c50-a69-l021-025-plazo-audiencia"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c50-cnpcf-transitorios-vigencia",
+          "ev-c50-cnpcf-520-alcance",
+          "ev-c50-cnpcf-521-escritos-pruebas",
+          "ev-c50-cnpcf-522-contestacion-audiencia",
+          "ev-c50-cnpcf-524-audiencia-sentencia",
+          "ev-c50-cnpcf-525-rentas",
+          "ev-c50-cnpcf-526-529-domicilio-recursos"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "El CNPCF diseña un juicio especial oral para controversias de arrendamiento inmobiliario. Exige verificar primero su vigencia territorial. Bajo ese modelo, demanda y contestación concentran pruebas; hay quince días para contestar y reconvenir, una audiencia de juicio y apelación devolutiva contra la sentencia definitiva. Ninguna de esas reglas autoriza asumir lanzamiento automático.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c50-cnpcf-transitorios-vigencia",
+            "ev-c50-cnpcf-520-alcance",
+            "ev-c50-cnpcf-521-escritos-pruebas",
+            "ev-c50-cnpcf-522-contestacion-audiencia",
+            "ev-c50-cnpcf-524-audiencia-sentencia",
+            "ev-c50-cnpcf-526-529-domicilio-recursos",
+            "ev-c50-pjmich-implementacion-2026",
+            "ev-c50-a69-l015-019-introduccion",
+            "ev-c50-a69-l021-025-plazo-audiencia"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa",
+          "content": "El Código Nacional tiene aplicación gradual. En entidades federativas entra en vigor conforme a la declaratoria del congreso local, previa solicitud del poder judicial, con la fecha expresamente publicada. Al 21 de agosto de 2026, las fuentes oficiales consultadas de Michoacán describen acciones preparatorias; por eso este paquete enseña el modelo nacional y exige revisar la declaratoria antes de aplicarlo a un expediente local.\n\nEl artículo 520 somete al capítulo las controversias sobre arrendamiento inmobiliario y, en lo conducente, determinadas acciones contra fiadores o terceros y la acción de la arrendataria sobre preferencia y daños prevista por el código civil aplicable. No se limita únicamente a falta de pago o desocupación.\n\nLa demanda, contestación y eventual reconvención siguen requisitos generales. Si el contrato fue escrito, debe acompañarse a la demanda. Las partes ofrecen sus pruebas en los escritos previstos por el artículo 521. Admitida la demanda, la demandada tiene quince días desde el emplazamiento para contestar y, en su caso, reconvenir; la reconvención se contesta en otros quince días.\n\nDesahogadas las vistas o vencidos los plazos, se fija directamente audiencia de juicio dentro de los quince días siguientes. No hay una audiencia preliminar separada en este capítulo. En la audiencia se intenta conciliación o mediación; si no hay convenio, se formulan alegatos iniciales, se desahogan pruebas, se expresan alegatos finales y se explica la sentencia. La copia escrita se entrega dentro del plazo legal.\n\nSi se reclaman rentas atrasadas de dos o más meses conforme al contrato, la actora puede pedir que se requieran recibos o consignaciones; si no se acredita estar al corriente, procede el embargo suficiente regulado en el artículo 525. Eso no equivale a desocupación o lanzamiento automático. Los incidentes no suspenden y la sentencia definitiva admite apelación en efecto devolutivo. Lo no previsto se completa con las reglas generales compatibles.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c50-cnpcf-transitorios-vigencia",
+            "ev-c50-cnpcf-235-251-reglas-generales",
+            "ev-c50-cnpcf-520-alcance",
+            "ev-c50-cnpcf-521-escritos-pruebas",
+            "ev-c50-cnpcf-522-contestacion-audiencia",
+            "ev-c50-cnpcf-523-pruebas",
+            "ev-c50-cnpcf-524-audiencia-sentencia",
+            "ev-c50-cnpcf-525-rentas",
+            "ev-c50-cnpcf-526-529-domicilio-recursos",
+            "ev-c50-pjmich-implementacion-2026",
+            "ev-c50-a69-l015-019-introduccion",
+            "ev-c50-a69-l021-025-plazo-audiencia"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Base jurídica",
+          "content": "CNPCF vigente 15-01-2026: transitorios Primero y Segundo; artículos 235–251 y 520–529. La aplicación local exige declaratoria y fecha territorial verificables.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c50-cnpcf-transitorios-vigencia",
+            "ev-c50-cnpcf-235-251-reglas-generales",
+            "ev-c50-cnpcf-520-alcance",
+            "ev-c50-cnpcf-521-escritos-pruebas",
+            "ev-c50-cnpcf-522-contestacion-audiencia",
+            "ev-c50-cnpcf-523-pruebas",
+            "ev-c50-cnpcf-524-audiencia-sentencia",
+            "ev-c50-cnpcf-525-rentas",
+            "ev-c50-cnpcf-526-529-domicilio-recursos",
+            "ev-c50-pjmich-implementacion-2026"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Ejemplo tipo CENEVAL",
+          "content": "Una opción sostiene que la falta de pago por dos meses produce desalojo inmediato. Se descarta: el artículo 525 regula comprobación y embargo, mientras la pretensión y la ejecución requieren su propio fundamento y resolución.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c50-cnpcf-525-rentas",
+            "ev-c50-cnpcf-526-529-domicilio-recursos"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Vigencia territorial primero; después ámbito, escritos con pruebas, contestación y reconvención en quince días, audiencia de juicio concentrada, regla específica para rentas e impugnación devolutiva.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c50-cnpcf-transitorios-vigencia",
+            "ev-c50-cnpcf-520-alcance",
+            "ev-c50-cnpcf-521-escritos-pruebas",
+            "ev-c50-cnpcf-522-contestacion-audiencia",
+            "ev-c50-cnpcf-524-audiencia-sentencia",
+            "ev-c50-cnpcf-525-rentas",
+            "ev-c50-cnpcf-526-529-domicilio-recursos",
+            "ev-c50-pjmich-implementacion-2026"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de estudio",
+          "content": "1. Comprueba declaratoria. 2. Identifica controversia arrendaticia. 3. Revisa contrato escrito y pruebas. 4. Cuenta quince días desde emplazamiento. 5. Distingue vistas y reconvención. 6. Prepara la audiencia única. 7. Separa embargo, posesión y ejecución. 8. Ubica la apelación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c50-cnpcf-transitorios-vigencia",
+            "ev-c50-cnpcf-235-251-reglas-generales",
+            "ev-c50-cnpcf-520-alcance",
+            "ev-c50-cnpcf-521-escritos-pruebas",
+            "ev-c50-cnpcf-522-contestacion-audiencia",
+            "ev-c50-cnpcf-523-pruebas",
+            "ev-c50-cnpcf-524-audiencia-sentencia",
+            "ev-c50-cnpcf-525-rentas",
+            "ev-c50-cnpcf-526-529-domicilio-recursos"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Declaratoria territorial; aplicación gradual; arrendamiento inmobiliario; contrato escrito; demanda; contestación; reconvención; prueba; audiencia de juicio; conciliación; rentas atrasadas; embargo; incidente; apelación devolutiva; supletoriedad interna.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c50-cnpcf-transitorios-vigencia",
+            "ev-c50-cnpcf-235-251-reglas-generales",
+            "ev-c50-cnpcf-520-alcance",
+            "ev-c50-cnpcf-521-escritos-pruebas",
+            "ev-c50-cnpcf-522-contestacion-audiencia",
+            "ev-c50-cnpcf-523-pruebas",
+            "ev-c50-cnpcf-524-audiencia-sentencia",
+            "ev-c50-cnpcf-525-rentas",
+            "ev-c50-cnpcf-526-529-domicilio-recursos"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "Presentar el CNPCF como vigente en toda entidad sin declaratoria; limitar el juicio a desocupación; confundir quince días de contestación con duración total; inventar audiencia preliminar; convertir dos meses de renta en lanzamiento; afirmar que no hay recurso.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c50-cnpcf-transitorios-vigencia",
+            "ev-c50-cnpcf-520-alcance",
+            "ev-c50-cnpcf-522-contestacion-audiencia",
+            "ev-c50-cnpcf-524-audiencia-sentencia",
+            "ev-c50-cnpcf-525-rentas",
+            "ev-c50-cnpcf-526-529-domicilio-recursos",
+            "ev-c50-pjmich-implementacion-2026"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Práctica de expediente",
+          "content": "Construye una tabla con: territorio y fecha, pretensión, contrato, pruebas, emplazamiento, contestación, reconvención, audiencia, medida por rentas y recurso. Marca como insuficiente cualquier caso sin declaratoria o hechos necesarios.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c50-cnpcf-transitorios-vigencia",
+            "ev-c50-cnpcf-235-251-reglas-generales",
+            "ev-c50-cnpcf-520-alcance",
+            "ev-c50-cnpcf-521-escritos-pruebas",
+            "ev-c50-cnpcf-522-contestacion-audiencia",
+            "ev-c50-cnpcf-523-pruebas",
+            "ev-c50-cnpcf-524-audiencia-sentencia",
+            "ev-c50-cnpcf-525-rentas",
+            "ev-c50-cnpcf-526-529-domicilio-recursos",
+            "ev-c50-pjmich-implementacion-2026"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Ruta del arrendamiento oral nacional",
+        "description": "Vigencia, escritos, audiencia y efectos",
+        "nodes": [
+          {
+            "id": "inicio",
+            "label": "Modelo nacional",
+            "description": "CNPCF",
+            "evidenceIds": [
+              "ev-c50-cnpcf-transitorios-vigencia",
+              "ev-c50-a69-l015-019-introduccion"
+            ]
+          },
+          {
+            "id": "vigencia",
+            "label": "Vigencia territorial",
+            "description": "No automática",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c50-cnpcf-transitorios-vigencia",
+              "ev-c50-pjmich-implementacion-2026"
+            ]
+          },
+          {
+            "id": "declaratoria",
+            "label": "Declaratoria",
+            "description": "Congreso local",
+            "parentId": "vigencia",
+            "evidenceIds": [
+              "ev-c50-cnpcf-transitorios-vigencia"
+            ]
+          },
+          {
+            "id": "fecha",
+            "label": "Fecha expresa",
+            "description": "Publicación oficial",
+            "parentId": "vigencia",
+            "evidenceIds": [
+              "ev-c50-cnpcf-transitorios-vigencia"
+            ]
+          },
+          {
+            "id": "michoacan",
+            "label": "Michoacán",
+            "description": "Preparación en 2026",
+            "parentId": "vigencia",
+            "evidenceIds": [
+              "ev-c50-pjmich-implementacion-2026"
+            ]
+          },
+          {
+            "id": "ambito",
+            "label": "Ámbito",
+            "description": "Controversias arrendaticias",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c50-cnpcf-520-alcance"
+            ]
+          },
+          {
+            "id": "arrendador",
+            "label": "Arrendadora",
+            "description": "Pretensiones contractuales",
+            "parentId": "ambito",
+            "evidenceIds": [
+              "ev-c50-cnpcf-520-alcance"
+            ]
+          },
+          {
+            "id": "arrendatario",
+            "label": "Arrendataria",
+            "description": "Preferencia y daños, en su caso",
+            "parentId": "ambito",
+            "evidenceIds": [
+              "ev-c50-cnpcf-520-alcance"
+            ]
+          },
+          {
+            "id": "fiador",
+            "label": "Fiador o tercero",
+            "description": "Reglas en lo conducente",
+            "parentId": "ambito",
+            "evidenceIds": [
+              "ev-c50-cnpcf-520-alcance"
+            ]
+          },
+          {
+            "id": "demanda",
+            "label": "Demanda",
+            "description": "Requisitos generales",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c50-cnpcf-235-251-reglas-generales",
+              "ev-c50-cnpcf-521-escritos-pruebas"
+            ]
+          },
+          {
+            "id": "contrato",
+            "label": "Contrato escrito",
+            "description": "Se acompaña si existe",
+            "parentId": "demanda",
+            "evidenceIds": [
+              "ev-c50-cnpcf-521-escritos-pruebas"
+            ]
+          },
+          {
+            "id": "pruebas-escrito",
+            "label": "Pruebas",
+            "description": "Se ofrecen en escritos",
+            "parentId": "demanda",
+            "evidenceIds": [
+              "ev-c50-cnpcf-521-escritos-pruebas"
+            ]
+          },
+          {
+            "id": "emplazamiento",
+            "label": "Emplazamiento",
+            "description": "Inicia plazo",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c50-cnpcf-235-251-reglas-generales",
+              "ev-c50-cnpcf-522-contestacion-audiencia"
+            ]
+          },
+          {
+            "id": "contestacion",
+            "label": "Contestación",
+            "description": "Quince días",
+            "parentId": "emplazamiento",
+            "evidenceIds": [
+              "ev-c50-cnpcf-522-contestacion-audiencia",
+              "ev-c50-a69-l021-025-plazo-audiencia"
+            ]
+          },
+          {
+            "id": "reconvencion",
+            "label": "Reconvención",
+            "description": "En su caso",
+            "parentId": "contestacion",
+            "evidenceIds": [
+              "ev-c50-cnpcf-522-contestacion-audiencia"
+            ]
+          },
+          {
+            "id": "respuesta-reconv",
+            "label": "Contestación reconvención",
+            "description": "Quince días",
+            "parentId": "reconvencion",
+            "evidenceIds": [
+              "ev-c50-cnpcf-522-contestacion-audiencia"
+            ]
+          },
+          {
+            "id": "vistas",
+            "label": "Vistas",
+            "description": "Excepciones y defensas",
+            "parentId": "contestacion",
+            "evidenceIds": [
+              "ev-c50-cnpcf-522-contestacion-audiencia"
+            ]
+          },
+          {
+            "id": "audiencia",
+            "label": "Audiencia de juicio",
+            "description": "Una fase concentrada",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c50-cnpcf-522-contestacion-audiencia",
+              "ev-c50-cnpcf-524-audiencia-sentencia",
+              "ev-c50-a69-l021-025-plazo-audiencia"
+            ]
+          },
+          {
+            "id": "fecha-audiencia",
+            "label": "Señalamiento",
+            "description": "Dentro de quince días",
+            "parentId": "audiencia",
+            "evidenceIds": [
+              "ev-c50-cnpcf-522-contestacion-audiencia"
+            ]
+          },
+          {
+            "id": "conciliacion",
+            "label": "Conciliación",
+            "description": "Inicio de audiencia",
+            "parentId": "audiencia",
+            "evidenceIds": [
+              "ev-c50-cnpcf-524-audiencia-sentencia"
+            ]
+          },
+          {
+            "id": "alegato-inicial",
+            "label": "Alegato inicial",
+            "description": "Si no hay convenio",
+            "parentId": "audiencia",
+            "evidenceIds": [
+              "ev-c50-cnpcf-524-audiencia-sentencia"
+            ]
+          },
+          {
+            "id": "desahogo",
+            "label": "Desahogo",
+            "description": "Pruebas admitidas",
+            "parentId": "audiencia",
+            "evidenceIds": [
+              "ev-c50-cnpcf-523-pruebas",
+              "ev-c50-cnpcf-524-audiencia-sentencia"
+            ]
+          },
+          {
+            "id": "alegato-final",
+            "label": "Alegato final",
+            "description": "Después de pruebas",
+            "parentId": "audiencia",
+            "evidenceIds": [
+              "ev-c50-cnpcf-524-audiencia-sentencia"
+            ]
+          },
+          {
+            "id": "sentencia",
+            "label": "Sentencia",
+            "description": "Explicación oral",
+            "parentId": "audiencia",
+            "evidenceIds": [
+              "ev-c50-cnpcf-524-audiencia-sentencia"
+            ]
+          },
+          {
+            "id": "copia",
+            "label": "Versión escrita",
+            "description": "Plazo legal",
+            "parentId": "sentencia",
+            "evidenceIds": [
+              "ev-c50-cnpcf-524-audiencia-sentencia"
+            ]
+          },
+          {
+            "id": "rentas",
+            "label": "Rentas atrasadas",
+            "description": "Dos o más meses",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c50-cnpcf-525-rentas"
+            ]
+          },
+          {
+            "id": "recibos",
+            "label": "Acreditación",
+            "description": "Recibos o consignación",
+            "parentId": "rentas",
+            "evidenceIds": [
+              "ev-c50-cnpcf-525-rentas"
+            ]
+          },
+          {
+            "id": "embargo",
+            "label": "Embargo",
+            "description": "Suficiente si no acredita",
+            "parentId": "rentas",
+            "evidenceIds": [
+              "ev-c50-cnpcf-525-rentas"
+            ]
+          },
+          {
+            "id": "no-lanzamiento",
+            "label": "No automático",
+            "description": "Embargo no es lanzamiento",
+            "parentId": "embargo",
+            "evidenceIds": [
+              "ev-c50-cnpcf-525-rentas",
+              "ev-c50-cnpcf-526-529-domicilio-recursos"
+            ]
+          },
+          {
+            "id": "incidentes",
+            "label": "Incidentes",
+            "description": "No suspenden",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c50-cnpcf-526-529-domicilio-recursos"
+            ]
+          },
+          {
+            "id": "domicilio",
+            "label": "Domicilio legal",
+            "description": "Inmueble arrendado",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c50-cnpcf-526-529-domicilio-recursos"
+            ]
+          },
+          {
+            "id": "apelacion",
+            "label": "Apelación",
+            "description": "Efecto devolutivo",
+            "parentId": "sentencia",
+            "evidenceIds": [
+              "ev-c50-cnpcf-526-529-domicilio-recursos"
+            ]
+          },
+          {
+            "id": "reglas-generales",
+            "label": "Reglas generales",
+            "description": "Solo si compatibles",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c50-cnpcf-235-251-reglas-generales",
+              "ev-c50-cnpcf-526-529-domicilio-recursos"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Código Nacional de Procedimientos Civiles y Familiares",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Texto vigente, última reforma DOF 15-01-2026; transitorios Primero y Segundo y artículos 235–251, 520–529",
+          "retrievedOn": "2026-08-21",
+          "note": "Modelo nacional y entrada en vigor gradual.",
+          "evidenceIds": [
+            "ev-c50-cnpcf-transitorios-vigencia",
+            "ev-c50-cnpcf-235-251-reglas-generales",
+            "ev-c50-cnpcf-520-alcance",
+            "ev-c50-cnpcf-521-escritos-pruebas",
+            "ev-c50-cnpcf-522-contestacion-audiencia",
+            "ev-c50-cnpcf-523-pruebas",
+            "ev-c50-cnpcf-524-audiencia-sentencia",
+            "ev-c50-cnpcf-525-rentas",
+            "ev-c50-cnpcf-526-529-domicilio-recursos"
+          ]
+        },
+        {
+          "title": "Poder Judicial de Michoacán continúa la preparación para implementar el CNPCF",
+          "url": "https://www.poderjudicialmichoacan.gob.mx/web/noticias/nota.aspx?id=3289",
+          "institution": "Poder Judicial del Estado de Michoacán",
+          "jurisdiction": "Michoacán, México",
+          "citation": "Nota institucional consultada el 21-08-2026 sobre acciones preparatorias para la implementación",
+          "retrievedOn": "2026-08-21",
+          "note": "No sustituye la declaratoria; obliga a comprobarla antes de aplicar el procedimiento.",
+          "evidenceIds": [
+            "ev-c50-pjmich-implementacion-2026"
+          ]
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué se verifica antes de aplicar el CNPCF en una entidad?",
+          "answer": "La declaratoria territorial y su fecha de entrada en vigor.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c50-cnpcf-transitorios-vigencia",
+            "ev-c50-pjmich-implementacion-2026"
+          ]
+        },
+        {
+          "question": "¿Qué controversias cubre el artículo 520?",
+          "answer": "Las de arrendamiento inmobiliario y los supuestos adicionales que enumera en lo conducente.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c50-cnpcf-520-alcance"
+          ]
+        },
+        {
+          "question": "¿Qué se acompaña si el arrendamiento consta por escrito?",
+          "answer": "El contrato de arrendamiento.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c50-cnpcf-521-escritos-pruebas"
+          ]
+        },
+        {
+          "question": "¿Cuándo se ofrecen las pruebas?",
+          "answer": "En demanda, contestación y demás escritos señalados por el artículo 521.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c50-cnpcf-521-escritos-pruebas"
+          ]
+        },
+        {
+          "question": "¿Plazo para contestar?",
+          "answer": "Quince días siguientes al emplazamiento.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c50-cnpcf-522-contestacion-audiencia",
+            "ev-c50-a69-l021-025-plazo-audiencia"
+          ]
+        },
+        {
+          "question": "¿Plazo para contestar reconvención?",
+          "answer": "Quince días siguientes al traslado.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c50-cnpcf-522-contestacion-audiencia"
+          ]
+        },
+        {
+          "question": "¿Hay preliminar separada?",
+          "answer": "El capítulo señala directamente audiencia de juicio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c50-cnpcf-522-contestacion-audiencia",
+            "ev-c50-cnpcf-524-audiencia-sentencia",
+            "ev-c50-a69-l021-025-plazo-audiencia"
+          ]
+        },
+        {
+          "question": "¿Quién prepara las pruebas?",
+          "answer": "Las partes, con auxilio judicial cuando acrediten imposibilidad y lo soliciten.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c50-cnpcf-523-pruebas"
+          ]
+        },
+        {
+          "question": "¿Qué ocurre al inicio de audiencia?",
+          "answer": "Se abre conciliación o mediación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c50-cnpcf-524-audiencia-sentencia"
+          ]
+        },
+        {
+          "question": "¿Qué regula el artículo 525?",
+          "answer": "Acreditación de pago y posible embargo por dos o más meses de rentas reclamadas.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c50-cnpcf-525-rentas"
+          ]
+        },
+        {
+          "question": "¿Los incidentes suspenden?",
+          "answer": "No, conforme al artículo 527.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c50-cnpcf-526-529-domicilio-recursos"
+          ]
+        },
+        {
+          "question": "¿Qué recurso procede contra sentencia definitiva?",
+          "answer": "Apelación en efecto devolutivo.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c50-cnpcf-526-529-domicilio-recursos"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación: arrendamiento inmobiliario oral",
+        "description": "Aplicación del modelo nacional con control de vigencia territorial.",
+        "questions": [
+          {
+            "text": "En Michoacán, ¿qué debe comprobarse antes de invocar los artículos 520–529?",
+            "difficulty": "basic",
+            "options": [
+              "La declaratoria territorial y fecha aplicable",
+              "Que el audio diga que ya cambió",
+              "Que exista una controversia sin importar vigencia"
+            ],
+            "correctOption": 0,
+            "explanation": "La aplicación estatal es gradual y depende de declaratoria.",
+            "optionExplanations": [
+              "La aplicación estatal es gradual y depende de declaratoria.",
+              "Esa opción altera el alcance o el momento procesal.",
+              "Esa opción convierte una regla condicionada en un efecto automático."
+            ],
+            "evidenceIds": [
+              "ev-c50-cnpcf-transitorios-vigencia",
+              "ev-c50-pjmich-implementacion-2026"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c50-cnpcf-transitorios-vigencia",
+                "ev-c50-pjmich-implementacion-2026"
+              ],
+              [
+                "ev-c50-a69-l015-019-introduccion",
+                "ev-c50-pjmich-implementacion-2026"
+              ],
+              [
+                "ev-c50-cnpcf-transitorios-vigencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c50-cnpcf-transitorios-vigencia",
+              "ev-c50-pjmich-implementacion-2026"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c50-cnpcf-transitorios-vigencia",
+              "ev-c50-pjmich-implementacion-2026"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c50-cnpcf-transitorios-vigencia",
+                "ev-c50-pjmich-implementacion-2026"
+              ],
+              [
+                "ev-c50-a69-l015-019-introduccion",
+                "ev-c50-pjmich-implementacion-2026"
+              ],
+              [
+                "ev-c50-cnpcf-transitorios-vigencia"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál es el ámbito principal del artículo 520?",
+            "difficulty": "basic",
+            "options": [
+              "Controversias de arrendamiento inmobiliario",
+              "Solo ejecuciones hipotecarias",
+              "Todo conflicto sobre cualquier bien mueble"
+            ],
+            "correctOption": 0,
+            "explanation": "El capítulo regula controversias arrendaticias inmobiliarias.",
+            "optionExplanations": [
+              "El capítulo regula controversias arrendaticias inmobiliarias.",
+              "Esa opción altera el alcance o el momento procesal.",
+              "Esa opción convierte una regla condicionada en un efecto automático."
+            ],
+            "evidenceIds": [
+              "ev-c50-cnpcf-520-alcance"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c50-cnpcf-520-alcance"
+              ],
+              [
+                "ev-c50-cnpcf-520-alcance"
+              ],
+              [
+                "ev-c50-cnpcf-520-alcance"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c50-cnpcf-520-alcance"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c50-cnpcf-520-alcance"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c50-cnpcf-520-alcance"
+              ],
+              [
+                "ev-c50-cnpcf-520-alcance"
+              ],
+              [
+                "ev-c50-cnpcf-520-alcance"
+              ]
+            ]
+          },
+          {
+            "text": "Si existe contrato escrito, ¿qué exige el artículo 521?",
+            "difficulty": "basic",
+            "options": [
+              "Acompañarlo a la demanda",
+              "Destruirlo después del emplazamiento",
+              "Sustituir toda prueba con testigos"
+            ],
+            "correctOption": 0,
+            "explanation": "El contrato escrito debe acompañar el escrito inicial.",
+            "optionExplanations": [
+              "El contrato escrito debe acompañar el escrito inicial.",
+              "Esa opción altera el alcance o el momento procesal.",
+              "Esa opción convierte una regla condicionada en un efecto automático."
+            ],
+            "evidenceIds": [
+              "ev-c50-cnpcf-521-escritos-pruebas"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c50-cnpcf-521-escritos-pruebas"
+              ],
+              [
+                "ev-c50-cnpcf-521-escritos-pruebas"
+              ],
+              [
+                "ev-c50-cnpcf-521-escritos-pruebas"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c50-cnpcf-521-escritos-pruebas"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c50-cnpcf-521-escritos-pruebas"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c50-cnpcf-521-escritos-pruebas"
+              ],
+              [
+                "ev-c50-cnpcf-521-escritos-pruebas"
+              ],
+              [
+                "ev-c50-cnpcf-521-escritos-pruebas"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál es el plazo para contestar la demanda?",
+            "difficulty": "basic",
+            "options": [
+              "Quince días desde el emplazamiento",
+              "Quince días para terminar todo el juicio",
+              "Tres días desde la firma del contrato"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 522 vincula quince días con contestación y eventual reconvención.",
+            "optionExplanations": [
+              "El artículo 522 vincula quince días con contestación y eventual reconvención.",
+              "Esa opción altera el alcance o el momento procesal.",
+              "Esa opción convierte una regla condicionada en un efecto automático."
+            ],
+            "evidenceIds": [
+              "ev-c50-cnpcf-522-contestacion-audiencia",
+              "ev-c50-a69-l021-025-plazo-audiencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c50-cnpcf-522-contestacion-audiencia",
+                "ev-c50-a69-l021-025-plazo-audiencia"
+              ],
+              [
+                "ev-c50-cnpcf-522-contestacion-audiencia"
+              ],
+              [
+                "ev-c50-cnpcf-522-contestacion-audiencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c50-cnpcf-522-contestacion-audiencia",
+              "ev-c50-a69-l021-025-plazo-audiencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c50-cnpcf-522-contestacion-audiencia",
+              "ev-c50-a69-l021-025-plazo-audiencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c50-cnpcf-522-contestacion-audiencia",
+                "ev-c50-a69-l021-025-plazo-audiencia"
+              ],
+              [
+                "ev-c50-cnpcf-522-contestacion-audiencia"
+              ],
+              [
+                "ev-c50-cnpcf-522-contestacion-audiencia"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué ocurre tras vistas y contestación de reconvención?",
+            "difficulty": "basic",
+            "options": [
+              "Se señala audiencia de juicio dentro del plazo legal",
+              "Se abre siempre una preliminar separada",
+              "Se ordena lanzamiento automático"
+            ],
+            "correctOption": 0,
+            "explanation": "El capítulo concentra el debate en audiencia de juicio.",
+            "optionExplanations": [
+              "El capítulo concentra el debate en audiencia de juicio.",
+              "Esa opción altera el alcance o el momento procesal.",
+              "Esa opción convierte una regla condicionada en un efecto automático."
+            ],
+            "evidenceIds": [
+              "ev-c50-cnpcf-522-contestacion-audiencia",
+              "ev-c50-cnpcf-524-audiencia-sentencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c50-cnpcf-522-contestacion-audiencia",
+                "ev-c50-cnpcf-524-audiencia-sentencia"
+              ],
+              [
+                "ev-c50-cnpcf-522-contestacion-audiencia",
+                "ev-c50-cnpcf-524-audiencia-sentencia"
+              ],
+              [
+                "ev-c50-cnpcf-525-rentas"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c50-cnpcf-522-contestacion-audiencia",
+              "ev-c50-cnpcf-524-audiencia-sentencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c50-cnpcf-522-contestacion-audiencia",
+              "ev-c50-cnpcf-524-audiencia-sentencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c50-cnpcf-522-contestacion-audiencia",
+                "ev-c50-cnpcf-524-audiencia-sentencia"
+              ],
+              [
+                "ev-c50-cnpcf-522-contestacion-audiencia",
+                "ev-c50-cnpcf-524-audiencia-sentencia"
+              ],
+              [
+                "ev-c50-cnpcf-525-rentas"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué secuencia corresponde a la audiencia?",
+            "difficulty": "basic",
+            "options": [
+              "Conciliación, alegatos iniciales, pruebas, alegatos finales y sentencia",
+              "Embargo, lanzamiento y archivo sin debate",
+              "Solo lectura de la demanda"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 524 establece esa secuencia concentrada.",
+            "optionExplanations": [
+              "El artículo 524 establece esa secuencia concentrada.",
+              "Esa opción altera el alcance o el momento procesal.",
+              "Esa opción convierte una regla condicionada en un efecto automático."
+            ],
+            "evidenceIds": [
+              "ev-c50-cnpcf-524-audiencia-sentencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c50-cnpcf-524-audiencia-sentencia"
+              ],
+              [
+                "ev-c50-cnpcf-524-audiencia-sentencia",
+                "ev-c50-cnpcf-525-rentas"
+              ],
+              [
+                "ev-c50-cnpcf-524-audiencia-sentencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c50-cnpcf-524-audiencia-sentencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c50-cnpcf-524-audiencia-sentencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c50-cnpcf-524-audiencia-sentencia"
+              ],
+              [
+                "ev-c50-cnpcf-524-audiencia-sentencia",
+                "ev-c50-cnpcf-525-rentas"
+              ],
+              [
+                "ev-c50-cnpcf-524-audiencia-sentencia"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué deber principal tienen las partes respecto de pruebas?",
+            "difficulty": "basic",
+            "options": [
+              "Prepararlas y presentar testigos, peritos y demás medios admitidos",
+              "Esperar siempre que el tribunal haga todo",
+              "Ofrecerlas después de sentencia"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 523 asigna preparación a las partes con auxilio condicionado.",
+            "optionExplanations": [
+              "El artículo 523 asigna preparación a las partes con auxilio condicionado.",
+              "Esa opción altera el alcance o el momento procesal.",
+              "Esa opción convierte una regla condicionada en un efecto automático."
+            ],
+            "evidenceIds": [
+              "ev-c50-cnpcf-523-pruebas"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c50-cnpcf-523-pruebas"
+              ],
+              [
+                "ev-c50-cnpcf-523-pruebas"
+              ],
+              [
+                "ev-c50-cnpcf-523-pruebas"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c50-cnpcf-523-pruebas"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c50-cnpcf-523-pruebas"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c50-cnpcf-523-pruebas"
+              ],
+              [
+                "ev-c50-cnpcf-523-pruebas"
+              ],
+              [
+                "ev-c50-cnpcf-523-pruebas"
+              ]
+            ]
+          },
+          {
+            "text": "Dos meses de rentas reclamadas sin recibos, ¿qué efecto específico prevé el artículo 525?",
+            "difficulty": "basic",
+            "options": [
+              "Posible embargo suficiente tras el requerimiento",
+              "Lanzamiento automático e inmediato",
+              "Pérdida automática de toda defensa"
+            ],
+            "correctOption": 0,
+            "explanation": "La norma regula acreditación y embargo, no desocupación automática.",
+            "optionExplanations": [
+              "La norma regula acreditación y embargo, no desocupación automática.",
+              "Esa opción altera el alcance o el momento procesal.",
+              "Esa opción convierte una regla condicionada en un efecto automático."
+            ],
+            "evidenceIds": [
+              "ev-c50-cnpcf-525-rentas"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c50-cnpcf-525-rentas"
+              ],
+              [
+                "ev-c50-cnpcf-525-rentas",
+                "ev-c50-cnpcf-526-529-domicilio-recursos"
+              ],
+              [
+                "ev-c50-cnpcf-525-rentas"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c50-cnpcf-525-rentas"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c50-cnpcf-525-rentas"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c50-cnpcf-525-rentas"
+              ],
+              [
+                "ev-c50-cnpcf-525-rentas",
+                "ev-c50-cnpcf-526-529-domicilio-recursos"
+              ],
+              [
+                "ev-c50-cnpcf-525-rentas"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué efecto tiene la apelación contra sentencia definitiva?",
+            "difficulty": "basic",
+            "options": [
+              "Devolutivo",
+              "Suspensivo universal",
+              "No existe recurso"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 528 establece apelación en efecto devolutivo.",
+            "optionExplanations": [
+              "El artículo 528 establece apelación en efecto devolutivo.",
+              "Esa opción altera el alcance o el momento procesal.",
+              "Esa opción convierte una regla condicionada en un efecto automático."
+            ],
+            "evidenceIds": [
+              "ev-c50-cnpcf-526-529-domicilio-recursos"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c50-cnpcf-526-529-domicilio-recursos"
+              ],
+              [
+                "ev-c50-cnpcf-526-529-domicilio-recursos"
+              ],
+              [
+                "ev-c50-cnpcf-526-529-domicilio-recursos"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c50-cnpcf-526-529-domicilio-recursos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c50-cnpcf-526-529-domicilio-recursos"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c50-cnpcf-526-529-domicilio-recursos"
+              ],
+              [
+                "ev-c50-cnpcf-526-529-domicilio-recursos"
+              ],
+              [
+                "ev-c50-cnpcf-526-529-domicilio-recursos"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cómo se resuelve lo no previsto en el capítulo?",
+            "difficulty": "basic",
+            "options": [
+              "Con reglas generales compatibles del CNPCF",
+              "Con la sección hipotecaria automáticamente",
+              "Con cualquier práctica local aunque contradiga el capítulo"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 529 remite a reglas generales que no se opongan.",
+            "optionExplanations": [
+              "El artículo 529 remite a reglas generales que no se opongan.",
+              "Esa opción altera el alcance o el momento procesal.",
+              "Esa opción convierte una regla condicionada en un efecto automático."
+            ],
+            "evidenceIds": [
+              "ev-c50-cnpcf-235-251-reglas-generales",
+              "ev-c50-cnpcf-526-529-domicilio-recursos"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c50-cnpcf-235-251-reglas-generales",
+                "ev-c50-cnpcf-526-529-domicilio-recursos"
+              ],
+              [
+                "ev-c50-cnpcf-526-529-domicilio-recursos"
+              ],
+              [
+                "ev-c50-cnpcf-526-529-domicilio-recursos"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c50-cnpcf-235-251-reglas-generales",
+              "ev-c50-cnpcf-526-529-domicilio-recursos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c50-cnpcf-235-251-reglas-generales",
+              "ev-c50-cnpcf-526-529-domicilio-recursos"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c50-cnpcf-235-251-reglas-generales",
+                "ev-c50-cnpcf-526-529-domicilio-recursos"
+              ],
+              [
+                "ev-c50-cnpcf-526-529-domicilio-recursos"
+              ],
+              [
+                "ev-c50-cnpcf-526-529-domicilio-recursos"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c50-cnpcf-transitorios-vigencia",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026, nota de vigencia y transitorios Primero y Segundo del Decreto DOF 07-06-2023",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c50-cnpcf-235-251-reglas-generales",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026, artículos 235 a 251: demanda, emplazamiento, contestación, reconvención, pruebas y audiencia preliminar general",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c50-cnpcf-520-alcance",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026, artículo 520: ámbito del juicio especial de arrendamiento inmobiliario oral",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c50-cnpcf-521-escritos-pruebas",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026, artículo 521: escritos, contrato escrito y ofrecimiento de pruebas",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c50-cnpcf-522-contestacion-audiencia",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026, artículo 522: contestación, reconvención, vistas, admisión y audiencia",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c50-cnpcf-523-pruebas",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026, artículo 523: preparación y desahogo de pruebas",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c50-cnpcf-524-audiencia-sentencia",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026, artículo 524: audiencia, conciliación, alegatos, prueba y sentencia",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c50-cnpcf-525-rentas",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026, artículo 525: dos o más meses, acreditación de pago y embargo",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c50-cnpcf-526-529-domicilio-recursos",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026, artículos 526 a 529: domicilio, incidentes, apelación y reglas generales",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c50-pjmich-implementacion-2026",
+      "kind": "official",
+      "title": "Preparación institucional para implementar el CNPCF",
+      "url": "https://www.poderjudicialmichoacan.gob.mx/web/noticias/nota.aspx?id=3289",
+      "institution": "Poder Judicial del Estado de Michoacán",
+      "jurisdiction": "Michoacán, México",
+      "locator": "nota institucional publicada 16-08-2026: acciones de preparación para la implementación del nuevo sistema",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c50-a69-l015-019-introduccion",
+      "kind": "transcript",
+      "audioNumber": 69,
+      "locator": {
+        "type": "line_range",
+        "startLine": 15,
+        "endLine": 19
+      }
+    },
+    {
+      "id": "ev-c50-a69-l021-025-plazo-audiencia",
+      "kind": "transcript",
+      "audioNumber": 69,
+      "locator": {
+        "type": "line_range",
+        "startLine": 21,
+        "endLine": 25
+      }
+    }
+  ]
+}

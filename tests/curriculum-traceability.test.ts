@@ -789,6 +789,37 @@ const traceablePackages = [
       /última reforma DOF 14-05-2026/i,
     ],
   },
+  {
+    code: "C49",
+    fileName:
+      "audio-62-jurisdiccion-voluntaria-consignacion-informacion-ad-perpetuam.json",
+    artifacts: 150,
+    evidence: 10,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /Michoacán y competencia territorial/i,
+      /depositar una cantidad elegida unilateralmente no garantiza liberación/i,
+      /cinco testigos sólo donde el código lo ordena/i,
+      /no universalices.*certificado negativo/i,
+      /cualquier bien sin dueño aparente.*regularizarse por esta vía/i,
+      /CNPCF no se mezcló con el régimen local/i,
+    ],
+  },
+  {
+    code: "C50",
+    fileName: "audio-69-arrendamiento-inmobiliario-especial-oral.json",
+    artifacts: 151,
+    evidence: 12,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /no se afirma vigencia actual en Michoacán sin declaratoria/i,
+      /quince días desde el emplazamiento para contestar/i,
+      /no hay una audiencia preliminar separada/i,
+      /no equivale a desocupación o lanzamiento automático/i,
+      /líneas 33 en adelante.*quedaron totalmente fuera/i,
+      /última reforma DOF 15-01-2026/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -1220,6 +1251,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una vía procesal o regla colectiva falsa como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C49" || expected.code === "C50") {
+      const obsoleteAsCurrent =
+        expected.code === "C49"
+          ? /(?:siempre|en todo caso).*(?:cinco testigos|certificado negativo)|(?:información ad perpetuam|jurisdicción voluntaria).*(?:crea|transmite|garantiza).*(?:propiedad|título)|(?:inventar|falsear).*(?:linderos|colindancias)|500 metros.*(?:regla|requisito)/i
+          : /CNPCF.*(?:ya|actualmente).*(?:rige|vigente|sustituyó).*(?:Michoacán|toda entidad)|quince días.*(?:termina|concluye).*(?:juicio|procedimiento)|(?:desocupación|lanzamiento).*(?:automático|inmediato)|audiencia preliminar.*(?:obligatoria|separada)/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una regla civil local falsa o una vigencia territorial no declarada como respuesta vigente.`,
         );
       }
     }

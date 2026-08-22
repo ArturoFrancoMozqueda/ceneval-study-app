@@ -1,0 +1,1411 @@
+{
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C49",
+    "order": 49,
+    "audioSources": [
+      {
+        "audioNumber": 62,
+        "fragment": "Líneas 19, 33–37, 161–163 y 267–269: nociones y afirmaciones históricas contrastadas"
+      }
+    ]
+  },
+  "subject": {
+    "name": "Derecho procesal civil de Michoacán",
+    "description": "Jurisdicción voluntaria, consignación e información testimonial conforme al derecho local vigente."
+  },
+  "class": {
+    "title": "Jurisdicción voluntaria, consignación e información ad perpetuam",
+    "description": "Supuestos, oposición y efectos en el Código Civil y procesal de Michoacán."
+  },
+  "transcript": {
+    "originalFile": "AUDIO 62.txt",
+    "cleaned": "Se conservaron sólo las líneas físicas 19, 33 a 37, 161 a 163 y 267 a 269. La primera aporta la ausencia inicial de controversia; la segunda identifica la consignación; las dos últimas documentan afirmaciones históricas sobre título y testigos que el paquete corrige con el código vigente. Se excluyeron nombres, logística, lenguaje ofensivo, anécdotas, consejos no verificables y todos los demás renglones. El CNPCF no se mezcló con el régimen local."
+  },
+  "topics": [
+    {
+      "title": "Vía voluntaria y diligencias civiles locales",
+      "description": "Identifica el supuesto local, las citaciones, la oposición y el efecto jurídicamente posible.",
+      "learningJourney": {
+        "openingPrompt": "¿Qué cambia cuando aparece oposición o cuando se pretende un efecto no previsto por la ley?",
+        "openingPromptEvidenceIds": [
+          "ev-c49-cpc-1153-1163-general",
+          "ev-c49-cpc-173-competencia",
+          "ev-c49-cc-1262-1268-consignacion",
+          "ev-c49-cpc-283-293-consignacion",
+          "ev-c49-cpc-1164-1167-informacion",
+          "ev-c49-cpc-1168-1175-especiales"
+        ],
+        "quickChecks": [
+          {
+            "prompt": "¿Toda consignación libera al deudor?",
+            "answer": "No; exige requisitos y aprobación legal.",
+            "feedback": "Separa depósito, oposición y aprobación.",
+            "evidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion"
+            ]
+          },
+          {
+            "prompt": "¿Siempre se requieren cinco testigos?",
+            "answer": "No; sólo en supuestos especiales expresos.",
+            "feedback": "No conviertas una excepción en regla.",
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ]
+          },
+          {
+            "prompt": "¿La información equivale a prescripción?",
+            "answer": "No; son instituciones jurídicas distintas.",
+            "feedback": "Identifica el efecto exacto solicitado.",
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una persona deposita una suma que eligió y otra pretende registrar un inmueble mediante información testimonial; en ambos asuntos hay oposición.",
+          "legalRule": "La consignación exige los requisitos de pago y aprobación; la información está sujeta al supuesto, citaciones y oposición del Código de Michoacán.",
+          "reasoning": "El depósito unilateral no libera automáticamente. La información tampoco reemplaza siempre el título; la oposición obliga a examinar la vía contenciosa correspondiente.",
+          "conclusion": "Debe resolverse cada efecto conforme al supuesto legal local.",
+          "question": "¿Qué presupuestos y vías deben verificarse antes de atribuir efectos?",
+          "evidenceIds": [
+            "ev-c49-cpc-1153-1163-general",
+            "ev-c49-cpc-173-competencia",
+            "ev-c49-cc-1262-1268-consignacion",
+            "ev-c49-cpc-283-293-consignacion",
+            "ev-c49-cpc-1164-1167-informacion",
+            "ev-c49-cpc-1168-1175-especiales"
+          ]
+        },
+        "closingPrompt": "Explica por qué depósito, testimonio, registro y propiedad no son equivalentes automáticos.",
+        "closingPromptEvidenceIds": [
+          "ev-c49-cpc-1153-1163-general",
+          "ev-c49-cpc-173-competencia",
+          "ev-c49-cc-1262-1268-consignacion",
+          "ev-c49-cpc-283-293-consignacion",
+          "ev-c49-cpc-1164-1167-informacion",
+          "ev-c49-cpc-1168-1175-especiales"
+        ],
+        "nextActivity": "Resuelve los reactivos identificando jurisdicción, supuesto, oposición y efecto.",
+        "nextActivityEvidenceIds": [
+          "ev-c49-cpc-1153-1163-general",
+          "ev-c49-cpc-173-competencia",
+          "ev-c49-cc-1262-1268-consignacion",
+          "ev-c49-cpc-283-293-consignacion",
+          "ev-c49-cpc-1164-1167-informacion",
+          "ev-c49-cpc-1168-1175-especiales"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "En Michoacán, la jurisdicción voluntaria exige intervención judicial sin cuestión entre partes determinadas. La consignación sólo produce efectos de pago cuando reúne los requisitos legales y es aprobada. La información ad perpetuam acredita hechos o posesión en los supuestos del código; no sustituye universalmente un título ni equivale por sí sola a prescripción positiva.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cpc-1153-1163-general",
+            "ev-c49-cpc-173-competencia",
+            "ev-c49-cc-1262-1268-consignacion",
+            "ev-c49-cpc-283-293-consignacion",
+            "ev-c49-cpc-1164-1167-informacion",
+            "ev-c49-cpc-1168-1175-especiales"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa",
+          "content": "Primero identifica la jurisdicción y el supuesto legal. En la vía voluntaria pueden existir personas citadas e interesadas aunque no haya controversia inicial. Una oposición con derecho puede volver contencioso el asunto. En consignación se distingue ofrecimiento, depósito, eventual oposición y aprobación judicial. En información ad perpetuam se distingue el supuesto general de los procedimientos posesorios especiales: las citaciones, testigos, posibilidad de contradicción, testimonio y registro dependen del artículo aplicable.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cpc-1153-1163-general",
+            "ev-c49-cpc-173-competencia",
+            "ev-c49-cc-1262-1268-consignacion",
+            "ev-c49-cpc-283-293-consignacion",
+            "ev-c49-cpc-1164-1167-informacion",
+            "ev-c49-cpc-1168-1175-especiales"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento legal",
+          "content": "El Código de Procedimientos Civiles de Michoacán regula competencia en el artículo 173; reglas generales en 1153–1163; consignación en 283–293; e información ad perpetuam en 1164–1175. El Código Civil, artículos 1262–1268, condiciona los efectos liberatorios de la consignación a sus requisitos y aprobación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cpc-1153-1163-general",
+            "ev-c49-cpc-173-competencia",
+            "ev-c49-cc-1262-1268-consignacion",
+            "ev-c49-cpc-283-293-consignacion",
+            "ev-c49-cpc-1164-1167-informacion",
+            "ev-c49-cpc-1168-1175-especiales"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Una persona ofrece exactamente la prestación debida y el acreedor se niega sin causa a recibirla. Puede promover el depósito conforme al procedimiento y después obtener decisión sobre su aprobación. Depositar una cantidad elegida unilateralmente no garantiza liberación ni evita por sí solo la mora.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cc-1262-1268-consignacion",
+            "ev-c49-cpc-283-293-consignacion"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Ejemplo tipo CENEVAL",
+          "content": "Si alguien pretende acreditar posesión de un inmueble y existe una persona con derecho que se opone, la respuesta correcta no es afirmar que la resolución voluntaria reemplaza automáticamente el título. Debe analizarse el supuesto legal, las citaciones y el tránsito a la vía contenciosa.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cpc-1153-1163-general",
+            "ev-c49-cpc-173-competencia",
+            "ev-c49-cpc-1164-1167-informacion",
+            "ev-c49-cpc-1168-1175-especiales"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Filtros: Michoacán y competencia territorial; ausencia inicial de controversia; oposición; consignación con requisitos y aprobación; información testimonial en supuesto legal; cinco testigos sólo donde el código lo ordena; registro condicionado, no automático.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cpc-1153-1163-general",
+            "ev-c49-cpc-173-competencia",
+            "ev-c49-cc-1262-1268-consignacion",
+            "ev-c49-cpc-283-293-consignacion",
+            "ev-c49-cpc-1164-1167-informacion",
+            "ev-c49-cpc-1168-1175-especiales"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de estudio",
+          "content": "Resuelve en este orden: 1) identifica el estado y el código; 2) clasifica jurisdicción voluntaria, consignación o información; 3) ubica el supuesto; 4) verifica citaciones y oposición; 5) separa depósito de aprobación; 6) verifica si el artículo especial permite testimonio o registro.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cpc-1153-1163-general",
+            "ev-c49-cpc-173-competencia",
+            "ev-c49-cc-1262-1268-consignacion",
+            "ev-c49-cpc-283-293-consignacion",
+            "ev-c49-cpc-1164-1167-informacion",
+            "ev-c49-cpc-1168-1175-especiales"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Jurisdicción voluntaria: intervención sin cuestión inicial entre partes determinadas. Consignación: ofrecimiento y depósito sujetos a requisitos. Información ad perpetuam: prueba testimonial en supuestos tasados. Oposición: puede desplazar la tramitación voluntaria. Prescripción positiva y título: instituciones distintas que no nacen automáticamente de la diligencia.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cpc-1153-1163-general",
+            "ev-c49-cpc-173-competencia",
+            "ev-c49-cc-1262-1268-consignacion",
+            "ev-c49-cpc-283-293-consignacion",
+            "ev-c49-cpc-1164-1167-informacion",
+            "ev-c49-cpc-1168-1175-especiales"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores frecuentes",
+          "content": "No universalices que toda resolución sea sólo declarativa, que siempre se requieran cinco testigos o certificado negativo, que cualquier bien sin dueño aparente pueda regularizarse por esta vía, ni que el testimonio siempre supla título. Tampoco confundas consignación civil con fijación de alimentos o con pago liberatorio automático.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cpc-1153-1163-general",
+            "ev-c49-cpc-173-competencia",
+            "ev-c49-cc-1262-1268-consignacion",
+            "ev-c49-cpc-283-293-consignacion",
+            "ev-c49-cpc-1164-1167-informacion",
+            "ev-c49-cpc-1168-1175-especiales"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa de jurisdicción voluntaria local",
+        "description": "Supuestos, oposición y efectos condicionados.",
+        "nodes": [
+          {
+            "id": "jv",
+            "label": "Jurisdicción voluntaria",
+            "description": "Sin controversia inicial",
+            "evidenceIds": [
+              "ev-c49-cpc-1153-1163-general",
+              "ev-c49-cpc-173-competencia",
+              "ev-c49-a62-l019-019-nocontroversia"
+            ]
+          },
+          {
+            "id": "jur",
+            "label": "Jurisdicción",
+            "description": "Michoacán",
+            "parentId": "jv",
+            "evidenceIds": [
+              "ev-c49-cpc-1153-1163-general",
+              "ev-c49-cpc-173-competencia"
+            ]
+          },
+          {
+            "id": "comp",
+            "label": "Competencia",
+            "description": "Domicilio o ubicación",
+            "parentId": "jur",
+            "evidenceIds": [
+              "ev-c49-cpc-1153-1163-general",
+              "ev-c49-cpc-173-competencia"
+            ]
+          },
+          {
+            "id": "inter",
+            "label": "Intervención judicial",
+            "description": "Supuesto legal",
+            "parentId": "jv",
+            "evidenceIds": [
+              "ev-c49-cpc-1153-1163-general",
+              "ev-c49-cpc-173-competencia"
+            ]
+          },
+          {
+            "id": "cit",
+            "label": "Personas citadas",
+            "description": "Pueden intervenir",
+            "parentId": "jv",
+            "evidenceIds": [
+              "ev-c49-cpc-1153-1163-general",
+              "ev-c49-cpc-173-competencia"
+            ]
+          },
+          {
+            "id": "mp",
+            "label": "Ministerio Público",
+            "description": "Sólo casos legales",
+            "parentId": "cit",
+            "evidenceIds": [
+              "ev-c49-cpc-1153-1163-general",
+              "ev-c49-cpc-173-competencia"
+            ]
+          },
+          {
+            "id": "opo",
+            "label": "Oposición",
+            "description": "Requiere derecho",
+            "parentId": "jv",
+            "evidenceIds": [
+              "ev-c49-cpc-1153-1163-general",
+              "ev-c49-cpc-173-competencia"
+            ]
+          },
+          {
+            "id": "cont",
+            "label": "Vía contenciosa",
+            "description": "Demanda posterior",
+            "parentId": "opo",
+            "evidenceIds": [
+              "ev-c49-cpc-1153-1163-general",
+              "ev-c49-cpc-173-competencia"
+            ]
+          },
+          {
+            "id": "plazo",
+            "label": "Ocho días",
+            "description": "Para demandar",
+            "parentId": "cont",
+            "evidenceIds": [
+              "ev-c49-cpc-1153-1163-general",
+              "ev-c49-cpc-173-competencia"
+            ]
+          },
+          {
+            "id": "cons",
+            "label": "Consignación",
+            "description": "No pago automático",
+            "evidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion",
+              "ev-c49-a62-l033-037-consignacion"
+            ]
+          },
+          {
+            "id": "oferta",
+            "label": "Ofrecimiento",
+            "description": "Prestación debida",
+            "parentId": "cons",
+            "evidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion"
+            ]
+          },
+          {
+            "id": "negativa",
+            "label": "Negativa del acreedor",
+            "description": "Sin causa",
+            "parentId": "oferta",
+            "evidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion"
+            ]
+          },
+          {
+            "id": "incierto",
+            "label": "Acreedor incierto",
+            "description": "Depósito con cita",
+            "parentId": "cons",
+            "evidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion"
+            ]
+          },
+          {
+            "id": "deposito",
+            "label": "Depósito judicial",
+            "description": "Dinero o cosa",
+            "parentId": "cons",
+            "evidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion"
+            ]
+          },
+          {
+            "id": "notario",
+            "label": "Vía notarial",
+            "description": "Si ley permite",
+            "parentId": "cons",
+            "evidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion"
+            ]
+          },
+          {
+            "id": "opof",
+            "label": "Oposición fundada",
+            "description": "Impide efecto",
+            "parentId": "cons",
+            "evidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion"
+            ]
+          },
+          {
+            "id": "aprob",
+            "label": "Aprobación judicial",
+            "description": "Extingue obligación",
+            "parentId": "cons",
+            "evidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion"
+            ]
+          },
+          {
+            "id": "riesgo",
+            "label": "Riesgo",
+            "description": "Desde depósito aprobado",
+            "parentId": "aprob",
+            "evidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion"
+            ]
+          },
+          {
+            "id": "info",
+            "label": "Información ad perpetuam",
+            "description": "Supuestos tasados",
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ]
+          },
+          {
+            "id": "hecho",
+            "label": "Hecho o derecho",
+            "description": "Interés del promovente",
+            "parentId": "info",
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ]
+          },
+          {
+            "id": "poses",
+            "label": "Posesión",
+            "description": "No propiedad automática",
+            "parentId": "info",
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ]
+          },
+          {
+            "id": "real",
+            "label": "Derecho real",
+            "description": "Supuesto distinto",
+            "parentId": "info",
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ]
+          },
+          {
+            "id": "citas",
+            "label": "Citaciones",
+            "description": "Contradicción posible",
+            "parentId": "info",
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ]
+          },
+          {
+            "id": "test",
+            "label": "Testigos",
+            "description": "Examen judicial",
+            "parentId": "info",
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ]
+          },
+          {
+            "id": "cinco",
+            "label": "Cinco testigos",
+            "description": "Sólo casos especiales",
+            "parentId": "test",
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ]
+          },
+          {
+            "id": "testim",
+            "label": "Testimonio",
+            "description": "Copia certificada",
+            "parentId": "info",
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ]
+          },
+          {
+            "id": "prot",
+            "label": "Protocolización",
+            "description": "Sólo si procede",
+            "parentId": "testim",
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ]
+          },
+          {
+            "id": "reg",
+            "label": "Registro",
+            "description": "Condicionado",
+            "parentId": "testim",
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ]
+          },
+          {
+            "id": "lit",
+            "label": "Litigio pendiente",
+            "description": "Quita valor",
+            "parentId": "info",
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ]
+          },
+          {
+            "id": "presc",
+            "label": "Prescripción positiva",
+            "description": "No equivalencia automática",
+            "parentId": "info",
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ]
+          },
+          {
+            "id": "titulo",
+            "label": "Título",
+            "description": "No sustitución universal",
+            "parentId": "info",
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ]
+          },
+          {
+            "id": "audio",
+            "label": "Audio histórico",
+            "description": "Errores corregidos",
+            "parentId": "info",
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales",
+              "ev-c49-a62-l161-163-titulo-historico",
+              "ev-c49-a62-l267-269-testigos-historico"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Código de Procedimientos Civiles para el Estado de Michoacán",
+          "citation": "Texto oficial compilado por el Congreso del Estado; última reforma publicada 30-06-2020; consulta 2026-08-21",
+          "url": "https://congresomich.gob.mx/leyes/",
+          "institution": "Congreso del Estado de Michoacán de Ocampo",
+          "jurisdiction": "Michoacán, México",
+          "retrievedOn": "2026-08-21",
+          "note": "Arts. 173, 283–293 y 1153–1175.",
+          "evidenceIds": [
+            "ev-c49-cpc-173-competencia",
+            "ev-c49-cpc-1153-1163-general",
+            "ev-c49-cpc-283-293-consignacion",
+            "ev-c49-cpc-1164-1167-informacion",
+            "ev-c49-cpc-1168-1175-especiales"
+          ]
+        },
+        {
+          "title": "Código Civil para el Estado de Michoacán",
+          "citation": "Texto oficial compilado por el Congreso del Estado; última reforma publicada 30-11-2023; consulta 2026-08-21",
+          "url": "https://congresomich.gob.mx/leyes/",
+          "institution": "Congreso del Estado de Michoacán de Ocampo",
+          "jurisdiction": "Michoacán, México",
+          "retrievedOn": "2026-08-21",
+          "note": "Arts. 1262–1268.",
+          "evidenceIds": [
+            "ev-c49-cc-1262-1268-consignacion"
+          ]
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué define la vía voluntaria?",
+          "answer": "Intervención judicial sin cuestión inicial entre partes determinadas.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cpc-1153-1163-general",
+            "ev-c49-cpc-173-competencia"
+          ]
+        },
+        {
+          "question": "¿Puede haber personas citadas?",
+          "answer": "Sí; ausencia de controversia no significa ausencia de interesados.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cpc-1153-1163-general",
+            "ev-c49-cpc-173-competencia"
+          ]
+        },
+        {
+          "question": "¿Qué provoca una oposición con derecho?",
+          "answer": "Puede convertir el negocio en contencioso conforme al procedimiento.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cpc-1153-1163-general",
+            "ev-c49-cpc-173-competencia"
+          ]
+        },
+        {
+          "question": "¿Consignar equivale siempre a pagar?",
+          "answer": "No; requiere presupuestos legales y aprobación cuando corresponda.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cc-1262-1268-consignacion",
+            "ev-c49-cpc-283-293-consignacion"
+          ]
+        },
+        {
+          "question": "¿Basta elegir una cantidad prudente?",
+          "answer": "No; debe corresponder a la obligación y cumplir requisitos legales.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cc-1262-1268-consignacion",
+            "ev-c49-cpc-283-293-consignacion"
+          ]
+        },
+        {
+          "question": "¿Qué sigue al depósito controvertido?",
+          "answer": "Una decisión sobre aprobación y liberación de la obligación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cc-1262-1268-consignacion",
+            "ev-c49-cpc-283-293-consignacion"
+          ]
+        },
+        {
+          "question": "¿La información ad perpetuam siempre suple título?",
+          "answer": "No; sus efectos dependen del supuesto legal específico.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c49-cpc-1164-1167-informacion",
+            "ev-c49-cpc-1168-1175-especiales",
+            "ev-c49-a62-l161-163-titulo-historico"
+          ]
+        },
+        {
+          "question": "¿Siempre son cinco testigos?",
+          "answer": "No; el código los exige sólo en procedimientos especiales expresos.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c49-cpc-1164-1167-informacion",
+            "ev-c49-cpc-1168-1175-especiales",
+            "ev-c49-a62-l267-269-testigos-historico"
+          ]
+        },
+        {
+          "question": "¿Puede una persona interesada contradecir?",
+          "answer": "Sí, mediante citación, oposición o impugnación según el supuesto.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cpc-1164-1167-informacion",
+            "ev-c49-cpc-1168-1175-especiales"
+          ]
+        },
+        {
+          "question": "¿Equivale a prescripción positiva?",
+          "answer": "No; deben distinguirse la diligencia probatoria y la adquisición sustantiva.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cpc-1164-1167-informacion",
+            "ev-c49-cpc-1168-1175-especiales"
+          ]
+        },
+        {
+          "question": "¿El registro es automático?",
+          "answer": "No; procede únicamente cuando la norma y la resolución lo permiten.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cpc-1164-1167-informacion",
+            "ev-c49-cpc-1168-1175-especiales"
+          ]
+        },
+        {
+          "question": "¿Qué filtro va primero?",
+          "answer": "Jurisdicción, código aplicable y supuesto legal concreto.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c49-cpc-1153-1163-general",
+            "ev-c49-cpc-173-competencia",
+            "ev-c49-cc-1262-1268-consignacion",
+            "ev-c49-cpc-283-293-consignacion",
+            "ev-c49-cpc-1164-1167-informacion",
+            "ev-c49-cpc-1168-1175-especiales"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación C49",
+        "description": "Vía voluntaria, consignación e información testimonial local.",
+        "questions": [
+          {
+            "text": "Una solicitud inicia sin controversia entre partes determinadas. ¿Qué vía describe?",
+            "difficulty": "basic",
+            "options": [
+              "Jurisdicción voluntaria",
+              "Juicio ordinario automático",
+              "Amparo directo"
+            ],
+            "correctOption": 0,
+            "explanation": "La respuesta aplica el Código de Michoacán al supuesto concreto y evita convertir una regla especial en regla universal.",
+            "optionExplanations": [
+              "Es la opción compatible con el supuesto y la norma aplicable.",
+              "Confunde instituciones o atribuye un efecto automático inexistente.",
+              "Generaliza una consecuencia que exige presupuestos legales específicos."
+            ],
+            "evidenceIds": [
+              "ev-c49-cpc-1153-1163-general",
+              "ev-c49-cpc-173-competencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c49-cpc-1153-1163-general",
+                "ev-c49-cpc-173-competencia"
+              ],
+              [
+                "ev-c49-cpc-1153-1163-general",
+                "ev-c49-cpc-173-competencia"
+              ],
+              [
+                "ev-c49-cpc-1153-1163-general",
+                "ev-c49-cpc-173-competencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c49-cpc-1153-1163-general",
+              "ev-c49-cpc-173-competencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c49-cpc-1153-1163-general",
+              "ev-c49-cpc-173-competencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c49-cpc-1153-1163-general",
+                "ev-c49-cpc-173-competencia"
+              ],
+              [
+                "ev-c49-cpc-1153-1163-general",
+                "ev-c49-cpc-173-competencia"
+              ],
+              [
+                "ev-c49-cpc-1153-1163-general",
+                "ev-c49-cpc-173-competencia"
+              ]
+            ]
+          },
+          {
+            "text": "Una persona con derecho formula oposición. ¿Qué debe analizarse?",
+            "difficulty": "basic",
+            "options": [
+              "El tránsito al procedimiento contencioso",
+              "La aprobación automática",
+              "La inexistencia permanente de partes"
+            ],
+            "correctOption": 0,
+            "explanation": "La respuesta aplica el Código de Michoacán al supuesto concreto y evita convertir una regla especial en regla universal.",
+            "optionExplanations": [
+              "Es la opción compatible con el supuesto y la norma aplicable.",
+              "Confunde instituciones o atribuye un efecto automático inexistente.",
+              "Generaliza una consecuencia que exige presupuestos legales específicos."
+            ],
+            "evidenceIds": [
+              "ev-c49-cpc-1153-1163-general",
+              "ev-c49-cpc-173-competencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c49-cpc-1153-1163-general",
+                "ev-c49-cpc-173-competencia"
+              ],
+              [
+                "ev-c49-cpc-1153-1163-general",
+                "ev-c49-cpc-173-competencia"
+              ],
+              [
+                "ev-c49-cpc-1153-1163-general",
+                "ev-c49-cpc-173-competencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c49-cpc-1153-1163-general",
+              "ev-c49-cpc-173-competencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c49-cpc-1153-1163-general",
+              "ev-c49-cpc-173-competencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c49-cpc-1153-1163-general",
+                "ev-c49-cpc-173-competencia"
+              ],
+              [
+                "ev-c49-cpc-1153-1163-general",
+                "ev-c49-cpc-173-competencia"
+              ],
+              [
+                "ev-c49-cpc-1153-1163-general",
+                "ev-c49-cpc-173-competencia"
+              ]
+            ]
+          },
+          {
+            "text": "El acreedor rechaza sin causa la prestación exacta. ¿Qué institución procede analizar?",
+            "difficulty": "basic",
+            "options": [
+              "Ofrecimiento y consignación",
+              "Prescripción positiva",
+              "Información ad perpetuam"
+            ],
+            "correctOption": 0,
+            "explanation": "La respuesta aplica el Código de Michoacán al supuesto concreto y evita convertir una regla especial en regla universal.",
+            "optionExplanations": [
+              "Es la opción compatible con el supuesto y la norma aplicable.",
+              "Confunde instituciones o atribuye un efecto automático inexistente.",
+              "Generaliza una consecuencia que exige presupuestos legales específicos."
+            ],
+            "evidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion"
+              ],
+              [
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion"
+              ],
+              [
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion"
+              ],
+              [
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion"
+              ],
+              [
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion"
+              ]
+            ]
+          },
+          {
+            "text": "Se deposita una cantidad unilateral menor a la debida. ¿Qué efecto tiene por sí sola?",
+            "difficulty": "intermediate",
+            "options": [
+              "No garantiza liberación",
+              "Extingue toda obligación",
+              "Fija alimentos definitivamente"
+            ],
+            "correctOption": 0,
+            "explanation": "La respuesta aplica el Código de Michoacán al supuesto concreto y evita convertir una regla especial en regla universal.",
+            "optionExplanations": [
+              "Es la opción compatible con el supuesto y la norma aplicable.",
+              "Confunde instituciones o atribuye un efecto automático inexistente.",
+              "Generaliza una consecuencia que exige presupuestos legales específicos."
+            ],
+            "evidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion"
+              ],
+              [
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion"
+              ],
+              [
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion"
+              ],
+              [
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion"
+              ],
+              [
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuándo extingue la consignación la obligación?",
+            "difficulty": "intermediate",
+            "options": [
+              "Cuando es aprobada conforme a derecho",
+              "Al presentar cualquier escrito",
+              "Cuando el deudor elige el monto"
+            ],
+            "correctOption": 0,
+            "explanation": "La respuesta aplica el Código de Michoacán al supuesto concreto y evita convertir una regla especial en regla universal.",
+            "optionExplanations": [
+              "Es la opción compatible con el supuesto y la norma aplicable.",
+              "Confunde instituciones o atribuye un efecto automático inexistente.",
+              "Generaliza una consecuencia que exige presupuestos legales específicos."
+            ],
+            "evidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion"
+              ],
+              [
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion"
+              ],
+              [
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion"
+              ],
+              [
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion"
+              ],
+              [
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué puede justificar la información ad perpetuam?",
+            "difficulty": "intermediate",
+            "options": [
+              "Hechos, derechos o posesión en supuestos legales",
+              "Cualquier propiedad sin trámite",
+              "Una sentencia condenatoria"
+            ],
+            "correctOption": 0,
+            "explanation": "La respuesta aplica el Código de Michoacán al supuesto concreto y evita convertir una regla especial en regla universal.",
+            "optionExplanations": [
+              "Es la opción compatible con el supuesto y la norma aplicable.",
+              "Confunde instituciones o atribuye un efecto automático inexistente.",
+              "Generaliza una consecuencia que exige presupuestos legales específicos."
+            ],
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuántos testigos exige siempre la información ad perpetuam?",
+            "difficulty": "intermediate",
+            "options": [
+              "No existe un número universal",
+              "Cinco en todos los casos",
+              "Uno en todos los casos"
+            ],
+            "correctOption": 0,
+            "explanation": "La respuesta aplica el Código de Michoacán al supuesto concreto y evita convertir una regla especial en regla universal.",
+            "optionExplanations": [
+              "Es la opción compatible con el supuesto y la norma aplicable.",
+              "Confunde instituciones o atribuye un efecto automático inexistente.",
+              "Generaliza una consecuencia que exige presupuestos legales específicos."
+            ],
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales",
+              "ev-c49-a62-l267-269-testigos-historico"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ]
+            ]
+          },
+          {
+            "text": "Existe litigio pendiente sobre el mismo derecho. ¿Qué ocurre con la información?",
+            "difficulty": "advanced",
+            "options": [
+              "No tiene el valor previsto por esa vía",
+              "Se vuelve título automático",
+              "Elimina el litigio"
+            ],
+            "correctOption": 0,
+            "explanation": "La respuesta aplica el Código de Michoacán al supuesto concreto y evita convertir una regla especial en regla universal.",
+            "optionExplanations": [
+              "Es la opción compatible con el supuesto y la norma aplicable.",
+              "Confunde instituciones o atribuye un efecto automático inexistente.",
+              "Generaliza una consecuencia que exige presupuestos legales específicos."
+            ],
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales",
+              "ev-c49-a62-l161-163-titulo-historico"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ]
+            ]
+          },
+          {
+            "text": "¿La resolución sustituye siempre el título de propiedad?",
+            "difficulty": "advanced",
+            "options": [
+              "No; depende del supuesto y efectos legales",
+              "Sí, sin excepciones",
+              "Sí, con cualquier bien abandonado"
+            ],
+            "correctOption": 0,
+            "explanation": "La respuesta aplica el Código de Michoacán al supuesto concreto y evita convertir una regla especial en regla universal.",
+            "optionExplanations": [
+              "Es la opción compatible con el supuesto y la norma aplicable.",
+              "Confunde instituciones o atribuye un efecto automático inexistente.",
+              "Generaliza una consecuencia que exige presupuestos legales específicos."
+            ],
+            "evidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál es el orden correcto de análisis?",
+            "difficulty": "advanced",
+            "options": [
+              "Jurisdicción, supuesto, citaciones, oposición y efecto",
+              "Monto elegido, depósito y propiedad",
+              "Cinco testigos, registro y título automático"
+            ],
+            "correctOption": 0,
+            "explanation": "La respuesta aplica el Código de Michoacán al supuesto concreto y evita convertir una regla especial en regla universal.",
+            "optionExplanations": [
+              "Es la opción compatible con el supuesto y la norma aplicable.",
+              "Confunde instituciones o atribuye un efecto automático inexistente.",
+              "Generaliza una consecuencia que exige presupuestos legales específicos."
+            ],
+            "evidenceIds": [
+              "ev-c49-cpc-1153-1163-general",
+              "ev-c49-cpc-173-competencia",
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion",
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c49-cpc-1153-1163-general",
+                "ev-c49-cpc-173-competencia",
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion",
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1153-1163-general",
+                "ev-c49-cpc-173-competencia",
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion",
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1153-1163-general",
+                "ev-c49-cpc-173-competencia",
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion",
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c49-cpc-1153-1163-general",
+              "ev-c49-cpc-173-competencia",
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion",
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c49-cpc-1153-1163-general",
+              "ev-c49-cpc-173-competencia",
+              "ev-c49-cc-1262-1268-consignacion",
+              "ev-c49-cpc-283-293-consignacion",
+              "ev-c49-cpc-1164-1167-informacion",
+              "ev-c49-cpc-1168-1175-especiales"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c49-cpc-1153-1163-general",
+                "ev-c49-cpc-173-competencia",
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion",
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1153-1163-general",
+                "ev-c49-cpc-173-competencia",
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion",
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ],
+              [
+                "ev-c49-cpc-1153-1163-general",
+                "ev-c49-cpc-173-competencia",
+                "ev-c49-cc-1262-1268-consignacion",
+                "ev-c49-cpc-283-293-consignacion",
+                "ev-c49-cpc-1164-1167-informacion",
+                "ev-c49-cpc-1168-1175-especiales"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c49-cpc-173-competencia",
+      "kind": "official",
+      "title": "Código de Procedimientos Civiles para el Estado de Michoacán",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial compilado, última reforma publicada 30-06-2020, consultado el 2026-08-21; artículo 173: competencia territorial en jurisdicción voluntaria",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c49-cpc-1153-1163-general",
+      "kind": "official",
+      "title": "Código de Procedimientos Civiles para el Estado de Michoacán",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial compilado, última reforma publicada 30-06-2020, consultado el 2026-08-21; artículos 1153 a 1163: ausencia de cuestión entre partes determinadas, citaciones, oposición, tránsito a contención, resolución y recursos",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c49-cc-1262-1268-consignacion",
+      "kind": "official",
+      "title": "Código Civil para el Estado de Michoacán",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial compilado, última reforma publicada 30-11-2023, consultado el 2026-08-21; artículos 1262 a 1268: ofrecimiento, consignación, oposición fundada, aprobación y efectos",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c49-cpc-283-293-consignacion",
+      "kind": "official",
+      "title": "Código de Procedimientos Civiles para el Estado de Michoacán",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial compilado, última reforma publicada 30-06-2020, consultado el 2026-08-21; artículos 283 a 293: preliminares de consignación, citación, depósito, demanda de aprobación y riesgo",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c49-cpc-1164-1167-informacion",
+      "kind": "official",
+      "title": "Código de Procedimientos Civiles para el Estado de Michoacán",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial compilado, última reforma publicada 30-06-2020, consultado el 2026-08-21; artículos 1164 a 1167: supuestos, citaciones, contradicción, testigos, testimonio e inexistencia de litigio",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c49-cpc-1168-1175-especiales",
+      "kind": "official",
+      "title": "Código de Procedimientos Civiles para el Estado de Michoacán",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial compilado, última reforma publicada 30-06-2020, consultado el 2026-08-21; artículos 1168 a 1175: procedimientos especiales de información posesoria; cinco testigos solo en los supuestos expresos y efectos condicionados",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c49-a62-l019-019-nocontroversia",
+      "kind": "transcript",
+      "audioNumber": 62,
+      "locator": {
+        "type": "line_range",
+        "startLine": 19,
+        "endLine": 19
+      }
+    },
+    {
+      "id": "ev-c49-a62-l033-037-consignacion",
+      "kind": "transcript",
+      "audioNumber": 62,
+      "locator": {
+        "type": "line_range",
+        "startLine": 33,
+        "endLine": 37
+      }
+    },
+    {
+      "id": "ev-c49-a62-l161-163-titulo-historico",
+      "kind": "transcript",
+      "audioNumber": 62,
+      "locator": {
+        "type": "line_range",
+        "startLine": 161,
+        "endLine": 163
+      }
+    },
+    {
+      "id": "ev-c49-a62-l267-269-testigos-historico",
+      "kind": "transcript",
+      "audioNumber": 62,
+      "locator": {
+        "type": "line_range",
+        "startLine": 267,
+        "endLine": 269
+      }
+    }
+  ]
+}
