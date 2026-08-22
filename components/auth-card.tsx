@@ -34,7 +34,7 @@ export function AuthCard({
         className="inline-flex min-h-11 items-center text-sm font-semibold text-brand"
         href="/"
       >
-        CENEVAL Study App
+        Sube Legal
       </Link>
       <h1 className="mt-5 text-3xl font-semibold tracking-tight">{title}</h1>
       <p className="mt-2 leading-7 text-muted">{description}</p>

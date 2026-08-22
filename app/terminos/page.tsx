@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { MarketingShell } from "@/components/marketing-shell";
 
 export const metadata: Metadata = {
   title: "Términos de uso",
@@ -28,6 +29,7 @@ function Section({
 
 export default function TermsOfUsePage() {
   return (
+    <MarketingShell>
     <div className="max-w-3xl">
       <p className="text-sm font-semibold text-success">Cumplimiento</p>
       <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -163,5 +165,6 @@ export default function TermsOfUsePage() {
 
       <p className="mt-8 text-sm text-muted">Última actualización: 22 de agosto de 2026.</p>
     </div>
+    </MarketingShell>
   );
 }

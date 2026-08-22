@@ -29,7 +29,13 @@ const authPaths = [
 // Rutas públicas de marketing (Fase 5 del plan de venta): tienen su propia
 // cabecera y pie de página en `components/marketing-shell.tsx`, así que no
 // deben quedar envueltas en la barra lateral de la app autenticada.
-const marketingPaths = ["/precios", "/muestra", "/preguntas-frecuentes"];
+const marketingPaths = [
+  "/precios",
+  "/muestra",
+  "/preguntas-frecuentes",
+  "/terminos",
+  "/privacidad",
+];
 
 function isActivePath(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
@@ -40,7 +46,7 @@ function isActivePath(pathname: string, href: string) {
 function Brand() {
   return (
     <Link
-      aria-label="CENEVAL Study App, ir al inicio"
+      aria-label="Sube Legal, ir al inicio"
       className="group flex items-center gap-3 rounded-xl"
       href="/"
     >

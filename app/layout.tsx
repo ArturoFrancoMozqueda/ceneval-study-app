@@ -17,11 +17,11 @@ const anton = Anton({
 
 export const metadata: Metadata = {
   title: {
-    default: "CENEVAL Study App",
-    template: "%s | CENEVAL Study App",
+    default: "Sube Legal",
+    template: "%s | Sube Legal",
   },
   description:
-    "Estudia para el CENEVAL de Derecho con clases editoriales revisadas, práctica guiada y fuentes verificables.",
+    "Prepárate para el examen CENEVAL EGEL de Derecho con clases editoriales revisadas, práctica guiada y fuentes verificables. Sube Legal no está afiliado a CENEVAL.",
 };
 
 export default async function RootLayout({
