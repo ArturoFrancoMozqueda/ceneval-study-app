@@ -1,0 +1,1337 @@
+{
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C47",
+    "order": 47,
+    "audioSources": [
+      {
+        "audioNumber": 60,
+        "fragment": "Líneas físicas 287 a 531: juicio ordinario laboral"
+      }
+    ]
+  },
+  "subject": {
+    "name": "Derecho laboral procesal",
+    "description": "Procedencia, postulación, prueba y sentencia en las vías mercantiles."
+  },
+  "class": {
+    "title": "Juicio ordinario laboral",
+    "description": "Fase escrita, audiencias y reglas probatorias del procedimiento ordinario vigente."
+  },
+  "transcript": {
+    "originalFile": "AUDIO 60.txt",
+    "cleaned": "Se utilizaron únicamente rangos pertinentes entre las líneas físicas 287 y 531. Los localizadores se estrecharon a las proposiciones auditables; las anécdotas no se usan como sustento normativo. Se excluyeron personas identificables, logística, lenguaje ofensivo y ejemplos no verificables. Se corrigieron el falso umbral de tres salarios, la falsa vía especial por menos de tres meses, la equiparación de tribunal federal con juzgado de distrito, la promesa de duración total y las generalizaciones sobre prueba y carga."
+  },
+  "topics": [
+    {
+      "title": "Juicio ordinario laboral vigente",
+      "description": "Ordena la fase escrita, la preliminar, el juicio y la carga probatoria sin atajos históricos.",
+      "learningJourney": {
+        "openingPrompt": "¿Qué filtros impiden llevar un conflicto a la vía o al tribunal equivocados?",
+        "openingPromptEvidenceIds": [
+          "ev-c47-lft-870-alcance",
+          "ev-c47-cpeum-123a-xx-xxxi-tribunales",
+          "ev-c47-a60-l297-317-inicio-demanda",
+          "ev-c47-a60-l347-351-competencia"
+        ],
+        "quickChecks": [
+          {
+            "prompt": "¿Existe umbral general de tres salarios?",
+            "answer": "No existe ese umbral general.",
+            "feedback": "Busca tramitación especial, no monto inventado.",
+            "evidenceIds": [
+              "ev-c47-lft-870-alcance",
+              "ev-c47-a60-l297-317-inicio-demanda"
+            ]
+          },
+          {
+            "prompt": "¿La réplica tiene ocho días?",
+            "answer": "Sí, conforme al 873-B vigente.",
+            "feedback": "No uses la duda oral.",
+            "evidenceIds": [
+              "ev-c47-lft-873a-873c-escritos",
+              "ev-c47-a60-l395-421-contestacion-replica"
+            ]
+          },
+          {
+            "prompt": "¿Carga siempre patronal?",
+            "answer": "No; depende del hecho controvertido.",
+            "feedback": "Aplica 784/804/805 al hecho concreto.",
+            "evidenceIds": [
+              "ev-c47-lft-784-carga",
+              "ev-c47-lft-804-805-documentos",
+              "ev-c47-a60-l461-499-hechos-prueba"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una demanda alega despido; la contestación niega relación y exhibe documentos nuevos.",
+          "legalRule": "Los artículos 873-A a C abren contestación, réplica y contrarréplica; 784/804/805 distribuyen cargas y efectos documentales.",
+          "reasoning": "La actora usa réplica para responder el nuevo punto y ofrecer prueba vinculada. El Tribunal asigna carga según el hecho y la documentación obligatoria, no por una consigna universal.",
+          "conclusion": "La respuesta procesal y la carga dependen de la controversia formada.",
+          "question": "¿Qué debe responderse en réplica y qué regla probatoria se aplica?",
+          "evidenceIds": [
+            "ev-c47-lft-873a-873c-escritos",
+            "ev-c47-lft-784-carga",
+            "ev-c47-lft-804-805-documentos",
+            "ev-c47-a60-l395-421-contestacion-replica",
+            "ev-c47-a60-l461-499-hechos-prueba"
+          ]
+        },
+        "closingPrompt": "Explica la secuencia vía→demanda→contestación→réplica→preliminar→juicio.",
+        "closingPromptEvidenceIds": [
+          "ev-c47-lft-870-alcance",
+          "ev-c47-lft-871-873-demanda",
+          "ev-c47-lft-873a-873c-escritos",
+          "ev-c47-lft-873e-873g-preliminar",
+          "ev-c47-lft-873h-873k-juicio",
+          "ev-c47-lft-784-carga",
+          "ev-c47-lft-804-805-documentos",
+          "ev-c47-cpeum-123a-xx-xxxi-tribunales",
+          "ev-c47-a60-l297-317-inicio-demanda",
+          "ev-c47-a60-l347-351-competencia",
+          "ev-c47-a60-l395-421-contestacion-replica",
+          "ev-c47-a60-l461-499-hechos-prueba"
+        ],
+        "nextActivity": "Resuelve los diez reactivos y justifica cada plazo con el artículo vigente.",
+        "nextActivityEvidenceIds": [
+          "ev-c47-lft-870-alcance",
+          "ev-c47-lft-871-873-demanda",
+          "ev-c47-lft-873a-873c-escritos",
+          "ev-c47-lft-873e-873g-preliminar",
+          "ev-c47-lft-873h-873k-juicio",
+          "ev-c47-lft-784-carga",
+          "ev-c47-lft-804-805-documentos",
+          "ev-c47-cpeum-123a-xx-xxxi-tribunales"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "El ordinario laboral resuelve conflictos individuales o colectivos jurídicos sin tramitación especial. Combina fase escrita —demanda, contestación, eventual reconvención, réplica y contrarréplica— con audiencia preliminar y audiencia de juicio. No depende de un umbral general de tres salarios ni promete una duración fija.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c47-lft-870-alcance",
+            "ev-c47-lft-871-873-demanda",
+            "ev-c47-lft-873a-873c-escritos",
+            "ev-c47-lft-873e-873g-preliminar",
+            "ev-c47-lft-873h-873k-juicio",
+            "ev-c47-lft-784-carga",
+            "ev-c47-lft-804-805-documentos",
+            "ev-c47-cpeum-123a-xx-xxxi-tribunales",
+            "ev-c47-a60-l297-317-inicio-demanda",
+            "ev-c47-a60-l347-351-competencia",
+            "ev-c47-a60-l395-421-contestacion-replica",
+            "ev-c47-a60-l461-499-hechos-prueba"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa",
+          "content": "El artículo 870 delimita el ordinario a conflictos jurídicos sin tramitación especial; no existe la regla del audio de “más de tres salarios” ni una vía especial automática por menos de tres meses. La competencia federal o local se determina con la Constitución y la LFT, y un tribunal laboral federal no debe llamarse automáticamente juzgado de distrito.\n\nEl procedimiento inicia con demanda escrita ante el Tribunal competente. El artículo 872 fija contenido y anexos: constancia de conciliación cuando sea exigible, documentos de personalidad y pruebas disponibles, además de solicitar las que no puedan obtenerse explicando por qué. No toda prueba imaginable tiene que estar materialmente en poder de la parte desde la demanda; sí debe observarse la oportunidad legal de ofrecerla. Para una demanda promovida por la persona trabajadora o sus beneficiarios que presente irregularidades, acciones contradictorias u omita precisar el salario base, el artículo 873 prevé la prevención y, en su caso, la subsanación en sus términos exactos.\n\nAdmitida, la parte demandada contesta por escrito en quince días, ofrece pruebas y puede reconvenir. La reconvención se contesta en quince días. La actora tiene ocho días para objetar pruebas, replicar y ofrecer las vinculadas con esos nuevos puntos; la demandada cuenta con cinco días para contrarreplicar, y existe una vista de tres días si se ofrecen pruebas relacionadas. Son plazos vigentes, no estimaciones del audio.\n\nLa audiencia preliminar depura, fija hechos no controvertidos, admite o desecha pruebas, cita a juicio y resuelve reconsideración contra actos del secretario instructor. En juicio se desahogan pruebas preparadas, se formulan alegatos y normalmente se dicta sentencia en la misma audiencia; excepcionalmente puede emitirse dentro de cinco días. Eso no permite prometer que el proceso completo durará dos o tres meses.\n\nLa carga probatoria no recae siempre en el patrón. El artículo 784 permite eximir a la persona trabajadora y enumera hechos cuya acreditación corresponde al patrón; los artículos 804 y 805 vinculan conservación documental e incumplimiento con una presunción susceptible de prueba en contrario. Fuera de esos supuestos, debe analizarse qué afirma cada parte, qué documento controla y qué regla aplica. El deber judicial de búsqueda de verdad y conducción proactiva no autoriza sustituir a las partes ni decidir sin contradicción.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c47-lft-870-alcance",
+            "ev-c47-lft-871-873-demanda",
+            "ev-c47-lft-873a-873c-escritos",
+            "ev-c47-lft-873e-873g-preliminar",
+            "ev-c47-lft-873h-873k-juicio",
+            "ev-c47-lft-784-carga",
+            "ev-c47-lft-804-805-documentos",
+            "ev-c47-cpeum-123a-xx-xxxi-tribunales",
+            "ev-c47-a60-l297-317-inicio-demanda",
+            "ev-c47-a60-l347-351-competencia",
+            "ev-c47-a60-l395-421-contestacion-replica",
+            "ev-c47-a60-l461-499-hechos-prueba"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Base jurídica",
+          "content": "CPEUM 123 A XX/XXXI; LFT vigente 14-05-2026, artículos 784, 804, 805 y 870–873-K.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c47-lft-870-alcance",
+            "ev-c47-lft-871-873-demanda",
+            "ev-c47-lft-873a-873c-escritos",
+            "ev-c47-lft-873e-873g-preliminar",
+            "ev-c47-lft-873h-873k-juicio",
+            "ev-c47-lft-784-carga",
+            "ev-c47-lft-804-805-documentos",
+            "ev-c47-cpeum-123a-xx-xxxi-tribunales"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo simple",
+          "content": "Una demanda laboral ordinaria se presenta con hechos, prestaciones y pruebas disponibles. Tras contestación, la réplica se usa para responder defensas y nuevos puntos; no es una segunda demanda libre.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c47-lft-871-873-demanda",
+            "ev-c47-lft-873a-873c-escritos",
+            "ev-c47-a60-l395-421-contestacion-replica",
+            "ev-c47-a60-l461-499-hechos-prueba"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Ejemplo CENEVAL",
+          "content": "Si una opción afirma que todo asunto menor a tres meses va por vía especial, se descarta: el artículo 870 pregunta si la ley asigna tramitación especial, no el monto inventado por el audio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c47-lft-870-alcance",
+            "ev-c47-a60-l297-317-inicio-demanda"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "El ordinario laboral resuelve conflictos individuales o colectivos jurídicos sin tramitación especial. Combina fase escrita —demanda, contestación, eventual reconvención, réplica y contrarréplica— con audiencia preliminar y audiencia de juicio. No depende de un umbral general de tres salarios ni promete una duración fija.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c47-lft-870-alcance",
+            "ev-c47-lft-871-873-demanda",
+            "ev-c47-lft-873a-873c-escritos",
+            "ev-c47-lft-873e-873g-preliminar",
+            "ev-c47-lft-873h-873k-juicio",
+            "ev-c47-lft-784-carga",
+            "ev-c47-lft-804-805-documentos"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de estudio",
+          "content": "1. Verifica vía. 2. Determina competencia. 3. Revisa demanda y anexos. 4. Ubica contestación/reconvención. 5. Cuenta réplica 8 y contrarréplica 5. 6. Separa preliminar y juicio. 7. Asigna carga por supuesto. 8. No prometas duración.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c47-lft-870-alcance",
+            "ev-c47-lft-871-873-demanda",
+            "ev-c47-lft-873a-873c-escritos",
+            "ev-c47-lft-873e-873g-preliminar",
+            "ev-c47-lft-873h-873k-juicio",
+            "ev-c47-lft-784-carga",
+            "ev-c47-lft-804-805-documentos",
+            "ev-c47-cpeum-123a-xx-xxxi-tribunales"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Ordinario; tribunal; demanda; prevención; subsanación; contestación; reconvención; réplica; contrarréplica; preliminar; juicio; carga; conservación documental; presunción; sentencia.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c47-lft-870-alcance",
+            "ev-c47-lft-871-873-demanda",
+            "ev-c47-lft-873a-873c-escritos",
+            "ev-c47-lft-873e-873g-preliminar",
+            "ev-c47-lft-873h-873k-juicio",
+            "ev-c47-lft-784-carga",
+            "ev-c47-lft-804-805-documentos",
+            "ev-c47-cpeum-123a-xx-xxxi-tribunales"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "Inventar umbral de tres salarios; llamar juzgado de distrito a todo tribunal federal; prometer dos o tres meses; afirmar carga patronal universal; exigir toda prueba sin matices; confundir réplica con reconvención.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c47-lft-870-alcance",
+            "ev-c47-lft-871-873-demanda",
+            "ev-c47-lft-873a-873c-escritos",
+            "ev-c47-lft-873e-873g-preliminar",
+            "ev-c47-lft-873h-873k-juicio",
+            "ev-c47-lft-784-carga",
+            "ev-c47-lft-804-805-documentos",
+            "ev-c47-cpeum-123a-xx-xxxi-tribunales",
+            "ev-c47-a60-l297-317-inicio-demanda",
+            "ev-c47-a60-l347-351-competencia",
+            "ev-c47-a60-l395-421-contestacion-replica",
+            "ev-c47-a60-l461-499-hechos-prueba"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa del ordinario laboral",
+        "description": "Fases y reglas de prueba",
+        "nodes": [
+          {
+            "id": "proc",
+            "label": "Ordinario laboral",
+            "description": "Sin trámite especial",
+            "evidenceIds": [
+              "ev-c47-lft-870-alcance",
+              "ev-c47-a60-l297-317-inicio-demanda"
+            ]
+          },
+          {
+            "id": "filtro",
+            "label": "Filtro de vía",
+            "description": "No cuantía inventada",
+            "parentId": "proc",
+            "evidenceIds": [
+              "ev-c47-lft-870-alcance"
+            ]
+          },
+          {
+            "id": "competencia",
+            "label": "Competencia",
+            "description": "Federal o local",
+            "parentId": "proc",
+            "evidenceIds": [
+              "ev-c47-cpeum-123a-xx-xxxi-tribunales",
+              "ev-c47-a60-l347-351-competencia"
+            ]
+          },
+          {
+            "id": "tribunal",
+            "label": "Tribunal laboral",
+            "description": "No juzgado distrital automático",
+            "parentId": "competencia",
+            "evidenceIds": [
+              "ev-c47-cpeum-123a-xx-xxxi-tribunales",
+              "ev-c47-a60-l347-351-competencia"
+            ]
+          },
+          {
+            "id": "escrita",
+            "label": "Fase escrita",
+            "description": "Postulación",
+            "parentId": "proc",
+            "evidenceIds": [
+              "ev-c47-lft-871-873-demanda",
+              "ev-c47-lft-873a-873c-escritos"
+            ]
+          },
+          {
+            "id": "demanda",
+            "label": "Demanda",
+            "description": "Artículo 872",
+            "parentId": "escrita",
+            "evidenceIds": [
+              "ev-c47-lft-871-873-demanda",
+              "ev-c47-a60-l297-317-inicio-demanda"
+            ]
+          },
+          {
+            "id": "hechos",
+            "label": "Hechos",
+            "description": "Claros y vinculados",
+            "parentId": "demanda",
+            "evidenceIds": [
+              "ev-c47-lft-871-873-demanda"
+            ]
+          },
+          {
+            "id": "prestaciones",
+            "label": "Prestaciones",
+            "description": "Pretensión concreta",
+            "parentId": "demanda",
+            "evidenceIds": [
+              "ev-c47-lft-871-873-demanda"
+            ]
+          },
+          {
+            "id": "anexos",
+            "label": "Anexos",
+            "description": "Según disponibilidad",
+            "parentId": "demanda",
+            "evidenceIds": [
+              "ev-c47-lft-871-873-demanda"
+            ]
+          },
+          {
+            "id": "pruebas",
+            "label": "Pruebas",
+            "description": "Oferta o solicitud fundada",
+            "parentId": "demanda",
+            "evidenceIds": [
+              "ev-c47-lft-871-873-demanda"
+            ]
+          },
+          {
+            "id": "subsanacion",
+            "label": "Subsanación",
+            "description": "Protección legal",
+            "parentId": "demanda",
+            "evidenceIds": [
+              "ev-c47-lft-871-873-demanda"
+            ]
+          },
+          {
+            "id": "contestacion",
+            "label": "Contestación",
+            "description": "15 días",
+            "parentId": "escrita",
+            "evidenceIds": [
+              "ev-c47-lft-873a-873c-escritos",
+              "ev-c47-a60-l395-421-contestacion-replica"
+            ]
+          },
+          {
+            "id": "reconvencion",
+            "label": "Reconvención",
+            "description": "Con contestación",
+            "parentId": "contestacion",
+            "evidenceIds": [
+              "ev-c47-lft-873a-873c-escritos"
+            ]
+          },
+          {
+            "id": "replica",
+            "label": "Réplica",
+            "description": "8 días",
+            "parentId": "escrita",
+            "evidenceIds": [
+              "ev-c47-lft-873a-873c-escritos",
+              "ev-c47-a60-l395-421-contestacion-replica",
+              "ev-c47-a60-l461-499-hechos-prueba"
+            ]
+          },
+          {
+            "id": "contra",
+            "label": "Contrarréplica",
+            "description": "5 días",
+            "parentId": "replica",
+            "evidenceIds": [
+              "ev-c47-lft-873a-873c-escritos"
+            ]
+          },
+          {
+            "id": "vista",
+            "label": "Vista eventual",
+            "description": "3 días",
+            "parentId": "contra",
+            "evidenceIds": [
+              "ev-c47-lft-873a-873c-escritos"
+            ]
+          },
+          {
+            "id": "preliminar",
+            "label": "Audiencia preliminar",
+            "description": "Depuración",
+            "parentId": "proc",
+            "evidenceIds": [
+              "ev-c47-lft-873e-873g-preliminar"
+            ]
+          },
+          {
+            "id": "dilatorias",
+            "label": "Excepciones dilatorias",
+            "description": "Resolución",
+            "parentId": "preliminar",
+            "evidenceIds": [
+              "ev-c47-lft-873e-873g-preliminar"
+            ]
+          },
+          {
+            "id": "no-controvertidos",
+            "label": "Hechos no controvertidos",
+            "description": "Fijación",
+            "parentId": "preliminar",
+            "evidenceIds": [
+              "ev-c47-lft-873e-873g-preliminar"
+            ]
+          },
+          {
+            "id": "admision",
+            "label": "Admisión probatoria",
+            "description": "Pertinencia",
+            "parentId": "preliminar",
+            "evidenceIds": [
+              "ev-c47-lft-873e-873g-preliminar"
+            ]
+          },
+          {
+            "id": "juicio",
+            "label": "Audiencia de juicio",
+            "description": "Oralidad",
+            "parentId": "proc",
+            "evidenceIds": [
+              "ev-c47-lft-873h-873k-juicio"
+            ]
+          },
+          {
+            "id": "desahogo",
+            "label": "Desahogo",
+            "description": "Pruebas preparadas",
+            "parentId": "juicio",
+            "evidenceIds": [
+              "ev-c47-lft-873h-873k-juicio"
+            ]
+          },
+          {
+            "id": "alegatos",
+            "label": "Alegatos",
+            "description": "Concisos",
+            "parentId": "juicio",
+            "evidenceIds": [
+              "ev-c47-lft-873h-873k-juicio"
+            ]
+          },
+          {
+            "id": "sentencia",
+            "label": "Sentencia",
+            "description": "Regla y excepción",
+            "parentId": "juicio",
+            "evidenceIds": [
+              "ev-c47-lft-873h-873k-juicio"
+            ]
+          },
+          {
+            "id": "carga",
+            "label": "Carga probatoria",
+            "description": "No universal",
+            "parentId": "proc",
+            "evidenceIds": [
+              "ev-c47-lft-784-carga",
+              "ev-c47-a60-l461-499-hechos-prueba"
+            ]
+          },
+          {
+            "id": "784",
+            "label": "Artículo 784",
+            "description": "Supuestos enumerados",
+            "parentId": "carga",
+            "evidenceIds": [
+              "ev-c47-lft-784-carga"
+            ]
+          },
+          {
+            "id": "804",
+            "label": "Artículo 804",
+            "description": "Conservación patronal",
+            "parentId": "carga",
+            "evidenceIds": [
+              "ev-c47-lft-804-805-documentos"
+            ]
+          },
+          {
+            "id": "805",
+            "label": "Artículo 805",
+            "description": "Presunción rebatible",
+            "parentId": "804",
+            "evidenceIds": [
+              "ev-c47-lft-804-805-documentos"
+            ]
+          },
+          {
+            "id": "verdad",
+            "label": "Verdad y probidad",
+            "description": "Con contradicción",
+            "parentId": "proc",
+            "evidenceIds": [
+              "ev-c47-lft-873h-873k-juicio"
+            ]
+          },
+          {
+            "id": "duracion",
+            "label": "Sin duración prometida",
+            "description": "Depende del expediente",
+            "parentId": "proc",
+            "evidenceIds": [
+              "ev-c47-lft-871-873-demanda",
+              "ev-c47-lft-873a-873c-escritos",
+              "ev-c47-lft-873e-873g-preliminar",
+              "ev-c47-lft-873h-873k-juicio",
+              "ev-c47-a60-l347-351-competencia"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Ley Federal del Trabajo",
+          "citation": "Texto vigente, última reforma DOF 14-05-2026",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "retrievedOn": "2026-08-21",
+          "note": "Arts. 784, 804, 805 y 870–873-K.",
+          "evidenceIds": [
+            "ev-c47-lft-870-alcance",
+            "ev-c47-lft-871-873-demanda",
+            "ev-c47-lft-873a-873c-escritos",
+            "ev-c47-lft-873e-873g-preliminar",
+            "ev-c47-lft-873h-873k-juicio",
+            "ev-c47-lft-784-carga",
+            "ev-c47-lft-804-805-documentos",
+            "ev-c47-cpeum-123a-xx-xxxi-tribunales"
+          ]
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Cuándo aplica el ordinario?",
+          "answer": "En conflictos jurídicos sin tramitación especial.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c47-lft-870-alcance"
+          ]
+        },
+        {
+          "question": "¿Existe umbral general de tres salarios?",
+          "answer": "No existe ese umbral general.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c47-lft-870-alcance",
+            "ev-c47-a60-l297-317-inicio-demanda"
+          ]
+        },
+        {
+          "question": "¿Tribunal federal equivale siempre a juzgado de distrito?",
+          "answer": "No; la denominación no es automática.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c47-cpeum-123a-xx-xxxi-tribunales",
+            "ev-c47-a60-l347-351-competencia"
+          ]
+        },
+        {
+          "question": "¿La demanda es escrita?",
+          "answer": "Sí, conforme a los artículos 871 y 872.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c47-lft-871-873-demanda",
+            "ev-c47-a60-l297-317-inicio-demanda"
+          ]
+        },
+        {
+          "question": "¿Contestación ordinaria?",
+          "answer": "Quince días.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c47-lft-873a-873c-escritos",
+            "ev-c47-a60-l395-421-contestacion-replica"
+          ]
+        },
+        {
+          "question": "¿Réplica vigente?",
+          "answer": "Ocho días.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c47-lft-873a-873c-escritos",
+            "ev-c47-a60-l395-421-contestacion-replica"
+          ]
+        },
+        {
+          "question": "¿Contrarréplica vigente?",
+          "answer": "Cinco días.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c47-lft-873a-873c-escritos"
+          ]
+        },
+        {
+          "question": "¿Qué hace la preliminar?",
+          "answer": "Depura, fija hechos, resuelve admisión y cita a juicio.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c47-lft-873e-873g-preliminar"
+          ]
+        },
+        {
+          "question": "¿Qué ocurre en juicio?",
+          "answer": "Desahogo, alegatos y sentencia.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c47-lft-873h-873k-juicio"
+          ]
+        },
+        {
+          "question": "¿Carga siempre patronal?",
+          "answer": "No; se aplican supuestos del 784.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c47-lft-784-carga",
+            "ev-c47-a60-l461-499-hechos-prueba"
+          ]
+        },
+        {
+          "question": "¿Qué produce incumplir 804?",
+          "answer": "Presunción rebatible del artículo 805.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c47-lft-804-805-documentos"
+          ]
+        },
+        {
+          "question": "¿Duración garantizada de 2–3 meses?",
+          "answer": "No; la ley fija actos, no ese plazo total.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c47-lft-871-873-demanda",
+            "ev-c47-lft-873a-873c-escritos",
+            "ev-c47-lft-873e-873g-preliminar",
+            "ev-c47-lft-873h-873k-juicio",
+            "ev-c47-a60-l347-351-competencia"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación C47",
+        "description": "Vía, escritos, audiencias y prueba.",
+        "instructions": "Elige la opción sustentada.",
+        "questions": [
+          {
+            "text": "Un conflicto jurídico no tiene trámite especial. ¿Qué vía corresponde?",
+            "difficulty": "basic",
+            "options": [
+              "Ordinario laboral",
+              "Especial por ser menor a tres salarios",
+              "Amparo directo"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 870 define el ámbito.",
+            "optionExplanations": [
+              "Es la regla.",
+              "Ese umbral no existe.",
+              "No sustituye la instancia."
+            ],
+            "evidenceIds": [
+              "ev-c47-lft-870-alcance",
+              "ev-c47-a60-l297-317-inicio-demanda"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c47-lft-870-alcance"
+              ],
+              [
+                "ev-c47-lft-870-alcance",
+                "ev-c47-a60-l297-317-inicio-demanda"
+              ],
+              [
+                "ev-c47-lft-870-alcance"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c47-lft-870-alcance"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c47-lft-870-alcance",
+              "ev-c47-a60-l297-317-inicio-demanda"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c47-lft-870-alcance"
+              ],
+              [
+                "ev-c47-lft-870-alcance",
+                "ev-c47-a60-l297-317-inicio-demanda"
+              ],
+              [
+                "ev-c47-lft-870-alcance"
+              ]
+            ]
+          },
+          {
+            "text": "¿Dónde se presenta la demanda?",
+            "difficulty": "basic",
+            "options": [
+              "Ante Oficialía o Unidad Receptora del Tribunal competente",
+              "Siempre en juzgado de distrito",
+              "Ante el Centro para sentencia"
+            ],
+            "correctOption": 0,
+            "explanation": "El 871 identifica el órgano receptor.",
+            "optionExplanations": [
+              "Es el órgano receptor correcto.",
+              "Federal no equivale automáticamente a distrito.",
+              "El Centro no sentencia."
+            ],
+            "evidenceIds": [
+              "ev-c47-lft-871-873-demanda",
+              "ev-c47-cpeum-123a-xx-xxxi-tribunales",
+              "ev-c47-a60-l347-351-competencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c47-lft-871-873-demanda"
+              ],
+              [
+                "ev-c47-cpeum-123a-xx-xxxi-tribunales",
+                "ev-c47-a60-l347-351-competencia"
+              ],
+              [
+                "ev-c47-cpeum-123a-xx-xxxi-tribunales"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c47-lft-871-873-demanda"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c47-lft-871-873-demanda",
+              "ev-c47-cpeum-123a-xx-xxxi-tribunales",
+              "ev-c47-a60-l347-351-competencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c47-lft-871-873-demanda"
+              ],
+              [
+                "ev-c47-cpeum-123a-xx-xxxi-tribunales",
+                "ev-c47-a60-l347-351-competencia"
+              ],
+              [
+                "ev-c47-cpeum-123a-xx-xxxi-tribunales"
+              ]
+            ]
+          },
+          {
+            "text": "¿Toda prueba debe ya estar físicamente con la demanda?",
+            "difficulty": "basic",
+            "options": [
+              "No; se ofrecen disponibles y se justifican las que deban recabarse",
+              "Sí, sin excepción",
+              "Nunca se ofrecen con demanda"
+            ],
+            "correctOption": 0,
+            "explanation": "El 872 contiene un régimen matizado.",
+            "optionExplanations": [
+              "Es la lectura exacta.",
+              "Universaliza.",
+              "Niega la oportunidad legal."
+            ],
+            "evidenceIds": [
+              "ev-c47-lft-871-873-demanda",
+              "ev-c47-a60-l297-317-inicio-demanda"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c47-lft-871-873-demanda"
+              ],
+              [
+                "ev-c47-lft-871-873-demanda"
+              ],
+              [
+                "ev-c47-lft-871-873-demanda"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c47-lft-871-873-demanda"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c47-lft-871-873-demanda",
+              "ev-c47-a60-l297-317-inicio-demanda"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c47-lft-871-873-demanda"
+              ],
+              [
+                "ev-c47-lft-871-873-demanda"
+              ],
+              [
+                "ev-c47-lft-871-873-demanda"
+              ]
+            ]
+          },
+          {
+            "text": "¿Plazo de contestación ordinaria?",
+            "difficulty": "basic",
+            "options": [
+              "15 días",
+              "8 días",
+              "5 días"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 873-A fija quince días para contestar la demanda ordinaria.",
+            "optionExplanations": [
+              "Contestación.",
+              "Corresponde al plazo de réplica.",
+              "Contrarréplica."
+            ],
+            "evidenceIds": [
+              "ev-c47-lft-873a-873c-escritos",
+              "ev-c47-a60-l395-421-contestacion-replica"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c47-lft-873a-873c-escritos",
+                "ev-c47-a60-l395-421-contestacion-replica"
+              ],
+              [
+                "ev-c47-lft-873a-873c-escritos",
+                "ev-c47-a60-l395-421-contestacion-replica"
+              ],
+              [
+                "ev-c47-lft-873a-873c-escritos"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c47-lft-873a-873c-escritos",
+              "ev-c47-a60-l395-421-contestacion-replica"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c47-lft-873a-873c-escritos",
+              "ev-c47-a60-l395-421-contestacion-replica"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c47-lft-873a-873c-escritos",
+                "ev-c47-a60-l395-421-contestacion-replica"
+              ],
+              [
+                "ev-c47-lft-873a-873c-escritos",
+                "ev-c47-a60-l395-421-contestacion-replica"
+              ],
+              [
+                "ev-c47-lft-873a-873c-escritos"
+              ]
+            ]
+          },
+          {
+            "text": "¿Plazo vigente de réplica?",
+            "difficulty": "basic",
+            "options": [
+              "8 días",
+              "7 días",
+              "No existe"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 873-B vigente fija ocho días para formular la réplica.",
+            "optionExplanations": [
+              "Es el plazo legal correcto.",
+              "El audio duda, la ley resuelve.",
+              "Sí existe."
+            ],
+            "evidenceIds": [
+              "ev-c47-lft-873a-873c-escritos",
+              "ev-c47-a60-l395-421-contestacion-replica"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c47-lft-873a-873c-escritos",
+                "ev-c47-a60-l395-421-contestacion-replica"
+              ],
+              [
+                "ev-c47-lft-873a-873c-escritos",
+                "ev-c47-a60-l395-421-contestacion-replica"
+              ],
+              [
+                "ev-c47-lft-873a-873c-escritos"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c47-lft-873a-873c-escritos",
+              "ev-c47-a60-l395-421-contestacion-replica"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c47-lft-873a-873c-escritos",
+              "ev-c47-a60-l395-421-contestacion-replica"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c47-lft-873a-873c-escritos",
+                "ev-c47-a60-l395-421-contestacion-replica"
+              ],
+              [
+                "ev-c47-lft-873a-873c-escritos",
+                "ev-c47-a60-l395-421-contestacion-replica"
+              ],
+              [
+                "ev-c47-lft-873a-873c-escritos"
+              ]
+            ]
+          },
+          {
+            "text": "¿Objeto de audiencia preliminar?",
+            "difficulty": "basic",
+            "options": [
+              "Depurar y decidir admisión probatoria",
+              "Desahogar siempre toda prueba",
+              "Dictar laudo del Centro"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 873-E enumera los objetivos de la audiencia preliminar.",
+            "optionExplanations": [
+              "Describe correctamente la audiencia.",
+              "Eso corresponde a juicio.",
+              "El Centro no juzga."
+            ],
+            "evidenceIds": [
+              "ev-c47-lft-873e-873g-preliminar"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c47-lft-873e-873g-preliminar"
+              ],
+              [
+                "ev-c47-lft-873h-873k-juicio"
+              ],
+              [
+                "ev-c47-cpeum-123a-xx-xxxi-tribunales"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c47-lft-873e-873g-preliminar"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c47-lft-873e-873g-preliminar"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c47-lft-873e-873g-preliminar"
+              ],
+              [
+                "ev-c47-lft-873h-873k-juicio"
+              ],
+              [
+                "ev-c47-cpeum-123a-xx-xxxi-tribunales"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué sigue al desahogo en juicio?",
+            "difficulty": "basic",
+            "options": [
+              "Alegatos y sentencia",
+              "Nueva demanda",
+              "Conciliación obligatoria desde cero"
+            ],
+            "correctOption": 0,
+            "explanation": "873-J ordena alegatos y sentencia.",
+            "optionExplanations": [
+              "Es la secuencia legal correcta.",
+              "No reinicia.",
+              "No es la regla."
+            ],
+            "evidenceIds": [
+              "ev-c47-lft-873h-873k-juicio"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c47-lft-873h-873k-juicio"
+              ],
+              [
+                "ev-c47-lft-873h-873k-juicio"
+              ],
+              [
+                "ev-c47-lft-870-alcance"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c47-lft-873h-873k-juicio"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c47-lft-873h-873k-juicio"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c47-lft-873h-873k-juicio"
+              ],
+              [
+                "ev-c47-lft-873h-873k-juicio"
+              ],
+              [
+                "ev-c47-lft-870-alcance"
+              ]
+            ]
+          },
+          {
+            "text": "¿La carga siempre corresponde al patrón?",
+            "difficulty": "basic",
+            "options": [
+              "No; el 784 enumera supuestos",
+              "Sí, por definición",
+              "Siempre a la persona trabajadora"
+            ],
+            "correctOption": 0,
+            "explanation": "Se analiza cada hecho y regla.",
+            "optionExplanations": [
+              "Reconoce la distribución condicionada.",
+              "Es excesivo.",
+              "También es excesivo."
+            ],
+            "evidenceIds": [
+              "ev-c47-lft-784-carga",
+              "ev-c47-lft-804-805-documentos",
+              "ev-c47-a60-l461-499-hechos-prueba"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c47-lft-784-carga",
+                "ev-c47-lft-804-805-documentos"
+              ],
+              [
+                "ev-c47-lft-784-carga",
+                "ev-c47-a60-l461-499-hechos-prueba"
+              ],
+              [
+                "ev-c47-lft-784-carga"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c47-lft-784-carga",
+              "ev-c47-lft-804-805-documentos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c47-lft-784-carga",
+              "ev-c47-lft-804-805-documentos",
+              "ev-c47-a60-l461-499-hechos-prueba"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c47-lft-784-carga",
+                "ev-c47-lft-804-805-documentos"
+              ],
+              [
+                "ev-c47-lft-784-carga",
+                "ev-c47-a60-l461-499-hechos-prueba"
+              ],
+              [
+                "ev-c47-lft-784-carga"
+              ]
+            ]
+          },
+          {
+            "text": "¿No exhibir documentos del 804 produce condena automática?",
+            "difficulty": "basic",
+            "options": [
+              "No; genera presunción susceptible de prueba en contrario",
+              "Sí, sin defensa",
+              "No produce efecto"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 805 establece una presunción susceptible de prueba en contrario.",
+            "optionExplanations": [
+              "Distingue presunción de condena.",
+              "Confunde presunción y decisión.",
+              "Desconoce el 805."
+            ],
+            "evidenceIds": [
+              "ev-c47-lft-804-805-documentos"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c47-lft-804-805-documentos"
+              ],
+              [
+                "ev-c47-lft-804-805-documentos"
+              ],
+              [
+                "ev-c47-lft-804-805-documentos"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c47-lft-804-805-documentos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c47-lft-804-805-documentos"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c47-lft-804-805-documentos"
+              ],
+              [
+                "ev-c47-lft-804-805-documentos"
+              ],
+              [
+                "ev-c47-lft-804-805-documentos"
+              ]
+            ]
+          },
+          {
+            "text": "¿Puede prometerse que todo ordinario dura 2–3 meses?",
+            "difficulty": "basic",
+            "options": [
+              "No",
+              "Sí, siempre",
+              "Solo si es federal"
+            ],
+            "correctOption": 0,
+            "explanation": "La LFT fija actos y plazos parciales, no esa garantía total.",
+            "optionExplanations": [
+              "Evita una promesa sin fundamento.",
+              "El audio no puede garantizarlo.",
+              "La competencia no crea garantía."
+            ],
+            "evidenceIds": [
+              "ev-c47-lft-871-873-demanda",
+              "ev-c47-lft-873a-873c-escritos",
+              "ev-c47-lft-873e-873g-preliminar",
+              "ev-c47-lft-873h-873k-juicio",
+              "ev-c47-a60-l347-351-competencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c47-lft-871-873-demanda",
+                "ev-c47-lft-873a-873c-escritos",
+                "ev-c47-lft-873e-873g-preliminar",
+                "ev-c47-lft-873h-873k-juicio"
+              ],
+              [
+                "ev-c47-a60-l347-351-competencia",
+                "ev-c47-lft-871-873-demanda"
+              ],
+              [
+                "ev-c47-cpeum-123a-xx-xxxi-tribunales",
+                "ev-c47-a60-l347-351-competencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c47-lft-871-873-demanda",
+              "ev-c47-lft-873a-873c-escritos",
+              "ev-c47-lft-873e-873g-preliminar",
+              "ev-c47-lft-873h-873k-juicio"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c47-lft-871-873-demanda",
+              "ev-c47-lft-873a-873c-escritos",
+              "ev-c47-lft-873e-873g-preliminar",
+              "ev-c47-lft-873h-873k-juicio",
+              "ev-c47-a60-l347-351-competencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c47-lft-871-873-demanda",
+                "ev-c47-lft-873a-873c-escritos",
+                "ev-c47-lft-873e-873g-preliminar",
+                "ev-c47-lft-873h-873k-juicio"
+              ],
+              [
+                "ev-c47-a60-l347-351-competencia",
+                "ev-c47-lft-871-873-demanda"
+              ],
+              [
+                "ev-c47-cpeum-123a-xx-xxxi-tribunales",
+                "ev-c47-a60-l347-351-competencia"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c47-lft-870-alcance",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 870 y 870 Bis: alcance del ordinario y reserva de conciliación",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c47-lft-871-873-demanda",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 871 a 873: inicio, demanda, anexos, admisión y subsanación",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c47-lft-873a-873c-escritos",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 873-A a 873-D: contestación, reconvención, réplica y contrarréplica",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c47-lft-873e-873g-preliminar",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 873-E a 873-G: audiencia preliminar y preparación probatoria",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c47-lft-873h-873k-juicio",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 873-H a 873-K: audiencia de juicio, prueba, alegatos y sentencia",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c47-lft-784-carga",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículo 784: cargas probatorias en supuestos enumerados y facultades del Tribunal",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c47-lft-804-805-documentos",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 804 y 805: documentos patronales, conservación y presunción",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c47-cpeum-123a-xx-xxxi-tribunales",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026, artículo 123 apartado A, fracciones XX y XXXI: tribunales y distribución federal-local",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c47-a60-l297-317-inicio-demanda",
+      "kind": "transcript",
+      "audioNumber": 60,
+      "locator": {
+        "type": "line_range",
+        "startLine": 297,
+        "endLine": 317
+      }
+    },
+    {
+      "id": "ev-c47-a60-l347-351-competencia",
+      "kind": "transcript",
+      "audioNumber": 60,
+      "locator": {
+        "type": "line_range",
+        "startLine": 347,
+        "endLine": 351
+      }
+    },
+    {
+      "id": "ev-c47-a60-l395-421-contestacion-replica",
+      "kind": "transcript",
+      "audioNumber": 60,
+      "locator": {
+        "type": "line_range",
+        "startLine": 395,
+        "endLine": 421
+      }
+    },
+    {
+      "id": "ev-c47-a60-l461-499-hechos-prueba",
+      "kind": "transcript",
+      "audioNumber": 60,
+      "locator": {
+        "type": "line_range",
+        "startLine": 461,
+        "endLine": 499
+      }
+    }
+  ]
+}

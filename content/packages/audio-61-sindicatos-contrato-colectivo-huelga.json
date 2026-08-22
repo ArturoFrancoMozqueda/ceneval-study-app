@@ -1,0 +1,1331 @@
+{
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C48",
+    "order": 48,
+    "audioSources": [
+      {
+        "audioNumber": 61,
+        "fragment": "Líneas 19 a 31: nociones de sindicato y revisión colectiva; se excluyen las líneas gigantes 29 y 33"
+      }
+    ]
+  },
+  "subject": {
+    "name": "Derecho Laboral",
+    "description": "Libertad sindical, contratación colectiva y derecho de huelga en el Apartado A constitucional."
+  },
+  "class": {
+    "title": "Sindicatos, contrato colectivo y huelga",
+    "description": "Organización sindical democrática, contratación colectiva representativa y requisitos legales del derecho de huelga."
+  },
+  "transcript": {
+    "originalFile": "AUDIO 61.txt",
+    "cleaned": "Se conservaron como evidencia específica las líneas físicas 19 y 21 a 25. La línea física 31, extensa, se usa únicamente como contexto amplio de la diferencia entre revisión salarial anual y revisión contractual bienal; cada regla se verifica en la LFT. Se excluyeron por completo las líneas físicas gigantes 29 y 33 porque mezclan afirmaciones jurídicas, opiniones, logística, ejemplos y materias ajenas. No se fingieron sublíneas. Se retiraron generalizaciones sobre afiliación, poder sindical, reconocimiento patronal, huelga, amparo y resultados garantizados."
+  },
+  "topics": [
+    {
+      "title": "Organización colectiva y huelga",
+      "description": "Del derecho de asociación a la negociación colectiva y al ejercicio reglado de la huelga.",
+      "learningJourney": {
+        "openingPrompt": "¿Cómo se conectan la libertad sindical, la representatividad para contratar colectivamente y los requisitos de una huelga legalmente existente?",
+        "quickChecks": [
+          {
+            "prompt": "¿Todo sindicato se integra exactamente con veinte personas?",
+            "answer": "No. El artículo 364 distingue sindicatos de trabajadores, con mínimo de veinte, y sindicatos de patrones, con mínimo de tres patrones.",
+            "feedback": "Identifica primero qué categoría de sindicato se pretende constituir.",
+            "evidenceIds": [
+              "ev-c48-lft-364-370-registro",
+              "ev-c48-a61-l021-025-minimo"
+            ]
+          },
+          {
+            "prompt": "¿El contrato colectivo completo se revisa cada año?",
+            "answer": "No. La revisión general opera conforme al ciclo bienal del artículo 399; el artículo 399 Bis permite revisar cada año el salario en efectivo por cuota diaria.",
+            "feedback": "No confundas revisión contractual con revisión salarial.",
+            "evidenceIds": [
+              "ev-c48-lft-391-400bis-revision",
+              "ev-c48-a61-l031-031-revision-contexto"
+            ]
+          },
+          {
+            "prompt": "¿La huelga es cualquier abandono concertado del trabajo?",
+            "answer": "No. Es una suspensión temporal realizada por una coalición de trabajadores y debe cumplir objeto, mayoría y requisitos procedimentales.",
+            "feedback": "Definición, objeto y procedimiento son filtros acumulativos.",
+            "evidenceIds": [
+              "ev-c48-cpeum-123a-xvi-xviii",
+              "ev-c48-lft-440-451-huelga",
+              "ev-c48-lft-920-938-procedimiento"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Un sindicato de trabajadores busca celebrar el contrato colectivo inicial. Acredita apoyo suficiente para solicitar constancia de representatividad, pero el patrón se niega a firmar. Después plantea suspender labores sin precisar objeto ni presentar emplazamiento.",
+          "question": "¿Qué pasos y filtros deben analizarse antes de considerar una huelga legalmente existente?",
+          "legalRule": "Los artículos 386 a 390 Ter regulan el contrato colectivo inicial y su respaldo democrático; los artículos 440 a 451 y 920 y siguientes regulan definición, objeto, mayoría y emplazamiento de huelga.",
+          "reasoning": "La constancia de representatividad y la consulta garantizan respaldo para la contratación colectiva. La negativa patronal puede vincularse con un objeto legal de huelga, pero no elimina los requisitos: objeto del artículo 450, mayoría en los términos del 451 y cumplimiento previo del 920. La existencia, ilicitud y justificación son calificaciones distintas.",
+          "conclusion": "La libertad colectiva no garantiza el resultado ni sustituye las condiciones legales de la contratación y la huelga.",
+          "evidenceIds": [
+            "ev-c48-cpeum-123a-xvi-xviii",
+            "ev-c48-lft-386-390ter-cct",
+            "ev-c48-lft-440-451-huelga",
+            "ev-c48-lft-445-469-calificacion",
+            "ev-c48-lft-920-938-procedimiento"
+          ]
+        },
+        "closingPrompt": "Explica la secuencia: libertad sindical, constitución y registro, democracia interna, representatividad, contrato colectivo, revisión y filtros de huelga.",
+        "nextActivity": "Recorre el mapa, repasa las doce tarjetas y resuelve los diez reactivos sin usar reglas históricas del audio.",
+        "openingPromptEvidenceIds": [
+          "ev-c48-cpeum-123a-xvi-xviii",
+          "ev-c48-lft-356-363-libertad",
+          "ev-c48-lft-364-370-registro",
+          "ev-c48-lft-386-390ter-cct",
+          "ev-c48-lft-440-451-huelga",
+          "ev-c48-a61-l019-019-definicion"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c48-cpeum-123a-xvi-xviii",
+          "ev-c48-lft-356-363-libertad",
+          "ev-c48-lft-364-370-registro",
+          "ev-c48-lft-371-373-democracia",
+          "ev-c48-lft-386-390ter-cct",
+          "ev-c48-lft-391-400bis-revision",
+          "ev-c48-lft-440-451-huelga",
+          "ev-c48-lft-445-469-calificacion",
+          "ev-c48-lft-920-938-procedimiento",
+          "ev-c48-a61-l019-019-definicion",
+          "ev-c48-a61-l021-025-minimo",
+          "ev-c48-a61-l031-031-revision-contexto"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c48-lft-364-370-registro",
+          "ev-c48-lft-386-390ter-cct",
+          "ev-c48-lft-391-400bis-revision",
+          "ev-c48-lft-440-451-huelga",
+          "ev-c48-lft-920-938-procedimiento"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "El sindicato es una asociación estable para estudiar, mejorar y defender intereses. Su constitución y registro respetan libertad, autonomía y democracia. El contrato colectivo fija condiciones de trabajo con respaldo representativo. La huelga es suspensión temporal sujeta a objeto, mayoría y procedimiento; no es abandono ni garantiza una decisión favorable.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c48-cpeum-123a-xvi-xviii",
+            "ev-c48-lft-356-363-libertad",
+            "ev-c48-lft-364-370-registro",
+            "ev-c48-lft-371-373-democracia",
+            "ev-c48-lft-386-390ter-cct",
+            "ev-c48-lft-440-451-huelga",
+            "ev-c48-a61-l019-019-definicion"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa",
+          "content": "La Constitución reconoce el derecho de trabajadores y patrones a coaligarse y protege huelgas y paros en los términos legales. La LFT distingue coalición temporal y sindicato permanente. Nadie puede ser obligado a formar o no formar parte de un sindicato y la autoridad o el patrón no deben controlar su vida interna.\n\nEl artículo 364 conserva dos categorías: un sindicato de trabajadores requiere por lo menos veinte trabajadores; uno de patrones, por lo menos tres patrones. No significa que todo sindicato requiera veinte integrantes. El registro corresponde al Centro Federal de Conciliación y Registro Laboral y se rige por autonomía, equidad, democracia, legalidad, transparencia, certeza, gratuidad, inmediatez, imparcialidad y libertad sindical. Los estatutos y la elección de directiva deben asegurar voto personal, libre, directo y secreto en los supuestos legales.\n\nEl contrato colectivo establece condiciones de trabajo. Para el contrato inicial, la constancia de representatividad acredita el respaldo mínimo previsto por la ley; la aprobación del contrato y de convenios de revisión se somete a consulta personal, libre, directa y secreta. El contrato se deposita ante el Centro Federal. La revisión general se solicita conforme al ciclo de dos años del artículo 399; solo los salarios en efectivo por cuota diaria son revisables cada año bajo el artículo 399 Bis.\n\nLa huelga es suspensión temporal del trabajo realizada por una coalición de trabajadores; los sindicatos de trabajadores son coaliciones permanentes para ese título. Debe perseguir un objeto del artículo 450, realizarse por la mayoría y cumplir previamente el artículo 920. Existencia, justificación e ilicitud son categorías distintas. Su terminación depende de los supuestos del artículo 469 y no de que la presión garantice el resultado buscado.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c48-cpeum-123a-xvi-xviii",
+            "ev-c48-lft-356-363-libertad",
+            "ev-c48-lft-364-370-registro",
+            "ev-c48-lft-371-373-democracia",
+            "ev-c48-lft-386-390ter-cct",
+            "ev-c48-lft-391-400bis-revision",
+            "ev-c48-lft-440-451-huelga",
+            "ev-c48-lft-445-469-calificacion",
+            "ev-c48-lft-920-938-procedimiento",
+            "ev-c48-a61-l019-019-definicion",
+            "ev-c48-a61-l021-025-minimo",
+            "ev-c48-a61-l031-031-revision-contexto"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Base jurídica",
+          "content": "CPEUM vigente 02-06-2026, artículo 123 Apartado A fracciones XVI a XVIII. LFT vigente 14-05-2026: artículos 356–373, 386–400 Bis, 440–469 y 920–938.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c48-cpeum-123a-xvi-xviii",
+            "ev-c48-lft-356-363-libertad",
+            "ev-c48-lft-364-370-registro",
+            "ev-c48-lft-371-373-democracia",
+            "ev-c48-lft-386-390ter-cct",
+            "ev-c48-lft-391-400bis-revision",
+            "ev-c48-lft-440-451-huelga",
+            "ev-c48-lft-445-469-calificacion",
+            "ev-c48-lft-920-938-procedimiento"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Ejemplo tipo CENEVAL",
+          "content": "Un reactivo afirma que veinte es el mínimo de cualquier sindicato y que todo el contrato se revisa anualmente. La respuesta correcta separa sindicatos de trabajadores y de patrones, y distingue revisión salarial anual de revisión contractual bienal.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c48-lft-364-370-registro",
+            "ev-c48-lft-391-400bis-revision",
+            "ev-c48-a61-l021-025-minimo",
+            "ev-c48-a61-l031-031-revision-contexto"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Libertad sindical no equivale a ausencia de reglas: constitución, registro y democracia protegen la organización; representatividad y consulta legitiman la contratación; objeto, mayoría y emplazamiento encauzan la huelga.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c48-cpeum-123a-xvi-xviii",
+            "ev-c48-lft-356-363-libertad",
+            "ev-c48-lft-364-370-registro",
+            "ev-c48-lft-371-373-democracia",
+            "ev-c48-lft-386-390ter-cct",
+            "ev-c48-lft-440-451-huelga",
+            "ev-c48-lft-920-938-procedimiento"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de estudio",
+          "content": "1. Distingue coalición y sindicato. 2. Separa sindicato de trabajadores y de patrones. 3. Ubica registro y estatutos. 4. Identifica representatividad y consulta. 5. Distingue revisión general y salarial. 6. Verifica definición, objeto, mayoría y emplazamiento. 7. No confundas existencia, ilicitud, justificación y terminación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c48-lft-356-363-libertad",
+            "ev-c48-lft-364-370-registro",
+            "ev-c48-lft-371-373-democracia",
+            "ev-c48-lft-386-390ter-cct",
+            "ev-c48-lft-391-400bis-revision",
+            "ev-c48-lft-440-451-huelga",
+            "ev-c48-lft-445-469-calificacion",
+            "ev-c48-lft-920-938-procedimiento"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Coalición; sindicato; libertad sindical; autonomía; registro; estatutos; voto personal, libre, directo y secreto; constancia de representatividad; contrato colectivo; consulta; revisión salarial; revisión contractual; huelga; existencia; ilicitud; terminación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c48-cpeum-123a-xvi-xviii",
+            "ev-c48-lft-356-363-libertad",
+            "ev-c48-lft-364-370-registro",
+            "ev-c48-lft-371-373-democracia",
+            "ev-c48-lft-386-390ter-cct",
+            "ev-c48-lft-391-400bis-revision",
+            "ev-c48-lft-440-451-huelga",
+            "ev-c48-lft-445-469-calificacion"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "Decir que todo sindicato requiere veinte integrantes; ignorar la categoría patronal; tratar el registro como autorización discrecional; confundir constancia con contrato; revisar íntegramente el contrato cada año; definir huelga como abandono; omitir mayoría o emplazamiento; asegurar que la huelga garantiza el resultado.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c48-lft-364-370-registro",
+            "ev-c48-lft-386-390ter-cct",
+            "ev-c48-lft-391-400bis-revision",
+            "ev-c48-lft-440-451-huelga",
+            "ev-c48-lft-445-469-calificacion",
+            "ev-c48-lft-920-938-procedimiento"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Práctica de clasificación",
+          "content": "Clasifica casos en cuatro columnas: organización sindical, contratación colectiva, revisión y huelga. Para huelga agrega objeto, mayoría, emplazamiento y posible calificación. Si falta un requisito, marca información insuficiente.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c48-lft-364-370-registro",
+            "ev-c48-lft-386-390ter-cct",
+            "ev-c48-lft-391-400bis-revision",
+            "ev-c48-lft-440-451-huelga",
+            "ev-c48-lft-445-469-calificacion",
+            "ev-c48-lft-920-938-procedimiento"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Ruta colectiva laboral",
+        "description": "Libertad, organización, negociación y huelga",
+        "nodes": [
+          {
+            "id": "colectivo",
+            "label": "Derecho colectivo",
+            "description": "Apartado A",
+            "evidenceIds": [
+              "ev-c48-cpeum-123a-xvi-xviii",
+              "ev-c48-a61-l019-019-definicion"
+            ]
+          },
+          {
+            "id": "libertad",
+            "label": "Libertad sindical",
+            "description": "Decidir organizarse",
+            "parentId": "colectivo",
+            "evidenceIds": [
+              "ev-c48-cpeum-123a-xvi-xviii",
+              "ev-c48-lft-356-363-libertad"
+            ]
+          },
+          {
+            "id": "positiva",
+            "label": "Libertad positiva",
+            "description": "Formar y afiliarse",
+            "parentId": "libertad",
+            "evidenceIds": [
+              "ev-c48-lft-356-363-libertad"
+            ]
+          },
+          {
+            "id": "negativa",
+            "label": "Libertad negativa",
+            "description": "No ser obligado",
+            "parentId": "libertad",
+            "evidenceIds": [
+              "ev-c48-lft-356-363-libertad"
+            ]
+          },
+          {
+            "id": "no-injerencia",
+            "label": "No injerencia",
+            "description": "Autonomía interna",
+            "parentId": "libertad",
+            "evidenceIds": [
+              "ev-c48-lft-356-363-libertad"
+            ]
+          },
+          {
+            "id": "coalicion",
+            "label": "Coalición",
+            "description": "Acuerdo temporal",
+            "parentId": "colectivo",
+            "evidenceIds": [
+              "ev-c48-lft-356-363-libertad",
+              "ev-c48-lft-440-451-huelga"
+            ]
+          },
+          {
+            "id": "sindicato",
+            "label": "Sindicato",
+            "description": "Asociación estable",
+            "parentId": "colectivo",
+            "evidenceIds": [
+              "ev-c48-lft-356-363-libertad",
+              "ev-c48-a61-l019-019-definicion"
+            ]
+          },
+          {
+            "id": "trabajadores",
+            "label": "De trabajadores",
+            "description": "Mínimo veinte",
+            "parentId": "sindicato",
+            "evidenceIds": [
+              "ev-c48-lft-364-370-registro",
+              "ev-c48-a61-l021-025-minimo"
+            ]
+          },
+          {
+            "id": "patrones",
+            "label": "De patrones",
+            "description": "Mínimo tres",
+            "parentId": "sindicato",
+            "evidenceIds": [
+              "ev-c48-lft-364-370-registro"
+            ]
+          },
+          {
+            "id": "confianza",
+            "label": "Confianza",
+            "description": "Regla del artículo 363",
+            "parentId": "sindicato",
+            "evidenceIds": [
+              "ev-c48-lft-356-363-libertad"
+            ]
+          },
+          {
+            "id": "registro",
+            "label": "Registro",
+            "description": "Centro Federal",
+            "parentId": "sindicato",
+            "evidenceIds": [
+              "ev-c48-lft-364-370-registro"
+            ]
+          },
+          {
+            "id": "documentos",
+            "label": "Documentos",
+            "description": "Acta, padrón y estatutos",
+            "parentId": "registro",
+            "evidenceIds": [
+              "ev-c48-lft-364-370-registro"
+            ]
+          },
+          {
+            "id": "principios",
+            "label": "Principios",
+            "description": "Autonomía y democracia",
+            "parentId": "registro",
+            "evidenceIds": [
+              "ev-c48-lft-364-370-registro"
+            ]
+          },
+          {
+            "id": "cancelacion",
+            "label": "Cancelación",
+            "description": "No administrativa",
+            "parentId": "registro",
+            "evidenceIds": [
+              "ev-c48-lft-364-370-registro"
+            ]
+          },
+          {
+            "id": "estatutos",
+            "label": "Estatutos",
+            "description": "Gobierno interno",
+            "parentId": "sindicato",
+            "evidenceIds": [
+              "ev-c48-lft-371-373-democracia"
+            ]
+          },
+          {
+            "id": "directiva",
+            "label": "Directiva",
+            "description": "Elección democrática",
+            "parentId": "estatutos",
+            "evidenceIds": [
+              "ev-c48-lft-371-373-democracia"
+            ]
+          },
+          {
+            "id": "voto",
+            "label": "Voto",
+            "description": "Personal, libre, directo y secreto",
+            "parentId": "directiva",
+            "evidenceIds": [
+              "ev-c48-lft-371-373-democracia"
+            ]
+          },
+          {
+            "id": "cct",
+            "label": "Contrato colectivo",
+            "description": "Condiciones de trabajo",
+            "parentId": "colectivo",
+            "evidenceIds": [
+              "ev-c48-lft-386-390ter-cct"
+            ]
+          },
+          {
+            "id": "representatividad",
+            "label": "Representatividad",
+            "description": "Respaldo para contrato inicial",
+            "parentId": "cct",
+            "evidenceIds": [
+              "ev-c48-lft-386-390ter-cct"
+            ]
+          },
+          {
+            "id": "consulta",
+            "label": "Consulta",
+            "description": "Aprobación mayoritaria",
+            "parentId": "cct",
+            "evidenceIds": [
+              "ev-c48-lft-386-390ter-cct",
+              "ev-c48-lft-391-400bis-revision"
+            ]
+          },
+          {
+            "id": "deposito",
+            "label": "Depósito",
+            "description": "Centro Federal",
+            "parentId": "cct",
+            "evidenceIds": [
+              "ev-c48-lft-386-390ter-cct"
+            ]
+          },
+          {
+            "id": "revision",
+            "label": "Revisión",
+            "description": "No es un ciclo único",
+            "parentId": "cct",
+            "evidenceIds": [
+              "ev-c48-lft-391-400bis-revision",
+              "ev-c48-a61-l031-031-revision-contexto"
+            ]
+          },
+          {
+            "id": "bienal",
+            "label": "Contractual",
+            "description": "Ciclo bienal",
+            "parentId": "revision",
+            "evidenceIds": [
+              "ev-c48-lft-391-400bis-revision"
+            ]
+          },
+          {
+            "id": "anual",
+            "label": "Salarial",
+            "description": "Cuota diaria anual",
+            "parentId": "revision",
+            "evidenceIds": [
+              "ev-c48-lft-391-400bis-revision",
+              "ev-c48-a61-l031-031-revision-contexto"
+            ]
+          },
+          {
+            "id": "huelga",
+            "label": "Huelga",
+            "description": "Suspensión temporal",
+            "parentId": "colectivo",
+            "evidenceIds": [
+              "ev-c48-cpeum-123a-xvi-xviii",
+              "ev-c48-lft-440-451-huelga"
+            ]
+          },
+          {
+            "id": "objeto",
+            "label": "Objeto",
+            "description": "Lista artículo 450",
+            "parentId": "huelga",
+            "evidenceIds": [
+              "ev-c48-lft-440-451-huelga"
+            ]
+          },
+          {
+            "id": "mayoria",
+            "label": "Mayoría",
+            "description": "Artículo 451",
+            "parentId": "huelga",
+            "evidenceIds": [
+              "ev-c48-lft-440-451-huelga"
+            ]
+          },
+          {
+            "id": "emplazamiento",
+            "label": "Emplazamiento",
+            "description": "Requisitos artículo 920",
+            "parentId": "huelga",
+            "evidenceIds": [
+              "ev-c48-lft-920-938-procedimiento"
+            ]
+          },
+          {
+            "id": "existencia",
+            "label": "Existencia",
+            "description": "Filtros artículo 459",
+            "parentId": "huelga",
+            "evidenceIds": [
+              "ev-c48-lft-445-469-calificacion"
+            ]
+          },
+          {
+            "id": "ilicitud",
+            "label": "Ilicitud",
+            "description": "Hipótesis artículo 445",
+            "parentId": "huelga",
+            "evidenceIds": [
+              "ev-c48-lft-445-469-calificacion"
+            ]
+          },
+          {
+            "id": "justificacion",
+            "label": "Justificación",
+            "description": "Motivos imputables",
+            "parentId": "huelga",
+            "evidenceIds": [
+              "ev-c48-lft-445-469-calificacion"
+            ]
+          },
+          {
+            "id": "terminacion",
+            "label": "Terminación",
+            "description": "Supuestos artículo 469",
+            "parentId": "huelga",
+            "evidenceIds": [
+              "ev-c48-lft-445-469-calificacion"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Ley Federal del Trabajo",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Texto vigente, última reforma DOF 14-05-2026; artículos 356–373, 386–400 Bis, 440–469 y 920–938",
+          "retrievedOn": "2026-08-21",
+          "note": "Organización sindical, contratación colectiva, revisión y huelga.",
+          "evidenceIds": [
+            "ev-c48-lft-356-363-libertad",
+            "ev-c48-lft-364-370-registro",
+            "ev-c48-lft-371-373-democracia",
+            "ev-c48-lft-386-390ter-cct",
+            "ev-c48-lft-391-400bis-revision",
+            "ev-c48-lft-440-451-huelga",
+            "ev-c48-lft-445-469-calificacion",
+            "ev-c48-lft-920-938-procedimiento"
+          ]
+        },
+        {
+          "title": "Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Texto vigente, últimas reformas DOF 02-06-2026; artículo 123 Apartado A fracciones XVI a XVIII",
+          "retrievedOn": "2026-08-21",
+          "note": "Derechos de coalición, huelga y paro en el Apartado A.",
+          "evidenceIds": [
+            "ev-c48-cpeum-123a-xvi-xviii"
+          ]
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué es sindicato según el artículo 356?",
+          "answer": "Asociación de trabajadores o patrones para estudiar, mejorar y defender sus intereses.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c48-lft-356-363-libertad",
+            "ev-c48-a61-l019-019-definicion"
+          ]
+        },
+        {
+          "question": "¿Cuántos integrantes exige el artículo 364?",
+          "answer": "Veinte trabajadores para sindicato de trabajadores o tres patrones para sindicato patronal.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c48-lft-364-370-registro",
+            "ev-c48-a61-l021-025-minimo"
+          ]
+        },
+        {
+          "question": "¿Dónde se registran los sindicatos?",
+          "answer": "En el Centro Federal de Conciliación y Registro Laboral.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c48-lft-364-370-registro"
+          ]
+        },
+        {
+          "question": "¿Qué protege el artículo 364 Bis?",
+          "answer": "Autonomía, equidad, democracia, legalidad, transparencia y libertad sindical, entre otros principios.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c48-lft-364-370-registro"
+          ]
+        },
+        {
+          "question": "¿Cómo se elige la directiva sindical?",
+          "answer": "Conforme a estatutos y las garantías legales de voto personal, libre, directo y secreto.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c48-lft-371-373-democracia"
+          ]
+        },
+        {
+          "question": "¿Qué establece un contrato colectivo?",
+          "answer": "Las condiciones en que debe prestarse el trabajo en las empresas o establecimientos cubiertos.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c48-lft-386-390ter-cct"
+          ]
+        },
+        {
+          "question": "¿Para qué sirve la constancia de representatividad?",
+          "answer": "Para acreditar respaldo en la solicitud de un contrato colectivo inicial.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c48-lft-386-390ter-cct"
+          ]
+        },
+        {
+          "question": "¿Cada cuándo se revisa integralmente el CCT?",
+          "answer": "Conforme al ciclo bienal del artículo 399, no cada año.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c48-lft-391-400bis-revision",
+            "ev-c48-a61-l031-031-revision-contexto"
+          ]
+        },
+        {
+          "question": "¿Qué se revisa anualmente?",
+          "answer": "Los salarios en efectivo por cuota diaria, según el artículo 399 Bis.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c48-lft-391-400bis-revision",
+            "ev-c48-a61-l031-031-revision-contexto"
+          ]
+        },
+        {
+          "question": "¿Qué es huelga?",
+          "answer": "Suspensión temporal del trabajo llevada a cabo por una coalición de trabajadores.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c48-lft-440-451-huelga"
+          ]
+        },
+        {
+          "question": "¿Qué filtros exige el artículo 451?",
+          "answer": "Objeto legal, mayoría y cumplimiento previo de los requisitos del artículo 920.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c48-lft-440-451-huelga",
+            "ev-c48-lft-920-938-procedimiento"
+          ]
+        },
+        {
+          "question": "¿Existencia, ilicitud y justificación significan lo mismo?",
+          "answer": "No; son calificaciones distintas con supuestos propios.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c48-lft-445-469-calificacion"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación: sindicatos, CCT y huelga",
+        "description": "Aplicación de reglas vigentes sobre sindicatos, CCT y huelga.",
+        "questions": [
+          {
+            "text": "¿Qué describe mejor a un sindicato?",
+            "difficulty": "basic",
+            "options": [
+              "Una asociación estable para estudiar, mejorar y defender intereses",
+              "Una reunión temporal sin organización",
+              "Una autoridad que dicta sentencias"
+            ],
+            "correctOption": 0,
+            "explanation": "Es la definición del artículo 356.",
+            "optionExplanations": [
+              "Es la definición del artículo 356.",
+              "Esa respuesta altera o universaliza la regla legal.",
+              "Esa respuesta confunde instituciones o efectos distintos."
+            ],
+            "evidenceIds": [
+              "ev-c48-lft-356-363-libertad",
+              "ev-c48-a61-l019-019-definicion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c48-lft-356-363-libertad",
+                "ev-c48-a61-l019-019-definicion"
+              ],
+              [
+                "ev-c48-lft-356-363-libertad"
+              ],
+              [
+                "ev-c48-lft-356-363-libertad"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c48-lft-356-363-libertad",
+              "ev-c48-a61-l019-019-definicion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c48-lft-356-363-libertad",
+              "ev-c48-a61-l019-019-definicion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c48-lft-356-363-libertad",
+                "ev-c48-a61-l019-019-definicion"
+              ],
+              [
+                "ev-c48-lft-356-363-libertad"
+              ],
+              [
+                "ev-c48-lft-356-363-libertad"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál es el mínimo legal correcto?",
+            "difficulty": "basic",
+            "options": [
+              "Veinte trabajadores o tres patrones, según la categoría",
+              "Veinte integrantes para cualquier sindicato",
+              "Tres personas para cualquier sindicato"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 364 distingue sindicatos de trabajadores y patronales.",
+            "optionExplanations": [
+              "El artículo 364 distingue sindicatos de trabajadores y patronales.",
+              "Esa respuesta altera o universaliza la regla legal.",
+              "Esa respuesta confunde instituciones o efectos distintos."
+            ],
+            "evidenceIds": [
+              "ev-c48-lft-364-370-registro",
+              "ev-c48-a61-l021-025-minimo"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c48-lft-364-370-registro",
+                "ev-c48-a61-l021-025-minimo"
+              ],
+              [
+                "ev-c48-lft-364-370-registro"
+              ],
+              [
+                "ev-c48-lft-364-370-registro"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c48-lft-364-370-registro",
+              "ev-c48-a61-l021-025-minimo"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c48-lft-364-370-registro",
+              "ev-c48-a61-l021-025-minimo"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c48-lft-364-370-registro",
+                "ev-c48-a61-l021-025-minimo"
+              ],
+              [
+                "ev-c48-lft-364-370-registro"
+              ],
+              [
+                "ev-c48-lft-364-370-registro"
+              ]
+            ]
+          },
+          {
+            "text": "¿Quién registra sindicatos conforme a la LFT vigente?",
+            "difficulty": "basic",
+            "options": [
+              "El Centro Federal de Conciliación y Registro Laboral",
+              "Cada patrón discrecionalmente",
+              "El tribunal civil local"
+            ],
+            "correctOption": 0,
+            "explanation": "La función registral está centralizada en el Centro Federal.",
+            "optionExplanations": [
+              "La función registral está centralizada en el Centro Federal.",
+              "Esa respuesta altera o universaliza la regla legal.",
+              "Esa respuesta confunde instituciones o efectos distintos."
+            ],
+            "evidenceIds": [
+              "ev-c48-lft-364-370-registro"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c48-lft-364-370-registro"
+              ],
+              [
+                "ev-c48-lft-364-370-registro"
+              ],
+              [
+                "ev-c48-lft-364-370-registro"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c48-lft-364-370-registro"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c48-lft-364-370-registro"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c48-lft-364-370-registro"
+              ],
+              [
+                "ev-c48-lft-364-370-registro"
+              ],
+              [
+                "ev-c48-lft-364-370-registro"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué regla protege la democracia de la directiva?",
+            "difficulty": "basic",
+            "options": [
+              "Voto personal, libre, directo y secreto conforme a ley y estatutos",
+              "Designación obligatoria por el patrón",
+              "Elección pública organizada siempre por el INE"
+            ],
+            "correctOption": 0,
+            "explanation": "La LFT establece garantías internas sin convertir al patrón o al INE en elector universal.",
+            "optionExplanations": [
+              "La LFT establece garantías internas sin convertir al patrón o al INE en elector universal.",
+              "Esa respuesta altera o universaliza la regla legal.",
+              "Esa respuesta confunde instituciones o efectos distintos."
+            ],
+            "evidenceIds": [
+              "ev-c48-lft-371-373-democracia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c48-lft-371-373-democracia"
+              ],
+              [
+                "ev-c48-lft-356-363-libertad",
+                "ev-c48-lft-371-373-democracia"
+              ],
+              [
+                "ev-c48-lft-371-373-democracia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c48-lft-371-373-democracia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c48-lft-371-373-democracia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c48-lft-371-373-democracia"
+              ],
+              [
+                "ev-c48-lft-356-363-libertad",
+                "ev-c48-lft-371-373-democracia"
+              ],
+              [
+                "ev-c48-lft-371-373-democracia"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué se requiere para solicitar un CCT inicial?",
+            "difficulty": "basic",
+            "options": [
+              "Constancia de representatividad en los términos legales",
+              "Solo afirmar que existe un sindicato",
+              "Una sentencia civil previa"
+            ],
+            "correctOption": 0,
+            "explanation": "La constancia acredita respaldo para el contrato inicial.",
+            "optionExplanations": [
+              "La constancia acredita respaldo para el contrato inicial.",
+              "Esa respuesta altera o universaliza la regla legal.",
+              "Esa respuesta confunde instituciones o efectos distintos."
+            ],
+            "evidenceIds": [
+              "ev-c48-lft-386-390ter-cct"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c48-lft-386-390ter-cct"
+              ],
+              [
+                "ev-c48-lft-386-390ter-cct"
+              ],
+              [
+                "ev-c48-lft-386-390ter-cct"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c48-lft-386-390ter-cct"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c48-lft-386-390ter-cct"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c48-lft-386-390ter-cct"
+              ],
+              [
+                "ev-c48-lft-386-390ter-cct"
+              ],
+              [
+                "ev-c48-lft-386-390ter-cct"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué parte del CCT es revisable cada año?",
+            "difficulty": "basic",
+            "options": [
+              "El salario en efectivo por cuota diaria",
+              "Todo el clausulado sin distinción",
+              "Ninguna condición puede revisarse"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 399 Bis limita la revisión anual a ese componente salarial.",
+            "optionExplanations": [
+              "El artículo 399 Bis limita la revisión anual a ese componente salarial.",
+              "Esa respuesta altera o universaliza la regla legal.",
+              "Esa respuesta confunde instituciones o efectos distintos."
+            ],
+            "evidenceIds": [
+              "ev-c48-lft-391-400bis-revision",
+              "ev-c48-a61-l031-031-revision-contexto"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c48-lft-391-400bis-revision",
+                "ev-c48-a61-l031-031-revision-contexto"
+              ],
+              [
+                "ev-c48-lft-391-400bis-revision"
+              ],
+              [
+                "ev-c48-lft-391-400bis-revision"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c48-lft-391-400bis-revision",
+              "ev-c48-a61-l031-031-revision-contexto"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c48-lft-391-400bis-revision",
+              "ev-c48-a61-l031-031-revision-contexto"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c48-lft-391-400bis-revision",
+                "ev-c48-a61-l031-031-revision-contexto"
+              ],
+              [
+                "ev-c48-lft-391-400bis-revision"
+              ],
+              [
+                "ev-c48-lft-391-400bis-revision"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué caracteriza jurídicamente a la huelga?",
+            "difficulty": "basic",
+            "options": [
+              "Suspensión temporal por una coalición de trabajadores",
+              "Abandono definitivo sin procedimiento",
+              "Resultado económico garantizado"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 440 define una suspensión temporal; no asegura el resultado.",
+            "optionExplanations": [
+              "El artículo 440 define una suspensión temporal; no asegura el resultado.",
+              "Esa respuesta altera o universaliza la regla legal.",
+              "Esa respuesta confunde instituciones o efectos distintos."
+            ],
+            "evidenceIds": [
+              "ev-c48-lft-440-451-huelga"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c48-lft-440-451-huelga"
+              ],
+              [
+                "ev-c48-lft-440-451-huelga",
+                "ev-c48-lft-920-938-procedimiento"
+              ],
+              [
+                "ev-c48-lft-440-451-huelga"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c48-lft-440-451-huelga"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c48-lft-440-451-huelga"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c48-lft-440-451-huelga"
+              ],
+              [
+                "ev-c48-lft-440-451-huelga",
+                "ev-c48-lft-920-938-procedimiento"
+              ],
+              [
+                "ev-c48-lft-440-451-huelga"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué exige el artículo 451 para suspender trabajos?",
+            "difficulty": "basic",
+            "options": [
+              "Objeto legal, mayoría y requisitos previos del artículo 920",
+              "Solo voluntad de una persona",
+              "Únicamente desacuerdo salarial"
+            ],
+            "correctOption": 0,
+            "explanation": "Los tres filtros son acumulativos.",
+            "optionExplanations": [
+              "Los tres filtros son acumulativos.",
+              "Esa respuesta altera o universaliza la regla legal.",
+              "Esa respuesta confunde instituciones o efectos distintos."
+            ],
+            "evidenceIds": [
+              "ev-c48-lft-440-451-huelga",
+              "ev-c48-lft-920-938-procedimiento"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c48-lft-440-451-huelga",
+                "ev-c48-lft-920-938-procedimiento"
+              ],
+              [
+                "ev-c48-lft-440-451-huelga"
+              ],
+              [
+                "ev-c48-lft-440-451-huelga"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c48-lft-440-451-huelga",
+              "ev-c48-lft-920-938-procedimiento"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c48-lft-440-451-huelga",
+              "ev-c48-lft-920-938-procedimiento"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c48-lft-440-451-huelga",
+                "ev-c48-lft-920-938-procedimiento"
+              ],
+              [
+                "ev-c48-lft-440-451-huelga"
+              ],
+              [
+                "ev-c48-lft-440-451-huelga"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuándo puede declararse inexistente una huelga?",
+            "difficulty": "basic",
+            "options": [
+              "En las hipótesis taxativas del artículo 459",
+              "Siempre que el patrón no esté de acuerdo",
+              "Cuando no consigue inmediatamente sus demandas"
+            ],
+            "correctOption": 0,
+            "explanation": "La inexistencia no depende de desacuerdo patronal ni de éxito inmediato.",
+            "optionExplanations": [
+              "La inexistencia no depende de desacuerdo patronal ni de éxito inmediato.",
+              "Esa respuesta altera o universaliza la regla legal.",
+              "Esa respuesta confunde instituciones o efectos distintos."
+            ],
+            "evidenceIds": [
+              "ev-c48-lft-445-469-calificacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c48-lft-445-469-calificacion"
+              ],
+              [
+                "ev-c48-lft-445-469-calificacion"
+              ],
+              [
+                "ev-c48-lft-445-469-calificacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c48-lft-445-469-calificacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c48-lft-445-469-calificacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c48-lft-445-469-calificacion"
+              ],
+              [
+                "ev-c48-lft-445-469-calificacion"
+              ],
+              [
+                "ev-c48-lft-445-469-calificacion"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué conclusión evita una regla histórica del audio?",
+            "difficulty": "basic",
+            "options": [
+              "Separar revisión salarial anual y contractual bienal con la LFT vigente",
+              "Revisar todo el contrato cada año",
+              "Tratar toda protesta como huelga"
+            ],
+            "correctOption": 0,
+            "explanation": "La norma oficial corrige las generalizaciones del fragmento.",
+            "optionExplanations": [
+              "La norma oficial corrige las generalizaciones del fragmento.",
+              "Esa respuesta altera o universaliza la regla legal.",
+              "Esa respuesta confunde instituciones o efectos distintos."
+            ],
+            "evidenceIds": [
+              "ev-c48-lft-391-400bis-revision",
+              "ev-c48-lft-440-451-huelga",
+              "ev-c48-a61-l031-031-revision-contexto"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c48-lft-391-400bis-revision",
+                "ev-c48-lft-440-451-huelga",
+                "ev-c48-a61-l031-031-revision-contexto"
+              ],
+              [
+                "ev-c48-lft-391-400bis-revision"
+              ],
+              [
+                "ev-c48-lft-440-451-huelga",
+                "ev-c48-lft-920-938-procedimiento"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c48-lft-391-400bis-revision",
+              "ev-c48-lft-440-451-huelga",
+              "ev-c48-a61-l031-031-revision-contexto"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c48-lft-391-400bis-revision",
+              "ev-c48-lft-440-451-huelga",
+              "ev-c48-a61-l031-031-revision-contexto"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c48-lft-391-400bis-revision",
+                "ev-c48-lft-440-451-huelga",
+                "ev-c48-a61-l031-031-revision-contexto"
+              ],
+              [
+                "ev-c48-lft-391-400bis-revision"
+              ],
+              [
+                "ev-c48-lft-440-451-huelga",
+                "ev-c48-lft-920-938-procedimiento"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c48-cpeum-123a-xvi-xviii",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026, artículo 123 Apartado A fracciones XVI a XVIII",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c48-lft-356-363-libertad",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 356 a 363: coalición, sindicato, libertad y categorías",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c48-lft-364-370-registro",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 364 a 370: mínimos, principios, registro, efectos y cancelación",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c48-lft-371-373-democracia",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 371 a 373: estatutos, directiva y rendición de cuentas",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c48-lft-386-390ter-cct",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 386 a 390 Ter: CCT, representatividad, registro y consulta",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c48-lft-391-400bis-revision",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 391 a 400 Bis: contenido, efectos y revisiones contractual y salarial",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c48-lft-440-451-huelga",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 440 a 451: definición, alcance, objeto y requisitos de huelga",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c48-lft-445-469-calificacion",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 445 a 469: ilicitud, justificación, inexistencia, servicios y terminación",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c48-lft-920-938-procedimiento",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 920 a 938: emplazamiento y procedimiento de huelga",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c48-a61-l019-019-definicion",
+      "kind": "transcript",
+      "audioNumber": 61,
+      "locator": {
+        "type": "line_range",
+        "startLine": 19,
+        "endLine": 19
+      }
+    },
+    {
+      "id": "ev-c48-a61-l021-025-minimo",
+      "kind": "transcript",
+      "audioNumber": 61,
+      "locator": {
+        "type": "line_range",
+        "startLine": 21,
+        "endLine": 25
+      }
+    },
+    {
+      "id": "ev-c48-a61-l031-031-revision-contexto",
+      "kind": "transcript",
+      "audioNumber": 61,
+      "locator": {
+        "type": "line_range",
+        "startLine": 31,
+        "endLine": 31
+      }
+    }
+  ]
+}

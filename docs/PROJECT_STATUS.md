@@ -34,7 +34,7 @@ Los bloqueos operativos reales siguen siendo:
    Hobby, pero faltan persistir los secretos, ejecutar el bootstrap explícito
    de la administradora y validar registro, verificación y acceso; no hay
    despliegue automático desde Git;
-5. C47–C58 y los bancos acumulativos siguen pendientes; C41–C46 ya tienen
+5. C49–C58 y los bancos acumulativos siguen pendientes; C41–C48 ya tienen
    paquetes 1.2 trazables locales, aún no importados ni publicados.
 
 El historial de Git ya es útil y existe CI. Esos dos hallazgos de la auditoría
@@ -87,15 +87,18 @@ anterior, pero esos datos no están presentes en el proyecto CENEVAL conectado:
 | Flashcards | 480 |
 | Preguntas de examen | 400 |
 
-El repositorio conserva C01–C46 como paquetes trazables en contrato 1.2 y una
-versión retirada en el archivo editorial. C01–C46 pasan el gate local, pero no
+El repositorio conserva C01–C48 como paquetes trazables en contrato 1.2 y una
+versión retirada en el archivo editorial. C01–C48 pasan el gate local, pero no
 se han importado, revisado ni publicado. C41 usa Audio 54 y solo las líneas
 13–69 pertinentes de Audio 55; C42 usa las líneas 85–295 de Audio 55; C43 usa
 Audio 56, líneas 23–199; C44 usa Audio 58, líneas 13–297; C45 usa la línea
 física 3 de Audio 59 solo como contexto amplio y sustenta las reglas en la
-LFT oficial; y C46 usa rangos acotados de Audio 59 y Audio 60, excluyendo esa
-línea mixta no delimitable. Antes de
-disponer de esa biblioteca en la aplicación habrá que importar C01–C46 en el
+LFT oficial; C46 usa rangos acotados de Audio 59 y Audio 60, excluyendo esa
+línea mixta no delimitable; C47 usa rangos pertinentes de Audio 60 y corrige
+las generalizaciones procesales con la LFT; y C48 usa líneas breves de Audio
+61 y la línea 31 solo como contexto amplio, excluyendo las líneas gigantes 29
+y 33. Antes de
+disponer de esa biblioteca en la aplicación habrá que importar C01–C48 en el
 proyecto CENEVAL correcto mediante el flujo autorizado.
 
 Existen tres identificadores distintos:
@@ -211,11 +214,11 @@ El contrato 1.2 añade el gate de confianza editorial:
 - modificar o rechazar contenido invalida la aprobación anterior;
 - la transcripción queda restringida a administración.
 
-Los 46 paquetes C01–C46 tienen código, orden y fuentes portables. C01–C46 ya
+Los 48 paquetes C01–C48 tienen código, orden y fuentes portables. C01–C48 ya
 usan 1.2: sus 139, 130, 133, 133, 137, 137, 138, 138, 140, 141, 139, 142, 144
-y 138, 137, 142, 142, 142, 143, 148, 150, 152, 151, 150, 152, 150, 150, 149, 151, 151, 151, 151, 151, 151, 151, 151, 154, 155, 156, 155, 150, 153, 148, 154, 148 y 150 artefactos quedaron enlazados a
+y 138, 137, 142, 142, 142, 143, 148, 150, 152, 151, 150, 152, 150, 150, 149, 151, 151, 151, 151, 151, 151, 151, 151, 154, 155, 156, 155, 150, 153, 148, 154, 148, 150, 148 y 150 artefactos quedaron enlazados a
 12, 17, 12, 12, 14, 18, 10, 15, 13, 18, 21, 16, 12, 12, 12, 12, 15, 10, 18,
-15, 18, 14, 16, 19, 19, 21, 15, 20, 15, 16, 15, 13, 13, 15, 14, 17, 13, 14, 16, 24, 16, 15, 12, 16, 9 y 16 evidencias verificables, respectivamente, y pasan el gate
+15, 18, 14, 16, 19, 19, 21, 15, 20, 15, 16, 15, 13, 13, 15, 14, 17, 13, 14, 16, 24, 16, 15, 12, 16, 9, 16, 12 y 12 evidencias verificables, respectivamente, y pasan el gate
 local sin importar contenido. El importador acepta
 exclusivamente 1.2 y delega la escritura a
 una única RPC transaccional que persiste el registro de
@@ -228,7 +231,7 @@ migraciones locales se aplicaron desde cero en PostgreSQL 17.6 y el runner
 dinámico comprobó round-trip semántico, 2 evidencias, 118 artefactos, 236
 vínculos, estados `draft`/`pending`, rechazo de duplicados sin residuos y RPC
 denegadas a `anon` y `authenticated`. La migración todavía no está aplicada en
-el proyecto remoto; C01–C46 no se han importado.
+el proyecto remoto; C01–C48 no se han importado.
 
 ### Controles editoriales concurrentes
 
@@ -374,27 +377,25 @@ Queda pendiente:
 
 ## 5. Contenido terminado y pendiente
 
-El inventario editorial registra contenido preparado para C01–C46: cada clase
+El inventario editorial registra contenido preparado para C01–C48: cada clase
 tiene transcripción conservada, versión depurada, nueve materiales, mapa,
-flashcards, diez reactivos y fuentes. C01–C46 pasan el gate local 1.2, pero
+flashcards, diez reactivos y fuentes. C01–C48 pasan el gate local 1.2, pero
 aún requieren revisión y publicación autorizadas.
 
 Orden de producción restante:
 
 | Orden | Clase | Fuente principal |
 | ---: | --- | --- |
-| 1 | C47 Juicio ordinario laboral | Segunda parte de 60 |
-| 2 | C48 Sindicatos, contrato colectivo y huelga | Audio 61 |
-| 3 | C49 Jurisdicción voluntaria | Audio 62 |
-| 4 | C50 Arrendamiento inmobiliario especial oral | Primera parte de 69 |
-| 5 | C51 Regímenes patrimoniales del matrimonio | Segunda parte de 46 |
-| 6 | C52 Divorcio voluntario y convenio familiar | Primera parte de 63 |
-| 7 | C53 Divorcio sin expresión de causa | Segunda parte de 67 |
-| 8 | C54 Medidas familiares provisionales | Audio 68 |
-| 9 | C55 Apertura de sucesión | Segunda parte de 63 |
-| 10 | C56 Herederos y albacea | Cierre de 63 + inicio de 64 |
-| 11 | C57 Inventario, avalúo y oposición | Audio 64 |
-| 12 | C58 Administración, partición y adjudicación | Sin fuente suficiente |
+| 1 | C49 Jurisdicción voluntaria | Audio 62 |
+| 2 | C50 Arrendamiento inmobiliario especial oral | Primera parte de 69 |
+| 3 | C51 Regímenes patrimoniales del matrimonio | Segunda parte de 46 |
+| 4 | C52 Divorcio voluntario y convenio familiar | Primera parte de 63 |
+| 5 | C53 Divorcio sin expresión de causa | Segunda parte de 67 |
+| 6 | C54 Medidas familiares provisionales | Audio 68 |
+| 7 | C55 Apertura de sucesión | Segunda parte de 63 |
+| 8 | C56 Herederos y albacea | Cierre de 63 + inicio de 64 |
+| 9 | C57 Inventario, avalúo y oposición | Audio 64 |
+| 10 | C58 Administración, partición y adjudicación | Sin fuente suficiente |
 
 Además siguen pendientes tres bancos transversales y 16 exámenes acumulativos.
 
@@ -411,18 +412,18 @@ Además siguen pendientes tres bancos transversales y 16 exámenes acumulativos.
    registrar el resultado. Esta suite crea y elimina datos remotos; no
    pertenece a CI.
 4. Aplicar la persistencia 1.2 ya aprobada localmente en un proyecto de ensayo;
-   C01–C46 ya cuentan con evidencia real verificable para ese ensayo.
+   C01–C48 ya cuentan con evidencia real verificable para ese ensayo.
 
-### Prioridad 1 — Cerrar el pipeline con C01–C46
+### Prioridad 1 — Cerrar el pipeline con C01–C48
 
-1. Mantener los localizadores reales y paquetes C01–C46 en contrato 1.2.
+1. Mantener los localizadores reales y paquetes C01–C48 en contrato 1.2.
 2. Verificar por round-trip dinámico que el registro de evidencias persiste sin
    pérdidas.
 3. Revisar vigencia jurídica y conteos editoriales.
 4. Publicar solo después de la revisión autorizada.
 5. Comprobar localmente el recorrido borrador, revisión, aprobación y publicación.
 
-### Prioridad 2 — Completar C47–C58
+### Prioridad 2 — Completar C49–C58
 
 Repetir el pipeline 1.2 con fuentes oficiales, validación, revisión editorial,
 publicación, navegación y un commit por unidad de trabajo.
@@ -461,7 +462,7 @@ publicación, navegación y un commit por unidad de trabajo.
 | 2 | Ejecutar y probar el respaldo documentado | Exportación fechada, copia externa verificada y restauración de ensayo |
 | 3 | Ampliar y ejecutar la suite RLS | Comprobaciones actuales y casos de temas no aprobados aprobados en CENEVAL |
 | 4 | Aplicar la persistencia 1.2 en un proyecto de ensayo | Migración remota de ensayo, round-trip y RLS aprobados antes de producción |
-| 5 | Aprobar C01–C46 | Recorrido trazable completo sin evidencia inventada |
+| 5 | Aprobar C01–C48 | Recorrido trazable completo sin evidencia inventada |
 | 6 | Crear pruebas de navegador | Flujos centrales reproducibles en CI o entorno aislado |
 | 7 | Completar y validar el despliegue privado | Variables persistentes, administradora operativa y URL estable aprobada desde teléfono y computadora |
 
@@ -494,4 +495,4 @@ contenido o escribir en la base remota:
 2. ejecutar y completar el procedimiento de `docs/SUPABASE_BACKUP.md`;
 3. aplicar las migraciones en un proyecto de ensayo y repetir el gate dinámico
    antes de promoverlas a CENEVAL;
-4. producir C47 solo después de mantener verdes los gates trazables de C01–C46.
+4. producir C49 solo después de mantener verdes los gates trazables de C01–C48.

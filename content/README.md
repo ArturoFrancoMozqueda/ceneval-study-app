@@ -61,7 +61,7 @@ comprueba que el código o el orden no pertenezcan a otra clase antes de crear
 ningún registro; los índices únicos de PostgreSQL protegen también contra dos
 importaciones simultáneas.
 
-Los 46 paquetes C01–C46 usan el contrato 1.2 y pasan el gate local de evidencia
+Los 48 paquetes C01–C48 usan el contrato 1.2 y pasan el gate local de evidencia
 por dinámica. Ese resultado no equivale a importación, revisión ni publicación
 remotas: esas operaciones requieren autorización y el flujo editorial. Las
 versiones retiradas 1.0 viven en `content/archive/withdrawn/` y no son

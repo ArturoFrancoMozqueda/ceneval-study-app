@@ -755,6 +755,40 @@ const traceablePackages = [
       /última reforma DOF 14-05-2026/i,
     ],
   },
+  {
+    code: "C47",
+    fileName: "audio-60-juicio-ordinario-laboral.json",
+    artifacts: 148,
+    evidence: 12,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /no existe la regla del audio de “más de tres salarios”/i,
+      /tribunal laboral federal no debe llamarse automáticamente juzgado de distrito/i,
+      /contesta por escrito en quince días/i,
+      /actora tiene ocho días/i,
+      /demandada cuenta con cinco días/i,
+      /carga probatoria no recae siempre en el patrón/i,
+      /excepcionalmente puede emitirse dentro de cinco días/i,
+      /última reforma DOF 14-05-2026/i,
+    ],
+  },
+  {
+    code: "C48",
+    fileName: "audio-61-sindicatos-contrato-colectivo-huelga.json",
+    artifacts: 150,
+    evidence: 12,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /veinte trabajadores.*tres patrones/i,
+      /revisión general.*ciclo de dos años/i,
+      /salarios en efectivo por cuota diaria.*cada año/i,
+      /huelga es suspensión temporal/i,
+      /objeto.*mayoría.*artículo 920/i,
+      /excluyeron.*líneas físicas gigantes 29 y 33/i,
+      /no se fingieron sublíneas/i,
+      /última reforma DOF 14-05-2026/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -1170,6 +1204,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una fórmula laboral universal o una ruta prejudicial falsa como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C47" || expected.code === "C48") {
+      const obsoleteAsCurrent =
+        expected.code === "C47"
+          ? /(?:más de tres salarios|menos de tres meses).*(?:ordinario|especial)|tribunal federal.*juzgado de distrito|juicio laboral.*(?:dura|termina).*(?:dos|tres) meses|carga.*siempre.*patrón|réplica.*(?:cinco|quince) días/i
+          : /(?:todo|cualquier) sindicato.*veinte|contrato colectivo.*(?:completo|íntegro).*(?:cada año|anual)|huelga.*(?:abandono|garantiza|asegura).*(?:resultado|triunfo)|registro sindical.*autorización discrecional|(?:objeto|mayoría|emplazamiento).*(?:innecesario|no se requiere)/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una vía procesal o regla colectiva falsa como respuesta vigente.`,
         );
       }
     }
