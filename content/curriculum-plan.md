@@ -136,8 +136,8 @@ Los conceptos registrales aislados de los audios 03, 45, 46 y bancos de práctic
 | ID | Clase | Fuentes | Estado editorial |
 | --- | --- | --- | --- |
 | C44 | Relación individual de trabajo y prestaciones mínimas | Audio 58, líneas 13–297; Audio 59 excluido por falta de delimitación limpia | Paquete 1.2 trazable preparado localmente; jornada gradual 2026–2030 verificada; no importado ni publicado |
-| C45 | Terminación laboral: finiquito, indemnización y prestaciones | primera parte del Audio 59 | Planificada |
-| C46 | Competencia y conciliación prejudicial laboral | segunda parte del Audio 59 y primera parte del Audio 60 | Planificada |
+| C45 | Terminación laboral: finiquito, indemnización y prestaciones | Audio 59, línea física 3 como bloque contextual amplio; reglas sustentadas primariamente en LFT vigente | Paquete 1.2 trazable preparado localmente; no se fingieron subrangos dentro de la línea mixta C44/C45/C46; no importado ni publicado |
+| C46 | Competencia y conciliación prejudicial laboral | Audio 59, líneas 5–25 y 27–45; Audio 60, líneas 123–159, 185–217 y 271–285; Audio 59 línea 3 excluida por falta de granularidad | Paquete 1.2 trazable preparado localmente; competencia y excepciones verificadas con CPEUM y LFT vigentes; no importado ni publicado |
 | C47 | Juicio ordinario laboral: demanda, contestación y réplica | segunda parte del Audio 60 | Planificada; completar audiencias con fuentes oficiales |
 | C48 | Sindicatos, contrato colectivo y huelga | Audio 61 | Planificada |
 

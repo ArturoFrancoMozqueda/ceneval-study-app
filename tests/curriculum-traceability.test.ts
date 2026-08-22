@@ -724,6 +724,37 @@ const traceablePackages = [
       /última reforma DOF 14-05-2026/i,
     ],
   },
+  {
+    code: "C45",
+    fileName: "audio-59-terminacion-laboral.json",
+    artifacts: 148,
+    evidence: 9,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /finiquito.*no es una fórmula única/i,
+      /no toda terminación genera acumulativamente tres meses, veinte días por año/i,
+      /prima de antigüedad.*supuestos de procedencia/i,
+      /prescripción tampoco es un plazo único/i,
+      /no se fingieron subrangos/i,
+      /última reforma DOF 14-05-2026/i,
+    ],
+  },
+  {
+    code: "C46",
+    fileName: "audio-59-60-competencia-conciliacion-laboral.json",
+    artifacts: 150,
+    evidence: 16,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /lo no federal corresponde a autoridades locales dentro del Apartado A/i,
+      /no se generaliza a personas servidoras públicas del Apartado B/i,
+      /no puede exceder cuarenta y cinco días naturales/i,
+      /artículo 685 Ter exceptúa/i,
+      /Centro.*no dicta sentencia/i,
+      /línea 3 del Audio 59 se excluyó por completo/i,
+      /última reforma DOF 14-05-2026/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -1123,6 +1154,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una vía mercantil o regla laboral obsoleta como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C45" || expected.code === "C46") {
+      const obsoleteAsCurrent =
+        expected.code === "C45"
+          ? /(?:todo|cualquier) (?:despido|salida|terminación).*(?:tres meses|veinte días por año|prima de antigüedad)|renuncia.*(?:equivale|es).*despido|finiquito.*(?:fórmula|monto).*(?:única|universal)|(?:toda|cualquier) acción.*prescribe.*un año/i
+          : /(?:todo|cualquier) conflicto.*(?:Centro Federal|competencia federal)|Centro.*(?:sentencia|juzga)|conciliación.*(?:siempre|sin excepciones).*obligatoria|cuarenta y cinco días hábiles|prescripción.*(?:no se interrumpe|continúa igual)|Apartado B.*(?:misma|igual).*ruta/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una fórmula laboral universal o una ruta prejudicial falsa como respuesta vigente.`,
         );
       }
     }

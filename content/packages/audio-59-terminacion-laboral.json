@@ -1,0 +1,1293 @@
+{
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C45",
+    "order": 45,
+    "audioSources": [
+      {
+        "audioNumber": 59,
+        "fragment": "Línea física 3, bloque amplio de terminación y finiquito"
+      }
+    ]
+  },
+  "subject": {
+    "name": "Derecho laboral",
+    "description": "Procedencia, postulación, prueba y sentencia en las vías mercantiles."
+  },
+  "class": {
+    "title": "Terminación laboral: finiquito, indemnización y prestaciones",
+    "description": "Clasificación jurídica de la salida laboral y determinación no automática de prestaciones e indemnizaciones."
+  },
+  "transcript": {
+    "originalFile": "AUDIO 59.txt",
+    "cleaned": "Se utilizó únicamente la línea física 3 del Audio 59 como bloque contextual amplio. Por ser una sola línea de 20,769 caracteres que mezcla C44, C45 y C46, no se fingieron subrangos ni se usó para cifras, fórmulas o plazos. Se excluyeron logística, opiniones, lenguaje ofensivo, ejemplos no verificables y materia procesal de C46. Las reglas vigentes provienen de la LFT oficial y distinguen renuncia, rescisión, despido injustificado y terminación."
+  },
+  "topics": [
+    {
+      "title": "Terminación laboral y consecuencias económicas",
+      "description": "Distingue la causa de salida, las prestaciones devengadas y las consecuencias indemnizatorias que realmente proceden.",
+      "learningJourney": {
+        "openingPrompt": "¿Por qué no basta pedir “finiquito” para saber qué debe pagarse?",
+        "openingPromptEvidenceIds": [
+          "ev-c45-lft-33-46-47-relacion-rescision",
+          "ev-c45-lft-76-80-87-devengadas",
+          "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+          "ev-c45-lft-162-prima-antiguedad",
+          "ev-c45-a59-l003-003-terminacion"
+        ],
+        "quickChecks": [
+          {
+            "prompt": "¿Renuncia equivale a perder proporcionales?",
+            "answer": "No; los derechos devengados se conservan.",
+            "feedback": "Separa causa de salida y conceptos pendientes.",
+            "evidenceIds": [
+              "ev-c45-lft-33-46-47-relacion-rescision",
+              "ev-c45-lft-76-80-87-devengadas"
+            ]
+          },
+          {
+            "prompt": "¿Todo despido acumula tres meses y veinte días por año?",
+            "answer": "No; depende de acción y supuesto.",
+            "feedback": "Lee coordinadamente los artículos 48 a 50.",
+            "evidenceIds": [
+              "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+            ]
+          },
+          {
+            "prompt": "¿Toda acción prescribe en un año?",
+            "answer": "No; hay plazos especiales.",
+            "feedback": "Identifica la acción antes del cómputo.",
+            "evidenceIds": [
+              "ev-c45-lft-516-521-prescripcion"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una persona se separa y le ofrecen una suma llamada finiquito sin desglose.",
+          "legalRule": "La LFT exige clasificar la salida y funda por separado derechos devengados, indemnizaciones, prima de antigüedad y prescripción.",
+          "reasoning": "Se determina si hubo renuncia, rescisión, despido o terminación; después se desglosan salarios y proporcionales; solo entonces se examinan indemnización y prima conforme a sus presupuestos.",
+          "conclusion": "No puede aceptarse ni rechazarse la suma sin causa, desglose y fundamento.",
+          "question": "¿Qué hechos y fundamentos faltan antes de determinar el pago correcto?",
+          "evidenceIds": [
+            "ev-c45-lft-33-46-47-relacion-rescision",
+            "ev-c45-lft-47-48-rescision-patron",
+            "ev-c45-lft-51-52-rescision-trabajador",
+            "ev-c45-lft-53-55-terminacion",
+            "ev-c45-lft-76-80-87-devengadas",
+            "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+            "ev-c45-lft-162-prima-antiguedad",
+            "ev-c45-lft-516-521-prescripcion",
+            "ev-c45-a59-l003-003-terminacion"
+          ]
+        },
+        "closingPrompt": "Explica por qué finiquito, liquidación e indemnización no son una misma fórmula.",
+        "closingPromptEvidenceIds": [
+          "ev-c45-lft-33-46-47-relacion-rescision",
+          "ev-c45-lft-47-48-rescision-patron",
+          "ev-c45-lft-51-52-rescision-trabajador",
+          "ev-c45-lft-53-55-terminacion",
+          "ev-c45-lft-76-80-87-devengadas",
+          "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+          "ev-c45-lft-162-prima-antiguedad",
+          "ev-c45-lft-516-521-prescripcion",
+          "ev-c45-a59-l003-003-terminacion"
+        ],
+        "nextActivity": "Resuelve diez casos con la secuencia causa→acción→conceptos→plazo.",
+        "nextActivityEvidenceIds": [
+          "ev-c45-lft-33-46-47-relacion-rescision",
+          "ev-c45-lft-47-48-rescision-patron",
+          "ev-c45-lft-51-52-rescision-trabajador",
+          "ev-c45-lft-53-55-terminacion",
+          "ev-c45-lft-76-80-87-devengadas",
+          "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+          "ev-c45-lft-162-prima-antiguedad",
+          "ev-c45-lft-516-521-prescripcion"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "La salida de una relación laboral exige identificar primero el hecho jurídico: renuncia, rescisión imputable a una de las partes, despido injustificado o terminación del artículo 53. Después se separan prestaciones ya devengadas o proporcionales de las indemnizaciones que solo proceden en supuestos y acciones concretos. “Finiquito” no es una fórmula única de la LFT.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c45-lft-33-46-47-relacion-rescision",
+            "ev-c45-lft-47-48-rescision-patron",
+            "ev-c45-lft-51-52-rescision-trabajador",
+            "ev-c45-lft-53-55-terminacion",
+            "ev-c45-lft-76-80-87-devengadas",
+            "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+            "ev-c45-lft-162-prima-antiguedad",
+            "ev-c45-lft-516-521-prescripcion",
+            "ev-c45-a59-l003-003-terminacion"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa",
+          "content": "La palabra finiquito se usa en la práctica para agrupar conceptos al concluir una relación, pero la Ley Federal del Trabajo no impone una suma universal con ese nombre. Primero se clasifica el modo de salida y luego se calcula cada concepto con su fundamento.\n\nLa renuncia es la decisión de la persona trabajadora de separarse. No transforma automáticamente la salida en despido ni permite renunciar a salarios o prestaciones ya generados. Todo convenio o liquidación debe cumplir el artículo 33 y no puede contener renuncia de derechos devengados.\n\nLa rescisión termina la relación por incumplimiento grave sin responsabilidad para quien la ejerce. El artículo 47 enumera causas patronales y regula el aviso; los artículos 51 y 52 contienen causas para la persona trabajadora y un plazo especial para separarse. No se presume la causa: se prueba el hecho y se aplica la fracción correspondiente.\n\nEl despido injustificado abre las acciones del artículo 48 y las consecuencias se determinan con los artículos 49 y 50. No toda terminación genera acumulativamente tres meses, veinte días por año, salarios vencidos y prima de antigüedad. Dependen de la acción, el supuesto, la procedencia de reinstalación y las reglas específicas.\n\nEl artículo 53 contiene causas de terminación distintas de una rescisión culpable, como mutuo consentimiento, muerte de la persona trabajadora, conclusión de obra o vencimiento válido, incapacidad que imposibilite el trabajo y los casos del artículo 434. El artículo 54 añade una consecuencia específica cuando existe incapacidad no profesional.\n\nAl terminar pueden existir salarios pendientes, vacaciones no disfrutadas o proporcionales, prima vacacional y aguinaldo proporcional. Son conceptos devengados; no equivalen por sí mismos a indemnización. La prima de antigüedad del artículo 162 tiene supuestos de procedencia y reglas de cálculo propias: no se suma mecánicamente a toda salida.\n\nLa prescripción tampoco es un plazo único. El artículo 516 fija la regla anual, pero los artículos 517 y 518 prevén plazos especiales, incluido el de acciones derivadas de separación, y los artículos 519 a 521 regulan otros supuestos, cómputo e interrupción. Antes de aconsejar o responder, identifica la acción exacta.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c45-lft-33-46-47-relacion-rescision",
+            "ev-c45-lft-47-48-rescision-patron",
+            "ev-c45-lft-51-52-rescision-trabajador",
+            "ev-c45-lft-53-55-terminacion",
+            "ev-c45-lft-76-80-87-devengadas",
+            "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+            "ev-c45-lft-162-prima-antiguedad",
+            "ev-c45-lft-516-521-prescripcion",
+            "ev-c45-a59-l003-003-terminacion"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Base jurídica",
+          "content": "LFT vigente 14-05-2026: artículos 33, 46–55, 76, 79, 80, 87, 162 y 516–521. Cada consecuencia se vincula con su supuesto y acción.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c45-lft-33-46-47-relacion-rescision",
+            "ev-c45-lft-47-48-rescision-patron",
+            "ev-c45-lft-51-52-rescision-trabajador",
+            "ev-c45-lft-53-55-terminacion",
+            "ev-c45-lft-76-80-87-devengadas",
+            "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+            "ev-c45-lft-162-prima-antiguedad",
+            "ev-c45-lft-516-521-prescripcion"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Ejemplo tipo CENEVAL",
+          "content": "Una persona comunica renuncia y tiene aguinaldo y vacaciones proporcionales pendientes. La respuesta correcta reconoce esos conceptos devengados, pero no agrega automáticamente indemnización constitucional ni veinte días por año.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c45-lft-33-46-47-relacion-rescision",
+            "ev-c45-lft-76-80-87-devengadas",
+            "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+            "ev-c45-a59-l003-003-terminacion"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "La salida de una relación laboral exige identificar primero el hecho jurídico: renuncia, rescisión imputable a una de las partes, despido injustificado o terminación del artículo 53. Después se separan prestaciones ya devengadas o proporcionales de las indemnizaciones que solo proceden en supuestos y acciones concretos. “Finiquito” no es una fórmula única de la LFT.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c45-lft-33-46-47-relacion-rescision",
+            "ev-c45-lft-47-48-rescision-patron",
+            "ev-c45-lft-51-52-rescision-trabajador",
+            "ev-c45-lft-53-55-terminacion",
+            "ev-c45-lft-76-80-87-devengadas",
+            "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+            "ev-c45-lft-162-prima-antiguedad"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de estudio",
+          "content": "1. Identifica el hecho de salida. 2. Busca la causa exacta. 3. Distingue prestaciones devengadas. 4. Determina si existe acción indemnizatoria. 5. Revisa prima de antigüedad. 6. Aplica el plazo de prescripción específico. 7. Evita fórmulas automáticas.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c45-lft-33-46-47-relacion-rescision",
+            "ev-c45-lft-47-48-rescision-patron",
+            "ev-c45-lft-51-52-rescision-trabajador",
+            "ev-c45-lft-53-55-terminacion",
+            "ev-c45-lft-76-80-87-devengadas",
+            "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+            "ev-c45-lft-162-prima-antiguedad",
+            "ev-c45-lft-516-521-prescripcion"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Renuncia; rescisión patronal; rescisión de la persona trabajadora; aviso; despido injustificado; reinstalación; indemnización; terminación; prestaciones devengadas; proporcionales; prima de antigüedad; prescripción.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c45-lft-33-46-47-relacion-rescision",
+            "ev-c45-lft-47-48-rescision-patron",
+            "ev-c45-lft-51-52-rescision-trabajador",
+            "ev-c45-lft-53-55-terminacion",
+            "ev-c45-lft-76-80-87-devengadas",
+            "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+            "ev-c45-lft-162-prima-antiguedad",
+            "ev-c45-lft-516-521-prescripcion"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "Usar finiquito y liquidación como sinónimos legales; sumar tres meses y veinte días en toda salida; confundir rescisión con terminación; negar proporcionales por renuncia; tratar la prima de antigüedad como automática; aplicar un año a cualquier acción.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c45-lft-33-46-47-relacion-rescision",
+            "ev-c45-lft-47-48-rescision-patron",
+            "ev-c45-lft-51-52-rescision-trabajador",
+            "ev-c45-lft-53-55-terminacion",
+            "ev-c45-lft-76-80-87-devengadas",
+            "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+            "ev-c45-lft-162-prima-antiguedad",
+            "ev-c45-lft-516-521-prescripcion"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Práctica de decisión",
+          "content": "Clasifica diez casos por causa, conceptos devengados, posible indemnización y plazo. Justifica cada columna con el artículo aplicable; si falta un hecho, marca información insuficiente en vez de inventarlo.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c45-lft-33-46-47-relacion-rescision",
+            "ev-c45-lft-47-48-rescision-patron",
+            "ev-c45-lft-51-52-rescision-trabajador",
+            "ev-c45-lft-53-55-terminacion",
+            "ev-c45-lft-76-80-87-devengadas",
+            "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+            "ev-c45-lft-162-prima-antiguedad",
+            "ev-c45-lft-516-521-prescripcion"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa de salida laboral",
+        "description": "Causa, acción, conceptos y prescripción",
+        "nodes": [
+          {
+            "id": "salida",
+            "label": "Salida laboral",
+            "description": "Clasificar antes de calcular",
+            "evidenceIds": [
+              "ev-c45-lft-33-46-47-relacion-rescision",
+              "ev-c45-lft-53-55-terminacion",
+              "ev-c45-a59-l003-003-terminacion"
+            ]
+          },
+          {
+            "id": "renuncia",
+            "label": "Renuncia",
+            "description": "Decisión de separarse",
+            "parentId": "salida",
+            "evidenceIds": [
+              "ev-c45-lft-33-46-47-relacion-rescision"
+            ]
+          },
+          {
+            "id": "irrenunciable",
+            "label": "Derechos devengados",
+            "description": "No se renuncian",
+            "parentId": "renuncia",
+            "evidenceIds": [
+              "ev-c45-lft-33-46-47-relacion-rescision",
+              "ev-c45-lft-76-80-87-devengadas"
+            ]
+          },
+          {
+            "id": "rescision",
+            "label": "Rescisión",
+            "description": "Incumplimiento grave",
+            "parentId": "salida",
+            "evidenceIds": [
+              "ev-c45-lft-33-46-47-relacion-rescision"
+            ]
+          },
+          {
+            "id": "patron",
+            "label": "Por patrón",
+            "description": "Causas del artículo 47",
+            "parentId": "rescision",
+            "evidenceIds": [
+              "ev-c45-lft-47-48-rescision-patron"
+            ]
+          },
+          {
+            "id": "aviso",
+            "label": "Aviso",
+            "description": "Regla del artículo 47",
+            "parentId": "patron",
+            "evidenceIds": [
+              "ev-c45-lft-47-48-rescision-patron"
+            ]
+          },
+          {
+            "id": "trabajador",
+            "label": "Por persona trabajadora",
+            "description": "Causas del artículo 51",
+            "parentId": "rescision",
+            "evidenceIds": [
+              "ev-c45-lft-51-52-rescision-trabajador"
+            ]
+          },
+          {
+            "id": "plazo52",
+            "label": "Plazo especial",
+            "description": "Artículo 52",
+            "parentId": "trabajador",
+            "evidenceIds": [
+              "ev-c45-lft-51-52-rescision-trabajador"
+            ]
+          },
+          {
+            "id": "despido",
+            "label": "Despido injustificado",
+            "description": "Acciones del artículo 48",
+            "parentId": "salida",
+            "evidenceIds": [
+              "ev-c45-lft-47-48-rescision-patron",
+              "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+            ]
+          },
+          {
+            "id": "reinstalacion",
+            "label": "Reinstalación",
+            "description": "Según acción y procedencia",
+            "parentId": "despido",
+            "evidenceIds": [
+              "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+            ]
+          },
+          {
+            "id": "indemnizacion",
+            "label": "Indemnización",
+            "description": "Según supuesto",
+            "parentId": "despido",
+            "evidenceIds": [
+              "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+            ]
+          },
+          {
+            "id": "no-acumular",
+            "label": "No acumular automático",
+            "description": "20 días no universal",
+            "parentId": "indemnizacion",
+            "evidenceIds": [
+              "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+            ]
+          },
+          {
+            "id": "terminacion",
+            "label": "Terminación artículo 53",
+            "description": "Causas no idénticas a rescisión",
+            "parentId": "salida",
+            "evidenceIds": [
+              "ev-c45-lft-53-55-terminacion"
+            ]
+          },
+          {
+            "id": "mutuo",
+            "label": "Mutuo consentimiento",
+            "description": "Causa legal",
+            "parentId": "terminacion",
+            "evidenceIds": [
+              "ev-c45-lft-53-55-terminacion"
+            ]
+          },
+          {
+            "id": "obra",
+            "label": "Obra o plazo válido",
+            "description": "Según modalidad",
+            "parentId": "terminacion",
+            "evidenceIds": [
+              "ev-c45-lft-53-55-terminacion"
+            ]
+          },
+          {
+            "id": "incapacidad",
+            "label": "Incapacidad",
+            "description": "Reglas 53 y 54",
+            "parentId": "terminacion",
+            "evidenceIds": [
+              "ev-c45-lft-53-55-terminacion"
+            ]
+          },
+          {
+            "id": "conceptos",
+            "label": "Conceptos económicos",
+            "description": "Calcular por fundamento",
+            "parentId": "salida",
+            "evidenceIds": [
+              "ev-c45-lft-76-80-87-devengadas",
+              "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+              "ev-c45-lft-162-prima-antiguedad"
+            ]
+          },
+          {
+            "id": "salarios",
+            "label": "Salarios pendientes",
+            "description": "Trabajo ya realizado",
+            "parentId": "conceptos",
+            "evidenceIds": [
+              "ev-c45-lft-33-46-47-relacion-rescision"
+            ]
+          },
+          {
+            "id": "vacaciones",
+            "label": "Vacaciones proporcionales",
+            "description": "Artículos 76 y 79",
+            "parentId": "conceptos",
+            "evidenceIds": [
+              "ev-c45-lft-76-80-87-devengadas"
+            ]
+          },
+          {
+            "id": "prima-vac",
+            "label": "Prima vacacional",
+            "description": "Artículo 80",
+            "parentId": "vacaciones",
+            "evidenceIds": [
+              "ev-c45-lft-76-80-87-devengadas"
+            ]
+          },
+          {
+            "id": "aguinaldo",
+            "label": "Aguinaldo proporcional",
+            "description": "Artículo 87",
+            "parentId": "conceptos",
+            "evidenceIds": [
+              "ev-c45-lft-76-80-87-devengadas"
+            ]
+          },
+          {
+            "id": "prima-ant",
+            "label": "Prima de antigüedad",
+            "description": "Supuestos del 162",
+            "parentId": "conceptos",
+            "evidenceIds": [
+              "ev-c45-lft-162-prima-antiguedad"
+            ]
+          },
+          {
+            "id": "tope",
+            "label": "Reglas de cálculo",
+            "description": "No monto universal",
+            "parentId": "prima-ant",
+            "evidenceIds": [
+              "ev-c45-lft-162-prima-antiguedad"
+            ]
+          },
+          {
+            "id": "prescripcion",
+            "label": "Prescripción",
+            "description": "Depende de la acción",
+            "parentId": "salida",
+            "evidenceIds": [
+              "ev-c45-lft-516-521-prescripcion"
+            ]
+          },
+          {
+            "id": "regla-anual",
+            "label": "Regla anual",
+            "description": "Artículo 516",
+            "parentId": "prescripcion",
+            "evidenceIds": [
+              "ev-c45-lft-516-521-prescripcion"
+            ]
+          },
+          {
+            "id": "especial",
+            "label": "Plazos especiales",
+            "description": "Artículos 517–519",
+            "parentId": "prescripcion",
+            "evidenceIds": [
+              "ev-c45-lft-516-521-prescripcion"
+            ]
+          },
+          {
+            "id": "computo",
+            "label": "Cómputo",
+            "description": "Artículo 521",
+            "parentId": "prescripcion",
+            "evidenceIds": [
+              "ev-c45-lft-516-521-prescripcion"
+            ]
+          },
+          {
+            "id": "interrupcion",
+            "label": "Interrupción",
+            "description": "Supuestos legales",
+            "parentId": "prescripcion",
+            "evidenceIds": [
+              "ev-c45-lft-516-521-prescripcion"
+            ]
+          },
+          {
+            "id": "metodo",
+            "label": "Método",
+            "description": "Causa→acción→concepto→plazo",
+            "parentId": "salida",
+            "evidenceIds": [
+              "ev-c45-lft-33-46-47-relacion-rescision",
+              "ev-c45-lft-47-48-rescision-patron",
+              "ev-c45-lft-51-52-rescision-trabajador",
+              "ev-c45-lft-53-55-terminacion",
+              "ev-c45-lft-76-80-87-devengadas",
+              "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+              "ev-c45-lft-162-prima-antiguedad",
+              "ev-c45-lft-516-521-prescripcion"
+            ]
+          },
+          {
+            "id": "prueba",
+            "label": "Hechos y prueba",
+            "description": "No asumir causa",
+            "parentId": "metodo",
+            "evidenceIds": [
+              "ev-c45-lft-47-48-rescision-patron",
+              "ev-c45-lft-51-52-rescision-trabajador",
+              "ev-c45-lft-53-55-terminacion"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Ley Federal del Trabajo",
+          "citation": "Texto vigente, última reforma DOF 14-05-2026",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "retrievedOn": "2026-08-21",
+          "note": "Arts. 33, 46–55, 76, 79, 80, 87, 162 y 516–521.",
+          "evidenceIds": [
+            "ev-c45-lft-33-46-47-relacion-rescision",
+            "ev-c45-lft-47-48-rescision-patron",
+            "ev-c45-lft-51-52-rescision-trabajador",
+            "ev-c45-lft-53-55-terminacion",
+            "ev-c45-lft-76-80-87-devengadas",
+            "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+            "ev-c45-lft-162-prima-antiguedad",
+            "ev-c45-lft-516-521-prescripcion"
+          ]
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Finiquito es una fórmula legal universal?",
+          "answer": "No; se identifican y calculan conceptos según la causa y el caso.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c45-lft-33-46-47-relacion-rescision",
+            "ev-c45-lft-76-80-87-devengadas",
+            "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+            "ev-c45-lft-162-prima-antiguedad"
+          ]
+        },
+        {
+          "question": "¿Renunciar elimina prestaciones devengadas?",
+          "answer": "No; no se pueden renunciar derechos ya generados.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c45-lft-33-46-47-relacion-rescision",
+            "ev-c45-lft-76-80-87-devengadas"
+          ]
+        },
+        {
+          "question": "¿Qué distingue rescisión de terminación?",
+          "answer": "La rescisión responde a una causa imputable; el artículo 53 enumera causas de terminación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c45-lft-33-46-47-relacion-rescision",
+            "ev-c45-lft-53-55-terminacion"
+          ]
+        },
+        {
+          "question": "¿Dónde están las causas patronales de rescisión?",
+          "answer": "En el artículo 47 de la LFT.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c45-lft-47-48-rescision-patron"
+          ]
+        },
+        {
+          "question": "¿Dónde están las causas para rescindir por la persona trabajadora?",
+          "answer": "En el artículo 51, con la regla temporal del 52.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c45-lft-51-52-rescision-trabajador"
+          ]
+        },
+        {
+          "question": "¿Todo despido produce 3 meses más 20 días por año?",
+          "answer": "No; las consecuencias dependen del supuesto y de la acción.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+          ]
+        },
+        {
+          "question": "¿Qué puede quedar pendiente al terminar?",
+          "answer": "Salarios y prestaciones devengadas o proporcionales, según hechos.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c45-lft-76-80-87-devengadas",
+            "ev-c45-a59-l003-003-terminacion"
+          ]
+        },
+        {
+          "question": "¿El aguinaldo puede ser proporcional?",
+          "answer": "Sí, conforme al artículo 87.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c45-lft-76-80-87-devengadas"
+          ]
+        },
+        {
+          "question": "¿La prima de antigüedad se paga en toda salida?",
+          "answer": "No; el artículo 162 fija supuestos y reglas.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c45-lft-162-prima-antiguedad"
+          ]
+        },
+        {
+          "question": "¿Todas las acciones prescriben en un año?",
+          "answer": "No; existen plazos especiales en los artículos 517 a 519.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c45-lft-516-521-prescripcion"
+          ]
+        },
+        {
+          "question": "¿Qué se revisa antes de calcular?",
+          "answer": "La causa de salida y la acción jurídicamente procedente.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c45-lft-33-46-47-relacion-rescision",
+            "ev-c45-lft-47-48-rescision-patron",
+            "ev-c45-lft-51-52-rescision-trabajador",
+            "ev-c45-lft-53-55-terminacion",
+            "ev-c45-lft-76-80-87-devengadas",
+            "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+            "ev-c45-lft-162-prima-antiguedad",
+            "ev-c45-lft-516-521-prescripcion"
+          ]
+        },
+        {
+          "question": "¿Una etiqueta “liquidación” decide los conceptos?",
+          "answer": "No; decide el fundamento aplicable a cada concepto.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c45-lft-33-46-47-relacion-rescision",
+            "ev-c45-lft-76-80-87-devengadas",
+            "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+            "ev-c45-lft-162-prima-antiguedad"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación C45",
+        "description": "Aplicación de causas de salida, conceptos económicos y prescripción.",
+        "instructions": "Elige la opción jurídicamente sustentada.",
+        "questions": [
+          {
+            "text": "Una persona renuncia con aguinaldo proporcional pendiente. ¿Qué es correcto?",
+            "difficulty": "basic",
+            "options": [
+              "Conservar el proporcional devengado",
+              "Perderlo por renunciar",
+              "Recibir automáticamente veinte días por año"
+            ],
+            "correctOption": 0,
+            "explanation": "La renuncia no elimina el aguinaldo proporcional.",
+            "optionExplanations": [
+              "El artículo 87 sostiene el proporcional.",
+              "Los derechos devengados no se renuncian.",
+              "Esa consecuencia no es universal."
+            ],
+            "evidenceIds": [
+              "ev-c45-lft-33-46-47-relacion-rescision",
+              "ev-c45-lft-76-80-87-devengadas"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c45-lft-76-80-87-devengadas"
+              ],
+              [
+                "ev-c45-lft-33-46-47-relacion-rescision",
+                "ev-c45-lft-76-80-87-devengadas"
+              ],
+              [
+                "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c45-lft-76-80-87-devengadas"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c45-lft-33-46-47-relacion-rescision",
+              "ev-c45-lft-76-80-87-devengadas"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c45-lft-76-80-87-devengadas"
+              ],
+              [
+                "ev-c45-lft-33-46-47-relacion-rescision",
+                "ev-c45-lft-76-80-87-devengadas"
+              ],
+              [
+                "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué paso antecede al cálculo de una salida laboral?",
+            "difficulty": "basic",
+            "options": [
+              "Clasificar la causa y la acción",
+              "Sumar una fórmula fija",
+              "Llamar finiquito a todo"
+            ],
+            "correctOption": 0,
+            "explanation": "La causa controla las consecuencias.",
+            "optionExplanations": [
+              "Es el método jurídicamente verificable.",
+              "No existe suma universal.",
+              "La etiqueta no sustituye el análisis."
+            ],
+            "evidenceIds": [
+              "ev-c45-lft-33-46-47-relacion-rescision",
+              "ev-c45-lft-53-55-terminacion",
+              "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c45-lft-33-46-47-relacion-rescision",
+                "ev-c45-lft-53-55-terminacion",
+                "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+              ],
+              [
+                "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+                "ev-c45-lft-162-prima-antiguedad"
+              ],
+              [
+                "ev-c45-lft-33-46-47-relacion-rescision",
+                "ev-c45-lft-76-80-87-devengadas"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c45-lft-33-46-47-relacion-rescision",
+              "ev-c45-lft-53-55-terminacion",
+              "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c45-lft-33-46-47-relacion-rescision",
+              "ev-c45-lft-53-55-terminacion",
+              "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c45-lft-33-46-47-relacion-rescision",
+                "ev-c45-lft-53-55-terminacion",
+                "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+              ],
+              [
+                "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+                "ev-c45-lft-162-prima-antiguedad"
+              ],
+              [
+                "ev-c45-lft-33-46-47-relacion-rescision",
+                "ev-c45-lft-76-80-87-devengadas"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué regula el artículo 47?",
+            "difficulty": "basic",
+            "options": [
+              "Causas patronales de rescisión y aviso",
+              "Vacaciones proporcionales",
+              "Toda prescripción laboral"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 47 disciplina la rescisión patronal.",
+            "optionExplanations": [
+              "Es su contenido pertinente.",
+              "Corresponde a 76, 79 y 80.",
+              "Se regula en 516–521."
+            ],
+            "evidenceIds": [
+              "ev-c45-lft-47-48-rescision-patron"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c45-lft-47-48-rescision-patron"
+              ],
+              [
+                "ev-c45-lft-76-80-87-devengadas"
+              ],
+              [
+                "ev-c45-lft-516-521-prescripcion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c45-lft-47-48-rescision-patron"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c45-lft-47-48-rescision-patron"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c45-lft-47-48-rescision-patron"
+              ],
+              [
+                "ev-c45-lft-76-80-87-devengadas"
+              ],
+              [
+                "ev-c45-lft-516-521-prescripcion"
+              ]
+            ]
+          },
+          {
+            "text": "La persona trabajadora rescinde por una causa patronal. ¿Qué artículos son centrales?",
+            "difficulty": "basic",
+            "options": [
+              "51 y 52",
+              "53 y 54 únicamente",
+              "76 y 80"
+            ],
+            "correctOption": 0,
+            "explanation": "Los artículos 51 y 52 regulan causa y plazo especial.",
+            "optionExplanations": [
+              "Es la pareja normativa.",
+              "Esos preceptos regulan terminación.",
+              "Esos preceptos regulan vacaciones."
+            ],
+            "evidenceIds": [
+              "ev-c45-lft-51-52-rescision-trabajador"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c45-lft-51-52-rescision-trabajador"
+              ],
+              [
+                "ev-c45-lft-53-55-terminacion"
+              ],
+              [
+                "ev-c45-lft-76-80-87-devengadas"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c45-lft-51-52-rescision-trabajador"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c45-lft-51-52-rescision-trabajador"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c45-lft-51-52-rescision-trabajador"
+              ],
+              [
+                "ev-c45-lft-53-55-terminacion"
+              ],
+              [
+                "ev-c45-lft-76-80-87-devengadas"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál es una causa de terminación del artículo 53?",
+            "difficulty": "basic",
+            "options": [
+              "Mutuo consentimiento",
+              "Toda falta menor",
+              "Cualquier retraso de salario sin análisis"
+            ],
+            "correctOption": 0,
+            "explanation": "El mutuo consentimiento aparece expresamente.",
+            "optionExplanations": [
+              "Es causa legal.",
+              "No basta para inventar rescisión.",
+              "Debe contrastarse con los artículos 51 y 52."
+            ],
+            "evidenceIds": [
+              "ev-c45-lft-53-55-terminacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c45-lft-53-55-terminacion"
+              ],
+              [
+                "ev-c45-lft-33-46-47-relacion-rescision"
+              ],
+              [
+                "ev-c45-lft-51-52-rescision-trabajador"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c45-lft-53-55-terminacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c45-lft-53-55-terminacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c45-lft-53-55-terminacion"
+              ],
+              [
+                "ev-c45-lft-33-46-47-relacion-rescision"
+              ],
+              [
+                "ev-c45-lft-51-52-rescision-trabajador"
+              ]
+            ]
+          },
+          {
+            "text": "Ante despido injustificado, ¿se acumulan siempre todas las indemnizaciones imaginables?",
+            "difficulty": "basic",
+            "options": [
+              "No, dependen de acción y supuesto",
+              "Sí, sin excepciones",
+              "Solo decide la palabra liquidación"
+            ],
+            "correctOption": 0,
+            "explanation": "Los artículos 48–50 exigen distinguir acción y consecuencia.",
+            "optionExplanations": [
+              "Evita la fórmula universal.",
+              "Ignora presupuestos legales.",
+              "Una etiqueta no crea derechos."
+            ],
+            "evidenceIds": [
+              "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+              ],
+              [
+                "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+              ],
+              [
+                "ev-c45-lft-33-46-47-relacion-rescision",
+                "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+              ],
+              [
+                "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+              ],
+              [
+                "ev-c45-lft-33-46-47-relacion-rescision",
+                "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué concepto está ligado a vacaciones no disfrutadas o proporcionales?",
+            "difficulty": "basic",
+            "options": [
+              "Prima vacacional según corresponda",
+              "Prima de antigüedad automática",
+              "Veinte días por año siempre"
+            ],
+            "correctOption": 0,
+            "explanation": "Vacaciones y prima se rigen por 76, 79 y 80.",
+            "optionExplanations": [
+              "Es el vínculo correcto.",
+              "Tiene supuestos propios.",
+              "No es consecuencia universal."
+            ],
+            "evidenceIds": [
+              "ev-c45-lft-76-80-87-devengadas"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c45-lft-76-80-87-devengadas"
+              ],
+              [
+                "ev-c45-lft-162-prima-antiguedad"
+              ],
+              [
+                "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c45-lft-76-80-87-devengadas"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c45-lft-76-80-87-devengadas"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c45-lft-76-80-87-devengadas"
+              ],
+              [
+                "ev-c45-lft-162-prima-antiguedad"
+              ],
+              [
+                "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+              ]
+            ]
+          },
+          {
+            "text": "¿La prima de antigüedad procede idénticamente en toda salida?",
+            "difficulty": "basic",
+            "options": [
+              "No, se revisa el artículo 162",
+              "Sí, siempre sin condiciones",
+              "Solo si se llama finiquito"
+            ],
+            "correctOption": 0,
+            "explanation": "Tiene supuestos y reglas propias.",
+            "optionExplanations": [
+              "Es la revisión correcta.",
+              "Universaliza indebidamente.",
+              "La etiqueta es irrelevante."
+            ],
+            "evidenceIds": [
+              "ev-c45-lft-162-prima-antiguedad"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c45-lft-162-prima-antiguedad"
+              ],
+              [
+                "ev-c45-lft-162-prima-antiguedad"
+              ],
+              [
+                "ev-c45-lft-33-46-47-relacion-rescision",
+                "ev-c45-lft-162-prima-antiguedad"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c45-lft-162-prima-antiguedad"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c45-lft-162-prima-antiguedad"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c45-lft-162-prima-antiguedad"
+              ],
+              [
+                "ev-c45-lft-162-prima-antiguedad"
+              ],
+              [
+                "ev-c45-lft-33-46-47-relacion-rescision",
+                "ev-c45-lft-162-prima-antiguedad"
+              ]
+            ]
+          },
+          {
+            "text": "¿Puede aplicarse un año de prescripción a cualquier reclamación laboral?",
+            "difficulty": "basic",
+            "options": [
+              "No, hay plazos especiales",
+              "Sí, sin revisar acción",
+              "No existe prescripción"
+            ],
+            "correctOption": 0,
+            "explanation": "Los artículos 517–519 contienen excepciones a la regla del 516.",
+            "optionExplanations": [
+              "Exige identificar la acción.",
+              "Desconoce las excepciones.",
+              "La LFT sí regula prescripción."
+            ],
+            "evidenceIds": [
+              "ev-c45-lft-516-521-prescripcion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c45-lft-516-521-prescripcion"
+              ],
+              [
+                "ev-c45-lft-516-521-prescripcion"
+              ],
+              [
+                "ev-c45-lft-516-521-prescripcion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c45-lft-516-521-prescripcion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c45-lft-516-521-prescripcion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c45-lft-516-521-prescripcion"
+              ],
+              [
+                "ev-c45-lft-516-521-prescripcion"
+              ],
+              [
+                "ev-c45-lft-516-521-prescripcion"
+              ]
+            ]
+          },
+          {
+            "text": "El Audio 59 menciona finiquito y liquidación en una línea extensa. ¿Cómo debe usarse?",
+            "difficulty": "basic",
+            "options": [
+              "Como contexto amplio, verificando cada regla en la LFT",
+              "Como fuente exacta de toda fórmula",
+              "Como subrangos inexistentes"
+            ],
+            "correctOption": 0,
+            "explanation": "La línea física 3 no permite fingir granularidad interna.",
+            "optionExplanations": [
+              "La norma oficial sustenta cada consecuencia.",
+              "El audio mezcla materias y ejemplos.",
+              "No existen líneas internas auditables."
+            ],
+            "evidenceIds": [
+              "ev-c45-a59-l003-003-terminacion",
+              "ev-c45-lft-33-46-47-relacion-rescision",
+              "ev-c45-lft-76-80-87-devengadas",
+              "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c45-a59-l003-003-terminacion",
+                "ev-c45-lft-33-46-47-relacion-rescision",
+                "ev-c45-lft-76-80-87-devengadas",
+                "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+              ],
+              [
+                "ev-c45-a59-l003-003-terminacion",
+                "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+              ],
+              [
+                "ev-c45-a59-l003-003-terminacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c45-a59-l003-003-terminacion",
+              "ev-c45-lft-33-46-47-relacion-rescision",
+              "ev-c45-lft-76-80-87-devengadas",
+              "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c45-a59-l003-003-terminacion",
+              "ev-c45-lft-33-46-47-relacion-rescision",
+              "ev-c45-lft-76-80-87-devengadas",
+              "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c45-a59-l003-003-terminacion",
+                "ev-c45-lft-33-46-47-relacion-rescision",
+                "ev-c45-lft-76-80-87-devengadas",
+                "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+              ],
+              [
+                "ev-c45-a59-l003-003-terminacion",
+                "ev-c45-cpeum-123-lft-48-50-indemnizacion"
+              ],
+              [
+                "ev-c45-a59-l003-003-terminacion"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c45-lft-33-46-47-relacion-rescision",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 33, 46 y 47: irrenunciabilidad y rescisión sin responsabilidad patronal",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c45-lft-47-48-rescision-patron",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 47 y 48: aviso de rescisión y acciones frente al despido",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c45-lft-51-52-rescision-trabajador",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 51 y 52: rescisión por la persona trabajadora y plazo especial",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c45-lft-53-55-terminacion",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 53 a 55: causas y consecuencias de terminación",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c45-lft-76-80-87-devengadas",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 76, 79, 80 y 87: vacaciones, prima y aguinaldo proporcionales",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c45-cpeum-123-lft-48-50-indemnizacion",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 48 a 50: acciones e indemnizaciones según supuesto",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c45-lft-162-prima-antiguedad",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículo 162 y reglas de salario máximo aplicables: prima de antigüedad según supuesto",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c45-lft-516-521-prescripcion",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 516 a 521: prescripción, plazos especiales e interrupción",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c45-a59-l003-003-terminacion",
+      "kind": "transcript",
+      "audioNumber": 59,
+      "locator": {
+        "type": "line_range",
+        "startLine": 3,
+        "endLine": 3
+      }
+    }
+  ]
+}

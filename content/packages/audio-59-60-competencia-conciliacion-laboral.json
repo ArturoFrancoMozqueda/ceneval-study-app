@@ -1,0 +1,1591 @@
+{
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C46",
+    "order": 46,
+    "audioSources": [
+      {
+        "audioNumber": 59,
+        "fragment": "Líneas 5 a 45: competencia y conciliación prejudicial"
+      },
+      {
+        "audioNumber": 60,
+        "fragment": "Líneas 123 a 285: sistema de justicia y conciliación"
+      }
+    ]
+  },
+  "subject": {
+    "name": "Derecho Laboral",
+    "description": "Competencia, conciliación prejudicial y acceso a tribunales laborales del Apartado A."
+  },
+  "class": {
+    "title": "Competencia y conciliación prejudicial laboral",
+    "description": "Cuadragésima sexta clase del plan académico: distribución federal-local, centros de conciliación, procedimiento prejudicial, excepciones y constancia."
+  },
+  "transcript": {
+    "originalFiles": [
+      "AUDIO 59.txt",
+      "AUDIO 60.txt"
+    ],
+    "cleaned": "Se utilizaron del Audio 59 únicamente las líneas físicas 5 a 45 y del Audio 60 las líneas 123 a 285. La línea 3 del Audio 59 se excluyó por completo porque reúne en un solo renglón físico contenidos de C44, C45 y C46 sin permitir un localizador semántico independiente. También se excluyeron conversaciones personales, ejemplos identificables, lenguaje ofensivo, recomendaciones casuísticas, promesas de resultado y la parte sindical posterior del Audio 60. Se corrigió que la competencia federal depende de las ramas, empresas y materias constitucionales y legales, no de que un trabajo parezca importante; lo no federal corresponde a autoridades locales dentro del Apartado A. Se distinguieron Centro Federal, centros locales y tribunales. La conciliación prejudicial es regla con excepciones taxativas, no un paso universal para Apartado B ni para los supuestos del artículo 685 Ter. El plazo máximo se precisó en cuarenta y cinco días naturales; la interrupción de prescripción, notificación, constancia y convenio se completaron solo con la LFT vigente."
+  },
+  "topics": [
+    {
+      "title": "Elegir autoridad y agotar la conciliación correcta",
+      "description": "Árbol de competencia y ruta prejudicial antes de acudir al tribunal laboral.",
+      "learningJourney": {
+        "openingPrompt": "Una persona del Apartado A tiene un conflicto laboral. ¿Cómo decide si solicita conciliación federal o local y si su caso está exceptuado?",
+        "quickChecks": [
+          {
+            "prompt": "¿Todo conflicto del sector privado corresponde al Centro Federal?",
+            "answer": "No. La competencia federal se limita a ramas, empresas y materias constitucionales y legales; los demás asuntos del Apartado A corresponden al ámbito local.",
+            "feedback": "Primero clasifica competencia, no el tamaño del conflicto.",
+            "evidenceIds": [
+              "ev-c46-cpeum-123a-xxxi-competencia",
+              "ev-c46-lft-527-529-competencia",
+              "ev-c46-a59-l005-025-competencia"
+            ]
+          },
+          {
+            "prompt": "¿Toda demanda laboral exige constancia prejudicial?",
+            "answer": "No. El artículo 685 Ter contiene excepciones específicas que permiten acudir directamente al tribunal.",
+            "feedback": "La conciliación es regla, pero sus excepciones son taxativas.",
+            "evidenceIds": [
+              "ev-c46-lft-684a-684d-prejudicial",
+              "ev-c46-lft-685ter-excepciones",
+              "ev-c46-a59-l027-045-prescripcion-excepciones",
+              "ev-c46-a60-l185-217-excepciones-constancia"
+            ]
+          },
+          {
+            "prompt": "¿El Centro de Conciliación dicta sentencia?",
+            "answer": "No. Facilita una solución; si no hay convenio emite la constancia y el tribunal competente conoce la controversia.",
+            "feedback": "Conciliar y juzgar son funciones institucionales diferentes.",
+            "evidenceIds": [
+              "ev-c46-cpeum-123a-xx-conciliacion",
+              "ev-c46-lft-590a-centro-federal",
+              "ev-c46-lft-604-605-tribunales",
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-a60-l123-159-ruta-conciliacion",
+              "ev-c46-a60-l185-217-excepciones-constancia"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una trabajadora de una empresa de una rama federal solicita pago de prestaciones y alega discriminación por embarazo. Antes de presentar demanda pregunta a qué autoridad acudir y si debe encontrarse con la persona señalada como agresora.",
+          "question": "¿Qué filtros debe aplicar y qué medidas proceden?",
+          "legalRule": "La fracción XXXI del apartado A del artículo 123 y los artículos 527 a 529 LFT distribuyen competencia; los artículos 684-A a 684-F regulan conciliación; el 685 Ter exceptúa conflictos específicos, incluida discriminación por embarazo.",
+          "reasoning": "Primero se verifica si la empresa, rama o materia es federal. Sin embargo, la discriminación por embarazo está dentro de las excepciones del artículo 685 Ter, por lo que no debe exigirse agotar conciliación como requisito para demandar. Si aun así solicita orientación o conciliación voluntariamente, la autoridad debe aplicar medidas para evitar revictimización y confrontación indebida. El tribunal, no el Centro, resuelve el fondo.",
+          "conclusion": "Competencia y excepción se analizan por separado: ser federal no elimina la excepción prejudicial ni convierte al Centro en tribunal.",
+          "evidenceIds": [
+            "ev-c46-cpeum-123a-xx-conciliacion",
+            "ev-c46-cpeum-123a-xxxi-competencia",
+            "ev-c46-lft-527-529-competencia",
+            "ev-c46-lft-590a-centro-federal",
+            "ev-c46-lft-604-605-tribunales",
+            "ev-c46-lft-684a-684d-prejudicial",
+            "ev-c46-lft-684e-procedimiento",
+            "ev-c46-lft-685ter-excepciones",
+            "ev-c46-a59-l005-025-competencia",
+            "ev-c46-a59-l027-045-prescripcion-excepciones",
+            "ev-c46-a60-l185-217-excepciones-constancia"
+          ]
+        },
+        "closingPrompt": "Explica en orden: Apartado A, competencia federal o local, excepción, solicitud, interrupción, notificación, audiencia, convenio o constancia y tribunal.",
+        "nextActivity": "Recorre el mapa, estudia las doce tarjetas y resuelve los diez casos originales.",
+        "openingPromptEvidenceIds": [
+          "ev-c46-cpeum-123a-xx-conciliacion",
+          "ev-c46-cpeum-123a-xxxi-competencia",
+          "ev-c46-lft-527-529-competencia",
+          "ev-c46-lft-684a-684d-prejudicial",
+          "ev-c46-lft-685ter-excepciones",
+          "ev-c46-a59-l005-025-competencia"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c46-cpeum-123a-xx-conciliacion",
+          "ev-c46-cpeum-123a-xxxi-competencia",
+          "ev-c46-lft-527-529-competencia",
+          "ev-c46-lft-590a-centro-federal",
+          "ev-c46-lft-604-605-tribunales",
+          "ev-c46-lft-684a-684d-prejudicial",
+          "ev-c46-lft-684e-procedimiento",
+          "ev-c46-lft-684f-notificacion",
+          "ev-c46-lft-685ter-excepciones",
+          "ev-c46-lft-521-prescripcion",
+          "ev-c46-a59-l005-025-competencia",
+          "ev-c46-a59-l027-045-prescripcion-excepciones",
+          "ev-c46-a60-l123-159-ruta-conciliacion",
+          "ev-c46-a60-l185-217-excepciones-constancia",
+          "ev-c46-a60-l271-285-convenio-prescripcion"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c46-lft-527-529-competencia",
+          "ev-c46-lft-684a-684d-prejudicial",
+          "ev-c46-lft-684e-procedimiento",
+          "ev-c46-lft-685ter-excepciones"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "En el Apartado A, la Constitución y la LFT distribuyen asuntos entre autoridades federales y locales. La conciliación prejudicial se solicita al Centro Federal cuando la competencia es federal y al centro local cuando es local. Salvo las excepciones del artículo 685 Ter, debe agotarse antes del tribunal. El procedimiento dura como máximo cuarenta y cinco días naturales y concluye con convenio ejecutable o constancia de no conciliación.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c46-cpeum-123a-xx-conciliacion",
+            "ev-c46-cpeum-123a-xxxi-competencia",
+            "ev-c46-lft-527-529-competencia",
+            "ev-c46-lft-590a-centro-federal",
+            "ev-c46-lft-604-605-tribunales",
+            "ev-c46-lft-684a-684d-prejudicial",
+            "ev-c46-lft-684e-procedimiento",
+            "ev-c46-lft-684f-notificacion",
+            "ev-c46-lft-685ter-excepciones",
+            "ev-c46-lft-521-prescripcion",
+            "ev-c46-a59-l005-025-competencia",
+            "ev-c46-a59-l027-045-prescripcion-excepciones",
+            "ev-c46-a60-l123-159-ruta-conciliacion",
+            "ev-c46-a60-l185-217-excepciones-constancia",
+            "ev-c46-a60-l271-285-convenio-prescripcion"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "La primera pregunta no es cuál Centro queda más cerca, sino quién tiene competencia. La fracción XXXI del apartado A del artículo 123 y los artículos 527 a 529 LFT reservan a la Federación ciertas ramas industriales, empresas y materias. Lo demás corresponde a autoridades locales dentro de sus atribuciones. Esta ruta no se generaliza a personas servidoras públicas del Apartado B.\n\nEl Centro Federal de Conciliación y Registro Laboral concilia los conflictos individuales de competencia federal y ejerce funciones registrales nacionales. Los centros de las entidades federativas concilian asuntos locales. Los tribunales laborales federales o locales juzgan: un centro no dicta sentencia ni arbitra.\n\nComo regla, antes de solicitar tutela jurisdiccional las personas trabajadoras y empleadoras deben acudir al Centro competente. El procedimiento se rige por gratuidad, imparcialidad, confidencialidad, eficacia, legalidad y demás principios legales; no puede exceder cuarenta y cinco días naturales. La solicitud puede presentarse personalmente, por escrito o por vía electrónica y debe permitir identificar a la persona solicitante y localizar a la contraparte.\n\nRecibida la solicitud, la prescripción se interrumpe en los términos de los artículos 521 y 684-E. El Centro determina competencia; si no la tiene, remite a la autoridad competente conforme a la ley. Fija audiencia y notifica a la parte citada con la anticipación legal. La conciliación puede generar propuestas, pero nadie está obligado a aceptar un arreglo.\n\nSi la parte solicitante no comparece sin causa, puede archivarse por falta de interés; si la citada fue debidamente notificada y no comparece, se aplican las consecuencias legales y se expide la constancia correspondiente. Si no hay arreglo, se emite constancia de no conciliación para acompañar la demanda cuando el requisito sea exigible.\n\nSi hay arreglo, se documenta en convenio. Aprobado y celebrado ante el Centro, adquiere condición de cosa juzgada y es ejecutable. El incumplimiento se lleva al tribunal para ejecución; no debe afirmarse que todo pago solo puede hacerse físicamente dentro del Centro.\n\nEl artículo 685 Ter exceptúa, entre otros conflictos expresamente enumerados, ciertas discriminaciones y acoso sexual; designación de beneficiarios por muerte; determinadas prestaciones de seguridad social; tutela de libertad sindical, negociación colectiva, trabajo forzoso, trata o trabajo infantil; titularidad de contratos colectivos y la impugnación de estatutos sindicales. La excepción requiere encuadrar hechos y evidencia; una etiqueta genérica de violencia no sustituye el artículo.\n\nLas personas menores trabajadoras comparecen con la asistencia prevista legalmente; la Procuraduría de la Defensa del Trabajo puede intervenir cuando corresponda. En casos de discriminación, acoso o riesgo de revictimización deben aplicarse medidas de protección y evitar confrontación con la persona señalada, sin convertir al Centro en órgano sancionador.\n\nMétodo CENEVAL: identifica régimen constitucional; determina competencia; revisa excepción exacta; ubica solicitud e interrupción; ordena notificación y audiencia; distingue convenio de constancia; y termina en el tribunal competente solo cuando corresponda.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c46-cpeum-123a-xx-conciliacion",
+            "ev-c46-cpeum-123a-xxxi-competencia",
+            "ev-c46-lft-527-529-competencia",
+            "ev-c46-lft-590a-centro-federal",
+            "ev-c46-lft-604-605-tribunales",
+            "ev-c46-lft-684a-684d-prejudicial",
+            "ev-c46-lft-684e-procedimiento",
+            "ev-c46-lft-684f-notificacion",
+            "ev-c46-lft-685ter-excepciones",
+            "ev-c46-lft-521-prescripcion",
+            "ev-c46-a59-l005-025-competencia",
+            "ev-c46-a59-l027-045-prescripcion-excepciones",
+            "ev-c46-a60-l123-159-ruta-conciliacion",
+            "ev-c46-a60-l185-217-excepciones-constancia",
+            "ev-c46-a60-l271-285-convenio-prescripcion"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "CPEUM, últimas reformas DOF 02-06-2026, artículo 123 apartado A, fracciones XX y XXXI. LFT, última reforma DOF 14-05-2026: artículos 521; 527 a 529; 590-A; 604 y 605; 684-A a 684-F; y 685 Ter. Estas reglas corresponden al Apartado A y no se trasladan automáticamente al Apartado B.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c46-cpeum-123a-xx-conciliacion",
+            "ev-c46-cpeum-123a-xxxi-competencia",
+            "ev-c46-lft-527-529-competencia",
+            "ev-c46-lft-590a-centro-federal",
+            "ev-c46-lft-604-605-tribunales",
+            "ev-c46-lft-684a-684d-prejudicial",
+            "ev-c46-lft-684e-procedimiento",
+            "ev-c46-lft-684f-notificacion",
+            "ev-c46-lft-685ter-excepciones",
+            "ev-c46-lft-521-prescripcion"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Una persona trabaja en un restaurante privado sin elemento federal. Si su conflicto no encaja en una excepción del artículo 685 Ter, solicita conciliación ante el centro local. Si no hay convenio recibe constancia y demanda ante el tribunal local competente.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c46-lft-527-529-competencia",
+            "ev-c46-lft-684a-684d-prejudicial",
+            "ev-c46-lft-684e-procedimiento",
+            "ev-c46-lft-685ter-excepciones",
+            "ev-c46-lft-604-605-tribunales",
+            "ev-c46-a59-l005-025-competencia",
+            "ev-c46-a60-l123-159-ruta-conciliacion",
+            "ev-c46-a60-l185-217-excepciones-constancia"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo CENEVAL",
+          "content": "Una opción manda a toda persona trabajadora al Centro Federal; es incorrecta. Otra obliga a conciliar una discriminación por embarazo; también es incorrecta por la excepción legal. La respuesta debe separar competencia territorial/material y exigibilidad del requisito prejudicial.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c46-cpeum-123a-xxxi-competencia",
+            "ev-c46-lft-527-529-competencia",
+            "ev-c46-lft-685ter-excepciones",
+            "ev-c46-a59-l005-025-competencia",
+            "ev-c46-a59-l027-045-prescripcion-excepciones"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Apartado A: federal solo en ramas, empresas y materias reservadas; lo demás es local. Centro Federal concilia federal y registra colectivamente; centros locales concilian local; tribunales juzgan. Conciliación prejudicial: regla con excepciones del 685 Ter. Máximo: 45 días naturales. Solicitud: interrumpe prescripción. Final: convenio con fuerza ejecutable o constancia de no conciliación.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c46-cpeum-123a-xx-conciliacion",
+            "ev-c46-cpeum-123a-xxxi-competencia",
+            "ev-c46-lft-527-529-competencia",
+            "ev-c46-lft-590a-centro-federal",
+            "ev-c46-lft-604-605-tribunales",
+            "ev-c46-lft-684a-684d-prejudicial",
+            "ev-c46-lft-684e-procedimiento",
+            "ev-c46-lft-684f-notificacion",
+            "ev-c46-lft-685ter-excepciones",
+            "ev-c46-lft-521-prescripcion",
+            "ev-c46-a59-l005-025-competencia",
+            "ev-c46-a59-l027-045-prescripcion-excepciones",
+            "ev-c46-a60-l123-159-ruta-conciliacion",
+            "ev-c46-a60-l185-217-excepciones-constancia",
+            "ev-c46-a60-l271-285-convenio-prescripcion"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de preguntas y respuestas",
+          "content": "1. ¿Qué norma distribuye competencia? Artículo 123 A XXXI y LFT 527–529. 2. ¿Todo es federal? No. 3. ¿Qué hace el Centro Federal? Conciliación federal y registro colectivo. 4. ¿Qué hacen centros locales? Conciliación local. 5. ¿Quién sentencia? Tribunales. 6. ¿Conciliación siempre obligatoria? No, hay excepciones 685 Ter. 7. ¿Máximo? 45 días naturales. 8. ¿Qué hace la solicitud a prescripción? La interrumpe conforme a ley. 9. ¿Qué sigue si no hay arreglo? Constancia. 10. ¿Qué valor tiene convenio? Cosa juzgada y ejecutabilidad. 11. ¿Menor comparece sin apoyo? Debe recibir asistencia legal prevista. 12. ¿Aplica igual Apartado B? No.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c46-cpeum-123a-xx-conciliacion",
+            "ev-c46-cpeum-123a-xxxi-competencia",
+            "ev-c46-lft-527-529-competencia",
+            "ev-c46-lft-590a-centro-federal",
+            "ev-c46-lft-604-605-tribunales",
+            "ev-c46-lft-684a-684d-prejudicial",
+            "ev-c46-lft-684e-procedimiento",
+            "ev-c46-lft-684f-notificacion",
+            "ev-c46-lft-685ter-excepciones",
+            "ev-c46-lft-521-prescripcion",
+            "ev-c46-a59-l005-025-competencia",
+            "ev-c46-a59-l027-045-prescripcion-excepciones",
+            "ev-c46-a60-l123-159-ruta-conciliacion",
+            "ev-c46-a60-l185-217-excepciones-constancia",
+            "ev-c46-a60-l271-285-convenio-prescripcion"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Apartado A; competencia federal; competencia local; rama industrial; Centro Federal; centro local; tribunal laboral; conciliación prejudicial; solicitud; prescripción; audiencia; citatorio; notificación; excepción; constancia de no conciliación; convenio; cosa juzgada; ejecución; acompañamiento; no revictimización.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c46-cpeum-123a-xx-conciliacion",
+            "ev-c46-cpeum-123a-xxxi-competencia",
+            "ev-c46-lft-527-529-competencia",
+            "ev-c46-lft-590a-centro-federal",
+            "ev-c46-lft-604-605-tribunales",
+            "ev-c46-lft-684a-684d-prejudicial",
+            "ev-c46-lft-684e-procedimiento",
+            "ev-c46-lft-684f-notificacion",
+            "ev-c46-lft-685ter-excepciones",
+            "ev-c46-lft-521-prescripcion"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores que debes evitar",
+          "content": "No mandes todo al Centro Federal ni todo al local. No confundas Centro Federal con tribunal. No traslades esta ruta al Apartado B. No llames arbitraje a la conciliación. No conviertas cuarenta y cinco días naturales en plazo para demandar. No enumeres excepciones de memoria incompleta: consulta 685 Ter. No digas que cualquier alegación evita conciliar sin encuadre y evidencia. No prometas convenio. No afirmes que todo pago debe hacerse físicamente en el Centro. No uses A59 L3 como evidencia delimitada.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c46-cpeum-123a-xx-conciliacion",
+            "ev-c46-cpeum-123a-xxxi-competencia",
+            "ev-c46-lft-527-529-competencia",
+            "ev-c46-lft-590a-centro-federal",
+            "ev-c46-lft-604-605-tribunales",
+            "ev-c46-lft-684a-684d-prejudicial",
+            "ev-c46-lft-684e-procedimiento",
+            "ev-c46-lft-684f-notificacion",
+            "ev-c46-lft-685ter-excepciones",
+            "ev-c46-lft-521-prescripcion",
+            "ev-c46-a59-l005-025-competencia",
+            "ev-c46-a59-l027-045-prescripcion-excepciones",
+            "ev-c46-a60-l123-159-ruta-conciliacion",
+            "ev-c46-a60-l185-217-excepciones-constancia",
+            "ev-c46-a60-l271-285-convenio-prescripcion"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual: competencia y conciliación",
+        "description": "Decisión desde el régimen aplicable hasta convenio o tribunal.",
+        "nodes": [
+          {
+            "id": "inicio",
+            "label": "Conflicto laboral",
+            "description": "Ruta del Apartado A",
+            "evidenceIds": [
+              "ev-c46-cpeum-123a-xx-conciliacion",
+              "ev-c46-a60-l123-159-ruta-conciliacion"
+            ]
+          },
+          {
+            "id": "regimen",
+            "label": "Régimen constitucional",
+            "description": "Primero Apartado A",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c46-cpeum-123a-xx-conciliacion"
+            ]
+          },
+          {
+            "id": "no-b",
+            "label": "No Apartado B",
+            "description": "Régimen distinto",
+            "parentId": "regimen",
+            "evidenceIds": [
+              "ev-c46-cpeum-123a-xx-conciliacion"
+            ]
+          },
+          {
+            "id": "competencia",
+            "label": "Competencia",
+            "description": "Federal o local",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c46-cpeum-123a-xxxi-competencia",
+              "ev-c46-lft-527-529-competencia",
+              "ev-c46-a59-l005-025-competencia"
+            ]
+          },
+          {
+            "id": "federal",
+            "label": "Federal",
+            "description": "Ramas, empresas, materias",
+            "parentId": "competencia",
+            "evidenceIds": [
+              "ev-c46-cpeum-123a-xxxi-competencia",
+              "ev-c46-lft-527-529-competencia",
+              "ev-c46-a59-l005-025-competencia"
+            ]
+          },
+          {
+            "id": "local",
+            "label": "Local",
+            "description": "Lo no reservado",
+            "parentId": "competencia",
+            "evidenceIds": [
+              "ev-c46-lft-527-529-competencia",
+              "ev-c46-a59-l005-025-competencia"
+            ]
+          },
+          {
+            "id": "centro-f",
+            "label": "Centro Federal",
+            "description": "Concilia competencia federal",
+            "parentId": "federal",
+            "evidenceIds": [
+              "ev-c46-lft-590a-centro-federal"
+            ]
+          },
+          {
+            "id": "centro-l",
+            "label": "Centro local",
+            "description": "Concilia competencia local",
+            "parentId": "local",
+            "evidenceIds": [
+              "ev-c46-cpeum-123a-xx-conciliacion",
+              "ev-c46-lft-527-529-competencia"
+            ]
+          },
+          {
+            "id": "tribunales",
+            "label": "Tribunales",
+            "description": "Resuelven el fondo",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c46-cpeum-123a-xx-conciliacion",
+              "ev-c46-lft-604-605-tribunales"
+            ]
+          },
+          {
+            "id": "federal-t",
+            "label": "Tribunal federal",
+            "description": "Asuntos federales",
+            "parentId": "tribunales",
+            "evidenceIds": [
+              "ev-c46-cpeum-123a-xxxi-competencia",
+              "ev-c46-lft-604-605-tribunales"
+            ]
+          },
+          {
+            "id": "local-t",
+            "label": "Tribunal local",
+            "description": "Asuntos locales",
+            "parentId": "tribunales",
+            "evidenceIds": [
+              "ev-c46-lft-604-605-tribunales"
+            ]
+          },
+          {
+            "id": "filtro",
+            "label": "Filtro prejudicial",
+            "description": "Antes de demandar",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c46-lft-684a-684d-prejudicial",
+              "ev-c46-a60-l123-159-ruta-conciliacion"
+            ]
+          },
+          {
+            "id": "excepcion",
+            "label": "Excepción 685 Ter",
+            "description": "Acceso directo",
+            "parentId": "filtro",
+            "evidenceIds": [
+              "ev-c46-lft-685ter-excepciones",
+              "ev-c46-a59-l027-045-prescripcion-excepciones",
+              "ev-c46-a60-l185-217-excepciones-constancia"
+            ]
+          },
+          {
+            "id": "discriminacion",
+            "label": "Discriminación/acoso",
+            "description": "Supuestos exactos",
+            "parentId": "excepcion",
+            "evidenceIds": [
+              "ev-c46-lft-685ter-excepciones"
+            ]
+          },
+          {
+            "id": "beneficiarios",
+            "label": "Beneficiarios",
+            "description": "Muerte de persona trabajadora",
+            "parentId": "excepcion",
+            "evidenceIds": [
+              "ev-c46-lft-685ter-excepciones"
+            ]
+          },
+          {
+            "id": "seguridad-social",
+            "label": "Seguridad social",
+            "description": "Prestaciones enumeradas",
+            "parentId": "excepcion",
+            "evidenceIds": [
+              "ev-c46-lft-685ter-excepciones"
+            ]
+          },
+          {
+            "id": "derechos-colectivos",
+            "label": "Derechos colectivos",
+            "description": "Libertad y titularidad",
+            "parentId": "excepcion",
+            "evidenceIds": [
+              "ev-c46-lft-685ter-excepciones"
+            ]
+          },
+          {
+            "id": "solicitud",
+            "label": "Solicitud",
+            "description": "Inicia conciliación",
+            "parentId": "filtro",
+            "evidenceIds": [
+              "ev-c46-lft-684a-684d-prejudicial",
+              "ev-c46-lft-684e-procedimiento"
+            ]
+          },
+          {
+            "id": "prescripcion",
+            "label": "Interrupción",
+            "description": "Desde recepción legal",
+            "parentId": "solicitud",
+            "evidenceIds": [
+              "ev-c46-lft-521-prescripcion",
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-a59-l027-045-prescripcion-excepciones",
+              "ev-c46-a60-l271-285-convenio-prescripcion"
+            ]
+          },
+          {
+            "id": "competencia-centro",
+            "label": "Revisión del Centro",
+            "description": "Remisión si procede",
+            "parentId": "solicitud",
+            "evidenceIds": [
+              "ev-c46-lft-684e-procedimiento"
+            ]
+          },
+          {
+            "id": "audiencia",
+            "label": "Audiencia",
+            "description": "Citación y diálogo",
+            "parentId": "solicitud",
+            "evidenceIds": [
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-lft-684f-notificacion",
+              "ev-c46-a60-l123-159-ruta-conciliacion"
+            ]
+          },
+          {
+            "id": "notificacion",
+            "label": "Notificación",
+            "description": "Anticipación legal",
+            "parentId": "audiencia",
+            "evidenceIds": [
+              "ev-c46-lft-684f-notificacion"
+            ]
+          },
+          {
+            "id": "propuestas",
+            "label": "Propuestas",
+            "description": "Sin imposición",
+            "parentId": "audiencia",
+            "evidenceIds": [
+              "ev-c46-lft-684a-684d-prejudicial",
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-a60-l123-159-ruta-conciliacion"
+            ]
+          },
+          {
+            "id": "plazo",
+            "label": "45 días naturales",
+            "description": "Máximo total",
+            "parentId": "solicitud",
+            "evidenceIds": [
+              "ev-c46-lft-684a-684d-prejudicial",
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-a60-l123-159-ruta-conciliacion"
+            ]
+          },
+          {
+            "id": "proteccion",
+            "label": "Protección",
+            "description": "Evita revictimización",
+            "parentId": "audiencia",
+            "evidenceIds": [
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-lft-685ter-excepciones"
+            ]
+          },
+          {
+            "id": "menores",
+            "label": "Personas menores",
+            "description": "Asistencia legal",
+            "parentId": "proteccion",
+            "evidenceIds": [
+              "ev-c46-lft-684e-procedimiento"
+            ]
+          },
+          {
+            "id": "resultado",
+            "label": "Resultado",
+            "description": "Convenio o constancia",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-a60-l185-217-excepciones-constancia"
+            ]
+          },
+          {
+            "id": "convenio",
+            "label": "Convenio",
+            "description": "Cosa juzgada",
+            "parentId": "resultado",
+            "evidenceIds": [
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-a60-l271-285-convenio-prescripcion"
+            ]
+          },
+          {
+            "id": "ejecucion",
+            "label": "Ejecución",
+            "description": "Ante tribunal competente",
+            "parentId": "convenio",
+            "evidenceIds": [
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-lft-604-605-tribunales"
+            ]
+          },
+          {
+            "id": "constancia",
+            "label": "Constancia",
+            "description": "No conciliación",
+            "parentId": "resultado",
+            "evidenceIds": [
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-a60-l185-217-excepciones-constancia"
+            ]
+          },
+          {
+            "id": "demanda",
+            "label": "Demanda",
+            "description": "Con requisito cuando aplica",
+            "parentId": "constancia",
+            "evidenceIds": [
+              "ev-c46-lft-604-605-tribunales",
+              "ev-c46-lft-684e-procedimiento"
+            ]
+          },
+          {
+            "id": "centro-no-juzga",
+            "label": "Centro no juzga",
+            "description": "Funciones separadas",
+            "parentId": "resultado",
+            "evidenceIds": [
+              "ev-c46-lft-590a-centro-federal",
+              "ev-c46-lft-604-605-tribunales"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Ley Federal del Trabajo",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Texto vigente, última reforma DOF 14-05-2026; artículos 521, 527–529, 590-A, 604–605, 684-A–F y 685 Ter",
+          "retrievedOn": "2026-08-21",
+          "note": "Competencia, instituciones y procedimiento prejudicial.",
+          "evidenceIds": [
+            "ev-c46-lft-527-529-competencia",
+            "ev-c46-lft-590a-centro-federal",
+            "ev-c46-lft-604-605-tribunales",
+            "ev-c46-lft-684a-684d-prejudicial",
+            "ev-c46-lft-684e-procedimiento",
+            "ev-c46-lft-684f-notificacion",
+            "ev-c46-lft-685ter-excepciones",
+            "ev-c46-lft-521-prescripcion"
+          ]
+        },
+        {
+          "title": "Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Texto vigente, últimas reformas DOF 02-06-2026; artículo 123 apartado A, fracciones XX y XXXI",
+          "retrievedOn": "2026-08-21",
+          "note": "Base constitucional de conciliación, tribunales y competencia.",
+          "evidenceIds": [
+            "ev-c46-cpeum-123a-xx-conciliacion",
+            "ev-c46-cpeum-123a-xxxi-competencia"
+          ]
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué define competencia federal?",
+          "answer": "Las ramas, empresas y materias reservadas por Constitución y LFT.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c46-cpeum-123a-xxxi-competencia",
+            "ev-c46-lft-527-529-competencia",
+            "ev-c46-a59-l005-025-competencia"
+          ]
+        },
+        {
+          "question": "¿Qué ocurre con lo no federal en Apartado A?",
+          "answer": "Corresponde a autoridades locales dentro de su competencia.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c46-lft-527-529-competencia",
+            "ev-c46-a59-l005-025-competencia"
+          ]
+        },
+        {
+          "question": "¿Qué hace el Centro Federal?",
+          "answer": "Concilia asuntos individuales federales y ejerce registro colectivo nacional.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c46-lft-590a-centro-federal"
+          ]
+        },
+        {
+          "question": "¿Quién dicta sentencia laboral?",
+          "answer": "El tribunal federal o local competente, no el Centro.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c46-cpeum-123a-xx-conciliacion",
+            "ev-c46-lft-604-605-tribunales"
+          ]
+        },
+        {
+          "question": "¿La conciliación es regla absoluta?",
+          "answer": "No; el artículo 685 Ter establece excepciones.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c46-lft-684a-684d-prejudicial",
+            "ev-c46-lft-685ter-excepciones",
+            "ev-c46-a59-l027-045-prescripcion-excepciones"
+          ]
+        },
+        {
+          "question": "¿Cuánto puede durar?",
+          "answer": "Máximo cuarenta y cinco días naturales.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c46-lft-684a-684d-prejudicial",
+            "ev-c46-lft-684e-procedimiento",
+            "ev-c46-a60-l123-159-ruta-conciliacion"
+          ]
+        },
+        {
+          "question": "¿Interrupción y suspensión significan lo mismo ante la solicitud?",
+          "answer": "No. El artículo 521 prevé interrupción general; para acciones por separación, el 518 dispone suspensión y reanudación del plazo especial.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c46-lft-518-separacion-suspension",
+            "ev-c46-lft-521-prescripcion",
+            "ev-c46-lft-684e-procedimiento"
+          ]
+        },
+        {
+          "question": "¿Qué pasa sin acuerdo?",
+          "answer": "Se expide constancia de no conciliación.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c46-lft-684e-procedimiento",
+            "ev-c46-a60-l185-217-excepciones-constancia"
+          ]
+        },
+        {
+          "question": "¿Qué valor tiene el convenio?",
+          "answer": "Cosa juzgada y ejecución conforme a la LFT.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c46-lft-684e-procedimiento",
+            "ev-c46-a60-l271-285-convenio-prescripcion"
+          ]
+        },
+        {
+          "question": "¿Centro equivale a arbitraje?",
+          "answer": "No; facilita conciliación y no impone sentencia.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c46-lft-684a-684d-prejudicial",
+            "ev-c46-lft-604-605-tribunales",
+            "ev-c46-a60-l123-159-ruta-conciliacion"
+          ]
+        },
+        {
+          "question": "¿Una persona menor comparece sin asistencia?",
+          "answer": "Debe recibir el acompañamiento legal previsto.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c46-lft-684e-procedimiento"
+          ]
+        },
+        {
+          "question": "¿La ruta se generaliza al Apartado B?",
+          "answer": "No; C46 estudia el régimen del Apartado A.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c46-cpeum-123a-xx-conciliacion"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Examen: competencia y conciliación laboral",
+        "description": "Diez casos originales sobre autoridad, excepción y procedimiento.",
+        "questions": [
+          {
+            "text": "Una empresa pertenece a una rama federal. ¿Dónde inicia la conciliación individual ordinaria?",
+            "difficulty": "basic",
+            "options": [
+              "Centro Federal",
+              "Centro local siempre",
+              "Tribunal local sin filtro"
+            ],
+            "correctOption": 0,
+            "explanation": "La competencia federal determina el Centro competente, salvo excepción prejudicial.",
+            "optionExplanations": [
+              "Es la autoridad conciliadora federal.",
+              "Ignora la reserva federal.",
+              "Primero se revisa excepción o conciliación."
+            ],
+            "evidenceIds": [
+              "ev-c46-cpeum-123a-xxxi-competencia",
+              "ev-c46-lft-527-529-competencia",
+              "ev-c46-lft-590a-centro-federal",
+              "ev-c46-a59-l005-025-competencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c46-cpeum-123a-xxxi-competencia",
+                "ev-c46-lft-527-529-competencia",
+                "ev-c46-lft-590a-centro-federal",
+                "ev-c46-a59-l005-025-competencia"
+              ],
+              [
+                "ev-c46-cpeum-123a-xxxi-competencia",
+                "ev-c46-lft-527-529-competencia",
+                "ev-c46-lft-590a-centro-federal",
+                "ev-c46-a59-l005-025-competencia"
+              ],
+              [
+                "ev-c46-cpeum-123a-xxxi-competencia",
+                "ev-c46-lft-527-529-competencia",
+                "ev-c46-lft-590a-centro-federal",
+                "ev-c46-a59-l005-025-competencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c46-cpeum-123a-xxxi-competencia",
+              "ev-c46-lft-527-529-competencia",
+              "ev-c46-lft-590a-centro-federal",
+              "ev-c46-a59-l005-025-competencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c46-cpeum-123a-xxxi-competencia",
+              "ev-c46-lft-527-529-competencia",
+              "ev-c46-lft-590a-centro-federal",
+              "ev-c46-a59-l005-025-competencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c46-cpeum-123a-xxxi-competencia",
+                "ev-c46-lft-527-529-competencia",
+                "ev-c46-lft-590a-centro-federal",
+                "ev-c46-a59-l005-025-competencia"
+              ],
+              [
+                "ev-c46-cpeum-123a-xxxi-competencia",
+                "ev-c46-lft-527-529-competencia",
+                "ev-c46-lft-590a-centro-federal",
+                "ev-c46-a59-l005-025-competencia"
+              ],
+              [
+                "ev-c46-cpeum-123a-xxxi-competencia",
+                "ev-c46-lft-527-529-competencia",
+                "ev-c46-lft-590a-centro-federal",
+                "ev-c46-a59-l005-025-competencia"
+              ]
+            ]
+          },
+          {
+            "text": "Un restaurante privado sin elemento federal tiene conflicto ordinario. ¿Qué ámbito corresponde?",
+            "difficulty": "basic",
+            "options": [
+              "Local",
+              "Federal por ser privado",
+              "Apartado B"
+            ],
+            "correctOption": 0,
+            "explanation": "Lo no reservado a Federación corresponde al ámbito local del Apartado A.",
+            "optionExplanations": [
+              "Es la distribución aplicable.",
+              "Privado no significa federal.",
+              "No es empleo público B."
+            ],
+            "evidenceIds": [
+              "ev-c46-lft-527-529-competencia",
+              "ev-c46-a59-l005-025-competencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c46-lft-527-529-competencia",
+                "ev-c46-a59-l005-025-competencia"
+              ],
+              [
+                "ev-c46-lft-527-529-competencia",
+                "ev-c46-a59-l005-025-competencia"
+              ],
+              [
+                "ev-c46-lft-527-529-competencia",
+                "ev-c46-a59-l005-025-competencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c46-lft-527-529-competencia",
+              "ev-c46-a59-l005-025-competencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c46-lft-527-529-competencia",
+              "ev-c46-a59-l005-025-competencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c46-lft-527-529-competencia",
+                "ev-c46-a59-l005-025-competencia"
+              ],
+              [
+                "ev-c46-lft-527-529-competencia",
+                "ev-c46-a59-l005-025-competencia"
+              ],
+              [
+                "ev-c46-lft-527-529-competencia",
+                "ev-c46-a59-l005-025-competencia"
+              ]
+            ]
+          },
+          {
+            "text": "Una trabajadora alega discriminación por embarazo. ¿Debe agotar obligatoriamente conciliación?",
+            "difficulty": "intermediate",
+            "options": [
+              "No, es excepción del 685 Ter",
+              "Sí, sin excepción",
+              "Solo ante Centro Federal"
+            ],
+            "correctOption": 0,
+            "explanation": "La discriminación por embarazo está exceptuada.",
+            "optionExplanations": [
+              "Permite acceso directo.",
+              "Contradice el artículo.",
+              "La excepción es distinta de competencia."
+            ],
+            "evidenceIds": [
+              "ev-c46-lft-685ter-excepciones",
+              "ev-c46-a59-l027-045-prescripcion-excepciones",
+              "ev-c46-a60-l185-217-excepciones-constancia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c46-lft-685ter-excepciones",
+                "ev-c46-a59-l027-045-prescripcion-excepciones",
+                "ev-c46-a60-l185-217-excepciones-constancia"
+              ],
+              [
+                "ev-c46-lft-685ter-excepciones",
+                "ev-c46-a59-l027-045-prescripcion-excepciones",
+                "ev-c46-a60-l185-217-excepciones-constancia"
+              ],
+              [
+                "ev-c46-lft-685ter-excepciones",
+                "ev-c46-a59-l027-045-prescripcion-excepciones",
+                "ev-c46-a60-l185-217-excepciones-constancia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c46-lft-685ter-excepciones",
+              "ev-c46-a59-l027-045-prescripcion-excepciones",
+              "ev-c46-a60-l185-217-excepciones-constancia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c46-lft-685ter-excepciones",
+              "ev-c46-a59-l027-045-prescripcion-excepciones",
+              "ev-c46-a60-l185-217-excepciones-constancia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c46-lft-685ter-excepciones",
+                "ev-c46-a59-l027-045-prescripcion-excepciones",
+                "ev-c46-a60-l185-217-excepciones-constancia"
+              ],
+              [
+                "ev-c46-lft-685ter-excepciones",
+                "ev-c46-a59-l027-045-prescripcion-excepciones",
+                "ev-c46-a60-l185-217-excepciones-constancia"
+              ],
+              [
+                "ev-c46-lft-685ter-excepciones",
+                "ev-c46-a59-l027-045-prescripcion-excepciones",
+                "ev-c46-a60-l185-217-excepciones-constancia"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál es el máximo del procedimiento conciliatorio?",
+            "difficulty": "basic",
+            "options": [
+              "45 días naturales",
+              "45 días hábiles",
+              "Un año"
+            ],
+            "correctOption": 0,
+            "explanation": "La LFT fija cuarenta y cinco días naturales.",
+            "optionExplanations": [
+              "Es el plazo correcto.",
+              "Cambia indebidamente la unidad.",
+              "Confunde prescripción."
+            ],
+            "evidenceIds": [
+              "ev-c46-lft-684a-684d-prejudicial",
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-a60-l123-159-ruta-conciliacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c46-lft-684a-684d-prejudicial",
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-a60-l123-159-ruta-conciliacion"
+              ],
+              [
+                "ev-c46-lft-684a-684d-prejudicial",
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-a60-l123-159-ruta-conciliacion"
+              ],
+              [
+                "ev-c46-lft-684a-684d-prejudicial",
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-a60-l123-159-ruta-conciliacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c46-lft-684a-684d-prejudicial",
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-a60-l123-159-ruta-conciliacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c46-lft-684a-684d-prejudicial",
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-a60-l123-159-ruta-conciliacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c46-lft-684a-684d-prejudicial",
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-a60-l123-159-ruta-conciliacion"
+              ],
+              [
+                "ev-c46-lft-684a-684d-prejudicial",
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-a60-l123-159-ruta-conciliacion"
+              ],
+              [
+                "ev-c46-lft-684a-684d-prejudicial",
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-a60-l123-159-ruta-conciliacion"
+              ]
+            ]
+          },
+          {
+            "text": "En una acción por separación, ¿cómo trata el artículo 518 el plazo desde la solicitud de conciliación?",
+            "difficulty": "intermediate",
+            "options": [
+              "Lo suspende y después lo reanuda en los términos legales",
+              "Renuncia al derecho",
+              "Sentencia automática"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 518 usa suspensión y reanudación para el plazo especial de separación; el 521 conserva la regla general de interrupción.",
+            "optionExplanations": [
+              "Es el efecto específico previsto para esta acción.",
+              "No implica renuncia.",
+              "El Centro no sentencia."
+            ],
+            "evidenceIds": [
+              "ev-c46-lft-518-separacion-suspension",
+              "ev-c46-lft-521-prescripcion",
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-a59-l027-045-prescripcion-excepciones",
+              "ev-c46-a60-l271-285-convenio-prescripcion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c46-lft-518-separacion-suspension",
+                "ev-c46-lft-521-prescripcion",
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-a59-l027-045-prescripcion-excepciones",
+                "ev-c46-a60-l271-285-convenio-prescripcion"
+              ],
+              [
+                "ev-c46-lft-518-separacion-suspension",
+                "ev-c46-lft-521-prescripcion",
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-a59-l027-045-prescripcion-excepciones",
+                "ev-c46-a60-l271-285-convenio-prescripcion"
+              ],
+              [
+                "ev-c46-lft-518-separacion-suspension",
+                "ev-c46-lft-521-prescripcion",
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-a59-l027-045-prescripcion-excepciones",
+                "ev-c46-a60-l271-285-convenio-prescripcion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c46-lft-518-separacion-suspension",
+              "ev-c46-lft-521-prescripcion",
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-a59-l027-045-prescripcion-excepciones",
+              "ev-c46-a60-l271-285-convenio-prescripcion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c46-lft-518-separacion-suspension",
+              "ev-c46-lft-521-prescripcion",
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-a59-l027-045-prescripcion-excepciones",
+              "ev-c46-a60-l271-285-convenio-prescripcion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c46-lft-518-separacion-suspension",
+                "ev-c46-lft-521-prescripcion",
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-a59-l027-045-prescripcion-excepciones",
+                "ev-c46-a60-l271-285-convenio-prescripcion"
+              ],
+              [
+                "ev-c46-lft-518-separacion-suspension",
+                "ev-c46-lft-521-prescripcion",
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-a59-l027-045-prescripcion-excepciones",
+                "ev-c46-a60-l271-285-convenio-prescripcion"
+              ],
+              [
+                "ev-c46-lft-518-separacion-suspension",
+                "ev-c46-lft-521-prescripcion",
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-a59-l027-045-prescripcion-excepciones",
+                "ev-c46-a60-l271-285-convenio-prescripcion"
+              ]
+            ]
+          },
+          {
+            "text": "No hay acuerdo en audiencia. ¿Qué documento procede?",
+            "difficulty": "basic",
+            "options": [
+              "Constancia de no conciliación",
+              "Laudo arbitral",
+              "Sentencia del Centro"
+            ],
+            "correctOption": 0,
+            "explanation": "La constancia acredita el agotamiento cuando era exigible.",
+            "optionExplanations": [
+              "Es el documento correcto.",
+              "No hay arbitraje.",
+              "El Centro no juzga."
+            ],
+            "evidenceIds": [
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-a60-l185-217-excepciones-constancia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-a60-l185-217-excepciones-constancia"
+              ],
+              [
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-a60-l185-217-excepciones-constancia"
+              ],
+              [
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-a60-l185-217-excepciones-constancia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-a60-l185-217-excepciones-constancia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-a60-l185-217-excepciones-constancia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-a60-l185-217-excepciones-constancia"
+              ],
+              [
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-a60-l185-217-excepciones-constancia"
+              ],
+              [
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-a60-l185-217-excepciones-constancia"
+              ]
+            ]
+          },
+          {
+            "text": "Las partes celebran convenio ante el Centro. ¿Qué efecto tiene?",
+            "difficulty": "intermediate",
+            "options": [
+              "Cosa juzgada y ejecutabilidad",
+              "Solo recomendación moral",
+              "Requiere un nuevo juicio declarativo siempre"
+            ],
+            "correctOption": 0,
+            "explanation": "El convenio aprobado tiene fuerza legal y puede ejecutarse.",
+            "optionExplanations": [
+              "Es el efecto legal.",
+              "Subestima su fuerza.",
+              "La ejecución no exige rediscutir siempre el fondo."
+            ],
+            "evidenceIds": [
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-lft-604-605-tribunales",
+              "ev-c46-a60-l271-285-convenio-prescripcion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-lft-604-605-tribunales",
+                "ev-c46-a60-l271-285-convenio-prescripcion"
+              ],
+              [
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-lft-604-605-tribunales",
+                "ev-c46-a60-l271-285-convenio-prescripcion"
+              ],
+              [
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-lft-604-605-tribunales",
+                "ev-c46-a60-l271-285-convenio-prescripcion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-lft-604-605-tribunales",
+              "ev-c46-a60-l271-285-convenio-prescripcion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-lft-604-605-tribunales",
+              "ev-c46-a60-l271-285-convenio-prescripcion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-lft-604-605-tribunales",
+                "ev-c46-a60-l271-285-convenio-prescripcion"
+              ],
+              [
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-lft-604-605-tribunales",
+                "ev-c46-a60-l271-285-convenio-prescripcion"
+              ],
+              [
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-lft-604-605-tribunales",
+                "ev-c46-a60-l271-285-convenio-prescripcion"
+              ]
+            ]
+          },
+          {
+            "text": "La citada no comparece pese a notificación legal. ¿Qué debe revisar el Centro?",
+            "difficulty": "intermediate",
+            "options": [
+              "Consecuencias y constancia previstas por LFT",
+              "Declararla culpable del fondo",
+              "Imponer sentencia definitiva"
+            ],
+            "correctOption": 0,
+            "explanation": "La incomparecencia tiene efectos procedimentales, no una sentencia de fondo.",
+            "optionExplanations": [
+              "Es el análisis correcto.",
+              "El Centro no decide culpabilidad.",
+              "Carece de función jurisdiccional."
+            ],
+            "evidenceIds": [
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-lft-684f-notificacion",
+              "ev-c46-lft-604-605-tribunales"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-lft-684f-notificacion",
+                "ev-c46-lft-604-605-tribunales"
+              ],
+              [
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-lft-684f-notificacion",
+                "ev-c46-lft-604-605-tribunales"
+              ],
+              [
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-lft-684f-notificacion",
+                "ev-c46-lft-604-605-tribunales"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-lft-684f-notificacion",
+              "ev-c46-lft-604-605-tribunales"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c46-lft-684e-procedimiento",
+              "ev-c46-lft-684f-notificacion",
+              "ev-c46-lft-604-605-tribunales"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-lft-684f-notificacion",
+                "ev-c46-lft-604-605-tribunales"
+              ],
+              [
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-lft-684f-notificacion",
+                "ev-c46-lft-604-605-tribunales"
+              ],
+              [
+                "ev-c46-lft-684e-procedimiento",
+                "ev-c46-lft-684f-notificacion",
+                "ev-c46-lft-604-605-tribunales"
+              ]
+            ]
+          },
+          {
+            "text": "Una persona menor trabajadora acude a conciliación. ¿Qué respuesta es correcta?",
+            "difficulty": "advanced",
+            "options": [
+              "Debe recibir asistencia y protección previstas",
+              "Debe comparecer siempre sola",
+              "No puede ejercer derechos laborales"
+            ],
+            "correctOption": 0,
+            "explanation": "La edad exige acompañamiento, no exclusión de derechos.",
+            "optionExplanations": [
+              "Protege acceso efectivo.",
+              "Desconoce salvaguardas.",
+              "Niega derechos."
+            ],
+            "evidenceIds": [
+              "ev-c46-lft-684e-procedimiento"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c46-lft-684e-procedimiento"
+              ],
+              [
+                "ev-c46-lft-684e-procedimiento"
+              ],
+              [
+                "ev-c46-lft-684e-procedimiento"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c46-lft-684e-procedimiento"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c46-lft-684e-procedimiento"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c46-lft-684e-procedimiento"
+              ],
+              [
+                "ev-c46-lft-684e-procedimiento"
+              ],
+              [
+                "ev-c46-lft-684e-procedimiento"
+              ]
+            ]
+          },
+          {
+            "text": "¿Puede aplicarse esta misma ruta sin más a una persona del Apartado B?",
+            "difficulty": "basic",
+            "options": [
+              "No, debe revisarse su régimen propio",
+              "Sí, siempre",
+              "Solo si el Centro Federal acepta"
+            ],
+            "correctOption": 0,
+            "explanation": "Las reglas estudiadas corresponden al Apartado A.",
+            "optionExplanations": [
+              "Evita universalizar.",
+              "Ignora régimen constitucional.",
+              "La aceptación no crea competencia."
+            ],
+            "evidenceIds": [
+              "ev-c46-cpeum-123a-xx-conciliacion",
+              "ev-c46-cpeum-123a-xxxi-competencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c46-cpeum-123a-xx-conciliacion",
+                "ev-c46-cpeum-123a-xxxi-competencia"
+              ],
+              [
+                "ev-c46-cpeum-123a-xx-conciliacion",
+                "ev-c46-cpeum-123a-xxxi-competencia"
+              ],
+              [
+                "ev-c46-cpeum-123a-xx-conciliacion",
+                "ev-c46-cpeum-123a-xxxi-competencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c46-cpeum-123a-xx-conciliacion",
+              "ev-c46-cpeum-123a-xxxi-competencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c46-cpeum-123a-xx-conciliacion",
+              "ev-c46-cpeum-123a-xxxi-competencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c46-cpeum-123a-xx-conciliacion",
+                "ev-c46-cpeum-123a-xxxi-competencia"
+              ],
+              [
+                "ev-c46-cpeum-123a-xx-conciliacion",
+                "ev-c46-cpeum-123a-xxxi-competencia"
+              ],
+              [
+                "ev-c46-cpeum-123a-xx-conciliacion",
+                "ev-c46-cpeum-123a-xxxi-competencia"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c46-cpeum-123a-xx-conciliacion",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026, artículo 123 apartado A fracción XX",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c46-cpeum-123a-xxxi-competencia",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026, artículo 123 apartado A fracción XXXI",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c46-lft-527-529-competencia",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 527 a 529: competencia federal y local",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c46-lft-590a-centro-federal",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículo 590-A: Centro Federal",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c46-lft-604-605-tribunales",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 604 y 605: tribunales laborales",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c46-lft-684a-684d-prejudicial",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 684-A a 684-D: principios, solicitud y duración",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c46-lft-684e-procedimiento",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículo 684-E: procedimiento, convenio, constancia y salvaguardas",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c46-lft-684f-notificacion",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículo 684-F: notificación",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c46-lft-685ter-excepciones",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículo 685 Ter: excepciones prejudiciales",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c46-lft-518-separacion-suspension",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículo 518: suspensión y reanudación del plazo de acciones por separación",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c46-lft-521-prescripcion",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículo 521: interrupción de prescripción",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c46-a59-l005-025-competencia",
+      "kind": "transcript",
+      "audioNumber": 59,
+      "locator": {
+        "type": "line_range",
+        "startLine": 5,
+        "endLine": 25
+      }
+    },
+    {
+      "id": "ev-c46-a59-l027-045-prescripcion-excepciones",
+      "kind": "transcript",
+      "audioNumber": 59,
+      "locator": {
+        "type": "line_range",
+        "startLine": 27,
+        "endLine": 45
+      }
+    },
+    {
+      "id": "ev-c46-a60-l123-159-ruta-conciliacion",
+      "kind": "transcript",
+      "audioNumber": 60,
+      "locator": {
+        "type": "line_range",
+        "startLine": 123,
+        "endLine": 159
+      }
+    },
+    {
+      "id": "ev-c46-a60-l185-217-excepciones-constancia",
+      "kind": "transcript",
+      "audioNumber": 60,
+      "locator": {
+        "type": "line_range",
+        "startLine": 185,
+        "endLine": 217
+      }
+    },
+    {
+      "id": "ev-c46-a60-l271-285-convenio-prescripcion",
+      "kind": "transcript",
+      "audioNumber": 60,
+      "locator": {
+        "type": "line_range",
+        "startLine": 271,
+        "endLine": 285
+      }
+    }
+  ]
+}
