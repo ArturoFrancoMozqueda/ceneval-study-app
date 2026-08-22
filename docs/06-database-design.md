@@ -69,26 +69,11 @@ Representa una clase dentro de una materia.
 
 Relación: muchas clases pertenecen a una materia.
 
-### transcripts
+### class_evidence
 
-Conserva original y versión limpia.
-
-- id
-- class_id
-- original_text
-- cleaned_text
-- processing_status
-- created_at
-- updated_at
-
-Relación: en la primera versión cada clase tendrá como máximo una transcripción.
-
-Reglas:
-
-- `class_id` será único;
-- `original_text` será obligatorio e inmutable para procesos automáticos;
-- `cleaned_text` podrá estar vacío mientras no se procese;
-- `processing_status` permitirá `pending`, `processing`, `ready` o `failed`.
+Conserva evidencia mínima sin texto transcriptivo: clave estable, tipo, número
+de audio y localizador, o metadatos de una fuente oficial. Los TXT originales y
+depurados viven exclusivamente en el archivo editorial privado.
 
 ### topics
 
@@ -121,7 +106,6 @@ Contiene una sección de material por tema.
 - topic_id
 - material_type
 - content
-- source_transcript_id
 - generated_by_ai
 - generation_version
 - version
@@ -147,7 +131,8 @@ Reglas:
 
 - solo existirá una versión actual por combinación de tema y tipo;
 - regenerar una sección archivará la versión anterior sin afectar las demás;
-- `source_transcript_id` conservará la relación con la fuente;
+- `source_origin` distingue clase, fuente complementaria o mezcla; los vínculos
+  concretos viven en `editorial_artifact_evidence`;
 - `generation_version` identificará la versión del proceso o prompt;
 - una edición manual actualizará la versión actual, pero no la fuente original.
 
@@ -262,7 +247,7 @@ En la primera versión el progreso se calculará desde respuestas de examen y re
 ```text
 subject
   └── classes
-      ├── transcripts
+      ├── class_evidence
       └── topics
           ├── study_materials
           ├── flashcards
@@ -277,7 +262,8 @@ subject
 
 ## Reglas importantes
 
-- Una transcripción original nunca debe sobrescribirse.
+- Una transcripción original nunca debe sobrescribirse ni almacenarse en la
+  base de la aplicación.
 - El contenido generado debe conservar referencia a su fuente.
 - Un intento de examen no debe sobrescribir intentos anteriores.
 - Las opciones correctas no deben exponerse antes de finalizar el examen.
@@ -298,11 +284,9 @@ subject
 Además de las claves primarias se prevén:
 
 - índice en `classes.subject_id`;
-- índice único en `transcripts.class_id`;
 - índice en `topics.class_id`;
 - restricción única en `topics (class_id, position)`;
 - índice en `study_materials.topic_id`;
-- índice en `study_materials.source_transcript_id`;
 - una sola versión actual de material por tema y tipo;
 - índice en `flashcards.topic_id`;
 - índice en `flashcard_reviews.flashcard_id`;
@@ -341,9 +325,10 @@ Entre 60% y 79% seguirá como **en proceso**. Estos umbrales podrán ajustarse d
 
 ## Decisiones resueltas
 
-### Una transcripción por clase
+### Transcripciones fuera de la base
 
-Una clase tendrá como máximo una transcripción en la primera versión. Si después se necesitan varias partes, se documentará una migración compatible.
+Una clase puede declarar varios audios, pero la base conserva únicamente sus
+metadatos y localizadores. El texto se resuelve localmente durante el gate.
 
 ### Un tema pertenece a una clase
 
@@ -367,7 +352,7 @@ Cuando llegue la fase de persistencia, la primera migración incluirá únicamen
 
 - `subjects`;
 - `classes`;
-- `transcripts`;
+- `class_evidence`;
 - `topics`;
 - restricciones, relaciones e índices necesarios.
 
@@ -377,7 +362,7 @@ Materiales, flashcards, exámenes, progreso y calendario se añadirán en migrac
 
 La usuaria confirmó:
 
-- una transcripción por clase para la primera versión;
+- texto transcriptivo fuera de Supabase y evidencia mínima trazable;
 - un tema asociado a una sola clase;
 - conservación de versiones regeneradas del material;
 - conservación de todos los intentos y revisiones;

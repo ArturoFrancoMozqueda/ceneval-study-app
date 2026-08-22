@@ -3,6 +3,7 @@ import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 import { assertClassPackageRoundTrip, countClassPackage } from "../lib/content/package-roundtrip";
+import { toPersistableClassPackage } from "../lib/content/package-persistence";
 import { createSyntheticTraceablePackage } from "../tests/fixtures/traceable-package";
 
 type LocalCredentials = {
@@ -14,7 +15,6 @@ type LocalCredentials = {
 type DatabaseCounts = {
   classes: number;
   audioSources: number;
-  transcripts: number;
   topics: number;
   learningJourneys: number;
   materials: number;
@@ -32,6 +32,7 @@ type DatabaseCounts = {
 };
 
 const fixture = createSyntheticTraceablePackage();
+const persistableFixture = toPersistableClassPackage(fixture);
 const syntheticReference = fixture.topics[0]!.references[0]!;
 const syntheticEmail = `rpc-local-${Date.now()}@example.invalid`;
 const syntheticPassword = `Local-only-${crypto.randomUUID()}-Aa1!`;
@@ -151,7 +152,6 @@ async function readDatabaseCounts(
   const [
     classes,
     audioSources,
-    transcripts,
     learningJourneys,
     materials,
     references,
@@ -163,7 +163,6 @@ async function readDatabaseCounts(
   ] = await Promise.all([
     exactCount(service, "classes", "id", [classId]),
     exactCount(service, "class_audio_sources", "class_id", [classId]),
-    exactCount(service, "transcripts", "class_id", [classId]),
     exactCount(service, "topic_learning_journeys", "topic_id", topicIds),
     exactCount(service, "study_materials", "topic_id", topicIds),
     exactCount(service, "topic_references", "topic_id", topicIds),
@@ -182,7 +181,6 @@ async function readDatabaseCounts(
   return {
     classes,
     audioSources,
-    transcripts,
     topics: topicIds.length,
     learningJourneys,
     materials,
@@ -251,6 +249,9 @@ async function main() {
   try {
     await verifyNoSyntheticResidue(service);
 
+    const removedTranscriptTable = await service.from("transcripts").select("id").limit(1);
+    assert.ok(removedTranscriptTable.error, "public.transcripts todavía existe.");
+
     const { data: createdUser, error: createUserError } =
       await service.auth.admin.createUser({
         email: syntheticEmail,
@@ -270,16 +271,41 @@ async function main() {
     if (signInError) throw signInError;
 
     await assertRpcDenied(anonymous, "import_class_package_v12", {
-      p_package: fixture,
+      p_package: persistableFixture,
     });
     await assertRpcDenied(authenticated, "import_class_package_v12", {
+      p_package: persistableFixture,
+    });
+
+    const rawTranscriptAttempt = await rpc(service, "import_class_package_v12", {
       p_package: fixture,
     });
+    assert.equal(rawTranscriptAttempt.error?.code, "22023");
+    await verifyNoSyntheticResidue(service);
+
+    const nestedRawAttempt = await rpc(service, "import_class_package_v12", {
+      p_package: {
+        ...persistableFixture,
+        topics: persistableFixture.topics.map((topic, index) =>
+          index === 0
+            ? {
+                ...topic,
+                learningJourney: {
+                  ...topic.learningJourney,
+                  rawContainer: { cleaned_text: "contenido que nunca debe persistirse" },
+                },
+              }
+            : topic,
+        ),
+      },
+    });
+    assert.equal(nestedRawAttempt.error?.code, "22023");
+    await verifyNoSyntheticResidue(service);
 
     const { data: importedId, error: importError } = await rpc(
       service,
       "import_class_package_v12",
-      { p_package: fixture },
+      { p_package: persistableFixture },
     );
     if (importError) throw importError;
     classId = Number(importedId);
@@ -298,6 +324,12 @@ async function main() {
       { p_class_id: classId },
     );
     if (exportError) throw exportError;
+    assert.ok(exported && typeof exported === "object");
+    assert.equal(
+      Object.hasOwn(exported, "transcript"),
+      false,
+      "El export volvió a exponer el cuerpo de la transcripción.",
+    );
 
     const { data: persistedClass, error: classError } = await service
       .from("classes")
@@ -323,7 +355,6 @@ async function main() {
     assert.deepEqual(counts, {
       classes: 1,
       audioSources: fixture.curriculum.audioSources.length,
-      transcripts: 1,
       topics: expected.topics,
       learningJourneys: expected.learningJourneys,
       materials: expected.materials,
@@ -342,7 +373,7 @@ async function main() {
 
     const beforeDuplicate = await readDatabaseCounts(service, classId);
     const duplicate = await rpc(service, "import_class_package_v12", {
-      p_package: fixture,
+      p_package: persistableFixture,
     });
     assert.equal(duplicate.error?.code, "23505");
     assert.equal(duplicate.data, null);

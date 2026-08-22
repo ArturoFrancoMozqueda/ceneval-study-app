@@ -5,6 +5,7 @@ import {
   compareClassPackageRoundTrip,
   countClassPackage,
 } from "../lib/content/package-roundtrip";
+import { toPersistableClassPackage } from "../lib/content/package-persistence";
 import { createSyntheticTraceablePackage } from "./fixtures/traceable-package";
 
 function cloneFixture() {
@@ -13,7 +14,7 @@ function cloneFixture() {
 
 test("acepta únicamente el reordenamiento canónico del registro de evidencia", () => {
   const expected = cloneFixture();
-  const exported = cloneFixture();
+  const exported = toPersistableClassPackage(cloneFixture());
   exported.evidenceRegistry.reverse();
 
   const report = assertClassPackageRoundTrip(expected, exported, {
@@ -27,7 +28,7 @@ test("acepta únicamente el reordenamiento canónico del registro de evidencia",
 
 test("rechaza reordenar cualquier colección con posición editorial", () => {
   const expected = cloneFixture();
-  const exported = cloneFixture();
+  const exported = toPersistableClassPackage(cloneFixture());
   exported.topics[0]!.materials.reverse();
 
   const report = compareClassPackageRoundTrip(expected, exported);
@@ -41,7 +42,7 @@ test("rechaza reordenar cualquier colección con posición editorial", () => {
 
 test("detecta pérdida de un vínculo aunque el paquete exportado siga siendo válido", () => {
   const expected = cloneFixture();
-  const exported = cloneFixture();
+  const exported = toPersistableClassPackage(cloneFixture());
   exported.topics[0]!.materials[0]!.evidenceIds = [
     "ev-transcript-synthetic",
   ];
@@ -78,7 +79,8 @@ test("cuenta todos los artefactos y vínculos del fixture sintético", () => {
 
 test("exige que la importación permanezca en borrador y los temas pendientes", () => {
   const fixture = cloneFixture();
-  const report = compareClassPackageRoundTrip(fixture, fixture, {
+  const persisted = toPersistableClassPackage(fixture);
+  const report = compareClassPackageRoundTrip(fixture, persisted, {
     publicationStatus: "published",
     topicApprovalStatuses: ["approved"],
   });
@@ -88,7 +90,7 @@ test("exige que la importación permanezca en borrador y los temas pendientes", 
   assert.ok(report.differences.includes("state.topicApprovalStatuses.0"));
   assert.throws(
     () =>
-      assertClassPackageRoundTrip(fixture, fixture, {
+      assertClassPackageRoundTrip(fixture, persisted, {
         publicationStatus: "published",
         topicApprovalStatuses: ["approved"],
       }),

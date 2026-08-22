@@ -85,6 +85,10 @@ test("el runner conserva cleanup idempotente en finally y no imprime secretos", 
   assert.match(runner, /selectSyntheticResidueIds/);
   assert.match(runner, /randomBytes\(32\)\.toString\("base64url"\)/);
   assert.match(runner, /OPS_READINESS_TOKEN: readinessToken/);
+  assert.match(
+    runner,
+    /p_package: toPersistableClassPackage\(fixture\)/,
+  );
   assert.match(runner, /\.from\("classes"\)\.delete\(\)\.in\("id", ids\)/);
   assert.match(runner, /\.from\("subjects"\)\.delete\(\)/);
   assert.doesNotMatch(runner, /console\.(?:log|error)\([^\n]*(?:Password|secretKey|publishableKey)/);

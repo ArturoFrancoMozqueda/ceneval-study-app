@@ -88,7 +88,7 @@ Next.js (autenticación, autorización y reglas de negocio)
 
 ### PostgreSQL
 
-Conserva datos estructurados, relaciones, texto de transcripciones, estado
+Conserva datos estructurados, relaciones, metadatos de evidencia, estado
 editorial, eventos de aprendizaje y la futura decisión local de acceso. Una
 suscripción no se modelará como un booleano en el perfil: seguirá el diseño de
 [`SUBSCRIPTION_ARCHITECTURE.md`](SUBSCRIPTION_ARCHITECTURE.md).
@@ -98,7 +98,8 @@ suscripción no se modelará como un booleano en el perfil: seguirá el diseño 
 Los audios, imágenes o exportaciones no deben guardarse como binarios dentro
 de PostgreSQL. La base almacenará metadatos, checksum, tamaño, tipo y una ruta
 estable. El acceso privado tendrá políticas propias. El texto consultable de
-una transcripción sí puede permanecer en PostgreSQL.
+el texto de una transcripción permanece en el archivo editorial privado y no
+en PostgreSQL; la base recibe únicamente audio, localizador y vínculos.
 
 ### Caché y CDN
 

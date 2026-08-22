@@ -28,7 +28,7 @@ Los bloqueos operativos reales siguen siendo:
 2. el mecanismo PostgreSQL ya pasó un respaldo y una restauración reales en
    local, pero todavía no existe una exportación del remoto, una copia externa
    cifrada ni una restauración de esa copia en un proyecto de ensayo;
-3. el proyecto local aplica dieciséis migraciones, exige un lint PostgreSQL
+3. el proyecto local aplica diecisiete migraciones, exige un lint PostgreSQL
    local sin advertencias y pasó 141 comprobaciones RLS;
    CENEVAL remoto conserva once migraciones y aún requiere ejecutar el mismo
    gate en un entorno de ensayo autorizado antes de promover cambios;
@@ -246,7 +246,8 @@ El contrato 1.2 añade el gate de confianza editorial:
 - la transición de clase es `draft → review → published`;
 - el dictamen registra administradora, fecha, notas, versión y digest;
 - modificar o rechazar contenido invalida la aprobación anterior;
-- la transcripción queda restringida a administración.
+- la evidencia transcriptiva conserva audio y localizador, sin guardar ni
+  mostrar el texto privado en la aplicación.
 
 Los 57 paquetes C01–C57 tienen código, orden y fuentes portables. C01–C57 ya
 usan 1.2: sus 139, 130, 133, 133, 137, 137, 138, 138, 140, 141, 139, 142, 144
@@ -260,7 +261,7 @@ evidencias, journeys y vínculos editoriales; 1.0 y 1.1 fallan antes de llamar a
 Supabase. La versión sustituida de C14 permanece en el archivo 1.0 no
 importable.
 
-La implementación pasó pruebas unitarias, TypeScript, lint y build. Las dieciséis
+La implementación pasó pruebas unitarias, TypeScript, lint y build. Las diecisiete
 migraciones locales se aplicaron desde cero en PostgreSQL 17.6 y el runner
 dinámico comprobó round-trip semántico, 2 evidencias, 118 artefactos, 236
 vínculos, estados `draft`/`pending`, rechazo de duplicados sin residuos y RPC
@@ -366,7 +367,7 @@ contraseñas filtradas está desactivada. Antes de abrir el acceso estudiantil, 
 autorizada debe habilitar esa protección y ejecutar la suite RLS dinámica con
 temas pendientes y rechazados, primero en un proyecto de ensayo.
 
-**Estado local posterior:** PostgreSQL 17.6 aplica dieciséis migraciones desde
+**Estado local posterior:** PostgreSQL 17.6 aplica diecisiete migraciones desde
 cero. `npm run security:rls:local` ejecuta 141 comprobaciones sobre contenido
 sintético y verifica RPC, ownership, tablas trazables, temas `pending` y
 `rejected`, claves de examen y limpieza sin residuos. El ensayo detectó y
@@ -417,7 +418,7 @@ no locales; ninguna de estas pruebas escribió en CENEVAL remoto.
 
 Queda pendiente:
 
-- aplicar las cinco migraciones locales pendientes en un proyecto de ensayo y
+- aplicar las seis migraciones locales pendientes en un proyecto de ensayo y
   repetir allí la suite RLS antes de CENEVAL;
 - mantener `npm run db:lint:local` sin advertencias; la migración nueva ya
   eliminó los doce avisos de `private.import_class_package_v12` y el reset,
@@ -433,15 +434,15 @@ tiene transcripción conservada, versión depurada, nueve materiales, mapa,
 flashcards, diez reactivos y fuentes. C01–C57 pasan el gate local 1.2, pero
 aún requieren revisión y publicación autorizadas.
 
-Antes de importarlas existe una decisión de arquitectura de datos pendiente.
-El importador 1.2 actual guarda en `public.transcripts` tanto el texto original
-como el depurado, además de las dinámicas. Esto contradice la preferencia de
-producto de conservar en Supabase solo las dinámicas publicables y mantener las
-transcripciones completas en el archivo editorial privado. La importación queda
-bloqueada hasta decidir y documentar una de estas opciones: persistir el texto
-completo con retención, acceso y respaldo explícitos, o modificar contrato,
-RPC, interfaz administrativa y pruebas para conservar solo localizadores y
-evidencia mínima sin perder trazabilidad.
+La decisión de minimización ya está implementada localmente. El cargador lee
+los TXT privados y valida el paquete editorial completo; antes de invocar la
+RPC proyecta el contrato 1.2 sin la clave `transcript`. Supabase conserva las
+dinámicas, el registro de evidencia y sus localizadores, pero no el texto
+original ni el depurado. La exportación reconstruye esa misma proyección y el
+round-trip comprueba que no se pierdan artefactos, vínculos o recorrido. La
+interfaz administrativa ya no ofrece captura o lectura de transcripciones.
+La importación remota continúa bloqueada hasta aplicar y probar la migración de
+minimización en el proyecto de ensayo autorizado.
 
 Orden de producción restante:
 

@@ -55,7 +55,9 @@ test("restaura y verifica esquema, RLS, evidencia, digest y round-trip", () => {
   assert.match(runner, /"pg_restore"/);
   assert.match(runner, /--single-transaction/);
   assert.match(runner, /relrowsecurity/);
-  assert.match(runner, /transcriptDigest/);
+  assert.match(runner, /transcriptStorageRemoved/);
+  assert.match(runner, /to_regclass\('public\.transcripts'\) is null/);
+  assert.match(runner, /column_name = 'source_transcript_id'/);
   assert.match(runner, /evidenceDigest/);
   assert.match(runner, /assertClassPackageRoundTrip/);
 });

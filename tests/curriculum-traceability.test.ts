@@ -10,6 +10,7 @@ import {
   assertClassPackageRoundTrip,
   countClassPackage,
 } from "../lib/content/package-roundtrip";
+import { toPersistableClassPackage } from "../lib/content/package-persistence";
 
 const traceablePackages = [
   {
@@ -1453,10 +1454,14 @@ for (const expected of traceablePackages) {
       }
     }
 
-    const report = assertClassPackageRoundTrip(bundle, bundle, {
+    const report = assertClassPackageRoundTrip(
+      bundle,
+      toPersistableClassPackage(bundle),
+      {
       publicationStatus: "draft",
       topicApprovalStatuses: bundle.topics.map(() => "pending"),
-    });
+      },
+    );
     assert.equal(report.equivalent, true);
   });
 }

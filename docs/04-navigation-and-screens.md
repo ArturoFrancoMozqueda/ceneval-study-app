@@ -24,8 +24,8 @@
 
 - `/administrar`: estado editorial de todas las clases;
 - `/administrar/clases/[classId]`: vista previa y publicación;
-- las rutas existentes de creación, transcripción y temas quedan limitadas al
-  rol administrador.
+- las rutas de creación y temas quedan limitadas al rol administrador; no
+  existe una ruta web de captura o lectura de transcripciones.
 
 ## Estado
 
@@ -90,8 +90,7 @@ Inicio
 | `/materias/nueva` | Nueva materia | Guardar materia |
 | `/materias/[materiaId]` | Detalle de materia | Crear clase |
 | `/materias/[materiaId]/clases/nueva` | Nueva clase | Guardar clase |
-| `/clases/[claseId]` | Detalle de clase | Agregar transcripción |
-| `/clases/[claseId]/transcripcion` | Transcripción | Guardar original o generar versión limpia |
+| `/clases/[claseId]` | Detalle de clase | Abrir temas o revisión editorial |
 | `/clases/[claseId]/temas` | Temas detectados | Aprobar temas |
 | `/temas/[temaId]` | Detalle de tema | Estudiar material |
 | `/temas/[temaId]/flashcards` | Flashcards | Iniciar sesión |
@@ -160,25 +159,17 @@ Después de guardar, debe abrir el detalle de la clase.
 Debe mostrar:
 
 - título, materia y datos de la clase;
-- estado de la transcripción;
+- audios y fragmentos editoriales declarados;
 - lista de temas;
 - acción principal según el avance:
-  - **Agregar transcripción** si no existe;
-  - **Revisar temas** si ya se procesó;
+  - **Revisar temas** si el paquete está en preparación;
   - **Estudiar temas** si fueron aprobados.
 
-### 7. Transcripción
+### 7. Evidencia editorial
 
-Debe incluir:
-
-- área amplia para pegar texto;
-- contador aproximado de caracteres;
-- aviso de que el original se conservará;
-- botón **Guardar transcripción original**;
-- vista separada para la versión limpia;
-- opción de alternar entre original y limpia.
-
-La versión original no podrá sobrescribirse mediante procesamiento automático.
+La transcripción completa permanece fuera de la aplicación. Administración
+consulta en el paquete local los rangos usados y, en la app, revisa únicamente
+las dinámicas, referencias públicas y metadatos de vigencia.
 
 ### 8. Revisión de temas
 
@@ -241,11 +232,10 @@ Debe incluir:
 ## Flujo principal
 
 ```text
-Crear materia
-  → crear clase
-  → pegar y guardar transcripción original
-  → generar o revisar versión limpia
-  → detectar y aprobar temas
+Preparar paquete editorial con la transcripción privada
+  → validar evidencia y localizadores
+  → importar proyección sin texto como borrador
+  → revisar y aprobar temas
   → abrir material de un tema
   → estudiar flashcards
   → resolver mini examen
@@ -298,7 +288,7 @@ No forman parte de la primera implementación:
 La usuaria confirmó:
 
 - que puede anticipar dónde crear una materia y una clase;
-- que entiende cómo guardar una transcripción;
+- que entiende que las transcripciones se conservan fuera de la app;
 - que el paso de clase a tema y material es claro;
 - que flashcards y examen son fáciles de encontrar;
 - que la búsqueda está en un lugar esperado;

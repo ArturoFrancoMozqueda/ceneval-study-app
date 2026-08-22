@@ -202,7 +202,7 @@ function readFingerprint(database: string) {
       'evidence', (select count(*) from public.class_evidence where class_id = :'class_id'::bigint),
       'artifacts', (select count(*) from public.editorial_artifacts where class_id = :'class_id'::bigint),
       'links', (select count(*) from public.editorial_artifact_evidence link join public.editorial_artifacts artifact on artifact.id = link.artifact_id where artifact.class_id = :'class_id'::bigint),
-      'transcriptDigest', (select md5(original_text) from public.transcripts where class_id = :'class_id'::bigint),
+      'transcriptStorageRemoved', (to_regclass('public.transcripts') is null),
       'evidenceDigest', (select md5(string_agg(evidence_key || ':' || locator::text, '|' order by evidence_key)) from public.class_evidence where class_id = :'class_id'::bigint)
     );`,
   );
@@ -222,6 +222,19 @@ function verifyRestoredDatabase(database: string, expectedFingerprint: unknown) 
     ) as required(regclass_name) where regclass_name is not null;`,
   );
   if (schemaCheck !== "6") throw new Error("La restauración perdió tablas requeridas.");
+  const transcriptStorageCheck = psql(
+    database,
+    `select (to_regclass('public.transcripts') is null)
+       and not exists (
+         select 1 from information_schema.columns
+         where table_schema = 'public'
+           and table_name = 'study_materials'
+           and column_name = 'source_transcript_id'
+       );`,
+  );
+  if (transcriptStorageCheck !== "t") {
+    throw new Error("La restauración reintrodujo almacenamiento de transcripciones.");
+  }
   const rlsCheck = psql(
     database,
     "select count(*) from pg_catalog.pg_class where oid in ('public.class_evidence'::regclass, 'public.editorial_artifacts'::regclass, 'public.exam_answer_keys'::regclass) and relrowsecurity;",

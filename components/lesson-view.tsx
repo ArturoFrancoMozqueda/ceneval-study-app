@@ -240,17 +240,6 @@ export function LessonView({
           ← Volver a la sesión
         </button>
         <div className="mt-5 space-y-6">
-          {lesson.transcript ? (
-            <article className="rounded-2xl border border-border bg-white p-6">
-              <h2 className="text-xl font-semibold">Transcripción original</h2>
-              <p className="mt-2 text-sm text-muted">
-                Archivo editorial privado visible únicamente para administración.
-              </p>
-              <div className="mt-5 max-h-[32rem] overflow-y-auto whitespace-pre-line rounded-xl bg-background p-5 text-sm leading-7">
-                {lesson.transcript.originalText}
-              </div>
-            </article>
-          ) : null}
           <article>
             <h2 className="text-xl font-semibold">Referencias jurídicas</h2>
             <div className="mt-4 space-y-3">
@@ -549,9 +538,7 @@ export function LessonView({
         onClick={() => setShowSources(true)}
         type="button"
       >
-        {lesson.transcript
-          ? "Consultar transcripción privada y fuentes jurídicas"
-          : "Consultar fuentes jurídicas"}
+        Consultar fuentes jurídicas
       </button>
     </div>
   );

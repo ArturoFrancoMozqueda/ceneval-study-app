@@ -4,6 +4,7 @@ import { randomBytes } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+import { toPersistableClassPackage } from "../lib/content/package-persistence";
 import { createSyntheticTraceablePackage } from "../tests/fixtures/traceable-package";
 import {
   assertLocalProjectConfig,
@@ -195,7 +196,7 @@ async function prepareFixture(service: SupabaseClient) {
 
   const { data: importedId, error: importError } = await service.rpc(
     "import_class_package_v12",
-    { p_package: fixture },
+    { p_package: toPersistableClassPackage(fixture) },
   );
   if (importError) throw new Error("No se pudo importar el paquete E2E 1.2.");
   const classId = Number(importedId);

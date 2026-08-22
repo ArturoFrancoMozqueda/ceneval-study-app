@@ -10,10 +10,11 @@ La arquitectura objetivo presenta a la estudiante solamente materiales de
 estudio aprobados: explicaciones, mapas, flashcards, reactivos, referencias
 oficiales y metadatos de vigencia.
 
-El importador actual todavía conserva una copia de la transcripción dentro del
-modelo editorial de Supabase. Retirar esa copia requiere una migración separada
-del esquema, del importador y de las vistas administrativas; hasta hacerla, no
-se debe afirmar que Supabase contiene únicamente las dinámicas publicadas.
+El paquete editorial 1.2 sigue resolviendo el TXT privado para comprobar sus
+localizadores antes de importar. Después crea una proyección persistible que
+elimina por completo la clave `transcript`. La RPC conserva número de audio,
+rango o marca temporal y vínculos de evidencia, pero no recibe, persiste ni
+exporta el texto original o depurado. La interfaz tampoco lo consulta o muestra.
 
 Los originales permiten auditar una transformación, corregir un material y
 reconstruirlo. Por ello deben conservarse, pero:

@@ -115,7 +115,7 @@ Incluirá:
 - materias;
 - clases;
 - temas;
-- transcripciones pegadas manualmente;
+- transcripciones conservadas y validadas en el archivo editorial privado;
 - material de estudio;
 - flashcards;
 - mini exámenes;
@@ -138,7 +138,9 @@ Incluirá:
 
 ## Resultado ideal
 
-El estudiante puede pegar una clase, obtener material completo, estudiar, responder preguntas y recibir una recomendación clara sobre el siguiente tema a repasar.
+La estudiante puede abrir una clase editorial publicada, estudiar, responder
+preguntas y recibir una recomendación clara sobre el siguiente tema a repasar,
+sin cargar ni consultar la transcripción privada.
 
 ## Métricas iniciales de éxito
 
@@ -146,8 +148,8 @@ La primera versión será útil cuando el usuario pueda:
 
 1. crear una materia;
 2. guardar una clase;
-3. conservar una transcripción;
-4. encontrarla después;
+3. conservar la trazabilidad mediante evidencia y localizadores;
+4. consultar las fuentes públicas del material;
 5. organizar sus temas;
 6. estudiar una explicación;
 7. practicar con flashcards;
