@@ -1,0 +1,8 @@
+.claude/
+backups/
+tmp/
+coverage/
+playwright-report/
+test-results/
+supabase/.branches/
+supabase/.temp/
