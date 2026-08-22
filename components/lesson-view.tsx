@@ -4,8 +4,10 @@ import Link from "next/link";
 import { useRef, useState, useTransition } from "react";
 import { saveStudyProgressAction } from "@/app/actions/academic";
 import { ConceptMap } from "@/components/concept-map";
+import { ContentShield } from "@/components/content-shield";
 import { ExamPlayer } from "@/components/exam-player";
 import { FlashcardsDeck } from "@/components/flashcards-deck";
+import { ProtectedText } from "@/components/protected-text";
 import type {
   LessonBundle,
   StudyMaterial,
@@ -34,15 +36,20 @@ function Material({ material }: { material: StudyMaterial }) {
     mixed: "Clase + fuentes complementarias",
   };
   return (
-    <article className="rounded-2xl border border-border bg-white p-5 sm:p-7">
-      <span className="rounded-full bg-success-soft px-3 py-1 text-xs font-semibold text-success">
-        {sourceLabels[material.sourceOrigin]}
-      </span>
-      <h2 className="mt-4 text-xl font-semibold">{material.title}</h2>
-      <div className="mt-3 whitespace-pre-line leading-8 text-foreground/80">
-        {material.content}
-      </div>
-    </article>
+    <ContentShield>
+      <article className="rounded-2xl border border-border bg-white p-5 sm:p-7">
+        <span className="rounded-full bg-success-soft px-3 py-1 text-xs font-semibold text-success">
+          {sourceLabels[material.sourceOrigin]}
+        </span>
+        <h2 className="mt-4 text-xl font-semibold">{material.title}</h2>
+        <ProtectedText
+          as="div"
+          className="mt-3 whitespace-pre-line leading-8 text-foreground/80"
+        >
+          {material.content}
+        </ProtectedText>
+      </article>
+    </ContentShield>
   );
 }
 
@@ -346,22 +353,24 @@ export function LessonView({
 
       <section className="mt-6">
         {activeStep === "discover" ? (
-          <div className="rounded-3xl bg-brand p-6 text-white sm:p-9">
-            <p className="text-sm font-semibold text-white/70">Antes de leer</p>
-            <h2 className="mt-3 max-w-3xl text-2xl font-semibold">
-              ¿Cómo resolverías este tema si apareciera hoy en un caso CENEVAL?
-            </h2>
-            <p className="mt-4 max-w-3xl leading-8 text-white/85">
-              {opener?.content ?? lesson.topic.description}
-            </p>
-            <button
-              className="mt-6 min-h-12 rounded-xl bg-white px-5 font-semibold text-brand"
-              onClick={() => completeAndContinue("discover")}
-              type="button"
-            >
-              Construir mi respuesta
-            </button>
-          </div>
+          <ContentShield>
+            <div className="rounded-3xl bg-brand p-6 text-white sm:p-9">
+              <p className="text-sm font-semibold text-white/70">Antes de leer</p>
+              <h2 className="mt-3 max-w-3xl text-2xl font-semibold">
+                ¿Cómo resolverías este tema si apareciera hoy en un caso CENEVAL?
+              </h2>
+              <ProtectedText as="p" className="mt-4 max-w-3xl leading-8 text-white/85">
+                {opener?.content ?? lesson.topic.description}
+              </ProtectedText>
+              <button
+                className="mt-6 min-h-12 rounded-xl bg-white px-5 font-semibold text-brand"
+                onClick={() => completeAndContinue("discover")}
+                type="button"
+              >
+                Construir mi respuesta
+              </button>
+            </div>
+          </ContentShield>
         ) : null}
 
         {activeStep === "understand" ? (
@@ -374,35 +383,40 @@ export function LessonView({
               />
             ) : null}
 
-            <article className="rounded-3xl border border-border bg-white p-5 sm:p-7">
-              <p className="text-sm font-semibold text-success">
-                Guía de preguntas y respuestas
-              </p>
-              <h2 className="mt-2 text-2xl font-semibold">
-                Comprueba las ideas esenciales
-              </h2>
-              <p className="mt-2 leading-7 text-muted">
-                Abre cada pregunta para consultar la respuesta explicada.
-              </p>
-              <div className="mt-5 space-y-3">
-                {lesson.flashcards.map((card, index) => (
-                  <details
-                    className="rounded-xl border border-border bg-background p-4 open:bg-white"
-                    key={card.id}
-                  >
-                    <summary className="cursor-pointer font-semibold">
-                      <span className="mr-2 font-mono text-xs text-muted">
-                        {index + 1}.
-                      </span>
-                      {card.question}
-                    </summary>
-                    <p className="mt-3 border-t border-border pt-3 leading-7 text-foreground/80">
-                      {card.answer}
-                    </p>
-                  </details>
-                ))}
-              </div>
-            </article>
+            <ContentShield>
+              <article className="rounded-3xl border border-border bg-white p-5 sm:p-7">
+                <p className="text-sm font-semibold text-success">
+                  Guía de preguntas y respuestas
+                </p>
+                <h2 className="mt-2 text-2xl font-semibold">
+                  Comprueba las ideas esenciales
+                </h2>
+                <p className="mt-2 leading-7 text-muted">
+                  Abre cada pregunta para consultar la respuesta explicada.
+                </p>
+                <div className="mt-5 space-y-3">
+                  {lesson.flashcards.map((card, index) => (
+                    <details
+                      className="rounded-xl border border-border bg-background p-4 open:bg-white"
+                      key={card.id}
+                    >
+                      <ProtectedText as="summary" className="cursor-pointer font-semibold">
+                        <span className="mr-2 font-mono text-xs text-muted">
+                          {index + 1}.
+                        </span>
+                        {card.question}
+                      </ProtectedText>
+                      <ProtectedText
+                        as="p"
+                        className="mt-3 border-t border-border pt-3 leading-7 text-foreground/80"
+                      >
+                        {card.answer}
+                      </ProtectedText>
+                    </details>
+                  ))}
+                </div>
+              </article>
+            </ContentShield>
 
             <div>
             <div className="mb-4 flex items-center justify-between">
@@ -467,26 +481,31 @@ export function LessonView({
 
         {activeStep === "apply" ? (
           <div className="space-y-5">
-            <div className="rounded-2xl border border-border bg-white p-6">
-              <p className="text-sm font-semibold text-success">
-                Decisión guiada
-              </p>
-              <h2 className="mt-2 text-xl font-semibold">
-                Hechos → norma → razonamiento → conclusión
-              </h2>
-              <p className="mt-2 text-sm leading-6 text-muted">
-                Identifica primero la regla aplicable y después contrasta tu
-                razonamiento con la explicación.
-              </p>
-            </div>
+            <ContentShield>
+              <div className="rounded-2xl border border-border bg-white p-6">
+                <p className="text-sm font-semibold text-success">
+                  Decisión guiada
+                </p>
+                <h2 className="mt-2 text-xl font-semibold">
+                  Hechos → norma → razonamiento → conclusión
+                </h2>
+                <ProtectedText as="p" className="mt-2 text-sm leading-6 text-muted">
+                  Identifica primero la regla aplicable y después contrasta tu
+                  razonamiento con la explicación.
+                </ProtectedText>
+              </div>
+            </ContentShield>
             {cases.map((material) => (
               <Material key={material.id} material={material} />
             ))}
-            <p className="rounded-2xl border border-success/25 bg-success-soft p-5 text-sm leading-6">
+            <ProtectedText
+              as="p"
+              className="rounded-2xl border border-success/25 bg-success-soft p-5 text-sm leading-6"
+            >
               El repaso activo continúa con tarjetas que registran qué
               conceptos necesitas reforzar. Después, el examen comprueba tus
               respuestas sin mostrarte la solución por adelantado.
-            </p>
+            </ProtectedText>
             <button
               className="min-h-12 rounded-xl bg-brand px-5 font-semibold text-white"
               onClick={() => completeAndContinue("apply")}

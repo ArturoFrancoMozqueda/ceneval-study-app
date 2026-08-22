@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LessonView } from "@/components/lesson-view";
+import { ProtectedText } from "@/components/protected-text";
 import {
   getLessonBundle,
   getStudyContinuation,
@@ -45,9 +46,9 @@ export async function TopicDetail({ topicId }: { topicId: number }) {
         <h1 className="mt-2 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">
           {lesson.topic.title}
         </h1>
-        <p className="mt-3 max-w-3xl leading-7 text-muted">
+        <ProtectedText as="p" className="mt-3 max-w-3xl leading-7 text-muted">
           {lesson.topic.description}
-        </p>
+        </ProtectedText>
         <p className="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">
           Material educativo para preparación académica; no constituye asesoría
           jurídica.

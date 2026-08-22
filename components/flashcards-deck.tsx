@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
 import { reviewFlashcardAction } from "@/app/actions/academic";
+import { ContentShield } from "@/components/content-shield";
+import { ProtectedText } from "@/components/protected-text";
 import type { Flashcard } from "@/lib/data/academic";
 
 const ratings = [
@@ -168,31 +170,34 @@ export function FlashcardsDeck({
           ) : null}
         </div>
       ) : null}
-      <button
-        aria-labelledby={`${accessibleId}-action ${accessibleId}-content`}
-        className="mt-4 flex min-h-72 w-full flex-col items-center justify-center rounded-3xl border border-border bg-white p-8 text-center shadow-sm"
-        onClick={() => setRevealed(true)}
-        ref={cardButtonRef}
-        type="button"
-      >
-        <span className="sr-only" id={`${accessibleId}-action`}>
-          {revealed ? "Respuesta revelada:" : "Revelar respuesta para:"}
-        </span>
-        <span
-          className="text-xs font-semibold uppercase tracking-widest text-success"
+      <ContentShield>
+        <button
+          aria-labelledby={`${accessibleId}-action ${accessibleId}-content`}
+          className="mt-4 flex min-h-72 w-full flex-col items-center justify-center rounded-3xl border border-border bg-white p-8 text-center shadow-sm"
+          onClick={() => setRevealed(true)}
+          ref={cardButtonRef}
+          type="button"
         >
-          {revealed ? "Respuesta" : "Pregunta"}
-        </span>
-        <span
-          className="mt-5 max-w-2xl text-xl font-semibold leading-8"
-          id={`${accessibleId}-content`}
-        >
-          {revealed ? card.answer : card.question}
-        </span>
-        {!revealed ? (
-          <span className="mt-6 text-sm text-brand">Toca para revelar</span>
-        ) : null}
-      </button>
+          <span className="sr-only" id={`${accessibleId}-action`}>
+            {revealed ? "Respuesta revelada:" : "Revelar respuesta para:"}
+          </span>
+          <span
+            className="text-xs font-semibold uppercase tracking-widest text-success"
+          >
+            {revealed ? "Respuesta" : "Pregunta"}
+          </span>
+          <ProtectedText
+            as="span"
+            className="mt-5 max-w-2xl text-xl font-semibold leading-8"
+            id={`${accessibleId}-content`}
+          >
+            {revealed ? card.answer : card.question}
+          </ProtectedText>
+          {!revealed ? (
+            <span className="mt-6 text-sm text-brand">Toca para revelar</span>
+          ) : null}
+        </button>
+      </ContentShield>
       <p aria-live="polite" className="sr-only" role="status">
         {revealed ? `Respuesta: ${card.answer}` : ""}
       </p>

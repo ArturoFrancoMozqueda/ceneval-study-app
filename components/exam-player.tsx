@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { submitExamAction, type ActionResult } from "@/app/actions/academic";
+import { ContentShield } from "@/components/content-shield";
+import { ProtectedText } from "@/components/protected-text";
 import type { Exam } from "@/lib/data/academic";
 import {
   canSubmitExamRun,
@@ -142,36 +144,43 @@ export function ExamPlayer({
               ({ id }) => id === answers[String(question.id)],
             );
             return (
-              <article
-                className="rounded-2xl border border-border bg-white p-5"
-                key={question.id}
-              >
-                <p
-                  className={`text-sm font-semibold ${
-                    review?.correct ? "text-success" : "text-danger"
-                  }`}
-                >
-                  {review?.correct ? "Respuesta correcta" : "Necesita repaso"}
-                </p>
-                <h3 className="mt-2 font-semibold">{question.text}</h3>
-                <div className="mt-4 rounded-xl bg-background p-4">
-                  <h4 className="text-sm font-semibold">Tu respuesta</h4>
-                  <p className="mt-1 text-sm leading-6">
-                    {selectedOption?.text}
+              <ContentShield key={question.id}>
+                <article className="rounded-2xl border border-border bg-white p-5">
+                  <p
+                    className={`text-sm font-semibold ${
+                      review?.correct ? "text-success" : "text-danger"
+                    }`}
+                  >
+                    {review?.correct ? "Respuesta correcta" : "Necesita repaso"}
                   </p>
-                  <p className="mt-2 whitespace-pre-line text-sm leading-6 text-muted">
-                    {review?.selectedOptionExplanation}
-                  </p>
-                </div>
-                <div className="mt-4">
-                  <h4 className="text-sm font-semibold">
-                    Explicación general
-                  </h4>
-                  <p className="mt-1 whitespace-pre-line text-sm leading-6 text-muted">
-                    {review?.explanation}
-                  </p>
-                </div>
-              </article>
+                  <ProtectedText as="h3" className="mt-2 font-semibold">
+                    {question.text}
+                  </ProtectedText>
+                  <div className="mt-4 rounded-xl bg-background p-4">
+                    <h4 className="text-sm font-semibold">Tu respuesta</h4>
+                    <ProtectedText as="p" className="mt-1 text-sm leading-6">
+                      {selectedOption?.text}
+                    </ProtectedText>
+                    <ProtectedText
+                      as="p"
+                      className="mt-2 whitespace-pre-line text-sm leading-6 text-muted"
+                    >
+                      {review?.selectedOptionExplanation}
+                    </ProtectedText>
+                  </div>
+                  <div className="mt-4">
+                    <h4 className="text-sm font-semibold">
+                      Explicación general
+                    </h4>
+                    <ProtectedText
+                      as="p"
+                      className="mt-1 whitespace-pre-line text-sm leading-6 text-muted"
+                    >
+                      {review?.explanation}
+                    </ProtectedText>
+                  </div>
+                </article>
+              </ContentShield>
             );
           })}
         </div>
