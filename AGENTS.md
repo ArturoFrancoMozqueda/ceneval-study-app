@@ -187,8 +187,11 @@ alguna sigue abierta; si corriges una, actualiza esta lista.
   de los 70 TXT y 14 lotes no encontró una transcripción que desarrolle
   administración, cuentas, partición y adjudicación hereditaria. No se debe
   crear un paquete solo con legislación; consulta `docs/C58_SOURCE_AUDIT.md`.
-- **Las 19 migraciones del repositorio están aplicadas en CENEVAL y coinciden
-  una a una con `supabase/migrations/`.** Verificado el 22 de agosto de 2026:
+- **Las 20 migraciones del repositorio están aplicadas en CENEVAL y coinciden
+  una a una con `supabase/migrations/`** (la más reciente,
+  `20260822160822_add_profiles_terms_accepted_at`, se aplicó el 22 de agosto
+  por la tarde como parte de la tarea `L-3` del plan de venta). Verificado el
+  22 de agosto de 2026:
   los asesores de Supabase solo muestran el `INFO` esperado de
   `exam_answer_keys` sin políticas (bloqueo deliberado) y un `WARN` de
   protección contra contraseñas filtradas, pendiente de activar (tarea `I-5`

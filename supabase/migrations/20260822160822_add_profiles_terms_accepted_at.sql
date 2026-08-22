@@ -2,8 +2,10 @@
 -- sign-up, so it can be shown as evidence of consent under the LFPDPPP.
 -- Task L-3 of docs/PLAN_ACCION_VENTA.md.
 --
--- NOT applied to any database by this change. This is a migration file
--- only; no local or remote Supabase project has been touched.
+-- Aplicada al proyecto remoto "CENEVAL Study App" (qcseoivljzuxzqeaxfly)
+-- el 22 de agosto de 2026. Este archivo se renombro de
+-- 20260822070000 a 20260822160822 para coincidir con la version que
+-- Supabase le asigno al aplicarla.
 
 alter table public.profiles
   add column terms_accepted_at timestamptz;

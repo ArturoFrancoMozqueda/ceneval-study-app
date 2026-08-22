@@ -112,8 +112,10 @@ mapas conceptuales, 685 flashcards, 57 exámenes, 570 preguntas y 570 claves de
 respuesta**. El catálogo C01–C57 ya está importado, revisado y publicado. Esto
 confirma que el bootstrap administrativo ya ocurrió, pero no sustituye una
 prueba E2E autenticada con más de una cuenta estudiante real (bloqueo B5 de
-[`PLAN_ACCION_VENTA.md`](PLAN_ACCION_VENTA.md)). Sus 19 migraciones están
-aplicadas, coinciden una a una con `supabase/migrations/` y todas las tablas
+[`PLAN_ACCION_VENTA.md`](PLAN_ACCION_VENTA.md)). Sus 20 migraciones están
+aplicadas (la más reciente, `terms_accepted_at`, del 22 de agosto por la
+tarde, tarea `L-3`), coinciden una a una con `supabase/migrations/` y todas
+las tablas
 públicas tienen RLS.
 
 | Elemento | Dato verificado el 22 de agosto de 2026 |
@@ -484,9 +486,9 @@ no locales; ninguna de estas pruebas escribió en CENEVAL remoto.
 
 Queda pendiente:
 
-- crear un proyecto de ensayo aparte de producción, aplicar allí las 19
+- crear un proyecto de ensayo aparte de producción, aplicar allí las 20
   migraciones desde cero y repetir la suite RLS con datos sintéticos (tarea
-  `M-1` de `PLAN_ACCION_VENTA.md`); las 19 migraciones ya están aplicadas en
+  `M-1` de `PLAN_ACCION_VENTA.md`); las 20 migraciones ya están aplicadas en
   CENEVAL, pero ese ensayo con datos no reales sigue sin hacerse;
 - mantener `npm run db:lint:local` sin advertencias; la migración nueva ya
   eliminó los doce avisos de `private.import_class_package_v12` y el reset,
@@ -596,7 +598,7 @@ solo con legislación; repetir después el pipeline 1.2 completo descrito en
 | 1 | Completar el respaldo de transcripciones | Segunda copia independiente y restauración de ensayo |
 | 2 | Ejecutar y probar el respaldo documentado | Exportación fechada, copia externa verificada y restauración de ensayo |
 | 3 | Ampliar y ejecutar la suite RLS | Comprobaciones actuales y casos de temas no aprobados aprobados en CENEVAL |
-| 4 | Crear un proyecto de ensayo Supabase aparte de producción para repetir la suite RLS con datos que no sean reales | Proyecto de ensayo con las 19 migraciones aplicadas y RLS aprobada (tarea `M-1` de `PLAN_ACCION_VENTA.md`) |
+| 4 | Crear un proyecto de ensayo Supabase aparte de producción para repetir la suite RLS con datos que no sean reales | Proyecto de ensayo con las 20 migraciones aplicadas y RLS aprobada (tarea `M-1` de `PLAN_ACCION_VENTA.md`) |
 | 5 | Aprobar C01–C57 — completado | 57 clases publicadas y 57 temas aprobados, verificado el 22 de agosto de 2026 en el proyecto remoto |
 | 6 | Crear pruebas de navegador | Flujos centrales reproducibles en CI o entorno aislado |
 | 7 | Completar y validar el despliegue privado | Variables persistentes, administradora operativa y URL estable aprobada desde teléfono y computadora |
