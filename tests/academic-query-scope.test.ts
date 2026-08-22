@@ -129,7 +129,7 @@ test("getAdminCatalog mantiene una sola consulta relacional y API sin inyeccion"
     /"id,name,classes\(id,title,publication_status,published_at,created_at,topics\(id\)\)"/,
   );
   assert.doesNotMatch(
-    academicSource.match(/const adminCatalogSelection =[\s\S]*?;\n/)?.[0] ?? "",
+    academicSource.match(/const adminCatalogSelection =[\s\S]*?;\r?\n/)?.[0] ?? "",
     /teacher|class_date|description|curriculum|audio_sources/,
   );
   assert.doesNotMatch(source, /select\(["'`]\*|select\(["'`][^"'`]*,\*/);

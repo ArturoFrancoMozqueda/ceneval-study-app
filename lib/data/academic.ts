@@ -10,15 +10,11 @@ import {
   type AdminCatalogRow,
 } from "@/lib/data/admin-catalog";
 import { relationRows } from "@/lib/data/relation-rows";
-import { createServerSupabaseClient } from "@/lib/supabase/server";
 import {
-  getLatestFlashcardReviews,
-  getLatestQuickChecks,
-  summarizeFlashcardReviews,
-  type FlashcardRating,
-  type FlashcardReviewRecord,
-  type QuickCheckRecord,
-} from "@/lib/study/review-schedule";
+  parseReviewOverviewRow,
+  type ReviewOverviewPayload,
+} from "@/lib/data/review-overview";
+import { createServerSupabaseClient } from "@/lib/supabase/server";
 import {
   deriveStudyContinuation,
   type StudyContinuation,
@@ -120,23 +116,8 @@ export type Flashcard = {
   position: number;
 };
 
-export type ReviewFlashcard = Flashcard & {
-  topicId: number;
-  topicTitle: string;
-  classId: number;
-  classTitle: string;
-  curriculumCode: string;
-  rating: FlashcardRating;
-  nextReviewAt: string | null;
-};
-
-export type ReviewOverview = {
-  dueCards: ReviewFlashcard[];
-  currentDifficultCards: number;
-  currentDifficultChecks: number;
-  currentDifficultCount: number;
-  nextReviewAt: string | null;
-};
+export type ReviewFlashcard = ReviewOverviewPayload["dueCards"][number];
+export type ReviewOverview = ReviewOverviewPayload;
 
 export type ExamOption = {
   id: number;
@@ -753,149 +734,18 @@ export async function getLessonBundle(
 
 export async function getReviewOverview(
   userId: string,
-  now: Date = new Date(),
 ): Promise<ReviewOverview> {
+  void userId;
   await connection();
   const supabase = await createServerSupabaseClient();
-  const [reviewsResult, checksResult] = await Promise.all([
-    supabase
-      .from("flashcard_reviews")
-      .select("id,flashcard_id,rating,reviewed_at,next_review_at")
-      .eq("user_id", userId)
-      .order("reviewed_at", { ascending: false }),
-    supabase
-      .from("quick_check_responses")
-      .select("id,topic_id,needs_review,answered_at")
-      .eq("user_id", userId)
-      .order("answered_at", { ascending: false }),
-  ]);
+  const { data, error } = await supabase
+    .rpc("get_review_overview_v1")
+    .single();
+  if (error) fail("getReviewOverview", error);
 
-  if (reviewsResult.error) {
-    fail("getReviewOverview reviews", reviewsResult.error);
+  try {
+    return parseReviewOverviewRow(data);
+  } catch (error) {
+    fail("getReviewOverview contract", error);
   }
-  if (checksResult.error) {
-    fail("getReviewOverview checks", checksResult.error);
-  }
-
-  const reviews: FlashcardReviewRecord[] = (reviewsResult.data ?? []).map(
-    (row) => ({
-      id: row.id as number,
-      flashcardId: row.flashcard_id as number,
-      rating: row.rating as FlashcardRating,
-      reviewedAt: row.reviewed_at as string,
-      nextReviewAt: (row.next_review_at as string | null) ?? null,
-    }),
-  );
-  const checks: QuickCheckRecord[] = (checksResult.data ?? []).map((row) => ({
-    id: row.id as number,
-    topicId: row.topic_id as number,
-    needsReview: row.needs_review as boolean,
-    answeredAt: row.answered_at as string,
-  }));
-  const latestReviews = getLatestFlashcardReviews(reviews);
-  const latestChecks = getLatestQuickChecks(checks);
-  const flashcardIds = latestReviews.map((review) => review.flashcardId);
-
-  const cardsResult = flashcardIds.length
-    ? await supabase
-        .from("flashcards")
-        .select("id,topic_id,question,answer,position")
-        .in("id", flashcardIds)
-    : { data: [], error: null };
-  if (cardsResult.error) {
-    fail("getReviewOverview flashcards", cardsResult.error);
-  }
-
-  const cardRows = (cardsResult.data ?? []).map((row) => ({
-    id: row.id as number,
-    topicId: row.topic_id as number,
-    question: row.question as string,
-    answer: row.answer as string,
-    position: row.position as number,
-  }));
-  const topicIds = [
-    ...new Set([
-      ...cardRows.map((card) => card.topicId),
-      ...latestChecks.map((check) => check.topicId),
-    ]),
-  ];
-  const topicsResult = topicIds.length
-    ? await supabase
-        .from("topics")
-        .select(
-          "id,title,class_id,classes!inner(id,title,curriculum_code,publication_status)",
-        )
-        .in("id", topicIds)
-        .eq("approval_status", "approved")
-        .eq("classes.publication_status", "published")
-    : { data: [], error: null };
-  if (topicsResult.error) {
-    fail("getReviewOverview topics", topicsResult.error);
-  }
-
-  const topics = new Map(
-    (topicsResult.data ?? []).flatMap((row) => {
-      const rawClass = row.classes as unknown;
-      const classValue = Array.isArray(rawClass) ? rawClass[0] : rawClass;
-      if (!classValue || typeof classValue !== "object") return [];
-      const studyClass = classValue as Record<string, unknown>;
-      return [
-        [
-          row.id as number,
-          {
-            id: row.id as number,
-            title: row.title as string,
-            classId: Number(studyClass.id),
-            classTitle: String(studyClass.title),
-            curriculumCode: studyClass.curriculum_code
-              ? String(studyClass.curriculum_code)
-              : "",
-          },
-        ] as const,
-      ];
-    }),
-  );
-  const visibleCards = new Map(
-    cardRows
-      .filter((card) => topics.has(card.topicId))
-      .map((card) => [card.id, card] as const),
-  );
-  const visibleReviews = reviews.filter((review) =>
-    visibleCards.has(review.flashcardId),
-  );
-  const summary = summarizeFlashcardReviews(visibleReviews, now);
-  const currentDifficultChecks = latestChecks.filter(
-    (check) => check.needsReview && topics.has(check.topicId),
-  ).length;
-  const dueCards = summary.due.flatMap((review) => {
-    const card = visibleCards.get(review.flashcardId);
-    if (!card) return [];
-    const topic = topics.get(card.topicId);
-    if (!topic) return [];
-
-    return [
-      {
-        id: card.id,
-        question: card.question,
-        answer: card.answer,
-        position: card.position,
-        topicId: topic.id,
-        topicTitle: topic.title,
-        classId: topic.classId,
-        classTitle: topic.classTitle,
-        curriculumCode: topic.curriculumCode,
-        rating: review.rating,
-        nextReviewAt: review.nextReviewAt,
-      },
-    ];
-  });
-
-  return {
-    dueCards,
-    currentDifficultCards: summary.currentDifficultCount,
-    currentDifficultChecks,
-    currentDifficultCount:
-      summary.currentDifficultCount + currentDifficultChecks,
-    nextReviewAt: summary.nextReviewAt,
-  };
 }

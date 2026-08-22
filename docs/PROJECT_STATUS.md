@@ -2,7 +2,7 @@
 
 Última actualización: 21 de agosto de 2026 (hora de México)
 
-Base documental: `main` en `5f0c7e0` y auditoría remota de solo lectura del 21
+Base documental: `main` en `9a4d472` y auditoría remota de solo lectura del 21
 de agosto de 2026 (hora de México). Los cambios de base de datos y la
 publicación del artefacto actual siguen pendientes.
 
@@ -28,7 +28,7 @@ Los bloqueos operativos reales siguen siendo:
 2. el mecanismo PostgreSQL ya pasó un respaldo y una restauración reales en
    local, pero todavía no existe una exportación del remoto, una copia externa
    cifrada ni una restauración de esa copia en un proyecto de ensayo;
-3. el proyecto local aplica diecisiete migraciones, exige un lint PostgreSQL
+3. el proyecto local aplica dieciocho migraciones, exige un lint PostgreSQL
    local sin advertencias y pasó 141 comprobaciones RLS;
    CENEVAL remoto conserva once migraciones y aún requiere ejecutar el mismo
    gate en un entorno de ensayo autorizado antes de promover cambios;
@@ -261,7 +261,7 @@ evidencias, journeys y vínculos editoriales; 1.0 y 1.1 fallan antes de llamar a
 Supabase. La versión sustituida de C14 permanece en el archivo 1.0 no
 importable.
 
-La implementación pasó pruebas unitarias, TypeScript, lint y build. Las diecisiete
+La implementación pasó pruebas unitarias, TypeScript, lint y build. Las dieciocho
 migraciones locales se aplicaron desde cero en PostgreSQL 17.6 y el runner
 dinámico comprobó round-trip semántico, 2 evidencias, 118 artefactos, 236
 vínculos, estados `draft`/`pending`, rechazo de duplicados sin residuos y RPC
@@ -311,9 +311,18 @@ migraciones antes de habilitar la Server Action.
 
 - `/estudiar/repaso` usa `next_review_at` para construir la cola vencida.
 - La prioridad considera dificultad y antigüedad.
+- `getReviewOverview` obtiene el resumen mediante una sola RPC `security
+  invoker`, en una llamada y una ola. La identidad procede de `auth.uid()` y
+  nunca se acepta como parámetro; la función entrega una sola fila JSON y no
+  transfiere el historial completo a Node.
 - Los contadores usan únicamente la revisión más reciente de cada tarjeta y la
   comprobación más reciente de cada tema; ya no crecen indefinidamente por el
   historial acumulado.
+- Los empates se resuelven de forma determinista por fecha y después por ID;
+  solo cuentan temas aprobados de clases publicadas y actividad propia. La
+  respuesta no trunca las tarjetas vencidas: si una medición real muestra un
+  payload excesivo, el siguiente hito será paginar la experiencia de repaso,
+  no ocultar pendientes.
 - Una cola vacía informa cuándo será el próximo repaso, si existe fecha.
 - `getStudyProgress` filtra por `topic_id` y por el `user_id` autenticado.
 - `/progreso` compara por materia temas con actividad y temas con sus cinco
@@ -367,7 +376,7 @@ contraseñas filtradas está desactivada. Antes de abrir el acceso estudiantil, 
 autorizada debe habilitar esa protección y ejecutar la suite RLS dinámica con
 temas pendientes y rechazados, primero en un proyecto de ensayo.
 
-**Estado local posterior:** PostgreSQL 17.6 aplica diecisiete migraciones desde
+**Estado local posterior:** PostgreSQL 17.6 aplica dieciocho migraciones desde
 cero. `npm run security:rls:local` ejecuta 141 comprobaciones sobre contenido
 sintético y verifica RPC, ownership, tablas trazables, temas `pending` y
 `rejected`, claves de examen y limpieza sin residuos. El ensayo detectó y
@@ -382,6 +391,14 @@ reportaron cero problemas de rendimiento. El único aviso de seguridad fue el
 `INFO` esperado de `exam_answer_keys` sin políticas, cuyo bloqueo deliberado
 también cubre la suite. Estos resultados son exclusivamente locales y no
 sustituyen el gate pendiente en un proyecto remoto de ensayo.
+
+Ese mismo entorno aplicó la migración 18 del resumen de repaso y ejecutó una
+prueba específica con dos estudiantes, una administradora y más de 500 eventos
+históricos. La RPC devolvió una sola fila, respetó el último evento por fecha e
+ID, calculó vencimiento, dificultad y próxima fecha, ocultó temas y clases no
+publicables, denegó ejecución a `anon` y `service_role` y terminó con cero
+residuos. El lint de base quedó en cero advertencias y la suite RLS conservó
+141/141 comprobaciones. Es evidencia exclusivamente local.
 
 ## 4. Seguridad y calidad: qué está probado
 
@@ -422,7 +439,7 @@ no locales; ninguna de estas pruebas escribió en CENEVAL remoto.
 
 Queda pendiente:
 
-- aplicar las seis migraciones locales pendientes en un proyecto de ensayo y
+- aplicar las siete migraciones locales pendientes en un proyecto de ensayo y
   repetir allí la suite RLS antes de CENEVAL;
 - mantener `npm run db:lint:local` sin advertencias; la migración nueva ya
   eliminó los doce avisos de `private.import_class_package_v12` y el reset,
