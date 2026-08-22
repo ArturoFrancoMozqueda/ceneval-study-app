@@ -406,13 +406,17 @@ También existen cabeceras de seguridad, redirección de autenticación limitada
 a destinos internos y un aviso educativo/de vigencia en la interfaz.
 
 Con Supabase local activo, `npm run test:content-db-local` prueba el round-trip
-1.2 y `npm run test:e2e:local` prepara usuarios y contenido sintéticos, compila,
-levanta la app y valida en Chromium el acceso privado, login administrativo,
-skip-link, navegación hasta un tema, autosave y persistencia después de
-recargar. El mismo E2E abre además `/administrar`, comprueba el conteo publicado
-y recorre el detalle editorial en modo de solo lectura. La repetición del 21 de
-agosto terminó con cero errores de consola y limpieza final en cero. Ese mismo
-día `test:backup-restore:local` volvió a completar en PostgreSQL 17 el respaldo,
+1.2 y `npm run test:e2e:local` prepara usuarios y contenido sintéticos, compila
+y levanta la app en un puerto loopback dedicado. El 21 de agosto el E2E recorrió
+en Chromium el acceso privado, skip-link, navegación por teclado, autosave,
+diez tarjetas, examen de diez reactivos, resultado, historial, panel editorial
+de solo lectura y cuatro rutas inválidas. También pasó en un viewport móvil
+táctil de 320 px, comprobó targets de 24 px, movimiento reducido computado y
+un proxy de reflow para zoom de 200%, con cero errores de consola, página, HTTP
+5xx o red no permitidos y limpieza final en cero. La evidencia y sus límites
+están en `docs/ACCESSIBILITY_TESTING.md`: todavía no sustituye pruebas manuales
+con lectores de pantalla ni zoom real. Ese mismo día
+`test:backup-restore:local` volvió a completar en PostgreSQL 17 el respaldo,
 restauración y round-trip sin artefactos residuales. Los runners rechazan URLs
 no locales; ninguna de estas pruebas escribió en CENEVAL remoto.
 
@@ -423,8 +427,8 @@ Queda pendiente:
 - mantener `npm run db:lint:local` sin advertencias; la migración nueva ya
   eliminó los doce avisos de `private.import_class_package_v12` y el reset,
   lint, round-trip RPC y RLS local volvieron a pasar;
-- ampliar E2E a examen, tarjetas, progreso, errores y rutas inválidas;
-- auditoría final de accesibilidad en navegador y dispositivos reales;
+- ejecutar y registrar la matriz manual de accesibilidad con lectores de
+  pantalla, zoom real, contraste alto y dispositivos físicos;
 - dejar de degradar silenciosamente ciertos errores de progreso a `null`.
 
 ## 5. Contenido terminado y pendiente

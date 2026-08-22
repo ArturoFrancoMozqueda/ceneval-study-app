@@ -45,10 +45,13 @@ test("rechaza hosts, puertos y roles que podrían apuntar fuera del ensayo", () 
   );
 });
 
-test("la URL de navegador también falla cerrada fuera del puerto local", () => {
-  assert.equal(validateLocalBaseUrl("http://localhost:3000/path"), "http://localhost:3000");
-  assert.throws(() => validateLocalBaseUrl("https://localhost:3000"), /protocolo/);
-  assert.throws(() => validateLocalBaseUrl("http://127.0.0.1:3001"), /puerto/);
+test("la URL de navegador falla cerrada ante puerto, protocolo o ruta inesperados", () => {
+  assert.equal(validateLocalBaseUrl("http://localhost:3100"), "http://localhost:3100");
+  assert.throws(() => validateLocalBaseUrl("http://localhost:3100/path"), /ruta/);
+  assert.throws(() => validateLocalBaseUrl("http://localhost:3100/?x=1"), /query/);
+  assert.throws(() => validateLocalBaseUrl("http://localhost:3100/#x"), /fragmento/);
+  assert.throws(() => validateLocalBaseUrl("https://localhost:3100"), /protocolo/);
+  assert.throws(() => validateLocalBaseUrl("http://127.0.0.1:3000"), /puerto/);
 });
 
 test("solo considera reentrante una clase con marcadores sintéticos exactos", () => {
@@ -84,6 +87,9 @@ test("el runner conserva cleanup idempotente en finally y no imprime secretos", 
   assert.match(runner, /auth\.admin\.deleteUser/);
   assert.match(runner, /selectSyntheticResidueIds/);
   assert.match(runner, /randomBytes\(32\)\.toString\("base64url"\)/);
+  assert.match(runner, /openSync\(fixtureLockPath, "wx", 0o600\)/);
+  assert.match(runner, /readFileSync\(fixtureLockPath, "utf8"\) === lock\.owner/);
+  assert.match(runner, /releaseFixtureLock\(fixtureLock\)/);
   assert.match(runner, /OPS_READINESS_TOKEN: readinessToken/);
   assert.match(
     runner,
@@ -93,4 +99,5 @@ test("el runner conserva cleanup idempotente en finally y no imprime secretos", 
   assert.match(runner, /\.from\("subjects"\)\.delete\(\)/);
   assert.doesNotMatch(runner, /console\.(?:log|error)\([^\n]*(?:Password|secretKey|publishableKey)/);
   assert.doesNotMatch(runner, /console\.(?:log|error)\([^\n]*readinessToken/);
+  assert.doesNotMatch(runner, /topicsError\.(?:message|details|hint)/);
 });

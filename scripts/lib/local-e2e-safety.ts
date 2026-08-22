@@ -1,6 +1,7 @@
 export const LOCAL_PROJECT_ID = "ceneval-study-app";
 export const LOCAL_API_PORT = "54321";
 export const LOCAL_DB_PORT = "54322";
+export const LOCAL_E2E_PORT = "3100";
 export const SYNTHETIC_CURRICULUM_CODE = "C41";
 export const SYNTHETIC_CLASS_TITLE = "Clase sintética de persistencia";
 export const SYNTHETIC_SUBJECT_NAME = "Materia sintética";
@@ -111,13 +112,13 @@ export function validateLocalSupabaseStatus(
 export function validateLocalBaseUrl(rawUrl: string) {
   const url = requireLoopbackUrl(
     rawUrl,
-    "3000",
+    LOCAL_E2E_PORT,
     new Set(["http:"]),
     "E2E_BASE_URL",
   );
-  url.pathname = "/";
-  url.search = "";
-  url.hash = "";
+  if (url.pathname !== "/" || url.search || url.hash) {
+    throw new Error("Gate local: E2E_BASE_URL no admite ruta, query ni fragmento.");
+  }
   return url.toString().replace(/\/$/, "");
 }
 
