@@ -166,10 +166,15 @@ async function verifyPersistedPackage(
     );
   }
 
-  assertClassPackageRoundTrip(loaded.bundle, exported, {
-    publicationStatus: classResult.data.publication_status,
-    topicApprovalStatuses: topicsResult.data.map((topic) => topic.approval_status),
-  });
+  try {
+    assertClassPackageRoundTrip(loaded.bundle, exported, {
+      publicationStatus: classResult.data.publication_status,
+      topicApprovalStatuses: topicsResult.data.map((topic) => topic.approval_status),
+    });
+  } catch (error) {
+    const detail = error instanceof Error ? error.message : "verificación fallida";
+    throw new Error(`${loaded.bundle.curriculum.code}: ${detail}`);
+  }
 }
 
 async function main(): Promise<void> {
