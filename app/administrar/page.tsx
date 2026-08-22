@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { requireAdmin } from "@/lib/auth";
-import { getClassesForSubject, getSubjects } from "@/lib/data/academic";
+import { getAdminCatalog } from "@/lib/data/academic";
 import { deriveEditorialOnboarding } from "@/lib/editorial-onboarding";
 import {
   publicationStatusLabels,
@@ -11,13 +11,8 @@ export const metadata = { title: "Panel editorial" };
 
 export default async function AdminPage() {
   await requireAdmin();
-  const subjects = await getSubjects();
-  const groups = await Promise.all(
-    subjects.map(async (subject) => ({
-      subject,
-      classes: await getClassesForSubject(subject.id),
-    })),
-  );
+  const groups = await getAdminCatalog();
+  const subjects = groups.map(({ subject }) => subject);
   const classes = groups.flatMap(({ classes: subjectClasses, subject }) =>
     subjectClasses.map((studyClass) => ({ ...studyClass, subject })),
   );

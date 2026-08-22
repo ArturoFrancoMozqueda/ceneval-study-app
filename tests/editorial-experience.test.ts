@@ -32,6 +32,9 @@ test("los metadatos describen la biblioteca editorial y anuncian el acceso", () 
 test("el primer estado administrativo dirige al flujo editorial honesto", () => {
   const admin = source("app/administrar/page.tsx");
 
+  assert.ok(admin.indexOf("await requireAdmin()") < admin.indexOf("await getAdminCatalog()"));
+  assert.match(admin, /const groups = await getAdminCatalog\(\)/);
+  assert.doesNotMatch(admin, /getSubjects|getClassesForSubject|subjects\.map\(async/);
   assert.match(admin, /Empieza aquí/);
   assert.match(admin, /deriveEditorialOnboarding\(subjects\)/);
   assert.match(admin, /href=\{onboarding\.actionHref\}/);
