@@ -577,6 +577,46 @@ const traceablePackages = [
       /Reglamento publicado el 28-04-2026/i,
     ],
   },
+  {
+    code: "C37",
+    fileName: "audio-50-patentes-modelos-utilidad.json",
+    artifacts: 154,
+    evidence: 13,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /conocimientos técnicos accesibles al público en México o en el extranjero/i,
+      /patente requiere simultáneamente novedad, actividad inventiva y aplicación industrial/i,
+      /reclamados exclusivamente como tales, no se consideran invenciones/i,
+      /reivindicaciones.*determinan el alcance concedido/i,
+      /veinte años improrrogables contados desde la fecha de presentación/i,
+      /modelo de utilidad.*mejoras funcionales/i,
+      /no enumera.*actividad inventiva como requisito autónomo/i,
+      /quince años improrrogables desde la fecha de presentación/i,
+      /no garantiza concesión ni libertad de operación/i,
+      /periodo de doce meses.*no debe asumirse que todos los países/i,
+      /ultima reforma DOF 03-04-2026/i,
+    ],
+  },
+  {
+    code: "C38",
+    fileName: "audio-51-disenos-denominaciones-origen.json",
+    artifacts: 155,
+    evidence: 14,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /apariencia ornamental y ventaja funcional no son lo mismo/i,
+      /vigencia inicial es de cinco años desde la fecha de presentación/i,
+      /hasta un máximo de veinticinco/i,
+      /denominación de origen exige una relación exclusiva o esencial más intensa/i,
+      /bienes nacionales.*no se apropia del nombre como marca individual/i,
+      /No existe una renovación decenal de la declaración/i,
+      /denominación de origen acredita la NOM y para indicación geográfica las reglas de uso/i,
+      /autorizacion dura diez años desde su solicitud/i,
+      /‘tipo’, ‘género’, ‘manera’ o ‘imitación’/i,
+      /reforma DOF 03-04-2026/i,
+      /Reglamento DOF 28-04-2026/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -912,6 +952,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una regla societaria o marcaria obsoleta como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C37" || expected.code === "C38") {
+      const obsoleteAsCurrent =
+        expected.code === "C37"
+          ? /estado de la técnica.*(?:solo|únicamente).*(?:México|nacional)|patente.*(?:sin|no requiere).*actividad inventiva|vigencia.*veinte años.*otorgamiento|modelo de utilidad.*(?:requiere|exige).*actividad inventiva|modelo de utilidad.*(?:decorativ|ornamental)|búsqueda.*(?:garantiza|asegura).*(?:concesión|libertad)|divulgación.*doce meses.*(?:siempre|todos los países)/i
+          : /diseño industrial.*(?:protege|incluye).*(?:función técnica|utilidad funcional)|vigencia.*(?:quince años|desde el otorgamiento)|declaración.*(?:diez años|renovación decenal)|denominación de origen.*marca privada|(?:denominación|indicación).*(?:son iguales|idénticas)|indicación geográfica.*(?:siempre|obligatoriamente).*NOM|(?:tipo|género|imitación).*(?:permite|vuelve lícito)/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una regla de propiedad industrial retirada como respuesta vigente.`,
         );
       }
     }

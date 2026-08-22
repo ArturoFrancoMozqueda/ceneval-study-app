@@ -1,10 +1,13 @@
 {
-  "packageVersion": "1.1",
+  "packageVersion": "1.2",
   "curriculum": {
     "code": "C38",
     "order": 38,
     "audioSources": [
-      {"audioNumber": 51,"fragment": "Primera parte: diseños industriales y denominaciones de origen"}
+      {
+        "audioNumber": 51,
+        "fragment": "Primera parte: diseños industriales y denominaciones de origen"
+      }
     ]
   },
   "subject": {
@@ -19,111 +22,1673 @@
     "originalFile": "AUDIO 51.txt",
     "cleaned": "Se conservó el bloque inicial del Audio 51 sobre diseños industriales y denominaciones de origen; el bloque posterior de derechos de autor se reservó para C39. Se eliminaron conversaciones personales, lenguaje ofensivo, opiniones discriminatorias, publicidad y ejemplos imprecisos. Se corrigió que el diseño industrial comprende dibujos ornamentales y modelos tridimensionales sin efectos técnicos, exige novedad y aplicación industrial, y dura cinco años desde la solicitud, renovable por periodos iguales hasta veinticinco años. También se corrigió que no es la denominación de origen la que se renueva cada diez años: la declaración de protección subsiste mientras permanezcan sus condiciones; la autorización individual para usar una denominación de origen o indicación geográfica dura diez años desde su solicitud y puede renovarse. Se agregó la diferencia vigente entre denominación de origen e indicación geográfica."
   },
-  "topics": [{
-    "title": "Apariencia industrial y origen geográfico protegido",
-    "description": "Diferencias, requisitos, vigencias y uso autorizado de diseños industriales, denominaciones de origen e indicaciones geográficas.",
-    "learningJourney": {
-      "openingPrompt": "¿Se protege igual la forma ornamental de una botella que el nombre geográfico del producto que contiene?",
-      "quickChecks": [
-        {"prompt":"¿Qué protege un diseño industrial?","answer":"La apariencia ornamental de un producto mediante un dibujo industrial o una forma tridimensional, no sus efectos puramente técnicos.","feedback":"Distingue apariencia de función."},
-        {"prompt":"¿Cuál es la vigencia máxima del diseño industrial?","answer":"Cinco años desde la solicitud, renovables por periodos de cinco hasta un máximo de veinticinco años.","feedback":"La renovación no es ilimitada."},
-        {"prompt":"¿Qué dura diez años en una denominación de origen?","answer":"La autorización individual de uso, no la declaración de protección.","feedback":"La declaración subsiste mientras continúen las condiciones que la motivaron."}
-      ],
-      "practicalCase": {
-        "facts": "Una cooperativa fabrica una botella con silueta tridimensional ornamental propia para una bebida regional. Además quiere imprimir una denominación de origen protegida, aunque parte de su producción ocurre fuera de la zona delimitada.",
-        "question": "¿Qué protecciones y requisitos deben analizarse?",
-        "legalRule": "Los artículos 65 a 81 LFPPI regulan diseños industriales; los artículos 264 a 269 y 298 a 304 regulan denominaciones de origen, indicaciones geográficas y autorizaciones de uso.",
-        "reasoning": "La silueta puede solicitarse como modelo industrial si es nueva, de creación independiente, difiere significativamente y tiene aplicación industrial, sin proteger rasgos dictados únicamente por función técnica. La denominación de origen es un bien nacional y solo puede usarse con autorización del IMPI; la persona productora debe operar dentro de la zona y cumplir la NOM y demás condiciones aplicables.",
-        "conclusion": "La cooperativa puede proteger la apariencia mediante registro propio, pero no puede utilizar lícitamente la denominación protegida para producción ajena a la zona o sin autorización."
+  "topics": [
+    {
+      "title": "Apariencia industrial y origen geográfico protegido",
+      "description": "Diferencias, requisitos, vigencias y uso autorizado de diseños industriales, denominaciones de origen e indicaciones geográficas.",
+      "learningJourney": {
+        "openingPrompt": "¿Se protege igual la forma ornamental de una botella que el nombre geográfico del producto que contiene?",
+        "quickChecks": [
+          {
+            "prompt": "¿Qué protege un diseño industrial?",
+            "answer": "La apariencia ornamental de un producto mediante un dibujo industrial o una forma tridimensional, no sus efectos puramente técnicos.",
+            "feedback": "Distingue apariencia de función.",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+              "ev-c38-dof-2026-arts67-82-disenos",
+              "ev-c38-reglamento-2026-arts45-46-disenos",
+              "ev-c38-a51-l005-009-vigencia-diseno"
+            ]
+          },
+          {
+            "prompt": "¿Cuál es la vigencia máxima del diseño industrial?",
+            "answer": "Cinco años desde la solicitud, renovables por periodos de cinco hasta un máximo de veinticinco años.",
+            "feedback": "La renovación no es ilimitada.",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+              "ev-c38-dof-2026-arts67-82-disenos",
+              "ev-c38-reglamento-2026-arts45-46-disenos",
+              "ev-c38-a51-l005-009-vigencia-diseno"
+            ]
+          },
+          {
+            "prompt": "¿Qué dura diez años en una denominación de origen?",
+            "answer": "La autorización individual de uso, no la declaración de protección.",
+            "feedback": "La declaración subsiste mientras continúen las condiciones que la motivaron.",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una cooperativa fabrica una botella con silueta tridimensional ornamental propia para una bebida regional. Además quiere imprimir una denominación de origen protegida, aunque parte de su producción ocurre fuera de la zona delimitada.",
+          "question": "¿Qué protecciones y requisitos deben analizarse?",
+          "legalRule": "Los artículos 65 a 81 LFPPI regulan diseños industriales; los artículos 264 a 269 y 298 a 304 regulan denominaciones de origen, indicaciones geográficas y autorizaciones de uso.",
+          "reasoning": "La silueta puede solicitarse como modelo industrial si es nueva, de creación independiente, difiere significativamente y tiene aplicación industrial, sin proteger rasgos dictados únicamente por función técnica. La denominación de origen es un bien nacional y solo puede usarse con autorización del IMPI; la persona productora debe operar dentro de la zona y cumplir la NOM y demás condiciones aplicables.",
+          "conclusion": "La cooperativa puede proteger la apariencia mediante registro propio, pero no puede utilizar lícitamente la denominación protegida para producción ajena a la zona o sin autorización.",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+            "ev-c38-dof-2026-arts67-82-disenos",
+            "ev-c38-reglamento-2026-arts45-46-disenos",
+            "ev-c38-lfppi-arts298-314-autorizacion-uso",
+            "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+            "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+            "ev-c38-lfppi-arts264-271-do-ig",
+            "ev-c38-reglamento-2026-arts127-133-vinculo-geografico",
+            "ev-c38-a51-l005-009-vigencia-diseno"
+          ]
+        },
+        "closingPrompt": "Compara diseño industrial, denominación de origen e indicación geográfica indicando qué protegen, quién es titular y cuánto dura cada derecho o autorización.",
+        "nextActivity": "Estudia el mapa visual, responde la guía de doce preguntas y resuelve los diez casos originales.",
+        "openingPromptEvidenceIds": [
+          "ev-c38-lfppi-arts65-68-disenos-requisitos",
+          "ev-c38-dof-2026-arts67-82-disenos"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c38-lfppi-arts65-68-disenos-requisitos",
+          "ev-c38-dof-2026-arts67-82-disenos",
+          "ev-c38-lfppi-arts298-314-autorizacion-uso",
+          "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+          "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+          "ev-c38-lfppi-arts264-271-do-ig",
+          "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c38-lfppi-arts65-68-disenos-requisitos",
+          "ev-c38-lfppi-arts264-271-do-ig"
+        ]
       },
-      "closingPrompt": "Compara diseño industrial, denominación de origen e indicación geográfica indicando qué protegen, quién es titular y cuánto dura cada derecho o autorización.",
-      "nextActivity": "Estudia el mapa visual, responde la guía de doce preguntas y resuelve los diez casos originales."
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "El diseño industrial protege la apariencia nueva y aplicable industrialmente de un producto: dibujo ornamental bidimensional o modelo tridimensional sin efectos técnicos. Su registro dura cinco años desde la solicitud y puede renovarse hasta veinticinco. La denominación de origen y la indicación geográfica vinculan productos con una zona; su protección nace por declaración del IMPI, son bienes nacionales y solo se usan con autorización. La declaración dura mientras subsistan sus condiciones; la autorización de uso dura diez años renovables.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+            "ev-c38-dof-2026-arts67-82-disenos",
+            "ev-c38-reglamento-2026-arts45-46-disenos",
+            "ev-c38-lfppi-arts298-314-autorizacion-uso",
+            "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+            "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+            "ev-c38-lfppi-arts272-297-declaracion",
+            "ev-c38-dof-2026-arts274-295-declaracion",
+            "ev-c38-reglamento-2026-arts134-144-declaracion",
+            "ev-c38-lfppi-arts264-271-do-ig",
+            "ev-c38-reglamento-2026-arts127-133-vinculo-geografico",
+            "ev-c38-a51-l005-009-vigencia-diseno"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "El diseño industrial y las figuras geográficas pertenecen a la propiedad industrial, pero protegen objetos distintos. El primero se concentra en la apariencia de un producto creado por una persona diseñadora. Las denominaciones de origen y las indicaciones geográficas protegen un vínculo colectivo entre producto, reputación o cualidades y territorio.\n\nLos diseños industriales comprenden dibujos y modelos industriales. El dibujo industrial es una combinación de figuras, líneas o colores incorporada a un producto industrial o artesanal con fines ornamentales, dándole aspecto peculiar y propio. El modelo industrial es una forma tridimensional que sirve de tipo o patrón de fabricación y da apariencia especial, siempre que no implique efectos técnicos.\n\nPara registrarse, el diseño debe ser nuevo y susceptible de aplicación industrial. La novedad exige creación independiente y diferencia en grado significativo respecto de diseños conocidos. La comparación atiende la impresión general producida en una persona técnica y el grado de libertad de la persona diseñadora. Detalles irrelevantes no bastan para considerar dos diseños diferentes.\n\nNo se protegen mediante diseño los elementos dictados únicamente por una función técnica ni, en general, características cuya reproducción exacta sea necesaria para montar o conectar mecánicamente productos. Sí puede protegerse una parte de producto o una conexión modular cuando cumpla los requisitos legales. Esto evita confundir diseño industrial con patente o modelo de utilidad: apariencia ornamental y ventaja funcional no son lo mismo.\n\nLa solicitud ante el IMPI identifica solicitante y persona diseñadora, denomina el diseño e incorpora reproducciones gráficas o fotográficas claras y una descripción. El alcance del derecho se determina por la descripción y las reproducciones otorgadas. El registro permite impedir que terceros fabriquen, usen, vendan, ofrezcan o importen sin consentimiento el producto que incorpore el diseño o una copia sustancial.\n\nLa vigencia inicial es de cinco años desde la fecha de presentación. Puede renovarse por periodos sucesivos de cinco años hasta un máximo de veinticinco, pagando las tarifas. La renovación se solicita durante los seis meses anteriores al vencimiento, sin perjuicio del plazo de gracia legal.\n\nLa denominación de origen corresponde a un producto originario de una zona cuando su calidad, características o reputación se deben exclusiva o esencialmente al origen geográfico de materias primas, procesos de producción y factores naturales y culturales. Emitida la declaración, debe existir una Norma Oficial Mexicana específica.\n\nLa indicación geográfica reconoce una zona, una referencia o una combinación de producto y zona para señalar origen, cuando determinada calidad, características o reputación se atribuyen a ese origen por materias primas, procesos o factores naturales y culturales. El vínculo requerido es distinto: la denominación de origen exige una relación exclusiva o esencial más intensa; la indicación geográfica permite que alguno de esos aspectos sustente la atribución.\n\nLa protección comienza con la declaración del IMPI. Las denominaciones de origen e indicaciones geográficas protegidas son bienes nacionales; una empresa no se apropia del nombre como marca individual. La vigencia de la declaración depende de que subsistan las condiciones que la motivaron. No existe una renovación decenal de la declaración.\n\nPara usar la figura protegida, la persona física o moral solicita autorización. Debe dedicarse directamente a extraer, producir o elaborar el producto dentro de la zona; para denominación de origen acredita la NOM y para indicación geográfica las reglas de uso, además de los requisitos de la declaración. La autorizacion dura diez años desde su solicitud y puede renovarse por periodos iguales. Su transmision se rige por la legislacion comun y debe inscribirse ante el IMPI para producir efectos frente a terceros; la nueva persona usuaria debe acreditar las condiciones legales.\n\nLa persona autorizada debe emplear la denominación o indicación tal como aparece en la declaración y aplicar la leyenda o siglas D.O.P. o I.G.P. El uso ilegal se sanciona incluso si se agregan palabras como ‘tipo’, ‘género’, ‘manera’ o ‘imitación’ capaces de confundir o constituir competencia desleal.\n\nMétodo CENEVAL: primero identifica si el caso trata de apariencia o procedencia; después clasifica dibujo o modelo industrial, o diferencia denominación e indicación; aplica requisitos; distingue declaración y autorización; calcula vigencia y finalmente verifica territorio, NOM o reglas de uso.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+            "ev-c38-dof-2026-arts67-82-disenos",
+            "ev-c38-reglamento-2026-arts45-46-disenos",
+            "ev-c38-lfppi-arts298-314-autorizacion-uso",
+            "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+            "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+            "ev-c38-lfppi-arts272-297-declaracion",
+            "ev-c38-dof-2026-arts274-295-declaracion",
+            "ev-c38-reglamento-2026-arts134-144-declaracion",
+            "ev-c38-lfppi-arts264-271-do-ig",
+            "ev-c38-reglamento-2026-arts127-133-vinculo-geografico",
+            "ev-c38-a51-l005-009-vigencia-diseno"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Ley Federal de Proteccion a la Propiedad Industrial: el texto consolidado vigente incorpora la reforma DOF 03-04-2026 y debe leerse con el Reglamento DOF 28-04-2026. Los articulos 65 a 82 regulan dibujos, modelos, novedad, solicitud, vigencia y alcance del diseño industrial; 264 a 271, denominacion de origen, indicacion geografica, bienes nacionales y vigencia de la declaracion; 272 a 297, la declaracion; y 298 a 314, autorizacion, uso, renovacion, transmision y terminacion de la autorizacion.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+            "ev-c38-dof-2026-arts67-82-disenos",
+            "ev-c38-reglamento-2026-arts45-46-disenos",
+            "ev-c38-lfppi-arts298-314-autorizacion-uso",
+            "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+            "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+            "ev-c38-lfppi-arts272-297-declaracion",
+            "ev-c38-dof-2026-arts274-295-declaracion",
+            "ev-c38-reglamento-2026-arts134-144-declaracion",
+            "ev-c38-lfppi-arts264-271-do-ig",
+            "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Un patron de lineas y colores aplicado a una vajilla puede ser dibujo industrial. La forma tridimensional ornamental de una lampara puede ser modelo industrial. En cambio, una denominacion de origen protegida identifica un producto cuyas condiciones se vinculan con la zona y su declaracion; una empresa solo puede usarla legalmente si obtiene autorizacion y cumple las reglas aplicables.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts65-68-disenos-requisitos",
+            "ev-c38-dof-2026-arts67-82-disenos",
+            "ev-c38-lfppi-arts298-314-autorizacion-uso",
+            "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+            "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+            "ev-c38-lfppi-arts264-271-do-ig",
+            "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo CENEVAL",
+          "content": "Una persona registra en 2026 una forma tridimensional nueva para un envase. El primer periodo concluye cinco años después de la solicitud; podrá renovar sucesivamente hasta completar veinticinco años. Si la forma está dictada únicamente por el acoplamiento técnico indispensable, ese elemento no queda protegido como diseño industrial.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+            "ev-c38-dof-2026-arts67-82-disenos",
+            "ev-c38-reglamento-2026-arts45-46-disenos",
+            "ev-c38-a51-l005-009-vigencia-diseno"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Diseño industrial: apariencia, no función pura. Dibujo: figuras, líneas o colores ornamentales. Modelo industrial: forma tridimensional ornamental. Requisitos: novedad y aplicación industrial. Vigencia: cinco años renovables hasta veinticinco. Denominación de origen: vínculo exclusivo o esencial con zona, materias primas, procesos y factores. Indicación geográfica: calidad, característica o reputación atribuible al origen. Declaración: inicia protección y subsiste mientras existan condiciones. Autorización: permite uso durante diez años renovables. IMPI: autoridad. D.O.P. e I.G.P.: siglas obligatorias para persona autorizada.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+            "ev-c38-dof-2026-arts67-82-disenos",
+            "ev-c38-reglamento-2026-arts45-46-disenos",
+            "ev-c38-lfppi-arts298-314-autorizacion-uso",
+            "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+            "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+            "ev-c38-lfppi-arts264-271-do-ig",
+            "ev-c38-reglamento-2026-arts127-133-vinculo-geografico",
+            "ev-c38-a51-l005-009-vigencia-diseno"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía intensiva de preguntas y respuestas",
+          "content": "1. ¿Qué es dibujo industrial? Respuesta: combinación ornamental de figuras, líneas o colores incorporada a un producto. 2. ¿Qué es modelo industrial? Respuesta: forma tridimensional ornamental sin efectos técnicos. 3. ¿Qué requisitos tienen? Respuesta: novedad y aplicación industrial. 4. ¿Cómo se valora novedad? Respuesta: creación independiente y diferencia significativa en impresión general. 5. ¿Qué no protege? Respuesta: rasgos dictados únicamente por función técnica. 6. ¿Cuánto dura? Respuesta: cinco años desde solicitud, renovables hasta veinticinco. 7. ¿Qué es denominación de origen? Respuesta: producto vinculado esencialmente a una zona por materias primas, procesos y factores naturales y culturales. 8. ¿Qué es indicación geográfica? Respuesta: referencia territorial cuya calidad, característica o reputación se atribuye al origen. 9. ¿Quién declara protección? Respuesta: IMPI. 10. ¿De quién son estas figuras protegidas? Respuesta: son bienes nacionales. 11. ¿Cuánto dura la declaración? Respuesta: mientras subsistan las condiciones que la motivaron. 12. ¿Cuánto dura la autorización de uso? Respuesta: diez años desde la solicitud, renovables por periodos iguales.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+            "ev-c38-dof-2026-arts67-82-disenos",
+            "ev-c38-reglamento-2026-arts45-46-disenos",
+            "ev-c38-lfppi-arts298-314-autorizacion-uso",
+            "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+            "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+            "ev-c38-lfppi-arts272-297-declaracion",
+            "ev-c38-dof-2026-arts274-295-declaracion",
+            "ev-c38-reglamento-2026-arts134-144-declaracion",
+            "ev-c38-lfppi-arts264-271-do-ig",
+            "ev-c38-reglamento-2026-arts127-133-vinculo-geografico",
+            "ev-c38-a51-l005-009-vigencia-diseno"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Diseño industrial: apariencia protegible. Dibujo industrial: ornamentación bidimensional. Modelo industrial: forma tridimensional. Creación independiente: ausencia de diseño idéntico previo. Grado significativo: impresión general diferente. Aplicación industrial: fabricación o uso productivo. Reproducciones: imágenes que delimitan el diseño. Copia sustancial: reproducción relevante protegida. Renovación: extensión quinquenal. Zona geográfica: región delimitada. Denominación de origen: vínculo territorial intenso. Indicación geográfica: identificación territorial de calidad o reputación. Declaración: acto que inicia protección. Bien nacional: titularidad no individual. NOM: estándar obligatorio de la denominación. Reglas de uso: condiciones de la indicación. Autorización: permiso individual del IMPI. D.O.P.: denominación protegida. I.G.P.: indicación protegida.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+            "ev-c38-dof-2026-arts67-82-disenos",
+            "ev-c38-reglamento-2026-arts45-46-disenos",
+            "ev-c38-lfppi-arts298-314-autorizacion-uso",
+            "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+            "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+            "ev-c38-lfppi-arts264-271-do-ig",
+            "ev-c38-reglamento-2026-arts127-133-vinculo-geografico",
+            "ev-c38-a51-l005-009-vigencia-diseno"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "No confundas diseño industrial con decoración de interiores o modelo de negocio. No confundas modelo industrial con modelo de utilidad. No protejas como diseño rasgos exclusivamente técnicos. No digas que dura quince años: son cinco renovables hasta veinticinco. No cuentes desde el otorgamiento sino desde la solicitud. No trates una denominación de origen como marca privada. No confundas declaración con autorización de uso. No digas que la declaración se renueva cada diez años. No omitas que la denominación requiere una NOM específica. No equipares automáticamente denominación e indicación. No uses una figura protegida solo por producir algo parecido. No creas que agregar ‘tipo’ o ‘imitación’ vuelve lícito el uso.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+            "ev-c38-dof-2026-arts67-82-disenos",
+            "ev-c38-reglamento-2026-arts45-46-disenos",
+            "ev-c38-lfppi-arts298-314-autorizacion-uso",
+            "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+            "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+            "ev-c38-lfppi-arts272-297-declaracion",
+            "ev-c38-dof-2026-arts274-295-declaracion",
+            "ev-c38-reglamento-2026-arts134-144-declaracion",
+            "ev-c38-lfppi-arts264-271-do-ig",
+            "ev-c38-reglamento-2026-arts127-133-vinculo-geografico",
+            "ev-c38-a51-l005-009-vigencia-diseno",
+            "ev-c38-a51-l011-013-renovacion-figuras"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual: apariencia y territorio",
+        "description": "Dos rutas de protección industrial: diseño del producto y origen geográfico.",
+        "nodes": [
+          {
+            "id": "pi",
+            "label": "Propiedad industrial",
+            "description": "Protección de valor competitivo.",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-lfppi-arts264-271-do-ig"
+            ]
+          },
+          {
+            "id": "apariencia",
+            "label": "Apariencia del producto",
+            "description": "Ruta de diseño industrial.",
+            "parentId": "pi",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-dof-2026-arts67-82-disenos"
+            ]
+          },
+          {
+            "id": "diseno",
+            "label": "Diseño industrial",
+            "description": "Aspecto nuevo y reproducible.",
+            "parentId": "apariencia",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-dof-2026-arts67-82-disenos"
+            ]
+          },
+          {
+            "id": "dibujo",
+            "label": "Dibujo industrial",
+            "description": "Figuras, líneas o colores.",
+            "parentId": "diseno",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-dof-2026-arts67-82-disenos"
+            ]
+          },
+          {
+            "id": "ornamento2d",
+            "label": "Ornamentación",
+            "description": "Aspecto peculiar y propio.",
+            "parentId": "dibujo",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-dof-2026-arts67-82-disenos"
+            ]
+          },
+          {
+            "id": "modelo",
+            "label": "Modelo industrial",
+            "description": "Forma tridimensional.",
+            "parentId": "diseno",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-dof-2026-arts67-82-disenos"
+            ]
+          },
+          {
+            "id": "ornamento3d",
+            "label": "Apariencia especial",
+            "description": "Sin efecto técnico protegido.",
+            "parentId": "modelo",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-dof-2026-arts67-82-disenos"
+            ]
+          },
+          {
+            "id": "requisitosD",
+            "label": "Requisitos",
+            "description": "Condiciones acumulativas.",
+            "parentId": "diseno",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-lfppi-arts264-271-do-ig"
+            ]
+          },
+          {
+            "id": "novedad",
+            "label": "Novedad",
+            "description": "Creación independiente y diferencia significativa.",
+            "parentId": "requisitosD",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-dof-2026-arts67-82-disenos"
+            ]
+          },
+          {
+            "id": "impresion",
+            "label": "Impresión general",
+            "description": "Perspectiva de persona técnica.",
+            "parentId": "novedad",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-dof-2026-arts67-82-disenos"
+            ]
+          },
+          {
+            "id": "aplicacion",
+            "label": "Aplicación industrial",
+            "description": "Reproducción en actividad económica.",
+            "parentId": "requisitosD",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+              "ev-c38-dof-2026-arts67-82-disenos",
+              "ev-c38-reglamento-2026-arts45-46-disenos"
+            ]
+          },
+          {
+            "id": "limites",
+            "label": "Límites",
+            "description": "Características no cubiertas.",
+            "parentId": "diseno",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-lfppi-arts264-271-do-ig"
+            ]
+          },
+          {
+            "id": "tecnico",
+            "label": "Función técnica",
+            "description": "No se monopoliza como diseño.",
+            "parentId": "limites",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-dof-2026-arts67-82-disenos"
+            ]
+          },
+          {
+            "id": "conexion",
+            "label": "Conexión necesaria",
+            "description": "Regla de compatibilidad.",
+            "parentId": "limites",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-lfppi-arts264-271-do-ig"
+            ]
+          },
+          {
+            "id": "tramiteD",
+            "label": "Solicitud IMPI",
+            "description": "Registro del diseño.",
+            "parentId": "diseno",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+              "ev-c38-dof-2026-arts67-82-disenos",
+              "ev-c38-reglamento-2026-arts45-46-disenos"
+            ]
+          },
+          {
+            "id": "imagenes",
+            "label": "Reproducciones",
+            "description": "Gráficas o fotográficas claras.",
+            "parentId": "tramiteD",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+              "ev-c38-dof-2026-arts67-82-disenos",
+              "ev-c38-reglamento-2026-arts45-46-disenos"
+            ]
+          },
+          {
+            "id": "descripcion",
+            "label": "Descripción",
+            "description": "Ayuda a delimitar alcance.",
+            "parentId": "tramiteD",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-lfppi-arts264-271-do-ig"
+            ]
+          },
+          {
+            "id": "vigenciaD",
+            "label": "5 + 5 años",
+            "description": "Hasta máximo de 25.",
+            "parentId": "diseno",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-a51-l005-009-vigencia-diseno"
+            ]
+          },
+          {
+            "id": "derechoD",
+            "label": "Exclusión",
+            "description": "Impide actos sobre producto o copia sustancial.",
+            "parentId": "diseno",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-lfppi-arts264-271-do-ig"
+            ]
+          },
+          {
+            "id": "territorio",
+            "label": "Origen geográfico",
+            "description": "Ruta de protección colectiva.",
+            "parentId": "pi",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ]
+          },
+          {
+            "id": "do",
+            "label": "Denominación de origen",
+            "description": "Vínculo exclusivo o esencial.",
+            "parentId": "territorio",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ]
+          },
+          {
+            "id": "materias",
+            "label": "Materias primas",
+            "description": "Elemento del vínculo.",
+            "parentId": "do",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-lfppi-arts264-271-do-ig"
+            ]
+          },
+          {
+            "id": "procesos",
+            "label": "Procesos",
+            "description": "Métodos de producción.",
+            "parentId": "do",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-lfppi-arts264-271-do-ig"
+            ]
+          },
+          {
+            "id": "factores",
+            "label": "Factores naturales y culturales",
+            "description": "Condiciones regionales.",
+            "parentId": "do",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-lfppi-arts264-271-do-ig"
+            ]
+          },
+          {
+            "id": "nom",
+            "label": "NOM específica",
+            "description": "Obligatoria tras declaración.",
+            "parentId": "do",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso"
+            ]
+          },
+          {
+            "id": "ig",
+            "label": "Indicación geográfica",
+            "description": "Calidad o reputación atribuible al origen.",
+            "parentId": "territorio",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ]
+          },
+          {
+            "id": "referencia",
+            "label": "Referencia territorial",
+            "description": "Zona, referencia o producto más zona.",
+            "parentId": "ig",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ]
+          },
+          {
+            "id": "reglas",
+            "label": "Reglas de uso",
+            "description": "Condiciones aplicables.",
+            "parentId": "ig",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ]
+          },
+          {
+            "id": "declaracion",
+            "label": "Declaración IMPI",
+            "description": "Inicia protección.",
+            "parentId": "territorio",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ]
+          },
+          {
+            "id": "bien",
+            "label": "Bien nacional",
+            "description": "No es propiedad empresarial individual.",
+            "parentId": "declaracion",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ]
+          },
+          {
+            "id": "vigenciaGeo",
+            "label": "Subsistencia de condiciones",
+            "description": "Determina vigencia de declaración.",
+            "parentId": "declaracion",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ]
+          },
+          {
+            "id": "autorizacion",
+            "label": "Autorización de uso",
+            "description": "Permiso individual.",
+            "parentId": "territorio",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso"
+            ]
+          },
+          {
+            "id": "zona",
+            "label": "Producción en zona",
+            "description": "Requisito territorial.",
+            "parentId": "autorizacion",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso"
+            ]
+          },
+          {
+            "id": "cumplimiento",
+            "label": "NOM o reglas",
+            "description": "Requisito de conformidad.",
+            "parentId": "autorizacion",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso"
+            ]
+          },
+          {
+            "id": "diez",
+            "label": "10 años renovables",
+            "description": "Vigencia de autorización.",
+            "parentId": "autorizacion",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso"
+            ]
+          },
+          {
+            "id": "siglas",
+            "label": "D.O.P. o I.G.P.",
+            "description": "Identificación obligatoria.",
+            "parentId": "autorizacion",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso"
+            ]
+          },
+          {
+            "id": "ilegal",
+            "label": "Uso ilegal",
+            "description": "Incluye tipo, género o imitación confusos.",
+            "parentId": "territorio",
+            "evidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Ley Federal de Proteccion a la Propiedad Industrial",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPPI.pdf",
+          "institution": "Camara de Diputados del H. Congreso de la Union",
+          "jurisdiction": "Federal, Mexico",
+          "citation": "Texto consolidado con ultima reforma DOF 03-04-2026; articulos 65 a 82 y 264 a 314",
+          "retrievedOn": "2026-08-21",
+          "note": "Definiciones, requisitos, vigencia y derechos aplicables a diseños industriales, denominaciones de origen e indicaciones geograficas."
+        },
+        {
+          "title": "Decreto de reforma a la Ley Federal de Proteccion a la Propiedad Industrial",
+          "url": "https://sidof.segob.gob.mx/notas/docFuente/5784017",
+          "institution": "Diario Oficial de la Federacion, Secretaria de Gobernacion",
+          "jurisdiction": "Federal, Mexico",
+          "citation": "DOF 03-04-2026, articulo unico y transitorios",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente oficial para las disposiciones reformadas de diseños, declaraciones y autorizaciones de uso."
+        },
+        {
+          "title": "Reglamento de la Ley Federal de Proteccion a la Propiedad Industrial",
+          "url": "https://sidof.segob.gob.mx/notas/docFuente/5786237",
+          "institution": "Diario Oficial de la Federacion, Secretaria de Gobernacion",
+          "jurisdiction": "Federal, Mexico",
+          "citation": "DOF 28-04-2026, articulos 45, 46 y 127 a 151",
+          "retrievedOn": "2026-08-21",
+          "note": "Regula requisitos complementarios de diseños y de las figuras geograficas."
+        },
+        {
+          "title": "Declaraciones Generales de Proteccion de Denominaciones de Origen",
+          "url": "https://www.gob.mx/impi/acciones-y-programas/declaraciones-generales-de-proteccion-de-denominaciones-de-origen",
+          "institution": "Instituto Mexicano de la Propiedad Industrial",
+          "jurisdiction": "Federal, Mexico",
+          "citation": "Repositorio institucional de declaraciones generales",
+          "retrievedOn": "2026-08-21",
+          "note": "Repositorio de consulta; la publicacion juridicamente vinculante debe verificarse en el DOF."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué protege el diseño industrial?",
+          "answer": "La apariencia nueva y aplicable industrialmente de un producto.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts65-68-disenos-requisitos",
+            "ev-c38-dof-2026-arts67-82-disenos"
+          ]
+        },
+        {
+          "question": "¿Qué es un dibujo industrial?",
+          "answer": "Combinación ornamental de figuras, líneas o colores incorporada a un producto.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts65-68-disenos-requisitos",
+            "ev-c38-dof-2026-arts67-82-disenos"
+          ]
+        },
+        {
+          "question": "¿Qué es un modelo industrial?",
+          "answer": "Forma tridimensional que da apariencia especial sin implicar efectos técnicos.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts65-68-disenos-requisitos",
+            "ev-c38-dof-2026-arts67-82-disenos"
+          ]
+        },
+        {
+          "question": "¿Cuánto dura un diseño industrial?",
+          "answer": "Cinco años desde la solicitud, renovables hasta un máximo de veinticinco.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+            "ev-c38-dof-2026-arts67-82-disenos",
+            "ev-c38-reglamento-2026-arts45-46-disenos",
+            "ev-c38-a51-l005-009-vigencia-diseno"
+          ]
+        },
+        {
+          "question": "¿Qué delimita su alcance?",
+          "answer": "La descripción y las reproducciones gráficas o fotográficas otorgadas.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+            "ev-c38-dof-2026-arts67-82-disenos",
+            "ev-c38-reglamento-2026-arts45-46-disenos"
+          ]
+        },
+        {
+          "question": "¿Qué no cubre el diseño?",
+          "answer": "Características dictadas únicamente por función técnica.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts65-68-disenos-requisitos",
+            "ev-c38-dof-2026-arts67-82-disenos"
+          ]
+        },
+        {
+          "question": "¿Qué es denominación de origen?",
+          "answer": "Producto cuya calidad, características o reputación se deben exclusiva o esencialmente a su origen geográfico.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts264-271-do-ig",
+            "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+          ]
+        },
+        {
+          "question": "¿Qué es indicación geográfica?",
+          "answer": "Referencia de origen cuando calidad, características o reputación se atribuyen a la zona.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts264-271-do-ig",
+            "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+          ]
+        },
+        {
+          "question": "¿Quién inicia la protección geográfica?",
+          "answer": "El IMPI mediante una declaración.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts264-271-do-ig",
+            "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+          ]
+        },
+        {
+          "question": "¿Cuánto dura la declaración?",
+          "answer": "Mientras subsistan las condiciones que la motivaron.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts264-271-do-ig",
+            "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+          ]
+        },
+        {
+          "question": "¿Cuánto dura la autorización de uso?",
+          "answer": "Diez años desde su solicitud, renovables por periodos iguales.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts298-314-autorizacion-uso",
+            "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+            "ev-c38-reglamento-2026-arts145-151-autorizacion-uso"
+          ]
+        },
+        {
+          "question": "¿Puede usarse con la palabra ‘tipo’ sin autorización?",
+          "answer": "No si crea confusión o competencia desleal; la ley sanciona ese uso ilegal.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c38-lfppi-arts298-314-autorizacion-uso",
+            "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+            "ev-c38-reglamento-2026-arts145-151-autorizacion-uso"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación: diseños y origen geográfico",
+        "description": "Diez casos originales sobre apariencia, territorio, vigencia y uso autorizado.",
+        "questions": [
+          {
+            "text": "Una empresa crea un patrón ornamental de líneas para platos. ¿Qué figura corresponde analizar?",
+            "difficulty": "basic",
+            "options": [
+              "Dibujo industrial",
+              "Modelo de utilidad",
+              "Denominación de origen"
+            ],
+            "correctOption": 0,
+            "explanation": "Las figuras o líneas ornamentales incorporadas a un producto constituyen dibujo industrial.",
+            "optionExplanations": [
+              "Protege ornamentación bidimensional.",
+              "Exige mejora funcional.",
+              "Protege vínculo geográfico."
+            ],
+            "evidenceIds": [
+              "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+              "ev-c38-dof-2026-arts67-82-disenos",
+              "ev-c38-reglamento-2026-arts45-46-disenos",
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico",
+              "ev-c38-a51-l005-009-vigencia-diseno"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos"
+              ],
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos"
+              ],
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-dof-2026-arts67-82-disenos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-dof-2026-arts67-82-disenos"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos"
+              ],
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos"
+              ],
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ]
+            ]
+          },
+          {
+            "text": "Una forma tridimensional da apariencia especial a una lámpara sin función técnica. ¿Qué es?",
+            "difficulty": "basic",
+            "options": [
+              "Modelo industrial",
+              "Patente de proceso",
+              "Aviso comercial"
+            ],
+            "correctOption": 0,
+            "explanation": "El modelo industrial protege una forma tridimensional ornamental.",
+            "optionExplanations": [
+              "Coincide con el artículo 66.",
+              "No existe proceso técnico descrito.",
+              "El aviso es una frase comercial."
+            ],
+            "evidenceIds": [
+              "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+              "ev-c38-dof-2026-arts67-82-disenos",
+              "ev-c38-reglamento-2026-arts45-46-disenos",
+              "ev-c38-a51-l005-009-vigencia-diseno"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos"
+              ],
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos"
+              ],
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-dof-2026-arts67-82-disenos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-dof-2026-arts67-82-disenos"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos"
+              ],
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos"
+              ],
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos"
+              ]
+            ]
+          },
+          {
+            "text": "Dos diseños solo difieren en detalles irrelevantes. ¿El segundo es creación independiente nueva?",
+            "difficulty": "intermediate",
+            "options": [
+              "No, pueden considerarse idénticos",
+              "Sí, cualquier detalle basta",
+              "Sí, si cambia el fabricante"
+            ],
+            "correctOption": 0,
+            "explanation": "Las diferencias irrelevantes no producen novedad.",
+            "optionExplanations": [
+              "Aplica la regla legal.",
+              "Ignora impresión general.",
+              "La identidad del fabricante no crea novedad."
+            ],
+            "evidenceIds": [
+              "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+              "ev-c38-dof-2026-arts67-82-disenos",
+              "ev-c38-reglamento-2026-arts45-46-disenos",
+              "ev-c38-a51-l005-009-vigencia-diseno"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos"
+              ],
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos"
+              ],
+              [
+                "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+                "ev-c38-dof-2026-arts67-82-disenos",
+                "ev-c38-reglamento-2026-arts45-46-disenos"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-dof-2026-arts67-82-disenos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-dof-2026-arts67-82-disenos"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos"
+              ],
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos"
+              ],
+              [
+                "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+                "ev-c38-dof-2026-arts67-82-disenos",
+                "ev-c38-reglamento-2026-arts45-46-disenos"
+              ]
+            ]
+          },
+          {
+            "text": "La forma de una pieza está dictada únicamente por su conexión técnica indispensable. ¿La cubre el diseño industrial?",
+            "difficulty": "advanced",
+            "options": [
+              "No, opera una exclusión funcional",
+              "Sí, siempre",
+              "Solo por usar una marca"
+            ],
+            "correctOption": 0,
+            "explanation": "Los rasgos puramente técnicos o necesarios para conexión no quedan cubiertos en esos términos.",
+            "optionExplanations": [
+              "Distingue forma ornamental y técnica.",
+              "Desconoce el artículo 68.",
+              "La marca no altera el análisis."
+            ],
+            "evidenceIds": [
+              "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+              "ev-c38-dof-2026-arts67-82-disenos",
+              "ev-c38-reglamento-2026-arts45-46-disenos",
+              "ev-c38-a51-l005-009-vigencia-diseno"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+                "ev-c38-dof-2026-arts67-82-disenos",
+                "ev-c38-reglamento-2026-arts45-46-disenos"
+              ],
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos"
+              ],
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+              "ev-c38-dof-2026-arts67-82-disenos",
+              "ev-c38-reglamento-2026-arts45-46-disenos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c38-lfppi-arts65-68-disenos-requisitos",
+              "ev-c38-dof-2026-arts67-82-disenos"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+                "ev-c38-dof-2026-arts67-82-disenos",
+                "ev-c38-reglamento-2026-arts45-46-disenos"
+              ],
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos"
+              ],
+              [
+                "ev-c38-lfppi-arts65-68-disenos-requisitos",
+                "ev-c38-dof-2026-arts67-82-disenos"
+              ]
+            ]
+          },
+          {
+            "text": "Un diseño se solicitó en 2026. ¿Cuál es su esquema ordinario de vigencia?",
+            "difficulty": "basic",
+            "options": [
+              "Cinco años renovables hasta veinticinco",
+              "Quince años improrrogables",
+              "Diez años renovables sin límite"
+            ],
+            "correctOption": 0,
+            "explanation": "La ley prevé periodos quinquenales con máximo de veinticinco años.",
+            "optionExplanations": [
+              "Es el artículo 78.",
+              "Corresponde al modelo de utilidad.",
+              "Confunde otras figuras."
+            ],
+            "evidenceIds": [
+              "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+              "ev-c38-dof-2026-arts67-82-disenos",
+              "ev-c38-reglamento-2026-arts45-46-disenos",
+              "ev-c38-a51-l005-009-vigencia-diseno"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+                "ev-c38-dof-2026-arts67-82-disenos",
+                "ev-c38-reglamento-2026-arts45-46-disenos",
+                "ev-c38-a51-l005-009-vigencia-diseno"
+              ],
+              [
+                "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+                "ev-c38-dof-2026-arts67-82-disenos",
+                "ev-c38-reglamento-2026-arts45-46-disenos"
+              ],
+              [
+                "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+                "ev-c38-dof-2026-arts67-82-disenos",
+                "ev-c38-reglamento-2026-arts45-46-disenos"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+              "ev-c38-dof-2026-arts67-82-disenos",
+              "ev-c38-reglamento-2026-arts45-46-disenos",
+              "ev-c38-a51-l005-009-vigencia-diseno"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+              "ev-c38-dof-2026-arts67-82-disenos",
+              "ev-c38-reglamento-2026-arts45-46-disenos",
+              "ev-c38-a51-l005-009-vigencia-diseno"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+                "ev-c38-dof-2026-arts67-82-disenos",
+                "ev-c38-reglamento-2026-arts45-46-disenos",
+                "ev-c38-a51-l005-009-vigencia-diseno"
+              ],
+              [
+                "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+                "ev-c38-dof-2026-arts67-82-disenos",
+                "ev-c38-reglamento-2026-arts45-46-disenos"
+              ],
+              [
+                "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+                "ev-c38-dof-2026-arts67-82-disenos",
+                "ev-c38-reglamento-2026-arts45-46-disenos"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál vínculo caracteriza a la denominación de origen?",
+            "difficulty": "intermediate",
+            "options": [
+              "Calidad, características o reputación debidas exclusiva o esencialmente al origen",
+              "Solo que la empresa tenga domicilio en la zona",
+              "Que el nombre sea una marca famosa"
+            ],
+            "correctOption": 0,
+            "explanation": "La denominación exige un vínculo sustantivo entre producto y entorno geográfico.",
+            "optionExplanations": [
+              "Incluye los elementos legales.",
+              "El domicilio no basta.",
+              "Marca y denominación son distintas."
+            ],
+            "evidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ],
+              [
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ],
+              [
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ],
+              [
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ],
+              [
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ]
+            ]
+          },
+          {
+            "text": "Una declaración de protección lleva diez años vigente y subsisten sus condiciones. ¿Caduca automáticamente?",
+            "difficulty": "advanced",
+            "options": [
+              "No, su vigencia depende de que subsistan las condiciones",
+              "Sí, debe renovarse cada diez años",
+              "Sí, se vuelve marca colectiva"
+            ],
+            "correctOption": 0,
+            "explanation": "Los diez años corresponden a la autorización de uso, no a la declaración.",
+            "optionExplanations": [
+              "Aplica el artículo 269.",
+              "Confunde actos diferentes.",
+              "No hay conversión automática."
+            ],
+            "evidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ],
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ],
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ],
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ],
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ]
+            ]
+          },
+          {
+            "text": "Una productora desea usar una denominación protegida. ¿Qué necesita?",
+            "difficulty": "intermediate",
+            "options": [
+              "Autorización del IMPI y cumplimiento territorial y normativo",
+              "Solo comprar el nombre de otra empresa",
+              "Registrar cualquier logotipo"
+            ],
+            "correctOption": 0,
+            "explanation": "La figura es un bien nacional y requiere autorización individual.",
+            "optionExplanations": [
+              "Integra los requisitos centrales.",
+              "No es propiedad privada transferible así.",
+              "El logotipo no autoriza uso."
+            ],
+            "evidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ],
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ],
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ],
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ],
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuánto dura la autorización para usar una denominación o indicación protegida?",
+            "difficulty": "basic",
+            "options": [
+              "Diez años desde la solicitud, renovables",
+              "Cinco años con máximo de veinticinco",
+              "Cien años desde la muerte"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 301 regula la autorización decenal renovable.",
+            "optionExplanations": [
+              "Es la regla aplicable.",
+              "Corresponde al diseño industrial.",
+              "Alude incorrectamente a derecho de autor."
+            ],
+            "evidenceIds": [
+              "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+              "ev-c38-dof-2026-arts67-82-disenos",
+              "ev-c38-reglamento-2026-arts45-46-disenos",
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+              "ev-c38-lfppi-arts272-297-declaracion",
+              "ev-c38-dof-2026-arts274-295-declaracion",
+              "ev-c38-reglamento-2026-arts134-144-declaracion",
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico",
+              "ev-c38-a51-l005-009-vigencia-diseno"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ],
+              [
+                "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+                "ev-c38-dof-2026-arts67-82-disenos",
+                "ev-c38-reglamento-2026-arts45-46-disenos",
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico",
+                "ev-c38-a51-l005-009-vigencia-diseno"
+              ],
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ],
+              [
+                "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+                "ev-c38-dof-2026-arts67-82-disenos",
+                "ev-c38-reglamento-2026-arts45-46-disenos",
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico",
+                "ev-c38-a51-l005-009-vigencia-diseno"
+              ],
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ]
+            ]
+          },
+          {
+            "text": "Un producto no autorizado usa “tipo” junto a una denominacion protegida de modo que confunde al consumidor. ¿La palabra vuelve licito el uso?",
+            "difficulty": "advanced",
+            "options": [
+              "No, la expresión no evita el uso ilegal",
+              "Si, “tipo” siempre libera la denominacion",
+              "Sí, si se vende fuera de la zona"
+            ],
+            "correctOption": 0,
+            "explanation": "La ley sanciona también expresiones como tipo, género o imitación cuando generan confusión o competencia desleal.",
+            "optionExplanations": [
+              "Aplica el artículo 304.",
+              "Es exactamente el supuesto sancionado.",
+              "La ubicación de venta no autoriza el uso."
+            ],
+            "evidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ],
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ],
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c38-lfppi-arts298-314-autorizacion-uso",
+              "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+              "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+              "ev-c38-lfppi-arts264-271-do-ig",
+              "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ],
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ],
+              [
+                "ev-c38-lfppi-arts298-314-autorizacion-uso",
+                "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+                "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+                "ev-c38-lfppi-arts264-271-do-ig",
+                "ev-c38-reglamento-2026-arts127-133-vinculo-geografico"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c38-lfppi-arts65-68-disenos-requisitos",
+      "kind": "official",
+      "title": "Ley Federal de Proteccion a la Propiedad Industrial",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPPI.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto consolidado con ultima reforma DOF 03-04-2026, articulos 65 a 68, paginas impresas 19 y 20",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
     },
-    "materials": [
-      {"type":"short_answer","title":"Respuesta breve","content":"El diseño industrial protege la apariencia nueva y aplicable industrialmente de un producto: dibujo ornamental bidimensional o modelo tridimensional sin efectos técnicos. Su registro dura cinco años desde la solicitud y puede renovarse hasta veinticinco. La denominación de origen y la indicación geográfica vinculan productos con una zona; su protección nace por declaración del IMPI, son bienes nacionales y solo se usan con autorización. La declaración dura mientras subsistan sus condiciones; la autorización de uso dura diez años renovables.","sourceOrigin":"mixed"},
-      {"type":"full_explanation","title":"Explicación completa desde cero","content":"El diseño industrial y las figuras geográficas pertenecen a la propiedad industrial, pero protegen objetos distintos. El primero se concentra en la apariencia de un producto creado por una persona diseñadora. Las denominaciones de origen y las indicaciones geográficas protegen un vínculo colectivo entre producto, reputación o cualidades y territorio.\n\nLos diseños industriales comprenden dibujos y modelos industriales. El dibujo industrial es una combinación de figuras, líneas o colores incorporada a un producto industrial o artesanal con fines ornamentales, dándole aspecto peculiar y propio. El modelo industrial es una forma tridimensional que sirve de tipo o patrón de fabricación y da apariencia especial, siempre que no implique efectos técnicos.\n\nPara registrarse, el diseño debe ser nuevo y susceptible de aplicación industrial. La novedad exige creación independiente y diferencia en grado significativo respecto de diseños conocidos. La comparación atiende la impresión general producida en una persona técnica y el grado de libertad de la persona diseñadora. Detalles irrelevantes no bastan para considerar dos diseños diferentes.\n\nNo se protegen mediante diseño los elementos dictados únicamente por una función técnica ni, en general, características cuya reproducción exacta sea necesaria para montar o conectar mecánicamente productos. Sí puede protegerse una parte de producto o una conexión modular cuando cumpla los requisitos legales. Esto evita confundir diseño industrial con patente o modelo de utilidad: apariencia ornamental y ventaja funcional no son lo mismo.\n\nLa solicitud ante el IMPI identifica solicitante y persona diseñadora, denomina el diseño e incorpora reproducciones gráficas o fotográficas claras y una descripción. El alcance del derecho se determina por la descripción y las reproducciones otorgadas. El registro permite impedir que terceros fabriquen, usen, vendan, ofrezcan o importen sin consentimiento el producto que incorpore el diseño o una copia sustancial.\n\nLa vigencia inicial es de cinco años desde la fecha de presentación. Puede renovarse por periodos sucesivos de cinco años hasta un máximo de veinticinco, pagando las tarifas. La renovación se solicita durante los seis meses anteriores al vencimiento, sin perjuicio del plazo de gracia legal.\n\nLa denominación de origen corresponde a un producto originario de una zona cuando su calidad, características o reputación se deben exclusiva o esencialmente al origen geográfico de materias primas, procesos de producción y factores naturales y culturales. Emitida la declaración, debe existir una Norma Oficial Mexicana específica.\n\nLa indicación geográfica reconoce una zona, una referencia o una combinación de producto y zona para señalar origen, cuando determinada calidad, características o reputación se atribuyen a ese origen por materias primas, procesos o factores naturales y culturales. El vínculo requerido es distinto: la denominación de origen exige una relación exclusiva o esencial más intensa; la indicación geográfica permite que alguno de esos aspectos sustente la atribución.\n\nLa protección comienza con la declaración del IMPI. Las denominaciones de origen e indicaciones geográficas protegidas son bienes nacionales; una empresa no se apropia del nombre como marca individual. La vigencia de la declaración depende de que subsistan las condiciones que la motivaron. No existe una renovación decenal de la declaración.\n\nPara usar la figura protegida, la persona física o moral solicita autorización. Debe dedicarse directamente a extraer, producir o elaborar el producto dentro de la zona; para denominación de origen acredita la NOM y para indicación geográfica las reglas de uso, además de los requisitos de la declaración. La autorización dura diez años desde su solicitud y puede renovarse por periodos iguales.\n\nLa persona autorizada debe emplear la denominación o indicación tal como aparece en la declaración y aplicar la leyenda o siglas D.O.P. o I.G.P. El uso ilegal se sanciona incluso si se agregan palabras como ‘tipo’, ‘género’, ‘manera’ o ‘imitación’ capaces de confundir o constituir competencia desleal.\n\nMétodo CENEVAL: primero identifica si el caso trata de apariencia o procedencia; después clasifica dibujo o modelo industrial, o diferencia denominación e indicación; aplica requisitos; distingue declaración y autorización; calcula vigencia y finalmente verifica territorio, NOM o reglas de uso.","sourceOrigin":"mixed"},
-      {"type":"legal_basis","title":"Fundamento jurídico vigente","content":"Ley Federal de Protección a la Propiedad Industrial, última reforma DOF 03-04-2026: artículos 65 a 82 sobre dibujos, modelos, novedad, solicitud, vigencia y alcance del diseño industrial; artículos 264 a 271 sobre denominación de origen, indicación geográfica, bienes nacionales y vigencia de la declaración; artículos 272 a 297 sobre declaración; y 298 a 314 sobre autorización, uso, renovación, transmisión, nulidad, cancelación y caducidad.","sourceOrigin":"complementary"},
-      {"type":"simple_example","title":"Ejemplo sencillo","content":"Un patrón de líneas y colores aplicado a una vajilla puede ser dibujo industrial. La forma tridimensional ornamental de una lámpara puede ser modelo industrial. En cambio, Tequila identifica un producto cuyas condiciones se vinculan con la zona y su declaración; una empresa solo puede usar legalmente esa denominación si obtiene autorización y cumple las reglas aplicables.","sourceOrigin":"mixed"},
-      {"type":"ceneval_example","title":"Caso tipo CENEVAL","content":"Una persona registra en 2026 una forma tridimensional nueva para un envase. El primer periodo concluye cinco años después de la solicitud; podrá renovar sucesivamente hasta completar veinticinco años. Si la forma está dictada únicamente por el acoplamiento técnico indispensable, ese elemento no queda protegido como diseño industrial.","sourceOrigin":"complementary"},
-      {"type":"summary","title":"Resumen","content":"Diseño industrial: apariencia, no función pura. Dibujo: figuras, líneas o colores ornamentales. Modelo industrial: forma tridimensional ornamental. Requisitos: novedad y aplicación industrial. Vigencia: cinco años renovables hasta veinticinco. Denominación de origen: vínculo exclusivo o esencial con zona, materias primas, procesos y factores. Indicación geográfica: calidad, característica o reputación atribuible al origen. Declaración: inicia protección y subsiste mientras existan condiciones. Autorización: permite uso durante diez años renovables. IMPI: autoridad. D.O.P. e I.G.P.: siglas obligatorias para persona autorizada.","sourceOrigin":"mixed"},
-      {"type":"study_guide","title":"Guía intensiva de preguntas y respuestas","content":"1. ¿Qué es dibujo industrial? Respuesta: combinación ornamental de figuras, líneas o colores incorporada a un producto. 2. ¿Qué es modelo industrial? Respuesta: forma tridimensional ornamental sin efectos técnicos. 3. ¿Qué requisitos tienen? Respuesta: novedad y aplicación industrial. 4. ¿Cómo se valora novedad? Respuesta: creación independiente y diferencia significativa en impresión general. 5. ¿Qué no protege? Respuesta: rasgos dictados únicamente por función técnica. 6. ¿Cuánto dura? Respuesta: cinco años desde solicitud, renovables hasta veinticinco. 7. ¿Qué es denominación de origen? Respuesta: producto vinculado esencialmente a una zona por materias primas, procesos y factores naturales y culturales. 8. ¿Qué es indicación geográfica? Respuesta: referencia territorial cuya calidad, característica o reputación se atribuye al origen. 9. ¿Quién declara protección? Respuesta: IMPI. 10. ¿De quién son estas figuras protegidas? Respuesta: son bienes nacionales. 11. ¿Cuánto dura la declaración? Respuesta: mientras subsistan las condiciones que la motivaron. 12. ¿Cuánto dura la autorización de uso? Respuesta: diez años desde la solicitud, renovables por periodos iguales.","sourceOrigin":"mixed"},
-      {"type":"key_concepts","title":"Conceptos clave","content":"Diseño industrial: apariencia protegible. Dibujo industrial: ornamentación bidimensional. Modelo industrial: forma tridimensional. Creación independiente: ausencia de diseño idéntico previo. Grado significativo: impresión general diferente. Aplicación industrial: fabricación o uso productivo. Reproducciones: imágenes que delimitan el diseño. Copia sustancial: reproducción relevante protegida. Renovación: extensión quinquenal. Zona geográfica: región delimitada. Denominación de origen: vínculo territorial intenso. Indicación geográfica: identificación territorial de calidad o reputación. Declaración: acto que inicia protección. Bien nacional: titularidad no individual. NOM: estándar obligatorio de la denominación. Reglas de uso: condiciones de la indicación. Autorización: permiso individual del IMPI. D.O.P.: denominación protegida. I.G.P.: indicación protegida.","sourceOrigin":"mixed"},
-      {"type":"common_errors","title":"Errores comunes","content":"No confundas diseño industrial con decoración de interiores o modelo de negocio. No confundas modelo industrial con modelo de utilidad. No protejas como diseño rasgos exclusivamente técnicos. No digas que dura quince años: son cinco renovables hasta veinticinco. No cuentes desde el otorgamiento sino desde la solicitud. No trates una denominación de origen como marca privada. No confundas declaración con autorización de uso. No digas que la declaración se renueva cada diez años. No omitas que la denominación requiere una NOM específica. No equipares automáticamente denominación e indicación. No uses una figura protegida solo por producir algo parecido. No creas que agregar ‘tipo’ o ‘imitación’ vuelve lícito el uso.","sourceOrigin":"complementary"}
-    ],
-    "conceptMap": {
-      "title":"Mapa visual: apariencia y territorio",
-      "description":"Dos rutas de protección industrial: diseño del producto y origen geográfico.",
-      "nodes":[
-        {"id":"pi","label":"Propiedad industrial","description":"Protección de valor competitivo."},
-        {"id":"apariencia","label":"Apariencia del producto","description":"Ruta de diseño industrial.","parentId":"pi"},
-        {"id":"diseno","label":"Diseño industrial","description":"Aspecto nuevo y reproducible.","parentId":"apariencia"},
-        {"id":"dibujo","label":"Dibujo industrial","description":"Figuras, líneas o colores.","parentId":"diseno"},
-        {"id":"ornamento2d","label":"Ornamentación","description":"Aspecto peculiar y propio.","parentId":"dibujo"},
-        {"id":"modelo","label":"Modelo industrial","description":"Forma tridimensional.","parentId":"diseno"},
-        {"id":"ornamento3d","label":"Apariencia especial","description":"Sin efecto técnico protegido.","parentId":"modelo"},
-        {"id":"requisitosD","label":"Requisitos","description":"Condiciones acumulativas.","parentId":"diseno"},
-        {"id":"novedad","label":"Novedad","description":"Creación independiente y diferencia significativa.","parentId":"requisitosD"},
-        {"id":"impresion","label":"Impresión general","description":"Perspectiva de persona técnica.","parentId":"novedad"},
-        {"id":"aplicacion","label":"Aplicación industrial","description":"Reproducción en actividad económica.","parentId":"requisitosD"},
-        {"id":"limites","label":"Límites","description":"Características no cubiertas.","parentId":"diseno"},
-        {"id":"tecnico","label":"Función técnica","description":"No se monopoliza como diseño.","parentId":"limites"},
-        {"id":"conexion","label":"Conexión necesaria","description":"Regla de compatibilidad.","parentId":"limites"},
-        {"id":"tramiteD","label":"Solicitud IMPI","description":"Registro del diseño.","parentId":"diseno"},
-        {"id":"imagenes","label":"Reproducciones","description":"Gráficas o fotográficas claras.","parentId":"tramiteD"},
-        {"id":"descripcion","label":"Descripción","description":"Ayuda a delimitar alcance.","parentId":"tramiteD"},
-        {"id":"vigenciaD","label":"5 + 5 años","description":"Hasta máximo de 25.","parentId":"diseno"},
-        {"id":"derechoD","label":"Exclusión","description":"Impide actos sobre producto o copia sustancial.","parentId":"diseno"},
-        {"id":"territorio","label":"Origen geográfico","description":"Ruta de protección colectiva.","parentId":"pi"},
-        {"id":"do","label":"Denominación de origen","description":"Vínculo exclusivo o esencial.","parentId":"territorio"},
-        {"id":"materias","label":"Materias primas","description":"Elemento del vínculo.","parentId":"do"},
-        {"id":"procesos","label":"Procesos","description":"Métodos de producción.","parentId":"do"},
-        {"id":"factores","label":"Factores naturales y culturales","description":"Condiciones regionales.","parentId":"do"},
-        {"id":"nom","label":"NOM específica","description":"Obligatoria tras declaración.","parentId":"do"},
-        {"id":"ig","label":"Indicación geográfica","description":"Calidad o reputación atribuible al origen.","parentId":"territorio"},
-        {"id":"referencia","label":"Referencia territorial","description":"Zona, referencia o producto más zona.","parentId":"ig"},
-        {"id":"reglas","label":"Reglas de uso","description":"Condiciones aplicables.","parentId":"ig"},
-        {"id":"declaracion","label":"Declaración IMPI","description":"Inicia protección.","parentId":"territorio"},
-        {"id":"bien","label":"Bien nacional","description":"No es propiedad empresarial individual.","parentId":"declaracion"},
-        {"id":"vigenciaGeo","label":"Subsistencia de condiciones","description":"Determina vigencia de declaración.","parentId":"declaracion"},
-        {"id":"autorizacion","label":"Autorización de uso","description":"Permiso individual.","parentId":"territorio"},
-        {"id":"zona","label":"Producción en zona","description":"Requisito territorial.","parentId":"autorizacion"},
-        {"id":"cumplimiento","label":"NOM o reglas","description":"Requisito de conformidad.","parentId":"autorizacion"},
-        {"id":"diez","label":"10 años renovables","description":"Vigencia de autorización.","parentId":"autorizacion"},
-        {"id":"siglas","label":"D.O.P. o I.G.P.","description":"Identificación obligatoria.","parentId":"autorizacion"},
-        {"id":"ilegal","label":"Uso ilegal","description":"Incluye tipo, género o imitación confusos.","parentId":"territorio"}
-      ]
+    {
+      "id": "ev-c38-lfppi-arts69-82-diseno-tramite-vigencia",
+      "kind": "official",
+      "title": "Ley Federal de Proteccion a la Propiedad Industrial",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPPI.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto consolidado con ultima reforma DOF 03-04-2026, articulos 69 a 82, paginas impresas 20 a 23",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
     },
-    "references":[
-      {"title":"Ley Federal de Protección a la Propiedad Industrial","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPPI.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Federal, México","citation":"Artículos 65 a 82 y 264 a 314; última reforma DOF 03-04-2026","retrievedOn":"2026-08-12","note":"Texto vigente sobre diseños industriales, denominaciones de origen e indicaciones geográficas."},
-      {"title":"Invenciones: patentes, modelos de utilidad y diseños industriales","url":"https://www.gob.mx/impi/acciones-y-programas/temas-de-interes-preguntas-frecuentes-patentes","institution":"Instituto Mexicano de la Propiedad Industrial","jurisdiction":"Federal, México","citation":"Preguntas frecuentes y trámite oficial de diseños industriales","retrievedOn":"2026-08-12","note":"Orientación sobre solicitud, búsqueda, etapas y seguimiento."},
-      {"title":"Declaraciones Generales de Protección de Denominaciones de Origen","url":"https://www.gob.mx/impi/acciones-y-programas/declaraciones-generales-de-proteccion-de-denominaciones-de-origen","institution":"Instituto Mexicano de la Propiedad Industrial","jurisdiction":"Federal, México","citation":"Repositorio oficial de declaraciones generales","retrievedOn":"2026-08-12","note":"Consulta de productos y publicaciones; la versión jurídicamente válida es la del DOF."},
-      {"title":"Autorización para usar una denominación de origen","url":"https://www.gob.mx/tramites/ficha/autorizacion-para-usar-una-demoninacion-de-origen/IMPI3172","institution":"Instituto Mexicano de la Propiedad Industrial","jurisdiction":"Federal, México","citation":"Ficha oficial del trámite de autorización de uso","retrievedOn":"2026-08-12","note":"Documentación sobre zona, NOM, personalidad y solicitud."}
-    ],
-    "flashcards":[
-      {"question":"¿Qué protege el diseño industrial?","answer":"La apariencia nueva y aplicable industrialmente de un producto.","sourceOrigin":"mixed"},
-      {"question":"¿Qué es un dibujo industrial?","answer":"Combinación ornamental de figuras, líneas o colores incorporada a un producto.","sourceOrigin":"complementary"},
-      {"question":"¿Qué es un modelo industrial?","answer":"Forma tridimensional que da apariencia especial sin implicar efectos técnicos.","sourceOrigin":"complementary"},
-      {"question":"¿Cuánto dura un diseño industrial?","answer":"Cinco años desde la solicitud, renovables hasta un máximo de veinticinco.","sourceOrigin":"mixed"},
-      {"question":"¿Qué delimita su alcance?","answer":"La descripción y las reproducciones gráficas o fotográficas otorgadas.","sourceOrigin":"complementary"},
-      {"question":"¿Qué no cubre el diseño?","answer":"Características dictadas únicamente por función técnica.","sourceOrigin":"complementary"},
-      {"question":"¿Qué es denominación de origen?","answer":"Producto cuya calidad, características o reputación se deben exclusiva o esencialmente a su origen geográfico.","sourceOrigin":"mixed"},
-      {"question":"¿Qué es indicación geográfica?","answer":"Referencia de origen cuando calidad, características o reputación se atribuyen a la zona.","sourceOrigin":"complementary"},
-      {"question":"¿Quién inicia la protección geográfica?","answer":"El IMPI mediante una declaración.","sourceOrigin":"complementary"},
-      {"question":"¿Cuánto dura la declaración?","answer":"Mientras subsistan las condiciones que la motivaron.","sourceOrigin":"complementary"},
-      {"question":"¿Cuánto dura la autorización de uso?","answer":"Diez años desde su solicitud, renovables por periodos iguales.","sourceOrigin":"mixed"},
-      {"question":"¿Puede usarse con la palabra ‘tipo’ sin autorización?","answer":"No si crea confusión o competencia desleal; la ley sanciona ese uso ilegal.","sourceOrigin":"complementary"}
-    ],
-    "exam":{"title":"Evaluación: diseños y origen geográfico","description":"Diez casos originales sobre apariencia, territorio, vigencia y uso autorizado.","questions":[
-      {"text":"Una empresa crea un patrón ornamental de líneas para platos. ¿Qué figura corresponde analizar?","difficulty":"basic","options":["Dibujo industrial","Modelo de utilidad","Denominación de origen"],"correctOption":0,"explanation":"Las figuras o líneas ornamentales incorporadas a un producto constituyen dibujo industrial.","optionExplanations":["Protege ornamentación bidimensional.","Exige mejora funcional.","Protege vínculo geográfico."]},
-      {"text":"Una forma tridimensional da apariencia especial a una lámpara sin función técnica. ¿Qué es?","difficulty":"basic","options":["Modelo industrial","Patente de proceso","Aviso comercial"],"correctOption":0,"explanation":"El modelo industrial protege una forma tridimensional ornamental.","optionExplanations":["Coincide con el artículo 66.","No existe proceso técnico descrito.","El aviso es una frase comercial."]},
-      {"text":"Dos diseños solo difieren en detalles irrelevantes. ¿El segundo es creación independiente nueva?","difficulty":"intermediate","options":["No, pueden considerarse idénticos","Sí, cualquier detalle basta","Sí, si cambia el fabricante"],"correctOption":0,"explanation":"Las diferencias irrelevantes no producen novedad.","optionExplanations":["Aplica la regla legal.","Ignora impresión general.","La identidad del fabricante no crea novedad."]},
-      {"text":"La forma de una pieza está dictada únicamente por su conexión técnica indispensable. ¿La cubre el diseño industrial?","difficulty":"advanced","options":["No, opera una exclusión funcional","Sí, siempre","Solo por usar una marca"],"correctOption":0,"explanation":"Los rasgos puramente técnicos o necesarios para conexión no quedan cubiertos en esos términos.","optionExplanations":["Distingue forma ornamental y técnica.","Desconoce el artículo 68.","La marca no altera el análisis."]},
-      {"text":"Un diseño se solicitó en 2026. ¿Cuál es su esquema ordinario de vigencia?","difficulty":"basic","options":["Cinco años renovables hasta veinticinco","Quince años improrrogables","Diez años renovables sin límite"],"correctOption":0,"explanation":"La ley prevé periodos quinquenales con máximo de veinticinco años.","optionExplanations":["Es el artículo 78.","Corresponde al modelo de utilidad.","Confunde otras figuras."]},
-      {"text":"¿Cuál vínculo caracteriza a la denominación de origen?","difficulty":"intermediate","options":["Calidad, características o reputación debidas exclusiva o esencialmente al origen","Solo que la empresa tenga domicilio en la zona","Que el nombre sea una marca famosa"],"correctOption":0,"explanation":"La denominación exige un vínculo sustantivo entre producto y entorno geográfico.","optionExplanations":["Incluye los elementos legales.","El domicilio no basta.","Marca y denominación son distintas."]},
-      {"text":"Una declaración de protección lleva diez años vigente y subsisten sus condiciones. ¿Caduca automáticamente?","difficulty":"advanced","options":["No, su vigencia depende de que subsistan las condiciones","Sí, debe renovarse cada diez años","Sí, se vuelve marca colectiva"],"correctOption":0,"explanation":"Los diez años corresponden a la autorización de uso, no a la declaración.","optionExplanations":["Aplica el artículo 269.","Confunde actos diferentes.","No hay conversión automática."]},
-      {"text":"Una productora desea usar una denominación protegida. ¿Qué necesita?","difficulty":"intermediate","options":["Autorización del IMPI y cumplimiento territorial y normativo","Solo comprar el nombre de otra empresa","Registrar cualquier logotipo"],"correctOption":0,"explanation":"La figura es un bien nacional y requiere autorización individual.","optionExplanations":["Integra los requisitos centrales.","No es propiedad privada transferible así.","El logotipo no autoriza uso."]},
-      {"text":"¿Cuánto dura la autorización para usar una denominación o indicación protegida?","difficulty":"basic","options":["Diez años desde la solicitud, renovables","Cinco años con máximo de veinticinco","Cien años desde la muerte"],"correctOption":0,"explanation":"El artículo 301 regula la autorización decenal renovable.","optionExplanations":["Es la regla aplicable.","Corresponde al diseño industrial.","Alude incorrectamente a derecho de autor."]},
-      {"text":"Un producto no autorizado usa ‘tipo Tequila’ de modo que confunde al consumidor. ¿Es lícito por añadir ‘tipo’?","difficulty":"advanced","options":["No, la expresión no evita el uso ilegal","Sí, ‘tipo’ siempre libera el nombre","Sí, si se vende fuera de la zona"],"correctOption":0,"explanation":"La ley sanciona también expresiones como tipo, género o imitación cuando generan confusión o competencia desleal.","optionExplanations":["Aplica el artículo 304.","Es exactamente el supuesto sancionado.","La ubicación de venta no autoriza el uso."]}
-    ]}
-  }]
+    {
+      "id": "ev-c38-dof-2026-arts67-82-disenos",
+      "kind": "official",
+      "title": "Decreto por el que se reforman, adicionan y derogan diversas disposiciones de la LFPPI",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5784017",
+      "institution": "Diario Oficial de la Federacion, Secretaria de Gobernacion",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "edicion DOF 03-04-2026, articulo unico, reformas a los articulos 67 a 82 y transitorios Primero a Cuarto",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c38-reglamento-2026-arts45-46-disenos",
+      "kind": "official",
+      "title": "Reglamento de la Ley Federal de Proteccion a la Propiedad Industrial",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5786237",
+      "institution": "Diario Oficial de la Federacion, Secretaria de Gobernacion",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "edicion DOF 28-04-2026, articulos 45 y 46",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c38-lfppi-arts264-271-do-ig",
+      "kind": "official",
+      "title": "Ley Federal de Proteccion a la Propiedad Industrial",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPPI.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto consolidado con ultima reforma DOF 03-04-2026, articulos 264 a 271, paginas impresas 70 a 72",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c38-reglamento-2026-arts127-133-vinculo-geografico",
+      "kind": "official",
+      "title": "Reglamento de la Ley Federal de Proteccion a la Propiedad Industrial",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5786237",
+      "institution": "Diario Oficial de la Federacion, Secretaria de Gobernacion",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "edicion DOF 28-04-2026, articulos 127 a 133, en especial 129 sobre mantenimiento del vinculo geografico",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c38-lfppi-arts272-297-declaracion",
+      "kind": "official",
+      "title": "Ley Federal de Proteccion a la Propiedad Industrial",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPPI.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto consolidado con ultima reforma DOF 03-04-2026, articulos 272 a 297, paginas impresas 72 a 78",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c38-dof-2026-arts274-295-declaracion",
+      "kind": "official",
+      "title": "Decreto por el que se reforman, adicionan y derogan diversas disposiciones de la LFPPI",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5784017",
+      "institution": "Diario Oficial de la Federacion, Secretaria de Gobernacion",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "edicion DOF 03-04-2026, articulo unico, reformas a los articulos 274 a 295",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c38-reglamento-2026-arts134-144-declaracion",
+      "kind": "official",
+      "title": "Reglamento de la Ley Federal de Proteccion a la Propiedad Industrial",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5786237",
+      "institution": "Diario Oficial de la Federacion, Secretaria de Gobernacion",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "edicion DOF 28-04-2026, articulos 134 a 144",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c38-lfppi-arts298-314-autorizacion-uso",
+      "kind": "official",
+      "title": "Ley Federal de Proteccion a la Propiedad Industrial",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPPI.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto consolidado con ultima reforma DOF 03-04-2026, articulos 298 a 314, paginas impresas 78 a 81",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c38-dof-2026-arts300-312-autorizacion-uso",
+      "kind": "official",
+      "title": "Decreto por el que se reforman, adicionan y derogan diversas disposiciones de la LFPPI",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5784017",
+      "institution": "Diario Oficial de la Federacion, Secretaria de Gobernacion",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "edicion DOF 03-04-2026, articulo unico, reformas a los articulos 300 a 312",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c38-reglamento-2026-arts145-151-autorizacion-uso",
+      "kind": "official",
+      "title": "Reglamento de la Ley Federal de Proteccion a la Propiedad Industrial",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5786237",
+      "institution": "Diario Oficial de la Federacion, Secretaria de Gobernacion",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "edicion DOF 28-04-2026, articulos 145 a 151",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c38-a51-l005-009-vigencia-diseno",
+      "kind": "transcript",
+      "audioNumber": 51,
+      "locator": {
+        "type": "line_range",
+        "startLine": 5,
+        "endLine": 9
+      }
+    },
+    {
+      "id": "ev-c38-a51-l011-013-renovacion-figuras",
+      "kind": "transcript",
+      "audioNumber": 51,
+      "locator": {
+        "type": "line_range",
+        "startLine": 11,
+        "endLine": 13
+      }
+    }
+  ]
 }

@@ -64,7 +64,7 @@ const legacyPackagePath = path.join(
   process.cwd(),
   "content",
   "packages",
-  "audio-50-patentes-modelos-utilidad.json",
+  "audio-51-derechos-autor.json",
 );
 
 function readLegacyPackage() {
