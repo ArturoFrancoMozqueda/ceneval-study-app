@@ -1,7 +1,24 @@
 # Roadmap y seguimiento — CENEVAL Study App
 
-Última actualización: 11 de agosto de 2026  
+Última actualización: 22 de agosto de 2026  
 Responsables: Fatima (aprobación editorial) y Codex (desarrollo y preparación académica)
+
+> **Nota de conciliación (22 de agosto de 2026).** El registro detallado de
+> este documento (secciones 2, 5 y 6) dejó de actualizarse sesión a sesión
+> después del 12 de agosto de 2026, cuando el catálogo llevaba 49 de 58
+> clases. Desde entonces la producción continuó hasta publicar C01–C57 (57 de
+> 58 clases) y el despliegue en Vercel se conectó a Git. El estado
+> continuamente verificado y actualizado vive en
+> [`docs/PROJECT_STATUS.md`](docs/PROJECT_STATUS.md); ante cualquier
+> contradicción entre ese documento y este, `PROJECT_STATUS.md` es la fuente
+> vigente. El plan para poder cobrar por la aplicación, con sus bloqueos y
+> evidencias de cierre, está en
+> [`docs/PLAN_ACCION_VENTA.md`](docs/PLAN_ACCION_VENTA.md); las decisiones de
+> producto, precio, proveedor y nombre comercial ya cerradas están en
+> [`docs/PLAN_VENTA_DECISIONES.md`](docs/PLAN_VENTA_DECISIONES.md). De ese
+> plan, hoy la Fase 0 (decisiones) ya cerró, y la Fase 1 (marco legal) y la
+> Fase 5 (producto vendible), además de parte de la tarea D-2, están en
+> desarrollo en paralelo por otros equipos — no están terminadas todavía.
 
 ## Cómo usar este documento
 
@@ -61,9 +78,9 @@ aprobación posterior.
 | Panel administrativo | 🚧 | 85% | Edición y retiro editorial completos |
 | Experiencia de estudiante | 🚧 | 80% | Prueba móvil, accesibilidad y estados |
 | Flashcards y exámenes | 🚧 | 85% | Historial y análisis de temas débiles |
-| Contenido académico | 🚧 | 2% | Revisar y publicar la clase piloto |
+| Contenido académico | 🚧 | 98% (57/58 clases publicadas, verificado 22-ago-2026) | Desbloquear C58 (ver `docs/C58_SOURCE_AUDIT.md`) y decidir alcance de bancos transversales |
 | Pruebas automatizadas | [ ] | 10% | Pruebas de permisos y flujo completo |
-| Despliegue | [ ] | 0% | Preparar Vercel y dominio |
+| Despliegue | 🚧 | Vercel conectado a Git, deployment `READY` en producción a la par de `main` (verificado 22-ago-2026); Hobby sin cambio a Pro | Subir a un plan que permita uso comercial (tarea `I-1` del plan de venta) |
 | Operación y mantenimiento | [ ] | 10% | Manuales, respaldos y actualización legal |
 
 ---
@@ -622,10 +639,10 @@ Estados editoriales:
 | Falta prueba automática integral de RLS | Pendiente | Completar Fase B antes de producción |
 | Protección contra contraseñas filtradas requiere plan Pro | Pospuesto | Activarla si el proyecto cambia a un plan compatible |
 | Falta versionado editorial completo | Pendiente | Completar Fase C |
-| Falta despliegue público | Pendiente | Completar pruebas antes de Fase H |
+| Falta despliegue público | Resuelto el despliegue técnico: Vercel conectado a Git, deployment `READY` a la par de `main` (verificado 22-ago-2026); pendiente para apertura comercial | Ver Fase 2 y Fase 5 de `docs/PLAN_ACCION_VENTA.md` |
 | Automatización con OpenAI | Pospuesta | Evaluar después de consolidar el flujo editorial manual |
 | Tutor y calendario | Pospuestos | Evaluar después del lanzamiento inicial |
-| Pagos | Fuera del alcance inicial | Biblioteca publicada gratuita |
+| Pagos | Producto, precio y proveedor ya decididos (`docs/PLAN_VENTA_DECISIONES.md`: $399 MXN/mes vía Stripe, *Sube Legal*); no implementado | No activar checkout ni webhook sin cerrar las Fases 0 a 3 de `docs/PLAN_ACCION_VENTA.md` |
 
 ---
 

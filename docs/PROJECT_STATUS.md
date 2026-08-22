@@ -1,10 +1,15 @@
 # Estado actual y siguientes pasos — CENEVAL Study App
 
-Última actualización: 21 de agosto de 2026 (hora de México)
+Última actualización: 22 de agosto de 2026 (hora de México)
 
-Base documental: `main` en `9a4d472` y auditoría remota de solo lectura del 21
-de agosto de 2026 (hora de México). Los cambios de base de datos y la
-publicación del artefacto actual siguen pendientes.
+Base documental: `main` en `9c74f58` y verificación remota de solo lectura del
+22 de agosto de 2026 (hora de México) contra el proyecto Supabase `CENEVAL
+Study App` y el proyecto Vercel `ceneval-study-app`. El plan vigente para
+comercializar la aplicación, con el estado verificado, los bloqueos y sus
+evidencias de cierre, está en
+[`PLAN_ACCION_VENTA.md`](PLAN_ACCION_VENTA.md); las decisiones de producto,
+precio, proveedor y nombre comercial ya cerradas están en
+[`PLAN_VENTA_DECISIONES.md`](PLAN_VENTA_DECISIONES.md).
 
 Responsables: Fatima (administración y validación) y Codex (desarrollo y contenido)
 
@@ -18,7 +23,25 @@ La aplicación tiene un núcleo local funcional: autenticación privada,
 biblioteca académica, sesiones en orden curricular, materiales, mapas,
 flashcards, repaso espaciado, exámenes, progreso, búsqueda y panel editorial.
 Desde la auditoría del 19 de agosto se integraron correcciones de seguridad,
-navegación, accesibilidad, estados de interfaz, dependencias y CI.
+navegación, accesibilidad, estados de interfaz, dependencias y CI, y desde
+entonces **el catálogo completo C01–C57 se importó, revisó y publicó** en el
+proyecto remoto.
+
+La verificación de solo lectura del 22 de agosto de 2026 confirmó que Vercel
+está **conectado a Git**, con el último deployment `READY` en producción
+correspondiente al commit actual de `main` (`9c74f58`); que las **19
+migraciones** del repositorio están aplicadas en Supabase y coinciden una a
+una con `supabase/migrations/`; y que el catálogo publicado tiene **24
+materias, 57 clases (todas `published`), 57 temas (todos `approved`), 513
+materiales, 57 mapas conceptuales, 685 flashcards, 57 exámenes, 570 preguntas
+y 570 claves de respuesta**. `npm run lint` pasa sin hallazgos y el build de
+producción del mismo commit se completó en Vercel. El detalle completo,
+incluidos los asesores de seguridad, está en
+[`PLAN_ACCION_VENTA.md`](PLAN_ACCION_VENTA.md) §1.
+
+En términos simples: la brecha entre las migraciones locales y las remotas ya
+se cerró, el despliegue ya no está desfasado de `main`, y C01–C57 ya no están
+pendientes de importar ni publicar.
 
 Los bloqueos operativos reales siguen siendo:
 
@@ -28,32 +51,43 @@ Los bloqueos operativos reales siguen siendo:
 2. el mecanismo PostgreSQL ya pasó un respaldo y una restauración reales en
    local, pero todavía no existe una exportación del remoto, una copia externa
    cifrada ni una restauración de esa copia en un proyecto de ensayo;
-3. el proyecto local aplica dieciocho migraciones, exige un lint PostgreSQL
-   local sin advertencias y pasó 141 comprobaciones RLS;
-   CENEVAL remoto conserva once migraciones y aún requiere ejecutar el mismo
-   gate en un entorno de ensayo autorizado antes de promover cambios;
-4. existe un despliegue técnico privado en Vercel Hobby y una cuenta
-   administradora confirmada en Supabase, pero el artefacto publicado es
-   anterior a `main`, no contiene los endpoints de health actuales y no hay
-   despliegue automático desde Git; faltan verificar los secretos por entorno
-   y validar el recorrido autenticado contra el artefacto que se promueva;
-5. C58 está bloqueada por insuficiencia de fuente y los bancos acumulativos
-   siguen pendientes; C41–C57 ya tienen
-   paquetes 1.2 trazables locales, aún no importados ni publicados.
+3. C58 está bloqueada por insuficiencia de fuente y los tres bancos
+   transversales y 16 exámenes acumulativos siguen pendientes de decisión de
+   alcance;
+4. **vender sigue bloqueado por razones no técnicas, no por el estado del
+   código o del contenido**: no hay pagos, planes, checkout ni webhook; el
+   registro sigue cerrado (`PRIVATE_ACCESS_ONLY=true`); no hay aviso de
+   privacidad ni términos de uso publicados (dos equipos los están redactando
+   en paralelo); no hay página pública de presentación (en desarrollo en
+   paralelo); no hay dominio propio, respaldo real de la base remota ni
+   monitoreo. El plan completo de qué falta para poder cobrar, con evidencia
+   de cierre por tarea, está en [`PLAN_ACCION_VENTA.md`](PLAN_ACCION_VENTA.md);
+   las decisiones de producto, precio y proveedor ya cerradas están en
+   [`PLAN_VENTA_DECISIONES.md`](PLAN_VENTA_DECISIONES.md).
 
 El historial de Git ya es útil y existe CI. Esos dos hallazgos de la auditoría
-original están resueltos, pero ninguno reemplaza un respaldo de la base.
+original están resueltos, pero ninguno reemplaza un respaldo real de la base
+remota.
 
 ### Estado actual y producto objetivo
 
-Hoy la aplicación es privada, la usa únicamente la administradora, el registro
-de estudiantes está pospuesto y no existen cobros. El objetivo de producto es
-ofrecer acceso mediante suscripción cuando contenido, seguridad, operación y
-despliegue estén listos.
+Hoy la aplicación es privada, la usa únicamente la administradora (1 usuario,
+1 perfil administrador, 0 intentos de examen en producción), el registro de
+estudiantes sigue pospuesto y no existen cobros. El objetivo de producto es
+ofrecer acceso mediante suscripción cuando el marco legal, la infraestructura
+apta para cobrar y la etapa de suscripción estén listos.
 
-Ese objetivo no autoriza todavía a abrir el registro ni define proveedor de
-pagos, precios, planes, periodo de prueba, cancelaciones o fecha de lanzamiento.
-Esas decisiones deben resolverse antes de concretar o implementar la venta.
+El producto comercial, el precio, el proveedor de pagos y el nombre comercial
+**ya están decididos**: una sola suscripción a la biblioteca completa, $399
+MXN/mes vía Stripe, bajo el nombre *Sube Legal*, sin periodo de prueba
+gratuito. El detalle completo está en
+[`PLAN_VENTA_DECISIONES.md`](PLAN_VENTA_DECISIONES.md). Esas decisiones no
+autorizan por sí solas a abrir el registro ni a cobrar: falta el marco legal
+(aviso de privacidad, términos de uso), la infraestructura apta para cobrar
+(planes comerciales de Vercel y Supabase, dominio propio, correo
+transaccional) y completar las etapas de `SUBSCRIPTION_ARCHITECTURE.md`, en
+ese orden. El plan completo con sus evidencias de cierre está en
+[`PLAN_ACCION_VENTA.md`](PLAN_ACCION_VENTA.md).
 
 La arquitectura técnica objetivo ya está documentada en
 [`SUBSCRIPTION_ARCHITECTURE.md`](SUBSCRIPTION_ARCHITECTURE.md) y registrada en
@@ -70,32 +104,35 @@ decisión no añade infraestructura ni reemplaza los gates operativos vigentes.
 
 ## 2. Inventario académico conocido
 
-La lectura del proyecto remoto **CENEVAL Study App** actualizada el 21 de agosto
-de 2026 (hora de México) confirmó **1 usuario con inicio de sesión, 1 perfil
-administrador, 0 materias, 0 clases y 0 temas**. Esto confirma que el bootstrap administrativo
-ya ocurrió, pero no sustituye una prueba E2E autenticada del artefacto que vaya
-a publicarse. Sus once migraciones están aplicadas y todas las tablas públicas
-tienen RLS.
+La verificación de solo lectura del proyecto remoto **CENEVAL Study App**
+actualizada el 22 de agosto de 2026 (hora de México) confirmó **1 usuario con
+inicio de sesión, 1 perfil administrador, 0 intentos de examen, 24 materias,
+57 clases (todas `published`), 57 temas (todos `approved`), 513 materiales, 57
+mapas conceptuales, 685 flashcards, 57 exámenes, 570 preguntas y 570 claves de
+respuesta**. El catálogo C01–C57 ya está importado, revisado y publicado. Esto
+confirma que el bootstrap administrativo ya ocurrió, pero no sustituye una
+prueba E2E autenticada con más de una cuenta estudiante real (bloqueo B5 de
+[`PLAN_ACCION_VENTA.md`](PLAN_ACCION_VENTA.md)). Sus 19 migraciones están
+aplicadas, coinciden una a una con `supabase/migrations/` y todas las tablas
+públicas tienen RLS.
 
-La auditoría del 12 de agosto registró el siguiente inventario en una base
-anterior, pero esos datos no están presentes en el proyecto CENEVAL conectado:
-
-| Elemento | Último dato conocido |
+| Elemento | Dato verificado el 22 de agosto de 2026 |
 | --- | ---: |
-| Clases académicas previstas | 58 |
-| Clases publicadas | 40 |
-| Clases restantes | 18 |
-| Versiones retiradas conservadas | 2 |
-| Materias con clases publicadas | 15 |
-| Temas publicados | 40 |
-| Materiales publicados | 360 |
-| Mapas conceptuales | 40 |
-| Flashcards | 480 |
-| Preguntas de examen | 400 |
+| Clases académicas previstas (C01–C58) | 58 |
+| Clases publicadas | 57 |
+| Clases restantes (C58, bloqueada) | 1 |
+| Materias con clases publicadas | 24 |
+| Temas aprobados | 57 |
+| Materiales publicados | 513 |
+| Mapas conceptuales | 57 |
+| Flashcards | 685 |
+| Exámenes publicados | 57 |
+| Preguntas de examen | 570 |
+| Claves de respuesta | 570 |
 
 El repositorio conserva C01–C57 como paquetes trazables en contrato 1.2 y una
-versión retirada en el archivo editorial. C01–C57 pasan el gate local, pero no
-se han importado, revisado ni publicado. C41 usa Audio 54 y solo las líneas
+versión retirada en el archivo editorial; esos mismos 57 ya están publicados
+en el proyecto remoto. C41 usa Audio 54 y solo las líneas
 13–69 pertinentes de Audio 55; C42 usa las líneas 85–295 de Audio 55; C43 usa
 Audio 56, líneas 23–199; C44 usa Audio 58, líneas 13–297; C45 usa la línea
 física 3 de Audio 59 solo como contexto amplio y sustenta las reglas en la
@@ -117,9 +154,9 @@ Audio 63, líneas 157–209, y Audio 64, líneas 17–45, excluyendo el cierre n
 pertinente 211–231; y C57 usa subrangos académicos de Audio 64, líneas 47–109,
 para inventario, avalúo y oposición. C58 permanece bloqueada: la auditoría de
 70/70 TXT y 14/14 lotes no encontró una transcripción suficiente sobre
-administración, cuentas, partición y adjudicación. Antes de disponer de esa
-biblioteca en la aplicación habrá que importar C01–C57 en el
-proyecto CENEVAL correcto mediante el flujo autorizado.
+administración, cuentas, partición y adjudicación (`docs/C58_SOURCE_AUDIT.md`).
+C01–C57 ya están importados, revisados y publicados en el proyecto CENEVAL; no
+queda una importación pendiente para ellos.
 
 Existen tres identificadores distintos:
 
@@ -163,27 +200,33 @@ de ejecutarlo, Supabase local debe estar activo; el comando no acepta
 ### Despliegue técnico en Vercel
 
 CENEVAL tiene un despliegue técnico privado en Vercel sobre Hobby; la cuenta no
-se cambió a Pro. La auditoría de solo lectura del 21 de agosto (hora de México)
-encontró cuatro deployments manuales, todos de Production y ninguno de Preview.
-El más reciente está `READY`, responde por HTTPS y protege la ruta administrativa mediante la
-pantalla de acceso, pero es anterior a `main` en `5f0c7e0`: tanto
-`/api/health/live` como `/api/health/ready` responden 404. Por ello todavía no
-equivale al artefacto actual, a un servicio operativo ni a un lanzamiento
-comercial. Supabase conserva once migraciones y 0 contenido académico.
+se cambió a Pro (sigue sin permitir uso comercial, bloqueo B2 de
+[`PLAN_ACCION_VENTA.md`](PLAN_ACCION_VENTA.md)). La verificación de solo
+lectura del 22 de agosto de 2026 (hora de México) encontró que **el proyecto
+ya está conectado a Git**: el último deployment está `READY`, target
+`production`, y corresponde al commit actual de `main` (`9c74f58`). Ya no
+depende de una publicación manual para reflejar el código más reciente.
+`GET /api/health/live` responde `200`; `GET /api/health/ready` responde `404`
+sin token, que es el comportamiento correcto y esperado (exige el token de
+operaciones). Esto reemplaza el hallazgo del 21 de agosto, que había
+encontrado cuatro deployments manuales desfasados de `main` (`5f0c7e0`), con
+ambos endpoints de health respondiendo `404` por estar desactualizados.
+`npm run lint` pasa sin hallazgos y el build de producción del mismo commit se
+completó en Vercel.
 
-La consulta de solo lectura de los metadatos de entorno de Vercel, sin leer ni
-imprimir valores, no encontró ninguna de las siete variables obligatorias de
-`.env.example` en el proyecto. El artefacto publicado cargó un archivo
-`.env.production` durante su build, pero eso no demuestra persistencia ni
-separación segura por entorno. Antes de operar deben configurarse y comprobarse
-los alcances Preview/Production de `NEXT_PUBLIC_SUPABASE_URL`,
-`NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_SECRET_KEY`,
-`NEXT_PUBLIC_SITE_URL`, `ADMIN_EMAIL`, `PRIVATE_ACCESS_ONLY` y
-`OPS_READINESS_TOKEN`, además de las redirecciones de Supabase Auth. El
-bootstrap de `docs/ADMIN_BOOTSTRAP.md` ya produjo un perfil administrador con
-inicio de sesión; falta repetir el E2E autenticado sobre el artefacto candidato.
-El proyecto no está conectado a Git; cada despliegue es manual y debe registrar
-el commit publicado.
+La consulta de solo lectura de los metadatos de entorno de Vercel del 21 de
+agosto, sin leer ni imprimir valores, no encontró ninguna de las siete
+variables obligatorias de `.env.example` en el proyecto; esa comprobación
+específica no se repitió el 22 de agosto y sigue sin confirmarse que las
+variables persistan separadas por entorno Preview/Production. Antes de operar
+deben configurarse y comprobarse los alcances Preview/Production de
+`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`,
+`SUPABASE_SECRET_KEY`, `NEXT_PUBLIC_SITE_URL`, `ADMIN_EMAIL`,
+`PRIVATE_ACCESS_ONLY` y `OPS_READINESS_TOKEN`, además de las redirecciones de
+Supabase Auth (tarea `I-6` de `PLAN_ACCION_VENTA.md`). El bootstrap de
+`docs/ADMIN_BOOTSTRAP.md` ya produjo el único perfil administrador con inicio
+de sesión confirmado hoy; falta repetir el E2E autenticado sobre el artefacto
+publicado con más de una cuenta.
 
 `docs/DEPLOYMENT_RUNBOOK.md` ya define un flujo fail-closed para registrar SHA,
 CI, proyecto, deployment anterior, preview, digest del build Production,
@@ -261,12 +304,14 @@ evidencias, journeys y vínculos editoriales; 1.0 y 1.1 fallan antes de llamar a
 Supabase. La versión sustituida de C14 permanece en el archivo 1.0 no
 importable.
 
-La implementación pasó pruebas unitarias, TypeScript, lint y build. Las dieciocho
-migraciones locales se aplicaron desde cero en PostgreSQL 17.6 y el runner
-dinámico comprobó round-trip semántico, 2 evidencias, 118 artefactos, 236
-vínculos, estados `draft`/`pending`, rechazo de duplicados sin residuos y RPC
-denegadas a `anon` y `authenticated`. La migración todavía no está aplicada en
-el proyecto remoto; C01–C57 no se han importado.
+La implementación pasó pruebas unitarias, TypeScript, lint y build. Las
+migraciones locales (19, coincidentes con el remoto) se aplicaron desde cero en
+PostgreSQL 17.6 y el runner dinámico comprobó round-trip semántico, 2
+evidencias, 118 artefactos, 236 vínculos, estados `draft`/`pending`, rechazo de
+duplicados sin residuos y RPC denegadas a `anon` y `authenticated`. Esa
+persistencia de 1.2 ya está aplicada en el proyecto remoto y C01–C57 ya se
+importaron, revisaron y publicaron: verificado el 22 de agosto de 2026 con 57
+clases y 57 temas en estado `published`/`approved`.
 
 ### Controles editoriales concurrentes
 
@@ -439,8 +484,10 @@ no locales; ninguna de estas pruebas escribió en CENEVAL remoto.
 
 Queda pendiente:
 
-- aplicar las siete migraciones locales pendientes en un proyecto de ensayo y
-  repetir allí la suite RLS antes de CENEVAL;
+- crear un proyecto de ensayo aparte de producción, aplicar allí las 19
+  migraciones desde cero y repetir la suite RLS con datos sintéticos (tarea
+  `M-1` de `PLAN_ACCION_VENTA.md`); las 19 migraciones ya están aplicadas en
+  CENEVAL, pero ese ensayo con datos no reales sigue sin hacerse;
 - mantener `npm run db:lint:local` sin advertencias; la migración nueva ya
   eliminó los doce avisos de `private.import_class_package_v12` y el reset,
   lint, round-trip RPC y RLS local volvieron a pasar;
@@ -452,8 +499,9 @@ Queda pendiente:
 
 El inventario editorial registra contenido preparado para C01–C57: cada clase
 tiene transcripción conservada, versión depurada, nueve materiales, mapa,
-flashcards, diez reactivos y fuentes. C01–C57 pasan el gate local 1.2, pero
-aún requieren revisión y publicación autorizadas.
+flashcards, diez reactivos y fuentes. C01–C57 pasan el gate local 1.2 y **ya
+están importados, revisados y publicados** en el proyecto remoto (verificado
+el 22 de agosto de 2026: 57 clases publicadas, 57 temas aprobados).
 
 La decisión de minimización ya está implementada localmente. El cargador lee
 los TXT privados y valida el paquete editorial completo; antes de invocar la
@@ -461,9 +509,10 @@ RPC proyecta el contrato 1.2 sin la clave `transcript`. Supabase conserva las
 dinámicas, el registro de evidencia y sus localizadores, pero no el texto
 original ni el depurado. La exportación reconstruye esa misma proyección y el
 round-trip comprueba que no se pierdan artefactos, vínculos o recorrido. La
-interfaz administrativa ya no ofrece captura o lectura de transcripciones.
-La importación remota continúa bloqueada hasta aplicar y probar la migración de
-minimización en el proyecto de ensayo autorizado.
+interfaz administrativa ya no ofrece captura o lectura de transcripciones. La
+migración de minimización (`20260822034153_minimize_transcript_storage.sql`)
+ya está aplicada en el proyecto remoto junto con el resto; la importación de
+C01–C57 se completó con esa protección activa.
 
 Orden de producción restante:
 
@@ -475,6 +524,10 @@ Además siguen pendientes tres bancos transversales y 16 exámenes acumulativos.
 
 ## 6. Plan vigente
 
+El plan detallado para poder cobrar, con sus bloqueos y evidencias de cierre,
+está en [`PLAN_ACCION_VENTA.md`](PLAN_ACCION_VENTA.md); lo que sigue aquí es el
+plan de trabajo técnico y de contenido, que es complementario.
+
 ### Prioridad 0 — Proteger y comprobar
 
 1. Crear una segunda copia independiente de las 70 transcripciones y verificarla
@@ -485,8 +538,11 @@ Además siguen pendientes tres bancos transversales y 16 exámenes acumulativos.
 3. Ampliar y ejecutar `npm run security:rls` en el proyecto CENEVAL y
    registrar el resultado. Esta suite crea y elimina datos remotos; no
    pertenece a CI.
-4. Aplicar la persistencia 1.2 ya aprobada localmente en un proyecto de ensayo;
-   C01–C57 ya cuentan con evidencia real verificable para ese ensayo.
+4. Crear un proyecto de ensayo Supabase aparte de producción, aplicar las 19
+   migraciones desde cero y repetir allí la suite RLS con datos sintéticos
+   (tarea `M-1` de `PLAN_ACCION_VENTA.md`). La persistencia 1.2 y C01–C57 ya
+   están aplicados y publicados directamente en el proyecto de producción; este
+   ensayo separado con datos que no sean reales sigue pendiente.
 
 ### Prioridad 1 — Cerrar el pipeline con C01–C57
 
@@ -516,15 +572,17 @@ solo con legislación; repetir después el pipeline 1.2 completo descrito en
 
 1. Persistir y verificar las variables de Vercel sin exponer secretos.
 2. Configurar las redirecciones de Supabase Auth y probar contra el artefacto
-   candidato la cuenta administradora ya creada, su inicio de sesión y acceso
+   publicado la cuenta administradora ya creada, su inicio de sesión y acceso
    privado.
 3. Probar login y rutas privadas desde teléfono y computadora, y revisar logs.
-4. Ejecutar y aprobar el runbook en la siguiente publicación manual y decidir
-   si se habilita integración Git.
+4. Ejecutar y aprobar el runbook en la siguiente publicación. Vercel ya está
+   conectado a Git, así que el despliegue ya no depende de una publicación
+   manual; falta ejecutar el runbook completo sobre ese flujo.
 5. Añadir monitoreo continuo; el runbook actual solo cubre observación manual
    en Hobby, respaldo y restauración.
-6. Resolver proveedor, planes/precios, prueba, cancelación, reembolsos,
-   impuestos y soporte antes de implementar registro o pagos.
+6. Proveedor, planes/precio, prueba, cancelación y reembolsos ya están
+   decididos en `PLAN_VENTA_DECISIONES.md`; sigue pendiente cerrar el régimen
+   fiscal por escrito y el soporte antes de implementar registro o pagos.
 7. Seguir los gates incrementales de `SUBSCRIPTION_ARCHITECTURE.md`: dominio y
    autorización sin cobro, sandbox cerrado, piloto privado y solo después
    apertura comercial explícita.
@@ -538,20 +596,28 @@ solo con legislación; repetir después el pipeline 1.2 completo descrito en
 | 1 | Completar el respaldo de transcripciones | Segunda copia independiente y restauración de ensayo |
 | 2 | Ejecutar y probar el respaldo documentado | Exportación fechada, copia externa verificada y restauración de ensayo |
 | 3 | Ampliar y ejecutar la suite RLS | Comprobaciones actuales y casos de temas no aprobados aprobados en CENEVAL |
-| 4 | Aplicar la persistencia 1.2 en un proyecto de ensayo | Migración remota de ensayo, round-trip y RLS aprobados antes de producción |
-| 5 | Aprobar C01–C57 | Recorrido trazable completo sin evidencia inventada |
+| 4 | Crear un proyecto de ensayo Supabase aparte de producción para repetir la suite RLS con datos que no sean reales | Proyecto de ensayo con las 19 migraciones aplicadas y RLS aprobada (tarea `M-1` de `PLAN_ACCION_VENTA.md`) |
+| 5 | Aprobar C01–C57 — completado | 57 clases publicadas y 57 temas aprobados, verificado el 22 de agosto de 2026 en el proyecto remoto |
 | 6 | Crear pruebas de navegador | Flujos centrales reproducibles en CI o entorno aislado |
 | 7 | Completar y validar el despliegue privado | Variables persistentes, administradora operativa y URL estable aprobada desde teléfono y computadora |
+| 8 | Cerrar los bloqueos de venta (marco legal, infraestructura apta para cobrar, respaldo real) | Fases 1 a 3 de `PLAN_ACCION_VENTA.md` con evidencia de cierre |
 
 ## 8. Decisiones de producto abiertas
 
 1. Definir responsables y periodicidad de la revisión jurídica trazable.
 2. Confirmar si el estándar definitivo es de tres o cuatro opciones por reactivo.
-3. Decidir el alcance de los 16 exámenes acumulativos.
-4. Definir responsables del repositorio, Supabase, respaldo y despliegue.
-5. Definir proveedor, planes, precio, reglas de acceso y soporte de la futura
-   suscripción, además de prueba, cancelación, reembolsos e impuestos; hasta
-   entonces, mantener cerrado el registro.
+3. Decidir el alcance de los 16 exámenes acumulativos (tarea `P-6` de
+   `PLAN_ACCION_VENTA.md`).
+4. Definir responsables del repositorio, Supabase, respaldo y despliegue
+   (resuelto para titularidad de cuentas en `PLAN_VENTA_DECISIONES.md` D-8;
+   falta el resto).
+5. Proveedor, planes, precio, nombre comercial, prueba, cancelación y
+   reembolsos de la futura suscripción **ya están decididos** en
+   [`PLAN_VENTA_DECISIONES.md`](PLAN_VENTA_DECISIONES.md): Stripe, $399
+   MXN/mes, sin periodo de prueba, *Sube Legal*. Sigue pendiente la
+   confirmación fiscal por escrito del contador (D-7) y la búsqueda formal de
+   marca en el IMPI (D-9). Hasta cerrar esas dos piezas y el resto de las
+   Fases 1 a 3 de `PLAN_ACCION_VENTA.md`, el registro se mantiene cerrado.
 
 ## 9. Definición de terminado
 
@@ -565,12 +631,18 @@ correspondiente y sus recorridos de alta, cobro, cancelación y soporte.
 
 ## 10. Siguiente acción inmediata
 
-La siguiente acción es cerrar el gate editorial trazable antes de producir más
-contenido o escribir en la base remota:
+Con C01–C57 ya publicadas, la siguiente acción es proteger lo que ya existe y
+avanzar el plan de venta, no producir más contenido:
 
 1. crear una segunda copia independiente del archivo editorial y ensayar su restauración;
 2. ejecutar y completar el procedimiento de `docs/SUPABASE_BACKUP.md`;
-3. aplicar las migraciones en un proyecto de ensayo y repetir el gate dinámico
-   antes de promoverlas a CENEVAL;
+3. crear un proyecto de ensayo aparte de producción para repetir el gate RLS
+   dinámico con datos sintéticos (tarea `M-1` de `PLAN_ACCION_VENTA.md`); las
+   migraciones y el contenido C01–C57 ya se aplicaron y publicaron
+   directamente en CENEVAL, sin pasar primero por ese ensayo;
 4. solicitar la nueva transcripción definida en `C58_SOURCE_AUDIT.md`; C58 no
-   puede producirse honestamente con el corpus actual.
+   puede producirse honestamente con el corpus actual;
+5. avanzar las Fases 1 a 3 de [`PLAN_ACCION_VENTA.md`](PLAN_ACCION_VENTA.md)
+   (legal, infraestructura y respaldo real) — la Fase 0 (decisiones) ya cerró
+   con [`D1_DERECHOS_AUDIOS.md`](D1_DERECHOS_AUDIOS.md) y
+   [`PLAN_VENTA_DECISIONES.md`](PLAN_VENTA_DECISIONES.md).

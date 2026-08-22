@@ -37,33 +37,45 @@ transcripción → preparación editorial → borrador → revisión → publica
 
 - El repositorio conserva 57 paquetes académicos vigentes (C01–C57), una
   versión retirada en el archivo editorial y el plan C01–C58. El proyecto
-  remoto **CENEVAL Study App** fue verificado el 20 de agosto de 2026 con el
-  esquema completo, pero todavía tiene 0 usuarios, 0 materias y 0 clases.
+  remoto **CENEVAL Study App** fue verificado el 22 de agosto de 2026: 1
+  usuario, 1 perfil administrador, 24 materias, 57 clases (todas
+  `published`), 57 temas (todos `approved`), 513 materiales, 57 mapas
+  conceptuales, 685 flashcards, 57 exámenes, 570 preguntas y 570 claves de
+  respuesta. C01–C57 ya están importados, revisados y publicados; solo C58
+  sigue bloqueada por falta de fuente académica.
 - La app es **privada**: solo la administradora entra. El registro de
   estudiantes está pospuesto por decisión de producto.
-- El objetivo futuro es ofrecerla mediante **suscripción**, pero todavía no se
-  han definido proveedor de pagos, precios, planes ni fecha de apertura. No
-  implementes registro público o cobros sin una decisión explícita.
+- El objetivo futuro es ofrecerla mediante **suscripción**. El producto,
+  precio ($399 MXN/mes), proveedor (Stripe) y nombre comercial (*Sube Legal*)
+  ya están decididos en `docs/PLAN_VENTA_DECISIONES.md`, pero eso no autoriza
+  a implementar registro público ni cobros: falta el marco legal, la
+  infraestructura apta para cobrar y las etapas de
+  `SUBSCRIPTION_ARCHITECTURE.md`. No implementes registro público o cobros sin
+  que el plan vigente lo indique explícitamente.
 - Existe un despliegue técnico privado de CENEVAL en un proyecto separado de
-  Vercel sobre el plan Hobby. No es un piloto ni una apertura comercial:
-  Supabase sigue sin usuarios ni contenido y falta completar la identidad
-  administradora y los secretos del entorno.
+  Vercel sobre el plan Hobby (no autoriza uso comercial). **Vercel ya está
+  conectado a Git**: el último deployment está `READY` en producción y
+  corresponde al commit actual de `main`. Supabase ya tiene el catálogo
+  publicado descrito arriba, pero sigue siendo de uso exclusivo de la
+  administradora: no hay estudiantes ni cobros.
 - La administradora se crea mediante `docs/ADMIN_BOOTSTRAP.md`. No restaures la
   autopromoción basada en `ADMIN_EMAIL` ni promociones usuarios dentro del
   render o de una petición GET.
-- Vercel todavía no está conectado a Git. La CI y los pushes no despliegan por
-  sí solos; las publicaciones actuales son manuales.
 - Hay CI para pruebas unitarias locales, lint y build. Aún no hay pruebas
   automatizadas de interfaz.
 
 ## Orden de lectura
 
 1. `docs/PROJECT_STATUS.md` — estado y plan vigentes.
-2. `docs/auditoria-2026-08/README.md` — corte histórico del 19 de agosto y
+2. `docs/PLAN_ACCION_VENTA.md` y `docs/PLAN_VENTA_DECISIONES.md` — lectura
+   obligatoria antes de cualquier trabajo relacionado con la venta o
+   comercialización: qué falta para poder cobrar y qué decisiones de producto,
+   precio, proveedor y nombre comercial ya están cerradas.
+3. `docs/auditoria-2026-08/README.md` — corte histórico del 19 de agosto y
    conciliación con el código integrado después de la auditoría.
-3. `docs/03-user-stories.md` — qué debe hacer el producto.
-4. `docs/DECISIONS.md` — decisiones tomadas y por qué (ADR).
-5. El resto de `docs/`, según lo que vayas a tocar.
+4. `docs/03-user-stories.md` — qué debe hacer el producto.
+5. `docs/DECISIONS.md` — decisiones tomadas y por qué (ADR).
+6. El resto de `docs/`, según lo que vayas a tocar.
 
 `docs/archivo/` contiene documentos históricos. **No los uses como referencia.**
 
@@ -175,13 +187,15 @@ alguna sigue abierta; si corriges una, actualiza esta lista.
   de los 70 TXT y 14 lotes no encontró una transcripción que desarrolle
   administración, cuentas, partición y adjudicación hereditaria. No se debe
   crear un paquete solo con legislación; consulta `docs/C58_SOURCE_AUDIT.md`.
-- **Las once migraciones están aplicadas en CENEVAL; el gate RLS ampliado ya
-  pasó localmente.** El historial remoto se verificó el 20 de agosto de 2026 y
-  los asesores no mostraron errores de seguridad; el aviso de
-  `exam_answer_keys` sin políticas es el bloqueo deliberado. En PG17 local,
-  `npm run security:rls` aplicó 17 migraciones desde cero y aprobó 141
-  comprobaciones con cleanup sin residuos. Las migraciones locales posteriores
-  todavía no están aplicadas en CENEVAL.
+- **Las 19 migraciones del repositorio están aplicadas en CENEVAL y coinciden
+  una a una con `supabase/migrations/`.** Verificado el 22 de agosto de 2026:
+  los asesores de Supabase solo muestran el `INFO` esperado de
+  `exam_answer_keys` sin políticas (bloqueo deliberado) y un `WARN` de
+  protección contra contraseñas filtradas, pendiente de activar (tarea `I-5`
+  de `docs/PLAN_ACCION_VENTA.md`). En PG17 local, `npm run security:rls`
+  aplicó las migraciones desde cero y aprobó 141 comprobaciones con cleanup
+  sin residuos, pero esa suite dinámica todavía no se ha ejecutado contra un
+  proyecto Supabase remoto (ni de ensayo ni de producción).
 - **La protección de lectura por aprobación está aplicada en CENEVAL.**
   `20260821023330_restrict_reading_to_approved_topics.sql` impide que una
   estudiante lea temas pendientes o rechazados, y extiende el bloqueo a sus
@@ -190,18 +204,23 @@ alguna sigue abierta; si corriges una, actualiza esta lista.
   quedó verificado dinámicamente en PG17 local por la suite RLS ampliada.
 - **Existe el procedimiento, no un respaldo real de Supabase.**
   `docs/SUPABASE_BACKUP.md` y `npm run test:backup` documentan y comprueban el
-  mecanismo con datos sintéticos. El proyecto remoto actual no contiene
-  usuarios ni contenido que respaldar; antes de importar o abrir el servicio
-  debe establecerse una exportación periódica, copia externa verificada y una
+  mecanismo con datos sintéticos. El proyecto remoto **ya tiene contenido real
+  que respaldar** (24 materias, 57 clases publicadas y el resto del catálogo,
+  verificado el 22 de agosto de 2026), lo que hace más urgente, no menos,
+  establecer una exportación periódica, copia externa verificada y una
   restauración en un proyecto de ensayo. Git y CI tampoco sustituyen esos pasos.
 - **Hay despliegue técnico, no servicio operativo.** CENEVAL usa un proyecto
-  separado en Vercel Hobby, sin cambio a Pro. Supabase sigue vacío y faltan la
-  configuración persistente de secretos, la administradora y la validación
-  autenticada. No hay integración Git automática: CI verde o un push a `main`
-  no publican por sí solos.
-- **El bootstrap administrativo existe, pero no se ha ejecutado.** El comando
+  separado en Vercel Hobby, sin cambio a Pro (no autoriza uso comercial).
+  Vercel **ya está conectado a Git**: el último deployment está `READY` en
+  producción y corresponde al commit actual de `main`, verificado el 22 de
+  agosto de 2026. Aun así sigue sin ser un servicio operativo: no hay
+  estudiantes, no hay cobros y falta confirmar que los secretos persistan
+  separados por entorno Preview/Production.
+- **El bootstrap administrativo existe y ya se ejecutó.** El comando
   `npm run admin:bootstrap` invita o promueve de forma explícita y verifica el
-  rol. Escribe en Supabase y requiere autorización; nunca pertenece a CI.
+  rol; escribe en Supabase y requiere autorización, nunca pertenece a CI. El
+  proyecto remoto ya tiene 1 perfil administrador confirmado (verificado el 22
+  de agosto de 2026).
 - **Tres numeraciones distintas.** Audio 01–70 (transcripciones), C01–C58
   (orden académico) e ID de Supabase (técnico). No las confundas: C40 tiene el
   ID 49, y eso no significa que existan 49 clases.
