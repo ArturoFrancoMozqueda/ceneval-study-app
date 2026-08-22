@@ -156,8 +156,8 @@ El Audio 66 se archiva como transcripción defectuosa. Su fragmento sobre acció
 | --- | --- | --- | --- |
 | C51 | Regímenes patrimoniales del matrimonio | Audio 46, líneas 113, 117–119 y 209–213; línea gigante 113 sólo como contraste del error de formalidad | Paquete 1.2 trazable preparado localmente; Código Familiar de Michoacán vigente, sin universalizar escritura o inscripción; no importado ni publicado |
 | C52 | Divorcio voluntario y convenio familiar | Audio 63, líneas 9–13, 19–23, 31–35 y 53; línea 57 en adelante excluida | Paquete 1.2 trazable preparado localmente; convenio, patria potestad y viaje delimitados con fuentes oficiales; no importado ni publicado |
-| C53 | Divorcio sin expresión de causa | segunda parte del Audio 67 | Planificada; distinguir código nacional y régimen local |
-| C54 | Medidas familiares provisionales: alimentos, custodia y convivencia | Audio 68 | Planificada |
+| C53 | Divorcio sin expresión de causa | Audio 67, líneas 169–265; subrangos académicos trazados y exclusiones documentadas | Paquete 1.2 trazable preparado localmente; régimen de Michoacán separado del modelo nacional gradual; no importado ni publicado |
+| C54 | Medidas familiares provisionales: alimentos, custodia y convivencia | Audio 68, líneas físicas completas 3, 5 y 9; línea 7 excluida por falta de pertinencia | Paquete 1.2 trazable preparado localmente; sin porcentajes, preferencias de género ni recursos automáticos; no importado ni publicado |
 
 ### M16. Derecho sucesorio
 

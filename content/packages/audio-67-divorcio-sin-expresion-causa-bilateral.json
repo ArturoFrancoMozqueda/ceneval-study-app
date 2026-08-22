@@ -1,0 +1,1514 @@
+{
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C53",
+    "order": 53,
+    "audioSources": [
+      {
+        "audioNumber": 67,
+          "fragment": "Líneas 169–265: divorcio sin causa, contraste bilateral, accesorias y depuración editorial documentada"
+      }
+    ]
+  },
+  "subject": {
+    "name": "Derecho Familiar",
+    "description": "Divorcio sin expresión de causa en Michoacán y contraste transitorio con el modelo nacional bilateral."
+  },
+  "class": {
+    "title": "Divorcio sin expresión de causa y modelo bilateral",
+    "description": "Voluntad unilateral, propuesta de convenio, cuestiones accesorias y aplicación gradual del Código Nacional."
+  },
+  "transcript": {
+    "originalFile": "AUDIO 67.txt",
+    "cleaned": "Cobertura editorial del fragmento 169–265. Se conservaron 169–173 (transición temática), 175–177 (domicilio sólo como afirmación que exige verificar la regla aplicable), 181–213 (contraste entre voluntad unilateral y modelo bilateral), 215–221 (separación entre vínculo y cuestiones accesorias, corrigiendo la cronología no universal), 233–237 (alimentos y convivencia) y 247–263 (convivencia, patria potestad y violencia únicamente como contraste corregido: no hay pérdida ni sanción automática). Se excluyeron 179, 193, 205 y las líneas pares vacías; 223–231 por anécdota, insultos, estereotipos y datos de un asunto; 239–245 por casos sensibles, persona identificable y comentarios económicos/profesionales; y 265 por publicidad del servicio de transcripción. Se corrigieron expresamente: el domicilio no es regla universal; el Código Nacional no opera automáticamente en Michoacán; su artículo 663 es una vía oral familiar general; ninguna secuencia de admisión/dos audiencias se universaliza; y convivencia o patria potestad requieren causal, prueba y decisión judicial, no fórmulas automáticas."
+  },
+  "topics": [
+    {
+      "title": "Disolución del vínculo y cuestiones accesorias",
+      "description": "Régimen vigente de Michoacán, tutela de la voluntad y lectura separada del modelo nacional de aplicación gradual.",
+      "learningJourney": {
+        "openingPrompt": "¿Puede una persona obtener el divorcio en Michoacán aunque la otra no consienta ni exista una causa que probar?",
+        "quickChecks": [
+          {
+            "prompt": "¿La oposición del otro cónyuge impide el divorcio sin expresión de causa?",
+            "answer": "No. En Michoacán basta la manifestación unilateral, sin perjuicio de resolver las cuestiones accesorias conforme a la ley.",
+            "feedback": "Separa la disolución del vínculo de alimentos, custodia, convivencia y patrimonio.",
+            "evidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta",
+              "ev-c53-cf-260-270-medidas-disolucion",
+              "ev-c53-scjn-2008492-libre-desarrollo",
+              "ev-c53-a67-l195-203-voluntad-unilateral"
+            ]
+          },
+          {
+            "prompt": "¿El artículo 663 del Código Nacional crea por sí solo una modalidad denominada divorcio unilateral?",
+            "answer": "No. Ese artículo abre la vía oral familiar general para controversias sin procedimiento especial; debe leerse con el régimen aplicable y sus transitorios.",
+            "feedback": "No conviertas una regla procesal general en una institución sustantiva específica.",
+            "evidenceIds": [
+              "ev-c53-cnpcf-transitorios-vigencia",
+              "ev-c53-cnpcf-663-oral-general",
+              "ev-c53-a67-l181-191-modelo-nacional"
+            ]
+          },
+          {
+            "prompt": "¿El divorcio extingue automáticamente las obligaciones hacia hijas e hijos?",
+            "answer": "No. La autoridad debe resolver o proteger alimentos, custodia, convivencia y demás derechos conforme al interés superior.",
+            "feedback": "Disolver el matrimonio no borra las relaciones parentales ni las prestaciones pendientes.",
+            "evidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta",
+              "ev-c53-cf-260-270-medidas-disolucion",
+              "ev-c53-cf-271-276-efectos-registro",
+              "ev-c53-a67-l233-237-alimentos-convivencia"
+            ]
+          },
+          {
+            "prompt": "¿Incumplir una convivencia produce por sí solo pérdida de patria potestad?",
+            "answer": "No. La pérdida o suspensión requiere una causa legal, valoración de hechos y resolución judicial; no es una consecuencia automática de una sola inasistencia.",
+            "feedback": "No conviertas el relato del audio en regla: verifica causal, prueba, interés superior y decisión.",
+            "evidenceIds": [
+              "ev-c53-cf-271-276-efectos-registro",
+              "ev-c53-cf-421-429-patria-potestad",
+              "ev-c53-a67-l247-263-convivencia-patria-potestad"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una persona casada en Michoacán pide el divorcio sin expresar causa. Presenta propuesta sobre alimentos, custodia, convivencia y liquidación. Su cónyuge se opone al divorcio y rechaza parte de la propuesta.",
+          "question": "¿Qué debe decidirse sobre el vínculo y qué puede permanecer controvertido?",
+          "legalRule": "Los artículos 253 a 257 del Código Familiar distinguen el divorcio voluntario y el solicitado unilateralmente; los artículos 260 a 270 permiten proteger intereses familiares y separar la disolución de los puntos todavía controvertidos.",
+          "reasoning": "La oposición no convierte la voluntad de permanecer casado en requisito. La autoridad examina la propuesta y contrapropuesta, protege a hijas e hijos y puede reservar las divergencias accesorias para su resolución, sin confundirlas con la continuidad del vínculo.",
+          "conclusion": "Procede analizar la disolución con base en la voluntad unilateral y tramitar o resolver separadamente las cuestiones accesorias pendientes.",
+          "evidenceIds": [
+            "ev-c53-cf-253-257-vias-propuesta",
+            "ev-c53-cf-260-270-medidas-disolucion",
+            "ev-c53-cf-271-276-efectos-registro",
+            "ev-c53-scjn-2008492-libre-desarrollo",
+            "ev-c53-a67-l195-203-voluntad-unilateral"
+          ]
+        },
+        "closingPrompt": "Explica por qué voluntad de divorciarse, convenio y cuestiones accesorias son tres planos relacionados pero distintos.",
+        "nextActivity": "Compara en una tabla el régimen vigente de Michoacán con el modelo bilateral de los artículos 654 a 662 del Código Nacional, señalando la condición transitoria de este último.",
+        "openingPromptEvidenceIds": [
+          "ev-c53-cf-253-257-vias-propuesta",
+          "ev-c53-scjn-2008492-libre-desarrollo",
+          "ev-c53-a67-l195-203-voluntad-unilateral"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c53-cf-253-257-vias-propuesta",
+          "ev-c53-cf-260-270-medidas-disolucion",
+          "ev-c53-cf-271-276-efectos-registro",
+          "ev-c53-cnpcf-654-662-bilateral"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c53-cnpcf-transitorios-vigencia",
+          "ev-c53-cnpcf-654-662-bilateral",
+          "ev-c53-cnpcf-663-oral-general",
+          "ev-c53-a67-l181-191-modelo-nacional",
+          "ev-c53-a67-l207-213-bilateral-convenio"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "En Michoacán, el divorcio puede ser voluntario o solicitarse sin expresión de causa. Para esta segunda vía basta la voluntad de una persona; la oposición no impide por sí sola disolver el vínculo. La propuesta debe atender alimentos, custodia, convivencia y patrimonio cuando corresponda, y las divergencias accesorias pueden continuar separadamente.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c53-cf-253-257-vias-propuesta",
+            "ev-c53-cf-260-270-medidas-disolucion",
+            "ev-c53-scjn-2008492-libre-desarrollo",
+            "ev-c53-a67-l195-203-voluntad-unilateral"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa",
+          "content": "El Código Familiar de Michoacán distingue el divorcio voluntario del solicitado unilateralmente sin necesidad de expresar motivo. La solicitud unilateral debe acompañarse de una propuesta que proteja, según el caso, custodia, convivencia, alimentos y liquidación patrimonial. La autoridad adopta medidas provisionales, recibe propuesta y contrapropuesta y busca acuerdos. Si persiste divergencia, puede declarar la disolución y reservar los puntos pendientes. Esto corrige la cronología rígida del audio: no se enseña una disolución automática desde la admisión ni dos audiencias universales. Las cuestiones parentales exigen valoración separada y la patria potestad no se pierde automáticamente. El Código Nacional regula en sus artículos 654 a 662 un divorcio bilateral con reglas propias; su aplicación es gradual y condicionada por transitorios, por lo que no sustituye automáticamente al régimen local. Su artículo 663 sólo abre la vía oral familiar general para asuntos sin procedimiento especial.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c53-cf-253-257-vias-propuesta",
+            "ev-c53-cf-260-270-medidas-disolucion",
+            "ev-c53-cf-271-276-efectos-registro",
+            "ev-c53-cnpcf-transitorios-vigencia",
+            "ev-c53-cnpcf-654-662-bilateral",
+            "ev-c53-cnpcf-663-oral-general",
+            "ev-c53-scjn-2008492-libre-desarrollo",
+            "ev-c53-cf-421-429-patria-potestad",
+            "ev-c53-a67-l169-173-introduccion",
+            "ev-c53-a67-l181-191-modelo-nacional",
+            "ev-c53-a67-l195-203-voluntad-unilateral",
+            "ev-c53-a67-l207-213-bilateral-convenio",
+            "ev-c53-a67-l215-221-disolucion-accesorias",
+            "ev-c53-a67-l233-237-alimentos-convivencia",
+            "ev-c53-a67-l247-263-convivencia-patria-potestad"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico",
+          "content": "Michoacán: artículos 253–257 sobre concepto, clases, voluntad unilateral y propuesta; 260–270 sobre medidas, emplazamiento, audiencia y separación de puntos controvertidos; 271–276 sobre efectos familiares y registro; 421–429 sobre patria potestad. Modelo nacional: transitorios y artículos 654–662 para divorcio bilateral; artículo 663 para la vía oral familiar general. La SCJN vincula el divorcio sin causa con el libre desarrollo de la personalidad.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c53-cf-253-257-vias-propuesta",
+            "ev-c53-cf-260-270-medidas-disolucion",
+            "ev-c53-cf-271-276-efectos-registro",
+            "ev-c53-cnpcf-transitorios-vigencia",
+            "ev-c53-cnpcf-654-662-bilateral",
+            "ev-c53-cnpcf-663-oral-general",
+            "ev-c53-scjn-2008492-libre-desarrollo",
+            "ev-c53-cf-421-429-patria-potestad"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Ejemplo tipo CENEVAL",
+          "content": "Si una persona pide el divorcio sin causa y la otra sólo discute custodia y liquidación, la respuesta jurídicamente más precisa separa el vínculo de las cuestiones accesorias: la oposición no bloquea el divorcio y el desacuerdo debe resolverse con protección familiar. No debe aplicarse automáticamente el procedimiento bilateral del Código Nacional sin verificar su entrada en vigor territorial.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c53-cf-253-257-vias-propuesta",
+            "ev-c53-cf-260-270-medidas-disolucion",
+            "ev-c53-cnpcf-transitorios-vigencia",
+            "ev-c53-cnpcf-654-662-bilateral",
+            "ev-c53-scjn-2008492-libre-desarrollo",
+            "ev-c53-a67-l195-203-voluntad-unilateral",
+            "ev-c53-a67-l207-213-bilateral-convenio"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "1) Michoacán admite divorcio unilateral sin causa. 2) La voluntad basta para pedir la disolución. 3) La propuesta organiza cuestiones accesorias. 4) El desacuerdo no obliga a mantener el vínculo. 5) El modelo bilateral nacional tiene vigencia gradual y el artículo 663 es una regla oral general.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c53-cf-253-257-vias-propuesta",
+            "ev-c53-cf-260-270-medidas-disolucion",
+            "ev-c53-cnpcf-transitorios-vigencia",
+            "ev-c53-cnpcf-654-662-bilateral",
+            "ev-c53-cnpcf-663-oral-general",
+            "ev-c53-scjn-2008492-libre-desarrollo"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de estudio",
+          "content": "Primero identifica jurisdicción y vigencia. Después clasifica la vía: voluntaria o unilateral local; bilateral nacional sólo cuando resulte aplicable. Separa el vínculo de alimentos, custodia, convivencia y patrimonio. Revisa si la pregunta trata de solicitud, medidas, audiencia, sentencia o registro. Descarta respuestas absolutas: consentimiento de ambos siempre, pérdida automática de derechos parentales o aplicación nacional automática.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c53-cf-253-257-vias-propuesta",
+            "ev-c53-cf-260-270-medidas-disolucion",
+            "ev-c53-cf-271-276-efectos-registro",
+            "ev-c53-cnpcf-transitorios-vigencia",
+            "ev-c53-cnpcf-654-662-bilateral",
+            "ev-c53-cnpcf-663-oral-general"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Divorcio sin expresión de causa: solicitud unilateral que no exige acreditar motivo. Propuesta: planteamiento sobre materias accesorias. Cuestiones accesorias: alimentos, custodia, convivencia y patrimonio, entre otras. Divorcio bilateral nacional: modalidad de los artículos 654–662 del Código Nacional. Aplicación gradual: condición transitoria que obliga a verificar declaratoria y territorio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c53-cf-253-257-vias-propuesta",
+            "ev-c53-cf-260-270-medidas-disolucion",
+            "ev-c53-cnpcf-transitorios-vigencia",
+            "ev-c53-cnpcf-654-662-bilateral",
+            "ev-c53-cnpcf-663-oral-general",
+            "ev-c53-scjn-2008492-libre-desarrollo",
+            "ev-c53-a67-l181-191-modelo-nacional",
+            "ev-c53-a67-l195-203-voluntad-unilateral",
+            "ev-c53-a67-l207-213-bilateral-convenio"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores frecuentes",
+          "content": "Error 1: creer que la oposición impide el divorcio. Error 2: convertir la referencia del audio al último domicilio en regla universal; la competencia depende del régimen aplicable y, en el modelo bilateral nacional, el artículo 654 contiene su propia regla. Error 3: asumir una disolución automática desde la admisión o dos audiencias universales. Error 4: llamar al artículo 663 “divorcio unilateral”. Error 5: aplicar el Código Nacional en Michoacán sin verificar transitorios. Error 6: convertir desacuerdos o inasistencias de convivencia en pérdida automática de patria potestad.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c53-cf-253-257-vias-propuesta",
+            "ev-c53-cf-260-270-medidas-disolucion",
+            "ev-c53-cf-271-276-efectos-registro",
+            "ev-c53-cnpcf-transitorios-vigencia",
+            "ev-c53-cnpcf-654-662-bilateral",
+            "ev-c53-cnpcf-663-oral-general",
+            "ev-c53-scjn-2008492-libre-desarrollo",
+            "ev-c53-cf-421-429-patria-potestad",
+            "ev-c53-a67-l175-177-domicilio",
+            "ev-c53-a67-l215-221-disolucion-accesorias",
+            "ev-c53-a67-l247-263-convivencia-patria-potestad"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Ana solicita en Michoacán el divorcio sin causa. Luis se opone y discute el horario de convivencia. La autoridad no exige que Luis consienta para analizar la disolución; debe proteger los derechos familiares y resolver el horario por la vía correspondiente.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c53-cf-253-257-vias-propuesta",
+            "ev-c53-cf-260-270-medidas-disolucion",
+            "ev-c53-scjn-2008492-libre-desarrollo",
+            "ev-c53-a67-l195-203-voluntad-unilateral"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa del divorcio sin causa",
+        "description": "Conecta voluntad, trámite local, cuestiones accesorias y transición nacional.",
+        "nodes": [
+          {
+            "id": "divorcio",
+            "label": "Divorcio",
+            "description": "Disuelve el vínculo",
+            "evidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta"
+            ]
+          },
+          {
+            "id": "local",
+            "label": "Michoacán",
+            "description": "Régimen local vigente",
+            "parentId": "divorcio",
+            "evidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta"
+            ]
+          },
+          {
+            "id": "clases",
+            "label": "Clases",
+            "description": "Voluntario o sin causa",
+            "parentId": "local",
+            "evidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta"
+            ]
+          },
+          {
+            "id": "voluntario",
+            "label": "Voluntario",
+            "description": "Mutuo consentimiento",
+            "parentId": "clases",
+            "evidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta"
+            ]
+          },
+          {
+            "id": "unilateral",
+            "label": "Sin expresión de causa",
+            "description": "Voluntad de una persona",
+            "parentId": "clases",
+            "evidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta",
+              "ev-c53-scjn-2008492-libre-desarrollo",
+              "ev-c53-a67-l195-203-voluntad-unilateral"
+            ]
+          },
+          {
+            "id": "sin-motivo",
+            "label": "Sin acreditar motivo",
+            "description": "No exige causal",
+            "parentId": "unilateral",
+            "evidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta",
+              "ev-c53-scjn-2008492-libre-desarrollo"
+            ]
+          },
+          {
+            "id": "oposicion",
+            "label": "Oposición",
+            "description": "No bloquea por sí sola",
+            "parentId": "unilateral",
+            "evidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta",
+              "ev-c53-scjn-2008492-libre-desarrollo"
+            ]
+          },
+          {
+            "id": "propuesta",
+            "label": "Propuesta",
+            "description": "Acompaña la solicitud",
+            "parentId": "unilateral",
+            "evidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta"
+            ]
+          },
+          {
+            "id": "custodia",
+            "label": "Custodia",
+            "description": "Cuidado de hijas e hijos",
+            "parentId": "propuesta",
+            "evidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta",
+              "ev-c53-cf-260-270-medidas-disolucion"
+            ]
+          },
+          {
+            "id": "convivencia",
+            "label": "Convivencia",
+            "description": "Días, horas y condiciones",
+            "parentId": "propuesta",
+            "evidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta",
+              "ev-c53-cf-260-270-medidas-disolucion"
+            ]
+          },
+          {
+            "id": "alimentos",
+            "label": "Alimentos",
+            "description": "Monto, forma y garantía",
+            "parentId": "propuesta",
+            "evidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta",
+              "ev-c53-cf-260-270-medidas-disolucion",
+              "ev-c53-cf-271-276-efectos-registro"
+            ]
+          },
+          {
+            "id": "patrimonio",
+            "label": "Patrimonio",
+            "description": "Administración y liquidación",
+            "parentId": "propuesta",
+            "evidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta",
+              "ev-c53-cf-260-270-medidas-disolucion"
+            ]
+          },
+          {
+            "id": "medidas",
+            "label": "Medidas provisionales",
+            "description": "Protección durante el trámite",
+            "parentId": "local",
+            "evidenceIds": [
+              "ev-c53-cf-260-270-medidas-disolucion"
+            ]
+          },
+          {
+            "id": "traslado",
+            "label": "Emplazamiento",
+            "description": "Permite contestar y proponer",
+            "parentId": "local",
+            "evidenceIds": [
+              "ev-c53-cf-260-270-medidas-disolucion"
+            ]
+          },
+          {
+            "id": "audiencia",
+            "label": "Audiencia preliminar",
+            "description": "Busca acuerdo y delimita litis",
+            "parentId": "local",
+            "evidenceIds": [
+              "ev-c53-cf-260-270-medidas-disolucion"
+            ]
+          },
+          {
+            "id": "acuerdo",
+            "label": "Acuerdo total",
+            "description": "Permite aprobar prestaciones",
+            "parentId": "audiencia",
+            "evidenceIds": [
+              "ev-c53-cf-260-270-medidas-disolucion"
+            ]
+          },
+          {
+            "id": "desacuerdo",
+            "label": "Divergencia",
+            "description": "No obliga a mantener el vínculo",
+            "parentId": "audiencia",
+            "evidenceIds": [
+              "ev-c53-cf-260-270-medidas-disolucion"
+            ]
+          },
+          {
+            "id": "disolucion",
+            "label": "Disolución",
+            "description": "Puede separarse de accesorias",
+            "parentId": "desacuerdo",
+            "evidenceIds": [
+              "ev-c53-cf-260-270-medidas-disolucion"
+            ]
+          },
+          {
+            "id": "pendientes",
+            "label": "Puntos pendientes",
+            "description": "Se reservan para juicio",
+            "parentId": "desacuerdo",
+            "evidenceIds": [
+              "ev-c53-cf-260-270-medidas-disolucion",
+              "ev-c53-cf-271-276-efectos-registro"
+            ]
+          },
+          {
+            "id": "hijos",
+            "label": "Interés superior",
+            "description": "Guía las decisiones",
+            "parentId": "pendientes",
+            "evidenceIds": [
+              "ev-c53-cf-260-270-medidas-disolucion",
+              "ev-c53-cf-271-276-efectos-registro"
+            ]
+          },
+          {
+            "id": "registro",
+            "label": "Registro Civil",
+            "description": "Recibe copia de sentencia",
+            "parentId": "local",
+            "evidenceIds": [
+              "ev-c53-cf-271-276-efectos-registro"
+            ]
+          },
+          {
+            "id": "modificacion",
+            "label": "Modificación posterior",
+            "description": "Prestaciones por vía legal",
+            "parentId": "local",
+            "evidenceIds": [
+              "ev-c53-cf-271-276-efectos-registro"
+            ]
+          },
+          {
+            "id": "scjn",
+            "label": "SCJN",
+            "description": "Libre desarrollo",
+            "parentId": "unilateral",
+            "evidenceIds": [
+              "ev-c53-scjn-2008492-libre-desarrollo"
+            ]
+          },
+          {
+            "id": "nacional",
+            "label": "Código Nacional",
+            "description": "Modelo procesal nacional",
+            "parentId": "divorcio",
+            "evidenceIds": [
+              "ev-c53-cnpcf-transitorios-vigencia",
+              "ev-c53-cnpcf-654-662-bilateral"
+            ]
+          },
+          {
+            "id": "gradual",
+            "label": "Aplicación gradual",
+            "description": "Depende de transitorios",
+            "parentId": "nacional",
+            "evidenceIds": [
+              "ev-c53-cnpcf-transitorios-vigencia"
+            ]
+          },
+          {
+            "id": "territorio",
+            "label": "Territorio",
+            "description": "Debe verificarse declaratoria",
+            "parentId": "gradual",
+            "evidenceIds": [
+              "ev-c53-cnpcf-transitorios-vigencia"
+            ]
+          },
+          {
+            "id": "bilateral",
+            "label": "Divorcio bilateral",
+            "description": "Ambas personas solicitan",
+            "parentId": "nacional",
+            "evidenceIds": [
+              "ev-c53-cnpcf-654-662-bilateral",
+              "ev-c53-a67-l207-213-bilateral-convenio"
+            ]
+          },
+          {
+            "id": "convenio-n",
+            "label": "Acuerdo bilateral",
+            "description": "Regula materias familiares",
+            "parentId": "bilateral",
+            "evidenceIds": [
+              "ev-c53-cnpcf-654-662-bilateral",
+              "ev-c53-a67-l207-213-bilateral-convenio"
+            ]
+          },
+          {
+            "id": "audiencia-n",
+            "label": "Una audiencia prevista",
+            "description": "Ratificación y revisión",
+            "parentId": "bilateral",
+            "evidenceIds": [
+              "ev-c53-cnpcf-654-662-bilateral"
+            ]
+          },
+          {
+            "id": "registro-n",
+            "label": "Vías condicionadas",
+            "description": "Judicial, notarial o civil",
+            "parentId": "bilateral",
+            "evidenceIds": [
+              "ev-c53-cnpcf-654-662-bilateral"
+            ]
+          },
+          {
+            "id": "oral-general",
+            "label": "Artículo 663",
+            "description": "Vía oral familiar general",
+            "parentId": "nacional",
+            "evidenceIds": [
+              "ev-c53-cnpcf-663-oral-general",
+              "ev-c53-a67-l181-191-modelo-nacional"
+            ]
+          },
+          {
+            "id": "no-etiqueta",
+            "label": "No es etiqueta",
+            "description": "No crea por sí solo divorcio unilateral",
+            "parentId": "oral-general",
+            "evidenceIds": [
+              "ev-c53-cnpcf-663-oral-general"
+            ]
+          },
+          {
+            "id": "comparar",
+            "label": "Regla de examen",
+            "description": "Jurisdicción antes que memoria",
+            "parentId": "divorcio",
+            "evidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta",
+              "ev-c53-cnpcf-transitorios-vigencia"
+            ]
+          },
+          {
+            "id": "separar",
+            "label": "Separar planos",
+            "description": "Vínculo y accesorias",
+            "parentId": "comparar",
+            "evidenceIds": [
+              "ev-c53-cf-260-270-medidas-disolucion",
+              "ev-c53-cf-271-276-efectos-registro"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+          "url": "https://congresomich.gob.mx/leyes/",
+          "institution": "Congreso del Estado de Michoacán de Ocampo",
+          "jurisdiction": "Michoacán, México",
+          "citation": "Texto oficial; última reforma publicada 24-10-2024; consulta 2026-08-21",
+          "retrievedOn": "2026-08-21",
+          "note": "Arts. 253–276.",
+          "evidenceIds": [
+            "ev-c53-cf-253-257-vias-propuesta",
+            "ev-c53-cf-260-270-medidas-disolucion",
+            "ev-c53-cf-271-276-efectos-registro"
+          ]
+        },
+        {
+          "title": "Código Nacional de Procedimientos Civiles y Familiares",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Texto vigente; última reforma DOF 15-01-2026; consulta 2026-08-21",
+          "retrievedOn": "2026-08-21",
+          "note": "Transitorios y arts. 654–663; aplicación gradual.",
+          "evidenceIds": [
+            "ev-c53-cnpcf-transitorios-vigencia",
+            "ev-c53-cnpcf-654-662-bilateral",
+            "ev-c53-cnpcf-663-oral-general"
+          ]
+        },
+        {
+          "title": "Divorcio sin expresión de causa y libre desarrollo de la personalidad",
+          "url": "https://sjf2.scjn.gob.mx/detalle/tesis/2008492",
+          "institution": "Suprema Corte de Justicia de la Nación",
+          "jurisdiction": "México",
+          "citation": "Primera Sala, registro digital 2008492, publicación 20-02-2015; consulta 2026-08-21",
+          "retrievedOn": "2026-08-21",
+          "note": "La voluntad de una persona basta para solicitar la disolución sin acreditar causa.",
+          "evidenceIds": [
+            "ev-c53-scjn-2008492-libre-desarrollo"
+          ]
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué exige el divorcio sin expresión de causa en Michoacán?",
+          "answer": "La manifestación unilateral y una propuesta sobre las materias accesorias aplicables.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c53-cf-253-257-vias-propuesta",
+            "ev-c53-a67-l195-203-voluntad-unilateral"
+          ]
+        },
+        {
+          "question": "¿La oposición del otro cónyuge bloquea la disolución?",
+          "answer": "No; no convierte el consentimiento bilateral en requisito.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c53-cf-253-257-vias-propuesta",
+            "ev-c53-scjn-2008492-libre-desarrollo"
+          ]
+        },
+        {
+          "question": "¿Qué diferencia hay entre vínculo y cuestiones accesorias?",
+          "answer": "El vínculo matrimonial puede disolverse mientras alimentos, custodia, convivencia o patrimonio siguen en decisión.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c53-cf-260-270-medidas-disolucion",
+            "ev-c53-cf-271-276-efectos-registro"
+          ]
+        },
+        {
+          "question": "¿Qué protege la propuesta?",
+          "answer": "Según el caso, custodia, convivencia, alimentos y liquidación patrimonial.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c53-cf-253-257-vias-propuesta"
+          ]
+        },
+        {
+          "question": "¿Qué ocurre si persiste el desacuerdo?",
+          "answer": "La ley local permite declarar la disolución y reservar las prestaciones controvertidas.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c53-cf-260-270-medidas-disolucion"
+          ]
+        },
+        {
+          "question": "¿Qué hace el Registro Civil?",
+          "answer": "Recibe la copia de la sentencia para levantar el acta y anotar el divorcio.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c53-cf-271-276-efectos-registro"
+          ]
+        },
+        {
+          "question": "¿Qué es el divorcio bilateral del Código Nacional?",
+          "answer": "Una solicitud conjunta regulada en los artículos 654 a 662.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c53-cnpcf-654-662-bilateral",
+            "ev-c53-a67-l207-213-bilateral-convenio"
+          ]
+        },
+        {
+          "question": "¿El Código Nacional opera automáticamente en Michoacán?",
+          "answer": "No; su aplicación es gradual y debe verificarse conforme a transitorios y declaratorias.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c53-cnpcf-transitorios-vigencia"
+          ]
+        },
+        {
+          "question": "¿Qué regula el artículo 663 del Código Nacional?",
+          "answer": "La vía oral familiar general para controversias sin procedimiento especial.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c53-cnpcf-663-oral-general",
+            "ev-c53-a67-l181-191-modelo-nacional"
+          ]
+        },
+        {
+          "question": "¿Qué NO regula por sí solo el artículo 663?",
+          "answer": "Una modalidad sustantiva denominada divorcio unilateral.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c53-cnpcf-663-oral-general"
+          ]
+        },
+        {
+          "question": "¿Qué principio constitucional protege la voluntad de divorciarse?",
+          "answer": "El libre desarrollo de la personalidad, conforme al criterio de la SCJN.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c53-scjn-2008492-libre-desarrollo",
+            "ev-c53-a67-l195-203-voluntad-unilateral"
+          ]
+        },
+        {
+          "question": "¿Qué orden de análisis evita errores?",
+          "answer": "Jurisdicción, vigencia, vía, vínculo y después cuestiones accesorias.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c53-cf-253-257-vias-propuesta",
+            "ev-c53-cf-260-270-medidas-disolucion",
+            "ev-c53-cnpcf-transitorios-vigencia"
+          ]
+        },
+        {
+          "question": "¿Una inasistencia a convivencia extingue automáticamente la patria potestad?",
+          "answer": "No. Se requiere actualizar una causa legal y una resolución judicial basada en el caso.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c53-cf-271-276-efectos-registro",
+            "ev-c53-cf-421-429-patria-potestad",
+            "ev-c53-a67-l247-263-convivencia-patria-potestad"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación: divorcio sin causa y transición nacional",
+        "description": "Diez casos sobre régimen local, voluntad unilateral, accesorias y vigencia gradual.",
+        "questions": [
+          {
+            "text": "En Michoacán, una persona solicita divorcio sin expresar causa y la otra se opone. ¿Qué respuesta es correcta?",
+            "difficulty": "intermediate",
+            "options": [
+              "La oposición no impide por sí sola la disolución",
+              "Debe probarse una causal grave",
+              "Se necesita consentimiento de ambas"
+            ],
+            "correctOption": 0,
+            "explanation": "La ley local admite la solicitud unilateral y la SCJN protege esa decisión personal.",
+            "optionExplanations": [
+              "Correcta: la voluntad unilateral es suficiente.",
+              "Incorrecta: no se exige acreditar una causal.",
+              "Incorrecta: confunde esta vía con el divorcio voluntario o bilateral."
+            ],
+            "evidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta",
+              "ev-c53-scjn-2008492-libre-desarrollo",
+              "ev-c53-a67-l195-203-voluntad-unilateral"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c53-cf-253-257-vias-propuesta",
+                "ev-c53-scjn-2008492-libre-desarrollo",
+                "ev-c53-a67-l195-203-voluntad-unilateral"
+              ],
+              [
+                "ev-c53-cf-253-257-vias-propuesta",
+                "ev-c53-scjn-2008492-libre-desarrollo",
+                "ev-c53-a67-l195-203-voluntad-unilateral"
+              ],
+              [
+                "ev-c53-cf-253-257-vias-propuesta",
+                "ev-c53-scjn-2008492-libre-desarrollo",
+                "ev-c53-a67-l195-203-voluntad-unilateral"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta",
+              "ev-c53-scjn-2008492-libre-desarrollo",
+              "ev-c53-a67-l195-203-voluntad-unilateral"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta",
+              "ev-c53-scjn-2008492-libre-desarrollo",
+              "ev-c53-a67-l195-203-voluntad-unilateral"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c53-cf-253-257-vias-propuesta",
+                "ev-c53-scjn-2008492-libre-desarrollo",
+                "ev-c53-a67-l195-203-voluntad-unilateral"
+              ],
+              [
+                "ev-c53-cf-253-257-vias-propuesta",
+                "ev-c53-scjn-2008492-libre-desarrollo",
+                "ev-c53-a67-l195-203-voluntad-unilateral"
+              ],
+              [
+                "ev-c53-cf-253-257-vias-propuesta",
+                "ev-c53-scjn-2008492-libre-desarrollo",
+                "ev-c53-a67-l195-203-voluntad-unilateral"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué debe acompañar la solicitud unilateral local cuando corresponden materias familiares?",
+            "difficulty": "intermediate",
+            "options": [
+              "Una propuesta sobre cuestiones accesorias",
+              "Una renuncia de derechos parentales",
+              "Una confesión de culpabilidad"
+            ],
+            "correctOption": 0,
+            "explanation": "La propuesta permite ordenar custodia, convivencia, alimentos y patrimonio.",
+            "optionExplanations": [
+              "Correcta: es el instrumento previsto por la norma.",
+              "Incorrecta: los derechos familiares no se extinguen por una renuncia privada.",
+              "Incorrecta: el divorcio sin causa no exige culpa."
+            ],
+            "evidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta",
+              "ev-c53-cf-260-270-medidas-disolucion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c53-cf-253-257-vias-propuesta",
+                "ev-c53-cf-260-270-medidas-disolucion"
+              ],
+              [
+                "ev-c53-cf-253-257-vias-propuesta",
+                "ev-c53-cf-260-270-medidas-disolucion"
+              ],
+              [
+                "ev-c53-cf-253-257-vias-propuesta",
+                "ev-c53-cf-260-270-medidas-disolucion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta",
+              "ev-c53-cf-260-270-medidas-disolucion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c53-cf-253-257-vias-propuesta",
+              "ev-c53-cf-260-270-medidas-disolucion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c53-cf-253-257-vias-propuesta",
+                "ev-c53-cf-260-270-medidas-disolucion"
+              ],
+              [
+                "ev-c53-cf-253-257-vias-propuesta",
+                "ev-c53-cf-260-270-medidas-disolucion"
+              ],
+              [
+                "ev-c53-cf-253-257-vias-propuesta",
+                "ev-c53-cf-260-270-medidas-disolucion"
+              ]
+            ]
+          },
+          {
+            "text": "Si hay desacuerdo sobre convivencia, ¿qué sucede con el vínculo matrimonial?",
+            "difficulty": "intermediate",
+            "options": [
+              "Puede disolverse y reservarse el punto controvertido",
+              "Debe mantenerse hasta lograr acuerdo total",
+              "La convivencia se elimina automáticamente"
+            ],
+            "correctOption": 0,
+            "explanation": "La legislación local separa la disolución de las prestaciones que permanezcan en litigio.",
+            "optionExplanations": [
+              "Correcta: distingue vínculo y accesorias.",
+              "Incorrecta: concede veto al desacuerdo.",
+              "Incorrecta: no existe extinción automática de convivencia."
+            ],
+            "evidenceIds": [
+              "ev-c53-cf-260-270-medidas-disolucion",
+              "ev-c53-cf-271-276-efectos-registro"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c53-cf-260-270-medidas-disolucion",
+                "ev-c53-cf-271-276-efectos-registro"
+              ],
+              [
+                "ev-c53-cf-260-270-medidas-disolucion",
+                "ev-c53-cf-271-276-efectos-registro"
+              ],
+              [
+                "ev-c53-cf-260-270-medidas-disolucion",
+                "ev-c53-cf-271-276-efectos-registro"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c53-cf-260-270-medidas-disolucion",
+              "ev-c53-cf-271-276-efectos-registro"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c53-cf-260-270-medidas-disolucion",
+              "ev-c53-cf-271-276-efectos-registro"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c53-cf-260-270-medidas-disolucion",
+                "ev-c53-cf-271-276-efectos-registro"
+              ],
+              [
+                "ev-c53-cf-260-270-medidas-disolucion",
+                "ev-c53-cf-271-276-efectos-registro"
+              ],
+              [
+                "ev-c53-cf-260-270-medidas-disolucion",
+                "ev-c53-cf-271-276-efectos-registro"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué afirmación describe correctamente el Código Nacional en Michoacán?",
+            "difficulty": "intermediate",
+            "options": [
+              "Su aplicación debe verificarse por el régimen transitorio",
+              "Sustituyó automáticamente toda norma local desde 2023",
+              "Nunca podrá aplicarse en materia familiar"
+            ],
+            "correctOption": 0,
+            "explanation": "El Código Nacional prevé entrada gradual, no sustitución automática ni imposibilidad permanente.",
+            "optionExplanations": [
+              "Correcta: obliga a revisar declaratoria y territorio.",
+              "Incorrecta: ignora los transitorios.",
+              "Incorrecta: niega el diseño gradual del Código."
+            ],
+            "evidenceIds": [
+              "ev-c53-cnpcf-transitorios-vigencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c53-cnpcf-transitorios-vigencia"
+              ],
+              [
+                "ev-c53-cnpcf-transitorios-vigencia"
+              ],
+              [
+                "ev-c53-cnpcf-transitorios-vigencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c53-cnpcf-transitorios-vigencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c53-cnpcf-transitorios-vigencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c53-cnpcf-transitorios-vigencia"
+              ],
+              [
+                "ev-c53-cnpcf-transitorios-vigencia"
+              ],
+              [
+                "ev-c53-cnpcf-transitorios-vigencia"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué regulan los artículos 654 a 662 del Código Nacional?",
+            "difficulty": "intermediate",
+            "options": [
+              "Un divorcio bilateral con reglas propias",
+              "Toda solicitud unilateral local",
+              "La pérdida automática de patria potestad"
+            ],
+            "correctOption": 0,
+            "explanation": "Esos artículos conforman el procedimiento bilateral nacional.",
+            "optionExplanations": [
+              "Correcta: identifica el objeto exacto.",
+              "Incorrecta: mezcla el modelo nacional con la vía local unilateral.",
+              "Incorrecta: no regulan esa sanción automática."
+            ],
+            "evidenceIds": [
+              "ev-c53-cnpcf-654-662-bilateral",
+              "ev-c53-a67-l207-213-bilateral-convenio"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c53-cnpcf-654-662-bilateral",
+                "ev-c53-a67-l207-213-bilateral-convenio"
+              ],
+              [
+                "ev-c53-cnpcf-654-662-bilateral",
+                "ev-c53-a67-l207-213-bilateral-convenio"
+              ],
+              [
+                "ev-c53-cnpcf-654-662-bilateral",
+                "ev-c53-a67-l207-213-bilateral-convenio"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c53-cnpcf-654-662-bilateral",
+              "ev-c53-a67-l207-213-bilateral-convenio"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c53-cnpcf-654-662-bilateral",
+              "ev-c53-a67-l207-213-bilateral-convenio"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c53-cnpcf-654-662-bilateral",
+                "ev-c53-a67-l207-213-bilateral-convenio"
+              ],
+              [
+                "ev-c53-cnpcf-654-662-bilateral",
+                "ev-c53-a67-l207-213-bilateral-convenio"
+              ],
+              [
+                "ev-c53-cnpcf-654-662-bilateral",
+                "ev-c53-a67-l207-213-bilateral-convenio"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál es el alcance correcto del artículo 663 del Código Nacional?",
+            "difficulty": "intermediate",
+            "options": [
+              "Abre la vía oral familiar general cuando no hay procedimiento especial",
+              "Crea una causal de divorcio",
+              "Impone dos audiencias en todo divorcio"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 663 es una regla procesal general; no crea una causal ni una cronología universal.",
+            "optionExplanations": [
+              "Correcta: respeta su texto y alcance.",
+              "Incorrecta: atribuye contenido sustantivo inexistente.",
+              "Incorrecta: universaliza una secuencia no prevista ahí."
+            ],
+            "evidenceIds": [
+              "ev-c53-cnpcf-663-oral-general",
+              "ev-c53-a67-l181-191-modelo-nacional"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c53-cnpcf-663-oral-general",
+                "ev-c53-a67-l181-191-modelo-nacional"
+              ],
+              [
+                "ev-c53-cnpcf-663-oral-general",
+                "ev-c53-a67-l181-191-modelo-nacional"
+              ],
+              [
+                "ev-c53-cnpcf-663-oral-general",
+                "ev-c53-a67-l181-191-modelo-nacional"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c53-cnpcf-663-oral-general",
+              "ev-c53-a67-l181-191-modelo-nacional"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c53-cnpcf-663-oral-general",
+              "ev-c53-a67-l181-191-modelo-nacional"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c53-cnpcf-663-oral-general",
+                "ev-c53-a67-l181-191-modelo-nacional"
+              ],
+              [
+                "ev-c53-cnpcf-663-oral-general",
+                "ev-c53-a67-l181-191-modelo-nacional"
+              ],
+              [
+                "ev-c53-cnpcf-663-oral-general",
+                "ev-c53-a67-l181-191-modelo-nacional"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué efecto produce la sentencia local de divorcio respecto del Registro Civil?",
+            "difficulty": "intermediate",
+            "options": [
+              "Se remite copia para el acta y la anotación correspondiente",
+              "Borra automáticamente toda obligación alimentaria",
+              "Convierte toda disputa en asunto administrativo"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 275 ordena la comunicación registral; no extingue obligaciones ni cambia la naturaleza de las controversias.",
+            "optionExplanations": [
+              "Correcta: es el efecto registral previsto.",
+              "Incorrecta: confunde disolución con obligaciones accesorias.",
+              "Incorrecta: la sentencia no transforma toda controversia."
+            ],
+            "evidenceIds": [
+              "ev-c53-cf-271-276-efectos-registro"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c53-cf-271-276-efectos-registro"
+              ],
+              [
+                "ev-c53-cf-271-276-efectos-registro"
+              ],
+              [
+                "ev-c53-cf-271-276-efectos-registro"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c53-cf-271-276-efectos-registro"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c53-cf-271-276-efectos-registro"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c53-cf-271-276-efectos-registro"
+              ],
+              [
+                "ev-c53-cf-271-276-efectos-registro"
+              ],
+              [
+                "ev-c53-cf-271-276-efectos-registro"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué protege la autoridad al resolver custodia y convivencia?",
+            "difficulty": "intermediate",
+            "options": [
+              "El interés superior de hijas e hijos",
+              "La preferencia automática de quien pidió el divorcio",
+              "El castigo por oponerse al divorcio"
+            ],
+            "correctOption": 0,
+            "explanation": "Las decisiones parentales requieren valoración propia y no son premio o sanción por la postura sobre el vínculo.",
+            "optionExplanations": [
+              "Correcta: es el criterio rector.",
+              "Incorrecta: no existe preferencia automática.",
+              "Incorrecta: la oposición no define por sí sola derechos parentales."
+            ],
+            "evidenceIds": [
+              "ev-c53-cf-260-270-medidas-disolucion",
+              "ev-c53-cf-271-276-efectos-registro",
+              "ev-c53-cf-421-429-patria-potestad",
+              "ev-c53-a67-l233-237-alimentos-convivencia",
+              "ev-c53-a67-l247-263-convivencia-patria-potestad"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c53-cf-260-270-medidas-disolucion",
+                "ev-c53-cf-271-276-efectos-registro",
+                "ev-c53-cf-421-429-patria-potestad",
+                "ev-c53-a67-l233-237-alimentos-convivencia",
+                "ev-c53-a67-l247-263-convivencia-patria-potestad"
+              ],
+              [
+                "ev-c53-cf-260-270-medidas-disolucion",
+                "ev-c53-cf-271-276-efectos-registro",
+                "ev-c53-cf-421-429-patria-potestad",
+                "ev-c53-a67-l233-237-alimentos-convivencia",
+                "ev-c53-a67-l247-263-convivencia-patria-potestad"
+              ],
+              [
+                "ev-c53-cf-260-270-medidas-disolucion",
+                "ev-c53-cf-271-276-efectos-registro",
+                "ev-c53-cf-421-429-patria-potestad",
+                "ev-c53-a67-l233-237-alimentos-convivencia",
+                "ev-c53-a67-l247-263-convivencia-patria-potestad"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c53-cf-260-270-medidas-disolucion",
+              "ev-c53-cf-271-276-efectos-registro",
+              "ev-c53-cf-421-429-patria-potestad",
+              "ev-c53-a67-l233-237-alimentos-convivencia",
+              "ev-c53-a67-l247-263-convivencia-patria-potestad"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c53-cf-260-270-medidas-disolucion",
+              "ev-c53-cf-271-276-efectos-registro",
+              "ev-c53-cf-421-429-patria-potestad",
+              "ev-c53-a67-l233-237-alimentos-convivencia",
+              "ev-c53-a67-l247-263-convivencia-patria-potestad"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c53-cf-260-270-medidas-disolucion",
+                "ev-c53-cf-271-276-efectos-registro",
+                "ev-c53-cf-421-429-patria-potestad",
+                "ev-c53-a67-l233-237-alimentos-convivencia",
+                "ev-c53-a67-l247-263-convivencia-patria-potestad"
+              ],
+              [
+                "ev-c53-cf-260-270-medidas-disolucion",
+                "ev-c53-cf-271-276-efectos-registro",
+                "ev-c53-cf-421-429-patria-potestad",
+                "ev-c53-a67-l233-237-alimentos-convivencia",
+                "ev-c53-a67-l247-263-convivencia-patria-potestad"
+              ],
+              [
+                "ev-c53-cf-260-270-medidas-disolucion",
+                "ev-c53-cf-271-276-efectos-registro",
+                "ev-c53-cf-421-429-patria-potestad",
+                "ev-c53-a67-l233-237-alimentos-convivencia",
+                "ev-c53-a67-l247-263-convivencia-patria-potestad"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué dato debe revisarse primero ante una pregunta que cita el Código Nacional?",
+            "difficulty": "intermediate",
+            "options": [
+              "Si está vigente y aplicable en el territorio del caso",
+              "Si el audio lo menciona como nuevo",
+              "Si el caso usa la palabra bilateral"
+            ],
+            "correctOption": 0,
+            "explanation": "La aplicabilidad normativa depende del régimen transitorio y la jurisdicción, no de una etiqueta didáctica.",
+            "optionExplanations": [
+              "Correcta: controla jurisdicción y vigencia.",
+              "Incorrecta: una clase no activa una norma.",
+              "Incorrecta: una palabra no sustituye el análisis transitorio."
+            ],
+            "evidenceIds": [
+              "ev-c53-cnpcf-transitorios-vigencia",
+              "ev-c53-a67-l181-191-modelo-nacional"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c53-cnpcf-transitorios-vigencia",
+                "ev-c53-a67-l181-191-modelo-nacional"
+              ],
+              [
+                "ev-c53-cnpcf-transitorios-vigencia",
+                "ev-c53-a67-l181-191-modelo-nacional"
+              ],
+              [
+                "ev-c53-cnpcf-transitorios-vigencia",
+                "ev-c53-a67-l181-191-modelo-nacional"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c53-cnpcf-transitorios-vigencia",
+              "ev-c53-a67-l181-191-modelo-nacional"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c53-cnpcf-transitorios-vigencia",
+              "ev-c53-a67-l181-191-modelo-nacional"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c53-cnpcf-transitorios-vigencia",
+                "ev-c53-a67-l181-191-modelo-nacional"
+              ],
+              [
+                "ev-c53-cnpcf-transitorios-vigencia",
+                "ev-c53-a67-l181-191-modelo-nacional"
+              ],
+              [
+                "ev-c53-cnpcf-transitorios-vigencia",
+                "ev-c53-a67-l181-191-modelo-nacional"
+              ]
+            ]
+          },
+          {
+            "text": "Una pareja tiene acuerdo total y analiza el modelo nacional aplicable. ¿Qué figura debe identificar?",
+            "difficulty": "intermediate",
+            "options": [
+              "Divorcio bilateral de los artículos 654 a 662",
+              "Divorcio unilateral creado por el artículo 663",
+              "Pérdida automática de patria potestad"
+            ],
+            "correctOption": 0,
+            "explanation": "La solicitud conjunta corresponde al régimen bilateral; el artículo 663 es general y no crea la figura descrita.",
+            "optionExplanations": [
+              "Correcta: coincide con la regulación especial.",
+              "Incorrecta: atribuye al artículo 663 una figura que no contiene.",
+              "Incorrecta: el acuerdo de divorcio no produce esa consecuencia automática."
+            ],
+            "evidenceIds": [
+              "ev-c53-cnpcf-transitorios-vigencia",
+              "ev-c53-cnpcf-654-662-bilateral",
+              "ev-c53-cnpcf-663-oral-general",
+              "ev-c53-a67-l207-213-bilateral-convenio"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c53-cnpcf-transitorios-vigencia",
+                "ev-c53-cnpcf-654-662-bilateral",
+                "ev-c53-cnpcf-663-oral-general",
+                "ev-c53-a67-l207-213-bilateral-convenio"
+              ],
+              [
+                "ev-c53-cnpcf-transitorios-vigencia",
+                "ev-c53-cnpcf-654-662-bilateral",
+                "ev-c53-cnpcf-663-oral-general",
+                "ev-c53-a67-l207-213-bilateral-convenio"
+              ],
+              [
+                "ev-c53-cnpcf-transitorios-vigencia",
+                "ev-c53-cnpcf-654-662-bilateral",
+                "ev-c53-cnpcf-663-oral-general",
+                "ev-c53-a67-l207-213-bilateral-convenio"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c53-cnpcf-transitorios-vigencia",
+              "ev-c53-cnpcf-654-662-bilateral",
+              "ev-c53-cnpcf-663-oral-general",
+              "ev-c53-a67-l207-213-bilateral-convenio"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c53-cnpcf-transitorios-vigencia",
+              "ev-c53-cnpcf-654-662-bilateral",
+              "ev-c53-cnpcf-663-oral-general",
+              "ev-c53-a67-l207-213-bilateral-convenio"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c53-cnpcf-transitorios-vigencia",
+                "ev-c53-cnpcf-654-662-bilateral",
+                "ev-c53-cnpcf-663-oral-general",
+                "ev-c53-a67-l207-213-bilateral-convenio"
+              ],
+              [
+                "ev-c53-cnpcf-transitorios-vigencia",
+                "ev-c53-cnpcf-654-662-bilateral",
+                "ev-c53-cnpcf-663-oral-general",
+                "ev-c53-a67-l207-213-bilateral-convenio"
+              ],
+              [
+                "ev-c53-cnpcf-transitorios-vigencia",
+                "ev-c53-cnpcf-654-662-bilateral",
+                "ev-c53-cnpcf-663-oral-general",
+                "ev-c53-a67-l207-213-bilateral-convenio"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c53-cf-253-257-vias-propuesta",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial con última reforma publicada 24-10-2024; artículos 253 a 257: concepto, clases, solicitud unilateral y propuesta",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c53-cf-260-270-medidas-disolucion",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial con última reforma publicada 24-10-2024; artículos 260 a 270: medidas, audiencia, disolución y puntos controvertidos",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c53-cf-271-276-efectos-registro",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial con última reforma publicada 24-10-2024; artículos 271 a 276: hijas e hijos, alimentos, registro y modificación",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c53-cnpcf-transitorios-vigencia",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículos transitorios sobre aplicación gradual y declaratorias",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c53-cnpcf-654-662-bilateral",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículos 654 a 662: divorcio bilateral",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c53-cnpcf-663-oral-general",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículo 663: vía oral familiar general",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c53-scjn-2008492-libre-desarrollo",
+      "kind": "official",
+      "title": "Divorcio sin expresión de causa y libre desarrollo de la personalidad",
+      "url": "https://sjf2.scjn.gob.mx/detalle/tesis/2008492",
+      "institution": "Suprema Corte de Justicia de la Nación",
+      "jurisdiction": "México",
+      "locator": "registro digital 2008492, Primera Sala, publicación 20-02-2015: voluntad unilateral y libre desarrollo de la personalidad",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c53-cf-421-429-patria-potestad",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial con última reforma publicada 24-10-2024; artículos 421 a 429: ejercicio, terminación, pérdida, suspensión y excusa de patria potestad",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c53-a67-l169-173-introduccion",
+      "kind": "transcript",
+      "audioNumber": 67,
+      "locator": {
+        "type": "line_range",
+        "startLine": 169,
+        "endLine": 173
+      }
+    },
+    {
+      "id": "ev-c53-a67-l175-177-domicilio",
+      "kind": "transcript",
+      "audioNumber": 67,
+      "locator": {
+        "type": "line_range",
+        "startLine": 175,
+        "endLine": 177
+      }
+    },
+    {
+      "id": "ev-c53-a67-l181-191-modelo-nacional",
+      "kind": "transcript",
+      "audioNumber": 67,
+      "locator": {
+        "type": "line_range",
+        "startLine": 181,
+        "endLine": 191
+      }
+    },
+    {
+      "id": "ev-c53-a67-l195-203-voluntad-unilateral",
+      "kind": "transcript",
+      "audioNumber": 67,
+      "locator": {
+        "type": "line_range",
+        "startLine": 195,
+        "endLine": 203
+      }
+    },
+    {
+      "id": "ev-c53-a67-l207-213-bilateral-convenio",
+      "kind": "transcript",
+      "audioNumber": 67,
+      "locator": {
+        "type": "line_range",
+        "startLine": 207,
+        "endLine": 213
+      }
+    },
+    {
+      "id": "ev-c53-a67-l215-221-disolucion-accesorias",
+      "kind": "transcript",
+      "audioNumber": 67,
+      "locator": {
+        "type": "line_range",
+        "startLine": 215,
+        "endLine": 221
+      }
+    },
+    {
+      "id": "ev-c53-a67-l233-237-alimentos-convivencia",
+      "kind": "transcript",
+      "audioNumber": 67,
+      "locator": {
+        "type": "line_range",
+        "startLine": 233,
+        "endLine": 237
+      }
+    },
+    {
+      "id": "ev-c53-a67-l247-263-convivencia-patria-potestad",
+      "kind": "transcript",
+      "audioNumber": 67,
+      "locator": {
+        "type": "line_range",
+        "startLine": 247,
+        "endLine": 263
+      }
+    }
+  ]
+}

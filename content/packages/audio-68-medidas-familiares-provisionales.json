@@ -1,0 +1,1405 @@
+{
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C54",
+    "order": 54,
+    "audioSources": [
+      {
+        "audioNumber": 68,
+        "fragment": "Líneas físicas 3–9: alimentos, custodia, convivencia y medidas provisionales"
+      }
+    ]
+  },
+  "subject": {
+    "name": "Derecho Familiar",
+    "description": "Medidas provisionales familiares bajo el régimen vigente de Michoacán."
+  },
+  "class": {
+    "title": "Medidas familiares provisionales",
+    "description": "Alimentos, custodia y convivencia con análisis individualizado e interés superior de la niñez."
+  },
+  "transcript": {
+    "originalFile": "AUDIO 68.txt",
+    "cleaned": "Se conservó únicamente el bloque de las líneas físicas 3 a 9 como panorama de alimentos, custodia, convivencia y medidas provisionales. Las líneas extensas se localizaron completas, sin inventar sublíneas. Se excluyeron porcentajes orientativos, estereotipos de género, anécdotas y afirmaciones universales sobre apelación, amparo, suspensión o reducción. Las reglas precisas se verificaron en fuentes oficiales vigentes."
+  },
+  "topics": [
+    {
+      "title": "Protección provisional de alimentos, custodia y convivencia",
+      "description": "Finalidad, criterios, evidencia, cumplimiento y revisión de medidas familiares en Michoacán.",
+      "learningJourney": {
+        "openingPrompt": "¿Por qué una medida provisional familiar debe proteger de inmediato sin decidir automáticamente el fondo?",
+        "quickChecks": [
+          {
+            "prompt": "¿Existe un porcentaje universal para fijar alimentos?",
+            "answer": "No. La decisión relaciona necesidades y posibilidades con las circunstancias acreditadas.",
+            "feedback": "Evita convertir ejemplos orientativos en una tarifa legal automática.",
+            "evidenceIds": [
+              "ev-c54-cf-443-470-alimentos",
+              "ev-c54-a68-l003-003-panorama",
+              "ev-c54-a68-l009-009-alimentos-medios"
+            ]
+          },
+          {
+            "prompt": "¿La custodia se asigna automáticamente por género?",
+            "answer": "No. Se valora el interés superior, la capacidad de cuidado y las circunstancias particulares.",
+            "feedback": "La autoridad debe razonar el caso sin estereotipos.",
+            "evidenceIds": [
+              "ev-c54-cf-430-435-custodia",
+              "ev-c54-cpeum-art4-ninez",
+              "ev-c54-lgdnna-art2-interes",
+              "ev-c54-a68-l005-005-custodia-convivencia"
+            ]
+          },
+          {
+            "prompt": "¿La mención de apelación, amparo o suspensión en el audio acredita que esas vías proceden universalmente?",
+            "answer": "No. La mención sólo identifica un punto que debe verificarse en la norma concreta aplicable al acto.",
+            "feedback": "No conviertas una exposición oral en una regla de procedencia procesal.",
+            "evidenceIds": [
+              "ev-c54-a68-l003-003-panorama",
+              "ev-c54-a68-l009-009-alimentos-medios"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "En Michoacán, dos progenitores separados discrepan sobre la custodia provisional, las convivencias y los alimentos de una hija. Una parte propone un porcentaje fijo sin documentos y pide suspender toda convivencia sin describir riesgo.",
+          "question": "¿Qué debe analizar la autoridad antes de fijar las medidas?",
+          "legalRule": "Debe privilegiar el interés superior, escuchar a la hija conforme a su edad y madurez, valorar capacidad de cuidado, necesidades, posibilidades económicas y riesgos concretos.",
+          "reasoning": "La urgencia permite protección provisional, pero no elimina la motivación. Deben recabarse datos económicos, diseñarse convivencia operable y valorar si existe riesgo que justifique supervisión o restricción. Ni el porcentaje ni la exclusión total se presumen.",
+          "conclusion": "Proceden medidas temporales individualizadas, revisables y suficientes para proteger derechos mientras se resuelve el fondo.",
+          "evidenceIds": [
+            "ev-c54-cf-443-470-alimentos",
+            "ev-c54-cf-430-435-custodia",
+            "ev-c54-cf-436-442-convivencia",
+            "ev-c54-cpeum-art4-ninez",
+            "ev-c54-lgdnna-art2-interes",
+            "ev-c54-lgdnna-22-23-familia",
+            "ev-c54-lgdnna-71-74-participacion",
+            "ev-c54-a68-l003-003-panorama",
+            "ev-c54-a68-l005-005-custodia-convivencia",
+            "ev-c54-a68-l009-009-alimentos-medios"
+          ]
+        },
+        "closingPrompt": "Explica cómo se relacionan urgencia, evidencia y proporcionalidad en una decisión provisional familiar.",
+        "nextActivity": "Construye una matriz que separe hechos, documentos, riesgo, medida solicitada y fundamento oficial.",
+        "openingPromptEvidenceIds": [
+          "ev-c54-cf-443-470-alimentos",
+          "ev-c54-cpeum-art4-ninez",
+          "ev-c54-lgdnna-art2-interes",
+          "ev-c54-a68-l003-003-panorama"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c54-cf-443-470-alimentos",
+          "ev-c54-cf-430-435-custodia",
+          "ev-c54-cf-436-442-convivencia",
+          "ev-c54-lgdnna-art2-interes"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c54-cf-443-470-alimentos",
+          "ev-c54-cf-430-435-custodia",
+          "ev-c54-cf-436-442-convivencia",
+          "ev-c54-lgdnna-71-74-participacion"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "Las medidas provisionales familiares protegen de manera temporal alimentos, custodia o convivencia mientras se reúne evidencia y se decide el fondo. Deben fundarse en las circunstancias del caso, ser proporcionales y priorizar el interés superior de niñas, niños y adolescentes.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c54-cf-443-470-alimentos",
+            "ev-c54-cf-430-435-custodia",
+            "ev-c54-cf-436-442-convivencia",
+            "ev-c54-cpeum-art4-ninez",
+            "ev-c54-lgdnna-art2-interes",
+            "ev-c54-a68-l003-003-panorama"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa",
+          "content": "En Michoacán, alimentos, custodia y convivencia son instituciones distintas. Los alimentos atienden necesidades y posibilidad económica; la custodia organiza guarda y cuidado; la convivencia conserva relaciones personales con modalidades compatibles con seguridad y bienestar. La provisionalidad permite respuesta oportuna, pero no autoriza porcentajes, preferencias de género ni restricciones automáticas. La autoridad debe escuchar cuando corresponda, valorar datos y motivar la medida. La sentencia definitiva sustituye la pensión provisional; el aumento, disminución, suspensión o cesación posterior se promueve por la vía prevista en el artículo 474.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c54-cf-443-470-alimentos",
+            "ev-c54-cf-430-435-custodia",
+            "ev-c54-cf-436-442-convivencia",
+            "ev-c54-cpeum-art4-ninez",
+            "ev-c54-lgdnna-art2-interes",
+            "ev-c54-lgdnna-22-23-familia",
+            "ev-c54-lgdnna-71-74-participacion",
+            "ev-c54-a68-l003-003-panorama",
+            "ev-c54-a68-l005-005-custodia-convivencia",
+            "ev-c54-a68-l009-009-alimentos-medios",
+            "ev-c54-cf-474-modificacion-alimentos"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico",
+          "content": "El artículo 4 constitucional y la LGDNNA colocan el interés superior y la participación de la niñez como ejes. El Código Familiar de Michoacán regula custodia en los artículos 430 a 435, convivencia en los artículos 436 a 442 y alimentos y su vía especial en los artículos 443 a 470. Cada regla debe leerse dentro de su institución y etapa.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c54-cf-443-470-alimentos",
+            "ev-c54-cf-430-435-custodia",
+            "ev-c54-cf-436-442-convivencia",
+            "ev-c54-cpeum-art4-ninez",
+            "ev-c54-lgdnna-art2-interes",
+            "ev-c54-lgdnna-22-23-familia",
+            "ev-c54-lgdnna-71-74-participacion"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Si una persona solicita alimentos provisionales para su hija, no basta proponer un porcentaje porque así se usa en otros asuntos. Debe mostrar el vínculo, las necesidades y los datos disponibles sobre la capacidad económica. La autoridad puede recabar informes y fijar una respuesta provisional conforme al régimen aplicable.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c54-cf-443-470-alimentos",
+            "ev-c54-a68-l003-003-panorama",
+            "ev-c54-a68-l009-009-alimentos-medios"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo CENEVAL",
+          "content": "Una respuesta correcta ante conflicto de custodia y convivencia debe elegir la opción que exige valoración individualizada del interés superior, capacidad de cuidado, opinión de la persona menor y riesgos. Son distractores las opciones que asignan custodia por género, eliminan convivencia sin resolución o tratan un convenio privado como irrevisable.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c54-cf-430-435-custodia",
+            "ev-c54-cf-436-442-convivencia",
+            "ev-c54-cpeum-art4-ninez",
+            "ev-c54-lgdnna-art2-interes",
+            "ev-c54-lgdnna-22-23-familia",
+            "ev-c54-lgdnna-71-74-participacion"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Provisional no significa arbitrario. Alimentos: necesidad, posibilidad, proporcionalidad y cumplimiento. Custodia: cuidado e interés superior. Convivencia: relación familiar con modalidad y seguridad. Niñez: escucha y evaluación de repercusiones. Medios de defensa: su mención en el audio no acredita procedencia universal; debe consultarse la norma concreta del acto.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c54-cf-443-470-alimentos",
+            "ev-c54-cf-430-435-custodia",
+            "ev-c54-cf-436-442-convivencia",
+            "ev-c54-lgdnna-art2-interes",
+            "ev-c54-lgdnna-71-74-participacion",
+            "ev-c54-a68-l005-005-custodia-convivencia",
+            "ev-c54-a68-l009-009-alimentos-medios"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de estudio",
+          "content": "Primero identifica la institución: alimentos, custodia o convivencia. Después ubica la etapa provisional, los sujetos y la competencia. Separa hechos de pruebas; contrasta necesidad y posibilidad; detecta riesgos; incorpora la opinión de la niñez; formula una medida operable; y revisa por separado modificación, cumplimiento e impugnación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c54-cf-443-470-alimentos",
+            "ev-c54-cf-430-435-custodia",
+            "ev-c54-cf-436-442-convivencia",
+            "ev-c54-lgdnna-art2-interes",
+            "ev-c54-lgdnna-71-74-participacion",
+            "ev-c54-cf-474-modificacion-alimentos"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Medida provisional; interés superior; evaluación de repercusiones; derecho a ser escuchado; alimentos; necesidad; posibilidad; proporcionalidad; aseguramiento; custodia; capacidad de cuidado; convivencia libre, asistida o supervisada; riesgo; modificación; resolución fundada.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c54-cf-443-470-alimentos",
+            "ev-c54-cf-430-435-custodia",
+            "ev-c54-cf-436-442-convivencia",
+            "ev-c54-cpeum-art4-ninez",
+            "ev-c54-lgdnna-art2-interes",
+            "ev-c54-lgdnna-22-23-familia",
+            "ev-c54-lgdnna-71-74-participacion"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores frecuentes",
+          "content": "No uses porcentajes como regla universal; no confundas custodia con patria potestad; no asignes custodia por género; no suspendas convivencia sin valorar riesgo y resolución; no trates la opinión infantil como decisión única; no reduzcas alimentos unilateralmente; no deduzcas de la mención del audio que apelación, amparo o suspensión proceden universalmente: consulta la norma concreta del acto.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c54-cf-443-470-alimentos",
+            "ev-c54-cf-430-435-custodia",
+            "ev-c54-cf-436-442-convivencia",
+            "ev-c54-lgdnna-art2-interes",
+            "ev-c54-lgdnna-71-74-participacion",
+            "ev-c54-a68-l003-003-panorama",
+            "ev-c54-a68-l005-005-custodia-convivencia",
+            "ev-c54-a68-l009-009-alimentos-medios",
+            "ev-c54-cf-474-modificacion-alimentos"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa de medidas familiares provisionales",
+        "description": "Relaciones entre protección temporal, alimentos, custodia, convivencia y garantías de niñez.",
+        "nodes": [
+          {
+            "id": "root",
+            "label": "Medidas familiares provisionales",
+            "description": "Protección temporal mientras se decide el fondo.",
+            "evidenceIds": [
+              "ev-c54-cf-443-470-alimentos"
+            ]
+          },
+          {
+            "id": "purpose",
+            "label": "Finalidad cautelar",
+            "description": "Evitar que la demora deje sin protección derechos familiares.",
+            "parentId": "root",
+            "evidenceIds": [
+              "ev-c54-cf-443-470-alimentos"
+            ]
+          },
+          {
+            "id": "not-final",
+            "label": "No prejuzgan el fondo",
+            "description": "Su carácter provisional no equivale a sentencia definitiva.",
+            "parentId": "purpose",
+            "evidenceIds": [
+              "ev-c54-cf-443-470-alimentos"
+            ]
+          },
+          {
+            "id": "best",
+            "label": "Interés superior",
+            "description": "Consideración primordial cuando la decisión afecta a niñas, niños o adolescentes.",
+            "parentId": "root",
+            "evidenceIds": [
+              "ev-c54-cpeum-art4-ninez",
+              "ev-c54-lgdnna-art2-interes"
+            ]
+          },
+          {
+            "id": "impact",
+            "label": "Evaluación de repercusiones",
+            "description": "La autoridad debe valorar efectos concretos de la decisión.",
+            "parentId": "best",
+            "evidenceIds": [
+              "ev-c54-cpeum-art4-ninez",
+              "ev-c54-lgdnna-art2-interes"
+            ]
+          },
+          {
+            "id": "voice",
+            "label": "Derecho a ser escuchado",
+            "description": "La opinión se recibe conforme a edad, desarrollo y madurez.",
+            "parentId": "best",
+            "evidenceIds": [
+              "ev-c54-lgdnna-71-74-participacion"
+            ]
+          },
+          {
+            "id": "food",
+            "label": "Alimentos",
+            "description": "Derecho que comprende diversos satisfactores, no sólo comida.",
+            "parentId": "root",
+            "evidenceIds": [
+              "ev-c54-cf-443-470-alimentos"
+            ]
+          },
+          {
+            "id": "need",
+            "label": "Necesidad",
+            "description": "Se analiza la situación de quien requiere alimentos.",
+            "parentId": "food",
+            "evidenceIds": [
+              "ev-c54-cf-443-470-alimentos"
+            ]
+          },
+          {
+            "id": "capacity",
+            "label": "Posibilidad",
+            "description": "Se analiza la capacidad económica de quien debe proporcionarlos.",
+            "parentId": "food",
+            "evidenceIds": [
+              "ev-c54-cf-443-470-alimentos"
+            ]
+          },
+          {
+            "id": "proportion",
+            "label": "Proporcionalidad",
+            "description": "Relaciona necesidad y posibilidad sin porcentajes automáticos.",
+            "parentId": "food",
+            "evidenceIds": [
+              "ev-c54-cf-443-470-alimentos"
+            ]
+          },
+          {
+            "id": "proof",
+            "label": "Información inicial",
+            "description": "Título, necesidad y datos económicos orientan la decisión provisional.",
+            "parentId": "food",
+            "evidenceIds": [
+              "ev-c54-cf-443-470-alimentos"
+            ]
+          },
+          {
+            "id": "reports",
+            "label": "Informes de ingresos",
+            "description": "La autoridad puede requerir información para conocer la capacidad económica.",
+            "parentId": "food",
+            "evidenceIds": [
+              "ev-c54-cf-443-470-alimentos"
+            ]
+          },
+          {
+            "id": "discount",
+            "label": "Cumplimiento",
+            "description": "La forma de pago o descuento depende de la orden judicial aplicable.",
+            "parentId": "food",
+            "evidenceIds": [
+              "ev-c54-cf-443-470-alimentos"
+            ]
+          },
+          {
+            "id": "security",
+            "label": "Aseguramiento",
+            "description": "Busca hacer efectivo el cumplimiento de la obligación alimentaria.",
+            "parentId": "food",
+            "evidenceIds": [
+              "ev-c54-cf-443-470-alimentos"
+            ]
+          },
+          {
+            "id": "definitive",
+            "label": "Pensión definitiva",
+            "description": "La sentencia sustituye la determinación provisional conforme al proceso.",
+            "parentId": "food",
+            "evidenceIds": [
+              "ev-c54-cf-443-470-alimentos"
+            ]
+          },
+          {
+            "id": "change-food",
+            "label": "Cambio de alimentos",
+            "description": "El aumento, disminución, suspensión o cesación requiere la vía especial oral prevista por la ley local.",
+            "parentId": "food",
+            "evidenceIds": [
+              "ev-c54-cf-474-modificacion-alimentos"
+            ]
+          },
+          {
+            "id": "custody",
+            "label": "Custodia",
+            "description": "Guarda y cuidado directo de la persona menor de edad.",
+            "parentId": "root",
+            "evidenceIds": [
+              "ev-c54-cf-430-435-custodia"
+            ]
+          },
+          {
+            "id": "agreement",
+            "label": "Convenio parental",
+            "description": "Los progenitores pueden proponer quién ejercerá la custodia.",
+            "parentId": "custody",
+            "evidenceIds": [
+              "ev-c54-cf-430-435-custodia"
+            ]
+          },
+          {
+            "id": "dispute",
+            "label": "Decisión judicial",
+            "description": "Ante desacuerdo decide la autoridad con valoración individualizada.",
+            "parentId": "custody",
+            "evidenceIds": [
+              "ev-c54-cf-430-435-custodia"
+            ]
+          },
+          {
+            "id": "capacity-care",
+            "label": "Capacidad de cuidado",
+            "description": "Se examinan circunstancias y aptitud de cuidado, no estereotipos.",
+            "parentId": "custody",
+            "evidenceIds": [
+              "ev-c54-cf-430-435-custodia"
+            ]
+          },
+          {
+            "id": "change-custody",
+            "label": "Modificación de custodia",
+            "description": "Puede revisarse cuando cambian las circunstancias del caso.",
+            "parentId": "custody",
+            "evidenceIds": [
+              "ev-c54-cf-430-435-custodia"
+            ]
+          },
+          {
+            "id": "conv",
+            "label": "Convivencia",
+            "description": "Relaciones personales del menor con familiares conforme a su interés superior.",
+            "parentId": "root",
+            "evidenceIds": [
+              "ev-c54-cf-436-442-convivencia",
+              "ev-c54-lgdnna-22-23-familia"
+            ]
+          },
+          {
+            "id": "risk",
+            "label": "Riesgo",
+            "description": "Puede justificar modalidades, límites o medidas de protección.",
+            "parentId": "conv",
+            "evidenceIds": [
+              "ev-c54-cf-436-442-convivencia",
+              "ev-c54-lgdnna-22-23-familia"
+            ]
+          },
+          {
+            "id": "modes",
+            "label": "Modalidades",
+            "description": "La convivencia puede ser libre, asistida, supervisada o progresiva según el caso.",
+            "parentId": "conv",
+            "evidenceIds": [
+              "ev-c54-cf-436-442-convivencia",
+              "ev-c54-lgdnna-22-23-familia"
+            ]
+          },
+          {
+            "id": "schedule",
+            "label": "Lugar y horario",
+            "description": "La resolución o convenio debe volver operable el régimen.",
+            "parentId": "conv",
+            "evidenceIds": [
+              "ev-c54-cf-436-442-convivencia",
+              "ev-c54-lgdnna-22-23-familia"
+            ]
+          },
+          {
+            "id": "change-conv",
+            "label": "Modificación de convivencia",
+            "description": "La determinación puede adaptarse a circunstancias posteriores.",
+            "parentId": "conv",
+            "evidenceIds": [
+              "ev-c54-cf-436-442-convivencia",
+              "ev-c54-lgdnna-22-23-familia"
+            ]
+          },
+          {
+            "id": "evidence",
+            "label": "Evidencia",
+            "description": "Documentos, informes y contexto permiten una decisión individualizada.",
+            "parentId": "root",
+            "evidenceIds": [
+              "ev-c54-cf-443-470-alimentos"
+            ]
+          },
+          {
+            "id": "no-gender",
+            "label": "Sin automatismos de género",
+            "description": "Custodia y alimentos no se deciden por estereotipos.",
+            "parentId": "evidence",
+            "evidenceIds": [
+              "ev-c54-cf-430-435-custodia"
+            ]
+          },
+          {
+            "id": "remedy",
+            "label": "Mención de medios",
+            "description": "El audio menciona vías de defensa, pero no demuestra su procedencia.",
+            "parentId": "root",
+            "evidenceIds": [
+              "ev-c54-a68-l009-009-alimentos-medios"
+            ]
+          },
+          {
+            "id": "no-universal",
+            "label": "Verificación normativa",
+            "description": "Debe consultarse la norma concreta del acto antes de afirmar una vía.",
+            "parentId": "remedy",
+            "evidenceIds": [
+              "ev-c54-a68-l003-003-panorama",
+              "ev-c54-a68-l009-009-alimentos-medios"
+            ]
+          },
+          {
+            "id": "review-list",
+            "label": "Lista de análisis",
+            "description": "Competencia, derecho afectado, urgencia, datos y medida proporcional.",
+            "parentId": "root",
+            "evidenceIds": [
+              "ev-c54-cf-443-470-alimentos"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+          "url": "https://congresomich.gob.mx/leyes/",
+          "institution": "Congreso del Estado de Michoacán de Ocampo",
+          "jurisdiction": "Michoacán, México",
+          "citation": "Texto oficial; última reforma 24-10-2024; arts. 430–474",
+          "retrievedOn": "2026-08-21",
+          "note": "Régimen local vigente de custodia, convivencia y alimentos."
+        },
+        {
+          "title": "Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Texto vigente; últimas reformas DOF 02-06-2026; art. 4",
+          "retrievedOn": "2026-08-21",
+          "note": "Interés superior y derechos de la niñez."
+        },
+        {
+          "title": "Ley General de los Derechos de Niñas, Niños y Adolescentes",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGDNNA.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Texto vigente; última reforma DOF 15-01-2026; arts. 2, 22–23 y 71–74",
+          "retrievedOn": "2026-08-21",
+          "note": "Interés superior, vida familiar y participación."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué distingue una medida provisional de la sentencia definitiva?",
+          "answer": "La medida protege temporalmente durante el proceso; la definitiva resuelve el fondo y puede sustituirla.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c54-cf-443-470-alimentos",
+            "ev-c54-a68-l003-003-panorama"
+          ]
+        },
+        {
+          "question": "¿Existe un porcentaje universal de alimentos?",
+          "answer": "No; se relacionan necesidades, posibilidad económica, proporcionalidad y datos del caso.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c54-cf-443-470-alimentos",
+            "ev-c54-a68-l009-009-alimentos-medios"
+          ]
+        },
+        {
+          "question": "¿Qué es custodia en el Código Familiar de Michoacán?",
+          "answer": "La guarda y cuidado directo de la persona menor por quien legalmente puede ejercerla.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c54-cf-430-435-custodia"
+          ]
+        },
+        {
+          "question": "¿Cómo se decide la custodia si no hay acuerdo?",
+          "answer": "Mediante valoración judicial del interés superior, capacidad de cuidado y circunstancias particulares.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c54-cf-430-435-custodia",
+            "ev-c54-lgdnna-art2-interes"
+          ]
+        },
+        {
+          "question": "¿Puede modificarse una determinación de custodia?",
+          "answer": "Sí, atendiendo a las circunstancias particulares posteriores y mediante la vía correspondiente.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c54-cf-430-435-custodia"
+          ]
+        },
+        {
+          "question": "¿Qué puede definir un régimen de convivencia?",
+          "answer": "Modalidad, lugar, días, horarios, progresividad y medidas acordes con riesgos y necesidades.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c54-cf-436-442-convivencia",
+            "ev-c54-lgdnna-22-23-familia"
+          ]
+        },
+        {
+          "question": "¿Cuándo puede limitarse la convivencia?",
+          "answer": "Por decisión de autoridad competente y cuando el caso justifica la restricción para proteger derechos.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c54-cf-436-442-convivencia",
+            "ev-c54-lgdnna-22-23-familia"
+          ]
+        },
+        {
+          "question": "¿Qué papel tiene la opinión de niñas, niños y adolescentes?",
+          "answer": "Debe ser escuchada y tomada en cuenta conforme a edad, desarrollo y madurez; no opera como automatismo.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c54-lgdnna-71-74-participacion",
+            "ev-c54-cf-436-442-convivencia"
+          ]
+        },
+        {
+          "question": "¿Qué debe probarse inicialmente al pedir alimentos?",
+          "answer": "El título para exigirlos y los datos relevantes de necesidad y capacidad económica conforme al régimen local.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c54-cf-443-470-alimentos"
+          ]
+        },
+        {
+          "question": "¿Puede reducirse unilateralmente una pensión?",
+          "answer": "No; el artículo 474 exige promover el aumento o disminución mediante las reglas del juicio especial oral.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c54-cf-474-modificacion-alimentos",
+            "ev-c54-a68-l009-009-alimentos-medios"
+          ]
+        },
+        {
+          "question": "¿Qué acredita la mención de recursos en el audio?",
+          "answer": "Sólo un asunto por verificar; no demuestra procedencia universal y exige consultar la norma concreta del acto.",
+          "sourceOrigin": "class",
+          "evidenceIds": [
+            "ev-c54-a68-l003-003-panorama",
+            "ev-c54-a68-l009-009-alimentos-medios"
+          ]
+        },
+        {
+          "question": "¿Qué automatismos deben evitarse?",
+          "answer": "Porcentajes fijos, preferencias de género, restricción total sin riesgo probado y procedencia universal de recursos.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c54-cf-443-470-alimentos",
+            "ev-c54-cf-430-435-custodia",
+            "ev-c54-cf-436-442-convivencia",
+            "ev-c54-lgdnna-art2-interes",
+            "ev-c54-a68-l003-003-panorama",
+            "ev-c54-a68-l005-005-custodia-convivencia",
+            "ev-c54-a68-l009-009-alimentos-medios"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación de medidas familiares provisionales",
+        "description": "Diez casos sobre alimentos, custodia, convivencia, niñez y medios de defensa.",
+        "questions": [
+          {
+            "text": "Una parte pide fijar alimentos en un porcentaje estándar sin aportar datos del caso. ¿Cuál es la respuesta jurídicamente más adecuada?",
+            "difficulty": "basic",
+            "options": [
+              "Aplicar siempre el porcentaje solicitado",
+              "Analizar necesidades, posibilidad económica y evidencia disponible",
+              "Negar toda medida hasta la sentencia"
+            ],
+            "correctOption": 1,
+            "explanation": "La proporcionalidad exige análisis individualizado; la urgencia no autoriza una tarifa universal.",
+            "optionExplanations": [
+              "No existe ese automatismo legal.",
+              "Integra los criterios relevantes.",
+              "La provisionalidad permite protección oportuna."
+            ],
+            "evidenceIds": [
+              "ev-c54-cf-443-470-alimentos",
+              "ev-c54-a68-l003-003-panorama",
+              "ev-c54-a68-l009-009-alimentos-medios"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c54-cf-443-470-alimentos",
+                "ev-c54-a68-l003-003-panorama",
+                "ev-c54-a68-l009-009-alimentos-medios"
+              ],
+              [
+                "ev-c54-cf-443-470-alimentos",
+                "ev-c54-a68-l003-003-panorama",
+                "ev-c54-a68-l009-009-alimentos-medios"
+              ],
+              [
+                "ev-c54-cf-443-470-alimentos",
+                "ev-c54-a68-l003-003-panorama",
+                "ev-c54-a68-l009-009-alimentos-medios"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c54-cf-443-470-alimentos",
+              "ev-c54-a68-l003-003-panorama",
+              "ev-c54-a68-l009-009-alimentos-medios"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c54-cf-443-470-alimentos",
+              "ev-c54-a68-l003-003-panorama",
+              "ev-c54-a68-l009-009-alimentos-medios"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c54-cf-443-470-alimentos",
+                "ev-c54-a68-l003-003-panorama",
+                "ev-c54-a68-l009-009-alimentos-medios"
+              ],
+              [
+                "ev-c54-cf-443-470-alimentos",
+                "ev-c54-a68-l003-003-panorama",
+                "ev-c54-a68-l009-009-alimentos-medios"
+              ],
+              [
+                "ev-c54-cf-443-470-alimentos",
+                "ev-c54-a68-l003-003-panorama",
+                "ev-c54-a68-l009-009-alimentos-medios"
+              ]
+            ]
+          },
+          {
+            "text": "Dos progenitores discrepan sobre custodia provisional. ¿Qué criterio debe guiar primordialmente la decisión?",
+            "difficulty": "basic",
+            "options": [
+              "El género de quien solicita",
+              "La primera petición presentada",
+              "El interés superior y la capacidad de cuidado en el caso"
+            ],
+            "correctOption": 2,
+            "explanation": "La custodia requiere valoración individualizada y libre de estereotipos.",
+            "optionExplanations": [
+              "Es un estereotipo inadmisible.",
+              "El orden de petición no decide el bienestar.",
+              "Es el criterio compatible con el régimen aplicable."
+            ],
+            "evidenceIds": [
+              "ev-c54-cf-430-435-custodia",
+              "ev-c54-cpeum-art4-ninez",
+              "ev-c54-lgdnna-art2-interes"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c54-cf-430-435-custodia",
+                "ev-c54-cpeum-art4-ninez",
+                "ev-c54-lgdnna-art2-interes"
+              ],
+              [
+                "ev-c54-cf-430-435-custodia",
+                "ev-c54-cpeum-art4-ninez",
+                "ev-c54-lgdnna-art2-interes"
+              ],
+              [
+                "ev-c54-cf-430-435-custodia",
+                "ev-c54-cpeum-art4-ninez",
+                "ev-c54-lgdnna-art2-interes"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c54-cf-430-435-custodia",
+              "ev-c54-cpeum-art4-ninez",
+              "ev-c54-lgdnna-art2-interes"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c54-cf-430-435-custodia",
+              "ev-c54-cpeum-art4-ninez",
+              "ev-c54-lgdnna-art2-interes"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c54-cf-430-435-custodia",
+                "ev-c54-cpeum-art4-ninez",
+                "ev-c54-lgdnna-art2-interes"
+              ],
+              [
+                "ev-c54-cf-430-435-custodia",
+                "ev-c54-cpeum-art4-ninez",
+                "ev-c54-lgdnna-art2-interes"
+              ],
+              [
+                "ev-c54-cf-430-435-custodia",
+                "ev-c54-cpeum-art4-ninez",
+                "ev-c54-lgdnna-art2-interes"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál afirmación describe correctamente la convivencia familiar?",
+            "difficulty": "intermediate",
+            "options": [
+              "Nunca puede limitarse",
+              "Puede adoptar modalidades y restricciones fundadas según riesgos y necesidades",
+              "Depende únicamente de la voluntad del progenitor custodio"
+            ],
+            "correctOption": 1,
+            "explanation": "La convivencia se diseña según circunstancias y puede restringirse por resolución competente.",
+            "optionExplanations": [
+              "La protección frente a riesgos permite límites.",
+              "Reconoce modalidad y motivación.",
+              "La decisión unilateral no sustituye convenio o resolución."
+            ],
+            "evidenceIds": [
+              "ev-c54-cf-436-442-convivencia",
+              "ev-c54-lgdnna-22-23-familia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c54-cf-436-442-convivencia",
+                "ev-c54-lgdnna-22-23-familia"
+              ],
+              [
+                "ev-c54-cf-436-442-convivencia",
+                "ev-c54-lgdnna-22-23-familia"
+              ],
+              [
+                "ev-c54-cf-436-442-convivencia",
+                "ev-c54-lgdnna-22-23-familia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c54-cf-436-442-convivencia",
+              "ev-c54-lgdnna-22-23-familia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c54-cf-436-442-convivencia",
+              "ev-c54-lgdnna-22-23-familia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c54-cf-436-442-convivencia",
+                "ev-c54-lgdnna-22-23-familia"
+              ],
+              [
+                "ev-c54-cf-436-442-convivencia",
+                "ev-c54-lgdnna-22-23-familia"
+              ],
+              [
+                "ev-c54-cf-436-442-convivencia",
+                "ev-c54-lgdnna-22-23-familia"
+              ]
+            ]
+          },
+          {
+            "text": "Una adolescente participa en un procedimiento de custodia. ¿Cómo debe tratarse su opinión?",
+            "difficulty": "basic",
+            "options": [
+              "Debe ignorarse hasta la mayoría de edad",
+              "Debe resolver por sí sola el litigio",
+              "Debe escucharse y ponderarse conforme a edad, desarrollo y madurez"
+            ],
+            "correctOption": 2,
+            "explanation": "Participar no equivale a trasladarle toda la responsabilidad de decidir.",
+            "optionExplanations": [
+              "Contradice su derecho de participación.",
+              "Confunde escucha con decisión exclusiva.",
+              "Es la regla aplicable."
+            ],
+            "evidenceIds": [
+              "ev-c54-lgdnna-71-74-participacion",
+              "ev-c54-cf-430-435-custodia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c54-lgdnna-71-74-participacion",
+                "ev-c54-cf-430-435-custodia"
+              ],
+              [
+                "ev-c54-lgdnna-71-74-participacion",
+                "ev-c54-cf-430-435-custodia"
+              ],
+              [
+                "ev-c54-lgdnna-71-74-participacion",
+                "ev-c54-cf-430-435-custodia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c54-lgdnna-71-74-participacion",
+              "ev-c54-cf-430-435-custodia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c54-lgdnna-71-74-participacion",
+              "ev-c54-cf-430-435-custodia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c54-lgdnna-71-74-participacion",
+                "ev-c54-cf-430-435-custodia"
+              ],
+              [
+                "ev-c54-lgdnna-71-74-participacion",
+                "ev-c54-cf-430-435-custodia"
+              ],
+              [
+                "ev-c54-lgdnna-71-74-participacion",
+                "ev-c54-cf-430-435-custodia"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué relación existe entre pensión provisional y definitiva?",
+            "difficulty": "intermediate",
+            "options": [
+              "Son necesariamente idénticas",
+              "La provisional protege durante el trámite y la definitiva la sustituye conforme a la sentencia",
+              "La provisional nunca puede cumplirse por descuento"
+            ],
+            "correctOption": 1,
+            "explanation": "La decisión temporal no prejuzga inalterablemente el resultado final.",
+            "optionExplanations": [
+              "La evidencia del proceso puede cambiar la cuantía.",
+              "Distingue correctamente ambas etapas.",
+              "La forma de cumplimiento depende de la orden aplicable."
+            ],
+            "evidenceIds": [
+              "ev-c54-cf-443-470-alimentos"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c54-cf-443-470-alimentos"
+              ],
+              [
+                "ev-c54-cf-443-470-alimentos"
+              ],
+              [
+                "ev-c54-cf-443-470-alimentos"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c54-cf-443-470-alimentos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c54-cf-443-470-alimentos"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c54-cf-443-470-alimentos"
+              ],
+              [
+                "ev-c54-cf-443-470-alimentos"
+              ],
+              [
+                "ev-c54-cf-443-470-alimentos"
+              ]
+            ]
+          },
+          {
+            "text": "Se solicita suspender toda convivencia sin identificar riesgo concreto. ¿Qué debe hacer la autoridad?",
+            "difficulty": "advanced",
+            "options": [
+              "Suspenderla automáticamente",
+              "Descartar cualquier posibilidad de protección",
+              "Valorar evidencia y diseñar, si procede, una modalidad proporcional y fundada"
+            ],
+            "correctOption": 2,
+            "explanation": "La seguridad puede exigir restricciones, pero éstas deben responder al caso.",
+            "optionExplanations": [
+              "La restricción total no se presume.",
+              "También sería incorrecto ignorar riesgos reales.",
+              "Equilibra protección, convivencia y motivación."
+            ],
+            "evidenceIds": [
+              "ev-c54-cf-436-442-convivencia",
+              "ev-c54-lgdnna-22-23-familia",
+              "ev-c54-lgdnna-art2-interes"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c54-cf-436-442-convivencia",
+                "ev-c54-lgdnna-22-23-familia",
+                "ev-c54-lgdnna-art2-interes"
+              ],
+              [
+                "ev-c54-cf-436-442-convivencia",
+                "ev-c54-lgdnna-22-23-familia",
+                "ev-c54-lgdnna-art2-interes"
+              ],
+              [
+                "ev-c54-cf-436-442-convivencia",
+                "ev-c54-lgdnna-22-23-familia",
+                "ev-c54-lgdnna-art2-interes"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c54-cf-436-442-convivencia",
+              "ev-c54-lgdnna-22-23-familia",
+              "ev-c54-lgdnna-art2-interes"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c54-cf-436-442-convivencia",
+              "ev-c54-lgdnna-22-23-familia",
+              "ev-c54-lgdnna-art2-interes"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c54-cf-436-442-convivencia",
+                "ev-c54-lgdnna-22-23-familia",
+                "ev-c54-lgdnna-art2-interes"
+              ],
+              [
+                "ev-c54-cf-436-442-convivencia",
+                "ev-c54-lgdnna-22-23-familia",
+                "ev-c54-lgdnna-art2-interes"
+              ],
+              [
+                "ev-c54-cf-436-442-convivencia",
+                "ev-c54-lgdnna-22-23-familia",
+                "ev-c54-lgdnna-art2-interes"
+              ]
+            ]
+          },
+          {
+            "text": "El deudor alimentario afirma que sus ingresos disminuyeron y reduce por sí mismo el pago. ¿Qué opción es correcta?",
+            "difficulty": "intermediate",
+            "options": [
+              "La reducción unilateral basta",
+              "Debe promover el ajuste por la vía correspondiente y acreditar el cambio",
+              "La pensión jamás puede modificarse"
+            ],
+            "correctOption": 1,
+            "explanation": "El artículo 474 exige promover el aumento o disminución mediante las reglas del juicio especial oral; la reducción unilateral no basta.",
+            "optionExplanations": [
+              "Desconoce la resolución vigente.",
+              "Es la vía compatible con debido análisis.",
+              "Las circunstancias pueden justificar revisión."
+            ],
+            "evidenceIds": [
+              "ev-c54-cf-474-modificacion-alimentos",
+              "ev-c54-a68-l009-009-alimentos-medios"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c54-cf-474-modificacion-alimentos",
+                "ev-c54-a68-l009-009-alimentos-medios"
+              ],
+              [
+                "ev-c54-cf-474-modificacion-alimentos",
+                "ev-c54-a68-l009-009-alimentos-medios"
+              ],
+              [
+                "ev-c54-cf-474-modificacion-alimentos",
+                "ev-c54-a68-l009-009-alimentos-medios"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c54-cf-474-modificacion-alimentos",
+              "ev-c54-a68-l009-009-alimentos-medios"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c54-cf-474-modificacion-alimentos",
+              "ev-c54-a68-l009-009-alimentos-medios"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c54-cf-474-modificacion-alimentos",
+                "ev-c54-a68-l009-009-alimentos-medios"
+              ],
+              [
+                "ev-c54-cf-474-modificacion-alimentos",
+                "ev-c54-a68-l009-009-alimentos-medios"
+              ],
+              [
+                "ev-c54-cf-474-modificacion-alimentos",
+                "ev-c54-a68-l009-009-alimentos-medios"
+              ]
+            ]
+          },
+          {
+            "text": "El audio menciona apelación, amparo y suspensión. ¿Qué permite concluir esa mención por sí sola?",
+            "difficulty": "advanced",
+            "options": [
+              "Que las tres vías proceden siempre",
+              "Que ninguna vía puede proceder",
+              "Sólo que debe consultarse la norma concreta del acto antes de afirmar procedencia"
+            ],
+            "correctOption": 2,
+            "explanation": "La exposición oral no acredita una regla universal de procedencia; cada afirmación exige fundamento normativo específico.",
+            "optionExplanations": [
+              "Generaliza sin fundamento normativo.",
+              "También generaliza sin fundamento normativo.",
+              "Reconoce correctamente el límite probatorio del audio."
+            ],
+            "evidenceIds": [
+              "ev-c54-a68-l003-003-panorama",
+              "ev-c54-a68-l009-009-alimentos-medios"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c54-a68-l003-003-panorama",
+                "ev-c54-a68-l009-009-alimentos-medios"
+              ],
+              [
+                "ev-c54-a68-l003-003-panorama",
+                "ev-c54-a68-l009-009-alimentos-medios"
+              ],
+              [
+                "ev-c54-a68-l003-003-panorama",
+                "ev-c54-a68-l009-009-alimentos-medios"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c54-a68-l003-003-panorama",
+              "ev-c54-a68-l009-009-alimentos-medios"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c54-a68-l003-003-panorama",
+              "ev-c54-a68-l009-009-alimentos-medios"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c54-a68-l003-003-panorama",
+                "ev-c54-a68-l009-009-alimentos-medios"
+              ],
+              [
+                "ev-c54-a68-l003-003-panorama",
+                "ev-c54-a68-l009-009-alimentos-medios"
+              ],
+              [
+                "ev-c54-a68-l003-003-panorama",
+                "ev-c54-a68-l009-009-alimentos-medios"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál dato es pertinente al definir custodia provisional?",
+            "difficulty": "intermediate",
+            "options": [
+              "Una preferencia abstracta por madres o padres",
+              "La capacidad real de cuidado y las circunstancias de la persona menor",
+              "La renuncia automática a la patria potestad"
+            ],
+            "correctOption": 1,
+            "explanation": "La custodia se centra en cuidado e interés superior, no en estereotipos ni renuncias ficticias.",
+            "optionExplanations": [
+              "No es un criterio legal individualizado.",
+              "Es pertinente a la decisión.",
+              "Custodia y patria potestad no son equivalentes."
+            ],
+            "evidenceIds": [
+              "ev-c54-cf-430-435-custodia",
+              "ev-c54-lgdnna-art2-interes"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c54-cf-430-435-custodia",
+                "ev-c54-lgdnna-art2-interes"
+              ],
+              [
+                "ev-c54-cf-430-435-custodia",
+                "ev-c54-lgdnna-art2-interes"
+              ],
+              [
+                "ev-c54-cf-430-435-custodia",
+                "ev-c54-lgdnna-art2-interes"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c54-cf-430-435-custodia",
+              "ev-c54-lgdnna-art2-interes"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c54-cf-430-435-custodia",
+              "ev-c54-lgdnna-art2-interes"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c54-cf-430-435-custodia",
+                "ev-c54-lgdnna-art2-interes"
+              ],
+              [
+                "ev-c54-cf-430-435-custodia",
+                "ev-c54-lgdnna-art2-interes"
+              ],
+              [
+                "ev-c54-cf-430-435-custodia",
+                "ev-c54-lgdnna-art2-interes"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál secuencia mejora el análisis de una medida familiar provisional?",
+            "difficulty": "advanced",
+            "options": [
+              "Elegir primero un porcentaje y después buscar hechos",
+              "Identificar institución, urgencia, sujetos, datos, riesgo y medida proporcional",
+              "Prometer el resultado antes de escuchar a las partes"
+            ],
+            "correctOption": 1,
+            "explanation": "El método parte del problema jurídico y de la evidencia, no de una conclusión prefijada.",
+            "optionExplanations": [
+              "Invierte el razonamiento.",
+              "Ordena los elementos jurídicos relevantes.",
+              "El resultado exige contradicción y valoración."
+            ],
+            "evidenceIds": [
+              "ev-c54-cf-443-470-alimentos",
+              "ev-c54-cf-430-435-custodia",
+              "ev-c54-cf-436-442-convivencia",
+              "ev-c54-lgdnna-art2-interes",
+              "ev-c54-lgdnna-71-74-participacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c54-cf-443-470-alimentos",
+                "ev-c54-cf-430-435-custodia",
+                "ev-c54-cf-436-442-convivencia",
+                "ev-c54-lgdnna-art2-interes",
+                "ev-c54-lgdnna-71-74-participacion"
+              ],
+              [
+                "ev-c54-cf-443-470-alimentos",
+                "ev-c54-cf-430-435-custodia",
+                "ev-c54-cf-436-442-convivencia",
+                "ev-c54-lgdnna-art2-interes",
+                "ev-c54-lgdnna-71-74-participacion"
+              ],
+              [
+                "ev-c54-cf-443-470-alimentos",
+                "ev-c54-cf-430-435-custodia",
+                "ev-c54-cf-436-442-convivencia",
+                "ev-c54-lgdnna-art2-interes",
+                "ev-c54-lgdnna-71-74-participacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c54-cf-443-470-alimentos",
+              "ev-c54-cf-430-435-custodia",
+              "ev-c54-cf-436-442-convivencia",
+              "ev-c54-lgdnna-art2-interes",
+              "ev-c54-lgdnna-71-74-participacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c54-cf-443-470-alimentos",
+              "ev-c54-cf-430-435-custodia",
+              "ev-c54-cf-436-442-convivencia",
+              "ev-c54-lgdnna-art2-interes",
+              "ev-c54-lgdnna-71-74-participacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c54-cf-443-470-alimentos",
+                "ev-c54-cf-430-435-custodia",
+                "ev-c54-cf-436-442-convivencia",
+                "ev-c54-lgdnna-art2-interes",
+                "ev-c54-lgdnna-71-74-participacion"
+              ],
+              [
+                "ev-c54-cf-443-470-alimentos",
+                "ev-c54-cf-430-435-custodia",
+                "ev-c54-cf-436-442-convivencia",
+                "ev-c54-lgdnna-art2-interes",
+                "ev-c54-lgdnna-71-74-participacion"
+              ],
+              [
+                "ev-c54-cf-443-470-alimentos",
+                "ev-c54-cf-430-435-custodia",
+                "ev-c54-cf-436-442-convivencia",
+                "ev-c54-lgdnna-art2-interes",
+                "ev-c54-lgdnna-71-74-participacion"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c54-cf-443-470-alimentos",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 24-10-2024; artículos 443 a 470: alimentos, obligación, acción, demanda, medidas iniciales, informes, cumplimiento y sentencia",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c54-cf-474-modificacion-alimentos",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 24-10-2024; artículo 474: aumento, disminución, suspensión o cesación de alimentos por las reglas del juicio especial oral",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c54-cf-430-435-custodia",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 24-10-2024; artículos 430 a 435: custodia, acuerdo, decisión, escucha y modificación",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c54-cf-436-442-convivencia",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 24-10-2024; artículos 436 a 442: convivencia, interés superior, modalidades, escucha y modificación",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c54-cpeum-art4-ninez",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026; artículo 4, interés superior y derechos de la niñez",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c54-lgdnna-art2-interes",
+      "kind": "official",
+      "title": "Ley General de los Derechos de Niñas, Niños y Adolescentes",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGDNNA.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículo 2: interés superior y evaluación de repercusiones",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c54-lgdnna-22-23-familia",
+      "kind": "official",
+      "title": "Ley General de los Derechos de Niñas, Niños y Adolescentes",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGDNNA.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículos 22 y 23: vida en familia, separación y contacto familiar",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c54-lgdnna-71-74-participacion",
+      "kind": "official",
+      "title": "Ley General de los Derechos de Niñas, Niños y Adolescentes",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGDNNA.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículos 71 a 74: derecho a ser escuchado y participación",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c54-a68-l003-003-panorama",
+      "kind": "transcript",
+      "audioNumber": 68,
+      "locator": {
+        "type": "line_range",
+        "startLine": 3,
+        "endLine": 3
+      }
+    },
+    {
+      "id": "ev-c54-a68-l005-005-custodia-convivencia",
+      "kind": "transcript",
+      "audioNumber": 68,
+      "locator": {
+        "type": "line_range",
+        "startLine": 5,
+        "endLine": 5
+      }
+    },
+    {
+      "id": "ev-c54-a68-l009-009-alimentos-medios",
+      "kind": "transcript",
+      "audioNumber": 68,
+      "locator": {
+        "type": "line_range",
+        "startLine": 9,
+        "endLine": 9
+      }
+    }
+  ]
+}

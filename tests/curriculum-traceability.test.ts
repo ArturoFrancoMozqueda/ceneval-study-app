@@ -850,6 +850,34 @@ const traceablePackages = [
       /última reforma publicada 24-10-2024/i,
     ],
   },
+  {
+    code: "C53",
+    fileName: "audio-67-divorcio-sin-expresion-causa-bilateral.json",
+    artifacts: 154,
+    evidence: 16,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /Cobertura editorial del fragmento 169–265/i,
+      /Código Nacional no opera automáticamente en Michoacán/i,
+      /artículo 663 es una vía oral familiar general/i,
+      /pérdida o suspensión requiere una causa legal, valoración de hechos y resolución judicial/i,
+      /última reforma publicada 24-10-2024/i,
+    ],
+  },
+  {
+    code: "C54",
+    fileName: "audio-68-medidas-familiares-provisionales.json",
+    artifacts: 149,
+    evidence: 11,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /líneas extensas se localizaron completas, sin inventar sublíneas/i,
+      /No\. Se valora el interés superior, la capacidad de cuidado y las circunstancias particulares/i,
+      /mención en el audio no acredita procedencia universal/i,
+      /artículo 474 exige promover el aumento o disminución/i,
+      /última reforma publicada 24-10-2024/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -1313,6 +1341,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una formalidad patrimonial universal o una regla familiar lesiva como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C53" || expected.code === "C54") {
+      const obsoleteAsCurrent =
+        expected.code === "C53"
+          ? /CNPCF.*(?:rige|opera|sustituyó).*(?:automáticamente|desde 2023).*Michoacán|(?:ambos|los dos) cónyuges.*(?:deben|tienen que).*(?:consentir|aceptar).*divorcio|(?:una|cualquier) inasistencia.*pérdida.*patria potestad|dos audiencias.*(?:siempre|obligatorias)/i
+          : /(?:porcentaje|tarifa).*(?:universal|siempre)|custodia.*(?:automática|por género)|reducción.*(?:automática|unilateral.*basta)|(?:apelación|amparo|suspensión).*(?:siempre|automáticamente).*procede/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una regla familiar automática o territorialmente falsa como respuesta vigente.`,
         );
       }
     }
