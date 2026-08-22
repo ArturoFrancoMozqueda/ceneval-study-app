@@ -26,6 +26,11 @@ const authPaths = [
   "/registro",
 ];
 
+// Rutas públicas de marketing (Fase 5 del plan de venta): tienen su propia
+// cabecera y pie de página en `components/marketing-shell.tsx`, así que no
+// deben quedar envueltas en la barra lateral de la app autenticada.
+const marketingPaths = ["/precios", "/muestra", "/preguntas-frecuentes"];
+
 function isActivePath(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
   if (href === "/materias" && pathname.startsWith("/clases/")) return true;
@@ -61,6 +66,13 @@ export function AppShell({
 }) {
   const pathname = usePathname();
   const isAuthPage = authPaths.some((path) => pathname.startsWith(path));
+  // La raíz sin sesión es la landing pública (ver app/page.tsx); con
+  // sesión sigue siendo el panel autenticado de siempre.
+  const isMarketingPage =
+    (pathname === "/" && !user) ||
+    marketingPaths.some(
+      (path) => pathname === path || pathname.startsWith(`${path}/`),
+    );
 
   if (isAuthPage) {
     return (
@@ -72,6 +84,10 @@ export function AppShell({
         {children}
       </main>
     );
+  }
+
+  if (isMarketingPage) {
+    return <>{children}</>;
   }
 
   return (
@@ -187,6 +203,12 @@ export function AppShell({
             CENEVAL de Derecho; no constituye asesoría jurídica. Las normas
             pueden cambiar, por lo que debes consultar la fuente oficial y su
             fecha de vigencia antes de aplicarlas a un caso real.
+          </p>
+          <p className="mt-2 text-xs leading-5 text-muted">
+            Sube Legal no está afiliada, patrocinada ni avalada por el Centro
+            Nacional de Evaluación para la Educación Superior, A.C. (CENEVAL).
+            &ldquo;Examen CENEVAL EGEL de Derecho&rdquo; se usa solo de forma
+            descriptiva, para indicar para qué examen prepara el contenido.
           </p>
         </footer>
       </div>
