@@ -1,0 +1,1368 @@
+{
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C43",
+    "order": 43,
+    "audioSources": [
+      {
+        "audioNumber": 56,
+        "fragment": "Primera parte, lineas 23 a 199: juicio ordinario mercantil escrito"
+      }
+    ]
+  },
+  "subject": {
+    "name": "Derecho Procesal Mercantil",
+    "description": "Procedencia, postulación, prueba y sentencia en las vías mercantiles."
+  },
+  "class": {
+    "title": "Juicio ordinario mercantil escrito",
+    "description": "Cuadragésima tercera clase del plan académico: subsistencia de la vía, demanda, contestación, prueba, alegatos y sentencia."
+  },
+  "transcript": {
+    "originalFile": "AUDIO 56.txt",
+    "cleaned": "Se utilizó exclusivamente el bloque académico de las líneas físicas 23 a 199 sobre juicio ordinario mercantil escrito. Se excluyeron saludos, conversaciones personales, lenguaje ofensivo, ejemplos no verificables y afirmaciones históricas sobre cuantía o procedencia. El bloque que inicia en la línea 201 sobre estructura y clases de resoluciones permanece asignado a C05. Se corrigió que el ordinario no es la vía general para toda controversia sin procedimiento especial: su artículo 1377 debe coordinarse con el juicio oral mercantil vigente y su exclusión de asuntos de cuantía indeterminada. Los plazos se tomaron del Código de Comercio vigente y no de memoria oral."
+  },
+  "topics": [
+    {
+      "title": "Procedencia y etapas del ordinario mercantil escrito",
+      "description": "Decisión de vía y secuencia escrita desde demanda hasta sentencia.",
+      "learningJourney": {
+        "openingPrompt": "Una pretensión mercantil no tiene procedimiento especial. ¿Eso basta para ir al ordinario escrito o todavía debe descartarse el oral mercantil?",
+        "quickChecks": [
+          {
+            "prompt": "¿Toda controversia sin vía especial va al ordinario?",
+            "answer": "No. También debe verificarse el alcance del oral mercantil y la apelabilidad exigida por el artículo 1377.",
+            "feedback": "Lee coordinadamente las reglas vigentes.",
+            "evidenceIds": [
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+              "ev-c43-ccom-1339-1340-apelabilidad",
+              "ev-c43-a56-l023-037-ordinario"
+            ]
+          },
+          {
+            "prompt": "¿La contestación ordinaria tiene nueve días?",
+            "answer": "No. La demanda se contesta en quince días; nueve días es el plazo para contestar una reconvención admitida.",
+            "feedback": "No traslades el plazo del oral.",
+            "evidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion",
+              "ev-c43-ccom-1061-1063-documentos",
+              "ev-c43-a56-l049-077-postulacion"
+            ]
+          },
+          {
+            "prompt": "¿Siempre hay cuarenta días de prueba?",
+            "answer": "No. Es el máximo ordinario cuando se abre el asunto a prueba.",
+            "feedback": "Distingue apertura, máximo y duración total.",
+            "evidenceIds": [
+              "ev-c43-ccom-1382-1387-prueba",
+              "ev-c43-a56-l095-121-etapas",
+              "ev-c43-a56-l129-159-prueba"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una empresa pide una declaración mercantil de valor indeterminable y no existe procedimiento especial. La demandada quiere reconvenir y ambas anuncian prueba documental y testimonial.",
+          "question": "¿Qué vía y secuencia deben examinarse?",
+          "legalRule": "Los artículos 1377 a 1390 regulan el ordinario; 1339 Bis hace apelables los asuntos indeterminados; 1390 Bis 1 los excluye del oral.",
+          "reasoning": "La pretensión indeterminada queda fuera del oral y satisface la apelabilidad. La demanda debe cumplir requisitos y documentos; se contesta en quince días. La reconvención se propone al contestar y, admitida, se responde en nueve. Si se abre prueba, el juez fija el término dentro del máximo legal. Después siguen alegatos, citación y sentencia.",
+          "conclusion": "El ordinario procede por coordinación normativa, no por llamarlo vía residual.",
+          "evidenceIds": [
+            "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+            "ev-c43-ccom-1339-1340-apelabilidad",
+            "ev-c43-a56-l023-037-ordinario",
+            "ev-c43-ccom-1378-1381-postulacion",
+            "ev-c43-ccom-1061-1063-documentos",
+            "ev-c43-a56-l049-077-postulacion",
+            "ev-c43-ccom-1382-1387-prueba",
+            "ev-c43-a56-l095-121-etapas",
+            "ev-c43-a56-l129-159-prueba",
+            "ev-c43-ccom-1388-1390-cierre",
+            "ev-c43-a56-l163-189-alegatos",
+            "ev-c43-a56-l191-199-sentencia"
+          ]
+        },
+        "closingPrompt": "Explica los filtros de vía y la secuencia demanda, contestación, prueba, alegatos y sentencia.",
+        "nextActivity": "Recorre el mapa, estudia doce tarjetas y resuelve diez casos.",
+        "openingPromptEvidenceIds": [
+          "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+          "ev-c43-ccom-1339-1340-apelabilidad",
+          "ev-c43-a56-l023-037-ordinario"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+          "ev-c43-ccom-1339-1340-apelabilidad",
+          "ev-c43-a56-l023-037-ordinario",
+          "ev-c43-ccom-1378-1381-postulacion",
+          "ev-c43-ccom-1061-1063-documentos",
+          "ev-c43-a56-l049-077-postulacion",
+          "ev-c43-ccom-1382-1387-prueba",
+          "ev-c43-a56-l095-121-etapas",
+          "ev-c43-a56-l129-159-prueba",
+          "ev-c43-ccom-1388-1390-cierre",
+          "ev-c43-a56-l163-189-alegatos",
+          "ev-c43-a56-l191-199-sentencia"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+          "ev-c43-ccom-1378-1381-postulacion",
+          "ev-c43-ccom-1382-1387-prueba",
+          "ev-c43-ccom-1388-1390-cierre"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "El juicio ordinario mercantil escrito no es hoy la vía general para toda controversia mercantil. Subsiste para los supuestos que encajan en el artículo 1377 y quedan fuera del oral mercantil o de un procedimiento especial; el caso central es la cuantía indeterminada. Su secuencia escrita comprende demanda, contestación, prueba, alegatos y sentencia.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+            "ev-c43-ccom-1339-1340-apelabilidad",
+            "ev-c43-a56-l023-037-ordinario",
+            "ev-c43-ccom-1378-1381-postulacion",
+            "ev-c43-ccom-1061-1063-documentos",
+            "ev-c43-a56-l049-077-postulacion",
+            "ev-c43-ccom-1382-1387-prueba",
+            "ev-c43-a56-l095-121-etapas",
+            "ev-c43-a56-l129-159-prueba",
+            "ev-c43-ccom-1388-1390-cierre",
+            "ev-c43-a56-l163-189-alegatos",
+            "ev-c43-a56-l191-199-sentencia"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "El artículo 1377 no puede leerse aislado. Dice que las contiendas sin tramitación especial se ventilan en ordinario cuando sean susceptibles de apelación y añade el supuesto de elección de la parte demandada cuando opone quita o pago. Pero los artículos 1390 Bis y 1390 Bis 1, posteriores y especiales, llevan al oral mercantil las contiendas sin límite de cuantía, salvo las de tramitación especial y las de cuantía indeterminada. Por eso no basta afirmar que un asunto no tiene vía especial: también debe comprobarse que realmente queda fuera del oral. La cuantía indeterminada es siempre apelable conforme al artículo 1339 Bis y constituye el supuesto ordinario más claro. No inventes un monto para acceder al ordinario.\n\nLa demanda escrita cumple el artículo 1378: identifica órgano y partes, prestaciones, hechos claros y numerados, fundamentos, valor cuando pueda determinarse, pruebas y firma; además se relacionan y acompañan documentos conforme a los artículos 1061 a 1063. Admitida, se emplaza para contestar en quince días. Las excepciones se concentran en la contestación. La reconvención se propone al contestar; si se admite, la actora la contesta en nueve días.\n\nSi la demanda es obscura o irregular, la prevención se formula una sola vez y se atiende en el plazo legal. Contestada la demanda, el asunto se abre a prueba si es necesario. El artículo 1383 permite un término ordinario máximo de cuarenta días: los primeros diez para ofrecimiento y los treinta siguientes para desahogo, o una proporción equivalente si el juez fija menos. Esto no debe convertirse en duración automática de todo juicio: depende de apertura, prueba necesaria y decisiones procesales.\n\nConcluida la prueba, los autos quedan a la vista para alegatos por tres días comunes y después se cita para sentencia. Los artículos 1388 a 1390 fijan el plazo de quince días para la sentencia definitiva. El bloque del Audio 56 desde la línea 201 cambia a teoría general de resoluciones y pertenece a C05; C43 solo conserva hasta la transición de la etapa resolutiva en la línea 199.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+            "ev-c43-ccom-1339-1340-apelabilidad",
+            "ev-c43-a56-l023-037-ordinario",
+            "ev-c43-ccom-1378-1381-postulacion",
+            "ev-c43-ccom-1061-1063-documentos",
+            "ev-c43-a56-l049-077-postulacion",
+            "ev-c43-ccom-1382-1387-prueba",
+            "ev-c43-a56-l095-121-etapas",
+            "ev-c43-a56-l129-159-prueba",
+            "ev-c43-ccom-1388-1390-cierre",
+            "ev-c43-a56-l163-189-alegatos",
+            "ev-c43-a56-l191-199-sentencia"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Código de Comercio, última reforma DOF 14-11-2025: artículos 1339, 1339 Bis y 1340 sobre apelabilidad; 1377 sobre procedencia; 1378 a 1381 sobre postulación; 1382 a 1387 sobre prueba; 1388 a 1390 sobre alegatos y sentencia; 1390 Bis y 1390 Bis 1 para delimitar el oral mercantil; y 1061 a 1063 sobre documentos.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+            "ev-c43-ccom-1378-1381-postulacion",
+            "ev-c43-ccom-1382-1387-prueba",
+            "ev-c43-ccom-1388-1390-cierre",
+            "ev-c43-ccom-1061-1063-documentos",
+            "ev-c43-ccom-1339-1340-apelabilidad"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo simple",
+          "content": "Una sociedad pide una declaración mercantil cuyo valor no puede determinarse y para la cual ninguna ley establece procedimiento especial. La cuantía indeterminada queda fuera del oral mercantil y es siempre apelable; por ello se revisa el ordinario escrito conforme al artículo 1377.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+            "ev-c43-ccom-1339-1340-apelabilidad",
+            "ev-c43-a56-l023-037-ordinario"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo CENEVAL",
+          "content": "Ante una demanda mercantil, aplica tres filtros: procedimiento especial, cuantía determinada o determinable y regla específica del artículo 1377. Si la pretensión es indeterminada y no tiene vía especial, ordena demanda, emplazamiento, contestación, posible reconvención, prueba cuando sea necesaria, alegatos y sentencia.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+            "ev-c43-ccom-1339-1340-apelabilidad",
+            "ev-c43-a56-l023-037-ordinario",
+            "ev-c43-ccom-1378-1381-postulacion",
+            "ev-c43-ccom-1061-1063-documentos",
+            "ev-c43-a56-l049-077-postulacion",
+            "ev-c43-ccom-1382-1387-prueba",
+            "ev-c43-a56-l095-121-etapas",
+            "ev-c43-a56-l129-159-prueba",
+            "ev-c43-ccom-1388-1390-cierre",
+            "ev-c43-a56-l163-189-alegatos",
+            "ev-c43-a56-l191-199-sentencia"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "El ordinario escrito no es residual automático. Se coordina con el oral mercantil vigente. Demanda y contestación son escritas; la contestación tiene quince días. La prueba puede abrirse hasta cuarenta días con distribución legal. Los alegatos tienen tres días comunes y la sentencia quince días después de la citación.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+            "ev-c43-ccom-1339-1340-apelabilidad",
+            "ev-c43-a56-l023-037-ordinario",
+            "ev-c43-ccom-1378-1381-postulacion",
+            "ev-c43-ccom-1061-1063-documentos",
+            "ev-c43-a56-l049-077-postulacion",
+            "ev-c43-ccom-1382-1387-prueba",
+            "ev-c43-a56-l095-121-etapas",
+            "ev-c43-a56-l129-159-prueba",
+            "ev-c43-ccom-1388-1390-cierre",
+            "ev-c43-a56-l163-189-alegatos",
+            "ev-c43-a56-l191-199-sentencia"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de estudio",
+          "content": "1. Descarta vía especial. 2. Pregunta si la cuantía es determinada o determinable. 3. Contrasta 1377 con 1390 Bis 1. 4. No uses montos inventados. 5. Revisa requisitos y documentos. 6. Cuenta quince días para contestar. 7. Distingue reconvención y vista. 8. No trates cuarenta días como duración total. 9. Ubica alegatos y sentencia. 10. Detén el transcript en L199.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+            "ev-c43-ccom-1339-1340-apelabilidad",
+            "ev-c43-a56-l023-037-ordinario",
+            "ev-c43-ccom-1378-1381-postulacion",
+            "ev-c43-ccom-1061-1063-documentos",
+            "ev-c43-a56-l049-077-postulacion",
+            "ev-c43-ccom-1382-1387-prueba",
+            "ev-c43-a56-l095-121-etapas",
+            "ev-c43-a56-l129-159-prueba",
+            "ev-c43-ccom-1388-1390-cierre",
+            "ev-c43-a56-l163-189-alegatos",
+            "ev-c43-a56-l191-199-sentencia"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Juicio ordinario mercantil; tramitación especial; apelabilidad; cuantía indeterminada; oral mercantil; demanda; emplazamiento; contestación; excepciones; reconvención; prevención; apertura a prueba; ofrecimiento; desahogo; alegatos; citación y sentencia.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+            "ev-c43-ccom-1339-1340-apelabilidad",
+            "ev-c43-a56-l023-037-ordinario",
+            "ev-c43-ccom-1378-1381-postulacion",
+            "ev-c43-ccom-1061-1063-documentos",
+            "ev-c43-a56-l049-077-postulacion",
+            "ev-c43-ccom-1382-1387-prueba",
+            "ev-c43-a56-l095-121-etapas",
+            "ev-c43-a56-l129-159-prueba",
+            "ev-c43-ccom-1388-1390-cierre",
+            "ev-c43-a56-l163-189-alegatos",
+            "ev-c43-a56-l191-199-sentencia"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "Llamarlo vía general para cualquier contrato; aplicar solo el artículo 1377 e ignorar 1390 Bis 1; inventar un umbral de acceso; llevar al ordinario un ejecutivo o procedimiento especial; decir que la demanda se contesta en nueve días; confundir cuarenta días de prueba con duración total; afirmar que siempre se abre prueba; trasladar a C43 la teoría general de sentencias desde L201 del audio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+            "ev-c43-ccom-1339-1340-apelabilidad",
+            "ev-c43-a56-l023-037-ordinario",
+            "ev-c43-ccom-1378-1381-postulacion",
+            "ev-c43-ccom-1061-1063-documentos",
+            "ev-c43-a56-l049-077-postulacion",
+            "ev-c43-ccom-1382-1387-prueba",
+            "ev-c43-a56-l095-121-etapas",
+            "ev-c43-a56-l129-159-prueba",
+            "ev-c43-ccom-1388-1390-cierre",
+            "ev-c43-a56-l163-189-alegatos",
+            "ev-c43-a56-l191-199-sentencia"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual: ordinario mercantil escrito",
+        "description": "Árbol de decisión de procedencia y etapas.",
+        "nodes": [
+          {
+            "id": "inicio",
+            "label": "Ordinario mercantil escrito",
+            "description": "Vía subsistente y delimitada.",
+            "evidenceIds": [
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+              "ev-c43-ccom-1339-1340-apelabilidad",
+              "ev-c43-a56-l023-037-ordinario"
+            ]
+          },
+          {
+            "id": "filtro-especial",
+            "label": "¿Hay vía especial?",
+            "description": "Si existe, desplaza al ordinario.",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+            ]
+          },
+          {
+            "id": "oral",
+            "label": "¿Cabe oral mercantil?",
+            "description": "Contraste con 1390 Bis 1.",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+              "ev-c43-ccom-1339-1340-apelabilidad",
+              "ev-c43-a56-l023-037-ordinario"
+            ]
+          },
+          {
+            "id": "indeterminada",
+            "label": "Cuantía indeterminada",
+            "description": "Excluida del oral.",
+            "parentId": "oral",
+            "evidenceIds": [
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+              "ev-c43-ccom-1339-1340-apelabilidad",
+              "ev-c43-a56-l023-037-ordinario"
+            ]
+          },
+          {
+            "id": "apelable",
+            "label": "Siempre apelable",
+            "description": "Artículo 1339 Bis.",
+            "parentId": "indeterminada",
+            "evidenceIds": [
+              "ev-c43-ccom-1339-1340-apelabilidad"
+            ]
+          },
+          {
+            "id": "quita",
+            "label": "Quita o pago",
+            "description": "Elección del demandado del 1377.",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+            ]
+          },
+          {
+            "id": "demanda",
+            "label": "Demanda escrita",
+            "description": "Requisitos del 1378.",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion",
+              "ev-c43-ccom-1061-1063-documentos",
+              "ev-c43-a56-l049-077-postulacion"
+            ]
+          },
+          {
+            "id": "partes",
+            "label": "Partes y órgano",
+            "description": "Identificación procesal.",
+            "parentId": "demanda",
+            "evidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion"
+            ]
+          },
+          {
+            "id": "pretension",
+            "label": "Prestaciones",
+            "description": "Objeto reclamado.",
+            "parentId": "demanda",
+            "evidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion"
+            ]
+          },
+          {
+            "id": "hechos",
+            "label": "Hechos numerados",
+            "description": "Claridad y precisión.",
+            "parentId": "demanda",
+            "evidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion",
+              "ev-c43-ccom-1061-1063-documentos",
+              "ev-c43-a56-l049-077-postulacion"
+            ]
+          },
+          {
+            "id": "documentos",
+            "label": "Documentos",
+            "description": "Relación y disponibilidad.",
+            "parentId": "demanda",
+            "evidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion",
+              "ev-c43-ccom-1061-1063-documentos"
+            ]
+          },
+          {
+            "id": "pruebas-oferta",
+            "label": "Oferta de pruebas",
+            "description": "Desde la demanda.",
+            "parentId": "demanda",
+            "evidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion",
+              "ev-c43-ccom-1061-1063-documentos"
+            ]
+          },
+          {
+            "id": "prevencion",
+            "label": "Prevención",
+            "description": "Una sola ocasión.",
+            "parentId": "demanda",
+            "evidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion"
+            ]
+          },
+          {
+            "id": "emplazamiento",
+            "label": "Emplazamiento",
+            "description": "Tras admisión.",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion",
+              "ev-c43-ccom-1061-1063-documentos",
+              "ev-c43-a56-l049-077-postulacion"
+            ]
+          },
+          {
+            "id": "contestacion",
+            "label": "Contestación: 15 días",
+            "description": "Concentra defensas.",
+            "parentId": "emplazamiento",
+            "evidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion",
+              "ev-c43-ccom-1061-1063-documentos",
+              "ev-c43-a56-l049-077-postulacion"
+            ]
+          },
+          {
+            "id": "vista",
+            "label": "Vista: 3 días",
+            "description": "Respuesta de la actora.",
+            "parentId": "contestacion",
+            "evidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion"
+            ]
+          },
+          {
+            "id": "reconvencion",
+            "label": "Reconvención",
+            "description": "Se propone al contestar.",
+            "parentId": "contestacion",
+            "evidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion"
+            ]
+          },
+          {
+            "id": "reconv-cont",
+            "label": "Contestación: 9 días",
+            "description": "Solo reconvención admitida.",
+            "parentId": "reconvencion",
+            "evidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion"
+            ]
+          },
+          {
+            "id": "prueba",
+            "label": "Etapa probatoria",
+            "description": "Solo si es necesaria.",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c43-ccom-1382-1387-prueba",
+              "ev-c43-a56-l095-121-etapas",
+              "ev-c43-a56-l129-159-prueba"
+            ]
+          },
+          {
+            "id": "maximo",
+            "label": "Máximo: 40 días",
+            "description": "No duración total.",
+            "parentId": "prueba",
+            "evidenceIds": [
+              "ev-c43-ccom-1382-1387-prueba"
+            ]
+          },
+          {
+            "id": "ofrecimiento",
+            "label": "10 días",
+            "description": "Ofrecimiento probatorio.",
+            "parentId": "maximo",
+            "evidenceIds": [
+              "ev-c43-ccom-1382-1387-prueba"
+            ]
+          },
+          {
+            "id": "desahogo",
+            "label": "30 días",
+            "description": "Desahogo probatorio.",
+            "parentId": "maximo",
+            "evidenceIds": [
+              "ev-c43-ccom-1382-1387-prueba"
+            ]
+          },
+          {
+            "id": "menos",
+            "label": "Plazo menor",
+            "description": "Debe mantener proporción.",
+            "parentId": "prueba",
+            "evidenceIds": [
+              "ev-c43-ccom-1382-1387-prueba"
+            ]
+          },
+          {
+            "id": "fuera",
+            "label": "Prueba fuera del lugar",
+            "description": "Requisitos especiales.",
+            "parentId": "prueba",
+            "evidenceIds": [
+              "ev-c43-ccom-1382-1387-prueba"
+            ]
+          },
+          {
+            "id": "cierre",
+            "label": "Cierre de instrucción",
+            "description": "Después de prueba.",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c43-ccom-1388-1390-cierre",
+              "ev-c43-a56-l163-189-alegatos",
+              "ev-c43-a56-l191-199-sentencia"
+            ]
+          },
+          {
+            "id": "alegatos",
+            "label": "Alegatos: 3 días",
+            "description": "Término común.",
+            "parentId": "cierre",
+            "evidenceIds": [
+              "ev-c43-ccom-1388-1390-cierre",
+              "ev-c43-a56-l163-189-alegatos",
+              "ev-c43-a56-l191-199-sentencia"
+            ]
+          },
+          {
+            "id": "citacion",
+            "label": "Citación",
+            "description": "Para sentencia definitiva.",
+            "parentId": "alegatos",
+            "evidenceIds": [
+              "ev-c43-ccom-1388-1390-cierre",
+              "ev-c43-a56-l163-189-alegatos",
+              "ev-c43-a56-l191-199-sentencia"
+            ]
+          },
+          {
+            "id": "sentencia",
+            "label": "Sentencia: 15 días",
+            "description": "Desde la citación.",
+            "parentId": "citacion",
+            "evidenceIds": [
+              "ev-c43-ccom-1388-1390-cierre",
+              "ev-c43-a56-l163-189-alegatos",
+              "ev-c43-a56-l191-199-sentencia"
+            ]
+          },
+          {
+            "id": "limite",
+            "label": "Límite editorial",
+            "description": "Audio 56 hasta L199.",
+            "parentId": "sentencia",
+            "evidenceIds": [
+              "ev-c43-a56-l191-199-sentencia"
+            ]
+          },
+          {
+            "id": "c05",
+            "label": "Resoluciones generales",
+            "description": "Se estudian en C05.",
+            "parentId": "limite",
+            "evidenceIds": [
+              "ev-c43-a56-l191-199-sentencia"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Codigo de Comercio",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+          "institution": "Camara de Diputados del H. Congreso de la Union",
+          "jurisdiction": "Federal, Mexico",
+          "citation": "Articulos 1061 a 1063, 1339, 1339 Bis, 1340 y 1377 a 1390; contraste con 1390 Bis y 1390 Bis 1; ultima reforma DOF 14-11-2025",
+          "retrievedOn": "2026-08-21",
+          "note": "Texto vigente para delimitar procedencia, postulación, prueba, alegatos y sentencia."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Es el ordinario la vía general para toda controversia mercantil?",
+          "answer": "No; debe coordinarse con procedimientos especiales y el oral mercantil.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+            "ev-c43-ccom-1339-1340-apelabilidad",
+            "ev-c43-a56-l023-037-ordinario"
+          ]
+        },
+        {
+          "question": "¿Qué caso queda expresamente fuera del oral mercantil?",
+          "answer": "La cuantía indeterminada.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+            "ev-c43-ccom-1339-1340-apelabilidad"
+          ]
+        },
+        {
+          "question": "¿La cuantía indeterminada es apelable?",
+          "answer": "Sí, conforme al artículo 1339 Bis.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c43-ccom-1339-1340-apelabilidad"
+          ]
+        },
+        {
+          "question": "¿Cuánto hay para contestar la demanda ordinaria?",
+          "answer": "Quince días.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c43-ccom-1378-1381-postulacion",
+            "ev-c43-ccom-1061-1063-documentos",
+            "ev-c43-a56-l049-077-postulacion"
+          ]
+        },
+        {
+          "question": "¿Cuándo se formula reconvención?",
+          "answer": "Al contestar la demanda.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c43-ccom-1378-1381-postulacion"
+          ]
+        },
+        {
+          "question": "¿Cuánto hay para contestar la reconvención admitida?",
+          "answer": "Nueve días.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c43-ccom-1378-1381-postulacion"
+          ]
+        },
+        {
+          "question": "¿Siempre se abre prueba?",
+          "answer": "No; se abre si el asunto la exige.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c43-ccom-1382-1387-prueba",
+            "ev-c43-a56-l095-121-etapas",
+            "ev-c43-a56-l129-159-prueba"
+          ]
+        },
+        {
+          "question": "¿Cuál es el máximo ordinario de prueba?",
+          "answer": "Cuarenta días: diez para ofrecer y treinta para desahogar.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c43-ccom-1382-1387-prueba",
+            "ev-c43-a56-l095-121-etapas",
+            "ev-c43-a56-l129-159-prueba"
+          ]
+        },
+        {
+          "question": "¿Cuarenta días es la duración total del juicio?",
+          "answer": "No, es el máximo del término probatorio ordinario.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c43-ccom-1382-1387-prueba"
+          ]
+        },
+        {
+          "question": "¿Cuánto duran los alegatos?",
+          "answer": "Tres días comunes.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c43-ccom-1388-1390-cierre",
+            "ev-c43-a56-l163-189-alegatos",
+            "ev-c43-a56-l191-199-sentencia"
+          ]
+        },
+        {
+          "question": "¿En cuánto se dicta sentencia tras la citación?",
+          "answer": "Quince días.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c43-ccom-1388-1390-cierre",
+            "ev-c43-a56-l163-189-alegatos",
+            "ev-c43-a56-l191-199-sentencia"
+          ]
+        },
+        {
+          "question": "¿Qué supuesto separado añade el artículo 1377?",
+          "answer": "La elección de la parte demandada cuando opone la excepción de quita o pago.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación: ordinario mercantil escrito",
+        "description": "Diez casos originales sobre vía y etapas.",
+        "questions": [
+          {
+            "text": "Una pretensión mercantil es de cuantía indeterminada y no tiene procedimiento especial. ¿Qué vía debe analizarse?",
+            "difficulty": "basic",
+            "options": [
+              "Ordinario mercantil escrito",
+              "Oral mercantil por cualquier cuantía",
+              "Ejecutivo sin título"
+            ],
+            "correctOption": 0,
+            "explanation": "El oral excluye la cuantía indeterminada y ésta es apelable.",
+            "optionExplanations": [
+              "Coordina 1377, 1339 Bis y 1390 Bis 1.",
+              "El 1390 Bis 1 la excluye.",
+              "Falta documento ejecutivo."
+            ],
+            "evidenceIds": [
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+              "ev-c43-ccom-1339-1340-apelabilidad",
+              "ev-c43-a56-l023-037-ordinario"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+                "ev-c43-ccom-1339-1340-apelabilidad",
+                "ev-c43-a56-l023-037-ordinario"
+              ],
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ],
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+              "ev-c43-ccom-1339-1340-apelabilidad",
+              "ev-c43-a56-l023-037-ordinario"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+              "ev-c43-ccom-1339-1340-apelabilidad",
+              "ev-c43-a56-l023-037-ordinario"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+                "ev-c43-ccom-1339-1340-apelabilidad",
+                "ev-c43-a56-l023-037-ordinario"
+              ],
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ],
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ]
+            ]
+          },
+          {
+            "text": "Una controversia tiene procedimiento especial en una ley mercantil. ¿Puede elegirse libremente el ordinario?",
+            "difficulty": "basic",
+            "options": [
+              "No, rige el especial",
+              "Sí, siempre",
+              "Solo por sumar intereses"
+            ],
+            "correctOption": 0,
+            "explanation": "El procedimiento especial desplaza a las vías ordinarias generales.",
+            "optionExplanations": [
+              "Es el primer filtro.",
+              "Contradice el artículo 1377.",
+              "Los intereses no crean vía."
+            ],
+            "evidenceIds": [
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ],
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ],
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ],
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ],
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué plazo tiene la demandada para contestar la demanda ordinaria?",
+            "difficulty": "basic",
+            "options": [
+              "Quince días",
+              "Nueve días",
+              "Tres días"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 1378 fija quince días.",
+            "optionExplanations": [
+              "Es el plazo correcto.",
+              "Nueve días corresponde a reconvención.",
+              "Tres días corresponde a vista."
+            ],
+            "evidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion",
+              "ev-c43-ccom-1061-1063-documentos",
+              "ev-c43-a56-l049-077-postulacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c43-ccom-1378-1381-postulacion"
+              ],
+              [
+                "ev-c43-ccom-1378-1381-postulacion"
+              ],
+              [
+                "ev-c43-ccom-1378-1381-postulacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion",
+              "ev-c43-ccom-1061-1063-documentos",
+              "ev-c43-a56-l049-077-postulacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion",
+              "ev-c43-ccom-1061-1063-documentos",
+              "ev-c43-a56-l049-077-postulacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c43-ccom-1378-1381-postulacion"
+              ],
+              [
+                "ev-c43-ccom-1378-1381-postulacion"
+              ],
+              [
+                "ev-c43-ccom-1378-1381-postulacion"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuándo propone reconvención la demandada?",
+            "difficulty": "basic",
+            "options": [
+              "Al contestar",
+              "Después de sentencia",
+              "En alegatos"
+            ],
+            "correctOption": 0,
+            "explanation": "La reconvención se formula con la contestación.",
+            "optionExplanations": [
+              "Es el momento legal.",
+              "Sería extemporánea.",
+              "Los alegatos no abren reconvención."
+            ],
+            "evidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c43-ccom-1378-1381-postulacion"
+              ],
+              [
+                "ev-c43-ccom-1378-1381-postulacion"
+              ],
+              [
+                "ev-c43-ccom-1378-1381-postulacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c43-ccom-1378-1381-postulacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c43-ccom-1378-1381-postulacion"
+              ],
+              [
+                "ev-c43-ccom-1378-1381-postulacion"
+              ],
+              [
+                "ev-c43-ccom-1378-1381-postulacion"
+              ]
+            ]
+          },
+          {
+            "text": "El asunto no necesita prueba adicional. ¿Debe abrirse forzosamente un término de cuarenta días?",
+            "difficulty": "basic",
+            "options": [
+              "No",
+              "Sí, siempre",
+              "Solo si lo pide la actora después de alegatos"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 1382 condiciona la apertura a que la prueba sea necesaria.",
+            "optionExplanations": [
+              "Es la lectura correcta.",
+              "Confunde máximo con obligación.",
+              "La prueba es anterior a alegatos."
+            ],
+            "evidenceIds": [
+              "ev-c43-ccom-1382-1387-prueba",
+              "ev-c43-a56-l095-121-etapas",
+              "ev-c43-a56-l129-159-prueba",
+              "ev-c43-ccom-1388-1390-cierre"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c43-ccom-1382-1387-prueba"
+              ],
+              [
+                "ev-c43-ccom-1382-1387-prueba"
+              ],
+              [
+                "ev-c43-ccom-1382-1387-prueba",
+                "ev-c43-ccom-1388-1390-cierre"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c43-ccom-1382-1387-prueba",
+              "ev-c43-a56-l095-121-etapas",
+              "ev-c43-a56-l129-159-prueba"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c43-ccom-1382-1387-prueba",
+              "ev-c43-a56-l095-121-etapas",
+              "ev-c43-a56-l129-159-prueba"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c43-ccom-1382-1387-prueba"
+              ],
+              [
+                "ev-c43-ccom-1382-1387-prueba"
+              ],
+              [
+                "ev-c43-ccom-1382-1387-prueba",
+                "ev-c43-ccom-1388-1390-cierre"
+              ]
+            ]
+          },
+          {
+            "text": "Si se concede el máximo ordinario de prueba, ¿cómo se distribuye?",
+            "difficulty": "basic",
+            "options": [
+              "10 días para ofrecer y 30 para desahogar",
+              "40 para ofrecer y otros 40 para desahogar",
+              "15 y 15"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 1383 fija esa distribución.",
+            "optionExplanations": [
+              "Es la proporción legal.",
+              "Duplica indebidamente el plazo.",
+              "No corresponde al artículo."
+            ],
+            "evidenceIds": [
+              "ev-c43-ccom-1382-1387-prueba",
+              "ev-c43-a56-l095-121-etapas",
+              "ev-c43-a56-l129-159-prueba"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c43-ccom-1382-1387-prueba"
+              ],
+              [
+                "ev-c43-ccom-1382-1387-prueba"
+              ],
+              [
+                "ev-c43-ccom-1382-1387-prueba"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c43-ccom-1382-1387-prueba",
+              "ev-c43-a56-l095-121-etapas",
+              "ev-c43-a56-l129-159-prueba"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c43-ccom-1382-1387-prueba",
+              "ev-c43-a56-l095-121-etapas",
+              "ev-c43-a56-l129-159-prueba"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c43-ccom-1382-1387-prueba"
+              ],
+              [
+                "ev-c43-ccom-1382-1387-prueba"
+              ],
+              [
+                "ev-c43-ccom-1382-1387-prueba"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué ocurre al concluir el término probatorio?",
+            "difficulty": "basic",
+            "options": [
+              "Alegatos por tres días comunes",
+              "Embargo automático",
+              "Audiencia preliminar oral"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 1388 abre alegatos y después cita para sentencia.",
+            "optionExplanations": [
+              "Es la secuencia ordinaria.",
+              "No es vía ejecutiva.",
+              "Pertenece al oral mercantil."
+            ],
+            "evidenceIds": [
+              "ev-c43-ccom-1388-1390-cierre",
+              "ev-c43-a56-l163-189-alegatos",
+              "ev-c43-a56-l191-199-sentencia",
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c43-ccom-1388-1390-cierre",
+                "ev-c43-a56-l163-189-alegatos",
+                "ev-c43-a56-l191-199-sentencia"
+              ],
+              [
+                "ev-c43-ccom-1388-1390-cierre"
+              ],
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+                "ev-c43-ccom-1388-1390-cierre"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c43-ccom-1388-1390-cierre",
+              "ev-c43-a56-l163-189-alegatos",
+              "ev-c43-a56-l191-199-sentencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c43-ccom-1388-1390-cierre",
+              "ev-c43-a56-l163-189-alegatos",
+              "ev-c43-a56-l191-199-sentencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c43-ccom-1388-1390-cierre",
+                "ev-c43-a56-l163-189-alegatos",
+                "ev-c43-a56-l191-199-sentencia"
+              ],
+              [
+                "ev-c43-ccom-1388-1390-cierre"
+              ],
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+                "ev-c43-ccom-1388-1390-cierre"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuánto tiene el tribunal para sentencia tras la citación?",
+            "difficulty": "basic",
+            "options": [
+              "Quince días",
+              "Tres días",
+              "Cuarenta días"
+            ],
+            "correctOption": 0,
+            "explanation": "Los artículos 1388 a 1390 señalan quince días.",
+            "optionExplanations": [
+              "Es el plazo vigente.",
+              "Tres días son alegatos.",
+              "Cuarenta es máximo probatorio."
+            ],
+            "evidenceIds": [
+              "ev-c43-ccom-1388-1390-cierre",
+              "ev-c43-a56-l163-189-alegatos",
+              "ev-c43-a56-l191-199-sentencia",
+              "ev-c43-ccom-1382-1387-prueba"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c43-ccom-1388-1390-cierre"
+              ],
+              [
+                "ev-c43-ccom-1388-1390-cierre"
+              ],
+              [
+                "ev-c43-ccom-1382-1387-prueba"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c43-ccom-1388-1390-cierre",
+              "ev-c43-a56-l163-189-alegatos",
+              "ev-c43-a56-l191-199-sentencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c43-ccom-1388-1390-cierre",
+              "ev-c43-a56-l163-189-alegatos",
+              "ev-c43-a56-l191-199-sentencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c43-ccom-1388-1390-cierre"
+              ],
+              [
+                "ev-c43-ccom-1388-1390-cierre"
+              ],
+              [
+                "ev-c43-ccom-1382-1387-prueba"
+              ]
+            ]
+          },
+          {
+            "text": "El audio afirma que el ordinario sirve para cualquier asunto sin cuantía específica. ¿Qué falta verificar?",
+            "difficulty": "basic",
+            "options": [
+              "Procedimiento especial, apelabilidad y exclusión del oral",
+              "Solo nombre del contrato",
+              "Que haya embargo"
+            ],
+            "correctOption": 0,
+            "explanation": "La explicación histórica debe contrastarse con 1377 y 1390 Bis 1.",
+            "optionExplanations": [
+              "Son los filtros actuales.",
+              "No define vía.",
+              "El ordinario no exige embargo inicial."
+            ],
+            "evidenceIds": [
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+              "ev-c43-a56-l023-037-ordinario",
+              "ev-c43-ccom-1339-1340-apelabilidad"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+                "ev-c43-ccom-1339-1340-apelabilidad",
+                "ev-c43-a56-l023-037-ordinario"
+              ],
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ],
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+              "ev-c43-ccom-1339-1340-apelabilidad",
+              "ev-c43-a56-l023-037-ordinario"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+              "ev-c43-a56-l023-037-ordinario"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+                "ev-c43-ccom-1339-1340-apelabilidad",
+                "ev-c43-a56-l023-037-ordinario"
+              ],
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ],
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ]
+            ]
+          },
+          {
+            "text": "La demandada opone la excepción de quita o pago. ¿Qué precisión contiene el artículo 1377?",
+            "difficulty": "intermediate",
+            "options": [
+              "Le permite elegir la tramitación ordinaria en ese supuesto",
+              "Convierte automáticamente la controversia en oral",
+              "Extingue el juicio sin decisión judicial"
+            ],
+            "correctOption": 0,
+            "explanation": "El supuesto de quita o pago es una regla separada de elección para la parte demandada dentro del artículo 1377.",
+            "optionExplanations": [
+              "Es la consecuencia específica del precepto.",
+              "No es la consecuencia que establece el artículo 1377.",
+              "La excepción requiere análisis y no termina el juicio por sí sola."
+            ],
+            "evidenceIds": [
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ],
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ],
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ],
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ],
+              [
+                "ev-c43-ccom-1339bis-1377-1390bis1-procedencia"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c43-ccom-1339bis-1377-1390bis1-procedencia",
+      "kind": "official",
+      "title": "Codigo de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto vigente, ultima reforma DOF 14-11-2025, articulos 1339 Bis, 1377, 1390 Bis y 1390 Bis 1",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c43-ccom-1378-1381-postulacion",
+      "kind": "official",
+      "title": "Codigo de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "articulos 1378 a 1381: demanda, contestacion, reconvencion, prevencion y excepciones",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c43-ccom-1382-1387-prueba",
+      "kind": "official",
+      "title": "Codigo de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "articulos 1382 a 1387: apertura, ofrecimiento, desahogo y terminos de prueba",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c43-ccom-1388-1390-cierre",
+      "kind": "official",
+      "title": "Codigo de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "articulos 1388 a 1390: alegatos, citacion y sentencia",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c43-ccom-1061-1063-documentos",
+      "kind": "official",
+      "title": "Codigo de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "articulos 1061 a 1063: documentos y copias de traslado",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c43-ccom-1339-1340-apelabilidad",
+      "kind": "official",
+      "title": "Codigo de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "articulos 1339, 1339 Bis y 1340: apelabilidad y cuantia indeterminada",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c43-a56-l023-037-ordinario",
+      "kind": "transcript",
+      "audioNumber": 56,
+      "locator": {
+        "type": "line_range",
+        "startLine": 23,
+        "endLine": 37
+      }
+    },
+    {
+      "id": "ev-c43-a56-l049-077-postulacion",
+      "kind": "transcript",
+      "audioNumber": 56,
+      "locator": {
+        "type": "line_range",
+        "startLine": 49,
+        "endLine": 77
+      }
+    },
+    {
+      "id": "ev-c43-a56-l095-121-etapas",
+      "kind": "transcript",
+      "audioNumber": 56,
+      "locator": {
+        "type": "line_range",
+        "startLine": 95,
+        "endLine": 121
+      }
+    },
+    {
+      "id": "ev-c43-a56-l129-159-prueba",
+      "kind": "transcript",
+      "audioNumber": 56,
+      "locator": {
+        "type": "line_range",
+        "startLine": 129,
+        "endLine": 159
+      }
+    },
+    {
+      "id": "ev-c43-a56-l163-189-alegatos",
+      "kind": "transcript",
+      "audioNumber": 56,
+      "locator": {
+        "type": "line_range",
+        "startLine": 163,
+        "endLine": 189
+      }
+    },
+    {
+      "id": "ev-c43-a56-l191-199-sentencia",
+      "kind": "transcript",
+      "audioNumber": 56,
+      "locator": {
+        "type": "line_range",
+        "startLine": 191,
+        "endLine": 199
+      }
+    }
+  ]
+}

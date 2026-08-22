@@ -687,6 +687,43 @@ const traceablePackages = [
       /no se utilizó el Audio 56/i,
     ],
   },
+  {
+    code: "C43",
+    fileName: "audio-56-juicio-ordinario-mercantil-escrito.json",
+    artifacts: 148,
+    evidence: 12,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /no es hoy la vía general/i,
+      /cuantía indeterminada.*supuesto ordinario más claro/i,
+      /elección de la parte demandada cuando opone quita o pago/i,
+      /contestar en quince días/i,
+      /primeros diez para ofrecimiento y los treinta siguientes para desahogo/i,
+      /alegatos por tres días comunes/i,
+      /plazo de quince días para la sentencia definitiva/i,
+      /línea 201.*pertenece a C05/i,
+    ],
+  },
+  {
+    code: "C44",
+    fileName: "audio-58-59-relacion-individual-trabajo.json",
+    artifacts: 154,
+    evidence: 16,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /trabajo personal subordinado.*mediante.*salario/i,
+      /falta.*escrito.*no priva.*derechos/i,
+      /durante 2026 permanece en 48 horas/i,
+      /40 en 2030/i,
+      /doce días laborables/i,
+      /prima vacacional mínima.*veinticinco por ciento/i,
+      /aguinaldo mínimo.*quince días/i,
+      /antes del veinte de diciembre/i,
+      /tope de tres meses de salario.*promedio.*últimos tres años/i,
+      /No se utilizó el Audio 59/i,
+      /última reforma DOF 14-05-2026/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -1070,6 +1107,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una regla mercantil retirada o una confusión de vías como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C43" || expected.code === "C44") {
+      const obsoleteAsCurrent =
+        expected.code === "C43"
+          ? /(?:toda|cualquier) controversia mercantil.*ordinario|ordinario.*(?:vía general|siempre procede)|contestación.*nueve días|prueba.*cuarenta días.*(?:siempre|obligatoriamente)/i
+          : /(?:nombre|etiqueta) del contrato.*(?:determina|decide).*relación|falta.*escrito.*(?:elimina|pierde).*derechos|(?:40|cuarenta) horas.*(?:vigente|rigen|máximo).*(?:2026|hoy)|vacaciones.*seis días|aguinaldo.*(?:se pierde|renunciable)/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una vía mercantil o regla laboral obsoleta como respuesta vigente.`,
         );
       }
     }

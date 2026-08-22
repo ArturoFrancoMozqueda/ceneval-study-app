@@ -1,0 +1,1521 @@
+{
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C44",
+    "order": 44,
+    "audioSources": [
+      {
+        "audioNumber": 58,
+        "fragment": "Bloque laboral, líneas 13 a 297"
+      }
+    ]
+  },
+  "subject": {
+    "name": "Derecho Laboral",
+    "description": "Relación individual de trabajo, condiciones mínimas y prestaciones legales."
+  },
+  "class": {
+    "title": "Relación individual de trabajo y prestaciones mínimas",
+    "description": "Cuadragésima cuarta clase del plan académico: relación subordinada, duración, jornada, descansos, vacaciones, aguinaldo y participación de utilidades."
+  },
+  "transcript": {
+    "originalFile": "AUDIO 58.txt",
+    "cleaned": "Se utilizó únicamente el bloque laboral del Audio 58 comprendido entre las líneas físicas 13 y 297. Se excluyeron el segmento previo, conversaciones personales, lenguaje ofensivo, opiniones sobre personas trabajadoras y empleadoras, asesoría casuística y afirmaciones no verificables. No se utilizó el Audio 59: su línea física 3 mezcla prestaciones con terminación y no permite delimitar evidencia independiente para C44 sin contaminar C45. Se corrigió que la relación laboral no depende del nombre del contrato ni únicamente de un pago periódico, sino del trabajo personal subordinado mediante salario; que la falta de escrito no elimina derechos; que una jornada u horario aislados no prueban por sí solos subordinación; y que cada prestación tiene requisitos propios. La jornada semanal se presenta con la transición oficial: en 2026 permanece en 48 horas y no se enseña como vigente todavía la meta de 40 horas de 2030. Finiquito, indemnización y terminación se reservaron para C45."
+  },
+  "topics": [
+    {
+      "title": "Reconocer la relación y calcular mínimos legales",
+      "description": "Del trabajo personal subordinado a las condiciones mínimas aplicables durante la relación.",
+      "learningJourney": {
+        "openingPrompt": "Una empresa llama prestadora independiente a una persona, pero le asigna tareas personales, dirección continua y salario. ¿Qué hechos importan más que la etiqueta contractual?",
+        "quickChecks": [
+          {
+            "prompt": "¿El nombre del contrato decide si existe relación laboral?",
+            "answer": "No. Deben examinarse la prestación personal subordinada y el salario, además de la presunción legal cuando una persona presta trabajo a otra.",
+            "feedback": "La realidad de la prestación prevalece sobre una etiqueta evasiva.",
+            "evidenceIds": [
+              "ev-c44-lft-20-26-relacion",
+              "ev-c44-a58-l073-109-salario-subordinacion",
+              "ev-c44-a58-l171-203-personal-subordinado"
+            ]
+          },
+          {
+            "prompt": "¿En 2026 ya rige una semana máxima general de 40 horas?",
+            "answer": "No. El decreto de reducción es gradual: para 2026 se mantiene el límite semanal de 48 horas; la meta de 40 corresponde a 2030.",
+            "feedback": "No anticipes una etapa futura del régimen transitorio.",
+            "evidenceIds": [
+              "ev-c44-lft-56-68-jornada",
+              "ev-c44-dof-2026-transicion-jornada"
+            ]
+          },
+          {
+            "prompt": "¿Toda persona trabajadora recibe la misma cantidad de PTU?",
+            "answer": "No. La participación depende de la utilidad repartible, reglas de distribución, tiempo y salario, excepciones y tope legal.",
+            "feedback": "PTU no es una cantidad uniforme ni automática.",
+            "evidenceIds": [
+              "ev-c44-cpeum-123-trabajo",
+              "ev-c44-lft-117-131-ptu"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Marina presta personalmente servicios bajo instrucciones y horario de una empresa, recibe salario quincenal y lleva catorce meses continuos. Su documento dice servicios independientes. La empresa niega vacaciones, prima vacacional y aguinaldo porque no firmó contrato laboral.",
+          "question": "¿Cómo debe analizarse la relación y qué mínimos deben revisarse?",
+          "legalRule": "Los artículos 20 a 26 LFT definen y presumen la relación; los artículos 56 a 81 regulan jornada, descansos y vacaciones; los artículos 80 y 87 establecen prima vacacional y aguinaldo.",
+          "reasoning": "La etiqueta no desplaza los hechos: hay que probar trabajo personal, subordinación y salario. La falta de contrato escrito no priva a Marina de derechos y su omisión se atribuye a la parte empleadora en los términos legales. Cumplido más de un año, se revisa el periodo vacacional mínimo, su disfrute y la prima de al menos veinticinco por ciento. El aguinaldo mínimo es de quince días de salario y debe pagarse antes del veinte de diciembre, con parte proporcional cuando corresponda.",
+          "conclusion": "La existencia y alcance de los derechos se determinan por la relación real y la ley, no por la etiqueta elegida por la empresa.",
+          "evidenceIds": [
+            "ev-c44-lft-20-26-relacion",
+            "ev-c44-lft-76-81-vacaciones",
+            "ev-c44-lft-82-89-salario-aguinaldo",
+            "ev-c44-lft-5-33-irrenunciabilidad",
+            "ev-c44-a58-l073-109-salario-subordinacion",
+            "ev-c44-a58-l171-203-personal-subordinado",
+            "ev-c44-a58-l251-281-prestaciones",
+            "ev-c44-a58-l281-297-aguinaldo"
+          ]
+        },
+        "closingPrompt": "Explica: relación, subordinación, salario, duración, jornada 2026, horas extra, descansos, vacaciones, prima, aguinaldo y PTU.",
+        "nextActivity": "Recorre el mapa, estudia las doce tarjetas y resuelve los diez casos originales.",
+        "openingPromptEvidenceIds": [
+          "ev-c44-lft-20-26-relacion",
+          "ev-c44-a58-l073-109-salario-subordinacion",
+          "ev-c44-a58-l171-203-personal-subordinado"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c44-cpeum-123-trabajo",
+          "ev-c44-lft-20-26-relacion",
+          "ev-c44-lft-35-41-duracion",
+          "ev-c44-lft-56-68-jornada",
+          "ev-c44-dof-2026-transicion-jornada",
+          "ev-c44-lft-69-75-descansos",
+          "ev-c44-lft-76-81-vacaciones",
+          "ev-c44-lft-82-89-salario-aguinaldo",
+          "ev-c44-lft-117-131-ptu",
+          "ev-c44-lft-5-33-irrenunciabilidad",
+          "ev-c44-a58-l013-019-relacion",
+          "ev-c44-a58-l073-109-salario-subordinacion",
+          "ev-c44-a58-l127-143-alcance-subordinacion",
+          "ev-c44-a58-l171-203-personal-subordinado",
+          "ev-c44-a58-l251-281-prestaciones",
+          "ev-c44-a58-l281-297-aguinaldo"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c44-lft-20-26-relacion",
+          "ev-c44-lft-56-68-jornada",
+          "ev-c44-lft-76-81-vacaciones",
+          "ev-c44-lft-82-89-salario-aguinaldo",
+          "ev-c44-lft-117-131-ptu"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "Existe relación de trabajo cuando una persona presta a otra trabajo personal subordinado mediante salario, sin que el nombre del contrato sea decisivo. La ley fija condiciones mínimas sobre duración, jornada, descansos, vacaciones y prima vacacional, aguinaldo y PTU. En 2026 la transición de jornada mantiene el máximo semanal general en 48 horas; la reducción a 40 es gradual hasta 2030.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c44-lft-20-26-relacion",
+            "ev-c44-lft-35-41-duracion",
+            "ev-c44-lft-56-68-jornada",
+            "ev-c44-dof-2026-transicion-jornada",
+            "ev-c44-lft-69-75-descansos",
+            "ev-c44-lft-76-81-vacaciones",
+            "ev-c44-lft-82-89-salario-aguinaldo",
+            "ev-c44-lft-117-131-ptu",
+            "ev-c44-a58-l073-109-salario-subordinacion",
+            "ev-c44-a58-l171-203-personal-subordinado",
+            "ev-c44-a58-l251-281-prestaciones",
+            "ev-c44-a58-l281-297-aguinaldo"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "La relación individual de trabajo nace de la prestación de un trabajo personal subordinado a otra persona mediante el pago de un salario. La subordinación es la facultad jurídica de dirigir el trabajo dentro de lo pactado y lo permitido por la ley; no autoriza humillación ni tareas ajenas sin fundamento. La etiqueta de prestación de servicios no decide el caso: importan los hechos. La ley presume la relación entre quien presta trabajo personal y quien lo recibe.\n\nLas condiciones deben constar por escrito cuando no exista contrato colectivo aplicable. El escrito identifica partes, servicio, lugar, jornada, salario, forma de pago, capacitación, descansos y vacaciones, entre otros datos. Si falta, la persona trabajadora no pierde sus derechos y la responsabilidad por esa omisión recae en la empleadora.\n\nLa relación puede ser para obra o tiempo determinado, temporada, capacitación inicial o tiempo indeterminado. A falta de estipulación válida, se entiende por tiempo indeterminado. Cada modalidad tiene presupuestos legales; no basta renovar etiquetas para evitar estabilidad.\n\nLa jornada es el tiempo durante el cual la persona está a disposición para prestar su trabajo. La ley distingue diurna, nocturna y mixta. El decreto publicado el 1 de mayo de 2026 redujo gradualmente la jornada semanal: durante 2026 permanece en 48 horas, después baja por etapas hasta 40 en 2030, sin reducción de salarios ni prestaciones. Las horas extraordinarias tienen límites y pago propios; trabajar más no vuelve irrelevante la seguridad y la salud.\n\nPor cada seis días de trabajo corresponde al menos uno de descanso con salario íntegro en el régimen aplicable a 2026. El trabajo en domingo genera prima dominical mínima de veinticinco por ciento y los días de descanso obligatorio se determinan por el artículo 74.\n\nDespués de más de un año de servicios, el periodo anual de vacaciones pagadas no puede ser inferior a doce días laborables; aumenta conforme a la antigüedad. Al menos doce días continuos se disfrutan en los términos legales, y las vacaciones deben concederse dentro de los seis meses siguientes al aniversario. La prima vacacional mínima es veinticinco por ciento sobre los salarios del periodo.\n\nEl aguinaldo mínimo equivale a quince días de salario y debe pagarse antes del veinte de diciembre. Quien no complete el año tiene derecho a la parte proporcional. No se pierde por renuncia o separación antes de diciembre. Eso no equivale a definir aquí finiquito o indemnización, materias de C45.\n\nLa PTU permite participar en utilidades conforme al porcentaje determinado por la autoridad, la renta gravable, las reglas de reparto y las excepciones legales. Se distribuye con componentes vinculados a días trabajados y salarios. Existe un tope de tres meses de salario o el promedio de la participación recibida en los últimos tres años, aplicándose lo más favorable. No toda empresa ni toda persona queda en idéntica situación.\n\nMétodo CENEVAL: identifica hechos de trabajo personal, subordinación y salario; determina duración; ubica la etapa transitoria de jornada; calcula cada prestación por separado y evita mezclar derechos devengados con consecuencias de terminación.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c44-cpeum-123-trabajo",
+            "ev-c44-lft-20-26-relacion",
+            "ev-c44-lft-35-41-duracion",
+            "ev-c44-lft-56-68-jornada",
+            "ev-c44-dof-2026-transicion-jornada",
+            "ev-c44-lft-69-75-descansos",
+            "ev-c44-lft-76-81-vacaciones",
+            "ev-c44-lft-82-89-salario-aguinaldo",
+            "ev-c44-lft-117-131-ptu",
+            "ev-c44-lft-5-33-irrenunciabilidad",
+            "ev-c44-a58-l013-019-relacion",
+            "ev-c44-a58-l073-109-salario-subordinacion",
+            "ev-c44-a58-l127-143-alcance-subordinacion",
+            "ev-c44-a58-l171-203-personal-subordinado",
+            "ev-c44-a58-l251-281-prestaciones",
+            "ev-c44-a58-l281-297-aguinaldo"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Constitución Política, artículo 123 apartado A. Ley Federal del Trabajo, última reforma DOF 14-05-2026: artículos 5 y 33; 20 a 26; 35 a 41; 56 a 75; 76 a 81; 82 a 89; y 117 a 131. Decreto DOF 01-05-2026 en materia de reducción de jornada: transición semanal 48 horas en 2026, 46 en 2027, 44 en 2028, 42 en 2029 y 40 en 2030, sin reducir salarios ni prestaciones.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c44-cpeum-123-trabajo",
+            "ev-c44-lft-20-26-relacion",
+            "ev-c44-lft-35-41-duracion",
+            "ev-c44-lft-56-68-jornada",
+            "ev-c44-dof-2026-transicion-jornada",
+            "ev-c44-lft-69-75-descansos",
+            "ev-c44-lft-76-81-vacaciones",
+            "ev-c44-lft-82-89-salario-aguinaldo",
+            "ev-c44-lft-117-131-ptu",
+            "ev-c44-lft-5-33-irrenunciabilidad"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Luis trabaja personalmente en una tienda bajo instrucciones y recibe salario semanal. Aunque el documento diga comisionista independiente, deben analizarse subordinación y realidad. Si tiene más de un año, se revisan vacaciones, prima y aguinaldo; la comisión puede integrar salario según sus reglas, pero no elimina por sí misma la relación.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c44-lft-20-26-relacion",
+            "ev-c44-lft-76-81-vacaciones",
+            "ev-c44-lft-82-89-salario-aguinaldo",
+            "ev-c44-a58-l073-109-salario-subordinacion",
+            "ev-c44-a58-l171-203-personal-subordinado"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo CENEVAL",
+          "content": "Una opción afirma que desde mayo de 2026 toda semana laboral es de 40 horas. Debe descartarse: el decreto es gradual y mantiene 48 horas durante 2026. Otra opción niega vacaciones porque no existe contrato escrito; también es incorrecta, pues la omisión no priva de derechos.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c44-lft-20-26-relacion",
+            "ev-c44-lft-56-68-jornada",
+            "ev-c44-dof-2026-transicion-jornada",
+            "ev-c44-lft-76-81-vacaciones"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Relación: trabajo personal subordinado mediante salario. Contrato escrito: documenta, no crea por sí solo la realidad. Duración: modalidades legales y regla de indeterminación. Jornada 2026: máximo semanal general de 48 horas durante la transición. Descanso: al menos uno por seis días. Vacaciones: mínimo doce días tras el primer año y prima mínima de 25%. Aguinaldo: mínimo quince días antes del 20 de diciembre. PTU: cálculo, excepciones y tope propios.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c44-cpeum-123-trabajo",
+            "ev-c44-lft-20-26-relacion",
+            "ev-c44-lft-35-41-duracion",
+            "ev-c44-lft-56-68-jornada",
+            "ev-c44-dof-2026-transicion-jornada",
+            "ev-c44-lft-69-75-descansos",
+            "ev-c44-lft-76-81-vacaciones",
+            "ev-c44-lft-82-89-salario-aguinaldo",
+            "ev-c44-lft-117-131-ptu",
+            "ev-c44-lft-5-33-irrenunciabilidad",
+            "ev-c44-a58-l073-109-salario-subordinacion",
+            "ev-c44-a58-l171-203-personal-subordinado",
+            "ev-c44-a58-l251-281-prestaciones",
+            "ev-c44-a58-l281-297-aguinaldo"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de preguntas y respuestas",
+          "content": "1. ¿Qué define la relación? Trabajo personal subordinado mediante salario. 2. ¿Importa la etiqueta? No más que los hechos. 3. ¿Qué pasa sin escrito? No se pierden derechos. 4. ¿Qué duración opera sin estipulación válida? Tiempo indeterminado. 5. ¿Qué es jornada? Tiempo a disposición. 6. ¿Máximo semanal 2026? 48 horas en la transición. 7. ¿Descanso semanal? Al menos uno por seis días. 8. ¿Vacaciones iniciales? No menos de doce días tras más de un año. 9. ¿Prima vacacional? Al menos 25%. 10. ¿Aguinaldo? Al menos quince días antes del 20 de diciembre, proporcional si procede. 11. ¿PTU uniforme? No. 12. ¿Finiquito e indemnización son estas prestaciones? No; se estudian aparte.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c44-cpeum-123-trabajo",
+            "ev-c44-lft-20-26-relacion",
+            "ev-c44-lft-35-41-duracion",
+            "ev-c44-lft-56-68-jornada",
+            "ev-c44-dof-2026-transicion-jornada",
+            "ev-c44-lft-69-75-descansos",
+            "ev-c44-lft-76-81-vacaciones",
+            "ev-c44-lft-82-89-salario-aguinaldo",
+            "ev-c44-lft-117-131-ptu",
+            "ev-c44-lft-5-33-irrenunciabilidad",
+            "ev-c44-a58-l073-109-salario-subordinacion",
+            "ev-c44-a58-l171-203-personal-subordinado",
+            "ev-c44-a58-l251-281-prestaciones",
+            "ev-c44-a58-l281-297-aguinaldo"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Trabajo personal; subordinación; salario; presunción laboral; condiciones escritas; tiempo indeterminado; obra, tiempo o temporada; jornada diurna, nocturna y mixta; transición 48–40; tiempo extraordinario; descanso semanal; prima dominical; vacaciones; prima vacacional; aguinaldo; PTU; irrenunciabilidad.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c44-cpeum-123-trabajo",
+            "ev-c44-lft-20-26-relacion",
+            "ev-c44-lft-35-41-duracion",
+            "ev-c44-lft-56-68-jornada",
+            "ev-c44-dof-2026-transicion-jornada",
+            "ev-c44-lft-69-75-descansos",
+            "ev-c44-lft-76-81-vacaciones",
+            "ev-c44-lft-82-89-salario-aguinaldo",
+            "ev-c44-lft-117-131-ptu",
+            "ev-c44-lft-5-33-irrenunciabilidad"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores que debes evitar",
+          "content": "No decidas la relación solo por el nombre del contrato, salario periódico u horario aislado. No conviertas subordinación en obediencia ilimitada. No afirmes que la falta de escrito elimina derechos. No enseñes 40 horas como máximo semanal ya vigente en 2026. No confundas descanso semanal con días obligatorios. No uses doce días de vacaciones para cualquier antigüedad. No olvides prima vacacional ni proporcional de aguinaldo. No presentes PTU como suma fija para todas las personas. No mezcles prestaciones devengadas con finiquito o indemnización. No uses la línea 3 del Audio 59 como evidencia delimitada.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c44-cpeum-123-trabajo",
+            "ev-c44-lft-20-26-relacion",
+            "ev-c44-lft-35-41-duracion",
+            "ev-c44-lft-56-68-jornada",
+            "ev-c44-dof-2026-transicion-jornada",
+            "ev-c44-lft-69-75-descansos",
+            "ev-c44-lft-76-81-vacaciones",
+            "ev-c44-lft-82-89-salario-aguinaldo",
+            "ev-c44-lft-117-131-ptu",
+            "ev-c44-lft-5-33-irrenunciabilidad",
+            "ev-c44-a58-l013-019-relacion",
+            "ev-c44-a58-l073-109-salario-subordinacion",
+            "ev-c44-a58-l127-143-alcance-subordinacion",
+            "ev-c44-a58-l171-203-personal-subordinado",
+            "ev-c44-a58-l251-281-prestaciones",
+            "ev-c44-a58-l281-297-aguinaldo"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual: relación y mínimos laborales",
+        "description": "Árbol desde los hechos de subordinación hasta cada prestación.",
+        "nodes": [
+          {
+            "id": "inicio",
+            "label": "Relación individual",
+            "description": "Realidad laboral",
+            "evidenceIds": [
+              "ev-c44-lft-20-26-relacion",
+              "ev-c44-a58-l013-019-relacion"
+            ]
+          },
+          {
+            "id": "personal",
+            "label": "Trabajo personal",
+            "description": "Lo presta la propia persona",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c44-lft-20-26-relacion",
+              "ev-c44-a58-l171-203-personal-subordinado"
+            ]
+          },
+          {
+            "id": "subordinacion",
+            "label": "Subordinación",
+            "description": "Dirección jurídica",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c44-lft-20-26-relacion",
+              "ev-c44-a58-l073-109-salario-subordinacion",
+              "ev-c44-a58-l127-143-alcance-subordinacion"
+            ]
+          },
+          {
+            "id": "salario",
+            "label": "Salario",
+            "description": "Retribución del trabajo",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c44-lft-20-26-relacion",
+              "ev-c44-lft-82-89-salario-aguinaldo",
+              "ev-c44-a58-l073-109-salario-subordinacion"
+            ]
+          },
+          {
+            "id": "presuncion",
+            "label": "Presunción",
+            "description": "Trabajo personal recibido",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c44-lft-20-26-relacion"
+            ]
+          },
+          {
+            "id": "etiqueta",
+            "label": "Etiqueta irrelevante",
+            "description": "Importan los hechos",
+            "parentId": "presuncion",
+            "evidenceIds": [
+              "ev-c44-lft-20-26-relacion",
+              "ev-c44-a58-l073-109-salario-subordinacion"
+            ]
+          },
+          {
+            "id": "escrito",
+            "label": "Condiciones escritas",
+            "description": "Documentan la relación",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c44-lft-20-26-relacion"
+            ]
+          },
+          {
+            "id": "sin-escrito",
+            "label": "Sin pérdida de derechos",
+            "description": "Omisión imputable al patrón",
+            "parentId": "escrito",
+            "evidenceIds": [
+              "ev-c44-lft-20-26-relacion"
+            ]
+          },
+          {
+            "id": "duracion",
+            "label": "Duración",
+            "description": "Modalidades legales",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c44-lft-35-41-duracion"
+            ]
+          },
+          {
+            "id": "indeterminado",
+            "label": "Tiempo indeterminado",
+            "description": "Regla supletoria",
+            "parentId": "duracion",
+            "evidenceIds": [
+              "ev-c44-lft-35-41-duracion"
+            ]
+          },
+          {
+            "id": "determinado",
+            "label": "Obra o tiempo",
+            "description": "Requiere supuesto legal",
+            "parentId": "duracion",
+            "evidenceIds": [
+              "ev-c44-lft-35-41-duracion"
+            ]
+          },
+          {
+            "id": "temporada",
+            "label": "Temporada",
+            "description": "Trabajo discontinuo previsto",
+            "parentId": "duracion",
+            "evidenceIds": [
+              "ev-c44-lft-35-41-duracion"
+            ]
+          },
+          {
+            "id": "jornada",
+            "label": "Jornada",
+            "description": "Tiempo a disposición",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c44-lft-56-68-jornada",
+              "ev-c44-a58-l171-203-personal-subordinado"
+            ]
+          },
+          {
+            "id": "tipos",
+            "label": "Tipos",
+            "description": "Diurna, nocturna, mixta",
+            "parentId": "jornada",
+            "evidenceIds": [
+              "ev-c44-lft-56-68-jornada"
+            ]
+          },
+          {
+            "id": "transicion",
+            "label": "Transición semanal",
+            "description": "Reducción gradual",
+            "parentId": "jornada",
+            "evidenceIds": [
+              "ev-c44-dof-2026-transicion-jornada"
+            ]
+          },
+          {
+            "id": "horas-2026",
+            "label": "2026: 48 horas",
+            "description": "No 40 todavía",
+            "parentId": "transicion",
+            "evidenceIds": [
+              "ev-c44-lft-56-68-jornada",
+              "ev-c44-dof-2026-transicion-jornada"
+            ]
+          },
+          {
+            "id": "horas-2030",
+            "label": "2030: 40 horas",
+            "description": "Meta final",
+            "parentId": "transicion",
+            "evidenceIds": [
+              "ev-c44-dof-2026-transicion-jornada"
+            ]
+          },
+          {
+            "id": "extra",
+            "label": "Tiempo extraordinario",
+            "description": "Límites y pago",
+            "parentId": "jornada",
+            "evidenceIds": [
+              "ev-c44-lft-56-68-jornada"
+            ]
+          },
+          {
+            "id": "descansos",
+            "label": "Descansos",
+            "description": "Recuperación protegida",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c44-lft-69-75-descansos"
+            ]
+          },
+          {
+            "id": "semanal",
+            "label": "Descanso semanal",
+            "description": "Uno por seis en 2026",
+            "parentId": "descansos",
+            "evidenceIds": [
+              "ev-c44-lft-69-75-descansos",
+              "ev-c44-dof-2026-transicion-jornada"
+            ]
+          },
+          {
+            "id": "domingo",
+            "label": "Prima dominical",
+            "description": "Mínimo 25%",
+            "parentId": "descansos",
+            "evidenceIds": [
+              "ev-c44-lft-69-75-descansos"
+            ]
+          },
+          {
+            "id": "obligatorios",
+            "label": "Días obligatorios",
+            "description": "Catálogo legal",
+            "parentId": "descansos",
+            "evidenceIds": [
+              "ev-c44-lft-69-75-descansos"
+            ]
+          },
+          {
+            "id": "vacaciones",
+            "label": "Vacaciones",
+            "description": "Descanso anual pagado",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c44-lft-76-81-vacaciones"
+            ]
+          },
+          {
+            "id": "doce",
+            "label": "Doce días iniciales",
+            "description": "Tras más de un año",
+            "parentId": "vacaciones",
+            "evidenceIds": [
+              "ev-c44-lft-76-81-vacaciones"
+            ]
+          },
+          {
+            "id": "antiguedad",
+            "label": "Aumento por antigüedad",
+            "description": "Escala legal",
+            "parentId": "vacaciones",
+            "evidenceIds": [
+              "ev-c44-lft-76-81-vacaciones"
+            ]
+          },
+          {
+            "id": "prima-vac",
+            "label": "Prima vacacional",
+            "description": "Mínimo 25%",
+            "parentId": "vacaciones",
+            "evidenceIds": [
+              "ev-c44-lft-76-81-vacaciones"
+            ]
+          },
+          {
+            "id": "seis-meses",
+            "label": "Concesión",
+            "description": "Dentro de seis meses",
+            "parentId": "vacaciones",
+            "evidenceIds": [
+              "ev-c44-lft-76-81-vacaciones"
+            ]
+          },
+          {
+            "id": "aguinaldo",
+            "label": "Aguinaldo",
+            "description": "Prestación anual",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c44-lft-82-89-salario-aguinaldo",
+              "ev-c44-a58-l281-297-aguinaldo"
+            ]
+          },
+          {
+            "id": "quince",
+            "label": "Quince días mínimo",
+            "description": "Regla general",
+            "parentId": "aguinaldo",
+            "evidenceIds": [
+              "ev-c44-lft-82-89-salario-aguinaldo",
+              "ev-c44-a58-l281-297-aguinaldo"
+            ]
+          },
+          {
+            "id": "diciembre",
+            "label": "Antes del 20 de diciembre",
+            "description": "Fecha máxima",
+            "parentId": "aguinaldo",
+            "evidenceIds": [
+              "ev-c44-lft-82-89-salario-aguinaldo",
+              "ev-c44-a58-l281-297-aguinaldo"
+            ]
+          },
+          {
+            "id": "proporcional",
+            "label": "Parte proporcional",
+            "description": "Año incompleto",
+            "parentId": "aguinaldo",
+            "evidenceIds": [
+              "ev-c44-lft-82-89-salario-aguinaldo"
+            ]
+          },
+          {
+            "id": "ptu",
+            "label": "PTU",
+            "description": "Participación en utilidades",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c44-cpeum-123-trabajo",
+              "ev-c44-lft-117-131-ptu"
+            ]
+          },
+          {
+            "id": "reparto",
+            "label": "Reglas de reparto",
+            "description": "Días y salarios",
+            "parentId": "ptu",
+            "evidenceIds": [
+              "ev-c44-lft-117-131-ptu"
+            ]
+          },
+          {
+            "id": "excepciones",
+            "label": "Excepciones",
+            "description": "No universalizar",
+            "parentId": "ptu",
+            "evidenceIds": [
+              "ev-c44-lft-117-131-ptu"
+            ]
+          },
+          {
+            "id": "tope",
+            "label": "Tope favorable",
+            "description": "Tres meses o promedio",
+            "parentId": "ptu",
+            "evidenceIds": [
+              "ev-c44-lft-117-131-ptu"
+            ]
+          },
+          {
+            "id": "separacion",
+            "label": "C45 aparte",
+            "description": "No finiquito aquí",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c44-lft-82-89-salario-aguinaldo",
+              "ev-c44-lft-5-33-irrenunciabilidad"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Ley Federal del Trabajo",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Texto vigente, última reforma DOF 14-05-2026",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente principal para relación, condiciones y prestaciones.",
+          "evidenceIds": [
+            "ev-c44-lft-20-26-relacion",
+            "ev-c44-lft-35-41-duracion",
+            "ev-c44-lft-56-68-jornada",
+            "ev-c44-lft-69-75-descansos",
+            "ev-c44-lft-76-81-vacaciones",
+            "ev-c44-lft-82-89-salario-aguinaldo",
+            "ev-c44-lft-117-131-ptu",
+            "ev-c44-lft-5-33-irrenunciabilidad"
+          ]
+        },
+        {
+          "title": "Constitución Política de los Estados Unidos Mexicanos",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Texto vigente, últimas reformas DOF 02-06-2026, artículo 123 apartado A",
+          "retrievedOn": "2026-08-21",
+          "note": "Marco constitucional del trabajo y PTU.",
+          "evidenceIds": [
+            "ev-c44-cpeum-123-trabajo"
+          ]
+        },
+        {
+          "title": "Decreto de reducción de la jornada laboral",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/lft/LFT_ref52_01may26.pdf",
+          "institution": "Diario Oficial de la Federación",
+          "jurisdiction": "Federal, México",
+          "citation": "DOF 01-05-2026, reforma LFT en materia de reducción de jornada",
+          "retrievedOn": "2026-08-21",
+          "note": "Régimen transitorio 2026–2030 y protección salarial.",
+          "evidenceIds": [
+            "ev-c44-dof-2026-transicion-jornada",
+            "ev-c44-lft-56-68-jornada",
+            "ev-c44-lft-69-75-descansos"
+          ]
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué integra la relación de trabajo?",
+          "answer": "Trabajo personal subordinado mediante salario.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c44-lft-20-26-relacion",
+            "ev-c44-a58-l073-109-salario-subordinacion",
+            "ev-c44-a58-l171-203-personal-subordinado"
+          ]
+        },
+        {
+          "question": "¿La etiqueta servicios independientes decide?",
+          "answer": "No; prevalecen los hechos de la prestación.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c44-lft-20-26-relacion",
+            "ev-c44-a58-l073-109-salario-subordinacion"
+          ]
+        },
+        {
+          "question": "¿Qué pasa si falta contrato escrito?",
+          "answer": "La persona trabajadora no pierde derechos por esa omisión.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c44-lft-20-26-relacion"
+          ]
+        },
+        {
+          "question": "¿Qué duración se presume sin estipulación válida?",
+          "answer": "Tiempo indeterminado.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c44-lft-35-41-duracion"
+          ]
+        },
+        {
+          "question": "¿Máximo semanal general en 2026?",
+          "answer": "48 horas durante la transición.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c44-lft-56-68-jornada",
+            "ev-c44-dof-2026-transicion-jornada"
+          ]
+        },
+        {
+          "question": "¿Cuándo llega la meta de 40 horas?",
+          "answer": "En 2030, tras reducciones graduales.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c44-dof-2026-transicion-jornada"
+          ]
+        },
+        {
+          "question": "¿Descanso semanal 2026?",
+          "answer": "Al menos un día por cada seis trabajados.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c44-lft-69-75-descansos",
+            "ev-c44-dof-2026-transicion-jornada"
+          ]
+        },
+        {
+          "question": "¿Vacaciones mínimas tras más de un año?",
+          "answer": "Doce días laborables.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c44-lft-76-81-vacaciones"
+          ]
+        },
+        {
+          "question": "¿Prima vacacional mínima?",
+          "answer": "Veinticinco por ciento.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c44-lft-76-81-vacaciones"
+          ]
+        },
+        {
+          "question": "¿Aguinaldo mínimo y fecha?",
+          "answer": "Quince días de salario antes del 20 de diciembre.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c44-lft-82-89-salario-aguinaldo",
+            "ev-c44-a58-l281-297-aguinaldo"
+          ]
+        },
+        {
+          "question": "¿Hay aguinaldo proporcional?",
+          "answer": "Sí, cuando no se completó el año, conforme al tiempo trabajado.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c44-lft-82-89-salario-aguinaldo"
+          ]
+        },
+        {
+          "question": "¿Cuál es el tope individual de PTU?",
+          "answer": "Tres meses de salario o promedio de los últimos tres años, lo más favorable.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c44-lft-117-131-ptu"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Examen: relación individual y prestaciones",
+        "description": "Diez casos originales sobre relación, jornada y mínimos laborales.",
+        "questions": [
+          {
+            "text": "Un contrato dice servicios independientes, pero hay trabajo personal, instrucciones y salario. ¿Qué debe prevalecer?",
+            "difficulty": "basic",
+            "options": [
+              "Los hechos de la relación",
+              "El título del documento",
+              "La voluntad patronal"
+            ],
+            "correctOption": 0,
+            "explanation": "La relación se determina por trabajo personal subordinado mediante salario.",
+            "optionExplanations": [
+              "Es el análisis legal.",
+              "La etiqueta no decide.",
+              "La ley no deja el punto a una sola parte."
+            ],
+            "evidenceIds": [
+              "ev-c44-lft-20-26-relacion",
+              "ev-c44-a58-l073-109-salario-subordinacion",
+              "ev-c44-a58-l171-203-personal-subordinado"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c44-lft-20-26-relacion",
+                "ev-c44-a58-l073-109-salario-subordinacion",
+                "ev-c44-a58-l171-203-personal-subordinado"
+              ],
+              [
+                "ev-c44-lft-20-26-relacion",
+                "ev-c44-a58-l073-109-salario-subordinacion",
+                "ev-c44-a58-l171-203-personal-subordinado"
+              ],
+              [
+                "ev-c44-lft-20-26-relacion",
+                "ev-c44-a58-l073-109-salario-subordinacion",
+                "ev-c44-a58-l171-203-personal-subordinado"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c44-lft-20-26-relacion",
+              "ev-c44-a58-l073-109-salario-subordinacion",
+              "ev-c44-a58-l171-203-personal-subordinado"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c44-lft-20-26-relacion",
+              "ev-c44-a58-l073-109-salario-subordinacion",
+              "ev-c44-a58-l171-203-personal-subordinado"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c44-lft-20-26-relacion",
+                "ev-c44-a58-l073-109-salario-subordinacion",
+                "ev-c44-a58-l171-203-personal-subordinado"
+              ],
+              [
+                "ev-c44-lft-20-26-relacion",
+                "ev-c44-a58-l073-109-salario-subordinacion",
+                "ev-c44-a58-l171-203-personal-subordinado"
+              ],
+              [
+                "ev-c44-lft-20-26-relacion",
+                "ev-c44-a58-l073-109-salario-subordinacion",
+                "ev-c44-a58-l171-203-personal-subordinado"
+              ]
+            ]
+          },
+          {
+            "text": "No se entregó contrato escrito. ¿Se pierden vacaciones y aguinaldo?",
+            "difficulty": "basic",
+            "options": [
+              "No, la omisión no elimina derechos",
+              "Sí, todo derecho depende del escrito",
+              "Solo se conserva el salario"
+            ],
+            "correctOption": 0,
+            "explanation": "La falta del escrito se atribuye a la empleadora y no priva derechos.",
+            "optionExplanations": [
+              "Es la consecuencia legal.",
+              "Confunde prueba con existencia.",
+              "Las demás prestaciones subsisten."
+            ],
+            "evidenceIds": [
+              "ev-c44-lft-20-26-relacion",
+              "ev-c44-lft-76-81-vacaciones",
+              "ev-c44-lft-82-89-salario-aguinaldo"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c44-lft-20-26-relacion",
+                "ev-c44-lft-76-81-vacaciones",
+                "ev-c44-lft-82-89-salario-aguinaldo"
+              ],
+              [
+                "ev-c44-lft-20-26-relacion",
+                "ev-c44-lft-76-81-vacaciones",
+                "ev-c44-lft-82-89-salario-aguinaldo"
+              ],
+              [
+                "ev-c44-lft-20-26-relacion",
+                "ev-c44-lft-76-81-vacaciones",
+                "ev-c44-lft-82-89-salario-aguinaldo"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c44-lft-20-26-relacion",
+              "ev-c44-lft-76-81-vacaciones",
+              "ev-c44-lft-82-89-salario-aguinaldo"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c44-lft-20-26-relacion",
+              "ev-c44-lft-76-81-vacaciones",
+              "ev-c44-lft-82-89-salario-aguinaldo"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c44-lft-20-26-relacion",
+                "ev-c44-lft-76-81-vacaciones",
+                "ev-c44-lft-82-89-salario-aguinaldo"
+              ],
+              [
+                "ev-c44-lft-20-26-relacion",
+                "ev-c44-lft-76-81-vacaciones",
+                "ev-c44-lft-82-89-salario-aguinaldo"
+              ],
+              [
+                "ev-c44-lft-20-26-relacion",
+                "ev-c44-lft-76-81-vacaciones",
+                "ev-c44-lft-82-89-salario-aguinaldo"
+              ]
+            ]
+          },
+          {
+            "text": "No se pactó válidamente duración. ¿Cuál es la regla?",
+            "difficulty": "basic",
+            "options": [
+              "Tiempo indeterminado",
+              "Treinta días",
+              "Una temporada automática"
+            ],
+            "correctOption": 0,
+            "explanation": "La indeterminación opera a falta de estipulación válida.",
+            "optionExplanations": [
+              "Es la regla supletoria.",
+              "No existe plazo general.",
+              "Temporada requiere presupuesto."
+            ],
+            "evidenceIds": [
+              "ev-c44-lft-35-41-duracion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c44-lft-35-41-duracion"
+              ],
+              [
+                "ev-c44-lft-35-41-duracion"
+              ],
+              [
+                "ev-c44-lft-35-41-duracion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c44-lft-35-41-duracion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c44-lft-35-41-duracion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c44-lft-35-41-duracion"
+              ],
+              [
+                "ev-c44-lft-35-41-duracion"
+              ],
+              [
+                "ev-c44-lft-35-41-duracion"
+              ]
+            ]
+          },
+          {
+            "text": "Una opción afirma que desde mayo de 2026 ya rigen 40 horas semanales. ¿Es correcta?",
+            "difficulty": "intermediate",
+            "options": [
+              "No, en 2026 se mantienen 48",
+              "Sí, sin transición",
+              "Solo si se reduce salario"
+            ],
+            "correctOption": 0,
+            "explanation": "La reducción es gradual hasta 2030 y no reduce salario.",
+            "optionExplanations": [
+              "Respeta el transitorio.",
+              "Omite las etapas.",
+              "La reforma protege salario y prestaciones."
+            ],
+            "evidenceIds": [
+              "ev-c44-lft-56-68-jornada",
+              "ev-c44-dof-2026-transicion-jornada"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c44-lft-56-68-jornada",
+                "ev-c44-dof-2026-transicion-jornada"
+              ],
+              [
+                "ev-c44-lft-56-68-jornada",
+                "ev-c44-dof-2026-transicion-jornada"
+              ],
+              [
+                "ev-c44-lft-56-68-jornada",
+                "ev-c44-dof-2026-transicion-jornada"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c44-lft-56-68-jornada",
+              "ev-c44-dof-2026-transicion-jornada"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c44-lft-56-68-jornada",
+              "ev-c44-dof-2026-transicion-jornada"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c44-lft-56-68-jornada",
+                "ev-c44-dof-2026-transicion-jornada"
+              ],
+              [
+                "ev-c44-lft-56-68-jornada",
+                "ev-c44-dof-2026-transicion-jornada"
+              ],
+              [
+                "ev-c44-lft-56-68-jornada",
+                "ev-c44-dof-2026-transicion-jornada"
+              ]
+            ]
+          },
+          {
+            "text": "Tras seis días de trabajo en 2026, ¿qué mínimo general corresponde?",
+            "difficulty": "basic",
+            "options": [
+              "Un día de descanso con salario íntegro",
+              "Dos días en todo caso",
+              "Ningún descanso si hay horas extra"
+            ],
+            "correctOption": 0,
+            "explanation": "En 2026 continúa la regla de un día por cada seis.",
+            "optionExplanations": [
+              "Es el mínimo vigente.",
+              "Anticipa una etapa futura.",
+              "Las horas extra no eliminan descanso."
+            ],
+            "evidenceIds": [
+              "ev-c44-lft-69-75-descansos",
+              "ev-c44-dof-2026-transicion-jornada"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c44-lft-69-75-descansos",
+                "ev-c44-dof-2026-transicion-jornada"
+              ],
+              [
+                "ev-c44-lft-69-75-descansos",
+                "ev-c44-dof-2026-transicion-jornada"
+              ],
+              [
+                "ev-c44-lft-69-75-descansos",
+                "ev-c44-dof-2026-transicion-jornada"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c44-lft-69-75-descansos",
+              "ev-c44-dof-2026-transicion-jornada"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c44-lft-69-75-descansos",
+              "ev-c44-dof-2026-transicion-jornada"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c44-lft-69-75-descansos",
+                "ev-c44-dof-2026-transicion-jornada"
+              ],
+              [
+                "ev-c44-lft-69-75-descansos",
+                "ev-c44-dof-2026-transicion-jornada"
+              ],
+              [
+                "ev-c44-lft-69-75-descansos",
+                "ev-c44-dof-2026-transicion-jornada"
+              ]
+            ]
+          },
+          {
+            "text": "Una persona cumple catorce meses y nunca tomó vacaciones. ¿Cuál es el mínimo inicial?",
+            "difficulty": "intermediate",
+            "options": [
+              "Doce días laborables",
+              "Seis días",
+              "Treinta días"
+            ],
+            "correctOption": 0,
+            "explanation": "Después de más de un año el mínimo es doce días.",
+            "optionExplanations": [
+              "Es la regla vigente.",
+              "Es una cifra anterior.",
+              "No es mínimo general."
+            ],
+            "evidenceIds": [
+              "ev-c44-lft-76-81-vacaciones"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c44-lft-76-81-vacaciones"
+              ],
+              [
+                "ev-c44-lft-76-81-vacaciones"
+              ],
+              [
+                "ev-c44-lft-76-81-vacaciones"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c44-lft-76-81-vacaciones"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c44-lft-76-81-vacaciones"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c44-lft-76-81-vacaciones"
+              ],
+              [
+                "ev-c44-lft-76-81-vacaciones"
+              ],
+              [
+                "ev-c44-lft-76-81-vacaciones"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué se suma al salario del periodo vacacional?",
+            "difficulty": "basic",
+            "options": [
+              "Prima mínima de 25%",
+              "PTU fija",
+              "Indemnización de tres meses"
+            ],
+            "correctOption": 0,
+            "explanation": "La prima vacacional mínima es veinticinco por ciento.",
+            "optionExplanations": [
+              "Es la prestación aplicable.",
+              "PTU es distinta.",
+              "La indemnización pertenece a terminación."
+            ],
+            "evidenceIds": [
+              "ev-c44-lft-76-81-vacaciones"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c44-lft-76-81-vacaciones"
+              ],
+              [
+                "ev-c44-lft-76-81-vacaciones"
+              ],
+              [
+                "ev-c44-lft-76-81-vacaciones"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c44-lft-76-81-vacaciones"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c44-lft-76-81-vacaciones"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c44-lft-76-81-vacaciones"
+              ],
+              [
+                "ev-c44-lft-76-81-vacaciones"
+              ],
+              [
+                "ev-c44-lft-76-81-vacaciones"
+              ]
+            ]
+          },
+          {
+            "text": "La relación termina en agosto. ¿Se pierde el aguinaldo?",
+            "difficulty": "intermediate",
+            "options": [
+              "No, corresponde parte proporcional",
+              "Sí, solo se paga en diciembre",
+              "Sí, si la separación fue voluntaria"
+            ],
+            "correctOption": 0,
+            "explanation": "El año incompleto genera parte proporcional.",
+            "optionExplanations": [
+              "Es la regla legal.",
+              "La fecha no elimina lo devengado.",
+              "La causa no borra automáticamente la prestación."
+            ],
+            "evidenceIds": [
+              "ev-c44-lft-82-89-salario-aguinaldo",
+              "ev-c44-a58-l281-297-aguinaldo"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c44-lft-82-89-salario-aguinaldo",
+                "ev-c44-a58-l281-297-aguinaldo"
+              ],
+              [
+                "ev-c44-lft-82-89-salario-aguinaldo",
+                "ev-c44-a58-l281-297-aguinaldo"
+              ],
+              [
+                "ev-c44-lft-82-89-salario-aguinaldo",
+                "ev-c44-a58-l281-297-aguinaldo"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c44-lft-82-89-salario-aguinaldo",
+              "ev-c44-a58-l281-297-aguinaldo"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c44-lft-82-89-salario-aguinaldo",
+              "ev-c44-a58-l281-297-aguinaldo"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c44-lft-82-89-salario-aguinaldo",
+                "ev-c44-a58-l281-297-aguinaldo"
+              ],
+              [
+                "ev-c44-lft-82-89-salario-aguinaldo",
+                "ev-c44-a58-l281-297-aguinaldo"
+              ],
+              [
+                "ev-c44-lft-82-89-salario-aguinaldo",
+                "ev-c44-a58-l281-297-aguinaldo"
+              ]
+            ]
+          },
+          {
+            "text": "Una empresa afirma que la PTU es idéntica para todas las personas. ¿Qué falta analizar?",
+            "difficulty": "advanced",
+            "options": [
+              "Utilidad, distribución, excepciones y tope",
+              "Solo antigüedad",
+              "Solo salario mínimo"
+            ],
+            "correctOption": 0,
+            "explanation": "La PTU tiene una fórmula y límites propios.",
+            "optionExplanations": [
+              "Integra los factores relevantes.",
+              "Es insuficiente.",
+              "No es el único dato."
+            ],
+            "evidenceIds": [
+              "ev-c44-cpeum-123-trabajo",
+              "ev-c44-lft-117-131-ptu"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c44-cpeum-123-trabajo",
+                "ev-c44-lft-117-131-ptu"
+              ],
+              [
+                "ev-c44-cpeum-123-trabajo",
+                "ev-c44-lft-117-131-ptu"
+              ],
+              [
+                "ev-c44-cpeum-123-trabajo",
+                "ev-c44-lft-117-131-ptu"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c44-cpeum-123-trabajo",
+              "ev-c44-lft-117-131-ptu"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c44-cpeum-123-trabajo",
+              "ev-c44-lft-117-131-ptu"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c44-cpeum-123-trabajo",
+                "ev-c44-lft-117-131-ptu"
+              ],
+              [
+                "ev-c44-cpeum-123-trabajo",
+                "ev-c44-lft-117-131-ptu"
+              ],
+              [
+                "ev-c44-cpeum-123-trabajo",
+                "ev-c44-lft-117-131-ptu"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué tema debe reservarse para C45?",
+            "difficulty": "basic",
+            "options": [
+              "Finiquito e indemnización por terminación",
+              "Prima vacacional",
+              "Descanso semanal"
+            ],
+            "correctOption": 0,
+            "explanation": "C44 estudia relación y mínimos durante su vigencia; terminación va aparte.",
+            "optionExplanations": [
+              "Respeta el límite curricular.",
+              "Es prestación de C44.",
+              "Es condición mínima de C44."
+            ],
+            "evidenceIds": [
+              "ev-c44-lft-76-81-vacaciones",
+              "ev-c44-lft-82-89-salario-aguinaldo",
+              "ev-c44-lft-5-33-irrenunciabilidad"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c44-lft-76-81-vacaciones",
+                "ev-c44-lft-82-89-salario-aguinaldo",
+                "ev-c44-lft-5-33-irrenunciabilidad"
+              ],
+              [
+                "ev-c44-lft-76-81-vacaciones",
+                "ev-c44-lft-82-89-salario-aguinaldo",
+                "ev-c44-lft-5-33-irrenunciabilidad"
+              ],
+              [
+                "ev-c44-lft-76-81-vacaciones",
+                "ev-c44-lft-82-89-salario-aguinaldo",
+                "ev-c44-lft-5-33-irrenunciabilidad"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c44-lft-76-81-vacaciones",
+              "ev-c44-lft-82-89-salario-aguinaldo",
+              "ev-c44-lft-5-33-irrenunciabilidad"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c44-lft-76-81-vacaciones",
+              "ev-c44-lft-82-89-salario-aguinaldo",
+              "ev-c44-lft-5-33-irrenunciabilidad"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c44-lft-76-81-vacaciones",
+                "ev-c44-lft-82-89-salario-aguinaldo",
+                "ev-c44-lft-5-33-irrenunciabilidad"
+              ],
+              [
+                "ev-c44-lft-76-81-vacaciones",
+                "ev-c44-lft-82-89-salario-aguinaldo",
+                "ev-c44-lft-5-33-irrenunciabilidad"
+              ],
+              [
+                "ev-c44-lft-76-81-vacaciones",
+                "ev-c44-lft-82-89-salario-aguinaldo",
+                "ev-c44-lft-5-33-irrenunciabilidad"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c44-cpeum-123-trabajo",
+      "kind": "official",
+      "title": "Constitución Política de los Estados Unidos Mexicanos",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, últimas reformas DOF 02-06-2026, artículo 123 apartado A",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c44-lft-20-26-relacion",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 20 a 26",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c44-lft-35-41-duracion",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 35 a 41",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c44-lft-56-68-jornada",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 56 a 68 y transitorios aplicables en 2026",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c44-dof-2026-transicion-jornada",
+      "kind": "official",
+      "title": "Decreto de reducción de la jornada laboral",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/lft/LFT_ref52_01may26.pdf",
+      "institution": "Diario Oficial de la Federación",
+      "jurisdiction": "Federal, México",
+      "locator": "DOF 01-05-2026, artículos transitorios: 48 horas en 2026 y reducción gradual a 40 en 2030, sin reducción salarial ni de prestaciones",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c44-lft-69-75-descansos",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 69 a 75 y transitorios aplicables",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c44-lft-76-81-vacaciones",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 76 a 81",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c44-lft-82-89-salario-aguinaldo",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 82 a 89",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c44-lft-117-131-ptu",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 117 a 131",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c44-lft-5-33-irrenunciabilidad",
+      "kind": "official",
+      "title": "Ley Federal del Trabajo",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-05-2026, artículos 5 y 33",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c44-a58-l013-019-relacion",
+      "kind": "transcript",
+      "audioNumber": 58,
+      "locator": {
+        "type": "line_range",
+        "startLine": 13,
+        "endLine": 19
+      }
+    },
+    {
+      "id": "ev-c44-a58-l073-109-salario-subordinacion",
+      "kind": "transcript",
+      "audioNumber": 58,
+      "locator": {
+        "type": "line_range",
+        "startLine": 73,
+        "endLine": 109
+      }
+    },
+    {
+      "id": "ev-c44-a58-l127-143-alcance-subordinacion",
+      "kind": "transcript",
+      "audioNumber": 58,
+      "locator": {
+        "type": "line_range",
+        "startLine": 127,
+        "endLine": 143
+      }
+    },
+    {
+      "id": "ev-c44-a58-l171-203-personal-subordinado",
+      "kind": "transcript",
+      "audioNumber": 58,
+      "locator": {
+        "type": "line_range",
+        "startLine": 171,
+        "endLine": 203
+      }
+    },
+    {
+      "id": "ev-c44-a58-l251-281-prestaciones",
+      "kind": "transcript",
+      "audioNumber": 58,
+      "locator": {
+        "type": "line_range",
+        "startLine": 251,
+        "endLine": 281
+      }
+    },
+    {
+      "id": "ev-c44-a58-l281-297-aguinaldo",
+      "kind": "transcript",
+      "audioNumber": 58,
+      "locator": {
+        "type": "line_range",
+        "startLine": 281,
+        "endLine": 297
+      }
+    }
+  ]
+}
