@@ -1,0 +1,1512 @@
+{
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C51",
+    "order": 51,
+    "audioSources": [
+      {
+        "audioNumber": 46,
+        "fragment": "Líneas 113, 117–119 y 209–213: formalidad histórica, regímenes y capitulaciones"
+      }
+    ]
+  },
+  "subject": {
+    "name": "Derecho familiar de Michoacán",
+    "description": "Régimen patrimonial, capitulaciones, administración y efectos frente a terceros."
+  },
+  "class": {
+    "title": "Regímenes patrimoniales y capitulaciones matrimoniales",
+    "description": "Sociedad conyugal y separación de bienes conforme al Código Familiar de Michoacán."
+  },
+  "transcript": {
+    "originalFile": "AUDIO 46.txt",
+    "cleaned": "Se conservaron sólo las líneas físicas 113, 117–119 y 209–213 como puntos didácticos auditables. La línea 113 es extensa y se usa únicamente para identificar la afirmación sobre formalidad que la fuente oficial corrige. Se excluyeron costos, nombres, anécdotas, insultos, estereotipos de género y clase, consejos económicos, ejemplos empresariales y la invitación engañosa de las líneas 217–219. Se corrigió que escritura pública e inscripción sean requisitos universales."
+  },
+  "topics": [
+    {
+      "title": "Capitulaciones y régimen patrimonial local",
+      "description": "Distingue régimen, contenido, formalidad, modificación y efectos patrimoniales en Michoacán.",
+      "learningJourney": {
+        "openingPrompt": "¿Qué datos impiden responder que toda capitulación requiere escritura e inscripción?",
+        "openingPromptEvidenceIds": [
+          "ev-c51-cf-159-161-regimenes",
+          "ev-c51-cf-164-170-sociedad",
+          "ev-c51-cf-171-forma",
+          "ev-c51-cf-172-contenido",
+          "ev-c51-cf-173-179-limites",
+          "ev-c51-cf-191-196-separacion",
+          "ev-c51-cf-180-190-disolucion"
+        ],
+        "quickChecks": [
+          {
+            "prompt": "¿Existen dos regímenes locales? ",
+            "answer": "Sí: sociedad conyugal y separación de bienes.",
+            "feedback": "Identifica primero el régimen pactado.",
+            "evidenceIds": [
+              "ev-c51-cf-159-161-regimenes"
+            ]
+          },
+          {
+            "prompt": "¿La escritura es requisito universal?",
+            "answer": "No; depende del pacto y de los bienes.",
+            "feedback": "Aplica los artículos 171 y 194.",
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites",
+              "ev-c51-cf-191-196-separacion",
+              "ev-c51-cf-159-161-regimenes"
+            ]
+          },
+          {
+            "prompt": "¿Separación elimina inventario?",
+            "answer": "No; debe contener bienes y deudas.",
+            "feedback": "Revisa el artículo 195.",
+            "evidenceIds": [
+              "ev-c51-cf-191-196-separacion",
+              "ev-c51-cf-159-161-regimenes"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Antes de casarse, dos personas pactan separación parcial; durante el matrimonio desean aportar un inmueble y modificar la administración.",
+          "legalRule": "Los artículos 191–195 regulan separación y el 171 condiciona la escritura a transmisiones que requieren esa forma; 161 y 177 regulan modificación y efectos.",
+          "reasoning": "Debe distinguirse el pacto inicial de la posterior transmisión del inmueble y comprobar forma, procedimiento y efectos frente a terceros.",
+          "conclusion": "No existe una única formalidad para todos los actos patrimoniales matrimoniales.",
+          "question": "¿Qué forma y procedimiento corresponden a cada acto?",
+          "evidenceIds": [
+            "ev-c51-cf-159-161-regimenes",
+            "ev-c51-cf-164-170-sociedad",
+            "ev-c51-cf-171-forma",
+            "ev-c51-cf-172-contenido",
+            "ev-c51-cf-173-179-limites",
+            "ev-c51-cf-191-196-separacion",
+            "ev-c51-cf-180-190-disolucion"
+          ]
+        },
+        "closingPrompt": "Explica régimen, inventario, deudas, administración, formalidad, modificación y terceros.",
+        "closingPromptEvidenceIds": [
+          "ev-c51-cf-159-161-regimenes",
+          "ev-c51-cf-164-170-sociedad",
+          "ev-c51-cf-171-forma",
+          "ev-c51-cf-172-contenido",
+          "ev-c51-cf-173-179-limites",
+          "ev-c51-cf-191-196-separacion",
+          "ev-c51-cf-180-190-disolucion"
+        ],
+        "nextActivity": "Resuelve los diez casos sin universalizar escritura, inscripción o comunidad.",
+        "nextActivityEvidenceIds": [
+          "ev-c51-cf-159-161-regimenes",
+          "ev-c51-cf-164-170-sociedad",
+          "ev-c51-cf-171-forma",
+          "ev-c51-cf-172-contenido",
+          "ev-c51-cf-173-179-limites",
+          "ev-c51-cf-191-196-separacion",
+          "ev-c51-cf-180-190-disolucion"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "En Michoacán, el matrimonio puede sujetarse a sociedad conyugal o separación de bienes. Las capitulaciones constituyen el régimen y regulan la administración. Su contenido y formalidad dependen del régimen y de los bienes: no toda capitulación requiere escritura pública ni toda estipulación se inscribe automáticamente.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c51-cf-159-161-regimenes",
+            "ev-c51-cf-164-170-sociedad",
+            "ev-c51-cf-171-forma",
+            "ev-c51-cf-172-contenido",
+            "ev-c51-cf-173-179-limites",
+            "ev-c51-cf-191-196-separacion",
+            "ev-c51-cf-180-190-disolucion"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa",
+          "content": "Primero identifica el régimen. En sociedad conyugal, las capitulaciones delimitan bienes, productos, deudas, administración y liquidación; si faltan o son imprecisas operan reglas legales supletorias. La escritura pública del artículo 171 depende de que se pacte coparticipación o transmisión de bienes cuya traslación exige esa forma. En separación, el acuerdo puede ser absoluto o parcial; antes del matrimonio no requiere por sí solo escritura pública, mientras que durante éste se observan las formalidades de los bienes transmitidos. Las modificaciones y su oponibilidad a terceros deben verificarse conforme a los artículos aplicables.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c51-cf-159-161-regimenes",
+            "ev-c51-cf-164-170-sociedad",
+            "ev-c51-cf-171-forma",
+            "ev-c51-cf-172-contenido",
+            "ev-c51-cf-173-179-limites",
+            "ev-c51-cf-191-196-separacion",
+            "ev-c51-cf-180-190-disolucion"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento local",
+          "content": "Código Familiar de Michoacán, artículos 159–196. La última reforma oficial identificada por el Congreso estatal es de 24 de octubre de 2024. El paquete no traslada estas reglas a otra entidad federativa.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c51-cf-159-161-regimenes",
+            "ev-c51-cf-164-170-sociedad",
+            "ev-c51-cf-171-forma",
+            "ev-c51-cf-172-contenido",
+            "ev-c51-cf-173-179-limites",
+            "ev-c51-cf-191-196-separacion",
+            "ev-c51-cf-180-190-disolucion"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Dos personas eligen separación de bienes antes del matrimonio y elaboran inventario de bienes y deudas. El artículo 194 impide afirmar que ese pacto siempre debe constar en escritura pública; si después transmiten un inmueble, deben revisar la formalidad propia de esa transmisión.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c51-cf-191-196-separacion",
+            "ev-c51-cf-159-161-regimenes",
+            "ev-c51-a46-l209-213-capitulaciones"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Ejemplo tipo CENEVAL",
+          "content": "Una opción dice que toda capitulación debe otorgarse en escritura e inscribirse. Se descarta: el artículo 171 condiciona la escritura al tipo de bienes y el 194 establece una regla distinta para separación antes del matrimonio. La respuesta debe identificar régimen, momento, bienes y efecto frente a terceros.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c51-cf-164-170-sociedad",
+            "ev-c51-cf-171-forma",
+            "ev-c51-cf-172-contenido",
+            "ev-c51-cf-173-179-limites",
+            "ev-c51-cf-191-196-separacion",
+            "ev-c51-cf-159-161-regimenes"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Dos regímenes; capitulaciones antes o durante el matrimonio; sociedad con reglas pactadas y supletorias; separación absoluta o parcial; inventario y deudas; escritura condicionada; modificación con requisitos; efectos frente a terceros y liquidación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c51-cf-159-161-regimenes",
+            "ev-c51-cf-164-170-sociedad",
+            "ev-c51-cf-171-forma",
+            "ev-c51-cf-172-contenido",
+            "ev-c51-cf-173-179-limites",
+            "ev-c51-cf-191-196-separacion",
+            "ev-c51-cf-180-190-disolucion"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de estudio",
+          "content": "Resuelve en orden: jurisdicción Michoacán, régimen, momento del pacto, bienes y deudas, administración, formalidad de cada transmisión, modificación, tercero afectado y eventual liquidación. Nunca respondas “escritura e inscripción siempre”.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c51-cf-159-161-regimenes",
+            "ev-c51-cf-164-170-sociedad",
+            "ev-c51-cf-171-forma",
+            "ev-c51-cf-172-contenido",
+            "ev-c51-cf-173-179-limites",
+            "ev-c51-cf-191-196-separacion",
+            "ev-c51-cf-180-190-disolucion"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Capitulaciones; sociedad conyugal; separación absoluta o parcial; bienes propios y comunes; inventario; gravamen; deuda; administración; escritura condicionada; modificación; oponibilidad; liquidación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c51-cf-159-161-regimenes",
+            "ev-c51-cf-164-170-sociedad",
+            "ev-c51-cf-171-forma",
+            "ev-c51-cf-172-contenido",
+            "ev-c51-cf-173-179-limites",
+            "ev-c51-cf-191-196-separacion",
+            "ev-c51-cf-180-190-disolucion"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores frecuentes",
+          "content": "Confundir sociedad con comunidad universal; afirmar que todo lo adquirido durante el matrimonio siempre es común; omitir bienes propios; exigir escritura o registro en cualquier caso; creer que separación elimina inventario; modificar unilateralmente; ignorar acreedores y terceros.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c51-cf-159-161-regimenes",
+            "ev-c51-cf-164-170-sociedad",
+            "ev-c51-cf-171-forma",
+            "ev-c51-cf-172-contenido",
+            "ev-c51-cf-173-179-limites",
+            "ev-c51-cf-191-196-separacion",
+            "ev-c51-cf-180-190-disolucion",
+            "ev-c51-a46-l113-formalidad"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa de regímenes patrimoniales",
+        "description": "Elección, contenido, forma y efectos.",
+        "nodes": [
+          {
+            "id": "root",
+            "label": "Régimen patrimonial",
+            "description": "Michoacán",
+            "evidenceIds": [
+              "ev-c51-cf-159-161-regimenes",
+              "ev-c51-a46-l117-119-regimenes"
+            ]
+          },
+          {
+            "id": "soc",
+            "label": "Sociedad conyugal",
+            "description": "Régimen legal",
+            "parentId": "root",
+            "evidenceIds": [
+              "ev-c51-cf-159-161-regimenes"
+            ]
+          },
+          {
+            "id": "sep",
+            "label": "Separación de bienes",
+            "description": "Régimen legal",
+            "parentId": "root",
+            "evidenceIds": [
+              "ev-c51-cf-191-196-separacion",
+              "ev-c51-cf-159-161-regimenes"
+            ]
+          },
+          {
+            "id": "caps",
+            "label": "Capitulaciones",
+            "description": "Pacto patrimonial",
+            "parentId": "root",
+            "evidenceIds": [
+              "ev-c51-cf-159-161-regimenes",
+              "ev-c51-a46-l209-213-capitulaciones"
+            ]
+          },
+          {
+            "id": "antes",
+            "label": "Antes del matrimonio",
+            "description": "Momento posible",
+            "parentId": "caps",
+            "evidenceIds": [
+              "ev-c51-cf-159-161-regimenes"
+            ]
+          },
+          {
+            "id": "durante",
+            "label": "Durante el matrimonio",
+            "description": "Momento posible",
+            "parentId": "caps",
+            "evidenceIds": [
+              "ev-c51-cf-159-161-regimenes"
+            ]
+          },
+          {
+            "id": "juez",
+            "label": "Juez del domicilio",
+            "description": "Modificación judicial",
+            "parentId": "durante",
+            "evidenceIds": [
+              "ev-c51-cf-159-161-regimenes",
+              "ev-c51-cf-173-179-limites",
+              "ev-c51-cf-191-196-separacion"
+            ]
+          },
+          {
+            "id": "vol",
+            "label": "Jurisdicción voluntaria",
+            "description": "Trámite indicado",
+            "parentId": "juez",
+            "evidenceIds": [
+              "ev-c51-cf-159-161-regimenes",
+              "ev-c51-cf-173-179-limites",
+              "ev-c51-cf-191-196-separacion"
+            ]
+          },
+          {
+            "id": "suple",
+            "label": "Reglas supletorias",
+            "description": "Falta o imprecisión",
+            "parentId": "soc",
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ]
+          },
+          {
+            "id": "comunes",
+            "label": "Bienes comunes",
+            "description": "Según pacto y ley",
+            "parentId": "soc",
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ]
+          },
+          {
+            "id": "propios",
+            "label": "Bienes propios",
+            "description": "Supuestos legales",
+            "parentId": "soc",
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ]
+          },
+          {
+            "id": "herencia",
+            "label": "Herencia y donación",
+            "description": "Regla y pacto",
+            "parentId": "propios",
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ]
+          },
+          {
+            "id": "admin",
+            "label": "Administración",
+            "description": "Ambos salvo pacto",
+            "parentId": "soc",
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ]
+          },
+          {
+            "id": "nace",
+            "label": "Nacimiento",
+            "description": "Al casarse o después",
+            "parentId": "soc",
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ]
+          },
+          {
+            "id": "escritura",
+            "label": "Escritura pública",
+            "description": "Formalidad condicionada",
+            "parentId": "caps",
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ]
+          },
+          {
+            "id": "traslado",
+            "label": "Transmisión de bienes",
+            "description": "Define formalidad",
+            "parentId": "escritura",
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ]
+          },
+          {
+            "id": "contenido",
+            "label": "Contenido mínimo",
+            "description": "Artículo 172",
+            "parentId": "caps",
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ]
+          },
+          {
+            "id": "inmuebles",
+            "label": "Inmuebles y gravámenes",
+            "description": "Lista y valor",
+            "parentId": "contenido",
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ]
+          },
+          {
+            "id": "muebles",
+            "label": "Bienes muebles",
+            "description": "Lista específica",
+            "parentId": "contenido",
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ]
+          },
+          {
+            "id": "deudas",
+            "label": "Deudas",
+            "description": "Responsabilidad pactada",
+            "parentId": "contenido",
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ]
+          },
+          {
+            "id": "productos",
+            "label": "Productos y trabajo",
+            "description": "Alcance y proporción",
+            "parentId": "contenido",
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ]
+          },
+          {
+            "id": "futuros",
+            "label": "Bienes futuros",
+            "description": "Inclusión o exclusión",
+            "parentId": "contenido",
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ]
+          },
+          {
+            "id": "liquidacion",
+            "label": "Bases de liquidación",
+            "description": "Previsión",
+            "parentId": "contenido",
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ]
+          },
+          {
+            "id": "limites",
+            "label": "Límites del pacto",
+            "description": "Cláusulas nulas",
+            "parentId": "caps",
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ]
+          },
+          {
+            "id": "mod",
+            "label": "Modificación",
+            "description": "No unilateral",
+            "parentId": "caps",
+            "evidenceIds": [
+              "ev-c51-cf-159-161-regimenes",
+              "ev-c51-cf-173-179-limites",
+              "ev-c51-cf-191-196-separacion"
+            ]
+          },
+          {
+            "id": "terceros",
+            "label": "Efectos frente a terceros",
+            "description": "Formalidad relevante",
+            "parentId": "mod",
+            "evidenceIds": [
+              "ev-c51-cf-159-161-regimenes",
+              "ev-c51-cf-173-179-limites",
+              "ev-c51-cf-191-196-separacion"
+            ]
+          },
+          {
+            "id": "absoluta",
+            "label": "Separación absoluta",
+            "description": "Todos los bienes",
+            "parentId": "sep",
+            "evidenceIds": [
+              "ev-c51-cf-191-196-separacion",
+              "ev-c51-cf-159-161-regimenes"
+            ]
+          },
+          {
+            "id": "parcial",
+            "label": "Separación parcial",
+            "description": "Resto puede ser común",
+            "parentId": "sep",
+            "evidenceIds": [
+              "ev-c51-cf-191-196-separacion",
+              "ev-c51-cf-159-161-regimenes"
+            ]
+          },
+          {
+            "id": "inventario",
+            "label": "Inventario",
+            "description": "Siempre en separación",
+            "parentId": "sep",
+            "evidenceIds": [
+              "ev-c51-cf-191-196-separacion",
+              "ev-c51-cf-159-161-regimenes"
+            ]
+          },
+          {
+            "id": "deuda-sep",
+            "label": "Nota de deudas",
+            "description": "Contenido requerido",
+            "parentId": "sep",
+            "evidenceIds": [
+              "ev-c51-cf-191-196-separacion",
+              "ev-c51-cf-159-161-regimenes"
+            ]
+          },
+          {
+            "id": "prop-sep",
+            "label": "Propiedad individual",
+            "description": "Cada cónyuge",
+            "parentId": "sep",
+            "evidenceIds": [
+              "ev-c51-cf-191-196-separacion",
+              "ev-c51-cf-159-161-regimenes"
+            ]
+          },
+          {
+            "id": "admin-sep",
+            "label": "Administración individual",
+            "description": "Bien propio",
+            "parentId": "sep",
+            "evidenceIds": [
+              "ev-c51-cf-191-196-separacion",
+              "ev-c51-cf-159-161-regimenes"
+            ]
+          },
+          {
+            "id": "disuelve",
+            "label": "Disolución",
+            "description": "Supuestos legales",
+            "parentId": "soc",
+            "evidenceIds": [
+              "ev-c51-cf-180-190-disolucion",
+              "ev-c51-cf-172-contenido"
+            ]
+          },
+          {
+            "id": "pago",
+            "label": "Créditos sociales",
+            "description": "Antes del reparto",
+            "parentId": "disuelve",
+            "evidenceIds": [
+              "ev-c51-cf-180-190-disolucion",
+              "ev-c51-cf-172-contenido"
+            ]
+          },
+          {
+            "id": "reparto",
+            "label": "Reparto",
+            "description": "Según pacto y ley",
+            "parentId": "disuelve",
+            "evidenceIds": [
+              "ev-c51-cf-180-190-disolucion",
+              "ev-c51-cf-172-contenido"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+          "citation": "Texto oficial; última reforma POE 24-10-2024",
+          "url": "https://congresomich.gob.mx/leyes/",
+          "institution": "Congreso del Estado de Michoacán de Ocampo",
+          "jurisdiction": "Michoacán, México",
+          "retrievedOn": "2026-08-21",
+          "note": "Arts. 159–196.",
+          "evidenceIds": [
+            "ev-c51-cf-159-161-regimenes",
+            "ev-c51-cf-164-170-sociedad",
+            "ev-c51-cf-171-forma",
+            "ev-c51-cf-172-contenido",
+            "ev-c51-cf-173-179-limites",
+            "ev-c51-cf-180-190-disolucion",
+            "ev-c51-cf-191-196-separacion"
+          ]
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué regímenes reconoce Michoacán?",
+          "answer": "Sociedad conyugal y separación de bienes.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c51-cf-159-161-regimenes",
+            "ev-c51-a46-l117-119-regimenes"
+          ]
+        },
+        {
+          "question": "¿Qué son las capitulaciones?",
+          "answer": "Pactos que constituyen el régimen y regulan la administración.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c51-cf-159-161-regimenes"
+          ]
+        },
+        {
+          "question": "¿Pueden otorgarse durante el matrimonio?",
+          "answer": "Sí, conforme al procedimiento previsto por el Código Familiar.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c51-cf-159-161-regimenes"
+          ]
+        },
+        {
+          "question": "¿Toda capitulación requiere escritura pública?",
+          "answer": "No; depende del régimen, momento y bienes involucrados.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c51-cf-164-170-sociedad",
+            "ev-c51-cf-171-forma",
+            "ev-c51-cf-172-contenido",
+            "ev-c51-cf-173-179-limites",
+            "ev-c51-cf-191-196-separacion",
+            "ev-c51-cf-159-161-regimenes",
+            "ev-c51-a46-l113-formalidad"
+          ]
+        },
+        {
+          "question": "¿Qué debe listar la sociedad conyugal?",
+          "answer": "Bienes, gravámenes, deudas y demás extremos del artículo 172.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c51-cf-164-170-sociedad",
+            "ev-c51-cf-171-forma",
+            "ev-c51-cf-172-contenido",
+            "ev-c51-cf-173-179-limites"
+          ]
+        },
+        {
+          "question": "¿La administración siempre corresponde a una sola persona?",
+          "answer": "No; corresponde a ambos salvo pacto en contrario.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c51-cf-164-170-sociedad",
+            "ev-c51-cf-171-forma",
+            "ev-c51-cf-172-contenido",
+            "ev-c51-cf-173-179-limites"
+          ]
+        },
+        {
+          "question": "¿Qué ocurre si faltan capitulaciones sociales?",
+          "answer": "Operan las reglas supletorias del capítulo.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c51-cf-164-170-sociedad",
+            "ev-c51-cf-171-forma",
+            "ev-c51-cf-172-contenido",
+            "ev-c51-cf-173-179-limites"
+          ]
+        },
+        {
+          "question": "¿La separación puede ser parcial?",
+          "answer": "Sí; lo no separado puede integrar la sociedad que se constituya.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c51-cf-191-196-separacion",
+            "ev-c51-cf-159-161-regimenes"
+          ]
+        },
+        {
+          "question": "¿Separación anterior exige escritura por sí sola?",
+          "answer": "No, conforme al artículo 194 de Michoacán.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c51-cf-191-196-separacion",
+            "ev-c51-cf-159-161-regimenes"
+          ]
+        },
+        {
+          "question": "¿Qué contiene la separación?",
+          "answer": "Inventario de bienes y nota de deudas de cada cónyuge.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c51-cf-191-196-separacion",
+            "ev-c51-cf-159-161-regimenes"
+          ]
+        },
+        {
+          "question": "¿Puede modificarse unilateralmente?",
+          "answer": "No; exige convenio y el procedimiento o formalidades aplicables.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c51-cf-159-161-regimenes",
+            "ev-c51-cf-173-179-limites",
+            "ev-c51-cf-191-196-separacion"
+          ]
+        },
+        {
+          "question": "¿Qué se paga antes de repartir el fondo social?",
+          "answer": "Los créditos contra el fondo, conforme a la liquidación legal.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c51-cf-180-190-disolucion",
+            "ev-c51-cf-172-contenido"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación C51",
+        "description": "Regímenes, capitulaciones, formalidades y efectos.",
+        "questions": [
+          {
+            "text": "¿Cuáles son los regímenes patrimoniales locales?",
+            "difficulty": "basic",
+            "options": [
+              "Sociedad conyugal y separación de bienes",
+              "Comunidad universal obligatoria y usufructo",
+              "Sólo separación de bienes"
+            ],
+            "correctOption": 0,
+            "explanation": "El Código Familiar de Michoacán exige identificar régimen, momento, contenido y formalidad concreta; no admite una respuesta universal.",
+            "optionExplanations": [
+              "Aplica la distinción y el requisito jurídico pertinente.",
+              "Convierte una regla condicionada en afirmación absoluta.",
+              "Confunde el régimen patrimonial con otra institución o autoridad."
+            ],
+            "evidenceIds": [
+              "ev-c51-cf-159-161-regimenes",
+              "ev-c51-a46-l117-119-regimenes"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-159-161-regimenes"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c51-cf-159-161-regimenes"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c51-cf-159-161-regimenes"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-159-161-regimenes"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué función tienen las capitulaciones?",
+            "difficulty": "basic",
+            "options": [
+              "Constituir el régimen y regular administración",
+              "Disolver automáticamente el matrimonio",
+              "Eliminar toda deuda frente a terceros"
+            ],
+            "correctOption": 0,
+            "explanation": "El Código Familiar de Michoacán exige identificar régimen, momento, contenido y formalidad concreta; no admite una respuesta universal.",
+            "optionExplanations": [
+              "Aplica la distinción y el requisito jurídico pertinente.",
+              "Convierte una regla condicionada en afirmación absoluta.",
+              "Confunde el régimen patrimonial con otra institución o autoridad."
+            ],
+            "evidenceIds": [
+              "ev-c51-cf-159-161-regimenes"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-159-161-regimenes"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c51-cf-159-161-regimenes"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c51-cf-159-161-regimenes"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-159-161-regimenes"
+              ]
+            ]
+          },
+          {
+            "text": "Una capitulación social no transfiere bienes sujetos a forma especial. ¿Requiere siempre escritura?",
+            "difficulty": "basic",
+            "options": [
+              "No; debe verificarse el artículo 171",
+              "Sí, sin excepción",
+              "Sólo si no hay bienes"
+            ],
+            "correctOption": 0,
+            "explanation": "El Código Familiar de Michoacán exige identificar régimen, momento, contenido y formalidad concreta; no admite una respuesta universal.",
+            "optionExplanations": [
+              "Aplica la distinción y el requisito jurídico pertinente.",
+              "Convierte una regla condicionada en afirmación absoluta.",
+              "Confunde el régimen patrimonial con otra institución o autoridad."
+            ],
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites",
+              "ev-c51-a46-l113-formalidad"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ],
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ],
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ],
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ],
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué debe incluir el artículo 172?",
+            "difficulty": "intermediate",
+            "options": [
+              "Inventario, gravámenes, deudas y reglas patrimoniales",
+              "Únicamente nombres de los cónyuges",
+              "Sólo una lista de ingresos futuros"
+            ],
+            "correctOption": 0,
+            "explanation": "El Código Familiar de Michoacán exige identificar régimen, momento, contenido y formalidad concreta; no admite una respuesta universal.",
+            "optionExplanations": [
+              "Aplica la distinción y el requisito jurídico pertinente.",
+              "Convierte una regla condicionada en afirmación absoluta.",
+              "Confunde el régimen patrimonial con otra institución o autoridad."
+            ],
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ],
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ],
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ],
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ],
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ]
+            ]
+          },
+          {
+            "text": "Faltan capitulaciones en sociedad conyugal. ¿Qué sucede?",
+            "difficulty": "intermediate",
+            "options": [
+              "Operan reglas supletorias del capítulo",
+              "Todo se vuelve separación",
+              "El matrimonio es nulo"
+            ],
+            "correctOption": 0,
+            "explanation": "El Código Familiar de Michoacán exige identificar régimen, momento, contenido y formalidad concreta; no admite una respuesta universal.",
+            "optionExplanations": [
+              "Aplica la distinción y el requisito jurídico pertinente.",
+              "Convierte una regla condicionada en afirmación absoluta.",
+              "Confunde el régimen patrimonial con otra institución o autoridad."
+            ],
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ],
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ],
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ],
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ],
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ]
+            ]
+          },
+          {
+            "text": "¿Quién administra bienes comunes por regla?",
+            "difficulty": "intermediate",
+            "options": [
+              "Ambos, salvo pacto en contrario",
+              "Siempre el cónyuge con mayor ingreso",
+              "El Registro Civil"
+            ],
+            "correctOption": 0,
+            "explanation": "El Código Familiar de Michoacán exige identificar régimen, momento, contenido y formalidad concreta; no admite una respuesta universal.",
+            "optionExplanations": [
+              "Aplica la distinción y el requisito jurídico pertinente.",
+              "Convierte una regla condicionada en afirmación absoluta.",
+              "Confunde el régimen patrimonial con otra institución o autoridad."
+            ],
+            "evidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ],
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ],
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c51-cf-164-170-sociedad",
+              "ev-c51-cf-171-forma",
+              "ev-c51-cf-172-contenido",
+              "ev-c51-cf-173-179-limites"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ],
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ],
+              [
+                "ev-c51-cf-164-170-sociedad",
+                "ev-c51-cf-171-forma",
+                "ev-c51-cf-172-contenido",
+                "ev-c51-cf-173-179-limites"
+              ]
+            ]
+          },
+          {
+            "text": "¿Puede existir separación parcial?",
+            "difficulty": "intermediate",
+            "options": [
+              "Sí; el resto puede sujetarse a sociedad",
+              "No, siempre debe ser absoluta",
+              "Sólo después del divorcio"
+            ],
+            "correctOption": 0,
+            "explanation": "El Código Familiar de Michoacán exige identificar régimen, momento, contenido y formalidad concreta; no admite una respuesta universal.",
+            "optionExplanations": [
+              "Aplica la distinción y el requisito jurídico pertinente.",
+              "Convierte una regla condicionada en afirmación absoluta.",
+              "Confunde el régimen patrimonial con otra institución o autoridad."
+            ],
+            "evidenceIds": [
+              "ev-c51-cf-191-196-separacion",
+              "ev-c51-cf-159-161-regimenes"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c51-cf-191-196-separacion",
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-191-196-separacion",
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-191-196-separacion",
+                "ev-c51-cf-159-161-regimenes"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c51-cf-191-196-separacion",
+              "ev-c51-cf-159-161-regimenes"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c51-cf-191-196-separacion",
+              "ev-c51-cf-159-161-regimenes"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c51-cf-191-196-separacion",
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-191-196-separacion",
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-191-196-separacion",
+                "ev-c51-cf-159-161-regimenes"
+              ]
+            ]
+          },
+          {
+            "text": "Separación pactada antes del matrimonio: ¿escritura universal?",
+            "difficulty": "advanced",
+            "options": [
+              "No es necesaria por ese solo hecho",
+              "Sí, siempre",
+              "Nunca puede documentarse"
+            ],
+            "correctOption": 0,
+            "explanation": "El Código Familiar de Michoacán exige identificar régimen, momento, contenido y formalidad concreta; no admite una respuesta universal.",
+            "optionExplanations": [
+              "Aplica la distinción y el requisito jurídico pertinente.",
+              "Convierte una regla condicionada en afirmación absoluta.",
+              "Confunde el régimen patrimonial con otra institución o autoridad."
+            ],
+            "evidenceIds": [
+              "ev-c51-cf-191-196-separacion",
+              "ev-c51-cf-159-161-regimenes"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c51-cf-191-196-separacion",
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-191-196-separacion",
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-191-196-separacion",
+                "ev-c51-cf-159-161-regimenes"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c51-cf-191-196-separacion",
+              "ev-c51-cf-159-161-regimenes"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c51-cf-191-196-separacion",
+              "ev-c51-cf-159-161-regimenes"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c51-cf-191-196-separacion",
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-191-196-separacion",
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-191-196-separacion",
+                "ev-c51-cf-159-161-regimenes"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué exigen las capitulaciones de separación?",
+            "difficulty": "advanced",
+            "options": [
+              "Inventario de bienes y nota de deudas",
+              "Renuncia a todos los frutos",
+              "Inscripción de cualquier objeto mueble"
+            ],
+            "correctOption": 0,
+            "explanation": "El Código Familiar de Michoacán exige identificar régimen, momento, contenido y formalidad concreta; no admite una respuesta universal.",
+            "optionExplanations": [
+              "Aplica la distinción y el requisito jurídico pertinente.",
+              "Convierte una regla condicionada en afirmación absoluta.",
+              "Confunde el régimen patrimonial con otra institución o autoridad."
+            ],
+            "evidenceIds": [
+              "ev-c51-cf-191-196-separacion",
+              "ev-c51-cf-159-161-regimenes"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c51-cf-191-196-separacion",
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-191-196-separacion",
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-191-196-separacion",
+                "ev-c51-cf-159-161-regimenes"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c51-cf-191-196-separacion",
+              "ev-c51-cf-159-161-regimenes"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c51-cf-191-196-separacion",
+              "ev-c51-cf-159-161-regimenes"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c51-cf-191-196-separacion",
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-191-196-separacion",
+                "ev-c51-cf-159-161-regimenes"
+              ],
+              [
+                "ev-c51-cf-191-196-separacion",
+                "ev-c51-cf-159-161-regimenes"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cómo se analiza una modificación frente a terceros?",
+            "difficulty": "advanced",
+            "options": [
+              "Con acuerdo, forma, anotación e inscripción aplicables",
+              "Por decisión unilateral",
+              "Sin revisar bienes ni registro"
+            ],
+            "correctOption": 0,
+            "explanation": "El Código Familiar de Michoacán exige identificar régimen, momento, contenido y formalidad concreta; no admite una respuesta universal.",
+            "optionExplanations": [
+              "Aplica la distinción y el requisito jurídico pertinente.",
+              "Convierte una regla condicionada en afirmación absoluta.",
+              "Confunde el régimen patrimonial con otra institución o autoridad."
+            ],
+            "evidenceIds": [
+              "ev-c51-cf-159-161-regimenes",
+              "ev-c51-cf-173-179-limites",
+              "ev-c51-cf-191-196-separacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c51-cf-159-161-regimenes",
+                "ev-c51-cf-173-179-limites",
+                "ev-c51-cf-191-196-separacion"
+              ],
+              [
+                "ev-c51-cf-159-161-regimenes",
+                "ev-c51-cf-173-179-limites",
+                "ev-c51-cf-191-196-separacion"
+              ],
+              [
+                "ev-c51-cf-159-161-regimenes",
+                "ev-c51-cf-173-179-limites",
+                "ev-c51-cf-191-196-separacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c51-cf-159-161-regimenes",
+              "ev-c51-cf-173-179-limites",
+              "ev-c51-cf-191-196-separacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c51-cf-159-161-regimenes",
+              "ev-c51-cf-173-179-limites",
+              "ev-c51-cf-191-196-separacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c51-cf-159-161-regimenes",
+                "ev-c51-cf-173-179-limites",
+                "ev-c51-cf-191-196-separacion"
+              ],
+              [
+                "ev-c51-cf-159-161-regimenes",
+                "ev-c51-cf-173-179-limites",
+                "ev-c51-cf-191-196-separacion"
+              ],
+              [
+                "ev-c51-cf-159-161-regimenes",
+                "ev-c51-cf-173-179-limites",
+                "ev-c51-cf-191-196-separacion"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c51-cf-159-161-regimenes",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial vigente, última reforma POE 24-10-2024; artículos 159 a 161: sociedad conyugal, separación de bienes, concepto, otorgamiento y modificación de capitulaciones",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c51-cf-164-170-sociedad",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial vigente, última reforma POE 24-10-2024; artículos 164 a 170: reglas supletorias, bienes comunes y propios, administración y nacimiento de la sociedad conyugal",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c51-cf-171-forma",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial vigente, última reforma POE 24-10-2024; artículo 171: escritura pública sólo cuando se pacta coparticipación o transmisión de bienes que requieren esa formalidad",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c51-cf-172-contenido",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial vigente, última reforma POE 24-10-2024; artículo 172: inventarios, gravámenes, deudas, alcance, productos, trabajo, administración, bienes futuros, herencias y liquidación",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c51-cf-173-179-limites",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial vigente, última reforma POE 24-10-2024; artículos 173 a 179: nulidad de cláusulas, ganancias, modificación, efectos frente a terceros, dominio y administración",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c51-cf-180-190-disolucion",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial vigente, última reforma POE 24-10-2024; artículos 180 a 190: terminación, suspensión, disolución, inventario, pago de créditos y liquidación de la sociedad conyugal",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c51-cf-191-196-separacion",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial vigente, última reforma POE 24-10-2024; artículos 191 a 196: separación absoluta o parcial, modificación, formalidad según bienes, inventario, deudas, propiedad y administración separadas",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c51-a46-l113-formalidad",
+      "kind": "transcript",
+      "audioNumber": 46,
+      "locator": {
+        "type": "line_range",
+        "startLine": 113,
+        "endLine": 113
+      }
+    },
+    {
+      "id": "ev-c51-a46-l117-119-regimenes",
+      "kind": "transcript",
+      "audioNumber": 46,
+      "locator": {
+        "type": "line_range",
+        "startLine": 117,
+        "endLine": 119
+      }
+    },
+    {
+      "id": "ev-c51-a46-l209-213-capitulaciones",
+      "kind": "transcript",
+      "audioNumber": 46,
+      "locator": {
+        "type": "line_range",
+        "startLine": 209,
+        "endLine": 213
+      }
+    }
+  ]
+}

@@ -6,12 +6,12 @@ import { classPackageFileSchema } from "../lib/content/package-schema";
 
 const packagesDirectory = path.join(process.cwd(), "content", "packages");
 
-test("el catálogo vigente contiene C01–C50 una sola vez y solo contratos 1.2", async () => {
+test("el catálogo vigente contiene C01–C52 una sola vez y solo contratos 1.2", async () => {
   const fileNames = (await readdir(packagesDirectory))
     .filter((fileName) => fileName.endsWith(".json"))
     .sort();
 
-  assert.equal(fileNames.length, 50);
+  assert.equal(fileNames.length, 52);
 
   const packages = await Promise.all(
     fileNames.map(async (fileName) => {
@@ -34,7 +34,7 @@ test("el catálogo vigente contiene C01–C50 una sola vez y solo contratos 1.2"
     currentPackages.filter(
       (packageData) => packageData.packageVersion === "1.2",
     ).length,
-    50,
+    52,
   );
   assert.equal(
     currentPackages.filter(
@@ -49,7 +49,7 @@ test("el catálogo vigente contiene C01–C50 una sola vez y solo contratos 1.2"
 
   assert.deepEqual(
     curriculum.map(({ code, order }) => ({ code, order })),
-    Array.from({ length: 50 }, (_, index) => ({
+    Array.from({ length: 52 }, (_, index) => ({
       code: `C${String(index + 1).padStart(2, "0")}`,
       order: index + 1,
     })),
@@ -302,6 +302,16 @@ test("el catálogo vigente contiene C01–C50 una sola vez y solo contratos 1.2"
   );
   assert.equal(
     currentPackages.find((packageData) => packageData.curriculum.code === "C50")
+      ?.packageVersion,
+    "1.2",
+  );
+  assert.equal(
+    currentPackages.find((packageData) => packageData.curriculum.code === "C51")
+      ?.packageVersion,
+    "1.2",
+  );
+  assert.equal(
+    currentPackages.find((packageData) => packageData.curriculum.code === "C52")
       ?.packageVersion,
     "1.2",
   );

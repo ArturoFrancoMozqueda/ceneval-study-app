@@ -1,0 +1,1323 @@
+{
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C52",
+    "order": 52,
+    "audioSources": [
+      {
+        "audioNumber": 63,
+        "fragment": "Líneas 9–55: solicitud, patria potestad, viaje, custodia y alimentos"
+      }
+    ]
+  },
+  "subject": {
+    "name": "Derecho Familiar",
+    "description": "Divorcio voluntario judicial y convenio familiar conforme al régimen de Michoacán."
+  },
+  "class": {
+    "title": "Divorcio voluntario y convenio familiar",
+    "description": "Vías, cláusulas del convenio, protección de hijas e hijos y trámite judicial en Michoacán."
+  },
+  "transcript": {
+    "originalFile": "AUDIO 63.txt",
+    "cleaned": "Se conservaron sólo las líneas físicas 9 a 55 como contexto sobre solicitud conjunta, patria potestad, salida del país, guarda y custodia y alimentos. Se excluyeron nombres, anécdotas, lenguaje ofensivo, costos y generalizaciones. La afirmación sobre impago se corrigió: no produce por sí mismo pérdida automática de patria potestad. La salida del país se presenta como cuestión sujeta a consentimiento o determinación judicial fundada, no como permiso automático. Todo contenido sucesorio de la línea 57 en adelante quedó fuera."
+  },
+  "topics": [
+    {
+      "title": "Convenio y protección familiar en el divorcio voluntario",
+      "description": "Contenido mínimo, control judicial, patria potestad y decisiones sobre hijas e hijos.",
+      "learningJourney": {
+        "openingPrompt": "¿Qué debe contener un convenio de divorcio voluntario judicial cuando existen hijas o hijos menores de edad?",
+        "quickChecks": [
+          {
+            "prompt": "¿Puede una persona renunciar libremente a la patria potestad dentro del convenio?",
+            "answer": "No. El Código Familiar declara que no es renunciable y regula por separado su terminación, pérdida, suspensión y excusa.",
+            "feedback": "Distingue acuerdo entre cónyuges de las consecuencias que sólo proceden por causa y decisión legal.",
+            "evidenceIds": [
+              "ev-c52-cf-421-429-patria-potestad",
+              "ev-c52-a63-l009-013-patria-potestad"
+            ]
+          },
+          {
+            "prompt": "¿El impago de alimentos extingue automáticamente la patria potestad?",
+            "answer": "No. Puede generar consecuencias y acciones específicas, pero la pérdida exige actualizar una causa legal y una resolución; las obligaciones hacia hijas e hijos subsisten incluso si se pierde.",
+            "feedback": "No sustituyas el análisis de causal y sentencia por una inferencia automática.",
+            "evidenceIds": [
+              "ev-c52-cf-421-429-patria-potestad"
+            ]
+          },
+          {
+            "prompt": "¿La negativa de un progenitor impide siempre un viaje internacional de una hija o hijo?",
+            "answer": "No necesariamente. La autoridad judicial puede resolver según el interés superior y las circunstancias, con datos y medidas que reduzcan el riesgo de sustracción.",
+            "feedback": "La autorización judicial requiere un caso concreto; no equivale a ignorar al otro progenitor.",
+            "evidenceIds": [
+              "ev-c52-scjn-2016005-viaje",
+              "ev-c52-a63-l019-023-interes-viaje",
+              "ev-c52-a63-l031-035-autorizacion"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Dos cónyuges solicitan divorcio voluntario judicial en Michoacán. Tienen una hija menor. Proponen custodia, convivencias y alimentos, pero uno pretende renunciar a la patria potestad y dejar abierta cualquier salida al extranjero.",
+          "question": "¿Qué debe corregirse antes de aprobar el convenio?",
+          "legalRule": "El artículo 281 fija las cláusulas del convenio; los artículos 282 a 290 regulan el control judicial. La patria potestad no es renunciable y los viajes controvertidos requieren valoración fundada del interés superior.",
+          "reasoning": "Debe precisarse custodia, convivencia, alimentos y garantía, vivienda y régimen patrimonial. La renuncia propuesta no sustituye las causas legales de pérdida o suspensión. Para viajes, deben definirse consentimiento o una vía judicial con fechas, destino y medidas adecuadas al caso.",
+          "conclusion": "El acuerdo se aprueba sólo en lo compatible con la ley y la protección de la hija; el vínculo puede disolverse sin validar cláusulas lesivas.",
+          "evidenceIds": [
+            "ev-c52-cf-254-277-280-vias",
+            "ev-c52-cf-281-convenio",
+            "ev-c52-cf-282-290-tramite",
+            "ev-c52-cf-276-modificacion",
+            "ev-c52-cf-421-429-patria-potestad",
+            "ev-c52-scjn-2016005-viaje",
+            "ev-c52-a63-l009-013-patria-potestad",
+            "ev-c52-a63-l019-023-interes-viaje",
+            "ev-c52-a63-l031-035-autorizacion",
+            "ev-c52-a63-l053-053-custodia-alimentos"
+          ]
+        },
+        "closingPrompt": "Explica por qué disolver el matrimonio, aprobar el convenio y modificar después sus prestaciones son decisiones relacionadas pero distintas.",
+        "nextActivity": "Construye una lista de control con las ocho materias del artículo 281 y marca cuáles requieren datos, garantía o valoración judicial.",
+        "openingPromptEvidenceIds": [
+          "ev-c52-cf-281-convenio",
+          "ev-c52-a63-l053-053-custodia-alimentos"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c52-cf-281-convenio",
+          "ev-c52-cf-282-290-tramite",
+          "ev-c52-cf-276-modificacion"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c52-cf-281-convenio"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "En Michoacán, el divorcio voluntario judicial nace del mutuo consentimiento y requiere solicitud ante la autoridad competente con un convenio. El convenio organiza custodia, convivencia, alimentos y garantía, vivienda, posibles alimentos entre cónyuges y sociedad conyugal. La autoridad revisa que los derechos de hijas e hijos queden protegidos.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c52-cf-254-277-280-vias",
+            "ev-c52-cf-281-convenio",
+            "ev-c52-cf-282-290-tramite",
+            "ev-c52-a63-l009-013-patria-potestad",
+            "ev-c52-a63-l053-053-custodia-alimentos"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa",
+          "content": "El Código Familiar distingue divorcio voluntario administrativo, notarial y judicial. La vía judicial corresponde al mutuo consentimiento presentado ante la autoridad jurisdiccional con el convenio del artículo 281. Si la solicitud, documentos o convenio son insuficientes, existe oportunidad legal de aclararlos; después intervienen la autoridad oral y el ministerio público cuando deben protegerse derechos de personas menores de edad o con discapacidad.\n\nEl convenio no es una renuncia de responsabilidades. Debe definir custodia y convivencia conforme al interés superior, alimentos y garantía, vivienda y domicilio, posibles alimentos entre cónyuges y administración o liquidación de la sociedad conyugal. La autoridad puede aprobar lo conforme y fijar medidas de oficio sobre hijas e hijos cuando no exista aceptación de ajustes protectores.\n\nLa patria potestad es distinta de la custodia. No se renuncia por convenio. Pérdida, suspensión, terminación, excusa y recuperación tienen presupuestos distintos. El impago alimentario no debe presentarse como pérdida automática y aun la pérdida no extingue las obligaciones hacia hijas e hijos.\n\nUna salida internacional controvertida tampoco se resuelve por decisión unilateral. El criterio oficial de la SCJN exige ponderar interés superior, fechas, destino, estancia, comunicación y, si existe riesgo fundado, garantías de retorno.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c52-cf-254-277-280-vias",
+            "ev-c52-cf-281-convenio",
+            "ev-c52-cf-282-290-tramite",
+            "ev-c52-cf-276-modificacion",
+            "ev-c52-cf-421-429-patria-potestad",
+            "ev-c52-scjn-2016005-viaje",
+            "ev-c52-a63-l009-013-patria-potestad",
+            "ev-c52-a63-l019-023-interes-viaje",
+            "ev-c52-a63-l031-035-autorizacion",
+            "ev-c52-a63-l053-053-custodia-alimentos"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico",
+          "content": "Código Familiar de Michoacán: artículos 254 y 277 a 280 sobre clases y vías; 281 sobre convenio; 282 a 290 sobre trámite y protección; 276 sobre modificación posterior; 421 a 429 sobre terminación, pérdida, suspensión, excusa y recuperación de patria potestad. SCJN, registro digital 2016005, sobre autorización judicial de viaje internacional atendiendo al interés superior.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c52-cf-254-277-280-vias",
+            "ev-c52-cf-281-convenio",
+            "ev-c52-cf-282-290-tramite",
+            "ev-c52-cf-276-modificacion",
+            "ev-c52-cf-421-429-patria-potestad",
+            "ev-c52-scjn-2016005-viaje"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Ejemplo tipo CENEVAL",
+          "content": "Si una opción sostiene que el convenio puede eliminar la patria potestad por voluntad de los progenitores, descártala. La respuesta jurídicamente completa identifica la cláusula del artículo 281, el control judicial y la diferencia entre custodia, convivencia, alimentos y patria potestad.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c52-cf-281-convenio",
+            "ev-c52-cf-282-290-tramite",
+            "ev-c52-cf-421-429-patria-potestad",
+            "ev-c52-a63-l009-013-patria-potestad",
+            "ev-c52-a63-l053-053-custodia-alimentos"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Mutuo consentimiento más convenio; ocho materias mínimas; control judicial de derechos; patria potestad no renunciable; impago sin pérdida automática; viaje internacional sujeto a consentimiento o resolución fundada; prestaciones modificables por la vía legal.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c52-cf-254-277-280-vias",
+            "ev-c52-cf-281-convenio",
+            "ev-c52-cf-282-290-tramite",
+            "ev-c52-cf-276-modificacion",
+            "ev-c52-cf-421-429-patria-potestad",
+            "ev-c52-scjn-2016005-viaje",
+            "ev-c52-a63-l009-013-patria-potestad",
+            "ev-c52-a63-l019-023-interes-viaje",
+            "ev-c52-a63-l031-035-autorizacion",
+            "ev-c52-a63-l053-053-custodia-alimentos"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de estudio",
+          "content": "1) Identifica la vía. 2) Revisa el contenido del convenio. 3) Separa custodia, convivencia y patria potestad. 4) Comprueba alimentos y garantía. 5) Revisa bienes y vivienda. 6) Ubica el control judicial. 7) Para viajes, exige datos y ponderación. 8) No conviertas incumplimiento en sanción automática.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c52-cf-254-277-280-vias",
+            "ev-c52-cf-281-convenio",
+            "ev-c52-cf-282-290-tramite",
+            "ev-c52-cf-421-429-patria-potestad",
+            "ev-c52-scjn-2016005-viaje"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Divorcio voluntario judicial, mutuo consentimiento, convenio, guarda y custodia, convivencia, alimentos, garantía, domicilio, sociedad conyugal, patria potestad, interés superior, autorización judicial y modificación de prestaciones.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c52-cf-254-277-280-vias",
+            "ev-c52-cf-281-convenio",
+            "ev-c52-cf-282-290-tramite",
+            "ev-c52-cf-276-modificacion",
+            "ev-c52-cf-421-429-patria-potestad",
+            "ev-c52-scjn-2016005-viaje",
+            "ev-c52-a63-l053-053-custodia-alimentos"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores frecuentes",
+          "content": "Confundir divorcio voluntario con divorcio sin expresión de causa; omitir la garantía alimentaria; creer que custodia equivale a patria potestad; tratar el impago como pérdida automática; aceptar una renuncia privada; afirmar que cualquier viaje queda autorizado; o suponer que el juez debe aprobar íntegramente un convenio lesivo.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c52-cf-254-277-280-vias",
+            "ev-c52-cf-281-convenio",
+            "ev-c52-cf-282-290-tramite",
+            "ev-c52-cf-421-429-patria-potestad",
+            "ev-c52-scjn-2016005-viaje"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Una pareja acuerda que su hija vivirá con la madre, convivirá con el padre en horarios definidos y recibirá alimentos garantizados. Ese acuerdo distribuye cuidado y obligaciones, pero no hace que el padre renuncie a la patria potestad. Un viaje futuro controvertido deberá resolverse con consentimiento o por la autoridad según el caso.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c52-cf-281-convenio",
+            "ev-c52-cf-421-429-patria-potestad",
+            "ev-c52-scjn-2016005-viaje",
+            "ev-c52-a63-l019-023-interes-viaje",
+            "ev-c52-a63-l031-035-autorizacion",
+            "ev-c52-a63-l053-053-custodia-alimentos"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa del divorcio voluntario y el convenio",
+        "description": "Relaciones entre vía, cláusulas, protección y control judicial.",
+        "nodes": [
+          {
+            "id": "divorcio",
+            "label": "Divorcio voluntario",
+            "description": "Mutuo consentimiento",
+            "evidenceIds": [
+              "ev-c52-cf-254-277-280-vias"
+            ]
+          },
+          {
+            "id": "vias",
+            "label": "Vías",
+            "description": "Administrativa, notarial o judicial",
+            "parentId": "divorcio",
+            "evidenceIds": [
+              "ev-c52-cf-254-277-280-vias"
+            ]
+          },
+          {
+            "id": "judicial",
+            "label": "Vía judicial",
+            "description": "Solicitud conjunta y convenio",
+            "parentId": "vias",
+            "evidenceIds": [
+              "ev-c52-cf-254-277-280-vias",
+              "ev-c52-cf-281-convenio"
+            ]
+          },
+          {
+            "id": "administrativa",
+            "label": "Vía administrativa",
+            "description": "Sólo con requisitos legales",
+            "parentId": "vias",
+            "evidenceIds": [
+              "ev-c52-cf-254-277-280-vias"
+            ]
+          },
+          {
+            "id": "notarial",
+            "label": "Vía notarial",
+            "description": "Sólo con requisitos legales",
+            "parentId": "vias",
+            "evidenceIds": [
+              "ev-c52-cf-254-277-280-vias"
+            ]
+          },
+          {
+            "id": "convenio",
+            "label": "Convenio",
+            "description": "Contenido del artículo 281",
+            "parentId": "judicial",
+            "evidenceIds": [
+              "ev-c52-cf-281-convenio",
+              "ev-c52-a63-l053-053-custodia-alimentos"
+            ]
+          },
+          {
+            "id": "custodia",
+            "label": "Guarda y custodia",
+            "description": "Durante y después",
+            "parentId": "convenio",
+            "evidenceIds": [
+              "ev-c52-cf-281-convenio",
+              "ev-c52-a63-l053-053-custodia-alimentos"
+            ]
+          },
+          {
+            "id": "convivencia",
+            "label": "Convivencia",
+            "description": "Días, horas y circunstancias",
+            "parentId": "convenio",
+            "evidenceIds": [
+              "ev-c52-cf-281-convenio"
+            ]
+          },
+          {
+            "id": "alimentos",
+            "label": "Alimentos",
+            "description": "Necesidades y forma de pago",
+            "parentId": "convenio",
+            "evidenceIds": [
+              "ev-c52-cf-281-convenio",
+              "ev-c52-a63-l053-053-custodia-alimentos"
+            ]
+          },
+          {
+            "id": "garantia",
+            "label": "Garantía",
+            "description": "Asegura obligaciones",
+            "parentId": "alimentos",
+            "evidenceIds": [
+              "ev-c52-cf-281-convenio",
+              "ev-c52-cf-282-290-tramite"
+            ]
+          },
+          {
+            "id": "domicilio",
+            "label": "Domicilio conyugal",
+            "description": "Uso durante el procedimiento",
+            "parentId": "convenio",
+            "evidenceIds": [
+              "ev-c52-cf-281-convenio"
+            ]
+          },
+          {
+            "id": "habitacion",
+            "label": "Habitación",
+            "description": "Durante y después",
+            "parentId": "convenio",
+            "evidenceIds": [
+              "ev-c52-cf-281-convenio"
+            ]
+          },
+          {
+            "id": "conyuges",
+            "label": "Alimentos entre cónyuges",
+            "description": "Sólo cuando corresponda",
+            "parentId": "convenio",
+            "evidenceIds": [
+              "ev-c52-cf-281-convenio"
+            ]
+          },
+          {
+            "id": "sociedad",
+            "label": "Sociedad conyugal",
+            "description": "Administración y liquidación",
+            "parentId": "convenio",
+            "evidenceIds": [
+              "ev-c52-cf-281-convenio"
+            ]
+          },
+          {
+            "id": "embarazo",
+            "label": "Manifestación de embarazo",
+            "description": "Cláusula legal",
+            "parentId": "convenio",
+            "evidenceIds": [
+              "ev-c52-cf-281-convenio"
+            ]
+          },
+          {
+            "id": "control",
+            "label": "Control judicial",
+            "description": "Protege derechos",
+            "parentId": "judicial",
+            "evidenceIds": [
+              "ev-c52-cf-282-290-tramite"
+            ]
+          },
+          {
+            "id": "prevencion",
+            "label": "Prevención",
+            "description": "Completar o aclarar",
+            "parentId": "control",
+            "evidenceIds": [
+              "ev-c52-cf-282-290-tramite"
+            ]
+          },
+          {
+            "id": "audiencia",
+            "label": "Audiencia",
+            "description": "Comparecencia personal",
+            "parentId": "control",
+            "evidenceIds": [
+              "ev-c52-cf-282-290-tramite"
+            ]
+          },
+          {
+            "id": "mp",
+            "label": "Ministerio público",
+            "description": "Intervención protectora",
+            "parentId": "control",
+            "evidenceIds": [
+              "ev-c52-cf-282-290-tramite"
+            ]
+          },
+          {
+            "id": "sentencia",
+            "label": "Sentencia",
+            "description": "Disuelve el vínculo",
+            "parentId": "control",
+            "evidenceIds": [
+              "ev-c52-cf-282-290-tramite"
+            ]
+          },
+          {
+            "id": "ajustes",
+            "label": "Ajustes al convenio",
+            "description": "Protección de hijas e hijos",
+            "parentId": "control",
+            "evidenceIds": [
+              "ev-c52-cf-282-290-tramite"
+            ]
+          },
+          {
+            "id": "modificacion",
+            "label": "Modificación posterior",
+            "description": "Procedimiento especial oral",
+            "parentId": "convenio",
+            "evidenceIds": [
+              "ev-c52-cf-276-modificacion"
+            ]
+          },
+          {
+            "id": "patria",
+            "label": "Patria potestad",
+            "description": "No equivale a custodia",
+            "parentId": "convenio",
+            "evidenceIds": [
+              "ev-c52-cf-421-429-patria-potestad",
+              "ev-c52-a63-l009-013-patria-potestad"
+            ]
+          },
+          {
+            "id": "no-renuncia",
+            "label": "No renunciable",
+            "description": "Artículo 426",
+            "parentId": "patria",
+            "evidenceIds": [
+              "ev-c52-cf-421-429-patria-potestad",
+              "ev-c52-a63-l009-013-patria-potestad"
+            ]
+          },
+          {
+            "id": "terminacion",
+            "label": "Terminación",
+            "description": "Supuestos legales",
+            "parentId": "patria",
+            "evidenceIds": [
+              "ev-c52-cf-421-429-patria-potestad"
+            ]
+          },
+          {
+            "id": "perdida",
+            "label": "Pérdida",
+            "description": "Causas y resolución",
+            "parentId": "patria",
+            "evidenceIds": [
+              "ev-c52-cf-421-429-patria-potestad"
+            ]
+          },
+          {
+            "id": "suspension",
+            "label": "Suspensión",
+            "description": "Supuestos distintos",
+            "parentId": "patria",
+            "evidenceIds": [
+              "ev-c52-cf-421-429-patria-potestad"
+            ]
+          },
+          {
+            "id": "limitacion",
+            "label": "Limitación",
+            "description": "No es pérdida automática",
+            "parentId": "patria",
+            "evidenceIds": [
+              "ev-c52-cf-421-429-patria-potestad"
+            ]
+          },
+          {
+            "id": "obligaciones",
+            "label": "Obligaciones subsistentes",
+            "description": "Aun tras pérdida",
+            "parentId": "patria",
+            "evidenceIds": [
+              "ev-c52-cf-421-429-patria-potestad"
+            ]
+          },
+          {
+            "id": "viaje",
+            "label": "Viaje internacional",
+            "description": "Consentimiento o decisión judicial",
+            "parentId": "patria",
+            "evidenceIds": [
+              "ev-c52-scjn-2016005-viaje",
+              "ev-c52-a63-l019-023-interes-viaje",
+              "ev-c52-a63-l031-035-autorizacion"
+            ]
+          },
+          {
+            "id": "interes",
+            "label": "Interés superior",
+            "description": "Valoración concreta",
+            "parentId": "viaje",
+            "evidenceIds": [
+              "ev-c52-scjn-2016005-viaje",
+              "ev-c52-a63-l019-023-interes-viaje",
+              "ev-c52-a63-l031-035-autorizacion"
+            ]
+          },
+          {
+            "id": "medidas",
+            "label": "Medidas de retorno",
+            "description": "Según riesgo y caso",
+            "parentId": "viaje",
+            "evidenceIds": [
+              "ev-c52-scjn-2016005-viaje"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+          "url": "https://congresomich.gob.mx/leyes/",
+          "institution": "Congreso del Estado de Michoacán de Ocampo",
+          "jurisdiction": "Michoacán, México",
+          "citation": "Texto oficial y reformas; última reforma publicada 24-10-2024; consulta 2026-08-21",
+          "retrievedOn": "2026-08-21",
+          "note": "Arts. 254, 276–290 y 421–429.",
+          "evidenceIds": [
+            "ev-c52-cf-254-277-280-vias",
+            "ev-c52-cf-281-convenio",
+            "ev-c52-cf-282-290-tramite",
+            "ev-c52-cf-276-modificacion",
+            "ev-c52-cf-421-429-patria-potestad"
+          ]
+        },
+        {
+          "title": "Autorización judicial para viaje internacional de una persona menor de edad",
+          "url": "https://sjf2.scjn.gob.mx/detalle/tesis/2016005",
+          "institution": "Suprema Corte de Justicia de la Nación, Semanario Judicial de la Federación",
+          "jurisdiction": "México",
+          "citation": "Registro digital 2016005, Primera Sala, publicación 19-01-2018; consulta 2026-08-21",
+          "retrievedOn": "2026-08-21",
+          "note": "Interés superior, datos del viaje, comunicación y garantía ante riesgo fundado.",
+          "evidenceIds": [
+            "ev-c52-scjn-2016005-viaje"
+          ]
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué caracteriza al divorcio voluntario?",
+          "answer": "El mutuo consentimiento; su vía depende de los requisitos legales del caso.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c52-cf-254-277-280-vias"
+          ]
+        },
+        {
+          "question": "¿Cuándo procede la vía judicial?",
+          "answer": "Cuando ambos cónyuges la solicitan y acompañan el convenio exigido por el artículo 281.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c52-cf-254-277-280-vias",
+            "ev-c52-cf-281-convenio"
+          ]
+        },
+        {
+          "question": "¿Qué debe decirse sobre custodia?",
+          "answer": "Quién la ejercerá durante el procedimiento y después de ejecutoriado el divorcio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c52-cf-281-convenio",
+            "ev-c52-a63-l053-053-custodia-alimentos"
+          ]
+        },
+        {
+          "question": "¿Cómo se regula la convivencia?",
+          "answer": "Con modalidades concretas compatibles con horarios, circunstancias personales e interés superior.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c52-cf-281-convenio"
+          ]
+        },
+        {
+          "question": "¿Qué acompaña a los alimentos de hijas e hijos?",
+          "answer": "Forma de pago y garantía suficiente, además del modo de cubrir sus necesidades.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c52-cf-281-convenio",
+            "ev-c52-a63-l053-053-custodia-alimentos"
+          ]
+        },
+        {
+          "question": "¿Qué se prevé sobre bienes?",
+          "answer": "Administración y liquidación de sociedad conyugal, con la documentación aplicable.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c52-cf-281-convenio"
+          ]
+        },
+        {
+          "question": "¿Puede renunciarse a la patria potestad?",
+          "answer": "No; el artículo 426 la declara no renunciable y sólo admite excusas tasadas.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c52-cf-421-429-patria-potestad",
+            "ev-c52-a63-l009-013-patria-potestad"
+          ]
+        },
+        {
+          "question": "¿Impago equivale automáticamente a pérdida?",
+          "answer": "No. Deben acreditarse causa legal y resolución; además subsisten obligaciones hacia hijas e hijos.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c52-cf-421-429-patria-potestad"
+          ]
+        },
+        {
+          "question": "¿Pérdida y suspensión son iguales?",
+          "answer": "No. Tienen supuestos y efectos jurídicos distintos.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c52-cf-421-429-patria-potestad"
+          ]
+        },
+        {
+          "question": "¿Qué controla la autoridad respecto del convenio?",
+          "answer": "Que los derechos de personas menores de edad o con discapacidad queden protegidos.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c52-cf-282-290-tramite"
+          ]
+        },
+        {
+          "question": "¿Cómo se resuelve un viaje internacional controvertido?",
+          "answer": "Mediante valoración judicial del interés superior y de datos y riesgos concretos.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c52-scjn-2016005-viaje",
+            "ev-c52-a63-l019-023-interes-viaje",
+            "ev-c52-a63-l031-035-autorizacion"
+          ]
+        },
+        {
+          "question": "¿Puede modificarse después una prestación del convenio?",
+          "answer": "Sí, por el procedimiento especial oral previsto en el artículo 276.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c52-cf-276-modificacion"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación: divorcio voluntario y convenio",
+        "description": "Diez casos breves sobre vía, cláusulas, patria potestad y control judicial.",
+        "questions": [
+          {
+            "text": "Dos cónyuges con una hija menor acuerdan divorciarse. ¿Qué vía corresponde analizar?",
+            "difficulty": "intermediate",
+            "options": [
+              "Judicial con convenio",
+              "Administrativa sin convenio",
+              "Notarial automática"
+            ],
+            "correctOption": 0,
+            "explanation": "La presencia de materias relativas a una hija menor exige el convenio y control judicial descritos por el Código Familiar.",
+            "optionExplanations": [
+              "Judicial con convenio es correcto porque aplica los presupuestos y efectos de la fuente citada.",
+              "Administrativa sin convenio es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece.",
+              "Notarial automática es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c52-cf-254-277-280-vias",
+              "ev-c52-cf-281-convenio"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c52-cf-254-277-280-vias",
+                "ev-c52-cf-281-convenio"
+              ],
+              [
+                "ev-c52-cf-254-277-280-vias",
+                "ev-c52-cf-281-convenio"
+              ],
+              [
+                "ev-c52-cf-254-277-280-vias",
+                "ev-c52-cf-281-convenio"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c52-cf-254-277-280-vias",
+              "ev-c52-cf-281-convenio"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c52-cf-254-277-280-vias",
+              "ev-c52-cf-281-convenio"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c52-cf-254-277-280-vias",
+                "ev-c52-cf-281-convenio"
+              ],
+              [
+                "ev-c52-cf-254-277-280-vias",
+                "ev-c52-cf-281-convenio"
+              ],
+              [
+                "ev-c52-cf-254-277-280-vias",
+                "ev-c52-cf-281-convenio"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál es una cláusula exigida por el artículo 281?",
+            "difficulty": "intermediate",
+            "options": [
+              "Custodia y convivencia de hijas e hijos",
+              "Renuncia privada a la patria potestad",
+              "Eliminación de toda obligación futura"
+            ],
+            "correctOption": 0,
+            "explanation": "El convenio debe regular custodia y convivencia; no puede crear renuncias o extinciones contrarias a la ley.",
+            "optionExplanations": [
+              "Custodia y convivencia de hijas e hijos es correcto porque aplica los presupuestos y efectos de la fuente citada.",
+              "Renuncia privada a la patria potestad es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece.",
+              "Eliminación de toda obligación futura es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c52-cf-281-convenio",
+              "ev-c52-a63-l053-053-custodia-alimentos"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c52-cf-281-convenio",
+                "ev-c52-a63-l053-053-custodia-alimentos"
+              ],
+              [
+                "ev-c52-cf-281-convenio",
+                "ev-c52-a63-l053-053-custodia-alimentos"
+              ],
+              [
+                "ev-c52-cf-281-convenio",
+                "ev-c52-a63-l053-053-custodia-alimentos"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c52-cf-281-convenio",
+              "ev-c52-a63-l053-053-custodia-alimentos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c52-cf-281-convenio",
+              "ev-c52-a63-l053-053-custodia-alimentos"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c52-cf-281-convenio",
+                "ev-c52-a63-l053-053-custodia-alimentos"
+              ],
+              [
+                "ev-c52-cf-281-convenio",
+                "ev-c52-a63-l053-053-custodia-alimentos"
+              ],
+              [
+                "ev-c52-cf-281-convenio",
+                "ev-c52-a63-l053-053-custodia-alimentos"
+              ]
+            ]
+          },
+          {
+            "text": "El convenio fija alimentos pero ninguna garantía. ¿Qué falta revisar?",
+            "difficulty": "intermediate",
+            "options": [
+              "La garantía para asegurar las necesidades",
+              "Una sanción penal automática",
+              "La pérdida inmediata de patria potestad"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 281 exige atender la garantía; las otras consecuencias no surgen automáticamente.",
+            "optionExplanations": [
+              "La garantía para asegurar las necesidades es correcto porque aplica los presupuestos y efectos de la fuente citada.",
+              "Una sanción penal automática es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece.",
+              "La pérdida inmediata de patria potestad es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c52-cf-281-convenio",
+              "ev-c52-cf-282-290-tramite"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c52-cf-281-convenio",
+                "ev-c52-cf-282-290-tramite"
+              ],
+              [
+                "ev-c52-cf-281-convenio",
+                "ev-c52-cf-282-290-tramite"
+              ],
+              [
+                "ev-c52-cf-281-convenio",
+                "ev-c52-cf-282-290-tramite"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c52-cf-281-convenio",
+              "ev-c52-cf-282-290-tramite"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c52-cf-281-convenio",
+              "ev-c52-cf-282-290-tramite"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c52-cf-281-convenio",
+                "ev-c52-cf-282-290-tramite"
+              ],
+              [
+                "ev-c52-cf-281-convenio",
+                "ev-c52-cf-282-290-tramite"
+              ],
+              [
+                "ev-c52-cf-281-convenio",
+                "ev-c52-cf-282-290-tramite"
+              ]
+            ]
+          },
+          {
+            "text": "Un progenitor declara que renuncia a la patria potestad. ¿Qué respuesta es correcta?",
+            "difficulty": "intermediate",
+            "options": [
+              "La renuncia no produce ese efecto por sí sola",
+              "La firma extingue toda responsabilidad",
+              "La custodia se vuelve adopción"
+            ],
+            "correctOption": 0,
+            "explanation": "La patria potestad no es renunciable y sus modos de terminar, perderse o suspenderse están regulados.",
+            "optionExplanations": [
+              "La renuncia no produce ese efecto por sí sola es correcto porque aplica los presupuestos y efectos de la fuente citada.",
+              "La firma extingue toda responsabilidad es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece.",
+              "La custodia se vuelve adopción es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c52-cf-421-429-patria-potestad",
+              "ev-c52-a63-l009-013-patria-potestad"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c52-cf-421-429-patria-potestad",
+                "ev-c52-a63-l009-013-patria-potestad"
+              ],
+              [
+                "ev-c52-cf-421-429-patria-potestad",
+                "ev-c52-a63-l009-013-patria-potestad"
+              ],
+              [
+                "ev-c52-cf-421-429-patria-potestad",
+                "ev-c52-a63-l009-013-patria-potestad"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c52-cf-421-429-patria-potestad",
+              "ev-c52-a63-l009-013-patria-potestad"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c52-cf-421-429-patria-potestad",
+              "ev-c52-a63-l009-013-patria-potestad"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c52-cf-421-429-patria-potestad",
+                "ev-c52-a63-l009-013-patria-potestad"
+              ],
+              [
+                "ev-c52-cf-421-429-patria-potestad",
+                "ev-c52-a63-l009-013-patria-potestad"
+              ],
+              [
+                "ev-c52-cf-421-429-patria-potestad",
+                "ev-c52-a63-l009-013-patria-potestad"
+              ]
+            ]
+          },
+          {
+            "text": "Existe incumplimiento alimentario. ¿Qué puede concluirse sin más prueba?",
+            "difficulty": "intermediate",
+            "options": [
+              "No hay pérdida automática de patria potestad",
+              "Siempre se pierde la patria potestad",
+              "Se extinguen los alimentos"
+            ],
+            "correctOption": 0,
+            "explanation": "El incumplimiento no reemplaza el análisis de la causa legal ni la resolución correspondiente.",
+            "optionExplanations": [
+              "No hay pérdida automática de patria potestad es correcto porque aplica los presupuestos y efectos de la fuente citada.",
+              "Siempre se pierde la patria potestad es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece.",
+              "Se extinguen los alimentos es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c52-cf-421-429-patria-potestad"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c52-cf-421-429-patria-potestad"
+              ],
+              [
+                "ev-c52-cf-421-429-patria-potestad"
+              ],
+              [
+                "ev-c52-cf-421-429-patria-potestad"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c52-cf-421-429-patria-potestad"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c52-cf-421-429-patria-potestad"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c52-cf-421-429-patria-potestad"
+              ],
+              [
+                "ev-c52-cf-421-429-patria-potestad"
+              ],
+              [
+                "ev-c52-cf-421-429-patria-potestad"
+              ]
+            ]
+          },
+          {
+            "text": "Un progenitor se opone al viaje internacional de su hija. ¿Qué debe hacer la autoridad?",
+            "difficulty": "intermediate",
+            "options": [
+              "Valorar interés superior, datos y riesgos del viaje",
+              "Autorizar siempre sin condiciones",
+              "Negar siempre por falta de firma"
+            ],
+            "correctOption": 0,
+            "explanation": "El criterio de la SCJN exige una decisión concreta y medidas proporcionales.",
+            "optionExplanations": [
+              "Valorar interés superior, datos y riesgos del viaje es correcto porque aplica los presupuestos y efectos de la fuente citada.",
+              "Autorizar siempre sin condiciones es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece.",
+              "Negar siempre por falta de firma es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c52-scjn-2016005-viaje",
+              "ev-c52-a63-l019-023-interes-viaje",
+              "ev-c52-a63-l031-035-autorizacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c52-scjn-2016005-viaje",
+                "ev-c52-a63-l019-023-interes-viaje",
+                "ev-c52-a63-l031-035-autorizacion"
+              ],
+              [
+                "ev-c52-scjn-2016005-viaje",
+                "ev-c52-a63-l019-023-interes-viaje",
+                "ev-c52-a63-l031-035-autorizacion"
+              ],
+              [
+                "ev-c52-scjn-2016005-viaje",
+                "ev-c52-a63-l019-023-interes-viaje",
+                "ev-c52-a63-l031-035-autorizacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c52-scjn-2016005-viaje",
+              "ev-c52-a63-l019-023-interes-viaje",
+              "ev-c52-a63-l031-035-autorizacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c52-scjn-2016005-viaje",
+              "ev-c52-a63-l019-023-interes-viaje",
+              "ev-c52-a63-l031-035-autorizacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c52-scjn-2016005-viaje",
+                "ev-c52-a63-l019-023-interes-viaje",
+                "ev-c52-a63-l031-035-autorizacion"
+              ],
+              [
+                "ev-c52-scjn-2016005-viaje",
+                "ev-c52-a63-l019-023-interes-viaje",
+                "ev-c52-a63-l031-035-autorizacion"
+              ],
+              [
+                "ev-c52-scjn-2016005-viaje",
+                "ev-c52-a63-l019-023-interes-viaje",
+                "ev-c52-a63-l031-035-autorizacion"
+              ]
+            ]
+          },
+          {
+            "text": "El convenio lesiona derechos de una hija y no se aceptan ajustes. ¿Qué puede hacer la autoridad?",
+            "difficulty": "intermediate",
+            "options": [
+              "Disolver el vínculo y fijar medidas protectoras",
+              "Aprobar todo por acuerdo privado",
+              "Desechar para siempre cualquier divorcio"
+            ],
+            "correctOption": 0,
+            "explanation": "El control judicial no queda desplazado por el acuerdo; el Código permite proteger de oficio a hijas e hijos.",
+            "optionExplanations": [
+              "Disolver el vínculo y fijar medidas protectoras es correcto porque aplica los presupuestos y efectos de la fuente citada.",
+              "Aprobar todo por acuerdo privado es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece.",
+              "Desechar para siempre cualquier divorcio es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c52-cf-282-290-tramite"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c52-cf-282-290-tramite"
+              ],
+              [
+                "ev-c52-cf-282-290-tramite"
+              ],
+              [
+                "ev-c52-cf-282-290-tramite"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c52-cf-282-290-tramite"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c52-cf-282-290-tramite"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c52-cf-282-290-tramite"
+              ],
+              [
+                "ev-c52-cf-282-290-tramite"
+              ],
+              [
+                "ev-c52-cf-282-290-tramite"
+              ]
+            ]
+          },
+          {
+            "text": "¿Custodia y patria potestad son equivalentes?",
+            "difficulty": "intermediate",
+            "options": [
+              "No, regulan dimensiones distintas",
+              "Sí, siempre se transfieren juntas",
+              "Sí, ambas son renunciables"
+            ],
+            "correctOption": 0,
+            "explanation": "La custodia se distribuye en el convenio; la patria potestad sigue su régimen legal propio.",
+            "optionExplanations": [
+              "No, regulan dimensiones distintas es correcto porque aplica los presupuestos y efectos de la fuente citada.",
+              "Sí, siempre se transfieren juntas es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece.",
+              "Sí, ambas son renunciables es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c52-cf-281-convenio",
+              "ev-c52-cf-421-429-patria-potestad",
+              "ev-c52-a63-l053-053-custodia-alimentos"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c52-cf-281-convenio",
+                "ev-c52-cf-421-429-patria-potestad",
+                "ev-c52-a63-l053-053-custodia-alimentos"
+              ],
+              [
+                "ev-c52-cf-281-convenio",
+                "ev-c52-cf-421-429-patria-potestad",
+                "ev-c52-a63-l053-053-custodia-alimentos"
+              ],
+              [
+                "ev-c52-cf-281-convenio",
+                "ev-c52-cf-421-429-patria-potestad",
+                "ev-c52-a63-l053-053-custodia-alimentos"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c52-cf-281-convenio",
+              "ev-c52-cf-421-429-patria-potestad",
+              "ev-c52-a63-l053-053-custodia-alimentos"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c52-cf-281-convenio",
+              "ev-c52-cf-421-429-patria-potestad",
+              "ev-c52-a63-l053-053-custodia-alimentos"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c52-cf-281-convenio",
+                "ev-c52-cf-421-429-patria-potestad",
+                "ev-c52-a63-l053-053-custodia-alimentos"
+              ],
+              [
+                "ev-c52-cf-281-convenio",
+                "ev-c52-cf-421-429-patria-potestad",
+                "ev-c52-a63-l053-053-custodia-alimentos"
+              ],
+              [
+                "ev-c52-cf-281-convenio",
+                "ev-c52-cf-421-429-patria-potestad",
+                "ev-c52-a63-l053-053-custodia-alimentos"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué ocurre si solicitud, convenio o documentos son irregulares?",
+            "difficulty": "intermediate",
+            "options": [
+              "Se concede el plazo legal para completar o aclarar",
+              "Se aprueba sin revisión",
+              "Se pierden automáticamente derechos parentales"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 282 prevé prevención y consecuencia procesal si no se atiende.",
+            "optionExplanations": [
+              "Se concede el plazo legal para completar o aclarar es correcto porque aplica los presupuestos y efectos de la fuente citada.",
+              "Se aprueba sin revisión es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece.",
+              "Se pierden automáticamente derechos parentales es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c52-cf-282-290-tramite"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c52-cf-282-290-tramite"
+              ],
+              [
+                "ev-c52-cf-282-290-tramite"
+              ],
+              [
+                "ev-c52-cf-282-290-tramite"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c52-cf-282-290-tramite"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c52-cf-282-290-tramite"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c52-cf-282-290-tramite"
+              ],
+              [
+                "ev-c52-cf-282-290-tramite"
+              ],
+              [
+                "ev-c52-cf-282-290-tramite"
+              ]
+            ]
+          },
+          {
+            "text": "Una prestación del convenio debe cambiar después del divorcio. ¿Cuál es la respuesta?",
+            "difficulty": "intermediate",
+            "options": [
+              "Debe acudirse al procedimiento especial oral",
+              "Basta un acuerdo verbal",
+              "Nunca puede modificarse"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 276 remite la modificación o extinción al procedimiento especial oral.",
+            "optionExplanations": [
+              "Debe acudirse al procedimiento especial oral es correcto porque aplica los presupuestos y efectos de la fuente citada.",
+              "Basta un acuerdo verbal es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece.",
+              "Nunca puede modificarse es incorrecto porque confunde la institución o atribuye un efecto que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c52-cf-276-modificacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c52-cf-276-modificacion"
+              ],
+              [
+                "ev-c52-cf-276-modificacion"
+              ],
+              [
+                "ev-c52-cf-276-modificacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c52-cf-276-modificacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c52-cf-276-modificacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c52-cf-276-modificacion"
+              ],
+              [
+                "ev-c52-cf-276-modificacion"
+              ],
+              [
+                "ev-c52-cf-276-modificacion"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c52-cf-254-277-280-vias",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 24-10-2024; artículos 254 y 277 a 280: clases, vías y presupuestos",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c52-cf-281-convenio",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 24-10-2024; artículo 281, fracciones I a VIII: convenio judicial",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c52-cf-282-290-tramite",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 24-10-2024; artículos 282 a 290: prevención, admisión, garantía, audiencia, sentencia y comparecencia",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c52-cf-276-modificacion",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 24-10-2024; artículo 276: modificación o extinción de prestaciones",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c52-cf-421-429-patria-potestad",
+      "kind": "official",
+      "title": "Código Familiar para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 24-10-2024; artículos 421 a 429: terminación, pérdida, suspensión, no renuncia, excusa y recuperación de patria potestad",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c52-scjn-2016005-viaje",
+      "kind": "official",
+      "title": "Menores de edad. Autorización judicial para viajar al extranjero",
+      "url": "https://sjf2.scjn.gob.mx/detalle/tesis/2016005",
+      "institution": "Suprema Corte de Justicia de la Nación, Semanario Judicial de la Federación",
+      "jurisdiction": "México",
+      "locator": "registro digital 2016005; Primera Sala; publicación 19-01-2018; interés superior, datos del viaje y medidas ante riesgo de sustracción",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c52-a63-l009-013-patria-potestad",
+      "kind": "transcript",
+      "audioNumber": 63,
+      "locator": {
+        "type": "line_range",
+        "startLine": 9,
+        "endLine": 13
+      }
+    },
+    {
+      "id": "ev-c52-a63-l019-023-interes-viaje",
+      "kind": "transcript",
+      "audioNumber": 63,
+      "locator": {
+        "type": "line_range",
+        "startLine": 19,
+        "endLine": 23
+      }
+    },
+    {
+      "id": "ev-c52-a63-l031-035-autorizacion",
+      "kind": "transcript",
+      "audioNumber": 63,
+      "locator": {
+        "type": "line_range",
+        "startLine": 31,
+        "endLine": 35
+      }
+    },
+    {
+      "id": "ev-c52-a63-l053-053-custodia-alimentos",
+      "kind": "transcript",
+      "audioNumber": 63,
+      "locator": {
+        "type": "line_range",
+        "startLine": 53,
+        "endLine": 53
+      }
+    }
+  ]
+}

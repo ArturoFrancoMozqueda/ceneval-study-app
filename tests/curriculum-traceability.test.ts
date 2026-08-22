@@ -820,6 +820,36 @@ const traceablePackages = [
       /última reforma DOF 15-01-2026/i,
     ],
   },
+  {
+    code: "C51",
+    fileName: "audio-46-regimenes-patrimoniales-capitulaciones-matrimoniales.json",
+    artifacts: 153,
+    evidence: 10,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /línea 113 es extensa.*únicamente.*afirmación sobre formalidad/i,
+      /no toda capitulación requiere escritura pública/i,
+      /artículo 171 condiciona la escritura/i,
+      /artículo 194 impide afirmar.*siempre debe constar en escritura/i,
+      /separación absoluta o parcial/i,
+      /última reforma POE 24-10-2024/i,
+    ],
+  },
+  {
+    code: "C52",
+    fileName: "audio-63-divorcio-voluntario-convenio-familiar.json",
+    artifacts: 150,
+    evidence: 10,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /contenido sucesorio de la línea 57 en adelante quedó fuera/i,
+      /impago.*no produce por sí mismo pérdida automática/i,
+      /patria potestad es distinta de la custodia/i,
+      /no se renuncia por convenio/i,
+      /salida internacional.*consentimiento o determinación judicial fundada/i,
+      /última reforma publicada 24-10-2024/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -1267,6 +1297,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una regla civil local falsa o una vigencia territorial no declarada como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C51" || expected.code === "C52") {
+      const obsoleteAsCurrent =
+        expected.code === "C51"
+          ? /(?:toda|cualquier) capitulación.*(?:escritura|inscrip)|separación de bienes.*(?:elimina|impide).*(?:inventario|deudas)|(?:todo|cualquier) bien.*(?:automáticamente|siempre).*(?:común|sociedad conyugal)/i
+          : /(?:impago|no pagar alimentos).*(?:extingue|pierde automáticamente).*patria potestad|patria potestad.*(?:renunciable|se renuncia).*(?:convenio|privado)|viaje.*(?:permiso|autorización).*(?:automático|unilateral)|custodia.*(?:equivale|es lo mismo).*patria potestad/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una formalidad patrimonial universal o una regla familiar lesiva como respuesta vigente.`,
         );
       }
     }

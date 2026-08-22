@@ -35,7 +35,7 @@ transcripción → preparación editorial → borrador → revisión → publica
 
 ## Estado real
 
-- El repositorio conserva 50 paquetes académicos vigentes (C01–C50), una
+- El repositorio conserva 52 paquetes académicos vigentes (C01–C52), una
   versión retirada en el archivo editorial y el plan C01–C58. El proyecto
   remoto **CENEVAL Study App** fue verificado el 20 de agosto de 2026 con el
   esquema completo, pero todavía tiene 0 usuarios, 0 materias y 0 clases.
@@ -116,7 +116,7 @@ red usa `npm run test:backup`. Consulta `docs/SUPABASE_BACKUP.md`.
 
 - Un paquete nuevo solo se importa si usa el contrato 1.2 y pasa
   `content:check`: además de los conteos editoriales, cada dinámica debe tener
-  evidencia concreta y verificable. C01–C50 ya usan 1.2 y pasan el gate local.
+  evidencia concreta y verificable. C01–C52 ya usan 1.2 y pasan el gate local.
 - Las fuentes jurídicas deben ser primarias y oficiales, con autoridad
   identificada, dominio verificado o allowlist y fecha de consulta. No infieras
   oficialidad solo por el sufijo: CENEVAL, SCJN y CNDH usan dominios distintos.
@@ -143,7 +143,7 @@ red usa `npm run test:backup`. Consulta `docs/SUPABASE_BACKUP.md`.
 | `lib/access.ts`, `lib/auth.ts` | Control de acceso y sesión. |
 | `lib/content/` | Esquema Zod y carga de paquetes. |
 | `supabase/migrations/` | Migraciones SQL, incluidas las políticas RLS. |
-| `content/packages/` | Los 50 paquetes académicos vigentes C01–C50 en JSON. |
+| `content/packages/` | Los 52 paquetes académicos vigentes C01–C52 en JSON. |
 | `content/archive/withdrawn/` | Versiones retiradas; nunca se importan. |
 | `content/batches/` | Clasificación de los audios originales. |
 | `scripts/` | Validador, importador y suite de permisos. |
@@ -156,15 +156,15 @@ red usa `npm run test:backup`. Consulta `docs/SUPABASE_BACKUP.md`.
 Detectadas en la auditoría de agosto de 2026. Verifica antes de asumir que
 alguna sigue abierta; si corriges una, actualiza esta lista.
 
-- **El contrato publicable es 1.2.** C01–C50 son los paquetes trazables:
+- **El contrato publicable es 1.2.** C01–C52 son los paquetes trazables:
   conservan código, orden y fuentes de audio, y sus 139, 130, 133, 133, 137,
   137, 138, 138, 140, 141, 139, 142, 144, 138, 137, 142, 142, 142, 143, 148,
-  150, 152, 151, 150, 152, 150, 150, 149, 151, 151, 151, 151, 151, 151, 151, 151, 154, 155, 156, 155, 150, 153, 148, 154, 148, 150, 148, 150, 150 y 151 artefactos, respectivamente,
+  150, 152, 151, 150, 152, 150, 150, 149, 151, 151, 151, 151, 151, 151, 151, 151, 154, 155, 156, 155, 150, 153, 148, 154, 148, 150, 148, 150, 150, 151, 153 y 150 artefactos, respectivamente,
   enlazan evidencia oficial o localizadores verificables de la transcripción.
   La versión retirada 1.0 se conserva fuera de `content/packages/`.
 - **Las transcripciones tienen una primera copia privada verificada.** El 21 de
   agosto de 2026 se copiaron los 70 TXT fuera de la memoria USB y se comprobó
-  su igualdad con SHA-256. Los 50 paquetes vigentes usan nombres portables
+  su igualdad con SHA-256. Los 52 paquetes vigentes usan nombres portables
   `AUDIO NN.txt`; el cargador los resuelve desde `CENEVAL_TRANSCRIPTS_DIR`.
   Falta una segunda copia independiente y una restauración ensayada; los
   originales nunca se agregan a Git ni a Vercel.
