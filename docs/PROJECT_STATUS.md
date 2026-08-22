@@ -27,7 +27,8 @@ Los bloqueos operativos reales siguen siendo:
 2. el mecanismo PostgreSQL ya pasó un respaldo y una restauración reales en
    local, pero todavía no existe una exportación del remoto, una copia externa
    cifrada ni una restauración de esa copia en un proyecto de ensayo;
-3. el proyecto local aplica quince migraciones y pasó 141 comprobaciones RLS;
+3. el proyecto local aplica dieciséis migraciones, exige un lint PostgreSQL
+   local sin advertencias y pasó 141 comprobaciones RLS;
    CENEVAL remoto conserva once migraciones y aún requiere ejecutar el mismo
    gate en un entorno de ensayo autorizado antes de promover cambios;
 4. existe un despliegue técnico privado en un proyecto separado de Vercel
@@ -139,6 +140,11 @@ C40 tiene el ID 49; eso no significa que existan 49 clases vigentes.
 Las acciones de terceros están fijadas por SHA, el job tiene permisos de solo
 lectura y no recibe secretos. La CI no se conecta a Supabase ni sustituye las
 pruebas de interfaz o la suite RLS remota.
+
+El contrato del gate `npm run db:lint:local` usa exclusivamente la instancia
+local de Supabase y falla ante cualquier advertencia de `plpgsql_check`. Antes
+de ejecutarlo, Supabase local debe estar activo; el comando no acepta
+`--linked`, una URL ni una referencia de proyecto remoto.
 
 ### Despliegue técnico en Vercel
 
@@ -335,7 +341,7 @@ seguridad; el aviso de `exam_answer_keys` sin políticas es el bloqueo
 deliberado. Antes de abrir el acceso estudiantil, una persona autorizada debe
 ampliar y ejecutar la suite RLS dinámica con temas pendientes y rechazados.
 
-**Estado local posterior:** PostgreSQL 17.6 aplica quince migraciones desde
+**Estado local posterior:** PostgreSQL 17.6 aplica dieciséis migraciones desde
 cero. `npm run security:rls:local` ejecuta 141 comprobaciones sobre contenido
 sintético y verifica RPC, ownership, tablas trazables, temas `pending` y
 `rejected`, claves de examen y limpieza sin residuos. El ensayo detectó y
