@@ -1,0 +1,1587 @@
+{
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C41",
+    "order": 41,
+    "audioSources": [
+      {
+        "audioNumber": 54,
+        "fragment": "Bloque academico, lineas 3 a 305"
+      },
+      {
+        "audioNumber": 55,
+        "fragment": "Complemento estricto sobre embargo y depositario, lineas 13 a 69"
+      }
+    ]
+  },
+  "subject": {
+    "name": "Derecho Procesal Mercantil",
+    "description": "Vías ejecutivas, oralidad, audiencias, prueba y ejecución mercantil."
+  },
+  "class": {
+    "title": "Juicio ejecutivo mercantil oral",
+    "description": "Cuadragésima primera clase del plan académico: título ejecutivo, cuantía, diligencia inicial, audiencias, prueba, sentencia, ejecución y aval."
+  },
+  "transcript": {
+    "originalFiles": [
+      "AUDIO 54.txt",
+      "AUDIO 55.txt"
+    ],
+    "cleaned": "Se conservó del Audio 54 el bloque académico sobre juicio ejecutivo mercantil oral y del Audio 55 únicamente el complemento de las líneas 13 a 69 sobre embargo, custodia y depositario. Se excluyeron saludos, conversaciones personales, lenguaje ofensivo, asesoría casuística, datos identificables, el anuncio final de transcripción y todo el desarrollo del juicio oral mercantil general desde la línea 85 del Audio 55. Se corrigieron cuantías y recursos con el Código de Comercio vigente; se distinguieron título ejecutivo, suerte principal, embargo, depositario y aval; y no se completó por intuición el ejemplo de aval truncado al final del Audio 54."
+  },
+  "topics": [
+    {
+      "title": "Del título ejecutivo a las audiencias y la ejecución",
+      "description": "Ruta oral especial basada en título ejecutivo, cuantía actualizada, defensa y audiencias.",
+      "learningJourney": {
+        "openingPrompt": "Un pagaré trae aparejada ejecución y su capital cae dentro del intervalo anual. ¿Qué vuelve oral a esta vía sin quitarle su carácter ejecutivo?",
+        "quickChecks": [
+          {
+            "prompt": "¿Los intereses se suman para elegir el ejecutivo oral?",
+            "answer": "No. Se usa la suerte principal, sin intereses ni accesorios.",
+            "feedback": "Separa capital y accesorios antes de revisar el intervalo.",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter-1390ter3-procedencia",
+              "ev-c41-ccom-1339-1390ter1-cuantia",
+              "ev-c41-dof-2026-monto-1339",
+              "ev-c41-a54-l003-019-panorama"
+            ]
+          },
+          {
+            "prompt": "¿Embargo equivale a sentencia?",
+            "answer": "No. Asegura una eventual ejecución y la persona demandada conserva defensa.",
+            "feedback": "La ejecución inicial convive con contradicción posterior.",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter4-1390ter9-litis",
+              "ev-c41-ccom-1391-1396-embargo",
+              "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+              "ev-c41-a55-l013-021-depositario",
+              "ev-c41-a55-l039-069-embargo"
+            ]
+          },
+          {
+            "prompt": "¿Avalista y depositario son la misma figura?",
+            "answer": "No. El avalista garantiza el título; el depositario custodia bienes embargados.",
+            "feedback": "Distingue garantía cambiaria de custodia procesal.",
+            "evidenceIds": [
+              "ev-c41-lgtoc-109-116-aval",
+              "ev-c41-a54-l269-305-aval",
+              "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+              "ev-c41-a55-l013-021-depositario"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una empresa presenta un pagaré exigible cuya suerte principal cae dentro del intervalo actualizado. Reclama también intereses y propone como depositaria a una persona vinculada con la actora.",
+          "question": "¿Qué debe revisar el órgano jurisdiccional y qué ruta sigue el procedimiento?",
+          "legalRule": "Los artículos 1390 Ter a 1390 Ter 19 regulan procedencia, fijación de la litis, audiencias y ejecución; los artículos 1391 a 1396 regulan título y embargo; la LGTOC regula el aval.",
+          "reasoning": "Primero se verifica que el pagaré sea título ejecutivo, después se calcula exclusivamente la suerte principal y se consultan los límites vigentes. Admitida la demanda, se requiere pago, se embarga si no paga y se emplaza. La defensa se presenta en ocho días. La audiencia preliminar prepara el juicio y la de juicio recibe prueba y conduce a sentencia. La designación y responsabilidad del depositario se examinan conforme a la ley y no se confunden con un aval.",
+          "conclusion": "La oralidad organiza audiencias, pero no elimina título, embargo, defensa ni reglas especiales de ejecución.",
+          "evidenceIds": [
+            "ev-c41-ccom-1390ter-1390ter3-procedencia",
+            "ev-c41-ccom-1339-1390ter1-cuantia",
+            "ev-c41-dof-2026-monto-1339",
+            "ev-c41-a54-l003-019-panorama",
+            "ev-c41-ccom-1390ter4-1390ter9-litis",
+            "ev-c41-ccom-1391-1396-embargo",
+            "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+            "ev-c41-a54-l051-131-preliminar",
+            "ev-c41-ccom-1390bis38-1390bis40-juicio",
+            "ev-c41-a54-l189-255-juicio",
+            "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+            "ev-c41-a55-l013-021-depositario",
+            "ev-c41-a55-l039-069-embargo",
+            "ev-c41-lgtoc-109-116-aval",
+            "ev-c41-a54-l269-305-aval"
+          ]
+        },
+        "closingPrompt": "Explica la ruta completa y distingue cuantía de apelabilidad, título ejecutivo, embargo, depositario y aval.",
+        "nextActivity": "Recorre el mapa, estudia doce tarjetas y resuelve diez casos originales.",
+        "openingPromptEvidenceIds": [
+          "ev-c41-ccom-1390ter-1390ter3-procedencia",
+          "ev-c41-ccom-1339-1390ter1-cuantia",
+          "ev-c41-dof-2026-monto-1339",
+          "ev-c41-a54-l003-019-panorama"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c41-ccom-1390ter-1390ter3-procedencia",
+          "ev-c41-ccom-1339-1390ter1-cuantia",
+          "ev-c41-dof-2026-monto-1339",
+          "ev-c41-a54-l003-019-panorama",
+          "ev-c41-ccom-1390ter4-1390ter9-litis",
+          "ev-c41-ccom-1391-1396-embargo",
+          "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+          "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+          "ev-c41-a54-l051-131-preliminar",
+          "ev-c41-ccom-1390bis38-1390bis40-juicio",
+          "ev-c41-a54-l189-255-juicio",
+          "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+          "ev-c41-a55-l013-021-depositario",
+          "ev-c41-a55-l039-069-embargo",
+          "ev-c41-lgtoc-109-116-aval",
+          "ev-c41-a54-l269-305-aval"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+          "ev-c41-ccom-1390bis38-1390bis40-juicio",
+          "ev-c41-ccom-1390ter10-1390ter14-audiencias"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "El juicio ejecutivo mercantil oral exige un documento que traiga aparejada ejecución y una suerte principal dentro del intervalo actualizado del artículo 1390 Ter 1. Conserva el requerimiento de pago y el embargo propios de la ejecución, pero desarrolla la contradicción, la prueba y la decisión mediante las reglas de oralidad aplicables.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c41-ccom-1390ter-1390ter3-procedencia",
+            "ev-c41-ccom-1339-1390ter1-cuantia",
+            "ev-c41-dof-2026-monto-1339",
+            "ev-c41-a54-l003-019-panorama",
+            "ev-c41-ccom-1390ter4-1390ter9-litis",
+            "ev-c41-ccom-1391-1396-embargo",
+            "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+            "ev-c41-a54-l051-131-preliminar",
+            "ev-c41-ccom-1390bis38-1390bis40-juicio",
+            "ev-c41-a54-l189-255-juicio"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "La palabra ejecutivo describe la fuerza del documento base; oral describe la forma procesal predominante. No es el juicio oral mercantil general. El artículo 1390 Ter exige un documento del artículo 1391 y el artículo 1390 Ter 1 fija un intervalo por suerte principal, sin sumar intereses ni accesorios. La cantidad del artículo 1339 es una cuantía de apelabilidad que la norma incorpora como límite inferior; para 2026 fue corregida a 924,300.58 pesos. El límite superior también se actualiza y debe consultarse al presentar la demanda.\n\nAdmitida la demanda, el auto tiene efectos de mandamiento: primero se requiere pago y, si no se realiza, se embargan bienes conforme a las reglas legales. Después se emplaza. El embargo asegura una eventual ejecución; no sustituye la sentencia ni elimina la defensa. La persona demandada cuenta con ocho días desde requerimiento, embargo en su caso y emplazamiento para contestar, oponer las excepciones permitidas y ofrecer pruebas. No hay reconvención en esta vía. La actora recibe vista por tres días.\n\nLas audiencias siguen las reglas a las que remiten los artículos 1390 Ter 10 a 14. La preliminar depura el procedimiento, busca conciliación por conducto judicial, fija hechos no controvertidos, acuerdos probatorios y admisión de pruebas, y cita a juicio. La audiencia de juicio recibe las pruebas preparadas, escucha alegatos y conduce a la sentencia conforme al Código. No toda prueba ofrecida se admite: debe ser lícita, pertinente y preparada.\n\nEl artículo 1390 Ter 2 excluye recursos ordinarios contra las resoluciones del juicio, pero permite pedir verbalmente que se subsanen omisiones o irregularidades en audiencia y solicitar aclaración o adición de la sentencia sin cambiar su sustancia. Esto no significa ausencia de control constitucional ni autoriza llamar apelación a cualquier inconformidad.\n\nLa ejecución de convenios y resoluciones se realiza en los términos específicos del propio Título. Depositario, custodia, ampliación, avalúo y remate no deben enseñarse como facultades ilimitadas. El aval es una garantía cambiaria: garantiza total o parcialmente el pago del título; el avalista queda obligado en los términos de la LGTOC, pero no es sinónimo de depositario ni de cualquier obligado solidario.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c41-ccom-1390ter-1390ter3-procedencia",
+            "ev-c41-ccom-1339-1390ter1-cuantia",
+            "ev-c41-dof-2026-monto-1339",
+            "ev-c41-a54-l003-019-panorama",
+            "ev-c41-ccom-1390ter4-1390ter9-litis",
+            "ev-c41-ccom-1391-1396-embargo",
+            "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+            "ev-c41-a54-l051-131-preliminar",
+            "ev-c41-ccom-1390bis38-1390bis40-juicio",
+            "ev-c41-a54-l189-255-juicio",
+            "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+            "ev-c41-a55-l013-021-depositario",
+            "ev-c41-a55-l039-069-embargo",
+            "ev-c41-lgtoc-109-116-aval",
+            "ev-c41-a54-l269-305-aval"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Código de Comercio, última reforma DOF 14-11-2025: artículos 1339, 1390 Bis 2 y 32 a 40, 1390 Ter a 1390 Ter 19 y 1391 a 1396. Corrección de montos publicada DOF 18-02-2026. LGTOC, última reforma DOF 26-03-2024: artículos 109 a 116 y remisión del artículo 174 para el aval en pagaré.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c41-ccom-1390ter-1390ter3-procedencia",
+            "ev-c41-ccom-1339-1390ter1-cuantia",
+            "ev-c41-dof-2026-monto-1339",
+            "ev-c41-ccom-1390ter4-1390ter9-litis",
+            "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c41-ccom-1390bis38-1390bis40-juicio",
+            "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+            "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+            "ev-c41-ccom-1391-1396-embargo",
+            "ev-c41-lgtoc-109-116-aval"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo simple",
+          "content": "Una persona presenta un pagaré exigible y la suerte principal cae dentro del intervalo anual del artículo 1390 Ter 1. El órgano jurisdiccional revisa título, cuantía y competencia; si admite, requiere pago, embarga si no se paga y emplaza. La defensa se formula en ocho días y el caso continúa a las audiencias previstas.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c41-ccom-1390ter-1390ter3-procedencia",
+            "ev-c41-ccom-1339-1390ter1-cuantia",
+            "ev-c41-dof-2026-monto-1339",
+            "ev-c41-a54-l003-019-panorama",
+            "ev-c41-ccom-1390ter4-1390ter9-litis",
+            "ev-c41-ccom-1391-1396-embargo",
+            "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+            "ev-c41-a54-l051-131-preliminar"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo CENEVAL",
+          "content": "Ante un pagaré con capital dentro del intervalo oral, no sumes intereses para elegir vía. Verifica primero que el documento traiga aparejada ejecución. Ordena luego: demanda, mandamiento, requerimiento, embargo en su caso, emplazamiento, contestación en ocho días, vista, audiencia preliminar, audiencia de juicio, sentencia y ejecución.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c41-ccom-1390ter-1390ter3-procedencia",
+            "ev-c41-ccom-1339-1390ter1-cuantia",
+            "ev-c41-dof-2026-monto-1339",
+            "ev-c41-a54-l003-019-panorama",
+            "ev-c41-ccom-1390ter4-1390ter9-litis",
+            "ev-c41-ccom-1391-1396-embargo",
+            "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+            "ev-c41-a54-l051-131-preliminar",
+            "ev-c41-ccom-1390bis38-1390bis40-juicio",
+            "ev-c41-a54-l189-255-juicio",
+            "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+            "ev-c41-a55-l013-021-depositario",
+            "ev-c41-a55-l039-069-embargo",
+            "ev-c41-lgtoc-109-116-aval",
+            "ev-c41-a54-l269-305-aval"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Título ejecutivo más cuantía vigente conduce al ejecutivo oral. La diligencia inicial conserva requerimiento y embargo. La contestación es en ocho días y no admite reconvención. La preliminar depura, concilia, fija acuerdos y admite pruebas; la de juicio desahoga prueba y conduce a decisión. Los recursos ordinarios están excluidos en los términos del artículo 1390 Ter 2.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c41-ccom-1390ter-1390ter3-procedencia",
+            "ev-c41-ccom-1339-1390ter1-cuantia",
+            "ev-c41-dof-2026-monto-1339",
+            "ev-c41-a54-l003-019-panorama",
+            "ev-c41-ccom-1390ter4-1390ter9-litis",
+            "ev-c41-ccom-1391-1396-embargo",
+            "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+            "ev-c41-a54-l051-131-preliminar",
+            "ev-c41-ccom-1390bis38-1390bis40-juicio",
+            "ev-c41-a54-l189-255-juicio"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de estudio",
+          "content": "1. Identifica el documento ejecutivo. 2. Calcula solo suerte principal. 3. Consulta ambos límites del año aplicable. 4. Distingue ejecutivo oral de oral mercantil general. 5. Ordena requerimiento, embargo y emplazamiento. 6. Cuenta ocho días para contestar. 7. Separa audiencia preliminar y de juicio. 8. Revisa prueba, sentencia y ejecución. 9. Distingue aval, obligado principal y depositario. 10. No inventes apelación ordinaria.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c41-ccom-1390ter-1390ter3-procedencia",
+            "ev-c41-ccom-1339-1390ter1-cuantia",
+            "ev-c41-dof-2026-monto-1339",
+            "ev-c41-a54-l003-019-panorama",
+            "ev-c41-ccom-1390ter4-1390ter9-litis",
+            "ev-c41-ccom-1391-1396-embargo",
+            "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+            "ev-c41-a54-l051-131-preliminar",
+            "ev-c41-ccom-1390bis38-1390bis40-juicio",
+            "ev-c41-a54-l189-255-juicio",
+            "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+            "ev-c41-a55-l013-021-depositario",
+            "ev-c41-a55-l039-069-embargo",
+            "ev-c41-lgtoc-109-116-aval",
+            "ev-c41-a54-l269-305-aval"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Documento con aparejada ejecución; suerte principal; intervalo actualizado; mandamiento en forma; requerimiento; embargo; emplazamiento; contestación; vista; audiencia preliminar; depuración; conciliación; hechos no controvertidos; acuerdos probatorios; audiencia de juicio; aclaración; ejecución; aval y depositario.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c41-ccom-1390ter-1390ter3-procedencia",
+            "ev-c41-ccom-1339-1390ter1-cuantia",
+            "ev-c41-dof-2026-monto-1339",
+            "ev-c41-a54-l003-019-panorama",
+            "ev-c41-ccom-1390ter4-1390ter9-litis",
+            "ev-c41-ccom-1391-1396-embargo",
+            "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+            "ev-c41-a54-l051-131-preliminar",
+            "ev-c41-ccom-1390bis38-1390bis40-juicio",
+            "ev-c41-a54-l189-255-juicio",
+            "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+            "ev-c41-a55-l013-021-depositario",
+            "ev-c41-a55-l039-069-embargo",
+            "ev-c41-lgtoc-109-116-aval",
+            "ev-c41-a54-l269-305-aval"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "Sumar intereses para elegir vía; creer que 924,300.58 pesos crea por sí solo acción ejecutiva; confundir ejecutivo oral con oral mercantil general; tratar embargo como sentencia; atribuir al depositario propiedad de los bienes; presentar reconvención; confundir subsanación o aclaración con apelación; afirmar que toda prueba se admite; llamar avalista a cualquier deudor solidario; completar el ejemplo truncado del audio como si fuera regla.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c41-ccom-1390ter-1390ter3-procedencia",
+            "ev-c41-ccom-1339-1390ter1-cuantia",
+            "ev-c41-dof-2026-monto-1339",
+            "ev-c41-a54-l003-019-panorama",
+            "ev-c41-ccom-1390ter4-1390ter9-litis",
+            "ev-c41-ccom-1391-1396-embargo",
+            "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+            "ev-c41-a54-l051-131-preliminar",
+            "ev-c41-ccom-1390bis38-1390bis40-juicio",
+            "ev-c41-a54-l189-255-juicio",
+            "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+            "ev-c41-a55-l013-021-depositario",
+            "ev-c41-a55-l039-069-embargo",
+            "ev-c41-lgtoc-109-116-aval",
+            "ev-c41-a54-l269-305-aval"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual: juicio ejecutivo mercantil oral",
+        "description": "Árbol desde el título y la cuantía hasta audiencias, sentencia y ejecución.",
+        "nodes": [
+          {
+            "id": "inicio",
+            "label": "Ejecutivo mercantil oral",
+            "description": "Ejecución con audiencias.",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter-1390ter3-procedencia",
+              "ev-c41-ccom-1339-1390ter1-cuantia",
+              "ev-c41-dof-2026-monto-1339",
+              "ev-c41-a54-l003-019-panorama"
+            ]
+          },
+          {
+            "id": "titulo",
+            "label": "Título ejecutivo",
+            "description": "Documento del artículo 1391.",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter-1390ter3-procedencia",
+              "ev-c41-ccom-1391-1396-embargo",
+              "ev-c41-a54-l003-019-panorama"
+            ]
+          },
+          {
+            "id": "cuantia",
+            "label": "Suerte principal",
+            "description": "No suma accesorios.",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter-1390ter3-procedencia",
+              "ev-c41-ccom-1339-1390ter1-cuantia",
+              "ev-c41-dof-2026-monto-1339",
+              "ev-c41-a54-l003-019-panorama"
+            ]
+          },
+          {
+            "id": "inferior",
+            "label": "Límite inferior",
+            "description": "Referencia del artículo 1339.",
+            "parentId": "cuantia",
+            "evidenceIds": [
+              "ev-c41-ccom-1339-1390ter1-cuantia",
+              "ev-c41-dof-2026-monto-1339"
+            ]
+          },
+          {
+            "id": "superior",
+            "label": "Límite superior",
+            "description": "Monto anual actualizado.",
+            "parentId": "cuantia",
+            "evidenceIds": [
+              "ev-c41-ccom-1339-1390ter1-cuantia",
+              "ev-c41-ccom-1390ter-1390ter3-procedencia"
+            ]
+          },
+          {
+            "id": "demanda",
+            "label": "Demanda",
+            "description": "Requisitos de oralidad.",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter4-1390ter9-litis",
+              "ev-c41-ccom-1391-1396-embargo",
+              "ev-c41-a54-l003-019-panorama"
+            ]
+          },
+          {
+            "id": "mandamiento",
+            "label": "Mandamiento",
+            "description": "Orden inicial de pago.",
+            "parentId": "demanda",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter4-1390ter9-litis",
+              "ev-c41-ccom-1391-1396-embargo",
+              "ev-c41-a54-l003-019-panorama"
+            ]
+          },
+          {
+            "id": "requerimiento",
+            "label": "Requerir pago",
+            "description": "Primera actuación ejecutiva.",
+            "parentId": "mandamiento",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter4-1390ter9-litis",
+              "ev-c41-ccom-1391-1396-embargo",
+              "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+              "ev-c41-a55-l013-021-depositario",
+              "ev-c41-a55-l039-069-embargo"
+            ]
+          },
+          {
+            "id": "embargo",
+            "label": "Embargo",
+            "description": "Si no se paga.",
+            "parentId": "mandamiento",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter4-1390ter9-litis",
+              "ev-c41-ccom-1391-1396-embargo",
+              "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+              "ev-c41-a55-l013-021-depositario",
+              "ev-c41-a55-l039-069-embargo"
+            ]
+          },
+          {
+            "id": "depositario",
+            "label": "Depositario",
+            "description": "Custodia, no propiedad.",
+            "parentId": "embargo",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+              "ev-c41-a55-l013-021-depositario",
+              "ev-c41-a55-l039-069-embargo"
+            ]
+          },
+          {
+            "id": "emplazamiento",
+            "label": "Emplazamiento",
+            "description": "Abre defensa.",
+            "parentId": "mandamiento",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter4-1390ter9-litis",
+              "ev-c41-ccom-1391-1396-embargo",
+              "ev-c41-a54-l003-019-panorama"
+            ]
+          },
+          {
+            "id": "contestacion",
+            "label": "Contestación",
+            "description": "Ocho días.",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter4-1390ter9-litis",
+              "ev-c41-a54-l003-019-panorama"
+            ]
+          },
+          {
+            "id": "excepciones",
+            "label": "Excepciones",
+            "description": "Solo las legales.",
+            "parentId": "contestacion",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter4-1390ter9-litis",
+              "ev-c41-ccom-1391-1396-embargo"
+            ]
+          },
+          {
+            "id": "sin-reconvencion",
+            "label": "Sin reconvención",
+            "description": "Incompatible con la vía.",
+            "parentId": "contestacion",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter-1390ter3-procedencia",
+              "ev-c41-ccom-1390ter4-1390ter9-litis"
+            ]
+          },
+          {
+            "id": "vista",
+            "label": "Vista a la actora",
+            "description": "Tres días.",
+            "parentId": "contestacion",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter4-1390ter9-litis"
+            ]
+          },
+          {
+            "id": "preliminar",
+            "label": "Audiencia preliminar",
+            "description": "Prepara el juicio.",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+              "ev-c41-a54-l051-131-preliminar"
+            ]
+          },
+          {
+            "id": "depuracion",
+            "label": "Depuración",
+            "description": "Sanea cuestiones procesales.",
+            "parentId": "preliminar",
+            "evidenceIds": [
+              "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+              "ev-c41-a54-l051-131-preliminar"
+            ]
+          },
+          {
+            "id": "conciliacion",
+            "label": "Conciliación",
+            "description": "Intento judicial.",
+            "parentId": "preliminar",
+            "evidenceIds": [
+              "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+              "ev-c41-a54-l051-131-preliminar"
+            ]
+          },
+          {
+            "id": "hechos",
+            "label": "Hechos no controvertidos",
+            "description": "Reduce debate.",
+            "parentId": "preliminar",
+            "evidenceIds": [
+              "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+              "ev-c41-a54-l051-131-preliminar"
+            ]
+          },
+          {
+            "id": "acuerdos",
+            "label": "Acuerdos probatorios",
+            "description": "Evitan prueba innecesaria.",
+            "parentId": "preliminar",
+            "evidenceIds": [
+              "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+              "ev-c41-a54-l051-131-preliminar"
+            ]
+          },
+          {
+            "id": "admision",
+            "label": "Admisión de pruebas",
+            "description": "Pertinencia y preparación.",
+            "parentId": "preliminar",
+            "evidenceIds": [
+              "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+              "ev-c41-a54-l051-131-preliminar",
+              "ev-c41-ccom-1390bis38-1390bis40-juicio",
+              "ev-c41-a54-l189-255-juicio"
+            ]
+          },
+          {
+            "id": "juicio",
+            "label": "Audiencia de juicio",
+            "description": "Prueba y decisión.",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c41-ccom-1390bis38-1390bis40-juicio",
+              "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+              "ev-c41-a54-l189-255-juicio"
+            ]
+          },
+          {
+            "id": "desahogo",
+            "label": "Desahogo",
+            "description": "Pruebas preparadas.",
+            "parentId": "juicio",
+            "evidenceIds": [
+              "ev-c41-ccom-1390bis38-1390bis40-juicio",
+              "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+              "ev-c41-a54-l189-255-juicio"
+            ]
+          },
+          {
+            "id": "alegatos",
+            "label": "Alegatos",
+            "description": "Cierre del debate.",
+            "parentId": "juicio",
+            "evidenceIds": [
+              "ev-c41-ccom-1390bis38-1390bis40-juicio",
+              "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+              "ev-c41-a54-l189-255-juicio"
+            ]
+          },
+          {
+            "id": "sentencia",
+            "label": "Sentencia",
+            "description": "Decide la controversia.",
+            "parentId": "juicio",
+            "evidenceIds": [
+              "ev-c41-ccom-1390bis38-1390bis40-juicio",
+              "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+              "ev-c41-a54-l189-255-juicio"
+            ]
+          },
+          {
+            "id": "recursos",
+            "label": "Sin recurso ordinario",
+            "description": "Regla del artículo 1390 Ter 2.",
+            "parentId": "sentencia",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter-1390ter3-procedencia",
+              "ev-c41-a54-l189-255-juicio"
+            ]
+          },
+          {
+            "id": "subsanacion",
+            "label": "Subsanación oral",
+            "description": "Regulariza el procedimiento.",
+            "parentId": "recursos",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter-1390ter3-procedencia"
+            ]
+          },
+          {
+            "id": "aclaracion",
+            "label": "Aclaración o adición",
+            "description": "No cambia sustancia.",
+            "parentId": "recursos",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter-1390ter3-procedencia"
+            ]
+          },
+          {
+            "id": "ejecucion",
+            "label": "Ejecución",
+            "description": "Convenio o resolución.",
+            "parentId": "sentencia",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+              "ev-c41-a55-l039-069-embargo"
+            ]
+          },
+          {
+            "id": "avaluo",
+            "label": "Avalúo y remate",
+            "description": "Realización conforme a ley.",
+            "parentId": "ejecucion",
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter15-1390ter19-ejecucion"
+            ]
+          },
+          {
+            "id": "aval",
+            "label": "Aval",
+            "description": "Garantía cambiaria.",
+            "parentId": "titulo",
+            "evidenceIds": [
+              "ev-c41-lgtoc-109-116-aval",
+              "ev-c41-a54-l269-305-aval"
+            ]
+          },
+          {
+            "id": "avalista",
+            "label": "Avalista",
+            "description": "Obligación según LGTOC.",
+            "parentId": "aval",
+            "evidenceIds": [
+              "ev-c41-lgtoc-109-116-aval",
+              "ev-c41-a54-l269-305-aval"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Codigo de Comercio",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+          "institution": "Camara de Diputados del H. Congreso de la Union",
+          "jurisdiction": "Federal, Mexico",
+          "citation": "Articulos 1339, 1390 Bis 2 y 32 a 40, 1390 Ter a 1390 Ter 19 y 1391 a 1396; ultima reforma DOF 14-11-2025",
+          "retrievedOn": "2026-08-21",
+          "note": "Texto vigente para procedencia, audiencias, recursos y ejecucion."
+        },
+        {
+          "title": "Ley General de Titulos y Operaciones de Credito",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGTOC.pdf",
+          "institution": "Camara de Diputados del H. Congreso de la Union",
+          "jurisdiction": "Federal, Mexico",
+          "citation": "Articulos 109 a 116 y 174; ultima reforma DOF 26-03-2024",
+          "retrievedOn": "2026-08-21",
+          "note": "Reglas del aval aplicables al pagare."
+        },
+        {
+          "title": "Correccion de montos del Codigo de Comercio",
+          "url": "https://www.dof.gob.mx/nota_detalle.php?codigo=5780306&fecha=18/02/2026",
+          "institution": "Diario Oficial de la Federacion",
+          "jurisdiction": "Federal, Mexico",
+          "citation": "DOF 18-02-2026, correccion del monto del articulo 1339 para 2026",
+          "retrievedOn": "2026-08-21",
+          "note": "La cifra es cuantia de apelabilidad referida como limite inferior por el articulo 1390 Ter 1."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué activa esta vía?",
+          "answer": "Un documento del artículo 1391 que traiga aparejada ejecución.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c41-ccom-1390ter-1390ter3-procedencia",
+            "ev-c41-ccom-1391-1396-embargo",
+            "ev-c41-a54-l003-019-panorama"
+          ]
+        },
+        {
+          "question": "¿Qué monto se usa para revisar el intervalo?",
+          "answer": "La suerte principal, sin intereses ni accesorios.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c41-ccom-1390ter-1390ter3-procedencia",
+            "ev-c41-ccom-1339-1390ter1-cuantia",
+            "ev-c41-dof-2026-monto-1339",
+            "ev-c41-a54-l003-019-panorama"
+          ]
+        },
+        {
+          "question": "¿Qué representa 924,300.58 pesos en 2026?",
+          "answer": "La cuantía de apelabilidad del artículo 1339 incorporada como límite inferior por el artículo 1390 Ter 1.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c41-ccom-1339-1390ter1-cuantia",
+            "ev-c41-dof-2026-monto-1339"
+          ]
+        },
+        {
+          "question": "¿Cuál es la diligencia inicial?",
+          "answer": "Requerimiento de pago, embargo si no paga y emplazamiento.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c41-ccom-1390ter4-1390ter9-litis",
+            "ev-c41-ccom-1391-1396-embargo",
+            "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+            "ev-c41-a55-l013-021-depositario",
+            "ev-c41-a55-l039-069-embargo"
+          ]
+        },
+        {
+          "question": "¿Cuánto tiempo hay para contestar?",
+          "answer": "Ocho días desde los actos que precisa el artículo 1390 Ter 6.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c41-ccom-1390ter4-1390ter9-litis",
+            "ev-c41-a54-l003-019-panorama"
+          ]
+        },
+        {
+          "question": "¿Cabe reconvención?",
+          "answer": "No; es incompatible con esta vía.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c41-ccom-1390ter-1390ter3-procedencia",
+            "ev-c41-ccom-1390ter4-1390ter9-litis"
+          ]
+        },
+        {
+          "question": "¿Para qué sirve la audiencia preliminar?",
+          "answer": "Para depurar, conciliar, fijar hechos y acuerdos probatorios y admitir pruebas.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+            "ev-c41-a54-l051-131-preliminar"
+          ]
+        },
+        {
+          "question": "¿Qué ocurre en la audiencia de juicio?",
+          "answer": "Se desahogan pruebas preparadas, se formulan alegatos y se conduce a sentencia.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c41-ccom-1390bis38-1390bis40-juicio",
+            "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+            "ev-c41-a54-l189-255-juicio"
+          ]
+        },
+        {
+          "question": "¿Hay apelación ordinaria?",
+          "answer": "El artículo 1390 Ter 2 excluye recursos ordinarios en este juicio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c41-ccom-1390ter-1390ter3-procedencia",
+            "ev-c41-a54-l189-255-juicio"
+          ]
+        },
+        {
+          "question": "¿Qué puede pedirse verbalmente en audiencia?",
+          "answer": "Subsanar omisiones o irregularidades para regularizar el procedimiento.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c41-ccom-1390ter-1390ter3-procedencia"
+          ]
+        },
+        {
+          "question": "¿Depositario y avalista son lo mismo?",
+          "answer": "No. Uno custodia bienes embargados; el otro garantiza el pago del título.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+            "ev-c41-lgtoc-109-116-aval",
+            "ev-c41-a55-l013-021-depositario",
+            "ev-c41-a54-l269-305-aval"
+          ]
+        },
+        {
+          "question": "¿El aval siempre cubre todo el título?",
+          "answer": "No necesariamente: puede garantizar total o parcialmente el pago.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c41-lgtoc-109-116-aval",
+            "ev-c41-a54-l269-305-aval"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación: juicio ejecutivo mercantil oral",
+        "description": "Diez casos originales sobre procedencia, diligencia, audiencias y ejecución.",
+        "questions": [
+          {
+            "text": "Un pagaré tiene capital dentro del intervalo anual e intereses que lo rebasan. ¿Qué se considera para elegir la vía?",
+            "difficulty": "basic",
+            "options": [
+              "Solo la suerte principal",
+              "Capital más intereses",
+              "Solo los intereses"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 1390 Ter 1 excluye intereses y accesorios del cálculo.",
+            "optionExplanations": [
+              "Es la base legal.",
+              "Los accesorios no se suman.",
+              "Los intereses no sustituyen el capital."
+            ],
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter-1390ter3-procedencia",
+              "ev-c41-ccom-1339-1390ter1-cuantia",
+              "ev-c41-dof-2026-monto-1339",
+              "ev-c41-a54-l003-019-panorama"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c41-ccom-1339-1390ter1-cuantia",
+                "ev-c41-dof-2026-monto-1339"
+              ],
+              [
+                "ev-c41-ccom-1339-1390ter1-cuantia"
+              ],
+              [
+                "ev-c41-ccom-1339-1390ter1-cuantia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c41-ccom-1339-1390ter1-cuantia",
+              "ev-c41-dof-2026-monto-1339",
+              "ev-c41-ccom-1390ter-1390ter3-procedencia",
+              "ev-c41-a54-l003-019-panorama"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c41-ccom-1390ter-1390ter3-procedencia",
+              "ev-c41-ccom-1339-1390ter1-cuantia",
+              "ev-c41-dof-2026-monto-1339",
+              "ev-c41-a54-l003-019-panorama"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c41-ccom-1339-1390ter1-cuantia",
+                "ev-c41-dof-2026-monto-1339"
+              ],
+              [
+                "ev-c41-ccom-1339-1390ter1-cuantia"
+              ],
+              [
+                "ev-c41-ccom-1339-1390ter1-cuantia"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué presupuesto debe existir además de la cuantía?",
+            "difficulty": "basic",
+            "options": [
+              "Documento con aparejada ejecución",
+              "Conciliación privada",
+              "Sentencia previa"
+            ],
+            "correctOption": 0,
+            "explanation": "La vía nace de los documentos previstos en el artículo 1391.",
+            "optionExplanations": [
+              "Es indispensable.",
+              "No crea título ejecutivo.",
+              "No es requisito universal."
+            ],
+            "evidenceIds": [
+              "ev-c41-a54-l003-019-panorama",
+              "ev-c41-ccom-1390ter-1390ter3-procedencia",
+              "ev-c41-ccom-1391-1396-embargo"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c41-ccom-1390ter-1390ter3-procedencia",
+                "ev-c41-ccom-1391-1396-embargo"
+              ],
+              [
+                "ev-c41-ccom-1390ter-1390ter3-procedencia"
+              ],
+              [
+                "ev-c41-ccom-1390ter-1390ter3-procedencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c41-ccom-1390ter-1390ter3-procedencia",
+              "ev-c41-ccom-1391-1396-embargo",
+              "ev-c41-a54-l003-019-panorama"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c41-a54-l003-019-panorama"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c41-ccom-1390ter-1390ter3-procedencia",
+                "ev-c41-ccom-1391-1396-embargo"
+              ],
+              [
+                "ev-c41-ccom-1390ter-1390ter3-procedencia"
+              ],
+              [
+                "ev-c41-ccom-1390ter-1390ter3-procedencia"
+              ]
+            ]
+          },
+          {
+            "text": "Admitida la demanda y no realizado el pago, ¿qué sigue?",
+            "difficulty": "basic",
+            "options": [
+              "Embargo y emplazamiento",
+              "Sentencia automática",
+              "Audiencia preliminar sin emplazar"
+            ],
+            "correctOption": 0,
+            "explanation": "El mandamiento conserva la secuencia ejecutiva.",
+            "optionExplanations": [
+              "Es la secuencia correcta.",
+              "El embargo no sustituye sentencia.",
+              "Debe existir emplazamiento."
+            ],
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter4-1390ter9-litis",
+              "ev-c41-ccom-1391-1396-embargo",
+              "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+              "ev-c41-a55-l013-021-depositario",
+              "ev-c41-a55-l039-069-embargo",
+              "ev-c41-ccom-1390bis38-1390bis40-juicio",
+              "ev-c41-ccom-1390bis32-1390bis37-preliminar"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis",
+                "ev-c41-ccom-1391-1396-embargo",
+                "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+                "ev-c41-a55-l013-021-depositario",
+                "ev-c41-a55-l039-069-embargo"
+              ],
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis",
+                "ev-c41-ccom-1390bis38-1390bis40-juicio"
+              ],
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis",
+                "ev-c41-ccom-1390bis32-1390bis37-preliminar"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c41-ccom-1390ter4-1390ter9-litis",
+              "ev-c41-ccom-1391-1396-embargo",
+              "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+              "ev-c41-a55-l013-021-depositario",
+              "ev-c41-a55-l039-069-embargo"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c41-ccom-1390ter4-1390ter9-litis",
+              "ev-c41-ccom-1391-1396-embargo"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis",
+                "ev-c41-ccom-1391-1396-embargo",
+                "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+                "ev-c41-a55-l013-021-depositario",
+                "ev-c41-a55-l039-069-embargo"
+              ],
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis",
+                "ev-c41-ccom-1390bis38-1390bis40-juicio"
+              ],
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis",
+                "ev-c41-ccom-1390bis32-1390bis37-preliminar"
+              ]
+            ]
+          },
+          {
+            "text": "¿En qué plazo contesta la persona demandada?",
+            "difficulty": "basic",
+            "options": [
+              "Ocho días",
+              "Tres días",
+              "Quince días"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 1390 Ter 6 establece ocho días.",
+            "optionExplanations": [
+              "Es el plazo legal.",
+              "Tres días corresponden a la vista.",
+              "No es el plazo de contestación."
+            ],
+            "evidenceIds": [
+              "ev-c41-a54-l003-019-panorama",
+              "ev-c41-ccom-1390ter4-1390ter9-litis"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis"
+              ],
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis"
+              ],
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c41-ccom-1390ter4-1390ter9-litis",
+              "ev-c41-a54-l003-019-panorama"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c41-a54-l003-019-panorama"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis"
+              ],
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis"
+              ],
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál actuación es incompatible con el ejecutivo oral?",
+            "difficulty": "basic",
+            "options": [
+              "Reconvención",
+              "Contestación",
+              "Oferta de pruebas"
+            ],
+            "correctOption": 0,
+            "explanation": "Los artículos 1390 Ter 3 y 6 excluyen la reconvención.",
+            "optionExplanations": [
+              "Está expresamente excluida.",
+              "La contestación integra la litis.",
+              "Las pruebas forman parte de la defensa."
+            ],
+            "evidenceIds": [
+              "ev-c41-ccom-1390ter-1390ter3-procedencia",
+              "ev-c41-ccom-1390ter4-1390ter9-litis",
+              "ev-c41-ccom-1390ter10-1390ter14-audiencias"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c41-ccom-1390ter-1390ter3-procedencia",
+                "ev-c41-ccom-1390ter4-1390ter9-litis"
+              ],
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis"
+              ],
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis",
+                "ev-c41-ccom-1390ter10-1390ter14-audiencias"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c41-ccom-1390ter-1390ter3-procedencia",
+              "ev-c41-ccom-1390ter4-1390ter9-litis"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c41-ccom-1390ter-1390ter3-procedencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c41-ccom-1390ter-1390ter3-procedencia",
+                "ev-c41-ccom-1390ter4-1390ter9-litis"
+              ],
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis"
+              ],
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis",
+                "ev-c41-ccom-1390ter10-1390ter14-audiencias"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué finalidad corresponde a la audiencia preliminar?",
+            "difficulty": "basic",
+            "options": [
+              "Depurar y admitir pruebas",
+              "Rematar bienes automáticamente",
+              "Sustituir el emplazamiento"
+            ],
+            "correctOption": 0,
+            "explanation": "La preliminar prepara el juicio y reduce la controversia.",
+            "optionExplanations": [
+              "Es su función legal.",
+              "El remate pertenece a ejecución.",
+              "El emplazamiento es anterior."
+            ],
+            "evidenceIds": [
+              "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+              "ev-c41-a54-l051-131-preliminar",
+              "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+              "ev-c41-ccom-1390ter4-1390ter9-litis"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+                "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+                "ev-c41-a54-l051-131-preliminar"
+              ],
+              [
+                "ev-c41-ccom-1390ter15-1390ter19-ejecucion"
+              ],
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+              "ev-c41-a54-l051-131-preliminar"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c41-ccom-1390ter10-1390ter14-audiencias"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+                "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+                "ev-c41-a54-l051-131-preliminar"
+              ],
+              [
+                "ev-c41-ccom-1390ter15-1390ter19-ejecucion"
+              ],
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué ocurre principalmente en la audiencia de juicio?",
+            "difficulty": "basic",
+            "options": [
+              "Desahogo de pruebas y alegatos",
+              "Presentación inicial de demanda",
+              "Elección del depositario como juez"
+            ],
+            "correctOption": 0,
+            "explanation": "La audiencia de juicio concentra el debate probatorio preparado.",
+            "optionExplanations": [
+              "Es la secuencia aplicable.",
+              "La demanda es previa.",
+              "El depositario no juzga."
+            ],
+            "evidenceIds": [
+              "ev-c41-ccom-1390bis38-1390bis40-juicio",
+              "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+              "ev-c41-a54-l189-255-juicio",
+              "ev-c41-ccom-1390ter4-1390ter9-litis",
+              "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+              "ev-c41-a55-l013-021-depositario"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c41-ccom-1390bis38-1390bis40-juicio",
+                "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+                "ev-c41-a54-l189-255-juicio"
+              ],
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis"
+              ],
+              [
+                "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+                "ev-c41-a55-l013-021-depositario"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c41-ccom-1390bis38-1390bis40-juicio",
+              "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+              "ev-c41-a54-l189-255-juicio"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c41-ccom-1390bis38-1390bis40-juicio",
+              "ev-c41-ccom-1390ter10-1390ter14-audiencias"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c41-ccom-1390bis38-1390bis40-juicio",
+                "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+                "ev-c41-a54-l189-255-juicio"
+              ],
+              [
+                "ev-c41-ccom-1390ter4-1390ter9-litis"
+              ],
+              [
+                "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+                "ev-c41-a55-l013-021-depositario"
+              ]
+            ]
+          },
+          {
+            "text": "Una parte discrepa de una resolución y anuncia apelación ordinaria. ¿Qué precisión procede?",
+            "difficulty": "basic",
+            "options": [
+              "El artículo 1390 Ter 2 excluye recursos ordinarios",
+              "Toda resolución es apelable",
+              "La audiencia elimina cualquier corrección"
+            ],
+            "correctOption": 0,
+            "explanation": "La ley excluye recursos ordinarios, pero conserva subsanación y aclaración en sus términos.",
+            "optionExplanations": [
+              "Es la regla especial.",
+              "Contradice la regla especial.",
+              "Sí hay mecanismos de regularización."
+            ],
+            "evidenceIds": [
+              "ev-c41-a54-l189-255-juicio",
+              "ev-c41-ccom-1390ter-1390ter3-procedencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c41-ccom-1390ter-1390ter3-procedencia"
+              ],
+              [
+                "ev-c41-ccom-1390ter-1390ter3-procedencia"
+              ],
+              [
+                "ev-c41-ccom-1390ter-1390ter3-procedencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c41-ccom-1390ter-1390ter3-procedencia",
+              "ev-c41-a54-l189-255-juicio"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c41-a54-l189-255-juicio"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c41-ccom-1390ter-1390ter3-procedencia"
+              ],
+              [
+                "ev-c41-ccom-1390ter-1390ter3-procedencia"
+              ],
+              [
+                "ev-c41-ccom-1390ter-1390ter3-procedencia"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál diferencia es correcta entre depositario y avalista?",
+            "difficulty": "basic",
+            "options": [
+              "El depositario custodia; el avalista garantiza el título",
+              "Ambos son propietarios",
+              "El depositario garantiza siempre la deuda"
+            ],
+            "correctOption": 0,
+            "explanation": "Son funciones jurídicas distintas.",
+            "optionExplanations": [
+              "Distingue custodia y garantía cambiaria.",
+              "La custodia no transmite propiedad.",
+              "El depósito no equivale a aval."
+            ],
+            "evidenceIds": [
+              "ev-c41-lgtoc-109-116-aval",
+              "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+              "ev-c41-a55-l013-021-depositario",
+              "ev-c41-a54-l269-305-aval"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+                "ev-c41-lgtoc-109-116-aval",
+                "ev-c41-a55-l013-021-depositario",
+                "ev-c41-a54-l269-305-aval"
+              ],
+              [
+                "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+                "ev-c41-a55-l013-021-depositario"
+              ],
+              [
+                "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+                "ev-c41-lgtoc-109-116-aval"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+              "ev-c41-lgtoc-109-116-aval",
+              "ev-c41-a55-l013-021-depositario",
+              "ev-c41-a54-l269-305-aval"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c41-lgtoc-109-116-aval"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+                "ev-c41-lgtoc-109-116-aval",
+                "ev-c41-a55-l013-021-depositario",
+                "ev-c41-a54-l269-305-aval"
+              ],
+              [
+                "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+                "ev-c41-a55-l013-021-depositario"
+              ],
+              [
+                "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+                "ev-c41-lgtoc-109-116-aval"
+              ]
+            ]
+          },
+          {
+            "text": "El audio termina durante un ejemplo de aval. ¿Cómo debe cerrarse el estudio?",
+            "difficulty": "intermediate",
+            "options": [
+              "Con los artículos 109 a 116 LGTOC, sin completar la anécdota",
+              "Inventando el desenlace",
+              "Tratando al avalista como depositario"
+            ],
+            "correctOption": 0,
+            "explanation": "La fuente oficial completa la regla; no se reconstruye una frase truncada.",
+            "optionExplanations": [
+              "Es el cierre verificable.",
+              "No es evidencia confiable.",
+              "Confunde instituciones."
+            ],
+            "evidenceIds": [
+              "ev-c41-lgtoc-109-116-aval",
+              "ev-c41-a54-l269-305-aval",
+              "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+              "ev-c41-a55-l013-021-depositario"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c41-lgtoc-109-116-aval",
+                "ev-c41-a54-l269-305-aval"
+              ],
+              [
+                "ev-c41-a54-l269-305-aval"
+              ],
+              [
+                "ev-c41-lgtoc-109-116-aval",
+                "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+                "ev-c41-a55-l013-021-depositario"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c41-lgtoc-109-116-aval",
+              "ev-c41-a54-l269-305-aval"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c41-lgtoc-109-116-aval",
+              "ev-c41-a54-l269-305-aval"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c41-lgtoc-109-116-aval",
+                "ev-c41-a54-l269-305-aval"
+              ],
+              [
+                "ev-c41-a54-l269-305-aval"
+              ],
+              [
+                "ev-c41-lgtoc-109-116-aval",
+                "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+                "ev-c41-a55-l013-021-depositario"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c41-ccom-1390ter-1390ter3-procedencia",
+      "kind": "official",
+      "title": "Codigo de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto vigente, ultima reforma DOF 14-11-2025, articulos 1390 Ter a 1390 Ter 3",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c41-ccom-1339-1390ter1-cuantia",
+      "kind": "official",
+      "title": "Codigo de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto vigente, articulos 1339 y 1390 Ter 1; la cuantia de apelabilidad es referencia inferior de la via oral y el limite superior se actualiza anualmente",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c41-dof-2026-monto-1339",
+      "kind": "official",
+      "title": "Correccion al Acuerdo de actualizacion de montos del Codigo de Comercio",
+      "url": "https://www.dof.gob.mx/nota_detalle.php?codigo=5780306&fecha=18/02/2026",
+      "institution": "Diario Oficial de la Federacion",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "DOF 18-02-2026, articulo unico: articulo 1339, 924,300.58 pesos",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c41-ccom-1390ter4-1390ter9-litis",
+      "kind": "official",
+      "title": "Codigo de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "articulos 1390 Ter 4 a 1390 Ter 9: demanda, mandamiento, embargo, contestacion y vista",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c41-ccom-1390bis32-1390bis37-preliminar",
+      "kind": "official",
+      "title": "Codigo de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "articulos 1390 Bis 32 a 1390 Bis 37, aplicables por los articulos 1390 Ter 10 y 11",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c41-ccom-1390bis38-1390bis40-juicio",
+      "kind": "official",
+      "title": "Codigo de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "articulos 1390 Bis 38 a 1390 Bis 40, aplicables por el articulo 1390 Ter 12",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c41-ccom-1390ter10-1390ter14-audiencias",
+      "kind": "official",
+      "title": "Codigo de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "articulos 1390 Ter 10 a 1390 Ter 14: audiencias, incidentes y pruebas",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c41-ccom-1390ter15-1390ter19-ejecucion",
+      "kind": "official",
+      "title": "Codigo de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "articulos 1390 Ter 15 a 1390 Ter 19: ejecucion, embargo, avaluo y remate",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c41-ccom-1391-1396-embargo",
+      "kind": "official",
+      "title": "Codigo de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "articulos 1391 a 1396; articulo 1393 reformado DOF 14-11-2025",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c41-lgtoc-109-116-aval",
+      "kind": "official",
+      "title": "Ley General de Titulos y Operaciones de Credito",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGTOC.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto vigente, ultima reforma DOF 26-03-2024, articulos 109 a 116; remision al pagare por articulo 174",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c41-a54-l003-019-panorama",
+      "kind": "transcript",
+      "title": "Audio 54: panorama ejecutivo oral",
+      "audioFile": "AUDIO 54.txt",
+      "audioNumber": 54,
+      "locator": {
+        "type": "line_range",
+        "startLine": 3,
+        "endLine": 19
+      }
+    },
+    {
+      "id": "ev-c41-a54-l051-131-preliminar",
+      "kind": "transcript",
+      "title": "Audio 54: audiencia preliminar",
+      "audioFile": "AUDIO 54.txt",
+      "audioNumber": 54,
+      "locator": {
+        "type": "line_range",
+        "startLine": 51,
+        "endLine": 131
+      }
+    },
+    {
+      "id": "ev-c41-a54-l189-255-juicio",
+      "kind": "transcript",
+      "title": "Audio 54: audiencia de juicio y prueba",
+      "audioFile": "AUDIO 54.txt",
+      "audioNumber": 54,
+      "locator": {
+        "type": "line_range",
+        "startLine": 189,
+        "endLine": 255
+      }
+    },
+    {
+      "id": "ev-c41-a54-l269-305-aval",
+      "kind": "transcript",
+      "title": "Audio 54: aval y contraste de vias",
+      "audioFile": "AUDIO 54.txt",
+      "audioNumber": 54,
+      "locator": {
+        "type": "line_range",
+        "startLine": 269,
+        "endLine": 305
+      }
+    },
+    {
+      "id": "ev-c41-a55-l013-021-depositario",
+      "kind": "transcript",
+      "title": "Audio 55: depositario",
+      "audioFile": "AUDIO 55.txt",
+      "audioNumber": 55,
+      "locator": {
+        "type": "line_range",
+        "startLine": 13,
+        "endLine": 21
+      }
+    },
+    {
+      "id": "ev-c41-a55-l039-069-embargo",
+      "kind": "transcript",
+      "title": "Audio 55: embargo y custodia",
+      "audioFile": "AUDIO 55.txt",
+      "audioNumber": 55,
+      "locator": {
+        "type": "line_range",
+        "startLine": 39,
+        "endLine": 69
+      }
+    }
+  ]
+}

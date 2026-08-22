@@ -655,6 +655,38 @@ const traceablePackages = [
       /última reforma DOF 14-11-2025 y montos corregidos el 18-02-2026/i,
     ],
   },
+  {
+    code: "C41",
+    fileName: "audio-54-55-juicio-ejecutivo-mercantil-oral.json",
+    artifacts: 150,
+    evidence: 16,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /documento.*artículo 1391/i,
+      /924,300\.58 pesos.*límite inferior/i,
+      /consulta ambos límites del año aplicable/i,
+      /contestación (?:es )?en ocho días/i,
+      /no hay reconvención/i,
+      /recursos ordinarios.*excluidos/i,
+      /aval.*no es sinónimo de depositario/i,
+    ],
+  },
+  {
+    code: "C42",
+    fileName: "audio-55-juicio-oral-mercantil.json",
+    artifacts: 153,
+    evidence: 15,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /controversias mercantiles que no tengan procedimiento especial/i,
+      /cuantía.*determinada o determinable/i,
+      /no existe una apelación ordinaria/i,
+      /contestar en nueve días/i,
+      /audiencia preliminar.*depura/i,
+      /regularización, aclaración o adición/i,
+      /no se utilizó el Audio 56/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -1022,6 +1054,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una regla autoral o ejecutiva retirada como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C41" || expected.code === "C42") {
+      const obsoleteAsCurrent =
+        expected.code === "C41"
+          ? /(?:todo|cualquier) documento.*(?:trae aparejada|título ejecutivo)|924,300\.58 pesos.*(?:basta|crea).*(?:acción|vía)|embargo.*(?:equivale|sustituye).*(?:sentencia|condena)|reconvención.*(?:procede|admisible)|aval.*(?:es|equivale).*depositario/i
+          : /(?:solo|únicamente).*(?:entre|para) comerciantes|etapa financiera.*(?:siempre|obligatoria)|juez de instrucción.*juez de oralidad|embargo.*(?:automático|siempre)|revocación.*(?:ordinaria|automática)/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una regla mercantil retirada o una confusión de vías como respuesta vigente.`,
         );
       }
     }

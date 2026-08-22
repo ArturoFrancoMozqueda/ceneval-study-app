@@ -61,11 +61,11 @@ comprueba que el código o el orden no pertenezcan a otra clase antes de crear
 ningún registro; los índices únicos de PostgreSQL protegen también contra dos
 importaciones simultáneas.
 
-Los 40 paquetes C01–C40 todavía usan el contrato 1.1. Son legibles y conservan
-su contenido, pero no demuestran evidencia por dinámica y por ello fallan
-deliberadamente `content:check`: no deben importarse ni publicarse. C01 no se
-migró artificialmente porque faltan localizadores verificables. Las versiones
-retiradas 1.0 viven en `content/archive/withdrawn/` y tampoco son importables.
+Los 42 paquetes C01–C42 usan el contrato 1.2 y pasan el gate local de evidencia
+por dinámica. Ese resultado no equivale a importación, revisión ni publicación
+remotas: esas operaciones requieren autorización y el flujo editorial. Las
+versiones retiradas 1.0 viven en `content/archive/withdrawn/` y no son
+importables.
 
 Cada paquete contiene:
 
@@ -79,7 +79,7 @@ Cada paquete contiene:
 - referencias oficiales HTTPS;
 - entre 10 y 15 flashcards;
 - un examen de exactamente 10 preguntas;
-- cuatro opciones y una respuesta correcta por pregunta;
+- tres o cuatro opciones y una respuesta correcta por pregunta;
 - explicación general y de cada opción.
 
 Si cualquier parte o evidencia falta, el validador detiene el flujo. El

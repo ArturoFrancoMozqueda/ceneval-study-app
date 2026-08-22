@@ -1,0 +1,1530 @@
+{
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C42",
+    "order": 42,
+    "audioSources": [
+      {
+        "audioNumber": 55,
+        "fragment": "Segunda parte, líneas 85 a 295: juicio oral mercantil"
+      }
+    ]
+  },
+  "subject": {
+    "name": "Derecho Procesal Mercantil",
+    "description": "Vías, postulación, audiencias, prueba, sentencia y medios de corrección en controversias mercantiles."
+  },
+  "class": {
+    "title": "Juicio oral mercantil",
+    "description": "Cuadragésima segunda clase del plan académico: procedencia, demanda, contestación, reconvención, audiencias, prueba, sentencia y límites de los recursos ordinarios."
+  },
+  "transcript": {
+    "originalFile": "AUDIO 55.txt",
+    "cleaned": "Se utilizó únicamente el bloque del Audio 55 comprendido entre las líneas físicas 85 y 295. Se excluyeron las líneas 13 a 69, reservadas para C41, así como conversaciones personales, lenguaje ofensivo, recomendaciones comerciales y ejemplos no verificables. Se corrigió que el juicio oral mercantil no se limita a litigios entre comerciantes; se retiró la idea de que siempre existe una etapa financiera previa; se distinguió el emplazamiento ordinario del requerimiento y embargo propios de la vía ejecutiva; se aclaró que las providencias precautorias no quedan prohibidas por esa diferencia; se eliminó la división ficticia entre juez de instrucción y juez de oralidad; y la supuesta revocación contra decisiones de audiencia se sustituyó por las solicitudes orales de regularización, aclaración o adición que permite el Código. El audio termina antes de desarrollar íntegramente prueba y sentencia, por lo que ese cierre se construyó solo con el Código de Comercio vigente. No se utilizó el Audio 56."
+  },
+  "topics": [
+    {
+      "title": "De la demanda a la sentencia oral mercantil",
+      "description": "Ruta del juicio oral mercantil ordinario, con postulación escrita, dirección judicial de las audiencias y contradicción probatoria.",
+      "learningJourney": {
+        "openingPrompt": "Una empresa reclama el incumplimiento de un contrato mercantil sin título ejecutivo. ¿Qué debe revisar antes de elegir la vía oral?",
+        "quickChecks": [
+          {
+            "prompt": "¿La vía oral mercantil exige que ambas partes sean comerciantes?",
+            "answer": "No. La mercantilidad puede derivar del acto o de la controversia; además deben revisarse las exclusiones legales de la vía.",
+            "feedback": "No reduzcas la procedencia a la calidad personal de las partes.",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis-1390bis2-procedencia",
+              "ev-c42-a55-l085-115-via-contratos"
+            ]
+          },
+          {
+            "prompt": "¿La fase inicial es verbal?",
+            "answer": "No. Demanda, contestación y, en su caso, reconvención se formulan por escrito y con los documentos y pruebas que la ley exige ofrecer.",
+            "feedback": "La oralidad se concentra en las audiencias, no elimina la postulación escrita.",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+              "ev-c42-ccom-1061-1063-documentos",
+              "ev-c42-a55-l129-145-demanda-hechos",
+              "ev-c42-a55-l231-243-fase-escrita"
+            ]
+          },
+          {
+            "prompt": "¿Cabe apelación ordinaria contra la sentencia?",
+            "answer": "No. El Código excluye recursos ordinarios; las solicitudes orales de regularización, aclaración o adición no equivalen a una apelación.",
+            "feedback": "Distingue corrección inmediata de un recurso ordinario.",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis-1390bis2-procedencia",
+              "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+              "ev-c42-a55-l271-295-recursos-publicidad"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Una proveedora demanda el pago derivado de un contrato mercantil. Adjunta el contrato y comunicaciones, cuantifica su pretensión y ofrece documental, testimonial y pericial. La demandada contesta, opone defensas y formula reconvención vinculada con el mismo contrato.",
+          "question": "¿Cómo avanza el expediente y qué debe decidirse en cada audiencia?",
+          "legalRule": "Los artículos 1390 Bis a 1390 Bis 50 del Código de Comercio regulan procedencia, principios, postulación, audiencias, prueba y sentencia del juicio oral mercantil.",
+          "reasoning": "El órgano jurisdiccional revisa primero la procedencia y los requisitos de la demanda. Admitida, se emplaza para contestar en nueve días. La reconvención se tramita dentro de la misma secuencia legal. En la audiencia preliminar se depura el procedimiento, se procura conciliación, se fijan hechos no controvertidos, se celebran acuerdos probatorios y se decide la admisión y preparación de pruebas. En la audiencia de juicio se desahogan las pruebas preparadas, se formulan alegatos y se dicta o comunica la sentencia conforme al Código. No existe una apelación ordinaria; las partes deben formular oportunamente las solicitudes orales permitidas y conservar sus defensas constitucionales cuando procedan.",
+          "conclusion": "La oralidad concentra dirección, contradicción y decisión en audiencias, pero exige una postulación escrita completa y preparación probatoria desde el inicio.",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis-1390bis2-procedencia",
+            "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+            "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+            "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+            "ev-c42-ccom-1390bis41-1390bis50-prueba",
+            "ev-c42-ccom-1061-1063-documentos",
+            "ev-c42-ccom-1194-carga-prueba",
+            "ev-c42-a55-l085-115-via-contratos",
+            "ev-c42-a55-l129-145-demanda-hechos",
+            "ev-c42-a55-l175-189-hechos-prueba",
+            "ev-c42-a55-l197-225-admision-emplazamiento",
+            "ev-c42-a55-l231-243-fase-escrita",
+            "ev-c42-a55-l243-269-audiencias",
+            "ev-c42-a55-l271-295-recursos-publicidad"
+          ]
+        },
+        "closingPrompt": "Explica en orden: procedencia, demanda, emplazamiento, contestación, reconvención, audiencia preliminar, audiencia de juicio, prueba, alegatos, sentencia y correcciones orales permitidas.",
+        "nextActivity": "Recorre el mapa, estudia las doce tarjetas y resuelve los diez casos originales.",
+        "openingPromptEvidenceIds": [
+          "ev-c42-ccom-1390bis-1390bis2-procedencia",
+          "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+          "ev-c42-a55-l085-115-via-contratos"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c42-ccom-1390bis-1390bis2-procedencia",
+          "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+          "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+          "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+          "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+          "ev-c42-ccom-1390bis41-1390bis50-prueba",
+          "ev-c42-ccom-1061-1063-documentos",
+          "ev-c42-ccom-1194-carga-prueba",
+          "ev-c42-a55-l129-145-demanda-hechos",
+          "ev-c42-a55-l197-225-admision-emplazamiento",
+          "ev-c42-a55-l231-243-fase-escrita",
+          "ev-c42-a55-l243-269-audiencias",
+          "ev-c42-a55-l271-295-recursos-publicidad"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c42-ccom-1390bis-1390bis2-procedencia",
+          "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+          "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "El juicio oral mercantil tramita controversias mercantiles que no tengan procedimiento especial y cuya cuantía sea determinada o determinable. Comienza con demanda escrita, emplazamiento y contestación en nueve días; puede incluir reconvención. La audiencia preliminar depura, procura conciliación, fija acuerdos y admite pruebas. La audiencia de juicio desahoga prueba, recibe alegatos y conduce a sentencia. No procede recurso ordinario, sin perjuicio de las solicitudes orales de regularización, aclaración o adición previstas en el Código.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis-1390bis2-procedencia",
+            "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+            "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+            "ev-c42-a55-l085-115-via-contratos",
+            "ev-c42-a55-l129-145-demanda-hechos",
+            "ev-c42-a55-l197-225-admision-emplazamiento",
+            "ev-c42-a55-l231-243-fase-escrita",
+            "ev-c42-a55-l243-269-audiencias",
+            "ev-c42-a55-l271-295-recursos-publicidad"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "El juicio oral mercantil es la vía ordinaria oral del Código de Comercio. No depende de que ambas partes tengan formalmente la calidad de comerciantes: importa que exista una controversia mercantil y que no esté reservada a un procedimiento especial. Tampoco admite pretensiones de cuantía indeterminada. La ley ya no establece un techo general de cuantía para esta vía.\n\nRigen oralidad, publicidad, igualdad, inmediación, contradicción, continuidad y concentración. La publicidad puede limitarse en los casos permitidos, y la inmediación exige que la persona juzgadora dirija las audiencias. No existen un juez de instrucción y otro de oralidad para dividir el mismo juicio.\n\nLa postulación es escrita. La demanda identifica órgano, partes, prestaciones, hechos claros y numerados, fundamentos y valor de lo demandado; debe acompañarse de los documentos exigibles y ofrecerse prueba en los términos legales. Si se admite, se emplaza a la demandada para contestar en nueve días. La contestación concentra defensas y pruebas. La reconvención se presenta al contestar y sigue el traslado previsto por el Código.\n\nEl emplazamiento comunica formalmente la existencia del juicio y entrega las copias correspondientes. A diferencia del ejecutivo, la admisión no contiene por sí misma requerimiento de pago y embargo. Eso no significa que estén prohibidas todas las providencias precautorias: su procedencia se analiza con sus reglas propias.\n\nLa audiencia preliminar depura el procedimiento, intenta conciliación o mediación por conducto judicial, procura acuerdos sobre hechos no controvertidos y acuerdos probatorios, decide admisión de pruebas y prepara la audiencia de juicio. Un convenio aprobado tiene la fuerza que la ley le reconoce. Si no hay arreglo, el expediente continúa.\n\nEn la audiencia de juicio se desahogan las pruebas debidamente preparadas. La carga de demostrar los hechos constitutivos y las defensas se distribuye conforme a las reglas mercantiles. Después se formulan alegatos y la persona juzgadora emite la decisión en la forma y plazo legales. El cierre que el audio no desarrolla se toma directamente del Código.\n\nContra las resoluciones del juicio oral mercantil no procede recurso ordinario. Durante las audiencias sí puede pedirse verbalmente la regularización de una omisión o irregularidad y la aclaración o adición de una resolución oral, inmediatamente. Estas solicitudes no son apelación ni revocación. La eventual defensa constitucional tiene presupuestos propios y no debe presentarse como una segunda instancia automática.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis-1390bis2-procedencia",
+            "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+            "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+            "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+            "ev-c42-ccom-1390bis41-1390bis50-prueba",
+            "ev-c42-ccom-1061-1063-documentos",
+            "ev-c42-ccom-1194-carga-prueba",
+            "ev-c42-a55-l085-115-via-contratos",
+            "ev-c42-a55-l129-145-demanda-hechos",
+            "ev-c42-a55-l175-189-hechos-prueba",
+            "ev-c42-a55-l197-225-admision-emplazamiento",
+            "ev-c42-a55-l231-243-fase-escrita",
+            "ev-c42-a55-l243-269-audiencias",
+            "ev-c42-a55-l271-295-recursos-publicidad"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Código de Comercio, texto vigente con última reforma DOF 14-11-2025: artículos 1390 Bis a 1390 Bis 10 sobre procedencia y reglas generales; 1390 Bis 11 a 1390 Bis 20 sobre demanda, contestación y reconvención; 1390 Bis 21 a 1390 Bis 31 sobre audiencias y registros; 1390 Bis 32 a 1390 Bis 37 sobre audiencia preliminar; 1390 Bis 38 y 1390 Bis 39 sobre audiencia de juicio y sentencia; y 1390 Bis 41 a 1390 Bis 50 sobre pruebas. También resultan pertinentes los artículos 1061 a 1063 sobre documentos y el 1194 sobre carga de la prueba.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis-1390bis2-procedencia",
+            "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+            "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+            "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+            "ev-c42-ccom-1390bis41-1390bis50-prueba",
+            "ev-c42-ccom-1061-1063-documentos",
+            "ev-c42-ccom-1194-carga-prueba"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Una empresa entregó mercancía conforme a un contrato, pero la compradora no pagó y no existe título ejecutivo. La actora puede plantear una controversia oral mercantil si satisface la procedencia legal; debe narrar hechos, acompañar documentos y ofrecer prueba desde la demanda. La admisión conduce al emplazamiento, no al embargo ejecutivo automático.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis-1390bis2-procedencia",
+            "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+            "ev-c42-ccom-1061-1063-documentos",
+            "ev-c42-ccom-1194-carga-prueba",
+            "ev-c42-a55-l085-115-via-contratos",
+            "ev-c42-a55-l129-145-demanda-hechos",
+            "ev-c42-a55-l197-225-admision-emplazamiento"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo CENEVAL",
+          "content": "La demandada recibe copias de una demanda oral mercantil y pregunta si puede responder verbalmente en la audiencia. La respuesta correcta es no: dispone de nueve días para contestar por escrito y ofrecer sus pruebas. La audiencia preliminar viene después de la fase postulatoria.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+            "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c42-a55-l197-225-admision-emplazamiento",
+            "ev-c42-a55-l231-243-fase-escrita"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Procedencia: controversia mercantil sin vía especial y cuantía determinada o determinable. Inicio: demanda escrita y documentos. Defensa: contestación en nueve días y posible reconvención. Preliminar: depuración, conciliación, acuerdos y admisión de pruebas. Juicio: desahogo, alegatos y sentencia. Recursos: no hay ordinarios; sí solicitudes orales inmediatas de regularización, aclaración o adición.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis-1390bis2-procedencia",
+            "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+            "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+            "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+            "ev-c42-a55-l129-145-demanda-hechos",
+            "ev-c42-a55-l197-225-admision-emplazamiento",
+            "ev-c42-a55-l231-243-fase-escrita",
+            "ev-c42-a55-l243-269-audiencias",
+            "ev-c42-a55-l271-295-recursos-publicidad"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de preguntas y respuestas",
+          "content": "1. ¿Qué controversias entran? Las mercantiles sin procedimiento especial y con cuantía determinada o determinable. 2. ¿Hay techo general de cuantía? No. 3. ¿Qué principios rigen? Oralidad, publicidad, igualdad, inmediación, contradicción, continuidad y concentración. 4. ¿Cómo inicia? Con demanda escrita. 5. ¿Cuánto hay para contestar? Nueve días. 6. ¿Cuándo se reconviene? Al contestar, conforme al trámite legal. 7. ¿Qué hace la preliminar? Depura, concilia, fija acuerdos y admite pruebas. 8. ¿Qué hace la audiencia de juicio? Desahoga prueba, oye alegatos y conduce a sentencia. 9. ¿Hay dos roles judiciales por etapa? No; el Código no crea un juez de instrucción y otro de oralidad. 10. ¿Hay embargo inicial automático? No como en el ejecutivo. 11. ¿Hay apelación ordinaria? No. 12. ¿Qué puede pedirse oralmente? Regularización, aclaración o adición inmediata en los supuestos legales.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis-1390bis2-procedencia",
+            "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+            "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+            "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+            "ev-c42-ccom-1390bis41-1390bis50-prueba",
+            "ev-c42-ccom-1061-1063-documentos",
+            "ev-c42-ccom-1194-carga-prueba",
+            "ev-c42-a55-l129-145-demanda-hechos",
+            "ev-c42-a55-l197-225-admision-emplazamiento",
+            "ev-c42-a55-l231-243-fase-escrita",
+            "ev-c42-a55-l243-269-audiencias",
+            "ev-c42-a55-l271-295-recursos-publicidad"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Vía oral mercantil; cuantía determinada; procedimiento especial; postulación escrita; demanda; emplazamiento; contestación; reconvención; audiencia preliminar; depuración; conciliación; hechos no controvertidos; acuerdos probatorios; admisión y preparación de prueba; audiencia de juicio; inmediación; contradicción; alegatos; sentencia; regularización; aclaración y adición.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis-1390bis2-procedencia",
+            "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+            "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+            "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+            "ev-c42-ccom-1390bis41-1390bis50-prueba",
+            "ev-c42-ccom-1061-1063-documentos",
+            "ev-c42-ccom-1194-carga-prueba"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores que debes evitar",
+          "content": "No limites la vía a conflictos entre personas comerciantes. No enseñes que todo contrato de seguro exige agotar una instancia previa. No confundas demanda oral con demanda verbal. No traslades el requerimiento y embargo ejecutivo al inicio del oral ordinario. No afirmes que toda providencia precautoria está prohibida. No dividas el juicio entre un supuesto juez de instrucción y otro de oralidad. No llames revocación a la solicitud oral de regularización. No conviertas el amparo en apelación automática. No inventes el cierre que falta en el audio: usa el Código vigente.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis-1390bis2-procedencia",
+            "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+            "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+            "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+            "ev-c42-ccom-1390bis41-1390bis50-prueba",
+            "ev-c42-ccom-1061-1063-documentos",
+            "ev-c42-ccom-1194-carga-prueba",
+            "ev-c42-a55-l085-115-via-contratos",
+            "ev-c42-a55-l129-145-demanda-hechos",
+            "ev-c42-a55-l175-189-hechos-prueba",
+            "ev-c42-a55-l197-225-admision-emplazamiento",
+            "ev-c42-a55-l231-243-fase-escrita",
+            "ev-c42-a55-l243-269-audiencias",
+            "ev-c42-a55-l271-295-recursos-publicidad"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual: juicio oral mercantil",
+        "description": "Árbol desde la procedencia hasta la sentencia y su corrección inmediata.",
+        "nodes": [
+          {
+            "id": "inicio",
+            "label": "Juicio oral mercantil",
+            "description": "Vía ordinaria oral",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis-1390bis2-procedencia",
+              "ev-c42-a55-l085-115-via-contratos"
+            ]
+          },
+          {
+            "id": "procedencia",
+            "label": "Procedencia",
+            "description": "Controversia mercantil",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis-1390bis2-procedencia",
+              "ev-c42-a55-l085-115-via-contratos"
+            ]
+          },
+          {
+            "id": "sin-especial",
+            "label": "Sin vía especial",
+            "description": "No desplaza trámite específico",
+            "parentId": "procedencia",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis-1390bis2-procedencia"
+            ]
+          },
+          {
+            "id": "cuantia",
+            "label": "Cuantía determinada",
+            "description": "No indeterminada",
+            "parentId": "procedencia",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis-1390bis2-procedencia",
+              "ev-c42-a55-l129-145-demanda-hechos"
+            ]
+          },
+          {
+            "id": "sin-techo",
+            "label": "Sin techo general",
+            "description": "Regla vigente",
+            "parentId": "cuantia",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis-1390bis2-procedencia"
+            ]
+          },
+          {
+            "id": "principios",
+            "label": "Principios",
+            "description": "Oralidad y contradicción",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis-1390bis2-procedencia"
+            ]
+          },
+          {
+            "id": "publicidad",
+            "label": "Publicidad",
+            "description": "Con excepciones legales",
+            "parentId": "principios",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis-1390bis2-procedencia",
+              "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+              "ev-c42-a55-l271-295-recursos-publicidad"
+            ]
+          },
+          {
+            "id": "inmediacion",
+            "label": "Inmediación",
+            "description": "La persona juzgadora dirige",
+            "parentId": "principios",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis-1390bis2-procedencia",
+              "ev-c42-ccom-1390bis3-1390bis26-audiencias"
+            ]
+          },
+          {
+            "id": "igualdad",
+            "label": "Igualdad",
+            "description": "Mismas oportunidades procesales",
+            "parentId": "principios",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis-1390bis2-procedencia"
+            ]
+          },
+          {
+            "id": "postulacion",
+            "label": "Postulación escrita",
+            "description": "Fija la controversia",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+              "ev-c42-a55-l231-243-fase-escrita"
+            ]
+          },
+          {
+            "id": "demanda",
+            "label": "Demanda",
+            "description": "Prestaciones, hechos y fundamentos",
+            "parentId": "postulacion",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+              "ev-c42-ccom-1061-1063-documentos",
+              "ev-c42-a55-l129-145-demanda-hechos"
+            ]
+          },
+          {
+            "id": "documentos",
+            "label": "Documentos",
+            "description": "Se acompañan oportunamente",
+            "parentId": "demanda",
+            "evidenceIds": [
+              "ev-c42-ccom-1061-1063-documentos",
+              "ev-c42-a55-l175-189-hechos-prueba"
+            ]
+          },
+          {
+            "id": "pruebas-inicio",
+            "label": "Oferta de prueba",
+            "description": "Desde los escritos",
+            "parentId": "demanda",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+              "ev-c42-ccom-1390bis41-1390bis50-prueba",
+              "ev-c42-a55-l175-189-hechos-prueba"
+            ]
+          },
+          {
+            "id": "admision",
+            "label": "Admisión",
+            "description": "Revisión judicial inicial",
+            "parentId": "postulacion",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+              "ev-c42-a55-l197-225-admision-emplazamiento"
+            ]
+          },
+          {
+            "id": "emplazamiento",
+            "label": "Emplazamiento",
+            "description": "Comunica y entrega traslado",
+            "parentId": "admision",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+              "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+              "ev-c42-a55-l197-225-admision-emplazamiento"
+            ]
+          },
+          {
+            "id": "sin-embargo",
+            "label": "Sin embargo ejecutivo",
+            "description": "No integra el auto ordinario",
+            "parentId": "emplazamiento",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+              "ev-c42-a55-l197-225-admision-emplazamiento"
+            ]
+          },
+          {
+            "id": "contestacion",
+            "label": "Contestación",
+            "description": "Nueve días",
+            "parentId": "postulacion",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+              "ev-c42-a55-l197-225-admision-emplazamiento",
+              "ev-c42-a55-l231-243-fase-escrita"
+            ]
+          },
+          {
+            "id": "defensas",
+            "label": "Defensas",
+            "description": "Se concentran al contestar",
+            "parentId": "contestacion",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+              "ev-c42-ccom-1194-carga-prueba"
+            ]
+          },
+          {
+            "id": "reconvencion",
+            "label": "Reconvención",
+            "description": "Se plantea al contestar",
+            "parentId": "contestacion",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion"
+            ]
+          },
+          {
+            "id": "preliminar",
+            "label": "Audiencia preliminar",
+            "description": "Ordena el litigio",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c42-a55-l243-269-audiencias"
+            ]
+          },
+          {
+            "id": "depuracion",
+            "label": "Depuración",
+            "description": "Resuelve cuestiones procesales",
+            "parentId": "preliminar",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c42-a55-l243-269-audiencias"
+            ]
+          },
+          {
+            "id": "conciliacion",
+            "label": "Conciliación",
+            "description": "Busca convenio",
+            "parentId": "preliminar",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c42-a55-l243-269-audiencias"
+            ]
+          },
+          {
+            "id": "hechos-acuerdo",
+            "label": "Hechos no controvertidos",
+            "description": "Reduce materia de prueba",
+            "parentId": "preliminar",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c42-a55-l243-269-audiencias"
+            ]
+          },
+          {
+            "id": "acuerdos-prueba",
+            "label": "Acuerdos probatorios",
+            "description": "Evitan prueba innecesaria",
+            "parentId": "preliminar",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c42-a55-l243-269-audiencias"
+            ]
+          },
+          {
+            "id": "admision-prueba",
+            "label": "Admisión de pruebas",
+            "description": "Pertinencia y preparación",
+            "parentId": "preliminar",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c42-ccom-1390bis41-1390bis50-prueba",
+              "ev-c42-a55-l243-269-audiencias"
+            ]
+          },
+          {
+            "id": "juicio",
+            "label": "Audiencia de juicio",
+            "description": "Desahogo y decisión",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+              "ev-c42-ccom-1390bis41-1390bis50-prueba",
+              "ev-c42-a55-l243-269-audiencias"
+            ]
+          },
+          {
+            "id": "desahogo",
+            "label": "Desahogo",
+            "description": "Prueba preparada",
+            "parentId": "juicio",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+              "ev-c42-ccom-1390bis41-1390bis50-prueba",
+              "ev-c42-a55-l243-269-audiencias"
+            ]
+          },
+          {
+            "id": "carga",
+            "label": "Carga probatoria",
+            "description": "Cada parte prueba sus hechos",
+            "parentId": "desahogo",
+            "evidenceIds": [
+              "ev-c42-ccom-1194-carga-prueba"
+            ]
+          },
+          {
+            "id": "alegatos",
+            "label": "Alegatos",
+            "description": "Conclusiones de las partes",
+            "parentId": "juicio",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+              "ev-c42-a55-l243-269-audiencias"
+            ]
+          },
+          {
+            "id": "sentencia",
+            "label": "Sentencia",
+            "description": "Decide la controversia",
+            "parentId": "juicio",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+              "ev-c42-a55-l243-269-audiencias"
+            ]
+          },
+          {
+            "id": "sin-recurso",
+            "label": "Sin recurso ordinario",
+            "description": "No hay apelación ordinaria",
+            "parentId": "sentencia",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis-1390bis2-procedencia",
+              "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+              "ev-c42-a55-l271-295-recursos-publicidad"
+            ]
+          },
+          {
+            "id": "regularizacion",
+            "label": "Regularización oral",
+            "description": "Corrige omisión o irregularidad",
+            "parentId": "sin-recurso",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+              "ev-c42-a55-l271-295-recursos-publicidad"
+            ]
+          },
+          {
+            "id": "aclaracion",
+            "label": "Aclaración o adición",
+            "description": "Petición inmediata",
+            "parentId": "sin-recurso",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+              "ev-c42-a55-l271-295-recursos-publicidad"
+            ]
+          },
+          {
+            "id": "direccion-judicial",
+            "label": "Dirección judicial",
+            "description": "No hay dos roles ficticios",
+            "parentId": "inmediacion",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+              "ev-c42-a55-l243-269-audiencias"
+            ]
+          },
+          {
+            "id": "cierre-oficial",
+            "label": "Cierre normativo",
+            "description": "Código completa el audio",
+            "parentId": "sentencia",
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+              "ev-c42-ccom-1390bis41-1390bis50-prueba"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Código de Comercio",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Texto vigente, última reforma DOF 14-11-2025; artículos 1390 Bis a 1390 Bis 50",
+          "retrievedOn": "2026-08-21",
+          "note": "Fuente normativa principal del juicio oral mercantil.",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis-1390bis2-procedencia",
+            "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+            "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+            "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+            "ev-c42-ccom-1390bis41-1390bis50-prueba",
+            "ev-c42-ccom-1061-1063-documentos",
+            "ev-c42-ccom-1194-carga-prueba"
+          ]
+        },
+        {
+          "title": "Código de Comercio — ficha de reformas",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/ccom.htm",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "Federal, México",
+          "citation": "Ficha oficial de texto vigente y decretos de reforma",
+          "retrievedOn": "2026-08-21",
+          "note": "Control de vigencia del texto consolidado.",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis-1390bis2-procedencia",
+            "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+            "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+            "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+            "ev-c42-ccom-1390bis41-1390bis50-prueba"
+          ]
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué excluye la vía oral mercantil?",
+          "answer": "Controversias con procedimiento especial y pretensiones de cuantía indeterminada.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis-1390bis2-procedencia"
+          ]
+        },
+        {
+          "question": "¿Existe límite máximo general de cuantía?",
+          "answer": "No; el texto vigente tramita la vía sin limitación de cuantía, salvo sus exclusiones.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis-1390bis2-procedencia"
+          ]
+        },
+        {
+          "question": "¿La demanda es verbal?",
+          "answer": "No, la postulación inicial se presenta por escrito.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+            "ev-c42-a55-l129-145-demanda-hechos",
+            "ev-c42-a55-l231-243-fase-escrita"
+          ]
+        },
+        {
+          "question": "¿Cuánto tiempo hay para contestar?",
+          "answer": "Nueve días desde el emplazamiento legal.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+            "ev-c42-a55-l197-225-admision-emplazamiento"
+          ]
+        },
+        {
+          "question": "¿Cuándo se formula reconvención?",
+          "answer": "Al contestar la demanda y conforme al traslado legal.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis11-1390bis20-postulacion"
+          ]
+        },
+        {
+          "question": "¿Qué depura la audiencia preliminar?",
+          "answer": "Cuestiones procesales antes del juicio.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+            "ev-c42-a55-l243-269-audiencias"
+          ]
+        },
+        {
+          "question": "¿Para qué sirven los acuerdos sobre hechos?",
+          "answer": "Para retirar de prueba lo que ya no está controvertido.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis32-1390bis37-preliminar"
+          ]
+        },
+        {
+          "question": "¿Qué son acuerdos probatorios?",
+          "answer": "Acuerdos que evitan pruebas innecesarias sobre ciertos extremos.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis32-1390bis37-preliminar"
+          ]
+        },
+        {
+          "question": "¿Qué ocurre en audiencia de juicio?",
+          "answer": "Se desahoga prueba, se oyen alegatos y se conduce a sentencia.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+            "ev-c42-ccom-1390bis41-1390bis50-prueba",
+            "ev-c42-a55-l243-269-audiencias"
+          ]
+        },
+        {
+          "question": "¿El Código crea un juez de instrucción y otro de oralidad?",
+          "answer": "No. Las audiencias se rigen por inmediación y dirección judicial, sin esos dos roles separados.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis-1390bis2-procedencia",
+            "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+            "ev-c42-a55-l243-269-audiencias"
+          ]
+        },
+        {
+          "question": "¿Procede apelación ordinaria?",
+          "answer": "No procede recurso ordinario contra resoluciones de esta vía.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis-1390bis2-procedencia",
+            "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+            "ev-c42-a55-l271-295-recursos-publicidad"
+          ]
+        },
+        {
+          "question": "¿Qué puede solicitarse oralmente?",
+          "answer": "Regularización de omisiones o irregularidades y aclaración o adición inmediata.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+            "ev-c42-a55-l271-295-recursos-publicidad"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Examen: juicio oral mercantil",
+        "description": "Diez casos originales sobre procedencia, postulación, audiencias, prueba y sentencia.",
+        "questions": [
+          {
+            "text": "Una controversia mercantil tiene cuantía indeterminada. ¿Debe tramitarse automáticamente por la vía oral mercantil?",
+            "difficulty": "basic",
+            "options": [
+              "No, la cuantía indeterminada está excluida",
+              "Sí, toda controversia mercantil entra",
+              "Solo si ambas partes son comerciantes"
+            ],
+            "correctOption": 0,
+            "explanation": "La cuantía indeterminada constituye una exclusión legal.",
+            "optionExplanations": [
+              "Aplica la exclusión expresa.",
+              "La regla tiene excepciones.",
+              "La calidad de comerciante no subsana la exclusión."
+            ],
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis-1390bis2-procedencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c42-ccom-1390bis-1390bis2-procedencia"
+              ],
+              [
+                "ev-c42-ccom-1390bis-1390bis2-procedencia"
+              ],
+              [
+                "ev-c42-ccom-1390bis-1390bis2-procedencia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c42-ccom-1390bis-1390bis2-procedencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c42-ccom-1390bis-1390bis2-procedencia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c42-ccom-1390bis-1390bis2-procedencia"
+              ],
+              [
+                "ev-c42-ccom-1390bis-1390bis2-procedencia"
+              ],
+              [
+                "ev-c42-ccom-1390bis-1390bis2-procedencia"
+              ]
+            ]
+          },
+          {
+            "text": "Una sociedad pretende contestar verbalmente hasta la audiencia preliminar. ¿Es correcto?",
+            "difficulty": "basic",
+            "options": [
+              "No, debe contestar por escrito en nueve días",
+              "Sí, porque el juicio es oral",
+              "Sí, si ofrece prueba después"
+            ],
+            "correctOption": 0,
+            "explanation": "La oralidad no elimina la postulación escrita ni su plazo.",
+            "optionExplanations": [
+              "Es la secuencia legal.",
+              "Confunde audiencia con contestación.",
+              "La prueba también debe ofrecerse oportunamente."
+            ],
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+              "ev-c42-a55-l197-225-admision-emplazamiento",
+              "ev-c42-a55-l231-243-fase-escrita"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+                "ev-c42-a55-l197-225-admision-emplazamiento",
+                "ev-c42-a55-l231-243-fase-escrita"
+              ],
+              [
+                "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+                "ev-c42-a55-l197-225-admision-emplazamiento",
+                "ev-c42-a55-l231-243-fase-escrita"
+              ],
+              [
+                "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+                "ev-c42-a55-l197-225-admision-emplazamiento",
+                "ev-c42-a55-l231-243-fase-escrita"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+              "ev-c42-a55-l197-225-admision-emplazamiento",
+              "ev-c42-a55-l231-243-fase-escrita"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+              "ev-c42-a55-l197-225-admision-emplazamiento",
+              "ev-c42-a55-l231-243-fase-escrita"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+                "ev-c42-a55-l197-225-admision-emplazamiento",
+                "ev-c42-a55-l231-243-fase-escrita"
+              ],
+              [
+                "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+                "ev-c42-a55-l197-225-admision-emplazamiento",
+                "ev-c42-a55-l231-243-fase-escrita"
+              ],
+              [
+                "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+                "ev-c42-a55-l197-225-admision-emplazamiento",
+                "ev-c42-a55-l231-243-fase-escrita"
+              ]
+            ]
+          },
+          {
+            "text": "La actora omite documentos que legalmente debía acompañar a su demanda. ¿Qué regla debe revisar?",
+            "difficulty": "intermediate",
+            "options": [
+              "La carga documental de los escritos iniciales",
+              "La apelación de sentencia",
+              "El embargo ejecutivo automático"
+            ],
+            "correctOption": 0,
+            "explanation": "Los documentos exigibles se acompañan con los escritos en los supuestos legales.",
+            "optionExplanations": [
+              "Es la regla pertinente.",
+              "La sentencia aún no existe.",
+              "Esta no es la vía ejecutiva."
+            ],
+            "evidenceIds": [
+              "ev-c42-ccom-1061-1063-documentos",
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+              "ev-c42-a55-l175-189-hechos-prueba"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c42-ccom-1061-1063-documentos",
+                "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+                "ev-c42-a55-l175-189-hechos-prueba"
+              ],
+              [
+                "ev-c42-ccom-1061-1063-documentos",
+                "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+                "ev-c42-a55-l175-189-hechos-prueba"
+              ],
+              [
+                "ev-c42-ccom-1061-1063-documentos",
+                "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+                "ev-c42-a55-l175-189-hechos-prueba"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c42-ccom-1061-1063-documentos",
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+              "ev-c42-a55-l175-189-hechos-prueba"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c42-ccom-1061-1063-documentos",
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+              "ev-c42-a55-l175-189-hechos-prueba"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c42-ccom-1061-1063-documentos",
+                "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+                "ev-c42-a55-l175-189-hechos-prueba"
+              ],
+              [
+                "ev-c42-ccom-1061-1063-documentos",
+                "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+                "ev-c42-a55-l175-189-hechos-prueba"
+              ],
+              [
+                "ev-c42-ccom-1061-1063-documentos",
+                "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+                "ev-c42-a55-l175-189-hechos-prueba"
+              ]
+            ]
+          },
+          {
+            "text": "La demandada quiere reclamar una prestación propia ligada al mismo conflicto. ¿En qué momento formula reconvención?",
+            "difficulty": "intermediate",
+            "options": [
+              "Al contestar la demanda",
+              "Después de la sentencia",
+              "Durante los alegatos"
+            ],
+            "correctOption": 0,
+            "explanation": "La reconvención se plantea en la fase postulatoria.",
+            "optionExplanations": [
+              "Es el momento legal.",
+              "Sería extemporáneo.",
+              "Los alegatos no abren nueva pretensión."
+            ],
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c42-ccom-1390bis11-1390bis20-postulacion"
+              ],
+              [
+                "ev-c42-ccom-1390bis11-1390bis20-postulacion"
+              ],
+              [
+                "ev-c42-ccom-1390bis11-1390bis20-postulacion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c42-ccom-1390bis11-1390bis20-postulacion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c42-ccom-1390bis11-1390bis20-postulacion"
+              ],
+              [
+                "ev-c42-ccom-1390bis11-1390bis20-postulacion"
+              ],
+              [
+                "ev-c42-ccom-1390bis11-1390bis20-postulacion"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál es una finalidad de la audiencia preliminar?",
+            "difficulty": "basic",
+            "options": [
+              "Depurar el procedimiento y decidir sobre prueba",
+              "Ejecutar el remate",
+              "Resolver una apelación"
+            ],
+            "correctOption": 0,
+            "explanation": "La preliminar ordena el litigio y prepara el juicio.",
+            "optionExplanations": [
+              "Corresponde a esta audiencia.",
+              "No es ejecución mercantil.",
+              "No hay apelación ordinaria."
+            ],
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c42-a55-l243-269-audiencias"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+                "ev-c42-a55-l243-269-audiencias"
+              ],
+              [
+                "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+                "ev-c42-a55-l243-269-audiencias"
+              ],
+              [
+                "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+                "ev-c42-a55-l243-269-audiencias"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c42-a55-l243-269-audiencias"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c42-a55-l243-269-audiencias"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+                "ev-c42-a55-l243-269-audiencias"
+              ],
+              [
+                "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+                "ev-c42-a55-l243-269-audiencias"
+              ],
+              [
+                "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+                "ev-c42-a55-l243-269-audiencias"
+              ]
+            ]
+          },
+          {
+            "text": "Las partes reconocen un hecho relevante. ¿Qué utilidad tiene fijarlo como no controvertido?",
+            "difficulty": "intermediate",
+            "options": [
+              "Evita prueba innecesaria sobre ese hecho",
+              "Obliga a terminar el juicio",
+              "Convierte la demanda en ejecutiva"
+            ],
+            "correctOption": 0,
+            "explanation": "Los acuerdos delimitan la materia que aún necesita prueba.",
+            "optionExplanations": [
+              "Reduce el debate probatorio.",
+              "No impone convenio total.",
+              "No crea título ejecutivo."
+            ],
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis32-1390bis37-preliminar"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c42-ccom-1390bis32-1390bis37-preliminar"
+              ],
+              [
+                "ev-c42-ccom-1390bis32-1390bis37-preliminar"
+              ],
+              [
+                "ev-c42-ccom-1390bis32-1390bis37-preliminar"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c42-ccom-1390bis32-1390bis37-preliminar"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c42-ccom-1390bis32-1390bis37-preliminar"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c42-ccom-1390bis32-1390bis37-preliminar"
+              ],
+              [
+                "ev-c42-ccom-1390bis32-1390bis37-preliminar"
+              ],
+              [
+                "ev-c42-ccom-1390bis32-1390bis37-preliminar"
+              ]
+            ]
+          },
+          {
+            "text": "Una testimonial no quedó preparada para la audiencia de juicio. ¿Qué debe evitarse?",
+            "difficulty": "intermediate",
+            "options": [
+              "Suponer que se desahoga sin cumplir preparación",
+              "Revisar la decisión judicial de admisión",
+              "Distinguir carga y preparación"
+            ],
+            "correctOption": 0,
+            "explanation": "La oralidad no elimina las cargas de preparación probatoria.",
+            "optionExplanations": [
+              "La prueba debe llegar preparada.",
+              "Esa revisión sí es pertinente.",
+              "La distinción es necesaria."
+            ],
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c42-ccom-1390bis41-1390bis50-prueba",
+              "ev-c42-ccom-1194-carga-prueba"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+                "ev-c42-ccom-1390bis41-1390bis50-prueba",
+                "ev-c42-ccom-1194-carga-prueba"
+              ],
+              [
+                "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+                "ev-c42-ccom-1390bis41-1390bis50-prueba",
+                "ev-c42-ccom-1194-carga-prueba"
+              ],
+              [
+                "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+                "ev-c42-ccom-1390bis41-1390bis50-prueba",
+                "ev-c42-ccom-1194-carga-prueba"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c42-ccom-1390bis41-1390bis50-prueba",
+              "ev-c42-ccom-1194-carga-prueba"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+              "ev-c42-ccom-1390bis41-1390bis50-prueba",
+              "ev-c42-ccom-1194-carga-prueba"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+                "ev-c42-ccom-1390bis41-1390bis50-prueba",
+                "ev-c42-ccom-1194-carga-prueba"
+              ],
+              [
+                "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+                "ev-c42-ccom-1390bis41-1390bis50-prueba",
+                "ev-c42-ccom-1194-carga-prueba"
+              ],
+              [
+                "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+                "ev-c42-ccom-1390bis41-1390bis50-prueba",
+                "ev-c42-ccom-1194-carga-prueba"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué secuencia corresponde a la audiencia de juicio?",
+            "difficulty": "basic",
+            "options": [
+              "Desahogo de prueba, alegatos y sentencia",
+              "Demanda, emplazamiento y contestación",
+              "Requerimiento, embargo y remate"
+            ],
+            "correctOption": 0,
+            "explanation": "La audiencia de juicio concentra prueba y conclusión.",
+            "optionExplanations": [
+              "Es la secuencia correcta.",
+              "Es fase postulatoria.",
+              "Describe la vía ejecutiva."
+            ],
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+              "ev-c42-ccom-1390bis41-1390bis50-prueba",
+              "ev-c42-a55-l243-269-audiencias"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+                "ev-c42-ccom-1390bis41-1390bis50-prueba",
+                "ev-c42-a55-l243-269-audiencias"
+              ],
+              [
+                "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+                "ev-c42-ccom-1390bis41-1390bis50-prueba",
+                "ev-c42-a55-l243-269-audiencias"
+              ],
+              [
+                "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+                "ev-c42-ccom-1390bis41-1390bis50-prueba",
+                "ev-c42-a55-l243-269-audiencias"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+              "ev-c42-ccom-1390bis41-1390bis50-prueba",
+              "ev-c42-a55-l243-269-audiencias"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+              "ev-c42-ccom-1390bis41-1390bis50-prueba",
+              "ev-c42-a55-l243-269-audiencias"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+                "ev-c42-ccom-1390bis41-1390bis50-prueba",
+                "ev-c42-a55-l243-269-audiencias"
+              ],
+              [
+                "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+                "ev-c42-ccom-1390bis41-1390bis50-prueba",
+                "ev-c42-a55-l243-269-audiencias"
+              ],
+              [
+                "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+                "ev-c42-ccom-1390bis41-1390bis50-prueba",
+                "ev-c42-a55-l243-269-audiencias"
+              ]
+            ]
+          },
+          {
+            "text": "Una parte intenta apelar una decisión del juicio oral mercantil. ¿Qué regla general aplica?",
+            "difficulty": "advanced",
+            "options": [
+              "No procede recurso ordinario",
+              "Siempre procede apelación por cuantía",
+              "Procede revocación escrita automática"
+            ],
+            "correctOption": 0,
+            "explanation": "El Código excluye recursos ordinarios en esta vía.",
+            "optionExplanations": [
+              "Es la regla expresa.",
+              "No existe esa regla general.",
+              "Confunde regularización oral con recurso."
+            ],
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis-1390bis2-procedencia",
+              "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+              "ev-c42-a55-l271-295-recursos-publicidad"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c42-ccom-1390bis-1390bis2-procedencia",
+                "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+                "ev-c42-a55-l271-295-recursos-publicidad"
+              ],
+              [
+                "ev-c42-ccom-1390bis-1390bis2-procedencia",
+                "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+                "ev-c42-a55-l271-295-recursos-publicidad"
+              ],
+              [
+                "ev-c42-ccom-1390bis-1390bis2-procedencia",
+                "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+                "ev-c42-a55-l271-295-recursos-publicidad"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c42-ccom-1390bis-1390bis2-procedencia",
+              "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+              "ev-c42-a55-l271-295-recursos-publicidad"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c42-ccom-1390bis-1390bis2-procedencia",
+              "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+              "ev-c42-a55-l271-295-recursos-publicidad"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c42-ccom-1390bis-1390bis2-procedencia",
+                "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+                "ev-c42-a55-l271-295-recursos-publicidad"
+              ],
+              [
+                "ev-c42-ccom-1390bis-1390bis2-procedencia",
+                "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+                "ev-c42-a55-l271-295-recursos-publicidad"
+              ],
+              [
+                "ev-c42-ccom-1390bis-1390bis2-procedencia",
+                "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+                "ev-c42-a55-l271-295-recursos-publicidad"
+              ]
+            ]
+          },
+          {
+            "text": "Durante una audiencia se advierte una omisión procesal inmediata. ¿Qué puede pedir la parte?",
+            "difficulty": "advanced",
+            "options": [
+              "Regularización oral en los términos del Código",
+              "Una segunda audiencia ante otro juez",
+              "Embargo ejecutivo de la contraparte"
+            ],
+            "correctOption": 0,
+            "explanation": "La solicitud oral de regularización corrige la marcha procesal sin convertirse en apelación.",
+            "optionExplanations": [
+              "Es el mecanismo correcto.",
+              "No existe esa división judicial.",
+              "No guarda relación con la omisión."
+            ],
+            "evidenceIds": [
+              "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+              "ev-c42-a55-l271-295-recursos-publicidad"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+                "ev-c42-a55-l271-295-recursos-publicidad"
+              ],
+              [
+                "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+                "ev-c42-a55-l271-295-recursos-publicidad"
+              ],
+              [
+                "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+                "ev-c42-a55-l271-295-recursos-publicidad"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+              "ev-c42-a55-l271-295-recursos-publicidad"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+              "ev-c42-a55-l271-295-recursos-publicidad"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+                "ev-c42-a55-l271-295-recursos-publicidad"
+              ],
+              [
+                "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+                "ev-c42-a55-l271-295-recursos-publicidad"
+              ],
+              [
+                "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+                "ev-c42-a55-l271-295-recursos-publicidad"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c42-ccom-1390bis-1390bis2-procedencia",
+      "kind": "official",
+      "title": "Código de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-11-2025, artículos 1390 Bis a 1390 Bis 2",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c42-ccom-1390bis3-1390bis26-audiencias",
+      "kind": "official",
+      "title": "Código de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-11-2025, artículos 1390 Bis 3 a 1390 Bis 26",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c42-ccom-1390bis11-1390bis20-postulacion",
+      "kind": "official",
+      "title": "Código de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-11-2025, artículos 1390 Bis 11 a 1390 Bis 20",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c42-ccom-1390bis32-1390bis37-preliminar",
+      "kind": "official",
+      "title": "Código de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-11-2025, artículos 1390 Bis 32 a 1390 Bis 37",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c42-ccom-1390bis38-1390bis39-juicio-sentencia",
+      "kind": "official",
+      "title": "Código de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-11-2025, artículos 1390 Bis 38 y 1390 Bis 39",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c42-ccom-1390bis41-1390bis50-prueba",
+      "kind": "official",
+      "title": "Código de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-11-2025, artículos 1390 Bis 41 a 1390 Bis 50",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c42-ccom-1061-1063-documentos",
+      "kind": "official",
+      "title": "Código de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-11-2025, artículos 1061 a 1063",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c42-ccom-1194-carga-prueba",
+      "kind": "official",
+      "title": "Código de Comercio",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "Federal, México",
+      "locator": "texto vigente, última reforma DOF 14-11-2025, artículo 1194",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c42-a55-l085-115-via-contratos",
+      "kind": "transcript",
+      "audioNumber": 55,
+      "locator": {
+        "type": "line_range",
+        "startLine": 85,
+        "endLine": 115
+      }
+    },
+    {
+      "id": "ev-c42-a55-l129-145-demanda-hechos",
+      "kind": "transcript",
+      "audioNumber": 55,
+      "locator": {
+        "type": "line_range",
+        "startLine": 129,
+        "endLine": 145
+      }
+    },
+    {
+      "id": "ev-c42-a55-l175-189-hechos-prueba",
+      "kind": "transcript",
+      "audioNumber": 55,
+      "locator": {
+        "type": "line_range",
+        "startLine": 175,
+        "endLine": 189
+      }
+    },
+    {
+      "id": "ev-c42-a55-l197-225-admision-emplazamiento",
+      "kind": "transcript",
+      "audioNumber": 55,
+      "locator": {
+        "type": "line_range",
+        "startLine": 197,
+        "endLine": 225
+      }
+    },
+    {
+      "id": "ev-c42-a55-l231-243-fase-escrita",
+      "kind": "transcript",
+      "audioNumber": 55,
+      "locator": {
+        "type": "line_range",
+        "startLine": 231,
+        "endLine": 243
+      }
+    },
+    {
+      "id": "ev-c42-a55-l243-269-audiencias",
+      "kind": "transcript",
+      "audioNumber": 55,
+      "locator": {
+        "type": "line_range",
+        "startLine": 243,
+        "endLine": 269
+      }
+    },
+    {
+      "id": "ev-c42-a55-l271-295-recursos-publicidad",
+      "kind": "transcript",
+      "audioNumber": 55,
+      "locator": {
+        "type": "line_range",
+        "startLine": 271,
+        "endLine": 295
+      }
+    }
+  ]
+}

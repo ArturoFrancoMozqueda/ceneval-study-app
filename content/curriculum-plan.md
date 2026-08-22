@@ -127,8 +127,8 @@ Los conceptos registrales aislados de los audios 03, 45, 46 y bancos de práctic
 | ID | Clase | Fuentes | Estado editorial |
 | --- | --- | --- | --- |
 | C40 | Juicio ejecutivo mercantil escrito | Audio 53 | Publicada — clase 49 |
-| C41 | Juicio ejecutivo mercantil oral | Audio 54 y primera parte del Audio 55 | Planificada |
-| C42 | Juicio oral mercantil | segunda parte del Audio 55 | Planificada; completar cierre con Código de Comercio vigente |
+| C41 | Juicio ejecutivo mercantil oral | Audio 54 y líneas 13–69 del Audio 55 | Paquete 1.2 trazable preparado localmente; no importado ni publicado |
+| C42 | Juicio oral mercantil | Audio 55, líneas 85–295 | Paquete 1.2 trazable preparado localmente; cierre completado solo con Código de Comercio vigente; no importado ni publicado |
 | C43 | Juicio ordinario mercantil escrito | primera parte del Audio 56 | Planificada; confirmar procedencia actual frente a la oralidad |
 
 ### M13. Derecho laboral
