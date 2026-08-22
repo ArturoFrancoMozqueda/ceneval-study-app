@@ -1,10 +1,13 @@
 {
-  "packageVersion": "1.1",
+  "packageVersion": "1.2",
   "curriculum": {
     "code": "C39",
     "order": 39,
     "audioSources": [
-      {"audioNumber": 51,"fragment": "Segunda parte: derechos de autor"}
+      {
+        "audioNumber": 51,
+        "fragment": "Segunda parte: derechos de autor"
+      }
     ]
   },
   "subject": {
@@ -19,112 +22,1467 @@
     "originalFile": "AUDIO 51.txt",
     "cleaned": "Se conservó la segunda parte del Audio 51 dedicada a derechos de autor. Se eliminaron conversaciones personales, lenguaje ofensivo, afirmaciones discriminatorias, recomendaciones comerciales y relatos ajenos al aprendizaje. Se corrigió que la autoridad es el Instituto Nacional del Derecho de Autor, INDAUTOR, no INPI; que la protección nace con la fijación de una obra original y no con su registro; que autor solo puede ser una persona física; que los derechos morales no duran cien años, sino que son perpetuos y están unidos al autor; que los derechos patrimoniales duran, por regla general, la vida del autor y cien años después de su muerte; que el ejercicio hereditario de derechos morales tiene límites; que registrar una adaptación no autoriza explotar la obra primigenia; y que ISBN e ISSN son identificadores normalizados de libros y publicaciones periódicas, no registros constitutivos de derecho de autor."
   },
-  "topics": [{
-    "title": "Proteger, explotar y registrar una obra",
-    "description": "De la fijación de la obra a la autoría, los derechos morales, la explotación patrimonial y la seguridad registral.",
-    "learningJourney": {
-      "openingPrompt": "Una estudiante termina y guarda su tesis en un archivo digital, pero todavía no la registra. ¿Tiene derechos de autor sobre ella?",
-      "quickChecks": [
-        {"prompt":"¿El registro crea el derecho de autor?","answer":"No. La protección nace cuando la obra queda fijada en un soporte material; el registro aporta seguridad jurídica y publicidad.","feedback":"Fijación y registro cumplen funciones diferentes."},
-        {"prompt":"¿Cuánto duran los derechos morales?","answer":"Son perpetuos y están unidos al autor; además son inalienables, imprescriptibles, irrenunciables e inembargables.","feedback":"No se les aplica el plazo patrimonial de cien años."},
-        {"prompt":"¿ISBN equivale a registrar una obra?","answer":"No. Es un identificador normalizado de una edición de libro; el registro autoral es un trámite diferente ante INDAUTOR.","feedback":"Identificación editorial no significa reconocimiento constitutivo de autoría."}
-      ],
-      "practicalCase": {
-        "facts": "Elena escribe una novela y la fija en un archivo. Firma con una editorial un documento verbal para imprimirla. La editorial cambia el final, omite su nombre y afirma que el ISBN acredita que es dueña de todos los derechos.",
-        "question": "¿Qué derechos y errores deben identificarse?",
-        "legalRule": "Los artículos 5, 18 a 21, 24 a 32 y 53 LFDA regulan protección sin formalidades, derechos morales, derechos patrimoniales, transmisión escrita e ISBN.",
-        "reasoning": "Elena quedó protegida desde la fijación. La atribución e integridad pertenecen al ámbito moral. La explotación requiere autorización patrimonial y la transmisión debe ser onerosa, temporal y escrita; de otro modo es nula. El ISBN identifica la publicación, pero no transfiere derechos ni sustituye el registro.",
-        "conclusion": "Elena conserva su calidad de autora y puede hacer valer las facultades morales y patrimoniales correspondientes; el conflicto no se resuelve mostrando únicamente el ISBN."
+  "topics": [
+    {
+      "title": "Proteger, explotar y registrar una obra",
+      "description": "De la fijación de la obra a la autoría, los derechos morales, la explotación patrimonial y la seguridad registral.",
+      "learningJourney": {
+        "openingPrompt": "Una estudiante termina y guarda su tesis en un archivo digital, pero todavía no la registra. ¿Tiene derechos de autor sobre ella?",
+        "quickChecks": [
+          {
+            "prompt": "¿El registro crea el derecho de autor?",
+            "answer": "No. La protección nace cuando la obra queda fijada en un soporte material; el registro aporta seguridad jurídica y publicidad.",
+            "feedback": "Fijación y registro cumplen funciones diferentes.",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+              "ev-c39-lfda-arts30-41-transmision-soporte",
+              "ev-c39-lfda-arts162-169-registro",
+              "ev-c39-reglamento-arts53-64-registro",
+              "ev-c39-lfda-arts208-210-indautor",
+              "ev-c39-indautor-instituto-servicios"
+            ]
+          },
+          {
+            "prompt": "¿Cuánto duran los derechos morales?",
+            "answer": "Son perpetuos y están unidos al autor; además son inalienables, imprescriptibles, irrenunciables e inembargables.",
+            "feedback": "No se les aplica el plazo patrimonial de cien años.",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+              "ev-c39-lfda-arts18-23-derechos-morales",
+              "ev-c39-lfda-arts24-29-patrimoniales-vigencia"
+            ]
+          },
+          {
+            "prompt": "¿ISBN equivale a registrar una obra?",
+            "answer": "No. Es un identificador normalizado de una edición de libro; el registro autoral es un trámite diferente ante INDAUTOR.",
+            "feedback": "Identificación editorial no significa reconocimiento constitutivo de autoría.",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+              "ev-c39-lfda-arts53-57-isbn-issn",
+              "ev-c39-reglamento-arts93-101-isbn-issn",
+              "ev-c39-indautor-instituto-servicios",
+              "ev-c39-lfda-arts162-169-registro",
+              "ev-c39-reglamento-arts53-64-registro",
+              "ev-c39-lfda-arts208-210-indautor"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "Elena escribe una novela y la fija en un archivo. Celebra verbalmente con una editorial un acuerdo para imprimirla. La editorial cambia el final, omite su nombre y afirma que el ISBN acredita que es dueña de todos los derechos.",
+          "question": "¿Qué derechos y errores deben identificarse?",
+          "legalRule": "Los artículos 5, 18 a 21, 24 a 32 y 53 LFDA regulan protección sin formalidades, derechos morales, derechos patrimoniales, transmisión escrita e ISBN.",
+          "reasoning": "Elena quedó protegida desde la fijación. La atribución e integridad pertenecen al ámbito moral. La explotación requiere autorización patrimonial y la transmisión debe ser onerosa, temporal y escrita; de otro modo es nula. El ISBN identifica la publicación, pero no transfiere derechos ni sustituye el registro.",
+          "conclusion": "Elena conserva su calidad de autora y puede hacer valer las facultades morales y patrimoniales correspondientes; el conflicto no se resuelve mostrando únicamente el ISBN.",
+          "evidenceIds": [
+            "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+            "ev-c39-lfda-arts18-23-derechos-morales",
+            "ev-c39-lfda-arts24-29-patrimoniales-vigencia",
+            "ev-c39-lfda-arts30-41-transmision-soporte",
+            "ev-c39-lfda-arts53-57-isbn-issn",
+            "ev-c39-reglamento-arts93-101-isbn-issn",
+            "ev-c39-indautor-instituto-servicios",
+            "ev-c39-lfda-arts162-169-registro",
+            "ev-c39-reglamento-arts53-64-registro",
+            "ev-c39-lfda-arts208-210-indautor"
+          ]
+        },
+        "closingPrompt": "Explica la ruta completa: creación, fijación, autor, derecho moral, derecho patrimonial, contrato, registro y dominio público.",
+        "nextActivity": "Revisa el mapa visual, contesta la guía de doce preguntas y respuestas y resuelve los diez casos originales.",
+        "openingPromptEvidenceIds": [
+          "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+          "ev-c39-lfda-arts18-23-derechos-morales",
+          "ev-c39-lfda-arts24-29-patrimoniales-vigencia",
+          "ev-c39-lfda-arts30-41-transmision-soporte",
+          "ev-c39-lfda-arts162-169-registro",
+          "ev-c39-reglamento-arts53-64-registro",
+          "ev-c39-lfda-arts208-210-indautor",
+          "ev-c39-indautor-instituto-servicios"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+          "ev-c39-lfda-arts18-23-derechos-morales",
+          "ev-c39-lfda-arts24-29-patrimoniales-vigencia",
+          "ev-c39-lfda-arts162-169-registro"
+        ]
       },
-      "closingPrompt": "Explica la ruta completa: creación, fijación, autor, derecho moral, derecho patrimonial, contrato, registro y dominio público.",
-      "nextActivity": "Revisa el mapa visual, contesta la guía de doce preguntas y respuestas y resuelve los diez casos originales."
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "El derecho de autor protege obras literarias y artísticas desde su fijación, sin exigir registro. Autor es la persona física creadora. El derecho moral protege el vínculo personal con la obra y es perpetuo, inalienable, imprescriptible, irrenunciable e inembargable. El patrimonial permite explotar o autorizar explotación y dura, como regla general, la vida del autor más cien años. INDAUTOR registra obras y contratos para seguridad jurídica; ISBN e ISSN solo identifican publicaciones.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+            "ev-c39-lfda-arts18-23-derechos-morales",
+            "ev-c39-lfda-arts24-29-patrimoniales-vigencia",
+            "ev-c39-lfda-arts30-41-transmision-soporte",
+            "ev-c39-lfda-arts53-57-isbn-issn",
+            "ev-c39-reglamento-arts93-101-isbn-issn",
+            "ev-c39-indautor-instituto-servicios",
+            "ev-c39-lfda-arts162-169-registro",
+            "ev-c39-reglamento-arts53-64-registro",
+            "ev-c39-lfda-arts208-210-indautor"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa desde cero",
+          "content": "El derecho de autor es el reconocimiento estatal a la persona física que crea una obra literaria o artística. Protege la forma original en que una creación se expresa, no la idea abstracta, el método, el sistema o el concepto por sí mismo. La ley reconoce ramas literaria, musical, dramática, danza, dibujo, escultura, caricatura, arquitectura, audiovisual, radio y televisión, programas de cómputo, fotografía, arte aplicado y compilaciones originales, entre otras análogas.\n\nLa protección comienza cuando la obra se fija en un soporte material que permite percibirla, reproducirla o comunicarla, incluido un archivo electrónico. No depende de calidad, destino, éxito comercial ni registro. Una tesis guardada digitalmente, una canción grabada o un programa escrito pueden estar protegidos desde su fijación. El Registro Público del Derecho de Autor sirve para seguridad jurídica y publicidad, pero la obra sigue protegida aunque no se inscriba.\n\nAutor es únicamente la persona física creadora. Una empresa puede adquirir derechos patrimoniales por transmisión u otro supuesto legal, o recibir una licencia de explotación; ello no la convierte en autora. Comprar el objeto que contiene la obra tampoco transfiere automáticamente los derechos patrimoniales: adquirir un cuadro no concede, por sí solo, facultad para reproducirlo comercialmente.\n\nLos derechos morales expresan el vínculo personal del autor con su obra. El autor es su titular primigenio y perpetuo; son inalienables, imprescriptibles, irrenunciables e inembargables. Incluyen decidir divulgación o mantener inédita la obra, exigir reconocimiento de autoría o anonimato o seudónimo, oponerse a deformaciones que causen demérito o perjuicio reputacional, modificarla, retirarla del comercio y rechazar atribuciones falsas.\n\nNo todas esas facultades pasan del mismo modo a herederos. Estos pueden ejercer divulgación, reconocimiento, integridad y oposición a falsa atribución, pero no reciben sin límites las facultades personales de modificar o retirar. Por eso es incorrecto afirmar simplemente que todos los derechos morales se heredan durante cien años. Su titularidad es perpetua y su ejercicio se distribuye conforme a la ley.\n\nLos derechos patrimoniales permiten explotar exclusivamente la obra o autorizar a terceros. Comprenden modalidades independientes como reproducción, publicación, edición, comunicación pública, transmisión, distribución, importación y divulgación de obras derivadas. Autorizar una modalidad no concede automáticamente todas las demás. El autor es titular originario; herederos o adquirentes pueden ser titulares derivados.\n\nLa vigencia patrimonial ordinaria es la vida del autor y cien años después de su muerte; en coautoría se cuentan desde la muerte del último coautor. La ley contempla además supuestos de cien años después de divulgación para determinadas obras. Terminado el plazo, la obra entra al dominio público y puede utilizarse libremente, respetando los derechos morales aplicables.\n\nLos derechos patrimoniales pueden transferirse o licenciarse. Toda transmisión debe ser onerosa y temporal; los contratos y licencias deben constar por escrito o serán nulos. La transmisión debe prever remuneración fija o participación proporcional y se inscribe en el Registro para surtir efectos contra terceros. Si no se pacta plazo, se presume cinco años; solo excepcionalmente puede superar quince cuando la naturaleza de la obra o inversión lo justifique, sin perjuicio de regímenes especiales.\n\nUna obra derivada —traducción, adaptación, arreglo o transformación— puede protegerse por sus aportaciones originales, pero su registro no autoriza explotar la obra primigenia si aún se necesita consentimiento. Tampoco registrar un videojuego, personaje o guion convierte en propios elementos ajenos incorporados sin autorización. Deben distinguirse autoría, titularidad y permisos.\n\nEl Registro Público del Derecho de Autor puede inscribir obras, ciertos actos, contratos, derechos conexos y características gráficas. Su función es probatoria, publicitaria y de seguridad jurídica. Para una obra suelen presentarse solicitud, ejemplares, identificación, comprobante de pago y documentos de representación o titularidad cuando correspondan. El trámite puede realizarse por los canales oficiales de INDAUTOR.\n\nISBN significa Número Internacional Normalizado del Libro e identifica una edición; ISSN identifica publicaciones periódicas. Son datos editoriales que deben aparecer cuando correspondan, pero no sustituyen la inscripción de la obra, no prueban por sí solos la transmisión y no crean derechos de autor. Una revista usa ISSN; una edición de libro usa ISBN.\n\nMétodo CENEVAL: identifica si existe obra expresada y fijada; separa idea de expresión; determina autor y titular; clasifica facultad moral o patrimonial; revisa autorización, modalidad, forma y plazo; distingue registro de identificadores editoriales; y concluye considerando vigencia, dominio público y derechos morales.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+            "ev-c39-lfda-arts18-23-derechos-morales",
+            "ev-c39-lfda-arts24-29-patrimoniales-vigencia",
+            "ev-c39-lfda-arts30-41-transmision-soporte",
+            "ev-c39-lfda-arts53-57-isbn-issn",
+            "ev-c39-reglamento-arts93-101-isbn-issn",
+            "ev-c39-indautor-instituto-servicios",
+            "ev-c39-lfda-arts77-80-obras-derivadas",
+            "ev-c39-lfda-arts162-169-registro",
+            "ev-c39-reglamento-arts53-64-registro",
+            "ev-c39-lfda-arts208-210-indautor"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico vigente",
+          "content": "Ley Federal del Derecho de Autor, última reforma DOF 14-05-2026: artículos 5 y 6 sobre protección y fijación; 11 a 14 sobre concepto, autor, ramas y exclusiones; 18 a 23 sobre derechos morales; 24 a 29 sobre derechos patrimoniales y vigencia; 30 a 38 sobre transmisión, licencias y soporte material; 53 sobre ISBN en publicaciones; 78 sobre obras derivadas; 102 a 106 sobre programas de cómputo; 162 a 169 sobre Registro Público; y 208 a 210 sobre INDAUTOR. El Reglamento de la LFDA, artículos 93 a 101, regula ISBN e ISSN.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+            "ev-c39-lfda-arts18-23-derechos-morales",
+            "ev-c39-lfda-arts24-29-patrimoniales-vigencia",
+            "ev-c39-lfda-arts30-41-transmision-soporte",
+            "ev-c39-lfda-arts53-57-isbn-issn",
+            "ev-c39-lfda-arts77-80-obras-derivadas",
+            "ev-c39-lfda-arts162-169-registro",
+            "ev-c39-lfda-arts208-210-indautor",
+            "ev-c39-reglamento-arts53-64-registro",
+            "ev-c39-reglamento-arts93-101-isbn-issn"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Ana escribe un cuento y lo guarda en su computadora: la fijación activa protección sin necesidad de registro. Si una editorial quiere imprimirlo, necesita autorización patrimonial por escrito. Ana conserva su autoría moral aunque otorgue una licencia. El ISBN de la edición identifica el libro, pero no convierte a la editorial en autora.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+            "ev-c39-lfda-arts18-23-derechos-morales",
+            "ev-c39-lfda-arts24-29-patrimoniales-vigencia",
+            "ev-c39-lfda-arts30-41-transmision-soporte",
+            "ev-c39-lfda-arts53-57-isbn-issn",
+            "ev-c39-reglamento-arts93-101-isbn-issn",
+            "ev-c39-indautor-instituto-servicios",
+            "ev-c39-lfda-arts162-169-registro",
+            "ev-c39-reglamento-arts53-64-registro",
+            "ev-c39-lfda-arts208-210-indautor"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo CENEVAL",
+          "content": "Un museo compra una pintura y comienza a vender reproducciones. La respuesta correcta no es que la compra del lienzo transfirió todos los derechos: propiedad del soporte y derechos patrimoniales son independientes. Debe revisarse si existe una autorización escrita para reproducir y comercializar.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+            "ev-c39-lfda-arts24-29-patrimoniales-vigencia"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Obra: expresión original fijada. Idea: no se protege por sí sola. Autor: persona física creadora. Protección: nace sin registro. Moral: vínculo personal, perpetuo e intransferible. Patrimonial: explotación y autorización. Vigencia ordinaria: vida más cien años. Contrato: escrito, oneroso y temporal para transmitir. Registro: seguridad jurídica y publicidad. Obra derivada: protege aportación original, pero puede requerir permiso de la obra base. ISBN: libro. ISSN: publicación periódica. INDAUTOR: autoridad autoral.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+            "ev-c39-lfda-arts18-23-derechos-morales",
+            "ev-c39-lfda-arts24-29-patrimoniales-vigencia",
+            "ev-c39-lfda-arts30-41-transmision-soporte",
+            "ev-c39-lfda-arts53-57-isbn-issn",
+            "ev-c39-reglamento-arts93-101-isbn-issn",
+            "ev-c39-indautor-instituto-servicios",
+            "ev-c39-lfda-arts77-80-obras-derivadas",
+            "ev-c39-lfda-arts162-169-registro",
+            "ev-c39-reglamento-arts53-64-registro",
+            "ev-c39-lfda-arts208-210-indautor"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía intensiva de preguntas y respuestas",
+          "content": "1. ¿Cuándo nace la protección? Respuesta: al fijarse la obra en un soporte. 2. ¿El registro es obligatorio para tener derechos? Respuesta: no. 3. ¿Quién puede ser autor? Respuesta: la persona física creadora. 4. ¿Qué no se protege? Respuesta: ideas, métodos, sistemas y conceptos por sí mismos. 5. ¿Qué protege el derecho moral? Respuesta: divulgación, atribución, integridad, modificación, retiro y oposición a falsa autoría. 6. ¿Cómo es el derecho moral? Respuesta: perpetuo, inalienable, imprescriptible, irrenunciable e inembargable. 7. ¿Qué permite el derecho patrimonial? Respuesta: explotar o autorizar modalidades de explotación. 8. ¿Cuánto dura ordinariamente? Respuesta: vida del autor más cien años. 9. ¿Cómo debe transmitirse? Respuesta: por escrito, de forma onerosa y temporal. 10. ¿Para qué sirve el registro? Respuesta: seguridad jurídica y publicidad. 11. ¿Qué identifica ISBN? Respuesta: una edición de libro. 12. ¿Qué identifica ISSN? Respuesta: una publicación periódica.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+            "ev-c39-lfda-arts18-23-derechos-morales",
+            "ev-c39-lfda-arts24-29-patrimoniales-vigencia",
+            "ev-c39-lfda-arts30-41-transmision-soporte",
+            "ev-c39-lfda-arts53-57-isbn-issn",
+            "ev-c39-reglamento-arts93-101-isbn-issn",
+            "ev-c39-indautor-instituto-servicios",
+            "ev-c39-lfda-arts162-169-registro",
+            "ev-c39-reglamento-arts53-64-registro",
+            "ev-c39-lfda-arts208-210-indautor"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Obra: creación literaria o artística expresada. Fijación: incorporación a soporte perceptible. Originalidad: aportación creativa propia. Autor: persona física creadora. Titular originario: autor. Titular derivado: heredero o adquirente. Derecho moral: prerrogativa personal. Divulgación: primera comunicación al público. Paternidad: reconocimiento autoral. Integridad: oposición a deformación perjudicial. Derecho patrimonial: explotación económica. Reproducción: creación de ejemplares. Comunicación pública: acceso sin distribución de copias. Distribución: puesta a disposición de ejemplares. Regalía: remuneración por explotación. Licencia: autorización de uso. Transmisión: cesión patrimonial. Dominio público: uso tras vencer plazo patrimonial. Registro: inscripción para seguridad jurídica. ISBN: identificador de libro. ISSN: identificador de serie.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+            "ev-c39-lfda-arts18-23-derechos-morales",
+            "ev-c39-lfda-arts24-29-patrimoniales-vigencia",
+            "ev-c39-lfda-arts30-41-transmision-soporte",
+            "ev-c39-lfda-arts53-57-isbn-issn",
+            "ev-c39-reglamento-arts93-101-isbn-issn",
+            "ev-c39-indautor-instituto-servicios",
+            "ev-c39-lfda-arts162-169-registro",
+            "ev-c39-reglamento-arts53-64-registro",
+            "ev-c39-lfda-arts208-210-indautor"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "No llames INPI ni IMPI a la autoridad registral autoral: es INDAUTOR. No confundas idea con obra fijada. No digas que el derecho nace al registrar. No atribuyas autoría a una persona moral. No afirmes que derechos morales y patrimoniales duran cien años. No confundas titularidad moral con su ejercicio hereditario. No reduzcas derecho patrimonial a cobrar regalías. No supongas que comprar un ejemplar transfiere reproducción. No transmitas derechos verbalmente. No interpretes una licencia como autorización para todas las modalidades. No creas que registrar una adaptación autoriza usar la obra base. No confundas ISBN o ISSN con certificado de obra. No afirmes que entrar al dominio público borra la autoría.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+            "ev-c39-lfda-arts18-23-derechos-morales",
+            "ev-c39-lfda-arts24-29-patrimoniales-vigencia",
+            "ev-c39-lfda-arts30-41-transmision-soporte",
+            "ev-c39-lfda-arts53-57-isbn-issn",
+            "ev-c39-reglamento-arts93-101-isbn-issn",
+            "ev-c39-indautor-instituto-servicios",
+            "ev-c39-lfda-arts77-80-obras-derivadas",
+            "ev-c39-lfda-arts162-169-registro",
+            "ev-c39-reglamento-arts53-64-registro",
+            "ev-c39-lfda-arts208-210-indautor",
+            "ev-c39-a51-l097-109-obra-autor-derechos",
+            "ev-c39-a51-l107-121-morales-distincion",
+            "ev-c39-a51-l133-145-patrimoniales-vigencia",
+            "ev-c39-a51-l143-163-transmision-soporte",
+            "ev-c39-a51-l169-187-registro-identificadores"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa visual: ciclo jurídico de una obra",
+        "description": "Nacimiento, contenido, explotación, registro y terminación del derecho patrimonial.",
+        "nodes": [
+          {
+            "id": "obra",
+            "label": "Obra autoral",
+            "description": "Expresión literaria o artística.",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+            ]
+          },
+          {
+            "id": "nacimiento",
+            "label": "Nacimiento",
+            "description": "Protección automática.",
+            "parentId": "obra",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+            ]
+          },
+          {
+            "id": "creacion",
+            "label": "Creación humana",
+            "description": "Autor persona física.",
+            "parentId": "nacimiento",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+            ]
+          },
+          {
+            "id": "fijacion",
+            "label": "Fijación",
+            "description": "Soporte material o electrónico.",
+            "parentId": "nacimiento",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+            ]
+          },
+          {
+            "id": "sinRegistro",
+            "label": "Sin formalidad",
+            "description": "No depende del registro.",
+            "parentId": "nacimiento",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+              "ev-c39-lfda-arts162-169-registro"
+            ]
+          },
+          {
+            "id": "objeto",
+            "label": "Objeto protegido",
+            "description": "Forma original expresada.",
+            "parentId": "obra",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+            ]
+          },
+          {
+            "id": "ramas",
+            "label": "Ramas",
+            "description": "Literaria, musical, audiovisual y más.",
+            "parentId": "objeto",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+            ]
+          },
+          {
+            "id": "software",
+            "label": "Programa de cómputo",
+            "description": "Protegido como obra literaria.",
+            "parentId": "ramas",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+            ]
+          },
+          {
+            "id": "tesis",
+            "label": "Tesis o libro",
+            "description": "Obra literaria fijada.",
+            "parentId": "ramas",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+            ]
+          },
+          {
+            "id": "noObjeto",
+            "label": "No protegido en sí",
+            "description": "Material excluido.",
+            "parentId": "objeto",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+            ]
+          },
+          {
+            "id": "ideas",
+            "label": "Ideas y conceptos",
+            "description": "Libres como abstracciones.",
+            "parentId": "noObjeto",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+            ]
+          },
+          {
+            "id": "metodos",
+            "label": "Métodos y sistemas",
+            "description": "No son obra por sí solos.",
+            "parentId": "noObjeto",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+            ]
+          },
+          {
+            "id": "moral",
+            "label": "Derecho moral",
+            "description": "Vínculo personal.",
+            "parentId": "obra",
+            "evidenceIds": [
+              "ev-c39-lfda-arts18-23-derechos-morales",
+              "ev-c39-a51-l097-109-obra-autor-derechos",
+              "ev-c39-a51-l107-121-morales-distincion"
+            ]
+          },
+          {
+            "id": "perpetuo",
+            "label": "Perpetuo",
+            "description": "Sin plazo de cien años.",
+            "parentId": "moral",
+            "evidenceIds": [
+              "ev-c39-lfda-arts18-23-derechos-morales"
+            ]
+          },
+          {
+            "id": "inalienable",
+            "label": "Inalienable",
+            "description": "No se transfiere.",
+            "parentId": "moral",
+            "evidenceIds": [
+              "ev-c39-lfda-arts18-23-derechos-morales"
+            ]
+          },
+          {
+            "id": "divulgacion",
+            "label": "Divulgación",
+            "description": "Publicar o mantener inédita.",
+            "parentId": "moral",
+            "evidenceIds": [
+              "ev-c39-lfda-arts18-23-derechos-morales"
+            ]
+          },
+          {
+            "id": "paternidad",
+            "label": "Atribución",
+            "description": "Nombre, anonimato o seudónimo.",
+            "parentId": "moral",
+            "evidenceIds": [
+              "ev-c39-lfda-arts18-23-derechos-morales"
+            ]
+          },
+          {
+            "id": "integridad",
+            "label": "Integridad",
+            "description": "Oposición a deformación perjudicial.",
+            "parentId": "moral",
+            "evidenceIds": [
+              "ev-c39-lfda-arts18-23-derechos-morales"
+            ]
+          },
+          {
+            "id": "modificar",
+            "label": "Modificar o retirar",
+            "description": "Facultades del autor.",
+            "parentId": "moral",
+            "evidenceIds": [
+              "ev-c39-lfda-arts18-23-derechos-morales",
+              "ev-c39-a51-l133-145-patrimoniales-vigencia",
+              "ev-c39-a51-l143-163-transmision-soporte"
+            ]
+          },
+          {
+            "id": "herederos",
+            "label": "Ejercicio hereditario",
+            "description": "Solo facultades permitidas.",
+            "parentId": "moral",
+            "evidenceIds": [
+              "ev-c39-lfda-arts18-23-derechos-morales"
+            ]
+          },
+          {
+            "id": "patrimonial",
+            "label": "Derecho patrimonial",
+            "description": "Explotación exclusiva.",
+            "parentId": "obra",
+            "evidenceIds": [
+              "ev-c39-lfda-arts24-29-patrimoniales-vigencia",
+              "ev-c39-a51-l097-109-obra-autor-derechos",
+              "ev-c39-a51-l133-145-patrimoniales-vigencia"
+            ]
+          },
+          {
+            "id": "reproduccion",
+            "label": "Reproducción",
+            "description": "Copias o fijaciones.",
+            "parentId": "patrimonial",
+            "evidenceIds": [
+              "ev-c39-lfda-arts24-29-patrimoniales-vigencia",
+              "ev-c39-a51-l133-145-patrimoniales-vigencia"
+            ]
+          },
+          {
+            "id": "comunicacion",
+            "label": "Comunicación pública",
+            "description": "Acceso general a la obra.",
+            "parentId": "patrimonial",
+            "evidenceIds": [
+              "ev-c39-lfda-arts24-29-patrimoniales-vigencia"
+            ]
+          },
+          {
+            "id": "distribucion",
+            "label": "Distribución",
+            "description": "Venta o arrendamiento de ejemplares.",
+            "parentId": "patrimonial",
+            "evidenceIds": [
+              "ev-c39-lfda-arts24-29-patrimoniales-vigencia"
+            ]
+          },
+          {
+            "id": "derivada",
+            "label": "Transformación",
+            "description": "Adaptación, traducción o arreglo.",
+            "parentId": "patrimonial",
+            "evidenceIds": [
+              "ev-c39-lfda-arts77-80-obras-derivadas"
+            ]
+          },
+          {
+            "id": "vigencia",
+            "label": "Vida + 100 años",
+            "description": "Regla patrimonial ordinaria.",
+            "parentId": "patrimonial",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+              "ev-c39-lfda-arts24-29-patrimoniales-vigencia"
+            ]
+          },
+          {
+            "id": "dominio",
+            "label": "Dominio público",
+            "description": "Después del plazo patrimonial.",
+            "parentId": "vigencia",
+            "evidenceIds": [
+              "ev-c39-lfda-arts24-29-patrimoniales-vigencia"
+            ]
+          },
+          {
+            "id": "negocios",
+            "label": "Negocios jurídicos",
+            "description": "Licencia o transmisión.",
+            "parentId": "patrimonial",
+            "evidenceIds": [
+              "ev-c39-lfda-arts30-41-transmision-soporte"
+            ]
+          },
+          {
+            "id": "escrito",
+            "label": "Forma escrita",
+            "description": "Requisito de validez.",
+            "parentId": "negocios",
+            "evidenceIds": [
+              "ev-c39-lfda-arts30-41-transmision-soporte"
+            ]
+          },
+          {
+            "id": "onerosa",
+            "label": "Onerosa y temporal",
+            "description": "Regla de transmisión.",
+            "parentId": "negocios",
+            "evidenceIds": [
+              "ev-c39-lfda-arts30-41-transmision-soporte"
+            ]
+          },
+          {
+            "id": "modalidades",
+            "label": "Modalidades independientes",
+            "description": "Autorizar una no concede todas.",
+            "parentId": "negocios",
+            "evidenceIds": [
+              "ev-c39-lfda-arts24-29-patrimoniales-vigencia"
+            ]
+          },
+          {
+            "id": "registro",
+            "label": "Registro INDAUTOR",
+            "description": "Seguridad jurídica y publicidad.",
+            "parentId": "obra",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+              "ev-c39-lfda-arts162-169-registro",
+              "ev-c39-reglamento-arts53-64-registro",
+              "ev-c39-lfda-arts208-210-indautor",
+              "ev-c39-indautor-instituto-servicios"
+            ]
+          },
+          {
+            "id": "inscripcion",
+            "label": "Inscripción de obra",
+            "description": "No crea la protección.",
+            "parentId": "registro",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+              "ev-c39-lfda-arts162-169-registro",
+              "ev-c39-reglamento-arts53-64-registro"
+            ]
+          },
+          {
+            "id": "contratos",
+            "label": "Inscripción de contratos",
+            "description": "Efectos frente a terceros.",
+            "parentId": "registro",
+            "evidenceIds": [
+              "ev-c39-lfda-arts30-41-transmision-soporte",
+              "ev-c39-lfda-arts162-169-registro",
+              "ev-c39-reglamento-arts53-64-registro"
+            ]
+          },
+          {
+            "id": "isbn",
+            "label": "ISBN",
+            "description": "Identifica edición de libro.",
+            "parentId": "registro",
+            "evidenceIds": [
+              "ev-c39-lfda-arts53-57-isbn-issn",
+              "ev-c39-reglamento-arts93-101-isbn-issn",
+              "ev-c39-indautor-instituto-servicios",
+              "ev-c39-a51-l169-187-registro-identificadores"
+            ]
+          },
+          {
+            "id": "issn",
+            "label": "ISSN",
+            "description": "Identifica publicación periódica.",
+            "parentId": "registro",
+            "evidenceIds": [
+              "ev-c39-lfda-arts53-57-isbn-issn",
+              "ev-c39-reglamento-arts93-101-isbn-issn",
+              "ev-c39-indautor-instituto-servicios",
+              "ev-c39-a51-l169-187-registro-identificadores"
+            ]
+          },
+          {
+            "id": "soporte",
+            "label": "Objeto material",
+            "description": "Propiedad separada de derechos.",
+            "parentId": "obra",
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+              "ev-c39-lfda-arts30-41-transmision-soporte"
+            ]
+          },
+          {
+            "id": "compra",
+            "label": "Compra de ejemplar",
+            "description": "No transfiere explotación.",
+            "parentId": "soporte",
+            "evidenceIds": [
+              "ev-c39-lfda-arts30-41-transmision-soporte"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Ley Federal del Derecho de Autor",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf",
+          "institution": "Camara de Diputados del H. Congreso de la Union",
+          "jurisdiction": "Federal, Mexico",
+          "citation": "Texto consolidado con ultima reforma DOF 14-05-2026; articulos 5 a 38, 53, 77 a 80, 162 a 169 y 208 a 210",
+          "retrievedOn": "2026-08-21",
+          "note": "Proteccion, derechos morales y patrimoniales, negocios, obras derivadas, registro, identificadores y autoridad."
+        },
+        {
+          "title": "Reglamento de la Ley Federal del Derecho de Autor",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LFDA.pdf",
+          "institution": "Camara de Diputados del H. Congreso de la Union",
+          "jurisdiction": "Federal, Mexico",
+          "citation": "Texto vigente, ultima reforma DOF 14-09-2005; articulos 53 a 64 y 93 a 101",
+          "retrievedOn": "2026-08-21",
+          "note": "Reglas complementarias del Registro Publico, ISBN e ISSN."
+        },
+        {
+          "title": "Instituto Nacional del Derecho de Autor",
+          "url": "https://indautor.gob.mx/el-instituto.php",
+          "institution": "Instituto Nacional del Derecho de Autor",
+          "jurisdiction": "Federal, Mexico",
+          "citation": "Apartado institucional sobre atribuciones y servicios",
+          "retrievedOn": "2026-08-21",
+          "note": "Autoridad administrativa, Registro Publico, ISBN e ISSN."
+        },
+        {
+          "title": "Inscripcion de obra literaria o artistica",
+          "url": "https://www.gob.mx/public/tramites/detalleTramite.xhtml?homoclave=INDAUTOR-01-001",
+          "institution": "Instituto Nacional del Derecho de Autor",
+          "jurisdiction": "Federal, Mexico",
+          "citation": "Ficha oficial INDAUTOR-01-001",
+          "retrievedOn": "2026-08-21",
+          "note": "Canal oficial del tramite; la proteccion legal no depende de esta inscripcion."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Cuándo nace la protección autoral?",
+          "answer": "Cuando la obra queda fijada en un soporte material, incluido uno electrónico.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+          ]
+        },
+        {
+          "question": "¿Quién es autor?",
+          "answer": "La persona física que crea una obra literaria o artística.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+          ]
+        },
+        {
+          "question": "¿Registrar es requisito constitutivo?",
+          "answer": "No; el registro aporta seguridad jurídica y publicidad.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+            "ev-c39-lfda-arts162-169-registro"
+          ]
+        },
+        {
+          "question": "¿Cómo son los derechos morales?",
+          "answer": "Perpetuos, inalienables, imprescriptibles, irrenunciables e inembargables.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c39-lfda-arts18-23-derechos-morales"
+          ]
+        },
+        {
+          "question": "¿Qué protege la atribución?",
+          "answer": "El reconocimiento de autoría o la decisión de usar anonimato o seudónimo.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c39-lfda-arts18-23-derechos-morales"
+          ]
+        },
+        {
+          "question": "¿Qué protege la integridad?",
+          "answer": "Permite oponerse a deformaciones que causen demérito o daño reputacional.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c39-lfda-arts18-23-derechos-morales"
+          ]
+        },
+        {
+          "question": "¿Qué permiten los derechos patrimoniales?",
+          "answer": "Explotar la obra o autorizar modalidades de explotación.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c39-lfda-arts24-29-patrimoniales-vigencia",
+            "ev-c39-a51-l133-145-patrimoniales-vigencia"
+          ]
+        },
+        {
+          "question": "¿Cuánto dura la regla patrimonial ordinaria?",
+          "answer": "Vida del autor y cien años después de su muerte.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+            "ev-c39-lfda-arts24-29-patrimoniales-vigencia"
+          ]
+        },
+        {
+          "question": "¿Cómo debe constar la transmisión patrimonial?",
+          "answer": "Por escrito, de forma onerosa y temporal.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c39-lfda-arts30-41-transmision-soporte"
+          ]
+        },
+        {
+          "question": "¿Comprar un cuadro transfiere reproducción?",
+          "answer": "No; soporte material y derechos patrimoniales son independientes.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c39-lfda-arts30-41-transmision-soporte"
+          ]
+        },
+        {
+          "question": "¿Qué identifica ISBN?",
+          "answer": "Una edición de libro.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c39-lfda-arts53-57-isbn-issn",
+            "ev-c39-reglamento-arts93-101-isbn-issn",
+            "ev-c39-indautor-instituto-servicios",
+            "ev-c39-a51-l169-187-registro-identificadores"
+          ]
+        },
+        {
+          "question": "¿Qué identifica ISSN?",
+          "answer": "Una publicación periódica o en serie.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c39-lfda-arts53-57-isbn-issn",
+            "ev-c39-reglamento-arts93-101-isbn-issn",
+            "ev-c39-indautor-instituto-servicios",
+            "ev-c39-a51-l169-187-registro-identificadores"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación: derechos de autor",
+        "description": "Diez casos originales sobre obra, autoría, derechos, transmisión y registro.",
+        "questions": [
+          {
+            "text": "Una estudiante guarda su tesis original en PDF y aún no la registra. ¿Está protegida?",
+            "difficulty": "basic",
+            "options": [
+              "Sí, desde la fijación",
+              "No, hasta recibir certificado",
+              "Solo si obtiene ISBN"
+            ],
+            "correctOption": 0,
+            "explanation": "La protección nace con la fijación y no requiere formalidad.",
+            "optionExplanations": [
+              "Aplica el artículo 5.",
+              "El registro no es constitutivo.",
+              "ISBN es identificador editorial."
+            ],
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+              "ev-c39-lfda-arts162-169-registro"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+              "ev-c39-lfda-arts162-169-registro"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+              "ev-c39-lfda-arts162-169-registro"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+                "ev-c39-lfda-arts162-169-registro"
+              ],
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+                "ev-c39-lfda-arts162-169-registro"
+              ],
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+                "ev-c39-lfda-arts162-169-registro"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+                "ev-c39-lfda-arts162-169-registro"
+              ],
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+                "ev-c39-lfda-arts162-169-registro"
+              ],
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+                "ev-c39-lfda-arts162-169-registro"
+              ]
+            ]
+          },
+          {
+            "text": "Una empresa encargó una obra y posee derechos patrimoniales. ¿Es autora por ello?",
+            "difficulty": "intermediate",
+            "options": [
+              "No, autor es la persona física creadora",
+              "Sí, toda titular es autora",
+              "Sí, si registra una marca"
+            ],
+            "correctOption": 0,
+            "explanation": "Autoría y titularidad patrimonial derivada son conceptos distintos.",
+            "optionExplanations": [
+              "Respeta el artículo 12.",
+              "Confunde categorías.",
+              "La marca es irrelevante."
+            ],
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+              ],
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+              ],
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+              ],
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+              ],
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+              ]
+            ]
+          },
+          {
+            "text": "Alguien comunica solo una idea para una novela, sin expresión fijada. ¿La idea queda protegida como obra?",
+            "difficulty": "basic",
+            "options": [
+              "No, las ideas en sí no son objeto de protección",
+              "Sí, toda idea tiene derecho de autor",
+              "Sí, durante cinco años"
+            ],
+            "correctOption": 0,
+            "explanation": "La LFDA protege expresión original, no ideas abstractas.",
+            "optionExplanations": [
+              "Aplica el artículo 14.",
+              "Es demasiado amplio.",
+              "No existe ese plazo para ideas."
+            ],
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+              ],
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+              ],
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+              ],
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+              ],
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion"
+              ]
+            ]
+          },
+          {
+            "text": "Un contrato pretende vender definitivamente el derecho moral de atribución. ¿Es válido?",
+            "difficulty": "intermediate",
+            "options": [
+              "No, el derecho moral es inalienable",
+              "Sí, si hay regalías",
+              "Sí, si dura cien años"
+            ],
+            "correctOption": 0,
+            "explanation": "Los derechos morales no pueden transmitirse.",
+            "optionExplanations": [
+              "Es una característica legal.",
+              "La remuneración no cambia su naturaleza.",
+              "No es un derecho patrimonial temporal."
+            ],
+            "evidenceIds": [
+              "ev-c39-lfda-arts18-23-derechos-morales"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c39-lfda-arts18-23-derechos-morales"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c39-lfda-arts18-23-derechos-morales"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c39-lfda-arts18-23-derechos-morales"
+              ],
+              [
+                "ev-c39-lfda-arts18-23-derechos-morales"
+              ],
+              [
+                "ev-c39-lfda-arts18-23-derechos-morales"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c39-lfda-arts18-23-derechos-morales"
+              ],
+              [
+                "ev-c39-lfda-arts18-23-derechos-morales"
+              ],
+              [
+                "ev-c39-lfda-arts18-23-derechos-morales"
+              ]
+            ]
+          },
+          {
+            "text": "Una editorial deforma una obra de modo que perjudica la reputación del autor. ¿Qué facultad se afecta?",
+            "difficulty": "basic",
+            "options": [
+              "Integridad de la obra",
+              "Solicitud de ISBN",
+              "Registro de marca"
+            ],
+            "correctOption": 0,
+            "explanation": "El autor puede oponerse a deformaciones perjudiciales.",
+            "optionExplanations": [
+              "Es derecho moral.",
+              "El identificador no resuelve integridad.",
+              "No es materia marcaria."
+            ],
+            "evidenceIds": [
+              "ev-c39-lfda-arts18-23-derechos-morales"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c39-lfda-arts18-23-derechos-morales"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c39-lfda-arts18-23-derechos-morales"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c39-lfda-arts18-23-derechos-morales"
+              ],
+              [
+                "ev-c39-lfda-arts18-23-derechos-morales"
+              ],
+              [
+                "ev-c39-lfda-arts18-23-derechos-morales"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c39-lfda-arts18-23-derechos-morales"
+              ],
+              [
+                "ev-c39-lfda-arts18-23-derechos-morales"
+              ],
+              [
+                "ev-c39-lfda-arts18-23-derechos-morales"
+              ]
+            ]
+          },
+          {
+            "text": "Conforme a la regla general, ¿cuánto duran los derechos patrimoniales de una persona autora?",
+            "difficulty": "intermediate",
+            "options": [
+              "La vida de la persona autora y cien años después de su muerte",
+              "Al morir inmediatamente",
+              "Cinco años después del registro"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 29 establece la vida de la persona autora más cien años; el cómputo se rige por el artículo 9.",
+            "optionExplanations": [
+              "Corresponde a la regla general de los artículos 9 y 29.",
+              "Omite el plazo post mortem.",
+              "El registro no inicia la vigencia."
+            ],
+            "evidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+              "ev-c39-lfda-arts24-29-patrimoniales-vigencia"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+              "ev-c39-lfda-arts24-29-patrimoniales-vigencia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+              "ev-c39-lfda-arts24-29-patrimoniales-vigencia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+                "ev-c39-lfda-arts24-29-patrimoniales-vigencia"
+              ],
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+                "ev-c39-lfda-arts24-29-patrimoniales-vigencia"
+              ],
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+                "ev-c39-lfda-arts24-29-patrimoniales-vigencia"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+                "ev-c39-lfda-arts24-29-patrimoniales-vigencia"
+              ],
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+                "ev-c39-lfda-arts24-29-patrimoniales-vigencia"
+              ],
+              [
+                "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+                "ev-c39-lfda-arts24-29-patrimoniales-vigencia"
+              ]
+            ]
+          },
+          {
+            "text": "Una cesión patrimonial se pacta solo verbalmente. ¿Qué consecuencia establece la ley?",
+            "difficulty": "advanced",
+            "options": [
+              "Es nula de pleno derecho",
+              "Es exclusiva automáticamente",
+              "Dura cien años"
+            ],
+            "correctOption": 0,
+            "explanation": "Transmisiones y licencias deben celebrarse por escrito.",
+            "optionExplanations": [
+              "Es el requisito legal.",
+              "La exclusividad debe expresarse.",
+              "No es el plazo contractual supletorio."
+            ],
+            "evidenceIds": [
+              "ev-c39-lfda-arts30-41-transmision-soporte"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c39-lfda-arts30-41-transmision-soporte"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c39-lfda-arts30-41-transmision-soporte"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c39-lfda-arts30-41-transmision-soporte"
+              ],
+              [
+                "ev-c39-lfda-arts30-41-transmision-soporte"
+              ],
+              [
+                "ev-c39-lfda-arts30-41-transmision-soporte"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c39-lfda-arts30-41-transmision-soporte"
+              ],
+              [
+                "ev-c39-lfda-arts30-41-transmision-soporte"
+              ],
+              [
+                "ev-c39-lfda-arts30-41-transmision-soporte"
+              ]
+            ]
+          },
+          {
+            "text": "Una persona compra el original de una pintura. ¿Puede imprimir camisetas sin otro acuerdo?",
+            "difficulty": "intermediate",
+            "options": [
+              "No necesariamente; comprar el soporte no transfiere reproducción",
+              "Sí, siempre",
+              "Sí, porque posee el marco"
+            ],
+            "correctOption": 0,
+            "explanation": "La propiedad material es independiente de los derechos patrimoniales.",
+            "optionExplanations": [
+              "Aplica el artículo 38.",
+              "Generaliza una facultad inexistente.",
+              "El marco no confiere explotación."
+            ],
+            "evidenceIds": [
+              "ev-c39-lfda-arts30-41-transmision-soporte"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c39-lfda-arts30-41-transmision-soporte"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c39-lfda-arts30-41-transmision-soporte"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c39-lfda-arts30-41-transmision-soporte"
+              ],
+              [
+                "ev-c39-lfda-arts30-41-transmision-soporte"
+              ],
+              [
+                "ev-c39-lfda-arts30-41-transmision-soporte"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c39-lfda-arts30-41-transmision-soporte"
+              ],
+              [
+                "ev-c39-lfda-arts30-41-transmision-soporte"
+              ],
+              [
+                "ev-c39-lfda-arts30-41-transmision-soporte"
+              ]
+            ]
+          },
+          {
+            "text": "Se registra una traducción de una novela aún protegida, pero sin permiso de explotación. ¿El registro autoriza publicarla?",
+            "difficulty": "advanced",
+            "options": [
+              "No, la inscripción no sustituye la autorización de la obra primigenia",
+              "Sí, automáticamente",
+              "Sí, si tiene ISSN"
+            ],
+            "correctOption": 0,
+            "explanation": "La aportación original puede registrarse, pero explotar la derivada exige los permisos aplicables.",
+            "optionExplanations": [
+              "Distingue registro y autorización.",
+              "Contradice el artículo 163.",
+              "ISSN no concede permisos."
+            ],
+            "evidenceIds": [
+              "ev-c39-lfda-arts77-80-obras-derivadas",
+              "ev-c39-lfda-arts162-169-registro"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c39-lfda-arts77-80-obras-derivadas",
+              "ev-c39-lfda-arts162-169-registro"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c39-lfda-arts77-80-obras-derivadas",
+              "ev-c39-lfda-arts162-169-registro"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c39-lfda-arts77-80-obras-derivadas",
+                "ev-c39-lfda-arts162-169-registro"
+              ],
+              [
+                "ev-c39-lfda-arts77-80-obras-derivadas",
+                "ev-c39-lfda-arts162-169-registro"
+              ],
+              [
+                "ev-c39-lfda-arts77-80-obras-derivadas",
+                "ev-c39-lfda-arts162-169-registro"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c39-lfda-arts77-80-obras-derivadas",
+                "ev-c39-lfda-arts162-169-registro"
+              ],
+              [
+                "ev-c39-lfda-arts77-80-obras-derivadas",
+                "ev-c39-lfda-arts162-169-registro"
+              ],
+              [
+                "ev-c39-lfda-arts77-80-obras-derivadas",
+                "ev-c39-lfda-arts162-169-registro"
+              ]
+            ]
+          },
+          {
+            "text": "Una revista periódica necesita identificador normalizado. ¿Cuál corresponde?",
+            "difficulty": "basic",
+            "options": [
+              "ISSN",
+              "ISBN como registro autoral",
+              "Patente"
+            ],
+            "correctOption": 0,
+            "explanation": "ISSN identifica publicaciones periódicas; no sustituye derechos de autor.",
+            "optionExplanations": [
+              "Es el identificador adecuado.",
+              "ISBN corresponde a libros y tampoco es registro.",
+              "Patente protege invenciones."
+            ],
+            "evidenceIds": [
+              "ev-c39-lfda-arts53-57-isbn-issn",
+              "ev-c39-reglamento-arts93-101-isbn-issn",
+              "ev-c39-indautor-instituto-servicios",
+              "ev-c39-a51-l169-187-registro-identificadores"
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c39-lfda-arts53-57-isbn-issn",
+              "ev-c39-reglamento-arts93-101-isbn-issn",
+              "ev-c39-indautor-instituto-servicios"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c39-lfda-arts53-57-isbn-issn",
+              "ev-c39-reglamento-arts93-101-isbn-issn",
+              "ev-c39-indautor-instituto-servicios"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c39-lfda-arts53-57-isbn-issn",
+                "ev-c39-reglamento-arts93-101-isbn-issn",
+                "ev-c39-indautor-instituto-servicios"
+              ],
+              [
+                "ev-c39-lfda-arts53-57-isbn-issn",
+                "ev-c39-reglamento-arts93-101-isbn-issn",
+                "ev-c39-indautor-instituto-servicios"
+              ],
+              [
+                "ev-c39-lfda-arts53-57-isbn-issn",
+                "ev-c39-reglamento-arts93-101-isbn-issn",
+                "ev-c39-indautor-instituto-servicios"
+              ]
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c39-lfda-arts53-57-isbn-issn",
+                "ev-c39-reglamento-arts93-101-isbn-issn",
+                "ev-c39-indautor-instituto-servicios"
+              ],
+              [
+                "ev-c39-lfda-arts53-57-isbn-issn",
+                "ev-c39-reglamento-arts93-101-isbn-issn",
+                "ev-c39-indautor-instituto-servicios"
+              ],
+              [
+                "ev-c39-lfda-arts53-57-isbn-issn",
+                "ev-c39-reglamento-arts93-101-isbn-issn",
+                "ev-c39-indautor-instituto-servicios"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c39-lfda-arts5-17-obra-autor-proteccion",
+      "kind": "official",
+      "title": "Ley Federal del Derecho de Autor",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto consolidado con ultima reforma DOF 14-05-2026, articulos 5 a 17, paginas impresas 3 a 6",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
     },
-    "materials": [
-      {"type":"short_answer","title":"Respuesta breve","content":"El derecho de autor protege obras literarias y artísticas desde su fijación, sin exigir registro. Autor es la persona física creadora. El derecho moral protege el vínculo personal con la obra y es perpetuo, inalienable, imprescriptible, irrenunciable e inembargable. El patrimonial permite explotar o autorizar explotación y dura, como regla general, la vida del autor más cien años. INDAUTOR registra obras y contratos para seguridad jurídica; ISBN e ISSN solo identifican publicaciones.","sourceOrigin":"mixed"},
-      {"type":"full_explanation","title":"Explicación completa desde cero","content":"El derecho de autor es el reconocimiento estatal a la persona física que crea una obra literaria o artística. Protege la forma original en que una creación se expresa, no la idea abstracta, el método, el sistema o el concepto por sí mismo. La ley reconoce ramas literaria, musical, dramática, danza, dibujo, escultura, caricatura, arquitectura, audiovisual, radio y televisión, programas de cómputo, fotografía, arte aplicado y compilaciones originales, entre otras análogas.\n\nLa protección comienza cuando la obra se fija en un soporte material que permite percibirla, reproducirla o comunicarla, incluido un archivo electrónico. No depende de calidad, destino, éxito comercial ni registro. Una tesis guardada digitalmente, una canción grabada o un programa escrito pueden estar protegidos desde su fijación. El Registro Público del Derecho de Autor sirve para seguridad jurídica y publicidad, pero la obra sigue protegida aunque no se inscriba.\n\nAutor es únicamente la persona física creadora. Una empresa puede ser titular derivada de derechos patrimoniales por contrato, relación laboral u otro supuesto legal, pero no se convierte por ello en autora humana. Comprar el objeto que contiene la obra tampoco transfiere automáticamente los derechos patrimoniales: adquirir un cuadro no concede, por sí solo, facultad para reproducirlo comercialmente.\n\nLos derechos morales expresan el vínculo personal del autor con su obra. El autor es su titular primigenio y perpetuo; son inalienables, imprescriptibles, irrenunciables e inembargables. Incluyen decidir divulgación o mantener inédita la obra, exigir reconocimiento de autoría o anonimato o seudónimo, oponerse a deformaciones que causen demérito o perjuicio reputacional, modificarla, retirarla del comercio y rechazar atribuciones falsas.\n\nNo todas esas facultades pasan del mismo modo a herederos. Estos pueden ejercer divulgación, reconocimiento, integridad y oposición a falsa atribución, pero no reciben sin límites las facultades personales de modificar o retirar. Por eso es incorrecto afirmar simplemente que todos los derechos morales se heredan durante cien años. Su titularidad es perpetua y su ejercicio se distribuye conforme a la ley.\n\nLos derechos patrimoniales permiten explotar exclusivamente la obra o autorizar a terceros. Comprenden modalidades independientes como reproducción, publicación, edición, comunicación pública, transmisión, distribución, importación y divulgación de obras derivadas. Autorizar una modalidad no concede automáticamente todas las demás. El autor es titular originario; herederos o adquirentes pueden ser titulares derivados.\n\nLa vigencia patrimonial ordinaria es la vida del autor y cien años después de su muerte; en coautoría se cuentan desde la muerte del último coautor. La ley contempla además supuestos de cien años después de divulgación para determinadas obras. Terminado el plazo, la obra entra al dominio público y puede utilizarse libremente, respetando los derechos morales aplicables.\n\nLos derechos patrimoniales pueden transferirse o licenciarse. Toda transmisión debe ser onerosa y temporal; los contratos y licencias deben constar por escrito o serán nulos. La transmisión debe prever remuneración fija o participación proporcional y se inscribe en el Registro para surtir efectos contra terceros. Si no se pacta plazo, se presume cinco años; solo excepcionalmente puede superar quince cuando la naturaleza de la obra o inversión lo justifique, sin perjuicio de regímenes especiales.\n\nUna obra derivada —traducción, adaptación, arreglo o transformación— puede protegerse por sus aportaciones originales, pero su registro no autoriza explotar la obra primigenia si aún se necesita consentimiento. Tampoco registrar un videojuego, personaje o guion convierte en propios elementos ajenos incorporados sin autorización. Deben distinguirse autoría, titularidad y permisos.\n\nEl Registro Público del Derecho de Autor puede inscribir obras, ciertos actos, contratos, derechos conexos y características gráficas. Su función es probatoria, publicitaria y de seguridad jurídica. Para una obra suelen presentarse solicitud, ejemplares, identificación, comprobante de pago y documentos de representación o titularidad cuando correspondan. El trámite puede realizarse por los canales oficiales de INDAUTOR.\n\nISBN significa Número Internacional Normalizado del Libro e identifica una edición; ISSN identifica publicaciones periódicas. Son datos editoriales que deben aparecer cuando correspondan, pero no sustituyen la inscripción de la obra, no prueban por sí solos la transmisión y no crean derechos de autor. Una revista usa ISSN; una edición de libro usa ISBN.\n\nMétodo CENEVAL: identifica si existe obra expresada y fijada; separa idea de expresión; determina autor y titular; clasifica facultad moral o patrimonial; revisa autorización, modalidad, forma y plazo; distingue registro de identificadores editoriales; y concluye considerando vigencia, dominio público y derechos morales.","sourceOrigin":"mixed"},
-      {"type":"legal_basis","title":"Fundamento jurídico vigente","content":"Ley Federal del Derecho de Autor, última reforma DOF 14-05-2026: artículos 5 y 6 sobre protección y fijación; 11 a 14 sobre concepto, autor, ramas y exclusiones; 18 a 23 sobre derechos morales; 24 a 29 sobre derechos patrimoniales y vigencia; 30 a 38 sobre transmisión, licencias y soporte material; 53 sobre ISBN e ISSN; 78 sobre obras derivadas; 102 a 106 sobre programas de cómputo; 162 a 169 sobre Registro Público; y 208 a 210 sobre INDAUTOR.","sourceOrigin":"complementary"},
-      {"type":"simple_example","title":"Ejemplo sencillo","content":"Ana escribe un cuento y lo guarda en su computadora: la fijación activa protección sin necesidad de registro. Si una editorial quiere imprimirlo, necesita autorización patrimonial por escrito. Ana conserva su autoría moral aunque otorgue una licencia. El ISBN de la edición identifica el libro, pero no convierte a la editorial en autora.","sourceOrigin":"mixed"},
-      {"type":"ceneval_example","title":"Caso tipo CENEVAL","content":"Un museo compra una pintura y comienza a vender reproducciones. La respuesta correcta no es que la compra del lienzo transfirió todos los derechos: propiedad del soporte y derechos patrimoniales son independientes. Debe revisarse si existe una autorización escrita para reproducir y comercializar.","sourceOrigin":"complementary"},
-      {"type":"summary","title":"Resumen","content":"Obra: expresión original fijada. Idea: no se protege por sí sola. Autor: persona física creadora. Protección: nace sin registro. Moral: vínculo personal, perpetuo e intransferible. Patrimonial: explotación y autorización. Vigencia ordinaria: vida más cien años. Contrato: escrito, oneroso y temporal para transmitir. Registro: seguridad jurídica y publicidad. Obra derivada: protege aportación original, pero puede requerir permiso de la obra base. ISBN: libro. ISSN: publicación periódica. INDAUTOR: autoridad autoral.","sourceOrigin":"mixed"},
-      {"type":"study_guide","title":"Guía intensiva de preguntas y respuestas","content":"1. ¿Cuándo nace la protección? Respuesta: al fijarse la obra en un soporte. 2. ¿El registro es obligatorio para tener derechos? Respuesta: no. 3. ¿Quién puede ser autor? Respuesta: la persona física creadora. 4. ¿Qué no se protege? Respuesta: ideas, métodos, sistemas y conceptos por sí mismos. 5. ¿Qué protege el derecho moral? Respuesta: divulgación, atribución, integridad, modificación, retiro y oposición a falsa autoría. 6. ¿Cómo es el derecho moral? Respuesta: perpetuo, inalienable, imprescriptible, irrenunciable e inembargable. 7. ¿Qué permite el derecho patrimonial? Respuesta: explotar o autorizar modalidades de explotación. 8. ¿Cuánto dura ordinariamente? Respuesta: vida del autor más cien años. 9. ¿Cómo debe transmitirse? Respuesta: por escrito, de forma onerosa y temporal. 10. ¿Para qué sirve el registro? Respuesta: seguridad jurídica y publicidad. 11. ¿Qué identifica ISBN? Respuesta: una edición de libro. 12. ¿Qué identifica ISSN? Respuesta: una publicación periódica.","sourceOrigin":"mixed"},
-      {"type":"key_concepts","title":"Conceptos clave","content":"Obra: creación literaria o artística expresada. Fijación: incorporación a soporte perceptible. Originalidad: aportación creativa propia. Autor: persona física creadora. Titular originario: autor. Titular derivado: heredero o adquirente. Derecho moral: prerrogativa personal. Divulgación: primera comunicación al público. Paternidad: reconocimiento autoral. Integridad: oposición a deformación perjudicial. Derecho patrimonial: explotación económica. Reproducción: creación de ejemplares. Comunicación pública: acceso sin distribución de copias. Distribución: puesta a disposición de ejemplares. Regalía: remuneración por explotación. Licencia: autorización de uso. Transmisión: cesión patrimonial. Dominio público: uso tras vencer plazo patrimonial. Registro: inscripción para seguridad jurídica. ISBN: identificador de libro. ISSN: identificador de serie.","sourceOrigin":"mixed"},
-      {"type":"common_errors","title":"Errores comunes","content":"No llames INPI ni IMPI a la autoridad registral autoral: es INDAUTOR. No confundas idea con obra fijada. No digas que el derecho nace al registrar. No atribuyas autoría a una persona moral. No afirmes que derechos morales y patrimoniales duran cien años. No confundas titularidad moral con su ejercicio hereditario. No reduzcas derecho patrimonial a cobrar regalías. No supongas que comprar un ejemplar transfiere reproducción. No transmitas derechos verbalmente. No interpretes una licencia como autorización para todas las modalidades. No creas que registrar una adaptación autoriza usar la obra base. No confundas ISBN o ISSN con certificado de obra. No afirmes que entrar al dominio público borra la autoría.","sourceOrigin":"complementary"}
-    ],
-    "conceptMap": {
-      "title":"Mapa visual: ciclo jurídico de una obra",
-      "description":"Nacimiento, contenido, explotación, registro y terminación del derecho patrimonial.",
-      "nodes":[
-        {"id":"obra","label":"Obra autoral","description":"Expresión literaria o artística."},
-        {"id":"nacimiento","label":"Nacimiento","description":"Protección automática.","parentId":"obra"},
-        {"id":"creacion","label":"Creación humana","description":"Autor persona física.","parentId":"nacimiento"},
-        {"id":"fijacion","label":"Fijación","description":"Soporte material o electrónico.","parentId":"nacimiento"},
-        {"id":"sinRegistro","label":"Sin formalidad","description":"No depende del registro.","parentId":"nacimiento"},
-        {"id":"objeto","label":"Objeto protegido","description":"Forma original expresada.","parentId":"obra"},
-        {"id":"ramas","label":"Ramas","description":"Literaria, musical, audiovisual y más.","parentId":"objeto"},
-        {"id":"software","label":"Programa de cómputo","description":"Protegido como obra literaria.","parentId":"ramas"},
-        {"id":"tesis","label":"Tesis o libro","description":"Obra literaria fijada.","parentId":"ramas"},
-        {"id":"noObjeto","label":"No protegido en sí","description":"Material excluido.","parentId":"objeto"},
-        {"id":"ideas","label":"Ideas y conceptos","description":"Libres como abstracciones.","parentId":"noObjeto"},
-        {"id":"metodos","label":"Métodos y sistemas","description":"No son obra por sí solos.","parentId":"noObjeto"},
-        {"id":"moral","label":"Derecho moral","description":"Vínculo personal.","parentId":"obra"},
-        {"id":"perpetuo","label":"Perpetuo","description":"Sin plazo de cien años.","parentId":"moral"},
-        {"id":"inalienable","label":"Inalienable","description":"No se transfiere.","parentId":"moral"},
-        {"id":"divulgacion","label":"Divulgación","description":"Publicar o mantener inédita.","parentId":"moral"},
-        {"id":"paternidad","label":"Atribución","description":"Nombre, anonimato o seudónimo.","parentId":"moral"},
-        {"id":"integridad","label":"Integridad","description":"Oposición a deformación perjudicial.","parentId":"moral"},
-        {"id":"modificar","label":"Modificar o retirar","description":"Facultades del autor.","parentId":"moral"},
-        {"id":"herederos","label":"Ejercicio hereditario","description":"Solo facultades permitidas.","parentId":"moral"},
-        {"id":"patrimonial","label":"Derecho patrimonial","description":"Explotación exclusiva.","parentId":"obra"},
-        {"id":"reproduccion","label":"Reproducción","description":"Copias o fijaciones.","parentId":"patrimonial"},
-        {"id":"comunicacion","label":"Comunicación pública","description":"Acceso general a la obra.","parentId":"patrimonial"},
-        {"id":"distribucion","label":"Distribución","description":"Venta o arrendamiento de ejemplares.","parentId":"patrimonial"},
-        {"id":"derivada","label":"Transformación","description":"Adaptación, traducción o arreglo.","parentId":"patrimonial"},
-        {"id":"vigencia","label":"Vida + 100 años","description":"Regla patrimonial ordinaria.","parentId":"patrimonial"},
-        {"id":"dominio","label":"Dominio público","description":"Después del plazo patrimonial.","parentId":"vigencia"},
-        {"id":"negocios","label":"Negocios jurídicos","description":"Licencia o transmisión.","parentId":"patrimonial"},
-        {"id":"escrito","label":"Forma escrita","description":"Requisito de validez.","parentId":"negocios"},
-        {"id":"onerosa","label":"Onerosa y temporal","description":"Regla de transmisión.","parentId":"negocios"},
-        {"id":"modalidades","label":"Modalidades independientes","description":"Autorizar una no concede todas.","parentId":"negocios"},
-        {"id":"registro","label":"Registro INDAUTOR","description":"Seguridad jurídica y publicidad.","parentId":"obra"},
-        {"id":"inscripcion","label":"Inscripción de obra","description":"No crea la protección.","parentId":"registro"},
-        {"id":"contratos","label":"Inscripción de contratos","description":"Efectos frente a terceros.","parentId":"registro"},
-        {"id":"isbn","label":"ISBN","description":"Identifica edición de libro.","parentId":"registro"},
-        {"id":"issn","label":"ISSN","description":"Identifica publicación periódica.","parentId":"registro"},
-        {"id":"soporte","label":"Objeto material","description":"Propiedad separada de derechos.","parentId":"obra"},
-        {"id":"compra","label":"Compra de ejemplar","description":"No transfiere explotación.","parentId":"soporte"}
-      ]
+    {
+      "id": "ev-c39-lfda-arts18-23-derechos-morales",
+      "kind": "official",
+      "title": "Ley Federal del Derecho de Autor",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto consolidado con ultima reforma DOF 14-05-2026, articulos 18 a 23, paginas impresas 6 y 7",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
     },
-    "references":[
-      {"title":"Ley Federal del Derecho de Autor","url":"https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf","institution":"Cámara de Diputados del H. Congreso de la Unión","jurisdiction":"Federal, México","citation":"Artículos 5 a 38, 53, 78, 102 a 106 y 162 a 210; última reforma DOF 14-05-2026","retrievedOn":"2026-08-12","note":"Texto vigente sobre protección, derechos morales y patrimoniales, registro e identificadores editoriales."},
-      {"title":"Instituto Nacional del Derecho de Autor","url":"https://indautor.gob.mx/","institution":"Instituto Nacional del Derecho de Autor","jurisdiction":"Federal, México","citation":"Portal institucional y servicios autorales","retrievedOn":"2026-08-12","note":"Autoridad administrativa, avisos, servicios y acceso a trámites."},
-      {"title":"Inscripción de obra literaria o artística","url":"https://www.gob.mx/public/tramites/detalleTramite.xhtml?homoclave=INDAUTOR-01-001","institution":"Instituto Nacional del Derecho de Autor","jurisdiction":"Federal, México","citation":"Ficha oficial INDAUTOR-01-001","retrievedOn":"2026-08-12","note":"Requisitos y canales oficiales del registro de obra."},
-      {"title":"Guía de llenado de formatos de registro","url":"https://indautor.gob.mx/servicios/guias_registro.php","institution":"Instituto Nacional del Derecho de Autor","jurisdiction":"Federal, México","citation":"Formatos RPDA para obras, derechos conexos y contratos","retrievedOn":"2026-08-12","note":"Orientación oficial para seleccionar el formato registral correspondiente."}
-    ],
-    "flashcards":[
-      {"question":"¿Cuándo nace la protección autoral?","answer":"Cuando la obra queda fijada en un soporte material, incluido uno electrónico.","sourceOrigin":"complementary"},
-      {"question":"¿Quién es autor?","answer":"La persona física que crea una obra literaria o artística.","sourceOrigin":"complementary"},
-      {"question":"¿Registrar es requisito constitutivo?","answer":"No; el registro aporta seguridad jurídica y publicidad.","sourceOrigin":"mixed"},
-      {"question":"¿Cómo son los derechos morales?","answer":"Perpetuos, inalienables, imprescriptibles, irrenunciables e inembargables.","sourceOrigin":"mixed"},
-      {"question":"¿Qué protege la atribución?","answer":"El reconocimiento de autoría o la decisión de usar anonimato o seudónimo.","sourceOrigin":"mixed"},
-      {"question":"¿Qué protege la integridad?","answer":"Permite oponerse a deformaciones que causen demérito o daño reputacional.","sourceOrigin":"mixed"},
-      {"question":"¿Qué permiten los derechos patrimoniales?","answer":"Explotar la obra o autorizar modalidades de explotación.","sourceOrigin":"mixed"},
-      {"question":"¿Cuánto dura la regla patrimonial ordinaria?","answer":"Vida del autor y cien años después de su muerte.","sourceOrigin":"mixed"},
-      {"question":"¿Cómo debe constar la transmisión patrimonial?","answer":"Por escrito, de forma onerosa y temporal.","sourceOrigin":"complementary"},
-      {"question":"¿Comprar un cuadro transfiere reproducción?","answer":"No; soporte material y derechos patrimoniales son independientes.","sourceOrigin":"complementary"},
-      {"question":"¿Qué identifica ISBN?","answer":"Una edición de libro.","sourceOrigin":"mixed"},
-      {"question":"¿Qué identifica ISSN?","answer":"Una publicación periódica o en serie.","sourceOrigin":"mixed"}
-    ],
-    "exam":{"title":"Evaluación: derechos de autor","description":"Diez casos originales sobre obra, autoría, derechos, transmisión y registro.","questions":[
-      {"text":"Una estudiante guarda su tesis original en PDF y aún no la registra. ¿Está protegida?","difficulty":"basic","options":["Sí, desde la fijación","No, hasta recibir certificado","Solo si obtiene ISBN"],"correctOption":0,"explanation":"La protección nace con la fijación y no requiere formalidad.","optionExplanations":["Aplica el artículo 5.","El registro no es constitutivo.","ISBN es identificador editorial."]},
-      {"text":"Una empresa encargó una obra y posee derechos patrimoniales. ¿Es autora por ello?","difficulty":"intermediate","options":["No, autor es la persona física creadora","Sí, toda titular es autora","Sí, si registra una marca"],"correctOption":0,"explanation":"Autoría y titularidad patrimonial derivada son conceptos distintos.","optionExplanations":["Respeta el artículo 12.","Confunde categorías.","La marca es irrelevante."]},
-      {"text":"Alguien comunica solo una idea para una novela, sin expresión fijada. ¿La idea queda protegida como obra?","difficulty":"basic","options":["No, las ideas en sí no son objeto de protección","Sí, toda idea tiene derecho de autor","Sí, durante cinco años"],"correctOption":0,"explanation":"La LFDA protege expresión original, no ideas abstractas.","optionExplanations":["Aplica el artículo 14.","Es demasiado amplio.","No existe ese plazo para ideas."]},
-      {"text":"Un contrato pretende vender definitivamente el derecho moral de atribución. ¿Es válido?","difficulty":"intermediate","options":["No, el derecho moral es inalienable","Sí, si hay regalías","Sí, si dura cien años"],"correctOption":0,"explanation":"Los derechos morales no pueden transmitirse.","optionExplanations":["Es una característica legal.","La remuneración no cambia su naturaleza.","No es un derecho patrimonial temporal."]},
-      {"text":"Una editorial deforma una obra de modo que perjudica la reputación del autor. ¿Qué facultad se afecta?","difficulty":"basic","options":["Integridad de la obra","Solicitud de ISBN","Registro de marca"],"correctOption":0,"explanation":"El autor puede oponerse a deformaciones perjudiciales.","optionExplanations":["Es derecho moral.","El identificador no resuelve integridad.","No es materia marcaria."]},
-      {"text":"Un autor fallece en 2026. Conforme a la regla general, ¿cuándo termina el plazo patrimonial?","difficulty":"intermediate","options":["Cien años después de su muerte","Al morir inmediatamente","Cinco años después del registro"],"correctOption":0,"explanation":"La regla es vida del autor más cien años.","optionExplanations":["Corresponde al artículo 29.","Omite el plazo post mortem.","El registro no inicia la vigencia."]},
-      {"text":"Una cesión patrimonial se pacta solo verbalmente. ¿Qué consecuencia establece la ley?","difficulty":"advanced","options":["Es nula de pleno derecho","Es exclusiva automáticamente","Dura cien años"],"correctOption":0,"explanation":"Transmisiones y licencias deben celebrarse por escrito.","optionExplanations":["Es el requisito legal.","La exclusividad debe expresarse.","No es el plazo contractual supletorio."]},
-      {"text":"Una persona compra el original de una pintura. ¿Puede imprimir camisetas sin otro acuerdo?","difficulty":"intermediate","options":["No necesariamente; comprar el soporte no transfiere reproducción","Sí, siempre","Sí, porque posee el marco"],"correctOption":0,"explanation":"La propiedad material es independiente de los derechos patrimoniales.","optionExplanations":["Aplica el artículo 38.","Generaliza una facultad inexistente.","El marco no confiere explotación."]},
-      {"text":"Se registra una traducción de una novela aún protegida, pero sin permiso de explotación. ¿El registro autoriza publicarla?","difficulty":"advanced","options":["No, la inscripción no sustituye la autorización de la obra primigenia","Sí, automáticamente","Sí, si tiene ISSN"],"correctOption":0,"explanation":"La aportación original puede registrarse, pero explotar la derivada exige los permisos aplicables.","optionExplanations":["Distingue registro y autorización.","Contradice el artículo 163.","ISSN no concede permisos."]},
-      {"text":"Una revista periódica necesita identificador normalizado. ¿Cuál corresponde?","difficulty":"basic","options":["ISSN","ISBN como registro autoral","Patente"],"correctOption":0,"explanation":"ISSN identifica publicaciones periódicas; no sustituye derechos de autor.","optionExplanations":["Es el identificador adecuado.","ISBN corresponde a libros y tampoco es registro.","Patente protege invenciones."]}
-    ]}
-  }]
+    {
+      "id": "ev-c39-lfda-arts24-29-patrimoniales-vigencia",
+      "kind": "official",
+      "title": "Ley Federal del Derecho de Autor",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto consolidado con ultima reforma DOF 14-05-2026, articulos 24 a 29, paginas impresas 7 a 9",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c39-lfda-arts30-41-transmision-soporte",
+      "kind": "official",
+      "title": "Ley Federal del Derecho de Autor",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto consolidado con ultima reforma DOF 14-05-2026, articulos 30 a 41, paginas impresas 9 y 10",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c39-lfda-arts53-57-isbn-issn",
+      "kind": "official",
+      "title": "Ley Federal del Derecho de Autor",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto consolidado con ultima reforma DOF 14-05-2026, articulos 53 a 57, paginas impresas 11 y 12",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c39-lfda-arts77-80-obras-derivadas",
+      "kind": "official",
+      "title": "Ley Federal del Derecho de Autor",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto consolidado con ultima reforma DOF 14-05-2026, articulos 77 a 80, paginas impresas 14 y 15",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c39-lfda-arts162-169-registro",
+      "kind": "official",
+      "title": "Ley Federal del Derecho de Autor",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto consolidado con ultima reforma DOF 14-05-2026, articulos 162 a 169, paginas impresas 35 a 37",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c39-lfda-arts208-210-indautor",
+      "kind": "official",
+      "title": "Ley Federal del Derecho de Autor",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto consolidado con ultima reforma DOF 14-05-2026, articulos 208 a 210, paginas impresas 46 y 47",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c39-reglamento-arts53-64-registro",
+      "kind": "official",
+      "title": "Reglamento de la Ley Federal del Derecho de Autor",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LFDA.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto vigente con ultima reforma DOF 14-09-2005, articulos 53 a 64, paginas impresas 12 a 14",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c39-reglamento-arts93-101-isbn-issn",
+      "kind": "official",
+      "title": "Reglamento de la Ley Federal del Derecho de Autor",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LFDA.pdf",
+      "institution": "Camara de Diputados del H. Congreso de la Union",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "texto vigente con ultima reforma DOF 14-09-2005, articulos 93 a 101, paginas impresas 18 a 20",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c39-indautor-instituto-servicios",
+      "kind": "official",
+      "title": "Instituto Nacional del Derecho de Autor",
+      "url": "https://indautor.gob.mx/el-instituto.php",
+      "institution": "Instituto Nacional del Derecho de Autor",
+      "jurisdiction": "Federal, Mexico",
+      "locator": "apartado El Instituto: autoridad, Registro Publico, ISBN e ISSN",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c39-a51-l097-109-obra-autor-derechos",
+      "kind": "transcript",
+      "audioNumber": 51,
+      "locator": {
+        "type": "line_range",
+        "startLine": 97,
+        "endLine": 109
+      }
+    },
+    {
+      "id": "ev-c39-a51-l107-121-morales-distincion",
+      "kind": "transcript",
+      "audioNumber": 51,
+      "locator": {
+        "type": "line_range",
+        "startLine": 107,
+        "endLine": 121
+      }
+    },
+    {
+      "id": "ev-c39-a51-l133-145-patrimoniales-vigencia",
+      "kind": "transcript",
+      "audioNumber": 51,
+      "locator": {
+        "type": "line_range",
+        "startLine": 133,
+        "endLine": 145
+      }
+    },
+    {
+      "id": "ev-c39-a51-l143-163-transmision-soporte",
+      "kind": "transcript",
+      "audioNumber": 51,
+      "locator": {
+        "type": "line_range",
+        "startLine": 143,
+        "endLine": 163
+      }
+    },
+    {
+      "id": "ev-c39-a51-l169-187-registro-identificadores",
+      "kind": "transcript",
+      "audioNumber": 51,
+      "locator": {
+        "type": "line_range",
+        "startLine": 169,
+        "endLine": 187
+      }
+    }
+  ]
 }

@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import test from "node:test";
+import { createSyntheticTraceablePackage as createTraceablePackageFixture } from "../../tests/fixtures/traceable-package";
 import { assertPackageCanReachSupabase } from "./import-gate";
 import {
   assessEditorialGate,
@@ -60,16 +61,38 @@ test("rechaza el mismo audio repetido dentro de una clase", () => {
   assert.match(result.error?.issues[0]?.message ?? "", /está repetido/);
 });
 
-const legacyPackagePath = path.join(
-  process.cwd(),
-  "content",
-  "packages",
-  "audio-51-derechos-autor.json",
-);
+function stripEvidenceMetadata(value: unknown): void {
+  if (Array.isArray(value)) {
+    value.forEach(stripEvidenceMetadata);
+    return;
+  }
+  if (!value || typeof value !== "object") return;
+
+  const record = value as Record<string, unknown>;
+  for (const [key, nestedValue] of Object.entries(record)) {
+    if (key === "evidenceRegistry" || key.toLowerCase().endsWith("evidenceids")) {
+      delete record[key];
+      continue;
+    }
+    stripEvidenceMetadata(nestedValue);
+  }
+}
 
 function readLegacyPackage() {
+  const fixture = structuredClone(createTraceablePackageFixture()) as unknown as Record<
+    string,
+    unknown
+  >;
+  fixture.packageVersion = "1.1";
+  const transcript = fixture.transcript as { cleaned: string };
+  fixture.transcript = {
+    originalFile: "AUDIO 54.txt",
+    cleaned: transcript.cleaned,
+  };
+  stripEvidenceMetadata(fixture);
+
   const parsed = classPackageFileSchema.parse(
-    JSON.parse(readFileSync(legacyPackagePath, "utf8")),
+    fixture,
   );
   assert.equal(parsed.packageVersion, "1.1");
   if (parsed.packageVersion !== "1.1") {

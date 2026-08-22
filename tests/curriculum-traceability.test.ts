@@ -617,6 +617,44 @@ const traceablePackages = [
       /Reglamento DOF 28-04-2026/i,
     ],
   },
+  {
+    code: "C39",
+    fileName: "audio-51-derechos-autor.json",
+    artifacts: 156,
+    evidence: 16,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /persona física que crea una obra literaria o artística/i,
+      /protección comienza cuando la obra se fija en un soporte material/i,
+      /no depende.*registro/i,
+      /derechos morales.*inalienables, imprescriptibles, irrenunciables e inembargables/i,
+      /vida del autor y cien años después de su muerte/i,
+      /transmisión debe ser onerosa y temporal/i,
+      /contratos y licencias deben constar por escrito o serán nulos/i,
+      /registro no autoriza explotar la obra primigenia/i,
+      /ISBN.*identifica una edición; ISSN identifica publicaciones periódicas/i,
+      /última reforma DOF 14-05-2026/i,
+    ],
+  },
+  {
+    code: "C40",
+    fileName: "audio-53-juicio-ejecutivo-mercantil-escrito.json",
+    artifacts: 155,
+    evidence: 24,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /documento trae aparejada ejecución/i,
+      /acción cambiaria prescribe.*tres años desde el vencimiento/i,
+      /umbral corregido del artículo 1339 es 924,300\.58 pesos/i,
+      /no tienen un tope universal de dos o tres por ciento mensual/i,
+      /requerimiento de pago; si no se paga, embargo.*y emplazamiento/i,
+      /remisi[oó]n expresa del articulo 1393/i,
+      /ocho días para hacer pago llano o contestar/i,
+      /vista al actor por tres días/i,
+      /sentencia.*dentro de ocho días/i,
+      /última reforma DOF 14-11-2025 y montos corregidos el 18-02-2026/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -968,6 +1006,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una regla de propiedad industrial retirada como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C39" || expected.code === "C40") {
+      const obsoleteAsCurrent =
+        expected.code === "C39"
+          ? /derecho de autor.*(?:nace|comienza|surge).*(?:registro|inscripci[oó]n)|autor.*persona moral|derecho moral.*(?:dura|vigencia).*(?:cien|100) años|(?:ISBN|ISSN).*(?:crea|constituye|otorga).*(?:derecho|protecci[oó]n)|registrar.*(?:adaptaci[oó]n|obra derivada).*(?:autoriza|permite).*(?:obra original|primigenia)/i
+          : /(?:todo|cualquier) contrato.*(?:trae aparejada|t[ií]tulo ejecutivo)|inter[eé]s.*(?:m[aá]ximo|tope).*(?:dos|tres|2|3)\s*%|embargo.*(?:decide|resuelve|equivale).*(?:fondo|ganar|sentencia)|(?:todo|cualquier) ejecutivo.*(?:oral|escrito).*(?:sin|independientemente).*(?:cuant[ií]a|monto)|acci[oó]n causal.*(?:siempre|autom[aá]tica)|costas.*(?:siempre|autom[aá]tica)/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una regla autoral o ejecutiva retirada como respuesta vigente.`,
         );
       }
     }
