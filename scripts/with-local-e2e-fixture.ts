@@ -1,7 +1,9 @@
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";
 import { randomBytes } from "node:crypto";
-import { readFileSync } from "node:fs";
+import { closeSync, openSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 import { toPersistableClassPackage } from "../lib/content/package-persistence";
@@ -18,6 +20,32 @@ const STUDENT_EMAIL = "e2e-student-local@example.invalid";
 const OTHER_STUDENT_EMAIL = "e2e-student-other-local@example.invalid";
 const fixture = createSyntheticTraceablePackage();
 const syntheticReference = fixture.topics[0]!.references[0]!;
+const fixtureLockPath = join(tmpdir(), "ceneval-study-e2e-fixture.lock");
+
+function acquireFixtureLock() {
+  const owner = `${process.pid}:${randomBytes(16).toString("hex")}`;
+  let descriptor: number;
+  try {
+    descriptor = openSync(fixtureLockPath, "wx", 0o600);
+  } catch {
+    throw new Error(
+      "Gate local: ya existe otra ejecución con el fixture E2E o quedó un lock que debe revisarse.",
+    );
+  }
+  writeFileSync(descriptor, owner, { encoding: "utf8" });
+  return { descriptor, owner };
+}
+
+function releaseFixtureLock(lock: { descriptor: number; owner: string }) {
+  closeSync(lock.descriptor);
+  try {
+    if (readFileSync(fixtureLockPath, "utf8") === lock.owner) {
+      unlinkSync(fixtureLockPath);
+    }
+  } catch {
+    throw new Error("Gate local: no se pudo liberar el lock propio del fixture.");
+  }
+}
 
 type CreatedUser = { id: string };
 
@@ -210,10 +238,7 @@ async function prepareFixture(service: SupabaseClient) {
     .eq("class_id", classId)
     .select("id,approval_status,position");
   if (topicsError || topics.length !== fixture.topics.length) {
-    const detail = topicsError
-      ? `${topicsError.code}: ${topicsError.message}`
-      : `conteo ${topics.length}`;
-    throw new Error(`No se pudieron aprobar los temas E2E (${detail}).`);
+    throw new Error("No se pudieron aprobar todos los temas E2E.");
   }
   const topicId = Number(
     [...topics].sort((left, right) => left.position - right.position)[0]!.id,
@@ -285,47 +310,52 @@ async function main() {
     throw new Error("Uso: tsx scripts/with-local-e2e-fixture.ts -- <comando>.");
   }
 
-  const credentials = readLocalStatus();
-  const baseUrl = validateLocalBaseUrl(
-    process.env.E2E_BASE_URL?.trim() || "http://127.0.0.1:3000",
-  );
-  const service = createClient(credentials.apiUrl, credentials.secretKey, {
-    auth: { autoRefreshToken: false, persistSession: false },
-  });
-  const readinessToken = randomBytes(32).toString("base64url");
-
+  const fixtureLock = acquireFixtureLock();
   try {
-    await cleanupFixture(service);
-    await verifyClean(service);
-    const prepared = await prepareFixture(service);
-    console.log("✓ Fixture sintético E2E preparado exclusivamente en Supabase local.");
-    await runChild(command, args, {
-      ...process.env,
-      ADMIN_EMAIL,
-      E2E_ADMIN_EMAIL: ADMIN_EMAIL,
-      E2E_ADMIN_PASSWORD: prepared.adminPassword,
-      E2E_BASE_URL: baseUrl,
-      E2E_CLASS_ID: String(prepared.classId),
-      E2E_STUDENT_EMAIL: STUDENT_EMAIL,
-      E2E_OTHER_STUDENT_EMAIL: OTHER_STUDENT_EMAIL,
-      E2E_OTHER_STUDENT_PASSWORD: prepared.otherStudentPassword,
-      E2E_STUDENT_PASSWORD: prepared.studentPassword,
-      E2E_TOPIC_ID: String(prepared.topicId),
-      E2E_TOPIC_URL: `/temas/${prepared.topicId}`,
-      NEXT_PUBLIC_SITE_URL: baseUrl,
-      NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: credentials.publishableKey,
-      NEXT_PUBLIC_SUPABASE_URL: credentials.apiUrl,
-      OPS_READINESS_TOKEN: readinessToken,
-      PRIVATE_ACCESS_ONLY: "true",
-      SUPABASE_LOCAL_DB_URL: credentials.databaseUrl,
-      SUPABASE_SECRET_KEY: credentials.secretKey,
-    });
-  } finally {
-    await cleanupFixture(service);
-    await verifyClean(service);
-    console.log(
-      "✓ Cleanup E2E verificado: 0 clases, 0 materias, 0 referencias y 0 usuarios sintéticos.",
+    const credentials = readLocalStatus();
+    const baseUrl = validateLocalBaseUrl(
+      process.env.E2E_BASE_URL?.trim() || "http://127.0.0.1:3100",
     );
+    const service = createClient(credentials.apiUrl, credentials.secretKey, {
+      auth: { autoRefreshToken: false, persistSession: false },
+    });
+    const readinessToken = randomBytes(32).toString("base64url");
+
+    try {
+      await cleanupFixture(service);
+      await verifyClean(service);
+      const prepared = await prepareFixture(service);
+      console.log("✓ Fixture sintético E2E preparado exclusivamente en Supabase local.");
+      await runChild(command, args, {
+        ...process.env,
+        ADMIN_EMAIL,
+        E2E_ADMIN_EMAIL: ADMIN_EMAIL,
+        E2E_ADMIN_PASSWORD: prepared.adminPassword,
+        E2E_BASE_URL: baseUrl,
+        E2E_CLASS_ID: String(prepared.classId),
+        E2E_STUDENT_EMAIL: STUDENT_EMAIL,
+        E2E_OTHER_STUDENT_EMAIL: OTHER_STUDENT_EMAIL,
+        E2E_OTHER_STUDENT_PASSWORD: prepared.otherStudentPassword,
+        E2E_STUDENT_PASSWORD: prepared.studentPassword,
+        E2E_TOPIC_ID: String(prepared.topicId),
+        E2E_TOPIC_URL: `/temas/${prepared.topicId}`,
+        NEXT_PUBLIC_SITE_URL: baseUrl,
+        NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: credentials.publishableKey,
+        NEXT_PUBLIC_SUPABASE_URL: credentials.apiUrl,
+        OPS_READINESS_TOKEN: readinessToken,
+        PRIVATE_ACCESS_ONLY: "true",
+        SUPABASE_LOCAL_DB_URL: credentials.databaseUrl,
+        SUPABASE_SECRET_KEY: credentials.secretKey,
+      });
+    } finally {
+      await cleanupFixture(service);
+      await verifyClean(service);
+      console.log(
+        "✓ Cleanup E2E verificado: 0 clases, 0 materias, 0 referencias y 0 usuarios sintéticos.",
+      );
+    }
+  } finally {
+    releaseFixtureLock(fixtureLock);
   }
 }
 

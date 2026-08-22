@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { SubjectDetail } from "@/components/subject-detail";
 import { getSubject } from "@/lib/data/academic";
 
@@ -27,6 +28,7 @@ export default async function SubjectDetailPage({
 }: SubjectPageProps) {
   const { subjectId } = await params;
   const numericSubjectId = Number(subjectId);
+  if (!Number.isInteger(numericSubjectId) || numericSubjectId < 1) notFound();
 
   return <SubjectDetail subjectId={numericSubjectId} />;
 }

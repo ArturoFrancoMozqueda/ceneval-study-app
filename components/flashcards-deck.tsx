@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { reviewFlashcardAction } from "@/app/actions/academic";
 import type { Flashcard } from "@/lib/data/academic";
 
@@ -39,7 +39,18 @@ export function FlashcardsDeck({
     review: 0,
     remembered: 0,
   });
+  const cardButtonRef = useRef<HTMLButtonElement>(null);
+  const completionTitleRef = useRef<HTMLHeadingElement>(null);
+  const shouldRestoreFocus = useRef(false);
+  const accessibleId = useId();
   const card = cards[index];
+
+  useEffect(() => {
+    if (!shouldRestoreFocus.current) return;
+    shouldRestoreFocus.current = false;
+    if (finished) completionTitleRef.current?.focus();
+    else cardButtonRef.current?.focus();
+  }, [finished, index]);
 
   if (!cards.length) {
     return <p className="text-muted">Esta lección aún no tiene tarjetas.</p>;
@@ -47,7 +58,11 @@ export function FlashcardsDeck({
   if (finished) {
     return (
       <div className="rounded-2xl bg-success-soft p-7 text-center">
-        <h2 className="text-2xl font-semibold text-success">
+        <h2
+          className="text-2xl font-semibold text-success"
+          ref={completionTitleRef}
+          tabIndex={-1}
+        >
           Repaso completado
         </h2>
         <p className="mt-2 text-muted">
@@ -59,6 +74,7 @@ export function FlashcardsDeck({
             <button
               className="rounded-xl border border-border bg-white px-5 py-3 font-semibold"
               onClick={() => {
+                shouldRestoreFocus.current = true;
                 setIndex(0);
                 setRevealed(false);
                 setFinished(false);
@@ -108,8 +124,10 @@ export function FlashcardsDeck({
           current.remembered + (value === "good" || value === "easy" ? 1 : 0),
       }));
       if (index === cards.length - 1) {
+        shouldRestoreFocus.current = true;
         setFinished(true);
       } else {
+        shouldRestoreFocus.current = true;
         setIndex((current) => current + 1);
         setRevealed(false);
       }
@@ -151,21 +169,33 @@ export function FlashcardsDeck({
         </div>
       ) : null}
       <button
-        aria-label={revealed ? "Respuesta revelada" : "Revelar respuesta"}
+        aria-labelledby={`${accessibleId}-action ${accessibleId}-content`}
         className="mt-4 flex min-h-72 w-full flex-col items-center justify-center rounded-3xl border border-border bg-white p-8 text-center shadow-sm"
         onClick={() => setRevealed(true)}
+        ref={cardButtonRef}
         type="button"
       >
-        <span className="text-xs font-semibold uppercase tracking-widest text-success">
+        <span className="sr-only" id={`${accessibleId}-action`}>
+          {revealed ? "Respuesta revelada:" : "Revelar respuesta para:"}
+        </span>
+        <span
+          className="text-xs font-semibold uppercase tracking-widest text-success"
+        >
           {revealed ? "Respuesta" : "Pregunta"}
         </span>
-        <span className="mt-5 max-w-2xl text-xl font-semibold leading-8">
+        <span
+          className="mt-5 max-w-2xl text-xl font-semibold leading-8"
+          id={`${accessibleId}-content`}
+        >
           {revealed ? card.answer : card.question}
         </span>
         {!revealed ? (
           <span className="mt-6 text-sm text-brand">Toca para revelar</span>
         ) : null}
       </button>
+      <p aria-live="polite" className="sr-only" role="status">
+        {revealed ? `Respuesta: ${card.answer}` : ""}
+      </p>
       {revealed ? (
         <>
           <div

@@ -26,10 +26,23 @@ export function ExamPlayer({
   const [run, setRun] = useState(createExamRunState);
   const submissionLock = useRef(false);
   const examStartRef = useRef<HTMLParagraphElement>(null);
+  const questionRef = useRef<HTMLLegendElement>(null);
+  const resultTitleRef = useRef<HTMLHeadingElement>(null);
+  const shouldFocusQuestion = useRef(false);
 
   useEffect(() => {
     if (run.runNumber > 0) examStartRef.current?.focus();
   }, [run.runNumber]);
+
+  useEffect(() => {
+    if (!shouldFocusQuestion.current) return;
+    shouldFocusQuestion.current = false;
+    questionRef.current?.focus();
+  }, [run.questionIndex]);
+
+  useEffect(() => {
+    if (run.result) resultTitleRef.current?.focus();
+  }, [run.result]);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -108,6 +121,8 @@ export function ExamPlayer({
           <h2
             className="text-sm font-semibold text-success"
             id="exam-result-title"
+            ref={resultTitleRef}
+            tabIndex={-1}
           >
             Resultado
           </h2>
@@ -223,10 +238,14 @@ export function ExamPlayer({
         className="rounded-2xl border border-border bg-white p-5 sm:p-6"
         disabled={phase === "submitting"}
       >
-        <legend className="px-2 text-sm font-semibold text-success">
-          {difficultyLabel[currentQuestion.difficulty]}
+        <legend className="px-2" ref={questionRef} tabIndex={-1}>
+          <span className="block text-sm font-semibold text-success">
+            {difficultyLabel[currentQuestion.difficulty]}
+          </span>
+          <span className="mt-2 block font-semibold leading-7 text-foreground">
+            {currentQuestion.text}
+          </span>
         </legend>
-        <p className="mt-2 font-semibold leading-7">{currentQuestion.text}</p>
         <div className="mt-4 space-y-2">
           {currentQuestion.options.map((option) => (
             <label
@@ -266,12 +285,13 @@ export function ExamPlayer({
         <button
           className="min-h-12 rounded-xl border border-border bg-white px-5 font-semibold disabled:opacity-40"
           disabled={phase === "submitting" || questionIndex === 0}
-          onClick={() =>
+          onClick={() => {
+            shouldFocusQuestion.current = true;
             setRun((current) => ({
               ...current,
               questionIndex: current.questionIndex - 1,
-            }))
-          }
+            }));
+          }}
           type="button"
         >
           Anterior
@@ -280,12 +300,13 @@ export function ExamPlayer({
           <button
             className="min-h-12 rounded-xl bg-brand px-6 font-semibold text-white disabled:opacity-40"
             disabled={!answers[String(currentQuestion.id)]}
-            onClick={() =>
+            onClick={() => {
+              shouldFocusQuestion.current = true;
               setRun((current) => ({
                 ...current,
                 questionIndex: current.questionIndex + 1,
-              }))
-            }
+              }));
+            }}
             type="button"
           >
             Siguiente pregunta

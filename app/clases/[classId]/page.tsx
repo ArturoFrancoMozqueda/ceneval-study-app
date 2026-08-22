@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { ClassDetail } from "@/components/class-detail";
 import { getClass } from "@/lib/data/academic";
 
@@ -28,6 +29,8 @@ export default async function ClassDetailPage({
   params,
 }: ClassPageProps) {
   const { classId } = await params;
+  const numericId = Number(classId);
+  if (!Number.isInteger(numericId) || numericId < 1) notFound();
 
-  return <ClassDetail classId={Number(classId)} />;
+  return <ClassDetail classId={numericId} />;
 }

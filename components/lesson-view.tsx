@@ -233,7 +233,7 @@ export function LessonView({
     return (
       <section className="mt-8">
         <button
-          className="text-sm font-semibold text-brand"
+          className="inline-flex min-h-6 items-center text-sm font-semibold text-brand"
           onClick={() => setShowSources(false)}
           type="button"
         >
@@ -534,7 +534,7 @@ export function LessonView({
       </section>
 
       <button
-        className="mt-8 text-sm font-semibold text-brand"
+        className="mt-8 inline-flex min-h-6 items-center text-sm font-semibold text-brand"
         onClick={() => setShowSources(true)}
         type="button"
       >
