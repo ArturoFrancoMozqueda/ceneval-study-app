@@ -42,6 +42,54 @@ export default async function SignUpPage({
             name="password"
             type="password"
           />
+          <div>
+            <label
+              className="flex items-start gap-3 text-sm leading-6"
+              htmlFor="termsAccepted"
+            >
+              <input
+                aria-describedby={
+                  field === "termsAccepted" ? "termsAccepted-error" : undefined
+                }
+                aria-invalid={field === "termsAccepted" || undefined}
+                className={`mt-0.5 size-5 shrink-0 rounded border bg-white text-brand focus-visible:ring-2 focus-visible:ring-brand ${
+                  field === "termsAccepted" ? "border-danger" : "border-muted"
+                }`}
+                id="termsAccepted"
+                name="termsAccepted"
+                required
+                type="checkbox"
+              />
+              <span>
+                Acepto los{" "}
+                <Link
+                  className="font-semibold text-brand underline"
+                  href="/terminos"
+                  target="_blank"
+                >
+                  términos de uso
+                </Link>{" "}
+                y el{" "}
+                <Link
+                  className="font-semibold text-brand underline"
+                  href="/privacidad"
+                  target="_blank"
+                >
+                  aviso de privacidad
+                </Link>
+                .
+              </span>
+            </label>
+            {field === "termsAccepted" ? (
+              <p
+                className="mt-2 text-sm font-medium text-danger"
+                id="termsAccepted-error"
+                role="alert"
+              >
+                {error}
+              </p>
+            ) : null}
+          </div>
         </>
       }
       footer={

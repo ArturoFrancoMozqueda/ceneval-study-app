@@ -14,6 +14,7 @@ test("normaliza una solicitud de registro válida", () => {
     fullName: "  Fátima Franco  ",
     email: "  ADMIN@EXAMPLE.COM ",
     password: "frase-segura-2026",
+    termsAccepted: true,
   });
 
   assert.deepEqual(result, {
@@ -22,6 +23,7 @@ test("normaliza una solicitud de registro válida", () => {
       fullName: "Fátima Franco",
       email: "admin@example.com",
       password: "frase-segura-2026",
+      termsAccepted: true,
     },
   });
 });
@@ -32,8 +34,22 @@ test("rechaza datos inválidos antes de llamar al proveedor", () => {
       fullName: "F",
       email: "correo-invalido",
       password: "corta",
+      termsAccepted: true,
     }),
     { success: false, field: "fullName", message: "Escribe tu nombre." },
+  );
+  assert.deepEqual(
+    validateRegistrationInput({
+      fullName: "Fátima Franco",
+      email: "admin@example.com",
+      password: "frase-segura-2026",
+      termsAccepted: false,
+    }),
+    {
+      success: false,
+      field: "termsAccepted",
+      message: "Debes aceptar los términos de uso y el aviso de privacidad.",
+    },
   );
   assert.deepEqual(validatePasswordInput("solo-letras-seguras"), {
     success: false,

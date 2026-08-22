@@ -21,11 +21,18 @@ const registrationSchema = z.object({
     .max(128, "La contraseña no puede superar 128 caracteres.")
     .regex(/[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/, "Incluye al menos una letra.")
     .regex(/[0-9]/, "Incluye al menos un número."),
+  termsAccepted: z.boolean().refine((accepted) => accepted, {
+    message: "Debes aceptar los términos de uso y el aviso de privacidad.",
+  }),
 });
 
 const passwordSchema = registrationSchema.shape.password;
 
-export type RegistrationField = "fullName" | "email" | "password";
+export type RegistrationField =
+  | "fullName"
+  | "email"
+  | "password"
+  | "termsAccepted";
 
 export type RegistrationResult =
   | { success: true; data: z.infer<typeof registrationSchema> }
@@ -35,6 +42,7 @@ export function validateRegistrationInput(input: {
   fullName: string;
   email: string;
   password: string;
+  termsAccepted: boolean;
 }): RegistrationResult {
   const result = registrationSchema.safeParse(input);
 
@@ -46,7 +54,10 @@ export function validateRegistrationInput(input: {
   return {
     success: false,
     field:
-      field === "fullName" || field === "email" || field === "password"
+      field === "fullName" ||
+      field === "email" ||
+      field === "password" ||
+      field === "termsAccepted"
         ? field
         : "email",
     message: issue.message,

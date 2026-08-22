@@ -67,7 +67,13 @@ export async function signUpAction(formData: FormData) {
   const fullName = value(formData, "fullName");
   const email = value(formData, "email").toLowerCase();
   const password = value(formData, "password");
-  const validation = validateRegistrationInput({ fullName, email, password });
+  const termsAccepted = formData.get("termsAccepted") === "on";
+  const validation = validateRegistrationInput({
+    fullName,
+    email,
+    password,
+    termsAccepted,
+  });
 
   if (!validation.success) {
     authError("/registro", validation.message, validation.field);
@@ -91,7 +97,10 @@ export async function signUpAction(formData: FormData) {
     email: validation.data.email,
     password: validation.data.password,
     options: {
-      data: { full_name: validation.data.fullName },
+      data: {
+        full_name: validation.data.fullName,
+        terms_accepted_at: new Date().toISOString(),
+      },
       emailRedirectTo: authCallbackUrl(
         "/auth/confirm",
         process.env.NEXT_PUBLIC_SITE_URL,
