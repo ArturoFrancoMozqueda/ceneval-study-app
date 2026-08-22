@@ -35,7 +35,8 @@ Los bloqueos operativos reales siguen siendo:
    Hobby, pero faltan persistir los secretos, ejecutar el bootstrap explícito
    de la administradora y validar registro, verificación y acceso; no hay
    despliegue automático desde Git;
-5. C57–C58 y los bancos acumulativos siguen pendientes; C41–C56 ya tienen
+5. C58 está bloqueada por insuficiencia de fuente y los bancos acumulativos
+   siguen pendientes; C41–C57 ya tienen
    paquetes 1.2 trazables locales, aún no importados ni publicados.
 
 El historial de Git ya es útil y existe CI. Esos dos hallazgos de la auditoría
@@ -88,8 +89,8 @@ anterior, pero esos datos no están presentes en el proyecto CENEVAL conectado:
 | Flashcards | 480 |
 | Preguntas de examen | 400 |
 
-El repositorio conserva C01–C56 como paquetes trazables en contrato 1.2 y una
-versión retirada en el archivo editorial. C01–C56 pasan el gate local, pero no
+El repositorio conserva C01–C57 como paquetes trazables en contrato 1.2 y una
+versión retirada en el archivo editorial. C01–C57 pasan el gate local, pero no
 se han importado, revisado ni publicado. C41 usa Audio 54 y solo las líneas
 13–69 pertinentes de Audio 55; C42 usa las líneas 85–295 de Audio 55; C43 usa
 Audio 56, líneas 23–199; C44 usa Audio 58, líneas 13–297; C45 usa la línea
@@ -109,8 +110,11 @@ modelo nacional gradual; C54 usa las líneas físicas completas 3, 5 y 9 de
 Audio 68 sin inventar sublíneas, porcentajes ni recursos automáticos; C55 usa
 solo subrangos sucesorios pertinentes de Audio 63, líneas 75–155; y C56 usa
 Audio 63, líneas 157–209, y Audio 64, líneas 17–45, excluyendo el cierre no
-pertinente 211–231. Antes de disponer de esa biblioteca en la aplicación habrá
-que importar C01–C56 en el
+pertinente 211–231; y C57 usa subrangos académicos de Audio 64, líneas 47–109,
+para inventario, avalúo y oposición. C58 permanece bloqueada: la auditoría de
+70/70 TXT y 14/14 lotes no encontró una transcripción suficiente sobre
+administración, cuentas, partición y adjudicación. Antes de disponer de esa
+biblioteca en la aplicación habrá que importar C01–C57 en el
 proyecto CENEVAL correcto mediante el flujo autorizado.
 
 Existen tres identificadores distintos:
@@ -231,11 +235,11 @@ El contrato 1.2 añade el gate de confianza editorial:
 - modificar o rechazar contenido invalida la aprobación anterior;
 - la transcripción queda restringida a administración.
 
-Los 56 paquetes C01–C56 tienen código, orden y fuentes portables. C01–C56 ya
+Los 57 paquetes C01–C57 tienen código, orden y fuentes portables. C01–C57 ya
 usan 1.2: sus 139, 130, 133, 133, 137, 137, 138, 138, 140, 141, 139, 142, 144
-y 138, 137, 142, 142, 142, 143, 148, 150, 152, 151, 150, 152, 150, 150, 149, 151, 151, 151, 151, 151, 151, 151, 151, 154, 155, 156, 155, 150, 153, 148, 154, 148, 150, 148, 150, 150, 151, 153, 150, 154, 149, 153 y 149 artefactos quedaron enlazados a
+y 138, 137, 142, 142, 142, 143, 148, 150, 152, 151, 150, 152, 150, 150, 149, 151, 151, 151, 151, 151, 151, 151, 151, 154, 155, 156, 155, 150, 153, 148, 154, 148, 150, 148, 150, 150, 151, 153, 150, 154, 149, 153, 149 y 149 artefactos quedaron enlazados a
 12, 17, 12, 12, 14, 18, 10, 15, 13, 18, 21, 16, 12, 12, 12, 12, 15, 10, 18,
-15, 18, 14, 16, 19, 19, 21, 15, 20, 15, 16, 15, 13, 13, 15, 14, 17, 13, 14, 16, 24, 16, 15, 12, 16, 9, 16, 12, 12, 10, 12, 10, 10, 16, 11, 18 y 10 evidencias verificables, respectivamente, y pasan el gate
+15, 18, 14, 16, 19, 19, 21, 15, 20, 15, 16, 15, 13, 13, 15, 14, 17, 13, 14, 16, 24, 16, 15, 12, 16, 9, 16, 12, 12, 10, 12, 10, 10, 16, 11, 18, 10 y 10 evidencias verificables, respectivamente, y pasan el gate
 local sin importar contenido. El importador acepta
 exclusivamente 1.2 y delega la escritura a
 una única RPC transaccional que persiste el registro de
@@ -248,7 +252,7 @@ migraciones locales se aplicaron desde cero en PostgreSQL 17.6 y el runner
 dinámico comprobó round-trip semántico, 2 evidencias, 118 artefactos, 236
 vínculos, estados `draft`/`pending`, rechazo de duplicados sin residuos y RPC
 denegadas a `anon` y `authenticated`. La migración todavía no está aplicada en
-el proyecto remoto; C01–C56 no se han importado.
+el proyecto remoto; C01–C57 no se han importado.
 
 ### Controles editoriales concurrentes
 
@@ -409,17 +413,16 @@ Queda pendiente:
 
 ## 5. Contenido terminado y pendiente
 
-El inventario editorial registra contenido preparado para C01–C56: cada clase
+El inventario editorial registra contenido preparado para C01–C57: cada clase
 tiene transcripción conservada, versión depurada, nueve materiales, mapa,
-flashcards, diez reactivos y fuentes. C01–C56 pasan el gate local 1.2, pero
+flashcards, diez reactivos y fuentes. C01–C57 pasan el gate local 1.2, pero
 aún requieren revisión y publicación autorizadas.
 
 Orden de producción restante:
 
 | Orden | Clase | Fuente principal |
 | ---: | --- | --- |
-| 1 | C57 Inventario, avalúo y oposición | Audio 64 |
-| 2 | C58 Administración, partición y adjudicación | Sin fuente suficiente |
+| 1 | C58 Administración, partición y adjudicación | Bloqueada hasta recibir una nueva transcripción suficiente |
 
 Además siguen pendientes tres bancos transversales y 16 exámenes acumulativos.
 
@@ -436,21 +439,23 @@ Además siguen pendientes tres bancos transversales y 16 exámenes acumulativos.
    registrar el resultado. Esta suite crea y elimina datos remotos; no
    pertenece a CI.
 4. Aplicar la persistencia 1.2 ya aprobada localmente en un proyecto de ensayo;
-   C01–C56 ya cuentan con evidencia real verificable para ese ensayo.
+   C01–C57 ya cuentan con evidencia real verificable para ese ensayo.
 
-### Prioridad 1 — Cerrar el pipeline con C01–C56
+### Prioridad 1 — Cerrar el pipeline con C01–C57
 
-1. Mantener los localizadores reales y paquetes C01–C56 en contrato 1.2.
+1. Mantener los localizadores reales y paquetes C01–C57 en contrato 1.2.
 2. Verificar por round-trip dinámico que el registro de evidencias persiste sin
    pérdidas.
 3. Revisar vigencia jurídica y conteos editoriales.
 4. Publicar solo después de la revisión autorizada.
 5. Comprobar localmente el recorrido borrador, revisión, aprobación y publicación.
 
-### Prioridad 2 — Completar C57–C58
+### Prioridad 2 — Desbloquear C58
 
-Repetir el pipeline 1.2 con fuentes oficiales, validación, revisión editorial,
-publicación, navegación y un commit por unidad de trabajo.
+Obtener una nueva transcripción académica íntegra sobre administración y
+cuentas, partición, oposición y adjudicación hereditaria. No crear un paquete
+solo con legislación; repetir después el pipeline 1.2 completo descrito en
+`C58_SOURCE_AUDIT.md`.
 
 ### Prioridad 3 — Calidad de producto
 
@@ -486,7 +491,7 @@ publicación, navegación y un commit por unidad de trabajo.
 | 2 | Ejecutar y probar el respaldo documentado | Exportación fechada, copia externa verificada y restauración de ensayo |
 | 3 | Ampliar y ejecutar la suite RLS | Comprobaciones actuales y casos de temas no aprobados aprobados en CENEVAL |
 | 4 | Aplicar la persistencia 1.2 en un proyecto de ensayo | Migración remota de ensayo, round-trip y RLS aprobados antes de producción |
-| 5 | Aprobar C01–C56 | Recorrido trazable completo sin evidencia inventada |
+| 5 | Aprobar C01–C57 | Recorrido trazable completo sin evidencia inventada |
 | 6 | Crear pruebas de navegador | Flujos centrales reproducibles en CI o entorno aislado |
 | 7 | Completar y validar el despliegue privado | Variables persistentes, administradora operativa y URL estable aprobada desde teléfono y computadora |
 
@@ -519,4 +524,5 @@ contenido o escribir en la base remota:
 2. ejecutar y completar el procedimiento de `docs/SUPABASE_BACKUP.md`;
 3. aplicar las migraciones en un proyecto de ensayo y repetir el gate dinámico
    antes de promoverlas a CENEVAL;
-4. producir C57 solo después de mantener verdes los gates trazables de C01–C56.
+4. solicitar la nueva transcripción definida en `C58_SOURCE_AUDIT.md`; C58 no
+   puede producirse honestamente con el corpus actual.

@@ -1,0 +1,1290 @@
+{
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C57",
+    "order": 57,
+    "audioSources": [
+      {
+        "audioNumber": 64,
+        "fragment": "Líneas 47–109: aceptación del albaceazgo y segunda sección de inventario, avalúo y oposición"
+      }
+    ]
+  },
+  "subject": {
+    "name": "Derecho sucesorio procesal de Michoacán",
+    "description": "Formación, revisión y aprobación del inventario y avalúo en la segunda sección sucesoria."
+  },
+  "class": {
+    "title": "Segunda sección sucesoria: inventario, avalúo y oposición",
+    "description": "Delimitación de la masa hereditaria, valoración, inconformidad y ampliación bajo el régimen procesal de Michoacán."
+  },
+  "transcript": {
+    "originalFile": "AUDIO 64.txt",
+    "cleaned": "Cobertura exclusiva de las líneas físicas 47–109. Se retuvieron 47–61 para aceptación del cargo e inicio de la segunda sección; 97–101 para su nombre y objeto; y la línea física 109 sólo como contexto amplio sobre contenido, oposición y bienes omitidos, sin atribuirle reglas precisas. Se excluyeron 51–57 por conversación ajena y 63–95, 103–107 por logística, examen, nombres, promoción y charla no jurídica. La línea 109 mezcla contenido académico con anécdotas, recomendaciones de salud, personas y logística: no se reproduce ni se usa para cifras, recursos, formalidades o ejemplos personales. Se corrigieron la equivalencia albacea-juez, el peritaje universal, la apelación automática, el pago de deudas como objeto exclusivo de esta sección y cualquier aplicación nacional uniforme. No se usa contenido anterior a la línea 47 ni posterior a la 109."
+  },
+  "topics": [
+    {
+      "title": "Formación y control del inventario y avalúo",
+      "description": "Qué integra la segunda sección, quién la impulsa, cómo se revisa y qué ocurre ante inconformidad o bienes omitidos.",
+      "learningJourney": {
+        "openingPrompt": "¿Por qué inventariar no equivale todavía a repartir ni adjudicar la herencia?",
+        "quickChecks": [
+          {
+            "prompt": "¿La segunda sección contiene sólo inmuebles?",
+            "answer": "No. El código local ordena diversas categorías de bienes, créditos, documentos, bienes ajenos, legados determinados y deudas mortuorias o hereditarias.",
+            "feedback": "Separa masa, titularidad, valor y distribución.",
+            "evidenceIds": [
+              "ev-c57-cpc-1048-1052-secciones",
+              "ev-c57-cpc-1073-1081-formacion-contenido",
+              "ev-c57-a64-l097-101-inventario-avaluo",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ]
+          },
+          {
+            "prompt": "¿Toda inconformidad obliga a presentar un inventario alternativo completo?",
+            "answer": "No. El escrito de inconformidad funciona como demanda incidental; debe precisar el desacuerdo y se tramita con el albacea conforme al código.",
+            "feedback": "No conviertas una práctica del audio en requisito universal.",
+            "evidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ]
+          },
+          {
+            "prompt": "¿El CNPCF reemplaza automáticamente hoy el procedimiento michoacano?",
+            "answer": "No. Su aplicación es gradual y depende de la declaratoria territorial correspondiente; aquí se usa sólo como contraste nacional.",
+            "feedback": "Verifica siempre régimen, territorio y fecha.",
+            "evidenceIds": [
+              "ev-c57-cnpcf-transitorios",
+              "ev-c57-cnpcf-706-seccion-segunda",
+              "ev-c57-cnpcf-736-750-inventario"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "En una sucesión radicada en Michoacán, el albacea presenta inventario y avalúo. Una heredera advierte que falta una cuenta bancaria y cuestiona el valor de un inmueble.",
+          "question": "¿Qué debe distinguir antes de pedir una decisión?",
+          "legalRule": "El inventario debe ser claro, incluir las categorías y deudas previstas, acompañar el avalúo y quedar sujeto al traslado, aprobación u oposición regulados localmente. Los bienes omitidos pueden agregarse; la impugnación del valor no convierte automáticamente toda la etapa en peritaje universal.",
+          "reasoning": "Debe identificar la omisión y el punto valuatorio, aportar soporte pertinente y usar la vía de inconformidad. La autoridad decide sobre aprobación o reprobación; si aparece un bien omitido, se incorpora según la reserva legal.",
+          "conclusion": "Omisión, desacuerdo de valor y distribución son problemas distintos; la segunda sección delimita y valora, no adjudica.",
+          "evidenceIds": [
+            "ev-c57-cpc-1073-1081-formacion-contenido",
+            "ev-c57-cpc-1082-1090-revision-oposicion",
+            "ev-c57-cpc-1091-1095-avaluo",
+            "ev-c57-a64-l109-contexto-segunda-seccion"
+          ]
+        },
+        "closingPrompt": "Explica el recorrido desde la aceptación del albacea hasta la aprobación, reprobación o ampliación del inventario.",
+        "nextActivity": "Construye una tabla con contenido, valuación, traslado, inconformidad y efecto de la resolución, siempre bajo el código local.",
+        "openingPromptEvidenceIds": [
+          "ev-c57-cpc-1048-1052-secciones",
+          "ev-c57-cpc-1073-1081-formacion-contenido",
+          "ev-c57-cpc-1082-1090-revision-oposicion"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c57-cpc-1073-1081-formacion-contenido",
+          "ev-c57-cpc-1082-1090-revision-oposicion",
+          "ev-c57-a64-l047-061-aceptacion-inicio",
+          "ev-c57-a64-l109-contexto-segunda-seccion"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c57-cpc-1048-1052-secciones",
+          "ev-c57-cpc-1073-1081-formacion-contenido",
+          "ev-c57-cpc-1082-1090-revision-oposicion",
+          "ev-c57-cpc-1091-1095-avaluo"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "La segunda sección sucesoria de Michoacán documenta inventarios, avalúos e incidentes relativos. Identifica y valora la masa; no la reparte.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c57-cpc-1048-1052-secciones",
+            "ev-c57-a64-l097-101-inventario-avaluo"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa",
+          "content": "Aceptado el albaceazgo, se forma el inventario y avalúo. El código local fija quién puede presentarlo, un orden de categorías, tratamiento de créditos, bienes litigiosos o ajenos, legados determinados y deudas. Presentado, se da vista a quienes no lo suscribieron; la conformidad permite aprobación y la inconformidad abre un incidente. Los bienes omitidos pueden agregarse. La partición pertenece a otra sección.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c57-cpc-1048-1052-secciones",
+            "ev-c57-cpc-1073-1081-formacion-contenido",
+            "ev-c57-cpc-1082-1090-revision-oposicion",
+            "ev-c57-cpc-1091-1095-avaluo",
+            "ev-c57-a64-l047-061-aceptacion-inicio",
+            "ev-c57-a64-l097-101-inventario-avaluo",
+            "ev-c57-a64-l109-contexto-segunda-seccion"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Base legal",
+          "content": "Código procesal de Michoacán: artículos 1048–1052, 1073–1095. El CNPCF, artículos 706 y 736–750, es contraste nacional sujeto a sus transitorios y a declaratoria de aplicación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c57-cpc-1048-1052-secciones",
+            "ev-c57-cpc-1073-1081-formacion-contenido",
+            "ev-c57-cpc-1082-1090-revision-oposicion",
+            "ev-c57-cpc-1091-1095-avaluo",
+            "ev-c57-cnpcf-transitorios",
+            "ev-c57-cnpcf-706-seccion-segunda",
+            "ev-c57-cnpcf-736-750-inventario"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo examen",
+          "content": "Si falta una cuenta bancaria, la respuesta no es adjudicarla ni abrir automáticamente otra sucesión: se plantea la omisión dentro del control del inventario y se aporta la documentación correspondiente.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c57-cpc-1073-1081-formacion-contenido",
+            "ev-c57-cpc-1082-1090-revision-oposicion",
+            "ev-c57-a64-l109-contexto-segunda-seccion"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Aceptación del cargo; segunda sección; inventario claro; categorías legales; avalúo; traslado; conformidad o inconformidad; resolución; bienes omitidos; separación respecto de administración y partición.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c57-cpc-1048-1052-secciones",
+            "ev-c57-cpc-1073-1081-formacion-contenido",
+            "ev-c57-cpc-1082-1090-revision-oposicion",
+            "ev-c57-cpc-1091-1095-avaluo",
+            "ev-c57-a64-l047-061-aceptacion-inicio",
+            "ev-c57-a64-l097-101-inventario-avaluo",
+            "ev-c57-a64-l109-contexto-segunda-seccion"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de estudio",
+          "content": "Estudia en cinco columnas: responsable, contenido, valoración, contradicción y resolución. Añade una sexta para territorio: Michoacán vigente frente al CNPCF de aplicación gradual.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c57-cpc-1048-1052-secciones",
+            "ev-c57-cpc-1073-1081-formacion-contenido",
+            "ev-c57-cpc-1082-1090-revision-oposicion",
+            "ev-c57-cpc-1091-1095-avaluo",
+            "ev-c57-cnpcf-transitorios",
+            "ev-c57-cnpcf-736-750-inventario"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Albacea, aceptación, inventario, masa hereditaria, avalúo, bienes litigiosos, bienes ajenos, créditos, deudas hereditarias, traslado, inconformidad, incidente, aprobación, reprobación y bienes omitidos.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c57-cpc-1073-1081-formacion-contenido",
+            "ev-c57-cpc-1082-1090-revision-oposicion",
+            "ev-c57-cpc-1091-1095-avaluo",
+            "ev-c57-a64-l047-061-aceptacion-inicio",
+            "ev-c57-a64-l109-contexto-segunda-seccion"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "Confundir inventario con adjudicación; omitir bienes ajenos o litigiosos; asumir que todo avalúo requiere el mismo perito; decir que toda resolución se apela sin condición; aplicar automáticamente el CNPCF; o tratar la cifra y práctica oral como regla nacional.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c57-cpc-1048-1052-secciones",
+            "ev-c57-cpc-1073-1081-formacion-contenido",
+            "ev-c57-cpc-1082-1090-revision-oposicion",
+            "ev-c57-cpc-1091-1095-avaluo",
+            "ev-c57-cnpcf-transitorios",
+            "ev-c57-cnpcf-736-750-inventario",
+            "ev-c57-a64-l109-contexto-segunda-seccion"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Una casa, una cuenta y una deuda documentada se describen y valoran. Si aparece después otro bien, se agrega conforme a la reserva; el reparto se decide más adelante.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c57-cpc-1073-1081-formacion-contenido",
+            "ev-c57-cpc-1082-1090-revision-oposicion",
+            "ev-c57-cpc-1091-1095-avaluo",
+            "ev-c57-a64-l109-contexto-segunda-seccion"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa de la segunda sección sucesoria",
+        "description": "Relaciones entre cargo, masa, valoración, contradicción y resolución.",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Segunda sección",
+            "description": "Cuaderno de inventarios del juicio hereditario local.",
+            "evidenceIds": [
+              "ev-c57-cpc-1048-1052-secciones",
+              "ev-c57-a64-l097-101-inventario-avaluo"
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Aceptación",
+            "description": "Asunción del cargo antes de impulsar la actividad correspondiente.",
+            "evidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido",
+              "ev-c57-a64-l047-061-aceptacion-inicio"
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Albacea",
+            "description": "Responsable principal de formar inventario y avalúo, sin ser dueño del caudal.",
+            "evidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido",
+              "ev-c57-a64-l047-061-aceptacion-inicio",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ]
+          },
+          {
+            "id": "n4",
+            "label": "Inventario",
+            "description": "Relación clara y ordenada de los elementos de la masa.",
+            "evidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido",
+              "ev-c57-a64-l097-101-inventario-avaluo",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ]
+          },
+          {
+            "id": "n5",
+            "label": "Avalúo",
+            "description": "Determinación de valor conforme al régimen aplicable.",
+            "evidenceIds": [
+              "ev-c57-cpc-1091-1095-avaluo",
+              "ev-c57-a64-l097-101-inventario-avaluo",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ]
+          },
+          {
+            "id": "n6",
+            "label": "Masa hereditaria",
+            "description": "Conjunto que debe identificarse antes de administrar o partir.",
+            "evidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ]
+          },
+          {
+            "id": "n7",
+            "label": "Dinero",
+            "description": "Primera categoría del orden legal local.",
+            "evidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido"
+            ]
+          },
+          {
+            "id": "n8",
+            "label": "Bienes muebles",
+            "description": "Categoría distinta de raíces y créditos.",
+            "evidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido"
+            ]
+          },
+          {
+            "id": "n9",
+            "label": "Bienes raíces",
+            "description": "Inmuebles sujetos a regla específica de valoración local.",
+            "evidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido",
+              "ev-c57-cpc-1091-1095-avaluo"
+            ]
+          },
+          {
+            "id": "n10",
+            "label": "Créditos activos",
+            "description": "Derechos de cobro con datos de identificación.",
+            "evidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido"
+            ]
+          },
+          {
+            "id": "n11",
+            "label": "Documentos",
+            "description": "Escrituras y papeles de importancia también se listan.",
+            "evidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido"
+            ]
+          },
+          {
+            "id": "n12",
+            "label": "Bienes ajenos",
+            "description": "Se identifican con la causa de su tenencia.",
+            "evidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido"
+            ]
+          },
+          {
+            "id": "n13",
+            "label": "Bienes litigiosos",
+            "description": "Se informa el juicio, autoridad, contraparte y causa.",
+            "evidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido"
+            ]
+          },
+          {
+            "id": "n14",
+            "label": "Legado determinado",
+            "description": "La cosa legada se individualiza con su calidad especial.",
+            "evidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido"
+            ]
+          },
+          {
+            "id": "n15",
+            "label": "Deudas",
+            "description": "Se listan origen, monto, vencimiento y documento.",
+            "evidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ]
+          },
+          {
+            "id": "n16",
+            "label": "Claridad",
+            "description": "Exigencia de descripción precisa del inventario.",
+            "evidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido"
+            ]
+          },
+          {
+            "id": "n17",
+            "label": "Orden legal",
+            "description": "Secuencia de categorías fijada por el código local.",
+            "evidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido"
+            ]
+          },
+          {
+            "id": "n18",
+            "label": "Valor catastral",
+            "description": "Referencia local para inmuebles, con las salvedades legales.",
+            "evidenceIds": [
+              "ev-c57-cpc-1091-1095-avaluo"
+            ]
+          },
+          {
+            "id": "n19",
+            "label": "Otros valores",
+            "description": "El albacea puede consultar a personas peritas sin convertirlo en fórmula universal.",
+            "evidenceIds": [
+              "ev-c57-cpc-1091-1095-avaluo",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ]
+          },
+          {
+            "id": "n20",
+            "label": "Traslado",
+            "description": "Vista del inventario y avalúo a quien no lo suscribió.",
+            "evidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion"
+            ]
+          },
+          {
+            "id": "n21",
+            "label": "Cinco días",
+            "description": "Plazo local de traslado del artículo 1082.",
+            "evidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion"
+            ]
+          },
+          {
+            "id": "n22",
+            "label": "Conformidad",
+            "description": "Permite la aprobación sin más trámites.",
+            "evidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion"
+            ]
+          },
+          {
+            "id": "n23",
+            "label": "Inconformidad",
+            "description": "Debe plantearse en el periodo y forma legal.",
+            "evidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ]
+          },
+          {
+            "id": "n24",
+            "label": "Incidente",
+            "description": "Cauce de contradicción con el albacea.",
+            "evidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ]
+          },
+          {
+            "id": "n25",
+            "label": "Aprobación",
+            "description": "Resolución que valida el inventario presentado.",
+            "evidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion"
+            ]
+          },
+          {
+            "id": "n26",
+            "label": "Reprobación",
+            "description": "Resolución posible cuando el inventario no debe aprobarse.",
+            "evidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion"
+            ]
+          },
+          {
+            "id": "n27",
+            "label": "Apelación condicionada",
+            "description": "La sentencia incidental es devolutiva sólo si la cuantía admite el recurso.",
+            "evidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion"
+            ]
+          },
+          {
+            "id": "n28",
+            "label": "Bien omitido",
+            "description": "Se agrega en el lugar correspondiente cuando aparece.",
+            "evidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ]
+          },
+          {
+            "id": "n29",
+            "label": "Partición separada",
+            "description": "El reparto pertenece a la cuarta sección.",
+            "evidenceIds": [
+              "ev-c57-cpc-1048-1052-secciones"
+            ]
+          },
+          {
+            "id": "n30",
+            "label": "Michoacán",
+            "description": "Jurisdicción del procedimiento explicado.",
+            "evidenceIds": [
+              "ev-c57-cpc-1048-1052-secciones",
+              "ev-c57-cpc-1073-1081-formacion-contenido",
+              "ev-c57-cpc-1082-1090-revision-oposicion",
+              "ev-c57-cpc-1091-1095-avaluo"
+            ]
+          },
+          {
+            "id": "n31",
+            "label": "CNPCF gradual",
+            "description": "Modelo nacional condicionado por transitorios y declaratoria.",
+            "evidenceIds": [
+              "ev-c57-cnpcf-transitorios",
+              "ev-c57-cnpcf-706-seccion-segunda",
+              "ev-c57-cnpcf-736-750-inventario"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Código de Procedimientos Civiles para el Estado de Michoacán de Ocampo",
+          "url": "https://congresomich.gob.mx/file/C%C3%93DIGO-DE-PROCEDIMIENTOS-CIVILES-REF-30-DE-JUNIO-DE-2020.pdf",
+          "institution": "Congreso del Estado de Michoacán de Ocampo",
+          "jurisdiction": "Michoacán, México",
+          "citation": "Texto oficial; última reforma publicada 30-06-2020; consulta 2026-08-21",
+          "retrievedOn": "2026-08-21",
+          "note": "Arts. 1048–1052 y 1073–1095.",
+          "evidenceIds": [
+            "ev-c57-cpc-1048-1052-secciones",
+            "ev-c57-cpc-1073-1081-formacion-contenido",
+            "ev-c57-cpc-1082-1090-revision-oposicion",
+            "ev-c57-cpc-1091-1095-avaluo"
+          ]
+        },
+        {
+          "title": "Código Nacional de Procedimientos Civiles y Familiares",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Texto vigente; última reforma DOF 15-01-2026; consulta 2026-08-21",
+          "retrievedOn": "2026-08-21",
+          "note": "Transitorios y arts. 706, 736–750; aplicación gradual.",
+          "evidenceIds": [
+            "ev-c57-cnpcf-transitorios",
+            "ev-c57-cnpcf-706-seccion-segunda",
+            "ev-c57-cnpcf-736-750-inventario"
+          ]
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué integra la segunda sección local?",
+          "answer": "Inventarios, avalúos e incidentes sobre esos puntos.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c57-cpc-1048-1052-secciones",
+            "ev-c57-a64-l097-101-inventario-avaluo"
+          ]
+        },
+        {
+          "question": "¿Quién impulsa normalmente inventario y avalúo?",
+          "answer": "El albacea, después de asumir el cargo, sin perjuicio de los demás legitimados previstos.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c57-cpc-1073-1081-formacion-contenido",
+            "ev-c57-a64-l047-061-aceptacion-inicio",
+            "ev-c57-a64-l109-contexto-segunda-seccion"
+          ]
+        },
+        {
+          "question": "¿Inventario equivale a partición?",
+          "answer": "No. Identifica la masa; la partición corresponde a la cuarta sección.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c57-cpc-1048-1052-secciones"
+          ]
+        },
+        {
+          "question": "¿Se incluyen deudas?",
+          "answer": "Sí, con origen, monto, vencimiento y documento; listarlas no significa que esta sección sea exclusivamente de pago.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c57-cpc-1073-1081-formacion-contenido",
+            "ev-c57-a64-l109-contexto-segunda-seccion"
+          ]
+        },
+        {
+          "question": "¿Qué ocurre con bienes ajenos?",
+          "answer": "Se hacen constar indicando la causa por la que estaban en poder del fallecido.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c57-cpc-1073-1081-formacion-contenido"
+          ]
+        },
+        {
+          "question": "¿Qué sigue a la presentación?",
+          "answer": "Traslado a quienes no suscribieron y posterior decisión de aprobación o reprobación.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c57-cpc-1082-1090-revision-oposicion"
+          ]
+        },
+        {
+          "question": "¿La inconformidad exige inventario alternativo universalmente?",
+          "answer": "No. El código regula un escrito de inconformidad como demanda incidental.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c57-cpc-1082-1090-revision-oposicion",
+            "ev-c57-a64-l109-contexto-segunda-seccion"
+          ]
+        },
+        {
+          "question": "¿Toda sentencia incidental es apelable?",
+          "answer": "Sólo en efecto devolutivo si la cuantía admite el recurso.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c57-cpc-1082-1090-revision-oposicion",
+            "ev-c57-a64-l109-contexto-segunda-seccion"
+          ]
+        },
+        {
+          "question": "¿Qué pasa si aparece otro bien?",
+          "answer": "Se agrega al inventario en el lugar correspondiente.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c57-cpc-1082-1090-revision-oposicion",
+            "ev-c57-a64-l109-contexto-segunda-seccion"
+          ]
+        },
+        {
+          "question": "¿El peritaje es siempre indispensable para todo bien?",
+          "answer": "No. La regla de valoración depende del tipo de bien y del régimen local.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c57-cpc-1091-1095-avaluo",
+            "ev-c57-a64-l109-contexto-segunda-seccion"
+          ]
+        },
+        {
+          "question": "¿El inventario aprobado puede cambiar libremente?",
+          "answer": "No; su reforma se limita a los supuestos legales, sin perjuicio de agregar bienes omitidos.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c57-cpc-1082-1090-revision-oposicion"
+          ]
+        },
+        {
+          "question": "¿El CNPCF rige automáticamente en Michoacán?",
+          "answer": "No; requiere atender sus transitorios y la declaratoria territorial aplicable.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c57-cnpcf-transitorios",
+            "ev-c57-cnpcf-706-seccion-segunda",
+            "ev-c57-cnpcf-736-750-inventario"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación de inventario, avalúo y oposición",
+        "description": "Diez reactivos sobre contenido, revisión y límites de la segunda sección.",
+        "questions": [
+          {
+            "text": "¿Cuál es el objeto central de la segunda sección sucesoria local?",
+            "difficulty": "intermediate",
+            "options": [
+              "Inventario, avalúo e incidentes relativos",
+              "Adjudicación definitiva de todos los bienes",
+              "Resolución de la vocación hereditaria"
+            ],
+            "correctOption": 0,
+            "explanation": "La segunda sección identifica y valora; no reemplaza la primera ni la cuarta.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla y el alcance territorial estudiados.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c57-cpc-1048-1052-secciones",
+              "ev-c57-a64-l097-101-inventario-avaluo"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c57-cpc-1048-1052-secciones",
+                "ev-c57-a64-l097-101-inventario-avaluo"
+              ],
+              [
+                "ev-c57-cpc-1048-1052-secciones",
+                "ev-c57-a64-l097-101-inventario-avaluo"
+              ],
+              [
+                "ev-c57-cpc-1048-1052-secciones",
+                "ev-c57-a64-l097-101-inventario-avaluo"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c57-cpc-1048-1052-secciones",
+              "ev-c57-a64-l097-101-inventario-avaluo"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c57-cpc-1048-1052-secciones",
+              "ev-c57-a64-l097-101-inventario-avaluo"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c57-cpc-1048-1052-secciones",
+                "ev-c57-a64-l097-101-inventario-avaluo"
+              ],
+              [
+                "ev-c57-cpc-1048-1052-secciones",
+                "ev-c57-a64-l097-101-inventario-avaluo"
+              ],
+              [
+                "ev-c57-cpc-1048-1052-secciones",
+                "ev-c57-a64-l097-101-inventario-avaluo"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué debe ocurrir antes de exigir al albacea definitivo que actúe como tal?",
+            "difficulty": "intermediate",
+            "options": [
+              "Debe asumir el cargo conforme al trámite",
+              "Debe volverse propietario de la masa",
+              "Debe obtener permiso de cada acreedor"
+            ],
+            "correctOption": 0,
+            "explanation": "Cargo, propiedad y acreedores son categorías diferentes.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla y el alcance territorial estudiados.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido",
+              "ev-c57-a64-l047-061-aceptacion-inicio"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c57-cpc-1073-1081-formacion-contenido",
+                "ev-c57-a64-l047-061-aceptacion-inicio"
+              ],
+              [
+                "ev-c57-cpc-1073-1081-formacion-contenido",
+                "ev-c57-a64-l047-061-aceptacion-inicio"
+              ],
+              [
+                "ev-c57-cpc-1073-1081-formacion-contenido",
+                "ev-c57-a64-l047-061-aceptacion-inicio"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido",
+              "ev-c57-a64-l047-061-aceptacion-inicio"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido",
+              "ev-c57-a64-l047-061-aceptacion-inicio"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c57-cpc-1073-1081-formacion-contenido",
+                "ev-c57-a64-l047-061-aceptacion-inicio"
+              ],
+              [
+                "ev-c57-cpc-1073-1081-formacion-contenido",
+                "ev-c57-a64-l047-061-aceptacion-inicio"
+              ],
+              [
+                "ev-c57-cpc-1073-1081-formacion-contenido",
+                "ev-c57-a64-l047-061-aceptacion-inicio"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál elemento debe aparecer en el inventario local?",
+            "difficulty": "intermediate",
+            "options": [
+              "Bienes ajenos, indicando la causa de tenencia",
+              "Sólo inmuebles libres de litigio",
+              "Únicamente activos sin deudas"
+            ],
+            "correctOption": 0,
+            "explanation": "El inventario legal es más amplio que una lista de inmuebles propios.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla y el alcance territorial estudiados.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c57-cpc-1073-1081-formacion-contenido"
+              ],
+              [
+                "ev-c57-cpc-1073-1081-formacion-contenido"
+              ],
+              [
+                "ev-c57-cpc-1073-1081-formacion-contenido"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c57-cpc-1073-1081-formacion-contenido"
+              ],
+              [
+                "ev-c57-cpc-1073-1081-formacion-contenido"
+              ],
+              [
+                "ev-c57-cpc-1073-1081-formacion-contenido"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cómo se tratan las deudas mortuorias y hereditarias?",
+            "difficulty": "intermediate",
+            "options": [
+              "Se listan con origen, monto, vencimiento y documento",
+              "Se pagan automáticamente al presentar el inventario",
+              "Se omiten hasta la adjudicación"
+            ],
+            "correctOption": 0,
+            "explanation": "Listar y pagar son actos distintos.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla y el alcance territorial estudiados.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c57-cpc-1073-1081-formacion-contenido",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ],
+              [
+                "ev-c57-cpc-1073-1081-formacion-contenido",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ],
+              [
+                "ev-c57-cpc-1073-1081-formacion-contenido",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c57-cpc-1073-1081-formacion-contenido",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c57-cpc-1073-1081-formacion-contenido",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ],
+              [
+                "ev-c57-cpc-1073-1081-formacion-contenido",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ],
+              [
+                "ev-c57-cpc-1073-1081-formacion-contenido",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ]
+            ]
+          },
+          {
+            "text": "Presentado el inventario y avalúo, ¿qué prevé el código local para quien no los suscribió?",
+            "difficulty": "intermediate",
+            "options": [
+              "Un traslado de cinco días",
+              "Adjudicación inmediata sin vista",
+              "Un plazo nacional uniforme de sesenta días"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 1082 fija el traslado local.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla y el alcance territorial estudiados.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion"
+              ]
+            ]
+          },
+          {
+            "text": "Si todas las personas interesadas están conformes, ¿qué procede?",
+            "difficulty": "intermediate",
+            "options": [
+              "Aprobación judicial sin más trámites, con reserva por nuevos bienes",
+              "Reprobación automática",
+              "Apertura obligatoria de otro juicio"
+            ],
+            "correctOption": 0,
+            "explanation": "La conformidad simplifica la decisión, pero conserva la reserva legal.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla y el alcance territorial estudiados.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cómo se encauza la inconformidad con inventario y avalúo?",
+            "difficulty": "intermediate",
+            "options": [
+              "Mediante incidente con el albacea",
+              "Mediante una nueva sucesión",
+              "Mediante denuncia penal automática"
+            ],
+            "correctOption": 0,
+            "explanation": "El desacuerdo se sustancia incidentalmente.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla y el alcance territorial estudiados.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ]
+            ]
+          },
+          {
+            "text": "¿La apelación contra la sentencia incidental procede siempre?",
+            "difficulty": "intermediate",
+            "options": [
+              "No; depende de que la cuantía admita el recurso",
+              "Sí, siempre en ambos efectos",
+              "Nunca existe recurso"
+            ],
+            "correctOption": 0,
+            "explanation": "El artículo 1085 condiciona procedencia y señala efecto devolutivo.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla y el alcance territorial estudiados.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué se hace si aparece un bien omitido después?",
+            "difficulty": "intermediate",
+            "options": [
+              "Se agrega en el lugar correspondiente del inventario",
+              "Se adjudica sin valoración",
+              "Se considera inexistente"
+            ],
+            "correctOption": 0,
+            "explanation": "La aprobación contiene reserva para bienes nuevos u omitidos.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla y el alcance territorial estudiados.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c57-cpc-1082-1090-revision-oposicion",
+              "ev-c57-a64-l109-contexto-segunda-seccion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ],
+              [
+                "ev-c57-cpc-1082-1090-revision-oposicion",
+                "ev-c57-a64-l109-contexto-segunda-seccion"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cómo debe usarse el CNPCF en este tema?",
+            "difficulty": "intermediate",
+            "options": [
+              "Como contraste sujeto a aplicación gradual y declaratoria",
+              "Como reemplazo automático del código local",
+              "Como prueba de que todos los estados siguen idénticos plazos"
+            ],
+            "correctOption": 0,
+            "explanation": "El régimen nacional no se activa territorialmente por su sola publicación.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla y el alcance territorial estudiados.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece.",
+              "Incorrecta: atribuye a esta etapa un efecto, requisito o automatismo que la norma no establece."
+            ],
+            "evidenceIds": [
+              "ev-c57-cnpcf-transitorios",
+              "ev-c57-cnpcf-706-seccion-segunda",
+              "ev-c57-cnpcf-736-750-inventario"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c57-cnpcf-transitorios",
+                "ev-c57-cnpcf-706-seccion-segunda",
+                "ev-c57-cnpcf-736-750-inventario"
+              ],
+              [
+                "ev-c57-cnpcf-transitorios",
+                "ev-c57-cnpcf-706-seccion-segunda",
+                "ev-c57-cnpcf-736-750-inventario"
+              ],
+              [
+                "ev-c57-cnpcf-transitorios",
+                "ev-c57-cnpcf-706-seccion-segunda",
+                "ev-c57-cnpcf-736-750-inventario"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c57-cnpcf-transitorios",
+              "ev-c57-cnpcf-706-seccion-segunda",
+              "ev-c57-cnpcf-736-750-inventario"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c57-cnpcf-transitorios",
+              "ev-c57-cnpcf-706-seccion-segunda",
+              "ev-c57-cnpcf-736-750-inventario"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c57-cnpcf-transitorios",
+                "ev-c57-cnpcf-706-seccion-segunda",
+                "ev-c57-cnpcf-736-750-inventario"
+              ],
+              [
+                "ev-c57-cnpcf-transitorios",
+                "ev-c57-cnpcf-706-seccion-segunda",
+                "ev-c57-cnpcf-736-750-inventario"
+              ],
+              [
+                "ev-c57-cnpcf-transitorios",
+                "ev-c57-cnpcf-706-seccion-segunda",
+                "ev-c57-cnpcf-736-750-inventario"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c57-cpc-1048-1052-secciones",
+      "kind": "official",
+      "title": "Código de Procedimientos Civiles para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/file/C%C3%93DIGO-DE-PROCEDIMIENTOS-CIVILES-REF-30-DE-JUNIO-DE-2020.pdf",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 30-06-2020; artículos 1048 a 1052: cuatro secciones y contenido de inventarios, administración y partición",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c57-cpc-1073-1081-formacion-contenido",
+      "kind": "official",
+      "title": "Código de Procedimientos Civiles para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/file/C%C3%93DIGO-DE-PROCEDIMIENTOS-CIVILES-REF-30-DE-JUNIO-DE-2020.pdf",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 30-06-2020; artículos 1073 a 1081: obligación, contenido ordenado, créditos, bienes litigiosos o ajenos, legados y deudas",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c57-cpc-1082-1090-revision-oposicion",
+      "kind": "official",
+      "title": "Código de Procedimientos Civiles para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/file/C%C3%93DIGO-DE-PROCEDIMIENTOS-CIVILES-REF-30-DE-JUNIO-DE-2020.pdf",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 30-06-2020; artículos 1082 a 1090: traslado, conformidad, inconformidad, apelación condicionada, bienes omitidos y efectos",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c57-cpc-1091-1095-avaluo",
+      "kind": "official",
+      "title": "Código de Procedimientos Civiles para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/file/C%C3%93DIGO-DE-PROCEDIMIENTOS-CIVILES-REF-30-DE-JUNIO-DE-2020.pdf",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 30-06-2020; artículos 1091 a 1095: presentación y reglas de avalúo, gastos y bienes sujetos a litigio",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c57-cnpcf-transitorios",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículos transitorios sobre entrada gradual y declaratorias territoriales",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c57-cnpcf-706-seccion-segunda",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículo 706: contenido de la sección segunda de inventarios",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c57-cnpcf-736-750-inventario",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículos 736 a 750: formación, oposición, aprobación, inventario suplementario y gastos",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c57-a64-l047-061-aceptacion-inicio",
+      "kind": "transcript",
+      "audioNumber": 64,
+      "locator": {
+        "type": "line_range",
+        "startLine": 47,
+        "endLine": 61
+      }
+    },
+    {
+      "id": "ev-c57-a64-l097-101-inventario-avaluo",
+      "kind": "transcript",
+      "audioNumber": 64,
+      "locator": {
+        "type": "line_range",
+        "startLine": 97,
+        "endLine": 101
+      }
+    },
+    {
+      "id": "ev-c57-a64-l109-contexto-segunda-seccion",
+      "kind": "transcript",
+      "audioNumber": 64,
+      "locator": {
+        "type": "line_range",
+        "startLine": 109,
+        "endLine": 109
+      }
+    }
+  ]
+}

@@ -906,6 +906,21 @@ const traceablePackages = [
       /última reforma publicada 30-06-2020/i,
     ],
   },
+  {
+    code: "C57",
+    fileName: "audio-64-inventario-avaluo-oposicion-sucesoria.json",
+    artifacts: 149,
+    evidence: 10,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /Cobertura exclusiva de las líneas físicas 47–109/i,
+      /línea física 109 sólo como contexto amplio/i,
+      /apelación automática/i,
+      /bienes omitidos pueden agregarse/i,
+      /reemplaza automáticamente hoy el procedimiento michoacano/i,
+      /última reforma publicada 30-06-2020/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -1401,6 +1416,20 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar como vigente una regla sucesoria automática, universal o no acreditada.`,
+        );
+      }
+    }
+
+    if (expected.code === "C57") {
+      const obsoleteAsCurrent =
+        /(?:todo|cualquier) avalúo.*(?:requiere|exige).*(?:perito|peritaje)|(?:toda|cualquier) (?:resolución|interlocutoria).*(?:siempre|automáticamente).*apel|inventario.*(?:equivale|es lo mismo).*(?:partición|adjudicación)|segunda sección.*(?:solo|exclusivamente).*(?:pagar|pago).*(?:deudas|pasivo)|CNPCF.*(?:ya|automáticamente).*(?:rige|sustituyó|opera).*Michoacán/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          "C57 no puede presentar como vigente una regla automática, universal o territorialmente falsa.",
         );
       }
     }
