@@ -1,0 +1,1384 @@
+{
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C56",
+    "order": 56,
+    "audioSources": [
+      {
+        "audioNumber": 63,
+        "fragment": "Líneas 157–209 útiles; 211–231 evaluadas y excluidas por insuficiencia semántica"
+      },
+      {
+        "audioNumber": 64,
+        "fragment": "Líneas 17–45: primera sección, declaración de herederos, albacea y resolución"
+      }
+    ]
+  },
+  "subject": {
+    "name": "Derecho Familiar y Sucesorio",
+    "description": "Procedimiento sucesorio civil vigente en Michoacán, con énfasis en la primera sección."
+  },
+  "class": {
+    "title": "Primera sección sucesoria: herederos y albacea",
+    "description": "Denuncia, llamamiento, acreditación de vocación, declaración judicial y designación del albacea en Michoacán."
+  },
+  "transcript": {
+    "originalFiles": [
+      "AUDIO 63.txt",
+      "AUDIO 64.txt"
+    ],
+    "cleaned": "Cobertura editorial limitada al Audio 63, líneas 157–231, y al Audio 64, líneas 17–45. Del Audio 63 se conservaron 157–179 sólo para el panorama y la denuncia, y 181–209 exclusivamente para certificado, testamento y coexistencia de rutas; 211–231 se evaluaron y excluyeron porque no sostienen comparecencia, parentesco, edictos, notificación, plazos ni voto. Las líneas 227 y 229 son renglones físicos extensos y no se usan como evidencia. Del Audio 64, 17–25 se usa para la primera sección, 27–35 para declaración y resolución interlocutoria, y 37–45 sólo para herederos y albaceazgo, no para aceptación o protesta. Se excluyó todo el Audio 63 hasta la línea 155 y todo el Audio 64 desde la línea 47. Las reglas precisas se verificaron en los códigos oficiales vigentes de Michoacán."
+  },
+  "topics": [
+    {
+      "title": "Radicación, declaración de herederos y albacea",
+      "description": "Secuencia verificable de la primera sección del juicio sucesorio intestamentario en Michoacán.",
+      "learningJourney": {
+        "openingPrompt": "¿Qué debe acreditarse para que una persona sea declarada heredera en un intestado de Michoacán?",
+        "quickChecks": [
+          {
+            "prompt": "¿Denunciar un intestado convierte de inmediato a la persona promovente en heredera?",
+            "answer": "No. Debe comparecer y justificar su parentesco o la vocación sucesoria que invoque.",
+            "feedback": "Distingue iniciar el expediente de obtener una declaración judicial.",
+            "evidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-cc-768-844-vocacion-albacea",
+              "ev-c56-a63-l157-179-panorama-denuncia"
+            ]
+          },
+          {
+            "prompt": "¿El albacea provisional y el definitivo son necesariamente la misma persona?",
+            "answer": "No. El primero cubre una función temporal; el definitivo se decide en la sentencia conforme al régimen local.",
+            "feedback": "Ubica cada nombramiento en su momento procesal.",
+            "evidenceIds": [
+              "ev-c56-cpc-986-radicacion-albacea-provisional",
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-a64-l37-45-herederos-albacea"
+            ]
+          },
+          {
+            "prompt": "¿El voto por una persona como albacea sustituye la prueba del parentesco?",
+            "answer": "No. La vocación hereditaria y la designación del albacea son cuestiones diferentes.",
+            "feedback": "Primero se acredita el derecho a heredar; el voto opera para la designación.",
+            "evidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-cc-768-844-vocacion-albacea",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "En Michoacán se denuncia una sucesión intestamentaria. Dos personas comparecen con documentos de parentesco y votan por una de ellas como albacea; otra persona sólo afirma verbalmente ser familiar.",
+          "question": "¿Qué debe resolver la autoridad en la primera sección?",
+          "legalRule": "Los artículos 1032 a 1035 del Código de Procedimientos Civiles local regulan llamamiento, comparecencia, acreditación del parentesco, voto y sentencia.",
+          "reasoning": "La autoridad valora los documentos y la vocación legal; la sola afirmación no sustituye la prueba. Después declara a quienes acreditaron su derecho y resuelve la designación del albacea definitivo.",
+          "conclusion": "La declaración de herederos y el nombramiento de albacea dependen de presupuestos distintos y se resuelven judicialmente.",
+          "evidenceIds": [
+            "ev-c56-cpc-1032-1034-citacion-comparecencia",
+            "ev-c56-cpc-1035-1036-declaracion-albacea",
+            "ev-c56-cc-768-844-vocacion-albacea",
+            "ev-c56-a64-l27-35-interlocutoria"
+          ]
+        },
+        "closingPrompt": "Explica la diferencia entre denunciar, acreditar parentesco, ser declarado heredero y aceptar el cargo de albacea.",
+        "nextActivity": "Construye una línea procesal desde la radicación hasta la aceptación y protesta del albacea definitivo, citando la disposición local de cada paso.",
+        "openingPromptEvidenceIds": [
+          "ev-c56-cpc-1032-1034-citacion-comparecencia",
+          "ev-c56-cpc-1035-1036-declaracion-albacea",
+          "ev-c56-cc-768-844-vocacion-albacea"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c56-cpc-986-radicacion-albacea-provisional",
+          "ev-c56-cpc-1032-1034-citacion-comparecencia",
+          "ev-c56-cpc-1035-1036-declaracion-albacea",
+          "ev-c56-cc-768-844-vocacion-albacea",
+          "ev-c56-a64-l27-35-interlocutoria",
+          "ev-c56-a64-l37-45-herederos-albacea"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c56-cpc-986-radicacion-albacea-provisional",
+          "ev-c56-cpc-1012-1013-primera-seccion",
+          "ev-c56-cpc-1032-1034-citacion-comparecencia",
+          "ev-c56-cpc-1035-1036-declaracion-albacea",
+          "ev-c56-a64-l17-25-primera-seccion",
+          "ev-c56-a64-l27-35-interlocutoria",
+          "ev-c56-a64-l37-45-herederos-albacea"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "En Michoacán, la primera sección sucesoria reúne la denuncia del intestado, el llamamiento y comparecencia de interesados, la prueba del parentesco, la declaración de herederos y el nombramiento del albacea. Denunciar no equivale a heredar.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c56-cpc-1012-1013-primera-seccion",
+            "ev-c56-cpc-1032-1034-citacion-comparecencia",
+            "ev-c56-cpc-1035-1036-declaracion-albacea",
+            "ev-c56-a63-l157-179-panorama-denuncia",
+            "ev-c56-a64-l17-25-primera-seccion"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa",
+          "content": "La radicación abre el expediente y permite una representación provisional. En el intestado, el llamamiento da oportunidad de comparecer; quien reclama la herencia acompaña documentos de parentesco y puede votar por albacea definitivo. Tras la fase de alegatos, la sentencia declara a quienes justificaron su derecho y resuelve el nombramiento. La aceptación y protesta del cargo son posteriores a la designación.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c56-cpc-986-radicacion-albacea-provisional",
+            "ev-c56-cpc-1012-1013-primera-seccion",
+            "ev-c56-cpc-1032-1034-citacion-comparecencia",
+            "ev-c56-cpc-1035-1036-declaracion-albacea",
+            "ev-c56-cc-768-844-vocacion-albacea",
+            "ev-c56-a64-l27-35-interlocutoria"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Base legal",
+          "content": "Código de Procedimientos Civiles de Michoacán: artículos 986, 1012–1013 y 1032–1036. Código Civil local: reglas de sucesión legítima y función representativa del albacea. La vigencia y jurisdicción son locales; este material no traslada automáticamente el esquema a otra entidad.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c56-cpc-986-radicacion-albacea-provisional",
+            "ev-c56-cpc-1012-1013-primera-seccion",
+            "ev-c56-cpc-1032-1034-citacion-comparecencia",
+            "ev-c56-cpc-1035-1036-declaracion-albacea",
+            "ev-c56-cc-768-844-vocacion-albacea"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Caso tipo examen",
+          "content": "Una hija comparece con acta que acredita el parentesco y vota por albacea; otra persona sólo afirma ser pariente. La respuesta correcta separa la acreditación de la vocación, la declaración judicial y la designación del cargo.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c56-cpc-1032-1034-citacion-comparecencia",
+            "ev-c56-cpc-1035-1036-declaracion-albacea",
+            "ev-c56-cc-768-844-vocacion-albacea",
+            "ev-c56-a64-l27-35-interlocutoria"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Radicación; certificado testamentario; albacea provisional; llamamiento; comparecencia con documentos; voto; alegatos; sentencia; declaración de herederos; albacea definitivo; aceptación y protesta.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c56-cpc-986-radicacion-albacea-provisional",
+            "ev-c56-cpc-1032-1034-citacion-comparecencia",
+            "ev-c56-cpc-1035-1036-declaracion-albacea",
+            "ev-c56-a64-l27-35-interlocutoria"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de estudio",
+          "content": "Ordena cada concepto por momento y pregunta siempre: ¿abre expediente, acredita derecho, decide calidad hereditaria o confiere un cargo? Después comprueba si la regla pertenece realmente a Michoacán.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c56-cpc-1012-1013-primera-seccion",
+            "ev-c56-cpc-1032-1034-citacion-comparecencia",
+            "ev-c56-cpc-1035-1036-declaracion-albacea",
+            "ev-c56-a64-l17-25-primera-seccion",
+            "ev-c56-a64-l27-35-interlocutoria"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Denuncia, radicación, vocación, parentesco, citación, comparecencia, declaración de herederos, albacea provisional, albacea definitivo, aceptación, protesta y sentencia de primera sección.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c56-cpc-986-radicacion-albacea-provisional",
+            "ev-c56-cpc-1012-1013-primera-seccion",
+            "ev-c56-cpc-1032-1034-citacion-comparecencia",
+            "ev-c56-cpc-1035-1036-declaracion-albacea",
+            "ev-c56-cc-768-844-vocacion-albacea",
+            "ev-c56-a63-l157-179-panorama-denuncia",
+            "ev-c56-a64-l17-25-primera-seccion"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores comunes",
+          "content": "Creer que denunciar ya confiere la herencia; tratar el voto como prueba de parentesco; equiparar albacea con propietario; aplicar automáticamente reglas notariales o de otra entidad; y presentar aceptación o protesta como si sustituyeran la resolución judicial.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c56-cpc-1032-1034-citacion-comparecencia",
+            "ev-c56-cpc-1035-1036-declaracion-albacea",
+            "ev-c56-cc-768-844-vocacion-albacea",
+            "ev-c56-a63-l157-179-panorama-denuncia"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Ana acredita ser hija y comparece dentro del llamamiento. Su documentación sirve para decidir su calidad hereditaria; su voto por una persona como albacea atiende una cuestión distinta. La sentencia resuelve ambas conforme al código local.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c56-cpc-1032-1034-citacion-comparecencia",
+            "ev-c56-cpc-1035-1036-declaracion-albacea",
+            "ev-c56-cc-768-844-vocacion-albacea",
+            "ev-c56-a64-l27-35-interlocutoria"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa de la primera sección sucesoria",
+        "description": "Relaciones entre apertura, prueba de vocación, declaración judicial y albaceazgo.",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Primera sección",
+            "description": "Cuaderno de sucesión del juicio hereditario en Michoacán.",
+            "evidenceIds": [
+              "ev-c56-cpc-1012-1013-primera-seccion",
+              "ev-c56-a64-l17-25-primera-seccion"
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Cuatro secciones",
+            "description": "El código local organiza el juicio hereditario en cuatro secciones.",
+            "evidenceIds": [
+              "ev-c56-cpc-1012-1013-primera-seccion",
+              "ev-c56-a64-l17-25-primera-seccion"
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Denuncia del intestado",
+            "description": "Acto que pone en conocimiento judicial la sucesión sin testamento.",
+            "evidenceIds": [
+              "ev-c56-cpc-1012-1013-primera-seccion",
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-a63-l157-179-panorama-denuncia"
+            ]
+          },
+          {
+            "id": "n4",
+            "label": "Radicación",
+            "description": "Resolución inicial que abre el expediente sucesorio.",
+            "evidenceIds": [
+              "ev-c56-cpc-986-radicacion-albacea-provisional",
+              "ev-c56-cpc-1032-1034-citacion-comparecencia"
+            ]
+          },
+          {
+            "id": "n5",
+            "label": "Certificado testamentario",
+            "description": "Comprobación oficial de existencia o inexistencia de disposición testamentaria.",
+            "evidenceIds": [
+              "ev-c56-cpc-986-radicacion-albacea-provisional",
+              "ev-c56-a63-l181-209-certificado-testamento"
+            ]
+          },
+          {
+            "id": "n6",
+            "label": "Albacea provisional",
+            "description": "Representación temporal mientras se define el albacea definitivo o la legitimidad del testamento.",
+            "evidenceIds": [
+              "ev-c56-cpc-986-radicacion-albacea-provisional"
+            ]
+          },
+          {
+            "id": "n7",
+            "label": "Presuntos herederos",
+            "description": "Personas que comparecen afirmando una vocación sucesoria.",
+            "evidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-cc-768-844-vocacion-albacea"
+            ]
+          },
+          {
+            "id": "n8",
+            "label": "Vocación hereditaria",
+            "description": "Fundamento legal por el que una persona puede ser llamada a heredar.",
+            "evidenceIds": [
+              "ev-c56-cc-768-844-vocacion-albacea"
+            ]
+          },
+          {
+            "id": "n9",
+            "label": "Parentesco",
+            "description": "Hecho que debe probarse cuando la vocación invocada depende de él.",
+            "evidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-cc-768-844-vocacion-albacea"
+            ]
+          },
+          {
+            "id": "n10",
+            "label": "Documentos",
+            "description": "Medios con los que se justifica el parentesco alegado.",
+            "evidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia"
+            ]
+          },
+          {
+            "id": "n11",
+            "label": "Citación general",
+            "description": "Llamamiento por edicto en los términos del artículo 1032 local.",
+            "evidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia"
+            ]
+          },
+          {
+            "id": "n12",
+            "label": "Notificación personal",
+            "description": "Llamamiento personal a presuntos herederos nombrados.",
+            "evidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia"
+            ]
+          },
+          {
+            "id": "n13",
+            "label": "Treinta días",
+            "description": "Periodo local para comparecer tras el llamamiento correspondiente.",
+            "evidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia"
+            ]
+          },
+          {
+            "id": "n14",
+            "label": "Comparecencia",
+            "description": "Intervención de quien pretende derechos hereditarios.",
+            "evidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia"
+            ]
+          },
+          {
+            "id": "n15",
+            "label": "Voto",
+            "description": "Manifestación para la designación de albacea definitivo.",
+            "evidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia"
+            ]
+          },
+          {
+            "id": "n16",
+            "label": "Mayoría",
+            "description": "Criterio que puede definir la designación entre herederos declarados.",
+            "evidenceIds": [
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ]
+          },
+          {
+            "id": "n17",
+            "label": "Alegatos",
+            "description": "Oportunidad común posterior al periodo de comparecencia.",
+            "evidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ]
+          },
+          {
+            "id": "n18",
+            "label": "Cinco días",
+            "description": "Plazo común local para alegar antes de la sentencia.",
+            "evidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ]
+          },
+          {
+            "id": "n19",
+            "label": "Sentencia",
+            "description": "Resolución de la primera sección sobre herederos y albacea.",
+            "evidenceIds": [
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ]
+          },
+          {
+            "id": "n20",
+            "label": "Declaración de herederos",
+            "description": "Reconoce a quienes acreditaron el parentesco y derecho aplicable.",
+            "evidenceIds": [
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-cc-768-844-vocacion-albacea",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ]
+          },
+          {
+            "id": "n21",
+            "label": "Prueba, no afirmación",
+            "description": "Alegar parentesco no equivale a demostrarlo.",
+            "evidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-cc-768-844-vocacion-albacea"
+            ]
+          },
+          {
+            "id": "n22",
+            "label": "Albacea definitivo",
+            "description": "Persona designada en la sentencia conforme a votos y regla judicial subsidiaria.",
+            "evidenceIds": [
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-a64-l37-45-herederos-albacea"
+            ]
+          },
+          {
+            "id": "n23",
+            "label": "Aceptación",
+            "description": "Manifestación posterior de asumir el cargo conferido.",
+            "evidenceIds": [
+              "ev-c56-cpc-1035-1036-declaracion-albacea"
+            ]
+          },
+          {
+            "id": "n24",
+            "label": "Protesta",
+            "description": "Formalización del compromiso de desempeñar el cargo conforme a derecho.",
+            "evidenceIds": [
+              "ev-c56-cpc-1035-1036-declaracion-albacea"
+            ]
+          },
+          {
+            "id": "n25",
+            "label": "Interlocutoria",
+            "description": "Forma con la que la práctica judicial identifica la resolución de esta sección.",
+            "evidenceIds": [
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ]
+          },
+          {
+            "id": "n26",
+            "label": "Posesión legítima",
+            "description": "Efecto legal atribuido por el artículo 1036 a la declaración de herederos.",
+            "evidenceIds": [
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ]
+          },
+          {
+            "id": "n27",
+            "label": "Representación sucesoria",
+            "description": "Función del albacea, distinta de convertirse en dueño del caudal.",
+            "evidenceIds": [
+              "ev-c56-cpc-986-radicacion-albacea-provisional",
+              "ev-c56-cc-768-844-vocacion-albacea"
+            ]
+          },
+          {
+            "id": "n28",
+            "label": "Testamentaria",
+            "description": "Ruta que depende de una disposición testamentaria válida.",
+            "evidenceIds": [
+              "ev-c56-cpc-986-radicacion-albacea-provisional",
+              "ev-c56-cpc-1012-1013-primera-seccion",
+              "ev-c56-a63-l181-209-certificado-testamento"
+            ]
+          },
+          {
+            "id": "n29",
+            "label": "Intestamentaria",
+            "description": "Ruta que exige justificar vocación conforme a la sucesión legítima.",
+            "evidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-cc-768-844-vocacion-albacea",
+              "ev-c56-a63-l157-179-panorama-denuncia"
+            ]
+          },
+          {
+            "id": "n30",
+            "label": "Jurisdicción local",
+            "description": "Estas reglas corresponden al procedimiento civil de Michoacán.",
+            "evidenceIds": [
+              "ev-c56-cpc-1012-1013-primera-seccion",
+              "ev-c56-cpc-1032-1034-citacion-comparecencia"
+            ]
+          },
+          {
+            "id": "n31",
+            "label": "Límite notarial",
+            "description": "El material no presenta la vía notarial como sustituto universal del trámite judicial.",
+            "evidenceIds": [
+              "ev-c56-cpc-1012-1013-primera-seccion",
+              "ev-c56-a63-l157-179-panorama-denuncia"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Código de Procedimientos Civiles para el Estado de Michoacán de Ocampo",
+          "url": "https://congresomich.gob.mx/leyes/",
+          "institution": "Congreso del Estado de Michoacán de Ocampo",
+          "jurisdiction": "Michoacán, México",
+          "citation": "Texto oficial; última reforma publicada 30-06-2020; consulta 2026-08-21",
+          "retrievedOn": "2026-08-21",
+          "note": "Arts. 986, 1012–1013 y 1032–1036.",
+          "evidenceIds": [
+            "ev-c56-cpc-986-radicacion-albacea-provisional",
+            "ev-c56-cpc-1012-1013-primera-seccion",
+            "ev-c56-cpc-1032-1034-citacion-comparecencia",
+            "ev-c56-cpc-1035-1036-declaracion-albacea"
+          ]
+        },
+        {
+          "title": "Código Civil para el Estado de Michoacán de Ocampo",
+          "url": "https://congresomich.gob.mx/leyes/",
+          "institution": "Congreso del Estado de Michoacán de Ocampo",
+          "jurisdiction": "Michoacán, México",
+          "citation": "Texto oficial; última reforma publicada 30-11-2023; consulta 2026-08-21",
+          "retrievedOn": "2026-08-21",
+          "note": "Sucesión legítima, parentesco y albaceazgo.",
+          "evidenceIds": [
+            "ev-c56-cc-768-844-vocacion-albacea"
+          ]
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Qué contiene la primera sección sucesoria?",
+          "answer": "La denuncia o testamento, nombramientos de albacea, decisiones sobre validez/capacidad/preferencia e incidentes relacionados.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c56-cpc-1012-1013-primera-seccion",
+            "ev-c56-a64-l17-25-primera-seccion"
+          ]
+        },
+        {
+          "question": "¿Denuncia equivale a declaración de heredero?",
+          "answer": "No; iniciar el intestado no sustituye la prueba ni la sentencia.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c56-cpc-1032-1034-citacion-comparecencia",
+            "ev-c56-cpc-1035-1036-declaracion-albacea",
+            "ev-c56-a63-l157-179-panorama-denuncia"
+          ]
+        },
+        {
+          "question": "¿Para qué sirve el certificado testamentario?",
+          "answer": "Para comprobar oficialmente si existe o no disposición testamentaria antes de definir la ruta.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c56-cpc-986-radicacion-albacea-provisional",
+            "ev-c56-a63-l181-209-certificado-testamento"
+          ]
+        },
+        {
+          "question": "¿Qué debe acompañar quien comparece por parentesco?",
+          "answer": "Documentos que justifiquen el parentesco invocado.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c56-cpc-1032-1034-citacion-comparecencia",
+            "ev-c56-cc-768-844-vocacion-albacea"
+          ]
+        },
+        {
+          "question": "¿Cómo se llama a posibles interesados en el intestado local?",
+          "answer": "Mediante el llamamiento general previsto por el código y notificación personal a los nombrados.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c56-cpc-1032-1034-citacion-comparecencia"
+          ]
+        },
+        {
+          "question": "¿Qué se vota durante la comparecencia?",
+          "answer": "La persona propuesta para albacea definitivo; no la calidad de heredero.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c56-cpc-1032-1034-citacion-comparecencia",
+            "ev-c56-cpc-1035-1036-declaracion-albacea"
+          ]
+        },
+        {
+          "question": "¿Quién declara a los herederos?",
+          "answer": "La autoridad judicial en la sentencia de la primera sección.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c56-cpc-1035-1036-declaracion-albacea",
+            "ev-c56-a64-l27-35-interlocutoria"
+          ]
+        },
+        {
+          "question": "¿Qué ocurre si nadie obtiene mayoría para albacea?",
+          "answer": "El juez lo nombra entre los herederos declarados conforme al artículo 1035.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c56-cpc-1035-1036-declaracion-albacea",
+            "ev-c56-a64-l27-35-interlocutoria"
+          ]
+        },
+        {
+          "question": "¿Albacea significa propietario del caudal?",
+          "answer": "No; es un cargo de representación y gestión sucesoria.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c56-cpc-986-radicacion-albacea-provisional",
+            "ev-c56-cc-768-844-vocacion-albacea"
+          ]
+        },
+        {
+          "question": "¿Qué sigue a la designación del albacea definitivo?",
+          "answer": "La comunicación del cargo y su aceptación y protesta conforme al trámite aplicable.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c56-cpc-1035-1036-declaracion-albacea"
+          ]
+        },
+        {
+          "question": "¿Qué efecto atribuye el artículo 1036 a la declaración?",
+          "answer": "Reconoce la posesión legítima de bienes, derechos y acciones del difunto en favor de la persona declarada.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c56-cpc-1035-1036-declaracion-albacea",
+            "ev-c56-a64-l27-35-interlocutoria"
+          ]
+        },
+        {
+          "question": "¿Estas reglas se aplican igual en toda entidad?",
+          "answer": "No; el paquete estudia el Código de Procedimientos Civiles de Michoacán.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c56-cpc-1012-1013-primera-seccion",
+            "ev-c56-cpc-1032-1034-citacion-comparecencia",
+            "ev-c56-a64-l17-25-primera-seccion"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación de la primera sección sucesoria",
+        "description": "Diez reactivos sobre secuencia, prueba, resolución y albaceazgo.",
+        "questions": [
+          {
+            "text": "Una persona presenta la denuncia de intestado. ¿Cuál es el efecto inmediato correcto?",
+            "difficulty": "intermediate",
+            "options": [
+              "Se inicia el análisis judicial, pero aún no queda declarada heredera",
+              "Adquiere automáticamente todos los bienes",
+              "Queda designada albacea definitiva por presentar primero"
+            ],
+            "correctOption": 0,
+            "explanation": "La denuncia inicia el trámite; declaración y cargo requieren decisiones posteriores.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla aplicable y con el momento procesal descrito.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así."
+            ],
+            "evidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-a63-l157-179-panorama-denuncia"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a63-l157-179-panorama-denuncia"
+              ],
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a63-l157-179-panorama-denuncia"
+              ],
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a63-l157-179-panorama-denuncia"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-a63-l157-179-panorama-denuncia"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-a63-l157-179-panorama-denuncia"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a63-l157-179-panorama-denuncia"
+              ],
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a63-l157-179-panorama-denuncia"
+              ],
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a63-l157-179-panorama-denuncia"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué elemento es pertinente para acreditar una vocación basada en parentesco?",
+            "difficulty": "intermediate",
+            "options": [
+              "Documentos que prueben el vínculo",
+              "El voto para albacea por sí solo",
+              "La mera afirmación de ser familiar"
+            ],
+            "correctOption": 0,
+            "explanation": "El código exige justificar el parentesco; el voto atiende otra cuestión.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla aplicable y con el momento procesal descrito.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así."
+            ],
+            "evidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-cc-768-844-vocacion-albacea"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cc-768-844-vocacion-albacea"
+              ],
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cc-768-844-vocacion-albacea"
+              ],
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cc-768-844-vocacion-albacea"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-cc-768-844-vocacion-albacea"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-cc-768-844-vocacion-albacea"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cc-768-844-vocacion-albacea"
+              ],
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cc-768-844-vocacion-albacea"
+              ],
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cc-768-844-vocacion-albacea"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué diferencia al albacea provisional del definitivo?",
+            "difficulty": "intermediate",
+            "options": [
+              "El provisional cubre representación temporal y el definitivo se resuelve después",
+              "El provisional es siempre propietario de los bienes",
+              "El definitivo no necesita resolución ni designación"
+            ],
+            "correctOption": 0,
+            "explanation": "Son momentos y funciones procesales distintos.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla aplicable y con el momento procesal descrito.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así."
+            ],
+            "evidenceIds": [
+              "ev-c56-cpc-986-radicacion-albacea-provisional",
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-a64-l37-45-herederos-albacea"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c56-cpc-986-radicacion-albacea-provisional",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a64-l37-45-herederos-albacea"
+              ],
+              [
+                "ev-c56-cpc-986-radicacion-albacea-provisional",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a64-l37-45-herederos-albacea"
+              ],
+              [
+                "ev-c56-cpc-986-radicacion-albacea-provisional",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a64-l37-45-herederos-albacea"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c56-cpc-986-radicacion-albacea-provisional",
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-a64-l37-45-herederos-albacea"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c56-cpc-986-radicacion-albacea-provisional",
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-a64-l37-45-herederos-albacea"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c56-cpc-986-radicacion-albacea-provisional",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a64-l37-45-herederos-albacea"
+              ],
+              [
+                "ev-c56-cpc-986-radicacion-albacea-provisional",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a64-l37-45-herederos-albacea"
+              ],
+              [
+                "ev-c56-cpc-986-radicacion-albacea-provisional",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a64-l37-45-herederos-albacea"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué integra la primera sección conforme al artículo 1013?",
+            "difficulty": "intermediate",
+            "options": [
+              "Denuncia, albaceas y decisiones sobre derecho a heredar",
+              "Únicamente inventario y avalúo",
+              "Sólo partición y adjudicación"
+            ],
+            "correctOption": 0,
+            "explanation": "Inventario y partición pertenecen a otros apartados del juicio hereditario.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla aplicable y con el momento procesal descrito.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así."
+            ],
+            "evidenceIds": [
+              "ev-c56-cpc-1012-1013-primera-seccion",
+              "ev-c56-a64-l17-25-primera-seccion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c56-cpc-1012-1013-primera-seccion",
+                "ev-c56-a64-l17-25-primera-seccion"
+              ],
+              [
+                "ev-c56-cpc-1012-1013-primera-seccion",
+                "ev-c56-a64-l17-25-primera-seccion"
+              ],
+              [
+                "ev-c56-cpc-1012-1013-primera-seccion",
+                "ev-c56-a64-l17-25-primera-seccion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c56-cpc-1012-1013-primera-seccion",
+              "ev-c56-a64-l17-25-primera-seccion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c56-cpc-1012-1013-primera-seccion",
+              "ev-c56-a64-l17-25-primera-seccion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c56-cpc-1012-1013-primera-seccion",
+                "ev-c56-a64-l17-25-primera-seccion"
+              ],
+              [
+                "ev-c56-cpc-1012-1013-primera-seccion",
+                "ev-c56-a64-l17-25-primera-seccion"
+              ],
+              [
+                "ev-c56-cpc-1012-1013-primera-seccion",
+                "ev-c56-a64-l17-25-primera-seccion"
+              ]
+            ]
+          },
+          {
+            "text": "Tras el periodo de comparecencia, ¿qué secuencia prevé el régimen local?",
+            "difficulty": "intermediate",
+            "options": [
+              "Alegatos y sentencia",
+              "Adjudicación automática",
+              "Traslado obligatorio a notaría"
+            ],
+            "correctOption": 0,
+            "explanation": "Los artículos 1034 y 1035 conducen de alegatos a la resolución judicial.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla aplicable y con el momento procesal descrito.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así."
+            ],
+            "evidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ],
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ],
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ],
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ],
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ]
+            ]
+          },
+          {
+            "text": "Si ninguna persona obtiene mayoría para albacea definitivo, ¿qué procede?",
+            "difficulty": "intermediate",
+            "options": [
+              "El juez lo nombra entre los herederos declarados",
+              "Se cancela necesariamente la sucesión",
+              "La persona denunciante queda nombrada automáticamente"
+            ],
+            "correctOption": 0,
+            "explanation": "La regla subsidiaria está en el artículo 1035 local.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla aplicable y con el momento procesal descrito.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así."
+            ],
+            "evidenceIds": [
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ],
+              [
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ],
+              [
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ],
+              [
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ],
+              [
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué decide la sentencia de la primera sección intestamentaria?",
+            "difficulty": "intermediate",
+            "options": [
+              "Quién acreditó calidad hereditaria y quién será albacea definitivo",
+              "La venta automática de todos los bienes",
+              "La validez universal de cualquier testamento"
+            ],
+            "correctOption": 0,
+            "explanation": "La resolución separa la declaración hereditaria de la designación del cargo.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla aplicable y con el momento procesal descrito.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así."
+            ],
+            "evidenceIds": [
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-cc-768-844-vocacion-albacea",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-cc-768-844-vocacion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ],
+              [
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-cc-768-844-vocacion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ],
+              [
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-cc-768-844-vocacion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-cc-768-844-vocacion-albacea",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-cc-768-844-vocacion-albacea",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-cc-768-844-vocacion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ],
+              [
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-cc-768-844-vocacion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ],
+              [
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-cc-768-844-vocacion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué significa aceptar y protestar el cargo de albacea?",
+            "difficulty": "intermediate",
+            "options": [
+              "Asumir formalmente el cargo conferido, no adquirir la herencia por ese solo hecho",
+              "Convertirse en dueño único del caudal",
+              "Sustituir la sentencia sobre herederos"
+            ],
+            "correctOption": 0,
+            "explanation": "El albaceazgo es un cargo de representación distinto de la titularidad hereditaria.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla aplicable y con el momento procesal descrito.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así."
+            ],
+            "evidenceIds": [
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-cc-768-844-vocacion-albacea"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-cc-768-844-vocacion-albacea"
+              ],
+              [
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-cc-768-844-vocacion-albacea"
+              ],
+              [
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-cc-768-844-vocacion-albacea"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-cc-768-844-vocacion-albacea"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-cc-768-844-vocacion-albacea"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-cc-768-844-vocacion-albacea"
+              ],
+              [
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-cc-768-844-vocacion-albacea"
+              ],
+              [
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-cc-768-844-vocacion-albacea"
+              ]
+            ]
+          },
+          {
+            "text": "¿Puede usarse este paquete para afirmar que toda sucesión de México sigue idénticos artículos?",
+            "difficulty": "intermediate",
+            "options": [
+              "No, las reglas estudiadas pertenecen a Michoacán",
+              "Sí, todo procedimiento sucesorio es federal",
+              "Sí, porque el audio reemplaza la legislación local"
+            ],
+            "correctOption": 0,
+            "explanation": "La territorialidad es parte esencial de la respuesta.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla aplicable y con el momento procesal descrito.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así."
+            ],
+            "evidenceIds": [
+              "ev-c56-cpc-1012-1013-primera-seccion",
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-a64-l17-25-primera-seccion"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c56-cpc-1012-1013-primera-seccion",
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-a64-l17-25-primera-seccion"
+              ],
+              [
+                "ev-c56-cpc-1012-1013-primera-seccion",
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-a64-l17-25-primera-seccion"
+              ],
+              [
+                "ev-c56-cpc-1012-1013-primera-seccion",
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-a64-l17-25-primera-seccion"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c56-cpc-1012-1013-primera-seccion",
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-a64-l17-25-primera-seccion"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c56-cpc-1012-1013-primera-seccion",
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-a64-l17-25-primera-seccion"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c56-cpc-1012-1013-primera-seccion",
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-a64-l17-25-primera-seccion"
+              ],
+              [
+                "ev-c56-cpc-1012-1013-primera-seccion",
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-a64-l17-25-primera-seccion"
+              ],
+              [
+                "ev-c56-cpc-1012-1013-primera-seccion",
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-a64-l17-25-primera-seccion"
+              ]
+            ]
+          },
+          {
+            "text": "En un caso con dos personas que prueban parentesco y una que no lo prueba, ¿qué criterio es correcto?",
+            "difficulty": "intermediate",
+            "options": [
+              "La autoridad declara conforme a la prueba y vocación legal, no por mera afirmación",
+              "Todas heredan sólo por comparecer",
+              "Hereda únicamente quien vote por el albacea ganador"
+            ],
+            "correctOption": 0,
+            "explanation": "Comparecer, probar parentesco y votar por albacea son actos distintos.",
+            "optionExplanations": [
+              "Correcta: coincide con la regla aplicable y con el momento procesal descrito.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así.",
+              "Incorrecta: confunde una etapa, un efecto o una facultad que la norma no establece así."
+            ],
+            "evidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-cc-768-844-vocacion-albacea",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-cc-768-844-vocacion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ],
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-cc-768-844-vocacion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ],
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-cc-768-844-vocacion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-cc-768-844-vocacion-albacea",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c56-cpc-1032-1034-citacion-comparecencia",
+              "ev-c56-cpc-1035-1036-declaracion-albacea",
+              "ev-c56-cc-768-844-vocacion-albacea",
+              "ev-c56-a64-l27-35-interlocutoria"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-cc-768-844-vocacion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ],
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-cc-768-844-vocacion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ],
+              [
+                "ev-c56-cpc-1032-1034-citacion-comparecencia",
+                "ev-c56-cpc-1035-1036-declaracion-albacea",
+                "ev-c56-cc-768-844-vocacion-albacea",
+                "ev-c56-a64-l27-35-interlocutoria"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c56-cpc-986-radicacion-albacea-provisional",
+      "kind": "official",
+      "title": "Código de Procedimientos Civiles para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma 30-06-2020; artículo 986: radicación, certificado testamentario y albacea provisional",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c56-cpc-1012-1013-primera-seccion",
+      "kind": "official",
+      "title": "Código de Procedimientos Civiles para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma 30-06-2020; artículos 1012–1013: cuatro secciones y contenido de la primera",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c56-cpc-1032-1034-citacion-comparecencia",
+      "kind": "official",
+      "title": "Código de Procedimientos Civiles para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma 30-06-2020; artículos 1032–1034: llamamiento, comparecencia, parentesco, voto y alegatos",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c56-cpc-1035-1036-declaracion-albacea",
+      "kind": "official",
+      "title": "Código de Procedimientos Civiles para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma 30-06-2020; artículos 1035–1036: declaración de herederos, albacea definitivo y efectos",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c56-cc-768-844-vocacion-albacea",
+      "kind": "official",
+      "title": "Código Civil para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma 30-11-2023; sucesión legítima por parentesco y función representativa del albacea, incluidos artículos 768 y 844",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c56-a63-l157-179-panorama-denuncia",
+      "kind": "transcript",
+      "audioNumber": 63,
+      "locator": {
+        "type": "line_range",
+        "startLine": 157,
+        "endLine": 179
+      }
+    },
+    {
+      "id": "ev-c56-a63-l181-209-certificado-testamento",
+      "kind": "transcript",
+      "audioNumber": 63,
+      "locator": {
+        "type": "line_range",
+        "startLine": 181,
+        "endLine": 209
+      }
+    },
+    {
+      "id": "ev-c56-a64-l17-25-primera-seccion",
+      "kind": "transcript",
+      "audioNumber": 64,
+      "locator": {
+        "type": "line_range",
+        "startLine": 17,
+        "endLine": 25
+      }
+    },
+    {
+      "id": "ev-c56-a64-l27-35-interlocutoria",
+      "kind": "transcript",
+      "audioNumber": 64,
+      "locator": {
+        "type": "line_range",
+        "startLine": 27,
+        "endLine": 35
+      }
+    },
+    {
+      "id": "ev-c56-a64-l37-45-herederos-albacea",
+      "kind": "transcript",
+      "audioNumber": 64,
+      "locator": {
+        "type": "line_range",
+        "startLine": 37,
+        "endLine": 45
+      }
+    }
+  ]
+}

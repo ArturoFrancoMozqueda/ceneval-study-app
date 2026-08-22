@@ -1,0 +1,1608 @@
+{
+  "packageVersion": "1.2",
+  "curriculum": {
+    "code": "C55",
+    "order": 55,
+    "audioSources": [
+      {
+        "audioNumber": 63,
+        "fragment": "Líneas 63–155: apertura sucesoria, testamento ológrafo y tramitación notarial sin controversia"
+      }
+    ]
+  },
+  "subject": {
+    "name": "Derecho sucesorio de Michoacán",
+    "description": "Apertura, sucesión testamentaria y legítima, testamentos, legados y trámite notarial."
+  },
+  "class": {
+    "title": "Apertura de la sucesión testamentaria e intestamentaria",
+    "description": "Identificación del título sucesorio, apertura, testamento, legado y límites de la intervención notarial en Michoacán."
+  },
+  "transcript": {
+    "originalFile": "AUDIO 63.txt",
+    "cleaned": "Cobertura editorial exclusiva de las líneas físicas 63–155. Se retuvieron 75–79 para la distinción testamentaria/legítima; 119–123 para las formas testamentarias; 129–145 como contraste corregido del testamento ológrafo y otras formas; y 147–155 para la posibilidad notarial sin controversia. Se excluyeron 63–73 y 81–85 por muletillas, logística, música y promoción; 87–115 por desvío completo a pagarés, prescripción mercantil y datos de estudiantes; y líneas pares vacías. Se corrigieron: “apintestato” por intestado o sucesión legítima; tres testigos como requisito universal del ológrafo; fe pública atribuida a toda forma; duración de dos o tres meses; validez automática del testamento; y notaría como vía irrestricta. Legados y presunción de muerte se explican sólo con fuentes oficiales, sin atribuirlos al audio. No se usa contenido desde la línea 157, reservado a C56."
+  },
+  "topics": [
+    {
+      "title": "Título sucesorio, apertura y vía de tramitación",
+      "description": "Cómo distinguir voluntad testamentaria, llamamiento legal y opciones judiciales o notariales sin confundir jurisdicciones.",
+      "learningJourney": {
+        "openingPrompt": "¿Qué debe verificarse antes de decidir si una sucesión se tramita como testamentaria o legítima?",
+        "quickChecks": [
+          {
+            "prompt": "¿La existencia de un testamento excluye siempre toda sucesión legítima?",
+            "answer": "No. Puede haber sucesión legítima total o parcial si no hay testamento válido o si éste no dispone de todos los bienes, entre otros supuestos legales.",
+            "feedback": "Distingue existencia documental, validez y alcance patrimonial.",
+            "evidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-ccm-765-772-legitima",
+              "ev-c55-a63-l075-079-clases"
+            ]
+          },
+          {
+            "prompt": "¿El testamento ológrafo michoacano exige siempre tres testigos?",
+            "answer": "No. Debe escribirse y firmarse íntegramente por el testador, fecharse y depositarse por duplicado; dos testigos de identificación intervienen sólo si la persona no es conocida por quien recibe el depósito.",
+            "feedback": "Corrige la cifra oral con los artículos 716 a 720.",
+            "evidenceIds": [
+              "ev-c55-ccm-671-730-formas",
+              "ev-c55-a63-l129-133-olografo"
+            ]
+          },
+          {
+            "prompt": "¿La ausencia de controversia basta por sí sola para llevar cualquier sucesión a notaría?",
+            "answer": "No. Además deben cumplirse los presupuestos, documentos, comparecencias y límites de la legislación aplicable; algunos actos testamentarios requieren intervención judicial previa.",
+            "feedback": "No confundas falta de pleito con competencia notarial ilimitada.",
+            "evidenceIds": [
+              "ev-c55-cpcm-1129-notarial",
+              "ev-c55-notariado-152-160-sucesiones",
+              "ev-c55-cnpcf-transitorios",
+              "ev-c55-cnpcf-805-807-notarial",
+              "ev-c55-a63-l147-155-notarial"
+            ]
+          }
+        ],
+        "practicalCase": {
+          "facts": "En Michoacán fallece una persona que dejó testamento ológrafo depositado. Las personas interesadas están de acuerdo y desean acudir directamente a notaría. El documento contiene un legado de un automóvil.",
+          "question": "¿Qué cuestiones deben separar antes de elegir la vía?",
+          "legalRule": "La sucesión se abre con la muerte; el testamento ológrafo está sujeto a formalidades y declaración judicial, mientras el legado atribuye un bien o prestación particular. La actuación notarial exige ausencia de controversia y los demás requisitos legales.",
+          "reasoning": "Primero se acredita la apertura y se localiza el testamento. Luego se verifica formalmente el ológrafo ante autoridad judicial. Después se identifica a herederos y legatario, se revisan cargas y, una vez cumplidos los actos que exigen jurisdicción, se determina si la continuación notarial es procedente y consensuada.",
+          "conclusion": "El acuerdo facilita el trámite, pero no sustituye la formalización judicial del ológrafo ni las reglas sustantivas del legado.",
+          "evidenceIds": [
+            "ev-c55-ccm-563-585-legados",
+            "ev-c55-ccm-671-730-formas",
+            "ev-c55-ccm-814-817-apertura",
+            "ev-c55-cpcm-990-999-apertura-procesal",
+            "ev-c55-cpcm-1021-testamentaria",
+            "ev-c55-cpcm-1129-notarial",
+            "ev-c55-notariado-152-160-sucesiones"
+          ]
+        },
+        "closingPrompt": "Explica la diferencia entre apertura, título sucesorio, reconocimiento de derechos y elección de vía.",
+        "nextActivity": "Construye una tabla con sucesión testamentaria, legítima, legado, ológrafo y trámite notarial, indicando fuente y jurisdicción.",
+        "openingPromptEvidenceIds": [
+          "ev-c55-ccm-452-462-sucesion",
+          "ev-c55-ccm-765-772-legitima",
+          "ev-c55-ccm-814-817-apertura",
+          "ev-c55-a63-l075-079-clases"
+        ],
+        "closingPromptEvidenceIds": [
+          "ev-c55-ccm-452-462-sucesion",
+          "ev-c55-ccm-814-817-apertura",
+          "ev-c55-cpcm-990-999-apertura-procesal",
+          "ev-c55-cpcm-1129-notarial"
+        ],
+        "nextActivityEvidenceIds": [
+          "ev-c55-ccm-452-462-sucesion",
+          "ev-c55-ccm-563-585-legados",
+          "ev-c55-ccm-671-730-formas",
+          "ev-c55-ccm-765-772-legitima",
+          "ev-c55-cpcm-1129-notarial",
+          "ev-c55-cnpcf-transitorios",
+          "ev-c55-cnpcf-805-807-notarial"
+        ]
+      },
+      "materials": [
+        {
+          "type": "short_answer",
+          "title": "Respuesta breve",
+          "content": "En Michoacán, la herencia puede deferirse por voluntad del testador o por disposición de la ley. La sucesión se abre con la muerte o con la declaración de presunción de muerte. Antes de elegir trámite se verifica el fallecimiento, la existencia y alcance del testamento, las personas interesadas, la presencia de controversia y los actos que necesariamente requieren autoridad judicial.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c55-ccm-452-462-sucesion",
+            "ev-c55-ccm-765-772-legitima",
+            "ev-c55-ccm-814-817-apertura",
+            "ev-c55-cpcm-990-999-apertura-procesal",
+            "ev-c55-a63-l075-079-clases"
+          ]
+        },
+        {
+          "type": "full_explanation",
+          "title": "Explicación completa",
+          "content": "La apertura es el hecho jurídico que activa la sucesión; no equivale todavía a adjudicar bienes. La testamentaria se funda en una voluntad válida, mientras la legítima opera en los supuestos legales, incluso parcialmente si el testamento no abarca todo. Heredero y legatario no son sinónimos: el primero adquiere a título universal y el segundo a título particular. El ológrafo michoacano requiere escritura y firma del testador, fecha, duplicado, huella y depósito; los testigos de identificación no son tres ni intervienen siempre. La falta de controversia puede permitir intervención notarial, pero no borra formalidades, búsquedas, comparecencias ni actos judiciales previos. El Código Nacional ofrece un régimen notarial más detallado sujeto a entrada gradual y no se aplica automáticamente en Michoacán.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c55-ccm-452-462-sucesion",
+            "ev-c55-ccm-467-473-testamento",
+            "ev-c55-ccm-563-585-legados",
+            "ev-c55-ccm-671-730-formas",
+            "ev-c55-ccm-765-772-legitima",
+            "ev-c55-ccm-814-817-apertura",
+            "ev-c55-cpcm-990-999-apertura-procesal",
+            "ev-c55-cpcm-1021-testamentaria",
+            "ev-c55-cpcm-1129-notarial",
+            "ev-c55-notariado-152-160-sucesiones",
+            "ev-c55-cnpcf-transitorios",
+            "ev-c55-cnpcf-684-705-sucesorios",
+            "ev-c55-cnpcf-805-807-notarial",
+            "ev-c55-a63-l075-079-clases",
+            "ev-c55-a63-l119-123-formas",
+            "ev-c55-a63-l129-133-olografo",
+            "ev-c55-a63-l135-145-eleccion-forma",
+            "ev-c55-a63-l147-155-notarial"
+          ]
+        },
+        {
+          "type": "legal_basis",
+          "title": "Fundamento jurídico",
+          "content": "Código Civil de Michoacán: artículos 452–462, 467–473, 563–585, 671–730, 765–772 y 814–817. Código procesal local: artículos 990–999, 1021 y 1129. Ley del Notariado local: reglas sobre sucesiones sin controversia. CNPCF: transitorios y artículos 684–705 y 805–807, sólo cuando su vigencia territorial resulte aplicable.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c55-ccm-452-462-sucesion",
+            "ev-c55-ccm-467-473-testamento",
+            "ev-c55-ccm-563-585-legados",
+            "ev-c55-ccm-671-730-formas",
+            "ev-c55-ccm-765-772-legitima",
+            "ev-c55-ccm-814-817-apertura",
+            "ev-c55-cpcm-990-999-apertura-procesal",
+            "ev-c55-cpcm-1021-testamentaria",
+            "ev-c55-cpcm-1129-notarial",
+            "ev-c55-notariado-152-160-sucesiones",
+            "ev-c55-cnpcf-transitorios",
+            "ev-c55-cnpcf-684-705-sucesorios",
+            "ev-c55-cnpcf-805-807-notarial"
+          ]
+        },
+        {
+          "type": "simple_example",
+          "title": "Ejemplo sencillo",
+          "content": "Si una persona muere sin testamento, se revisan los supuestos de sucesión legítima y se acredita la muerte. Si dejó un testamento que sólo dispone de una casa, el resto puede quedar sujeto al llamamiento legal. Ninguna de estas conclusiones adjudica por sí sola los bienes.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c55-ccm-452-462-sucesion",
+            "ev-c55-ccm-765-772-legitima",
+            "ev-c55-ccm-814-817-apertura",
+            "ev-c55-cpcm-990-999-apertura-procesal",
+            "ev-c55-a63-l075-079-clases"
+          ]
+        },
+        {
+          "type": "ceneval_example",
+          "title": "Ejemplo tipo CENEVAL",
+          "content": "Un reactivo afirma que un testamento ológrafo siempre requiere tres testigos y puede llevarse directamente a notaría. La respuesta correcta rechaza ambos absolutos: en Michoacán la identificación por dos testigos sólo aplica si quien deposita no es conocido, y la declaración formal del ológrafo exige intervención judicial antes de una eventual continuación notarial.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c55-ccm-671-730-formas",
+            "ev-c55-cpcm-1021-testamentaria",
+            "ev-c55-cpcm-1129-notarial",
+            "ev-c55-notariado-152-160-sucesiones",
+            "ev-c55-a63-l129-133-olografo",
+            "ev-c55-a63-l147-155-notarial"
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "Resumen",
+          "content": "Apertura: muerte o declaración de presunción. Título: testamento o ley. Alcance: universal para heredero, particular para legatario. Intestado: supuestos del artículo 765. Ológrafo: formalidades locales precisas. Notaría: posible sin controversia y con requisitos, no automática. CNPCF: modelo nacional de vigencia gradual.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c55-ccm-452-462-sucesion",
+            "ev-c55-ccm-563-585-legados",
+            "ev-c55-ccm-671-730-formas",
+            "ev-c55-ccm-765-772-legitima",
+            "ev-c55-ccm-814-817-apertura",
+            "ev-c55-cpcm-1129-notarial",
+            "ev-c55-notariado-152-160-sucesiones",
+            "ev-c55-cnpcf-transitorios",
+            "ev-c55-cnpcf-805-807-notarial"
+          ]
+        },
+        {
+          "type": "study_guide",
+          "title": "Guía de estudio",
+          "content": "Resuelve en este orden: 1) jurisdicción y vigencia; 2) muerte o declaración; 3) búsqueda de testamento; 4) validez y alcance; 5) heredero frente a legatario; 6) testamentaria, legítima o coexistencia parcial; 7) existencia de controversia; 8) actos judiciales indispensables; 9) posibilidad de continuación notarial.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c55-ccm-452-462-sucesion",
+            "ev-c55-ccm-563-585-legados",
+            "ev-c55-ccm-671-730-formas",
+            "ev-c55-ccm-765-772-legitima",
+            "ev-c55-ccm-814-817-apertura",
+            "ev-c55-cpcm-990-999-apertura-procesal",
+            "ev-c55-cpcm-1021-testamentaria",
+            "ev-c55-cpcm-1129-notarial",
+            "ev-c55-cnpcf-transitorios",
+            "ev-c55-cnpcf-805-807-notarial"
+          ]
+        },
+        {
+          "type": "key_concepts",
+          "title": "Conceptos clave",
+          "content": "Herencia: bienes, derechos y obligaciones transmisibles. Testamentaria: voluntad del testador. Legítima o intestamentaria: disposición de la ley. Apertura: muerte o presunción declarada. Heredero: título universal. Legatario: título particular. Ológrafo: escrito de puño y letra con formalidades locales. Trámite notarial: vía condicionada por consenso y requisitos.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c55-ccm-452-462-sucesion",
+            "ev-c55-ccm-563-585-legados",
+            "ev-c55-ccm-671-730-formas",
+            "ev-c55-ccm-765-772-legitima",
+            "ev-c55-ccm-814-817-apertura",
+            "ev-c55-cpcm-1129-notarial",
+            "ev-c55-a63-l075-079-clases",
+            "ev-c55-a63-l119-123-formas",
+            "ev-c55-a63-l129-133-olografo",
+            "ev-c55-a63-l147-155-notarial"
+          ]
+        },
+        {
+          "type": "common_errors",
+          "title": "Errores frecuentes",
+          "content": "No digas que testamentaria e intestamentaria nunca coexisten; que el testamento se valida automáticamente; que el ológrafo exige tres testigos universales; que todas las formas tienen fe pública; que un juicio dura dos o tres meses; que ausencia equivale a muerte sin declaración; o que el acuerdo convierte cualquier sucesión en jurisdicción notarial.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c55-ccm-452-462-sucesion",
+            "ev-c55-ccm-671-730-formas",
+            "ev-c55-ccm-765-772-legitima",
+            "ev-c55-ccm-814-817-apertura",
+            "ev-c55-cpcm-990-999-apertura-procesal",
+            "ev-c55-cpcm-1021-testamentaria",
+            "ev-c55-cpcm-1129-notarial",
+            "ev-c55-notariado-152-160-sucesiones",
+            "ev-c55-cnpcf-transitorios",
+            "ev-c55-cnpcf-805-807-notarial",
+            "ev-c55-a63-l129-133-olografo",
+            "ev-c55-a63-l135-145-eleccion-forma",
+            "ev-c55-a63-l147-155-notarial"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "title": "Mapa de apertura y título sucesorio",
+        "description": "Relaciones entre hecho de apertura, título, sujetos, forma testamentaria y vía.",
+        "nodes": [
+          {
+            "id": "sucesion",
+            "label": "Sucesión",
+            "description": "Transmisión mortis causa",
+            "evidenceIds": [
+              "ev-c55-ccm-452-462-sucesion"
+            ]
+          },
+          {
+            "id": "apertura",
+            "label": "Apertura",
+            "description": "Activa el fenómeno sucesorio",
+            "parentId": "sucesion",
+            "evidenceIds": [
+              "ev-c55-ccm-814-817-apertura"
+            ]
+          },
+          {
+            "id": "muerte",
+            "label": "Muerte",
+            "description": "Momento ordinario de apertura",
+            "parentId": "apertura",
+            "evidenceIds": [
+              "ev-c55-ccm-814-817-apertura",
+              "ev-c55-cpcm-990-999-apertura-procesal"
+            ]
+          },
+          {
+            "id": "presuncion",
+            "label": "Presunción de muerte",
+            "description": "Requiere declaración",
+            "parentId": "apertura",
+            "evidenceIds": [
+              "ev-c55-ccm-814-817-apertura",
+              "ev-c55-cpcm-990-999-apertura-procesal"
+            ]
+          },
+          {
+            "id": "no-ausencia",
+            "label": "Ausencia ≠ muerte",
+            "description": "No opera automáticamente",
+            "parentId": "presuncion",
+            "evidenceIds": [
+              "ev-c55-ccm-814-817-apertura",
+              "ev-c55-cpcm-990-999-apertura-procesal"
+            ]
+          },
+          {
+            "id": "titulo",
+            "label": "Título sucesorio",
+            "description": "Voluntad o ley",
+            "parentId": "sucesion",
+            "evidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-a63-l075-079-clases"
+            ]
+          },
+          {
+            "id": "testamentaria",
+            "label": "Testamentaria",
+            "description": "Voluntad válida",
+            "parentId": "titulo",
+            "evidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-ccm-467-473-testamento",
+              "ev-c55-a63-l075-079-clases"
+            ]
+          },
+          {
+            "id": "legitima",
+            "label": "Legítima",
+            "description": "Llamamiento legal",
+            "parentId": "titulo",
+            "evidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-ccm-765-772-legitima",
+              "ev-c55-a63-l075-079-clases"
+            ]
+          },
+          {
+            "id": "parcial",
+            "label": "Coexistencia parcial",
+            "description": "Bienes no dispuestos",
+            "parentId": "titulo",
+            "evidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-ccm-765-772-legitima"
+            ]
+          },
+          {
+            "id": "testamento",
+            "label": "Testamento",
+            "description": "Acto personal y revocable",
+            "parentId": "testamentaria",
+            "evidenceIds": [
+              "ev-c55-ccm-467-473-testamento"
+            ]
+          },
+          {
+            "id": "formas",
+            "label": "Formas",
+            "description": "Ordinarias y especiales",
+            "parentId": "testamento",
+            "evidenceIds": [
+              "ev-c55-ccm-671-730-formas",
+              "ev-c55-a63-l119-123-formas",
+              "ev-c55-a63-l135-145-eleccion-forma"
+            ]
+          },
+          {
+            "id": "abierto",
+            "label": "Público abierto",
+            "description": "Forma ordinaria",
+            "parentId": "formas",
+            "evidenceIds": [
+              "ev-c55-ccm-671-730-formas",
+              "ev-c55-a63-l119-123-formas"
+            ]
+          },
+          {
+            "id": "cerrado",
+            "label": "Público cerrado",
+            "description": "Forma ordinaria",
+            "parentId": "formas",
+            "evidenceIds": [
+              "ev-c55-ccm-671-730-formas",
+              "ev-c55-a63-l119-123-formas"
+            ]
+          },
+          {
+            "id": "olografo",
+            "label": "Ológrafo",
+            "description": "Puño y letra",
+            "parentId": "formas",
+            "evidenceIds": [
+              "ev-c55-ccm-671-730-formas",
+              "ev-c55-a63-l119-123-formas",
+              "ev-c55-a63-l129-133-olografo"
+            ]
+          },
+          {
+            "id": "fecha",
+            "label": "Fecha y firma",
+            "description": "Formalidades esenciales",
+            "parentId": "olografo",
+            "evidenceIds": [
+              "ev-c55-ccm-671-730-formas"
+            ]
+          },
+          {
+            "id": "duplicado",
+            "label": "Duplicado y huella",
+            "description": "Depósito local",
+            "parentId": "olografo",
+            "evidenceIds": [
+              "ev-c55-ccm-671-730-formas"
+            ]
+          },
+          {
+            "id": "testigos",
+            "label": "Identificación condicionada",
+            "description": "Dos si no es conocido",
+            "parentId": "olografo",
+            "evidenceIds": [
+              "ev-c55-ccm-671-730-formas",
+              "ev-c55-a63-l129-133-olografo"
+            ]
+          },
+          {
+            "id": "especiales",
+            "label": "Formas especiales",
+            "description": "Sólo supuestos legales",
+            "parentId": "formas",
+            "evidenceIds": [
+              "ev-c55-ccm-671-730-formas",
+              "ev-c55-a63-l135-145-eleccion-forma"
+            ]
+          },
+          {
+            "id": "heredero",
+            "label": "Heredero",
+            "description": "Título universal",
+            "parentId": "sucesion",
+            "evidenceIds": [
+              "ev-c55-ccm-452-462-sucesion"
+            ]
+          },
+          {
+            "id": "legatario",
+            "label": "Legatario",
+            "description": "Título particular",
+            "parentId": "sucesion",
+            "evidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-ccm-563-585-legados"
+            ]
+          },
+          {
+            "id": "legado",
+            "label": "Legado",
+            "description": "Cosa, hecho o servicio",
+            "parentId": "legatario",
+            "evidenceIds": [
+              "ev-c55-ccm-563-585-legados"
+            ]
+          },
+          {
+            "id": "entrega",
+            "label": "Entrega del legado",
+            "description": "No se toma por autoridad propia",
+            "parentId": "legado",
+            "evidenceIds": [
+              "ev-c55-ccm-563-585-legados"
+            ]
+          },
+          {
+            "id": "intestado",
+            "label": "Supuestos de intestado",
+            "description": "Artículo 765",
+            "parentId": "legitima",
+            "evidenceIds": [
+              "ev-c55-ccm-765-772-legitima"
+            ]
+          },
+          {
+            "id": "sin-testamento",
+            "label": "Sin testamento",
+            "description": "Llamamiento legal",
+            "parentId": "intestado",
+            "evidenceIds": [
+              "ev-c55-ccm-765-772-legitima"
+            ]
+          },
+          {
+            "id": "nulo",
+            "label": "Nulo o ineficaz",
+            "description": "Puede abrir legítima",
+            "parentId": "intestado",
+            "evidenceIds": [
+              "ev-c55-ccm-765-772-legitima"
+            ]
+          },
+          {
+            "id": "remanente",
+            "label": "Bienes no dispuestos",
+            "description": "Legítima parcial",
+            "parentId": "intestado",
+            "evidenceIds": [
+              "ev-c55-ccm-765-772-legitima"
+            ]
+          },
+          {
+            "id": "inicio",
+            "label": "Inicio procesal",
+            "description": "Acreditar muerte y documentos",
+            "parentId": "sucesion",
+            "evidenceIds": [
+              "ev-c55-cpcm-990-999-apertura-procesal"
+            ]
+          },
+          {
+            "id": "testamentaria-proc",
+            "label": "Radicación testamentaria",
+            "description": "Examen judicial",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c55-cpcm-1021-testamentaria"
+            ]
+          },
+          {
+            "id": "notaria",
+            "label": "Notaría",
+            "description": "Intervención condicionada",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c55-cpcm-1129-notarial",
+              "ev-c55-notariado-152-160-sucesiones",
+              "ev-c55-a63-l147-155-notarial"
+            ]
+          },
+          {
+            "id": "sin-controversia",
+            "label": "Sin controversia",
+            "description": "Condición necesaria, no única",
+            "parentId": "notaria",
+            "evidenceIds": [
+              "ev-c55-cpcm-1129-notarial",
+              "ev-c55-notariado-152-160-sucesiones",
+              "ev-c55-a63-l147-155-notarial"
+            ]
+          },
+          {
+            "id": "actos-judiciales",
+            "label": "Actos judiciales previos",
+            "description": "Ológrafo y otros casos",
+            "parentId": "notaria",
+            "evidenceIds": [
+              "ev-c55-ccm-671-730-formas",
+              "ev-c55-cpcm-1021-testamentaria",
+              "ev-c55-cnpcf-805-807-notarial"
+            ]
+          },
+          {
+            "id": "nacional",
+            "label": "CNPCF",
+            "description": "Modelo nacional gradual",
+            "parentId": "inicio",
+            "evidenceIds": [
+              "ev-c55-cnpcf-transitorios",
+              "ev-c55-cnpcf-684-705-sucesorios"
+            ]
+          },
+          {
+            "id": "notaria-nacional",
+            "label": "Notaría nacional",
+            "description": "Arts. 805–807",
+            "parentId": "nacional",
+            "evidenceIds": [
+              "ev-c55-cnpcf-805-807-notarial"
+            ]
+          },
+          {
+            "id": "vigencia",
+            "label": "Vigencia territorial",
+            "description": "Debe verificarse",
+            "parentId": "nacional",
+            "evidenceIds": [
+              "ev-c55-cnpcf-transitorios"
+            ]
+          },
+          {
+            "id": "metodo",
+            "label": "Método de examen",
+            "description": "Apertura → título → vía",
+            "parentId": "sucesion",
+            "evidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-ccm-814-817-apertura",
+              "ev-c55-cpcm-990-999-apertura-procesal",
+              "ev-c55-cpcm-1129-notarial"
+            ]
+          }
+        ]
+      },
+      "references": [
+        {
+          "title": "Código Civil para el Estado de Michoacán de Ocampo",
+          "url": "https://congresomich.gob.mx/leyes/",
+          "institution": "Congreso del Estado de Michoacán de Ocampo",
+          "jurisdiction": "Michoacán, México",
+          "citation": "Texto oficial; última reforma publicada 30-11-2023; consulta 2026-08-21",
+          "retrievedOn": "2026-08-21",
+          "note": "Libro Cuarto: sucesiones, testamentos, legados, legítima y apertura.",
+          "evidenceIds": [
+            "ev-c55-ccm-452-462-sucesion",
+            "ev-c55-ccm-467-473-testamento",
+            "ev-c55-ccm-563-585-legados",
+            "ev-c55-ccm-671-730-formas",
+            "ev-c55-ccm-765-772-legitima",
+            "ev-c55-ccm-814-817-apertura"
+          ]
+        },
+        {
+          "title": "Código de Procedimientos Civiles y Ley del Notariado de Michoacán",
+          "url": "https://congresomich.gob.mx/leyes/",
+          "institution": "Congreso del Estado de Michoacán de Ocampo",
+          "jurisdiction": "Michoacán, México",
+          "citation": "Código procesal, última reforma 30-06-2020; Ley notarial, última reforma 28-03-2022; consulta 2026-08-21",
+          "retrievedOn": "2026-08-21",
+          "note": "Apertura procesal, testamentaría e intervención notarial.",
+          "evidenceIds": [
+            "ev-c55-cpcm-990-999-apertura-procesal",
+            "ev-c55-cpcm-1021-testamentaria",
+            "ev-c55-cpcm-1129-notarial",
+            "ev-c55-notariado-152-160-sucesiones"
+          ]
+        },
+        {
+          "title": "Código Nacional de Procedimientos Civiles y Familiares",
+          "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+          "institution": "Cámara de Diputados del H. Congreso de la Unión",
+          "jurisdiction": "México",
+          "citation": "Texto vigente; última reforma DOF 15-01-2026; consulta 2026-08-21",
+          "retrievedOn": "2026-08-21",
+          "note": "Modelo nacional sucesorio y notarial sujeto a aplicación gradual.",
+          "evidenceIds": [
+            "ev-c55-cnpcf-transitorios",
+            "ev-c55-cnpcf-684-705-sucesorios",
+            "ev-c55-cnpcf-805-807-notarial"
+          ]
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "¿Cuándo se abre la sucesión en Michoacán?",
+          "answer": "Con la muerte del autor o con la declaración de presunción de muerte de una persona ausente.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c55-ccm-814-817-apertura"
+          ]
+        },
+        {
+          "question": "¿Qué diferencia testamentaria y legítima?",
+          "answer": "La primera deriva de voluntad testamentaria válida; la segunda, de los supuestos de ley.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c55-ccm-452-462-sucesion",
+            "ev-c55-ccm-765-772-legitima",
+            "ev-c55-a63-l075-079-clases"
+          ]
+        },
+        {
+          "question": "¿Pueden coexistir?",
+          "answer": "Sí, por ejemplo cuando el testamento no dispone de todos los bienes.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c55-ccm-452-462-sucesion",
+            "ev-c55-ccm-765-772-legitima"
+          ]
+        },
+        {
+          "question": "¿Heredero y legatario son equivalentes?",
+          "answer": "No: el heredero adquiere a título universal y el legatario a título particular.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c55-ccm-452-462-sucesion",
+            "ev-c55-ccm-563-585-legados"
+          ]
+        },
+        {
+          "question": "¿Qué puede ser un legado?",
+          "answer": "Una cosa, un hecho o un servicio, sujeto a las reglas testamentarias.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c55-ccm-563-585-legados"
+          ]
+        },
+        {
+          "question": "¿Qué caracteriza al ológrafo local?",
+          "answer": "Lo escribe y firma el testador, lo fecha, imprime huella en duplicados y lo deposita conforme a la ley.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c55-ccm-671-730-formas",
+            "ev-c55-a63-l129-133-olografo"
+          ]
+        },
+        {
+          "question": "¿Siempre requiere tres testigos?",
+          "answer": "No; si el testador no es conocido, presenta dos testigos para identificarlo al depositar.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c55-ccm-671-730-formas",
+            "ev-c55-a63-l129-133-olografo"
+          ]
+        },
+        {
+          "question": "¿Todo testamento tiene fe pública?",
+          "answer": "No. La forma y formalización dependen del tipo legal.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c55-ccm-671-730-formas",
+            "ev-c55-a63-l135-145-eleccion-forma"
+          ]
+        },
+        {
+          "question": "¿La testamentaría valida automáticamente el documento?",
+          "answer": "No; la autoridad debe examinar los presupuestos y formalidades aplicables.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c55-cpcm-1021-testamentaria",
+            "ev-c55-a63-l147-155-notarial"
+          ]
+        },
+        {
+          "question": "¿Qué exige la vía notarial?",
+          "answer": "Ausencia de controversia y cumplimiento de los demás requisitos legales.",
+          "sourceOrigin": "mixed",
+          "evidenceIds": [
+            "ev-c55-cpcm-1129-notarial",
+            "ev-c55-notariado-152-160-sucesiones",
+            "ev-c55-a63-l147-155-notarial"
+          ]
+        },
+        {
+          "question": "¿El acuerdo elimina actos judiciales previos?",
+          "answer": "No. La declaración formal de ciertos testamentos sigue siendo judicial.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c55-ccm-671-730-formas",
+            "ev-c55-cpcm-1021-testamentaria",
+            "ev-c55-cnpcf-805-807-notarial"
+          ]
+        },
+        {
+          "question": "¿El CNPCF opera automáticamente en Michoacán?",
+          "answer": "No; su vigencia territorial debe verificarse conforme al régimen transitorio.",
+          "sourceOrigin": "complementary",
+          "evidenceIds": [
+            "ev-c55-cnpcf-transitorios"
+          ]
+        }
+      ],
+      "exam": {
+        "title": "Evaluación: apertura y título sucesorio",
+        "description": "Diez casos sobre apertura, testamento, intestado, legados y vía notarial.",
+        "questions": [
+          {
+            "text": "Una persona muere sin testamento. ¿Qué título sucesorio debe analizarse?",
+            "difficulty": "intermediate",
+            "options": [
+              "Sucesión legítima",
+              "Legado automático",
+              "Donación entre vivos"
+            ],
+            "correctOption": 0,
+            "explanation": "La falta de testamento es uno de los supuestos de apertura de la sucesión legítima.",
+            "optionExplanations": [
+              "Correcta: aplica el llamamiento legal.",
+              "Incorrecta: no existe legado sin disposición.",
+              "Incorrecta: no es transmisión mortis causa."
+            ],
+            "evidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-ccm-765-772-legitima",
+              "ev-c55-a63-l075-079-clases"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-765-772-legitima",
+                "ev-c55-a63-l075-079-clases"
+              ],
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-765-772-legitima",
+                "ev-c55-a63-l075-079-clases"
+              ],
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-765-772-legitima",
+                "ev-c55-a63-l075-079-clases"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-ccm-765-772-legitima",
+              "ev-c55-a63-l075-079-clases"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-ccm-765-772-legitima",
+              "ev-c55-a63-l075-079-clases"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-765-772-legitima",
+                "ev-c55-a63-l075-079-clases"
+              ],
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-765-772-legitima",
+                "ev-c55-a63-l075-079-clases"
+              ],
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-765-772-legitima",
+                "ev-c55-a63-l075-079-clases"
+              ]
+            ]
+          },
+          {
+            "text": "El testamento dispone sólo de una casa y omite otros bienes. ¿Qué ocurre con el remanente?",
+            "difficulty": "intermediate",
+            "options": [
+              "Puede regirse por sucesión legítima",
+              "Queda sin dueño",
+              "Se adjudica automáticamente al albacea"
+            ],
+            "correctOption": 0,
+            "explanation": "La ley permite coexistencia testamentaria y legítima respecto de bienes no dispuestos.",
+            "optionExplanations": [
+              "Correcta: respeta el alcance parcial.",
+              "Incorrecta: la omisión no vuelve mostrencos los bienes.",
+              "Incorrecta: el albacea administra, no hereda por ese solo cargo."
+            ],
+            "evidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-ccm-765-772-legitima"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-765-772-legitima"
+              ],
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-765-772-legitima"
+              ],
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-765-772-legitima"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-ccm-765-772-legitima"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-ccm-765-772-legitima"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-765-772-legitima"
+              ],
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-765-772-legitima"
+              ],
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-765-772-legitima"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué hecho abre ordinariamente la sucesión?",
+            "difficulty": "intermediate",
+            "options": [
+              "La muerte del autor",
+              "La elaboración del inventario",
+              "La aceptación ante notario"
+            ],
+            "correctOption": 0,
+            "explanation": "La apertura ocurre con la muerte; inventario y aceptación son actos posteriores.",
+            "optionExplanations": [
+              "Correcta: identifica el momento legal.",
+              "Incorrecta: es una etapa posterior.",
+              "Incorrecta: no condiciona el momento de apertura."
+            ],
+            "evidenceIds": [
+              "ev-c55-ccm-814-817-apertura",
+              "ev-c55-cpcm-990-999-apertura-procesal"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c55-ccm-814-817-apertura",
+                "ev-c55-cpcm-990-999-apertura-procesal"
+              ],
+              [
+                "ev-c55-ccm-814-817-apertura",
+                "ev-c55-cpcm-990-999-apertura-procesal"
+              ],
+              [
+                "ev-c55-ccm-814-817-apertura",
+                "ev-c55-cpcm-990-999-apertura-procesal"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c55-ccm-814-817-apertura",
+              "ev-c55-cpcm-990-999-apertura-procesal"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c55-ccm-814-817-apertura",
+              "ev-c55-cpcm-990-999-apertura-procesal"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c55-ccm-814-817-apertura",
+                "ev-c55-cpcm-990-999-apertura-procesal"
+              ],
+              [
+                "ev-c55-ccm-814-817-apertura",
+                "ev-c55-cpcm-990-999-apertura-procesal"
+              ],
+              [
+                "ev-c55-ccm-814-817-apertura",
+                "ev-c55-cpcm-990-999-apertura-procesal"
+              ]
+            ]
+          },
+          {
+            "text": "No existe acta de defunción porque hay una persona ausente. ¿Qué basta para abrir la sucesión?",
+            "difficulty": "intermediate",
+            "options": [
+              "Una declaración de presunción de muerte conforme a la ley",
+              "Un rumor familiar",
+              "Seis meses en todos los casos"
+            ],
+            "correctOption": 0,
+            "explanation": "La ley exige la declaración correspondiente; ausencia, rumor o un plazo universal no la sustituyen.",
+            "optionExplanations": [
+              "Correcta: es el supuesto legal.",
+              "Incorrecta: carece de declaración.",
+              "Incorrecta: universaliza un plazo."
+            ],
+            "evidenceIds": [
+              "ev-c55-ccm-814-817-apertura",
+              "ev-c55-cpcm-990-999-apertura-procesal"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c55-ccm-814-817-apertura",
+                "ev-c55-cpcm-990-999-apertura-procesal"
+              ],
+              [
+                "ev-c55-ccm-814-817-apertura",
+                "ev-c55-cpcm-990-999-apertura-procesal"
+              ],
+              [
+                "ev-c55-ccm-814-817-apertura",
+                "ev-c55-cpcm-990-999-apertura-procesal"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c55-ccm-814-817-apertura",
+              "ev-c55-cpcm-990-999-apertura-procesal"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c55-ccm-814-817-apertura",
+              "ev-c55-cpcm-990-999-apertura-procesal"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c55-ccm-814-817-apertura",
+                "ev-c55-cpcm-990-999-apertura-procesal"
+              ],
+              [
+                "ev-c55-ccm-814-817-apertura",
+                "ev-c55-cpcm-990-999-apertura-procesal"
+              ],
+              [
+                "ev-c55-ccm-814-817-apertura",
+                "ev-c55-cpcm-990-999-apertura-procesal"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál describe correctamente al legatario?",
+            "difficulty": "intermediate",
+            "options": [
+              "Adquiere a título particular",
+              "Siempre recibe toda la herencia",
+              "Puede tomar la cosa por autoridad propia"
+            ],
+            "correctOption": 0,
+            "explanation": "El legado es particular y su entrega sigue las reglas legales.",
+            "optionExplanations": [
+              "Correcta: distingue su título.",
+              "Incorrecta: describe al heredero universal.",
+              "Incorrecta: debe pedir entrega al albacea o ejecutor."
+            ],
+            "evidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-ccm-563-585-legados"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-563-585-legados"
+              ],
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-563-585-legados"
+              ],
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-563-585-legados"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-ccm-563-585-legados"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-ccm-563-585-legados"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-563-585-legados"
+              ],
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-563-585-legados"
+              ],
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-563-585-legados"
+              ]
+            ]
+          },
+          {
+            "text": "Un testamento ológrafo se presenta con tres testigos porque así lo afirmó una clase. ¿Qué debe corregirse?",
+            "difficulty": "intermediate",
+            "options": [
+              "La ley local sólo exige dos testigos de identificación si el depositante no es conocido",
+              "Siempre se requieren cinco testigos",
+              "Nunca puede intervenir persona testigo"
+            ],
+            "correctOption": 0,
+            "explanation": "Los artículos 716 a 720 contienen la formalidad precisa y condicionada.",
+            "optionExplanations": [
+              "Correcta: evita convertir el audio en regla.",
+              "Incorrecta: inventa otra cifra.",
+              "Incorrecta: desconoce la identificación condicionada."
+            ],
+            "evidenceIds": [
+              "ev-c55-ccm-671-730-formas",
+              "ev-c55-a63-l129-133-olografo"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c55-ccm-671-730-formas",
+                "ev-c55-a63-l129-133-olografo"
+              ],
+              [
+                "ev-c55-ccm-671-730-formas",
+                "ev-c55-a63-l129-133-olografo"
+              ],
+              [
+                "ev-c55-ccm-671-730-formas",
+                "ev-c55-a63-l129-133-olografo"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c55-ccm-671-730-formas",
+              "ev-c55-a63-l129-133-olografo"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c55-ccm-671-730-formas",
+              "ev-c55-a63-l129-133-olografo"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c55-ccm-671-730-formas",
+                "ev-c55-a63-l129-133-olografo"
+              ],
+              [
+                "ev-c55-ccm-671-730-formas",
+                "ev-c55-a63-l129-133-olografo"
+              ],
+              [
+                "ev-c55-ccm-671-730-formas",
+                "ev-c55-a63-l129-133-olografo"
+              ]
+            ]
+          },
+          {
+            "text": "Las personas interesadas están de acuerdo y existe testamento ológrafo. ¿Pueden omitir toda intervención judicial?",
+            "difficulty": "intermediate",
+            "options": [
+              "No; la declaración formal del ológrafo requiere actuación judicial",
+              "Sí, el acuerdo valida cualquier documento",
+              "Sí, si prometen no impugnar"
+            ],
+            "correctOption": 0,
+            "explanation": "El consenso no reemplaza el acto judicial exigido para formalizar el ológrafo.",
+            "optionExplanations": [
+              "Correcta: separa consenso y formalidad.",
+              "Incorrecta: atribuye validez automática.",
+              "Incorrecta: una promesa no altera competencia."
+            ],
+            "evidenceIds": [
+              "ev-c55-ccm-671-730-formas",
+              "ev-c55-cpcm-1021-testamentaria",
+              "ev-c55-cnpcf-805-807-notarial",
+              "ev-c55-a63-l147-155-notarial"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c55-ccm-671-730-formas",
+                "ev-c55-cpcm-1021-testamentaria",
+                "ev-c55-cnpcf-805-807-notarial",
+                "ev-c55-a63-l147-155-notarial"
+              ],
+              [
+                "ev-c55-ccm-671-730-formas",
+                "ev-c55-cpcm-1021-testamentaria",
+                "ev-c55-cnpcf-805-807-notarial",
+                "ev-c55-a63-l147-155-notarial"
+              ],
+              [
+                "ev-c55-ccm-671-730-formas",
+                "ev-c55-cpcm-1021-testamentaria",
+                "ev-c55-cnpcf-805-807-notarial",
+                "ev-c55-a63-l147-155-notarial"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c55-ccm-671-730-formas",
+              "ev-c55-cpcm-1021-testamentaria",
+              "ev-c55-cnpcf-805-807-notarial",
+              "ev-c55-a63-l147-155-notarial"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c55-ccm-671-730-formas",
+              "ev-c55-cpcm-1021-testamentaria",
+              "ev-c55-cnpcf-805-807-notarial",
+              "ev-c55-a63-l147-155-notarial"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c55-ccm-671-730-formas",
+                "ev-c55-cpcm-1021-testamentaria",
+                "ev-c55-cnpcf-805-807-notarial",
+                "ev-c55-a63-l147-155-notarial"
+              ],
+              [
+                "ev-c55-ccm-671-730-formas",
+                "ev-c55-cpcm-1021-testamentaria",
+                "ev-c55-cnpcf-805-807-notarial",
+                "ev-c55-a63-l147-155-notarial"
+              ],
+              [
+                "ev-c55-ccm-671-730-formas",
+                "ev-c55-cpcm-1021-testamentaria",
+                "ev-c55-cnpcf-805-807-notarial",
+                "ev-c55-a63-l147-155-notarial"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué afirmación sobre la notaría es correcta?",
+            "difficulty": "intermediate",
+            "options": [
+              "Puede intervenir sin controversia si se cumplen todos los requisitos aplicables",
+              "Puede resolver litigios entre herederos",
+              "Garantiza concluir en tres meses"
+            ],
+            "correctOption": 0,
+            "explanation": "La falta de controversia es necesaria, pero no única, y no existe duración garantizada.",
+            "optionExplanations": [
+              "Correcta: formula la condición sin absolutismos.",
+              "Incorrecta: la controversia limita la vía.",
+              "Incorrecta: el audio no acredita un plazo."
+            ],
+            "evidenceIds": [
+              "ev-c55-cpcm-1129-notarial",
+              "ev-c55-notariado-152-160-sucesiones",
+              "ev-c55-cnpcf-805-807-notarial",
+              "ev-c55-a63-l147-155-notarial"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c55-cpcm-1129-notarial",
+                "ev-c55-notariado-152-160-sucesiones",
+                "ev-c55-cnpcf-805-807-notarial",
+                "ev-c55-a63-l147-155-notarial"
+              ],
+              [
+                "ev-c55-cpcm-1129-notarial",
+                "ev-c55-notariado-152-160-sucesiones",
+                "ev-c55-cnpcf-805-807-notarial",
+                "ev-c55-a63-l147-155-notarial"
+              ],
+              [
+                "ev-c55-cpcm-1129-notarial",
+                "ev-c55-notariado-152-160-sucesiones",
+                "ev-c55-cnpcf-805-807-notarial",
+                "ev-c55-a63-l147-155-notarial"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c55-cpcm-1129-notarial",
+              "ev-c55-notariado-152-160-sucesiones",
+              "ev-c55-cnpcf-805-807-notarial",
+              "ev-c55-a63-l147-155-notarial"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c55-cpcm-1129-notarial",
+              "ev-c55-notariado-152-160-sucesiones",
+              "ev-c55-cnpcf-805-807-notarial",
+              "ev-c55-a63-l147-155-notarial"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c55-cpcm-1129-notarial",
+                "ev-c55-notariado-152-160-sucesiones",
+                "ev-c55-cnpcf-805-807-notarial",
+                "ev-c55-a63-l147-155-notarial"
+              ],
+              [
+                "ev-c55-cpcm-1129-notarial",
+                "ev-c55-notariado-152-160-sucesiones",
+                "ev-c55-cnpcf-805-807-notarial",
+                "ev-c55-a63-l147-155-notarial"
+              ],
+              [
+                "ev-c55-cpcm-1129-notarial",
+                "ev-c55-notariado-152-160-sucesiones",
+                "ev-c55-cnpcf-805-807-notarial",
+                "ev-c55-a63-l147-155-notarial"
+              ]
+            ]
+          },
+          {
+            "text": "¿Qué debe verificarse antes de aplicar los artículos sucesorios del CNPCF en Michoacán?",
+            "difficulty": "intermediate",
+            "options": [
+              "Su entrada en vigor territorial conforme a transitorios",
+              "Sólo que el trámite sea notarial",
+              "Sólo que exista un testamento"
+            ],
+            "correctOption": 0,
+            "explanation": "El Código Nacional tiene aplicación gradual y no sustituye automáticamente el procedimiento local.",
+            "optionExplanations": [
+              "Correcta: controla vigencia y jurisdicción.",
+              "Incorrecta: la sede no activa la norma.",
+              "Incorrecta: el título tampoco activa su vigencia."
+            ],
+            "evidenceIds": [
+              "ev-c55-cnpcf-transitorios",
+              "ev-c55-cnpcf-684-705-sucesorios",
+              "ev-c55-cnpcf-805-807-notarial"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c55-cnpcf-transitorios",
+                "ev-c55-cnpcf-684-705-sucesorios",
+                "ev-c55-cnpcf-805-807-notarial"
+              ],
+              [
+                "ev-c55-cnpcf-transitorios",
+                "ev-c55-cnpcf-684-705-sucesorios",
+                "ev-c55-cnpcf-805-807-notarial"
+              ],
+              [
+                "ev-c55-cnpcf-transitorios",
+                "ev-c55-cnpcf-684-705-sucesorios",
+                "ev-c55-cnpcf-805-807-notarial"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c55-cnpcf-transitorios",
+              "ev-c55-cnpcf-684-705-sucesorios",
+              "ev-c55-cnpcf-805-807-notarial"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c55-cnpcf-transitorios",
+              "ev-c55-cnpcf-684-705-sucesorios",
+              "ev-c55-cnpcf-805-807-notarial"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c55-cnpcf-transitorios",
+                "ev-c55-cnpcf-684-705-sucesorios",
+                "ev-c55-cnpcf-805-807-notarial"
+              ],
+              [
+                "ev-c55-cnpcf-transitorios",
+                "ev-c55-cnpcf-684-705-sucesorios",
+                "ev-c55-cnpcf-805-807-notarial"
+              ],
+              [
+                "ev-c55-cnpcf-transitorios",
+                "ev-c55-cnpcf-684-705-sucesorios",
+                "ev-c55-cnpcf-805-807-notarial"
+              ]
+            ]
+          },
+          {
+            "text": "¿Cuál es el orden analítico más seguro?",
+            "difficulty": "intermediate",
+            "options": [
+              "Apertura, título, sujetos, controversia y vía",
+              "Notaría, costo y después testamento",
+              "Albacea, adjudicación y después muerte"
+            ],
+            "correctOption": 0,
+            "explanation": "La secuencia parte del hecho de apertura y del título antes de escoger la vía.",
+            "optionExplanations": [
+              "Correcta: ordena presupuestos jurídicos.",
+              "Incorrecta: prioriza factores ajenos.",
+              "Incorrecta: invierte hechos y etapas."
+            ],
+            "evidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-ccm-814-817-apertura",
+              "ev-c55-cpcm-990-999-apertura-procesal",
+              "ev-c55-cpcm-1129-notarial"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-814-817-apertura",
+                "ev-c55-cpcm-990-999-apertura-procesal",
+                "ev-c55-cpcm-1129-notarial"
+              ],
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-814-817-apertura",
+                "ev-c55-cpcm-990-999-apertura-procesal",
+                "ev-c55-cpcm-1129-notarial"
+              ],
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-814-817-apertura",
+                "ev-c55-cpcm-990-999-apertura-procesal",
+                "ev-c55-cpcm-1129-notarial"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-ccm-814-817-apertura",
+              "ev-c55-cpcm-990-999-apertura-procesal",
+              "ev-c55-cpcm-1129-notarial"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c55-ccm-452-462-sucesion",
+              "ev-c55-ccm-814-817-apertura",
+              "ev-c55-cpcm-990-999-apertura-procesal",
+              "ev-c55-cpcm-1129-notarial"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-814-817-apertura",
+                "ev-c55-cpcm-990-999-apertura-procesal",
+                "ev-c55-cpcm-1129-notarial"
+              ],
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-814-817-apertura",
+                "ev-c55-cpcm-990-999-apertura-procesal",
+                "ev-c55-cpcm-1129-notarial"
+              ],
+              [
+                "ev-c55-ccm-452-462-sucesion",
+                "ev-c55-ccm-814-817-apertura",
+                "ev-c55-cpcm-990-999-apertura-procesal",
+                "ev-c55-cpcm-1129-notarial"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidenceRegistry": [
+    {
+      "id": "ev-c55-ccm-452-462-sucesion",
+      "kind": "official",
+      "title": "Código Civil para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 30-11-2023; artículos 452 a 462: herencia, títulos, heredero y legatario",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c55-ccm-467-473-testamento",
+      "kind": "official",
+      "title": "Código Civil para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 30-11-2023; artículos 467 a 473: testamentos y disposiciones generales",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c55-ccm-563-585-legados",
+      "kind": "official",
+      "title": "Código Civil para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 30-11-2023; artículos 563 a 585: legados, entrega, cargas y efectos",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c55-ccm-671-730-formas",
+      "kind": "official",
+      "title": "Código Civil para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 30-11-2023; artículos 671 a 730: formas de testamento y ológrafo",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c55-ccm-765-772-legitima",
+      "kind": "official",
+      "title": "Código Civil para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 30-11-2023; artículos 765 a 772: apertura y reglas generales de sucesión legítima",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c55-ccm-814-817-apertura",
+      "kind": "official",
+      "title": "Código Civil para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 30-11-2023; artículos 814 a 817: apertura por muerte o declaración de presunción",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c55-cpcm-990-999-apertura-procesal",
+      "kind": "official",
+      "title": "Código de Procedimientos Civiles para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 30-06-2020; artículos 990 a 999: juicio sucesorio, defunción, ausencia y apertura",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c55-cpcm-1021-testamentaria",
+      "kind": "official",
+      "title": "Código de Procedimientos Civiles para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 30-06-2020; artículo 1021: presentación, examen y radicación de testamentaría",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c55-cpcm-1129-notarial",
+      "kind": "official",
+      "title": "Código de Procedimientos Civiles para el Estado de Michoacán de Ocampo",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 30-06-2020; artículo 1129: continuación extrajudicial de secciones sucesorias",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c55-notariado-152-160-sucesiones",
+      "kind": "official",
+      "title": "Ley del Notariado del Estado de Michoacán",
+      "url": "https://congresomich.gob.mx/leyes/",
+      "institution": "Congreso del Estado de Michoacán de Ocampo",
+      "jurisdiction": "Michoacán, México",
+      "locator": "texto oficial, última reforma publicada 28-03-2022; artículos 152 a 160: tramitación sucesoria notarial y ausencia de controversia",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c55-cnpcf-transitorios",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículos transitorios sobre aplicación gradual y declaratorias",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c55-cnpcf-684-705-sucesorios",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículos 684 a 705: disposiciones generales del juicio sucesorio",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c55-cnpcf-805-807-notarial",
+      "kind": "official",
+      "title": "Código Nacional de Procedimientos Civiles y Familiares",
+      "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPCF.pdf",
+      "institution": "Cámara de Diputados del H. Congreso de la Unión",
+      "jurisdiction": "México",
+      "locator": "texto vigente, última reforma DOF 15-01-2026; artículos 805 a 807: sucesiones notariales sin controversia y actos judiciales previos",
+      "retrievedOn": "2026-08-21",
+      "verifiedOn": "2026-08-21"
+    },
+    {
+      "id": "ev-c55-a63-l075-079-clases",
+      "kind": "transcript",
+      "audioNumber": 63,
+      "locator": {
+        "type": "line_range",
+        "startLine": 75,
+        "endLine": 79
+      }
+    },
+    {
+      "id": "ev-c55-a63-l119-123-formas",
+      "kind": "transcript",
+      "audioNumber": 63,
+      "locator": {
+        "type": "line_range",
+        "startLine": 119,
+        "endLine": 123
+      }
+    },
+    {
+      "id": "ev-c55-a63-l129-133-olografo",
+      "kind": "transcript",
+      "audioNumber": 63,
+      "locator": {
+        "type": "line_range",
+        "startLine": 129,
+        "endLine": 133
+      }
+    },
+    {
+      "id": "ev-c55-a63-l135-145-eleccion-forma",
+      "kind": "transcript",
+      "audioNumber": 63,
+      "locator": {
+        "type": "line_range",
+        "startLine": 135,
+        "endLine": 145
+      }
+    },
+    {
+      "id": "ev-c55-a63-l147-155-notarial",
+      "kind": "transcript",
+      "audioNumber": 63,
+      "locator": {
+        "type": "line_range",
+        "startLine": 147,
+        "endLine": 155
+      }
+    }
+  ]
+}

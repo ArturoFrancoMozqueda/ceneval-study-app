@@ -163,8 +163,8 @@ El Audio 66 se archiva como transcripción defectuosa. Su fragmento sobre acció
 
 | ID | Clase | Fuentes | Estado editorial |
 | --- | --- | --- | --- |
-| C55 | Apertura de la sucesión testamentaria e intestamentaria | segunda parte del Audio 63 | Planificada |
-| C56 | Primera sección sucesoria: herederos y albacea | cierre del Audio 63 e inicio del Audio 64 | Planificada |
+| C55 | Apertura de la sucesión testamentaria e intestamentaria | Audio 63, líneas 75–79, 119–123, 129–133, 135–145 y 147–155; logística y bloque mercantil excluidos | Paquete 1.2 trazable preparado localmente; régimen sucesorio de Michoacán y transición nacional gradual delimitados; no importado ni publicado |
+| C56 | Primera sección sucesoria: herederos y albacea | Audio 63, líneas 157–209, y Audio 64, líneas 17–45; Audio 63, líneas 211–231, evaluadas y excluidas por falta de pertinencia | Paquete 1.2 trazable preparado localmente; el audio se usa solo donde acredita contexto y las reglas procesales se sustentan en fuentes oficiales; no importado ni publicado |
 | C57 | Segunda sección sucesoria: inventario, avalúo y oposición | Audio 64 | Planificada |
 | C58 | Administración, partición y adjudicación de la herencia | Sin transcripción suficiente | Complemento obligatorio con legislación y fuentes oficiales para cerrar el módulo |
 

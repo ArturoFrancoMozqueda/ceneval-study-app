@@ -878,6 +878,34 @@ const traceablePackages = [
       /última reforma publicada 24-10-2024/i,
     ],
   },
+  {
+    code: "C55",
+    fileName: "audio-63-apertura-sucesion-testamentaria-intestamentaria.json",
+    artifacts: 153,
+    evidence: 18,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /Cobertura editorial exclusiva de las líneas físicas 63–155/i,
+      /los testigos de identificación no son tres ni intervienen siempre/i,
+      /declaración formal del ológrafo exige intervención judicial/i,
+      /Código Nacional ofrece un régimen notarial más detallado sujeto a entrada gradual/i,
+      /última reforma publicada 30-11-2023/i,
+    ],
+  },
+  {
+    code: "C56",
+    fileName: "audio-63-64-primera-seccion-sucesoria.json",
+    artifacts: 149,
+    evidence: 10,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /211–231 se evaluaron y excluyeron/i,
+      /no sostienen comparecencia, parentesco, edictos, notificación, plazos ni voto/i,
+      /Audio 64.*37–45.*no para aceptación o protesta/i,
+      /Denunciar no equivale a heredar/i,
+      /última reforma publicada 30-06-2020/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -1357,6 +1385,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una regla familiar automática o territorialmente falsa como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C55" || expected.code === "C56") {
+      const obsoleteAsCurrent =
+        expected.code === "C55"
+          ? /testamento ológrafo.*(?:siempre|universal).*(?:tres testigos)|(?:vigencia|validez).*(?:automática|plazo fijo universal)|notari[oa].*(?:automática|irrestricta|sin límite)|CNPCF.*(?:ya|automáticamente).*(?:rige|opera).*Michoacán|apertura.*(?:equivale|es lo mismo).*(?:adjudicación|propiedad)/i
+          : /denuncia.*(?:convierte|hace).*(?:heredero|dueño)|votación.*(?:prueba|acredita).*(?:parentesco|calidad de heredero)|albacea.*(?:es|se vuelve).*(?:dueño|propietario)|(?:siempre|en toda entidad).*cuatro secciones|notari[oa].*(?:universal|automática)|(?:aceptación|protesta).*(?:sustituye|reemplaza).*(?:resolución|decisión judicial)/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar como vigente una regla sucesoria automática, universal o no acreditada.`,
         );
       }
     }
