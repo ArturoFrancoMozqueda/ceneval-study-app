@@ -4,6 +4,11 @@ import { writeDependencyFailure } from "@/lib/operations/safe-log";
 
 import { connection } from "next/server";
 import { getCurrentUser, requireUser } from "@/lib/auth";
+import {
+  deriveAdminCatalog,
+  type AdminCatalogGroup,
+  type AdminCatalogRow,
+} from "@/lib/data/admin-catalog";
 import { relationRows } from "@/lib/data/relation-rows";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 import {
@@ -250,6 +255,27 @@ const subjectOverviewSelection =
   "id,name,description,classes(id,topics(id))";
 const classOverviewSelection =
   `${classSelection},topics(id)`;
+const adminCatalogSelection =
+  "id,name,classes(id,title,publication_status,published_at,created_at,topics(id))";
+
+export async function getAdminCatalog(): Promise<AdminCatalogGroup[]> {
+  await connection();
+  const supabase = await createServerSupabaseClient();
+  const catalogResult = await supabase
+    .from("subjects")
+    .select(adminCatalogSelection)
+    .order("name", { ascending: true })
+    .order("published_at", {
+      ascending: false,
+      nullsFirst: false,
+      referencedTable: "classes",
+    })
+    .order("created_at", { ascending: false, referencedTable: "classes" });
+
+  if (catalogResult.error) fail("getAdminCatalog", catalogResult.error);
+
+  return deriveAdminCatalog((catalogResult.data ?? []) as AdminCatalogRow[]);
+}
 
 export async function getSubjects(): Promise<Subject[]> {
   await connection();
