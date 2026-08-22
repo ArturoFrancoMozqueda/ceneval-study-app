@@ -5,7 +5,7 @@ import test from "node:test";
 const academic = readFileSync(
   new URL("../lib/data/academic.ts", import.meta.url),
   "utf8",
-);
+).replace(/\r\n/g, "\n");
 
 function getReviewOverviewSource() {
   const start = academic.indexOf("export async function getReviewOverview(");
