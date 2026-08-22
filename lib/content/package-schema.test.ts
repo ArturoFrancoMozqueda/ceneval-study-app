@@ -64,7 +64,7 @@ const legacyPackagePath = path.join(
   process.cwd(),
   "content",
   "packages",
-  "audio-47-sociedades-mercantiles.json",
+  "audio-50-patentes-modelos-utilidad.json",
 );
 
 function readLegacyPackage() {

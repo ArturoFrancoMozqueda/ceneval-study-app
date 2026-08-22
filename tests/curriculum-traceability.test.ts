@@ -540,6 +540,43 @@ const traceablePackages = [
       /última reforma DOF 14-11-2025/i,
     ],
   },
+  {
+    code: "C35",
+    fileName: "audio-47-sociedades-mercantiles.json",
+    artifacts: 151,
+    evidence: 14,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /La autorización del nombre no crea la sociedad/i,
+      /La SAS es excepción.*procedimiento electrónico especial/i,
+      /Antes de la inscripción.*responder ilimitada y solidariamente/i,
+      /asamblea general de accionistas es el órgano supremo de la sociedad anónima/i,
+      /videoconferencia no significa por sí solo celebrar fuera del domicilio social/i,
+      /dentro de los cuatro meses siguientes al cierre/i,
+      /actas ordinarias se asientan en el libro.*actas extraordinarias se protocolizan.*RPC/i,
+      /disolución anticipada.*no borra obligaciones/i,
+      /última reforma DOF 20-10-2023/i,
+      /acuerdo DOF 26-12-2025/i,
+    ],
+  },
+  {
+    code: "C36",
+    fileName: "audio-50-marcas.json",
+    artifacts: 151,
+    evidence: 17,
+    forbiddenClaims: [],
+    requiredClaims: [
+      /No garantiza registro: la autoridad examina impedimentos/i,
+      /El derecho exclusivo nace con el registro/i,
+      /diez años desde la fecha de otorgamiento/i,
+      /tres meses posteriores a que se cumpla el tercer año/i,
+      /protección continúa solo respecto de aquellos declarados/i,
+      /sin presentar toda licencia como una inscripción universalmente constitutiva/i,
+      /transmisión y gravamen se inscriben ante el IMPI para producir efectos en perjuicio de terceras personas/i,
+      /decreto DOF 03-04-2026/i,
+      /Reglamento publicado el 28-04-2026/i,
+    ],
+  },
 ] as const;
 
 function collectUsedEvidenceIds(value: unknown, key = ""): Set<string> {
@@ -859,6 +896,22 @@ for (const expected of traceablePackages) {
           question.options[question.correctOption] ?? "",
           obsoleteAsCurrent,
           `${expected.code} no puede presentar una generalización notarial o representativa como respuesta vigente.`,
+        );
+      }
+    }
+
+    if (expected.code === "C35" || expected.code === "C36") {
+      const obsoleteAsCurrent =
+        expected.code === "C35"
+          ? /autorizaci[oó]n.*denominaci[oó]n.*(?:crea|constituye|nace).*sociedad|SAS.*(?:debe|requiere).*(?:notario|fedatario)|(?:toda|cualquier) sociedad.*asamblea.*(?:accionistas|sociedad an[oó]nima)|(?:toda|cualquier) ordinaria.*(?:notario|protocoliza|inscrib|RPC)|videoconferencia.*(?:basta|sin controles)|(?:toda|cualquier) variaci[oó]n.*capital variable.*extraordinaria|disoluci[oó]n.*(?:extingue|borra|cancela).*(?:deudas|obligaciones)/i
+          : /\bINPI\b|consulta.*(?:garantiza|equivale).*(?:registro|registrar)|uso previo.*(?:equivale|es igual).*(?:t[ií]tulo|registro)|vigencia.*(?:pago|solicitud|presentaci[oó]n)|declarar.*(?:todos|cinco).*(?:aunque|sin).*(?:uso|usar)|licencia.*(?:transfiere|cambia).*(?:titular|propiedad)|renovaci[oó]n.*(?:corrige|subsana).*(?:falta de uso|tres a[nñ]os)|gravamen.*hipoteca inmobiliaria/i;
+      for (const question of bundle.topics.flatMap(
+        (topic) => topic.exam.questions,
+      )) {
+        assert.doesNotMatch(
+          question.options[question.correctOption] ?? "",
+          obsoleteAsCurrent,
+          `${expected.code} no puede presentar una regla societaria o marcaria obsoleta como respuesta vigente.`,
         );
       }
     }
