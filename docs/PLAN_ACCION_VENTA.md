@@ -18,11 +18,16 @@ la aplicación.** No autoriza abrir el registro, contratar planes ni cobrar.
 > [`docs/PLAN_VENTA_DECISIONES.md`](PLAN_VENTA_DECISIONES.md) (D-1 a D-9
 > cerradas: nombre comercial "Sube Legal", $399 MXN/mes, Stripe/México,
 > niveles + protección de contenido). `OP-6` ya se ejecutó. Se implementaron
-> L-1 a L-6 (Fase 1) y P-1 a P-4 (Fase 5) en la rama
-> `claude/plan-accion-venta-a34700`, y se aplicó la migración de `L-3`
+> L-1 a L-6 (Fase 1) y P-1 a P-4 (Fase 5), se unificó la marca "Sube Legal"
+> en `app/layout.tsx` y en las pantallas de inicio de sesión/registro, y se
+> corrigió que `/terminos` y `/privacidad` quedaran envueltas en
+> `MarketingShell` (antes una visitante anónima que llegaba ahí caía en la
+> barra lateral de la app autenticada). Se aplicó la migración de `L-3`
 > (`terms_accepted_at`) al proyecto remoto — ver §3 más abajo, ahora son
-> **20 migraciones**, no 19. Nada de esto abre el registro, activa cobro real
-> ni cambia `PRIVATE_ACCESS_ONLY`.
+> **20 migraciones**, no 19. **Todo esto ya está fusionado en `main` y
+> desplegado en producción** (push directo, sin PR, igual que el resto del
+> historial del repositorio). Nada de esto abre el registro, activa cobro
+> real ni cambia `PRIVATE_ACCESS_ONLY`.
 
 ---
 
@@ -150,12 +155,12 @@ hecha.
 
 | ID | Tarea | Evidencia de cierre |
 | --- | --- | --- |
-| L-1 | Redactar y publicar el **aviso de privacidad** LFPDPPP: datos recabados, finalidades, transferencia internacional (Supabase y Vercel fuera de México), plazo de conservación y ejercicio de derechos ARCO con un correo de contacto real. | Ruta `/privacidad` publicada y enlazada desde el pie y desde el registro. **✅ Código listo (22 ago).** Correo `privacidad@sube-legal.mx` sigue siendo provisional hasta tener dominio propio (`I-3`). |
-| L-2 | Redactar y publicar los **términos de uso**, incluyendo cancelación, reembolso, uso permitido y limitación de responsabilidad. | Ruta `/terminos` publicada y enlazada. **✅ Código listo (22 ago).** |
+| L-1 | Redactar y publicar el **aviso de privacidad** LFPDPPP: datos recabados, finalidades, transferencia internacional (Supabase y Vercel fuera de México), plazo de conservación y ejercicio de derechos ARCO con un correo de contacto real. | Ruta `/privacidad` publicada y enlazada desde el pie y desde el registro. **✅ Publicado en producción (22 ago).** Correo `privacidad@sube-legal.mx` sigue siendo provisional hasta tener dominio propio (`I-3`). |
+| L-2 | Redactar y publicar los **términos de uso**, incluyendo cancelación, reembolso, uso permitido y limitación de responsabilidad. | Ruta `/terminos` publicada y enlazada. **✅ Publicado en producción (22 ago).** |
 | L-3 | Añadir en el registro una casilla explícita de aceptación de términos y aviso de privacidad, y guardar la fecha de aceptación. | Casilla en `/registro` y columna con la fecha en base de datos. **✅ Hecho (22 ago).** Columna `profiles.terms_accepted_at` aplicada al proyecto remoto (migración `20260822160822_add_profiles_terms_accepted_at`). |
-| L-4 | Implementar **borrado de cuenta y exportación de datos personales** a solicitud de la usuaria. | Flujo probado de principio a fin con una cuenta de prueba. **✅ Código listo (22 ago)**, `/cuenta`. Falta la prueba de extremo a extremo con una cuenta real. |
+| L-4 | Implementar **borrado de cuenta y exportación de datos personales** a solicitud de la usuaria. | Flujo probado de principio a fin con una cuenta de prueba. **✅ Publicado en producción (22 ago)**, `/cuenta`. Falta la prueba de extremo a extremo con una cuenta real. |
 | L-5 | Añadir el aviso de no afiliación con CENEVAL en un lugar visible. | Texto visible en la app y en la página pública. **✅ Hecho (22 ago).** |
-| L-6 | Definir el canal de soporte y el compromiso de tiempo de respuesta. | Correo o formulario publicado y quién lo atiende. **✅ Código listo (22 ago).** Correo `soporte@sube-legal.mx` provisional hasta tener dominio propio (`I-3`); falta definir quién lo atiende. |
+| L-6 | Definir el canal de soporte y el compromiso de tiempo de respuesta. | Correo o formulario publicado y quién lo atiende. **✅ Publicado en producción (22 ago).** Correo `soporte@sube-legal.mx` provisional hasta tener dominio propio (`I-3`); falta definir quién lo atiende. |
 
 > El aviso educativo de "no constituye asesoría jurídica" **ya está en la
 > aplicación**; se comprobó en el sitio publicado. No hay que rehacerlo.
@@ -197,10 +202,10 @@ hecha.
 
 | ID | Tarea | Evidencia de cierre |
 | --- | --- | --- |
-| P-1 | Construir una **página pública** en la raíz: qué es, para quién, qué incluye (57 clases, 685 flashcards, 570 reactivos), y llamada a la acción. Hoy la raíz lleva directo a la app autenticada. | Página publicada y visible sin sesión. **✅ Código listo (22 ago).** `app/page.tsx` muestra la landing a visitantes anónimos. |
-| P-2 | Construir la **página de precios** con el plan aprobado en D-3. | Página publicada, con enlace a términos y privacidad. **✅ Código listo (22 ago)**, `/precios`. Botón de suscripción deshabilitado a propósito (sin checkout real). |
-| P-3 | Preparar una vista de muestra gratuita: una clase o un examen accesible sin pagar, para que la persona pueda evaluar antes de comprar. | Ruta de muestra publicada. **✅ Código listo (22 ago)**, `/muestra` (C01, sin examen). |
-| P-4 | Escribir el texto de venta y las preguntas frecuentes, incluyendo qué **no** incluye el producto. | Contenido publicado. **✅ Código listo (22 ago)**, `/preguntas-frecuentes`. |
+| P-1 | Construir una **página pública** en la raíz: qué es, para quién, qué incluye (57 clases, 685 flashcards, 570 reactivos), y llamada a la acción. Hoy la raíz lleva directo a la app autenticada. | Página publicada y visible sin sesión. **✅ Publicado en producción (22 ago).** `app/page.tsx` muestra la landing a visitantes anónimos. |
+| P-2 | Construir la **página de precios** con el plan aprobado en D-3. | Página publicada, con enlace a términos y privacidad. **✅ Publicado en producción (22 ago)**, `/precios`. Botón de suscripción deshabilitado a propósito (sin checkout real). |
+| P-3 | Preparar una vista de muestra gratuita: una clase o un examen accesible sin pagar, para que la persona pueda evaluar antes de comprar. | Ruta de muestra publicada. **✅ Publicado en producción (22 ago)**, `/muestra` (C01, sin examen). |
+| P-4 | Escribir el texto de venta y las preguntas frecuentes, incluyendo qué **no** incluye el producto. | Contenido publicado. **✅ Publicado en producción (22 ago)**, `/preguntas-frecuentes`. |
 | P-5 | Decidir el destino de C58: obtener la transcripción faltante descrita en `docs/C58_SOURCE_AUDIT.md`, o vender explícitamente 57 clases. | Decisión escrita. No crear C58 solo con legislación. |
 | P-6 | Decidir el alcance de los 3 bancos transversales y los 16 exámenes acumulativos pendientes: entran en el lanzamiento o se anuncian como futuros. | Decisión escrita y reflejada en la página de precios. |
 
