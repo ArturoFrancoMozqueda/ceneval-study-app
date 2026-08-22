@@ -1,9 +1,10 @@
 # Estado actual y siguientes pasos — CENEVAL Study App
 
-Última actualización: 21 de agosto de 2026
+Última actualización: 21 de agosto de 2026 (hora de México)
 
-Base documental: trabajo local acumulado hasta la rama
-`feature/respaldo-restauracion-local`; su integración remota sigue pendiente.
+Base documental: `main` en `5f0c7e0` y auditoría remota de solo lectura del 21
+de agosto de 2026 (hora de México). Los cambios de base de datos y la
+publicación del artefacto actual siguen pendientes.
 
 Responsables: Fatima (administración y validación) y Codex (desarrollo y contenido)
 
@@ -31,10 +32,11 @@ Los bloqueos operativos reales siguen siendo:
    local sin advertencias y pasó 141 comprobaciones RLS;
    CENEVAL remoto conserva once migraciones y aún requiere ejecutar el mismo
    gate en un entorno de ensayo autorizado antes de promover cambios;
-4. existe un despliegue técnico privado en un proyecto separado de Vercel
-   Hobby, pero faltan persistir los secretos, ejecutar el bootstrap explícito
-   de la administradora y validar registro, verificación y acceso; no hay
-   despliegue automático desde Git;
+4. existe un despliegue técnico privado en Vercel Hobby y una cuenta
+   administradora confirmada en Supabase, pero el artefacto publicado es
+   anterior a `main`, no contiene los endpoints de health actuales y no hay
+   despliegue automático desde Git; faltan verificar los secretos por entorno
+   y validar el recorrido autenticado contra el artefacto que se promueva;
 5. C58 está bloqueada por insuficiencia de fuente y los bancos acumulativos
    siguen pendientes; C41–C57 ya tienen
    paquetes 1.2 trazables locales, aún no importados ni publicados.
@@ -68,10 +70,12 @@ decisión no añade infraestructura ni reemplaza los gates operativos vigentes.
 
 ## 2. Inventario académico conocido
 
-La lectura del proyecto remoto **CENEVAL Study App** realizada el 21 de agosto
-de 2026 confirmó **1 fila en `profiles`, 0 materias, 0 clases y 0 temas**. Esa
-fila no demuestra por sí sola que el acceso administrativo esté operativo. Sus
-once migraciones están aplicadas y todas las tablas públicas tienen RLS.
+La lectura del proyecto remoto **CENEVAL Study App** actualizada el 21 de agosto
+de 2026 (hora de México) confirmó **1 usuario con inicio de sesión, 1 perfil
+administrador, 0 materias, 0 clases y 0 temas**. Esto confirma que el bootstrap administrativo
+ya ocurrió, pero no sustituye una prueba E2E autenticada del artefacto que vaya
+a publicarse. Sus once migraciones están aplicadas y todas las tablas públicas
+tienen RLS.
 
 La auditoría del 12 de agosto registró el siguiente inventario en una base
 anterior, pero esos datos no están presentes en el proyecto CENEVAL conectado:
@@ -158,19 +162,28 @@ de ejecutarlo, Supabase local debe estar activo; el comando no acepta
 
 ### Despliegue técnico en Vercel
 
-CENEVAL tiene un despliegue técnico privado en un proyecto separado de Vercel
-sobre Hobby; la cuenta no se cambió a Pro. La publicación responde por HTTPS y
-redirige a la pantalla de acceso, pero todavía no equivale a un servicio
-operativo ni a un lanzamiento comercial: Supabase conserva las once migraciones
-y continúa con 0 usuarios y 0 contenido.
+CENEVAL tiene un despliegue técnico privado en Vercel sobre Hobby; la cuenta no
+se cambió a Pro. La auditoría de solo lectura del 21 de agosto (hora de México)
+encontró cuatro deployments manuales, todos de Production y ninguno de Preview.
+El más reciente está `READY`, responde por HTTPS y protege la ruta administrativa mediante la
+pantalla de acceso, pero es anterior a `main` en `5f0c7e0`: tanto
+`/api/health/live` como `/api/health/ready` responden 404. Por ello todavía no
+equivale al artefacto actual, a un servicio operativo ni a un lanzamiento
+comercial. Supabase conserva once migraciones y 0 contenido académico.
 
-El despliegue actual recibió las variables públicas y `PRIVATE_ACCESS_ONLY`
-durante la compilación. Antes de operar deben persistirse mediante el almacén
-seguro de Vercel `SUPABASE_SECRET_KEY`, `ADMIN_EMAIL` y el resto de variables,
-ejecutar el procedimiento explícito de `docs/ADMIN_BOOTSTRAP.md`, configurar las
-redirecciones de Supabase Auth y probar la invitación o activación privada,
-confirmación e inicio de sesión de la administradora. El proyecto no está conectado a Git; cada
-despliegue es manual y debe registrar el commit publicado.
+La consulta de solo lectura de los metadatos de entorno de Vercel, sin leer ni
+imprimir valores, no encontró ninguna de las siete variables obligatorias de
+`.env.example` en el proyecto. El artefacto publicado cargó un archivo
+`.env.production` durante su build, pero eso no demuestra persistencia ni
+separación segura por entorno. Antes de operar deben configurarse y comprobarse
+los alcances Preview/Production de `NEXT_PUBLIC_SUPABASE_URL`,
+`NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_SECRET_KEY`,
+`NEXT_PUBLIC_SITE_URL`, `ADMIN_EMAIL`, `PRIVATE_ACCESS_ONLY` y
+`OPS_READINESS_TOKEN`, además de las redirecciones de Supabase Auth. El
+bootstrap de `docs/ADMIN_BOOTSTRAP.md` ya produjo un perfil administrador con
+inicio de sesión; falta repetir el E2E autenticado sobre el artefacto candidato.
+El proyecto no está conectado a Git; cada despliegue es manual y debe registrar
+el commit publicado.
 
 `docs/DEPLOYMENT_RUNBOOK.md` ya define un flujo fail-closed para registrar SHA,
 CI, proyecto, deployment anterior, preview, digest del build Production,
@@ -346,10 +359,12 @@ Como defensa adicional, `getTopic` filtra explícitamente por aprobación y
 sin conectarse a Supabase.
 
 **Estado remoto:** esta undécima migración se aplicó en CENEVAL y se verificó
-en el historial el 20 de agosto de 2026. Los asesores no mostraron errores de
-seguridad; el aviso de `exam_answer_keys` sin políticas es el bloqueo
-deliberado. Antes de abrir el acceso estudiantil, una persona autorizada debe
-ampliar y ejecutar la suite RLS dinámica con temas pendientes y rechazados.
+en el historial el 20 de agosto de 2026. La revisión de solo lectura del 21 de
+agosto (hora de México) mantuvo el `INFO` esperado de `exam_answer_keys` sin
+políticas —bloqueo deliberado— y encontró un `WARN` porque la protección contra
+contraseñas filtradas está desactivada. Antes de abrir el acceso estudiantil, una persona
+autorizada debe habilitar esa protección y ejecutar la suite RLS dinámica con
+temas pendientes y rechazados, primero en un proyecto de ensayo.
 
 **Estado local posterior:** PostgreSQL 17.6 aplica dieciséis migraciones desde
 cero. `npm run security:rls:local` ejecuta 141 comprobaciones sobre contenido
@@ -418,6 +433,16 @@ tiene transcripción conservada, versión depurada, nueve materiales, mapa,
 flashcards, diez reactivos y fuentes. C01–C57 pasan el gate local 1.2, pero
 aún requieren revisión y publicación autorizadas.
 
+Antes de importarlas existe una decisión de arquitectura de datos pendiente.
+El importador 1.2 actual guarda en `public.transcripts` tanto el texto original
+como el depurado, además de las dinámicas. Esto contradice la preferencia de
+producto de conservar en Supabase solo las dinámicas publicables y mantener las
+transcripciones completas en el archivo editorial privado. La importación queda
+bloqueada hasta decidir y documentar una de estas opciones: persistir el texto
+completo con retención, acceso y respaldo explícitos, o modificar contrato,
+RPC, interfaz administrativa y pruebas para conservar solo localizadores y
+evidencia mínima sin perder trazabilidad.
+
 Orden de producción restante:
 
 | Orden | Clase | Fuente principal |
@@ -468,8 +493,9 @@ solo con legislación; repetir después el pipeline 1.2 completo descrito en
 ### Prioridad 4 — Despliegue y operación
 
 1. Persistir y verificar las variables de Vercel sin exponer secretos.
-2. Configurar las redirecciones de Supabase Auth, ejecutar el bootstrap interno
-   de `ADMIN_BOOTSTRAP.md` y probar activación privada, confirmación e inicio de sesión.
+2. Configurar las redirecciones de Supabase Auth y probar contra el artefacto
+   candidato la cuenta administradora ya creada, su inicio de sesión y acceso
+   privado.
 3. Probar login y rutas privadas desde teléfono y computadora, y revisar logs.
 4. Ejecutar y aprobar el runbook en la siguiente publicación manual y decidir
    si se habilita integración Git.

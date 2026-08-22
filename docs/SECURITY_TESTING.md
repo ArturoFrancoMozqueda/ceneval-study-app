@@ -77,7 +77,7 @@ La última ejecución remota histórica fue el **29 de julio de 2026**:
 - recorrido editorial básico aprobado.
 
 Desde entonces, el runner se aisló de producción y la suite ampliada se ejecutó
-en PG17 local después de aplicar las 15 migraciones desde cero. El 21 de agosto
+en PG17 local después de aplicar las 16 migraciones desde cero. El 21 de agosto
 de 2026 aprobó 141 de 141 comprobaciones y cleanup sin residuos. Durante el gate
 se detectaron y corrigieron dos fallos: actividad permitida sobre temas no
 aprobados y recursión `42P17` entre las políticas de evidencia.
@@ -88,7 +88,7 @@ siguen siendo locales hasta una aplicación remota expresamente autorizada.
 
 Por lo tanto, la afirmación correcta es:
 
-> Las once migraciones del corte remoto están aplicadas en CENEVAL. Las 15
+> Las once migraciones del corte remoto están aplicadas en CENEVAL. Las 16
 > migraciones actuales y su comportamiento RLS están aprobados en PG17 local;
 > aplicar las posteriores al remoto sigue requiriendo autorización explícita.
 

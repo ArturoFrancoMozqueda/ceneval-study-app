@@ -19,8 +19,9 @@ y generado desde el mismo commit que pasó Preview. Preview y Production se
 construyen por separado porque las variables `NEXT_PUBLIC_*` quedan congeladas
 durante el build y pueden diferir entre entornos.
 
-En el estado del 21 de agosto de 2026, CENEVAL remoto conserva once migraciones
-y el código local espera quince. Esa diferencia bloquea la promoción hasta que
+En el estado verificado el 21 de agosto de 2026 (hora de México), CENEVAL remoto
+conserva once migraciones y el código local espera dieciséis. Esa diferencia
+bloquea la promoción hasta que
 las migraciones pasen primero por un proyecto de ensayo autorizado y se apruebe
 su aplicación. Este runbook no aplica ni revierte base de datos.
 
