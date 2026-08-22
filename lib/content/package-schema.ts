@@ -417,12 +417,13 @@ const currentPackageSchema = packageContent.extend({
   curriculum: curriculumMetadataSchema,
 });
 
-const traceablePackageSchema = traceablePackageContent
+export const persistableClassPackageSchema = traceablePackageContent
   .extend({
     packageVersion: z.literal("1.2"),
     curriculum: curriculumMetadataSchema,
     evidenceRegistry: z.array(evidenceSchema).min(1),
   })
+  .strict()
   .superRefine((bundle, context) => {
     const evidenceById = new Map<string, number>();
     const usedEvidenceIds = new Set<string>();
@@ -579,16 +580,16 @@ const traceablePackageSchema = traceablePackageContent
 export const classPackageSchema = z.discriminatedUnion("packageVersion", [
   legacyPackageSchema.extend({ transcript: transcriptSchema }),
   currentPackageSchema.extend({ transcript: transcriptSchema }),
-  traceablePackageSchema.safeExtend({ transcript: transcriptSchema }),
+  persistableClassPackageSchema.safeExtend({ transcript: transcriptSchema }),
 ]);
 
 export const classPackageFileSchema = z.discriminatedUnion("packageVersion", [
   legacyPackageSchema.extend({ transcript: transcriptFileSchema }),
   currentPackageSchema.extend({ transcript: transcriptFileSchema }),
-  traceablePackageSchema.safeExtend({ transcript: transcriptFileSchema }),
+  persistableClassPackageSchema.safeExtend({ transcript: transcriptFileSchema }),
 ]);
 
-export const importableClassPackageSchema = traceablePackageSchema.safeExtend({
+export const importableClassPackageSchema = persistableClassPackageSchema.safeExtend({
   transcript: z.object({
     original: z
       .string()
@@ -606,6 +607,9 @@ export const importableClassPackageSchema = traceablePackageSchema.safeExtend({
 export type ClassPackage = z.infer<typeof classPackageSchema>;
 export type ImportableClassPackage = z.infer<
   typeof importableClassPackageSchema
+>;
+export type PersistableClassPackage = z.infer<
+  typeof persistableClassPackageSchema
 >;
 
 export type EditorialGateAssessment = {

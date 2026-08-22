@@ -149,12 +149,6 @@ export async function ClassDetail({ classId }: { classId: number }) {
           <div className="mt-7 flex flex-wrap gap-3 border-t border-border pt-6">
             <Link
               className="rounded-xl border border-border px-4 py-3 text-sm font-semibold text-brand"
-              href={`/clases/${studyClass.id}/transcripcion`}
-            >
-              Transcripción
-            </Link>
-            <Link
-              className="rounded-xl border border-border px-4 py-3 text-sm font-semibold text-brand"
               href={`/clases/${studyClass.id}/temas`}
             >
               Organizar temas

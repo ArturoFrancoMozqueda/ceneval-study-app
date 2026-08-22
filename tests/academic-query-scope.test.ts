@@ -48,6 +48,6 @@ test("getClassesForSubject limita relaciones a las clases de la materia", () => 
   assert.doesNotMatch(source, /\.from\("transcripts"\)|\.from\("topics"\)/);
   assert.match(
     academicSource,
-    /`\$\{classSelection\},transcripts\(id\),topics\(id\)`/,
+    /`\$\{classSelection\},topics\(id\)`/,
   );
 });

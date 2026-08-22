@@ -21,7 +21,6 @@ import {
 } from "@/lib/publication-readiness";
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
-import { getTranscriptValidationError } from "@/lib/transcript-validation";
 import { writeDependencyFailure } from "@/lib/operations/safe-log";
 import {
   isPositiveInteger,
@@ -210,34 +209,6 @@ export async function updateClassDetailsAction(
   revalidatePath("/administrar");
   revalidatePath(`/administrar/clases/${classId}`);
   revalidatePath(`/clases/${classId}`);
-  return { id: data.id as number };
-}
-
-export async function saveTranscriptAction(
-  classId: number,
-  formData: FormData,
-) {
-  await requireAdmin();
-  const originalText = textValue(formData, "originalText");
-  const validationError = getTranscriptValidationError(originalText);
-  if (validationError) return { error: validationError };
-
-  const { data, error } = await getSupabaseAdminClient()
-    .from("transcripts")
-    .insert({
-      class_id: classId,
-      original_text: originalText,
-      processing_status: "pending",
-    })
-    .select("id")
-    .single();
-
-  if (error?.code === "23505") {
-    return { error: "Esta clase ya tiene una transcripción original." };
-  }
-  if (error) return databaseError("saveTranscript", error);
-  revalidatePath(`/clases/${classId}`);
-  revalidatePath(`/clases/${classId}/transcripcion`);
   return { id: data.id as number };
 }
 

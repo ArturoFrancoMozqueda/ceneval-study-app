@@ -5,8 +5,8 @@ import {
   exportClassPackageRpc,
   importClassPackage,
   importClassPackageRpc,
-  parseImportableClassPackage,
   serializeClassPackage,
+  toPersistableClassPackage,
   type InvokePackageRpc,
 } from "../lib/content/package-persistence";
 import { createSyntheticTraceablePackage } from "./fixtures/traceable-package";
@@ -24,8 +24,11 @@ test("envía un paquete 1.2 validado mediante una sola RPC transaccional", async
   assert.equal(classId, 741);
   assert.equal(calls.length, 1);
   assert.equal(calls[0]?.functionName, importClassPackageRpc);
-  assert.deepEqual(calls[0]?.args, { p_package: fixture });
-  const persisted = calls[0]?.args.p_package as typeof fixture;
+  const expectedPersistable = toPersistableClassPackage(fixture);
+  assert.deepEqual(calls[0]?.args, { p_package: expectedPersistable });
+  const persisted = calls[0]?.args.p_package as typeof expectedPersistable;
+  assert.equal("transcript" in persisted, false);
+  assert.doesNotMatch(JSON.stringify(persisted), /Transcripción completamente sintética/);
   assert.deepEqual(persisted.evidenceRegistry, fixture.evidenceRegistry);
   assert.deepEqual(
     persisted.topics[0]?.learningJourney,
@@ -95,7 +98,7 @@ test("rechaza un retorno ambiguo para impedir reintentos automáticos peligrosos
 
 test("la exportación usa la RPC real y reconstruye un 1.2 semánticamente equivalente", async () => {
   const fixture = createSyntheticTraceablePackage();
-  const reconstructed = JSON.parse(JSON.stringify(fixture)) as typeof fixture;
+  const reconstructed = structuredClone(toPersistableClassPackage(fixture));
   reconstructed.evidenceRegistry.sort((left, right) =>
     left.id.localeCompare(right.id),
   );
@@ -104,14 +107,61 @@ test("la exportación usa la RPC real y reconstruye un 1.2 semánticamente equiv
     calls.push({ functionName, args });
     return { data: reconstructed, error: null };
   }, 741);
-  const reparsed = parseImportableClassPackage(
-    JSON.parse(serializeClassPackage(exported)),
-  );
+  const reparsed = JSON.parse(serializeClassPackage(exported));
 
   assert.deepEqual(calls, [
     { functionName: exportClassPackageRpc, args: { p_class_id: 741 } },
   ]);
   assert.deepEqual(reparsed, reconstructed);
+  assert.equal("transcript" in exported, false);
+});
+
+test("la proyección rechaza claves de cuerpo privadas anidadas antes de la RPC", async () => {
+  for (const forbiddenKey of [
+    "transcript",
+    "original_text",
+    "cleaned_text",
+  ]) {
+    const fixture = createSyntheticTraceablePackage();
+    Object.assign(fixture.topics[0]!.learningJourney, {
+      [forbiddenKey]: "texto privado anidado",
+    });
+    let calls = 0;
+
+    await assert.rejects(
+      importClassPackage(async () => {
+        calls += 1;
+        return { data: 1, error: null };
+      }, fixture),
+      /clave reservada para texto privado/,
+    );
+    assert.equal(calls, 0);
+  }
+});
+
+test("la exportación rechaza cualquier reaparición de texto transcriptivo", async () => {
+  const leaked = {
+    ...toPersistableClassPackage(createSyntheticTraceablePackage()),
+    transcript: { original: "texto privado", cleaned: "texto privado" },
+  };
+
+  await assert.rejects(
+    exportClassPackage(async () => ({ data: leaked, error: null }), 741),
+    /clave reservada para texto privado/,
+  );
+});
+
+test("la exportación rechaza cuerpos privados anidados aunque Zod ignore claves extra", async () => {
+  const leaked = toPersistableClassPackage(
+    createSyntheticTraceablePackage(),
+  ) as unknown as Record<string, unknown>;
+  const topics = leaked.topics as Array<Record<string, unknown>>;
+  Object.assign(topics[0]!, { original_text: "texto privado anidado" });
+
+  await assert.rejects(
+    exportClassPackage(async () => ({ data: leaked, error: null }), 741),
+    /clave reservada para texto privado/,
+  );
 });
 
 test("la exportación SQL reconstruye relaciones y no devuelve un snapshot opaco", async () => {

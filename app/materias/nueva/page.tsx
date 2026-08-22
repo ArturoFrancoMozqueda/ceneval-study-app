@@ -28,8 +28,8 @@ export default async function NewSubjectPage() {
           Nueva materia
         </h1>
         <p className="mt-3 max-w-2xl leading-7 text-muted">
-          Empieza con el nombre. Después podrás agregar clases, transcripciones
-          y temas.
+          Empieza con el nombre. Después podrás agregar clases y organizar sus
+          temas editoriales.
         </p>
       </header>
       <SubjectForm />

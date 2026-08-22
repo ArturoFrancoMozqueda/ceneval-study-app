@@ -121,14 +121,16 @@ Se preferirán componentes de servidor. Los componentes del navegador se usarán
 
 Supabase PostgreSQL será la fuente permanente de verdad:
 
-- guardará materias, clases y transcripciones;
+- guardará materias, clases, dinámicas y evidencia mínima trazable;
 - conservará relaciones entre clases, temas y materiales;
 - almacenará flashcards, exámenes e intentos;
 - aplicará integridad referencial;
 - permitirá migraciones reproducibles;
 - incorporará políticas de acceso antes de habilitar múltiples usuarios.
 
-En la fase inicial no se usarán Auth ni Storage porque habrá una sola usuaria y las transcripciones se pegarán como texto.
+Las transcripciones no se pegan en la app ni se guardan en Storage o Postgres;
+el proceso editorial las resuelve desde el archivo privado antes de proyectar
+el paquete persistible.
 
 ## Flujo de lectura
 
@@ -165,7 +167,8 @@ La validación del navegador ayuda a la experiencia, pero la validación del ser
 - Las entradas externas se validarán en tiempo de ejecución.
 - Los errores técnicos se registrarán en el servidor; la pantalla recibirá mensajes seguros.
 - Las operaciones repetidas accidentalmente deberán ser detectables o seguras.
-- La transcripción original será inmutable para el procesamiento automático.
+- La transcripción original será inmutable y permanecerá en el archivo privado;
+  solo la proyección sin texto podrá cruzar hacia Supabase.
 
 ## Estructura prevista
 
@@ -185,7 +188,7 @@ components/
 features/
   subjects/
   classes/
-  transcripts/
+  evidence/
   topics/
   study-materials/
   flashcards/
@@ -220,7 +223,7 @@ Esta estructura es una guía. Solo se crearán carpetas cuando contengan código
 
 - materias;
 - clases;
-- transcripciones;
+- evidencia y localizadores;
 - temas;
 - materiales;
 - flashcards;
@@ -257,7 +260,7 @@ Una capa puede depender de la que está debajo, pero la función de datos no deb
 - secretos únicamente del lado servidor;
 - validación de entradas;
 - sanitización de contenido cuando aplique;
-- límites de tamaño para transcripciones;
+- límites de tamaño y rutas seguras para la lectura editorial local;
 - protección contra acciones duplicadas;
 - registro de errores sin exponer información sensible;
 - políticas de acceso de Supabase antes de múltiples usuarios.
@@ -268,7 +271,7 @@ Una capa puede depender de la que está debajo, pero la función de datos no deb
 
 ## IA
 
-La IA no debe reemplazar el texto original.
+La IA no debe reemplazar el texto original, que permanece en el archivo privado.
 
 Cada generación debe relacionarse con:
 
@@ -281,7 +284,8 @@ Cada generación debe relacionarse con:
 
 Las respuestas estructuradas deberán validarse antes de guardarse.
 
-La integración de IA se hará después de completar el flujo manual. Si el proveedor falla, la transcripción original y el material editado manualmente deben seguir disponibles.
+Si un proveedor editorial falla, la transcripción original seguirá disponible
+en el archivo privado y el material aprobado permanecerá en la aplicación.
 
 ## Evolución por fases
 

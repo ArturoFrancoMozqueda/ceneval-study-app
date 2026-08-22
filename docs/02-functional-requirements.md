@@ -111,27 +111,32 @@ El usuario podrá cambiar una clase de materia.
 
 ---
 
-## Transcripciones
+## Evidencia transcriptiva privada
 
-### FR-011 Pegar una transcripción — P0
+### FR-011 Resolver la transcripción privada — P0
 
-El usuario podrá pegar texto largo y asociarlo a una clase.
+El proceso editorial resolverá el TXT desde el archivo privado configurado;
+la aplicación web no ofrecerá carga o pegado de transcripciones.
 
 ### FR-012 Conservar el original — P0
 
-La aplicación no modificará ni reemplazará el texto original.
+El archivo editorial no modificará ni reemplazará el texto original y tendrá
+una segunda copia protegida.
 
 ### FR-013 Crear versión limpia — P0
 
-La aplicación podrá mejorar puntuación, párrafos y repeticiones sin cambiar el significado.
+El paquete podrá conservar una versión depurada para validación editorial
+local, sin enviarla a Supabase.
 
 ### FR-014 Editar versión limpia — P1
 
-El usuario podrá corregir manualmente la versión procesada.
+El equipo editorial podrá corregir el paquete antes de importarlo; la interfaz
+de producción no editará la transcripción.
 
 ### FR-015 Comparar versiones — P1
 
-El usuario podrá alternar entre original y limpia.
+Las herramientas locales podrán comparar versiones. La interfaz web mostrará
+solo materiales aprobados, fuentes oficiales y metadatos de evidencia.
 
 ---
 
@@ -215,7 +220,8 @@ Todo material generado podrá modificarse manualmente.
 
 ### FR-034 Mostrar fuente — P0
 
-El usuario podrá consultar la transcripción utilizada.
+El usuario podrá consultar las fuentes oficiales. El equipo editorial conserva
+audio y localizador para auditar el origen sin exponer el texto privado.
 
 ---
 

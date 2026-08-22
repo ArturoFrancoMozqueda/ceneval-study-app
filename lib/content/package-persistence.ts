@@ -1,7 +1,9 @@
 import {
   classPackageSchema,
   importableClassPackageSchema,
+  persistableClassPackageSchema,
   type ImportableClassPackage,
+  type PersistableClassPackage,
 } from "./package-schema";
 import { assertPackageCanReachSupabase } from "./import-gate";
 
@@ -23,12 +25,56 @@ export type InvokePackageRpc = (
   args: Record<string, unknown>,
 ) => PromiseLike<PackageRpcResult>;
 
+const privateBodyKeys = new Set([
+  "transcript",
+  "original_text",
+  "cleaned_text",
+]);
+
+function assertNoPrivateBodyKeys(
+  input: unknown,
+  allowRootTranscript = false,
+): void {
+  const visited = new WeakSet<object>();
+
+  function visit(value: unknown, depth: number): void {
+    if (value === null || typeof value !== "object" || visited.has(value)) {
+      return;
+    }
+    visited.add(value);
+
+    for (const [key, nested] of Object.entries(value)) {
+      if (allowRootTranscript && depth === 0 && key === "transcript") {
+        continue;
+      }
+      if (privateBodyKeys.has(key)) {
+        throw new Error(
+          "El paquete persistible contiene una clave reservada para texto privado.",
+        );
+      }
+      visit(nested, depth + 1);
+    }
+  }
+
+  visit(input, 0);
+}
+
 export function parseImportableClassPackage(
   input: unknown,
 ): ImportableClassPackage {
   const readableBundle = classPackageSchema.parse(input);
   assertPackageCanReachSupabase(readableBundle);
   return importableClassPackageSchema.parse(readableBundle);
+}
+
+export function toPersistableClassPackage(
+  input: unknown,
+): PersistableClassPackage {
+  assertNoPrivateBodyKeys(input, true);
+  const bundle = parseImportableClassPackage(input);
+  const { transcript: _privateTranscript, ...persistable } = bundle;
+  void _privateTranscript;
+  return persistableClassPackageSchema.parse(persistable);
 }
 
 function parseClassId(value: unknown): number {
@@ -45,7 +91,7 @@ export async function importClassPackage(
   invokeRpc: InvokePackageRpc,
   input: unknown,
 ): Promise<number> {
-  const bundle = parseImportableClassPackage(input);
+  const bundle = toPersistableClassPackage(input);
   const { data, error } = await invokeRpc(importClassPackageRpc, {
     p_package: bundle,
   });
@@ -67,7 +113,7 @@ export async function importClassPackage(
 export async function exportClassPackage(
   invokeRpc: InvokePackageRpc,
   classId: number,
-): Promise<ImportableClassPackage> {
+): Promise<PersistableClassPackage> {
   if (!Number.isSafeInteger(classId) || classId <= 0) {
     throw new Error("La clase solicitada para exportación no es válida.");
   }
@@ -80,12 +126,14 @@ export async function exportClassPackage(
       "No se pudo exportar la clase sin exponer datos editoriales internos.",
     );
   }
-  return importableClassPackageSchema.parse(data);
+  assertNoPrivateBodyKeys(data);
+  return persistableClassPackageSchema.parse(data);
 }
 
 export function serializeClassPackage(
-  bundle: ImportableClassPackage,
+  bundle: PersistableClassPackage,
 ): string {
-  const validated = importableClassPackageSchema.parse(bundle);
+  assertNoPrivateBodyKeys(bundle);
+  const validated = persistableClassPackageSchema.parse(bundle);
   return `${JSON.stringify(validated, null, 2)}\n`;
 }

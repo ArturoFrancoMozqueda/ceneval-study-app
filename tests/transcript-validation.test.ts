@@ -1,7 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
-  getNextTabIndex,
   getTranscriptValidationError,
   MAX_TRANSCRIPT_LENGTH,
 } from "../lib/transcript-validation";
@@ -20,22 +19,13 @@ test("rechaza sin truncar el texto que excede 200 mil caracteres", () => {
 
   assert.match(error ?? "", /200,137 caracteres/);
   assert.match(error ?? "", /Reduce al menos 137/);
-  assert.match(error ?? "", /El texto no se modificó/);
+  assert.match(error ?? "", /El archivo no se modificó/);
   assert.equal(originalText.length, MAX_TRANSCRIPT_LENGTH + 137);
 });
 
 test("mantiene la validación mínima después de normalizar espacios", () => {
   assert.equal(
     getTranscriptValidationError("   texto breve   "),
-    "Pega una transcripción de al menos 30 caracteres.",
+    "La fuente editorial local debe contener al menos 30 caracteres.",
   );
-});
-
-test("calcula el foco roving de pestañas y su recorrido circular", () => {
-  assert.equal(getNextTabIndex(0, "ArrowRight", 2), 1);
-  assert.equal(getNextTabIndex(1, "ArrowRight", 2), 0);
-  assert.equal(getNextTabIndex(0, "ArrowLeft", 2), 1);
-  assert.equal(getNextTabIndex(1, "Home", 2), 0);
-  assert.equal(getNextTabIndex(0, "End", 2), 1);
-  assert.equal(getNextTabIndex(0, "Tab", 2), null);
 });

@@ -88,7 +88,7 @@ export async function SubjectDetail({ subjectId }: { subjectId: number }) {
             }
             description={
               user.role === "admin"
-                ? "Agrega una clase para incorporar su transcripción, organizar los temas y preparar el material de estudio."
+                ? "Agrega una clase para organizar sus temas y preparar el material editorial."
                 : "Cuando haya una clase publicada en esta materia, podrás abrir sus temas y materiales desde aquí."
             }
             title={

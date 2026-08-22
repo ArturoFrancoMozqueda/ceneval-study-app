@@ -9,6 +9,17 @@ const migration = readFileSync(
   ),
   "utf8",
 );
+const transcriptMinimization = readFileSync(
+  new URL(
+    "../supabase/migrations/20260822034153_minimize_transcript_storage.sql",
+    import.meta.url,
+  ),
+  "utf8",
+);
+const localRpcRunner = readFileSync(
+  new URL("../scripts/test-content-rpc-local.ts", import.meta.url),
+  "utf8",
+);
 
 test("la migración es atómica y conserva las migraciones anteriores", () => {
   assert.match(migration, /^begin;[\s\S]*commit;\s*$/);
@@ -119,4 +130,60 @@ test("el orden de referencias y vínculos se persiste explícitamente", () => {
   assert.match(migration, /unique \(topic_id, position\)/);
   assert.match(migration, /unique \(artifact_id, position\)/);
   assert.match(migration, /order by link\.position/);
+});
+
+test("la minimización elimina cuerpos transcriptivos sin CASCADE", () => {
+  assert.match(transcriptMinimization, /^begin;[\s\S]*commit;\s*$/);
+  assert.match(transcriptMinimization, /drop table public\.transcripts;/);
+  assert.match(transcriptMinimization, /drop column if exists source_transcript_id/);
+  assert.match(transcriptMinimization, /drop trigger if exists transcripts_invalidate_editorial_review/);
+  assert.match(transcriptMinimization, /drop policy if exists transcripts_select_admin_only/);
+  assert.doesNotMatch(transcriptMinimization, /\bcascade\b/i);
+});
+
+test("el import nuevo acepta solo el DTO persistible y conserva la trazabilidad", () => {
+  const importFunction = transcriptMinimization.match(
+    /create or replace function private\.import_class_package_v12[\s\S]*?\n\$\$;/,
+  )?.[0];
+  assert.ok(importFunction);
+  for (const forbiddenKey of ["transcript", "original_text", "cleaned_text"]) {
+    assert.match(
+      importFunction,
+      new RegExp(`jsonb_path_exists\\(p_package, 'strict \\$\\.\\*\\*\\.${forbiddenKey}'\\)`),
+    );
+  }
+  assert.match(importFunction, /using errcode = '22023'/);
+  assert.match(importFunction, /insert into public\.class_evidence/);
+  assert.match(importFunction, /private\.link_artifact_evidence/);
+  assert.doesNotMatch(importFunction, /public\.transcripts|source_transcript_id|#>> '\{transcript,/);
+});
+
+test("el export nuevo reconstruye relaciones sin devolver cuerpos", () => {
+  const exportFunction = transcriptMinimization.match(
+    /create or replace function private\.export_class_package_v12[\s\S]*?\n\$\$;/,
+  )?.[0];
+  assert.ok(exportFunction);
+  assert.match(exportFunction, /from public\.class_evidence evidence/);
+  assert.match(exportFunction, /join public\.exam_answer_keys answer_key/);
+  assert.doesNotMatch(exportFunction, /original_text|cleaned_text|join public\.transcripts/);
+});
+
+test("los RPC nuevos siguen siendo invoker y service_role-only", () => {
+  for (const signature of [
+    "import_class_package_v12\\(jsonb\\)",
+    "export_class_package_v12\\(bigint\\)",
+  ]) {
+    assert.match(transcriptMinimization, new RegExp(`revoke all on function public\\.${signature}[\\s\\S]*?from public, anon, authenticated, service_role`));
+    assert.match(transcriptMinimization, new RegExp(`grant execute on function public\\.${signature}[\\s\\S]*?to service_role`));
+  }
+  assert.doesNotMatch(transcriptMinimization, /security definer/i);
+});
+
+test("el runner prueba rechazo, ausencia física y export sanitizado", () => {
+  assert.match(localRpcRunner, /rawTranscriptAttempt\.error\?\.code, "22023"/);
+  assert.match(localRpcRunner, /nestedRawAttempt\.error\?\.code, "22023"/);
+  assert.match(localRpcRunner, /rawContainer: \{ cleaned_text:/);
+  assert.match(localRpcRunner, /from\("transcripts"\)/);
+  assert.match(localRpcRunner, /Object\.hasOwn\(exported, "transcript"\)/);
+  assert.match(localRpcRunner, /toPersistableClassPackage\(fixture\)/);
 });

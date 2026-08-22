@@ -123,6 +123,9 @@ red usa `npm run test:backup`. Consulta `docs/SUPABASE_BACKUP.md`.
 - La legislación cambia. Verifica vigencia antes de publicar: el validador
   comprueba formato, no vigencia.
 - Conserva la transcripción original. Nunca la sustituyas por un resumen.
+- Consérvala exclusivamente en el archivo editorial privado: el gate local la
+  lee para validar localizadores, pero el payload RPC, Supabase y la interfaz no
+  almacenan ni muestran el texto original o depurado.
 
 **Trabajo**
 
@@ -176,7 +179,7 @@ alguna sigue abierta; si corriges una, actualiza esta lista.
   pasó localmente.** El historial remoto se verificó el 20 de agosto de 2026 y
   los asesores no mostraron errores de seguridad; el aviso de
   `exam_answer_keys` sin políticas es el bloqueo deliberado. En PG17 local,
-  `npm run security:rls` aplicó 16 migraciones desde cero y aprobó 141
+  `npm run security:rls` aplicó 17 migraciones desde cero y aprobó 141
   comprobaciones con cleanup sin residuos. Las migraciones locales posteriores
   todavía no están aplicadas en CENEVAL.
 - **La protección de lectura por aprobación está aplicada en CENEVAL.**

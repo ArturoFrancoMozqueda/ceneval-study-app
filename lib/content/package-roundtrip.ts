@@ -1,8 +1,9 @@
 import { isDeepStrictEqual } from "node:util";
 import {
-  importableClassPackageSchema,
-  type ImportableClassPackage,
+  persistableClassPackageSchema,
+  type PersistableClassPackage,
 } from "./package-schema";
+import { toPersistableClassPackage } from "./package-persistence";
 
 export type PackageRoundTripCounts = {
   topics: number;
@@ -30,7 +31,7 @@ export type PackageRoundTripReport = {
   actualCounts: PackageRoundTripCounts;
 };
 
-function evidenceLinkCount(bundle: ImportableClassPackage): number {
+function evidenceLinkCount(bundle: PersistableClassPackage): number {
   return bundle.topics.reduce((total, topic) => {
     const journey = topic.learningJourney;
     const journeyLinks =
@@ -82,7 +83,10 @@ function evidenceLinkCount(bundle: ImportableClassPackage): number {
 export function countClassPackage(
   input: unknown,
 ): PackageRoundTripCounts {
-  const bundle = importableClassPackageSchema.parse(input);
+  const persisted = persistableClassPackageSchema.safeParse(input);
+  const bundle = persisted.success
+    ? persisted.data
+    : toPersistableClassPackage(input);
   const examQuestions = bundle.topics.reduce(
     (sum, topic) => sum + topic.exam.questions.length,
     0,
@@ -135,8 +139,8 @@ export function countClassPackage(
   };
 }
 
-function canonicalize(input: unknown): ImportableClassPackage {
-  const bundle = importableClassPackageSchema.parse(input);
+function canonicalizePersisted(input: unknown): PersistableClassPackage {
+  const bundle = persistableClassPackageSchema.parse(input);
   return {
     ...bundle,
     // SQL reconstruye el registro por su clave estable. Ninguna otra colección
@@ -195,8 +199,10 @@ export function compareClassPackageRoundTrip(
   actualInput: unknown,
   persistedState?: PersistedPackageState,
 ): PackageRoundTripReport {
-  const expected = canonicalize(expectedInput);
-  const actual = canonicalize(actualInput);
+  const expected = canonicalizePersisted(
+    toPersistableClassPackage(expectedInput),
+  );
+  const actual = canonicalizePersisted(actualInput);
   const differences: string[] = [];
   collectDifferencePaths(expected, actual, "package", differences);
 

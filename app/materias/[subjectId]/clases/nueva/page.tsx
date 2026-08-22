@@ -44,8 +44,7 @@ export default async function NewClassPage({
           Nueva clase
         </h1>
         <p className="mt-3 max-w-2xl leading-7 text-muted">
-          Registra la clase ahora y agrega su transcripción en el siguiente
-          paso.
+          Registra la clase ahora y después organiza sus temas editoriales.
         </p>
       </header>
       <ClassForm subjectId={numericSubjectId} />

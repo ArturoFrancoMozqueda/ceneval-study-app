@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import test from "node:test";
 
 const migration = readFileSync(
@@ -63,16 +63,14 @@ test("la base valida identidad, estado y versión antes de aceptar un dictamen",
   );
 });
 
-test("las transcripciones quedan limitadas a administración", () => {
-  assert.match(migration, /drop policy if exists transcripts_select_published_or_admin/);
-  assert.match(migration, /create policy transcripts_select_admin_only/);
-  assert.match(migration, /using \(\(select private\.is_admin\(\)\)\)/);
-  assert.match(academicDal, /if \(user\?\.role !== "admin"\) return null/);
-  assert.match(
-    academicDal,
-    /user\?\.role === "admin" \? await getTranscript\(studyClass\.id\) : null/,
+test("la app no consulta, muestra ni captura transcripciones privadas", () => {
+  assert.doesNotMatch(academicDal, /\.from\("transcripts"\)|getTranscript/);
+  assert.doesNotMatch(lessonView, /lesson\.transcript|Transcripción original/);
+  assert.equal(
+    existsSync("app/clases/[classId]/transcripcion/page.tsx"),
+    false,
   );
-  assert.match(lessonView, /\{lesson\.transcript \? \(/);
+  assert.equal(existsSync("components/transcript-workspace.tsx"), false);
 });
 
 test("administración puede registrar el dictamen desde el estado de revisión", () => {

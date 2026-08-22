@@ -42,7 +42,6 @@ export type StudyClass = {
   teacher: string;
   description: string;
   topicCount: number;
-  hasTranscript: boolean;
   publicationStatus: PublicationStatus;
   publishedAt: string;
   curriculumCode: string;
@@ -60,14 +59,6 @@ export type StudySession = StudyClass & {
   subjectName: string;
   completedSteps: number;
   totalSteps: number;
-};
-
-export type Transcript = {
-  id: number;
-  classId: number;
-  originalText: string;
-  cleanedText: string;
-  status: "pending" | "processing" | "ready" | "failed";
 };
 
 export type Topic = {
@@ -167,7 +158,6 @@ export type LessonBundle = {
   topic: Topic;
   studyClass: StudyClass;
   subject: Subject;
-  transcript: Transcript | null;
   materials: StudyMaterial[];
   conceptMap: {
     title: string;
@@ -222,7 +212,6 @@ type ClassRow = {
 };
 
 type ClassOverviewRow = ClassRow & {
-  transcripts?: Array<{ id: number }> | { id: number } | null;
   topics?: Array<{ id: number }> | { id: number } | null;
 };
 
@@ -234,7 +223,6 @@ function fail(operation: string, error?: unknown): never {
 function toClass(
   row: ClassRow,
   topicCount: number,
-  hasTranscript: boolean,
 ): StudyClass {
   return {
     id: row.id,
@@ -244,7 +232,6 @@ function toClass(
     teacher: row.teacher ?? "",
     description: row.description ?? "",
     topicCount,
-    hasTranscript,
     publicationStatus: row.publication_status,
     publishedAt: row.published_at ?? "",
     curriculumCode: row.curriculum_code ?? "",
@@ -262,7 +249,7 @@ const classSelection =
 const subjectOverviewSelection =
   "id,name,description,classes(id,topics(id))";
 const classOverviewSelection =
-  `${classSelection},transcripts(id),topics(id)`;
+  `${classSelection},topics(id)`;
 
 export async function getSubjects(): Promise<Subject[]> {
   await connection();
@@ -309,18 +296,14 @@ export async function getClassesForSubject(subjectId: number) {
   }
 
   return ((classesResult.data ?? []) as ClassOverviewRow[]).map((row) =>
-    toClass(
-      row,
-      relationRows(row.topics).length,
-      relationRows(row.transcripts).length > 0,
-    ),
+    toClass(row, relationRows(row.topics).length),
   );
 }
 
 export async function getClass(classId: number) {
   await connection();
   const supabase = await createServerSupabaseClient();
-  const [classResult, transcriptResult, topicsResult] = await Promise.all([
+  const [classResult, topicsResult] = await Promise.all([
     supabase
       .from("classes")
       .select(
@@ -328,25 +311,16 @@ export async function getClass(classId: number) {
       )
       .eq("id", classId)
       .maybeSingle(),
-    supabase
-      .from("transcripts")
-      .select("class_id")
-      .eq("class_id", classId)
-      .maybeSingle(),
     supabase.from("topics").select("id").eq("class_id", classId),
   ]);
 
   if (classResult.error) fail("getClass", classResult.error);
-  if (transcriptResult.error) {
-    fail("getClass transcript", transcriptResult.error);
-  }
   if (topicsResult.error) fail("getClass topics", topicsResult.error);
   if (!classResult.data) return null;
 
   return toClass(
     classResult.data as ClassRow,
     topicsResult.data?.length ?? 0,
-    Boolean(transcriptResult.data),
   );
 }
 
@@ -388,7 +362,7 @@ export async function getPublishedSessions(userId: string): Promise<StudySession
   return ((classesResult.data ?? []) as ClassRow[]).map((row) => {
     const classTopics = topics.filter((topic) => topic.class_id === row.id);
     return {
-      ...toClass(row, classTopics.length, false),
+      ...toClass(row, classTopics.length),
       subjectName: subjects.get(row.subject_id) ?? "Materia",
       completedSteps: classTopics.reduce(
         (total, topic) => total + (progress.get(topic.id) ?? 0),
@@ -415,28 +389,6 @@ export async function getPublishedSessionNeighbors(classId: number) {
   return {
     previous: sessions[index - 1] ?? null,
     next: sessions[index + 1] ?? null,
-  };
-}
-
-export async function getTranscript(classId: number): Promise<Transcript | null> {
-  await connection();
-  const user = await getCurrentUser();
-  if (user?.role !== "admin") return null;
-  const supabase = await createServerSupabaseClient();
-  const { data, error } = await supabase
-    .from("transcripts")
-    .select("id,class_id,original_text,cleaned_text,processing_status")
-    .eq("class_id", classId)
-    .maybeSingle();
-
-  if (error) fail("getTranscript", error);
-  if (!data) return null;
-  return {
-    id: data.id as number,
-    classId: data.class_id as number,
-    originalText: data.original_text as string,
-    cleanedText: (data.cleaned_text as string | null) ?? "",
-    status: data.processing_status as Transcript["status"],
   };
 }
 
@@ -672,7 +624,6 @@ export async function getLessonBundle(
 
   const subject = await getSubject(studyClass.subjectId);
   if (!subject) return null;
-  const transcript = user?.role === "admin" ? await getTranscript(studyClass.id) : null;
   const verificationResult = await (await createServerSupabaseClient())
     .from("class_editorial_reviews")
     .select("legal_verified_on")
@@ -748,7 +699,6 @@ export async function getLessonBundle(
     topic,
     studyClass,
     subject,
-    transcript,
     materials: (materialsResult.data ?? []).map((row) => ({
       id: row.id as number,
       materialType: row.material_type as StudyMaterial["materialType"],
