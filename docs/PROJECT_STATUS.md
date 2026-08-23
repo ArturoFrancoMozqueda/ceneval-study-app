@@ -108,6 +108,17 @@ decisión no añade infraestructura ni reemplaza los gates operativos vigentes.
 - No hay pagos, planes, entitlements, checkout ni webhook reales.
 - No hay registro abierto: `PRIVATE_ACCESS_ONLY` es obligatorio en `true` y
   `lib/operations/runtime-env.ts:91` **falla el arranque** si vale otra cosa.
+  **Incidente del 23 de agosto de 2026 — resuelto:** ese bloqueo solo existía
+  en la app Next.js; Supabase Auth tenía **"Allow new users to sign up"
+  activado**, y las políticas RLS de lectura del catálogo publicado son
+  `to authenticated` (correcto para el diseño futuro con estudiantes de pago,
+  no para hoy). Cualquier persona con la URL y la llave pública de Supabase
+  (visibles en el código fuente de cualquier página) podía registrarse
+  directamente contra Supabase, sin pasar por la app, y leer el catálogo
+  académico completo gratis. Se desactivó "Allow new users to sign up" en
+  `Authentication → Sign In / Providers` del proyecto **CENEVAL Study App** y
+  se verificó tras recargar que quedó guardado. No afecta a la cuenta
+  administradora existente.
 - No hay dominio propio: solo `ceneval-study-app.vercel.app`. Los correos de
   contacto publicados (`privacidad@sube-legal.mx`, `soporte@sube-legal.mx`)
   son placeholders que no reciben correo real todavía.
