@@ -489,15 +489,30 @@ de ejecutarlo, Supabase local debe estar activo; el comando no acepta
 ### Despliegue técnico en Vercel
 
 CENEVAL tiene un despliegue técnico privado en Vercel sobre Hobby; la cuenta no
-se cambió a Pro (sigue sin permitir uso comercial, bloqueo B2). El proyecto
-está **conectado a Git**, pero los deploys a producción **no se disparan
-automáticamente en cada push** — se confirmó el 22 de agosto de 2026 que el
-mecanismo real es un deploy manual por CLI (`npx vercel deploy --prod`) desde
-un checkout con el proyecto vinculado (`.vercel/project.json`); el push a
-`main` por sí solo no publica. `GET /api/health/live` responde `200`; `GET
-/api/health/ready` responde `404` sin token, que es el comportamiento correcto
-y esperado (exige el token de operaciones). `npm run lint` pasa sin hallazgos
-y el build de producción del mismo commit se completó en Vercel.
+se cambió a Pro (sigue sin permitir uso comercial, bloqueo B2).
+
+**Incidente del 23 de agosto de 2026 — resuelto:** el dominio de producción
+llevaba desde el 21 de agosto sirviendo un deployment subido manualmente por
+CLI (`dpl_Brb4...`), previo a la migración `minimize_transcript_storage.sql`
+que eliminó la tabla `public.transcripts`. Ese build viejo seguía consultando
+esa tabla al abrir una clase o un tema (`getClass`), y producía el error
+genérico "No pudimos consultar los datos" para la única usuaria admin. Se
+comprobó con `GET /kova-mx/ceneval-study-app` (Vercel API) que el proyecto
+**nunca tuvo la GitHub App de Vercel conectada**: el registro de "no se
+disparan deploys automáticos en cada push", anotado el 22 de agosto, no era un
+comportamiento a corregir sino la ausencia real de la conexión. Causa raíz:
+la instalación de la GitHub App "Vercel" en la cuenta de GitHub tenía acceso
+restringido a 3 repositorios (`sweet_home_pos`, `valt`, `kova`) y no incluía
+`ceneval-study-app`. Se agregó el repositorio en
+`github.com/settings/installations` y se conectó desde
+`Project Settings → Git` en Vercel. **A partir de ahora, cada push a `main`
+debe disparar un deployment automático de producción** — hay que confirmarlo
+con el primer push real y, si el deployment resultante queda listo, promoverlo
+para reemplazar el build viejo que sigue como alias activo. `GET
+/api/health/live` responde `200`; `GET /api/health/ready` responde `404` sin
+token, que es el comportamiento correcto y esperado (exige el token de
+operaciones). `npm run lint` pasa sin hallazgos y el build de producción del
+mismo commit se completó en Vercel.
 
 La consulta de solo lectura de los metadatos de entorno de Vercel del 21 de
 agosto, sin leer ni imprimir valores, no encontró ninguna de las siete
