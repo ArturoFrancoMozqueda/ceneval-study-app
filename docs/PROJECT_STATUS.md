@@ -514,19 +514,31 @@ token, que es el comportamiento correcto y esperado (exige el token de
 operaciones). `npm run lint` pasa sin hallazgos y el build de producción del
 mismo commit se completó en Vercel.
 
-La consulta de solo lectura de los metadatos de entorno de Vercel del 21 de
-agosto, sin leer ni imprimir valores, no encontró ninguna de las siete
-variables obligatorias de `.env.example` en el proyecto; esa comprobación
-específica no se repitió el 22 de agosto y sigue sin confirmarse que las
-variables persistan separadas por entorno Preview/Production. Antes de operar
-deben configurarse y comprobarse los alcances Preview/Production de
-`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`,
+**I-6 verificado el 23 de agosto de 2026:** `vercel env pull` confirma que las
+siete variables obligatorias de `.env.example`
+(`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`,
 `SUPABASE_SECRET_KEY`, `NEXT_PUBLIC_SITE_URL`, `ADMIN_EMAIL`,
-`PRIVATE_ACCESS_ONLY` y `OPS_READINESS_TOKEN`, además de las redirecciones de
-Supabase Auth (tarea `I-6`). El bootstrap de `docs/ADMIN_BOOTSTRAP.md` ya
-produjo el único perfil administrador con inicio de sesión confirmado hoy;
-falta repetir el E2E autenticado sobre el artefacto publicado con más de una
-cuenta.
+`PRIVATE_ACCESS_ONLY`, `OPS_READINESS_TOKEN`) están configuradas por separado
+en los entornos Production y Preview del proyecto — las siete aparecen en
+ambos scopes. Las siete están marcadas como **Sensitive** en Vercel, por lo
+que ni la CLI ni el dashboard pueden volver a mostrar su valor una vez
+guardado (`vercel env pull` devuelve el literal `[SENSITIVE]`). Eso es
+deseable para `SUPABASE_SECRET_KEY` y `OPS_READINESS_TOKEN`, pero para las
+cuatro variables `NEXT_PUBLIC_*` no aporta protección real (via de todos
+modos al bundle del navegador) y sí rompe `npm run ops:preflight:production` y
+`ops:preflight:preview`: ambos scripts leen el valor para validar formato (por
+ejemplo, que `NEXT_PUBLIC_SUPABASE_URL` sea una URL) y truenan con
+`Configuración inválida` al recibir el literal `[SENSITIVE]` en vez del valor
+real. **Pendiente:** decidir si quitar la marca Sensitive de las cuatro
+variables `NEXT_PUBLIC_*` (para que el preflight vuelva a funcionar) o
+reescribir el preflight para que no dependa de leer el valor. Ningún valor
+real se leyó ni se imprimió durante esta verificación; los archivos
+`.vercel/.env.production.local` y `.vercel/.env.preview.local` generados para
+la prueba se borraron al terminar.
+
+El bootstrap de `docs/ADMIN_BOOTSTRAP.md` ya produjo el único perfil
+administrador con inicio de sesión confirmado hoy; falta repetir el E2E
+autenticado sobre el artefacto publicado con más de una cuenta.
 
 `docs/DEPLOYMENT_RUNBOOK.md` ya define un flujo fail-closed para registrar SHA,
 CI, proyecto, deployment anterior, preview, digest del build Production,
