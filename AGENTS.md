@@ -47,7 +47,7 @@ transcripción → preparación editorial → borrador → revisión → publica
   estudiantes está pospuesto por decisión de producto.
 - El objetivo futuro es ofrecerla mediante **suscripción**. El producto,
   precio ($399 MXN/mes), proveedor (Stripe) y nombre comercial (*Sube Legal*)
-  ya están decididos en `docs/PLAN_VENTA_DECISIONES.md`, pero eso no autoriza
+  ya están decididos en `docs/PROJECT_STATUS.md` §4, pero eso no autoriza
   a implementar registro público ni cobros: falta el marco legal, la
   infraestructura apta para cobrar y las etapas de
   `SUBSCRIPTION_ARCHITECTURE.md`. No implementes registro público o cobros sin
@@ -66,16 +66,15 @@ transcripción → preparación editorial → borrador → revisión → publica
 
 ## Orden de lectura
 
-1. `docs/PROJECT_STATUS.md` — estado y plan vigentes.
-2. `docs/PLAN_ACCION_VENTA.md` y `docs/PLAN_VENTA_DECISIONES.md` — lectura
+1. `docs/PROJECT_STATUS.md` — estado y plan vigentes; sus §3 a §5 son lectura
    obligatoria antes de cualquier trabajo relacionado con la venta o
    comercialización: qué falta para poder cobrar y qué decisiones de producto,
    precio, proveedor y nombre comercial ya están cerradas.
-3. `docs/auditoria-2026-08/README.md` — corte histórico del 19 de agosto y
+2. `docs/auditoria-2026-08/README.md` — corte histórico del 19 de agosto y
    conciliación con el código integrado después de la auditoría.
-4. `docs/03-user-stories.md` — qué debe hacer el producto.
-5. `docs/DECISIONS.md` — decisiones tomadas y por qué (ADR).
-6. El resto de `docs/`, según lo que vayas a tocar.
+3. `docs/03-user-stories.md` — qué debe hacer el producto.
+4. `docs/DECISIONS.md` — decisiones tomadas y por qué (ADR).
+5. El resto de `docs/`, según lo que vayas a tocar.
 
 `docs/archivo/` contiene documentos históricos. **No los uses como referencia.**
 
@@ -195,7 +194,7 @@ alguna sigue abierta; si corriges una, actualiza esta lista.
   los asesores de Supabase solo muestran el `INFO` esperado de
   `exam_answer_keys` sin políticas (bloqueo deliberado) y un `WARN` de
   protección contra contraseñas filtradas, pendiente de activar (tarea `I-5`
-  de `docs/PLAN_ACCION_VENTA.md`). En PG17 local, `npm run security:rls`
+  de `docs/PROJECT_STATUS.md` §5). En PG17 local, `npm run security:rls`
   aplicó las migraciones desde cero y aprobó 141 comprobaciones con cleanup
   sin residuos, pero esa suite dinámica todavía no se ha ejecutado contra un
   proyecto Supabase remoto (ni de ensayo ni de producción).

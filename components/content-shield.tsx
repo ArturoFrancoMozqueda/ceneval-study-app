@@ -23,7 +23,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
  * heurística de devtools deja de disparar.
  *
  * LIMITACIÓN RECONOCIDA Y ACEPTADA (decisión D-2, ver
- * docs/PLAN_VENTA_DECISIONES.md y docs/CONTENT_PROTECTION.md): esto NO
+ * docs/PROJECT_STATUS.md §4 y docs/CONTENT_PROTECTION.md): esto NO
  * bloquea PrtScn, la herramienta de recorte del sistema operativo, una
  * grabación de pantalla con software externo, ni una foto tomada con otro
  * dispositivo. Ninguna aplicación web puede impedir eso — el sistema

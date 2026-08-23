@@ -1,6 +1,6 @@
 -- Record when a student accepted the terms of use and privacy notice at
 -- sign-up, so it can be shown as evidence of consent under the LFPDPPP.
--- Task L-3 of docs/PLAN_ACCION_VENTA.md.
+-- Task L-3 of docs/PROJECT_STATUS.md §5.
 --
 -- Aplicada al proyecto remoto "CENEVAL Study App" (qcseoivljzuxzqeaxfly)
 -- el 22 de agosto de 2026. Este archivo se renombro de

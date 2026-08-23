@@ -11,14 +11,13 @@ Responsables: Fatima (aprobación editorial) y Codex (desarrollo y preparación 
 > continuamente verificado y actualizado vive en
 > [`docs/PROJECT_STATUS.md`](docs/PROJECT_STATUS.md); ante cualquier
 > contradicción entre ese documento y este, `PROJECT_STATUS.md` es la fuente
-> vigente. El plan para poder cobrar por la aplicación, con sus bloqueos y
-> evidencias de cierre, está en
-> [`docs/PLAN_ACCION_VENTA.md`](docs/PLAN_ACCION_VENTA.md); las decisiones de
-> producto, precio, proveedor y nombre comercial ya cerradas están en
-> [`docs/PLAN_VENTA_DECISIONES.md`](docs/PLAN_VENTA_DECISIONES.md). De ese
-> plan, hoy la Fase 0 (decisiones) ya cerró, y la Fase 1 (marco legal) y la
-> Fase 5 (producto vendible), además de parte de la tarea D-2, están en
-> desarrollo en paralelo por otros equipos — no están terminadas todavía.
+> vigente. Ese documento absorbió el 22 de agosto de 2026 lo que antes eran
+> `PLAN_ACCION_VENTA.md`, `D1_DERECHOS_AUDIOS.md` y `PLAN_VENTA_DECISIONES.md`
+> (ya no existen): el plan para poder cobrar, con sus bloqueos y evidencias de
+> cierre, está en su §3 a §5; las decisiones de producto, precio, proveedor y
+> nombre comercial ya cerradas están en su §4. De ese plan, la Fase 0
+> (decisiones) ya cerró, y la Fase 1 (marco legal) y la Fase 5 (producto
+> vendible) ya están publicadas en producción.
 
 ## Cómo usar este documento
 
@@ -639,10 +638,10 @@ Estados editoriales:
 | Falta prueba automática integral de RLS | Pendiente | Completar Fase B antes de producción |
 | Protección contra contraseñas filtradas requiere plan Pro | Pospuesto | Activarla si el proyecto cambia a un plan compatible |
 | Falta versionado editorial completo | Pendiente | Completar Fase C |
-| Falta despliegue público | Resuelto el despliegue técnico: Vercel conectado a Git, deployment `READY` a la par de `main` (verificado 22-ago-2026); pendiente para apertura comercial | Ver Fase 2 y Fase 5 de `docs/PLAN_ACCION_VENTA.md` |
+| Falta despliegue público | Resuelto el despliegue técnico: Vercel conectado a Git, deployment `READY` a la par de `main` (verificado 22-ago-2026); Fase 5 (landing, precios, muestra) ya publicada, pendiente Fase 2 para apertura comercial | Ver `docs/PROJECT_STATUS.md` §5 |
 | Automatización con OpenAI | Pospuesta | Evaluar después de consolidar el flujo editorial manual |
 | Tutor y calendario | Pospuestos | Evaluar después del lanzamiento inicial |
-| Pagos | Producto, precio y proveedor ya decididos (`docs/PLAN_VENTA_DECISIONES.md`: $399 MXN/mes vía Stripe, *Sube Legal*); no implementado | No activar checkout ni webhook sin cerrar las Fases 0 a 3 de `docs/PLAN_ACCION_VENTA.md` |
+| Pagos | Producto, precio y proveedor ya decididos (`docs/PROJECT_STATUS.md` §4: $399 MXN/mes vía Stripe, *Sube Legal*); no implementado | No activar checkout ni webhook sin cerrar las Fases 2 y 3 de `docs/PROJECT_STATUS.md` §5 |
 
 ---
 

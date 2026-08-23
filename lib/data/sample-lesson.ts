@@ -6,7 +6,7 @@ import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 
 /**
  * Tema fijo de la muestra gratuita pública (tarea P-3 de
- * `docs/PLAN_ACCION_VENTA.md`).
+ * `docs/PROJECT_STATUS.md §5`).
  *
  * Elegido explícitamente: C01 "Cómo estudiar y resolver el EGEL Plus
  * Derecho", tema "Estructura y estrategia para el EGEL Plus Derecho"

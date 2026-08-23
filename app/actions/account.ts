@@ -6,7 +6,7 @@ import { writeDependencyFailure } from "@/lib/operations/safe-log";
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 
-// L-4 (docs/PLAN_ACCION_VENTA.md): lets a student request permanent
+// L-4 (docs/PROJECT_STATUS.md §5): lets a student request permanent
 // deletion of their own account and personal data. Deleting the
 // auth.users row cascades (ON DELETE CASCADE) to profiles, study_progress,
 // quick_check_responses, flashcard_reviews, exam_attempts and exam_answers.

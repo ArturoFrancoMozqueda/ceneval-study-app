@@ -1,7 +1,7 @@
 # Protección de contenido — disuasión, no DRM
 
 **Fecha:** 22 de agosto de 2026
-**Referencia:** `docs/PLAN_VENTA_DECISIONES.md` D-2 ("Protección de contenido").
+**Referencia:** `docs/PROJECT_STATUS.md` §4 D-2 ("Protección de contenido").
 **Decisión aceptada por la titular, ya negociada y explicada:** ninguna medida
 de esta página bloquea una captura de pantalla real. Lo que sigue es
 disuasión razonable contra el copiado y la redistribución casual, no una
@@ -122,7 +122,7 @@ supuesta):
   errores relacionados con este cambio.
 
 **Limitación reconocida y aceptada explícitamente por la titular** (ver
-`docs/PLAN_VENTA_DECISIONES.md` D-2): esto no bloquea PrtScn, la herramienta
+`docs/PROJECT_STATUS.md` §4 D-2): esto no bloquea PrtScn, la herramienta
 de recorte del sistema operativo, una grabación de pantalla con software
 externo, ni una foto tomada con otro dispositivo. El comentario en la
 cabecera de `components/content-shield.tsx` repite esta misma limitación
@@ -170,13 +170,13 @@ seleccionar texto, clic derecho → Copiar, captura sin darse cuenta al
 cambiar de ventana), no impedir la redistribución deliberada de alguien
 decidido a hacerlo. Por eso el plan también contempla una medida no técnica:
 la cláusula explícita en términos de uso que prohíbe la redistribución, con
-cancelación sin reembolso como consecuencia (`docs/PLAN_VENTA_DECISIONES.md`
+cancelación sin reembolso como consecuencia (`docs/PROJECT_STATUS.md` §4
 D-2, tarea `L-2` del plan de acción). Esa cláusula, no el CSS, es la que
 tiene dientes reales frente a alguien que decide redistribuir el contenido.
 
 ## 3. Pendientes que requieren una decisión de infraestructura (no implementados aquí)
 
-Las siguientes dos medidas están descritas en `docs/PLAN_VENTA_DECISIONES.md`
+Las siguientes dos medidas están descritas en `docs/PROJECT_STATUS.md` §4
 D-2 como parte de la protección de contenido, pero **no se implementan en
 este cambio** porque requieren elegir un proveedor/arquitectura de
 infraestructura que la titular todavía no ha decidido, y porque el alcance
@@ -202,7 +202,7 @@ clases completas en minutos).
 - *Contras:* añade un proveedor y un costo recurrente nuevo (aunque Upstash
   tiene una capa gratuita razonable para el volumen esperado); otra pieza de
   infraestructura que mantener, monitorear y respaldar en el inventario de
-  titularidad (`docs/PLAN_ACCION_VENTA.md` D-8); requiere una variable de
+  titularidad (`docs/PROJECT_STATUS.md` §4 D-8); requiere una variable de
   entorno y credenciales nuevas.
 
 **Opción B — Contador en Postgres/Supabase.**

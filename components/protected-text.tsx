@@ -11,7 +11,7 @@ import { createElement, type ElementType, type MouseEvent, type ReactNode } from
  * mantener presionado) para que "Copiar" no aparezca sobre ese bloque.
  *
  * LIMITACIÓN RECONOCIDA Y ACEPTADA (decisión D-2, ver
- * docs/PLAN_VENTA_DECISIONES.md y docs/CONTENT_PROTECTION.md): esto NO
+ * docs/PROJECT_STATUS.md §4 y docs/CONTENT_PROTECTION.md): esto NO
  * impide una captura de pantalla real (PrtScn, la herramienta de recorte
  * del sistema operativo, ni una foto tomada con otro dispositivo), ni el
  * copiado desde las herramientas de desarrollador del navegador. Ninguna

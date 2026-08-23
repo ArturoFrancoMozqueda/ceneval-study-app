@@ -5,7 +5,7 @@ import { requireUser } from "@/lib/auth";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 
 // Personal-data export for account holders (task L-4,
-// docs/PLAN_ACCION_VENTA.md). Every query below is scoped to the signed-in
+// docs/PROJECT_STATUS.md §5). Every query below is scoped to the signed-in
 // user's own rows and additionally protected by the "select own" RLS
 // policies on each table, so this never reads another student's data.
 //
