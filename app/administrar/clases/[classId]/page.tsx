@@ -94,9 +94,8 @@ export default async function EditorialClassPage({
         <h2 className="text-xl font-semibold">Vista previa por tema</h2>
         <div className="mt-4 space-y-3">
           {topics.map((topic) => (
-            <Link
-              className="flex items-center justify-between rounded-xl border border-border bg-white p-4 hover:border-brand/30"
-              href={`/temas/${topic.id}`}
+            <div
+              className="flex items-center justify-between gap-4 rounded-xl border border-border bg-white p-4"
               key={topic.id}
             >
               <span>
@@ -105,8 +104,21 @@ export default async function EditorialClassPage({
                   {topicApprovalStatusLabels[topic.approvalStatus]}
                 </span>
               </span>
-              <span className="text-brand">Vista previa →</span>
-            </Link>
+              <span className="flex shrink-0 items-center gap-4">
+                <Link
+                  className="text-sm font-semibold text-brand hover:underline"
+                  href={`/administrar/clases/${studyClass.id}/temas/${topic.id}/examen`}
+                >
+                  Editar examen
+                </Link>
+                <Link
+                  className="text-sm font-semibold text-brand hover:underline"
+                  href={`/temas/${topic.id}`}
+                >
+                  Vista previa →
+                </Link>
+              </span>
+            </div>
           ))}
         </div>
       </section>

@@ -212,6 +212,164 @@ export async function updateClassDetailsAction(
   return { id: data.id as number };
 }
 
+export type ExamQuestionForEdit = {
+  id: number;
+  position: number;
+  questionText: string;
+  difficulty: "basic" | "intermediate" | "advanced";
+  options: { id: number; position: number; text: string }[];
+  correctOptionId: number;
+  explanation: string;
+  optionExplanations: Record<string, string>;
+};
+
+export async function getExamQuestionsForEdit(
+  topicId: number,
+): Promise<ExamQuestionForEdit[] | null> {
+  await requireAdmin();
+  if (!isPositiveInteger(topicId)) return null;
+
+  const admin = getSupabaseAdminClient();
+  const { data: exam, error: examError } = await admin
+    .from("exams")
+    .select("id")
+    .eq("topic_id", topicId)
+    .eq("is_current", true)
+    .maybeSingle();
+  if (examError || !exam) return null;
+
+  const { data: questions, error: questionsError } = await admin
+    .from("exam_questions")
+    .select("id,position,question_text,difficulty")
+    .eq("exam_id", exam.id)
+    .order("position");
+  if (questionsError || !questions?.length) return null;
+
+  const questionIds = questions.map((question) => question.id as number);
+  const [{ data: options, error: optionsError }, { data: keys, error: keysError }] =
+    await Promise.all([
+      admin
+        .from("exam_options")
+        .select("id,question_id,position,option_text")
+        .in("question_id", questionIds)
+        .order("position"),
+      admin
+        .from("exam_answer_keys")
+        .select("question_id,correct_option_id,explanation,option_explanations")
+        .in("question_id", questionIds),
+    ]);
+  if (optionsError || keysError) return null;
+
+  const optionsByQuestion = new Map<
+    number,
+    { id: number; position: number; text: string }[]
+  >();
+  for (const option of options ?? []) {
+    const questionId = option.question_id as number;
+    const list = optionsByQuestion.get(questionId) ?? [];
+    list.push({
+      id: option.id as number,
+      position: option.position as number,
+      text: option.option_text as string,
+    });
+    optionsByQuestion.set(questionId, list);
+  }
+
+  const keysByQuestion = new Map(
+    (keys ?? []).map((key) => [key.question_id as number, key]),
+  );
+
+  return questions.map((question) => {
+    const questionId = question.id as number;
+    const key = keysByQuestion.get(questionId);
+    return {
+      id: questionId,
+      position: question.position as number,
+      questionText: question.question_text as string,
+      difficulty: question.difficulty as ExamQuestionForEdit["difficulty"],
+      options: (optionsByQuestion.get(questionId) ?? []).sort(
+        (a, b) => a.position - b.position,
+      ),
+      correctOptionId: (key?.correct_option_id as number) ?? 0,
+      explanation: (key?.explanation as string) ?? "",
+      optionExplanations:
+        (key?.option_explanations as Record<string, string>) ?? {},
+    };
+  });
+}
+
+export async function updateExamQuestionAction(
+  classId: number,
+  topicId: number,
+  questionId: number,
+  formData: FormData,
+): Promise<ActionResult> {
+  await requireAdmin();
+  if (
+    !isPositiveInteger(classId) ||
+    !isPositiveInteger(topicId) ||
+    !isPositiveInteger(questionId)
+  ) {
+    return { error: "La pregunta seleccionada no es válida." };
+  }
+
+  const questionText = textValue(formData, "questionText");
+  const difficulty = textValue(formData, "difficulty");
+  const option1 = textValue(formData, "option1");
+  const option2 = textValue(formData, "option2");
+  const option3 = textValue(formData, "option3");
+  const correctPosition = Number(textValue(formData, "correctPosition"));
+  const explanation = textValue(formData, "explanation");
+  const explanation1 = textValue(formData, "explanation1");
+  const explanation2 = textValue(formData, "explanation2");
+  const explanation3 = textValue(formData, "explanation3");
+
+  if (!questionText || questionText.length > 600) {
+    return {
+      error: "El texto de la pregunta debe medir entre 1 y 600 caracteres.",
+    };
+  }
+  if (!["basic", "intermediate", "advanced"].includes(difficulty)) {
+    return { error: "Elige un nivel de dificultad válido." };
+  }
+  if (!option1 || !option2 || !option3) {
+    return { error: "Escribe las tres opciones." };
+  }
+  if (![1, 2, 3].includes(correctPosition)) {
+    return { error: "Elige cuál opción es la correcta." };
+  }
+  if (!explanation || !explanation1 || !explanation2 || !explanation3) {
+    return {
+      error:
+        "Completa la explicación general y las tres explicaciones de opción.",
+    };
+  }
+
+  const { error } = await getSupabaseAdminClient().rpc(
+    "update_exam_question_v1",
+    {
+      p_question_id: questionId,
+      p_question_text: questionText,
+      p_difficulty: difficulty,
+      p_option_1: option1,
+      p_option_2: option2,
+      p_option_3: option3,
+      p_correct_position: correctPosition,
+      p_explanation: explanation,
+      p_explanation_1: explanation1,
+      p_explanation_2: explanation2,
+      p_explanation_3: explanation3,
+    },
+  );
+  if (error) return databaseError("updateExamQuestion", error);
+
+  revalidatePath(`/administrar/clases/${classId}`);
+  revalidatePath(`/administrar/clases/${classId}/temas/${topicId}/examen`);
+  revalidatePath(`/temas/${topicId}`);
+  revalidatePath(`/clases/${classId}`);
+  return { id: questionId };
+}
+
 export async function createTopicAction(
   classId: number,
   formData: FormData,
