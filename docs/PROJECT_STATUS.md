@@ -1,13 +1,19 @@
 # Estado actual y plan de venta — CENEVAL Study App
 
-Última actualización: 22 de agosto de 2026 (hora de México)
+Última actualización: 24 de agosto de 2026 (hora de México)
 
-Base documental: `main` en `de403ef` (incluye la Fase 0 del plan de venta, la
-Fase 1 legal, la Fase 5 de producto vendible y la unificación de marca "Sube
-Legal", ya desplegadas en producción) y verificación remota de solo lectura
-del 22 de agosto de 2026 contra el proyecto Supabase `CENEVAL Study App`
+Base documental: `main` en `527385f` (incluye todo lo del 22 de agosto —
+Fase 0, Fase 1 legal, Fase 5 de producto vendible, marca "Sube Legal" — más
+el trabajo del 23–24 de agosto: reconexión de Vercel↔GitHub, cierre de la
+brecha de registro directo en Supabase Auth, auditoría y corrección de C01,
+y el nuevo mecanismo para editar preguntas de examen publicadas) y
+verificación remota directa contra el proyecto Supabase `CENEVAL Study App`
 (`qcseoivljzuxzqeaxfly`) y el proyecto Vercel `ceneval-study-app` (team
-`kova-mx`).
+`kova-mx`) el 24 de agosto de 2026.
+
+> **Si vienes a este documento buscando "qué hacer ahora", ve directo al
+> §0.** El resto del documento es el archivo histórico detallado detrás de
+> esa lista.
 
 Responsables: Fatima (administración y validación) y Codex (desarrollo y contenido)
 
@@ -23,16 +29,115 @@ a dar por verificados sin consultar el proyecto remoto.
 
 ---
 
+## 0. Qué falta y qué hacer ahora (24 de agosto de 2026)
+
+Esta sección es la lista maestra. Cada punto dice: qué falta exactamente,
+por qué falta, quién lo puede resolver, y cuál es el siguiente paso concreto.
+Está ordenada por lo que bloquea más — no por facilidad.
+
+### 0.1 — Requieren una decisión o una acción de Fatima (nadie más las puede cerrar)
+
+| # | Qué falta | Por qué está pendiente | Siguiente paso concreto |
+| --- | --- | --- | --- |
+| A | **Confirmación fiscal por escrito del contador (`D-7`)** | La titular consultará IVA y CFDI con su contador propio; sin esa confirmación no se activa cobro real (Fase 6, etapa 3+). | Pedir al contador una respuesta por escrito (correo o documento) sobre régimen fiscal, IVA aplicable y forma de emitir CFDI por la suscripción. Guardar esa respuesta en el repositorio o en un lugar que quede registrado como evidencia de cierre de `D-7`. |
+| B | **Subir Vercel a un plan que permita uso comercial (`I-1`)** | Vercel Hobby prohíbe cobrar; es una violación de términos, no una limitación técnica que se pueda rodear. | Decidir si se paga Vercel Pro (~$20 USD/mes) y confirmarlo — no lo voy a hacer sin tu autorización explícita del monto. |
+| C | **Subir Supabase a un plan con respaldos automáticos (`I-2`)** | El plan `free` no incluye respaldo diario ni recuperación a un punto en el tiempo; cobrar sobre datos sin respaldo gestionado es un riesgo que no se debe asumir. | Decidir si se paga Supabase Pro (~$25 USD/mes) — esto también resolvería, de paso, el bloqueo de `I-5` (protección de contraseñas filtradas, que ya confirmé que requiere Pro) y el límite de 2 proyectos gratis que hoy bloquea `M-1` (ver punto E). |
+| D | **Dominio propio y proveedor de correo transaccional (`I-3`, `I-4`)** | Sin dominio, los correos de contacto (`privacidad@sube-legal.mx`, `soporte@sube-legal.mx`) son placeholders que no reciben nada; sin correo transaccional propio, el registro/confirmación/recuperación de contraseña fallarían silenciosamente en cuanto haya más de una usuaria. | Elegir proveedor de dominio (ej. Namecheap, Cloudflare) y de correo transaccional (ej. Resend) y confirmar presupuesto — quedó pausado el 23 de agosto a pedido tuyo. Puedo preparar la comparación de opciones y costos cuando lo pidas. |
+| E | **Liberar espacio para el proyecto de ensayo de Supabase (`M-1`)** | Descubierto el 23 de agosto: la organización "Kova" ya tiene 2 proyectos gratuitos ocupados (`Kova Production`, `CENEVAL Study App`) — el límite del plan gratuito. Sin un tercer proyecto no se puede probar la app con más de una usuaria real sin arriesgar producción. | Decidir: (a) pausar temporalmente `Kova Production` para crear el ensayo y luego reactivarla, o (b) subir a Supabase Pro (soluciona esto y `I-2`/`I-5` a la vez), o (c) posponer `M-1`. |
+| F | **Búsqueda formal de marca "Sube Legal" en el IMPI (`D-9`)** | Es la única pieza de Fase 0 que sigue abierta; no bloquea seguir desarrollando con este nombre, pero sí bloquea confirmar el nombre comercial en firme antes de invertir en marketing con él. | Contratar una búsqueda de disponibilidad en MARCANET (IMPI) o un agente de propiedad industrial. |
+| G | **Decisión de alcance de C58 y de los 16 exámenes acumulativos (`P-5`, `P-6`)** | C58 sigue bloqueada por falta de fuente académica suficiente (`docs/C58_SOURCE_AUDIT.md`); los 3 bancos transversales y 16 exámenes acumulativos nunca se decidieron. | Decidir por escrito: ¿se vende explícitamente "57 clases" sin C58, o se consigue primero la transcripción faltante? ¿Los acumulativos entran al lanzamiento o se anuncian como "próximamente"? |
+
+### 0.2 — Ejecutables técnicamente ahora, sin esperar una decisión de negocio
+
+Estas no necesitan gastar dinero ni decidir nada de negocio — solo tiempo de
+trabajo. Ordenadas por impacto:
+
+1. **Continuar la auditoría de contenido con las skills educativas instaladas
+   el 24 de agosto** (`.claude/skills/` y `.agents/skills/`, 10 skills de
+   `GarethManning/education-agent-skills`). Ya se completó el paso 1
+   (`edu-agent-skills-assessment-validity-checker` sobre el examen de C01,
+   que encontró y corrigió 3 reactivos con distractores poco plausibles o que
+   no ejercitaban la estrategia de lectura real). Faltan:
+   - Paso 2: `edu-agent-skills-cognitive-load-analyser` sobre las
+     explicaciones ("learning journey") de las clases.
+   - Paso 3: `edu-agent-skills-retrieval-practice-generator` sobre el patrón
+     de las 685 flashcards existentes.
+   - **Advertencia importante:** el mecanismo de edición construido el 24 de
+     agosto (`update_exam_question_v1`) **solo cubre preguntas de examen**.
+     Si los pasos 2 o 3 encuentran algo que corregir en materiales,
+     flashcards o el learning journey, hace falta extender el mismo patrón
+     (migración + Server Action + formulario) a esas tablas antes de poder
+     aplicar la corrección sin SQL manual — ver punto 2.
+   - También vale la pena repetir el paso 1 sobre una clase de contenido
+     jurídico sustantivo (no de orientación, como C01) para ver si el mismo
+     patrón de "preguntas de recuerdo disfrazadas de aplicación" se repite en
+     el resto del catálogo, antes de decidir si conviene una revisión más
+     amplia.
+2. **Extender el mecanismo de edición de contenido publicado a materiales,
+   mapas conceptuales, flashcards y learning journey.** Hoy solo existe para
+   preguntas de examen (`private.update_exam_question_v1`,
+   `app/actions/academic.ts`, `/administrar/clases/[classId]/temas/[topicId]/examen`).
+   El patrón ya está probado y documentado (migración con `security invoker`
+   + grant solo a `service_role`, Server Action admin-gated, formulario
+   cliente); replicarlo para las tablas restantes es mecánico.
+3. **Segunda copia independiente de las 70 transcripciones originales y
+   restauración de ensayo (`R-4`, prioridad 0).** La primera copia ya se
+   verificó con SHA-256 el 21 de agosto; falta la segunda copia y probar que
+   se puede restaurar.
+4. **Ejecutar `docs/SUPABASE_BACKUP.md` de punta a punta contra producción
+   (`R-1` a `R-3`, prioridad 0).** El mecanismo ya está probado con datos
+   sintéticos (`npm run test:backup`); falta correr
+   `npm run backup:supabase -- -ConfirmProduction` de verdad, verificarlo,
+   sacar una copia cifrada fuera del equipo y restaurarla en un proyecto de
+   ensayo. Requiere tu autorización expresa antes de ejecutarse (toca datos
+   reales).
+5. **Decidir y aplicar el arreglo de `I-6` (variables `Sensitive` en
+   Vercel).** Verificado el 23 de agosto: las 7 variables obligatorias están
+   bien separadas entre Preview y Production, pero las 4 `NEXT_PUBLIC_*`
+   están marcadas `Sensitive`, lo que rompe `npm run ops:preflight:production`.
+   Hay que decidir entre quitarles la marca `Sensitive` (no aporta protección
+   real ya que viajan al navegador de todos modos) o reescribir el script de
+   preflight para que no dependa de leer el valor.
+6. **Pruebas automatizadas de interfaz en navegador** (`Prioridad 3` del §10)
+   — el proyecto ya tiene la skill `webapp-testing` disponible para esto y
+   nunca se ha usado.
+7. **Auditoría de accesibilidad manual** con lector de pantalla, zoom real y
+   dispositivos físicos — la skill `accessibility` está disponible y no se
+   ha corrido.
+8. **Corregir `README.md`**, que sigue desactualizado (dice "40 de 58 clases
+   publicadas" y "no hay despliegue todavía"; en realidad son 57/58 y sí hay
+   despliegue en producción desde hace varios días). Pendiente desde que se
+   señaló el 23 de agosto, nunca se autorizó el cambio.
+
+### 0.3 — Bloqueadas por terceros, sin acción posible hoy
+
+- **C58** sigue bloqueada por falta de fuente académica suficiente sobre
+  administración, cuentas, partición y adjudicación hereditaria
+  (`docs/C58_SOURCE_AUDIT.md`). No se debe crear con solo legislación.
+
+### 0.4 — Regla general para cualquier sesión futura (de agente o humana)
+
+No se debe avanzar la Fase 6 (suscripción/cobro real), abrir el registro
+público, ni gastar dinero en ningún plan o servicio sin que Fatima lo
+autorice explícitamente en ese momento — ver "Qué no hacer todavía" en el §5.
+Todo lo demás en 0.2 se puede ejecutar sin pedir permiso adicional más allá
+de lo que ya pide cada tarea (por ejemplo, `R-1` sí toca producción y
+siempre debe confirmarse antes de correr).
+
+---
+
 ## 1. Resumen ejecutivo
 
 La aplicación tiene un núcleo funcional completo: autenticación privada,
 biblioteca académica, sesiones en orden curricular, materiales, mapas,
 flashcards, repaso espaciado, exámenes, progreso, búsqueda y panel editorial.
 El catálogo completo C01–C57 está importado, revisado y publicado en el
-proyecto remoto. Vercel está **conectado a Git**, con el último deployment
-`READY` en producción; las **20 migraciones** del repositorio están aplicadas
-en Supabase y coinciden una a una con `supabase/migrations/`. El detalle
-verificado está en el §2.
+proyecto remoto. Vercel está **conectado a Git de verdad** (verificado y
+reparado el 23 de agosto — ver §7), con el último deployment `READY` en
+producción; las **21 migraciones** del repositorio están aplicadas en
+Supabase y coinciden una a una con `supabase/migrations/`. El detalle
+verificado está en el §2. La lista concreta de lo que falta y qué hacer con
+cada punto está en el **§0**.
 
 **En términos simples: el producto ya está construido, desplegado y con su
 catálogo cargado.** Desde el 22 de agosto de 2026 también están cerradas
@@ -92,14 +197,14 @@ decisión no añade infraestructura ni reemplaza los gates operativos vigentes.
 
 ## 2. Estado verificado hoy
 
-| Área | Estado comprobado el 22 de agosto de 2026 |
+| Área | Estado comprobado el 24 de agosto de 2026 |
 | --- | --- |
-| Despliegue | Vercel **conectado a Git**. El deployment en producción corresponde al commit actual de `main` (`de403ef`), publicado por deploy manual de CLI el 22 de agosto por la tarde. |
+| Despliegue | Vercel **conectado a Git de verdad** (no lo estaba realmente — ver incidente del 23 de agosto en §7). El deployment en producción corresponde al commit actual de `main` (`527385f`), publicado automáticamente por el push a GitHub. |
 | Salud | `GET /api/health/live` responde `200`. `GET /api/health/ready` responde `404` sin token, que es el comportamiento correcto. |
-| Base de datos | Las **20 migraciones** del repositorio están aplicadas en el proyecto remoto (19 verificadas el 22 de agosto por la mañana + `20260822160822_add_profiles_terms_accepted_at` de la tarea `L-3`, aplicada esa misma tarde). Coinciden una a una con `supabase/migrations/`. |
-| Contenido publicado | **24 materias, 57 clases (todas `published`), 57 temas (todos `approved`), 513 materiales, 57 mapas conceptuales, 685 flashcards, 57 exámenes, 570 preguntas y 570 claves de respuesta.** Detalle completo en el §8. |
-| Seguridad de base | Los asesores de Supabase solo reportan el `INFO` esperado de `exam_answer_keys` sin políticas (bloqueo deliberado) y un `WARN` de contraseñas filtradas, pendiente de activar (`I-5`). Sin errores. |
-| Código | `npm run lint` pasa sin hallazgos. El build de producción del mismo commit se completó en Vercel. |
+| Base de datos | Las **21 migraciones** del repositorio están aplicadas en el proyecto remoto (20 verificadas el 22 de agosto + `20260824040500_add_update_exam_question_v1` del 24 de agosto). Coinciden una a una con `supabase/migrations/`. |
+| Contenido publicado | **24 materias, 57 clases (todas `published`), 57 temas (todos `approved`), 513 materiales, 57 mapas conceptuales, 685 flashcards, 57 exámenes, 570 preguntas y 570 claves de respuesta.** Detalle completo en el §8. El examen de C01 (10 preguntas) fue auditado y 3 de sus reactivos corregidos el 24 de agosto — ver §0.2 y §7. |
+| Seguridad de base | Los asesores de Supabase solo reportan el `INFO` esperado de `exam_answer_keys` sin políticas (bloqueo deliberado) y un `WARN` de contraseñas filtradas, pendiente de activar y confirmado el 23 de agosto que **requiere plan Pro** (`I-5`, ver §0.1-C). Sin errores. Se cerró además una brecha real (registro directo contra Supabase sin pasar por la app) — ver §7. |
+| Código | `npm run lint` y `npm run build` pasan sin hallazgos. El build de producción del mismo commit se completó en Vercel. |
 | Usuarios | **1 usuario, 1 perfil administrador, 0 intentos de examen** en producción. |
 | Venta | Fase 0 (decisiones) cerrada, Fase 1 (legal) y Fase 5 (producto vendible) publicadas en producción — ver §4 y §5. |
 
@@ -218,6 +323,12 @@ y el E2E se ejecutaron **en local**, no contra el proyecto remoto. El
 aislamiento entre estudiantes está diseñado y probado localmente, pero no
 demostrado en el entorno real (`M-1` a `M-3`, §5).
 
+**Intento del 23 de agosto de 2026:** se intentó crear el proyecto de ensayo
+para `M-1` (costo confirmado: $0/mes, cabe en el plan gratuito). Falló: la
+organización "Kova" ya tiene el máximo de 2 proyectos gratuitos ocupados
+(`Kova Production` y `CENEVAL Study App`). Ver la decisión pendiente en
+§0.1-E.
+
 ---
 
 ## 4. Decisiones de Fase 0 — producto, precio y titularidad (todas cerradas)
@@ -325,7 +436,7 @@ hecha.
 | I-3 | Contratar un dominio propio, apuntarlo a Vercel y actualizar `NEXT_PUBLIC_SITE_URL` y las URLs de redirección de Supabase Auth. | El dominio sirve la app por HTTPS y el correo de confirmación apunta a él. |
 | I-4 | Configurar un proveedor de correo transaccional propio en Supabase Auth y probar alta, confirmación y recuperación de contraseña. | Tres correos recibidos en una cuenta real, desde el dominio propio. |
 | I-5 | Activar la protección contra contraseñas filtradas en Supabase Auth. | El asesor de seguridad deja de reportar el `WARN`. |
-| I-6 | Verificar que las siete variables de entorno de `.env.example` están configuradas por separado en Preview y en Production, sin exponer valores. | `npm run ops:preflight:production` en verde contra el entorno real. |
+| I-6 | Verificar que las siete variables de entorno de `.env.example` están configuradas por separado en Preview y en Production, sin exponer valores. | **Presencia y separación verificadas el 23 de agosto (§7).** `npm run ops:preflight:production` sigue en rojo porque las 4 variables `NEXT_PUBLIC_*` están marcadas `Sensitive` en Vercel — pendiente decidir si se quita la marca o se reescribe el script (§0.2, punto 5). |
 | I-7 | Revisar los límites de autenticación (intentos de acceso, altas por hora) antes de abrir el registro. | Configuración registrada en el runbook. |
 
 ### Fase 3 — Respaldo y recuperación reales
@@ -342,7 +453,7 @@ hecha.
 
 | ID | Tarea | Evidencia de cierre |
 | --- | --- | --- |
-| M-1 | Crear un **proyecto Supabase de ensayo** con las 20 migraciones aplicadas desde cero. | Historial de migraciones del proyecto de ensayo. |
+| M-1 | Crear un **proyecto Supabase de ensayo** con las 21 migraciones aplicadas desde cero. | Historial de migraciones del proyecto de ensayo. **Bloqueado desde el 23 de agosto:** la organización no tiene espacio en el plan gratuito (2/2 proyectos ocupados) — decisión pendiente en §0.1-E. |
 | M-2 | Ejecutar allí la suite RLS completa con dos estudiantes y una administradora. | Las comprobaciones aprobadas y sin residuos, registradas con fecha. |
 | M-3 | Comprobar en el ensayo que una estudiante no ve el progreso, los intentos ni las respuestas de otra. | Evidencia de la prueba cruzada. |
 | M-4 | Invitar a 3 a 5 personas reales de confianza, sin cobro, a recorrer la app completa en teléfono y computadora. | Lista de hallazgos y su corrección. |
@@ -830,10 +941,11 @@ no locales; ninguna de estas pruebas escribió en CENEVAL remoto.
 
 Queda pendiente:
 
-- crear un proyecto de ensayo aparte de producción, aplicar allí las 20
+- crear un proyecto de ensayo aparte de producción, aplicar allí las 21
   migraciones desde cero y repetir la suite RLS con datos sintéticos (tarea
-  `M-1`); las 20 migraciones ya están aplicadas en CENEVAL, pero ese ensayo
-  con datos no reales sigue sin hacerse;
+  `M-1`); las 21 migraciones ya están aplicadas en CENEVAL, pero ese ensayo
+  con datos no reales sigue sin hacerse y además está bloqueado por el límite
+  de proyectos gratuitos de la organización (§0.1-E);
 - mantener `npm run db:lint:local` sin advertencias; la migración nueva ya
   eliminó los doce avisos de `private.import_class_package_v12` y el reset,
   lint, round-trip RPC y RLS local volvieron a pasar;
@@ -943,16 +1055,22 @@ solo con legislación; repetir después el pipeline 1.2 completo descrito en
 
 ## 11. Próximas tareas ejecutables
 
+> Esta tabla es un resumen corto; la versión detallada con "por qué" y
+> "siguiente paso concreto" para cada punto está en el **§0**.
+
 | # | Tarea | Evidencia para cerrarla |
 | ---: | --- | --- |
 | 1 | Completar el respaldo de transcripciones | Segunda copia independiente y restauración de ensayo |
 | 2 | Ejecutar y probar el respaldo documentado | Exportación fechada, copia externa verificada y restauración de ensayo |
 | 3 | Ampliar y ejecutar la suite RLS | Comprobaciones actuales y casos de temas no aprobados aprobados en CENEVAL |
-| 4 | Crear un proyecto de ensayo Supabase aparte de producción para repetir la suite RLS con datos que no sean reales | Proyecto de ensayo con las 20 migraciones aplicadas y RLS aprobada (tarea `M-1`) |
+| 4 | Crear un proyecto de ensayo Supabase aparte de producción para repetir la suite RLS con datos que no sean reales | Proyecto de ensayo con las 21 migraciones aplicadas y RLS aprobada (tarea `M-1`). Bloqueado por límite de proyectos gratuitos — ver §0.1-E |
 | 5 | Aprobar C01–C57 — completado | 57 clases publicadas y 57 temas aprobados, verificado el 22 de agosto de 2026 en el proyecto remoto |
-| 6 | Crear pruebas de navegador | Flujos centrales reproducibles en CI o entorno aislado |
+| 6 | Crear pruebas de navegador | Flujos centrales reproducibles en CI o entorno aislado (skill `webapp-testing` disponible y sin usar) |
 | 7 | Completar y validar el despliegue privado | Variables persistentes, administradora operativa y URL estable aprobada desde teléfono y computadora |
 | 8 | Cerrar los bloqueos de venta (infraestructura apta para cobrar, respaldo real) | Fases 2 y 3 (§5) con evidencia de cierre |
+| 9 | Continuar la auditoría de contenido con las skills educativas (pasos 2 y 3: carga cognitiva y flashcards) | Hallazgos documentados y, si aplica, corregidos — ver §0.2, punto 1 |
+| 10 | Extender `update_exam_question_v1` a materiales, mapas, flashcards y learning journey | Mismo patrón aplicado a esas tablas — ver §0.2, punto 2 |
+| 11 | Corregir `README.md` (desactualizado desde el 23 de agosto) | Cifras y estado de despliegue correctos |
 
 ---
 
@@ -984,18 +1102,22 @@ correspondiente y sus recorridos de alta, cobro, cancelación y soporte.
 
 ## 14. Siguiente acción inmediata
 
-Con C01–C57 publicadas y la Fase 0, Fase 1 y Fase 5 del plan de venta ya
-cerradas y publicadas, la siguiente acción es proteger lo que ya existe y
-avanzar la infraestructura y el respaldo, no producir más contenido ni tomar
-más decisiones de producto:
+**La lista detallada y actualizada está en el §0.** En resumen: la siguiente
+acción es proteger lo que ya existe, avanzar la infraestructura y el
+respaldo, y continuar la auditoría de calidad del contenido ya publicado —
+no producir clases nuevas ni tomar más decisiones de producto (las de
+producto, precio y nombre ya cerraron en la Fase 0, §4).
 
-1. crear una segunda copia independiente del archivo editorial y ensayar su restauración;
-2. ejecutar y completar el procedimiento de `docs/SUPABASE_BACKUP.md`;
-3. crear un proyecto de ensayo aparte de producción para repetir el gate RLS
-   dinámico con datos sintéticos (tarea `M-1`); las migraciones y el
-   contenido C01–C57 ya se aplicaron y publicaron directamente en CENEVAL,
-   sin pasar primero por ese ensayo;
-4. solicitar la nueva transcripción definida en `C58_SOURCE_AUDIT.md`; C58 no
-   puede producirse honestamente con el corpus actual;
-5. avanzar las Fases 2 y 3 (§5): infraestructura apta para cobrar y respaldo
-   real. La Fase 0 (decisiones) y la Fase 1 (legal) ya cerraron — ver §4 y §5.
+Priorizado:
+
+1. Decidir los puntos de §0.1 que dependen de Fatima — sobre todo E (espacio
+   para el proyecto de ensayo de `M-1`) y B/C (planes de pago de Vercel y
+   Supabase), porque desbloquean varias otras tareas a la vez.
+2. Mientras eso se decide, seguir con lo ejecutable de §0.2: continuar la
+   auditoría de contenido con las skills educativas instaladas (pasos 2 y 3),
+   la segunda copia de las transcripciones (`R-4`), y el resto de tareas que
+   no dependen de gastar dinero.
+3. Ejecutar `docs/SUPABASE_BACKUP.md` de punta a punta contra producción
+   (requiere autorización expresa antes de correr — §0.2, punto 4).
+4. Solicitar la nueva transcripción definida en `C58_SOURCE_AUDIT.md`; C58 no
+   puede producirse honestamente con el corpus actual.
