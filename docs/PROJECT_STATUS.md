@@ -125,18 +125,27 @@ decisión no añade infraestructura ni reemplaza los gates operativos vigentes.
 - No hay respaldo real de la base remota, ni copia externa, ni restauración
   ensayada.
 - No hay monitoreo, alertas, registro de errores ni canal de soporte atendido.
-- **No existe un mecanismo para actualizar una clase ya publicada.** Descubierto
-  el 24 de agosto de 2026 al corregir 3 reactivos de C01 tras una auditoría de
-  validez: `import_class_package_v12` (el único camino de escritura) rechaza
-  cualquier paquete cuyo `curriculum_code` ya exista — solo sirve para importar
-  clases nuevas como borrador. No hay flujo de edición en `/administrar` ni
-  script de "reimportar con nueva versión". La corrección de C01 se hizo con un
-  `UPDATE` SQL manual y verificado directo sobre `exam_questions`,
-  `exam_options` y `exam_answer_keys`, fuera de las validaciones de evidencia
-  que sí exige la importación normal — válido como excepción puntual (0
-  intentos de examen en producción, sin datos históricos que romper), pero no
-  es una solución repetible. Falta decidir si vale la pena construir un flujo
-  de actualización versionada antes de que haya más contenido que corregir.
+- **Editar preguntas de examen ya publicadas — resuelto el 24 de agosto de
+  2026.** El hallazgo original (`import_class_package_v12` solo importa
+  clases nuevas; la corrección de C01 se hizo con `UPDATE` SQL manual sin
+  pasar por ninguna validación de la app) quedó cerrado con un mecanismo
+  propio: `private.update_exam_question_v1` / `public.update_exam_question_v1`
+  (`security invoker`, otorgada solo a `service_role`, mismo candado que
+  `import_class_package_v12`/`export_class_package_v12`), un Server Action
+  admin-gated (`updateExamQuestionAction` en `app/actions/academic.ts`) y una
+  página nueva en `/administrar/clases/[classId]/temas/[topicId]/examen`. No
+  toca `editorial_artifacts`/`editorial_artifact_evidence` (los vínculos de
+  evidencia apuntan por `question_id`/`option_id`, no por texto); los
+  triggers `*_invalidate_editorial_review` ya existentes se disparan solos y
+  marcan la revisión aprobada vigente como obsoleta sin despublicar la
+  clase. Verificado con una prueba funcional directa (texto, opciones,
+  opción correcta y explicaciones se actualizan correctamente,
+  `content_version` se incrementa), con `authenticated`/`anon` denegados en
+  local y en producción, y con `npm run security:rls` en 141/141 tras
+  aplicar la migración desde cero. **Alcance:** solo preguntas de examen —
+  editar materiales, mapas conceptuales, flashcards o el learning journey de
+  una clase publicada sigue sin tener un flujo soportado; se puede extender
+  con el mismo patrón si hace falta.
 - Vercel sigue en Hobby (no permite uso comercial) y Supabase sigue en plan
   `free` (sin respaldos automáticos gestionados).
 
