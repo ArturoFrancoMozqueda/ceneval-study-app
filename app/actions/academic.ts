@@ -591,6 +591,208 @@ export async function updateTopicLearningJourneyAction(
   return { id: topicId };
 }
 
+export type StudyMaterialForEdit = {
+  id: number;
+  materialType:
+    | "short_answer"
+    | "full_explanation"
+    | "legal_basis"
+    | "simple_example"
+    | "ceneval_example"
+    | "summary"
+    | "study_guide"
+    | "key_concepts"
+    | "common_errors";
+  title: string;
+  content: string;
+  version: number;
+};
+
+export async function getStudyMaterialsForEdit(
+  topicId: number,
+): Promise<StudyMaterialForEdit[] | null> {
+  await requireAdmin();
+  if (!isPositiveInteger(topicId)) return null;
+
+  const { data: materials, error } = await getSupabaseAdminClient()
+    .from("study_materials")
+    .select("id,material_type,title,content,version")
+    .eq("topic_id", topicId)
+    .eq("is_current", true)
+    .order("material_type");
+  if (error || !materials?.length) return null;
+
+  return materials.map((material) => ({
+    id: material.id as number,
+    materialType: material.material_type as StudyMaterialForEdit["materialType"],
+    title: material.title as string,
+    content: material.content as string,
+    version: material.version as number,
+  }));
+}
+
+export async function updateStudyMaterialAction(
+  classId: number,
+  topicId: number,
+  materialId: number,
+  formData: FormData,
+): Promise<ActionResult> {
+  await requireAdmin();
+  if (
+    !isPositiveInteger(classId) ||
+    !isPositiveInteger(topicId) ||
+    !isPositiveInteger(materialId)
+  ) {
+    return { error: "El material seleccionado no es válido." };
+  }
+
+  const title = textValue(formData, "title");
+  const content = textValue(formData, "content");
+
+  if (!title) {
+    return { error: "Escribe el título del material." };
+  }
+  if (!content) {
+    return { error: "Escribe el contenido del material." };
+  }
+
+  const { data, error } = await getSupabaseAdminClient().rpc(
+    "update_study_material_v1",
+    {
+      p_material_id: materialId,
+      p_title: title,
+      p_content: content,
+    },
+  );
+  if (error) return databaseError("updateStudyMaterial", error);
+
+  revalidatePath(`/administrar/clases/${classId}`);
+  revalidatePath(`/administrar/clases/${classId}/temas/${topicId}/materiales`);
+  revalidatePath(`/temas/${topicId}`);
+  revalidatePath(`/clases/${classId}`);
+  return { id: data as number };
+}
+
+export type ConceptMapNodeForEdit = {
+  id: string;
+  label: string;
+  description: string;
+  parentId: string;
+};
+
+export type ConceptMapForEdit = {
+  id: number;
+  title: string;
+  description: string;
+  nodes: ConceptMapNodeForEdit[];
+  version: number;
+};
+
+export async function getConceptMapForEdit(
+  topicId: number,
+): Promise<ConceptMapForEdit | null> {
+  await requireAdmin();
+  if (!isPositiveInteger(topicId)) return null;
+
+  const { data: map, error } = await getSupabaseAdminClient()
+    .from("concept_maps")
+    .select("id,title,description,nodes,version")
+    .eq("topic_id", topicId)
+    .eq("is_current", true)
+    .maybeSingle();
+  if (error || !map) return null;
+
+  const nodes = Array.isArray(map.nodes)
+    ? (map.nodes as Record<string, unknown>[]).map((node) => ({
+        id: String(node.id ?? ""),
+        label: String(node.label ?? ""),
+        description: String(node.description ?? ""),
+        parentId: String(node.parentId ?? ""),
+      }))
+    : [];
+
+  return {
+    id: map.id as number,
+    title: map.title as string,
+    description: (map.description as string | null) ?? "",
+    nodes,
+    version: map.version as number,
+  };
+}
+
+export async function updateConceptMapAction(
+  classId: number,
+  topicId: number,
+  mapId: number,
+  formData: FormData,
+): Promise<ActionResult> {
+  await requireAdmin();
+  if (
+    !isPositiveInteger(classId) ||
+    !isPositiveInteger(topicId) ||
+    !isPositiveInteger(mapId)
+  ) {
+    return { error: "El mapa conceptual seleccionado no es válido." };
+  }
+
+  const title = textValue(formData, "title");
+  const description = textValue(formData, "description");
+
+  if (!title) {
+    return { error: "Escribe el título del mapa conceptual." };
+  }
+
+  const nodeCount = Number(textValue(formData, "nodeCount"));
+  if (!Number.isInteger(nodeCount) || nodeCount < 1) {
+    return { error: "El mapa conceptual necesita al menos un nodo." };
+  }
+
+  const nodes: Record<string, string>[] = [];
+  const nodeIds = new Set<string>();
+  for (let index = 0; index < nodeCount; index += 1) {
+    const nodeId = textValue(formData, `nodeId${index}`);
+    const label = textValue(formData, `nodeLabel${index}`);
+    const description = textValue(formData, `nodeDescription${index}`);
+    const parentId = textValue(formData, `nodeParentId${index}`);
+    if (!nodeId || !label) {
+      return { error: "Cada nodo necesita un id y una etiqueta." };
+    }
+    if (nodeIds.has(nodeId)) {
+      return { error: `El id de nodo "${nodeId}" está repetido.` };
+    }
+    nodeIds.add(nodeId);
+
+    const node: Record<string, string> = { id: nodeId, label };
+    if (description) node.description = description;
+    if (parentId) node.parentId = parentId;
+    nodes.push(node);
+  }
+  for (const node of nodes) {
+    if (node.parentId && !nodeIds.has(node.parentId)) {
+      return {
+        error: `El nodo padre "${node.parentId}" no existe entre los nodos del mapa.`,
+      };
+    }
+  }
+
+  const { data, error } = await getSupabaseAdminClient().rpc(
+    "update_concept_map_v1",
+    {
+      p_map_id: mapId,
+      p_title: title,
+      p_description: description,
+      p_nodes: nodes,
+    },
+  );
+  if (error) return databaseError("updateConceptMap", error);
+
+  revalidatePath(`/administrar/clases/${classId}`);
+  revalidatePath(`/administrar/clases/${classId}/temas/${topicId}/mapa`);
+  revalidatePath(`/temas/${topicId}`);
+  revalidatePath(`/clases/${classId}`);
+  return { id: data as number };
+}
+
 export async function createTopicAction(
   classId: number,
   formData: FormData,

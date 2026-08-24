@@ -88,25 +88,38 @@ trabajo. Ordenadas por impacto:
      "preguntas de recuerdo disfrazadas de aplicación" se repite en el resto
      del catálogo, antes de decidir si conviene una revisión más amplia.
 2. **Extender el mecanismo de edición de contenido publicado a materiales,
-   mapas conceptuales, flashcards y learning journey.** Preguntas de examen
-   quedó resuelto el 24 de agosto de 2026 (ver más abajo). **Flashcards y
-   learning journey también quedaron resueltos el 24 de agosto de 2026**
-   con el mismo patrón: `private.update_flashcard_v1` /
-   `public.update_flashcard_v1` (UPDATE en el lugar, `flashcards` no tiene
-   columnas de versión) y `private.update_topic_learning_journey_v1` /
-   `public.update_topic_learning_journey_v1` (UPDATE en el lugar sobre la
-   fila única por `topic_id`), ambos `security invoker` otorgados solo a
-   `service_role`, con Server Actions admin-gated
-   (`updateFlashcardAction`, `updateTopicLearningJourneyAction` en
-   `app/actions/academic.ts`) y páginas nuevas en
-   `/administrar/clases/[classId]/temas/[topicId]/flashcards` y
-   `/administrar/clases/[classId]/temas/[topicId]/learning-journey`.
-   **Faltan materiales y mapas conceptuales** (columnas `version`/
-   `is_current`, necesitan insertar una fila nueva en vez de UPDATE en el
-   lugar) — el patrón ya está probado y documentado tres veces (migración
-   con `security invoker` + grant solo a `service_role`, Server Action
-   admin-gated, formulario cliente); replicarlo para esas dos tablas
-   restantes es mecánico.
+   mapas conceptuales, flashcards y learning journey — completado el 24 de
+   agosto de 2026.** Las 5 categorías de contenido publicado ahora tienen
+   mecanismo de edición admin-gated, sin SQL manual:
+   - Preguntas de examen: `update_exam_question_v1` (UPDATE en el lugar).
+   - Flashcards y learning journey: `update_flashcard_v1` /
+     `update_topic_learning_journey_v1` (UPDATE en el lugar — ninguna de las
+     dos tiene columnas de versión).
+   - **Materiales y mapas conceptuales:** `update_study_material_v1` /
+     `update_concept_map_v1`. Estas dos SÍ tienen `version`/`is_current` con
+     un índice único parcial (una sola fila vigente por tema+tipo en
+     materiales, una por tema en mapas), así que el mecanismo es distinto:
+     **desactiva la fila vigente e inserta una fila nueva** con
+     `version + 1`, tal como estaba pensado el esquema original
+     (`docs/06-database-design.md`, "Versiones de material").
+     **Limitación conocida y documentada, no resuelta:** como la fila nueva
+     tiene un `id` distinto al de la fila vieja, los vínculos de evidencia
+     en `editorial_artifacts`/`editorial_artifact_evidence` de la fila vieja
+     quedan huérfanos — siguen existiendo como historial, pero
+     `private.class_has_complete_evidence` ya filtra por `is_current` y deja
+     de contarlos. Tras editar un material o un mapa conceptual, esa fila
+     deja de pasar la validación de evidencia completa hasta que alguien
+     vuelva a vincular evidencia a la fila nueva — igual que si el material
+     se regenerara por el proceso editorial normal. A diferencia de
+     flashcards/examen/journey (que no cambian de `id` y por eso conservan
+     su evidencia intacta al editarse).
+   - Todas las funciones son `security invoker`, otorgadas solo a
+     `service_role` (verificado: `authenticated`/`anon` reciben
+     `permission denied`), con Server Actions admin-gated en
+     `app/actions/academic.ts` y páginas en
+     `/administrar/clases/[classId]/temas/[topicId]/{examen,flashcards,learning-journey,materiales,mapa}`.
+     Probado con datos sintéticos en producción (creados y borrados sin
+     residuo) y sin alertas nuevas de seguridad.
 3. **Segunda copia independiente de las 70 transcripciones originales y
    restauración de ensayo (`R-4`, prioridad 0).** La primera copia ya se
    verificó con SHA-256 el 21 de agosto; falta la segunda copia y probar que
@@ -302,10 +315,40 @@ decisión no añade infraestructura ni reemplaza los gates operativos vigentes.
   dejar residuo), validaciones de contenido en blanco/incompleto rechazadas
   correctamente, `authenticated`/`anon` denegados en las cuatro funciones
   (`has_function_privilege` en `false`), y sin alertas nuevas de seguridad
-  tras `get_advisors`. **Alcance:** preguntas de examen, flashcards y
-  learning journey ya tienen mecanismo de edición — materiales y mapas
-  conceptuales de una clase publicada siguen sin tener un flujo soportado;
-  se puede extender con el mismo patrón si hace falta.
+  tras `get_advisors`.
+- **Editar materiales y mapas conceptuales ya publicados — resuelto el 24 de
+  agosto de 2026.** Cierra la brecha para las últimas dos de las 5
+  categorías de contenido: `private.update_study_material_v1` /
+  `public.update_study_material_v1` y `private.update_concept_map_v1` /
+  `public.update_concept_map_v1`. A diferencia de las tres tablas
+  anteriores, `study_materials` y `concept_maps` sí tienen columnas
+  `version`/`is_current` con un índice único parcial (una fila vigente por
+  tema+tipo en materiales, una por tema en mapas) — así que estas dos
+  funciones no hacen `UPDATE` en el lugar: desactivan la fila vigente
+  (`is_current = false`) e insertan una fila nueva con `version + 1`, tal
+  como estaba pensado el esquema original
+  (`docs/06-database-design.md`, "Versiones de material"). **Limitación
+  conocida, documentada y no resuelta:** como la fila nueva tiene un `id`
+  distinto, los vínculos de evidencia de la fila vieja en
+  `editorial_artifacts`/`editorial_artifact_evidence` quedan huérfanos —
+  siguen existiendo como historial, pero `private.class_has_complete_evidence`
+  ya filtra por `is_current` y deja de contarlos, así que la fila editada
+  deja de pasar la validación de evidencia completa hasta que alguien
+  vuelva a vincularle evidencia nueva (igual que si el material se
+  regenerara por el proceso editorial normal). Ambas funciones `security
+  invoker`, otorgadas solo a `service_role`. Server Actions admin-gated
+  (`updateStudyMaterialAction`, `updateConceptMapAction`) y páginas nuevas
+  en `/administrar/clases/[classId]/temas/[topicId]/materiales` y
+  `/administrar/clases/[classId]/temas/[topicId]/mapa`. Verificado con una
+  prueba funcional directa contra producción (fila de prueba, dos
+  ediciones sucesivas, confirmando que solo queda una fila `is_current` a
+  la vez y que la versión se incrementa correctamente; todo borrado sin
+  residuo), rechazo correcto al intentar editar una versión que ya no es
+  vigente, `authenticated`/`anon` denegados en las cuatro funciones
+  (`has_function_privilege` en `false`), y sin alertas nuevas de seguridad
+  tras `get_advisors`. **Con esto, las 5 categorías de contenido publicado
+  (examen, flashcards, learning journey, materiales, mapas conceptuales)
+  ya tienen mecanismo de edición admin-gated, sin necesitar SQL manual.**
 - Vercel sigue en Hobby (no permite uso comercial) y Supabase sigue en plan
   `free` (sin respaldos automáticos gestionados).
 
@@ -1138,7 +1181,7 @@ solo con legislación; repetir después el pipeline 1.2 completo descrito en
 | 7 | Completar y validar el despliegue privado | Variables persistentes, administradora operativa y URL estable aprobada desde teléfono y computadora |
 | 8 | Cerrar los bloqueos de venta (infraestructura apta para cobrar, respaldo real) | Fases 2 y 3 (§5) con evidencia de cierre |
 | 9 | Continuar la auditoría de contenido con las skills educativas (pasos 2 y 3: carga cognitiva y flashcards) | Hallazgos documentados y, si aplica, corregidos — ver §0.2, punto 1 |
-| 10 | Extender `update_exam_question_v1` a materiales, mapas, flashcards y learning journey | Mismo patrón aplicado a esas tablas — ver §0.2, punto 2 |
+| 10 | Extender `update_exam_question_v1` a materiales, mapas, flashcards y learning journey | **✅ Completado (24 ago).** Mismo patrón aplicado a las 4 tablas restantes — ver §0.2, punto 2 |
 | 11 | Corregir `README.md` (desactualizado desde el 23 de agosto) | Cifras y estado de despliegue correctos |
 
 ---

@@ -125,6 +125,18 @@ export default async function EditorialClassPage({
                 </Link>
                 <Link
                   className="text-sm font-semibold text-brand hover:underline"
+                  href={`/administrar/clases/${studyClass.id}/temas/${topic.id}/materiales`}
+                >
+                  Editar materiales
+                </Link>
+                <Link
+                  className="text-sm font-semibold text-brand hover:underline"
+                  href={`/administrar/clases/${studyClass.id}/temas/${topic.id}/mapa`}
+                >
+                  Editar mapa
+                </Link>
+                <Link
+                  className="text-sm font-semibold text-brand hover:underline"
                   href={`/temas/${topic.id}`}
                 >
                   Vista previa →

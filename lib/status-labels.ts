@@ -1,4 +1,8 @@
-import type { PublicationStatus, Topic } from "@/lib/data/academic";
+import type {
+  PublicationStatus,
+  StudyMaterial,
+  Topic,
+} from "@/lib/data/academic";
 
 export const publicationStatusLabels: Record<PublicationStatus, string> = {
   draft: "Borrador",
@@ -34,4 +38,16 @@ export const topicApprovalStatusLabels: Record<
   pending: "Pendiente",
   approved: "Aprobado",
   rejected: "Rechazado",
+};
+
+export const materialTypeLabels: Record<StudyMaterial["materialType"], string> = {
+  short_answer: "Respuesta corta",
+  full_explanation: "Explicación completa",
+  legal_basis: "Fundamento legal",
+  simple_example: "Ejemplo simple",
+  ceneval_example: "Ejemplo tipo CENEVAL",
+  summary: "Resumen",
+  study_guide: "Guía de estudio",
+  key_concepts: "Conceptos clave",
+  common_errors: "Errores comunes",
 };
