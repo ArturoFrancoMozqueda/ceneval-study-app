@@ -37,15 +37,19 @@ Está ordenada por lo que bloquea más — no por facilidad.
 
 ### 0.1 — Requieren una decisión o una acción de Fatima (nadie más las puede cerrar)
 
+Ordenada a propósito para dejar "subir a un plan de pago" al final — no porque
+importe menos, sino porque son gasto recurrente y conviene decidirlas con
+calma, después de ver las demás.
+
 | # | Qué falta | Por qué está pendiente | Siguiente paso concreto |
 | --- | --- | --- | --- |
 | A | **Confirmación fiscal por escrito del contador (`D-7`)** | La titular consultará IVA y CFDI con su contador propio; sin esa confirmación no se activa cobro real (Fase 6, etapa 3+). | Pedir al contador una respuesta por escrito (correo o documento) sobre régimen fiscal, IVA aplicable y forma de emitir CFDI por la suscripción. Guardar esa respuesta en el repositorio o en un lugar que quede registrado como evidencia de cierre de `D-7`. |
-| B | **Subir Vercel a un plan que permita uso comercial (`I-1`)** | Vercel Hobby prohíbe cobrar; es una violación de términos, no una limitación técnica que se pueda rodear. | Decidir si se paga Vercel Pro (~$20 USD/mes) y confirmarlo — no lo voy a hacer sin tu autorización explícita del monto. |
-| C | **Subir Supabase a un plan con respaldos automáticos (`I-2`)** | El plan `free` no incluye respaldo diario ni recuperación a un punto en el tiempo; cobrar sobre datos sin respaldo gestionado es un riesgo que no se debe asumir. | Decidir si se paga Supabase Pro (~$25 USD/mes) — esto también resolvería, de paso, el bloqueo de `I-5` (protección de contraseñas filtradas, que ya confirmé que requiere Pro) y el límite de 2 proyectos gratis que hoy bloquea `M-1` (ver punto E). |
-| D | **Dominio propio y proveedor de correo transaccional (`I-3`, `I-4`)** | Sin dominio, los correos de contacto (`privacidad@sube-legal.mx`, `soporte@sube-legal.mx`) son placeholders que no reciben nada; sin correo transaccional propio, el registro/confirmación/recuperación de contraseña fallarían silenciosamente en cuanto haya más de una usuaria. | Elegir proveedor de dominio (ej. Namecheap, Cloudflare) y de correo transaccional (ej. Resend) y confirmar presupuesto — quedó pausado el 23 de agosto a pedido tuyo. Puedo preparar la comparación de opciones y costos cuando lo pidas. |
-| E | **Liberar espacio para el proyecto de ensayo de Supabase (`M-1`)** | Descubierto el 23 de agosto: la organización "Kova" ya tiene 2 proyectos gratuitos ocupados (`Kova Production`, `CENEVAL Study App`) — el límite del plan gratuito. Sin un tercer proyecto no se puede probar la app con más de una usuaria real sin arriesgar producción. | Decidir: (a) pausar temporalmente `Kova Production` para crear el ensayo y luego reactivarla, o (b) subir a Supabase Pro (soluciona esto y `I-2`/`I-5` a la vez), o (c) posponer `M-1`. |
-| F | **Búsqueda formal de marca "Sube Legal" en el IMPI (`D-9`)** | Es la única pieza de Fase 0 que sigue abierta; no bloquea seguir desarrollando con este nombre, pero sí bloquea confirmar el nombre comercial en firme antes de invertir en marketing con él. | Contratar una búsqueda de disponibilidad en MARCANET (IMPI) o un agente de propiedad industrial. |
-| G | **Decisión de alcance de C58 y de los 16 exámenes acumulativos (`P-5`, `P-6`)** | C58 sigue bloqueada por falta de fuente académica suficiente (`docs/C58_SOURCE_AUDIT.md`); los 3 bancos transversales y 16 exámenes acumulativos nunca se decidieron. | Decidir por escrito: ¿se vende explícitamente "57 clases" sin C58, o se consigue primero la transcripción faltante? ¿Los acumulativos entran al lanzamiento o se anuncian como "próximamente"? |
+| B | **Dominio propio y proveedor de correo transaccional (`I-3`, `I-4`)** | Sin dominio, los correos de contacto (`privacidad@sube-legal.mx`, `soporte@sube-legal.mx`) son placeholders que no reciben nada; sin correo transaccional propio, el registro/confirmación/recuperación de contraseña fallarían silenciosamente en cuanto haya más de una usuaria. | Elegir proveedor de dominio (ej. Namecheap, Cloudflare) y de correo transaccional (ej. Resend) y confirmar presupuesto — quedó pausado el 23 de agosto a pedido tuyo. Puedo preparar la comparación de opciones y costos cuando lo pidas. |
+| C | **Liberar espacio para el proyecto de ensayo de Supabase (`M-1`)** | Descubierto el 23 de agosto: la organización "Kova" ya tiene 2 proyectos gratuitos ocupados (`Kova Production`, `CENEVAL Study App`) — el límite del plan gratuito. Sin un tercer proyecto no se puede probar la app con más de una usuaria real sin arriesgar producción. | Decidir: (a) pausar temporalmente `Kova Production` para crear el ensayo y luego reactivarla, (b) posponer `M-1`, o (c) resolverlo junto con G (subir a Supabase Pro también quita este límite). |
+| D | **Búsqueda formal de marca "Sube Legal" en el IMPI (`D-9`)** | Es la única pieza de Fase 0 que sigue abierta; no bloquea seguir desarrollando con este nombre, pero sí bloquea confirmar el nombre comercial en firme antes de invertir en marketing con él. | Contratar una búsqueda de disponibilidad en MARCANET (IMPI) o un agente de propiedad industrial. |
+| E | **Decisión de alcance de C58 y de los 16 exámenes acumulativos (`P-5`, `P-6`)** | C58 sigue bloqueada por falta de fuente académica suficiente (`docs/C58_SOURCE_AUDIT.md`); los 3 bancos transversales y 16 exámenes acumulativos nunca se decidieron. | Decidir por escrito: ¿se vende explícitamente "57 clases" sin C58, o se consigue primero la transcripción faltante? ¿Los acumulativos entran al lanzamiento o se anuncian como "próximamente"? |
+| F | **Subir Vercel a un plan que permita uso comercial (`I-1`)** | Vercel Hobby prohíbe cobrar; es una violación de términos, no una limitación técnica que se pueda rodear. | Decidir si se paga Vercel Pro (~$20 USD/mes) y confirmarlo — no lo voy a hacer sin tu autorización explícita del monto. |
+| G | **Subir Supabase a un plan con respaldos automáticos (`I-2`)** | El plan `free` no incluye respaldo diario ni recuperación a un punto en el tiempo; cobrar sobre datos sin respaldo gestionado es un riesgo que no se debe asumir. | Decidir si se paga Supabase Pro (~$25 USD/mes) — esto también resolvería, de paso, el bloqueo de `I-5` (protección de contraseñas filtradas, que ya confirmé que requiere Pro) y el límite de 2 proyectos gratis que hoy bloquea `M-1` (punto C). |
 
 ### 0.2 — Ejecutables técnicamente ahora, sin esperar una decisión de negocio
 
@@ -203,7 +207,7 @@ decisión no añade infraestructura ni reemplaza los gates operativos vigentes.
 | Salud | `GET /api/health/live` responde `200`. `GET /api/health/ready` responde `404` sin token, que es el comportamiento correcto. |
 | Base de datos | Las **21 migraciones** del repositorio están aplicadas en el proyecto remoto (20 verificadas el 22 de agosto + `20260824040500_add_update_exam_question_v1` del 24 de agosto). Coinciden una a una con `supabase/migrations/`. |
 | Contenido publicado | **24 materias, 57 clases (todas `published`), 57 temas (todos `approved`), 513 materiales, 57 mapas conceptuales, 685 flashcards, 57 exámenes, 570 preguntas y 570 claves de respuesta.** Detalle completo en el §8. El examen de C01 (10 preguntas) fue auditado y 3 de sus reactivos corregidos el 24 de agosto — ver §0.2 y §7. |
-| Seguridad de base | Los asesores de Supabase solo reportan el `INFO` esperado de `exam_answer_keys` sin políticas (bloqueo deliberado) y un `WARN` de contraseñas filtradas, pendiente de activar y confirmado el 23 de agosto que **requiere plan Pro** (`I-5`, ver §0.1-C). Sin errores. Se cerró además una brecha real (registro directo contra Supabase sin pasar por la app) — ver §7. |
+| Seguridad de base | Los asesores de Supabase solo reportan el `INFO` esperado de `exam_answer_keys` sin políticas (bloqueo deliberado) y un `WARN` de contraseñas filtradas, pendiente de activar y confirmado el 23 de agosto que **requiere plan Pro** (`I-5`, ver §0.1-G). Sin errores. Se cerró además una brecha real (registro directo contra Supabase sin pasar por la app) — ver §7. |
 | Código | `npm run lint` y `npm run build` pasan sin hallazgos. El build de producción del mismo commit se completó en Vercel. |
 | Usuarios | **1 usuario, 1 perfil administrador, 0 intentos de examen** en producción. |
 | Venta | Fase 0 (decisiones) cerrada, Fase 1 (legal) y Fase 5 (producto vendible) publicadas en producción — ver §4 y §5. |
@@ -327,7 +331,7 @@ demostrado en el entorno real (`M-1` a `M-3`, §5).
 para `M-1` (costo confirmado: $0/mes, cabe en el plan gratuito). Falló: la
 organización "Kova" ya tiene el máximo de 2 proyectos gratuitos ocupados
 (`Kova Production` y `CENEVAL Study App`). Ver la decisión pendiente en
-§0.1-E.
+§0.1-C.
 
 ---
 
@@ -453,7 +457,7 @@ hecha.
 
 | ID | Tarea | Evidencia de cierre |
 | --- | --- | --- |
-| M-1 | Crear un **proyecto Supabase de ensayo** con las 21 migraciones aplicadas desde cero. | Historial de migraciones del proyecto de ensayo. **Bloqueado desde el 23 de agosto:** la organización no tiene espacio en el plan gratuito (2/2 proyectos ocupados) — decisión pendiente en §0.1-E. |
+| M-1 | Crear un **proyecto Supabase de ensayo** con las 21 migraciones aplicadas desde cero. | Historial de migraciones del proyecto de ensayo. **Bloqueado desde el 23 de agosto:** la organización no tiene espacio en el plan gratuito (2/2 proyectos ocupados) — decisión pendiente en §0.1-C. |
 | M-2 | Ejecutar allí la suite RLS completa con dos estudiantes y una administradora. | Las comprobaciones aprobadas y sin residuos, registradas con fecha. |
 | M-3 | Comprobar en el ensayo que una estudiante no ve el progreso, los intentos ni las respuestas de otra. | Evidencia de la prueba cruzada. |
 | M-4 | Invitar a 3 a 5 personas reales de confianza, sin cobro, a recorrer la app completa en teléfono y computadora. | Lista de hallazgos y su corrección. |
@@ -945,7 +949,7 @@ Queda pendiente:
   migraciones desde cero y repetir la suite RLS con datos sintéticos (tarea
   `M-1`); las 21 migraciones ya están aplicadas en CENEVAL, pero ese ensayo
   con datos no reales sigue sin hacerse y además está bloqueado por el límite
-  de proyectos gratuitos de la organización (§0.1-E);
+  de proyectos gratuitos de la organización (§0.1-C);
 - mantener `npm run db:lint:local` sin advertencias; la migración nueva ya
   eliminó los doce avisos de `private.import_class_package_v12` y el reset,
   lint, round-trip RPC y RLS local volvieron a pasar;
@@ -1063,7 +1067,7 @@ solo con legislación; repetir después el pipeline 1.2 completo descrito en
 | 1 | Completar el respaldo de transcripciones | Segunda copia independiente y restauración de ensayo |
 | 2 | Ejecutar y probar el respaldo documentado | Exportación fechada, copia externa verificada y restauración de ensayo |
 | 3 | Ampliar y ejecutar la suite RLS | Comprobaciones actuales y casos de temas no aprobados aprobados en CENEVAL |
-| 4 | Crear un proyecto de ensayo Supabase aparte de producción para repetir la suite RLS con datos que no sean reales | Proyecto de ensayo con las 21 migraciones aplicadas y RLS aprobada (tarea `M-1`). Bloqueado por límite de proyectos gratuitos — ver §0.1-E |
+| 4 | Crear un proyecto de ensayo Supabase aparte de producción para repetir la suite RLS con datos que no sean reales | Proyecto de ensayo con las 21 migraciones aplicadas y RLS aprobada (tarea `M-1`). Bloqueado por límite de proyectos gratuitos — ver §0.1-C |
 | 5 | Aprobar C01–C57 — completado | 57 clases publicadas y 57 temas aprobados, verificado el 22 de agosto de 2026 en el proyecto remoto |
 | 6 | Crear pruebas de navegador | Flujos centrales reproducibles en CI o entorno aislado (skill `webapp-testing` disponible y sin usar) |
 | 7 | Completar y validar el despliegue privado | Variables persistentes, administradora operativa y URL estable aprobada desde teléfono y computadora |
