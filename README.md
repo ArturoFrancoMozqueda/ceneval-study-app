@@ -1,24 +1,33 @@
-# CENEVAL Study App
+# CENEVAL Study App (marca comercial: Sube Legal)
 
 Biblioteca de estudio para el examen CENEVAL de Derecho (titulación, México).
 Las clases se preparan editorialmente a partir de transcripciones de audio y se
-publican como paquetes completos: transcripción conservada, versión didáctica,
-nueve materiales, mapa conceptual, guía, flashcards y examen.
+publican como paquetes completos: versión didáctica, nueve materiales, mapa
+conceptual, guía, flashcards y examen. La transcripción original nunca entra
+a Supabase ni se muestra en la interfaz — se conserva solo en un archivo
+editorial privado.
 
 > **¿Eres un agente de IA?** Lee [`AGENTS.md`](AGENTS.md) antes de tocar nada.
 > Contiene el contexto, las reglas duras y las trampas conocidas.
 
 ## Estado
 
-- **40 de 58 clases publicadas.** La siguiente es C41.
+- **57 de 58 clases publicadas** (C01–C57). C58 está bloqueada por falta de
+  fuente académica suficiente (`docs/C58_SOURCE_AUDIT.md`).
 - La aplicación es **privada**: por ahora solo entra la administradora. El
   registro de estudiantes está pospuesto por decisión de producto.
 - Funciona sobre Supabase real: autenticación, roles, políticas RLS, biblioteca
-  por materias, recorrido en orden C01→C40, mapas, guías, flashcards, exámenes
-  con respuestas protegidas, progreso individual, búsqueda y panel editorial
-  con flujo `draft → published → withdrawn`.
-- **No hay despliegue todavía.** Solo corre en `localhost`.
-- No hay pruebas automatizadas de interfaz ni integración continua.
+  por materias, recorrido en orden curricular C01→C57, mapas, guías,
+  flashcards, repaso espaciado, exámenes con respuestas protegidas, progreso
+  individual, búsqueda y panel editorial con flujo
+  `draft → review → published → withdrawn`, incluida edición de preguntas de
+  examen ya publicadas.
+- **Sí hay despliegue en producción**, en Vercel, conectado a Git (cada push a
+  `main` publica automáticamente). No confundir con uso comercial: el plan de
+  Vercel sigue siendo Hobby, que no lo permite — ver
+  [docs/PROJECT_STATUS.md §0](docs/PROJECT_STATUS.md).
+- No hay pruebas automatizadas de interfaz todavía; sí hay integración
+  continua (`.github/workflows/ci.yml`) en cada PR y push a `main`.
 
 Para el estado detallado y el plan vigente, consulta
 [docs/PROJECT_STATUS.md](docs/PROJECT_STATUS.md). Para los problemas abiertos y
@@ -71,7 +80,7 @@ Supabase local, crea un paquete sintético y verifica su limpieza al terminar.
 - Tailwind CSS 4
 - Supabase: autenticación, Postgres y políticas RLS
 - Zod para validación de paquetes
-- Vercel para despliegue futuro
+- Vercel para despliegue (técnico, sobre plan Hobby)
 
 ## Variables de entorno
 
