@@ -1,12 +1,16 @@
 # Visión del producto
 
-## Nombre provisional
+## Nombre
 
-CENEVAL Study App
+**Sube Legal** es el nombre comercial definitivo, decidido el 22 de agosto de
+2026 (`docs/PROJECT_STATUS.md` §4, decisión D-9). Se descartó cualquier nombre
+que incluyera "CENEVAL" o "EGEL" por ser marcas de un tercero. "CENEVAL Study
+App" sigue siendo el nombre técnico interno del repositorio y del proyecto en
+Vercel/Supabase, pero de cara a la usuaria la marca es Sube Legal.
 
 ## Resumen
 
-CENEVAL Study App será una aplicación de estudio enfocada inicialmente en personas egresadas de Derecho que desean prepararse para el examen CENEVAL como modalidad de titulación.
+Sube Legal será una aplicación de estudio enfocada inicialmente en personas egresadas de Derecho que desean prepararse para el examen CENEVAL como modalidad de titulación.
 
 La aplicación ofrecerá una biblioteca de clases transformadas previamente en
 material de estudio organizado, completo y personalizado.
@@ -81,6 +85,25 @@ Ese paquete podrá incluir:
 - retroalimentación;
 - recomendaciones de repaso.
 
+## Modelo de negocio (decidido, no implementado aún)
+
+Decidido el 22 de agosto de 2026 (`docs/PROJECT_STATUS.md` §4, D-2 a D-6).
+Fija el destino; no autoriza por sí solo a abrir cobro real, que sigue
+esperando la Fase 6 de `docs/SUBSCRIPTION_ARCHITECTURE.md`.
+
+- **Una sola suscripción**, $399 MXN/mes, con acceso a la biblioteca completa
+  (57 clases, materiales, mapas conceptuales, flashcards y exámenes). No hay
+  planes distintos por nivel ni por materia.
+- **Progresión por niveles** como mecánica de experiencia de uso: la
+  estudiante avanza de nivel al completar el examen del nivel actual. Es
+  gamificación de estudio, no segmentación de precio.
+- **Sin periodo de prueba gratuito.** En su lugar, una vista de muestra
+  gratuita permanente (`/muestra`, una clase completa sin examen).
+- Cancelación sin corte inmediato (se conserva el acceso hasta el fin del
+  periodo pagado) y sin reembolso de la parte no usada. El progreso académico
+  de la estudiante nunca se borra al cancelar.
+- Proveedor de pagos: **Stripe**, cuenta contractual en México.
+
 ## Flujo principal
 
 1. La administradora proporciona una transcripción a Codex.
@@ -105,6 +128,9 @@ Ese paquete podrá incluir:
 - No presentar la IA como una autoridad jurídica infalible.
 - Ayudar a comprender, practicar y decidir qué estudiar.
 - Diseñar para una experiencia sencilla antes de agregar automatización compleja.
+- Proteger el contenido pagado sin estorbar el estudio: sin selección ni
+  copiado de texto en las vistas de estudio, disuasión de captura de pantalla,
+  sin exportación ni descarga masiva del catálogo (`docs/CONTENT_PROTECTION.md`).
 
 ## Alcance de la primera versión
 
@@ -125,12 +151,15 @@ Incluirá:
 
 ## Fuera del alcance inicial
 
+El cobro real ya no está fuera del alcance del producto — está diseñado (ver
+"Modelo de negocio" arriba) pero pendiente de implementar, y no se activa
+hasta cerrar las Fases 1 a 3 de `docs/PROJECT_STATUS.md` §5. Sigue fuera del
+alcance de esta primera versión operativa:
+
 - carga directa de audio;
 - transcripción automática;
-- pagos y planes de acceso;
 - profesores;
 - carga autónoma de contenido por estudiantes;
-- pagos;
 - aplicación móvil;
 - otras carreras;
 - grupos de estudio;
