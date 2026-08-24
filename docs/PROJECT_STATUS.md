@@ -125,6 +125,18 @@ decisión no añade infraestructura ni reemplaza los gates operativos vigentes.
 - No hay respaldo real de la base remota, ni copia externa, ni restauración
   ensayada.
 - No hay monitoreo, alertas, registro de errores ni canal de soporte atendido.
+- **No existe un mecanismo para actualizar una clase ya publicada.** Descubierto
+  el 24 de agosto de 2026 al corregir 3 reactivos de C01 tras una auditoría de
+  validez: `import_class_package_v12` (el único camino de escritura) rechaza
+  cualquier paquete cuyo `curriculum_code` ya exista — solo sirve para importar
+  clases nuevas como borrador. No hay flujo de edición en `/administrar` ni
+  script de "reimportar con nueva versión". La corrección de C01 se hizo con un
+  `UPDATE` SQL manual y verificado directo sobre `exam_questions`,
+  `exam_options` y `exam_answer_keys`, fuera de las validaciones de evidencia
+  que sí exige la importación normal — válido como excepción puntual (0
+  intentos de examen en producción, sin datos históricos que romper), pero no
+  es una solución repetible. Falta decidir si vale la pena construir un flujo
+  de actualización versionada antes de que haya más contenido que corregir.
 - Vercel sigue en Hobby (no permite uso comercial) y Supabase sigue en plan
   `free` (sin respaldos automáticos gestionados).
 
