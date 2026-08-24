@@ -656,49 +656,57 @@
             ]
           },
           {
-            "text": "En comprensión lectora, dos opciones recuperan datos verdaderos pero solo una responde por completo. ¿Cuál debe elegirse?",
+            "text": "Lee el fragmento (tomado del resumen ya verificado de esta clase): \"La guía indica que 15% son reactivos piloto y no cuentan para la calificación.\" Un reactivo pregunta qué implica ese 15% para la sustentante. Dos opciones recuperan datos verdaderos relacionados con el fragmento, pero solo una responde exactamente lo que se pregunta. ¿Cuál debe elegirse?",
             "difficulty": "basic",
             "options": [
               "La opción más extensa",
-              "La respuesta totalmente correcta conforme al texto",
-              "Cualquier opción con una frase verdadera"
+              "La respuesta totalmente correcta conforme al fragmento: el 15% de reactivos piloto no se considera para la calificación",
+              "Cualquier opción que mencione la palabra \"piloto\""
             ],
             "correctOption": 1,
-            "explanation": "La guía señala que no hay respuestas parcialmente correctas y pide elegir la opción plenamente sustentada.",
+            "explanation": "La guía señala que no hay respuestas parcialmente correctas y pide elegir la opción plenamente sustentada por el fragmento, no solo la que menciona un término relacionado.",
             "optionExplanations": [
-              "La extensión no determina corrección.",
-              "Atiende íntegramente la tarea y el texto.",
-              "Un dato verdadero puede ser insuficiente para responder."
+              "La extensión no determina corrección; una opción larga puede seguir siendo incompleta.",
+              "Recupera exactamente lo que el fragmento indica sobre los reactivos piloto y la calificación, no solo un dato relacionado.",
+              "Mencionar la palabra \"piloto\" no garantiza que la opción responda lo que el fragmento indica sobre la calificación."
             ],
             "evidenceIds": [
-              "ev-ceneval-lenguaje"
+              "ev-ceneval-lenguaje",
+              "ev-ceneval-estructura-derecho",
+              "ev-ceneval-formato-reactivo"
             ],
             "optionEvidenceIds": [
               [
                 "ev-ceneval-lenguaje"
               ],
               [
-                "ev-ceneval-lenguaje"
+                "ev-ceneval-lenguaje",
+                "ev-ceneval-estructura-derecho",
+                "ev-ceneval-formato-reactivo"
               ],
               [
-                "ev-ceneval-lenguaje"
+                "ev-ceneval-lenguaje",
+                "ev-ceneval-formato-reactivo"
               ]
             ],
             "correctOptionEvidenceIds": [
-              "ev-ceneval-lenguaje"
+              "ev-ceneval-estructura-derecho",
+              "ev-ceneval-formato-reactivo"
             ],
             "explanationEvidenceIds": [
-              "ev-ceneval-lenguaje"
+              "ev-ceneval-lenguaje",
+              "ev-ceneval-formato-reactivo"
             ],
             "optionExplanationEvidenceIds": [
               [
                 "ev-ceneval-lenguaje"
               ],
               [
-                "ev-ceneval-lenguaje"
+                "ev-ceneval-estructura-derecho",
+                "ev-ceneval-formato-reactivo"
               ],
               [
-                "ev-ceneval-lenguaje"
+                "ev-ceneval-formato-reactivo"
               ]
             ]
           },
@@ -979,14 +987,14 @@
             "options": [
               "Monitorear el cumplimiento y ajustar las actividades",
               "Conservar el plan aunque no funcione",
-              "Sustituir el estudio por un banco de respuestas"
+              "Reducir las horas de estudio porque ya avanzó lo suficiente"
             ],
             "correctOption": 0,
-            "explanation": "La guía incluye el monitoreo del avance como parte de una preparación organizada.",
+            "explanation": "La guía incluye el monitoreo del avance como parte de una preparación organizada, no una impresión sin verificar.",
             "optionExplanations": [
-              "Permite revisar y ajustar el proceso.",
-              "Ignora la información producida por el seguimiento.",
-              "No demuestra dominio ni respeta una preparación verificable."
+              "Permite revisar el avance real y ajustar el proceso con evidencia.",
+              "Ignora la información que produciría el seguimiento y repite lo que quizá no funciona.",
+              "Sin monitorear primero, \"ya avanzó lo suficiente\" es una impresión, no una comprobación."
             ],
             "evidenceIds": [
               "ev-ceneval-preparacion",
@@ -1031,15 +1039,15 @@
             "difficulty": "advanced",
             "options": [
               "Autoevaluar, planear y monitorear",
-              "Memorizar, copiar y repetir",
-              "Improvisar, omitir y adivinar"
+              "Planear y monitorear, sin autoevaluar antes de empezar",
+              "Autoevaluar y planear, sin dar seguimiento después"
             ],
             "correctOption": 0,
-            "explanation": "La guía estructura la preparación mediante autoevaluación, planeación de actividades y monitoreo del avance.",
+            "explanation": "La guía estructura la preparación mediante los tres pasos completos: autoevaluación, planeación de actividades y monitoreo del avance; omitir cualquiera de los tres deja incompleto el ciclo.",
             "optionExplanations": [
-              "Integra los tres componentes descritos en la guía.",
-              "No corresponde con la preparación recomendada.",
-              "No ofrece un proceso de estudio verificable."
+              "Integra los tres componentes completos descritos en la guía, en orden.",
+              "Sin autoevaluar primero, la planeación no parte de un diagnóstico real de lo que domina o le falta a la sustentante.",
+              "Sin monitorear después, no hay forma de saber si el plan funcionó ni de ajustarlo."
             ],
             "evidenceIds": [
               "ev-ceneval-preparacion"
