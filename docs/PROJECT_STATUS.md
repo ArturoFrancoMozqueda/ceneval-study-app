@@ -56,34 +56,46 @@ calma, después de ver las demás.
 Estas no necesitan gastar dinero ni decidir nada de negocio — solo tiempo de
 trabajo. Ordenadas por impacto:
 
-1. **Continuar la auditoría de contenido con las skills educativas instaladas
-   el 24 de agosto** (`.claude/skills/` y `.agents/skills/`, 10 skills de
-   `GarethManning/education-agent-skills`). Ya se completó el paso 1
-   (`edu-agent-skills-assessment-validity-checker` sobre el examen de C01,
-   que encontró y corrigió 3 reactivos con distractores poco plausibles o que
-   no ejercitaban la estrategia de lectura real). Faltan:
-   - Paso 2: `edu-agent-skills-cognitive-load-analyser` sobre las
-     explicaciones ("learning journey") de las clases.
-   - Paso 3: `edu-agent-skills-retrieval-practice-generator` sobre el patrón
-     de las 685 flashcards existentes.
-   - **Advertencia importante:** el mecanismo de edición construido el 24 de
-     agosto (`update_exam_question_v1`) **solo cubre preguntas de examen**.
-     Si los pasos 2 o 3 encuentran algo que corregir en materiales,
-     flashcards o el learning journey, hace falta extender el mismo patrón
-     (migración + Server Action + formulario) a esas tablas antes de poder
-     aplicar la corrección sin SQL manual — ver punto 2.
-   - También vale la pena repetir el paso 1 sobre una clase de contenido
-     jurídico sustantivo (no de orientación, como C01) para ver si el mismo
-     patrón de "preguntas de recuerdo disfrazadas de aplicación" se repite en
-     el resto del catálogo, antes de decidir si conviene una revisión más
-     amplia.
+1. **Auditoría de contenido de C01 con las skills educativas — completada el
+   24 de agosto** (`.claude/skills/` y `.agents/skills/`, 10 skills de
+   `GarethManning/education-agent-skills`):
+   - Paso 1 (`edu-agent-skills-assessment-validity-checker` sobre el examen):
+     encontró y corrigió 3 reactivos con distractores poco plausibles o que
+     no ejercitaban la estrategia de lectura real — ya aplicado en producción.
+   - Paso 2 (`edu-agent-skills-cognitive-load-analyser` sobre el learning
+     journey y los 9 materiales): encontró que **6 de los 9 tipos de
+     material fijo** (`short_answer`, `full_explanation`, `legal_basis`,
+     `summary`, `study_guide`, `key_concepts`) repiten, reformulados, el
+     mismo puñado de datos — efecto de redundancia (Sweller, 1994), no
+     complejidad real. Como los 9 tipos son un contrato fijo aplicado a las
+     57 clases (`lib/content/package-schema.ts`), es probable que el patrón
+     se repita en todo el catálogo, no solo en C01. **No corregido
+     todavía** — no es un bug puntual, es un rediseño de cómo se presentan
+     los 9 materiales en la interfaz (agruparlos por función en vez de
+     mostrarlos todos igual) o del proceso editorial que los genera.
+   - Paso 3 (`edu-agent-skills-retrieval-practice-generator` sobre las 12
+     flashcards de C01): el formato ya es el correcto por diseño (recuerdo
+     libre, la categoría de mayor efecto). Dos hallazgos menores: una
+     tarjeta con fecha fija ("...vigente en 2026") que caducará cuando
+     cambie el periodo de aplicación, y ninguna tarjeta ataca directamente
+     los errores ya detectados en el examen de la misma clase (confundir
+     áreas con materias universitarias, abandonar un reactivo difícil,
+     elegir por frase verdadera aislada). No corregido — bajo impacto.
+   - **Pendiente:** repetir el paso 1 sobre una clase de contenido jurídico
+     sustantivo (no de orientación, como C01) para ver si el patrón de
+     "preguntas de recuerdo disfrazadas de aplicación" se repite en el resto
+     del catálogo, antes de decidir si conviene una revisión más amplia.
 2. **Extender el mecanismo de edición de contenido publicado a materiales,
    mapas conceptuales, flashcards y learning journey.** Hoy solo existe para
    preguntas de examen (`private.update_exam_question_v1`,
    `app/actions/academic.ts`, `/administrar/clases/[classId]/temas/[topicId]/examen`).
    El patrón ya está probado y documentado (migración con `security invoker`
    + grant solo a `service_role`, Server Action admin-gated, formulario
-   cliente); replicarlo para las tablas restantes es mecánico.
+   cliente); replicarlo para las tablas restantes es mecánico. **En progreso
+   el 24 de agosto** — se está construyendo en dos partes: flashcards y
+   learning journey (sin columnas de versión, UPDATE en el lugar) por un
+   lado, materiales y mapas conceptuales (con `version`/`is_current`,
+   necesitan insertar una fila nueva) por otro.
 3. **Segunda copia independiente de las 70 transcripciones originales y
    restauración de ensayo (`R-4`, prioridad 0).** La primera copia ya se
    verificó con SHA-256 el 21 de agosto; falta la segunda copia y probar que
