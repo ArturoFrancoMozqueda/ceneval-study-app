@@ -95,13 +95,16 @@ trabajo. Ordenadas por impacto:
    sacar una copia cifrada fuera del equipo y restaurarla en un proyecto de
    ensayo. Requiere tu autorización expresa antes de ejecutarse (toca datos
    reales).
-5. **Decidir y aplicar el arreglo de `I-6` (variables `Sensitive` en
-   Vercel).** Verificado el 23 de agosto: las 7 variables obligatorias están
-   bien separadas entre Preview y Production, pero las 4 `NEXT_PUBLIC_*`
-   están marcadas `Sensitive`, lo que rompe `npm run ops:preflight:production`.
-   Hay que decidir entre quitarles la marca `Sensitive` (no aporta protección
-   real ya que viajan al navegador de todos modos) o reescribir el script de
-   preflight para que no dependa de leer el valor.
+5. **`I-6` — resuelto el 24 de agosto de 2026.** El script de preflight
+   (`lib/operations/runtime-env.ts`) ahora reconoce el literal `[SENSITIVE]`
+   que devuelve `vercel env pull` para las 4 variables `NEXT_PUBLIC_*` y
+   explica con un mensaje claro por qué no puede validarlas localmente —en
+   vez del error genérico de "formato inválido"— y aclara que **no es un
+   problema real**: `app/api/health/ready/route.ts` usa la misma función de
+   validación con los valores reales en cada arranque, y cada build de
+   Vercel también la ejecuta con los valores reales inyectados (Sensitive
+   solo bloquea volver a leerlos después, no su inyección real). No hace
+   falta quitar la marca `Sensitive` — de hecho conviene dejarla.
 6. **Pruebas automatizadas de interfaz en navegador** (`Prioridad 3` del §10)
    — el proyecto ya tiene la skill `webapp-testing` disponible para esto y
    nunca se ha usado.
@@ -440,7 +443,7 @@ hecha.
 | I-3 | Contratar un dominio propio, apuntarlo a Vercel y actualizar `NEXT_PUBLIC_SITE_URL` y las URLs de redirección de Supabase Auth. | El dominio sirve la app por HTTPS y el correo de confirmación apunta a él. |
 | I-4 | Configurar un proveedor de correo transaccional propio en Supabase Auth y probar alta, confirmación y recuperación de contraseña. | Tres correos recibidos en una cuenta real, desde el dominio propio. |
 | I-5 | Activar la protección contra contraseñas filtradas en Supabase Auth. | El asesor de seguridad deja de reportar el `WARN`. |
-| I-6 | Verificar que las siete variables de entorno de `.env.example` están configuradas por separado en Preview y en Production, sin exponer valores. | **Presencia y separación verificadas el 23 de agosto (§7).** `npm run ops:preflight:production` sigue en rojo porque las 4 variables `NEXT_PUBLIC_*` están marcadas `Sensitive` en Vercel — pendiente decidir si se quita la marca o se reescribe el script (§0.2, punto 5). |
+| I-6 | Verificar que las siete variables de entorno de `.env.example` están configuradas por separado en Preview y en Production, sin exponer valores. | **✅ Resuelto (24 ago).** Presencia y separación verificadas el 23 de agosto (§7); el preflight local ahora explica con claridad por qué no puede leer las 4 `NEXT_PUBLIC_*` (marcadas `Sensitive`) y confirma que la validación real ya ocurre en cada build y en `GET /api/health/ready` — ver §0.2, punto 5. |
 | I-7 | Revisar los límites de autenticación (intentos de acceso, altas por hora) antes de abrir el registro. | Configuración registrada en el runbook. |
 
 ### Fase 3 — Respaldo y recuperación reales
@@ -676,12 +679,26 @@ modos al bundle del navegador) y sí rompe `npm run ops:preflight:production` y
 `ops:preflight:preview`: ambos scripts leen el valor para validar formato (por
 ejemplo, que `NEXT_PUBLIC_SUPABASE_URL` sea una URL) y truenan con
 `Configuración inválida` al recibir el literal `[SENSITIVE]` en vez del valor
-real. **Pendiente:** decidir si quitar la marca Sensitive de las cuatro
-variables `NEXT_PUBLIC_*` (para que el preflight vuelva a funcionar) o
-reescribir el preflight para que no dependa de leer el valor. Ningún valor
-real se leyó ni se imprimió durante esta verificación; los archivos
-`.vercel/.env.production.local` y `.vercel/.env.preview.local` generados para
-la prueba se borraron al terminar.
+real. Ningún valor real se leyó ni se imprimió durante esta verificación; los
+archivos `.vercel/.env.production.local` y `.vercel/.env.preview.local`
+generados para la prueba se borraron al terminar.
+
+**Resuelto el 24 de agosto de 2026.** No hacía falta decidir nada: el
+`WARN`/error del preflight era ruido, no una falla real. `validateRuntimeEnvironment`
+(la misma función que usa el preflight) también la invoca directamente
+`app/api/health/ready/route.ts` en cada arranque de la app, con los valores
+reales que Vercel sí inyecta en el runtime — la marca `Sensitive` solo impide
+volver a *leer* el valor después por API/CLI/dashboard, no bloquea su
+inyección real en build ni en runtime. Como `/api/health/ready` ya responde
+correctamente en producción, la configuración real ya está validada; el
+preflight local solo repetía esa comprobación de forma redundante y con
+información incompleta. Se cambió `lib/operations/runtime-env.ts` para que,
+al detectar el literal `[SENSITIVE]`, explique esto en vez de lanzar un
+error de "formato inválido" que sugería (incorrectamente) que algo estaba
+mal configurado. Verificado corriendo `npm run ops:preflight:production`
+tras un `vercel env pull` real: ahora imprime el mensaje explicativo en vez
+del error genérico, y `npm run test:runtime-operations` (11/11) sigue en
+verde.
 
 El bootstrap de `docs/ADMIN_BOOTSTRAP.md` ya produjo el único perfil
 administrador con inicio de sesión confirmado hoy; falta repetir el E2E

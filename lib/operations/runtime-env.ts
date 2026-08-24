@@ -18,6 +18,18 @@ type ValidationOptions = { production?: boolean };
 function required(source: EnvironmentSource, name: string) {
   const value = source[name]?.trim();
   if (!value) throw new Error(`Configuración inválida: falta ${name}.`);
+  if (value === "[SENSITIVE]") {
+    throw new Error(
+      `No se puede verificar ${name} localmente: está marcada "Sensitive" en ` +
+        "Vercel, así que `vercel env pull` solo devuelve el literal " +
+        "\"[SENSITIVE]\" en vez del valor real. Esto no significa que la " +
+        "variable esté mal configurada: el build y el runtime reales en " +
+        "Vercel sí reciben el valor verdadero (Sensitive solo bloquea volver " +
+        "a leerlo después, no su inyección). La validación real ya ocurre en " +
+        "cada build y en GET /api/health/ready; este preflight local no " +
+        "puede repetirla mientras la variable siga marcada Sensitive.",
+    );
+  }
   return value;
 }
 
