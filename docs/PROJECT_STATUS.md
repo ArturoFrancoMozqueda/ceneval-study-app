@@ -80,22 +80,33 @@ trabajo. Ordenadas por impacto:
      cambie el periodo de aplicación, y ninguna tarjeta ataca directamente
      los errores ya detectados en el examen de la misma clase (confundir
      áreas con materias universitarias, abandonar un reactivo difícil,
-     elegir por frase verdadera aislada). No corregido — bajo impacto.
+     elegir por frase verdadera aislada). No corregido — bajo impacto. Si se
+     decide corregirla, ya existe mecanismo de edición
+     (`update_flashcard_v1` — ver punto 2).
    - **Pendiente:** repetir el paso 1 sobre una clase de contenido jurídico
      sustantivo (no de orientación, como C01) para ver si el patrón de
      "preguntas de recuerdo disfrazadas de aplicación" se repite en el resto
      del catálogo, antes de decidir si conviene una revisión más amplia.
 2. **Extender el mecanismo de edición de contenido publicado a materiales,
-   mapas conceptuales, flashcards y learning journey.** Hoy solo existe para
-   preguntas de examen (`private.update_exam_question_v1`,
-   `app/actions/academic.ts`, `/administrar/clases/[classId]/temas/[topicId]/examen`).
-   El patrón ya está probado y documentado (migración con `security invoker`
-   + grant solo a `service_role`, Server Action admin-gated, formulario
-   cliente); replicarlo para las tablas restantes es mecánico. **En progreso
-   el 24 de agosto** — se está construyendo en dos partes: flashcards y
-   learning journey (sin columnas de versión, UPDATE en el lugar) por un
-   lado, materiales y mapas conceptuales (con `version`/`is_current`,
-   necesitan insertar una fila nueva) por otro.
+   mapas conceptuales, flashcards y learning journey.** Preguntas de examen
+   quedó resuelto el 24 de agosto de 2026 (ver más abajo). **Flashcards y
+   learning journey también quedaron resueltos el 24 de agosto de 2026**
+   con el mismo patrón: `private.update_flashcard_v1` /
+   `public.update_flashcard_v1` (UPDATE en el lugar, `flashcards` no tiene
+   columnas de versión) y `private.update_topic_learning_journey_v1` /
+   `public.update_topic_learning_journey_v1` (UPDATE en el lugar sobre la
+   fila única por `topic_id`), ambos `security invoker` otorgados solo a
+   `service_role`, con Server Actions admin-gated
+   (`updateFlashcardAction`, `updateTopicLearningJourneyAction` en
+   `app/actions/academic.ts`) y páginas nuevas en
+   `/administrar/clases/[classId]/temas/[topicId]/flashcards` y
+   `/administrar/clases/[classId]/temas/[topicId]/learning-journey`.
+   **Faltan materiales y mapas conceptuales** (columnas `version`/
+   `is_current`, necesitan insertar una fila nueva en vez de UPDATE en el
+   lugar) — el patrón ya está probado y documentado tres veces (migración
+   con `security invoker` + grant solo a `service_role`, Server Action
+   admin-gated, formulario cliente); replicarlo para esas dos tablas
+   restantes es mecánico.
 3. **Segunda copia independiente de las 70 transcripciones originales y
    restauración de ensayo (`R-4`, prioridad 0).** La primera copia ya se
    verificó con SHA-256 el 21 de agosto; falta la segunda copia y probar que
@@ -266,10 +277,35 @@ decisión no añade infraestructura ni reemplaza los gates operativos vigentes.
   opción correcta y explicaciones se actualizan correctamente,
   `content_version` se incrementa), con `authenticated`/`anon` denegados en
   local y en producción, y con `npm run security:rls` en 141/141 tras
-  aplicar la migración desde cero. **Alcance:** solo preguntas de examen —
-  editar materiales, mapas conceptuales, flashcards o el learning journey de
-  una clase publicada sigue sin tener un flujo soportado; se puede extender
-  con el mismo patrón si hace falta.
+  aplicar la migración desde cero.
+- **Editar flashcards y learning journey ya publicados — resuelto el 24 de
+  agosto de 2026.** Mismo patrón que preguntas de examen, extendido a las
+  dos tablas siguientes: `private.update_flashcard_v1` /
+  `public.update_flashcard_v1` (UPDATE en el lugar — `flashcards` no tiene
+  columnas de versión ni tabla de historial) y
+  `private.update_topic_learning_journey_v1` /
+  `public.update_topic_learning_journey_v1` (UPDATE en el lugar sobre la
+  fila única por `topic_id`, validando las 5 claves obligatorias y el
+  mínimo de 2 `quickChecks` antes de escribir, igual que el `check` de la
+  tabla). Ambos `security invoker`, otorgados solo a `service_role`. Server
+  Actions admin-gated (`updateFlashcardAction`,
+  `updateTopicLearningJourneyAction` en `app/actions/academic.ts`) y páginas
+  nuevas en `/administrar/clases/[classId]/temas/[topicId]/flashcards` y
+  `/administrar/clases/[classId]/temas/[topicId]/learning-journey`. No toca
+  `editorial_artifacts`/`editorial_artifact_evidence` (los vínculos apuntan
+  por `flashcard_id` o por el `topic_id` de la journey, no por texto); los
+  triggers `flashcards_invalidate_editorial_review` y
+  `topic_learning_journeys_invalidate_review` ya existentes se disparan
+  solos y marcan la revisión aprobada vigente como obsoleta sin despublicar
+  la clase. Verificado con una prueba funcional directa contra producción
+  (fila de prueba desincronizada del catálogo real, creada y borrada sin
+  dejar residuo), validaciones de contenido en blanco/incompleto rechazadas
+  correctamente, `authenticated`/`anon` denegados en las cuatro funciones
+  (`has_function_privilege` en `false`), y sin alertas nuevas de seguridad
+  tras `get_advisors`. **Alcance:** preguntas de examen, flashcards y
+  learning journey ya tienen mecanismo de edición — materiales y mapas
+  conceptuales de una clase publicada siguen sin tener un flujo soportado;
+  se puede extender con el mismo patrón si hace falta.
 - Vercel sigue en Hobby (no permite uso comercial) y Supabase sigue en plan
   `free` (sin respaldos automáticos gestionados).
 

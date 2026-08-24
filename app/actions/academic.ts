@@ -370,6 +370,227 @@ export async function updateExamQuestionAction(
   return { id: questionId };
 }
 
+export type FlashcardForEdit = {
+  id: number;
+  position: number;
+  question: string;
+  answer: string;
+};
+
+export async function getFlashcardsForEdit(
+  topicId: number,
+): Promise<FlashcardForEdit[] | null> {
+  await requireAdmin();
+  if (!isPositiveInteger(topicId)) return null;
+
+  const { data: flashcards, error } = await getSupabaseAdminClient()
+    .from("flashcards")
+    .select("id,position,question,answer")
+    .eq("topic_id", topicId)
+    .order("position");
+  if (error || !flashcards?.length) return null;
+
+  return flashcards.map((flashcard) => ({
+    id: flashcard.id as number,
+    position: flashcard.position as number,
+    question: flashcard.question as string,
+    answer: flashcard.answer as string,
+  }));
+}
+
+export async function updateFlashcardAction(
+  classId: number,
+  topicId: number,
+  flashcardId: number,
+  formData: FormData,
+): Promise<ActionResult> {
+  await requireAdmin();
+  if (
+    !isPositiveInteger(classId) ||
+    !isPositiveInteger(topicId) ||
+    !isPositiveInteger(flashcardId)
+  ) {
+    return { error: "La flashcard seleccionada no es válida." };
+  }
+
+  const question = textValue(formData, "question");
+  const answer = textValue(formData, "answer");
+
+  if (!question) {
+    return { error: "Escribe la pregunta de la flashcard." };
+  }
+  if (!answer) {
+    return { error: "Escribe la respuesta de la flashcard." };
+  }
+
+  const { error } = await getSupabaseAdminClient().rpc(
+    "update_flashcard_v1",
+    {
+      p_flashcard_id: flashcardId,
+      p_question: question,
+      p_answer: answer,
+    },
+  );
+  if (error) return databaseError("updateFlashcard", error);
+
+  revalidatePath(`/administrar/clases/${classId}`);
+  revalidatePath(`/administrar/clases/${classId}/temas/${topicId}/flashcards`);
+  revalidatePath(`/temas/${topicId}`);
+  revalidatePath(`/clases/${classId}`);
+  return { id: flashcardId };
+}
+
+export type TopicLearningJourneyQuickCheck = {
+  prompt: string;
+  answer: string;
+  feedback: string;
+};
+
+export type TopicLearningJourneyPracticalCase = {
+  facts: string;
+  question: string;
+  legalRule: string;
+  reasoning: string;
+  conclusion: string;
+};
+
+export type TopicLearningJourneyForEdit = {
+  openingPrompt: string;
+  quickChecks: TopicLearningJourneyQuickCheck[];
+  practicalCase: TopicLearningJourneyPracticalCase;
+  closingPrompt: string;
+  nextActivity: string;
+};
+
+export async function getTopicLearningJourneyForEdit(
+  topicId: number,
+): Promise<TopicLearningJourneyForEdit | null> {
+  await requireAdmin();
+  if (!isPositiveInteger(topicId)) return null;
+
+  const { data: journey, error } = await getSupabaseAdminClient()
+    .from("topic_learning_journeys")
+    .select("content")
+    .eq("topic_id", topicId)
+    .maybeSingle();
+  if (error || !journey) return null;
+
+  const content = journey.content as Record<string, unknown>;
+  const quickChecks = Array.isArray(content.quickChecks)
+    ? (content.quickChecks as TopicLearningJourneyQuickCheck[]).map(
+        (quickCheck) => ({
+          prompt: String(quickCheck.prompt ?? ""),
+          answer: String(quickCheck.answer ?? ""),
+          feedback: String(quickCheck.feedback ?? ""),
+        }),
+      )
+    : [];
+  const practicalCase = (content.practicalCase ?? {}) as Record<
+    string,
+    unknown
+  >;
+
+  return {
+    openingPrompt: String(content.openingPrompt ?? ""),
+    quickChecks,
+    practicalCase: {
+      facts: String(practicalCase.facts ?? ""),
+      question: String(practicalCase.question ?? ""),
+      legalRule: String(practicalCase.legalRule ?? ""),
+      reasoning: String(practicalCase.reasoning ?? ""),
+      conclusion: String(practicalCase.conclusion ?? ""),
+    },
+    closingPrompt: String(content.closingPrompt ?? ""),
+    nextActivity: String(content.nextActivity ?? ""),
+  };
+}
+
+export async function updateTopicLearningJourneyAction(
+  classId: number,
+  topicId: number,
+  formData: FormData,
+): Promise<ActionResult> {
+  await requireAdmin();
+  if (!isPositiveInteger(classId) || !isPositiveInteger(topicId)) {
+    return { error: "El tema seleccionado no es válido." };
+  }
+
+  const openingPrompt = textValue(formData, "openingPrompt");
+  const closingPrompt = textValue(formData, "closingPrompt");
+  const nextActivity = textValue(formData, "nextActivity");
+  const facts = textValue(formData, "facts");
+  const caseQuestion = textValue(formData, "caseQuestion");
+  const legalRule = textValue(formData, "legalRule");
+  const reasoning = textValue(formData, "reasoning");
+  const conclusion = textValue(formData, "conclusion");
+
+  const quickCheckCount = Number(textValue(formData, "quickCheckCount"));
+  if (!Number.isInteger(quickCheckCount) || quickCheckCount < 2) {
+    return {
+      error: "El learning journey necesita al menos dos quick checks.",
+    };
+  }
+
+  const quickChecks: TopicLearningJourneyQuickCheck[] = [];
+  for (let index = 0; index < quickCheckCount; index += 1) {
+    const prompt = textValue(formData, `quickCheckPrompt${index}`);
+    const answer = textValue(formData, `quickCheckAnswer${index}`);
+    const feedback = textValue(formData, `quickCheckFeedback${index}`);
+    if (!prompt || !answer || !feedback) {
+      return {
+        error: "Completa el prompt, la respuesta y la retroalimentación de cada quick check.",
+      };
+    }
+    quickChecks.push({ prompt, answer, feedback });
+  }
+
+  if (
+    !openingPrompt ||
+    !closingPrompt ||
+    !nextActivity ||
+    !facts ||
+    !caseQuestion ||
+    !legalRule ||
+    !reasoning ||
+    !conclusion
+  ) {
+    return {
+      error: "Completa todas las secciones del learning journey.",
+    };
+  }
+
+  const content: TopicLearningJourneyForEdit = {
+    openingPrompt,
+    quickChecks,
+    practicalCase: {
+      facts,
+      question: caseQuestion,
+      legalRule,
+      reasoning,
+      conclusion,
+    },
+    closingPrompt,
+    nextActivity,
+  };
+
+  const { error } = await getSupabaseAdminClient().rpc(
+    "update_topic_learning_journey_v1",
+    {
+      p_topic_id: topicId,
+      p_content: content,
+    },
+  );
+  if (error) return databaseError("updateTopicLearningJourney", error);
+
+  revalidatePath(`/administrar/clases/${classId}`);
+  revalidatePath(
+    `/administrar/clases/${classId}/temas/${topicId}/learning-journey`,
+  );
+  revalidatePath(`/temas/${topicId}`);
+  revalidatePath(`/clases/${classId}`);
+  return { id: topicId };
+}
+
 export async function createTopicAction(
   classId: number,
   formData: FormData,
