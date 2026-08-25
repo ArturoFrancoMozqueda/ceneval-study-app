@@ -554,19 +554,19 @@
         "description": "Diez casos originales para identificar procedencia, legitimación, plazo, suspensión y efectos.",
         "questions": [
           {
-            "text": "Una persona considera que una ley estatal viola directamente sus derechos y pretende promover una controversia constitucional en nombre propio. ¿Qué dato impide elegir esa vía?",
-            "difficulty": "basic",
+            "text": "Una asociación civil y un municipio objetan la misma ley estatal: la asociación afirma que vulnera derechos de sus integrantes y el municipio que invade su esfera competencial. Ambos pretenden promover una controversia constitucional en nombre propio. ¿Quién cuenta con la legitimación prevista para esa vía?",
+            "difficulty": "intermediate",
             "options": [
-              "Carece de legitimación como ente público del artículo 105",
-              "La ley estatal nunca puede impugnarse",
-              "La SCJN no conoce normas generales"
+              "Ambos, porque cualquier afectación constitucional permite promover controversia",
+              "Solo el municipio, si plantea una relación y afectación competencial de las previstas por el artículo 105",
+              "Solo la asociación, porque representa directamente a personas titulares de derechos"
             ],
-            "correctOption": 0,
-            "explanation": "La controversia se reserva a los entes, poderes y órganos legitimados; un particular debe analizar la vía que corresponda a su afectación.",
+            "correctOption": 1,
+            "explanation": "La controversia constitucional se reserva a los entes, poderes y órganos comprendidos en las relaciones del artículo 105. El municipio puede estar legitimado si acredita esa relación y la afectación competencial; la asociación debe analizar una vía distinta conforme a su propia afectación.",
             "optionExplanations": [
-              "La calidad del promovente es incompatible con esta vía.",
-              "Una ley estatal sí puede ser objeto en relaciones constitucionalmente previstas.",
-              "La SCJN sí controla normas generales mediante los medios del artículo 105."
+              "La existencia de una cuestión constitucional no elimina los requisitos de legitimación propios de cada medio de control.",
+              "El municipio aparece entre los sujetos de las relaciones constitucionales previstas y debe justificar la invasión de su esfera competencial.",
+              "Representar a personas afectadas no convierte a una asociación civil en uno de los entes legitimados para la controversia constitucional."
             ],
             "evidenceIds": [
               "ev-c06-cpeum-arts104-105-sujetos-objeto",
@@ -610,19 +610,19 @@
             ]
           },
           {
-            "text": "Un municipio sostiene que una ley de su estado invade la libre administración de su hacienda. ¿Qué elemento constitucional es central?",
-            "difficulty": "basic",
+            "text": "El congreso de un estado expide una ley que exige autorización de una secretaría estatal para que los municipios ejerzan partidas de su hacienda. Un municipio sostiene que esa regla invade su autonomía. ¿Qué clasificación sostiene mejor el análisis de procedencia de una controversia constitucional?",
+            "difficulty": "intermediate",
             "options": [
-              "La esfera municipal prevista por el artículo 115",
-              "La libertad contractual del alcalde",
-              "La competencia de un juez civil"
+              "Un conflicto contractual del alcalde con la secretaría estatal",
+              "Una acción de inconstitucionalidad promovida por cualquier habitante del municipio",
+              "Una norma general estatal que puede afectar la esfera municipal protegida por los artículos 105 y 115"
             ],
-            "correctOption": 0,
-            "explanation": "El análisis se concentra en la competencia y autonomía municipal reconocidas constitucionalmente.",
+            "correctOption": 2,
+            "explanation": "El caso exige identificar al municipio como sujeto, a la ley estatal como norma general y a la libre administración de la hacienda como posible afectación de su esfera constitucional. Esa clasificación, no un interés personal del alcalde, permite analizar la vía del artículo 105.",
             "optionExplanations": [
-              "El artículo 115 estructura el municipio y su hacienda.",
-              "No se trata de un derecho contractual personal.",
-              "El control corresponde a la SCJN, no a un litigio civil ordinario."
+              "La medida recae sobre el ejercicio de recursos municipales; el supuesto no describe un contrato personal del alcalde.",
+              "La acción de inconstitucionalidad también tiene legitimación tasada y no puede promoverla cualquier habitante.",
+              "La relación entre estado y municipio, el carácter general de la ley y la esfera hacendaria del artículo 115 son los elementos constitucionales relevantes."
             ],
             "evidenceIds": [
               "ev-c06-cpeum-arts104-105-sujetos-objeto",
@@ -675,19 +675,19 @@
             ]
           },
           {
-            "text": "La Federación impugna una norma general local y solicita que deje de aplicarse mientras se resuelve el asunto. ¿Qué procede respecto de la suspensión?",
+            "text": "La Federación impugna en una controversia una norma general local y también un acto concreto dictado para aplicarla. Al admitir la demanda solicita suspender ambos mientras se resuelve el asunto. ¿Qué tratamiento distingue correctamente los dos objetos?",
             "difficulty": "intermediate",
             "options": [
-              "La admisión no puede suspender la norma general",
-              "Debe suspenderse automáticamente",
-              "Solo el congreso local decide la suspensión"
+              "La admisión no puede suspender la norma general; la suspensión del acto concreto debe analizarse conforme a los artículos 14 a 18",
+              "La norma general y el acto concreto deben suspenderse automáticamente por haber sido impugnados juntos",
+              "La prohibición relativa a normas generales obliga a negar también, sin análisis, cualquier suspensión del acto concreto"
             ],
             "correctOption": 0,
-            "explanation": "La Constitución y el artículo 14 reglamentario prohíben que la admisión suspenda la norma general cuestionada.",
+            "explanation": "La Constitución y el artículo 14 reglamentario impiden que la admisión suspenda la norma general cuestionada. Esa prohibición no sustituye el análisis cautelar del acto concreto, que debe atender las circunstancias, límites, alcances y efectos previstos en los artículos 14 a 18.",
             "optionExplanations": [
-              "Es la regla vigente específica.",
-              "No existe suspensión automática de la norma.",
-              "La decisión cautelar corresponde al proceso constitucional, con esa prohibición."
+              "Distingue la prohibición absoluta para la norma general del examen cautelar que corresponde al acto concreto.",
+              "La sola admisión no produce suspensión automática y la norma general no puede suspenderse por esa vía.",
+              "La restricción para normas generales no convierte en idéntico al acto concreto ni elimina el análisis exigido por la ley."
             ],
             "evidenceIds": [
               "ev-c06-cpeum-art105-efectos-suspension",
@@ -731,225 +731,225 @@
             ]
           },
           {
-            "text": "Una entidad impugna un acto que conoció formalmente hace veinte días. En principio, ¿qué plazo general debe revisar?",
-            "difficulty": "basic",
-            "options": [
-              "Treinta días",
-              "Quince días naturales en todos los casos",
-              "Un año"
-            ],
-            "correctOption": 0,
-            "explanation": "El artículo 21 prevé treinta días para actos u omisiones desde el punto de inicio aplicable.",
-            "optionExplanations": [
-              "Es el plazo general pertinente.",
-              "No es la regla de esta ley.",
-              "Ese plazo no corresponde a la controversia descrita."
-            ],
-            "evidenceIds": [
-              "ev-c06-lr-arts19-23-procedencia-demanda"
-            ],
-            "optionEvidenceIds": [
-              [
-                "ev-c06-lr-arts19-23-procedencia-demanda"
-              ],
-              [
-                "ev-c06-lr-arts19-23-procedencia-demanda"
-              ],
-              [
-                "ev-c06-lr-arts19-23-procedencia-demanda"
-              ]
-            ],
-            "correctOptionEvidenceIds": [
-              "ev-c06-lr-arts19-23-procedencia-demanda"
-            ],
-            "explanationEvidenceIds": [
-              "ev-c06-lr-arts19-23-procedencia-demanda"
-            ],
-            "optionExplanationEvidenceIds": [
-              [
-                "ev-c06-lr-arts19-23-procedencia-demanda"
-              ],
-              [
-                "ev-c06-lr-arts19-23-procedencia-demanda"
-              ],
-              [
-                "ev-c06-lr-arts19-23-procedencia-demanda"
-              ]
-            ]
-          },
-          {
-            "text": "Dos poderes de una misma entidad controvierten una norma general y la Corte alcanza seis votos por su invalidez. ¿Qué alcance puede producir?",
+            "text": "Una resolución fue notificada a un municipio y, conforme a la ley que rige ese acto, la notificación surtió efectos el 3 de septiembre. Para calcular el plazo general de la controversia contra ese acto, ¿qué punto de partida debe usar?",
             "difficulty": "intermediate",
             "options": [
-              "Efectos generales",
-              "Solo una recomendación política",
-              "Ningún efecto por tratarse de poderes locales"
+              "El mismo 3 de septiembre, porque ese día surtió efectos la notificación",
+              "El día siguiente a aquel en que surtió efectos la notificación, para contar el plazo de treinta días",
+              "El día en que la autoridad demandada decida remitir el expediente a la Corte"
             ],
-            "correctOption": 0,
-            "explanation": "Ese supuesto está previsto para efectos generales cuando se alcanza la mayoría mínima de seis votos.",
+            "correctOption": 1,
+            "explanation": "Para actos u omisiones, el artículo 21, fracción I, prevé treinta días contados a partir del día siguiente a aquel en que surta efectos la notificación, sin perjuicio de los otros supuestos de conocimiento o ejecución que la misma fracción regula.",
             "optionExplanations": [
-              "Coinciden supuesto y votación constitucionales.",
-              "La sentencia es jurisdiccional, no recomendación.",
-              "Los poderes locales aparecen expresamente en el artículo 105."
+              "La ley no inicia el cómputo el mismo día en que la notificación surte efectos, sino al día siguiente.",
+              "Aplica al hecho dado el plazo y el punto de inicio previstos para actos u omisiones.",
+              "La remisión del expediente no es el punto de partida establecido por el artículo 21."
             ],
             "evidenceIds": [
-              "ev-c06-cpeum-art105-efectos-suspension",
-              "ev-c06-lr-arts41-45-sentencia"
+              "ev-c06-lr-arts19-23-procedencia-demanda"
             ],
             "optionEvidenceIds": [
               [
-                "ev-c06-cpeum-art105-efectos-suspension",
-                "ev-c06-lr-arts41-45-sentencia"
+                "ev-c06-lr-arts19-23-procedencia-demanda"
               ],
               [
-                "ev-c06-cpeum-art105-efectos-suspension",
-                "ev-c06-lr-arts41-45-sentencia"
+                "ev-c06-lr-arts19-23-procedencia-demanda"
               ],
               [
-                "ev-c06-cpeum-art105-efectos-suspension",
-                "ev-c06-lr-arts41-45-sentencia"
+                "ev-c06-lr-arts19-23-procedencia-demanda"
               ]
             ],
             "correctOptionEvidenceIds": [
-              "ev-c06-cpeum-art105-efectos-suspension",
-              "ev-c06-lr-arts41-45-sentencia"
+              "ev-c06-lr-arts19-23-procedencia-demanda"
             ],
             "explanationEvidenceIds": [
-              "ev-c06-cpeum-art105-efectos-suspension",
-              "ev-c06-lr-arts41-45-sentencia"
+              "ev-c06-lr-arts19-23-procedencia-demanda"
             ],
             "optionExplanationEvidenceIds": [
               [
-                "ev-c06-cpeum-art105-efectos-suspension",
-                "ev-c06-lr-arts41-45-sentencia"
+                "ev-c06-lr-arts19-23-procedencia-demanda"
               ],
               [
-                "ev-c06-cpeum-art105-efectos-suspension",
-                "ev-c06-lr-arts41-45-sentencia"
+                "ev-c06-lr-arts19-23-procedencia-demanda"
               ],
               [
-                "ev-c06-cpeum-art105-efectos-suspension",
-                "ev-c06-lr-arts41-45-sentencia"
+                "ev-c06-lr-arts19-23-procedencia-demanda"
               ]
             ]
           },
           {
-            "text": "Un ayuntamiento impugna una omisión atribuida al gobierno estatal. ¿Qué debe contener su demanda además de identificar a las partes?",
+            "text": "El poder ejecutivo de una entidad controvierte una norma general expedida por el congreso de esa misma entidad. Seis integrantes de la Corte votan por declarar su invalidez. ¿Qué consecuencia corresponde a la combinación de sujetos, objeto y votación descrita?",
             "difficulty": "intermediate",
             "options": [
-              "La omisión, preceptos, hechos y conceptos de invalidez",
-              "Una lista de ciudadanos inconformes",
-              "Únicamente una petición política"
+              "La controversia debe desestimarse porque entre poderes locales las sentencias nunca invalidan normas",
+              "La invalidez solo puede alcanzar a las partes porque toda sentencia de controversia tiene efectos relativos",
+              "La declaración de invalidez puede tener efectos generales porque se trata de dos poderes de la misma entidad y se alcanzaron seis votos"
             ],
-            "correctOption": 0,
-            "explanation": "El artículo 22 exige precisar objeto, parámetros constitucionales, antecedentes y conceptos de invalidez.",
+            "correctOption": 2,
+            "explanation": "El artículo 105, fracción I, incluye las controversias entre dos poderes de una misma entidad y permite efectos generales respecto de normas generales invalidadas cuando la decisión obtiene por lo menos seis votos.",
             "optionExplanations": [
-              "Son elementos procesales esenciales.",
-              "La legitimación no depende de reunir firmas ciudadanas.",
-              "Se requiere una argumentación jurídica formal."
+              "Los poderes de una misma entidad están expresamente incluidos; la consecuencia depende además del objeto y de la votación.",
+              "Los efectos relativos son la regla para los demás casos, pero el supuesto descrito encuadra en una excepción de efectos generales.",
+              "Coinciden la relación constitucional, el carácter general de la norma y la mayoría mínima exigida."
             ],
             "evidenceIds": [
-              "ev-c06-lr-arts19-23-procedencia-demanda"
+              "ev-c06-cpeum-art105-efectos-suspension",
+              "ev-c06-lr-arts41-45-sentencia"
             ],
             "optionEvidenceIds": [
               [
-                "ev-c06-lr-arts19-23-procedencia-demanda"
+                "ev-c06-cpeum-art105-efectos-suspension",
+                "ev-c06-lr-arts41-45-sentencia"
               ],
               [
-                "ev-c06-lr-arts19-23-procedencia-demanda"
+                "ev-c06-cpeum-art105-efectos-suspension",
+                "ev-c06-lr-arts41-45-sentencia"
               ],
               [
-                "ev-c06-lr-arts19-23-procedencia-demanda"
+                "ev-c06-cpeum-art105-efectos-suspension",
+                "ev-c06-lr-arts41-45-sentencia"
               ]
             ],
             "correctOptionEvidenceIds": [
-              "ev-c06-lr-arts19-23-procedencia-demanda"
+              "ev-c06-cpeum-art105-efectos-suspension",
+              "ev-c06-lr-arts41-45-sentencia"
             ],
             "explanationEvidenceIds": [
-              "ev-c06-lr-arts19-23-procedencia-demanda"
+              "ev-c06-cpeum-art105-efectos-suspension",
+              "ev-c06-lr-arts41-45-sentencia"
             ],
             "optionExplanationEvidenceIds": [
               [
-                "ev-c06-lr-arts19-23-procedencia-demanda"
+                "ev-c06-cpeum-art105-efectos-suspension",
+                "ev-c06-lr-arts41-45-sentencia"
               ],
               [
-                "ev-c06-lr-arts19-23-procedencia-demanda"
+                "ev-c06-cpeum-art105-efectos-suspension",
+                "ev-c06-lr-arts41-45-sentencia"
               ],
               [
-                "ev-c06-lr-arts19-23-procedencia-demanda"
+                "ev-c06-cpeum-art105-efectos-suspension",
+                "ev-c06-lr-arts41-45-sentencia"
               ]
             ]
           },
           {
-            "text": "Una controversia pretende anular una reforma a la propia Constitución federal. ¿Cuál es la respuesta conforme al texto vigente?",
-            "difficulty": "basic",
+            "text": "Un ayuntamiento demanda al gobierno estatal por una omisión. Presenta tres borradores que ya identifican a las partes. ¿Cuál contiene los demás elementos sustantivos exigidos por el artículo 22 para describir correctamente la controversia?",
+            "difficulty": "intermediate",
             "options": [
-              "Es improcedente",
-              "Procede si la promueve un municipio",
-              "Procede con mayoría simple"
+              "El que precisa la omisión impugnada, los preceptos constitucionales estimados violados, los hechos o abstenciones antecedentes y los conceptos de invalidez",
+              "El que sustituye los conceptos de invalidez por una relación de firmas ciudadanas y deja para después la identificación de la omisión",
+              "El que narra los hechos y solicita una solución política, pero omite señalar los preceptos constitucionales y los conceptos de invalidez"
             ],
             "correctOption": 0,
-            "explanation": "El artículo 105 declara improcedentes las controversias y acciones dirigidas contra adiciones o reformas constitucionales.",
+            "explanation": "Además de las partes, el artículo 22 exige señalar la norma, acto u omisión cuya invalidez se demanda, los preceptos constitucionales estimados violados, los hechos o abstenciones antecedentes y los conceptos de invalidez.",
             "optionExplanations": [
-              "Es una exclusión expresa.",
-              "La calidad municipal no elimina la improcedencia.",
-              "La votación no corrige la falta de procedencia."
+              "Integra el objeto, el parámetro constitucional, los antecedentes y la argumentación de invalidez requerida.",
+              "Las firmas no sustituyen la identificación del objeto impugnado ni los conceptos de invalidez.",
+              "La narración fáctica por sí sola deja incompletos el parámetro constitucional y la razón jurídica de invalidez."
             ],
             "evidenceIds": [
-              "ev-c06-cpeum-art105-efectos-suspension",
               "ev-c06-lr-arts19-23-procedencia-demanda"
             ],
             "optionEvidenceIds": [
               [
-                "ev-c06-cpeum-art105-efectos-suspension",
                 "ev-c06-lr-arts19-23-procedencia-demanda"
               ],
               [
-                "ev-c06-cpeum-art105-efectos-suspension",
                 "ev-c06-lr-arts19-23-procedencia-demanda"
               ],
               [
-                "ev-c06-cpeum-art105-efectos-suspension",
                 "ev-c06-lr-arts19-23-procedencia-demanda"
               ]
             ],
             "correctOptionEvidenceIds": [
-              "ev-c06-cpeum-art105-efectos-suspension",
               "ev-c06-lr-arts19-23-procedencia-demanda"
             ],
             "explanationEvidenceIds": [
-              "ev-c06-cpeum-art105-efectos-suspension",
               "ev-c06-lr-arts19-23-procedencia-demanda"
             ],
             "optionExplanationEvidenceIds": [
               [
-                "ev-c06-cpeum-art105-efectos-suspension",
                 "ev-c06-lr-arts19-23-procedencia-demanda"
               ],
               [
-                "ev-c06-cpeum-art105-efectos-suspension",
                 "ev-c06-lr-arts19-23-procedencia-demanda"
               ],
               [
-                "ev-c06-cpeum-art105-efectos-suspension",
                 "ev-c06-lr-arts19-23-procedencia-demanda"
               ]
             ]
           },
           {
-            "text": "Una norma federal y un acto municipal generan problemas distintos. ¿Qué paso debe hacerse primero para elegir la controversia constitucional?",
+            "text": "Se comparan tres demandas: I) la Federación impugna un acto de una entidad federativa por invasión competencial; II) un municipio impugna una norma electoral local; III) una entidad federativa impugna una reforma a la Constitución federal. ¿Cuáles presentan una improcedencia expresa por el objeto controvertido?",
             "difficulty": "advanced",
             "options": [
-              "Verificar sujetos, relación, objeto y afectación constitucional",
-              "Elegir siempre la vía más rápida",
-              "Contar únicamente el número de artículos citados"
+              "I y II",
+              "II y III",
+              "I y III"
             ],
-            "correctOption": 0,
-            "explanation": "La procedencia depende de la estructura constitucional del conflicto, no de preferencias prácticas o cantidad de citas.",
+            "correctOption": 1,
+            "explanation": "El artículo 105 excluye las controversias sobre materia electoral y declara improcedentes las dirigidas contra adiciones o reformas a la Constitución. El supuesto I, a diferencia de los otros dos, describe en principio un conflicto competencial incluido en la fracción I y todavía requiere analizar sus demás requisitos.",
             "optionExplanations": [
-              "Es el método correcto de clasificación.",
-              "La rapidez no crea competencia ni legitimación.",
-              "Las citas no sustituyen la relación constitucional exigida."
+              "El supuesto I no contiene por sí mismo uno de esos objetos expresamente excluidos; el III sí.",
+              "La materia electoral del supuesto II y la reforma constitucional del III son exclusiones expresas vigentes.",
+              "El supuesto I puede encuadrar en una relación constitucional; el que falta en esta pareja es el supuesto electoral II."
+            ],
+            "evidenceIds": [
+              "ev-c06-cpeum-art105-efectos-suspension",
+              "ev-c06-lr-arts19-23-procedencia-demanda"
+            ],
+            "optionEvidenceIds": [
+              [
+                "ev-c06-cpeum-art105-efectos-suspension",
+                "ev-c06-lr-arts19-23-procedencia-demanda"
+              ],
+              [
+                "ev-c06-cpeum-art105-efectos-suspension",
+                "ev-c06-lr-arts19-23-procedencia-demanda"
+              ],
+              [
+                "ev-c06-cpeum-art105-efectos-suspension",
+                "ev-c06-lr-arts19-23-procedencia-demanda"
+              ]
+            ],
+            "correctOptionEvidenceIds": [
+              "ev-c06-cpeum-art105-efectos-suspension",
+              "ev-c06-lr-arts19-23-procedencia-demanda"
+            ],
+            "explanationEvidenceIds": [
+              "ev-c06-cpeum-art105-efectos-suspension",
+              "ev-c06-lr-arts19-23-procedencia-demanda"
+            ],
+            "optionExplanationEvidenceIds": [
+              [
+                "ev-c06-cpeum-art105-efectos-suspension",
+                "ev-c06-lr-arts19-23-procedencia-demanda"
+              ],
+              [
+                "ev-c06-cpeum-art105-efectos-suspension",
+                "ev-c06-lr-arts19-23-procedencia-demanda"
+              ],
+              [
+                "ev-c06-cpeum-art105-efectos-suspension",
+                "ev-c06-lr-arts19-23-procedencia-demanda"
+              ]
+            ]
+          },
+          {
+            "text": "El congreso de una entidad acusa al poder ejecutivo de esa misma entidad de omitir la publicación de un decreto y sostiene que la omisión impide ejercer una atribución constitucional. ¿Qué clasificación reúne los elementos relevantes antes de decidir la procedencia?",
+            "difficulty": "advanced",
+            "options": [
+              "Un desacuerdo político sin objeto revisable, porque las omisiones no pueden controvertirse",
+              "Una acción de inconstitucionalidad, porque todo conflicto entre poderes debe plantearse contra una norma general",
+              "Una relación entre dos poderes de la misma entidad, con una omisión como objeto y una posible afectación constitucional que debe analizarse"
+            ],
+            "correctOption": 2,
+            "explanation": "La clasificación debe integrar sujetos, relación constitucional, objeto y afectación alegada. El artículo 105 incluye a dos poderes de una misma entidad y permite controvertir normas generales, actos u omisiones, sin que esa clasificación inicial sustituya el examen de los demás requisitos.",
+            "optionExplanations": [
+              "El texto vigente incluye expresamente las omisiones entre los objetos posibles de la controversia.",
+              "La acción de inconstitucionalidad tiene por objeto la contradicción de una norma general con la Constitución; el caso plantea una omisión y una relación competencial.",
+              "Es la clasificación completa del supuesto y permite continuar con el análisis de procedencia sin darla por automática."
             ],
             "evidenceIds": [
               "ev-c06-cpeum-arts104-105-sujetos-objeto",
@@ -993,19 +993,19 @@
             ]
           },
           {
-            "text": "La transcripción afirma que el Pleno se integra con once ministros. ¿Qué dato debe usarse para estudiar en 2026?",
+            "text": "Una ficha de clase anterior afirma que el Pleno se integra con once ministros, pero la versión oficial de la Constitución consultada para actualizar el tema contiene una cifra distinta. ¿Qué decisión editorial mantiene vigente el material?",
             "difficulty": "basic",
             "options": [
-              "Nueve integrantes conforme al artículo 94 vigente",
-              "Once porque lo dice la clase oral",
-              "Veintiuno por tratarse de control constitucional"
+              "Usar nueve integrantes conforme al artículo 94 vigente y señalar que la afirmación anterior quedó desactualizada",
+              "Conservar once sin advertencia porque la transcripción es la fuente cronológicamente anterior",
+              "Omitir cualquier cifra y afirmar que la integración depende de cada controversia"
             ],
             "correctOption": 0,
-            "explanation": "El material oral quedó desactualizado; el artículo 94 vigente al 2 de junio de 2026 establece nueve integrantes.",
+            "explanation": "El material anterior quedó desactualizado: la fuente oficial vigente prevalece y el artículo 94, con reformas al 2 de junio de 2026, establece nueve integrantes. La transcripción se conserva como fuente histórica, pero no sustituye el derecho vigente.",
             "optionExplanations": [
-              "Es el derecho constitucional vigente.",
-              "La transcripción es fuente de clase, no sustituye la norma vigente.",
-              "Ese número no tiene base constitucional."
+              "Distingue la conservación de la fuente original de la obligación editorial de presentar el texto constitucional vigente.",
+              "La antigüedad de una fuente no le da prioridad sobre el texto constitucional vigente para afirmar la integración actual.",
+              "La integración de la Corte está fijada por el artículo 94 y no varía según el asunto concreto."
             ],
             "evidenceIds": [
               "ev-c06-cpeum-art94-integracion",
@@ -1049,19 +1049,19 @@
             ]
           },
           {
-            "text": "La Corte declara inválido un acto concreto en un caso que no corresponde a los supuestos de efectos generales. ¿A quién alcanza la resolución?",
+            "text": "La Federación obtiene la invalidez de un acto concreto de una entidad federativa. El caso no versa sobre una norma general ni encuadra en otro supuesto de efectos generales. ¿Qué alcance debe distinguirse de la obligatoriedad que puedan tener las razones de la sentencia?",
             "difficulty": "intermediate",
             "options": [
-              "A las partes de la controversia",
-              "A toda persona sin excepción",
-              "A nadie hasta que el Congreso la ratifique"
+              "La invalidez del acto se extiende automáticamente a cualquier persona por haber intervenido la Federación",
+              "La sentencia carece de efectos hasta que el congreso de la entidad la ratifique",
+              "La resolución produce efectos respecto de las partes, aunque la ley regule por separado la obligatoriedad de ciertas razones aprobadas con la votación requerida"
             ],
-            "correctOption": 0,
-            "explanation": "En los demás casos, el artículo 105 dispone efectos únicamente respecto de las partes.",
+            "correctOption": 2,
+            "explanation": "Para los demás casos, el artículo 105 y el artículo 42 reglamentario disponen efectos únicamente respecto de las partes. Ese alcance no debe confundirse con la regla distinta del artículo 43 sobre la obligatoriedad de las razones que justifican determinadas decisiones.",
             "optionExplanations": [
-              "Es la regla residual constitucional.",
-              "Los efectos generales no son automáticos.",
-              "La sentencia no requiere ratificación legislativa."
+              "La presencia de la Federación no convierte por sí sola la invalidez de un acto concreto en una decisión de efectos generales.",
+              "La sentencia de la Corte no está sujeta a ratificación del congreso local para producir los efectos que ella determine.",
+              "Aplica la regla de efectos entre partes y evita confundirla con la fuerza obligatoria de las razones de la decisión."
             ],
             "evidenceIds": [
               "ev-c06-cpeum-art105-efectos-suspension",

@@ -399,9 +399,20 @@ def main() -> None:
             page.keyboard.press("Enter")
             expect(page.locator("#contenido-principal")).to_be_focused()
 
+            page.goto(f"{base_url}/progreso/examenes", wait_until="networkidle")
+            expect(page.get_by_role("heading", name="Historial de exámenes")).to_be_visible()
+            expect(
+                page.get_by_role("heading", name="Aún no has entregado exámenes")
+            ).to_be_visible()
+            expect(page.get_by_role("link", name="Elegir un tema")).to_have_attribute(
+                "href", "/estudiar"
+            )
+
             sessions_link = page.get_by_role("link", name="Sesiones").first
             expect(sessions_link).to_have_attribute("href", "/sesiones")
             page.goto(f"{base_url}/sesiones", wait_until="networkidle")
+            expect(page.get_by_role("heading", name="Sesiones", exact=True)).to_be_visible()
+            expect(page.get_by_role("heading", name="1 clases publicadas")).to_be_visible()
 
             class_link = page.locator(f'a[href="{class_path}"]').first
             expect(class_link).to_be_visible()
@@ -523,7 +534,7 @@ def main() -> None:
                 raise AssertionError(f"El navegador registró errores: {details}")
 
             print(
-                "[OK] E2E local: login privado, health, progreso, flashcards, examen, historial, rutas inválidas, panel y emulación de reflow/touch/reduced-motion verificados; "
+                "[OK] E2E local: login privado, health, biblioteca, estado vacío de historial, progreso, flashcards, examen, historial con intento, rutas inválidas, panel y emulación de reflow/touch/reduced-motion verificados; "
                 f"0 errores de consola/página/red; abortos permitidos document-navigation={allowed_aborts['document-navigation']}, next-prefetch={allowed_aborts['next-prefetch']}, next-server-action={allowed_aborts['next-server-action']}."
             )
         finally:

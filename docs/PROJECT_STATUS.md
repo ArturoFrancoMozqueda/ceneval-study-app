@@ -83,10 +83,58 @@ trabajo. Ordenadas por impacto:
      elegir por frase verdadera aislada). No corregido — bajo impacto. Si se
      decide corregirla, ya existe mecanismo de edición
      (`update_flashcard_v1` — ver punto 2).
-   - **Pendiente:** repetir el paso 1 sobre una clase de contenido jurídico
-     sustantivo (no de orientación, como C01) para ver si el patrón de
-     "preguntas de recuerdo disfrazadas de aplicación" se repite en el resto
-     del catálogo, antes de decidir si conviene una revisión más amplia.
+   - **Paso 1 repetido sobre C06 — completado el 24 de agosto.** C06
+     (controversia constitucional) se eligió porque exige distinguir sujetos,
+     objeto, afectación competencial, plazo, suspensión y efectos. La auditoría
+     encontró que 8 de 10 reactivos eran recuerdo literal con apariencia de
+     caso, los 10 tenían la respuesta correcta en la primera posición y varios
+     distractores podían descartarse sin razonamiento jurídico. Se reescribieron
+     los 10 reactivos en el paquete 1.2 para exigir clasificaciones o decisiones
+     sobre hechos y se distribuyeron las claves entre las tres posiciones. La
+     vigencia se comprobó directamente en las fuentes oficiales ya registradas:
+     Constitución (últimas reformas DOF 02-06-2026) y Ley Reglamentaria de las
+     Fracciones I y II del artículo 105 (última reforma DOF 14-11-2025).
+     `content:test` conserva los 137 artefactos y el round-trip de C06; el gate
+     `content:check` no pudo releer `AUDIO 06.txt` porque
+     `CENEVAL_TRANSCRIPTS_DIR` no está configurado en esta sesión.
+   - **Corrección de C06 aplicada y verificada en producción el 24 de agosto.**
+     Antes se probó `update_exam_question_v1` con una materia, clase, tema,
+     examen y pregunta sintéticos `ZZTEST`; el RPC actualizó texto, dificultad,
+     opciones, clave y explicaciones, y la limpieza terminó en 0 filas en las
+     seis tablas comprobadas. Después se invocó el mismo RPC para las preguntas
+     remotas 51–60: las 10 coinciden campo por campo con el paquete y C06 sigue
+     `published`. El mecanismo invalidó, como está diseñado, la aprobación
+     editorial anterior; C06 quedó con 0 aprobaciones vigentes y necesita que
+     Fatima revise el resultado desde el panel antes de emitir un nuevo dictamen.
+   - **Propuesta de decisión para la redundancia de los 9 materiales — no
+     implementada:** conservar por ahora el contrato editorial 1.2 y sus nueve
+     tipos (evita una migración destructiva y preserva la trazabilidad), pero
+     dejar de presentarlos como nueve lecturas equivalentes. La vista de estudio
+     ya los separa parcialmente por función en `components/lesson-view.tsx`,
+     aunque todavía mezcla contenidos conceptuales repetidos y no muestra
+     `study_guide` en ninguna etapa. Se propone una **vista guiada con
+     divulgación progresiva**:
+     1. `short_answer` como apertura breve de **Qué resolver**;
+     2. `full_explanation` como lectura principal de **Comprende**, con
+        `legal_basis` disponible al lado como **Ver fundamento jurídico**;
+     3. `simple_example` y `ceneval_example` juntos en **Aplica**;
+     4. `common_errors` como bloque propio de **Evita estos errores**;
+     5. `summary` como cierre visible y `key_concepts`/`study_guide` dentro de
+        **Otras formas de repasar**, cerradas inicialmente y con su tipo
+        identificado, para que la estudiante sepa que son reformulaciones y no
+        contenido nuevo obligatorio.
+     Esta solución reduce el efecto de redundancia descrito por Sweller (1994)
+     sin eliminar evidencia ni dificultad productiva; también permite que una
+     estudiante avanzada omita apoyos repetidos, atendiendo el efecto de
+     reversión por pericia de Kalyuga et al. (2003). **No se propone marcar
+     automáticamente pares como “duplicados” mediante similitud textual:** esa
+     etiqueta podría confundir paráfrasis útil con repetición y requeriría una
+     revisión editorial nueva de 513 materiales. Antes de implementarla, Fatima
+     debe decidir si aprueba esta jerarquía visual. Si la aprueba, el siguiente
+     paso técnico es un piloto reversible solo de presentación sobre C01 y dos
+     clases jurídicas sustantivas, sin cambiar contenido ni esquema, con pruebas
+     de que los nueve materiales siguen accesibles por teclado y lector de
+     pantalla.
 2. **Extender el mecanismo de edición de contenido publicado a materiales,
    mapas conceptuales, flashcards y learning journey — completado el 24 de
    agosto de 2026.** Las 5 categorías de contenido publicado ahora tienen
@@ -123,14 +171,19 @@ trabajo. Ordenadas por impacto:
 3. **Segunda copia independiente de las 70 transcripciones originales y
    restauración de ensayo (`R-4`, prioridad 0).** La primera copia ya se
    verificó con SHA-256 el 21 de agosto; falta la segunda copia y probar que
-   se puede restaurar.
+   se puede restaurar. **Bloqueada en esta sesión:**
+   `CENEVAL_TRANSCRIPTS_DIR` no está configurado y no existe una ruta editorial
+   autorizada que se pueda leer o usar como destino independiente. No se buscó
+   el archivo privado fuera de esa variable ni se creó una copia incompleta.
 4. **Ejecutar `docs/SUPABASE_BACKUP.md` de punta a punta contra producción
    (`R-1` a `R-3`, prioridad 0).** El mecanismo ya está probado con datos
    sintéticos (`npm run test:backup`); falta correr
    `npm run backup:supabase -- -ConfirmProduction` de verdad, verificarlo,
    sacar una copia cifrada fuera del equipo y restaurarla en un proyecto de
    ensayo. Requiere tu autorización expresa antes de ejecutarse (toca datos
-   reales).
+   reales). **No ejecutado en esta sesión:** el encargo reiteró que no debe
+   asumirse autorización y no incluyó una autorización explícita nueva para el
+   comando de producción.
 5. **`I-6` — resuelto el 24 de agosto de 2026.** El script de preflight
    (`lib/operations/runtime-env.ts`) ahora reconoce el literal `[SENSITIVE]`
    que devuelve `vercel env pull` para las 4 variables `NEXT_PUBLIC_*` y
@@ -141,16 +194,28 @@ trabajo. Ordenadas por impacto:
    Vercel también la ejecuta con los valores reales inyectados (Sensitive
    solo bloquea volver a leerlos después, no su inyección real). No hace
    falta quitar la marca `Sensitive` — de hecho conviene dejarla.
-6. **Pruebas automatizadas de interfaz en navegador** (`Prioridad 3` del §10)
-   — el proyecto ya tiene la skill `webapp-testing` disponible para esto y
-   nunca se ha usado.
-7. **Auditoría de accesibilidad manual** con lector de pantalla, zoom real y
-   dispositivos físicos — la skill `accessibility` está disponible y no se
-   ha corrido.
-8. **Corregir `README.md`**, que sigue desactualizado (dice "40 de 58 clases
-   publicadas" y "no hay despliegue todavía"; en realidad son 57/58 y sí hay
-   despliegue en producción desde hace varios días). Pendiente desde que se
-   señaló el 23 de agosto, nunca se autorizó el cambio.
+6. **Pruebas automatizadas de interfaz en navegador — completadas y ampliadas
+   el 24 de agosto.** La afirmación anterior de que nunca se habían usado era
+   obsoleta: `test:e2e:local` ya cubría desde el 21 de agosto login privado,
+   biblioteca, clase, repaso, examen e historial. La brecha reproducible era el
+   historial antes del primer intento; ahora el E2E comprueba ese estado vacío,
+   su CTA, la biblioteca de sesiones y el conteo de la clase sintética antes de
+   completar el examen. Pasó en Chromium headless contra build de producción,
+   sin errores de consola/página/red y con limpieza final en 0 clases, materias,
+   referencias y usuarios sintéticos.
+7. **Primera auditoría manual de accesibilidad — ejecutada el 24 de agosto con
+   los medios disponibles.** Teclado, skip-link, orden de foco, formularios,
+   radios, reflow y contraste principal pasaron en las rutas centrales. Se
+   encontró un incumplimiento reproducible de WCAG 2.2 AA 2.5.8: el botón
+   lateral de escritorio “Cerrar sesión” mide aproximadamente 80×16 CSS px;
+   queda pendiente corregirlo. NVDA no está instalado, Computer Use no pudo
+   acreditar el zoom real del navegador, no se alteró el modo de contraste alto
+   de Windows y no hay dispositivo físico con TalkBack/VoiceOver; esas cuatro
+   comprobaciones siguen bloqueadas y no se declaran aprobadas. Matriz y límites
+   en `docs/ACCESSIBILITY_TESTING.md`.
+8. **README corregido el 24 de agosto.** Ya muestra 57/58 clases y el despliegue
+   técnico privado real; el punto pendiente había quedado obsoleto tras el
+   commit `b797833`.
 
 ### 0.3 — Bloqueadas por terceros, sin acción posible hoy
 

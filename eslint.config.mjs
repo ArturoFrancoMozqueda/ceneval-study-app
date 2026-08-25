@@ -14,6 +14,10 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // Supabase CLI materializes bundled third-party services here.
     "supabase/.temp/**",
+    // Agent/browser tooling owns disposable worktrees and capture artifacts.
+    ".claude/worktrees/**",
+    ".playwright-mcp/**",
+    "tmp/**",
   ]),
 ]);
 
