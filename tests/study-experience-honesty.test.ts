@@ -52,3 +52,25 @@ test("el progreso visible no ofrece una autoevaluación que ya no existe", () =>
   assert.doesNotMatch(progressSource, /QuickCheckEvidence/);
   assert.match(progressSource, /sm:grid-cols-2/);
 });
+
+test("los nueve materiales se presentan por función sin fingir contenido nuevo", () => {
+  for (const materialType of [
+    "short_answer",
+    "full_explanation",
+    "legal_basis",
+    "simple_example",
+    "ceneval_example",
+    "common_errors",
+    "summary",
+    "key_concepts",
+    "study_guide",
+  ]) {
+    assert.match(lessonSource, new RegExp(`${materialType}:`));
+  }
+
+  assert.match(lessonSource, /label="Ver fundamento jurídico"/);
+  assert.match(lessonSource, /label="Otras formas de repasar"/);
+  assert.match(lessonSource, /reformulaciones opcionales del tema/);
+  assert.match(lessonSource, /<details className=/);
+  assert.doesNotMatch(lessonSource, /Bloque \{safeMaterialIndex/);
+});

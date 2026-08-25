@@ -423,6 +423,15 @@ def main() -> None:
             page.goto(topic_url, wait_until="networkidle")
             expect(page.locator("h1")).to_be_visible()
 
+            page.get_by_role("button", name=re.compile("Comprende")).click()
+            expect(page.get_by_text("Explicación principal", exact=True)).to_be_visible()
+            legal_disclosure = page.locator("summary").filter(
+                has_text="Ver fundamento jurídico"
+            )
+            expect(legal_disclosure).to_be_visible()
+            legal_disclosure.click()
+            expect(page.get_by_text("Fundamento jurídico", exact=True)).to_be_visible()
+
             page.get_by_role("button", name="Practicar casos").click()
             expect(page.get_by_role("status")).to_have_text("Avance guardado")
             page.reload(wait_until="networkidle")
@@ -449,6 +458,13 @@ def main() -> None:
             expect(completion_heading).to_be_visible()
             expect(completion_heading).to_be_focused()
             page.get_by_role("button", name="Comprobar lo aprendido").click()
+            optional_review = page.locator("summary").filter(
+                has_text="Otras formas de repasar"
+            )
+            expect(optional_review).to_be_visible()
+            optional_review.click()
+            expect(page.get_by_text("Conceptos clave", exact=True)).to_be_visible()
+            expect(page.get_by_text("Guía de estudio", exact=True)).to_be_visible()
 
             for index in range(10):
                 fieldset = page.locator("fieldset").first

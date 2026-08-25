@@ -29,18 +29,36 @@ const steps = [
 type StepId = (typeof steps)[number]["id"];
 const stepIds = steps.map(({ id }) => id);
 
+const sourceLabels = {
+  class: "Explicado en clase",
+  complementary: "Explicación complementaria",
+  mixed: "Clase + fuentes complementarias",
+};
+
+const materialFunctionLabels: Record<StudyMaterial["materialType"], string> = {
+  short_answer: "Punto de partida",
+  full_explanation: "Explicación principal",
+  legal_basis: "Fundamento jurídico",
+  simple_example: "Ejemplo sencillo",
+  ceneval_example: "Caso tipo CENEVAL",
+  common_errors: "Prevención de errores",
+  summary: "Cierre",
+  key_concepts: "Conceptos clave",
+  study_guide: "Guía de estudio",
+};
+
 function Material({ material }: { material: StudyMaterial }) {
-  const sourceLabels = {
-    class: "Explicado en clase",
-    complementary: "Explicación complementaria",
-    mixed: "Clase + fuentes complementarias",
-  };
   return (
     <ContentShield>
       <article className="rounded-2xl border border-border bg-white p-5 sm:p-7">
-        <span className="rounded-full bg-success-soft px-3 py-1 text-xs font-semibold text-success">
-          {sourceLabels[material.sourceOrigin]}
-        </span>
+        <div className="flex flex-wrap gap-2">
+          <span className="rounded-full bg-success-soft px-3 py-1 text-xs font-semibold text-success">
+            {materialFunctionLabels[material.materialType]}
+          </span>
+          <span className="rounded-full border border-border px-3 py-1 text-xs font-semibold text-muted">
+            {sourceLabels[material.sourceOrigin]}
+          </span>
+        </div>
         <h2 className="mt-4 text-xl font-semibold">{material.title}</h2>
         <ProtectedText
           as="div"
@@ -49,6 +67,55 @@ function Material({ material }: { material: StudyMaterial }) {
           {material.content}
         </ProtectedText>
       </article>
+    </ContentShield>
+  );
+}
+
+function MaterialDisclosure({
+  label,
+  description,
+  materials,
+}: {
+  label: string;
+  description: string;
+  materials: StudyMaterial[];
+}) {
+  if (materials.length === 0) return null;
+
+  return (
+    <ContentShield>
+      <details className="group rounded-2xl border border-border bg-white open:border-brand/30">
+        <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 rounded-2xl px-5 py-3 font-semibold text-brand marker:content-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:px-7">
+          <span>{label}</span>
+          <span aria-hidden="true" className="text-xl leading-none group-open:rotate-45">
+            +
+          </span>
+        </summary>
+        <div className="border-t border-border px-5 pb-6 pt-4 sm:px-7">
+          <p className="text-sm leading-6 text-muted">{description}</p>
+          <div className="mt-5 space-y-6">
+            {materials.map((material) => (
+              <article key={material.id}>
+                <div className="flex flex-wrap gap-2">
+                  <span className="rounded-full bg-success-soft px-3 py-1 text-xs font-semibold text-success">
+                    {materialFunctionLabels[material.materialType]}
+                  </span>
+                  <span className="rounded-full border border-border px-3 py-1 text-xs font-semibold text-muted">
+                    {sourceLabels[material.sourceOrigin]}
+                  </span>
+                </div>
+                <h2 className="mt-3 text-lg font-semibold">{material.title}</h2>
+                <ProtectedText
+                  as="div"
+                  className="mt-3 whitespace-pre-line leading-8 text-foreground/80"
+                >
+                  {material.content}
+                </ProtectedText>
+              </article>
+            ))}
+          </div>
+        </div>
+      </details>
     </ContentShield>
   );
 }
@@ -152,9 +219,6 @@ export function LessonView({
   const [activeStep, setActiveStep] = useState<StepId>(
     initialProgress?.currentStep ?? "discover",
   );
-  const [materialIndex, setMaterialIndex] = useState(
-    initialProgress?.materialIndex ?? 0,
-  );
   const sessionMinutes = initialProgress?.sessionMinutes ?? 10;
   const [completed, setCompleted] = useState<StepId[]>(
     initialProgress?.completedSteps ?? [],
@@ -167,16 +231,6 @@ export function LessonView({
   const saveSequence = useRef(0);
   const [, startSaving] = useTransition();
 
-  const conceptual = lesson.materials.filter(
-    ({ materialType }) =>
-      ![
-        "short_answer",
-        "simple_example",
-        "ceneval_example",
-        "summary",
-        "study_guide",
-      ].includes(materialType),
-  );
   const cases = lesson.materials.filter(({ materialType }) =>
     ["simple_example", "ceneval_example"].includes(materialType),
   );
@@ -186,9 +240,17 @@ export function LessonView({
   const closing = lesson.materials.find(
     ({ materialType }) => materialType === "summary",
   );
-  const safeMaterialIndex = Math.min(
-    materialIndex,
-    Math.max(conceptual.length - 1, 0),
+  const explanation = lesson.materials.find(
+    ({ materialType }) => materialType === "full_explanation",
+  );
+  const legalBasis = lesson.materials.filter(
+    ({ materialType }) => materialType === "legal_basis",
+  );
+  const commonErrors = lesson.materials.find(
+    ({ materialType }) => materialType === "common_errors",
+  );
+  const optionalReviews = lesson.materials.filter(({ materialType }) =>
+    ["key_concepts", "study_guide"].includes(materialType),
   );
 
   function persist(
@@ -219,7 +281,6 @@ export function LessonView({
 
   function goToStep(nextStep: StepId) {
     setActiveStep(nextStep);
-    setMaterialIndex(0);
     setShowSources(false);
     persist(nextStep, 0);
   }
@@ -232,7 +293,6 @@ export function LessonView({
       stepIds[Math.min(stepIds.indexOf(step) + 1, stepIds.length - 1)];
     setCompleted(nextCompleted);
     setActiveStep(nextStep);
-    setMaterialIndex(0);
     persist(nextStep, 0, nextCompleted);
   }
 
@@ -355,7 +415,9 @@ export function LessonView({
         {activeStep === "discover" ? (
           <ContentShield>
             <div className="rounded-3xl bg-brand p-6 text-white sm:p-9">
-              <p className="text-sm font-semibold text-white/70">Antes de leer</p>
+              <p className="text-sm font-semibold text-white/70">
+                Qué resolver · Punto de partida
+              </p>
               <h2 className="mt-3 max-w-3xl text-2xl font-semibold">
                 ¿Cómo resolverías este tema si apareciera hoy en un caso CENEVAL?
               </h2>
@@ -375,6 +437,14 @@ export function LessonView({
 
         {activeStep === "understand" ? (
           <div className="space-y-6">
+            {explanation ? <Material material={explanation} /> : null}
+
+            <MaterialDisclosure
+              description="Consulta la base normativa cuando necesites verificar de dónde proviene la explicación principal."
+              label="Ver fundamento jurídico"
+              materials={legalBasis}
+            />
+
             {lesson.conceptMap ? (
               <ConceptMap
                 description={lesson.conceptMap.description}
@@ -383,99 +453,22 @@ export function LessonView({
               />
             ) : null}
 
-            <ContentShield>
-              <article className="rounded-3xl border border-border bg-white p-5 sm:p-7">
-                <p className="text-sm font-semibold text-success">
-                  Guía de preguntas y respuestas
+            {commonErrors ? (
+              <section aria-label="Evita estos errores">
+                <p className="mb-3 text-sm font-semibold text-danger">
+                  Evita estos errores
                 </p>
-                <h2 className="mt-2 text-2xl font-semibold">
-                  Comprueba las ideas esenciales
-                </h2>
-                <p className="mt-2 leading-7 text-muted">
-                  Abre cada pregunta para consultar la respuesta explicada.
-                </p>
-                <div className="mt-5 space-y-3">
-                  {lesson.flashcards.map((card, index) => (
-                    <details
-                      className="rounded-xl border border-border bg-background p-4 open:bg-white"
-                      key={card.id}
-                    >
-                      <ProtectedText as="summary" className="cursor-pointer font-semibold">
-                        <span className="mr-2 font-mono text-xs text-muted">
-                          {index + 1}.
-                        </span>
-                        {card.question}
-                      </ProtectedText>
-                      <ProtectedText
-                        as="p"
-                        className="mt-3 border-t border-border pt-3 leading-7 text-foreground/80"
-                      >
-                        {card.answer}
-                      </ProtectedText>
-                    </details>
-                  ))}
-                </div>
-              </article>
-            </ContentShield>
+                <Material material={commonErrors} />
+              </section>
+            ) : null}
 
-            <div>
-            <div className="mb-4 flex items-center justify-between">
-              <p className="font-mono text-xs text-muted">
-                Bloque {safeMaterialIndex + 1} de {conceptual.length || 1}
-              </p>
-              <div
-                aria-label={`${safeMaterialIndex + 1} de ${conceptual.length || 1}`}
-                aria-valuemax={conceptual.length || 1}
-                aria-valuemin={1}
-                aria-valuenow={safeMaterialIndex + 1}
-                className="h-2 w-32 overflow-hidden rounded-full bg-border"
-                role="progressbar"
-              >
-                <div
-                  className="h-full bg-success"
-                  style={{
-                    width: `${((safeMaterialIndex + 1) / (conceptual.length || 1)) * 100}%`,
-                  }}
-                />
-              </div>
-            </div>
-            {conceptual[safeMaterialIndex] ? (
-              <Material material={conceptual[safeMaterialIndex]} />
-            ) : (
-              <p className="text-muted">La explicación está pendiente.</p>
-            )}
-            <div className="mt-4 flex justify-between gap-3">
-              <button
-                className="min-h-11 rounded-xl border border-border bg-white px-4 font-semibold disabled:opacity-40"
-                disabled={safeMaterialIndex === 0}
-                onClick={() => {
-                  const next = safeMaterialIndex - 1;
-                  setMaterialIndex(next);
-                  persist("understand", next);
-                }}
-                type="button"
-              >
-                Anterior
-              </button>
-              <button
-                className="min-h-11 rounded-xl bg-brand px-5 font-semibold text-white"
-                onClick={() => {
-                  if (safeMaterialIndex >= conceptual.length - 1) {
-                    completeAndContinue("understand");
-                  } else {
-                    const next = safeMaterialIndex + 1;
-                    setMaterialIndex(next);
-                    persist("understand", next);
-                  }
-                }}
-                type="button"
-              >
-                {safeMaterialIndex >= conceptual.length - 1
-                  ? "Aplicar lo aprendido"
-                  : "Siguiente bloque"}
-              </button>
-            </div>
-            </div>
+            <button
+              className="min-h-12 rounded-xl bg-brand px-5 font-semibold text-white"
+              onClick={() => completeAndContinue("understand")}
+              type="button"
+            >
+              Aplicar lo aprendido
+            </button>
           </div>
         ) : null}
 
@@ -524,12 +517,17 @@ export function LessonView({
         ) : null}
 
         {activeStep === "check" ? (
-          <div>
+          <div className="space-y-5">
             {closing ? (
-              <div className="mb-5">
+              <div>
                 <Material material={closing} />
               </div>
             ) : null}
+            <MaterialDisclosure
+              description="Son reformulaciones opcionales del tema, no contenido nuevo obligatorio. Ábrelas solo si otra presentación te ayuda a repasar."
+              label="Otras formas de repasar"
+              materials={optionalReviews}
+            />
             {lesson.exam ? (
               <ExamPlayer
                 exam={lesson.exam}

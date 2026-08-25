@@ -12,8 +12,9 @@ editorial privado.
 
 ## Estado
 
-- **57 de 58 clases publicadas** (C01–C57). C58 está bloqueada por falta de
-  fuente académica suficiente (`docs/C58_SOURCE_AUDIT.md`).
+- **57 de 58 clases publicadas** (C01–C57). Para C58 ya se localizaron fuentes
+  académicas suficientes, pero sigue bloqueada hasta obtener permiso comercial
+  y una clase/transcripción original autorizada (`docs/C58_NEW_SOURCE.md`).
 - La aplicación es **privada**: por ahora solo entra la administradora. El
   registro de estudiantes está pospuesto por decisión de producto.
 - Funciona sobre Supabase real: autenticación, roles, políticas RLS, biblioteca

@@ -1,12 +1,13 @@
 # Estado actual y plan de venta — CENEVAL Study App
 
-Última actualización: 24 de agosto de 2026 (hora de México)
+Última actualización: 25 de agosto de 2026 (hora de México)
 
-Base documental: `main` en `527385f` (incluye todo lo del 22 de agosto —
-Fase 0, Fase 1 legal, Fase 5 de producto vendible, marca "Sube Legal" — más
-el trabajo del 23–24 de agosto: reconexión de Vercel↔GitHub, cierre de la
-brecha de registro directo en Supabase Auth, auditoría y corrección de C01,
-y el nuevo mecanismo para editar preguntas de examen publicadas) y
+Base documental: `main` con el trabajo integrado hasta este corte (incluye
+todo lo del 22 de agosto — Fase 0, Fase 1 legal, Fase 5 de producto vendible,
+marca "Sube Legal" — más el trabajo del 23–25 de agosto: reconexión de
+Vercel↔GitHub, cierre de la brecha de registro directo en Supabase Auth,
+auditorías y correcciones de C01/C06, mecanismos de edición, pruebas E2E,
+auditoría de accesibilidad, jerarquía visual de materiales y búsqueda de C58) y
 verificación remota directa contra el proyecto Supabase `CENEVAL Study App`
 (`qcseoivljzuxzqeaxfly`) y el proyecto Vercel `ceneval-study-app` (team
 `kova-mx`) el 24 de agosto de 2026.
@@ -47,7 +48,7 @@ calma, después de ver las demás.
 | B | **Dominio propio y proveedor de correo transaccional (`I-3`, `I-4`)** | Sin dominio, los correos de contacto (`privacidad@sube-legal.mx`, `soporte@sube-legal.mx`) son placeholders que no reciben nada; sin correo transaccional propio, el registro/confirmación/recuperación de contraseña fallarían silenciosamente en cuanto haya más de una usuaria. | Elegir proveedor de dominio (ej. Namecheap, Cloudflare) y de correo transaccional (ej. Resend) y confirmar presupuesto — quedó pausado el 23 de agosto a pedido tuyo. Puedo preparar la comparación de opciones y costos cuando lo pidas. |
 | C | **Liberar espacio para el proyecto de ensayo de Supabase (`M-1`)** | Descubierto el 23 de agosto: la organización "Kova" ya tiene 2 proyectos gratuitos ocupados (`Kova Production`, `CENEVAL Study App`) — el límite del plan gratuito. Sin un tercer proyecto no se puede probar la app con más de una usuaria real sin arriesgar producción. | Decidir: (a) pausar temporalmente `Kova Production` para crear el ensayo y luego reactivarla, (b) posponer `M-1`, o (c) resolverlo junto con G (subir a Supabase Pro también quita este límite). |
 | D | **Búsqueda formal de marca "Sube Legal" en el IMPI (`D-9`)** | Es la única pieza de Fase 0 que sigue abierta; no bloquea seguir desarrollando con este nombre, pero sí bloquea confirmar el nombre comercial en firme antes de invertir en marketing con él. | Contratar una búsqueda de disponibilidad en MARCANET (IMPI) o un agente de propiedad industrial. |
-| E | **Decisión de alcance de C58 y de los 16 exámenes acumulativos (`P-5`, `P-6`)** | C58 sigue bloqueada por falta de fuente académica suficiente (`docs/C58_SOURCE_AUDIT.md`); los 3 bancos transversales y 16 exámenes acumulativos nunca se decidieron. | Decidir por escrito: ¿se vende explícitamente "57 clases" sin C58, o se consigue primero la transcripción faltante? ¿Los acumulativos entran al lanzamiento o se anuncian como "próximamente"? |
+| E | **Completar la nueva fuente de C58 y decidir los 16 exámenes acumulativos (`P-5`, `P-6`)** | Fatima decidió el 25 de agosto conseguir primero una fuente para C58. Ya se localizaron dos obras académicas suficientes para diseñarla, pero no autorizan claramente su transformación comercial y el contrato 1.2 sigue necesitando una clase/transcripción original. Los 3 bancos transversales y 16 exámenes acumulativos siguen sin decisión. | Obtener permiso escrito de uso comercial y encargar/grabar con una persona docente una clase propia, íntegra y autorizada; después decidir si los acumulativos entran al lanzamiento o se anuncian como “próximamente”. Ver `docs/C58_NEW_SOURCE.md`. |
 | F | **Subir Vercel a un plan que permita uso comercial (`I-1`)** | Vercel Hobby prohíbe cobrar; es una violación de términos, no una limitación técnica que se pueda rodear. | Decidir si se paga Vercel Pro (~$20 USD/mes) y confirmarlo — no lo voy a hacer sin tu autorización explícita del monto. |
 | G | **Subir Supabase a un plan con respaldos automáticos (`I-2`)** | El plan `free` no incluye respaldo diario ni recuperación a un punto en el tiempo; cobrar sobre datos sin respaldo gestionado es un riesgo que no se debe asumir. | Decidir si se paga Supabase Pro (~$25 USD/mes) — esto también resolvería, de paso, el bloqueo de `I-5` (protección de contraseñas filtradas, que ya confirmé que requiere Pro) y el límite de 2 proyectos gratis que hoy bloquea `M-1` (punto C). |
 
@@ -106,13 +107,11 @@ trabajo. Ordenadas por impacto:
      `published`. El mecanismo invalidó, como está diseñado, la aprobación
      editorial anterior; C06 quedó con 0 aprobaciones vigentes y necesita que
      Fatima revise el resultado desde el panel antes de emitir un nuevo dictamen.
-   - **Propuesta de decisión para la redundancia de los 9 materiales — no
-     implementada:** conservar por ahora el contrato editorial 1.2 y sus nueve
+   - **Jerarquía visual de los 9 materiales — aprobada e implementada el 25 de
+     agosto:** se conserva el contrato editorial 1.2 y sus nueve
      tipos (evita una migración destructiva y preserva la trazabilidad), pero
-     dejar de presentarlos como nueve lecturas equivalentes. La vista de estudio
-     ya los separa parcialmente por función en `components/lesson-view.tsx`,
-     aunque todavía mezcla contenidos conceptuales repetidos y no muestra
-     `study_guide` en ninguna etapa. Se propone una **vista guiada con
+     se dejan de presentar como nueve lecturas equivalentes. La vista de estudio
+     en `components/lesson-view.tsx` ahora usa una **vista guiada con
      divulgación progresiva**:
      1. `short_answer` como apertura breve de **Qué resolver**;
      2. `full_explanation` como lectura principal de **Comprende**, con
@@ -129,12 +128,10 @@ trabajo. Ordenadas por impacto:
      reversión por pericia de Kalyuga et al. (2003). **No se propone marcar
      automáticamente pares como “duplicados” mediante similitud textual:** esa
      etiqueta podría confundir paráfrasis útil con repetición y requeriría una
-     revisión editorial nueva de 513 materiales. Antes de implementarla, Fatima
-     debe decidir si aprueba esta jerarquía visual. Si la aprueba, el siguiente
-     paso técnico es un piloto reversible solo de presentación sobre C01 y dos
-     clases jurídicas sustantivas, sin cambiar contenido ni esquema, con pruebas
-     de que los nueve materiales siguen accesibles por teclado y lector de
-     pantalla.
+     revisión editorial nueva de 513 materiales. La implementación es global y
+     reversible, solo de presentación: no cambia contenido, esquema ni evidencia.
+     Usa `details`/`summary` nativos, controles de 48 px y etiquetas de función;
+     la prueba de contrato confirma que los nueve tipos siguen representados.
 2. **Extender el mecanismo de edición de contenido publicado a materiales,
    mapas conceptuales, flashcards y learning journey — completado el 24 de
    agosto de 2026.** Las 5 categorías de contenido publicado ahora tienen
@@ -216,12 +213,24 @@ trabajo. Ordenadas por impacto:
 8. **README corregido el 24 de agosto.** Ya muestra 57/58 clases y el despliegue
    técnico privado real; el punto pendiente había quedado obsoleto tras el
    commit `b797833`.
+9. **Nueva base académica para C58 — localizada y auditada el 25 de agosto.**
+   El manual de María de Montserrat Pérez Contreras, *Derecho de familia y
+   sucesiones* (IIJ-UNAM/Nostra, 2010), capítulos 5–7, cubre los seis criterios
+   de desbloqueo; *El albacea* de Ángel Gilberto Adame López (Colegio de
+   Notarios del Distrito Federal, 2013) refuerza administración, cuentas y la
+   diferencia entre partición y adjudicación. La matriz, páginas, enlaces,
+   jurisdicción y contraste con el CNPCF están en `docs/C58_NEW_SOURCE.md`.
+   No se creó contenido: la licencia BY-NC-ND/no lucrativa no permite asumir una
+   adaptación comercial y todavía falta una clase/transcripción original
+   autorizada para el contrato 1.2.
 
 ### 0.3 — Bloqueadas por terceros, sin acción posible hoy
 
-- **C58** sigue bloqueada por falta de fuente académica suficiente sobre
-  administración, cuentas, partición y adjudicación hereditaria
-  (`docs/C58_SOURCE_AUDIT.md`). No se debe crear con solo legislación.
+- **C58** ya tiene una base académica temática suficiente, pero sigue bloqueada
+  por terceros: hace falta permiso escrito para el uso comercial de la obra y
+  una persona docente que imparta/autorice una nueva clase original, de la que
+  se conservará la transcripción privada (`docs/C58_NEW_SOURCE.md`). No se debe
+  crear con solo legislación ni copiar/adaptar una obra BY-NC-ND.
 
 ### 0.4 — Regla general para cualquier sesión futura (de agente o humana)
 
@@ -265,9 +274,10 @@ Los bloqueos operativos reales siguen siendo:
 2. el mecanismo PostgreSQL ya pasó un respaldo y una restauración reales en
    local, pero todavía no existe una exportación del remoto, una copia externa
    cifrada ni una restauración de esa copia en un proyecto de ensayo;
-3. C58 está bloqueada por insuficiencia de fuente y los tres bancos
-   transversales y 16 exámenes acumulativos siguen pendientes de decisión de
-   alcance;
+3. C58 ya tiene fuentes académicas candidatas con cobertura suficiente, pero
+   sigue bloqueada hasta obtener permiso comercial y una clase/transcripción
+   original; los tres bancos transversales y 16 exámenes acumulativos siguen
+   pendientes de decisión de alcance;
 4. **vender sigue bloqueado por razones no técnicas, no por el estado del
    código o del contenido**: Vercel sigue en un plan que no permite uso
    comercial, Supabase sigue sin respaldos automáticos gestionados, no hay
@@ -745,9 +755,11 @@ Audio 68 sin inventar sublíneas, porcentajes ni recursos automáticos; C55 usa
 solo subrangos sucesorios pertinentes de Audio 63, líneas 75–155; y C56 usa
 Audio 63, líneas 157–209, y Audio 64, líneas 17–45, excluyendo el cierre no
 pertinente 211–231; y C57 usa subrangos académicos de Audio 64, líneas 47–109,
-para inventario, avalúo y oposición. C58 permanece bloqueada: la auditoría de
-70/70 TXT y 14/14 lotes no encontró una transcripción suficiente sobre
-administración, cuentas, partición y adjudicación (`docs/C58_SOURCE_AUDIT.md`).
+para inventario, avalúo y oposición. La auditoría de 70/70 TXT y 14/14 lotes no
+encontró una transcripción suficiente para C58; el 25 de agosto se localizaron
+dos obras académicas externas con cobertura temática suficiente, pero C58 sigue
+bloqueada hasta obtener permiso comercial y producir una clase/transcripción
+original autorizada (`docs/C58_NEW_SOURCE.md`).
 C01–C57 ya están importados, revisados y publicados en el proyecto CENEVAL; no
 queda una importación pendiente para ellos.
 
@@ -1155,7 +1167,7 @@ Orden de producción restante:
 
 | Orden | Clase | Fuente principal |
 | ---: | --- | --- |
-| 1 | C58 Administración, partición y adjudicación | Bloqueada hasta recibir una nueva transcripción suficiente |
+| 1 | C58 Administración, partición y adjudicación | Base académica localizada; bloqueada hasta obtener permiso comercial y una clase/transcripción original autorizada |
 
 Además siguen pendientes tres bancos transversales y 16 exámenes acumulativos.
 
@@ -1194,10 +1206,12 @@ contenido, complementario.
 
 ### Prioridad 2 — Desbloquear C58
 
-Obtener una nueva transcripción académica íntegra sobre administración y
-cuentas, partición, oposición y adjudicación hereditaria. No crear un paquete
-solo con legislación; repetir después el pipeline 1.2 completo descrito en
-`C58_SOURCE_AUDIT.md`.
+La base temática ya está localizada y auditada en `C58_NEW_SOURCE.md`. Falta
+obtener permiso escrito para su uso comercial, encargar/grabar una clase propia
+con una persona docente calificada y conservar audio/transcripción íntegros en
+el archivo editorial privado. No crear un paquete solo con legislación ni
+adaptar directamente la obra BY-NC-ND; repetir después el pipeline 1.2 completo
+descrito en `C58_SOURCE_AUDIT.md`.
 
 ### Prioridad 3 — Calidad de producto
 
@@ -1287,7 +1301,7 @@ producto, precio y nombre ya cerraron en la Fase 0, §4).
 
 Priorizado:
 
-1. Decidir los puntos de §0.1 que dependen de Fatima — sobre todo E (espacio
+1. Decidir los puntos de §0.1 que dependen de Fatima — sobre todo C (espacio
    para el proyecto de ensayo de `M-1`) y B/C (planes de pago de Vercel y
    Supabase), porque desbloquean varias otras tareas a la vez.
 2. Mientras eso se decide, seguir con lo ejecutable de §0.2: continuar la
@@ -1296,5 +1310,6 @@ Priorizado:
    no dependen de gastar dinero.
 3. Ejecutar `docs/SUPABASE_BACKUP.md` de punta a punta contra producción
    (requiere autorización expresa antes de correr — §0.2, punto 4).
-4. Solicitar la nueva transcripción definida en `C58_SOURCE_AUDIT.md`; C58 no
-   puede producirse honestamente con el corpus actual.
+4. Solicitar el permiso comercial y encargar/grabar la nueva clase definida en
+   `C58_NEW_SOURCE.md`; C58 no puede producirse honestamente solo a partir del
+   corpus actual ni adaptando directamente las obras candidatas.

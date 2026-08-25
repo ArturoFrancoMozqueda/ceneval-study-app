@@ -41,8 +41,10 @@ transcripción → preparación editorial → borrador → revisión → publica
   usuario, 1 perfil administrador, 24 materias, 57 clases (todas
   `published`), 57 temas (todos `approved`), 513 materiales, 57 mapas
   conceptuales, 685 flashcards, 57 exámenes, 570 preguntas y 570 claves de
-  respuesta. C01–C57 ya están importados, revisados y publicados; solo C58
-  sigue bloqueada por falta de fuente académica.
+  respuesta. C01–C57 ya están importados, revisados y publicados; para C58 ya
+  se localizaron fuentes académicas suficientes, pero sigue bloqueada hasta
+  obtener permiso comercial y producir una clase/transcripción original
+  autorizada.
 - La app es **privada**: solo la administradora entra. El registro de
   estudiantes está pospuesto por decisión de producto.
 - El objetivo futuro es ofrecerla mediante **suscripción**. El producto,
@@ -182,10 +184,14 @@ alguna sigue abierta; si corriges una, actualiza esta lista.
   `AUDIO NN.txt`; el cargador los resuelve desde `CENEVAL_TRANSCRIPTS_DIR`.
   Falta una segunda copia independiente y una restauración ensayada; los
   originales nunca se agregan a Git ni a Vercel.
-- **C58 está bloqueada por falta de fuente académica.** La auditoría definitiva
-  de los 70 TXT y 14 lotes no encontró una transcripción que desarrolle
-  administración, cuentas, partición y adjudicación hereditaria. No se debe
-  crear un paquete solo con legislación; consulta `docs/C58_SOURCE_AUDIT.md`.
+- **C58 ya tiene base académica externa, pero aún no una fuente original
+  utilizable.** La auditoría definitiva de los 70 TXT y 14 lotes no encontró
+  una transcripción que desarrolle administración, cuentas, partición y
+  adjudicación hereditaria. El 25 de agosto se localizaron dos obras académicas
+  con cobertura suficiente, pero sus condiciones no autorizan asumir una
+  adaptación comercial y el contrato 1.2 exige una clase/transcripción original
+  privada. No se debe crear un paquete solo con legislación ni copiar/adaptar la
+  obra BY-NC-ND; consulta `docs/C58_NEW_SOURCE.md`.
 - **Las 20 migraciones del repositorio están aplicadas en CENEVAL y coinciden
   una a una con `supabase/migrations/`** (la más reciente,
   `20260822160822_add_profiles_terms_accepted_at`, se aplicó el 22 de agosto

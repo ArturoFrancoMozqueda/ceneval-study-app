@@ -97,3 +97,16 @@ un mapa sustantivo, entre diez y quince flashcards y diez reactivos originales,
 sin que la legislación oficial tenga que reemplazar la explicación académica.
 Después deberá pasar la misma matriz de rangos, vigencia, jurisdicción,
 evidencia por artefacto y round-trip exigida a C01–C57.
+
+## Seguimiento del 25 de agosto de 2026
+
+La búsqueda externa posterior sí localizó dos obras académicas con cobertura
+temática suficiente. El dictamen completo, páginas, enlaces, licencias,
+jurisdicción y contraste con el CNPCF se documentan en
+[`C58_NEW_SOURCE.md`](./C58_NEW_SOURCE.md).
+
+Este hallazgo supera la carencia temática del corpus original, pero no autoriza
+crear todavía el paquete: la obra principal tiene restricciones BY-NC-ND/no
+lucrativas y el contrato 1.2 requiere una clase/transcripción original privada.
+El bloqueo vigente es obtener permiso comercial y producir esa fuente original
+con una persona docente, no encontrar otra compilación legislativa.

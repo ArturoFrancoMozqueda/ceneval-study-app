@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "project": {
+    "name": "ceneval-study-app",
+    "productType": null,
+    "stack": [
+      "nextjs",
+      "react",
+      "tailwind-v4"
+    ]
+  },
+  "sources": {
+    "tokens": [
+      "app/globals.css"
+    ],
+    "components": [],
+    "assets": [
+      "public/images"
+    ],
+    "instructions": [
+      "AGENTS.md",
+      "CLAUDE.md"
+    ]
+  },
+  "design": {
+    "colorMode": "light",
+    "colors": {
+      "--background": {
+        "value": "#f7f5f0",
+        "source": "app/globals.css"
+      },
+      "--foreground": {
+        "value": "#172033",
+        "source": "app/globals.css"
+      },
+      "--muted": {
+        "value": "#5b6474",
+        "source": "app/globals.css"
+      },
+      "--border": {
+        "value": "#ded9cf",
+        "source": "app/globals.css"
+      },
+      "--color-background": {
+        "value": "var(--background)",
+        "source": "app/globals.css"
+      },
+      "--color-surface": {
+        "value": "var(--surface)",
+        "source": "app/globals.css"
+      },
+      "--color-foreground": {
+        "value": "var(--foreground)",
+        "source": "app/globals.css"
+      },
+      "--color-muted": {
+        "value": "var(--muted)",
+        "source": "app/globals.css"
+      },
+      "--color-brand": {
+        "value": "var(--brand)",
+        "source": "app/globals.css"
+      },
+      "--color-brand-deep": {
+        "value": "var(--brand-deep)",
+        "source": "app/globals.css"
+      },
+      "--color-success": {
+        "value": "var(--success)",
+        "source": "app/globals.css"
+      },
+      "--color-success-soft": {
+        "value": "var(--success-soft)",
+        "source": "app/globals.css"
+      },
+      "--color-warning": {
+        "value": "var(--warning)",
+        "source": "app/globals.css"
+      },
+      "--color-danger": {
+        "value": "var(--danger)",
+        "source": "app/globals.css"
+      },
+      "--color-danger-soft": {
+        "value": "var(--danger-soft)",
+        "source": "app/globals.css"
+      },
+      "--color-border": {
+        "value": "var(--border)",
+        "source": "app/globals.css"
+      }
+    },
+    "typography": {
+      "--font-sans": {
+        "value": "\"Montserrat\", \"Montserrat Fallback\", ui-sans-serif, system-ui, sans-serif",
+        "source": "app/globals.css"
+      },
+      "--font-mono": {
+        "value": "\"Montserrat\", \"Montserrat Fallback\", ui-sans-serif, system-ui, sans-serif",
+        "source": "app/globals.css"
+      }
+    },
+    "spacing": {},
+    "radius": {},
+    "shadows": {},
+    "motion": {},
+    "density": "unknown"
+  },
+  "components": {
+    "installed": [],
+    "preferredPrimitives": [],
+    "patterns": []
+  },
+  "constraints": {
+    "must": [],
+    "avoid": []
+  },
+  "decisions": [
+    {
+      "decision": "Presentar los nueve materiales por funcion dentro del recorrido, con divulgacion progresiva para fundamento juridico y repasos opcionales.",
+      "rationale": "Reduce la carga redundante sin eliminar trazabilidad ni contenido del contrato editorial 1.2; conserva controles nativos accesibles.",
+      "source": "Aprobacion de Fatima, 2026-08-25"
+    }
+  ],
+  "evidence": [
+    {
+      "fact": "design.colorMode:light",
+      "source": "app/globals.css"
+    },
+    {
+      "fact": "design.tokens",
+      "source": "app/globals.css"
+    },
+    {
+      "fact": "project.instructions",
+      "source": "AGENTS.md"
+    },
+    {
+      "fact": "project.instructions",
+      "source": "CLAUDE.md"
+    },
+    {
+      "fact": "project.stack:nextjs",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:react",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:tailwind-v4",
+      "source": "package.json"
+    }
+  ],
+  "generatedAt": "2026-08-25T20:25:04.444Z"
+}
