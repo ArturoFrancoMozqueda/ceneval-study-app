@@ -2,11 +2,53 @@
 
 **Fecha:** 25 de agosto de 2026
 
-**Estado:** bloqueados; no publicar ni importar
+**Estado actual:** reauditoría técnica y jurídica cerrada; pendiente aprobación
+editorial humana; no importar ni publicar todavía
 
 **Alcance:** C01–C57, 456 preguntas
 
-## Resultado
+## Resolución del 25 de agosto de 2026
+
+Los borradores originales se sustituyeron íntegramente por 456 reactivos
+derivados de artefactos trazados de los 57 paquetes académicos 1.2. Tres
+revisiones paralelas comprobaron C01–C19, C20–C38 y C39–C57 contra las claves y
+los registros de evidencia de cada paquete.
+
+- 456 de 456 reactivos tienen identificador estable y clave no vacía.
+- 456 de 456 enlazan evidencia existente y al menos una fuente oficial.
+- C48–C57 tienen 80 de 80 soluciones sustantivas.
+- La consigna promedio bajó de 33.3 a 19.6 palabras aun después de añadir el
+  contexto de tema necesario para intercalar tarjetas sin ambigüedad.
+- Las consignas multiparte bajaron de 256 a 0.
+- Toda la voz editorial y las etiquetas están en español y se dirigen a la
+  estudiante autodirigida.
+- Las reglas locales declaran su ámbito; la evidencia privada conserva solo el
+  número de audio y el localizador, sin exponer la transcripción.
+
+Los bloqueos críticos quedaron resueltos así:
+
+- **C01:** dos secciones, tres áreas disciplinares, tres opciones y una correcta
+  conforme a la guía vigente de Ceneval.
+- **C06 y C07:** seis votos en los supuestos vigentes, no ocho.
+- **C13:** se retiró el reactivo ajeno y erróneo sobre declaratoria general; la
+  práctica actual cubre el plazo máximo de noventa días del fallo y la revisión.
+- **C20:** diferencia veinte días para desvirtuar, ampliación de quince, máximo
+  ordinario de doce meses y seis meses para la resolución, con sus reservas.
+- **C33:** separa autenticidad de ejecutividad, limita la fe a hechos y
+  declaraciones y aplica el artículo 2080 federal sin mezclar ámbitos.
+- **C51:** presenta el régimen de Michoacán sin universalizar la sociedad
+  conyugal ni las formalidades de capitulaciones.
+- **C57:** distingue inventario, oposición y valoración; no presenta peritaje o
+  tercero en discordia como regla universal.
+
+El contrato está en [CONTRACT.md](CONTRACT.md). `npm run retrieval:check`
+valida el esquema 1.2, el conjunto exacto C01–C57, 456 reactivos, selecciones
+únicas, claves no vacías, referencias, HTTPS, localizadores y fechas. También
+compara byte a byte cada documento con su origen generado. El gate no pretende
+calificar semántica jurídica; esa limitación está cubierta por la reauditoría y
+debe seguir cubierta por aprobación editorial humana y revisión de vigencia.
+
+## Resultado de la auditoría inicial
 
 La colección tiene cobertura completa de C01–C57 y una mezcla global útil:
 213 preguntas de recuerdo libre (46.7%), 186 de recuerdo guiado (40.8%) y 57
@@ -75,11 +117,10 @@ calificación automática de texto libre. Las sesiones deben contener 3–5
 reactivos, repetir errores y baja confianza, intercalar temas relacionados y
 ofrecer un modo urgente honesto cuando el examen sea inminente.
 
-## Condición para desbloquear
+## Condición editorial restante
 
-1. Regenerar o auditar los 456 reactivos contra `content/packages/`.
-2. Corregir primero todos los bloqueos críticos anteriores.
-3. Añadir trazabilidad y vigencia por reactivo.
-4. Validar carga cognitiva y voz autodirigida.
-5. Incorporar el nuevo contrato a un gate automatizado.
-6. Ejecutar revisión editorial humana antes de cualquier importación.
+La reauditoría, corrección, trazabilidad, vigencia, carga cognitiva, voz y gate
+automático ya están cerrados. Permanece un único requisito deliberado: una
+persona responsable del contenido debe aprobar editorialmente el corpus y
+autorizar por separado cualquier diseño de importación. Hasta entonces no se
+publica ni se escribe en Supabase.

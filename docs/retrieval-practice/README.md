@@ -1,20 +1,26 @@
 # Preguntas de práctica de recuperación (C01–C57)
 
-> **BLOQUEADO — NO PUBLICAR NI IMPORTAR.** La auditoría del 25 de agosto de
-> 2026 encontró errores jurídicos críticos, claves de respuesta incompletas y
-> ausencia de trazabilidad por reactivo. Consulta [AUDIT.md](AUDIT.md). Estos
-> archivos son borradores de exploración y no una fuente académica aprobada.
+> **REAUDITADO — PENDIENTE DE APROBACIÓN EDITORIAL HUMANA.** El 25 de agosto
+> de 2026 se reconstruyeron y reauditaron los 456 reactivos contra los paquetes
+> 1.2. El gate de estructura y trazabilidad está aprobado y los bloqueos
+> jurídicos documentados quedaron corregidos. Esto no autoriza importar ni
+> publicar: consulta [AUDIT.md](AUDIT.md) y [CONTRACT.md](CONTRACT.md).
 
-Generadas con la skill `edu-agent-skills-retrieval-practice-generator`, 8 preguntas
-por clase (mezcla de recall libre, recall guiado y reconocimiento), para
+Reauditoradas con las skills `edu-agent-skills-retrieval-practice-generator`,
+`edu-agent-skills-assessment-validity-checker` y
+`edu-agent-skills-cognitive-load-analyser`: 8 preguntas por clase (recuerdo
+libre, aplicación guiada y reconocimiento), para
 estudiantes de Derecho que ya concluyeron la licenciatura y se preparan para el
 examen CENEVAL EGEL Plus Derecho.
 
-Estos archivos son material de apoyo editorial (borrador de estudio), **no**
-están importados a Supabase ni forman parte del contrato de contenido 1.2. Si
-se quieren aprovechar, primero deben regenerarse o auditarse uno por uno contra
-`content/packages/` y sus `evidenceRefs`; después deberán pasar por el flujo
-editorial normal (`content:check` → `content:import` → revisión → publicación).
+Estos archivos son material de apoyo editorial, **no** están importados a
+Supabase ni forman parte del contrato de contenido 1.2. Cada reactivo se deriva
+de un artefacto trazado de `content/packages/`, pero todavía debe recibir una
+aprobación editorial humana antes de diseñar o autorizar una importación. No se
+ejecutó ninguna operación contra Supabase.
+
+El gate local se ejecuta con `npm run retrieval:check`. Compara los 57 archivos
+con sus paquetes 1.2; cualquier deriva de consigna, clave o evidencia falla.
 
 | Código | Materia | Tema |
 | --- | --- | --- |
