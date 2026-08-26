@@ -1,5 +1,10 @@
 # Preguntas de práctica de recuperación (C01–C57)
 
+> **BLOQUEADO — NO PUBLICAR NI IMPORTAR.** La auditoría del 25 de agosto de
+> 2026 encontró errores jurídicos críticos, claves de respuesta incompletas y
+> ausencia de trazabilidad por reactivo. Consulta [AUDIT.md](AUDIT.md). Estos
+> archivos son borradores de exploración y no una fuente académica aprobada.
+
 Generadas con la skill `edu-agent-skills-retrieval-practice-generator`, 8 preguntas
 por clase (mezcla de recall libre, recall guiado y reconocimiento), para
 estudiantes de Derecho que ya concluyeron la licenciatura y se preparan para el
@@ -7,8 +12,9 @@ examen CENEVAL EGEL Plus Derecho.
 
 Estos archivos son material de apoyo editorial (borrador de estudio), **no**
 están importados a Supabase ni forman parte del contrato de contenido 1.2. Si
-se quieren publicar en la app, deben pasar por el flujo editorial normal
-(`content:check` → `content:import` → revisión → publicación).
+se quieren aprovechar, primero deben regenerarse o auditarse uno por uno contra
+`content/packages/` y sus `evidenceRefs`; después deberán pasar por el flujo
+editorial normal (`content:check` → `content:import` → revisión → publicación).
 
 | Código | Materia | Tema |
 | --- | --- | --- |

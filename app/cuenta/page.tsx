@@ -5,7 +5,7 @@ import { requireUser } from "@/lib/auth";
 
 export const metadata: Metadata = {
   title: "Tu cuenta",
-  description: "Exporta tus datos personales o elimina tu cuenta de Sube Legal.",
+  description: "Consulta y exporta los datos personales de tu cuenta de Sube Legal.",
 };
 
 export default async function AccountPage({
@@ -24,8 +24,11 @@ export default async function AccountPage({
       </h1>
       <p className="mt-4 text-base leading-7 text-muted">
         Aquí puedes descargar los datos personales asociados a tu cuenta{" "}
-        <strong className="text-foreground">{user.email}</strong> o solicitar
-        que se elimine de forma permanente, conforme a nuestro{" "}
+        <strong className="text-foreground">{user.email}</strong>
+        {user.role === "student"
+          ? " o solicitar que se elimine de forma permanente"
+          : " y revisar cómo se protege tu información"}
+        , conforme a nuestro{" "}
         <Link className="font-semibold text-brand underline" href="/privacidad">
           aviso de privacidad
         </Link>
@@ -59,6 +62,7 @@ export default async function AccountPage({
         </a>
       </section>
 
+      {user.role === "student" ? (
       <section className="mt-6 rounded-3xl border border-danger/25 bg-danger-soft/40 p-6 sm:p-8">
         <h2 className="text-xl font-semibold tracking-tight text-danger">
           Eliminar mi cuenta
@@ -97,6 +101,18 @@ export default async function AccountPage({
           </button>
         </form>
       </section>
+      ) : (
+        <section className="mt-6 rounded-3xl border border-border bg-surface p-6 sm:p-8">
+          <h2 className="text-xl font-semibold tracking-tight">
+            Cuenta administradora protegida
+          </h2>
+          <p className="mt-2 text-sm leading-6 text-muted">
+            Esta cuenta no se puede eliminar desde la aplicación porque podría
+            dejar el proyecto sin acceso administrativo. Si necesitas
+            reemplazarla, sigue el procedimiento operativo de administración.
+          </p>
+        </section>
+      )}
 
       <p className="mt-6 text-sm text-muted">
         Consulta también los{" "}

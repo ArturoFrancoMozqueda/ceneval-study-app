@@ -205,9 +205,9 @@ export default async function MuestraPage() {
               </Link>
               <Link
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/40 px-6 text-sm font-semibold text-white hover:bg-white/10"
-                href="/registro"
+                href="/iniciar-sesion"
               >
-                Regístrate para avisarte
+                Ya tengo acceso
               </Link>
             </div>
           </section>

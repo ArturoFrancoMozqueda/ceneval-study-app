@@ -153,14 +153,12 @@ Por el momento, la aplicación solo permite el acceso de cuentas con rol
 `admin`. El registro público está desactivado y las cuentas con rol `student`
 no pueden entrar en las rutas protegidas.
 
-La activación inicial no se considera registro público: con el modo privado
-activo, `/registro` solo envía la solicitud a Supabase cuando el correo
-normalizado coincide exactamente con `ADMIN_EMAIL`. La respuesta es idéntica
-para correos permitidos, no permitidos o ya existentes. Las confirmaciones e
-invitaciones vuelven a comprobar ese correo antes de conservar la sesión. El
-callback no concede roles: la promoción se realiza con el bootstrap explícito
-desde una terminal confiable y se verifica volviendo a leer el perfil. No hay
-escrituras durante el render de páginas.
+Con el modo privado activo, `/registro` no recopila datos ni envía solicitudes
+a Supabase. La activación inicial se realiza con el bootstrap explícito desde
+una terminal confiable, que invita o promueve el correo configurado en
+`ADMIN_EMAIL` y verifica el rol. Las confirmaciones e invitaciones vuelven a
+comprobar ese correo antes de conservar la sesión. El callback no concede
+roles y no hay escrituras durante el render de páginas.
 
 **Razón:** Fatima desea usar y validar personalmente la biblioteca antes de
 abrirla a otras personas.

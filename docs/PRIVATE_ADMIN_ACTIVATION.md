@@ -1,8 +1,9 @@
 # Activación privada de la administradora
 
 La aplicación permanece cerrada con `PRIVATE_ACCESS_ONLY=true`. Esta guía no
-habilita registro público ni acceso de estudiantes: únicamente permite activar
-el correo exacto configurado en `ADMIN_EMAIL`.
+habilita registro público ni acceso de estudiantes. `/registro` muestra un
+aviso y no recopila datos en este modo; la cuenta administrativa se prepara
+exclusivamente mediante invitación y bootstrap desde una terminal confiable.
 
 ## Configuración obligatoria
 
@@ -19,22 +20,7 @@ En Supabase Auth configura `NEXT_PUBLIC_SITE_URL` como Site URL y permite
 confirmación de correo. La URL permitida debe pertenecer al proyecto CENEVAL,
 nunca al de otra aplicación.
 
-## Opción 1: activación inicial
-
-1. Abre `/registro` desde el enlace **Activa tu cuenta** de la pantalla de
-   acceso.
-2. Escribe el mismo correo de `ADMIN_EMAIL`, el nombre y una contraseña de 12 a
-   128 caracteres con al menos una letra y un número.
-3. La pantalla siempre muestra una respuesta genérica. Esto evita revelar qué
-   correo está autorizado o si ya existe una cuenta.
-4. Abre el correo de confirmación. `/auth/confirm` intercambia el código por una
-   sesión y vuelve a comprobar que el correo coincida con `ADMIN_EMAIL`.
-5. La confirmación crea la identidad, pero no concede el rol. Si el bootstrap
-   aún no asignó `admin`, el callback cierra la sesión y muestra que la
-   activación administrativa está pendiente; la cuenta no puede entrar en modo
-   privado.
-
-## Bootstrap obligatorio del rol
+## Activación inicial y bootstrap obligatorio
 
 La invitación y la asignación de `admin` se realizan desde una terminal
 confiable con el comando canónico:
@@ -43,12 +29,12 @@ confiable con el comando canónico:
 npm run admin:bootstrap -- --email=correo@dominio.com --confirm-production
 ```
 
-El correo debe coincidir exactamente con `ADMIN_EMAIL`. Este comando es el
-camino recomendado: invita o reenvía la invitación cuando corresponde, asigna
-el rol y lo vuelve a leer para verificarlo. La aceptación del correo sigue
-siendo obligatoria y el callback de la aplicación nunca concede el rol.
+El correo debe coincidir exactamente con `ADMIN_EMAIL`. Este es el camino
+canónico: invita o reenvía la invitación cuando corresponde, asigna el rol y
+lo vuelve a leer para verificarlo. La aceptación del correo sigue siendo
+obligatoria y el callback de la aplicación nunca concede el rol.
 
-## Opción 2: invitación desde Supabase
+## Alternativa: invitación desde Supabase
 
 Como alternativa operativa, en Authentication → Users del proyecto CENEVAL
 puedes usar **Send invitation** para `ADMIN_EMAIL`. La invitación debe volver a:
@@ -68,8 +54,7 @@ y se muestra el mismo error genérico.
 Después de confirmar:
 
 1. iniciar sesión con `ADMIN_EMAIL` funciona;
-2. un correo distinto recibe una respuesta indistinguible pero no se crea
-   desde la aplicación;
+2. `/registro` informa que el acceso es privado y no envía datos a Supabase;
 3. una cuenta con rol `student` no puede entrar mientras el modo privado siga
    activo;
 4. ningún secreto aparece en el navegador ni en Git.

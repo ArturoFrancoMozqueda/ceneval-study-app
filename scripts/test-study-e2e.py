@@ -392,6 +392,14 @@ def main() -> None:
             page.wait_for_url(f"{base_url}/")
             wait_for_network(page)
 
+            sign_out_button = page.get_by_role("button", name="Cerrar sesión").first
+            expect(sign_out_button).to_be_visible()
+            sign_out_box = sign_out_button.bounding_box()
+            assert sign_out_box is not None
+            assert sign_out_box["height"] >= 44, (
+                "El botón lateral Cerrar sesión debe medir al menos 44 CSS px de alto."
+            )
+
             page.evaluate("document.activeElement?.blur()")
             page.keyboard.press("Tab")
             skip_link = page.get_by_role("link", name="Saltar al contenido principal")

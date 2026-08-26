@@ -119,7 +119,7 @@ test("el callback privado exige correo autorizado y rol admin sin promoverlo", (
   assert.doesNotMatch(source, /update\(\{ role: "admin" \}\)/);
 });
 
-test("login y registro muestran un flujo convencional sin lenguaje operativo", () => {
+test("el modo privado informa con honestidad que el registro no está abierto", () => {
   const registrationPage = readFileSync(
     new URL("../app/registro/page.tsx", import.meta.url),
     "utf8",
@@ -128,12 +128,17 @@ test("login y registro muestran un flujo convencional sin lenguaje operativo", (
     new URL("../components/sign-in-form.tsx", import.meta.url),
     "utf8",
   );
-  const visibleSource = `${registrationPage}\n${signInForm}`;
+  const actionSource = readFileSync(
+    new URL("../app/actions/auth.ts", import.meta.url),
+    "utf8",
+  );
 
-  assert.match(visibleSource, /Crea tu cuenta/);
-  assert.match(visibleSource, /Regístrate/);
-  assert.doesNotMatch(
-    visibleSource,
-    /administradora|invitaci[oó]n|bootstrap|activaci[oó]n|correo autorizado/i,
+  assert.match(registrationPage, /El registro aún no está abierto/);
+  assert.match(registrationPage, /no\s+recopila datos ni crea solicitudes/);
+  assert.match(signInForm, /solo para cuentas autorizadas/);
+  assert.ok(
+    actionSource.indexOf("if (isPrivateAccessOnly())") <
+      actionSource.indexOf('value(formData, "fullName")'),
+    "El modo privado debe rechazar la acción antes de procesar datos.",
   );
 });

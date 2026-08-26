@@ -5,7 +5,8 @@
 ### Rutas públicas de autenticación
 
 - `/iniciar-sesion`
-- `/registro`
+- `/registro` (aviso de acceso privado; no captura datos mientras
+  `PRIVATE_ACCESS_ONLY=true`)
 - `/recuperar-contrasena`
 - `/auth/confirm`
 

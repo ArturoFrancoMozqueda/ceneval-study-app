@@ -74,16 +74,17 @@ trabajo. Ordenadas por impacto:
      todavía** — no es un bug puntual, es un rediseño de cómo se presentan
      los 9 materiales en la interfaz (agruparlos por función en vez de
      mostrarlos todos igual) o del proceso editorial que los genera.
-   - Paso 3 (`edu-agent-skills-retrieval-practice-generator` sobre las 12
-     flashcards de C01): el formato ya es el correcto por diseño (recuerdo
-     libre, la categoría de mayor efecto). Dos hallazgos menores: una
-     tarjeta con fecha fija ("...vigente en 2026") que caducará cuando
-     cambie el periodo de aplicación, y ninguna tarjeta ataca directamente
-     los errores ya detectados en el examen de la misma clase (confundir
-     áreas con materias universitarias, abandonar un reactivo difícil,
-     elegir por frase verdadera aislada). No corregido — bajo impacto. Si se
-     decide corregirla, ya existe mecanismo de edición
-     (`update_flashcard_v1` — ver punto 2).
+   - Paso 3 (`edu-agent-skills-retrieval-practice-generator`): la revisión
+     inicial de las 12 flashcards de C01 solo encontró dos detalles menores,
+     pero una generación posterior de 456 preguntas en
+     `docs/retrieval-practice/` abrió un frente distinto y **no publicable**.
+     La auditoría integral del 25 de agosto encontró reglas jurídicas
+     obsoletas o invertidas (entre otras, C06, C07 y C13), generalizaciones
+     riesgosas (C33, C51 y C57), contradicciones en C20 y 75 de 80 notas de
+     C48–C57 sin puntos de respuesta correcta. Ningún reactivo tiene
+     `evidenceRefs` ni fecha de vigencia. La carpeta quedó marcada
+     **BLOQUEADA — NO PUBLICAR NI IMPORTAR**; inventario y condición de salida
+     en `docs/retrieval-practice/AUDIT.md`.
    - **Paso 1 repetido sobre C06 — completado el 24 de agosto.** C06
      (controversia constitucional) se eligió porque exige distinguir sujetos,
      objeto, afectación competencial, plazo, suspensión y efectos. La auditoría
@@ -223,6 +224,15 @@ trabajo. Ordenadas por impacto:
    No se creó contenido: la licencia BY-NC-ND/no lucrativa no permite asumir una
    adaptación comercial y todavía falta una clase/transcripción original
    autorizada para el contrato 1.2.
+10. **Auditoría integral de aplicación y recuperación activa — ejecutada el 25
+    de agosto.** Tres frentes revisaron UX/accesibilidad, ingeniería/seguridad y
+    pedagogía. Se corrigieron el registro privado engañoso, el borrado de la
+    única cuenta administradora, degradaciones silenciosas de progreso y
+    búsqueda, descubribilidad de cuenta, foco modal/fuentes, targets pequeños,
+    skip link público y consistencia de marca. La colección nueva de
+    recuperación activa quedó bloqueada por errores jurídicos y falta de
+    trazabilidad. Hallazgos, correcciones y backlog priorizado en
+    `docs/QUALITY_AUDIT_2026-08-25.md`.
 
 ### 0.3 — Bloqueadas por terceros, sin acción posible hoy
 

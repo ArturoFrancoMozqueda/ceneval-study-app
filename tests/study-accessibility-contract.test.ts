@@ -5,6 +5,11 @@ import test from "node:test";
 const flashcards = readFileSync("components/flashcards-deck.tsx", "utf8");
 const exam = readFileSync("components/exam-player.tsx", "utf8");
 const lesson = readFileSync("components/lesson-view.tsx", "utf8");
+const appShell = readFileSync("components/app-shell.tsx", "utf8");
+const marketingShell = readFileSync("components/marketing-shell.tsx", "utf8");
+const publicationControls = readFileSync("components/publication-controls.tsx", "utf8");
+const conceptMapEditor = readFileSync("components/concept-map-edit-form.tsx", "utf8");
+const journeyEditor = readFileSync("components/topic-learning-journey-edit-form.tsx", "utf8");
 const classPage = readFileSync("app/clases/[classId]/page.tsx", "utf8");
 const subjectPage = readFileSync("app/materias/[subjectId]/page.tsx", "utf8");
 
@@ -37,5 +42,39 @@ test("los controles de texto independientes del tema miden al menos 24 px", () =
     const buttonStart = lesson.lastIndexOf("<button", labelIndex);
     const buttonSource = lesson.slice(buttonStart, labelIndex);
     assert.match(buttonSource, /inline-flex min-h-6 items-center/);
+  }
+});
+
+test("cerrar sesión mantiene un área de interacción suficiente", () => {
+  const labelIndex = appShell.indexOf("Cerrar sesión");
+  assert.ok(labelIndex >= 0, "No se encontró Cerrar sesión");
+  const buttonStart = appShell.lastIndexOf("<button", labelIndex);
+  const buttonSource = appShell.slice(buttonStart, labelIndex);
+  assert.match(buttonSource, /inline-flex min-h-11 items-center/);
+});
+
+test("las rutas públicas también permiten saltar la navegación", () => {
+  assert.match(marketingShell, /href="#contenido-principal"/);
+  assert.match(marketingShell, />\s*Saltar al contenido principal\s*</);
+});
+
+test("el diálogo editorial gestiona foco, escape y tabulación", () => {
+  assert.match(publicationControls, /cancelConfirmationRef\.current\?\.focus\(\)/);
+  assert.match(publicationControls, /event\.key === "Escape"/);
+  assert.match(publicationControls, /event\.key !== "Tab"/);
+  assert.match(publicationControls, /confirmationTriggerRef\.current\?\.focus\(\)/);
+  assert.match(publicationControls, /document\.body\.style\.overflow = "hidden"/);
+});
+
+test("abrir y cerrar fuentes conserva el contexto de teclado", () => {
+  assert.match(lesson, /sourcesBackRef\.current\?\.focus\(\)/);
+  assert.match(lesson, /sourcesTriggerRef\.current\?\.focus\(\)/);
+});
+
+test("los controles Quitar alcanzan el mínimo de 24 px", () => {
+  for (const editor of [conceptMapEditor, journeyEditor]) {
+    const labelIndex = editor.indexOf("Quitar");
+    const buttonStart = editor.lastIndexOf("<button", labelIndex);
+    assert.match(editor.slice(buttonStart, labelIndex), /inline-flex min-h-6 items-center/);
   }
 });

@@ -106,14 +106,14 @@ export default function PreciosPage() {
             Suscribirme — muy pronto
           </button>
           <p className="mt-3 text-center text-xs text-white/65">
-            El cobro en línea todavía no está activo. Puedes dejar registrado
-            tu interés para que te avisemos cuando abra.
+            El cobro en línea y el registro todavía no están activos. Esta
+            página no recopila solicitudes ni datos de espera.
           </p>
           <Link
             className="mt-3 flex min-h-11 w-full items-center justify-center gap-2 rounded-xl border border-white/40 px-6 text-sm font-semibold text-white hover:bg-white/10"
-            href="/registro"
+            href="/muestra"
           >
-            Regístrate para avisarte
+            Ver la muestra gratuita
             <ArrowRightIcon className="size-4" />
           </Link>
         </div>

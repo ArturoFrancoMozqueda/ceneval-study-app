@@ -51,13 +51,13 @@ function Brand() {
       href="/"
     >
       <span className="grid size-10 place-items-center rounded-xl bg-brand text-sm font-bold tracking-tight text-white shadow-sm transition-transform group-hover:-rotate-2">
-        CE
+        SL
       </span>
       <span>
         <span className="block text-sm font-semibold tracking-tight text-foreground">
-          CENEVAL
+          Sube Legal
         </span>
-        <span className="block text-xs text-muted">Study App</span>
+        <span className="block text-xs text-muted">Biblioteca CENEVAL Derecho</span>
       </span>
     </Link>
   );
@@ -144,11 +144,22 @@ export function AppShell({
             {user?.fullName || user?.email || "Aprende paso a paso."}
           </p>
           {user ? (
-            <form action={signOutAction} className="mt-3">
-              <button className="text-xs font-semibold text-brand" type="submit">
-                Cerrar sesión
-              </button>
-            </form>
+            <div className="mt-3 grid gap-1">
+              <Link
+                className="inline-flex min-h-11 items-center rounded-xl px-3 text-xs font-semibold text-brand hover:bg-background"
+                href="/cuenta"
+              >
+                Mi cuenta y privacidad
+              </Link>
+              <form action={signOutAction}>
+                <button
+                  className="inline-flex min-h-11 items-center rounded-xl px-3 text-xs font-semibold text-brand hover:bg-background"
+                  type="submit"
+                >
+                  Cerrar sesión
+                </button>
+              </form>
+            </div>
           ) : null}
         </div>
       </aside>
@@ -182,6 +193,12 @@ export function AppShell({
                     href="/actualizar-contrasena"
                   >
                     Cambiar contraseña
+                  </Link>
+                  <Link
+                    className="flex min-h-11 items-center rounded-xl px-3 text-sm font-semibold text-brand hover:bg-background"
+                    href="/cuenta"
+                  >
+                    Mi cuenta y privacidad
                   </Link>
                   <form action={signOutAction}>
                     <button

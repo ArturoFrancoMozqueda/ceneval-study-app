@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   recordEditorialReviewAction,
@@ -115,10 +115,57 @@ export function PublicationControls({
     readiness?: PublicationReadinessFailure;
   } | null>(null);
   const [pending, setPending] = useState<PublicationStatus | null>(null);
+  const pendingRef = useRef<PublicationStatus | null>(null);
   const [confirmationStatus, setConfirmationStatus] = useState<
     "published" | "withdrawn" | null
   >(null);
+  const confirmationRef = useRef<HTMLDivElement>(null);
+  const cancelConfirmationRef = useRef<HTMLButtonElement>(null);
+  const confirmationTriggerRef = useRef<HTMLElement | null>(null);
   const [legalVerifiedOn, setLegalVerifiedOn] = useState("");
+
+  useEffect(() => {
+    pendingRef.current = pending;
+  }, [pending]);
+
+  useEffect(() => {
+    if (!confirmationStatus) return;
+
+    confirmationTriggerRef.current = document.activeElement as HTMLElement | null;
+    cancelConfirmationRef.current?.focus();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape" && pendingRef.current === null) {
+        event.preventDefault();
+        setConfirmationStatus(null);
+        return;
+      }
+      if (event.key !== "Tab") return;
+
+      const focusable = confirmationRef.current?.querySelectorAll<HTMLElement>(
+        'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      );
+      if (!focusable?.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = previousOverflow;
+      confirmationTriggerRef.current?.focus();
+    };
+  }, [confirmationStatus]);
   const [reviewNotes, setReviewNotes] = useState("");
   const [reviewPending, setReviewPending] = useState<
     "approved" | "rejected" | null
@@ -284,7 +331,10 @@ export function PublicationControls({
           className="fixed inset-0 z-50 grid place-items-center bg-foreground/45 p-4"
           role="dialog"
         >
-          <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-xl">
+          <div
+            className="w-full max-w-md rounded-2xl bg-white p-6 shadow-xl"
+            ref={confirmationRef}
+          >
             <h3
               className="text-xl font-semibold"
               id="status-confirmation-title"
@@ -306,6 +356,7 @@ export function PublicationControls({
                 className="min-h-11 rounded-xl border border-border px-4 text-sm font-semibold text-brand"
                 disabled={pending !== null}
                 onClick={() => setConfirmationStatus(null)}
+                ref={cancelConfirmationRef}
                 type="button"
               >
                 Cancelar

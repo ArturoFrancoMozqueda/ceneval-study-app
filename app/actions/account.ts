@@ -12,6 +12,19 @@ import { createServerSupabaseClient } from "@/lib/supabase/server";
 // quick_check_responses, flashcard_reviews, exam_attempts and exam_answers.
 export async function deleteAccountAction(formData: FormData) {
   const user = await requireUser();
+
+  // La eliminación autoservicio está pensada para estudiantes. Una cuenta
+  // administrativa se recupera mediante el procedimiento operativo de
+  // bootstrap y no debe poder dejar la instalación sin administración desde
+  // una petición web.
+  if (user.role === "admin") {
+    redirect(
+      `/cuenta?error=${encodeURIComponent(
+        "La cuenta administradora no se puede eliminar desde la aplicación.",
+      )}`,
+    );
+  }
+
   const confirmed = formData.get("confirmDeletion") === "on";
 
   if (!confirmed) {

@@ -122,12 +122,8 @@ const faqs: { question: string; answer: ReactNode }[] = [
     answer: (
       <p>
         Todavía no: la aplicación está en preparación comercial y el
-        registro público no está abierto. Puedes dejar tu interés registrado
-        en{" "}
-        <Link className="font-semibold text-brand" href="/registro">
-          la página de registro
-        </Link>{" "}
-        para que te avisemos en cuanto abra, o leer la{" "}
+        registro público no está abierto. Aún no recopilamos solicitudes ni
+        correos de espera. Puedes leer la{" "}
         <Link className="font-semibold text-brand" href="/muestra">
           muestra gratuita
         </Link>{" "}

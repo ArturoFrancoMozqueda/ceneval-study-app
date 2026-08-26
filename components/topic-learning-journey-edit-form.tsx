@@ -112,7 +112,7 @@ export function TopicLearningJourneyEditForm({
               <div className="flex items-center justify-between">
                 <p className="text-sm font-medium">Quick check {index + 1}</p>
                 <button
-                  className="text-xs font-semibold text-danger disabled:cursor-not-allowed disabled:opacity-40"
+                  className="inline-flex min-h-6 items-center rounded-lg px-2 text-xs font-semibold text-danger hover:bg-danger-soft disabled:cursor-not-allowed disabled:opacity-40"
                   disabled={quickChecks.length <= 2}
                   onClick={() => removeQuickCheck(quickCheck.id)}
                   type="button"

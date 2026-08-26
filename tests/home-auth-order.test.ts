@@ -22,3 +22,14 @@ test("autentica antes de consultar datos del inicio", () => {
     /Promise\.all\(\[requireUser\(\),\s*getSubjects\(\)\]\)/,
   );
 });
+
+test("el inicio no convierte fallas de progreso en estados académicos vacíos", () => {
+  assert.match(dashboardSource, /if \(attempts\.error\)/);
+  assert.match(dashboardSource, /if \(progressResult\.error\)/);
+  assert.match(dashboardSource, /if \(nextTopicResult\.error\)/);
+  assert.match(dashboardSource, /writeDependencyFailure/);
+  assert.match(
+    dashboardSource,
+    /throw new Error\("No pudimos consultar tu avance\. Intenta nuevamente\."\)/,
+  );
+});

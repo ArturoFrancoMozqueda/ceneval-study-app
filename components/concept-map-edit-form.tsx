@@ -140,7 +140,7 @@ export function ConceptMapEditForm({
               <div className="flex items-center justify-between">
                 <p className="text-sm font-medium">Nodo {index + 1}</p>
                 <button
-                  className="text-xs font-semibold text-danger disabled:cursor-not-allowed disabled:opacity-40"
+                  className="inline-flex min-h-6 items-center rounded-lg px-2 text-xs font-semibold text-danger hover:bg-danger-soft disabled:cursor-not-allowed disabled:opacity-40"
                   disabled={nodes.length <= 1}
                   onClick={() => removeNode(node.key)}
                   type="button"

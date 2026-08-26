@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { SignInForm } from "@/components/sign-in-form";
+import { isPrivateAccessOnly } from "@/lib/access";
 import { getCurrentUser } from "@/lib/auth";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default async function SignInPage({
     <SignInForm
       initialError={error}
       initialMessage={message}
+      privateAccessOnly={isPrivateAccessOnly()}
     />
   );
 }

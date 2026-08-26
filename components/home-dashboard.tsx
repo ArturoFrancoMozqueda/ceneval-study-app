@@ -9,7 +9,13 @@ import {
 } from "@/lib/data/academic";
 import { deriveStudyOnboarding } from "@/lib/study/onboarding";
 import { getTopicJourneyStatus } from "@/lib/study/progress-presentation";
+import { writeDependencyFailure } from "@/lib/operations/safe-log";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
+
+function failDashboardQuery(operation: string, error: unknown): never {
+  writeDependencyFailure({ error, operation });
+  throw new Error("No pudimos consultar tu avance. Intenta nuevamente.");
+}
 
 export async function HomeDashboard() {
   const user = await requireUser();
@@ -27,6 +33,14 @@ export async function HomeDashboard() {
       .limit(1)
       .maybeSingle(),
   ]);
+
+  if (attempts.error) {
+    failDashboardQuery("home exam attempts", attempts.error);
+  }
+  if (progressResult.error) {
+    failDashboardQuery("home latest progress", progressResult.error);
+  }
+
   const progress = progressResult.data;
   const hasActivity = Boolean(progress || attempts.data?.length);
 
@@ -57,13 +71,17 @@ export async function HomeDashboard() {
     (sum, attempt) => sum + (attempt.score ?? 0),
     0,
   );
-  const { data: nextTopic } = progress?.topic_id
+  const nextTopicResult = progress?.topic_id
     ? await supabase
         .from("topics")
         .select("id,title")
         .eq("id", progress.topic_id)
         .maybeSingle()
-    : { data: null };
+    : { data: null, error: null };
+  if (nextTopicResult.error) {
+    failDashboardQuery("home continuation topic", nextTopicResult.error);
+  }
+  const nextTopic = nextTopicResult.data;
   const completedCount = Array.isArray(progress?.completed_steps)
     ? progress.completed_steps.length
     : 0;

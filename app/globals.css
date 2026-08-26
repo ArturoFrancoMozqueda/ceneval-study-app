@@ -6,6 +6,7 @@
   --foreground: #172033;
   --muted: #5b6474;
   --brand: #243b64;
+  --brand-soft: #e8edf5;
   --brand-deep: #192b4b;
   --success: #2f6b57;
   --success-soft: #dce9e2;
@@ -21,6 +22,7 @@
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
   --color-brand-deep: var(--brand-deep);
   --color-success: var(--success);
   --color-success-soft: var(--success-soft);

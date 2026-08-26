@@ -66,11 +66,8 @@ export function MarketingLanding() {
         </div>
         <p className="mt-4 text-sm text-muted">
           El registro todavía no está abierto: la aplicación está en
-          preparación comercial.{" "}
-          <Link className="font-semibold text-brand" href="/registro">
-            Regístrate para avisarte cuando abra
-          </Link>
-          .
+          preparación comercial. Mientras tanto puedes revisar la muestra
+          gratuita; todavía no recopilamos solicitudes ni correos de espera.
         </p>
       </section>
 

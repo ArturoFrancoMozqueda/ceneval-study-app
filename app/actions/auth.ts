@@ -4,8 +4,6 @@ import { redirect } from "next/navigation";
 import { isPrivateAccessOnly } from "@/lib/access";
 import {
   authCallbackUrl,
-  isAuthorizedPrivateRegistration,
-  REGISTRATION_CONFIRMATION_MESSAGE,
   validatePasswordInput,
   validateRegistrationInput,
 } from "@/lib/auth/registration";
@@ -64,6 +62,13 @@ export async function signInAction(
 }
 
 export async function signUpAction(formData: FormData) {
+  if (isPrivateAccessOnly()) {
+    authError(
+      "/registro",
+      "El registro público aún no está disponible.",
+    );
+  }
+
   const fullName = value(formData, "fullName");
   const email = value(formData, "email").toLowerCase();
   const password = value(formData, "password");
@@ -77,19 +82,6 @@ export async function signUpAction(formData: FormData) {
 
   if (!validation.success) {
     authError("/registro", validation.message, validation.field);
-  }
-
-  const privateAccessOnly = isPrivateAccessOnly();
-  if (
-    privateAccessOnly &&
-    !isAuthorizedPrivateRegistration(
-      validation.data.email,
-      process.env.ADMIN_EMAIL,
-    )
-  ) {
-    redirect(
-      `/iniciar-sesion?message=${encodeURIComponent(REGISTRATION_CONFIRMATION_MESSAGE)}`,
-    );
   }
 
   const supabase = await createServerSupabaseClient();
@@ -109,11 +101,6 @@ export async function signUpAction(formData: FormData) {
   });
 
   if (error) {
-    if (privateAccessOnly) {
-      redirect(
-        `/iniciar-sesion?message=${encodeURIComponent(REGISTRATION_CONFIRMATION_MESSAGE)}`,
-      );
-    }
     authError(
       "/registro",
       "No pudimos crear la cuenta. Revisa los datos o intenta nuevamente.",
@@ -122,9 +109,7 @@ export async function signUpAction(formData: FormData) {
 
   redirect(
     `/iniciar-sesion?message=${encodeURIComponent(
-      privateAccessOnly
-        ? REGISTRATION_CONFIRMATION_MESSAGE
-        : "Revisa tu correo para confirmar la cuenta.",
+      "Revisa tu correo para confirmar la cuenta.",
     )}`,
   );
 }

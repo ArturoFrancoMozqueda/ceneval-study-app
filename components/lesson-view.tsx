@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState, useTransition } from "react";
+import { useEffect, useRef, useState, useTransition } from "react";
 import { saveStudyProgressAction } from "@/app/actions/academic";
 import { ConceptMap } from "@/components/concept-map";
 import { ContentShield } from "@/components/content-shield";
@@ -229,6 +229,9 @@ export function LessonView({
   const [showSources, setShowSources] = useState(false);
   const [saveState, setSaveState] = useState<ProgressSaveState>("idle");
   const saveSequence = useRef(0);
+  const sourcesBackRef = useRef<HTMLButtonElement>(null);
+  const sourcesTriggerRef = useRef<HTMLButtonElement>(null);
+  const sourcesWereOpenRef = useRef(false);
   const [, startSaving] = useTransition();
 
   const cases = lesson.materials.filter(({ materialType }) =>
@@ -252,6 +255,16 @@ export function LessonView({
   const optionalReviews = lesson.materials.filter(({ materialType }) =>
     ["key_concepts", "study_guide"].includes(materialType),
   );
+
+  useEffect(() => {
+    if (showSources) {
+      sourcesWereOpenRef.current = true;
+      sourcesBackRef.current?.focus();
+    } else if (sourcesWereOpenRef.current) {
+      sourcesWereOpenRef.current = false;
+      sourcesTriggerRef.current?.focus();
+    }
+  }, [showSources]);
 
   function persist(
     nextStep: StepId,
@@ -302,6 +315,7 @@ export function LessonView({
         <button
           className="inline-flex min-h-6 items-center text-sm font-semibold text-brand"
           onClick={() => setShowSources(false)}
+          ref={sourcesBackRef}
           type="button"
         >
           ← Volver a la sesión
@@ -553,6 +567,7 @@ export function LessonView({
       <button
         className="mt-8 inline-flex min-h-6 items-center text-sm font-semibold text-brand"
         onClick={() => setShowSources(true)}
+        ref={sourcesTriggerRef}
         type="button"
       >
         Consultar fuentes jurídicas
