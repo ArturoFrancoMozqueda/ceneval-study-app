@@ -28,6 +28,26 @@ test("el examen usa la pregunta como leyenda y enfoca cambios y resultado", () =
   assert.match(exam, /resultTitleRef\.current\?\.focus\(\)/);
 });
 
+test("las preguntas largas permanecen dentro de la tarjeta del examen", () => {
+  assert.match(exam, /<form[\s\S]*className="min-w-0"/);
+  assert.match(
+    exam,
+    /<fieldset[\s\S]*className="min-w-0 max-w-full rounded-2xl/,
+  );
+  assert.match(
+    exam,
+    /<legend[\s\S]*className="max-w-full whitespace-normal px-2"/,
+  );
+  assert.match(
+    exam,
+    /className="mt-2 block break-words font-semibold leading-7 text-foreground"/,
+  );
+  assert.match(
+    exam,
+    /className="min-w-0 break-words text-sm leading-6"/,
+  );
+});
+
 test("clases y materias inválidas terminan en la página 404", () => {
   for (const source of [classPage, subjectPage]) {
     assert.match(source, /Number\.isInteger/);

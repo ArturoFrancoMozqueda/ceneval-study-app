@@ -153,7 +153,10 @@ export function ExamPlayer({
                   >
                     {review?.correct ? "Respuesta correcta" : "Necesita repaso"}
                   </p>
-                  <ProtectedText as="h3" className="mt-2 font-semibold">
+                  <ProtectedText
+                    as="h3"
+                    className="mt-2 break-words font-semibold"
+                  >
                     {question.text}
                   </ProtectedText>
                   <div className="mt-4 rounded-xl bg-background p-4">
@@ -206,7 +209,11 @@ export function ExamPlayer({
   const currentQuestion = exam.questions[questionIndex];
 
   return (
-    <form aria-busy={phase === "submitting"} onSubmit={submit}>
+    <form
+      aria-busy={phase === "submitting"}
+      className="min-w-0"
+      onSubmit={submit}
+    >
       <p
         className="sr-only"
         ref={examStartRef}
@@ -244,21 +251,25 @@ export function ExamPlayer({
       </div>
 
       <fieldset
-        className="rounded-2xl border border-border bg-white p-5 sm:p-6"
+        className="min-w-0 max-w-full rounded-2xl border border-border bg-white p-5 sm:p-6"
         disabled={phase === "submitting"}
       >
-        <legend className="px-2" ref={questionRef} tabIndex={-1}>
+        <legend
+          className="max-w-full whitespace-normal px-2"
+          ref={questionRef}
+          tabIndex={-1}
+        >
           <span className="block text-sm font-semibold text-success">
             {difficultyLabel[currentQuestion.difficulty]}
           </span>
-          <span className="mt-2 block font-semibold leading-7 text-foreground">
+          <span className="mt-2 block break-words font-semibold leading-7 text-foreground">
             {currentQuestion.text}
           </span>
         </legend>
         <div className="mt-4 space-y-2">
           {currentQuestion.options.map((option) => (
             <label
-              className="flex cursor-pointer gap-3 rounded-xl border border-border p-3 hover:bg-background"
+              className="flex min-w-0 cursor-pointer gap-3 rounded-xl border border-border p-3 hover:bg-background"
               key={option.id}
             >
               <input
@@ -278,7 +289,9 @@ export function ExamPlayer({
                 type="radio"
                 value={option.id}
               />
-              <span className="text-sm leading-6">{option.text}</span>
+              <span className="min-w-0 break-words text-sm leading-6">
+                {option.text}
+              </span>
             </label>
           ))}
         </div>
