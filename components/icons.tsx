@@ -50,6 +50,15 @@ export function SearchIcon(props: IconProps) {
   );
 }
 
+export function GlossaryIcon(props: IconProps) {
+  return (
+    <IconBase {...props}>
+      <path d="M5 4h10a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" />
+      <path d="M8 20a3 3 0 0 1 3-3h7M9 8h5M9 12h4" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" />
+    </IconBase>
+  );
+}
+
 export function ArrowRightIcon(props: IconProps) {
   return (
     <IconBase {...props}>

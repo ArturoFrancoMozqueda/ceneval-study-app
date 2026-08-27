@@ -6,6 +6,7 @@ import type { ReactNode } from "react";
 import { signOutAction } from "@/app/actions/auth";
 import {
   BookIcon,
+  GlossaryIcon,
   HomeIcon,
   SearchIcon,
   StudyIcon,
@@ -17,6 +18,7 @@ const navigation = [
   { href: "/sesiones", label: "Sesiones", icon: StudyIcon },
   { href: "/materias", label: "Biblioteca", icon: BookIcon },
   { href: "/buscar", label: "Buscar", icon: SearchIcon },
+  { href: "/glosario", label: "Glosario", icon: GlossaryIcon },
 ];
 
 const authPaths = [
@@ -238,7 +240,7 @@ export function AppShell({
 
       <nav
         aria-label="Navegación principal"
-        className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-4 border-t border-border bg-surface/95 px-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-2 shadow-[0_-8px_24px_rgb(23_32_51_/_0.07)] backdrop-blur lg:hidden"
+        className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-5 border-t border-border bg-surface/95 px-1 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-2 shadow-[0_-8px_24px_rgb(23_32_51_/_0.07)] backdrop-blur lg:hidden"
       >
         {navigation.map(({ href, icon: Icon, label }) => {
           const active = isActivePath(pathname, href);
