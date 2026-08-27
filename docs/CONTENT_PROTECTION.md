@@ -1,6 +1,6 @@
 # Protección de contenido — disuasión, no DRM
 
-**Fecha:** 22 de agosto de 2026
+**Fecha:** 27 de agosto de 2026
 **Referencia:** `docs/PROJECT_STATUS.md` §4 D-2 ("Protección de contenido").
 **Decisión aceptada por la titular, ya negociada y explicada:** ninguna medida
 de esta página bloquea una captura de pantalla real. Lo que sigue es
@@ -88,8 +88,9 @@ detecta una de dos señales:
 1. **La pestaña o la ventana pierde el foco** — `visibilitychange` cuando el
    documento deja de estar visible, y `blur`/`focus` de `window` cuando la
    ventana pierde el foco del sistema operativo (por ejemplo, al cambiar de
-   aplicación con Alt+Tab). Con un pequeño retraso (120 ms) antes de mostrar
-   el overlay, para no parpadear con cambios de foco muy breves.
+   aplicación con Alt+Tab). El overlay se muestra inmediatamente: el retraso
+   anterior de 120 ms dejaba una ventana adicional en la que una herramienta
+   de recorte podía terminar la captura.
 2. **Heurística de herramientas de desarrollador acopladas**: compara
    `window.outerWidth`/`outerHeight` contra `innerWidth`/`innerHeight`. Un
    panel de DevTools acoplado reduce el viewport interno sin cambiar el
@@ -99,6 +100,18 @@ detecta una de dos señales:
 
 El overlay se retira en cuanto la pestaña recupera el foco y la heurística
 de DevTools deja de disparar.
+
+Además, cada `ContentShield` mantiene sobre el contenido una marca de agua
+repetida y no interactiva (`SUBE LEGAL · USO PERSONAL`). Esta es la defensa
+que sí queda incluida en una captura aunque el sistema operativo no emita
+ningún evento detectable. Al imprimir o exportar a PDF desde el navegador,
+el contenido protegido se sustituye por un aviso. La marca no identifica a
+una persona concreta y no convierte la captura en imposible: hace menos útil
+la redistribución casual sin recopilar ni revelar datos personales.
+
+Cuando el overlay reactivo aparece, su mensaje explica el límite real: la web
+puede ocultar al perder foco, pero no bloquear las capturas del sistema. Esto
+evita presentar la disuasión como una garantía técnica inexistente.
 
 **Verificación de que no dispara en falso en uso normal** (razonada, no solo
 supuesta):
@@ -277,3 +290,8 @@ tocó `proxy.ts`, `app/page.tsx`, `app/registro/`, `app/actions/auth.ts` ni
 `supabase/migrations/`. No se implementó rate limiting ni límite de
 sesiones concurrentes — solo se documentan las opciones arriba para que la
 decisión de infraestructura se tome cuando corresponda.
+
+La mejora del 27 de agosto añade únicamente la marca de agua persistente, la
+ocultación al imprimir, la reacción inmediata a pérdida de foco y sus pruebas
+de contrato. No amplía la cobertura a formularios ni afirma bloquear PrtScn,
+grabadores externos o fotografías.

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 
 /**
  * Disuasión de captura/grabación de pantalla para el contenido de estudio.
@@ -19,8 +19,10 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
  *       cambiar el tamaño externo de la ventana, así que la diferencia
  *       crece por encima de un umbral razonable.
  *
- * El overlay se retira en cuanto la pestaña recupera el foco y la
- * heurística de devtools deja de disparar.
+ * La medida que sí permanece en una captura es una marca de agua repetida
+ * sobre el contenido. También se oculta el contenido al imprimir. Ninguna de
+ * las dos impide una captura, pero sí conserva la atribución del producto y
+ * aumenta la fricción de una redistribución casual.
  *
  * LIMITACIÓN RECONOCIDA Y ACEPTADA (decisión D-2, ver
  * docs/PROJECT_STATUS.md §4 y docs/CONTENT_PROTECTION.md): esto NO
@@ -52,14 +54,12 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
  *     Next.js (que se renderiza dentro de la misma página, no cambia
  *     `outerWidth`/`outerHeight` ni `innerWidth`/`innerHeight`), así que no
  *     se activa solo por tener `next dev` corriendo.
- *   - Se usa un pequeño retraso (debounce) antes de mostrar el overlay por
- *     pérdida de foco, para no parpadear con cambios de foco muy breves
- *     (por ejemplo, un clic que pasa brevemente por la barra de
- *     direcciones).
+ * El overlay reactivo se muestra inmediatamente: esperar antes de pintarlo
+ * permitía que una herramienta de recorte terminara la captura durante ese
+ * intervalo. Aun así, el sistema operativo puede capturar sin emitir `blur`.
  */
 
 const DEVTOOLS_SIZE_THRESHOLD = 160;
-const BLUR_SHOW_DELAY_MS = 120;
 const DEVTOOLS_POLL_INTERVAL_MS = 700;
 
 function isLikelyDevtoolsOpen() {
@@ -73,25 +73,9 @@ function isLikelyDevtoolsOpen() {
 
 export function ContentShield({ children }: { children: ReactNode }) {
   const [shielded, setShielded] = useState(false);
-  const blurTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    function clearBlurTimer() {
-      if (blurTimer.current !== null) {
-        clearTimeout(blurTimer.current);
-        blurTimer.current = null;
-      }
-    }
-
-    function scheduleShieldFromFocusLoss() {
-      clearBlurTimer();
-      blurTimer.current = setTimeout(() => {
-        setShielded(true);
-      }, BLUR_SHOW_DELAY_MS);
-    }
-
     function unshieldFromFocus() {
-      clearBlurTimer();
       // Solo se quita por foco si la heurística de devtools tampoco está
       // disparando en este momento; si sigue abierta, el intervalo de abajo
       // se encarga de mantener o retirar el overlay.
@@ -99,12 +83,12 @@ export function ContentShield({ children }: { children: ReactNode }) {
     }
 
     function handleVisibilityChange() {
-      if (document.hidden) scheduleShieldFromFocusLoss();
+      if (document.hidden) setShielded(true);
       else unshieldFromFocus();
     }
 
     function handleWindowBlur() {
-      scheduleShieldFromFocusLoss();
+      setShielded(true);
     }
 
     function handleWindowFocus() {
@@ -128,23 +112,35 @@ export function ContentShield({ children }: { children: ReactNode }) {
       window.removeEventListener("blur", handleWindowBlur);
       window.removeEventListener("focus", handleWindowFocus);
       clearInterval(devtoolsInterval);
-      clearBlurTimer();
     };
   }, []);
 
   return (
-    <div className="relative">
+    <div className="content-shield relative">
       {children}
+      <div
+        aria-hidden="true"
+        className="content-shield-watermark pointer-events-none absolute inset-0 z-30"
+      />
       {shielded ? (
         <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-40 flex items-center justify-center rounded-[inherit] bg-background/95 backdrop-blur-md"
+          aria-live="polite"
+          className="pointer-events-none absolute inset-0 z-40 flex flex-col items-center justify-center rounded-[inherit] bg-background/95 px-6 text-center backdrop-blur-md"
         >
-          <p className="px-6 text-center text-sm font-semibold text-muted">
-            Contenido oculto mientras la ventana no está activa
+          <p className="text-sm font-semibold text-foreground">
+            Protección de contenido activa
+          </p>
+          <p className="mt-2 max-w-md text-xs leading-5 text-muted">
+            El contenido se oculta al perder foco. Una página web no puede
+            bloquear las capturas del sistema; la marca de uso personal
+            permanece visible como medida disuasoria.
           </p>
         </div>
       ) : null}
+      <p className="content-shield-print-notice hidden text-center text-sm font-semibold text-muted">
+        La impresión y exportación a PDF del contenido de estudio están
+        deshabilitadas.
+      </p>
     </div>
   );
 }

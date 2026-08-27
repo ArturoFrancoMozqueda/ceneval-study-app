@@ -77,6 +77,21 @@ textarea {
   color: var(--foreground);
 }
 
+.content-shield-watermark {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='160' viewBox='0 0 280 160'%3E%3Ctext x='140' y='80' text-anchor='middle' dominant-baseline='middle' transform='rotate(-24 140 80)' fill='%23243b64' fill-opacity='.11' font-family='Arial,sans-serif' font-size='13' font-weight='700' letter-spacing='1'%3ESUBE LEGAL %C2%B7 USO PERSONAL%3C/text%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+@media print {
+  .content-shield > :not(.content-shield-print-notice) {
+    display: none !important;
+  }
+
+  .content-shield > .content-shield-print-notice {
+    display: block !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
