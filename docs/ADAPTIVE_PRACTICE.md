@@ -1,17 +1,24 @@
 # Práctica adaptativa — contrato local `spacing-v1`
 
-**Estado:** backend preparado localmente; corpus pendiente de aprobación editorial.
+**Estado:** backend preparado localmente; corpus aprobado editorialmente el 28 de
+agosto de 2026, condicionado a que `npm run retrieval:check` continúe aprobando.
+No se ha importado ni publicado en Supabase.
 
 La proyección lee los 456 reactivos de `docs/retrieval-practice/C01.md` a
 `C57.md` y produce el contrato `retrieval-corpus-v1`. Este paso valida y separa
 los datos públicos de las claves, pero no escribe en Supabase.
 
-Hay dos aprobaciones distintas:
+Hay dos autorizaciones distintas:
 
-1. `approvalStatus: pending_editorial_approval` significa que el corpus no
-   puede llegar a la RPC de importación.
-2. Cuando una persona responsable cambie explícitamente el estado a
-   `approved`, la RPC podrá crear filas, pero siempre con
+1. La titular ya aprobó editorialmente el contenido exacto de los 456
+   reactivos. Cualquier cambio invalida esa aprobación y obliga a repetir el
+   gate y la revisión humana.
+2. `approvalStatus: pending_editorial_approval` sigue siendo el valor seguro
+   de toda proyección nueva, para que preparar o probar el corpus nunca pueda
+   importarlo por accidente.
+3. Una futura ejecución autorizada deberá volver a aprobar el gate y marcar
+   explícitamente esa proyección inmutable como `approved`. Solo entonces la
+   RPC podrá crear filas, siempre con
    `editorial_status = draft`. Publicarlas seguirá requiriendo el flujo
    editorial y no ocurre durante la importación.
 

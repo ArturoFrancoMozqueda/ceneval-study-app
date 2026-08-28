@@ -31,7 +31,7 @@ test("el importador falla cerrado antes de invocar Supabase sin aprobación", as
       called = true;
       return { data: 8, error: null };
     }, corpus),
-    /pendiente de aprobación editorial/,
+    /no incluye aprobación explícita para importar/,
   );
   assert.equal(called, false);
 });

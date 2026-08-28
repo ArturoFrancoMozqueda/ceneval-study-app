@@ -242,6 +242,52 @@ def assert_computed_reduced_motion(page: Page, label: str) -> None:
         )
 
 
+def assert_privacy_curtain(page: Page) -> None:
+    """Comprueba las señales web reales sin afirmar que bloquean PrtScn."""
+    curtain = page.locator(".privacy-curtain")
+    expect(curtain).to_have_count(1)
+    page.bring_to_front()
+    page.evaluate("window.dispatchEvent(new Event('focus'))")
+    expect(curtain).to_have_attribute("data-state", "hidden")
+
+    # Demostración deliberada de la limitación: con la ventana activa el
+    # contenido continúa visible y Playwright puede capturarlo.
+    expect(page.locator("#contenido-principal")).to_be_visible()
+    direct_capture = page.screenshot()
+    assert len(direct_capture) > 0
+    expect(curtain).to_have_attribute("data-state", "hidden")
+
+    page.evaluate("window.dispatchEvent(new Event('blur'))")
+    expect(curtain).to_have_attribute("data-state", "visible")
+    assert curtain.evaluate("el => getComputedStyle(el).backgroundColor") == "rgb(0, 0, 0)"
+    page.evaluate("window.dispatchEvent(new Event('focus'))")
+    expect(curtain).to_have_attribute("data-state", "hidden")
+
+    page.evaluate(
+        """() => {
+          Object.defineProperty(document, 'hidden', {
+            configurable: true,
+            get: () => true
+          });
+          document.dispatchEvent(new Event('visibilitychange'));
+        }"""
+    )
+    expect(curtain).to_have_attribute("data-state", "visible")
+    page.evaluate(
+        """() => {
+          delete document.hidden;
+          document.dispatchEvent(new Event('visibilitychange'));
+          window.dispatchEvent(new Event('focus'));
+        }"""
+    )
+    expect(curtain).to_have_attribute("data-state", "hidden")
+
+    page.evaluate("window.dispatchEvent(new Event('beforeprint'))")
+    expect(curtain).to_have_attribute("data-state", "visible")
+    page.evaluate("window.dispatchEvent(new Event('afterprint'))")
+    expect(curtain).to_have_attribute("data-state", "hidden")
+
+
 def audit_emulated_accessibility(
     browser: Browser,
     base_url: str,
@@ -391,6 +437,8 @@ def main() -> None:
             page.get_by_role("button", name="Iniciar sesión").click()
             page.wait_for_url(f"{base_url}/")
             wait_for_network(page)
+
+            assert_privacy_curtain(page)
 
             sign_out_button = page.get_by_role("button", name="Cerrar sesión").first
             expect(sign_out_button).to_be_visible()

@@ -168,7 +168,7 @@ export async function importApprovedRetrievalCorpus(
   const corpus = retrievalCorpusProjectionSchema.parse(input);
   if (corpus.approvalStatus !== "approved") {
     throw new Error(
-      "El corpus sigue pendiente de aprobación editorial; no puede escribirse en Supabase.",
+      "La proyección no incluye aprobación explícita para importar; no puede escribirse en Supabase.",
     );
   }
   const { data, error } = await invokeRpc("import_retrieval_corpus_v1", {
