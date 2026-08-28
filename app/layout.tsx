@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Anton, Montserrat } from "next/font/google";
 import { AppShell } from "@/components/app-shell";
+import { PrivacyCurtain } from "@/components/privacy-curtain";
 import { getCurrentUser } from "@/lib/auth";
 import "./globals.css";
 
@@ -36,8 +37,11 @@ export default async function RootLayout({
       lang="es"
       className={`${montserrat.variable} ${anton.variable} h-full`}
     >
-      <body className="min-h-full antialiased">
+      <body
+        className={`min-h-full antialiased${user ? " privacy-protected" : ""}`}
+      >
         <AppShell user={user}>{children}</AppShell>
+        {user ? <PrivacyCurtain /> : null}
       </body>
     </html>
   );

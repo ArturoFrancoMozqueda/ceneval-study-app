@@ -537,9 +537,9 @@ en la única suscripción.
 
 *Protección de contenido* (además de la regla ya vigente de no exponer la
 transcripción original): deshabilitar selección y copiado de texto en las
-vistas de estudio (✅ publicado), disuasión de captura de pantalla oscureciendo
-el contenido al perder foco o detectar herramientas de desarrollador (✅
-publicado, ver `docs/CONTENT_PROTECTION.md` para su limitación reconocida: no
+vistas de estudio (✅ publicado), cortina de privacidad global al perder foco,
+cambiar de visibilidad, abandonar la página o imprimir (✅ publicado, ver
+`docs/CONTENT_PROTECTION.md` para su limitación reconocida: no detecta ni
 bloquea una captura real), sin exportación ni descarga masiva del catálogo,
 límite de tasa en las rutas de lectura contra scraping, límite de sesiones
 concurrentes por cuenta (estos dos últimos solo diseñados en
