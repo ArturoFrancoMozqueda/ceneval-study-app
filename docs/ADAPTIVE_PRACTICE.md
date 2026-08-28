@@ -1,0 +1,47 @@
+# Práctica adaptativa — contrato local `spacing-v1`
+
+**Estado:** backend preparado localmente; corpus pendiente de aprobación editorial.
+
+La proyección lee los 456 reactivos de `docs/retrieval-practice/C01.md` a
+`C57.md` y produce el contrato `retrieval-corpus-v1`. Este paso valida y separa
+los datos públicos de las claves, pero no escribe en Supabase.
+
+Hay dos aprobaciones distintas:
+
+1. `approvalStatus: pending_editorial_approval` significa que el corpus no
+   puede llegar a la RPC de importación.
+2. Cuando una persona responsable cambie explícitamente el estado a
+   `approved`, la RPC podrá crear filas, pero siempre con
+   `editorial_status = draft`. Publicarlas seguirá requiriendo el flujo
+   editorial y no ocurre durante la importación.
+
+## Seguridad y persistencia
+
+- `retrieval_items` contiene únicamente consigna y metadatos públicos.
+- `retrieval_item_answer_keys` no tiene política ni permisos para clientes.
+- `retrieval_item_evidence` está separada y solo se muestra con contenido
+  publicado y aprobado.
+- Las acciones obtienen la identidad de la sesión, vuelven a autorizar el
+  reactivo y leen la clave con el cliente administrativo solo al revelar.
+- Las sesiones, intentos y estados pertenecen a una usuaria. Los clientes
+  autenticados pueden leer los suyos, pero las mutaciones quedan en servidor.
+- Un borrador libre de respuesta nunca se persiste.
+
+## Algoritmo
+
+`spacing-v1` usa etapas con intervalos de 1, 3, 7, 14, 30 y 60 días. Un error
+reinicia la etapa, suma un lapse, vuelve al día siguiente y se reinserta en la
+sesión después de otros dos reactivos. Una respuesta parcial retrocede una
+etapa y vuelve al día siguiente. Una correcta segura avanza; una correcta con
+dudas conserva la etapa. `no_recall` siempre se normaliza como incorrecta.
+
+La cola toma primero los reactivos vencidos, prioriza errores, parciales y baja
+confianza, y evita más de dos reactivos consecutivos del mismo tema cuando hay
+otra opción disponible.
+
+`startOrResumePracticeSessionAction({ targetSize: 5 })` inicia la ronda global;
+se puede agregar `topicId` para una ronda manual de un solo tema. La ronda
+original conserva entre tres y cinco reactivos, pero la cola persistida admite
+hasta 32 posiciones para reintentos. Solo existe una sesión activa por usuaria,
+de modo que cualquier entrada reanuda primero esa ronda hasta completarla o
+abandonarla explícitamente.
