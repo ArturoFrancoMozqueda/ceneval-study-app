@@ -1,11 +1,12 @@
 # Preguntas de práctica de recuperación (C01–C57)
 
-> **REAUDITADO Y APROBADO EDITORIALMENTE — NO IMPORTADO.** El 25 de agosto de
+> **REAUDITADO, APROBADO E IMPORTADO COMO BORRADOR.** El 25 de agosto de
 > 2026 se reconstruyeron y reauditaron los 456 reactivos contra los paquetes
 > 1.2, y la titular aprobó ese contenido exacto el 28 de agosto de 2026,
-> condicionado a que `npm run retrieval:check` continúe aprobando. Esto no
-> autoriza escribir en Supabase ni publicar: consulta [AUDIT.md](AUDIT.md) y
-> [CONTRACT.md](CONTRACT.md).
+> condicionado a que `npm run retrieval:check` continúe aprobando. Ese mismo
+> día se importaron 456 reactivos, 456 claves y 1,377 evidencias al proyecto
+> CENEVAL Study App. Los 456 permanecen en `draft`; la importación no autorizó
+> publicarlos. Consulta [AUDIT.md](AUDIT.md) y [CONTRACT.md](CONTRACT.md).
 
 Reauditoradas con las skills `edu-agent-skills-retrieval-practice-generator`,
 `edu-agent-skills-assessment-validity-checker` y
@@ -14,12 +15,11 @@ libre, aplicación guiada y reconocimiento), para
 estudiantes de Derecho que ya concluyeron la licenciatura y se preparan para el
 examen CENEVAL EGEL Plus Derecho.
 
-Estos archivos son material de apoyo editorial, **no** están importados a
-Supabase ni forman parte del contrato de contenido 1.2. Cada reactivo se deriva
-de un artefacto trazado de `content/packages/` y la aprobación editorial ya fue
-otorgada para esta versión exacta. Una importación futura requiere autorización
-operativa separada y debe crear únicamente borradores. No se ejecutó ninguna
-operación contra Supabase.
+Estos archivos son material de apoyo editorial y **no** forman parte del
+contrato de contenido 1.2. Cada reactivo se deriva de un artefacto
+trazado de `content/packages/` y la aprobación editorial fue otorgada para esta
+versión exacta. La proyección estructurada ya está en Supabase como borrador;
+su publicación continúa siendo una operación editorial separada.
 
 El gate local se ejecuta con `npm run retrieval:check`. Compara los 57 archivos
 con sus paquetes 1.2; cualquier deriva de consigna, clave o evidencia falla.

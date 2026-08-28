@@ -2,7 +2,8 @@
 
 **Estado:** backend preparado localmente; corpus aprobado editorialmente el 28 de
 agosto de 2026, condicionado a que `npm run retrieval:check` continúe aprobando.
-No se ha importado ni publicado en Supabase.
+Los 456 reactivos se importaron al proyecto CENEVAL Study App el 28 de agosto
+de 2026 como borradores; ninguno se publicó durante la importación.
 
 La proyección lee los 456 reactivos de `docs/retrieval-practice/C01.md` a
 `C57.md` y produce el contrato `retrieval-corpus-v1`. Este paso valida y separa
@@ -21,6 +22,18 @@ Hay dos autorizaciones distintas:
    RPC podrá crear filas, siempre con
    `editorial_status = draft`. Publicarlas seguirá requiriendo el flujo
    editorial y no ocurre durante la importación.
+
+La importación remota se ejecuta únicamente con autorización expresa:
+
+```powershell
+npm run retrieval:check
+npm run retrieval:import -- -ConfirmProduction
+```
+
+El importador valida el proyecto remoto, exige que la tabla esté vacía y
+confirma que reactivos y claves se hayan creado íntegramente como borradores.
+Requiere las variables privadas locales documentadas en `.env.example`; ningún
+archivo con secretos se agrega a Git.
 
 ## Seguridad y persistencia
 

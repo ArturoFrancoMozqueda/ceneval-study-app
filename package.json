@@ -18,6 +18,7 @@
     "content:check": "tsx --env-file-if-exists=.env.local scripts/check-content.ts",
     "retrieval:generate": "tsx scripts/generate-retrieval-practice.ts --write",
     "retrieval:check": "tsx scripts/generate-retrieval-practice.ts",
+    "retrieval:import": "tsx --env-file=.env.local scripts/import-retrieval-corpus.ts",
     "test:adaptive": "tsx --test tests/adaptive-practice.test.ts tests/adaptive-spacing.test.ts tests/exam-target-date.test.ts tests/retrieval-corpus-import.test.ts tests/adaptive-practice-security.test.ts",
     "content:test": "tsx --test lib/content/package-schema.test.ts tests/curriculum-traceability.test.ts tests/content-curriculum-corpus.test.ts tests/content-package-persistence.test.ts tests/content-package-roundtrip.test.ts",
     "test:publication": "tsx --test tests/publication-readiness.test.ts tests/editorial-publication-gate.test.ts tests/traceable-package-migration.test.ts",
