@@ -83,6 +83,10 @@ export default function PrivacyNoticePage() {
             para poder mostrarte tu resultado e historial.
           </li>
           <li>
+            La fecha objetivo del examen, únicamente si decides configurarla,
+            para ajustar tu calendario de repasos.
+          </li>
+          <li>
             La fecha en la que aceptaste estos términos y este aviso de
             privacidad, como evidencia de tu consentimiento.
           </li>
@@ -100,6 +104,10 @@ export default function PrivacyNoticePage() {
           <li>Crear, identificar y administrar tu cuenta.</li>
           <li>Darte acceso a la biblioteca de estudio de tu suscripción.</li>
           <li>Guardar tu progreso, tus intentos de examen y tus respuestas.</li>
+          <li>
+            Ajustar los intervalos de repaso a tu fecha objetivo, cuando la
+            configures de forma opcional.
+          </li>
           <li>Atender tus solicitudes de soporte.</li>
           <li>
             Administrar tu suscripción y, cuando el cobro esté activo,

@@ -24,6 +24,8 @@ export type AccountExport = {
     role: string;
     createdAt: string;
     termsAcceptedAt: string | null;
+    examTargetDate: string | null;
+    examTargetHeuristicVersion: string | null;
   } | null;
   studyProgress: Array<{
     topicId: number;
@@ -82,7 +84,9 @@ export async function buildAccountExport(): Promise<AccountExport> {
   ] = await Promise.all([
     supabase
       .from("profiles")
-      .select("full_name,role,created_at,terms_accepted_at")
+      .select(
+        "full_name,role,created_at,terms_accepted_at,exam_target_date,exam_target_heuristic_version",
+      )
       .eq("id", user.id)
       .maybeSingle(),
     supabase
@@ -148,6 +152,9 @@ export async function buildAccountExport(): Promise<AccountExport> {
           role: profileResult.data.role,
           createdAt: profileResult.data.created_at,
           termsAcceptedAt: profileResult.data.terms_accepted_at,
+          examTargetDate: profileResult.data.exam_target_date,
+          examTargetHeuristicVersion:
+            profileResult.data.exam_target_heuristic_version,
         }
       : null,
     studyProgress: (progressResult.data ?? []).map((row) => ({

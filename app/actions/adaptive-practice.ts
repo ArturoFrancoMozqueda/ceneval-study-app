@@ -20,6 +20,10 @@ import {
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 import { writeDependencyFailure } from "@/lib/operations/safe-log";
+import {
+  applyExamTargetHeuristicV1,
+  EXAM_TARGET_HEURISTIC_VERSION,
+} from "@/lib/study/exam-target";
 
 type PracticeActionResult<T> = { error: string } | T;
 
@@ -330,9 +334,25 @@ export async function rateAdaptiveAttemptAction(
     outcome: parsed.data.outcome,
     reviewedAt,
   });
+  const { data: profile, error: profileError } = await admin
+    .from("profiles")
+    .select("exam_target_date,exam_target_heuristic_version")
+    .eq("id", user.id)
+    .maybeSingle();
+  if (profileError) return unavailable("loadExamTargetDate", profileError);
+  const adjustedSchedule = applyExamTargetHeuristicV1(
+    scheduled,
+    profile?.exam_target_heuristic_version === EXAM_TARGET_HEURISTIC_VERSION
+      ? profile.exam_target_date
+      : null,
+    reviewedAt,
+  );
   const { data: updatedAttempt, error: attemptUpdateError } = await admin
     .from("retrieval_attempts")
-    .update({ outcome: scheduled.lastOutcome, rated_at: scheduled.lastReviewedAt })
+    .update({
+      outcome: adjustedSchedule.lastOutcome,
+      rated_at: adjustedSchedule.lastReviewedAt,
+    })
     .eq("id", attempt.id)
     .eq("user_id", user.id)
     .is("outcome", null)
@@ -364,14 +384,14 @@ export async function rateAdaptiveAttemptAction(
     {
       user_id: user.id,
       retrieval_item_id: attempt.retrieval_item_id,
-      stage: scheduled.stage,
-      success_streak: scheduled.successStreak,
-      lapse_count: scheduled.lapseCount,
-      last_confidence: scheduled.lastConfidence,
-      last_outcome: scheduled.lastOutcome,
-      last_reviewed_at: scheduled.lastReviewedAt,
-      next_review_at: scheduled.nextReviewAt,
-      scheduler_version: scheduled.schedulerVersion,
+      stage: adjustedSchedule.stage,
+      success_streak: adjustedSchedule.successStreak,
+      lapse_count: adjustedSchedule.lapseCount,
+      last_confidence: adjustedSchedule.lastConfidence,
+      last_outcome: adjustedSchedule.lastOutcome,
+      last_reviewed_at: adjustedSchedule.lastReviewedAt,
+      next_review_at: adjustedSchedule.nextReviewAt,
+      scheduler_version: adjustedSchedule.schedulerVersion,
     },
     { onConflict: "user_id,retrieval_item_id" },
   );
@@ -397,7 +417,7 @@ export async function rateAdaptiveAttemptAction(
       .update({ status: "rated" })
       .eq("session_id", session.id)
       .eq("position", session.current_position);
-    if (scheduled.instruction === "retry_in_session") {
+    if (adjustedSchedule.instruction === "retry_in_session") {
       const { error: retryError } = await admin.rpc("enqueue_retrieval_retry_v1", {
         p_session_id: session.id,
         p_user_id: user.id,
@@ -433,9 +453,9 @@ export async function rateAdaptiveAttemptAction(
   }
 
   return {
-    nextReviewAt: scheduled.nextReviewAt,
-    stage: scheduled.stage,
-    instruction: scheduled.instruction,
+    nextReviewAt: adjustedSchedule.nextReviewAt,
+    stage: adjustedSchedule.stage,
+    instruction: adjustedSchedule.instruction,
   };
 }
 

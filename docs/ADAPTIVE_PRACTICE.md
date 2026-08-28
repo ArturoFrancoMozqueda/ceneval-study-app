@@ -52,3 +52,11 @@ original conserva entre tres y cinco reactivos, pero la cola persistida admite
 hasta 32 posiciones para reintentos. Solo existe una sesión activa por usuaria,
 de modo que cualquier entrada reanuda primero esa ronda hasta completarla o
 abandonarla explícitamente.
+
+## Fecha objetivo opcional
+
+Cada usuaria puede guardar o quitar una fecha objetivo en su perfil. La
+variante `spacing-v1-exam-date-v1` conserva las reglas de spacing-v1 y solo
+acorta intervalos largos a 30, 14, 7, 3 o 1 día conforme se acerca el examen.
+Es una heurística de producto versionada: no es una prescripción científicamente
+validada, no predice dominio y no garantiza desempeño en el examen.
