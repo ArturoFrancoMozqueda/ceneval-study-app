@@ -140,6 +140,24 @@ export type Exam = {
   questions: ExamQuestion[];
 };
 
+export type TopicLearningJourney = {
+  openingPrompt: string;
+  quickChecks: Array<{
+    prompt: string;
+    answer: string;
+    feedback: string;
+  }>;
+  practicalCase: {
+    facts: string;
+    question: string;
+    legalRule: string;
+    reasoning: string;
+    conclusion: string;
+  };
+  closingPrompt: string;
+  nextActivity: string;
+};
+
 export type LessonBundle = {
   topic: Topic;
   studyClass: StudyClass;
@@ -151,6 +169,7 @@ export type LessonBundle = {
     nodes: ConceptMapNode[];
   } | null;
   references: LegalReference[];
+  learningJourney: TopicLearningJourney | null;
   flashcards: Flashcard[];
   exam: Exam | null;
 };
@@ -375,7 +394,7 @@ export async function getPublishedSessions(userId: string): Promise<StudySession
         (total, topic) => total + (progress.get(topic.id) ?? 0),
         0,
       ),
-      totalSteps: classTopics.length * 5,
+      totalSteps: classTopics.length * 3,
     };
   });
 }
@@ -589,7 +608,7 @@ export async function getLessonBundle(
     return null;
   }
 
-  const [studyClass, materialsResult, mapResult, linksResult, cardsResult, examsResult] =
+  const [studyClass, materialsResult, mapResult, linksResult, journeyResult, cardsResult, examsResult] =
     await Promise.all([
       getClass(topic.classId),
       (await createServerSupabaseClient())
@@ -610,6 +629,11 @@ export async function getLessonBundle(
         )
         .eq("topic_id", topicId),
       (await createServerSupabaseClient())
+        .from("topic_learning_journeys")
+        .select("content")
+        .eq("topic_id", topicId)
+        .maybeSingle(),
+      (await createServerSupabaseClient())
         .from("flashcards")
         .select("id,question,answer,position")
         .eq("topic_id", topicId)
@@ -626,6 +650,7 @@ export async function getLessonBundle(
   if (materialsResult.error) fail("lesson materials", materialsResult.error);
   if (mapResult.error) fail("lesson map", mapResult.error);
   if (linksResult.error) fail("lesson references", linksResult.error);
+  if (journeyResult.error) fail("lesson journey", journeyResult.error);
   if (cardsResult.error) fail("lesson flashcards", cardsResult.error);
   if (examsResult.error) fail("lesson exam", examsResult.error);
 
@@ -722,6 +747,9 @@ export async function getLessonBundle(
         }
       : null,
     references,
+    learningJourney: journeyResult.data?.content
+      ? (journeyResult.data.content as unknown as TopicLearningJourney)
+      : null,
     flashcards: (cardsResult.data ?? []).map((row) => ({
       id: row.id as number,
       question: row.question as string,

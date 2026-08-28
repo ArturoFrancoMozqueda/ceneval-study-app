@@ -6,6 +6,7 @@ import { getTopic } from "@/lib/data/academic";
 
 type TopicPageProps = {
   params: Promise<{ topicId: string }>;
+  searchParams: Promise<{ modo?: string | string[] }>;
 };
 
 export async function generateMetadata({
@@ -26,11 +27,19 @@ export async function generateMetadata({
 
 export default async function TopicPage({
   params,
+  searchParams,
 }: TopicPageProps) {
   await requireUser();
   const { topicId } = await params;
+  const { modo: rawMode } = await searchParams;
   const numericId = Number(topicId);
   if (!Number.isInteger(numericId) || numericId < 1) notFound();
 
-  return <TopicDetail topicId={numericId} />;
+  const requestedMode = Array.isArray(rawMode) ? rawMode[0] : rawMode;
+  const mode =
+    requestedMode === "leccion" || requestedMode === "simulacro"
+      ? requestedMode
+      : "practicar";
+
+  return <TopicDetail mode={mode} topicId={numericId} />;
 }

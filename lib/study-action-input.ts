@@ -14,6 +14,11 @@ export const studySteps = [
   "check",
 ] as const;
 
+// `remember` y `check` se conservan para leer progreso histórico. Desde que
+// práctica y simulacro son experiencias independientes, la lección termina al
+// completar estos tres pasos editoriales.
+export const lessonStudySteps = ["discover", "understand", "apply"] as const;
+
 const studyStepSchema = z.enum(studySteps);
 
 const flashcardReviewSchema = z

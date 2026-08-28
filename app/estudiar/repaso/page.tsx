@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FlashcardsDeck } from "@/components/flashcards-deck";
+import { AdaptivePractice } from "@/components/adaptive-practice";
 import { requireUser } from "@/lib/auth";
 import { getReviewOverview } from "@/lib/data/academic";
 
@@ -38,49 +38,31 @@ export default async function ReviewPage() {
       <header className="mt-7">
         <p className="text-sm font-semibold text-success">Repaso espaciado</p>
         <h1 className="mt-2 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">
-          {cards.length
-            ? `${cards.length} ${cards.length === 1 ? "tarjeta pendiente" : "tarjetas pendientes"}`
-            : "Terminaste por hoy"}
+          Práctica adaptativa de hoy
         </h1>
         <p className="mt-3 max-w-2xl leading-7 text-muted">
-          {cards.length
-            ? "Empezamos por las tarjetas que marcaste como más difíciles y seguimos con las que llevan más tiempo pendientes."
-            : "No hay tarjetas vencidas. Las que calificaste volverán a aparecer cuando corresponda."}
+          Empezamos por preguntas nuevas o pendientes y priorizamos lo que te
+          costó recuperar. Si el banco adaptativo todavía no está disponible,
+          usamos tus tarjetas vencidas como respaldo.
         </p>
       </header>
 
-      {cards.length ? (
-        <section aria-labelledby="review-deck-title" className="mt-9">
-          <h2 className="sr-only" id="review-deck-title">
-            Tarjetas para repasar
-          </h2>
-          <FlashcardsDeck
-            allowRestart={false}
-            cards={cards}
-            completionHref="/estudiar"
-          />
-        </section>
-      ) : (
-        <section
-          aria-labelledby="review-complete-title"
-          className="mt-9 rounded-2xl border border-success/20 bg-success-soft p-6"
-        >
-          <h2 className="text-xl font-semibold text-success" id="review-complete-title">
-            Repaso al día
-          </h2>
-          <p className="mt-2 leading-7 text-muted">
-            {nextReviewLabel
-              ? `Tu próximo repaso está programado para el ${nextReviewLabel}.`
-              : "Cuando clasifiques una tarjeta, aquí aparecerá en su fecha de repaso."}
+      <section aria-labelledby="review-deck-title" className="mt-9">
+        <h2 className="sr-only" id="review-deck-title">
+          Preguntas para practicar
+        </h2>
+        <AdaptivePractice
+          adaptive
+          cards={cards}
+          completionHref="/estudiar"
+          completionLabel="Volver al centro de estudio"
+        />
+        {!cards.length && nextReviewLabel ? (
+          <p className="mt-5 text-sm leading-6 text-muted">
+            Tus tarjetas tradicionales volverán a estar disponibles el {nextReviewLabel}.
           </p>
-          <Link
-            className="mt-5 inline-flex min-h-11 items-center rounded-xl bg-brand px-5 text-sm font-semibold text-white hover:bg-brand-deep"
-            href="/estudiar"
-          >
-            Volver al centro de estudio
-          </Link>
-        </section>
-      )}
+        ) : null}
+      </section>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { studySteps } from "@/lib/study-action-input";
+import { lessonStudySteps } from "@/lib/study-action-input";
 
 export type PublishedTopic = {
   id: number;
@@ -59,7 +59,7 @@ function isLater(candidate: string | null, current: string | null) {
 
 function isCompleted(completedSteps: string[]) {
   const completed = new Set(completedSteps);
-  return studySteps.every((step) => completed.has(step));
+  return lessonStudySteps.every((step) => completed.has(step));
 }
 
 function isValidCompletedAttempt(attempt: TopicExamAttemptRecord) {

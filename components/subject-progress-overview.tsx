@@ -97,8 +97,9 @@ export function SubjectProgressOverview({
         <p className="mt-2 text-sm leading-6 text-foreground/80">
           El total incluye solo temas aprobados de clases publicadas. “Con
           actividad” significa que existe progreso guardado; “finalizado”, que
-          completaste sus cinco pasos. Los exámenes cuentan aciertos y preguntas
-          de intentos finalizados del examen vigente.
+          completaste los tres pasos de su lección. La práctica y el simulacro
+          aportan evidencia aparte; los exámenes cuentan aciertos y preguntas de
+          intentos finalizados del examen vigente.
         </p>
       </aside>
 

@@ -47,40 +47,59 @@ export default async function StudyPage() {
     <div>
       <p className="text-sm font-semibold text-success">Centro de estudio</p>
       <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-        ¿Qué quieres estudiar hoy?
+        Practica lo que está por olvidarse
       </h1>
-      <section className="mt-8 grid gap-4 sm:grid-cols-2">
-        <article className="rounded-2xl border border-border bg-white p-6">
-          <h2 className="text-xl font-semibold">
-            {dueCount ? "Repaso listo" : "Al día por hoy"}
-          </h2>
-          <p className="mt-1 text-sm text-muted">
+      <p className="mt-3 max-w-2xl leading-7 text-muted">
+        Empieza con una ronda breve. Intentarás responder antes de ver la clave y
+        ajustarás el próximo repaso con una autoevaluación honesta.
+      </p>
+      <section className="mt-8 overflow-hidden rounded-3xl border border-brand/15 bg-brand text-white">
+        <div className="grid md:grid-cols-[1fr_auto] md:items-end">
+          <div className="p-6 sm:p-8">
+            <p className="text-sm font-semibold text-white/65">Tu siguiente acción</p>
+            <h2 className="mt-2 text-3xl">
+              {dueCount ? "Tienes una ronda lista" : "Tu repaso está al día"}
+            </h2>
+            <p className="mt-3 max-w-2xl leading-7 text-white/75">
             {reviewOverview.currentDifficultCount
               ? `${reviewOverview.currentDifficultCount} conceptos necesitan refuerzo según tu respuesta más reciente.`
-              : "No tienes conceptos marcados actualmente para reforzar."}
+              : "No tienes conceptos marcados para reforzar ahora. Puedes practicar un tema nuevo."}
           </p>
-          {dueCount ? (
-            <Link
-              className="mt-5 inline-flex min-h-11 items-center rounded-xl bg-brand px-5 text-sm font-semibold text-white hover:bg-brand-deep"
-              href="/estudiar/repaso"
-            >
-              Repasar {dueCount} {dueCount === 1 ? "tarjeta" : "tarjetas"}
-            </Link>
-          ) : nextReviewLabel ? (
-            <p className="mt-4 text-xs font-semibold text-success">
-              Próximo repaso: {nextReviewLabel}
+          <Link
+            className="mt-6 inline-flex min-h-12 items-center rounded-xl bg-white px-5 font-semibold text-brand"
+            href="/estudiar/repaso"
+          >
+            {dueCount
+              ? `Practicar ${dueCount} ${dueCount === 1 ? "pregunta" : "preguntas"}`
+              : "Iniciar una ronda adaptativa"}
+          </Link>
+          {!dueCount && nextReviewLabel ? (
+            <p className="mt-4 text-sm font-semibold text-white/75">
+              Próximo repaso tradicional: {nextReviewLabel}
             </p>
           ) : null}
-        </article>
-        <article className="rounded-2xl border border-border bg-white p-6">
-          <h2 className="text-xl font-semibold">Recorrido flexible</h2>
-          <p className="mt-1 text-sm text-muted">
-            Avanza una actividad a la vez y retoma desde tu último cambio guardado.
-          </p>
-        </article>
+          </div>
+          <div className="border-t border-white/15 px-6 py-5 md:w-56 md:border-l md:border-t-0 md:px-7 md:py-8">
+            <p className="font-mono text-xs uppercase tracking-[0.16em] text-white/55">
+              Método
+            </p>
+            <ol className="mt-3 space-y-2 text-sm font-semibold text-white/85">
+              <li>1. Intentar</li>
+              <li>2. Contrastar</li>
+              <li>3. Ajustar</li>
+            </ol>
+          </div>
+        </div>
       </section>
       <section className="mt-9">
-        <h2 className="text-2xl font-semibold">Temas disponibles</h2>
+        <div className="max-w-2xl">
+          <p className="text-sm font-semibold text-success">Elegir manualmente</p>
+          <h2 className="mt-1 text-2xl font-semibold">Practicar un tema</h2>
+          <p className="mt-2 text-sm leading-6 text-muted">
+            La recomendación no bloquea la biblioteca. También puedes abrir cualquier
+            tema y consultar su lección o hacer el simulacro.
+          </p>
+        </div>
         {(topics ?? []).length ? (
           <div className="mt-5 grid gap-4 md:grid-cols-2">
             {(topics ?? []).map((topic) => {
@@ -98,6 +117,9 @@ export default async function StudyPage() {
                   <span className="mt-2 block font-semibold">{topic.title}</span>
                   <span className="mt-2 line-clamp-2 block text-sm leading-6 text-muted">
                     {topic.description}
+                  </span>
+                  <span className="mt-4 block text-sm font-semibold text-brand">
+                    Practicar ahora →
                   </span>
                 </Link>
               );

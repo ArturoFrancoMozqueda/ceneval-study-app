@@ -17,13 +17,7 @@ test("deriva cobertura y evidencia real por materia", () => {
     [
       {
         topicId: 1,
-        completedSteps: [
-          "discover",
-          "understand",
-          "apply",
-          "remember",
-          "check",
-        ],
+        completedSteps: ["discover", "understand", "apply"],
         lastActivityAt: "2026-08-20T12:00:00.000Z",
       },
       {

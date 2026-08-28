@@ -5,26 +5,21 @@ import { useEffect, useRef, useState, useTransition } from "react";
 import { saveStudyProgressAction } from "@/app/actions/academic";
 import { ConceptMap } from "@/components/concept-map";
 import { ContentShield } from "@/components/content-shield";
-import { ExamPlayer } from "@/components/exam-player";
-import { FlashcardsDeck } from "@/components/flashcards-deck";
 import { ProtectedText } from "@/components/protected-text";
 import type {
   LessonBundle,
   StudyMaterial,
   StudyProgress,
 } from "@/lib/data/academic";
-import type { StudyContinuation } from "@/lib/study/continuation";
 import {
   getProgressSaveFeedback,
   type ProgressSaveState,
 } from "@/lib/study/progress-presentation";
 
 const steps = [
-  { id: "discover", label: "Descubre" },
-  { id: "understand", label: "Comprende" },
-  { id: "apply", label: "Aplica" },
-  { id: "remember", label: "Recuerda" },
-  { id: "check", label: "Comprueba" },
+  { id: "discover", label: "Vista breve" },
+  { id: "understand", label: "Explicación" },
+  { id: "apply", label: "Casos" },
 ] as const;
 type StepId = (typeof steps)[number]["id"];
 const stepIds = steps.map(({ id }) => id);
@@ -120,112 +115,28 @@ function MaterialDisclosure({
   );
 }
 
-function ContinuationCard({
-  continuation,
-}: {
-  continuation: StudyContinuation;
-}) {
-  if (continuation.kind === "unavailable") return null;
-
-  if (continuation.kind === "topic") {
-    return (
-      <aside
-        aria-labelledby="study-continuation-title"
-        className="mt-7 rounded-2xl border border-success/30 bg-success-soft p-5 sm:p-6"
-      >
-        <p className="text-sm font-semibold text-success">
-          Siguiente tema de {continuation.curriculumCode}
-        </p>
-        <h2 className="mt-2 text-xl font-semibold" id="study-continuation-title">
-          {continuation.topicTitle}
-        </h2>
-        <p className="mt-2 text-sm leading-6 text-muted">
-          Continúa con el siguiente tema aprobado de esta clase.
-        </p>
-        <Link
-          className="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-brand px-5 text-center font-semibold text-white sm:w-auto"
-          href={`/temas/${continuation.topicId}`}
-        >
-          Estudiar el siguiente tema →
-        </Link>
-      </aside>
-    );
-  }
-
-  if (continuation.kind === "class") {
-    return (
-      <aside
-        aria-labelledby="study-continuation-title"
-        className="mt-7 rounded-2xl border border-success/30 bg-success-soft p-5 sm:p-6"
-      >
-        <p className="text-sm font-semibold text-success">Clase completada</p>
-        <h2 className="mt-2 text-xl font-semibold" id="study-continuation-title">
-          Sigue con {continuation.curriculumCode} · {continuation.classTitle}
-        </h2>
-        <p className="mt-2 text-sm leading-6 text-muted">
-          Terminaste el último tema. Abre la siguiente clase publicada del
-          recorrido curricular.
-        </p>
-        <Link
-          className="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-brand px-5 text-center font-semibold text-white sm:w-auto"
-          href={`/clases/${continuation.classId}`}
-        >
-          Ir a la siguiente clase →
-        </Link>
-      </aside>
-    );
-  }
-
-  return (
-    <aside
-      aria-labelledby="study-continuation-title"
-      className="mt-7 rounded-2xl border border-success/30 bg-success-soft p-5 sm:p-6"
-    >
-      <p className="text-sm font-semibold text-success">Recorrido al día</p>
-      <h2 className="mt-2 text-xl font-semibold" id="study-continuation-title">
-        Terminaste todo el contenido publicado
-      </h2>
-      <p className="mt-2 text-sm leading-6 text-muted">
-        Puedes volver a Sesiones para revisar tu avance o practicar lo que ya
-        estudiaste en la cola de repaso.
-      </p>
-      <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-        <Link
-          className="inline-flex min-h-12 items-center justify-center rounded-xl bg-brand px-5 text-center font-semibold text-white"
-          href="/sesiones"
-        >
-          Volver a Sesiones
-        </Link>
-        <Link
-          className="inline-flex min-h-12 items-center justify-center rounded-xl border border-border bg-white px-5 text-center font-semibold text-brand"
-          href="/estudiar/repaso"
-        >
-          Ir al repaso
-        </Link>
-      </div>
-    </aside>
-  );
-}
-
 export function LessonView({
   lesson,
   initialProgress,
-  continuation,
 }: {
   lesson: LessonBundle;
   initialProgress: StudyProgress | null;
-  continuation: StudyContinuation;
 }) {
   const [activeStep, setActiveStep] = useState<StepId>(
-    initialProgress?.currentStep ?? "discover",
+    stepIds.includes(initialProgress?.currentStep as StepId)
+      ? (initialProgress?.currentStep as StepId)
+      : "discover",
   );
   const sessionMinutes = initialProgress?.sessionMinutes ?? 10;
   const [completed, setCompleted] = useState<StepId[]>(
-    initialProgress?.completedSteps ?? [],
+    (initialProgress?.completedSteps ?? []).filter((step): step is StepId =>
+      stepIds.includes(step as StepId),
+    ),
   );
-  const [topicCompleted, setTopicCompleted] = useState(
-    initialProgress?.completedSteps.includes("check") ?? false,
-  );
+  const [openingRevealed, setOpeningRevealed] = useState(false);
+  const [quickCheckIndex, setQuickCheckIndex] = useState(0);
+  const [quickCheckRevealed, setQuickCheckRevealed] = useState(false);
+  const [caseStage, setCaseStage] = useState(0);
   const [showSources, setShowSources] = useState(false);
   const [saveState, setSaveState] = useState<ProgressSaveState>("idle");
   const saveSequence = useRef(0);
@@ -255,6 +166,8 @@ export function LessonView({
   const optionalReviews = lesson.materials.filter(({ materialType }) =>
     ["key_concepts", "study_guide"].includes(materialType),
   );
+  const journey = lesson.learningJourney;
+  const quickCheck = journey?.quickChecks[quickCheckIndex];
 
   useEffect(() => {
     if (showSources) {
@@ -360,40 +273,18 @@ export function LessonView({
         aria-labelledby="session-title"
         className="rounded-3xl border border-border bg-surface p-5 sm:p-7"
       >
-        <div>
-          <div>
-            <p className="text-sm font-semibold text-success">Tu sesión</p>
-            <h2 className="mt-1 text-2xl font-semibold" id="session-title">
-              Elige qué practicar ahora
-            </h2>
-            <p className="mt-2 text-sm text-muted">
-              Avanza una actividad a la vez. No hay rachas ni puntos.
-            </p>
-          </div>
-        </div>
-        <div className="mt-6 grid gap-3 md:grid-cols-3">
-          {[
-            ["discover", "Entender un tema", "Parte de una pregunta y construye la explicación."],
-            ["apply", "Practicar casos", "Aplica la norma a situaciones concretas."],
-            ["remember", "Repasar errores", "Vuelve a lo difícil con tarjetas y retroalimentación."],
-          ].map(([step, title, text]) => (
-            <button
-              className="rounded-2xl border border-border bg-white p-4 text-left hover:border-brand/40"
-              key={step}
-              onClick={() => goToStep(step as StepId)}
-              type="button"
-            >
-              <span className="font-semibold">{title}</span>
-              <span className="mt-1 block text-sm leading-6 text-muted">
-                {text}
-              </span>
-            </button>
-          ))}
-        </div>
+        <p className="text-sm font-semibold text-success">Lección de apoyo</p>
+        <h2 className="mt-1 text-2xl font-semibold" id="session-title">
+          Consulta solo lo que necesites
+        </h2>
+        <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
+          La práctica es la actividad principal. Aquí puedes volver a la vista breve,
+          profundizar en la explicación o revisar los casos sin perder tu avance.
+        </p>
       </section>
 
       <nav aria-label="Recorrido de aprendizaje" className="mt-7">
-        <ol className="grid grid-cols-2 gap-2 sm:grid-cols-5">
+        <ol className="grid grid-cols-3 gap-2">
           {steps.map((step, index) => (
             <li key={step.id}>
               <button
@@ -430,27 +321,83 @@ export function LessonView({
           <ContentShield>
             <div className="rounded-3xl bg-brand p-6 text-white sm:p-9">
               <p className="text-sm font-semibold text-white/70">
-                Qué resolver · Punto de partida
+                Antes de leer
               </p>
               <h2 className="mt-3 max-w-3xl text-2xl font-semibold">
-                ¿Cómo resolverías este tema si apareciera hoy en un caso CENEVAL?
+                {journey?.openingPrompt ?? lesson.topic.title}
               </h2>
-              <ProtectedText as="p" className="mt-4 max-w-3xl leading-8 text-white/85">
-                {opener?.content ?? lesson.topic.description}
-              </ProtectedText>
-              <button
-                className="mt-6 min-h-12 rounded-xl bg-white px-5 font-semibold text-brand"
-                onClick={() => completeAndContinue("discover")}
-                type="button"
-              >
-                Construir mi respuesta
-              </button>
+              <p className="mt-4 max-w-2xl text-sm leading-6 text-white/70">
+                Intenta responder mentalmente o en papel. La orientación aparece solo
+                cuando decidas contrastar tu idea.
+              </p>
+              {openingRevealed ? (
+                <div className="mt-6 border-t border-white/20 pt-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/60">
+                    Orientación esencial
+                  </p>
+                  <ProtectedText as="p" className="mt-3 max-w-3xl leading-8 text-white/90">
+                    {opener?.content ?? lesson.topic.description}
+                  </ProtectedText>
+                  <button
+                    className="mt-6 min-h-12 rounded-xl bg-white px-5 font-semibold text-brand"
+                    onClick={() => completeAndContinue("discover")}
+                    type="button"
+                  >
+                    Profundizar en la explicación
+                  </button>
+                </div>
+              ) : (
+                <button
+                  className="mt-6 min-h-12 rounded-xl bg-white px-5 font-semibold text-brand"
+                  onClick={() => setOpeningRevealed(true)}
+                  type="button"
+                >
+                  Contrastar mi idea
+                </button>
+              )}
             </div>
           </ContentShield>
         ) : null}
 
         {activeStep === "understand" ? (
           <div className="space-y-6">
+            {quickCheck ? (
+              <ContentShield>
+                <section className="rounded-2xl border border-brand/20 bg-brand-soft p-5 sm:p-6" aria-labelledby="quick-check-title">
+                  <p className="text-sm font-semibold text-success">
+                    Comprobación {quickCheckIndex + 1} de {journey?.quickChecks.length}
+                  </p>
+                  <h2 className="mt-2 text-xl" id="quick-check-title">{quickCheck.prompt}</h2>
+                  {quickCheckRevealed ? (
+                    <div className="mt-5 border-t border-brand/15 pt-5">
+                      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-success">Respuesta</p>
+                      <ProtectedText as="p" className="mt-2 font-semibold leading-7">{quickCheck.answer}</ProtectedText>
+                      <ProtectedText as="p" className="mt-2 text-sm leading-6 text-muted">{quickCheck.feedback}</ProtectedText>
+                      {journey && quickCheckIndex < journey.quickChecks.length - 1 ? (
+                        <button
+                          className="mt-4 min-h-11 rounded-xl bg-brand px-5 text-sm font-semibold text-white"
+                          onClick={() => {
+                            setQuickCheckIndex((current) => current + 1);
+                            setQuickCheckRevealed(false);
+                          }}
+                          type="button"
+                        >
+                          Siguiente comprobación
+                        </button>
+                      ) : null}
+                    </div>
+                  ) : (
+                    <button
+                      className="mt-5 min-h-11 rounded-xl border border-brand/20 bg-white px-5 text-sm font-semibold text-brand"
+                      onClick={() => setQuickCheckRevealed(true)}
+                      type="button"
+                    >
+                      Ver respuesta después de intentarlo
+                    </button>
+                  )}
+                </section>
+              </ContentShield>
+            ) : null}
             {explanation ? <Material material={explanation} /> : null}
 
             <MaterialDisclosure
@@ -488,78 +435,76 @@ export function LessonView({
 
         {activeStep === "apply" ? (
           <div className="space-y-5">
-            <ContentShield>
-              <div className="rounded-2xl border border-border bg-white p-6">
+            {journey ? (
+              <ContentShield>
+                <section className="rounded-2xl border border-border bg-white p-6" aria-labelledby="guided-case-title">
                 <p className="text-sm font-semibold text-success">
                   Decisión guiada
                 </p>
-                <h2 className="mt-2 text-xl font-semibold">
-                  Hechos → norma → razonamiento → conclusión
-                </h2>
-                <ProtectedText as="p" className="mt-2 text-sm leading-6 text-muted">
-                  Identifica primero la regla aplicable y después contrasta tu
-                  razonamiento con la explicación.
-                </ProtectedText>
-              </div>
-            </ContentShield>
+                  <h2 className="mt-2 text-xl" id="guided-case-title">{journey.practicalCase.question}</h2>
+                  <ProtectedText as="p" className="mt-3 text-sm leading-6 text-muted">{journey.practicalCase.facts}</ProtectedText>
+                  <div className="mt-5 space-y-4 border-t border-border pt-5">
+                    {caseStage >= 1 ? (
+                      <div><p className="text-xs font-semibold uppercase tracking-[0.14em] text-success">1 · Norma</p><ProtectedText as="p" className="mt-2 leading-7">{journey.practicalCase.legalRule}</ProtectedText></div>
+                    ) : null}
+                    {caseStage >= 2 ? (
+                      <div><p className="text-xs font-semibold uppercase tracking-[0.14em] text-success">2 · Razonamiento</p><ProtectedText as="p" className="mt-2 leading-7">{journey.practicalCase.reasoning}</ProtectedText></div>
+                    ) : null}
+                    {caseStage >= 3 ? (
+                      <div><p className="text-xs font-semibold uppercase tracking-[0.14em] text-success">3 · Conclusión</p><ProtectedText as="p" className="mt-2 font-semibold leading-7">{journey.practicalCase.conclusion}</ProtectedText></div>
+                    ) : null}
+                    {caseStage < 3 ? (
+                      <button
+                        className="min-h-11 rounded-xl bg-brand px-5 text-sm font-semibold text-white"
+                        onClick={() => setCaseStage((current) => current + 1)}
+                        type="button"
+                      >
+                        {caseStage === 0 ? "Revelar la norma" : caseStage === 1 ? "Contrastar el razonamiento" : "Ver la conclusión"}
+                      </button>
+                    ) : null}
+                  </div>
+                </section>
+              </ContentShield>
+            ) : (
+              <ContentShield>
+                <div className="rounded-2xl border border-border bg-white p-6">
+                  <p className="text-sm font-semibold text-success">Decisión guiada</p>
+                  <h2 className="mt-2 text-xl font-semibold">Hechos → norma → razonamiento → conclusión</h2>
+                </div>
+              </ContentShield>
+            )}
             {cases.map((material) => (
               <Material key={material.id} material={material} />
             ))}
-            <ProtectedText
-              as="p"
-              className="rounded-2xl border border-success/25 bg-success-soft p-5 text-sm leading-6"
-            >
-              El repaso activo continúa con tarjetas que registran qué
-              conceptos necesitas reforzar. Después, el examen comprueba tus
-              respuestas sin mostrarte la solución por adelantado.
-            </ProtectedText>
-            <button
-              className="min-h-12 rounded-xl bg-brand px-5 font-semibold text-white"
-              onClick={() => completeAndContinue("apply")}
-              type="button"
-            >
-              Pasar al repaso
-            </button>
-          </div>
-        ) : null}
-
-        {activeStep === "remember" ? (
-          <FlashcardsDeck
-            cards={lesson.flashcards}
-            onComplete={() => completeAndContinue("remember")}
-          />
-        ) : null}
-
-        {activeStep === "check" ? (
-          <div className="space-y-5">
-            {closing ? (
-              <div>
-                <Material material={closing} />
-              </div>
-            ) : null}
+            {closing ? <Material material={closing} /> : null}
             <MaterialDisclosure
-              description="Son reformulaciones opcionales del tema, no contenido nuevo obligatorio. Ábrelas solo si otra presentación te ayuda a repasar."
+              description="Son reformulaciones opcionales del tema. Ábrelas solo si otra presentación te ayuda."
               label="Otras formas de repasar"
               materials={optionalReviews}
             />
-            {lesson.exam ? (
-              <ExamPlayer
-                exam={lesson.exam}
-                onComplete={() => {
-                  const nextCompleted: StepId[] = completed.includes("check")
-                    ? completed
-                    : [...completed, "check"];
-                  setCompleted(nextCompleted);
-                  setTopicCompleted(true);
-                  persist("check", 0, nextCompleted);
-                }}
-              />
-            ) : (
-              <p className="text-muted">El examen está pendiente.</p>
-            )}
-            {topicCompleted ? (
-              <ContinuationCard continuation={continuation} />
-            ) : null}
+            <div className="rounded-2xl border border-success/25 bg-success-soft p-5">
+              <p className="text-sm leading-6 text-muted">
+                {journey?.closingPrompt ?? "Cierra la lectura intentando recuperar el tema sin mirar."}
+              </p>
+              {journey?.nextActivity ? <p className="mt-2 text-sm font-semibold text-success">Siguiente actividad: {journey.nextActivity}</p> : null}
+              <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+                {!completed.includes("apply") ? (
+                  <button
+                    className="min-h-12 rounded-xl border border-success/30 bg-white px-5 font-semibold text-success"
+                    onClick={() => completeAndContinue("apply")}
+                    type="button"
+                  >
+                    Marcar lección como consultada
+                  </button>
+                ) : null}
+                <Link
+                  className="inline-flex min-h-12 items-center justify-center rounded-xl bg-brand px-5 font-semibold text-white"
+                  href={`/temas/${lesson.topic.id}`}
+                >
+                  Practicar este tema
+                </Link>
+              </div>
+            </div>
           </div>
         ) : null}
       </section>

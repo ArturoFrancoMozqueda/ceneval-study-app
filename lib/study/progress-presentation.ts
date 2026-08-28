@@ -1,7 +1,7 @@
 export type ProgressSaveState = "idle" | "saving" | "saved" | "error";
 
 export function getTopicJourneyStatus(completedStepCount: number) {
-  if (completedStepCount >= 5) return "Recorrido completado";
+  if (completedStepCount >= 3) return "Recorrido completado";
   if (completedStepCount > 0) return "En curso";
   return "Por comenzar";
 }
