@@ -3,7 +3,9 @@
 **Estado:** backend preparado localmente; corpus aprobado editorialmente el 28 de
 agosto de 2026, condicionado a que `npm run retrieval:check` continúe aprobando.
 Los 456 reactivos se importaron al proyecto CENEVAL Study App el 28 de agosto
-de 2026 como borradores; ninguno se publicó durante la importación.
+de 2026 como borradores y se publicaron por autorización expresa el 29 de
+agosto. El control padre continúa vigente: 448 están disponibles y los ocho de
+C01 permanecen ocultos mientras esa clase conserve el estado `review`.
 
 La proyección lee los 456 reactivos de `docs/retrieval-practice/C01.md` a
 `C57.md` y produce el contrato `retrieval-corpus-v1`. Este paso valida y separa

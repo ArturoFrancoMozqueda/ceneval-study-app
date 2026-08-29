@@ -1,12 +1,13 @@
 # Preguntas de práctica de recuperación (C01–C57)
 
-> **REAUDITADO, APROBADO E IMPORTADO COMO BORRADOR.** El 25 de agosto de
+> **REAUDITADO, APROBADO, IMPORTADO Y PUBLICADO.** El 25 de agosto de
 > 2026 se reconstruyeron y reauditaron los 456 reactivos contra los paquetes
 > 1.2, y la titular aprobó ese contenido exacto el 28 de agosto de 2026,
 > condicionado a que `npm run retrieval:check` continúe aprobando. Ese mismo
 > día se importaron 456 reactivos, 456 claves y 1,377 evidencias al proyecto
-> CENEVAL Study App. Los 456 permanecen en `draft`; la importación no autorizó
-> publicarlos. Consulta [AUDIT.md](AUDIT.md) y [CONTRACT.md](CONTRACT.md).
+> CENEVAL Study App. Los 456 se publicaron por autorización expresa el 29 de
+> agosto. El filtro padre mantiene ocultos los ocho de C01 mientras su clase
+> esté en `review`. Consulta [AUDIT.md](AUDIT.md) y [CONTRACT.md](CONTRACT.md).
 
 Reauditoradas con las skills `edu-agent-skills-retrieval-practice-generator`,
 `edu-agent-skills-assessment-validity-checker` y
@@ -18,8 +19,9 @@ examen CENEVAL EGEL Plus Derecho.
 Estos archivos son material de apoyo editorial y **no** forman parte del
 contrato de contenido 1.2. Cada reactivo se deriva de un artefacto
 trazado de `content/packages/` y la aprobación editorial fue otorgada para esta
-versión exacta. La proyección estructurada ya está en Supabase como borrador;
-su publicación continúa siendo una operación editorial separada.
+versión exacta. La proyección estructurada ya está publicada en Supabase; su
+visibilidad continúa dependiendo de la aprobación del tema y publicación de
+la clase padre.
 
 El gate local se ejecuta con `npm run retrieval:check`. Compara los 57 archivos
 con sus paquetes 1.2; cualquier deriva de consigna, clave o evidencia falla.
