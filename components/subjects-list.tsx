@@ -34,8 +34,10 @@ export async function SubjectsList() {
       {subjects.length ? (
         <section className="mt-9 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {subjects.map((subject) => (
-            <article
-              className="flex min-h-64 flex-col rounded-2xl border border-border bg-surface p-5 shadow-sm"
+            <Link
+              aria-label={`Abrir ${subject.name}`}
+              className="group flex min-h-64 flex-col rounded-2xl border border-border bg-surface p-5 shadow-sm hover:border-brand/30"
+              href={`/materias/${subject.id}`}
               key={subject.id}
             >
               <span className="grid size-11 place-items-center rounded-xl bg-success-soft text-success">
@@ -49,16 +51,12 @@ export async function SubjectsList() {
                 <p className="font-mono text-xs text-muted">
                   {subject.classCount} clases · {subject.topicCount} temas
                 </p>
-                <Link
-                  aria-label={`Abrir ${subject.name}`}
-                  className="inline-flex min-h-11 items-center gap-2 px-3 text-sm font-semibold text-brand"
-                  href={`/materias/${subject.id}`}
-                >
+                <span className="inline-flex min-h-11 items-center gap-2 px-3 text-sm font-semibold text-brand">
                   Abrir
-                  <ArrowRightIcon className="size-4" />
-                </Link>
+                  <ArrowRightIcon className="size-4 transition-transform group-hover:translate-x-1" />
+                </span>
               </div>
-            </article>
+            </Link>
           ))}
         </section>
       ) : (

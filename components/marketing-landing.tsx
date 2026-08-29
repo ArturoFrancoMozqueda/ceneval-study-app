@@ -18,7 +18,7 @@ const catalogStats = [
 ];
 
 const included = [
-  "Las 57 clases del temario, en niveles: avanzas de nivel al completar el examen del nivel actual.",
+  "Las 57 clases del temario en una ruta curricular; cada examen terminado acredita una sesión sin ocultar el resto de la biblioteca.",
   "513 materiales de estudio: explicación completa, fundamento legal, ejemplos y resúmenes por tema.",
   "57 mapas conceptuales para repasar la estructura de cada clase de un vistazo.",
   "685 flashcards con repaso espaciado para memorizar lo esencial.",
@@ -47,7 +47,7 @@ export function MarketingLanding() {
           Sube Legal es una biblioteca de estudio para el examen CENEVAL EGEL
           de Derecho: 57 clases completas con materiales, mapas
           conceptuales, flashcards y exámenes de práctica, listos para
-          estudiar por nivel, sin tener que armar tu propio temario.
+          estudiar en orden, sin tener que armar tu propio temario.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
@@ -94,9 +94,9 @@ export function MarketingLanding() {
           </span>
           <h2 className="mt-4 text-xl font-semibold">¿Cómo se estudia?</h2>
           <p className="mt-3 leading-7 text-muted">
-            El catálogo está agrupado en niveles, en el mismo orden en que se
-            imparte el temario. Avanzas de nivel al completar el examen del
-            nivel en curso: no hay que decidir por dónde empezar.
+            El catálogo sigue una ruta curricular clara. La app te señala dónde
+            continuar y cada examen terminado acredita una sesión, pero siempre
+            puedes consultar el resto de la biblioteca.
           </p>
         </div>
       </section>

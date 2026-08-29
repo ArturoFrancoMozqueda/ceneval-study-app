@@ -55,13 +55,13 @@ test("clases y materias inválidas terminan en la página 404", () => {
   }
 });
 
-test("los controles de texto independientes del tema miden al menos 24 px", () => {
+test("los controles de texto independientes del tema alcanzan 44 px", () => {
   for (const label of ["← Volver a la sesión", "Consultar fuentes jurídicas"]) {
     const labelIndex = lesson.indexOf(label);
     assert.ok(labelIndex >= 0, `No se encontró ${label}`);
     const buttonStart = lesson.lastIndexOf("<button", labelIndex);
     const buttonSource = lesson.slice(buttonStart, labelIndex);
-    assert.match(buttonSource, /inline-flex min-h-6 items-center/);
+    assert.match(buttonSource, /inline-flex min-h-11 items-center/);
   }
 });
 

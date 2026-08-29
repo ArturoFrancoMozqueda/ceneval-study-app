@@ -9,6 +9,7 @@ import {
 } from "@/lib/data/academic";
 import { deriveStudyOnboarding } from "@/lib/study/onboarding";
 import { getTopicJourneyStatus } from "@/lib/study/progress-presentation";
+import { deriveSessionPath } from "@/lib/study/session-path";
 import { writeDependencyFailure } from "@/lib/operations/safe-log";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 
@@ -59,9 +60,10 @@ export async function HomeDashboard() {
     }
   }
 
-  const [subjects, reviewOverview] = await Promise.all([
+  const [subjects, reviewOverview, sessions] = await Promise.all([
     getSubjects(),
     getReviewOverview(user.id),
+    getPublishedSessions(user.id),
   ]);
   const totalAnswers = (attempts.data ?? []).reduce(
     (sum, attempt) => sum + (attempt.total_questions ?? 0),
@@ -86,6 +88,24 @@ export async function HomeDashboard() {
     ? progress.completed_steps.length
     : 0;
   const journeyStatus = getTopicJourneyStatus(completedCount);
+  const sessionPath = deriveSessionPath(sessions);
+  const currentSession = sessionPath.find(
+    ({ pathStatus }) => pathStatus === "current",
+  );
+  const accreditedSessions = sessionPath.filter(
+    ({ pathStatus }) => pathStatus === "completed",
+  ).length;
+  const shouldResumeTopic = Boolean(nextTopic && completedCount < 3);
+  const primaryHref = shouldResumeTopic
+    ? `/temas/${nextTopic?.id}`
+    : currentSession
+      ? `/clases/${currentSession.id}`
+      : "/estudiar";
+  const primaryTitle = shouldResumeTopic
+    ? `Continúa: ${nextTopic?.title}`
+    : currentSession
+      ? `${currentSession.curriculumCode} · ${currentSession.title}`
+      : "Refuerza lo que ya aprendiste";
 
   return (
     <div>
@@ -103,28 +123,37 @@ export async function HomeDashboard() {
       </section>
 
       <section className="mt-8 rounded-3xl bg-brand p-6 text-white sm:p-8">
-        <p className="text-sm font-semibold text-white/70">Siguiente paso</p>
+        <p className="text-sm font-semibold text-white/70">Tu recomendación de hoy</p>
         <h2 className="mt-2 text-2xl font-semibold">
-          {nextTopic
-            ? `Continúa: ${nextTopic.title}`
-            : "Comienza una sesión breve de estudio"}
+          {primaryTitle}
         </h2>
         <p className="mt-2 max-w-2xl leading-7 text-white/80">
-          {nextTopic
+          {shouldResumeTopic
             ? `${journeyStatus}: retoma exactamente donde pausaste.`
-            : "Elige un tema y avanza con preguntas, casos y repaso activo."}
+            : currentSession
+              ? currentSession.completedSteps >= currentSession.totalSteps && currentSession.totalSteps > 0
+                ? "Ya recorriste la lección; su examen es el siguiente paso para acreditar la sesión."
+                : "Es la primera sesión pendiente en tu ruta curricular."
+              : "Tu ruta está acreditada. Mantén lo aprendido con una ronda adaptativa."}
         </p>
         <Link
           className="mt-5 inline-flex min-h-11 items-center rounded-xl bg-white px-5 font-semibold text-brand"
-          href={nextTopic ? `/temas/${nextTopic.id}` : "/estudiar"}
+          href={primaryHref}
         >
-          {nextTopic ? "Continuar sesión" : "Elegir un tema"}
+          {shouldResumeTopic
+            ? "Continuar sesión"
+            : currentSession
+              ? "Seguir mi ruta"
+              : "Practicar ahora"}
         </Link>
       </section>
 
       <section className="mt-8 grid gap-4 sm:grid-cols-3">
         {[
-          { label: "Recorrido del último tema", value: journeyStatus },
+          {
+            label: "Sesiones acreditadas con examen",
+            value: `${accreditedSessions} de ${sessionPath.length}`,
+          },
           {
             label: "Conceptos para repasar",
             value: reviewOverview.currentDifficultCount,

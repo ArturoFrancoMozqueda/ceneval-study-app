@@ -117,6 +117,11 @@
   },
   "decisions": [
     {
+      "decision": "Usar una ruta curricular C01-C57 con recomendacion de siguiente sesion y acreditacion por examen, sin bloquear la consulta manual de la biblioteca.",
+      "rationale": "Alinea la promesa comercial con evidencia real de aprendizaje y conserva autonomia adulta, sin rachas, puntos ni competencia.",
+      "source": "Auditoria de experiencia vendible, 2026-08-29"
+    },
+    {
       "decision": "Presentar los nueve materiales por funcion dentro del recorrido, con divulgacion progresiva para fundamento juridico y repasos opcionales.",
       "rationale": "Reduce la carga redundante sin eliminar trazabilidad ni contenido del contrato editorial 1.2; conserva controles nativos accesibles.",
       "source": "Aprobacion de Fatima, 2026-08-25"

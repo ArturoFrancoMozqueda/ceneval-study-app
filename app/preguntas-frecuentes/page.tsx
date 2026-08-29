@@ -64,14 +64,13 @@ const faqs: { question: string; answer: ReactNode }[] = [
     ),
   },
   {
-    question: "¿Cómo funciona la progresión por niveles?",
+    question: "¿Cómo funciona la ruta curricular?",
     answer: (
       <p>
-        El catálogo se agrupa en niveles siguiendo el orden curricular con
-        el que ya está organizado el temario. Avanzas al siguiente nivel al
-        completar el examen del nivel en curso. Es una forma de guiar tu
-        estudio, no una segmentación de precio: no pagas más por avanzar de
-        nivel, todo está incluido desde el primer mes.
+        El catálogo sigue una ruta curricular C01–C57. La aplicación te señala
+        la primera sesión pendiente y cada examen terminado acredita esa sesión.
+        La lectura se registra aparte para no confundir recorrido con dominio.
+        Todo el contenido permanece disponible desde el primer mes.
       </p>
     ),
   },

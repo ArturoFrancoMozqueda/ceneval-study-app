@@ -143,6 +143,8 @@ export function LessonView({
   const sourcesBackRef = useRef<HTMLButtonElement>(null);
   const sourcesTriggerRef = useRef<HTMLButtonElement>(null);
   const sourcesWereOpenRef = useRef(false);
+  const stepPanelRef = useRef<HTMLElement>(null);
+  const focusStepOnChangeRef = useRef(false);
   const [, startSaving] = useTransition();
 
   const cases = lesson.materials.filter(({ materialType }) =>
@@ -179,6 +181,12 @@ export function LessonView({
     }
   }, [showSources]);
 
+  useEffect(() => {
+    if (!focusStepOnChangeRef.current) return;
+    focusStepOnChangeRef.current = false;
+    stepPanelRef.current?.focus();
+  }, [activeStep]);
+
   function persist(
     nextStep: StepId,
     nextIndex: number,
@@ -206,6 +214,7 @@ export function LessonView({
   }
 
   function goToStep(nextStep: StepId) {
+    focusStepOnChangeRef.current = true;
     setActiveStep(nextStep);
     setShowSources(false);
     persist(nextStep, 0);
@@ -218,6 +227,7 @@ export function LessonView({
     const nextStep =
       stepIds[Math.min(stepIds.indexOf(step) + 1, stepIds.length - 1)];
     setCompleted(nextCompleted);
+    focusStepOnChangeRef.current = nextStep !== step;
     setActiveStep(nextStep);
     persist(nextStep, 0, nextCompleted);
   }
@@ -226,7 +236,7 @@ export function LessonView({
     return (
       <section className="mt-8">
         <button
-          className="inline-flex min-h-6 items-center text-sm font-semibold text-brand"
+          className="inline-flex min-h-11 items-center text-sm font-semibold text-brand"
           onClick={() => setShowSources(false)}
           ref={sourcesBackRef}
           type="button"
@@ -299,7 +309,7 @@ export function LessonView({
                 onClick={() => goToStep(step.id)}
                 type="button"
               >
-                <span className="font-mono text-xs">{index + 1}/5</span>
+                <span className="font-mono text-xs">{index + 1}/{steps.length}</span>
                 <span className="block text-sm font-semibold">{step.label}</span>
               </button>
             </li>
@@ -316,7 +326,13 @@ export function LessonView({
         </p>
       </nav>
 
-      <section className="mt-6">
+      <section
+        aria-label={`Paso ${stepIds.indexOf(activeStep) + 1}: ${steps.find(({ id }) => id === activeStep)?.label}`}
+        className="mt-6 scroll-mt-24"
+        ref={stepPanelRef}
+        role="region"
+        tabIndex={-1}
+      >
         {activeStep === "discover" ? (
           <ContentShield>
             <div className="rounded-3xl bg-brand p-6 text-white sm:p-9">
@@ -510,7 +526,7 @@ export function LessonView({
       </section>
 
       <button
-        className="mt-8 inline-flex min-h-6 items-center text-sm font-semibold text-brand"
+        className="mt-8 inline-flex min-h-11 items-center text-sm font-semibold text-brand"
         onClick={() => setShowSources(true)}
         ref={sourcesTriggerRef}
         type="button"

@@ -60,6 +60,7 @@ export type StudySession = StudyClass & {
   subjectName: string;
   completedSteps: number;
   totalSteps: number;
+  examCompleted: boolean;
 };
 
 export type Topic = {
@@ -353,7 +354,13 @@ export async function getClass(classId: number) {
 export async function getPublishedSessions(userId: string): Promise<StudySession[]> {
   await connection();
   const supabase = await createServerSupabaseClient();
-  const [classesResult, subjectsResult, topicsResult, progressResult] =
+  const [
+    classesResult,
+    subjectsResult,
+    topicsResult,
+    progressResult,
+    attemptsResult,
+  ] =
     await Promise.all([
       supabase
         .from("classes")
@@ -367,12 +374,19 @@ export async function getPublishedSessions(userId: string): Promise<StudySession
         .from("study_progress")
         .select("topic_id,completed_steps")
         .eq("user_id", userId),
+      supabase
+        .from("exam_attempts")
+        .select("completed_at,exams!inner(topic_id,is_current)")
+        .eq("user_id", userId)
+        .not("completed_at", "is", null)
+        .eq("exams.is_current", true),
     ]);
 
   if (classesResult.error) fail("getPublishedSessions", classesResult.error);
   if (subjectsResult.error) fail("getPublishedSessions subjects", subjectsResult.error);
   if (topicsResult.error) fail("getPublishedSessions topics", topicsResult.error);
   if (progressResult.error) fail("getPublishedSessions progress", progressResult.error);
+  if (attemptsResult.error) fail("getPublishedSessions attempts", attemptsResult.error);
 
   const subjects = new Map(
     (subjectsResult.data ?? []).map((subject) => [subject.id as number, subject.name as string]),
@@ -383,6 +397,11 @@ export async function getPublishedSessions(userId: string): Promise<StudySession
       row.topic_id as number,
       Array.isArray(row.completed_steps) ? row.completed_steps.length : 0,
     ]),
+  );
+  const completedExamTopics = new Set(
+    (attemptsResult.data ?? []).flatMap((row) =>
+      relationRows(row.exams).map((exam) => Number(exam.topic_id)),
+    ),
   );
 
   return ((classesResult.data ?? []) as ClassRow[]).map((row) => {
@@ -395,6 +414,9 @@ export async function getPublishedSessions(userId: string): Promise<StudySession
         0,
       ),
       totalSteps: classTopics.length * 3,
+      examCompleted:
+        classTopics.length > 0 &&
+        classTopics.every((topic) => completedExamTopics.has(topic.id)),
     };
   });
 }

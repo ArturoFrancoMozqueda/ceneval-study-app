@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 };
 
 const included = [
-  "Las 57 clases del temario completo, organizadas por nivel.",
+  "Las 57 clases del temario completo, organizadas como ruta curricular.",
   "513 materiales de estudio por tema: explicación completa, fundamento legal, ejemplos y resúmenes.",
   "57 mapas conceptuales.",
   "685 flashcards con repaso espaciado.",
   "57 exámenes de práctica con 570 reactivos en total, calificados en el servidor.",
   "Fuentes jurídicas primarias y oficiales, con fecha de consulta, en cada tema.",
-  "Progresión por nivel: avanzas al completar el examen del nivel en curso.",
+  "Progreso verificable: cada examen terminado acredita una sesión y la lectura se muestra por separado.",
 ];
 
 export default function PreciosPage() {
@@ -27,12 +27,12 @@ export default function PreciosPage() {
           Precio
         </p>
         <h1 className="mt-5 max-w-2xl text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">
-          Una sola suscripción, sin planes por nivel.
+          Una sola suscripción, con la ruta completa.
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">
-          Todo el catálogo está incluido desde el primer mes. Los niveles son
-          la forma en que se organiza el estudio, no una forma de cobrar más
-          por avanzar.
+          Todo el catálogo está incluido desde el primer mes. La ruta te indica
+          qué sigue y distingue lo que consultaste de lo que ya demostraste en
+          un examen.
         </p>
       </section>
 

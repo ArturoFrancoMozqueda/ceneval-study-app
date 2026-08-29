@@ -15,10 +15,10 @@ import type { CurrentUser } from "@/lib/auth";
 
 const navigation = [
   { href: "/", label: "Inicio", icon: HomeIcon },
-  { href: "/sesiones", label: "Sesiones", icon: StudyIcon },
+  { href: "/sesiones", label: "Mi ruta", icon: StudyIcon },
+  { href: "/estudiar", label: "Practicar", icon: GlossaryIcon },
   { href: "/materias", label: "Biblioteca", icon: BookIcon },
   { href: "/buscar", label: "Buscar", icon: SearchIcon },
-  { href: "/glosario", label: "Glosario", icon: GlossaryIcon },
 ];
 
 const authPaths = [
@@ -138,6 +138,12 @@ export function AppShell({
             Panel editorial
           </Link>
         ) : null}
+        <Link
+          className="mt-2 flex min-h-11 items-center rounded-xl px-3 text-sm font-medium text-muted hover:bg-background hover:text-foreground"
+          href="/glosario"
+        >
+          Glosario jurídico
+        </Link>
         <div className="mt-auto rounded-2xl border border-success/15 bg-success-soft/65 p-4">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-success">
             Tu espacio de estudio
@@ -190,6 +196,12 @@ export function AppShell({
                       Panel editorial
                     </Link>
                   ) : null}
+                  <Link
+                    className="flex min-h-11 items-center rounded-xl px-3 text-sm font-semibold text-brand hover:bg-background"
+                    href="/glosario"
+                  >
+                    Glosario jurídico
+                  </Link>
                   <Link
                     className="flex min-h-11 items-center rounded-xl px-3 text-sm font-semibold text-brand hover:bg-background"
                     href="/actualizar-contrasena"

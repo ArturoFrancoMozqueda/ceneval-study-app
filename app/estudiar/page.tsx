@@ -3,6 +3,7 @@ import Link from "next/link";
 import { EmptyState } from "@/components/empty-state";
 import { requireUser } from "@/lib/auth";
 import { getReviewOverview } from "@/lib/data/academic";
+import { writeDependencyFailure } from "@/lib/operations/safe-log";
 import { getTopicJourneyStatus } from "@/lib/study/progress-presentation";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 
@@ -12,8 +13,8 @@ export default async function StudyPage() {
   const user = await requireUser();
   const supabase = await createServerSupabaseClient();
   const [
-    { data: topics },
-    { data: progressRows },
+    topicsResult,
+    progressResult,
     reviewOverview,
   ] = await Promise.all([
     supabase
@@ -28,6 +29,22 @@ export default async function StudyPage() {
       .eq("user_id", user.id),
     getReviewOverview(user.id),
   ]);
+  if (topicsResult.error) {
+    writeDependencyFailure({
+      error: topicsResult.error,
+      operation: "study topics",
+    });
+    throw new Error("No pudimos preparar tus temas. Intenta nuevamente.");
+  }
+  if (progressResult.error) {
+    writeDependencyFailure({
+      error: progressResult.error,
+      operation: "study progress",
+    });
+    throw new Error("No pudimos consultar tu avance. Intenta nuevamente.");
+  }
+  const topics = topicsResult.data;
+  const progressRows = progressResult.data;
   const progressByTopic = new Map(
     (progressRows ?? []).map((row) => [
       row.topic_id as number,
@@ -45,9 +62,9 @@ export default async function StudyPage() {
 
   return (
     <div>
-      <p className="text-sm font-semibold text-success">Centro de estudio</p>
+      <p className="text-sm font-semibold text-success">Práctica adaptativa</p>
       <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-        Practica lo que está por olvidarse
+        Practica lo que más te conviene hoy
       </h1>
       <p className="mt-3 max-w-2xl leading-7 text-muted">
         Empieza con una ronda breve. Intentarás responder antes de ver la clave y
@@ -91,15 +108,14 @@ export default async function StudyPage() {
           </div>
         </div>
       </section>
-      <section className="mt-9">
-        <div className="max-w-2xl">
-          <p className="text-sm font-semibold text-success">Elegir manualmente</p>
-          <h2 className="mt-1 text-2xl font-semibold">Practicar un tema</h2>
-          <p className="mt-2 text-sm leading-6 text-muted">
-            La recomendación no bloquea la biblioteca. También puedes abrir cualquier
-            tema y consultar su lección o hacer el simulacro.
-          </p>
-        </div>
+      <details className="mt-9 rounded-2xl border border-border bg-surface p-5 sm:p-6">
+        <summary className="cursor-pointer text-lg font-semibold text-brand">
+          Elegir otro tema manualmente
+        </summary>
+        <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
+          La recomendación no bloquea la biblioteca. Abre cualquier tema para
+          consultar su lección, flashcards o examen.
+        </p>
         {(topics ?? []).length ? (
           <div className="mt-5 grid gap-4 md:grid-cols-2">
             {(topics ?? []).map((topic) => {
@@ -144,7 +160,7 @@ export default async function StudyPage() {
             />
           </div>
         )}
-      </section>
+      </details>
     </div>
   );
 }
