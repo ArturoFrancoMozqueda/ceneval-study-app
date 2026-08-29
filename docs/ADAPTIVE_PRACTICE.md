@@ -4,8 +4,9 @@
 agosto de 2026, condicionado a que `npm run retrieval:check` continúe aprobando.
 Los 456 reactivos se importaron al proyecto CENEVAL Study App el 28 de agosto
 de 2026 como borradores y se publicaron por autorización expresa el 29 de
-agosto. El control padre continúa vigente: 448 están disponibles y los ocho de
-C01 permanecen ocultos mientras esa clase conserve el estado `review`.
+agosto. C01 recibió una nueva aprobación vigente para su versión 493 y volvió
+a publicarse ese mismo día; los 456 reactivos pasan actualmente el filtro
+completo de clase publicada y tema aprobado.
 
 La proyección lee los 456 reactivos de `docs/retrieval-practice/C01.md` a
 `C57.md` y produce el contrato `retrieval-corpus-v1`. Este paso valida y separa

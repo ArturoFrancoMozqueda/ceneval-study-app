@@ -6,8 +6,9 @@
 > condicionado a que `npm run retrieval:check` continúe aprobando. Ese mismo
 > día se importaron 456 reactivos, 456 claves y 1,377 evidencias al proyecto
 > CENEVAL Study App. Los 456 se publicaron por autorización expresa el 29 de
-> agosto. El filtro padre mantiene ocultos los ocho de C01 mientras su clase
-> esté en `review`. Consulta [AUDIT.md](AUDIT.md) y [CONTRACT.md](CONTRACT.md).
+> agosto. C01 recibió una aprobación vigente para su versión 493 y volvió a
+> `published` ese mismo día, por lo que los 456 pasan el filtro padre. Consulta
+> [AUDIT.md](AUDIT.md) y [CONTRACT.md](CONTRACT.md).
 
 Reauditoradas con las skills `edu-agent-skills-retrieval-practice-generator`,
 `edu-agent-skills-assessment-validity-checker` y
