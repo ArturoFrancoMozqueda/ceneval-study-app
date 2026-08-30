@@ -37,6 +37,7 @@ test("el recorrido guarda flashcards, examen e historial y valida rutas inválid
   assert.doesNotMatch(e2e, /get_by_role\("link", name="Sesiones"\)/);
   assert.match(e2e, /get_by_role\("heading", name="Mi ruta", exact=True\)/);
   assert.doesNotMatch(e2e, /get_by_role\("heading", name="Sesiones", exact=True\)/);
+  assert.match(e2e, /lesson_url = f"\{topic_url\}\?modo=leccion"/);
   assert.match(e2e, /name="Iniciar ronda adaptativa"/);
   assert.match(e2e, /for index in range\(5\):[\s\S]*name=re\.compile\("Correcta"\)/);
   assert.match(e2e, /name=re\.compile\("Puedo explicarlo"\)/);

@@ -364,6 +364,7 @@ def main() -> None:
     class_id = required_env("E2E_CLASS_ID")
     topic_path = required_env("E2E_TOPIC_URL")
     topic_url = loopback_url(urljoin(f"{base_url}/", topic_path), "E2E_TOPIC_URL")
+    lesson_url = f"{topic_url}?modo=leccion"
     class_path = f"/clases/{class_id}"
     secrets = [
         admin_email,
@@ -476,7 +477,7 @@ def main() -> None:
 
             topic_link = page.locator(f'a[href="{topic_path}"]').first
             expect(topic_link).to_be_visible()
-            page.goto(topic_url, wait_until="networkidle")
+            page.goto(lesson_url, wait_until="networkidle")
             expect(page.locator("h1")).to_be_visible()
 
             page.get_by_role("button", name=re.compile("Explicación")).click()
