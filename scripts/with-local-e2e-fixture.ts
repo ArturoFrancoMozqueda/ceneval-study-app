@@ -244,6 +244,50 @@ async function prepareFixture(service: SupabaseClient) {
     [...topics].sort((left, right) => left.position - right.position)[0]!.id,
   );
 
+  const retrievalSeeds = Array.from({ length: 5 }, (_, index) => ({
+    stable_code: `C41-R${String(index + 1).padStart(2, "0")}`,
+    topic_id: topicId,
+    prompt: `Pregunta adaptativa sintética ${index + 1}`,
+    retrieval_type: index % 2 === 0 ? "free_recall" : "cued_recall",
+    difficulty: "basic",
+    estimated_seconds: 30,
+    objective: "Verificar el recorrido adaptativo E2E sin usar contenido real.",
+    editorial_status: "published",
+  }));
+  const { data: retrievalItems, error: retrievalError } = await service
+    .from("retrieval_items")
+    .insert(retrievalSeeds)
+    .select("id,stable_code");
+  if (retrievalError || !retrievalItems || retrievalItems.length !== retrievalSeeds.length) {
+    throw new Error("No se pudo preparar la práctica adaptativa E2E.");
+  }
+  const { error: answerKeysError } = await service
+    .from("retrieval_item_answer_keys")
+    .insert(
+      retrievalItems.map((item) => ({
+        retrieval_item_id: item.id,
+        required_points: [`Punto sintético de ${item.stable_code}`],
+        acceptable_alternatives: ["Formulación sintética equivalente."],
+        common_errors: ["Confundir el fixture con contenido académico real."],
+      })),
+    );
+  if (answerKeysError) {
+    throw new Error("No se pudieron preparar las claves adaptativas E2E.");
+  }
+  const { error: evidenceError } = await service
+    .from("retrieval_item_evidence")
+    .insert(
+      retrievalItems.map((item) => ({
+        retrieval_item_id: item.id,
+        evidence_code: `${item.stable_code}-E1`,
+        label: "Evidencia sintética exclusiva del entorno local.",
+        verified_on: new Date().toISOString().slice(0, 10),
+      })),
+    );
+  if (evidenceError) {
+    throw new Error("No se pudo preparar la evidencia adaptativa E2E.");
+  }
+
   const { error: reviewStatusError } = await service
     .from("classes")
     .update({ publication_status: "review", published_at: null })

@@ -6,6 +6,10 @@ const e2e = readFileSync(
   new URL("../scripts/test-study-e2e.py", import.meta.url),
   "utf8",
 );
+const fixture = readFileSync(
+  new URL("../scripts/with-local-e2e-fixture.ts", import.meta.url),
+  "utf8",
+);
 
 test("el E2E recorre el panel y el detalle editorial publicados", () => {
   assert.match(e2e, /admin_link = page\.get_by_role\("link", name="Panel editorial"\)/);
@@ -39,6 +43,9 @@ test("el recorrido guarda flashcards, examen e historial y valida rutas inválid
   assert.doesNotMatch(e2e, /get_by_role\("heading", name="Sesiones", exact=True\)/);
   assert.match(e2e, /lesson_url = f"\{topic_url\}\?modo=leccion"/);
   assert.match(e2e, /name="Iniciar ronda adaptativa"/);
+  assert.match(fixture, /from\("retrieval_items"\)[\s\S]*insert\(retrievalSeeds\)/);
+  assert.match(fixture, /from\("retrieval_item_answer_keys"\)/);
+  assert.match(fixture, /from\("retrieval_item_evidence"\)/);
   assert.match(e2e, /for index in range\(5\):[\s\S]*name=re\.compile\("Correcta"\)/);
   assert.match(e2e, /name=re\.compile\("Puedo explicarlo"\)/);
   assert.match(e2e, /name="Comparar con la clave"/);
