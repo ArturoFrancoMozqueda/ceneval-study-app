@@ -479,7 +479,7 @@ def main() -> None:
             page.goto(topic_url, wait_until="networkidle")
             expect(page.locator("h1")).to_be_visible()
 
-            page.get_by_role("button", name=re.compile("Comprende")).click()
+            page.get_by_role("button", name=re.compile("Explicación")).click()
             expect(page.get_by_text("Explicación principal", exact=True)).to_be_visible()
             legal_disclosure = page.locator("summary").filter(
                 has_text="Ver fundamento jurídico"
@@ -488,32 +488,13 @@ def main() -> None:
             legal_disclosure.click()
             expect(page.get_by_text("Fundamento jurídico", exact=True)).to_be_visible()
 
-            page.get_by_role("button", name="Practicar casos").click()
+            page.get_by_role("button", name="Aplicar lo aprendido").click()
             expect(page.get_by_role("status")).to_have_text("Avance guardado")
             page.reload(wait_until="networkidle")
             current_step = page.locator(
                 'nav[aria-label="Recorrido de aprendizaje"] button[aria-current="step"]'
             )
-            expect(current_step).to_contain_text("Aplica")
-
-            page.get_by_role("button", name="Pasar al repaso").click()
-            for index in range(10):
-                expect(page.get_by_text(f"Tarjeta {index + 1} de 10", exact=True)).to_be_visible()
-                card_button = page.locator("button[aria-labelledby]").first
-                card_button.click()
-                revealed_answer = card_button.locator("span[id]").last.inner_text().strip()
-                deck = card_button.locator("xpath=ancestor::section[1]")
-                expect(deck.get_by_role("status")).to_have_text(
-                    f"Respuesta: {revealed_answer}"
-                )
-                page.get_by_role("button", name="Repetir", exact=True).click()
-                wait_for_network(page)
-                if index < 9:
-                    expect(page.locator("button[aria-labelledby]").first).to_be_focused()
-            completion_heading = page.get_by_role("heading", name="Repaso completado")
-            expect(completion_heading).to_be_visible()
-            expect(completion_heading).to_be_focused()
-            page.get_by_role("button", name="Comprobar lo aprendido").click()
+            expect(current_step).to_contain_text("Casos")
             optional_review = page.locator("summary").filter(
                 has_text="Otras formas de repasar"
             )
@@ -521,6 +502,26 @@ def main() -> None:
             optional_review.click()
             expect(page.get_by_text("Conceptos clave", exact=True)).to_be_visible()
             expect(page.get_by_text("Guía de estudio", exact=True)).to_be_visible()
+
+            page.get_by_role("button", name="Marcar lección como consultada").click()
+            expect(page.get_by_role("status")).to_have_text("Avance guardado")
+            page.get_by_role("link", name="Practicar este tema").click()
+            wait_for_network(page)
+            page.get_by_role("button", name="Iniciar ronda adaptativa").click()
+            for index in range(5):
+                expect(page.get_by_text(f"Pregunta {index + 1} de 5", exact=True)).to_be_visible()
+                page.get_by_role("radio", name=re.compile("Puedo explicarlo")).check()
+                page.get_by_role("button", name="Comparar con la clave").click()
+                expect(page.get_by_text("Clave de comparación", exact=True)).to_be_visible()
+                page.get_by_role("button", name=re.compile("Correcta")).click()
+                wait_for_network(page)
+            completion_heading = page.get_by_role(
+                "heading", name=re.compile("Ya hiciste el trabajo difícil")
+            )
+            expect(completion_heading).to_be_visible()
+            expect(completion_heading).to_be_focused()
+            page.get_by_role("link", name="Hacer el simulacro").click()
+            wait_for_network(page)
 
             for index in range(10):
                 fieldset = page.locator("fieldset").first
