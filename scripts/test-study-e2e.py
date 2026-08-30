@@ -464,7 +464,7 @@ def main() -> None:
                 "href", "/estudiar"
             )
 
-            sessions_link = page.get_by_role("link", name="Sesiones").first
+            sessions_link = page.get_by_role("link", name="Mi ruta").first
             expect(sessions_link).to_have_attribute("href", "/sesiones")
             page.goto(f"{base_url}/sesiones", wait_until="networkidle")
             expect(page.get_by_role("heading", name="Sesiones", exact=True)).to_be_visible()

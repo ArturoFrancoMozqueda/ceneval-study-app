@@ -33,6 +33,8 @@ test("el recorrido administrativo es read-only y conserva el gate de errores", (
 });
 
 test("el recorrido guarda flashcards, examen e historial y valida rutas inválidas", () => {
+  assert.match(e2e, /get_by_role\("link", name="Mi ruta"\)/);
+  assert.doesNotMatch(e2e, /get_by_role\("link", name="Sesiones"\)/);
   assert.match(e2e, /name="Pasar al repaso"/);
   assert.match(e2e, /for index in range\(10\):[\s\S]*name="Repetir"/);
   assert.match(e2e, /button\[aria-labelledby\][\s\S]*to_be_focused\(\)/);
