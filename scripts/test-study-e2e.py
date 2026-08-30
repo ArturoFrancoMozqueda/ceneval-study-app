@@ -511,7 +511,10 @@ def main() -> None:
             page.get_by_role("button", name="Iniciar ronda adaptativa").click()
             for index in range(5):
                 expect(page.get_by_text(f"Pregunta {index + 1} de 5", exact=True)).to_be_visible()
-                page.get_by_role("radio", name=re.compile("Puedo explicarlo")).check()
+                page.locator("label").filter(has_text="Puedo explicarlo").click()
+                expect(
+                    page.get_by_role("radio", name=re.compile("Puedo explicarlo"))
+                ).to_be_checked()
                 page.get_by_role("button", name="Comparar con la clave").click()
                 expect(page.get_by_text("Clave de comparación", exact=True)).to_be_visible()
                 page.get_by_role("button", name=re.compile("Correcta")).click()

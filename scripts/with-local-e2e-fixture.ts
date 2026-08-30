@@ -107,6 +107,16 @@ async function cleanupFixture(service: SupabaseClient) {
     }
   };
 
+  await attempt("sesiones adaptativas sintéticas", async () => {
+    const fixtureUserIds = await listFixtureUserIds(service);
+    if (fixtureUserIds.length) {
+      await deleteRows(
+        service.from("practice_sessions").delete().in("user_id", fixtureUserIds),
+        "las sesiones adaptativas sintéticas",
+      );
+    }
+  });
+
   await attempt("clase sintética", async () => {
     const { data, error } = await service
       .from("classes")

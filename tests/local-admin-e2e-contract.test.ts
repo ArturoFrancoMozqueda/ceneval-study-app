@@ -47,7 +47,8 @@ test("el recorrido guarda flashcards, examen e historial y valida rutas inválid
   assert.match(fixture, /from\("retrieval_item_answer_keys"\)/);
   assert.match(fixture, /from\("retrieval_item_evidence"\)/);
   assert.match(e2e, /for index in range\(5\):[\s\S]*name=re\.compile\("Correcta"\)/);
-  assert.match(e2e, /name=re\.compile\("Puedo explicarlo"\)/);
+  assert.match(e2e, /locator\("label"\)\.filter\(has_text="Puedo explicarlo"\)\.click\(\)/);
+  assert.match(e2e, /name=re\.compile\("Puedo explicarlo"\)[\s\S]*to_be_checked\(\)/);
   assert.match(e2e, /name="Comparar con la clave"/);
   assert.match(e2e, /name="Hacer el simulacro"/);
   assert.match(e2e, /completion_heading[\s\S]*to_be_focused\(\)/);
