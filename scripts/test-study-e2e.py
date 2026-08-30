@@ -467,8 +467,8 @@ def main() -> None:
             sessions_link = page.get_by_role("link", name="Mi ruta").first
             expect(sessions_link).to_have_attribute("href", "/sesiones")
             page.goto(f"{base_url}/sesiones", wait_until="networkidle")
-            expect(page.get_by_role("heading", name="Sesiones", exact=True)).to_be_visible()
-            expect(page.get_by_role("heading", name="1 clases publicadas")).to_be_visible()
+            expect(page.get_by_role("heading", name="Mi ruta", exact=True)).to_be_visible()
+            expect(page.get_by_role("heading", name="Ruta completa", exact=True)).to_be_visible()
 
             class_link = page.locator(f'a[href="{class_path}"]').first
             expect(class_link).to_be_visible()
