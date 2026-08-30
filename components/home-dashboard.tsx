@@ -4,9 +4,9 @@ import { ArrowRightIcon, BookIcon } from "@/components/icons";
 import { requireUser } from "@/lib/auth";
 import {
   getPublishedSessions,
-  getReviewOverview,
   getSubjects,
 } from "@/lib/data/academic";
+import { getStudyPlanOverview } from "@/lib/data/study-plan";
 import { deriveStudyOnboarding } from "@/lib/study/onboarding";
 import { getTopicJourneyStatus } from "@/lib/study/progress-presentation";
 import { deriveSessionPath } from "@/lib/study/session-path";
@@ -60,11 +60,12 @@ export async function HomeDashboard() {
     }
   }
 
-  const [subjects, reviewOverview, sessions] = await Promise.all([
+  const [subjects, studyPlanResult, sessions] = await Promise.all([
     getSubjects(),
-    getReviewOverview(user.id),
+    getStudyPlanOverview(user.id),
     getPublishedSessions(user.id),
   ]);
+  const studyPlan = studyPlanResult.overview;
   const totalAnswers = (attempts.data ?? []).reduce(
     (sum, attempt) => sum + (attempt.total_questions ?? 0),
     0,
@@ -156,7 +157,7 @@ export async function HomeDashboard() {
           },
           {
             label: "Conceptos para repasar",
-            value: reviewOverview.currentDifficultCount,
+            value: studyPlan.difficultCount,
           },
           {
             label: "Comprensión en exámenes",

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { ConceptMapEditForm } from "@/components/concept-map-edit-form";
 import { requireAdmin } from "@/lib/auth";
 import { getConceptMapForEdit } from "@/app/actions/academic";
@@ -32,11 +33,10 @@ export default async function EditorialConceptMapPage({
   const numericClassId = Number(classId);
   const numericTopicId = Number(topicId);
 
-  if (!Number.isInteger(numericClassId) || !Number.isInteger(numericTopicId)) {
-    return (
-      <h1 className="text-2xl font-semibold">Mapa conceptual no encontrado</h1>
-    );
-  }
+  if (
+    !Number.isInteger(numericClassId) || numericClassId < 1 ||
+    !Number.isInteger(numericTopicId) || numericTopicId < 1
+  ) notFound();
 
   const [studyClass, topic, conceptMap] = await Promise.all([
     getClass(numericClassId),
@@ -44,11 +44,7 @@ export default async function EditorialConceptMapPage({
     getConceptMapForEdit(numericTopicId),
   ]);
 
-  if (!studyClass || !topic || topic.classId !== numericClassId) {
-    return (
-      <h1 className="text-2xl font-semibold">Mapa conceptual no encontrado</h1>
-    );
-  }
+  if (!studyClass || !topic || topic.classId !== numericClassId) notFound();
 
   return (
     <div>

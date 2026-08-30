@@ -1,6 +1,6 @@
 # Respaldo lógico de Supabase
 
-Última actualización: 21 de agosto de 2026
+Última actualización: 30 de agosto de 2026
 
 > **Estado actual:** existe un procedimiento reproducible y una prueba local
 > de integridad. **No se generó ni se comprobó un respaldo real de producción**
@@ -145,6 +145,13 @@ Después de generarlo:
 Frecuencia inicial recomendada: semanal y antes/después de cada publicación o
 migración relevante. Debe revisarse cuando el proyecto entre en producción
 formal.
+
+La responsable primaria es Fatima, titular de producción; puede delegar una
+ejecución únicamente a una persona suplente designada con acceso propio. Quien
+ejecute registra fecha, resultado de ambas verificaciones, ubicación lógica de
+la copia externa y siguiente fecha programada en el inventario restringido. Si
+la semana termina sin respaldo aprobado, se registra como incidente operativo y
+se detienen migraciones o publicaciones de contenido hasta recuperar el ciclo.
 
 ## 3. Restauración manual y separada
 

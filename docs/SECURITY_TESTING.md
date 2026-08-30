@@ -30,7 +30,10 @@ Este comando no usa `.env.local`, Supabase remoto ni el disco `F:`. Incluye:
 - integridad del procedimiento de respaldo con SQL sintético.
 
 GitHub Actions ejecuta estas pruebas, lint y build en pull requests y pushes a
-`main`, sin secretos y sin acceso a Supabase.
+`main`, sin secretos y sin acceso a Supabase remoto. Además, el workflow
+`E2E local nocturno` ejecuta diariamente y bajo demanda el recorrido completo
+con una instancia efímera de Supabase en loopback y Chromium. El job no recibe
+credenciales de producción y ejecuta `supabase stop --no-backup` aun si falla.
 
 La comprobación `test:rls-policies` es estática: confirma que la migración
 versionada contiene ownership, rol `authenticated`, encadenamiento a clase

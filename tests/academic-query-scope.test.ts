@@ -147,6 +147,16 @@ test("getSubjects obtiene conteos desde una sola consulta relacional minima", ()
   );
 });
 
+test("getSubject consulta solo la materia solicitada", () => {
+  const source = functionSource("getSubject", "getClassesForSubject");
+  assert.equal(source.match(/\.from\(/g)?.length, 1);
+  assert.match(source, /\.from\("subjects"\)/);
+  assert.match(source, /\.select\(subjectOverviewSelection\)/);
+  assert.match(source, /\.eq\("id", subjectId\)/);
+  assert.match(source, /\.maybeSingle\(\)/);
+  assert.doesNotMatch(source, /getSubjects\(|\.find\(/);
+});
+
 test("getClassesForSubject limita relaciones a las clases de la materia", () => {
   const source = functionSource("getClassesForSubject", "getClass");
   assert.equal(source.match(/\.from\(/g)?.length, 1);

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { ClassDetailsForm } from "@/components/class-details-form";
 import { PublicationControls } from "@/components/publication-controls";
 import { requireAdmin } from "@/lib/auth";
@@ -40,15 +41,14 @@ export default async function EditorialClassPage({
   await requireAdmin();
   const { classId } = await params;
   const numericId = Number(classId);
+  if (!Number.isInteger(numericId) || numericId < 1) notFound();
   const [studyClass, topics] = await Promise.all([
     getClass(numericId),
     getTopicsForClass(numericId),
   ]);
   const subject = studyClass ? await getSubject(studyClass.subjectId) : null;
 
-  if (!studyClass || !subject) {
-    return <h1 className="text-2xl font-semibold">Clase no encontrada</h1>;
-  }
+  if (!studyClass || !subject) notFound();
 
   return (
     <div>

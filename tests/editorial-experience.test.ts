@@ -70,6 +70,24 @@ test("el progreso de sesiones expone valor, límites y rol accesibles", () => {
   assert.match(sessions, /aria-valuenow=\{percent\}/);
 });
 
+test("las rutas editoriales inválidas responden con el 404 de Next", () => {
+  const routes = [
+    "app/administrar/clases/[classId]/page.tsx",
+    "app/administrar/clases/[classId]/temas/[topicId]/examen/page.tsx",
+    "app/administrar/clases/[classId]/temas/[topicId]/flashcards/page.tsx",
+    "app/administrar/clases/[classId]/temas/[topicId]/learning-journey/page.tsx",
+    "app/administrar/clases/[classId]/temas/[topicId]/mapa/page.tsx",
+    "app/administrar/clases/[classId]/temas/[topicId]/materiales/page.tsx",
+  ];
+
+  for (const route of routes) {
+    const page = source(route);
+    assert.match(page, /import \{ notFound \} from "next\/navigation"/);
+    assert.match(page, /notFound\(\)/);
+    assert.doesNotMatch(page, /return <h1[^>]*>[\s\S]*no encontrad/i);
+  }
+});
+
 test("las historias separan preparación editorial y consumo", () => {
   const stories = source("docs/03-user-stories.md");
 

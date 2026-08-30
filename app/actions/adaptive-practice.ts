@@ -73,14 +73,7 @@ export async function getPracticeSessionAction(): Promise<
     return { session: await loadActivePracticeSession(user.id) };
   } catch (error) {
     if (error instanceof HiddenPracticeContentError) {
-      const { error: abandonError } = await getSupabaseAdminClient()
-        .from("practice_sessions")
-        .update({ status: "abandoned", last_activity_at: new Date().toISOString() })
-        .eq("id", error.sessionId)
-        .eq("user_id", user.id)
-        .eq("status", "active");
-      if (!abandonError) return { session: null };
-      return unavailable("abandonHiddenPracticeSession", abandonError);
+      return { session: null };
     }
     return unavailable("getPracticeSession", error);
   }

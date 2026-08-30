@@ -30,7 +30,7 @@ a dar por verificados sin consultar el proyecto remoto.
 
 ---
 
-## 0. Qué falta y qué hacer ahora (24 de agosto de 2026)
+## 0. Qué falta y qué hacer ahora (30 de agosto de 2026)
 
 Esta sección es la lista maestra. Cada punto dice: qué falta exactamente,
 por qué falta, quién lo puede resolver, y cuál es el siguiente paso concreto.
@@ -233,6 +233,18 @@ trabajo. Ordenadas por impacto:
     recuperación activa quedó bloqueada por errores jurídicos y falta de
     trazabilidad. Hallazgos, correcciones y backlog priorizado en
     `docs/QUALITY_AUDIT_2026-08-25.md`.
+11. **Cierre del backlog técnico local — ejecutado el 30 de agosto.** Un Agent
+    Team implementó la entrega transaccional de examen, restricciones de
+    integridad en Postgres, un resumen único de repaso, inicio explícito de la
+    práctica adaptativa, E2E manual/nocturno con Supabase local y Chromium,
+    respuesta a incidentes, CSP Report-Only, consultas más acotadas y 404
+    editoriales consistentes. La marca de agua visual continúa retirada y el
+    contrato `test:content-protection` impide que reaparezca. `test:local` pasó
+    completo. La migración nueva no se aplicó remotamente: Docker local estaba
+    apagado y la cuenta visible para Supabase CLI solo mostró un proyecto ajeno
+    (`VALT`), así que no se enlazó ni escribió ningún destino. La aplicación
+    conserva un fallback temporal solo para `PGRST202` hasta verificar la RPC.
+    Detalle y condiciones restantes en `docs/QUALITY_AUDIT_2026-08-25.md`.
 
 ### 0.3 — Bloqueadas por terceros, sin acción posible hoy
 
@@ -630,13 +642,13 @@ hecha.
 | R-2 | Guardar una copia cifrada de ese respaldo fuera del equipo de trabajo. | Ubicación registrada y copia comprobada. |
 | R-3 | Restaurar ese respaldo en un proyecto de ensayo y comprobar que el contenido llega completo. | Proyecto de ensayo con las 57 clases restauradas. |
 | R-4 | Crear la segunda copia independiente de las 70 transcripciones originales y verificarla contra el manifiesto privado. | `npm run transcripts:verify` sin diferencias sobre la segunda copia. |
-| R-5 | Definir la periodicidad del respaldo manual y quién lo ejecuta. | Calendario escrito en el runbook. |
+| R-5 | Definir la periodicidad del respaldo manual y quién lo ejecuta. | **✅ Hecho (30 ago).** Semanal y antes/después de cambios relevantes; Fatima es responsable primaria y puede designar suplente. Registro y retención en `docs/SUPABASE_BACKUP.md`. |
 
 ### Fase 4 — Demostrar que aguanta varios usuarios
 
 | ID | Tarea | Evidencia de cierre |
 | --- | --- | --- |
-| M-1 | Crear un **proyecto Supabase de ensayo** con las 21 migraciones aplicadas desde cero. | Historial de migraciones del proyecto de ensayo. **Bloqueado desde el 23 de agosto:** la organización no tiene espacio en el plan gratuito (2/2 proyectos ocupados) — decisión pendiente en §0.1-C. |
+| M-1 | Crear un **proyecto Supabase de ensayo** con todas las migraciones aplicadas desde cero (26 en el repositorio al corte del 30 de agosto). | Historial de migraciones del proyecto de ensayo. **Bloqueado desde el 23 de agosto:** la organización no tiene espacio en el plan gratuito (2/2 proyectos ocupados) — decisión pendiente en §0.1-C. |
 | M-2 | Ejecutar allí la suite RLS completa con dos estudiantes y una administradora. | Las comprobaciones aprobadas y sin residuos, registradas con fecha. |
 | M-3 | Comprobar en el ensayo que una estudiante no ve el progreso, los intentos ni las respuestas de otra. | Evidencia de la prueba cruzada. |
 | M-4 | Invitar a 3 a 5 personas reales de confianza, sin cobro, a recorrer la app completa en teléfono y computadora. | Lista de hallazgos y su corrección. |
@@ -676,7 +688,7 @@ Esta fase ya está diseñada a detalle. **No la rediseñes**: sigue sus etapas.
 | OP-2 | Añadir registro de errores del servidor con alertas, sin datos personales. | Un error de prueba visible en la herramienta. |
 | OP-3 | Añadir analítica de uso mínima y respetuosa, declarada en el aviso de privacidad. | Métricas visibles y declaradas. |
 | OP-4 | Ejecutar `docs/DEPLOYMENT_RUNBOOK.md` completo en la siguiente publicación y aprobarlo. | Runbook con la publicación registrada y rollback probado. |
-| OP-5 | Escribir el plan de respuesta a incidentes: quién responde, en cuánto tiempo, y cómo se avisa a las usuarias. | Documento aprobado. |
+| OP-5 | Escribir el plan de respuesta a incidentes: quién responde, en cuánto tiempo, y cómo se avisa a las usuarias. | **✅ Redactado y probado por contrato (30 ago)** en `docs/INCIDENT_RESPONSE.md`; antes de invitar estudiantes falta designar suplente y canal real. |
 | OP-6 | Conciliar la documentación de estado con el estado real verificado. | **✅ Hecho.** Este documento es el resultado; ya no hay tres documentos separados que puedan desincronizarse. |
 
 ### Ruta crítica

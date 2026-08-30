@@ -3,6 +3,7 @@ import test from "node:test";
 import {
   gradeExamSelections,
   parseExamSubmission,
+  parsePersistedExamResult,
   validateExamSelections,
 } from "../lib/exam-submission";
 
@@ -23,6 +24,69 @@ test("acepta únicamente IDs enteros positivos y respuestas numéricas", () => {
   assert.equal(parseExamSubmission(7, { "11": "101" }), null);
   assert.equal(parseExamSubmission(7.5, { "11": 101 }), null);
   assert.equal(parseExamSubmission(7, { "011": 101 }), null);
+});
+
+test("valida la respuesta mínima y segura de la RPC transaccional", () => {
+  assert.deepEqual(parsePersistedExamResult({ status: "incomplete" }), {
+    status: "incomplete",
+  });
+  assert.deepEqual(
+    parsePersistedExamResult({
+      status: "success",
+      id: 81,
+      score: 1,
+      total: 1,
+      review: [
+        {
+          questionId: 11,
+          correct: true,
+          explanation: "Explicación general",
+          selectedOptionExplanation: "Explicación elegida",
+        },
+      ],
+    }),
+    {
+      status: "success",
+      id: 81,
+      score: 1,
+      total: 1,
+      review: [
+        {
+          questionId: 11,
+          correct: true,
+          explanation: "Explicación general",
+          selectedOptionExplanation: "Explicación elegida",
+        },
+      ],
+    },
+  );
+  assert.equal(
+    parsePersistedExamResult({
+      status: "success",
+      id: 81,
+      score: 2,
+      total: 1,
+      review: [],
+    }),
+    null,
+  );
+  assert.equal(
+    parsePersistedExamResult({
+      status: "success",
+      id: 81,
+      score: 0,
+      total: 1,
+      review: [
+        {
+          questionId: 11,
+          correct: false,
+          explanation: "Explicación general",
+          selectedOptionExplanation: "",
+        },
+      ],
+    }),
+    null,
+  );
 });
 
 test("rechaza opciones que pertenecen a otra pregunta", () => {

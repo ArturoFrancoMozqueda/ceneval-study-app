@@ -63,7 +63,9 @@ hay rollback seguro.
    registro. Si hay cambios sin commit, detente.
 
 2. Confirma en GitHub que el workflow **Calidad** terminó verde para ese mismo
-   SHA. Un resultado verde de otro commit no sirve.
+   SHA. Confirma también que la última ejecución programada o manual de
+   **E2E local nocturno** está verde y corresponde a ese commit. Un resultado
+   verde de otro commit no sirve.
 
 3. Ejecuta los gates sin red de producción:
 
@@ -253,4 +255,5 @@ procedimiento de recuperación autorizado de Supabase.
 La publicación solo se cierra cuando el registro contiene SHA de Git, CI,
 preview, digest del build Production, producción anterior/nueva, resultados de
 health/E2E/logs y decisión final. Si hubo rollback, conserva ambos deployment
-IDs y abre una incidencia sin datos privados.
+IDs y abre una incidencia sin datos privados siguiendo
+`docs/INCIDENT_RESPONSE.md`.

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { EmptyState } from "@/components/empty-state";
 import { requireUser } from "@/lib/auth";
-import { getReviewOverview } from "@/lib/data/academic";
+import { getStudyPlanOverview } from "@/lib/data/study-plan";
 import { writeDependencyFailure } from "@/lib/operations/safe-log";
 import { getTopicJourneyStatus } from "@/lib/study/progress-presentation";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
@@ -15,7 +15,7 @@ export default async function StudyPage() {
   const [
     topicsResult,
     progressResult,
-    reviewOverview,
+    studyPlanResult,
   ] = await Promise.all([
     supabase
       .from("topics")
@@ -27,7 +27,7 @@ export default async function StudyPage() {
       .from("study_progress")
       .select("topic_id,completed_steps,last_activity_at")
       .eq("user_id", user.id),
-    getReviewOverview(user.id),
+    getStudyPlanOverview(user.id),
   ]);
   if (topicsResult.error) {
     writeDependencyFailure({
@@ -51,13 +51,14 @@ export default async function StudyPage() {
       Array.isArray(row.completed_steps) ? row.completed_steps.length : 0,
     ]),
   );
-  const dueCount = reviewOverview.dueCards.length;
-  const nextReviewLabel = reviewOverview.nextReviewAt
+  const studyPlan = studyPlanResult.overview;
+  const dueCount = studyPlan.recommendedCount;
+  const nextReviewLabel = studyPlan.nextReviewAt
     ? new Intl.DateTimeFormat("es-MX", {
         dateStyle: "medium",
         timeStyle: "short",
         timeZone: "America/Mexico_City",
-      }).format(new Date(reviewOverview.nextReviewAt))
+      }).format(new Date(studyPlan.nextReviewAt))
     : null;
 
   return (
@@ -78,8 +79,8 @@ export default async function StudyPage() {
               {dueCount ? "Tienes una ronda lista" : "Tu repaso está al día"}
             </h2>
             <p className="mt-3 max-w-2xl leading-7 text-white/75">
-            {reviewOverview.currentDifficultCount
-              ? `${reviewOverview.currentDifficultCount} conceptos necesitan refuerzo según tu respuesta más reciente.`
+            {studyPlan.difficultCount
+              ? `${studyPlan.difficultCount} conceptos necesitan refuerzo según tu respuesta más reciente.`
               : "No tienes conceptos marcados para reforzar ahora. Puedes practicar un tema nuevo."}
           </p>
           <Link
@@ -92,7 +93,7 @@ export default async function StudyPage() {
           </Link>
           {!dueCount && nextReviewLabel ? (
             <p className="mt-4 text-sm font-semibold text-white/75">
-              Próximo repaso tradicional: {nextReviewLabel}
+              Próximo repaso programado: {nextReviewLabel}
             </p>
           ) : null}
           </div>

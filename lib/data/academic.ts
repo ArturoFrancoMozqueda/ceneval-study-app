@@ -259,6 +259,20 @@ const classOverviewSelection =
 const adminCatalogSelection =
   "id,name,classes(id,title,publication_status,published_at,created_at,topics(id))";
 
+function toSubject(row: SubjectRow): Subject {
+  const subjectClasses = relationRows(row.classes);
+  return {
+    id: row.id,
+    name: row.name,
+    description: row.description ?? "",
+    classCount: subjectClasses.length,
+    topicCount: subjectClasses.reduce(
+      (total, studyClass) => total + relationRows(studyClass.topics).length,
+      0,
+    ),
+  };
+}
+
 export async function getAdminCatalog(): Promise<AdminCatalogGroup[]> {
   await connection();
   const supabase = await createServerSupabaseClient();
@@ -288,24 +302,20 @@ export async function getSubjects(): Promise<Subject[]> {
 
   if (subjectsResult.error) fail("getSubjects", subjectsResult.error);
 
-  return ((subjectsResult.data ?? []) as SubjectRow[]).map((subject) => {
-    const subjectClasses = relationRows(subject.classes);
-    return {
-      id: subject.id,
-      name: subject.name,
-      description: subject.description ?? "",
-      classCount: subjectClasses.length,
-      topicCount: subjectClasses.reduce(
-        (total, studyClass) => total + relationRows(studyClass.topics).length,
-        0,
-      ),
-    };
-  });
+  return ((subjectsResult.data ?? []) as SubjectRow[]).map(toSubject);
 }
 
 export async function getSubject(subjectId: number) {
-  const subjects = await getSubjects();
-  return subjects.find(({ id }) => id === subjectId) ?? null;
+  await connection();
+  const supabase = await createServerSupabaseClient();
+  const subjectResult = await supabase
+    .from("subjects")
+    .select(subjectOverviewSelection)
+    .eq("id", subjectId)
+    .maybeSingle();
+
+  if (subjectResult.error) fail("getSubject", subjectResult.error);
+  return subjectResult.data ? toSubject(subjectResult.data as SubjectRow) : null;
 }
 
 export async function getClassesForSubject(subjectId: number) {

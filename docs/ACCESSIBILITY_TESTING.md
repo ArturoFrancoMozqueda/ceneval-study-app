@@ -27,6 +27,12 @@ crea un fixture sintético y comprueba en Chromium:
 - ausencia de errores de consola, página, HTTP 5xx y fallos de red. Solo se
   toleran cancelaciones explícitas de navegación del navegador.
 
+El mismo recorrido se ejecuta en GitHub Actions mediante el workflow
+`E2E local nocturno`, todos los días a las 03:17 (hora de Ciudad de México) y
+también bajo ejecución manual. El job levanta Supabase y Chromium dentro del
+runner efímero, no usa secretos del repositorio ni servicios remotos y elimina
+la base local al terminar, incluso si la prueba falla.
+
 La prueba falla cerrada si el entorno no es Supabase local, si el puerto
 dedicado ya está ocupado o si no puede acreditar la propiedad del proceso.
 Siempre verifica la limpieza de usuarios y contenido sintéticos.

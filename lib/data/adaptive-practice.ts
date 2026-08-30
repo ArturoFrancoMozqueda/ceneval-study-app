@@ -2,6 +2,15 @@ import "server-only";
 
 import type { PracticeItem, PracticeSession } from "@/lib/study/adaptive-practice";
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
+import { createServerSupabaseClient } from "@/lib/supabase/server";
+
+export type AdaptivePracticeOverview = {
+  hasHistory: boolean;
+  dueCount: number;
+  difficultCount: number;
+  nextReviewAt: string | null;
+  activeSessionRemaining: number;
+};
 
 export class HiddenPracticeContentError extends Error {
   constructor(readonly sessionId: string) {
@@ -83,6 +92,66 @@ export async function loadActivePracticeSession(
       const item = byId.get(Number(row.retrieval_item_id));
       return item ? [item] : [];
     }),
+  };
+}
+
+export async function loadAdaptivePracticeOverview(
+  userId: string,
+): Promise<AdaptivePracticeOverview> {
+  const admin = getSupabaseAdminClient();
+  const [{ data: stateRows, error: stateError }, activeSession] = await Promise.all([
+    admin
+      .from("retrieval_schedule_states")
+      .select("retrieval_item_id,last_confidence,last_outcome,next_review_at")
+      .eq("user_id", userId),
+    loadActivePracticeSession(userId).catch((error) => {
+      if (error instanceof HiddenPracticeContentError) return null;
+      throw error;
+    }),
+  ]);
+  if (stateError) throw new Error("No se pudo resumir el calendario adaptativo.");
+
+  const itemIds = (stateRows ?? []).map((row) => Number(row.retrieval_item_id));
+  const student = await createServerSupabaseClient();
+  const { data: visibleItems, error: visibilityError } = itemIds.length
+    ? await student
+        .from("retrieval_items")
+        .select("id,topics!inner(approval_status,classes!inner(publication_status))")
+        .in("id", itemIds)
+        .eq("editorial_status", "published")
+        .eq("topics.approval_status", "approved")
+        .eq("topics.classes.publication_status", "published")
+    : { data: [], error: null };
+  if (visibilityError) {
+    throw new Error("No se pudo verificar el calendario adaptativo visible.");
+  }
+
+  const visibleIds = new Set((visibleItems ?? []).map((row) => Number(row.id)));
+  const visibleStates = (stateRows ?? []).filter((row) =>
+    visibleIds.has(Number(row.retrieval_item_id)),
+  );
+  const now = Date.now();
+  const futureReviews = visibleStates
+    .map((row) => String(row.next_review_at))
+    .filter((value) => Date.parse(value) > now)
+    .sort((left, right) => Date.parse(left) - Date.parse(right));
+
+  return {
+    hasHistory: visibleStates.length > 0,
+    dueCount: visibleStates.filter(
+      (row) => Date.parse(String(row.next_review_at)) <= now,
+    ).length,
+    difficultCount: visibleStates.filter(
+      (row) =>
+        row.last_outcome === "incorrect" ||
+        row.last_outcome === "partial" ||
+        row.last_confidence === "no_recall" ||
+        row.last_confidence === "unsure",
+    ).length,
+    nextReviewAt: futureReviews[0] ?? null,
+    activeSessionRemaining: activeSession
+      ? Math.max(0, activeSession.items.length - activeSession.currentPosition + 1)
+      : 0,
   };
 }
 

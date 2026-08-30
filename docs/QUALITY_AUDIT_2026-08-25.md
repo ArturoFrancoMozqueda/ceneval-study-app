@@ -3,6 +3,33 @@
 Auditoría coordinada con tres frentes: UX/accesibilidad, ingeniería/seguridad y
 calidad pedagógica. No se consultó ni modificó Supabase remoto.
 
+## Seguimiento técnico — 30 de agosto de 2026
+
+Se cerró en código el backlog de alta prioridad de la aplicación, sin escribir
+en Supabase remoto:
+
+- La entrega de examen ya tiene una RPC transaccional `submit_exam_v1`; la
+  migración también refuerza pertenencia pregunta/opción y límites de actividad.
+  La aplicación conserva temporalmente el flujo anterior solo cuando PostgREST
+  confirma con `PGRST202` que la función todavía no existe, para no romper el
+  despliegue mientras se autoriza y verifica la migración remota.
+- El learning journey ya se consume en la vista guiada de la lección.
+- Inicio, Mi ruta y Repasar hoy comparten un solo resumen que prioriza la ronda
+  adaptativa sin sumar métricas incompatibles con el repaso tradicional.
+- Abrir la práctica ya no crea, abandona ni reanuda una ronda por efecto
+  secundario; iniciar una ronda requiere una acción explícita.
+- Existe un workflow manual y nocturno con Supabase local y Chromium, sin
+  secretos remotos. Su primera ejecución real en GitHub queda pendiente del
+  push de este cambio.
+- `getSubject()` limita la consulta a un ID; las rutas editoriales inválidas
+  usan el 404 de Next; y una CSP completa se añadió en modo Report-Only como
+  etapa de observación previa al uso de nonces.
+
+La migración y la suite dinámica local no se pudieron ejecutar en esta sesión
+porque Docker Desktop no estaba activo. Tampoco se aplicó la migración al
+proyecto remoto: las credenciales CLI disponibles solo mostraron un proyecto
+distinto (`VALT`), por lo que se falló cerrado antes de enlazar o escribir.
+
 ## Resumen
 
 La línea base es sólida: pruebas locales, lint, build y auditoría de
@@ -30,22 +57,18 @@ integridad/confiabilidad antes de abrir a estudiantes.
   `brand-soft` que ya se usaba.
 - `docs/retrieval-practice/` quedó explícitamente bloqueado y auditado.
 
-## Pendientes de prioridad alta
+## Pendientes de prioridad alta al corte original
 
 ### Integridad técnica
 
-1. **Entrega de examen no atómica.** La acción inserta el intento y después sus
-   respuestas; el cleanup es de mejor esfuerzo. Debe convertirse en una RPC
-   transaccional antes de abrir a estudiantes.
-2. **Learning journey no consumido.** Los quick checks y casos se persisten y
-   editan, pero la vista de estudiante no los usa. El resumen puede contar
-   respuestas difíciles que la cola de repaso no permite trabajar.
-3. **Invariantes de actividad solo en la app.** La Data API permite que un
-   cliente autenticado salte límites Zod de pasos y textos. Añadir constraints
-   o escrituras por RPC antes del modo multiusuario.
-4. **Pruebas E2E fuera de CI.** El recorrido local de navegador existe y pasa,
-   pero `test:local`/CI solo incluyen contratos estáticos. Añadir un job aislado
-   con Supabase local y Chromium, al menos nocturno si el costo es alto.
+1. **Entrega de examen no atómica.** **Resuelto en código el 30 de agosto;**
+   falta aplicar y probar la migración en un entorno Supabase autorizado.
+2. **Learning journey no consumido.** **Resuelto:** la lección usa la secuencia
+   editorial y el resumen de repaso ya no mezcla conteos incompatibles.
+3. **Invariantes de actividad solo en la app.** **Resuelto en la misma
+   migración pendiente de aplicación remota.**
+4. **Pruebas E2E fuera de CI.** **Resuelto en configuración:** workflow manual
+   y nocturno aislado; falta observar su primera ejecución en GitHub.
 
 ### Contenido y aprendizaje
 
@@ -57,15 +80,14 @@ integridad/confiabilidad antes de abrir a estudiantes.
 
 ## Pendientes de prioridad media
 
-- Introducir CSP real de forma gradual (primero Report-Only); la política actual
-  protege framing/base/formularios, pero no restringe scripts.
-- Reducir las 11–13 consultas aproximadas del bundle de lección y evitar que
-  `getSubject()` cargue el catálogo completo para un solo ID; medir antes y
-  después.
+- Continuar el rollout de CSP: Report-Only ya está configurado; falta observar
+  violaciones reales y migrar a nonces antes de aplicar la política estricta.
+- Reducir las consultas restantes del bundle de lección. `getSubject()` ya no
+  carga el catálogo completo para un solo ID; falta medir el bundle completo.
 - Ampliar búsqueda a materia, clase, descripción y materiales mediante una
   consulta segura y medible. La UI ahora describe honestamente el alcance
   actual: títulos de temas.
-- Convertir las rutas editoriales inválidas en 404 consistentes.
+- Convertir las rutas editoriales inválidas en 404 consistentes. **Resuelto.**
 - Añadir filtros/agrupación al panel editorial de 57 clases.
 - Añadir confirmación fuerte y estado pending a la eliminación estudiantil.
 - Reforzar integridad relacional de claves y respuestas de examen en la base.

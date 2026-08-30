@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { FlashcardEditForm } from "@/components/flashcard-edit-form";
 import { requireAdmin } from "@/lib/auth";
 import { getFlashcardsForEdit } from "@/app/actions/academic";
@@ -32,9 +33,10 @@ export default async function EditorialFlashcardsPage({
   const numericClassId = Number(classId);
   const numericTopicId = Number(topicId);
 
-  if (!Number.isInteger(numericClassId) || !Number.isInteger(numericTopicId)) {
-    return <h1 className="text-2xl font-semibold">Flashcards no encontradas</h1>;
-  }
+  if (
+    !Number.isInteger(numericClassId) || numericClassId < 1 ||
+    !Number.isInteger(numericTopicId) || numericTopicId < 1
+  ) notFound();
 
   const [studyClass, topic, flashcards] = await Promise.all([
     getClass(numericClassId),
@@ -42,9 +44,7 @@ export default async function EditorialFlashcardsPage({
     getFlashcardsForEdit(numericTopicId),
   ]);
 
-  if (!studyClass || !topic || topic.classId !== numericClassId) {
-    return <h1 className="text-2xl font-semibold">Flashcards no encontradas</h1>;
-  }
+  if (!studyClass || !topic || topic.classId !== numericClassId) notFound();
 
   return (
     <div>

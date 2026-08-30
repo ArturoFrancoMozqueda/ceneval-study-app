@@ -97,11 +97,16 @@ async function expectHidden(
 
 async function expectRpcDenied(
   client: SupabaseClient,
-  name: "import_class_package_v12" | "export_class_package_v12",
+  name:
+    | "import_class_package_v12"
+    | "export_class_package_v12"
+    | "submit_exam_v1",
 ) {
   const args =
     name === "import_class_package_v12"
       ? { p_package: { packageVersion: "1.2" } }
+      : name === "submit_exam_v1"
+        ? { p_exam_id: 1, p_answers: {} }
       : { p_class_id: classId };
   const { error } = await client.rpc(name, args);
   check(`${name} denegada`, error?.code === "42501");
@@ -255,7 +260,119 @@ async function testActivityOwnership(
     rating: "easy",
   });
   check("revisión ajena denegada", Boolean(foreignReview.error));
+
+  const oversizedProgress = await owner.client
+    .from("study_progress")
+    .update({ material_index: 101 })
+    .eq("user_id", owner.id)
+    .eq("topic_id", topicId);
+  check("índice de progreso fuera de límite denegado", Boolean(oversizedProgress.error));
+  const duplicateSteps = await owner.client
+    .from("study_progress")
+    .update({ completed_steps: ["discover", "discover"] })
+    .eq("user_id", owner.id)
+    .eq("topic_id", topicId);
+  check("pasos de progreso duplicados denegados", Boolean(duplicateSteps.error));
+  const oversizedQuickCheck = await owner.client
+    .from("quick_check_responses")
+    .insert({
+      user_id: owner.id,
+      topic_id: topicId,
+      prompt: "x".repeat(501),
+      response: "No debe persistir.",
+      needs_review: false,
+    });
+  check("quick check fuera de límite denegado", Boolean(oversizedQuickCheck.error));
   return flashcardId;
+}
+
+async function testAtomicExamSubmission(
+  owner: { client: SupabaseClient; id: string },
+  other: { client: SupabaseClient; id: string },
+  examId: number,
+) {
+  checkpoint("entrega atómica de examen");
+  const questions = await service
+    .from("exam_questions")
+    .select("id")
+    .eq("exam_id", examId)
+    .order("position");
+  requireNoError(questions.error, "No se leyeron preguntas para la entrega");
+  const questionIds = (questions.data ?? []).map((row) => Number(row.id));
+  const keys = await service
+    .from("exam_answer_keys")
+    .select("question_id,correct_option_id")
+    .in("question_id", questionIds);
+  requireNoError(keys.error, "No se leyeron claves para preparar la prueba");
+  const answers = Object.fromEntries(
+    (keys.data ?? []).map((row) => [
+      String(row.question_id),
+      Number(row.correct_option_id),
+    ]),
+  );
+  check(
+    "fixture de examen calificable",
+    questionIds.length > 0 && Object.keys(answers).length === questionIds.length,
+  );
+
+  const before = await owner.client
+    .from("exam_attempts")
+    .select("id", { count: "exact", head: true })
+    .eq("exam_id", examId);
+  requireNoError(before.error, "No se contó el historial inicial");
+
+  const submission = await owner.client.rpc("submit_exam_v1", {
+    p_exam_id: examId,
+    p_answers: answers,
+  });
+  requireNoError(submission.error, "No se entregó el examen por RPC");
+  const result = submission.data as Record<string, unknown>;
+  check("RPC devuelve éxito", result.status === "success");
+  check("RPC calcula el puntaje", result.score === questionIds.length);
+  check("RPC no expone IDs de claves", !JSON.stringify(result).includes("correctOptionId"));
+
+  const attemptId = Number(result.id);
+  const attempt = await owner.client
+    .from("exam_attempts")
+    .select("id,score,total_questions")
+    .eq("id", attemptId)
+    .single();
+  requireNoError(attempt.error, "No se leyó el intento persistido");
+  check(
+    "intento completo persistido",
+    attempt.data!.score === questionIds.length
+      && attempt.data!.total_questions === questionIds.length,
+  );
+  const persistedAnswers = await owner.client
+    .from("exam_answers")
+    .select("question_id")
+    .eq("attempt_id", attemptId);
+  requireNoError(persistedAnswers.error, "No se leyeron respuestas persistidas");
+  check("todas las respuestas persistidas", persistedAnswers.data!.length === questionIds.length);
+  const hiddenAttempt = await other.client
+    .from("exam_attempts")
+    .select("id")
+    .eq("id", attemptId);
+  requireNoError(hiddenAttempt.error, "No se verificó aislamiento del intento");
+  check("intento aislado por propietaria", hiddenAttempt.data!.length === 0);
+
+  const invalidSubmission = await owner.client.rpc("submit_exam_v1", {
+    p_exam_id: examId,
+    p_answers: { ...answers, "999999999": 999999999 },
+  });
+  requireNoError(invalidSubmission.error, "La RPC no manejó una respuesta inválida");
+  check(
+    "entrega inválida rechazada sin excepción",
+    (invalidSubmission.data as Record<string, unknown>).status === "invalid",
+  );
+  const after = await owner.client
+    .from("exam_attempts")
+    .select("id", { count: "exact", head: true })
+    .eq("exam_id", examId);
+  requireNoError(after.error, "No se contó el historial final");
+  check("entrega inválida no deja intento parcial", after.count === (before.count ?? 0) + 1);
+
+  return answers;
 }
 
 async function main() {
@@ -272,6 +389,7 @@ async function main() {
     await expectRpcDenied(client, "import_class_package_v12");
     await expectRpcDenied(client, "export_class_package_v12");
   }
+  await expectRpcDenied(anonymous, "submit_exam_v1");
 
   checkpoint("publicado y aprobado");
   await expectVisible(owner.client, "classes", "id", classId);
@@ -280,6 +398,11 @@ async function main() {
   const answerKeys = await countRows(owner.client, "exam_answer_keys", "question_id", ids.questionIds);
   check("exam_answer_keys bloqueada", Boolean(answerKeys.error) || answerKeys.count === 0);
   const flashcardId = await testActivityOwnership(owner, other);
+  const examAnswers = await testAtomicExamSubmission(
+    owner,
+    other,
+    ids.examIds[0]!,
+  );
 
   for (const status of ["pending", "rejected"] as const) {
     checkpoint(`tema ${status}`);
@@ -318,6 +441,15 @@ async function main() {
       rating: "again",
     });
     check(`revisión bloqueada en ${status}`, Boolean(blockedReview.error));
+    const blockedExam = await owner.client.rpc("submit_exam_v1", {
+      p_exam_id: ids.examIds[0]!,
+      p_answers: examAnswers,
+    });
+    requireNoError(blockedExam.error, `No se comprobó examen bloqueado en ${status}`);
+    check(
+      `examen bloqueado en ${status}`,
+      (blockedExam.data as Record<string, unknown>).status === "unavailable",
+    );
   }
 
   checkpoint("perfiles");

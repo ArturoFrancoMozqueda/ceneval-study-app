@@ -35,6 +35,7 @@ test("cubre recursos editoriales nuevos, claves y RPC privadas", () => {
     "exam_answer_keys",
     "import_class_package_v12",
     "export_class_package_v12",
+    "submit_exam_v1",
   ]) {
     assert.match(suite, new RegExp(token));
   }
@@ -54,6 +55,9 @@ test("cubre owner/other y estados pending/rejected con diagnóstico seguro", () 
   assert.match(suite, /progreso bloqueado en/);
   assert.match(suite, /quick check bloqueado en/);
   assert.match(suite, /revisión bloqueada en/);
+  assert.match(suite, /entrega atómica de examen/);
+  assert.match(suite, /entrega inválida no deja intento parcial/);
+  assert.match(suite, /examen bloqueado en/);
 });
 
 test("rompe la recursión con un helper privado mínimo y cerrado", () => {

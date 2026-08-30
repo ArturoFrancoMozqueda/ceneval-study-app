@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AdaptivePractice } from "@/components/adaptive-practice";
 import { requireUser } from "@/lib/auth";
-import { getReviewOverview } from "@/lib/data/academic";
+import { getStudyPlanOverview } from "@/lib/data/study-plan";
 
 export const metadata: Metadata = { title: "Repasar hoy" };
 
 export default async function ReviewPage() {
   const user = await requireUser();
-  const reviewOverview = await getReviewOverview(user.id);
+  const { overview: studyPlan, traditional: reviewOverview } =
+    await getStudyPlanOverview(user.id);
   const cards = reviewOverview.dueCards.map((card) => ({
     id: card.id,
     question: card.question,
@@ -45,6 +46,12 @@ export default async function ReviewPage() {
           costó recuperar. Si el banco adaptativo todavía no está disponible,
           usamos tus tarjetas vencidas como respaldo.
         </p>
+        {studyPlan.source === "active" ? (
+          <p className="mt-4 rounded-xl border border-success/20 bg-success-soft p-4 text-sm font-semibold text-success">
+            Tienes una ronda en curso con {studyPlan.recommendedCount}{" "}
+            {studyPlan.recommendedCount === 1 ? "pregunta pendiente" : "preguntas pendientes"}.
+          </p>
+        ) : null}
       </header>
 
       <section aria-labelledby="review-deck-title" className="mt-9">

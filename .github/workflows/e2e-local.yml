@@ -1,0 +1,55 @@
+name: E2E local nocturno
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 03:17 en Ciudad de México (UTC-6), fuera de la jornada habitual.
+    - cron: "17 9 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: e2e-local-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  navegador:
+    name: Supabase local y Chromium
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+      E2E_BASE_URL: http://127.0.0.1:3100
+      E2E_PYTHON: .venv-e2e/bin/python
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+          package-manager-cache: false
+
+      - name: Instalar dependencias bloqueadas
+        run: npm ci --ignore-scripts
+
+      - name: Preparar Playwright y Chromium
+        run: |
+          python3 -m venv .venv-e2e
+          .venv-e2e/bin/python -m pip install --disable-pip-version-check -r scripts/requirements-e2e.txt
+          .venv-e2e/bin/python -m playwright install --with-deps chromium
+
+      - name: Iniciar Supabase local
+        run: npx --no-install supabase start
+
+      - name: Ejecutar recorrido E2E aislado
+        run: npm run test:e2e:ci
+
+      - name: Detener Supabase local sin conservar datos
+        if: always()
+        run: npx --no-install supabase stop --no-backup

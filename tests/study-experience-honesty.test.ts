@@ -53,6 +53,12 @@ test("la práctica exige intentar antes de revelar y separa el simulacro", () =>
   assert.match(reviewSource, /<AdaptivePractice[\s\S]*adaptive/);
   assert.match(adaptivePracticeSource, /abandonPracticeSessionAction/);
   assert.match(adaptivePracticeSource, /ronda anterior de otro tema/);
+  assert.match(adaptivePracticeSource, /getPracticeSessionAction\(\)/);
+  assert.match(adaptivePracticeSource, /Iniciar ronda adaptativa/);
+  assert.doesNotMatch(
+    adaptivePracticeSource,
+    /let active = true;\s*startOrResumePracticeSessionAction/,
+  );
 });
 
 test("el progreso visible no ofrece una autoevaluación que ya no existe", () => {

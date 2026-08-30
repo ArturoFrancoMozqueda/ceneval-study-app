@@ -46,6 +46,33 @@ export type ExamReview = {
   selectedOptionExplanation: string;
 };
 
+const examReviewSchema = z.object({
+  questionId: databaseIdSchema,
+  correct: z.boolean(),
+  explanation: z.string().trim().min(1),
+  selectedOptionExplanation: z.string().trim().min(1),
+});
+
+const persistedExamResultSchema = z.discriminatedUnion("status", [
+  z.object({ status: z.literal("invalid") }),
+  z.object({ status: z.literal("incomplete") }),
+  z.object({ status: z.literal("unavailable") }),
+  z
+    .object({
+      status: z.literal("success"),
+      id: databaseIdSchema,
+      score: z.number().int().nonnegative(),
+      total: z.number().int().positive(),
+      review: z.array(examReviewSchema).min(1),
+    })
+    .refine(
+      ({ score, total, review }) =>
+        score <= total && review.length === total,
+    ),
+]);
+
+export type PersistedExamResult = z.infer<typeof persistedExamResultSchema>;
+
 type ValidationFailure = {
   success: false;
   reason: "incomplete" | "invalid";
@@ -68,6 +95,13 @@ export function parseExamSubmission(
   answers: unknown,
 ): ValidatedExamSubmission | null {
   const result = examSubmissionSchema.safeParse({ examId, answers });
+  return result.success ? result.data : null;
+}
+
+export function parsePersistedExamResult(
+  input: unknown,
+): PersistedExamResult | null {
+  const result = persistedExamResultSchema.safeParse(input);
   return result.success ? result.data : null;
 }
 

@@ -3,9 +3,8 @@
 import { revalidatePath } from "next/cache";
 import { requireAdmin, requireUser } from "@/lib/auth";
 import {
-  gradeExamSelections,
   parseExamSubmission,
-  validateExamSelections,
+  parsePersistedExamResult,
   type ExamReview,
 } from "@/lib/exam-submission";
 import {
@@ -22,6 +21,7 @@ import {
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 import { writeDependencyFailure } from "@/lib/operations/safe-log";
+import { submitExamLegacy } from "@/lib/data/legacy-exam-submission";
 import {
   isPositiveInteger,
   isTopicApprovalStatus,
@@ -1255,118 +1255,44 @@ export async function submitExamAction(
   }
 
   const student = await createServerSupabaseClient();
-  const { data: exam, error: examError } = await student
-    .from("exams")
-    .select("id")
-    .eq("id", submission.examId)
-    .maybeSingle();
-  if (examError || !exam) return { error: "El examen no está disponible." };
-
-  const admin = getSupabaseAdminClient();
-  const { data: questions, error: questionsError } = await admin
-    .from("exam_questions")
-    .select("id")
-    .eq("exam_id", submission.examId)
-    .order("position");
-  if (questionsError || !questions?.length) {
-    return { error: "El examen no tiene preguntas disponibles." };
+  const { data, error } = await student.rpc("submit_exam_v1", {
+    p_exam_id: submission.examId,
+    p_answers: submission.answers,
+  });
+  if (error) {
+    if (error.code === "PGRST202") {
+      writeDependencyFailure({ error, operation: "submitExamRpcUnavailable" });
+      const legacy = await submitExamLegacy(user.id, submission);
+      if (!legacy.error) {
+        revalidatePath("/");
+        revalidatePath("/estudiar");
+      }
+      return legacy;
+    }
+    return databaseError("submitExam", error);
   }
 
-  const questionIds = questions.map(({ id }) => id as number);
-  const { data: options, error: optionsError } = await admin
-    .from("exam_options")
-    .select("id,question_id")
-    .in("question_id", questionIds);
-  if (optionsError) return databaseError("loadExamOptions", optionsError);
-
-  const optionReferences = (options ?? []).map((option) => ({
-    id: option.id as number,
-    questionId: option.question_id as number,
-  }));
-  const selectionValidation = validateExamSelections(
-    submission.answers,
-    questions.map(({ id }) => ({ id: id as number })),
-    optionReferences,
-  );
-  if (!selectionValidation.success && selectionValidation.reason === "incomplete") {
+  const result = parsePersistedExamResult(data);
+  if (!result) return databaseError("submitExam", "invalid RPC response");
+  if (result.status === "unavailable") {
+    return { error: "El examen no está disponible." };
+  }
+  if (result.status === "incomplete") {
     return { error: "Responde todas las preguntas antes de entregar." };
   }
-  if (!selectionValidation.success) {
+  if (result.status === "invalid") {
     return {
       error:
         "Las respuestas no corresponden a este examen. Vuelve a abrirlo e inténtalo nuevamente.",
     };
   }
 
-  const { data: keys, error: keysError } = await admin
-    .from("exam_answer_keys")
-    .select(
-      "question_id,correct_option_id,explanation,option_explanations",
-    )
-    .in("question_id", questionIds);
-  if (keysError || keys?.length !== questionIds.length) {
-    return databaseError("gradeExam", keysError);
-  }
-
-  const grading = gradeExamSelections(
-    selectionValidation.selections,
-    optionReferences,
-    keys.map((key) => ({
-      questionId: key.question_id as number,
-      correctOptionId: key.correct_option_id as number,
-      explanation: key.explanation,
-      optionExplanations: key.option_explanations,
-    })),
-  );
-  if (!grading.success) {
-    return databaseError("gradeExam", "invalid answer key data");
-  }
-
-  const { data: attempt, error: attemptError } = await admin
-    .from("exam_attempts")
-    .insert({
-      user_id: user.id,
-      exam_id: submission.examId,
-      completed_at: new Date().toISOString(),
-      score: grading.score,
-      total_questions: questionIds.length,
-    })
-    .select("id")
-    .single();
-  if (attemptError) return databaseError("createAttempt", attemptError);
-
-  const correctnessByQuestion = new Map(
-    grading.review.map(({ questionId, correct }) => [questionId, correct]),
-  );
-  const { error: answersError } = await admin.from("exam_answers").insert(
-    selectionValidation.selections.map((selection) => ({
-      attempt_id: attempt.id,
-      question_id: selection.questionId,
-      selected_option_id: selection.selectedOptionId,
-      is_correct: correctnessByQuestion.get(selection.questionId) === true,
-    })),
-  );
-  if (answersError) {
-    const { error: cleanupError } = await admin
-      .from("exam_attempts")
-      .delete()
-      .eq("id", attempt.id)
-      .eq("user_id", user.id);
-    if (cleanupError) {
-      writeDependencyFailure({
-        error: cleanupError,
-        operation: "cleanupExamAttempt",
-      });
-    }
-    return databaseError("saveAnswers", answersError);
-  }
-
   revalidatePath("/");
   revalidatePath("/estudiar");
   return {
-    id: attempt.id as number,
-    score: grading.score,
-    total: questionIds.length,
-    review: grading.review,
+    id: result.id,
+    score: result.score,
+    total: result.total,
+    review: result.review,
   };
 }

@@ -78,6 +78,7 @@ export function AdaptivePractice({
   const [feedback, setFeedback] = useState("");
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState("");
+  const [starting, setStarting] = useState(false);
   const questionRef = useRef<HTMLHeadingElement>(null);
   const completionRef = useRef<HTMLHeadingElement>(null);
   const accessibleId = useId();
@@ -107,10 +108,7 @@ export function AdaptivePractice({
   useEffect(() => {
     if (!shouldLoadAdaptive) return;
     let active = true;
-    startOrResumePracticeSessionAction({
-      ...(topicId === undefined ? {} : { topicId }),
-      targetSize: 5,
-    })
+    getPracticeSessionAction()
       .then((result) => {
         if (!active) return;
         if ("error" in result) {
@@ -120,8 +118,10 @@ export function AdaptivePractice({
           return;
         }
         setAdaptiveSession(result.session);
-        setQueue(result.session.items.map((_, index) => index));
-        setCursor(Math.max(0, result.session.currentPosition - 1));
+        if (result.session) {
+          setQueue(result.session.items.map((_, index) => index));
+          setCursor(Math.max(0, result.session.currentPosition - 1));
+        }
       })
       .catch(() => {
         if (!active) return;
@@ -145,6 +145,28 @@ export function AdaptivePractice({
         Preparando una ronda breve con tus preguntas disponibles…
       </p>
     );
+  }
+
+  async function startAdaptiveRound() {
+    setStarting(true);
+    setSaveError("");
+    try {
+      const result = await startOrResumePracticeSessionAction({
+        ...(topicId === undefined ? {} : { topicId }),
+        targetSize: 5,
+      });
+      if ("error" in result) {
+        setSaveError(result.error);
+        return;
+      }
+      setAdaptiveSession(result.session);
+      setQueue(result.session.items.map((_, index) => index));
+      setCursor(Math.max(0, result.session.currentPosition - 1));
+    } catch {
+      setSaveError("No pudimos preparar la ronda. Revisa tu conexión e intenta nuevamente.");
+    } finally {
+      setStarting(false);
+    }
   }
 
   async function startFreshAdaptiveRound() {
@@ -181,6 +203,33 @@ export function AdaptivePractice({
     setCounts({ correct: 0, partial: 0, incorrect: 0 });
     setFeedback("");
     setSaving(false);
+  }
+
+  if (shouldLoadAdaptive && !adaptiveSession) {
+    return (
+      <section className="rounded-3xl border border-brand/15 bg-surface p-6 sm:p-8">
+        <p className="text-sm font-semibold text-success">Ronda lista para preparar</p>
+        <h2 className="mt-2 text-2xl font-semibold">Empieza cuando estés lista</h2>
+        <p className="mt-3 max-w-2xl leading-7 text-muted">
+          Abrir esta pantalla no cambia tu avance. Al iniciar, prepararemos hasta
+          cinco preguntas según tus repasos pendientes; si aún no tienes historial,
+          comenzaremos con contenido nuevo.
+        </p>
+        {saveError ? (
+          <p className="mt-4 text-sm font-semibold text-danger" role="alert">
+            {saveError}
+          </p>
+        ) : null}
+        <button
+          className="mt-6 min-h-12 rounded-xl bg-brand px-6 font-semibold text-white disabled:cursor-not-allowed disabled:opacity-45"
+          disabled={starting}
+          onClick={startAdaptiveRound}
+          type="button"
+        >
+          {starting ? "Preparando ronda…" : "Iniciar ronda adaptativa"}
+        </button>
+      </section>
+    );
   }
 
   if (!displayCards.length) {
