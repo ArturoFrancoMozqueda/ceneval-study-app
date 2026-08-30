@@ -77,6 +77,8 @@ test("el E2E vigila red y emula reflow, touch y movimiento reducido", () => {
   assert.match(e2e, /allowed_aborts\["document-navigation"\]/);
   assert.match(e2e, /allowed_aborts\["next-prefetch"\]/);
   assert.match(e2e, /allowed_aborts\["next-server-action"\]/);
+  assert.match(e2e, /headers\.get\("rsc"\) == "1"/);
+  assert.match(e2e, /allowed_aborts\["next-rsc-navigation"\]/);
   assert.match(e2e, /response\.status >= 500/);
   assert.match(e2e, /"width": 320/);
   assert.match(e2e, /has_touch=configuration\["has_touch"\]/);

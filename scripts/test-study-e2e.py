@@ -91,6 +91,12 @@ def attach_error_gates(
             and bool(headers.get("next-action"))
             and bool(headers.get("next-router-state-tree"))
         )
+        is_next_rsc_navigation = (
+            request.resource_type == "fetch"
+            and request.method == "GET"
+            and headers.get("rsc") == "1"
+            and bool(headers.get("next-router-state-tree"))
+        )
         if failure_reason in {"net::ERR_ABORTED", "NS_BINDING_ABORTED"} and same_origin:
             if is_document_navigation:
                 allowed_aborts["document-navigation"] += 1
@@ -100,6 +106,9 @@ def attach_error_gates(
                 return
             if is_explicit_next_action:
                 allowed_aborts["next-server-action"] += 1
+                return
+            if is_next_rsc_navigation:
+                allowed_aborts["next-rsc-navigation"] += 1
                 return
         safe_reason = (
             failure_reason
@@ -382,6 +391,7 @@ def main() -> None:
         "document-navigation": 0,
         "next-prefetch": 0,
         "next-server-action": 0,
+        "next-rsc-navigation": 0,
     }
 
     with sync_playwright() as playwright:
@@ -612,7 +622,7 @@ def main() -> None:
 
             print(
                 "[OK] E2E local: login privado, health, biblioteca, estado vacío de historial, progreso, flashcards, examen, historial con intento, rutas inválidas, panel y emulación de reflow/touch/reduced-motion verificados; "
-                f"0 errores de consola/página/red; abortos permitidos document-navigation={allowed_aborts['document-navigation']}, next-prefetch={allowed_aborts['next-prefetch']}, next-server-action={allowed_aborts['next-server-action']}."
+                f"0 errores de consola/página/red; abortos permitidos document-navigation={allowed_aborts['document-navigation']}, next-prefetch={allowed_aborts['next-prefetch']}, next-server-action={allowed_aborts['next-server-action']}, next-rsc-navigation={allowed_aborts['next-rsc-navigation']}."
             )
         finally:
             context.close()
