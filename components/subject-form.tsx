@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { createSubjectAction } from "@/app/actions/academic";
 
 const MAX_NAME_LENGTH = 80;
@@ -13,7 +13,9 @@ export function SubjectForm() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [nameError, setNameError] = useState("");
+  const [formError, setFormError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const nameInputRef = useRef<HTMLInputElement>(null);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -21,27 +23,37 @@ export function SubjectForm() {
 
     if (!normalizedName) {
       setNameError("Escribe el nombre de la materia.");
+      nameInputRef.current?.focus();
       return;
     }
 
     setIsSubmitting(true);
     setNameError("");
+    setFormError("");
     const formData = new FormData(event.currentTarget);
-    const result = await createSubjectAction(formData);
+    try {
+      const result = await createSubjectAction(formData);
 
-    if (result.error) {
-      setNameError(result.error);
+      if (result.error) {
+        setFormError(result.error);
+        setIsSubmitting(false);
+        return;
+      }
+
+      router.push("/materias?creada=1");
+      router.refresh();
+    } catch {
+      setFormError(
+        "No pudimos guardar la materia. Revisa tu conexión e intenta nuevamente.",
+      );
       setIsSubmitting(false);
-      return;
     }
-
-    router.push("/materias?creada=1");
-    router.refresh();
   }
 
   return (
     <form
       className="mt-8 max-w-2xl rounded-2xl border border-border bg-surface p-5 shadow-[0_12px_35px_rgb(23_32_51_/_0.05)] sm:p-8"
+      aria-busy={isSubmitting}
       noValidate
       onSubmit={handleSubmit}
     >
@@ -60,7 +72,6 @@ export function SubjectForm() {
           }
           aria-invalid={Boolean(nameError)}
           autoComplete="off"
-          autoFocus
           className={`mt-3 min-h-12 w-full rounded-xl border bg-white px-4 text-base text-foreground transition placeholder:text-muted/65 ${
             nameError
               ? "border-danger focus:border-danger"
@@ -74,8 +85,10 @@ export function SubjectForm() {
             if (nameError) {
               setNameError("");
             }
+            if (formError) setFormError("");
           }}
           placeholder="Ej. Derecho constitucional"
+          ref={nameInputRef}
           type="text"
           value={name}
         />
@@ -111,7 +124,10 @@ export function SubjectForm() {
           id="subject-description"
           maxLength={MAX_DESCRIPTION_LENGTH}
           name="description"
-          onChange={(event) => setDescription(event.target.value)}
+          onChange={(event) => {
+            setDescription(event.target.value);
+            if (formError) setFormError("");
+          }}
           placeholder="Ej. Principios constitucionales, derechos humanos y amparo."
           value={description}
         />
@@ -138,6 +154,11 @@ export function SubjectForm() {
           {isSubmitting ? "Guardando…" : "Guardar materia"}
         </button>
       </div>
+      {formError ? (
+        <p className="mt-4 text-sm font-medium text-danger" role="alert">
+          {formError}
+        </p>
+      ) : null}
     </form>
   );
 }

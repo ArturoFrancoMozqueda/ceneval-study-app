@@ -6,6 +6,10 @@ const migration = readFileSync(
   "supabase/migrations/20260828190238_adaptive_learning_engine.sql",
   "utf8",
 );
+const atomicRatingMigration = readFileSync(
+  "supabase/migrations/20260904225405_rate_adaptive_attempt_atomic.sql",
+  "utf8",
+);
 const actions = readFileSync("app/actions/adaptive-practice.ts", "utf8");
 const types = readFileSync("lib/study/adaptive-practice.ts", "utf8");
 
@@ -72,4 +76,62 @@ test("la sesión puede iniciar una cola global o restringida a un tema", () => {
   assert.match(actions, /topicId: z\.number\(\)\.int\(\)\.positive\(\)\.optional\(\)/);
   assert.match(actions, /if \(parsed\.data\.topicId !== undefined\)/);
   assert.match(actions, /prioritizeDueRetrievalItems/);
+});
+
+test("la calificación adaptativa usa una única RPC transaccional", () => {
+  const rateAction = actions.slice(
+    actions.indexOf("export async function rateAdaptiveAttemptAction"),
+    actions.indexOf("export async function abandonPracticeSessionAction"),
+  );
+  assert.match(rateAction, /admin\.rpc\(\s*"rate_adaptive_attempt_v1"/);
+  assert.doesNotMatch(rateAction, /\.from\("retrieval_attempts"\)\s*\.update/);
+  assert.doesNotMatch(rateAction, /\.from\("retrieval_schedule_states"\)\.upsert/);
+  assert.doesNotMatch(rateAction, /enqueue_retrieval_retry_v1/);
+  assert.match(rateAction, /atomicRateResultSchema\.safeParse/);
+});
+
+test("el fallback transitorio se limita a RPC ausente y queda registrado", () => {
+  const rateAction = actions.slice(
+    actions.indexOf("export async function rateAdaptiveAttemptAction"),
+    actions.indexOf("export async function abandonPracticeSessionAction"),
+  );
+  assert.match(rateAction, /atomicError\.code !== "PGRST202"/);
+  assert.match(rateAction, /operation: "rateAdaptiveAttemptRpcUnavailable"/);
+  assert.match(rateAction, /return rateAdaptiveAttemptLegacy\(/);
+  assert.match(actions, /async function rateAdaptiveAttemptLegacy/);
+});
+
+test("la RPC fija propiedad y estado bajo bloqueo antes de mutar", () => {
+  assert.match(atomicRatingMigration, /^begin;/);
+  assert.match(atomicRatingMigration, /create function public\.rate_adaptive_attempt_v1/);
+  assert.match(atomicRatingMigration, /security invoker\s+set search_path = ''/);
+  assert.match(
+    atomicRatingMigration,
+    /attempt\.id = p_attempt_id\s+and attempt\.user_id = p_user_id\s+for update/,
+  );
+  assert.match(atomicRatingMigration, /session\.status = 'active'/);
+  assert.match(
+    atomicRatingMigration,
+    /session\.current_position = locked_attempt\.session_position/,
+  );
+  assert.match(atomicRatingMigration, /session_item\.status = 'revealed'/);
+  assert.match(atomicRatingMigration, /for update of session, session_item/);
+  assert.match(atomicRatingMigration, /update public\.retrieval_attempts/);
+  assert.match(atomicRatingMigration, /insert into public\.retrieval_schedule_states/);
+  assert.match(atomicRatingMigration, /update public\.practice_session_items/);
+  assert.match(atomicRatingMigration, /perform public\.enqueue_retrieval_retry_v1/);
+  assert.match(atomicRatingMigration, /update public\.practice_sessions/);
+  assert.match(atomicRatingMigration, /commit;\s*$/);
+});
+
+test("la RPC adaptativa solo concede EXECUTE al service role", () => {
+  const signature = String.raw`public\.rate_adaptive_attempt_v1\([\s\S]*?\)`;
+  assert.match(
+    atomicRatingMigration,
+    new RegExp(`revoke all on function ${signature} from public, anon, authenticated;`),
+  );
+  assert.match(
+    atomicRatingMigration,
+    new RegExp(`grant execute on function ${signature} to service_role;`),
+  );
 });

@@ -3,10 +3,10 @@
 import Link from "next/link";
 
 export default function ErrorPage({
-  unstable_retry,
+  retry,
 }: {
   error: Error & { digest?: string };
-  unstable_retry: () => void;
+  retry: () => void;
 }) {
   return (
     <section
@@ -30,7 +30,7 @@ export default function ErrorPage({
       <div className="mt-7 flex flex-col gap-3 sm:flex-row">
         <button
           className="inline-flex min-h-12 items-center justify-center rounded-xl bg-brand px-5 font-semibold text-white hover:bg-brand-deep focus-visible:outline-brand"
-          onClick={() => unstable_retry()}
+          onClick={() => retry()}
           type="button"
         >
           Intentar nuevamente

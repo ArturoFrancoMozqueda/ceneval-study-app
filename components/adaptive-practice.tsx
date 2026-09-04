@@ -554,6 +554,7 @@ export function AdaptivePractice({
                           {evidence.href ? (
                             <a className="font-semibold text-brand underline-offset-4 hover:underline" href={evidence.href} rel="noreferrer" target="_blank">
                               {evidence.label}
+                              <span className="sr-only"> (abre en una pestaña nueva)</span>
                             </a>
                           ) : evidence.label}
                           {evidence.verifiedOn ? ` · Verificada ${evidence.verifiedOn}` : ""}

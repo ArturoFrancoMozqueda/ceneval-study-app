@@ -25,11 +25,16 @@ export async function SubjectDetail({ subjectId }: { subjectId: number }) {
 
   return (
     <div>
-      <nav className="text-sm text-muted">
-        <Link className="hover:text-brand" href="/materias">
-          Biblioteca
-        </Link>{" "}
-        / {subject.name}
+      <nav aria-label="Migas de navegación" className="text-sm text-muted">
+        <ol className="flex flex-wrap items-center gap-2">
+          <li>
+            <Link className="hover:text-brand" href="/materias">
+              Biblioteca
+            </Link>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page">{subject.name}</li>
+        </ol>
       </nav>
       <header className="mt-7 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
         <div>

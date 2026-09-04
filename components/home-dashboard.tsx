@@ -234,7 +234,10 @@ export async function HomeDashboard() {
                   {subject.description}
                 </p>
                 <p className="mt-4 font-mono text-xs text-muted">
-                  {subject.classCount} clases · {subject.topicCount} temas
+                  {subject.classCount}{" "}
+                  {subject.classCount === 1 ? "clase" : "clases"} ·{" "}
+                  {subject.topicCount}{" "}
+                  {subject.topicCount === 1 ? "tema" : "temas"}
                 </p>
               </Link>
             ))}

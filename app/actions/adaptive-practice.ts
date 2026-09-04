@@ -26,6 +26,11 @@ import {
 } from "@/lib/study/exam-target";
 
 type PracticeActionResult<T> = { error: string } | T;
+type RateAdaptiveAttemptResult = {
+  nextReviewAt: string;
+  stage: number;
+  instruction: "retry_in_session" | "review_tomorrow" | "advance";
+};
 
 const startSchema = z
   .object({
@@ -45,6 +50,16 @@ const rateSchema = z
     outcome: retrievalOutcomeSchema,
   })
   .strict();
+const atomicRateResultSchema = z.discriminatedUnion("status", [
+  z.object({
+    status: z.literal("success"),
+    nextReviewAt: z.string().datetime({ offset: true }),
+    stage: z.number().int().min(0).max(5),
+    instruction: z.enum(["retry_in_session", "review_tomorrow", "advance"]),
+  }),
+  z.object({ status: z.literal("invalid") }),
+  z.object({ status: z.literal("unavailable") }),
+]);
 const abandonSchema = z.object({ sessionId: z.uuid() }).strict();
 
 function unavailable(operation?: string, error?: unknown) {
@@ -62,6 +77,148 @@ function toScheduleState(row: Record<string, unknown>): RetrievalScheduleState {
     lastReviewedAt: row.last_reviewed_at ? String(row.last_reviewed_at) : null,
     nextReviewAt: String(row.next_review_at),
     schedulerVersion: "spacing-v1",
+  };
+}
+
+async function rateAdaptiveAttemptLegacy({
+  userId,
+  attempt,
+  schedule,
+  reviewedAt,
+}: {
+  userId: string;
+  attempt: {
+    id: string;
+    session_id: string;
+    session_position: number;
+    retrieval_item_id: number;
+  };
+  schedule: RetrievalScheduleState & {
+    instruction: RateAdaptiveAttemptResult["instruction"];
+  };
+  reviewedAt: Date;
+}): Promise<PracticeActionResult<RateAdaptiveAttemptResult>> {
+  const admin = getSupabaseAdminClient();
+  const { data: session, error: sessionError } = await admin
+    .from("practice_sessions")
+    .select("id,current_position")
+    .eq("id", attempt.session_id)
+    .eq("user_id", userId)
+    .eq("status", "active")
+    .eq("current_position", attempt.session_position)
+    .maybeSingle();
+  if (sessionError || !session) {
+    return unavailable("loadLegacyAdaptiveSession", sessionError);
+  }
+
+  const { data: updatedAttempt, error: attemptUpdateError } = await admin
+    .from("retrieval_attempts")
+    .update({ outcome: schedule.lastOutcome, rated_at: schedule.lastReviewedAt })
+    .eq("id", attempt.id)
+    .eq("user_id", userId)
+    .is("outcome", null)
+    .select("id")
+    .maybeSingle();
+  if (attemptUpdateError) return unavailable("rateLegacyRetrievalAttempt", attemptUpdateError);
+  if (!updatedAttempt) {
+    const { data: currentState, error: currentStateError } = await admin
+      .from("retrieval_schedule_states")
+      .select("stage,next_review_at,last_outcome")
+      .eq("user_id", userId)
+      .eq("retrieval_item_id", attempt.retrieval_item_id)
+      .maybeSingle();
+    if (currentStateError || !currentState) {
+      return unavailable("resumeLegacyRatedRetrievalAttempt", currentStateError);
+    }
+    return {
+      nextReviewAt: String(currentState.next_review_at),
+      stage: Number(currentState.stage),
+      instruction:
+        currentState.last_outcome === "incorrect"
+          ? "retry_in_session"
+          : currentState.last_outcome === "partial"
+            ? "review_tomorrow"
+            : "advance",
+    };
+  }
+
+  const { error: scheduleError } = await admin.from("retrieval_schedule_states").upsert(
+    {
+      user_id: userId,
+      retrieval_item_id: attempt.retrieval_item_id,
+      stage: schedule.stage,
+      success_streak: schedule.successStreak,
+      lapse_count: schedule.lapseCount,
+      last_confidence: schedule.lastConfidence,
+      last_outcome: schedule.lastOutcome,
+      last_reviewed_at: schedule.lastReviewedAt,
+      next_review_at: schedule.nextReviewAt,
+      scheduler_version: schedule.schedulerVersion,
+    },
+    { onConflict: "user_id,retrieval_item_id" },
+  );
+  if (scheduleError) {
+    await admin
+      .from("retrieval_attempts")
+      .update({ outcome: null, rated_at: null })
+      .eq("id", attempt.id)
+      .eq("user_id", userId);
+    return unavailable("saveLegacyRetrievalSchedule", scheduleError);
+  }
+
+  const { data: ratedItem, error: ratedItemError } = await admin
+    .from("practice_session_items")
+    .update({ status: "rated" })
+    .eq("session_id", session.id)
+    .eq("position", attempt.session_position)
+    .eq("retrieval_item_id", attempt.retrieval_item_id)
+    .eq("status", "revealed")
+    .select("position")
+    .maybeSingle();
+  if (ratedItemError || !ratedItem) {
+    return unavailable("markLegacyRetrievalRating", ratedItemError);
+  }
+  if (schedule.instruction === "retry_in_session") {
+    const { error: retryError } = await admin.rpc("enqueue_retrieval_retry_v1", {
+      p_session_id: session.id,
+      p_user_id: userId,
+      p_retrieval_item_id: attempt.retrieval_item_id,
+      p_after_position: attempt.session_position,
+    });
+    if (retryError) return unavailable("enqueueLegacyRetrievalRetry", retryError);
+  }
+  const { data: queued, error: queueError } = await admin
+    .from("practice_session_items")
+    .select("position")
+    .eq("session_id", session.id)
+    .gt("position", attempt.session_position)
+    .eq("status", "queued")
+    .order("position");
+  if (queueError) return unavailable("loadLegacyAdaptiveQueue", queueError);
+  const nextPosition = queued?.[0]?.position;
+  const sessionUpdate = nextPosition
+    ? { current_position: nextPosition, last_activity_at: reviewedAt.toISOString() }
+    : {
+        status: "completed",
+        completed_at: reviewedAt.toISOString(),
+        last_activity_at: reviewedAt.toISOString(),
+      };
+  const { data: advancedSession, error: advanceError } = await admin
+    .from("practice_sessions")
+    .update(sessionUpdate)
+    .eq("id", session.id)
+    .eq("user_id", userId)
+    .eq("status", "active")
+    .eq("current_position", session.current_position)
+    .select("id")
+    .maybeSingle();
+  if (advanceError || !advancedSession) {
+    return unavailable("advanceLegacyAdaptiveSession", advanceError);
+  }
+  return {
+    nextReviewAt: schedule.nextReviewAt,
+    stage: schedule.stage,
+    instruction: schedule.instruction,
   };
 }
 
@@ -292,24 +449,18 @@ export async function revealAdaptiveItemAction(
 
 export async function rateAdaptiveAttemptAction(
   rawInput: unknown,
-): Promise<
-  PracticeActionResult<{
-    nextReviewAt: string;
-    stage: number;
-    instruction: "retry_in_session" | "review_tomorrow" | "advance";
-  }>
-> {
+): Promise<PracticeActionResult<RateAdaptiveAttemptResult>> {
   const user = await requireUser();
   const parsed = rateSchema.safeParse(rawInput);
   if (!parsed.success) return unavailable();
   const admin = getSupabaseAdminClient();
   const { data: attempt, error } = await admin
     .from("retrieval_attempts")
-    .select("id,session_id,retrieval_item_id,confidence,revealed_at,outcome")
+    .select("id,session_id,session_position,retrieval_item_id,confidence,revealed_at,outcome")
     .eq("id", parsed.data.attemptId)
     .eq("user_id", user.id)
     .maybeSingle();
-  if (error || !attempt || attempt.outcome) return unavailable();
+  if (error || !attempt) return unavailable();
   const { data: stateRow, error: stateError } = await admin
     .from("retrieval_schedule_states")
     .select("stage,success_streak,lapse_count,last_confidence,last_outcome,last_reviewed_at,next_review_at")
@@ -340,115 +491,52 @@ export async function rateAdaptiveAttemptAction(
       : null,
     reviewedAt,
   );
-  const { data: updatedAttempt, error: attemptUpdateError } = await admin
-    .from("retrieval_attempts")
-    .update({
-      outcome: adjustedSchedule.lastOutcome,
-      rated_at: adjustedSchedule.lastReviewedAt,
-    })
-    .eq("id", attempt.id)
-    .eq("user_id", user.id)
-    .is("outcome", null)
-    .select("id")
-    .maybeSingle();
-  if (attemptUpdateError) return unavailable("rateRetrievalAttempt", attemptUpdateError);
-  if (!updatedAttempt) {
-    const { data: currentState, error: currentStateError } = await admin
-      .from("retrieval_schedule_states")
-      .select("stage,next_review_at,last_outcome")
-      .eq("user_id", user.id)
-      .eq("retrieval_item_id", attempt.retrieval_item_id)
-      .maybeSingle();
-    if (currentStateError || !currentState) {
-      return unavailable("resumeRatedRetrievalAttempt", currentStateError);
-    }
-    return {
-      nextReviewAt: String(currentState.next_review_at),
-      stage: Number(currentState.stage),
-      instruction:
-        currentState.last_outcome === "incorrect"
-          ? "retry_in_session"
-          : currentState.last_outcome === "partial"
-            ? "review_tomorrow"
-            : "advance",
-    };
-  }
-  const { error: scheduleError } = await admin.from("retrieval_schedule_states").upsert(
+  const { data: atomicResult, error: atomicError } = await admin.rpc(
+    "rate_adaptive_attempt_v1",
     {
-      user_id: user.id,
-      retrieval_item_id: attempt.retrieval_item_id,
-      stage: adjustedSchedule.stage,
-      success_streak: adjustedSchedule.successStreak,
-      lapse_count: adjustedSchedule.lapseCount,
-      last_confidence: adjustedSchedule.lastConfidence,
-      last_outcome: adjustedSchedule.lastOutcome,
-      last_reviewed_at: adjustedSchedule.lastReviewedAt,
-      next_review_at: adjustedSchedule.nextReviewAt,
-      scheduler_version: adjustedSchedule.schedulerVersion,
+      p_attempt_id: attempt.id,
+      p_user_id: user.id,
+      p_outcome: adjustedSchedule.lastOutcome,
+      p_stage: adjustedSchedule.stage,
+      p_success_streak: adjustedSchedule.successStreak,
+      p_lapse_count: adjustedSchedule.lapseCount,
+      p_last_confidence: adjustedSchedule.lastConfidence,
+      p_reviewed_at: adjustedSchedule.lastReviewedAt,
+      p_next_review_at: adjustedSchedule.nextReviewAt,
+      p_scheduler_version: adjustedSchedule.schedulerVersion,
     },
-    { onConflict: "user_id,retrieval_item_id" },
   );
-  if (scheduleError) {
-    await admin
-      .from("retrieval_attempts")
-      .update({ outcome: null, rated_at: null })
-      .eq("id", attempt.id)
-      .eq("user_id", user.id);
-    return unavailable("saveRetrievalSchedule", scheduleError);
-  }
-
-  const { data: session } = await admin
-    .from("practice_sessions")
-    .select("id,current_position")
-    .eq("id", attempt.session_id)
-    .eq("user_id", user.id)
-    .eq("status", "active")
-    .maybeSingle();
-  if (session) {
-    await admin
-      .from("practice_session_items")
-      .update({ status: "rated" })
-      .eq("session_id", session.id)
-      .eq("position", session.current_position);
-    if (adjustedSchedule.instruction === "retry_in_session") {
-      const { error: retryError } = await admin.rpc("enqueue_retrieval_retry_v1", {
-        p_session_id: session.id,
-        p_user_id: user.id,
-        p_retrieval_item_id: attempt.retrieval_item_id,
-        p_after_position: session.current_position,
-      });
-      if (retryError) return unavailable("enqueueRetrievalRetry", retryError);
+  if (atomicError) {
+    if (atomicError.code !== "PGRST202") {
+      return unavailable("rateAdaptiveAttemptAtomic", atomicError);
     }
-    const { data: queued } = await admin
-      .from("practice_session_items")
-      .select("position")
-      .eq("session_id", session.id)
-      .gt("position", session.current_position)
-      .order("position");
-    const nextPosition = queued?.[0]?.position;
-    if (nextPosition) {
-      await admin
-        .from("practice_sessions")
-        .update({ current_position: nextPosition, last_activity_at: reviewedAt.toISOString() })
-        .eq("id", session.id)
-        .eq("user_id", user.id);
-    } else {
-      await admin
-        .from("practice_sessions")
-        .update({
-          status: "completed",
-          completed_at: reviewedAt.toISOString(),
-          last_activity_at: reviewedAt.toISOString(),
-        })
-        .eq("id", session.id)
-        .eq("user_id", user.id);
-    }
+    writeDependencyFailure({
+      error: atomicError,
+      operation: "rateAdaptiveAttemptRpcUnavailable",
+    });
+    return rateAdaptiveAttemptLegacy({
+      userId: user.id,
+      attempt: {
+        id: String(attempt.id),
+        session_id: String(attempt.session_id),
+        session_position: Number(attempt.session_position),
+        retrieval_item_id: Number(attempt.retrieval_item_id),
+      },
+      schedule: adjustedSchedule,
+      reviewedAt,
+    });
   }
-
+  const result = atomicRateResultSchema.safeParse(atomicResult);
+  if (!result.success || result.data.status !== "success") {
+    return unavailable(
+      "rateAdaptiveAttemptAtomic",
+      result.success ? undefined : new Error("Respuesta inesperada de la RPC adaptativa."),
+    );
+  }
   return {
-    nextReviewAt: adjustedSchedule.nextReviewAt,
-    stage: adjustedSchedule.stage,
-    instruction: adjustedSchedule.instruction,
+    nextReviewAt: result.data.nextReviewAt,
+    stage: result.data.stage,
+    instruction: result.data.instruction,
   };
 }
 

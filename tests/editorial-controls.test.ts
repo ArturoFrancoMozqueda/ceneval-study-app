@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import {
+  isIsoCalendarDate,
   isPositiveInteger,
   isTopicApprovalStatus,
   topicMutationErrorMessage,
@@ -25,6 +26,14 @@ test("valida identificadores y estados editoriales en una frontera estricta", ()
   assert.equal(isTopicApprovalStatus("approved"), true);
   assert.equal(isTopicApprovalStatus("rejected"), true);
   assert.equal(isTopicApprovalStatus("pending"), false);
+});
+
+test("rechaza fechas editoriales inexistentes aunque tengan formato ISO", () => {
+  assert.equal(isIsoCalendarDate("2026-02-28"), true);
+  assert.equal(isIsoCalendarDate("2024-02-29"), true);
+  assert.equal(isIsoCalendarDate("2026-02-29"), false);
+  assert.equal(isIsoCalendarDate("2026-04-31"), false);
+  assert.equal(isIsoCalendarDate("31/12/2026"), false);
 });
 
 test("traduce la colisión unique sin filtrar detalles internos", () => {

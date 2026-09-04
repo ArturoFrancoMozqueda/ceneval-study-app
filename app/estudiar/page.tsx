@@ -115,7 +115,7 @@ export default async function StudyPage() {
         </summary>
         <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
           La recomendación no bloquea la biblioteca. Abre cualquier tema para
-          consultar su lección, flashcards o examen.
+          consultar su lección, practicar o hacer el simulacro.
         </p>
         {(topics ?? []).length ? (
           <div className="mt-5 grid gap-4 md:grid-cols-2">

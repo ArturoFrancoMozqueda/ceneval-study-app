@@ -36,7 +36,19 @@ test("el recorrido administrativo es read-only y conserva el gate de errores", (
   assert.ok(adminFlow >= 0 && errorGate > adminFlow);
 });
 
-test("el recorrido guarda flashcards, examen e historial y valida rutas inválidas", () => {
+test("el recorrido cubre biblioteca, búsqueda, práctica, examen e historial", () => {
+  assert.match(e2e, /name="Biblioteca CENEVAL"/);
+  assert.match(e2e, /name="Abrir Materia sintética"/);
+  assert.match(e2e, /subject_link\.click\(\)/);
+  assert.match(e2e, /expect\(subject_link\)\.to_contain_text\("1 clase · 1 tema"\)/);
+  assert.match(e2e, /class_link\.click\(\)/);
+  assert.match(e2e, /topic_link\.click\(\)/);
+  assert.match(e2e, /name="Buscar por tema o concepto"/);
+  assert.match(e2e, /search\.fill\("consulta-sintetica-inexistente"\)/);
+  assert.match(e2e, /No encontramos temas publicados/);
+  assert.match(e2e, /search\.fill\("Tema sintético"\)/);
+  assert.match(e2e, /search_result\.click\(\)/);
+  assert.match(e2e, /page\.go_back\(wait_until="networkidle"\)/);
   assert.match(e2e, /get_by_role\("link", name="Mi ruta"\)/);
   assert.doesNotMatch(e2e, /get_by_role\("link", name="Sesiones"\)/);
   assert.match(e2e, /get_by_role\("heading", name="Mi ruta", exact=True\)/);
@@ -55,7 +67,13 @@ test("el recorrido guarda flashcards, examen e historial y valida rutas inválid
   assert.match(e2e, /name="Entregar examen"/);
   assert.match(e2e, /get_by_role\([\s\S]*"group"[\s\S]*re\.compile\(re\.escape\(question_text\)\)/);
   assert.match(e2e, /name="Anterior"[\s\S]*fieldset legend[\s\S]*to_be_focused/);
+  assert.match(e2e, /get_by_role\("radio"\)\.first\)\.to_be_checked\(\)/);
   assert.match(e2e, /result_heading[\s\S]*to_be_focused\(\)/);
+  assert.match(e2e, /get_by_text\("0\/10", exact=True\)/);
+  assert.match(e2e, /get_by_text\("Necesita repaso", exact=True\)[\s\S]*to_have_count\(10\)/);
+  assert.match(e2e, /name="Repetir examen"[\s\S]*\.click\(\)/);
+  assert.match(e2e, /name="Abrir intento"[\s\S]*open_attempt\.click\(\)/);
+  assert.match(e2e, /0% de respuestas correctas/);
   assert.match(e2e, /name="Historial de exámenes"/);
   assert.match(e2e, /name="Abrir intento"/);
   assert.match(e2e, /"\/temas\/999999999"/);

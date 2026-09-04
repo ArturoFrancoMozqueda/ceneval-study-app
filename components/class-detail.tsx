@@ -80,18 +80,29 @@ export async function ClassDetail({ classId }: { classId: number }) {
         ) : null}
       </header>
 
-      <nav aria-label="Recorrido de sesiones" className="mt-7 grid gap-3 sm:grid-cols-2">
-        {neighbors.previous ? (
-          <Link className="rounded-xl border border-border bg-white p-4 text-sm font-semibold text-brand" href={`/clases/${neighbors.previous.id}`}>
-            ← Anterior · {neighbors.previous.curriculum_code}
-          </Link>
-        ) : <span />}
-        {neighbors.next ? (
-          <Link className="rounded-xl border border-border bg-white p-4 text-right text-sm font-semibold text-brand" href={`/clases/${neighbors.next.id}`}>
-            {neighbors.next.curriculum_code} · Siguiente →
-          </Link>
-        ) : null}
-      </nav>
+      {neighbors.previous || neighbors.next ? (
+        <nav
+          aria-label="Recorrido de sesiones"
+          className="mt-7 grid gap-3 sm:grid-cols-2"
+        >
+          {neighbors.previous ? (
+            <Link
+              className="rounded-xl border border-border bg-white p-4 text-sm font-semibold text-brand"
+              href={`/clases/${neighbors.previous.id}`}
+            >
+              ← Anterior · {neighbors.previous.curriculum_code}
+            </Link>
+          ) : null}
+          {neighbors.next ? (
+            <Link
+              className="rounded-xl border border-border bg-white p-4 text-right text-sm font-semibold text-brand sm:col-start-2"
+              href={`/clases/${neighbors.next.id}`}
+            >
+              {neighbors.next.curriculum_code} · Siguiente →
+            </Link>
+          ) : null}
+        </nav>
+      ) : null}
 
       <section className="mt-9">
         <div className="flex items-end justify-between">

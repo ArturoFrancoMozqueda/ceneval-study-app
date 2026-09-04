@@ -168,8 +168,8 @@ export function TopicsReview({
             Revisión de temas
           </h1>
           <p className="mt-3 max-w-2xl leading-7 text-muted">
-            Aprueba las propuestas útiles o agrega un tema manualmente. Las
-            propuestas mostradas son demostrativas hasta integrar IA.
+            Revisa los temas importados con el paquete editorial, aprueba los
+            que estén listos o agrega uno manualmente para completar la clase.
           </p>
         </div>
         <button
@@ -286,7 +286,8 @@ export function TopicsReview({
                       </span>
                     </div>
                     <p className="mt-2 text-sm leading-6 text-muted">
-                      {topic.description || "Sin descripción."}
+                      {topic.description ||
+                        "La descripción editorial de este tema está pendiente."}
                     </p>
                   </div>
                   <div className="flex flex-wrap items-center gap-2">
@@ -337,8 +338,8 @@ export function TopicsReview({
           <div className="rounded-2xl border border-dashed border-border bg-surface p-9 text-center">
             <h2 className="text-xl font-semibold">Agrega el primer tema</h2>
             <p className="mx-auto mt-2 max-w-md leading-7 text-muted">
-              La detección automática llegará con IA. Por ahora puedes organizar
-              la clase manualmente.
+              Importa el paquete editorial de la clase o crea un tema manual
+              para comenzar la revisión antes de publicar.
             </p>
             <button
               className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-xl bg-brand px-5 text-sm font-semibold text-white"

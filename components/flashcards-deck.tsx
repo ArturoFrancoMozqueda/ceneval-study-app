@@ -194,7 +194,9 @@ export function FlashcardsDeck({
             {revealed ? card.answer : card.question}
           </ProtectedText>
           {!revealed ? (
-            <span className="mt-6 text-sm text-brand">Toca para revelar</span>
+            <span className="mt-6 text-sm text-brand">
+              Selecciona para revelar
+            </span>
           ) : null}
         </button>
       </ContentShield>

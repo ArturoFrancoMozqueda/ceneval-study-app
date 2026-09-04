@@ -258,6 +258,7 @@ export function LessonView({
                   <span className="font-semibold text-brand">
                     {reference.title}
                   </span>
+                  <span className="sr-only"> (abre en una pestaña nueva)</span>
                   <span className="mt-1 block text-sm text-muted">
                     {reference.institution} · {reference.jurisdiction}
                     {reference.citation ? ` · ${reference.citation}` : ""}

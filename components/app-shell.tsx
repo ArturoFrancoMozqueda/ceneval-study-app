@@ -47,11 +47,7 @@ function isActivePath(pathname: string, href: string) {
 
 function Brand() {
   return (
-    <Link
-      aria-label="Sube Legal, ir al inicio"
-      className="group flex items-center gap-3 rounded-xl"
-      href="/"
-    >
+    <Link className="group flex items-center gap-3 rounded-xl" href="/">
       <span className="grid size-10 place-items-center rounded-xl bg-brand text-sm font-bold tracking-tight text-white shadow-sm transition-transform group-hover:-rotate-2">
         SL
       </span>
@@ -61,6 +57,7 @@ function Brand() {
         </span>
         <span className="block text-xs text-muted">Biblioteca CENEVAL Derecho</span>
       </span>
+      <span className="sr-only">, ir al inicio</span>
     </Link>
   );
 }

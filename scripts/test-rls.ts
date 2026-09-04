@@ -100,14 +100,28 @@ async function expectRpcDenied(
   name:
     | "import_class_package_v12"
     | "export_class_package_v12"
-    | "submit_exam_v1",
+    | "submit_exam_v1"
+    | "rate_adaptive_attempt_v1",
 ) {
   const args =
     name === "import_class_package_v12"
       ? { p_package: { packageVersion: "1.2" } }
       : name === "submit_exam_v1"
         ? { p_exam_id: 1, p_answers: {} }
-      : { p_class_id: classId };
+        : name === "rate_adaptive_attempt_v1"
+          ? {
+              p_attempt_id: "00000000-0000-0000-0000-000000000001",
+              p_user_id: "00000000-0000-0000-0000-000000000001",
+              p_outcome: "correct",
+              p_stage: 1,
+              p_success_streak: 1,
+              p_lapse_count: 0,
+              p_last_confidence: "sure",
+              p_reviewed_at: "2026-01-01T00:00:00.000Z",
+              p_next_review_at: "2026-01-02T00:00:00.000Z",
+              p_scheduler_version: "spacing-v1",
+            }
+        : { p_class_id: classId };
   const { error } = await client.rpc(name, args);
   check(`${name} denegada`, error?.code === "42501");
 }
@@ -375,6 +389,237 @@ async function testAtomicExamSubmission(
   return answers;
 }
 
+function adaptiveRatingArgs({
+  attemptId,
+  userId,
+  outcome = "correct",
+  confidence = "sure",
+}: {
+  attemptId: string;
+  userId: string;
+  outcome?: "incorrect" | "partial" | "correct";
+  confidence?: "sure" | "unsure" | "no_recall";
+}) {
+  const reviewedAt = new Date();
+  return {
+    p_attempt_id: attemptId,
+    p_user_id: userId,
+    p_outcome: outcome,
+    p_stage: outcome === "correct" ? 1 : 0,
+    p_success_streak: outcome === "correct" ? 1 : 0,
+    p_lapse_count: outcome === "incorrect" ? 1 : 0,
+    p_last_confidence: confidence,
+    p_reviewed_at: reviewedAt.toISOString(),
+    p_next_review_at: new Date(reviewedAt.getTime() + 86_400_000).toISOString(),
+    p_scheduler_version: "spacing-v1",
+  };
+}
+
+async function createAdaptiveAttempt({
+  userId,
+  retrievalItemIds,
+  queueSize,
+}: {
+  userId: string;
+  retrievalItemIds: number[];
+  queueSize: number;
+}) {
+  const sessionResult = await service
+    .from("practice_sessions")
+    .insert({ user_id: userId, target_size: 3, current_position: 1 })
+    .select("id")
+    .single();
+  requireNoError(sessionResult.error, "No se creó la sesión adaptativa atómica");
+  const sessionId = String(sessionResult.data!.id);
+  const queue = Array.from({ length: queueSize }, (_, index) => ({
+    session_id: sessionId,
+    retrieval_item_id: retrievalItemIds[index % retrievalItemIds.length]!,
+    position: index + 1,
+    status: index === 0 ? "revealed" : "queued",
+  }));
+  const queueResult = await service.from("practice_session_items").insert(queue);
+  requireNoError(queueResult.error, "No se creó la cola adaptativa atómica");
+  const attemptResult = await service
+    .from("retrieval_attempts")
+    .insert({
+      user_id: userId,
+      session_id: sessionId,
+      session_position: 1,
+      retrieval_item_id: retrievalItemIds[0]!,
+      confidence: "sure",
+    })
+    .select("id")
+    .single();
+  requireNoError(attemptResult.error, "No se creó el intento adaptativo atómico");
+  return { attemptId: String(attemptResult.data!.id), sessionId };
+}
+
+async function testAtomicAdaptiveRating(
+  owner: { client: SupabaseClient; id: string },
+  other: { client: SupabaseClient; id: string },
+) {
+  checkpoint("calificación adaptativa atómica");
+  const retrievalItems = await service
+    .from("retrieval_items")
+    .select("id")
+    .eq("topic_id", topicId)
+    .order("id")
+    .limit(5);
+  requireNoError(retrievalItems.error, "No se leyeron reactivos adaptativos sintéticos");
+  const retrievalItemIds = (retrievalItems.data ?? []).map((row) => Number(row.id));
+  check("fixture adaptativo completo", retrievalItemIds.length === 5);
+
+  const successful = await createAdaptiveAttempt({
+    userId: owner.id,
+    retrievalItemIds,
+    queueSize: 3,
+  });
+  const wrongOwner = await service.rpc(
+    "rate_adaptive_attempt_v1",
+    adaptiveRatingArgs({ attemptId: successful.attemptId, userId: other.id }),
+  );
+  requireNoError(wrongOwner.error, "La RPC no manejó una propietaria ajena");
+  check(
+    "RPC oculta intento ajeno",
+    (wrongOwner.data as Record<string, unknown>).status === "unavailable",
+  );
+  const untouched = await service
+    .from("retrieval_attempts")
+    .select("outcome,rated_at")
+    .eq("id", successful.attemptId)
+    .single();
+  requireNoError(untouched.error, "No se leyó el intento tras ownership inválido");
+  check("ownership inválido no muta", untouched.data!.outcome === null && untouched.data!.rated_at === null);
+
+  const wrongConfidence = await service.rpc(
+    "rate_adaptive_attempt_v1",
+    adaptiveRatingArgs({
+      attemptId: successful.attemptId,
+      userId: owner.id,
+      confidence: "unsure",
+    }),
+  );
+  requireNoError(wrongConfidence.error, "La RPC no manejó confianza inconsistente");
+  check(
+    "confianza inconsistente se rechaza",
+    (wrongConfidence.data as Record<string, unknown>).status === "invalid",
+  );
+
+  const rated = await service.rpc(
+    "rate_adaptive_attempt_v1",
+    adaptiveRatingArgs({ attemptId: successful.attemptId, userId: owner.id }),
+  );
+  requireNoError(rated.error, "No se calificó el intento adaptativo por RPC");
+  const ratedResult = rated.data as Record<string, unknown>;
+  check("RPC adaptativa devuelve éxito", ratedResult.status === "success");
+  check("RPC adaptativa devuelve etapa", ratedResult.stage === 1);
+  const [persistedAttempt, persistedState, persistedItem, advancedSession] =
+    await Promise.all([
+      service
+        .from("retrieval_attempts")
+        .select("outcome,rated_at")
+        .eq("id", successful.attemptId)
+        .single(),
+      service
+        .from("retrieval_schedule_states")
+        .select("stage,last_outcome")
+        .eq("user_id", owner.id)
+        .eq("retrieval_item_id", retrievalItemIds[0]!)
+        .single(),
+      service
+        .from("practice_session_items")
+        .select("status")
+        .eq("session_id", successful.sessionId)
+        .eq("position", 1)
+        .single(),
+      service
+        .from("practice_sessions")
+        .select("status,current_position")
+        .eq("id", successful.sessionId)
+        .single(),
+    ]);
+  requireNoError(persistedAttempt.error, "No se leyó el intento adaptativo persistido");
+  requireNoError(persistedState.error, "No se leyó el calendario adaptativo persistido");
+  requireNoError(persistedItem.error, "No se leyó el reactivo adaptativo cerrado");
+  requireNoError(advancedSession.error, "No se leyó la sesión adaptativa avanzada");
+  check("intento adaptativo persistido", persistedAttempt.data!.outcome === "correct" && Boolean(persistedAttempt.data!.rated_at));
+  check("calendario adaptativo persistido", persistedState.data!.stage === 1 && persistedState.data!.last_outcome === "correct");
+  check("reactivo adaptativo cerrado", persistedItem.data!.status === "rated");
+  check("sesión adaptativa avanzada", advancedSession.data!.status === "active" && advancedSession.data!.current_position === 2);
+
+  const duplicate = await service.rpc(
+    "rate_adaptive_attempt_v1",
+    adaptiveRatingArgs({
+      attemptId: successful.attemptId,
+      userId: owner.id,
+      outcome: "incorrect",
+    }),
+  );
+  requireNoError(duplicate.error, "La RPC adaptativa no fue idempotente");
+  const duplicateResult = duplicate.data as Record<string, unknown>;
+  check("reintento concurrente devuelve resultado persistido", duplicateResult.status === "success" && duplicateResult.instruction === "advance");
+  const unchangedQueue = await service
+    .from("practice_session_items")
+    .select("position")
+    .eq("session_id", successful.sessionId);
+  requireNoError(unchangedQueue.error, "No se verificó la cola idempotente");
+  check("reintento idempotente no duplica cola", unchangedQueue.data!.length === 3);
+
+  const rollback = await createAdaptiveAttempt({
+    userId: other.id,
+    retrievalItemIds,
+    queueSize: 32,
+  });
+  const forcedFailure = await service.rpc(
+    "rate_adaptive_attempt_v1",
+    adaptiveRatingArgs({
+      attemptId: rollback.attemptId,
+      userId: other.id,
+      outcome: "incorrect",
+    }),
+  );
+  check(
+    "error tardío de cola se propaga",
+    Boolean(
+      forcedFailure.error &&
+        (forcedFailure.error.code === "22023" ||
+          forcedFailure.error.message.includes("límite seguro")),
+    ),
+  );
+  const [rolledBackAttempt, rolledBackState, rolledBackItem, rolledBackSession] =
+    await Promise.all([
+      service
+        .from("retrieval_attempts")
+        .select("outcome,rated_at")
+        .eq("id", rollback.attemptId)
+        .single(),
+      service
+        .from("retrieval_schedule_states")
+        .select("stage")
+        .eq("user_id", other.id)
+        .eq("retrieval_item_id", retrievalItemIds[0]!),
+      service
+        .from("practice_session_items")
+        .select("status")
+        .eq("session_id", rollback.sessionId)
+        .eq("position", 1)
+        .single(),
+      service
+        .from("practice_sessions")
+        .select("status,current_position")
+        .eq("id", rollback.sessionId)
+        .single(),
+    ]);
+  requireNoError(rolledBackAttempt.error, "No se leyó el intento tras rollback");
+  requireNoError(rolledBackState.error, "No se leyó el calendario tras rollback");
+  requireNoError(rolledBackItem.error, "No se leyó el reactivo tras rollback");
+  requireNoError(rolledBackSession.error, "No se leyó la sesión tras rollback");
+  check("rollback revierte intento", rolledBackAttempt.data!.outcome === null && rolledBackAttempt.data!.rated_at === null);
+  check("rollback elimina calendario parcial", rolledBackState.data!.length === 0);
+  check("rollback restaura estado del reactivo", rolledBackItem.data!.status === "revealed");
+  check("rollback conserva posición de sesión", rolledBackSession.data!.status === "active" && rolledBackSession.data!.current_position === 1);
+}
+
 async function main() {
   const anonymous = publicClient();
   const owner = await signIn("E2E_STUDENT_EMAIL", "E2E_STUDENT_PASSWORD");
@@ -388,6 +633,7 @@ async function main() {
   for (const client of [anonymous, owner.client, other.client]) {
     await expectRpcDenied(client, "import_class_package_v12");
     await expectRpcDenied(client, "export_class_package_v12");
+    await expectRpcDenied(client, "rate_adaptive_attempt_v1");
   }
   await expectRpcDenied(anonymous, "submit_exam_v1");
 
@@ -403,6 +649,7 @@ async function main() {
     other,
     ids.examIds[0]!,
   );
+  await testAtomicAdaptiveRating(owner, other);
 
   for (const status of ["pending", "rejected"] as const) {
     checkpoint(`tema ${status}`);

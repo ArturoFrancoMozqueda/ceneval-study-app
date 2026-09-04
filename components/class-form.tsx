@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { createClassAction } from "@/app/actions/academic";
 
 export function ClassForm({ subjectId }: { subjectId: number }) {
@@ -12,7 +12,9 @@ export function ClassForm({ subjectId }: { subjectId: number }) {
   const [teacher, setTeacher] = useState("");
   const [description, setDescription] = useState("");
   const [titleError, setTitleError] = useState("");
+  const [formError, setFormError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const titleInputRef = useRef<HTMLInputElement>(null);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -20,23 +22,32 @@ export function ClassForm({ subjectId }: { subjectId: number }) {
 
     if (!normalizedTitle) {
       setTitleError("Escribe el título de la clase.");
+      titleInputRef.current?.focus();
       return;
     }
 
     setIsSubmitting(true);
-    const result = await createClassAction(
-      subjectId,
-      new FormData(event.currentTarget),
-    );
+    setFormError("");
+    try {
+      const result = await createClassAction(
+        subjectId,
+        new FormData(event.currentTarget),
+      );
 
-    if (result.error || !result.id) {
-      setTitleError(result.error ?? "No pudimos guardar la clase.");
+      if (result.error || !result.id) {
+        setFormError(result.error ?? "No pudimos guardar la clase.");
+        setIsSubmitting(false);
+        return;
+      }
+
+      router.push(`/clases/${result.id}`);
+      router.refresh();
+    } catch {
+      setFormError(
+        "No pudimos guardar la clase. Revisa tu conexión e intenta nuevamente.",
+      );
       setIsSubmitting(false);
-      return;
     }
-
-    router.push(`/clases/${result.id}`);
-    router.refresh();
   }
 
   const inputClassName =
@@ -45,6 +56,7 @@ export function ClassForm({ subjectId }: { subjectId: number }) {
   return (
     <form
       className="mt-8 max-w-3xl rounded-2xl border border-border bg-surface p-5 shadow-[0_12px_35px_rgb(23_32_51_/_0.05)] sm:p-8"
+      aria-busy={isSubmitting}
       noValidate
       onSubmit={handleSubmit}
     >
@@ -55,7 +67,6 @@ export function ClassForm({ subjectId }: { subjectId: number }) {
         <input
           aria-describedby={titleError ? "class-title-error" : undefined}
           aria-invalid={Boolean(titleError)}
-          autoFocus
           className={`${inputClassName} ${titleError ? "border-danger" : ""}`}
           id="class-title"
           maxLength={120}
@@ -63,8 +74,10 @@ export function ClassForm({ subjectId }: { subjectId: number }) {
           onChange={(event) => {
             setTitle(event.target.value);
             if (titleError) setTitleError("");
+            if (formError) setFormError("");
           }}
           placeholder="Ej. Principios constitucionales"
+          ref={titleInputRef}
           value={title}
         />
         {titleError ? (
@@ -87,7 +100,10 @@ export function ClassForm({ subjectId }: { subjectId: number }) {
             className={inputClassName}
             id="class-date"
             name="classDate"
-            onChange={(event) => setClassDate(event.target.value)}
+            onChange={(event) => {
+              setClassDate(event.target.value);
+              if (formError) setFormError("");
+            }}
             type="date"
             value={classDate}
           />
@@ -103,7 +119,10 @@ export function ClassForm({ subjectId }: { subjectId: number }) {
             id="class-teacher"
             maxLength={100}
             name="teacher"
-            onChange={(event) => setTeacher(event.target.value)}
+            onChange={(event) => {
+              setTeacher(event.target.value);
+              if (formError) setFormError("");
+            }}
             placeholder="Ej. Dra. Martínez"
             value={teacher}
           />
@@ -119,7 +138,10 @@ export function ClassForm({ subjectId }: { subjectId: number }) {
           id="class-description"
           maxLength={400}
           name="description"
-          onChange={(event) => setDescription(event.target.value)}
+          onChange={(event) => {
+            setDescription(event.target.value);
+            if (formError) setFormError("");
+          }}
           placeholder="Anota brevemente qué se revisó en esta clase."
           value={description}
         />
@@ -143,6 +165,11 @@ export function ClassForm({ subjectId }: { subjectId: number }) {
           {isSubmitting ? "Guardando…" : "Guardar clase"}
         </button>
       </div>
+      {formError ? (
+        <p className="mt-4 text-sm font-medium text-danger" role="alert">
+          {formError}
+        </p>
+      ) : null}
     </form>
   );
 }

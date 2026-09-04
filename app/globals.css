@@ -70,6 +70,7 @@ textarea {
   outline: 3px solid var(--brand-deep);
   outline-offset: 3px;
   box-shadow: 0 0 0 2px var(--surface);
+  scroll-margin-block: 5rem;
 }
 
 ::selection {
@@ -102,5 +103,12 @@ textarea {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 3px solid Highlight;
+    box-shadow: none;
   }
 }

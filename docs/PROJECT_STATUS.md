@@ -1,6 +1,6 @@
 # Estado actual y plan de venta — CENEVAL Study App
 
-Última actualización: 25 de agosto de 2026 (hora de México)
+Última actualización: 4 de septiembre de 2026 (hora de México)
 
 Base documental: `main` con el trabajo integrado hasta este corte (incluye
 todo lo del 22 de agosto — Fase 0, Fase 1 legal, Fase 5 de producto vendible,
@@ -11,6 +11,16 @@ auditoría de accesibilidad, jerarquía visual de materiales y búsqueda de C58)
 verificación remota directa contra el proyecto Supabase `CENEVAL Study App`
 (`qcseoivljzuxzqeaxfly`) y el proyecto Vercel `ceneval-study-app` (team
 `kova-mx`) el 24 de agosto de 2026.
+
+Seguimiento del 4 de septiembre: se completó una auditoría integral de UX,
+accesibilidad, funcionamiento, calidad y seguridad. El recorrido local cubre
+ahora los flujos principales completos con navegador real y fixture sintético;
+se corrigieron textos que prometían funciones inexistentes, recuperación de
+errores de Next.js 16, semántica y validaciones de formularios. La nueva RPC
+transaccional de calificación adaptativa quedó validada **solo en Supabase
+local**; su migración remota sigue pendiente de autorización y el código usa un
+fallback compatible mientras falte. No se modificó Supabase remoto. Evidencia,
+límites y pendientes: `docs/QUALITY_AUDIT_2026-09-04.md`.
 
 > **Si vienes a este documento buscando "qué hacer ahora", ve directo al
 > §0.** El resto del documento es el archivo histórico detallado detrás de

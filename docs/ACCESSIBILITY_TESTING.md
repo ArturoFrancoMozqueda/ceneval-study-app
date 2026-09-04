@@ -88,3 +88,17 @@ La limpieza local quedó verificada en **0 clases, 0 materias, 0 referencias y
 Por tanto, el defecto de tamaño de objetivo queda abierto y el proyecto sigue
 sin declarar conformidad integral WCAG 2.2 AA ni compatibilidad comprobada con
 lectores de pantalla.
+
+## Seguimiento del 4 de septiembre de 2026
+
+La auditoría integral posterior corrigió el objetivo de “Cerrar sesión”, evitó
+regiones de navegación vacías, agregó migas semánticas y soporte de foco para
+`forced-colors`, y eliminó `autofocus` de formularios. También corrigió el
+nombre accesible del enlace de marca para que contenga su rótulo visible, de
+acuerdo con WCAG 2.5.3.
+
+El E2E ampliado volvió a pasar a 320 CSS px, reflow equivalente a 200%, targets
+de al menos 24×24 CSS px y movimiento reducido. La deuda de verificación manual
+con lector de pantalla, zoom real, contraste alto y dispositivo físico sigue
+abierta; por ello no se declara conformidad integral WCAG 2.2 AA. La evidencia
+completa está en `docs/QUALITY_AUDIT_2026-09-04.md`.

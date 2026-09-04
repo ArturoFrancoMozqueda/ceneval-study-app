@@ -60,7 +60,7 @@ export default async function EditorialLearningJourneyPage({
           Editar explicación del tema
         </h1>
         <p className="mt-3 max-w-2xl leading-6 text-muted">
-          Corrige el prompt de apertura, los quick checks, el caso práctico,
+          Corrige la consigna de apertura, las comprobaciones rápidas, el caso práctico,
           el cierre o la siguiente actividad de este tema ya publicado.
           Guardar aquí marca la clase con una revisión editorial pendiente —
           no se pierde ni se despublica nada, pero conviene volver a
@@ -70,7 +70,7 @@ export default async function EditorialLearningJourneyPage({
 
       {!journey ? (
         <p className="mt-8 rounded-xl border border-dashed border-border p-6 text-muted">
-          Este tema no tiene una explicación (learning journey) para editar.
+          Este tema no tiene un recorrido de aprendizaje para editar.
         </p>
       ) : (
         <div className="mt-8">

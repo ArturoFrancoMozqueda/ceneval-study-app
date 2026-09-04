@@ -466,6 +466,68 @@ def main() -> None:
             page.keyboard.press("Enter")
             expect(page.locator("#contenido-principal")).to_be_focused()
 
+            # Recorre la biblioteca como lo haría una persona: lista de
+            # materias -> materia -> clase -> tema. Comprobar solo hrefs con
+            # page.goto() no detectaría enlaces que no navegan al activarlos.
+            page.goto(f"{base_url}/materias", wait_until="networkidle")
+            expect(
+                page.get_by_role("heading", name="Biblioteca CENEVAL", exact=True)
+            ).to_be_visible()
+            subject_link = page.get_by_role("link", name="Abrir Materia sintética")
+            expect(subject_link).to_be_visible()
+            expect(subject_link).to_contain_text("1 clase · 1 tema")
+            subject_link.click()
+            wait_for_network(page)
+            expect(page.get_by_role("heading", name="Materia sintética", exact=True)).to_be_visible()
+            class_link = page.locator(f'a[href="{class_path}"]').first
+            expect(class_link).to_contain_text("Clase sintética de persistencia")
+            expect(class_link).to_contain_text("1 tema")
+            class_link.click()
+            wait_for_network(page)
+            expect(
+                page.get_by_role(
+                    "heading", name="Clase sintética de persistencia", exact=True
+                )
+            ).to_be_visible()
+            topic_link = page.locator(f'a[href="{topic_path}"]').first
+            expect(topic_link).to_contain_text("Tema sintético")
+            topic_link.click()
+            wait_for_network(page)
+            expect(page).to_have_url(topic_url)
+
+            # La búsqueda valida tanto el estado útil sin resultados como un
+            # resultado seleccionable y el regreso con la consulta intacta.
+            page.goto(f"{base_url}/buscar", wait_until="networkidle")
+            expect(
+                page.get_by_role("heading", name="Buscar por tema o concepto")
+            ).to_be_visible()
+            search = page.get_by_role("searchbox", name="Buscar temas")
+            search.fill("consulta-sintetica-inexistente")
+            page.get_by_role("button", name="Buscar", exact=True).click()
+            wait_for_network(page)
+            expect(
+                page.get_by_text(
+                    "No encontramos temas publicados para “consulta-sintetica-inexistente”.",
+                    exact=True,
+                )
+            ).to_be_visible()
+            search.fill("Tema sintético")
+            page.get_by_role("button", name="Buscar", exact=True).click()
+            wait_for_network(page)
+            expect(page.get_by_role("heading", name="1 resultado", exact=True)).to_be_visible()
+            search_result = page.locator(f'a[href="{topic_path}"]').first
+            expect(search_result).to_contain_text("Tema sintético")
+            expect(search_result).to_contain_text(
+                "Materia sintética · C41 · Clase sintética de persistencia"
+            )
+            search_result.click()
+            wait_for_network(page)
+            expect(page).to_have_url(topic_url)
+            page.go_back(wait_until="networkidle")
+            expect(page.get_by_role("searchbox", name="Buscar temas")).to_have_value(
+                "Tema sintético"
+            )
+
             page.goto(f"{base_url}/progreso/examenes", wait_until="networkidle")
             expect(page.get_by_role("heading", name="Historial de exámenes")).to_be_visible()
             expect(
@@ -483,7 +545,8 @@ def main() -> None:
 
             class_link = page.locator(f'a[href="{class_path}"]').first
             expect(class_link).to_be_visible()
-            page.goto(f"{base_url}{class_path}", wait_until="networkidle")
+            class_link.click()
+            wait_for_network(page)
 
             topic_link = page.locator(f'a[href="{topic_path}"]').first
             expect(topic_link).to_be_visible()
@@ -554,6 +617,7 @@ def main() -> None:
                     expect(page.locator("fieldset legend")).to_be_focused()
                     page.get_by_role("button", name="Anterior", exact=True).click()
                     expect(page.locator("fieldset legend")).to_be_focused()
+                    expect(page.get_by_role("radio").first).to_be_checked()
                     page.get_by_role("button", name="Siguiente pregunta").click()
                     expect(page.locator("fieldset legend")).to_be_focused()
                     continue
@@ -565,12 +629,39 @@ def main() -> None:
             result_heading = page.get_by_role("heading", name="Resultado")
             expect(result_heading).to_be_visible()
             expect(result_heading).to_be_focused()
+            expect(page.get_by_text("0/10", exact=True)).to_be_visible()
             expect(page.get_by_text("Tu intento quedó guardado.", exact=False)).to_be_visible()
+            expect(page.get_by_text("Necesita repaso", exact=True)).to_have_count(10)
+            expect(page.get_by_role("heading", name="Tu respuesta")).to_have_count(10)
+            expect(page.get_by_text("Opción sintética A", exact=True)).to_have_count(10)
+            expect(
+                page.get_by_text("Explicación sintética de la opción A", exact=True)
+            ).to_have_count(10)
+            expect(
+                page.get_by_text(
+                    "Explicación general artificial suficientemente extensa para la prueba.",
+                    exact=True,
+                )
+            ).to_have_count(10)
+            page.get_by_role("button", name="Repetir examen", exact=True).click()
+            expect(page.get_by_text("Nuevo intento:", exact=False)).to_be_visible()
+            expect(page.locator("fieldset legend")).to_be_visible()
+            expect(page.get_by_role("radio").first).not_to_be_checked()
 
             page.goto(f"{base_url}/progreso/examenes", wait_until="networkidle")
             expect(page.get_by_role("heading", name="Historial de exámenes")).to_be_visible()
             expect(page.get_by_text("Examen sintético", exact=True)).to_be_visible()
-            expect(page.get_by_role("link", name="Abrir intento")).to_be_visible()
+            open_attempt = page.get_by_role("link", name="Abrir intento")
+            expect(open_attempt).to_be_visible()
+            open_attempt.click()
+            wait_for_network(page)
+            expect(page.get_by_role("heading", name="Examen sintético", exact=True)).to_be_visible()
+            expect(page.get_by_text("0% de respuestas correctas", exact=True)).to_be_visible()
+            expect(page.get_by_text("Necesita repaso", exact=False)).to_have_count(10)
+            expect(page.get_by_text("Opción sintética A", exact=True)).to_have_count(10)
+            page.get_by_role("link", name="Volver al historial", exact=True).click()
+            wait_for_network(page)
+            expect(page.get_by_role("heading", name="Historial de exámenes")).to_be_visible()
 
             admin_link = page.get_by_role("link", name="Panel editorial").first
             expect(admin_link).to_have_attribute("href", "/administrar")
@@ -621,7 +712,7 @@ def main() -> None:
                 raise AssertionError(f"El navegador registró errores: {details}")
 
             print(
-                "[OK] E2E local: login privado, health, biblioteca, estado vacío de historial, progreso, flashcards, examen, historial con intento, rutas inválidas, panel y emulación de reflow/touch/reduced-motion verificados; "
+                "[OK] E2E local: login privado, health, biblioteca navegable, búsqueda con y sin resultados, estado vacío de historial, progreso, práctica adaptativa, examen, detalle e historial del intento, rutas inválidas, panel y emulación de reflow/touch/reduced-motion verificados; "
                 f"0 errores de consola/página/red; abortos permitidos document-navigation={allowed_aborts['document-navigation']}, next-prefetch={allowed_aborts['next-prefetch']}, next-server-action={allowed_aborts['next-server-action']}, next-rsc-navigation={allowed_aborts['next-rsc-navigation']}."
             )
         finally:

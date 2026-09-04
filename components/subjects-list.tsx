@@ -49,7 +49,10 @@ export async function SubjectsList() {
               </p>
               <div className="mt-auto flex items-end justify-between gap-4 pt-6">
                 <p className="font-mono text-xs text-muted">
-                  {subject.classCount} clases · {subject.topicCount} temas
+                  {subject.classCount}{" "}
+                  {subject.classCount === 1 ? "clase" : "clases"} ·{" "}
+                  {subject.topicCount}{" "}
+                  {subject.topicCount === 1 ? "tema" : "temas"}
                 </p>
                 <span className="inline-flex min-h-11 items-center gap-2 px-3 text-sm font-semibold text-brand">
                   Abrir

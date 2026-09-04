@@ -84,7 +84,7 @@ export function TopicLearningJourneyEditForm({
       onSubmit={handleSubmit}
     >
       <label className="block text-sm font-semibold" htmlFor="openingPrompt">
-        Prompt de apertura
+        Consigna de apertura
       </label>
       <textarea
         className={`${inputClassName} min-h-20 resize-y`}
@@ -99,7 +99,7 @@ export function TopicLearningJourneyEditForm({
       />
 
       <fieldset className="mt-6">
-        <legend className="text-sm font-semibold">Quick checks</legend>
+        <legend className="text-sm font-semibold">Comprobaciones rápidas</legend>
         <p className="mt-1 text-xs text-muted">
           Se necesitan al menos dos.
         </p>
@@ -110,7 +110,9 @@ export function TopicLearningJourneyEditForm({
               key={quickCheck.id}
             >
               <div className="flex items-center justify-between">
-                <p className="text-sm font-medium">Quick check {index + 1}</p>
+                <p className="text-sm font-medium">
+                  Comprobación {index + 1}
+                </p>
                 <button
                   className="inline-flex min-h-6 items-center rounded-lg px-2 text-xs font-semibold text-danger hover:bg-danger-soft disabled:cursor-not-allowed disabled:opacity-40"
                   disabled={quickChecks.length <= 2}
@@ -125,7 +127,7 @@ export function TopicLearningJourneyEditForm({
                 className="mt-2 block text-xs font-semibold text-muted"
                 htmlFor={`quickCheckPrompt${index}`}
               >
-                Prompt
+                Consigna
               </label>
               <textarea
                 className={`${inputClassName} min-h-14 resize-y`}
@@ -182,7 +184,7 @@ export function TopicLearningJourneyEditForm({
           onClick={addQuickCheck}
           type="button"
         >
-          + Agregar quick check
+          + Agregar comprobación
         </button>
       </fieldset>
 
@@ -284,7 +286,7 @@ export function TopicLearningJourneyEditForm({
         className="mt-6 block text-sm font-semibold"
         htmlFor="closingPrompt"
       >
-        Prompt de cierre
+        Consigna de cierre
       </label>
       <textarea
         className={`${inputClassName} min-h-20 resize-y`}
@@ -322,7 +324,7 @@ export function TopicLearningJourneyEditForm({
           disabled={isSubmitting}
           type="submit"
         >
-          {isSubmitting ? "Guardando…" : "Guardar learning journey"}
+          {isSubmitting ? "Guardando…" : "Guardar recorrido de aprendizaje"}
         </button>
         <p aria-live="polite" className="text-sm">
           {error ? (

@@ -51,6 +51,14 @@ test("la práctica exige intentar antes de revelar y separa el simulacro", () =>
   assert.match(topicDetailSource, /modo=\$\{value\}/);
   assert.match(topicDetailSource, /verás la revisión[\s\S]*solo después de entregar/);
   assert.match(reviewSource, /<AdaptivePractice[\s\S]*adaptive/);
+  assert.match(
+    studySource,
+    /consultar su lección, practicar o hacer el simulacro/,
+  );
+  assert.doesNotMatch(
+    studySource,
+    /consultar su lección, flashcards o examen/,
+  );
   assert.match(adaptivePracticeSource, /abandonPracticeSessionAction/);
   assert.match(adaptivePracticeSource, /ronda anterior de otro tema/);
   assert.match(adaptivePracticeSource, /getPracticeSessionAction\(\)/);

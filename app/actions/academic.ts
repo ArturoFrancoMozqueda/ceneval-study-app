@@ -23,6 +23,7 @@ import { createServerSupabaseClient } from "@/lib/supabase/server";
 import { writeDependencyFailure } from "@/lib/operations/safe-log";
 import { submitExamLegacy } from "@/lib/data/legacy-exam-submission";
 import {
+  isIsoCalendarDate,
   isPositiveInteger,
   isTopicApprovalStatus,
   topicMutationErrorMessage,
@@ -149,6 +150,9 @@ export async function createClassAction(
   }
   if (!title) return { error: "Escribe el título de la clase." };
   if (title.length > 120) return { error: "El título es demasiado largo." };
+  if (classDate && !isIsoCalendarDate(classDate)) {
+    return { error: "La fecha de la clase no es válida." };
+  }
   if (teacher.length > 100 || description.length > 400) {
     return { error: "Revisa la longitud de los campos." };
   }
@@ -527,7 +531,7 @@ export async function updateTopicLearningJourneyAction(
   const quickCheckCount = Number(textValue(formData, "quickCheckCount"));
   if (!Number.isInteger(quickCheckCount) || quickCheckCount < 2) {
     return {
-      error: "El learning journey necesita al menos dos quick checks.",
+      error: "El recorrido de aprendizaje necesita al menos dos comprobaciones rápidas.",
     };
   }
 
@@ -538,7 +542,8 @@ export async function updateTopicLearningJourneyAction(
     const feedback = textValue(formData, `quickCheckFeedback${index}`);
     if (!prompt || !answer || !feedback) {
       return {
-        error: "Completa el prompt, la respuesta y la retroalimentación de cada quick check.",
+        error:
+          "Completa la consigna, la respuesta y la retroalimentación de cada comprobación rápida.",
       };
     }
     quickChecks.push({ prompt, answer, feedback });
@@ -555,7 +560,7 @@ export async function updateTopicLearningJourneyAction(
     !conclusion
   ) {
     return {
-      error: "Completa todas las secciones del learning journey.",
+      error: "Completa todas las secciones del recorrido de aprendizaje.",
     };
   }
 
@@ -1095,7 +1100,7 @@ export async function recordEditorialReviewAction(
   }
   if (
     verdict === "approved" &&
-    (!/^\d{4}-\d{2}-\d{2}$/.test(legalVerifiedOn) ||
+    (!isIsoCalendarDate(legalVerifiedOn) ||
       legalVerifiedOn > new Date().toISOString().slice(0, 10))
   ) {
     return {

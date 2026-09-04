@@ -18,6 +18,10 @@ async function main() {
     headers.get("referrer-policy"),
     "strict-origin-when-cross-origin",
   );
+  assert.equal(
+    headers.get("strict-transport-security"),
+    "max-age=31536000",
+  );
   assert.match(
     headers.get("content-security-policy") ?? "",
     /frame-ancestors 'none'/,
