@@ -867,8 +867,10 @@ mismo commit se completó en Vercel.
 siete variables exigidas entonces. Desde el 5 de septiembre el código requiere
 seis (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`,
 `SUPABASE_SECRET_KEY`, `NEXT_PUBLIC_SITE_URL`, `ADMIN_EMAIL` y
-`OPS_READINESS_TOKEN`); la variable obsoleta de acceso privado se retirará de
-Vercel después de publicar y verificar el código que dejó de consumirla.
+`OPS_READINESS_TOKEN`). La variable obsoleta de acceso privado se retiró de
+Preview y Production después de que el commit `6c58c03` pasara CI y el
+deployment `dpl_C4Ce1ii4jPkcQ43eD6PCXB2hiAXs` quedara `READY`; la lista de
+ambos entornos conserva exactamente las seis variables vigentes.
 Las variables están marcadas como **Sensitive** en Vercel, por lo
 que ni la CLI ni el dashboard pueden volver a mostrar su valor una vez
 guardado (`vercel env pull` devuelve el literal `[SENSITIVE]`). Eso es
