@@ -1,9 +1,9 @@
-# Publicación manual privada en Vercel
+# Publicación con acceso por invitación en Vercel
 
-Última actualización: 4 de septiembre de 2026
+Última actualización: 5 de septiembre de 2026
 
-> **Alcance actual:** este procedimiento publica únicamente la aplicación
-> privada de la administradora. No habilita estudiantes, registro público,
+> **Alcance actual:** este procedimiento publica la aplicación con acceso por
+> invitación para administradora y estudiantes. No habilita registro público,
 > pagos ni un lanzamiento comercial. Vercel está conectado a GitHub y `main`
 > publica automáticamente en producción. El plan actual es Hobby y no autoriza
 > uso comercial.
@@ -96,7 +96,7 @@ hay rollback seguro.
    - respaldo real verificado y restaurado en ensayo, si se cambiará esquema o
      contenido;
    - migraciones del destino compatibles con el commit;
-   - `PRIVATE_ACCESS_ONLY=true`;
+   - altas públicas desactivadas en Supabase Auth y `/registro` cerrado;
    - administradora y redirecciones Auth operativas;
    - variables de Preview y Production configuradas en Vercel, sin copiar
      valores a archivos o al registro.
@@ -165,8 +165,9 @@ esa sea la modalidad expresamente elegida.
    - `GET /api/health/live` responde éxito sin revelar configuración;
    - `GET /api/health/ready` sin autorización responde 404 genérico;
    - con `Authorization: Bearer <OPS_READINESS_TOKEN>` responde éxito;
-   - la raíz redirige a `/iniciar-sesion`;
-   - una cuenta student permanece rechazada por ADR-014;
+   - la raíz pública ofrece el inicio de sesión sin abrir el registro;
+   - una cuenta `student` invitada acepta términos, entra a estudio y queda
+     fuera de `/administrar`;
    - la administradora entra y abre `/administrar` y el detalle editorial de
      una clase sin hacer cambios.
 
@@ -193,7 +194,7 @@ vercel build --prod
 ```
 
 El preflight no imprime valores. Si Vercel devuelve valores reales, exige
-`PRIVATE_ACCESS_ONLY=true`, URLs HTTPS, claves distintas, administradora y
+URLs HTTPS, claves distintas, administradora y
 readiness token válido. Cuando una variable está marcada `Sensitive`, `pull`
 devuelve literalmente `[SENSITIVE]` y este preflight local falla de forma
 intencional; en ese caso registra la limitación y exige que el build real de
@@ -272,7 +273,7 @@ manualmente hasta que se apruebe monitoreo adicional.
 
 El rollback de Vercel **no revierte migraciones, Auth, contenido ni secretos**.
 Nunca ejecutes SQL inverso automáticamente. Si el deployment anterior no es
-compatible con la base actual, mantén el acceso privado, detén cambios y usa el
+compatible con la base actual, mantén cerrado el registro, detén cambios y usa el
 procedimiento de recuperación autorizado de Supabase.
 
 ## Cierre

@@ -58,7 +58,7 @@ rechaza cualquier destino remoto antes de escribir. Crea tres cuentas y un
 paquete sintético 1.2, lo publica, ejecuta la suite y verifica en `finally` que
 no queden clase, materia, referencia ni usuarios propios.
 
-La suite actual contiene **141 comprobaciones**. Cubre:
+La suite actual contiene **182 comprobaciones**. Cubre:
 
 - anónimo sin acceso a clases;
 - contenido publicado y aprobado visible;
@@ -98,7 +98,7 @@ Por lo tanto, la afirmación correcta es:
 ## Orden seguro para cerrar la verificación
 
 1. Iniciar Supabase local y ejecutar `npm run security:rls`.
-2. Confirmar 141 comprobaciones y cleanup con cuatro conteos en cero.
+2. Confirmar 182 comprobaciones y cleanup con cuatro conteos en cero.
 3. Registrar fecha, commit y resultado sin copiar secretos.
 4. Antes de aplicar migraciones al remoto, generar y verificar un respaldo.
 5. Aplicarlas solo en una ventana expresamente autorizada y repetir un smoke

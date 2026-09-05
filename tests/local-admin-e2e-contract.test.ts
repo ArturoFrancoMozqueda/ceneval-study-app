@@ -11,6 +11,18 @@ const fixture = readFileSync(
   "utf8",
 );
 
+test("el E2E permite estudiar a la cuenta invitada y le niega administración", () => {
+  assert.match(e2e, /wait_for_url\(f"\{base_url\}\/aceptar-terminos"\)/);
+  assert.match(e2e, /name="Aceptar y continuar"/);
+  assert.match(e2e, /fill\(student_email\)[\s\S]*wait_for_url\(f"\{base_url\}\/"\)/);
+  assert.match(e2e, /page\.goto\(f"\{base_url\}\/materias"/);
+  assert.match(e2e, /fill\(student_email\)[\s\S]*page\.goto\(lesson_url[\s\S]*Aplicar lo aprendido/);
+  assert.match(e2e, /to_have_text\("Avance guardado"\)/);
+  assert.match(e2e, /page\.goto\(f"\{base_url\}\/administrar"[\s\S]*to_have_url\(f"\{base_url\}\/"\)/);
+  assert.match(e2e, /name="Panel editorial"\)\)\.to_have_count\(0\)/);
+  assert.match(e2e, /name="Cerrar sesión"\)\.first\.click\(\)/);
+});
+
 test("el E2E recorre el panel y el detalle editorial publicados", () => {
   assert.match(e2e, /admin_link = page\.get_by_role\("link", name="Panel editorial"\)/);
   assert.match(e2e, /to_have_attribute\("href", "\/administrar"\)/);
@@ -116,6 +128,8 @@ test("el E2E vigila red y emula reflow, touch y movimiento reducido", () => {
   assert.match(e2e, /allowed_aborts\["next-server-action"\]/);
   assert.match(e2e, /headers\.get\("rsc"\) == "1"/);
   assert.match(e2e, /allowed_aborts\["next-rsc-navigation"\]/);
+  assert.match(e2e, /allowed_aborts\["next-static-script"\]/);
+  assert.match(e2e, /\/_next\/static\/chunks\//);
   assert.match(e2e, /response\.status >= 500/);
   assert.match(e2e, /"width": 320/);
   assert.match(e2e, /has_touch=configuration\["has_touch"\]/);

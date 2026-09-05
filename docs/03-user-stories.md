@@ -2,15 +2,15 @@
 
 ## Historias del modelo editorial
 
-### US-064 Acceder como estudiante (futuro condicionado)
+### US-064 Acceder como estudiante invitada
 
-Cuando exista una apertura comercial aprobada, como estudiante quiero acceder
-con una cuenta autorizada para conservar mi avance.
+Como estudiante invitada quiero acceder con una cuenta autorizada para
+conservar mi avance.
 
-**Aceptación futura:** el alta pública solo se habilita después de definir el
-modelo comercial y aprobar su seguridad; la sesión se conserva de forma segura
-y puedo recuperar mi contraseña. Esta historia no autoriza registro público en
-la versión privada actual.
+**Aceptación:** la cuenta se crea mediante invitación administrativa; en la
+primera entrada acepto explícitamente términos y privacidad antes de que la RLS
+habilite el catálogo. La sesión se conserva de forma segura y puedo recuperar
+mi contraseña. Esta historia no autoriza registro público ni cobros.
 
 ### US-065 Encontrar clases terminadas
 
@@ -61,8 +61,8 @@ La aplicación sigue un modelo editorial, no autoservicio:
   revisa la evidencia, aprueba los temas y publica.
 - La **estudiante consumidora** abre clases ya publicadas, practica y conserva
   su progreso privado. No carga transcripciones ni genera materiales propios.
-- En la versión actual solo accede la administradora. El alta de estudiantes,
-  el registro público y los pagos permanecen fuera de alcance.
+- En la versión actual acceden la administradora y estudiantes invitadas. El
+  registro público y los pagos permanecen fuera de alcance.
 
 Este documento conserva requisitos útiles de preparación editorial y consumo,
 pero no convierte el procesamiento editorial en una función pública de la app.
@@ -821,9 +821,8 @@ Como estudiante, quiero abrir el resultado correcto para consultar su contenido.
 
 # Épica 10: Calendario (futuro condicionado)
 
-Estas historias se habilitan para estudiantes únicamente después de levantar
-la restricción de acceso privado de ADR-014. No forman parte del primer valor
-editorial actual.
+Estas historias de calendario siguen pospuestas por alcance de producto. El
+acceso por invitación no las habilita automáticamente.
 
 ## US-054 Programar una sesión
 
@@ -984,9 +983,9 @@ Como estudiante, quiero que el tutor recuerde la materia, clase y tema actuales.
 - US-002, US-007, US-035, US-039, US-040, US-041, US-042
 - US-047, US-051, US-053
 
-El acceso público de US-064 no forma parte de esta entrega. La comprobación del
-flujo de estudiante se realiza con cuentas privadas de ensayo hasta que exista
-una decisión de apertura.
+El acceso de US-064 forma parte de esta entrega únicamente por invitación. La
+comprobación del flujo de estudiante usa cuentas sintéticas locales; abrir el
+registro público requiere una decisión posterior.
 
 ## Segunda entrega
 
@@ -1004,8 +1003,8 @@ una decisión de apertura.
 
 - herramientas internas para preparar audios y transcripciones, siempre fuera
   del flujo de estudiante y conservando el original;
-- registro y múltiples estudiantes, condicionados a una decisión comercial y
-  de seguridad explícita;
+- registro público y altas autoservicio, condicionados a una decisión comercial
+  y de seguridad explícita;
 - tutor dinámico limitado al corpus editorial publicado y con citas;
 - profesores;
 - contenido compartido;

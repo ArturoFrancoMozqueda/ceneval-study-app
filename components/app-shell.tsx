@@ -22,6 +22,7 @@ const navigation = [
 ];
 
 const authPaths = [
+  "/aceptar-terminos",
   "/actualizar-contrasena",
   "/iniciar-sesion",
   "/recuperar-contrasena",

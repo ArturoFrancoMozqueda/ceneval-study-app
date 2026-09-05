@@ -1,13 +1,13 @@
 # Alta segura de la administradora
 
-La aplicación no tiene registro público mientras esté vigente ADR-014. La
+La aplicación no tiene registro público y usa acceso por invitación. La
 primera administradora se crea o promueve mediante un procedimiento explícito
 desde una terminal confiable; visitar una página nunca cambia roles.
 
 ## Antes de empezar
 
 1. Confirma que estás trabajando en el proyecto Supabase de CENEVAL, no Kova.
-2. Conserva `PRIVATE_ACCESS_ONLY=true`.
+2. Confirma que las altas públicas están desactivadas en Supabase Auth.
 3. Configura en `.env.local` la URL, la clave pública, `SUPABASE_SECRET_KEY`,
    `NEXT_PUBLIC_SITE_URL` y `ADMIN_EMAIL`. No compartas ni subas `.env.local`
    a Git. El correo del comando debe coincidir exactamente con la allowlist

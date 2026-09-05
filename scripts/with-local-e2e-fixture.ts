@@ -269,12 +269,18 @@ async function createUser(
   email: string,
   password: string,
   fullName: string,
+  termsAccepted = false,
 ): Promise<CreatedUser> {
   const { data, error } = await service.auth.admin.createUser({
     email,
     password,
     email_confirm: true,
-    user_metadata: { full_name: fullName },
+    user_metadata: {
+      full_name: fullName,
+      ...(termsAccepted
+        ? { terms_accepted_at: new Date().toISOString() }
+        : {}),
+    },
   });
   if (error) throw new Error("No se pudo crear una cuenta E2E local.");
   return { id: data.user.id };
@@ -289,6 +295,7 @@ async function prepareFixture(service: SupabaseClient) {
     ADMIN_EMAIL,
     adminPassword,
     "Administradora E2E sintética",
+    true,
   );
   await createUser(
     service,
@@ -301,6 +308,7 @@ async function prepareFixture(service: SupabaseClient) {
     OTHER_STUDENT_EMAIL,
     otherStudentPassword,
     "Otra estudiante E2E sintética",
+    true,
   );
 
   const { data: profile, error: profileError } = await service
@@ -484,7 +492,6 @@ async function main() {
         NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: credentials.publishableKey,
         NEXT_PUBLIC_SUPABASE_URL: credentials.apiUrl,
         OPS_READINESS_TOKEN: readinessToken,
-        PRIVATE_ACCESS_ONLY: "true",
         SUPABASE_LOCAL_DB_URL: credentials.databaseUrl,
         SUPABASE_SECRET_KEY: credentials.secretKey,
       });

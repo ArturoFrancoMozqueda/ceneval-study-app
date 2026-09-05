@@ -35,8 +35,12 @@ test("el runbook liga release a commit, CI, preview y rollback conocidos", () =>
   assert.match(runbook, /terminar en verde\/?`READY`/);
 });
 
-test("el runbook exige acceso privado, readiness protegida y logs Hobby", () => {
-  assert.match(runbook, /PRIVATE_ACCESS_ONLY=true/);
+test("el runbook exige acceso por invitación, readiness protegida y logs Hobby", () => {
+  assert.match(runbook, /altas públicas desactivadas en Supabase Auth/);
+  assert.match(runbook, /\/registro` cerrado/);
+  assert.match(runbook, /`student` invitada acepta términos/);
+  assert.match(runbook, /fuera de `\/administrar`/);
+  assert.doesNotMatch(runbook, /student permanece rechazada|ADR-014/);
   assert.match(runbook, /OPS_READINESS_TOKEN/);
   assert.match(runbook, /\[SENSITIVE\]/);
   assert.match(runbook, /preflight local falla de forma\s+intencional/);

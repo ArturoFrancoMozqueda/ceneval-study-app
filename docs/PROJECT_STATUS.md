@@ -282,7 +282,7 @@ flashcards, repaso espaciado, exámenes, progreso, búsqueda y panel editorial.
 El catálogo completo C01–C57 está importado, revisado y publicado en el
 proyecto remoto. Vercel está **conectado a Git de verdad** (verificado y
 reparado el 23 de agosto — ver §7), con el último deployment `READY` en
-producción; las **29 migraciones** del repositorio están aplicadas en
+producción; las **32 migraciones** del repositorio están aplicadas en
 Supabase y coinciden una a una con `supabase/migrations/`. El detalle
 verificado está en el §2. La lista concreta de lo que falta y qué hacer con
 cada punto está en el **§0**.
@@ -350,9 +350,9 @@ decisión no añade infraestructura ni reemplaza los gates operativos vigentes.
 | --- | --- |
 | Despliegue | Vercel **conectado a Git de verdad** (no lo estaba realmente — ver incidente del 23 de agosto en §7). Cada push validado a `main` crea automáticamente el deployment de producción; el SHA nuevo se registra después de cada release. |
 | Salud | `GET /api/health/live` responde `200`. `GET /api/health/ready` responde `404` sin token, que es el comportamiento correcto. |
-| Base de datos | Las **29 migraciones** del repositorio están aplicadas en el proyecto remoto: 20 verificadas el 22 de agosto y 9 posteriores, hasta `20260904234059_add_missing_foreign_key_indexes`, verificadas el 4 de septiembre. Coinciden una a una con `supabase/migrations/`. |
+| Base de datos | Las **32 migraciones** del repositorio están aplicadas en el proyecto remoto: las 29 anteriores y las tres de acceso por invitación aplicadas el 5 de septiembre. Coinciden una a una con `supabase/migrations/`. |
 | Contenido publicado | **24 materias, 57 clases (todas `published`), 57 temas (todos `approved`), 513 materiales, 57 mapas conceptuales, 685 flashcards, 57 exámenes, 570 preguntas y 570 claves de respuesta.** Detalle completo en el §8. El examen de C01 (10 preguntas) fue auditado y 3 de sus reactivos corregidos el 24 de agosto — ver §0.2 y §7. |
-| Seguridad de base | Los asesores reportan los `INFO` esperados de las dos tablas de claves sin políticas (bloqueo deliberado), el RPC de examen `SECURITY DEFINER` autenticado y documentado, y el `WARN` de contraseñas filtradas que **requiere plan Pro** (`I-5`, ver §0.1-G). Sin errores. |
+| Seguridad de base | Los asesores reportan los avisos esperados de las dos tablas de claves sin políticas (bloqueo deliberado), `accept_terms_v1` como RPC autenticado `SECURITY DEFINER` intencional y acotado, y el `WARN` de contraseñas filtradas que **requiere plan Pro** (`I-5`, ver §0.1-G). El examen expone ahora un wrapper `SECURITY INVOKER` y conserva la calificación privilegiada en `private`. Sin errores. |
 | Código | `npm run lint` y `npm run build` pasan sin hallazgos. El build de producción del mismo commit se completó en Vercel. |
 | Usuarios | **1 usuario y 1 perfil administrador** en producción. Hay 5 intentos de examen privados de esa cuenta. |
 | Venta | Fase 0 (decisiones) cerrada, Fase 1 (legal) y Fase 5 (producto vendible) publicadas en producción — ver §4 y §5. |
@@ -360,8 +360,8 @@ decisión no añade infraestructura ni reemplaza los gates operativos vigentes.
 ### Lo que todavía no existe
 
 - No hay pagos, planes, entitlements, checkout ni webhook reales.
-- No hay registro abierto: `PRIVATE_ACCESS_ONLY` es obligatorio en `true` y
-  `lib/operations/runtime-env.ts:91` **falla el arranque** si vale otra cosa.
+- No hay registro abierto: `/registro` no contiene formulario ni Server Action
+  de alta y Supabase Auth mantiene desactivada la creación pública de usuarios.
   **Incidente del 23 de agosto de 2026 — resuelto:** ese bloqueo solo existía
   en la app Next.js; Supabase Auth tenía **"Allow new users to sign up"
   activado**, y las políticas RLS de lectura del catálogo publicado son
@@ -522,7 +522,7 @@ altas fallarían silenciosamente. Depende de contratar un dominio propio
 
 ### B5 — La aplicación nunca ha sido usada por dos personas a la vez · **alto, abierto**
 
-Hay 1 usuario y 0 intentos de examen en producción. Las 141 comprobaciones RLS
+Hay 1 usuario y 5 intentos de examen en producción. Las 182 comprobaciones RLS
 y el E2E se ejecutaron **en local**, no contra el proyecto remoto. El
 aislamiento entre estudiantes está diseñado y probado localmente, pero no
 demostrado en el entorno real (`M-1` a `M-3`, §5).
@@ -623,7 +623,7 @@ hecha.
 | --- | --- | --- |
 | L-1 | Redactar y publicar el **aviso de privacidad** LFPDPPP: datos recabados, finalidades, transferencia internacional (Supabase y Vercel fuera de México), plazo de conservación y ejercicio de derechos ARCO con un correo de contacto real. | **✅ Publicado en producción (22 ago)**, `/privacidad`. Correo `privacidad@sube-legal.mx` sigue siendo provisional hasta tener dominio propio (`I-3`). |
 | L-2 | Redactar y publicar los **términos de uso**, incluyendo cancelación, reembolso, uso permitido y limitación de responsabilidad. | **✅ Publicado en producción (22 ago)**, `/terminos`. |
-| L-3 | Añadir en el registro una casilla explícita de aceptación de términos y aviso de privacidad, y guardar la fecha de aceptación. | **✅ Hecho (22 ago).** Columna `profiles.terms_accepted_at` aplicada al proyecto remoto (migración `20260822160822_add_profiles_terms_accepted_at`). |
+| L-3 | Exigir en la primera entrada por invitación una aceptación explícita de términos y aviso de privacidad, y guardar la fecha de aceptación. | **✅ Hecho (5 sep).** `accept_terms_v1` asigna la hora del servidor una sola vez; la RLS bloquea catálogo y actividad y el wrapper público de examen verifica el mismo gate (`20260905163856`, `20260905164824` y `20260905165955`). |
 | L-4 | Implementar **borrado de cuenta y exportación de datos personales** a solicitud de la usuaria. | **✅ Publicado en producción (22 ago)**, `/cuenta`. Falta la prueba de extremo a extremo con una cuenta real. |
 | L-5 | Añadir el aviso de no afiliación con CENEVAL en un lugar visible. | **✅ Hecho (22 ago).** |
 | L-6 | Definir el canal de soporte y el compromiso de tiempo de respuesta. | **✅ Publicado en producción (22 ago).** Correo `soporte@sube-legal.mx` provisional hasta tener dominio propio (`I-3`); falta definir quién lo atiende. |
@@ -640,7 +640,7 @@ hecha.
 | I-3 | Contratar un dominio propio, apuntarlo a Vercel y actualizar `NEXT_PUBLIC_SITE_URL` y las URLs de redirección de Supabase Auth. | El dominio sirve la app por HTTPS y el correo de confirmación apunta a él. |
 | I-4 | Configurar un proveedor de correo transaccional propio en Supabase Auth y probar alta, confirmación y recuperación de contraseña. | Tres correos recibidos en una cuenta real, desde el dominio propio. |
 | I-5 | Activar la protección contra contraseñas filtradas en Supabase Auth. | El asesor de seguridad deja de reportar el `WARN`. |
-| I-6 | Verificar que las siete variables de entorno de `.env.example` están configuradas por separado en Preview y en Production, sin exponer valores. | **✅ Resuelto (24 ago).** Presencia y separación verificadas el 23 de agosto (§7); el preflight local ahora explica con claridad por qué no puede leer las 4 `NEXT_PUBLIC_*` (marcadas `Sensitive`) y confirma que la validación real ya ocurre en cada build y en `GET /api/health/ready` — ver §0.2, punto 5. |
+| I-6 | Verificar que las seis variables de entorno de `.env.example` están configuradas por separado en Preview y en Production, sin exponer valores. | **✅ Resuelto (24 ago; actualizado 5 sep).** Presencia y separación verificadas; el preflight confirma la validación real en cada build y en `GET /api/health/ready` — ver §0.2, punto 5. |
 | I-7 | Revisar los límites de autenticación (intentos de acceso, altas por hora) antes de abrir el registro. | Configuración registrada en el runbook. |
 
 ### Fase 3 — Respaldo y recuperación reales
@@ -687,7 +687,7 @@ Esta fase ya está diseñada a detalle. **No la rediseñes**: sigue sus etapas.
 | S-4 | Implementar el webhook firmado, idempotente y resistente a reenvíos, con las pruebas del §14 de la arquitectura. | Firma inválida, duplicado, replay y desorden cubiertos por pruebas. |
 | S-5 | Implementar la conciliación periódica contra el proveedor. | Una ejecución que detecta y repara una diferencia sembrada. |
 | S-6 | Etapa 3: piloto privado con invitaciones y cobro real de bajo volumen. | Al menos un ciclo completo de alta, cobro, comprobante y cancelación. |
-| S-7 | Etapa 4: apertura comercial, cambiando `PRIVATE_ACCESS_ONLY` y el gate de `lib/operations/runtime-env.ts`. | Checklist de lanzamiento firmado. |
+| S-7 | Etapa 4: apertura comercial, habilitando deliberadamente el registro público en la aplicación y Supabase Auth. | Checklist de lanzamiento firmado. |
 
 ### Fase 7 — Operación mientras se cobra
 
@@ -727,7 +727,7 @@ explícitamente en su Etapa 0.
 
 Copiado del §16 de `docs/SUBSCRIPTION_ARCHITECTURE.md`, sigue vigente:
 
-- No cambiar `PRIVATE_ACCESS_ONLY` para abrir el registro.
+- No habilitar el registro público en la aplicación ni en Supabase Auth.
 - No habilitar checkout, portal ni webhook de producción.
 - No crear productos, precios ni pruebas reales sin decisión aprobada.
 - No aceptar datos de tarjeta dentro de la aplicación.
@@ -863,13 +863,13 @@ token, que es el comportamiento correcto y esperado (exige el token de
 operaciones). `npm run lint` pasa sin hallazgos y el build de producción del
 mismo commit se completó en Vercel.
 
-**I-6 verificado el 23 de agosto de 2026:** `vercel env pull` confirma que las
-siete variables obligatorias de `.env.example`
-(`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`,
-`SUPABASE_SECRET_KEY`, `NEXT_PUBLIC_SITE_URL`, `ADMIN_EMAIL`,
-`PRIVATE_ACCESS_ONLY`, `OPS_READINESS_TOKEN`) están configuradas por separado
-en los entornos Production y Preview del proyecto — las siete aparecen en
-ambos scopes. Las siete están marcadas como **Sensitive** en Vercel, por lo
+**I-6 verificado el 23 de agosto de 2026:** `vercel env pull` confirmó las
+siete variables exigidas entonces. Desde el 5 de septiembre el código requiere
+seis (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`,
+`SUPABASE_SECRET_KEY`, `NEXT_PUBLIC_SITE_URL`, `ADMIN_EMAIL` y
+`OPS_READINESS_TOKEN`); la variable obsoleta de acceso privado se retirará de
+Vercel después de publicar y verificar el código que dejó de consumirla.
+Las variables están marcadas como **Sensitive** en Vercel, por lo
 que ni la CLI ni el dashboard pueden volver a mostrar su valor una vez
 guardado (`vercel env pull` devuelve el literal `[SENSITIVE]`). Eso es
 deseable para `SUPABASE_SECRET_KEY` y `OPS_READINESS_TOKEN`, pero para las
@@ -1159,11 +1159,17 @@ con lectores de pantalla ni zoom real. Ese mismo día
 restauración y round-trip sin artefactos residuales. Los runners rechazan URLs
 no locales; ninguna de estas pruebas escribió en CENEVAL remoto.
 
+El 5 de septiembre el E2E actualizado comprobó además que una cuenta `student`
+invitada acepta explícitamente términos y privacidad, entra a la biblioteca y
+queda fuera de `/administrar`; después recorrió el flujo editorial con `admin`.
+Terminó con cero errores de consola, página, HTTP 5xx o red no permitidos y
+limpieza final sin residuos.
+
 Queda pendiente:
 
-- crear un proyecto de ensayo aparte de producción, aplicar allí las 29
+- crear un proyecto de ensayo aparte de producción, aplicar allí las 32
   migraciones desde cero y repetir la suite RLS con datos sintéticos (tarea
-  `M-1`); las 29 migraciones ya están aplicadas en CENEVAL, pero ese ensayo
+  `M-1`); las 32 migraciones ya están aplicadas en CENEVAL, pero ese ensayo
   con datos no reales sigue sin hacerse y además está bloqueado por el límite
   de proyectos gratuitos de la organización (§0.1-C);
 - mantener `npm run db:lint:local` sin advertencias; la migración nueva ya
@@ -1285,7 +1291,7 @@ descrito en `C58_SOURCE_AUDIT.md`.
 | 1 | Completar el respaldo de transcripciones | Segunda copia independiente y restauración de ensayo |
 | 2 | Ejecutar y probar el respaldo documentado | Exportación fechada, copia externa verificada y restauración de ensayo |
 | 3 | Ampliar y ejecutar la suite RLS | Comprobaciones actuales y casos de temas no aprobados aprobados en CENEVAL |
-| 4 | Crear un proyecto de ensayo Supabase aparte de producción para repetir la suite RLS con datos que no sean reales | Proyecto de ensayo con las 29 migraciones aplicadas y RLS aprobada (tarea `M-1`). Bloqueado por límite de proyectos gratuitos — ver §0.1-C |
+| 4 | Crear un proyecto de ensayo Supabase aparte de producción para repetir la suite RLS con datos que no sean reales | Proyecto de ensayo con las 32 migraciones aplicadas y RLS aprobada (tarea `M-1`). Bloqueado por límite de proyectos gratuitos — ver §0.1-C |
 | 5 | Aprobar C01–C57 — completado | 57 clases publicadas y 57 temas aprobados, verificado el 22 de agosto de 2026 en el proyecto remoto |
 | 6 | Crear pruebas de navegador — completado | Flujos centrales reproducibles en Chromium y Supabase local; incluye creación, gate editorial, publicación, estudio y cleanup sin residuos |
 | 7 | Completar y validar el despliegue privado | Variables persistentes, administradora operativa y URL estable aprobada desde teléfono y computadora |

@@ -184,7 +184,6 @@ async function main(): Promise<void> {
   assertPrivatePreprodTarget({
     confirmation: process.argv.includes(PRIVATE_PREPROD_CONFIRMATION),
     execute: process.argv.includes("--execute"),
-    privateAccessOnly: process.env.PRIVATE_ACCESS_ONLY,
     secretKey,
     siteUrl: process.env.NEXT_PUBLIC_SITE_URL,
     supabaseUrl: url,

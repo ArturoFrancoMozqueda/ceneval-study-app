@@ -10,17 +10,15 @@ import {
 const validTarget = {
   confirmation: true,
   execute: true,
-  privateAccessOnly: "true",
   secretKey: "sb_secret_example",
   siteUrl: "https://ceneval-study-app.vercel.app",
   supabaseUrl: "https://qcseoivljzuxzqeaxfly.supabase.co",
 };
 
-test("falla cerrado ante confirmación, destino, modo o clave incorrectos", () => {
+test("falla cerrado ante confirmación, destino o clave incorrectos", () => {
   for (const invalid of [
     { ...validTarget, confirmation: false },
     { ...validTarget, execute: false },
-    { ...validTarget, privateAccessOnly: "false" },
     { ...validTarget, secretKey: "public" },
     { ...validTarget, siteUrl: "https://otro.vercel.app" },
     { ...validTarget, supabaseUrl: "https://otro.supabase.co" },

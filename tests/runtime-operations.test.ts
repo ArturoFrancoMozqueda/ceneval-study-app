@@ -14,17 +14,12 @@ const validEnvironment = {
   NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: "sb_publishable_12345678901234567890",
   NEXT_PUBLIC_SUPABASE_URL: "http://127.0.0.1:54321",
   OPS_READINESS_TOKEN: "readiness_token_12345678901234567890",
-  PRIVATE_ACCESS_ONLY: "true",
   SUPABASE_SECRET_KEY: "sb_secret_123456789012345678901234567890",
 };
 
-test("el preflight separa build de runtime y mantiene modo privado", () => {
+test("el preflight separa build de runtime y valida credenciales", () => {
   assert.equal(validateBuildEnvironment(validEnvironment).siteUrl, "http://127.0.0.1:3000");
   assert.equal(validateRuntimeEnvironment(validEnvironment).adminEmail, "admin@example.test");
-  assert.throws(
-    () => validateRuntimeEnvironment({ ...validEnvironment, PRIVATE_ACCESS_ONLY: "false" }),
-    /PRIVATE_ACCESS_ONLY/,
-  );
   assert.throws(
     () => validateRuntimeEnvironment({ ...validEnvironment, OPS_READINESS_TOKEN: "corto" }),
     /OPS_READINESS_TOKEN/,

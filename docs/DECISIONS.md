@@ -147,7 +147,7 @@ automatización o tutor futuro.
 ## ADR-014 — Acceso privado para una sola administradora
 
 **Fecha:** 2026-07-29  
-**Estado:** Aceptada
+**Estado:** Reemplazada por ADR-018
 
 Por el momento, la aplicación solo permite el acceso de cuentas con rol
 `admin`. El registro público está desactivado y las cuentas con rol `student`
@@ -163,10 +163,9 @@ roles y no hay escrituras durante el render de páginas.
 **Razón:** Fatima desea usar y validar personalmente la biblioteca antes de
 abrirla a otras personas.
 
-El modo público podrá recuperarse explícitamente con
-`PRIVATE_ACCESS_ONLY=false`, acompañado de una nueva revisión de seguridad.
-La operación de esta excepción cerrada se documenta en
-[`PRIVATE_ADMIN_ACTIVATION.md`](PRIVATE_ADMIN_ACTIVATION.md).
+La operación de esta etapa cerrada se documentó en
+[`PRIVATE_ADMIN_ACTIVATION.md`](PRIVATE_ADMIN_ACTIVATION.md). ADR-018 conserva
+el registro cerrado, pero permite el piloto de estudiantes invitadas.
 
 ---
 
@@ -177,8 +176,8 @@ La operación de esta excepción cerrada se documenta en
 **Estado:** Aceptada como arquitectura objetivo; implementación bloqueada
 
 El objetivo comercial futuro es vender acceso a la biblioteca mediante
-suscripción. Esta dirección no reemplaza todavía ADR-014: la aplicación sigue
-privada, sin registro público y sin cobros.
+suscripción. El acceso actual por invitación no habilita registro público ni
+cobros.
 
 Cuando se implemente, identidad, rol y derecho de acceso serán conceptos
 separados:
@@ -278,3 +277,29 @@ que puede registrarse y auditarse.
 **Consecuencia:** antes del primer acceso una persona autorizada debe configurar
 Supabase Auth, ejecutar el comando y completar la invitación. CI y Vercel no
 ejecutan este procedimiento automáticamente.
+
+---
+
+## ADR-018 — Acceso de estudiantes exclusivamente por invitación
+
+**Fecha:** 2026-09-05
+
+**Estado:** Aceptada
+
+Las cuentas con perfiles `admin` o `student` pueden iniciar sesión. El rol
+continúa separando capacidades: solo `admin` entra al panel editorial y ejecuta
+acciones administrativas. Las cuentas `student` se crean explícitamente por
+invitación y acceden únicamente al contenido publicado y a su propio progreso.
+
+El registro autoservicio permanece cerrado en tres capas: `/registro` no tiene
+formulario, la aplicación no expone una Server Action de alta y Supabase Auth
+mantiene desactivada la creación pública de usuarios. Los cobros y entitlements
+siguen fuera de alcance.
+
+**Razón:** permite probar el producto con personas de confianza sin confundir
+un piloto gratuito con la apertura comercial ni debilitar la separación entre
+identidad y permisos editoriales.
+
+**Consecuencia:** cada alta requiere una operación administrativa trazable. La
+apertura pública futura necesitará otra revisión explícita de seguridad,
+infraestructura, soporte, correo y cumplimiento.

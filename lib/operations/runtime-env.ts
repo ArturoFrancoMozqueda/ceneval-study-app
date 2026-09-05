@@ -100,9 +100,6 @@ export function validateBuildEnvironment(
   const publishableKey = required(source, "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY");
   assertOpaqueCredential(publishableKey, "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY", 20);
   assertSupabaseKey(publishableKey, "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY", "anon");
-  if (source.PRIVATE_ACCESS_ONLY?.trim() !== "true") {
-    throw new Error("Configuración inválida: PRIVATE_ACCESS_ONLY debe ser true.");
-  }
   return { publishableKey, siteUrl, supabaseUrl };
 }
 

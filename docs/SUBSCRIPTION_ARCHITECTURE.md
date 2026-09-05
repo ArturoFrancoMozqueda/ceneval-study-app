@@ -7,29 +7,30 @@
 **Base auditada:** `origin/main` en `3a1fe92`
 
 Este documento define cómo incorporar suscripciones sin confundir el objetivo
-comercial con el estado actual. No selecciona proveedor, no fija precios, no
-abre el registro y no autoriza cobros.
+comercial con el estado actual. Stripe y $399 MXN/mes ya fueron decididos
+después de la auditoría base; este diseño no abre el registro ni autoriza cobros.
 
 ## 1. Estado actual comprobado
 
 Hoy la aplicación:
 
-- funciona solo en `localhost` y no tiene despliegue;
-- está cerrada mediante `PRIVATE_ACCESS_ONLY=true`;
-- admite los roles `admin` y `student` en `profiles`, pero solo la
-  administradora puede entrar mientras siga activo el modo privado;
+- tiene un despliegue técnico en Vercel Hobby conectado a Git, todavía no apto
+  para operación comercial;
+- usa acceso por invitación y mantiene desactivadas las altas públicas;
+- admite los roles `admin` y `student` en `profiles`; ambos pueden entrar,
+  pero solo `admin` tiene capacidades editoriales;
 - autentica con Supabase Auth y cookies de servidor;
 - usa `requireUser` para identidad y `requireAdmin` para capacidades
   editoriales;
 - aplica RLS a la biblioteca y a la actividad privada por `user_id`;
 - no tiene tablas de clientes, suscripciones, derechos de acceso, eventos de
   facturación ni conciliación;
-- no tiene proveedor, planes, precios, prueba, impuestos, política de
-  cancelación o política de reembolso aprobados.
+- tiene proveedor, producto, precio y política comercial decididos, pero no
+  checkout ni infraestructura de facturación; el régimen fiscal sigue abierto.
 
 El procedimiento de respaldo existe, pero todavía no hay una exportación real
-ni una restauración de ensayo. La migración RLS del 20 de agosto está en Git,
-pero su aplicación remota tampoco está confirmada. Estos bloqueos son puertas
+ni una restauración de ensayo desde producción. Las migraciones RLS están
+aplicadas en el proyecto remoto. Estos bloqueos son puertas
 de entrada para el roadmap, no detalles opcionales.
 
 ## 2. Principios obligatorios
@@ -525,7 +526,7 @@ Solo una decisión explícita puede habilitar registro y cobros de producción.
 
 Hasta completar las etapas anteriores, queda prohibido:
 
-- cambiar `PRIVATE_ACCESS_ONLY` para abrir registro;
+- habilitar el registro público en la aplicación o en Supabase Auth;
 - habilitar checkout, portal o webhook de producción;
 - crear productos, precios o pruebas reales sin decisión aprobada;
 - aceptar datos de tarjeta en la aplicación;

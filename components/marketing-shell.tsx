@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { isPrivateAccessOnly } from "@/lib/access";
 
 const publicNavigation = [
   { href: "/precios", label: "Precios" },
@@ -34,8 +33,6 @@ function MarketingBrand() {
  * pasar estas rutas sin la barra lateral de la app autenticada.
  */
 export function MarketingShell({ children }: { children: ReactNode }) {
-  const privateAccessOnly = isPrivateAccessOnly();
-
   return (
     <div className="mx-auto flex min-h-screen max-w-[1200px] flex-col px-5 sm:px-8 lg:px-10">
       <a
@@ -60,16 +57,10 @@ export function MarketingShell({ children }: { children: ReactNode }) {
             </Link>
           ))}
           <Link
-            className="rounded-xl px-3 py-2 text-sm font-medium text-muted hover:bg-surface hover:text-foreground"
+            className="inline-flex min-h-11 items-center rounded-xl bg-brand px-4 text-sm font-semibold text-white hover:bg-brand-deep"
             href="/iniciar-sesion"
           >
             Iniciar sesión
-          </Link>
-          <Link
-            className="ml-1 inline-flex min-h-11 items-center rounded-xl bg-brand px-4 text-sm font-semibold text-white hover:bg-brand-deep"
-            href="/iniciar-sesion"
-          >
-            {privateAccessOnly ? "Acceso privado" : "Iniciar sesión"}
           </Link>
         </nav>
       </header>

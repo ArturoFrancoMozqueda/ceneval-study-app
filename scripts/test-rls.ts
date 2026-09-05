@@ -627,8 +627,32 @@ async function main() {
   const admin = await signIn("E2E_ADMIN_EMAIL", "E2E_ADMIN_PASSWORD");
   const ids = await readResourceIds();
 
+  checkpoint("aceptación de términos");
+  await expectHidden(owner.client, "classes", "id", classId);
+  await expectRpcDenied(owner.client, "submit_exam_v1");
+  const forgedAcceptance = await owner.client
+    .from("profiles")
+    .update({ terms_accepted_at: "2099-01-01T00:00:00.000Z" })
+    .eq("id", owner.id);
+  check("fecha de aceptación no falsificable", Boolean(forgedAcceptance.error));
+  const firstAcceptance = await owner.client.rpc("accept_terms_v1");
+  requireNoError(firstAcceptance.error, "No se registró la aceptación");
+  check(
+    "aceptación fechada por el servidor",
+    typeof firstAcceptance.data === "string" &&
+      Number.isFinite(Date.parse(firstAcceptance.data)),
+  );
+  const repeatedAcceptance = await owner.client.rpc("accept_terms_v1");
+  requireNoError(repeatedAcceptance.error, "No se comprobó la aceptación idempotente");
+  check(
+    "aceptación no sobrescribible",
+    repeatedAcceptance.data === firstAcceptance.data,
+  );
+
   checkpoint("anon y RPC privadas");
   await expectHidden(anonymous, "classes", "id", classId);
+  const anonymousAcceptance = await anonymous.rpc("accept_terms_v1");
+  check("accept_terms_v1 denegada", anonymousAcceptance.error?.code === "42501");
   await assertStudyResources(anonymous, ids, "hidden");
   for (const client of [anonymous, owner.client, other.client]) {
     await expectRpcDenied(client, "import_class_package_v12");

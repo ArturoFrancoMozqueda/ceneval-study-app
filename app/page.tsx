@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import { HomeDashboard } from "@/components/home-dashboard";
 import { MarketingLanding } from "@/components/marketing-landing";
 import { getCurrentUser } from "@/lib/auth";
@@ -16,6 +17,7 @@ export default async function HomePage() {
   if (!user) {
     return <MarketingLanding />;
   }
+  if (!user.termsAcceptedAt) redirect("/aceptar-terminos");
 
   return <HomeDashboard />;
 }

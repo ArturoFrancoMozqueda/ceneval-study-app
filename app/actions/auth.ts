@@ -1,11 +1,9 @@
 "use server";
 
 import { redirect } from "next/navigation";
-import { isPrivateAccessOnly } from "@/lib/access";
 import {
   authCallbackUrl,
   validatePasswordInput,
-  validateRegistrationInput,
 } from "@/lib/auth/registration";
 import {
   invalidCredentialsState,
@@ -45,73 +43,48 @@ export async function signInAction(
     return invalidCredentialsState();
   }
 
-  if (isPrivateAccessOnly()) {
-    const { data: profile, error: profileError } = await supabase
-      .from("profiles")
-      .select("role")
-      .eq("id", data.user.id)
-      .single();
+  const { data: profile, error: profileError } = await supabase
+    .from("profiles")
+    .select("role,terms_accepted_at")
+    .eq("id", data.user.id)
+    .maybeSingle();
 
-    if (profileError || profile?.role !== "admin") {
-      await supabase.auth.signOut();
-      return invalidCredentialsState();
-    }
+  if (
+    profileError ||
+    !profile ||
+    (profile.role !== "admin" && profile.role !== "student")
+  ) {
+    await supabase.auth.signOut();
+    return invalidCredentialsState();
   }
 
+  if (!profile.terms_accepted_at) redirect("/aceptar-terminos");
   redirect("/");
 }
 
-export async function signUpAction(formData: FormData) {
-  if (isPrivateAccessOnly()) {
+export async function acceptTermsAction(formData: FormData) {
+  if (formData.get("termsAccepted") !== "on") {
     authError(
-      "/registro",
-      "El registro público aún no está disponible.",
+      "/aceptar-terminos",
+      "Debes aceptar los términos de uso y el aviso de privacidad para continuar.",
+      "termsAccepted",
     );
-  }
-
-  const fullName = value(formData, "fullName");
-  const email = value(formData, "email").toLowerCase();
-  const password = value(formData, "password");
-  const termsAccepted = formData.get("termsAccepted") === "on";
-  const validation = validateRegistrationInput({
-    fullName,
-    email,
-    password,
-    termsAccepted,
-  });
-
-  if (!validation.success) {
-    authError("/registro", validation.message, validation.field);
   }
 
   const supabase = await createServerSupabaseClient();
-  const { error } = await supabase.auth.signUp({
-    email: validation.data.email,
-    password: validation.data.password,
-    options: {
-      data: {
-        full_name: validation.data.fullName,
-        terms_accepted_at: new Date().toISOString(),
-      },
-      emailRedirectTo: authCallbackUrl(
-        "/auth/confirm",
-        process.env.NEXT_PUBLIC_SITE_URL,
-      ),
-    },
-  });
+  const { data: authData, error: authUserError } = await supabase.auth.getUser();
+  if (authUserError || !authData.user) redirect("/iniciar-sesion");
 
-  if (error) {
+  const { data, error } = await supabase.rpc("accept_terms_v1");
+
+  if (error || typeof data !== "string") {
     authError(
-      "/registro",
-      "No pudimos crear la cuenta. Revisa los datos o intenta nuevamente.",
+      "/aceptar-terminos",
+      "No pudimos guardar tu aceptación. Intenta nuevamente.",
     );
   }
 
-  redirect(
-    `/iniciar-sesion?message=${encodeURIComponent(
-      "Revisa tu correo para confirmar la cuenta.",
-    )}`,
-  );
+  redirect("/");
 }
 
 export async function requestPasswordResetAction(formData: FormData) {
@@ -160,7 +133,17 @@ export async function updatePasswordAction(formData: FormData) {
     );
   }
 
-  redirect("/?message=Contraseña actualizada.");
+  const { data: currentAuth } = await supabase.auth.getUser();
+  if (!currentAuth.user) redirect("/iniciar-sesion");
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("terms_accepted_at")
+    .eq("id", currentAuth.user.id)
+    .maybeSingle();
+  if (!profile?.terms_accepted_at) {
+    redirect("/aceptar-terminos?message=Contraseña actualizada.");
+  }
+  redirect("/cuenta?saved=Contraseña actualizada.");
 }
 
 export async function signOutAction() {

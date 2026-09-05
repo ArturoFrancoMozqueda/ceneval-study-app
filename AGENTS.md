@@ -45,8 +45,9 @@ transcripción → preparación editorial → borrador → revisión → publica
   se localizaron fuentes académicas suficientes, pero sigue bloqueada hasta
   obtener permiso comercial y producir una clase/transcripción original
   autorizada.
-- La app es **privada**: solo la administradora entra. El registro de
-  estudiantes está pospuesto por decisión de producto.
+- La app usa **acceso por invitación**: la administradora y las cuentas
+  `student` creadas explícitamente pueden entrar. El registro público sigue
+  cerrado y Supabase Auth no permite altas autoservicio.
 - El objetivo futuro es ofrecerla mediante **suscripción**. El producto,
   precio ($399 MXN/mes), proveedor (Stripe) y nombre comercial (*Sube Legal*)
   ya están decididos en `docs/PROJECT_STATUS.md` §4, pero eso no autoriza
@@ -54,7 +55,7 @@ transcripción → preparación editorial → borrador → revisión → publica
   infraestructura apta para cobrar y las etapas de
   `SUBSCRIPTION_ARCHITECTURE.md`. No implementes registro público o cobros sin
   que el plan vigente lo indique explícitamente.
-- Existe un despliegue técnico privado de CENEVAL en un proyecto separado de
+- Existe un despliegue técnico por invitación de CENEVAL en un proyecto separado de
   Vercel sobre el plan Hobby (no autoriza uso comercial). **Vercel ya está
   conectado a Git**: el último deployment está `READY` en producción y
   corresponde al commit actual de `main`. Supabase ya tiene el catálogo
@@ -192,18 +193,18 @@ alguna sigue abierta; si corriges una, actualiza esta lista.
   adaptación comercial y el contrato 1.2 exige una clase/transcripción original
   privada. No se debe crear un paquete solo con legislación ni copiar/adaptar la
   obra BY-NC-ND; consulta `docs/C58_NEW_SOURCE.md`.
-- **Las 29 migraciones del repositorio están aplicadas en CENEVAL y coinciden
-  una a una con `supabase/migrations/`** (20 se verificaron el 22 de agosto y
-  las 9 posteriores, hasta
-  `20260904234059_add_missing_foreign_key_indexes`, el 4 de septiembre).
-  Verificado el 4 de septiembre de 2026: los asesores de Supabase muestran los
+- **Las 32 migraciones del repositorio están aplicadas en CENEVAL y coinciden
+  una a una con `supabase/migrations/`** (20 se verificaron el 22 de agosto,
+  9 posteriores hasta `20260904234059_add_missing_foreign_key_indexes` el 4 de
+  septiembre y 3 de acceso por invitación el 5 de septiembre).
+  Verificado el 5 de septiembre de 2026: los asesores de Supabase muestran los
   `INFO` esperados de `exam_answer_keys` y `retrieval_item_answer_keys` sin
-  políticas (bloqueo deliberado), el `WARN` documentado del RPC autenticado
-  `submit_exam_v1` que necesita leer claves ocultas dentro de su transacción, y
-  el `WARN` de protección contra contraseñas filtradas, pendiente de activar
+  políticas (bloqueo deliberado), el `WARN` documentado de `accept_terms_v1`
+  (RPC autenticado, acotado e idempotente que fecha el consentimiento), y el
+  `WARN` de protección contra contraseñas filtradas, pendiente de activar
   (tarea `I-5` de `docs/PROJECT_STATUS.md` §5). En PG17 local,
   `npm run security:rls`
-  aplicó las migraciones desde cero y aprobó 176 comprobaciones con cleanup
+  aplicó las migraciones desde cero y aprobó 182 comprobaciones con cleanup
   sin residuos, pero esa suite dinámica todavía no se ha ejecutado contra un
   proyecto Supabase remoto (ni de ensayo ni de producción).
 - **La protección de lectura por aprobación está aplicada en CENEVAL.**

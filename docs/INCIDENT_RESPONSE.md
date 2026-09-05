@@ -1,7 +1,7 @@
 # Respuesta a incidentes
 
-Este procedimiento aplica al servicio privado actual y será el punto de partida
-si se habilitan estudiantes o cobros. No sustituye obligaciones legales ni
+Este procedimiento aplica al servicio actual por invitación y será el punto de
+partida si se habilitan cobros. No sustituye obligaciones legales ni
 autoriza publicar datos personales, secretos o contenido académico privado.
 
 ## Responsabilidades y tiempos
@@ -27,7 +27,8 @@ monitoreo continuo, deben registrarse como limitación y no como un SLA ofrecido
 2. Clasifica la severidad y conserva evidencia mínima sanitizada. Ante posible
    exposición, revoca sesiones o credenciales comprometidas desde sus paneles;
    no edites secretos dentro de Git.
-3. Contén el impacto. Conserva el acceso privado, pausa cambios y, si el
+3. Contén el impacto. Pausa nuevas invitaciones, revoca las sesiones afectadas,
+   conserva cerrado el registro público y, si el
    despliegue es la causa, sigue el rollback de
    `docs/DEPLOYMENT_RUNBOOK.md`. Un rollback de Vercel no revierte la base.
 4. Verifica integridad antes de recuperar. Para datos, usa únicamente un
@@ -41,9 +42,9 @@ monitoreo continuo, deben registrarse como limitación y no como un SLA ofrecido
 
 ## Comunicación
 
-Mientras la app siga siendo de una sola administradora, la responsable registra
-y confirma directamente el incidente. Antes de invitar estudiantes debe existir
-un canal de soporte real y una lista privada de destinatarias autorizadas.
+La responsable registra y confirma el incidente. Debe mantenerse una lista
+privada de destinatarias invitadas y usar el canal de soporte definido para las
+usuarias afectadas.
 
 Si hay usuarias afectadas, el primer aviso debe indicar: qué función está
 afectada, desde cuándo, qué deben hacer, cuándo habrá otra actualización y un

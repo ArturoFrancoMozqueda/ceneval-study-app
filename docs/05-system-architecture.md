@@ -25,7 +25,7 @@ firmados, idempotentes y resistentes a replay; mantiene facturación fuera de
 la Data API; y establece gates previos a cualquier apertura.
 
 Ese documento no selecciona proveedor, plan, precio, prueba, política de
-cancelación o impuestos y no autoriza cambiar `PRIVATE_ACCESS_ONLY`.
+cancelación o impuestos y no autoriza abrir el registro público.
 
 ## Estado
 

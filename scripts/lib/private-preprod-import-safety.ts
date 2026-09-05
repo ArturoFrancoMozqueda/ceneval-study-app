@@ -10,7 +10,6 @@ export const EXPECTED_CURRICULUM_CODES = Array.from(
 type TargetInput = {
   confirmation: boolean;
   execute: boolean;
-  privateAccessOnly: string | undefined;
   secretKey: string | undefined;
   siteUrl: string | undefined;
   supabaseUrl: string | undefined;
@@ -30,9 +29,6 @@ export function assertPrivatePreprodTarget(input: TargetInput): void {
   }
   if (input.siteUrl?.trim() !== EXPECTED_SITE_URL) {
     throw new Error("El sitio configurado no es el despliegue privado de CENEVAL.");
-  }
-  if (input.privateAccessOnly?.trim() !== "true") {
-    throw new Error("La importación exige PRIVATE_ACCESS_ONLY=true.");
   }
   if (!input.secretKey?.trim().startsWith("sb_secret_")) {
     throw new Error("Falta una clave secreta moderna de Supabase.");

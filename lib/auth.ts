@@ -2,7 +2,6 @@ import "server-only";
 
 import { cache } from "react";
 import { redirect } from "next/navigation";
-import { isPrivateAccessOnly } from "@/lib/access";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 
 export type AppRole = "admin" | "student";
@@ -12,6 +11,7 @@ export type CurrentUser = {
   email: string;
   fullName: string;
   role: AppRole;
+  termsAcceptedAt: string | null;
 };
 
 export const getCurrentUser = cache(async (): Promise<CurrentUser | null> => {
@@ -20,29 +20,33 @@ export const getCurrentUser = cache(async (): Promise<CurrentUser | null> => {
 
   if (error || !data.user) return null;
 
-  const { data: profile } = await supabase
+  const { data: profile, error: profileError } = await supabase
     .from("profiles")
-    .select("full_name,role")
+    .select("full_name,role,terms_accepted_at")
     .eq("id", data.user.id)
     .maybeSingle();
 
-  const role: AppRole = profile?.role === "admin" ? "admin" : "student";
-
-  if (isPrivateAccessOnly() && role !== "admin") {
+  if (
+    profileError ||
+    !profile ||
+    (profile.role !== "admin" && profile.role !== "student")
+  ) {
     return null;
   }
 
   return {
     id: data.user.id,
     email: data.user.email ?? "",
-    fullName: profile?.full_name ?? "",
-    role,
+    fullName: profile.full_name ?? "",
+    role: profile.role,
+    termsAcceptedAt: profile.terms_accepted_at,
   };
 });
 
 export async function requireUser() {
   const user = await getCurrentUser();
   if (!user) redirect("/iniciar-sesion");
+  if (!user.termsAcceptedAt) redirect("/aceptar-terminos");
   return user;
 }
 

@@ -98,6 +98,12 @@ def attach_error_gates(
             and headers.get("rsc") == "1"
             and bool(headers.get("next-router-state-tree"))
         )
+        is_next_static_script = (
+            request.resource_type == "script"
+            and request.method == "GET"
+            and parsed_request.path.startswith("/_next/static/chunks/")
+            and parsed_request.path.endswith(".js")
+        )
         if failure_reason in {"net::ERR_ABORTED", "NS_BINDING_ABORTED"} and same_origin:
             if is_document_navigation:
                 allowed_aborts["document-navigation"] += 1
@@ -110,6 +116,12 @@ def attach_error_gates(
                 return
             if is_next_rsc_navigation:
                 allowed_aborts["next-rsc-navigation"] += 1
+                return
+            if is_next_static_script:
+                # Next can cancel an obsolete route chunk when a redirect wins
+                # the race. A real load failure still surfaces as HTTP >= 500,
+                # a non-abort network error, a page error or a missing UI state.
+                allowed_aborts["next-static-script"] += 1
                 return
         safe_reason = (
             failure_reason
@@ -564,6 +576,7 @@ def main() -> None:
         "next-prefetch": 0,
         "next-server-action": 0,
         "next-rsc-navigation": 0,
+        "next-static-script": 0,
     }
 
     with sync_playwright() as playwright:
@@ -610,10 +623,31 @@ def main() -> None:
             page.get_by_label("Correo electrónico").fill(student_email)
             page.get_by_label("Contraseña").fill(student_password)
             page.get_by_role("button", name="Iniciar sesión").click()
-            expect(page.locator("#sign-in-error")).to_have_text(
-                "No pudimos iniciar sesión. Revisa tus datos o confirma tu correo."
-            )
-            expect(page).to_have_url(f"{base_url}/iniciar-sesion")
+            page.wait_for_url(f"{base_url}/aceptar-terminos")
+            expect(
+                page.get_by_role("heading", name="Confirma las condiciones de acceso")
+            ).to_be_visible()
+            page.get_by_label(re.compile("Acepto los términos de uso")).check()
+            page.get_by_role("button", name="Aceptar y continuar").click()
+            page.wait_for_url(f"{base_url}/")
+            wait_for_network(page)
+
+            page.goto(f"{base_url}/materias", wait_until="networkidle")
+            expect(
+                page.get_by_role("heading", name="Biblioteca CENEVAL", exact=True)
+            ).to_be_visible()
+            page.goto(lesson_url, wait_until="networkidle")
+            expect(page.locator("h1")).to_be_visible()
+            page.get_by_role("button", name=re.compile("Explicación")).click()
+            page.get_by_role("button", name="Aplicar lo aprendido").click()
+            expect(page.get_by_role("status")).to_have_text("Avance guardado")
+            page.goto(f"{base_url}/administrar", wait_until="networkidle")
+            expect(page).to_have_url(f"{base_url}/")
+            wait_for_network(page)
+            expect(page.get_by_role("link", name="Panel editorial")).to_have_count(0)
+
+            page.get_by_role("button", name="Cerrar sesión").first.click()
+            page.wait_for_url(f"{base_url}/iniciar-sesion")
 
             page.get_by_label("Correo electrónico").fill(admin_email)
             page.get_by_label("Contraseña").fill(admin_password)
@@ -906,8 +940,8 @@ def main() -> None:
                 raise AssertionError(f"El navegador registró errores: {details}")
 
             print(
-                "[OK] E2E local: login privado, health, biblioteca navegable, creación visible de materia y clase con validación/persistencia, gate de publicación incompleta, revisión y publicación completa, búsqueda con y sin resultados, estado vacío de historial, progreso, práctica adaptativa, examen, detalle e historial del intento, rutas inválidas, panel y emulación de reflow/touch/reduced-motion verificados; "
-                f"0 errores de consola/página/red; abortos permitidos document-navigation={allowed_aborts['document-navigation']}, next-prefetch={allowed_aborts['next-prefetch']}, next-server-action={allowed_aborts['next-server-action']}, next-rsc-navigation={allowed_aborts['next-rsc-navigation']}."
+                "[OK] E2E local: acceso estudiantil por invitación, aceptación explícita de términos, denegación administrativa, login admin, health, biblioteca navegable, creación visible de materia y clase con validación/persistencia, gate de publicación incompleta, revisión y publicación completa, búsqueda con y sin resultados, estado vacío de historial, progreso, práctica adaptativa, examen, detalle e historial del intento, rutas inválidas, panel y emulación de reflow/touch/reduced-motion verificados; "
+                f"0 errores de consola/página/red; abortos permitidos document-navigation={allowed_aborts['document-navigation']}, next-prefetch={allowed_aborts['next-prefetch']}, next-server-action={allowed_aborts['next-server-action']}, next-rsc-navigation={allowed_aborts['next-rsc-navigation']}, next-static-script={allowed_aborts['next-static-script']}."
             )
         finally:
             context.close()

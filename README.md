@@ -15,8 +15,8 @@ editorial privado.
 - **57 de 58 clases publicadas** (C01–C57). Para C58 ya se localizaron fuentes
   académicas suficientes, pero sigue bloqueada hasta obtener permiso comercial
   y una clase/transcripción original autorizada (`docs/C58_NEW_SOURCE.md`).
-- La aplicación es **privada**: por ahora solo entra la administradora. El
-  registro de estudiantes está pospuesto por decisión de producto.
+- La aplicación funciona mediante **invitación**: entran la administradora y
+  estudiantes invitados. El registro público continúa cerrado.
 - Funciona sobre Supabase real: autenticación, roles, políticas RLS, biblioteca
   por materias, recorrido en orden curricular C01→C57, mapas, guías,
   flashcards, repaso espaciado, exámenes con respuestas protegidas, progreso
@@ -27,8 +27,9 @@ editorial privado.
   `main` publica automáticamente). No confundir con uso comercial: el plan de
   Vercel sigue siendo Hobby, que no lo permite — ver
   [docs/PROJECT_STATUS.md §0](docs/PROJECT_STATUS.md).
-- No hay pruebas automatizadas de interfaz todavía; sí hay integración
-  continua (`.github/workflows/ci.yml`) en cada PR y push a `main`.
+- Hay un recorrido E2E local con Chromium y Supabase local que comprueba el
+  acceso estudiantil, la separación de roles y el flujo editorial. También hay
+  integración continua (`.github/workflows/ci.yml`) en cada PR y push a `main`.
 
 Para el estado detallado y el plan vigente, consulta
 [docs/PROJECT_STATUS.md](docs/PROJECT_STATUS.md). Para los problemas abiertos y

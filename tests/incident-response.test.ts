@@ -26,6 +26,8 @@ test("el plan protege evidencia y no promete capacidad que aún no existe", () =
   assert.match(plan, /No copies cookies, tokens, correos/);
   assert.match(plan, /rollback de Vercel no revierte la base/);
   assert.match(plan, /Mientras no exista[\s\S]*no como un SLA ofrecido/);
-  assert.match(plan, /Antes de invitar estudiantes[\s\S]*canal de soporte real/);
+  assert.match(plan, /lista[\s\S]*privada de destinatarias invitadas/);
+  assert.match(plan, /canal de soporte definido/);
+  assert.match(plan, /Pausa nuevas invitaciones[\s\S]*registro público/);
   assert.doesNotMatch(plan, /OPS_READINESS_TOKEN\s*=|SUPABASE_SECRET_KEY\s*=/);
 });

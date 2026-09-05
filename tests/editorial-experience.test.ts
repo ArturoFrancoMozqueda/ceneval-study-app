@@ -135,10 +135,10 @@ test("las historias separan preparación editorial y consumo", () => {
   const stories = source("docs/03-user-stories.md");
 
   assert.match(stories, /modelo editorial, no autoservicio/i);
-  assert.match(stories, /US-064 Acceder como estudiante \(futuro condicionado\)/);
+  assert.match(stories, /US-064 Acceder como estudiante invitada/);
   assert.match(stories, /Épica 10: Calendario \(futuro condicionado\)/);
   assert.match(stories, /ADR-013/);
-  assert.match(stories, /ADR-014/);
+  assert.match(stories, /acceso por invitación no las habilita automáticamente/i);
   assert.doesNotMatch(stories, /Como estudiante, quiero generar/i);
   assert.doesNotMatch(stories, /Como estudiante, quiero pegar/i);
   assert.doesNotMatch(stories, /Como estudiante, quiero crear una (materia|clase|flashcard)/i);

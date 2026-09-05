@@ -1,13 +1,14 @@
 import { updatePasswordAction } from "@/app/actions/auth";
 import { AuthCard, AuthField } from "@/components/auth-card";
-import { requireUser } from "@/lib/auth";
+import { getCurrentUser } from "@/lib/auth";
+import { redirect } from "next/navigation";
 
 export default async function UpdatePasswordPage({
   searchParams,
 }: {
   searchParams: Promise<{ error?: string; field?: string }>;
 }) {
-  await requireUser();
+  if (!(await getCurrentUser())) redirect("/iniciar-sesion");
   const { error, field } = await searchParams;
 
   return (

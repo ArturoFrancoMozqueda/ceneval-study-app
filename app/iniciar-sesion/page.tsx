@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { SignInForm } from "@/components/sign-in-form";
-import { isPrivateAccessOnly } from "@/lib/access";
 import { getCurrentUser } from "@/lib/auth";
 
 export const metadata: Metadata = {
   title: "Iniciar sesión",
-  description: "Acceso privado al espacio editorial de CENEVAL Study App.",
+  description: "Acceso por invitación a la biblioteca de Sube Legal.",
 };
 
 export default async function SignInPage({
@@ -21,7 +20,6 @@ export default async function SignInPage({
     <SignInForm
       initialError={error}
       initialMessage={message}
-      privateAccessOnly={isPrivateAccessOnly()}
     />
   );
 }

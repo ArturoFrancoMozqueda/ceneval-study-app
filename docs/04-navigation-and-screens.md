@@ -5,10 +5,14 @@
 ### Rutas públicas de autenticación
 
 - `/iniciar-sesion`
-- `/registro` (aviso de acceso privado; no captura datos mientras
-  `PRIVATE_ACCESS_ONLY=true`)
+- `/registro` (aviso de acceso por invitación; no captura datos ni crea cuentas)
 - `/recuperar-contrasena`
 - `/auth/confirm`
+
+### Ruta autenticada previa al estudio
+
+- `/aceptar-terminos` (paso autenticado aislado; el catálogo permanece cerrado
+  por RLS hasta registrar la aceptación)
 
 ### Rutas del estudiante autenticado
 

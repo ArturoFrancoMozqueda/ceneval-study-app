@@ -1,7 +1,5 @@
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { NextResponse, type NextRequest } from "next/server";
-import { isPrivateAccessOnly } from "@/lib/access";
-import { isAuthorizedPrivateRegistration } from "@/lib/auth/registration";
 import { safeInternalPath } from "@/lib/auth/safe-next";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 
@@ -35,41 +33,29 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  if (isPrivateAccessOnly()) {
-    const { data, error: userError } = await supabase.auth.getUser();
-    const authorized =
-      !userError &&
-      data.user?.email &&
-      isAuthorizedPrivateRegistration(
-        data.user.email,
-        process.env.ADMIN_EMAIL,
-      );
+  const { data, error: userError } = await supabase.auth.getUser();
+  const { data: profile, error: profileError } = data.user
+    ? await supabase
+        .from("profiles")
+        .select("role")
+        .eq("id", data.user.id)
+        .maybeSingle()
+    : { data: null, error: userError };
 
-    if (!authorized || !data.user) {
-      await supabase.auth.signOut();
-      return NextResponse.redirect(
-        new URL(
-          "/iniciar-sesion?error=El enlace es inválido o ya venció.",
-          request.url,
-        ),
-      );
-    }
-
-    const { data: profile, error: profileError } = await supabase
-      .from("profiles")
-      .select("role")
-      .eq("id", data.user.id)
-      .maybeSingle();
-
-    if (profileError || profile?.role !== "admin") {
-      await supabase.auth.signOut();
-      return NextResponse.redirect(
-        new URL(
-          "/iniciar-sesion?message=Tu correo fue confirmado. Ya puedes intentar iniciar sesión.",
-          request.url,
-        ),
-      );
-    }
+  if (
+    userError ||
+    profileError ||
+    !data.user ||
+    !profile ||
+    (profile.role !== "admin" && profile.role !== "student")
+  ) {
+    await supabase.auth.signOut();
+    return NextResponse.redirect(
+      new URL(
+        "/iniciar-sesion?error=El enlace es inválido o ya venció.",
+        request.url,
+      ),
+    );
   }
 
   return NextResponse.redirect(new URL(next, request.url));

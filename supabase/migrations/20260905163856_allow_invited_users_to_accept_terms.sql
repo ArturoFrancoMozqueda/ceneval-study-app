@@ -1,0 +1,3 @@
+-- Historical bridge applied before the hardened acceptance RPC. It is kept as
+-- a no-op in fresh installs so a failure in the following migration can never
+-- leave direct timestamp updates enabled.

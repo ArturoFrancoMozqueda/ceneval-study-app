@@ -15,7 +15,7 @@ npm.cmd run test:e2e:local
 El runner usa exclusivamente loopback y un puerto dedicado, compila la app,
 crea un fixture sintético y comprueba en Chromium:
 
-- inicio de sesión privado y skip-link mediante teclado;
+- acceso estudiantil por invitación, denegación administrativa y skip-link mediante teclado;
 - nombres programáticos, anuncios y gestión de foco en tarjetas y examen;
 - recorrido de diez tarjetas, examen de diez reactivos, resultado e historial;
 - persistencia del progreso después de recargar;

@@ -15,11 +15,6 @@ async function main() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
   if (!siteUrl) throw new Error("Falta NEXT_PUBLIC_SITE_URL.");
   requireAllowedAdminEmail(email, process.env.ADMIN_EMAIL);
-  if (process.env.PRIVATE_ACCESS_ONLY === "false") {
-    throw new Error(
-      "El bootstrap se bloqueó porque PRIVATE_ACCESS_ONLY=false. Cierra primero el acceso público.",
-    );
-  }
 
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
   const secretKey = process.env.SUPABASE_SECRET_KEY?.trim();
