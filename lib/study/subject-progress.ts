@@ -41,6 +41,13 @@ export type SubjectProgress = {
   correctExamAnswers: number;
   answeredExamQuestions: number;
   examAccuracyPercent: number | null;
+  evaluatedTopics: number;
+  reviewTopics: Array<{
+    topicId: number;
+    topicTitle: string;
+    reasons: string[];
+    lastEvidenceAt: string;
+  }>;
   lastActivityAt: string | null;
 };
 
@@ -109,6 +116,20 @@ export function deriveSubjectProgress(
     attemptsByTopic.set(attempt.topicId, attempts);
   }
 
+  const latestAttemptByTopic = new Map<number, TopicExamAttemptRecord>();
+  for (const [topicId, attempts] of attemptsByTopic) {
+    for (const attempt of attempts) {
+      const current = latestAttemptByTopic.get(topicId);
+      if (
+        !current ||
+        (attempt.completedAt ?? "") > (current.completedAt ?? "") ||
+        (attempt.completedAt === current.completedAt && attempt.id > current.id)
+      ) {
+        latestAttemptByTopic.set(topicId, attempt);
+      }
+    }
+  }
+
   const subjects = new Map<number, SubjectProgress>();
   for (const topic of uniqueTopics.values()) {
     const subject = subjects.get(topic.subjectId) ?? {
@@ -124,6 +145,8 @@ export function deriveSubjectProgress(
       correctExamAnswers: 0,
       answeredExamQuestions: 0,
       examAccuracyPercent: null,
+      evaluatedTopics: 0,
+      reviewTopics: [],
       lastActivityAt: null,
     };
 
@@ -146,6 +169,39 @@ export function deriveSubjectProgress(
       }
     }
 
+    const latestAttempt = latestAttemptByTopic.get(topic.id);
+    if (latestCheck || latestAttempt) subject.evaluatedTopics += 1;
+
+    const reviewReasons: string[] = [];
+    let lastEvidenceAt = "";
+    if (latestCheck?.needsReview) {
+      reviewReasons.push(
+        "La última comprobación indicó que este tema necesita repaso.",
+      );
+      lastEvidenceAt = latestCheck.answeredAt;
+    }
+    if (
+      latestAttempt &&
+      (latestAttempt.score ?? 0) < (latestAttempt.totalQuestions ?? 0)
+    ) {
+      const errors =
+        (latestAttempt.totalQuestions ?? 0) - (latestAttempt.score ?? 0);
+      reviewReasons.push(
+        `Tu intento más reciente tuvo ${errors} ${errors === 1 ? "error" : "errores"} de ${latestAttempt.totalQuestions} preguntas.`,
+      );
+      if ((latestAttempt.completedAt ?? "") > lastEvidenceAt) {
+        lastEvidenceAt = latestAttempt.completedAt ?? lastEvidenceAt;
+      }
+    }
+    if (reviewReasons.length) {
+      subject.reviewTopics.push({
+        topicId: topic.id,
+        topicTitle: topic.title,
+        reasons: reviewReasons,
+        lastEvidenceAt,
+      });
+    }
+
     for (const attempt of attemptsByTopic.get(topic.id) ?? []) {
       subject.completedExamAttempts += 1;
       subject.correctExamAnswers += attempt.score ?? 0;
@@ -160,6 +216,9 @@ export function deriveSubjectProgress(
 
   const derivedSubjects = [...subjects.values()].map((subject) => ({
     ...subject,
+    reviewTopics: subject.reviewTopics.sort((left, right) =>
+      right.lastEvidenceAt.localeCompare(left.lastEvidenceAt),
+    ),
     pendingTopics: subject.totalTopics - subject.completedTopics,
     examAccuracyPercent: subject.answeredExamQuestions
       ? Math.round(

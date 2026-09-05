@@ -3,11 +3,11 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 
 const migration = readFileSync(
-  "supabase/migrations/20260828190238_adaptive_learning_engine.sql",
+  "supabase/migrations/20260828195744_adaptive_learning_engine.sql",
   "utf8",
 );
 const atomicRatingMigration = readFileSync(
-  "supabase/migrations/20260904225405_rate_adaptive_attempt_atomic.sql",
+  "supabase/migrations/20260904233622_rate_adaptive_attempt_atomic.sql",
   "utf8",
 );
 const actions = readFileSync("app/actions/adaptive-practice.ts", "utf8");
@@ -90,15 +90,14 @@ test("la calificación adaptativa usa una única RPC transaccional", () => {
   assert.match(rateAction, /atomicRateResultSchema\.safeParse/);
 });
 
-test("el fallback transitorio se limita a RPC ausente y queda registrado", () => {
+test("la calificación adaptativa falla cerrada si la RPC no está disponible", () => {
   const rateAction = actions.slice(
     actions.indexOf("export async function rateAdaptiveAttemptAction"),
     actions.indexOf("export async function abandonPracticeSessionAction"),
   );
-  assert.match(rateAction, /atomicError\.code !== "PGRST202"/);
-  assert.match(rateAction, /operation: "rateAdaptiveAttemptRpcUnavailable"/);
-  assert.match(rateAction, /return rateAdaptiveAttemptLegacy\(/);
-  assert.match(actions, /async function rateAdaptiveAttemptLegacy/);
+  assert.match(rateAction, /return unavailable\("rateAdaptiveAttemptAtomic", atomicError\)/);
+  assert.doesNotMatch(rateAction, /PGRST202|rateAdaptiveAttemptLegacy/);
+  assert.doesNotMatch(actions, /async function rateAdaptiveAttemptLegacy/);
 });
 
 test("la RPC fija propiedad y estado bajo bloqueo antes de mutar", () => {

@@ -18,6 +18,14 @@ import {
 const ADMIN_EMAIL = "e2e-admin-local@example.invalid";
 const STUDENT_EMAIL = "e2e-student-local@example.invalid";
 const OTHER_STUDENT_EMAIL = "e2e-student-other-local@example.invalid";
+const UI_SUBJECT_NAME = "Materia creada por E2E local";
+const UI_SUBJECT_DESCRIPTION =
+  "Registro sintético creado únicamente por el navegador E2E local.";
+const UI_CLASS_TITLE = "Clase creada por E2E local";
+const UI_CLASS_DESCRIPTION =
+  "Borrador sintético creado únicamente por el navegador E2E local.";
+const UI_CLASS_DATE = "2026-09-04";
+const UI_CLASS_TEACHER = "Docente E2E local";
 const fixture = createSyntheticTraceablePackage();
 const syntheticReference = fixture.topics[0]!.references[0]!;
 const fixtureLockPath = join(tmpdir(), "ceneval-study-e2e-fixture.lock");
@@ -97,6 +105,50 @@ async function deleteRows(
   if (error) throw new Error(`No se pudo limpiar ${label}.`);
 }
 
+async function listUiSubjectIds(service: SupabaseClient) {
+  const { data, error } = await service
+    .from("subjects")
+    .select("id,name,description")
+    .eq("name", UI_SUBJECT_NAME);
+  if (error) throw error;
+  for (const row of data ?? []) {
+    if (
+      row.name !== UI_SUBJECT_NAME ||
+      row.description !== UI_SUBJECT_DESCRIPTION
+    ) {
+      throw new Error(
+        "Gate local: la materia reservada para E2E no tiene los marcadores sintéticos exactos.",
+      );
+    }
+  }
+  return (data ?? []).map(({ id }) => Number(id));
+}
+
+async function listUiClassIds(
+  service: SupabaseClient,
+  subjectIds: number[],
+) {
+  if (!subjectIds.length) return [];
+  const { data, error } = await service
+    .from("classes")
+    .select("id,subject_id,title,description,class_date,teacher")
+    .in("subject_id", subjectIds);
+  if (error) throw error;
+  for (const row of data ?? []) {
+    if (
+      row.title !== UI_CLASS_TITLE ||
+      row.description !== UI_CLASS_DESCRIPTION ||
+      row.class_date !== UI_CLASS_DATE ||
+      row.teacher !== UI_CLASS_TEACHER
+    ) {
+      throw new Error(
+        "Gate local: la materia reservada para E2E contiene una clase ajena; no se modificará.",
+      );
+    }
+  }
+  return (data ?? []).map(({ id }) => Number(id));
+}
+
 async function cleanupFixture(service: SupabaseClient) {
   const failures: string[] = [];
   const attempt = async (label: string, operation: () => Promise<void>) => {
@@ -113,6 +165,17 @@ async function cleanupFixture(service: SupabaseClient) {
       await deleteRows(
         service.from("practice_sessions").delete().in("user_id", fixtureUserIds),
         "las sesiones adaptativas sintéticas",
+      );
+    }
+  });
+
+  await attempt("clase creada por la interfaz E2E", async () => {
+    const subjectIds = await listUiSubjectIds(service);
+    const classIds = await listUiClassIds(service, subjectIds);
+    if (classIds.length) {
+      await deleteRows(
+        service.from("classes").delete().in("id", classIds),
+        "la clase creada por la interfaz E2E",
       );
     }
   });
@@ -147,6 +210,15 @@ async function cleanupFixture(service: SupabaseClient) {
       "la materia sintética",
     );
   });
+  await attempt("materia creada por la interfaz E2E", async () => {
+    const subjectIds = await listUiSubjectIds(service);
+    if (subjectIds.length) {
+      await deleteRows(
+        service.from("subjects").delete().in("id", subjectIds),
+        "la materia creada por la interfaz E2E",
+      );
+    }
+  });
   await attempt("usuarios sintéticos", async () => {
     for (const userId of await listFixtureUserIds(service)) {
       const { error } = await service.auth.admin.deleteUser(userId);
@@ -160,23 +232,32 @@ async function cleanupFixture(service: SupabaseClient) {
 }
 
 async function verifyClean(service: SupabaseClient) {
-  const [classes, subjects, references, userIds] = await Promise.all([
-    service
-      .from("classes")
-      .select("id", { count: "exact", head: true })
-      .eq("curriculum_code", fixture.curriculum.code),
-    service
-      .from("subjects")
-      .select("id", { count: "exact", head: true })
-      .eq("name", fixture.subject.name),
-    service
-      .from("legal_references")
-      .select("id", { count: "exact", head: true })
-      .eq("url", syntheticReference.url)
-      .eq("citation", syntheticReference.citation),
-    listFixtureUserIds(service),
-  ]);
-  for (const result of [classes, subjects, references]) {
+  const [classes, uiClasses, subjects, uiSubjects, references, userIds] =
+    await Promise.all([
+      service
+        .from("classes")
+        .select("id", { count: "exact", head: true })
+        .eq("curriculum_code", fixture.curriculum.code),
+      service
+        .from("classes")
+        .select("id", { count: "exact", head: true })
+        .eq("title", UI_CLASS_TITLE),
+      service
+        .from("subjects")
+        .select("id", { count: "exact", head: true })
+        .eq("name", fixture.subject.name),
+      service
+        .from("subjects")
+        .select("id", { count: "exact", head: true })
+        .eq("name", UI_SUBJECT_NAME),
+      service
+        .from("legal_references")
+        .select("id", { count: "exact", head: true })
+        .eq("url", syntheticReference.url)
+        .eq("citation", syntheticReference.citation),
+      listFixtureUserIds(service),
+    ]);
+  for (const result of [classes, uiClasses, subjects, uiSubjects, references]) {
     if (result.error) throw new Error("No se pudo verificar la limpieza local.");
     assert.equal(result.count, 0, "La limpieza local dejó residuos.");
   }
@@ -393,6 +474,12 @@ async function main() {
         E2E_STUDENT_PASSWORD: prepared.studentPassword,
         E2E_TOPIC_ID: String(prepared.topicId),
         E2E_TOPIC_URL: `/temas/${prepared.topicId}`,
+        E2E_UI_CLASS_DATE: UI_CLASS_DATE,
+        E2E_UI_CLASS_DESCRIPTION: UI_CLASS_DESCRIPTION,
+        E2E_UI_CLASS_TEACHER: UI_CLASS_TEACHER,
+        E2E_UI_CLASS_TITLE: UI_CLASS_TITLE,
+        E2E_UI_SUBJECT_DESCRIPTION: UI_SUBJECT_DESCRIPTION,
+        E2E_UI_SUBJECT_NAME: UI_SUBJECT_NAME,
         NEXT_PUBLIC_SITE_URL: baseUrl,
         NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: credentials.publishableKey,
         NEXT_PUBLIC_SUPABASE_URL: credentials.apiUrl,
@@ -405,7 +492,7 @@ async function main() {
       await cleanupFixture(service);
       await verifyClean(service);
       console.log(
-        "✓ Cleanup E2E verificado: 0 clases, 0 materias, 0 referencias y 0 usuarios sintéticos.",
+        "✓ Cleanup E2E verificado: 0 clases, 0 materias, 0 referencias y 0 usuarios sintéticos, incluidos los creados desde la interfaz.",
       );
     }
   } finally {

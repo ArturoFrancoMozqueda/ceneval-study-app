@@ -91,6 +91,16 @@ test("el runner conserva cleanup idempotente en finally y no imprime secretos", 
   assert.match(runner, /readFileSync\(fixtureLockPath, "utf8"\) === lock\.owner/);
   assert.match(runner, /releaseFixtureLock\(fixtureLock\)/);
   assert.match(runner, /OPS_READINESS_TOKEN: readinessToken/);
+  assert.match(runner, /UI_SUBJECT_NAME = "Materia creada por E2E local"/);
+  assert.match(runner, /UI_CLASS_TITLE = "Clase creada por E2E local"/);
+  assert.match(runner, /row\.description !== UI_SUBJECT_DESCRIPTION/);
+  assert.match(runner, /row\.class_date !== UI_CLASS_DATE/);
+  assert.match(runner, /row\.teacher !== UI_CLASS_TEACHER/);
+  assert.match(runner, /contiene una clase ajena; no se modificará/);
+  assert.match(runner, /listUiSubjectIds\(service\)/);
+  assert.match(runner, /listUiClassIds\(service, subjectIds\)/);
+  assert.match(runner, /E2E_UI_SUBJECT_NAME: UI_SUBJECT_NAME/);
+  assert.match(runner, /E2E_UI_CLASS_TITLE: UI_CLASS_TITLE/);
   assert.match(
     runner,
     /p_package: toPersistableClassPackage\(fixture\)/,

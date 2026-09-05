@@ -26,14 +26,15 @@ async function main() {
     headers.get("content-security-policy") ?? "",
     /frame-ancestors 'none'/,
   );
-  assert.match(headers.get("content-security-policy") ?? "", /base-uri 'self'/);
-  assert.match(headers.get("content-security-policy") ?? "", /form-action 'self'/);
-  const reportOnly = headers.get("content-security-policy-report-only") ?? "";
-  assert.match(reportOnly, /default-src 'self'/);
-  assert.match(reportOnly, /script-src 'self' 'unsafe-inline'/);
-  assert.match(reportOnly, /connect-src 'self' https:\/\/\*\.supabase\.co wss:\/\/\*\.supabase\.co/);
-  assert.match(reportOnly, /http:\/\/127\.0\.0\.1:\*/);
-  assert.match(reportOnly, /object-src 'none'/);
+  const enforced = headers.get("content-security-policy") ?? "";
+  assert.match(enforced, /base-uri 'self'/);
+  assert.match(enforced, /form-action 'self'/);
+  assert.match(enforced, /default-src 'self'/);
+  assert.match(enforced, /script-src 'self' 'unsafe-inline'/);
+  assert.match(enforced, /connect-src 'self' https:\/\/\*\.supabase\.co wss:\/\/\*\.supabase\.co/);
+  assert.match(enforced, /http:\/\/127\.0\.0\.1:\*/);
+  assert.match(enforced, /object-src 'none'/);
+  assert.equal(headers.get("content-security-policy-report-only"), undefined);
   assert.match(headers.get("permissions-policy") ?? "", /camera=\(\)/);
 
   console.log("Cabeceras HTTP de seguridad: configuración aprobada.");

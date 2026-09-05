@@ -80,6 +80,11 @@ test("deriva cobertura y evidencia real por materia", () => {
       correct: overview.subjects[0].correctExamAnswers,
       questions: overview.subjects[0].answeredExamQuestions,
       accuracy: overview.subjects[0].examAccuracyPercent,
+      evaluated: overview.subjects[0].evaluatedTopics,
+      reviewTopics: overview.subjects[0].reviewTopics.map((topic) => ({
+        topicId: topic.topicId,
+        reasons: topic.reasons.length,
+      })),
     },
     {
       total: 2,
@@ -92,6 +97,11 @@ test("deriva cobertura y evidencia real por materia", () => {
       correct: 11,
       questions: 15,
       accuracy: 73,
+      evaluated: 2,
+      reviewTopics: [
+        { topicId: 1, reasons: 1 },
+        { topicId: 2, reasons: 2 },
+      ],
     },
   );
 });
@@ -145,6 +155,8 @@ test("no inventa desempeño sin intentos válidos ni incluye contenido fuera del
     assert.equal(subject.completedExamAttempts, 0);
     assert.equal(subject.examAccuracyPercent, null);
     assert.equal(subject.lastActivityAt, null);
+    assert.equal(subject.evaluatedTopics, 0);
+    assert.deepEqual(subject.reviewTopics, []);
   }
 });
 
@@ -171,4 +183,33 @@ test("desempata comprobaciones simultáneas por el identificador más reciente",
 
   assert.equal(overview.subjects[0].checkedTopics, 1);
   assert.equal(overview.subjects[0].needsReviewTopics, 0);
+  assert.equal(overview.subjects[0].evaluatedTopics, 1);
+  assert.deepEqual(overview.subjects[0].reviewTopics, []);
+});
+
+test("usa solo el intento más reciente para explicar el refuerzo", () => {
+  const overview = deriveSubjectProgress(
+    [topics[0]],
+    [],
+    [],
+    [
+      {
+        id: 1,
+        topicId: 1,
+        score: 5,
+        totalQuestions: 10,
+        completedAt: "2026-08-20T12:00:00.000Z",
+      },
+      {
+        id: 2,
+        topicId: 1,
+        score: 10,
+        totalQuestions: 10,
+        completedAt: "2026-08-21T12:00:00.000Z",
+      },
+    ],
+  );
+
+  assert.equal(overview.subjects[0].evaluatedTopics, 1);
+  assert.deepEqual(overview.subjects[0].reviewTopics, []);
 });

@@ -1,6 +1,7 @@
 import json
 import os
 import re
+from datetime import date
 from urllib.error import HTTPError
 from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
@@ -297,6 +298,171 @@ def assert_privacy_curtain(page: Page) -> None:
     expect(curtain).to_have_attribute("data-state", "hidden")
 
 
+def create_editorial_draft_through_ui(
+    page: Page,
+    base_url: str,
+    subject_name: str,
+    subject_description: str,
+    class_title: str,
+    class_description: str,
+    class_date: str,
+    class_teacher: str,
+) -> tuple[str, str]:
+    page.goto(f"{base_url}/materias", wait_until="networkidle")
+    page.get_by_role("link", name="Nueva materia", exact=True).click()
+    wait_for_network(page)
+    expect(page.get_by_role("heading", name="Nueva materia", exact=True)).to_be_visible()
+
+    subject_name_input = page.locator("#subject-name")
+    page.get_by_role("button", name="Guardar materia", exact=True).click()
+    expect(page.locator("#subject-name-error")).to_have_text(
+        "Escribe el nombre de la materia."
+    )
+    expect(subject_name_input).to_be_focused()
+    subject_name_input.fill(subject_name)
+    page.locator("#subject-description").fill(subject_description)
+    page.get_by_role("button", name="Guardar materia", exact=True).click()
+    page.wait_for_url(re.compile(rf"^{re.escape(base_url)}/materias\?creada=1$"))
+    wait_for_network(page)
+
+    subject_link = page.get_by_role("link", name=f"Abrir {subject_name}", exact=True)
+    expect(subject_link).to_contain_text("0 clases · 0 temas")
+    subject_href = subject_link.get_attribute("href")
+    if not subject_href or not re.fullmatch(r"/materias/[1-9]\d*", subject_href):
+        raise AssertionError("La materia creada no expuso un enlace local válido.")
+    # SubjectForm hace push y refresh consecutivos. Esperar a que el refresh
+    # termine evita activar el enlace contra el árbol anterior del router.
+    page.wait_for_timeout(500)
+    subject_link.click()
+    page.wait_for_url(f"{base_url}{subject_href}")
+    wait_for_network(page)
+    subject_path = urlparse(page.url).path
+    if not re.fullmatch(r"/materias/[1-9]\d*", subject_path):
+        raise AssertionError(
+            f"La materia creada no abrió una ruta local válida: {subject_path[:80]}."
+        )
+    expect(page.get_by_role("heading", name=subject_name, exact=True)).to_be_visible()
+    expect(
+        page.get_by_role("heading", name="Esta materia aún no tiene clases", exact=True)
+    ).to_be_visible()
+    page.get_by_role("link", name="Crear la primera clase", exact=True).click()
+    wait_for_network(page)
+    expect(page.get_by_role("heading", name="Nueva clase", exact=True)).to_be_visible()
+
+    class_title_input = page.locator("#class-title")
+    page.get_by_role("button", name="Guardar clase", exact=True).click()
+    expect(page.locator("#class-title-error")).to_have_text(
+        "Escribe el título de la clase."
+    )
+    expect(class_title_input).to_be_focused()
+    class_title_input.fill(class_title)
+    page.locator("#class-date").fill(class_date)
+    page.locator("#class-teacher").fill(class_teacher)
+    page.locator("#class-description").fill(class_description)
+    page.get_by_role("button", name="Guardar clase", exact=True).click()
+    page.wait_for_url(re.compile(rf"^{re.escape(base_url)}/clases/[1-9]\d*$"))
+    wait_for_network(page)
+    class_path = urlparse(page.url).path
+    expect(page.get_by_role("heading", name=class_title, exact=True)).to_be_visible()
+    expect(page.get_by_text("Borrador", exact=True)).to_be_visible()
+    expect(page.get_by_text(class_description, exact=True)).to_be_visible()
+    expect(
+        page.get_by_role(
+            "heading", name="Esta clase aún no tiene temas disponibles", exact=True
+        )
+    ).to_be_visible()
+    page.reload(wait_until="networkidle")
+    expect(page.get_by_role("heading", name=class_title, exact=True)).to_be_visible()
+    expect(page.get_by_text(class_description, exact=True)).to_be_visible()
+    return subject_path, class_path
+
+
+def exercise_incomplete_publication_gate(
+    page: Page,
+    base_url: str,
+    class_path: str,
+) -> None:
+    page.get_by_role("link", name="Revisar publicación", exact=True).click()
+    wait_for_network(page)
+    expected_path = class_path.replace("/clases/", "/administrar/clases/")
+    expect(page).to_have_url(f"{base_url}{expected_path}")
+    expect(page.get_by_text("Estado actual: Borrador", exact=True)).to_be_visible()
+
+    publish_button = page.get_by_role("button", name="Publicar clase", exact=True)
+    publish_button.click()
+    dialog = page.get_by_role("dialog", name="¿Publicar esta clase?")
+    expect(dialog).to_be_visible()
+    expect(page.get_by_role("button", name="Cancelar", exact=True)).to_be_focused()
+    page.keyboard.press("Escape")
+    expect(dialog).to_have_count(0)
+    expect(publish_button).to_be_focused()
+
+    publish_button.click()
+    page.get_by_role("button", name="Sí, publicar clase", exact=True).click()
+    direct_publish_error = page.get_by_role("alert").filter(
+        has_text="Primero envía la clase a revisión"
+    )
+    expect(direct_publish_error).to_contain_text(
+        "Primero envía la clase a revisión"
+    )
+    page.get_by_role("button", name="Enviar a revisión", exact=True).click()
+    expect(page.get_by_text("Estado actual: En revisión", exact=True)).to_be_visible()
+    page.get_by_role("button", name="Publicar clase", exact=True).click()
+    page.get_by_role("button", name="Sí, publicar clase", exact=True).click()
+    incomplete_error = page.get_by_role("alert").filter(
+        has_text="La clase no tiene temas para publicar."
+    )
+    expect(incomplete_error).to_contain_text("La clase no tiene temas para publicar.")
+    page.get_by_role("button", name="Volver a borrador", exact=True).click()
+    expect(page.get_by_text("Estado actual: Borrador", exact=True)).to_be_visible()
+    page.reload(wait_until="networkidle")
+    expect(page.get_by_text("Estado actual: Borrador", exact=True)).to_be_visible()
+
+
+def exercise_complete_editorial_workflow(page: Page) -> None:
+    updated_description = (
+        "Fixture artificial actualizado desde los controles visibles del E2E local."
+    )
+    description_input = page.locator("#editorial-class-description")
+    description_input.fill(updated_description)
+    page.get_by_role("button", name="Guardar cambios", exact=True).click()
+    expect(page.get_by_text("Cambios guardados correctamente.", exact=True)).to_be_visible()
+    page.reload(wait_until="networkidle")
+    expect(page.locator("#editorial-class-description")).to_have_value(
+        updated_description
+    )
+
+    page.get_by_role("button", name="Enviar a revisión", exact=True).click()
+    expect(page.get_by_text("Estado actual: En revisión", exact=True)).to_be_visible()
+    expect(
+        page.get_by_role("heading", name="Dictamen editorial", exact=True)
+    ).to_be_visible()
+    approve_button = page.get_by_role("button", name="Aprobar versión", exact=True)
+    expect(approve_button).to_be_disabled()
+    page.locator("#legal-verified-on").fill(date.today().isoformat())
+    page.locator("#review-notes").fill(
+        "Dictamen ejercido únicamente por el navegador E2E local."
+    )
+    expect(approve_button).to_be_enabled()
+    approve_button.click()
+    expect(
+        page.get_by_text(
+            "Aprobación editorial registrada para esta versión.", exact=True
+        )
+    ).to_be_visible()
+
+    publish_button = page.get_by_role("button", name="Publicar clase", exact=True)
+    publish_button.click()
+    expect(page.get_by_role("dialog", name="¿Publicar esta clase?")).to_be_visible()
+    page.get_by_role("button", name="Sí, publicar clase", exact=True).click()
+    expect(page.get_by_text("Estado actual: Publicada", exact=True)).to_be_visible()
+    expect(
+        page.get_by_role("button", name="Publicar clase", exact=True)
+    ).to_be_disabled()
+    page.reload(wait_until="networkidle")
+    expect(page.get_by_text("Estado actual: Publicada", exact=True)).to_be_visible()
+
+
 def audit_emulated_accessibility(
     browser: Browser,
     base_url: str,
@@ -372,6 +538,12 @@ def main() -> None:
     readiness_token = required_env("OPS_READINESS_TOKEN")
     class_id = required_env("E2E_CLASS_ID")
     topic_path = required_env("E2E_TOPIC_URL")
+    ui_subject_name = required_env("E2E_UI_SUBJECT_NAME")
+    ui_subject_description = required_env("E2E_UI_SUBJECT_DESCRIPTION")
+    ui_class_title = required_env("E2E_UI_CLASS_TITLE")
+    ui_class_description = required_env("E2E_UI_CLASS_DESCRIPTION")
+    ui_class_date = required_env("E2E_UI_CLASS_DATE")
+    ui_class_teacher = required_env("E2E_UI_CLASS_TEACHER")
     topic_url = loopback_url(urljoin(f"{base_url}/", topic_path), "E2E_TOPIC_URL")
     lesson_url = f"{topic_url}?modo=leccion"
     class_path = f"/clases/{class_id}"
@@ -495,19 +667,37 @@ def main() -> None:
             wait_for_network(page)
             expect(page).to_have_url(topic_url)
 
+            _, created_class_path = create_editorial_draft_through_ui(
+                page,
+                base_url,
+                ui_subject_name,
+                ui_subject_description,
+                ui_class_title,
+                ui_class_description,
+                ui_class_date,
+                ui_class_teacher,
+            )
+            exercise_incomplete_publication_gate(
+                page,
+                base_url,
+                created_class_path,
+            )
+
             # La búsqueda valida tanto el estado útil sin resultados como un
             # resultado seleccionable y el regreso con la consulta intacta.
             page.goto(f"{base_url}/buscar", wait_until="networkidle")
             expect(
-                page.get_by_role("heading", name="Buscar por tema o concepto")
+                page.get_by_role("heading", name="Buscar en todo el contenido")
             ).to_be_visible()
-            search = page.get_by_role("searchbox", name="Buscar temas")
+            search = page.get_by_role(
+                "searchbox", name="Buscar materias, clases o temas"
+            )
             search.fill("consulta-sintetica-inexistente")
             page.get_by_role("button", name="Buscar", exact=True).click()
             wait_for_network(page)
             expect(
                 page.get_by_text(
-                    "No encontramos temas publicados para “consulta-sintetica-inexistente”.",
+                    "No encontramos contenido publicado para “consulta-sintetica-inexistente”.",
                     exact=True,
                 )
             ).to_be_visible()
@@ -517,6 +707,7 @@ def main() -> None:
             expect(page.get_by_role("heading", name="1 resultado", exact=True)).to_be_visible()
             search_result = page.locator(f'a[href="{topic_path}"]').first
             expect(search_result).to_contain_text("Tema sintético")
+            expect(search_result.get_by_text("Tema", exact=True)).to_be_visible()
             expect(search_result).to_contain_text(
                 "Materia sintética · C41 · Clase sintética de persistencia"
             )
@@ -524,9 +715,11 @@ def main() -> None:
             wait_for_network(page)
             expect(page).to_have_url(topic_url)
             page.go_back(wait_until="networkidle")
-            expect(page.get_by_role("searchbox", name="Buscar temas")).to_have_value(
-                "Tema sintético"
-            )
+            expect(
+                page.get_by_role(
+                    "searchbox", name="Buscar materias, clases o temas"
+                )
+            ).to_have_value("Tema sintético")
 
             page.goto(f"{base_url}/progreso/examenes", wait_until="networkidle")
             expect(page.get_by_role("heading", name="Historial de exámenes")).to_be_visible()
@@ -678,6 +871,7 @@ def main() -> None:
             expect(page.get_by_text("Estado actual: Publicada", exact=True)).to_be_visible()
             expect(page.get_by_role("heading", name="Publicación", exact=True)).to_be_visible()
             expect(page.get_by_role("button", name="Publicar clase", exact=True)).to_be_disabled()
+            exercise_complete_editorial_workflow(page)
 
             storage_state = context.storage_state()
             audit_emulated_accessibility(
@@ -712,7 +906,7 @@ def main() -> None:
                 raise AssertionError(f"El navegador registró errores: {details}")
 
             print(
-                "[OK] E2E local: login privado, health, biblioteca navegable, búsqueda con y sin resultados, estado vacío de historial, progreso, práctica adaptativa, examen, detalle e historial del intento, rutas inválidas, panel y emulación de reflow/touch/reduced-motion verificados; "
+                "[OK] E2E local: login privado, health, biblioteca navegable, creación visible de materia y clase con validación/persistencia, gate de publicación incompleta, revisión y publicación completa, búsqueda con y sin resultados, estado vacío de historial, progreso, práctica adaptativa, examen, detalle e historial del intento, rutas inválidas, panel y emulación de reflow/touch/reduced-motion verificados; "
                 f"0 errores de consola/página/red; abortos permitidos document-navigation={allowed_aborts['document-navigation']}, next-prefetch={allowed_aborts['next-prefetch']}, next-server-action={allowed_aborts['next-server-action']}, next-rsc-navigation={allowed_aborts['next-rsc-navigation']}."
             )
         finally:

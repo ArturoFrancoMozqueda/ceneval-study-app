@@ -23,13 +23,31 @@ test("el E2E recorre el panel y el detalle editorial publicados", () => {
   assert.match(e2e, /name="Publicación"/);
 });
 
-test("el recorrido administrativo es read-only y conserva el gate de errores", () => {
+test("el recorrido administrativo crea borradores y ejerce el gate editorial", () => {
+  for (const required of [
+    'required_env("E2E_UI_SUBJECT_NAME")',
+    'required_env("E2E_UI_CLASS_TITLE")',
+    "create_editorial_draft_through_ui(",
+    "exercise_incomplete_publication_gate(",
+    "exercise_complete_editorial_workflow(page)",
+    'name="Guardar materia"',
+    'name="Guardar clase"',
+    'name="Enviar a revisión"',
+    'name="Aprobar versión"',
+    'name="Sí, publicar clase"',
+  ]) {
+    assert.ok(e2e.includes(required), `Falta control editorial visible: ${required}`);
+  }
   assert.match(
     e2e,
     /get_by_role\("button", name="Publicar clase", exact=True\)[\s\S]*to_be_disabled\(\)/,
   );
-  assert.doesNotMatch(e2e, /name="Sí, publicar clase"[\s\S]*\.click\(\)/);
-  assert.doesNotMatch(e2e, /name="Retirar"[\s\S]*\.click\(\)/);
+  assert.match(e2e, /Escribe el nombre de la materia/);
+  assert.match(e2e, /Escribe el título de la clase/);
+  assert.match(e2e, /Primero envía la clase a revisión/);
+  assert.match(e2e, /La clase no tiene temas para publicar/);
+  assert.match(e2e, /Aprobación editorial registrada para esta versión/);
+  assert.match(e2e, /Estado actual: Publicada/);
 
   const adminFlow = e2e.indexOf('name="Panel editorial"');
   const errorGate = e2e.indexOf("if console_errors or page_errors or network_errors:");
@@ -43,9 +61,10 @@ test("el recorrido cubre biblioteca, búsqueda, práctica, examen e historial", 
   assert.match(e2e, /expect\(subject_link\)\.to_contain_text\("1 clase · 1 tema"\)/);
   assert.match(e2e, /class_link\.click\(\)/);
   assert.match(e2e, /topic_link\.click\(\)/);
-  assert.match(e2e, /name="Buscar por tema o concepto"/);
+  assert.match(e2e, /name="Buscar en todo el contenido"/);
   assert.match(e2e, /search\.fill\("consulta-sintetica-inexistente"\)/);
-  assert.match(e2e, /No encontramos temas publicados/);
+  assert.match(e2e, /No encontramos contenido publicado/);
+  assert.match(e2e, /get_by_text\("Tema", exact=True\)/);
   assert.match(e2e, /search\.fill\("Tema sintético"\)/);
   assert.match(e2e, /search_result\.click\(\)/);
   assert.match(e2e, /page\.go_back\(wait_until="networkidle"\)/);

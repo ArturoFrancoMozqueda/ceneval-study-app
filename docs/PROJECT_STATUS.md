@@ -10,17 +10,18 @@ auditorías y correcciones de C01/C06, mecanismos de edición, pruebas E2E,
 auditoría de accesibilidad, jerarquía visual de materiales y búsqueda de C58) y
 verificación remota directa contra el proyecto Supabase `CENEVAL Study App`
 (`qcseoivljzuxzqeaxfly`) y el proyecto Vercel `ceneval-study-app` (team
-`kova-mx`) el 24 de agosto de 2026.
+`kova-mx`), actualizada el 4 de septiembre de 2026.
 
 Seguimiento del 4 de septiembre: se completó una auditoría integral de UX,
 accesibilidad, funcionamiento, calidad y seguridad. El recorrido local cubre
-ahora los flujos principales completos con navegador real y fixture sintético;
-se corrigieron textos que prometían funciones inexistentes, recuperación de
-errores de Next.js 16, semántica y validaciones de formularios. La nueva RPC
-transaccional de calificación adaptativa quedó validada **solo en Supabase
-local**; su migración remota sigue pendiente de autorización y el código usa un
-fallback compatible mientras falte. No se modificó Supabase remoto. Evidencia,
-límites y pendientes: `docs/QUALITY_AUDIT_2026-09-04.md`.
+los flujos principales con navegador real y fixture sintético, incluida la
+creación, revisión, aprobación y publicación editorial. Se aplicaron en
+Supabase remoto la calificación adaptativa atómica y cinco índices de claves
+foráneas; se verificaron 456 reactivos adaptativos publicados con 456 claves y
+1,377 evidencias. Los fallbacks no transaccionales fueron retirados, CSP quedó
+aplicada y se cerraron las brechas de edición de materia, búsqueda global y
+señales de repaso por tema. Evidencia y límites:
+`docs/QUALITY_AUDIT_2026-09-04.md`.
 
 > **Si vienes a este documento buscando "qué hacer ahora", ve directo al
 > §0.** El resto del documento es el archivo histórico detallado detrás de
@@ -243,18 +244,16 @@ trabajo. Ordenadas por impacto:
     recuperación activa quedó bloqueada por errores jurídicos y falta de
     trazabilidad. Hallazgos, correcciones y backlog priorizado en
     `docs/QUALITY_AUDIT_2026-08-25.md`.
-11. **Cierre del backlog técnico local — ejecutado el 30 de agosto.** Un Agent
-    Team implementó la entrega transaccional de examen, restricciones de
-    integridad en Postgres, un resumen único de repaso, inicio explícito de la
-    práctica adaptativa, E2E manual/nocturno con Supabase local y Chromium,
-    respuesta a incidentes, CSP Report-Only, consultas más acotadas y 404
-    editoriales consistentes. La marca de agua visual continúa retirada y el
-    contrato `test:content-protection` impide que reaparezca. `test:local` pasó
-    completo. La migración nueva no se aplicó remotamente: Docker local estaba
-    apagado y la cuenta visible para Supabase CLI solo mostró un proyecto ajeno
-    (`VALT`), así que no se enlazó ni escribió ningún destino. La aplicación
-    conserva un fallback temporal solo para `PGRST202` hasta verificar la RPC.
-    Detalle y condiciones restantes en `docs/QUALITY_AUDIT_2026-08-25.md`.
+11. **Cierre del backlog técnico — completado el 4 de septiembre.** Un Agent
+    Team verificó la entrega transaccional de examen y práctica adaptativa,
+    restricciones de integridad, progreso por materia, búsqueda global y el
+    recorrido editorial mediante Supabase local y Chromium. El E2E crea desde
+    controles visibles, rechaza publicaciones incompletas, revisa, aprueba y
+    publica un fixture completo, y limpia todos sus datos. CSP está aplicada,
+    los fallbacks no transaccionales se retiraron y `test:local` conserva los
+    contratos de seguridad. Las migraciones adaptativa e índices de claves
+    foráneas se aplicaron y verificaron en CENEVAL remoto antes del despliegue.
+    Detalle en `docs/QUALITY_AUDIT_2026-09-04.md`.
 
 ### 0.3 — Bloqueadas por terceros, sin acción posible hoy
 
@@ -283,7 +282,7 @@ flashcards, repaso espaciado, exámenes, progreso, búsqueda y panel editorial.
 El catálogo completo C01–C57 está importado, revisado y publicado en el
 proyecto remoto. Vercel está **conectado a Git de verdad** (verificado y
 reparado el 23 de agosto — ver §7), con el último deployment `READY` en
-producción; las **21 migraciones** del repositorio están aplicadas en
+producción; las **29 migraciones** del repositorio están aplicadas en
 Supabase y coinciden una a una con `supabase/migrations/`. El detalle
 verificado está en el §2. La lista concreta de lo que falta y qué hacer con
 cada punto está en el **§0**.
@@ -347,15 +346,15 @@ decisión no añade infraestructura ni reemplaza los gates operativos vigentes.
 
 ## 2. Estado verificado hoy
 
-| Área | Estado comprobado el 24 de agosto de 2026 |
+| Área | Estado comprobado el 4 de septiembre de 2026 |
 | --- | --- |
-| Despliegue | Vercel **conectado a Git de verdad** (no lo estaba realmente — ver incidente del 23 de agosto en §7). El deployment en producción corresponde al commit actual de `main` (`527385f`), publicado automáticamente por el push a GitHub. |
+| Despliegue | Vercel **conectado a Git de verdad** (no lo estaba realmente — ver incidente del 23 de agosto en §7). Cada push validado a `main` crea automáticamente el deployment de producción; el SHA nuevo se registra después de cada release. |
 | Salud | `GET /api/health/live` responde `200`. `GET /api/health/ready` responde `404` sin token, que es el comportamiento correcto. |
-| Base de datos | Las **21 migraciones** del repositorio están aplicadas en el proyecto remoto (20 verificadas el 22 de agosto + `20260824040500_add_update_exam_question_v1` del 24 de agosto). Coinciden una a una con `supabase/migrations/`. |
+| Base de datos | Las **29 migraciones** del repositorio están aplicadas en el proyecto remoto: 20 verificadas el 22 de agosto y 9 posteriores, hasta `20260904234059_add_missing_foreign_key_indexes`, verificadas el 4 de septiembre. Coinciden una a una con `supabase/migrations/`. |
 | Contenido publicado | **24 materias, 57 clases (todas `published`), 57 temas (todos `approved`), 513 materiales, 57 mapas conceptuales, 685 flashcards, 57 exámenes, 570 preguntas y 570 claves de respuesta.** Detalle completo en el §8. El examen de C01 (10 preguntas) fue auditado y 3 de sus reactivos corregidos el 24 de agosto — ver §0.2 y §7. |
-| Seguridad de base | Los asesores de Supabase solo reportan el `INFO` esperado de `exam_answer_keys` sin políticas (bloqueo deliberado) y un `WARN` de contraseñas filtradas, pendiente de activar y confirmado el 23 de agosto que **requiere plan Pro** (`I-5`, ver §0.1-G). Sin errores. Se cerró además una brecha real (registro directo contra Supabase sin pasar por la app) — ver §7. |
+| Seguridad de base | Los asesores reportan los `INFO` esperados de las dos tablas de claves sin políticas (bloqueo deliberado), el RPC de examen `SECURITY DEFINER` autenticado y documentado, y el `WARN` de contraseñas filtradas que **requiere plan Pro** (`I-5`, ver §0.1-G). Sin errores. |
 | Código | `npm run lint` y `npm run build` pasan sin hallazgos. El build de producción del mismo commit se completó en Vercel. |
-| Usuarios | **1 usuario, 1 perfil administrador, 0 intentos de examen** en producción. |
+| Usuarios | **1 usuario y 1 perfil administrador** en producción. Hay 5 intentos de examen privados de esa cuenta. |
 | Venta | Fase 0 (decisiones) cerrada, Fase 1 (legal) y Fase 5 (producto vendible) publicadas en producción — ver §4 y §5. |
 
 ### Lo que todavía no existe
@@ -1162,9 +1161,9 @@ no locales; ninguna de estas pruebas escribió en CENEVAL remoto.
 
 Queda pendiente:
 
-- crear un proyecto de ensayo aparte de producción, aplicar allí las 21
+- crear un proyecto de ensayo aparte de producción, aplicar allí las 29
   migraciones desde cero y repetir la suite RLS con datos sintéticos (tarea
-  `M-1`); las 21 migraciones ya están aplicadas en CENEVAL, pero ese ensayo
+  `M-1`); las 29 migraciones ya están aplicadas en CENEVAL, pero ese ensayo
   con datos no reales sigue sin hacerse y además está bloqueado por el límite
   de proyectos gratuitos de la organización (§0.1-C);
 - mantener `npm run db:lint:local` sin advertencias; la migración nueva ya
@@ -1286,9 +1285,9 @@ descrito en `C58_SOURCE_AUDIT.md`.
 | 1 | Completar el respaldo de transcripciones | Segunda copia independiente y restauración de ensayo |
 | 2 | Ejecutar y probar el respaldo documentado | Exportación fechada, copia externa verificada y restauración de ensayo |
 | 3 | Ampliar y ejecutar la suite RLS | Comprobaciones actuales y casos de temas no aprobados aprobados en CENEVAL |
-| 4 | Crear un proyecto de ensayo Supabase aparte de producción para repetir la suite RLS con datos que no sean reales | Proyecto de ensayo con las 21 migraciones aplicadas y RLS aprobada (tarea `M-1`). Bloqueado por límite de proyectos gratuitos — ver §0.1-C |
+| 4 | Crear un proyecto de ensayo Supabase aparte de producción para repetir la suite RLS con datos que no sean reales | Proyecto de ensayo con las 29 migraciones aplicadas y RLS aprobada (tarea `M-1`). Bloqueado por límite de proyectos gratuitos — ver §0.1-C |
 | 5 | Aprobar C01–C57 — completado | 57 clases publicadas y 57 temas aprobados, verificado el 22 de agosto de 2026 en el proyecto remoto |
-| 6 | Crear pruebas de navegador | Flujos centrales reproducibles en CI o entorno aislado (skill `webapp-testing` disponible y sin usar) |
+| 6 | Crear pruebas de navegador — completado | Flujos centrales reproducibles en Chromium y Supabase local; incluye creación, gate editorial, publicación, estudio y cleanup sin residuos |
 | 7 | Completar y validar el despliegue privado | Variables persistentes, administradora operativa y URL estable aprobada desde teléfono y computadora |
 | 8 | Cerrar los bloqueos de venta (infraestructura apta para cobrar, respaldo real) | Fases 2 y 3 (§5) con evidencia de cierre |
 | 9 | Continuar la auditoría de contenido con las skills educativas (pasos 2 y 3: carga cognitiva y flashcards) | Hallazgos documentados y, si aplica, corregidos — ver §0.2, punto 1 |

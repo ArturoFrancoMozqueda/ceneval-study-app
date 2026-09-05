@@ -1,9 +1,9 @@
 import type { NextConfig } from "next";
 
-const cspReportOnly = [
+const contentSecurityPolicy = [
   "default-src 'self'",
-  // Next injects inline bootstrap scripts. Report-only starts with the
-  // compatible baseline; a nonce can remove this allowance in a later gate.
+  // Next injects inline bootstrap scripts. A nonce can remove this compatible
+  // allowance when the application adopts per-request CSP generation.
   "script-src 'self' 'unsafe-inline'",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' blob: data:",
@@ -20,11 +20,7 @@ const cspReportOnly = [
 const securityHeaders = [
   {
     key: "Content-Security-Policy",
-    value: "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
-  },
-  {
-    key: "Content-Security-Policy-Report-Only",
-    value: cspReportOnly,
+    value: contentSecurityPolicy,
   },
   { key: "X-Frame-Options", value: "DENY" },
   { key: "X-Content-Type-Options", value: "nosniff" },

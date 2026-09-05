@@ -29,11 +29,18 @@ test("el runbook liga release a commit, CI, preview y rollback conocidos", () =>
   assert.doesNotMatch(runbook, /^\s*vercel --prod\b/m);
   assert.match(runbook, /No uses\s+`vercel --prod` sin `--prebuilt`/);
   assert.match(runbook, /NEXT_PUBLIC_\*` quedan congeladas/);
+  assert.match(runbook, /Vercel está conectado a GitHub/);
+  assert.match(runbook, /push del commit exacto a `main`/);
+  assert.match(runbook, /mismo SHA/);
+  assert.match(runbook, /terminar en verde\/?`READY`/);
 });
 
 test("el runbook exige acceso privado, readiness protegida y logs Hobby", () => {
   assert.match(runbook, /PRIVATE_ACCESS_ONLY=true/);
   assert.match(runbook, /OPS_READINESS_TOKEN/);
+  assert.match(runbook, /\[SENSITIVE\]/);
+  assert.match(runbook, /preflight local falla de forma\s+intencional/);
+  assert.match(runbook, /build real de\s+Vercel/);
   assert.match(runbook, /Authorization: Bearer/);
   assert.match(runbook, /sin autorización responde 404 genérico/);
   assert.match(runbook, /Runtime Logs/);

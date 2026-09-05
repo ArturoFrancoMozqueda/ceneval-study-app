@@ -42,7 +42,7 @@ test("la heurística versionada solo acorta el siguiente intervalo", () => {
 
 test("persistencia y acción conservan propiedad y versión cerrada", () => {
   const migration = readFileSync(
-    "supabase/migrations/20260828192551_add_exam_target_date_to_profiles.sql",
+    "supabase/migrations/20260828195753_add_exam_target_date_to_profiles.sql",
     "utf8",
   );
   const action = readFileSync("app/actions/account.ts", "utf8");

@@ -7,6 +7,19 @@ import { createServerSupabaseClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = { title: "Buscar" };
 
+type SearchResult = {
+  key: string;
+  title: string;
+  description: string;
+  href: string;
+  type: "Materia" | "Clase" | "Tema";
+  location: string;
+};
+
+function uniqueRows<T extends { id: number }>(rows: T[]) {
+  return Array.from(new Map(rows.map((row) => [row.id, row])).values());
+}
+
 export default async function SearchPage({
   searchParams,
 }: {
@@ -16,54 +29,148 @@ export default async function SearchPage({
   const { q = "" } = await searchParams;
   const query = q.trim().slice(0, 100);
   const supabase = await createServerSupabaseClient();
-  const searchSelection =
-    "id,title,description,classes!inner(title,curriculum_code,publication_status,subjects!inner(name))";
-  const [titleResult, descriptionResult] = query
+  const emptyResult = { data: [], error: null };
+  const [
+    subjectNameResult,
+    subjectDescriptionResult,
+    classTitleResult,
+    classDescriptionResult,
+    topicTitleResult,
+    topicDescriptionResult,
+  ] = query
     ? await Promise.all([
         supabase
+          .from("subjects")
+          .select(
+            "id,name,description,classes!inner(publication_status,topics!inner(approval_status))",
+          )
+          .ilike("name", `%${query}%`)
+          .eq("classes.publication_status", "published")
+          .eq("classes.topics.approval_status", "approved")
+          .limit(10),
+        supabase
+          .from("subjects")
+          .select(
+            "id,name,description,classes!inner(publication_status,topics!inner(approval_status))",
+          )
+          .ilike("description", `%${query}%`)
+          .eq("classes.publication_status", "published")
+          .eq("classes.topics.approval_status", "approved")
+          .limit(10),
+        supabase
+          .from("classes")
+          .select(
+            "id,title,description,curriculum_code,publication_status,subjects!inner(name),topics!inner(approval_status)",
+          )
+          .ilike("title", `%${query}%`)
+          .eq("publication_status", "published")
+          .eq("topics.approval_status", "approved")
+          .limit(10),
+        supabase
+          .from("classes")
+          .select(
+            "id,title,description,curriculum_code,publication_status,subjects!inner(name),topics!inner(approval_status)",
+          )
+          .ilike("description", `%${query}%`)
+          .eq("publication_status", "published")
+          .eq("topics.approval_status", "approved")
+          .limit(10),
+        supabase
           .from("topics")
-          .select(searchSelection)
+          .select(
+            "id,title,description,classes!inner(title,curriculum_code,publication_status,subjects!inner(name))",
+          )
           .ilike("title", `%${query}%`)
           .eq("approval_status", "approved")
           .eq("classes.publication_status", "published")
-          .limit(30),
+          .limit(20),
         supabase
           .from("topics")
-          .select(searchSelection)
+          .select(
+            "id,title,description,classes!inner(title,curriculum_code,publication_status,subjects!inner(name))",
+          )
           .ilike("description", `%${query}%`)
           .eq("approval_status", "approved")
           .eq("classes.publication_status", "published")
-          .limit(30),
+          .limit(20),
       ])
-    : [
-        { data: [], error: null },
-        { data: [], error: null },
-      ];
+    : [emptyResult, emptyResult, emptyResult, emptyResult, emptyResult, emptyResult];
 
-  if (titleResult.error || descriptionResult.error) {
+  const failures = [
+    subjectNameResult.error,
+    subjectDescriptionResult.error,
+    classTitleResult.error,
+    classDescriptionResult.error,
+    topicTitleResult.error,
+    topicDescriptionResult.error,
+  ].filter(Boolean);
+  if (failures.length) {
     writeDependencyFailure({
-      error: titleResult.error ?? descriptionResult.error,
-      operation: "search published topics",
+      error: failures[0],
+      operation: "search published library",
     });
-    throw new Error("No pudimos buscar los temas. Intenta nuevamente.");
+    throw new Error("No pudimos buscar en la biblioteca. Intenta nuevamente.");
   }
-  const topics = Array.from(
-    new Map(
-      [...(titleResult.data ?? []), ...(descriptionResult.data ?? [])].map(
-        (topic) => [topic.id, topic],
-      ),
-    ).values(),
-  ).slice(0, 30);
+
+  const subjects = uniqueRows([
+    ...(subjectNameResult.data ?? []),
+    ...(subjectDescriptionResult.data ?? []),
+  ]);
+  const classes = uniqueRows([
+    ...(classTitleResult.data ?? []),
+    ...(classDescriptionResult.data ?? []),
+  ]);
+  const topics = uniqueRows([
+    ...(topicTitleResult.data ?? []),
+    ...(topicDescriptionResult.data ?? []),
+  ]);
+  const results: SearchResult[] = [
+    ...subjects.map((subject) => ({
+      key: `subject-${subject.id}`,
+      title: String(subject.name),
+      description: String(subject.description ?? ""),
+      href: `/materias/${subject.id}`,
+      type: "Materia" as const,
+      location: "Biblioteca",
+    })),
+    ...classes.map((studyClass) => {
+      const subject = relationRows(studyClass.subjects)[0];
+      return {
+        key: `class-${studyClass.id}`,
+        title: String(studyClass.title),
+        description: String(studyClass.description ?? ""),
+        href: `/clases/${studyClass.id}`,
+        type: "Clase" as const,
+        location: [subject?.name, studyClass.curriculum_code]
+          .filter(Boolean)
+          .join(" · "),
+      };
+    }),
+    ...topics.map((topic) => {
+      const studyClass = relationRows(topic.classes)[0];
+      const subject = relationRows(studyClass?.subjects)[0];
+      return {
+        key: `topic-${topic.id}`,
+        title: String(topic.title),
+        description: String(topic.description ?? ""),
+        href: `/temas/${topic.id}`,
+        type: "Tema" as const,
+        location: [subject?.name, studyClass?.curriculum_code, studyClass?.title]
+          .filter(Boolean)
+          .join(" · "),
+      };
+    }),
+  ].slice(0, 30);
 
   return (
     <div>
       <p className="text-sm font-semibold text-success">Consulta la biblioteca</p>
       <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-        Buscar por tema o concepto
+        Buscar en todo el contenido
       </h1>
-      <form className="mt-7 flex max-w-2xl gap-3">
+      <form className="mt-7 flex max-w-2xl gap-3" role="search">
         <label className="sr-only" htmlFor="search">
-          Buscar temas
+          Buscar materias, clases o temas
         </label>
         <input
           className="min-h-12 min-w-0 flex-1 rounded-xl border border-border bg-white px-4"
@@ -85,43 +192,46 @@ export default async function SearchPage({
           <div className="rounded-2xl border border-dashed border-border bg-surface p-6">
             <h2 className="text-lg font-semibold">¿Qué necesitas repasar?</h2>
             <p className="mt-2 max-w-xl text-sm leading-6 text-muted">
-              Escribe un concepto jurídico o el nombre de un tema. Buscaremos
-              tanto en el título como en su descripción.
+              Escribe un concepto, una materia, una clase o un tema. Cada
+              resultado indica qué tipo de contenido es y dónde se encuentra.
             </p>
           </div>
         ) : null}
-        {query && topics.length ? (
+        {query && results.length ? (
           <h2 className="text-lg font-semibold">
-            {topics.length} {topics.length === 1 ? "resultado" : "resultados"}
-            {topics.length === 30 ? " (se muestran los primeros 30)" : ""}
+            {results.length} {results.length === 1 ? "resultado" : "resultados"}
+            {results.length === 30 ? " (se muestran los primeros 30)" : ""}
           </h2>
         ) : null}
-        {query && !topics?.length ? (
+        {query && !results.length ? (
           <p className="rounded-xl border border-dashed border-border p-6 text-muted">
-            No encontramos temas publicados para “{query}”.
+            No encontramos contenido publicado para “{query}”.
           </p>
         ) : null}
-        {topics.map((topic) => {
-          const studyClass = relationRows(topic.classes)[0];
-          const subject = relationRows(studyClass?.subjects)[0];
-          return (
-            <Link
-              className="block rounded-xl border border-border bg-white p-5 hover:border-brand/30"
-              href={`/temas/${topic.id}`}
-              key={topic.id}
-            >
-              <span className="font-semibold text-brand">{topic.title}</span>
+        {results.map((result) => (
+          <Link
+            className="block rounded-xl border border-border bg-white p-5 hover:border-brand/30"
+            href={result.href}
+            key={result.key}
+          >
+            <span className="inline-flex rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand">
+              {result.type}
+            </span>
+            <span className="mt-3 block font-semibold text-brand">
+              {result.title}
+            </span>
+            {result.location ? (
               <span className="mt-1 block text-xs font-semibold text-success">
-                {[subject?.name, studyClass?.curriculum_code, studyClass?.title]
-                  .filter(Boolean)
-                  .join(" · ")}
+                {result.location}
               </span>
+            ) : null}
+            {result.description ? (
               <span className="mt-1 line-clamp-2 block text-sm text-muted">
-                {topic.description}
+                {result.description}
               </span>
-            </Link>
-          );
-        })}
+            ) : null}
+          </Link>
+        ))}
       </section>
     </div>
   );

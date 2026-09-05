@@ -38,10 +38,11 @@ la transcripción original se conserva en el archivo editorial privado.
 
 ### US-068 Estudiar con varios recursos
 
-Como estudiante quiero alternar entre explicación, mapa, guía, flashcards,
-examen y fuente.
+Como estudiante quiero alternar entre la lección guiada, la práctica activa y
+el simulacro, y consultar dentro de la lección el mapa, la guía y las fuentes.
 
-**Aceptación:** las seis secciones funcionan en móvil y escritorio.
+**Aceptación:** los tres recorridos principales y sus recursos funcionan en
+móvil y escritorio, sin presentar reformulaciones como contenido nuevo.
 
 ### US-069 Conservar progreso privado
 
@@ -556,18 +557,19 @@ Como editora, quiero agregar una flashcard al borrador cuando detecto un concept
 - Ninguno de los campos puede quedar vacío.
 - La tarjeta se asocia a un tema.
 
-## US-035 Estudiar con flashcards
+## US-035 Practicar recuperación activa
 
-Como estudiante, quiero estudiar tarjetas para comprobar qué recuerdo.
+Como estudiante, quiero intentar recuperar una respuesta antes de ver la clave
+para comprobar qué recuerdo.
 
 **Prioridad:** P0
 
 ### Criterios de aceptación
 
-- Primero se muestra la pregunta.
-- La respuesta se revela mediante una acción.
+- Primero se muestra la pregunta y se pide declarar confianza.
+- La clave se revela mediante una acción explícita.
 - El avance de la sesión es visible.
-- Se registra que la tarjeta fue revisada.
+- Se registra el resultado que la estudiante asigna a su respuesta.
 
 ## US-036 Clasificar una flashcard
 
@@ -611,17 +613,19 @@ Como editora, quiero preparar un banco de preguntas verificables para que la est
 - Cada pregunta tiene instrucciones claras.
 - El paquete no se publica si faltan preguntas, opciones, explicación o evidencia.
 
-## US-039 Configurar dificultad y cantidad
+## US-039 Iniciar el simulacro editorial
 
-Como estudiante, quiero elegir dificultad y número de preguntas del banco publicado para adaptar la práctica.
+Como estudiante, quiero conocer la extensión del simulacro publicado antes de
+iniciarlo.
 
 **Prioridad:** P0
 
 ### Criterios de aceptación
 
-- Existen opciones de dificultad.
-- La cantidad se limita a valores válidos.
-- La configuración se muestra antes de iniciar.
+- Cada tema publicable contiene exactamente diez reactivos editoriales.
+- La pantalla informa que el simulacro tiene diez reactivos antes de iniciar.
+- La práctica adaptativa, separada del simulacro, ajusta la selección de
+  reactivos de recuperación según el historial.
 
 ## US-040 Responder preguntas
 
@@ -651,16 +655,19 @@ Como estudiante, quiero ver mi resultado para conocer mi desempeño.
 
 ## US-042 Explicar respuestas
 
-Como estudiante, quiero comprender por qué una opción es correcta y las demás no.
+Como estudiante, quiero comprender el resultado después de entregar el
+simulacro sin recibir claves antes de tiempo.
 
 **Prioridad:** P0
 
 ### Criterios de aceptación
 
-- Cada pregunta muestra la respuesta correcta.
-- Explica el razonamiento.
-- Explica los distractores relevantes.
-- Distingue la respuesta del usuario.
+- Cada pregunta distingue si la respuesta elegida fue correcta o incorrecta.
+- Se muestra el razonamiento general y la explicación de la opción elegida.
+- Las claves y explicaciones permanecen protegidas en el servidor hasta la
+  entrega.
+- No se envían al cliente explicaciones de distractores que la estudiante no
+  eligió.
 
 ## US-043 Consultar historial de intentos
 

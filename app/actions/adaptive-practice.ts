@@ -80,148 +80,6 @@ function toScheduleState(row: Record<string, unknown>): RetrievalScheduleState {
   };
 }
 
-async function rateAdaptiveAttemptLegacy({
-  userId,
-  attempt,
-  schedule,
-  reviewedAt,
-}: {
-  userId: string;
-  attempt: {
-    id: string;
-    session_id: string;
-    session_position: number;
-    retrieval_item_id: number;
-  };
-  schedule: RetrievalScheduleState & {
-    instruction: RateAdaptiveAttemptResult["instruction"];
-  };
-  reviewedAt: Date;
-}): Promise<PracticeActionResult<RateAdaptiveAttemptResult>> {
-  const admin = getSupabaseAdminClient();
-  const { data: session, error: sessionError } = await admin
-    .from("practice_sessions")
-    .select("id,current_position")
-    .eq("id", attempt.session_id)
-    .eq("user_id", userId)
-    .eq("status", "active")
-    .eq("current_position", attempt.session_position)
-    .maybeSingle();
-  if (sessionError || !session) {
-    return unavailable("loadLegacyAdaptiveSession", sessionError);
-  }
-
-  const { data: updatedAttempt, error: attemptUpdateError } = await admin
-    .from("retrieval_attempts")
-    .update({ outcome: schedule.lastOutcome, rated_at: schedule.lastReviewedAt })
-    .eq("id", attempt.id)
-    .eq("user_id", userId)
-    .is("outcome", null)
-    .select("id")
-    .maybeSingle();
-  if (attemptUpdateError) return unavailable("rateLegacyRetrievalAttempt", attemptUpdateError);
-  if (!updatedAttempt) {
-    const { data: currentState, error: currentStateError } = await admin
-      .from("retrieval_schedule_states")
-      .select("stage,next_review_at,last_outcome")
-      .eq("user_id", userId)
-      .eq("retrieval_item_id", attempt.retrieval_item_id)
-      .maybeSingle();
-    if (currentStateError || !currentState) {
-      return unavailable("resumeLegacyRatedRetrievalAttempt", currentStateError);
-    }
-    return {
-      nextReviewAt: String(currentState.next_review_at),
-      stage: Number(currentState.stage),
-      instruction:
-        currentState.last_outcome === "incorrect"
-          ? "retry_in_session"
-          : currentState.last_outcome === "partial"
-            ? "review_tomorrow"
-            : "advance",
-    };
-  }
-
-  const { error: scheduleError } = await admin.from("retrieval_schedule_states").upsert(
-    {
-      user_id: userId,
-      retrieval_item_id: attempt.retrieval_item_id,
-      stage: schedule.stage,
-      success_streak: schedule.successStreak,
-      lapse_count: schedule.lapseCount,
-      last_confidence: schedule.lastConfidence,
-      last_outcome: schedule.lastOutcome,
-      last_reviewed_at: schedule.lastReviewedAt,
-      next_review_at: schedule.nextReviewAt,
-      scheduler_version: schedule.schedulerVersion,
-    },
-    { onConflict: "user_id,retrieval_item_id" },
-  );
-  if (scheduleError) {
-    await admin
-      .from("retrieval_attempts")
-      .update({ outcome: null, rated_at: null })
-      .eq("id", attempt.id)
-      .eq("user_id", userId);
-    return unavailable("saveLegacyRetrievalSchedule", scheduleError);
-  }
-
-  const { data: ratedItem, error: ratedItemError } = await admin
-    .from("practice_session_items")
-    .update({ status: "rated" })
-    .eq("session_id", session.id)
-    .eq("position", attempt.session_position)
-    .eq("retrieval_item_id", attempt.retrieval_item_id)
-    .eq("status", "revealed")
-    .select("position")
-    .maybeSingle();
-  if (ratedItemError || !ratedItem) {
-    return unavailable("markLegacyRetrievalRating", ratedItemError);
-  }
-  if (schedule.instruction === "retry_in_session") {
-    const { error: retryError } = await admin.rpc("enqueue_retrieval_retry_v1", {
-      p_session_id: session.id,
-      p_user_id: userId,
-      p_retrieval_item_id: attempt.retrieval_item_id,
-      p_after_position: attempt.session_position,
-    });
-    if (retryError) return unavailable("enqueueLegacyRetrievalRetry", retryError);
-  }
-  const { data: queued, error: queueError } = await admin
-    .from("practice_session_items")
-    .select("position")
-    .eq("session_id", session.id)
-    .gt("position", attempt.session_position)
-    .eq("status", "queued")
-    .order("position");
-  if (queueError) return unavailable("loadLegacyAdaptiveQueue", queueError);
-  const nextPosition = queued?.[0]?.position;
-  const sessionUpdate = nextPosition
-    ? { current_position: nextPosition, last_activity_at: reviewedAt.toISOString() }
-    : {
-        status: "completed",
-        completed_at: reviewedAt.toISOString(),
-        last_activity_at: reviewedAt.toISOString(),
-      };
-  const { data: advancedSession, error: advanceError } = await admin
-    .from("practice_sessions")
-    .update(sessionUpdate)
-    .eq("id", session.id)
-    .eq("user_id", userId)
-    .eq("status", "active")
-    .eq("current_position", session.current_position)
-    .select("id")
-    .maybeSingle();
-  if (advanceError || !advancedSession) {
-    return unavailable("advanceLegacyAdaptiveSession", advanceError);
-  }
-  return {
-    nextReviewAt: schedule.nextReviewAt,
-    stage: schedule.stage,
-    instruction: schedule.instruction,
-  };
-}
-
 export async function getPracticeSessionAction(): Promise<
   PracticeActionResult<{ session: PracticeSession | null }>
 > {
@@ -456,7 +314,7 @@ export async function rateAdaptiveAttemptAction(
   const admin = getSupabaseAdminClient();
   const { data: attempt, error } = await admin
     .from("retrieval_attempts")
-    .select("id,session_id,session_position,retrieval_item_id,confidence,revealed_at,outcome")
+    .select("id,session_id,retrieval_item_id,confidence,revealed_at,outcome")
     .eq("id", parsed.data.attemptId)
     .eq("user_id", user.id)
     .maybeSingle();
@@ -507,24 +365,7 @@ export async function rateAdaptiveAttemptAction(
     },
   );
   if (atomicError) {
-    if (atomicError.code !== "PGRST202") {
-      return unavailable("rateAdaptiveAttemptAtomic", atomicError);
-    }
-    writeDependencyFailure({
-      error: atomicError,
-      operation: "rateAdaptiveAttemptRpcUnavailable",
-    });
-    return rateAdaptiveAttemptLegacy({
-      userId: user.id,
-      attempt: {
-        id: String(attempt.id),
-        session_id: String(attempt.session_id),
-        session_position: Number(attempt.session_position),
-        retrieval_item_id: Number(attempt.retrieval_item_id),
-      },
-      schedule: adjustedSchedule,
-      reviewedAt,
-    });
+    return unavailable("rateAdaptiveAttemptAtomic", atomicError);
   }
   const result = atomicRateResultSchema.safeParse(atomicResult);
   if (!result.success || result.data.status !== "success") {

@@ -177,6 +177,51 @@ export function SubjectProgressOverview({
                         <ExamEvidence subject={subject} />
                       </div>
                     </dl>
+
+                    <section
+                      aria-labelledby={`refuerzo-${subject.subjectId}`}
+                      className="mt-6 border-t border-border pt-5"
+                    >
+                      <h4
+                        className="text-sm font-semibold"
+                        id={`refuerzo-${subject.subjectId}`}
+                      >
+                        Qué conviene reforzar
+                      </h4>
+                      {subject.reviewTopics.length ? (
+                        <ul className="mt-3 grid gap-3 sm:grid-cols-2">
+                          {subject.reviewTopics.map((topic) => (
+                            <li
+                              className="rounded-xl border border-warning/25 bg-warning/10 p-4"
+                              key={topic.topicId}
+                            >
+                              <Link
+                                className="font-semibold text-brand hover:underline"
+                                href={`/temas/${topic.topicId}`}
+                              >
+                                {topic.topicTitle}
+                              </Link>
+                              <ul className="mt-2 space-y-1 text-xs leading-5 text-muted">
+                                {topic.reasons.map((reason) => (
+                                  <li key={reason}>{reason}</li>
+                                ))}
+                              </ul>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : subject.evaluatedTopics ? (
+                        <p className="mt-2 text-sm leading-6 text-muted">
+                          No hay errores pendientes en la evidencia más reciente
+                          de los temas que ya evaluaste.
+                        </p>
+                      ) : (
+                        <p className="mt-2 text-sm leading-6 text-muted">
+                          Aún no hay evidencia suficiente. Completa una
+                          comprobación o un simulacro para identificar temas de
+                          repaso con resultados reales.
+                        </p>
+                      )}
+                    </section>
                   </div>
                 </article>
               </li>

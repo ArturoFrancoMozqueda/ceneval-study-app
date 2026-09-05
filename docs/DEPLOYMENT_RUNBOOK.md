@@ -1,29 +1,33 @@
 # Publicación manual privada en Vercel
 
-Última actualización: 21 de agosto de 2026
+Última actualización: 4 de septiembre de 2026
 
 > **Alcance actual:** este procedimiento publica únicamente la aplicación
 > privada de la administradora. No habilita estudiantes, registro público,
-> pagos ni un lanzamiento comercial. Vercel no está conectado a Git y el plan
-> actual es Hobby; cada publicación y cada revisión de logs son manuales.
+> pagos ni un lanzamiento comercial. Vercel está conectado a GitHub y `main`
+> publica automáticamente en producción. El plan actual es Hobby y no autoriza
+> uso comercial.
 
-No se ejecutó una publicación al escribir este runbook. Los comandos de Vercel
-requieren autorización, sesión de la cuenta correcta y un proyecto enlazado.
+Los comandos de Vercel requieren sesión de la cuenta correcta y el proyecto
+enlazado. El flujo normal es commit, push a `main`, CI y verificación del
+deployment automático; la ruta prebuilt de este documento se conserva para una
+publicación manual controlada.
 
 ## Regla de parada
 
 Ante cualquier dato faltante, resultado ambiguo o gate rojo, **detén la
-publicación**. No cambies secretos, no apliques migraciones y no uses otro
-proyecto para “hacer que pase”. Producción recibe un build prebuilt identificado
-y generado desde el mismo commit que pasó Preview. Preview y Production se
-construyen por separado porque las variables `NEXT_PUBLIC_*` quedan congeladas
-durante el build y pueden diferir entre entornos.
+publicación**. No cambies secretos ni uses otro proyecto para “hacer que pase”.
+Las migraciones compatibles hacia atrás se aplican y verifican antes del código;
+una migración destructiva requiere respaldo y ensayo autorizados. En el flujo
+Git, producción debe identificar el mismo commit empujado a `main`; en el flujo
+manual recibe el build prebuilt identificado. Preview y Production se construyen
+por separado porque las variables `NEXT_PUBLIC_*` quedan congeladas durante el
+build y pueden diferir entre entornos.
 
-En el estado verificado el 21 de agosto de 2026 (hora de México), CENEVAL remoto
-conserva once migraciones y el código local espera diecisiete. Esa diferencia
-bloquea la promoción hasta que
-las migraciones pasen primero por un proyecto de ensayo autorizado y se apruebe
-su aplicación. Este runbook no aplica ni revierte base de datos.
+En el estado verificado el 4 de septiembre de 2026, CENEVAL remoto conserva 29
+migraciones de aplicación. El esquema requerido por esta versión, incluida la
+calificación atómica de examen y práctica adaptativa, se verificó antes del
+release. Este runbook no aplica ni revierte base de datos.
 
 ## Registro obligatorio
 
@@ -119,6 +123,23 @@ versión registrada, detente; no descargues una versión distinta de paso. La
 sesión debe obtenerse con el login de la CLI o un token en el entorno seguro.
 Nunca pegues `--token` en el comando ni captures el entorno en logs.
 
+### 2.1 Flujo normal conectado a GitHub
+
+1. Ejecuta todos los gates de la sección 1 sobre el commit que se publicará.
+2. Si hay migraciones compatibles hacia atrás, aplícalas primero y confirma
+   permisos, funciones e índices mediante consultas de solo lectura.
+3. Haz push del commit exacto a `main`. No vuelvas a modificar el árbol mientras
+   se observa el release.
+4. Espera el workflow Calidad y el deployment automático de Vercel. Ambos deben
+   asociarse al mismo SHA y terminar en verde/`READY`.
+5. Inspecciona el deployment, verifica health, redirección privada, encabezados,
+   login y panel, y completa la observación descrita en la sección 5.
+
+Si el deployment automático no identifica el SHA, el CI falla o Vercel no queda
+`READY`, no lo sustituyas silenciosamente con un deployment manual: investiga o
+ejecuta rollback. Las secciones 3 y 4 describen la ruta manual prebuilt cuando
+esa sea la modalidad expresamente elegida.
+
 ## 3. Construir y desplegar preview
 
 1. Trae configuración de Preview y construye un artefacto prebuilt:
@@ -171,9 +192,13 @@ npm.cmd run ops:preflight:production
 vercel build --prod
 ```
 
-El preflight debe leer la configuración descargada de Production sin imprimir
-valores y exige `PRIVATE_ACCESS_ONLY=true`, URLs HTTPS, claves distintas,
-administradora y readiness token válido. Si no puede demostrarlo, detente.
+El preflight no imprime valores. Si Vercel devuelve valores reales, exige
+`PRIVATE_ACCESS_ONLY=true`, URLs HTTPS, claves distintas, administradora y
+readiness token válido. Cuando una variable está marcada `Sensitive`, `pull`
+devuelve literalmente `[SENSITIVE]` y este preflight local falla de forma
+intencional; en ese caso registra la limitación y exige que el build real de
+Vercel pase su validación con los valores inyectados y que readiness responda
+correctamente. Si también falla alguno de esos dos controles reales, detente.
 
 Antes de publicar, crea un manifiesto local estable del directorio prebuilt y
 registra únicamente su SHA-256; `.vercel/` y el manifiesto no van a Git:

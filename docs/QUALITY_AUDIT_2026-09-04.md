@@ -2,8 +2,10 @@
 
 Esta auditoría comprobó el producto desde tres frentes paralelos: experiencia y
 accesibilidad, recorridos funcionales en navegador, y calidad/seguridad del
-código. No se escribió en Supabase remoto; los datos y usuarios utilizados
-fueron sintéticos y vivieron exclusivamente en Supabase local.
+código. Los recorridos usaron datos sintéticos exclusivamente en Supabase
+local. El cierre técnico del mismo día sí aplicó dos migraciones no destructivas
+al proyecto remoto: calificación adaptativa atómica e índices de claves
+foráneas.
 
 ## Criterios utilizados
 
@@ -42,12 +44,14 @@ declaración total de conformidad.
 ### Producto autenticado local
 
 `npm run test:e2e:local` recorrió una compilación de producción con Chromium y
-Supabase local: inicio de sesión, biblioteca, búsqueda con y sin resultados,
-navegación materia-clase-tema, lección, práctica adaptativa, examen de diez
-reactivos, resultado, repetición, historial, rutas inválidas y panel de
-administración. También comprobó reflow móvil, tamaño táctil y movimiento
-reducido. Terminó sin errores de consola, página o red y eliminó el fixture:
-0 clases, materias, referencias y usuarios sintéticos residuales.
+Supabase local: inicio de sesión, creación visible y persistente de materia y
+clase, validaciones, gate de publicación incompleta, revisión, aprobación y
+publicación de un fixture completo, biblioteca, búsqueda, lección, práctica
+adaptativa, examen de diez reactivos, resultado, repetición, historial, rutas
+inválidas y panel de administración. También comprobó reflow móvil, tamaño
+táctil y movimiento reducido. Terminó sin errores de consola, página o red y
+eliminó el fixture: 0 clases, materias, referencias y usuarios sintéticos
+residuales.
 
 ## Correcciones aplicadas
 
@@ -68,27 +72,42 @@ reducido. Terminó sin errores de consola, página o red y eliminó el fixture:
   por su forma ISO.
 - Se añadió HSTS a la configuración de seguridad y una prueba de encabezados.
 - La calificación adaptativa dispone de una RPC transaccional que actualiza el
-  intento, agenda, cola y sesión como una sola unidad. La Server Action conserva
-  temporalmente el flujo anterior **solo** cuando PostgREST informa que la RPC
-  aún no existe (`PGRST202`), para que el despliegue de código no rompa
-  producción antes de aplicar la migración.
+  intento, agenda, cola y sesión como una sola unidad. Tras comprobar la RPC en
+  producción se eliminó el flujo anterior no transaccional: ahora cualquier
+  fallo cierra la operación sin escritura parcial.
+- La entrega del examen también exige su RPC atómica; se eliminó el fallback
+  legado que aceptaba datos de calificación calculados por el cliente.
+- La política CSP completa pasó de observación a aplicada. El contrato
+  automatizado impide volver a modo Report-Only.
+- La búsqueda abarca materias, clases y temas publicados, distingue el tipo y
+  muestra su ubicación. El progreso identifica temas con errores usando solo
+  la comprobación y el intento más recientes y explica cuándo no hay evidencia.
+- La administradora puede corregir una materia desde su detalle, con formulario
+  precargado, validación, cancelación y persistencia.
 - El E2E ahora activa controles visibles y verifica persistencia, resultado,
   repetición e historial, en vez de limitarse a abrir URLs.
 
-## Límites y trabajo pendiente
+## Verificación remota y límites
 
-- La migración `20260904225405_rate_adaptive_attempt_atomic.sql` se probó
-  localmente, pero no se aplicó a producción. Hasta que se autorice y ejecute,
-  producción seguirá usando el fallback no transaccional y registrará esa
-  condición.
-- El panel editorial se comprueba en modo lectura. Falta automatizar, mediante
-  la UI, crear, aprobar y publicar un fixture completo.
-- Permanecen contradicciones de alcance en las historias US-003, US-039,
-  US-042, US-047, US-051 y en el nombre “flashcards” frente a la práctica
-  adaptativa. No se inventó una decisión de producto para cerrarlas.
+- La RPC adaptativa y los cinco índices de claves foráneas se aplicaron antes
+  del despliegue. La llamada de prueba con un identificador inexistente devolvió
+  `unavailable` sin mutar datos. Sus permisos son `service_role` solamente.
+- El corpus remoto contiene 456 reactivos publicados, 456 claves protegidas y
+  1,377 vínculos de evidencia. La práctica adaptativa no depende de un estado
+  vacío ni de un fallback simulado.
+- Los avisos de índices de claves foráneas quedaron cerrados. Los índices
+  marcados como no usados se conservan: el proyecto tiene poco tráfico y esa
+  estadística no acredita que sean innecesarios.
+- `submit_exam_v1` permanece deliberadamente como `SECURITY DEFINER`
+  ejecutable por `authenticated`: debe leer claves que RLS oculta, comprueba
+  `auth.uid()`, exige examen vigente, tema aprobado y clase publicada, y valida
+  cada opción dentro de la misma transacción.
 - Sigue pendiente una sesión manual con NVDA/TalkBack/VoiceOver, zoom real,
   contraste alto y dispositivos físicos. La automatización no sustituye esas
   comprobaciones.
-- CSP continúa en modo report-only y el RPC `submit_exam_v1` mantiene su propio
-  fallback hasta que todas las migraciones requeridas estén confirmadas en el
-  entorno remoto.
+- La protección contra contraseñas filtradas requiere el plan Pro de Supabase y
+  sigue pendiente de una decisión de gasto. No se habilitaron registro público,
+  cobros ni acceso estudiantil.
+- El respaldo real de producción y su restauración en ensayo siguen pendientes
+  de autorización explícita y de un proyecto de ensayo. Ninguna migración
+  destructiva se incluyó en este cierre.

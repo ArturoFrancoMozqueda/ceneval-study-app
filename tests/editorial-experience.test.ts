@@ -88,6 +88,49 @@ test("las rutas editoriales inválidas responden con el 404 de Next", () => {
   }
 });
 
+test("la edición de materia valida, autoriza y actualiza solo el registro solicitado", () => {
+  const actions = source("app/actions/academic.ts");
+  const start = actions.indexOf("export async function updateSubjectAction");
+  const end = actions.indexOf("export async function createClassAction", start);
+  const updateSubject = actions.slice(start, end);
+
+  assert.ok(start >= 0, "No se encontró updateSubjectAction");
+  assert.ok(updateSubject.indexOf("await requireAdmin()") >= 0);
+  assert.match(updateSubject, /isPositiveInteger\(subjectId\)/);
+  assert.match(updateSubject, /name\.length > 80/);
+  assert.match(updateSubject, /description\.length > 300/);
+  assert.match(updateSubject, /\.from\("subjects"\)[\s\S]*\.update\(/);
+  assert.match(updateSubject, /\.eq\("id", subjectId\)/);
+  assert.match(updateSubject, /error\?\.code === "23505"/);
+  assert.match(updateSubject, /revalidatePath\(`\/materias\/\$\{subjectId\}`\)/);
+  assert.match(updateSubject, /revalidatePath\("\/administrar"\)/);
+});
+
+test("la ruta de edición es solo admin, precarga la materia y responde 404", () => {
+  const page = source("app/materias/[subjectId]/editar/page.tsx");
+  const form = source("components/subject-form.tsx");
+  const detail = source("components/subject-detail.tsx");
+
+  assert.match(page, /await requireAdmin\(\)/);
+  assert.ok(
+    page.indexOf("await requireAdmin()") <
+      page.indexOf("const subject = await getSubject"),
+  );
+  assert.match(page, /Number\.isInteger\(numericSubjectId\)/);
+  assert.match(page, /if \(!subject\) notFound\(\)/);
+  assert.match(page, /<SubjectForm[\s\S]*initialSubject=/);
+
+  assert.match(form, /useState\(initialSubject\?\.name \?\? ""\)/);
+  assert.match(form, /updateSubjectAction\(initialSubject\.id, formData\)/);
+  assert.match(form, /Cambios guardados correctamente\./);
+  assert.match(form, /role="status"/);
+  assert.match(form, /initialSubject \? `\/materias\/\$\{initialSubject\.id\}`/);
+
+  assert.match(detail, /user\.role === "admin"/);
+  assert.match(detail, /href=\{`\/materias\/\$\{subject\.id\}\/editar`\}/);
+  assert.match(detail, />\s*Editar materia\s*</);
+});
+
 test("las historias separan preparación editorial y consumo", () => {
   const stories = source("docs/03-user-stories.md");
 

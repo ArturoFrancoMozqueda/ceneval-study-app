@@ -3,9 +3,9 @@ begin;
 -- Permite corregir un material de estudio o el mapa conceptual de un tema
 -- ya publicado sin pasar por import_class_package_v12, que solo importa
 -- clases nuevas. Replica el patrón de update_exam_question_v1
--- (20260824040500_add_update_exam_question_v1.sql) y
+-- (20260824044139_add_update_exam_question_v1.sql) y
 -- update_flashcard_v1/update_topic_learning_journey_v1
--- (20260824224000_add_update_flashcard_and_journey_v1.sql): función en
+-- (20260824224500_add_update_flashcard_and_journey_v1.sql): función en
 -- private.* con la lógica real, wrapper delgado en public.*, ambas security
 -- invoker con search_path vacío, y ejecución restringida a service_role.
 --

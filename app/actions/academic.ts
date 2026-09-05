@@ -21,7 +21,6 @@ import {
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 import { writeDependencyFailure } from "@/lib/operations/safe-log";
-import { submitExamLegacy } from "@/lib/data/legacy-exam-submission";
 import {
   isIsoCalendarDate,
   isPositiveInteger,
@@ -131,6 +130,44 @@ export async function createSubjectAction(formData: FormData) {
   if (error) return databaseError("createSubject", error);
   revalidatePath("/");
   revalidatePath("/materias");
+  revalidatePath("/administrar");
+  return { id: data.id as number };
+}
+
+export async function updateSubjectAction(
+  subjectId: number,
+  formData: FormData,
+): Promise<ActionResult> {
+  await requireAdmin();
+  if (!isPositiveInteger(subjectId)) {
+    return { error: "La materia seleccionada no es válida." };
+  }
+
+  const name = textValue(formData, "name");
+  const description = textValue(formData, "description");
+  if (!name) return { error: "Escribe el nombre de la materia." };
+  if (name.length > 80) return { error: "El nombre es demasiado largo." };
+  if (description.length > 300) {
+    return { error: "La descripción es demasiado larga." };
+  }
+
+  const { data, error } = await getSupabaseAdminClient()
+    .from("subjects")
+    .update({ name, description: description || null })
+    .eq("id", subjectId)
+    .select("id")
+    .maybeSingle();
+
+  if (error?.code === "23505") {
+    return { error: "Ya existe una materia con ese nombre." };
+  }
+  if (error) return databaseError("updateSubject", error);
+  if (!data) return { error: "No encontramos la materia que quieres editar." };
+
+  revalidatePath("/");
+  revalidatePath("/materias");
+  revalidatePath(`/materias/${subjectId}`);
+  revalidatePath(`/materias/${subjectId}/editar`);
   revalidatePath("/administrar");
   return { id: data.id as number };
 }
@@ -1250,7 +1287,7 @@ export async function submitExamAction(
   examId: unknown,
   answers: unknown,
 ): Promise<ActionResult> {
-  const user = await requireUser();
+  await requireUser();
   const submission = parseExamSubmission(examId, answers);
   if (!submission) {
     return {
@@ -1265,15 +1302,6 @@ export async function submitExamAction(
     p_answers: submission.answers,
   });
   if (error) {
-    if (error.code === "PGRST202") {
-      writeDependencyFailure({ error, operation: "submitExamRpcUnavailable" });
-      const legacy = await submitExamLegacy(user.id, submission);
-      if (!legacy.error) {
-        revalidatePath("/");
-        revalidatePath("/estudiar");
-      }
-      return legacy;
-    }
     return databaseError("submitExam", error);
   }
 

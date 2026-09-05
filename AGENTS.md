@@ -192,16 +192,18 @@ alguna sigue abierta; si corriges una, actualiza esta lista.
   adaptación comercial y el contrato 1.2 exige una clase/transcripción original
   privada. No se debe crear un paquete solo con legislación ni copiar/adaptar la
   obra BY-NC-ND; consulta `docs/C58_NEW_SOURCE.md`.
-- **Las 20 migraciones del repositorio están aplicadas en CENEVAL y coinciden
-  una a una con `supabase/migrations/`** (la más reciente,
-  `20260822160822_add_profiles_terms_accepted_at`, se aplicó el 22 de agosto
-  por la tarde como parte de la tarea `L-3` del plan de venta). Verificado el
-  22 de agosto de 2026:
-  los asesores de Supabase solo muestran el `INFO` esperado de
-  `exam_answer_keys` sin políticas (bloqueo deliberado) y un `WARN` de
-  protección contra contraseñas filtradas, pendiente de activar (tarea `I-5`
-  de `docs/PROJECT_STATUS.md` §5). En PG17 local, `npm run security:rls`
-  aplicó las migraciones desde cero y aprobó 141 comprobaciones con cleanup
+- **Las 29 migraciones del repositorio están aplicadas en CENEVAL y coinciden
+  una a una con `supabase/migrations/`** (20 se verificaron el 22 de agosto y
+  las 9 posteriores, hasta
+  `20260904234059_add_missing_foreign_key_indexes`, el 4 de septiembre).
+  Verificado el 4 de septiembre de 2026: los asesores de Supabase muestran los
+  `INFO` esperados de `exam_answer_keys` y `retrieval_item_answer_keys` sin
+  políticas (bloqueo deliberado), el `WARN` documentado del RPC autenticado
+  `submit_exam_v1` que necesita leer claves ocultas dentro de su transacción, y
+  el `WARN` de protección contra contraseñas filtradas, pendiente de activar
+  (tarea `I-5` de `docs/PROJECT_STATUS.md` §5). En PG17 local,
+  `npm run security:rls`
+  aplicó las migraciones desde cero y aprobó 176 comprobaciones con cleanup
   sin residuos, pero esa suite dinámica todavía no se ha ejecutado contra un
   proyecto Supabase remoto (ni de ensayo ni de producción).
 - **La protección de lectura por aprobación está aplicada en CENEVAL.**

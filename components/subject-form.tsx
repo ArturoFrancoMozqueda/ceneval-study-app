@@ -3,19 +3,34 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useRef, useState, type FormEvent } from "react";
-import { createSubjectAction } from "@/app/actions/academic";
+import {
+  createSubjectAction,
+  updateSubjectAction,
+} from "@/app/actions/academic";
 
 const MAX_NAME_LENGTH = 80;
 const MAX_DESCRIPTION_LENGTH = 300;
 
-export function SubjectForm() {
+type SubjectFormProps = {
+  initialSubject?: {
+    id: number;
+    name: string;
+    description: string;
+  };
+};
+
+export function SubjectForm({ initialSubject }: SubjectFormProps = {}) {
   const router = useRouter();
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
+  const [name, setName] = useState(initialSubject?.name ?? "");
+  const [description, setDescription] = useState(
+    initialSubject?.description ?? "",
+  );
   const [nameError, setNameError] = useState("");
   const [formError, setFormError] = useState("");
+  const [saved, setSaved] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const nameInputRef = useRef<HTMLInputElement>(null);
+  const isEditing = initialSubject !== undefined;
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -30,9 +45,12 @@ export function SubjectForm() {
     setIsSubmitting(true);
     setNameError("");
     setFormError("");
+    setSaved(false);
     const formData = new FormData(event.currentTarget);
     try {
-      const result = await createSubjectAction(formData);
+      const result = initialSubject
+        ? await updateSubjectAction(initialSubject.id, formData)
+        : await createSubjectAction(formData);
 
       if (result.error) {
         setFormError(result.error);
@@ -40,8 +58,14 @@ export function SubjectForm() {
         return;
       }
 
-      router.push("/materias?creada=1");
-      router.refresh();
+      if (initialSubject) {
+        setSaved(true);
+        setIsSubmitting(false);
+        router.refresh();
+      } else {
+        router.push("/materias?creada=1");
+        router.refresh();
+      }
     } catch {
       setFormError(
         "No pudimos guardar la materia. Revisa tu conexión e intenta nuevamente.",
@@ -86,6 +110,7 @@ export function SubjectForm() {
               setNameError("");
             }
             if (formError) setFormError("");
+            if (saved) setSaved(false);
           }}
           placeholder="Ej. Derecho constitucional"
           ref={nameInputRef}
@@ -127,6 +152,7 @@ export function SubjectForm() {
           onChange={(event) => {
             setDescription(event.target.value);
             if (formError) setFormError("");
+            if (saved) setSaved(false);
           }}
           placeholder="Ej. Principios constitucionales, derechos humanos y amparo."
           value={description}
@@ -142,7 +168,9 @@ export function SubjectForm() {
       <div className="mt-8 flex flex-col-reverse gap-3 sm:flex-row">
         <Link
           className="inline-flex min-h-11 items-center justify-center rounded-xl border border-border px-5 text-sm font-semibold text-foreground transition-colors hover:bg-background"
-          href="/materias"
+          href={
+            initialSubject ? `/materias/${initialSubject.id}` : "/materias"
+          }
         >
           Cancelar
         </Link>
@@ -151,14 +179,24 @@ export function SubjectForm() {
           disabled={isSubmitting}
           type="submit"
         >
-          {isSubmitting ? "Guardando…" : "Guardar materia"}
+          {isSubmitting
+            ? "Guardando…"
+            : isEditing
+              ? "Guardar cambios"
+              : "Guardar materia"}
         </button>
       </div>
-      {formError ? (
-        <p className="mt-4 text-sm font-medium text-danger" role="alert">
-          {formError}
-        </p>
-      ) : null}
+      <div className="mt-4 min-h-5 text-sm font-medium">
+        {formError ? (
+          <p className="text-danger" role="alert">
+            {formError}
+          </p>
+        ) : saved ? (
+          <p className="text-success" role="status">
+            Cambios guardados correctamente.
+          </p>
+        ) : null}
+      </div>
     </form>
   );
 }

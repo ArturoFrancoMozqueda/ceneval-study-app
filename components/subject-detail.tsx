@@ -47,13 +47,21 @@ export async function SubjectDetail({ subjectId }: { subjectId: number }) {
           </p>
         </div>
         {user.role === "admin" ? (
-          <Link
-            className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-brand px-5 text-sm font-semibold text-white"
-            href={`/materias/${subject.id}/clases/nueva`}
-          >
-            <PlusIcon className="size-4" />
-            Nueva clase
-          </Link>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Link
+              className="inline-flex min-h-11 items-center justify-center rounded-xl border border-border bg-white px-5 text-sm font-semibold text-foreground transition-colors hover:border-brand/30 hover:bg-background"
+              href={`/materias/${subject.id}/editar`}
+            >
+              Editar materia
+            </Link>
+            <Link
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-brand px-5 text-sm font-semibold text-white"
+              href={`/materias/${subject.id}/clases/nueva`}
+            >
+              <PlusIcon className="size-4" />
+              Nueva clase
+            </Link>
+          </div>
         ) : null}
       </header>
       <section className="mt-9 space-y-4">
