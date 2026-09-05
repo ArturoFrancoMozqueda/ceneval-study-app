@@ -354,7 +354,7 @@ decisión no añade infraestructura ni reemplaza los gates operativos vigentes.
 | Contenido publicado | **24 materias, 57 clases (todas `published`), 57 temas (todos `approved`), 513 materiales, 57 mapas conceptuales, 685 flashcards, 57 exámenes, 570 preguntas y 570 claves de respuesta.** Detalle completo en el §8. El examen de C01 (10 preguntas) fue auditado y 3 de sus reactivos corregidos el 24 de agosto — ver §0.2 y §7. |
 | Seguridad de base | Los asesores reportan los avisos esperados de las dos tablas de claves sin políticas (bloqueo deliberado), `accept_terms_v1` como RPC autenticado `SECURITY DEFINER` intencional y acotado, y el `WARN` de contraseñas filtradas que **requiere plan Pro** (`I-5`, ver §0.1-G). El examen expone ahora un wrapper `SECURITY INVOKER` y conserva la calificación privilegiada en `private`. Sin errores. |
 | Código | `npm run lint` y `npm run build` pasan sin hallazgos. El build de producción del mismo commit se completó en Vercel. |
-| Usuarios | **2 usuarios: 1 administradora y 1 estudiante invitada** en producción. La estudiante está pendiente de confirmar su correo y aceptar términos. Hay 5 intentos de examen privados de la cuenta administradora. |
+| Usuarios | **2 usuarios: 1 administradora y 1 estudiante activa** en producción. La estudiante fue creada y confirmada administrativamente, puede iniciar sesión con contraseña y está pendiente de aceptar términos. Hay 5 intentos de examen privados de la cuenta administradora. |
 | Venta | Fase 0 (decisiones) cerrada, Fase 1 (legal) y Fase 5 (producto vendible) publicadas en producción — ver §4 y §5. |
 
 ### Lo que todavía no existe
@@ -522,11 +522,11 @@ altas fallarían silenciosamente. Depende de contratar un dominio propio
 
 ### B5 — La aplicación nunca ha sido usada por dos personas a la vez · **alto, abierto**
 
-Hay 2 usuarios (1 administradora y 1 estudiante invitada pendiente de confirmar
-su correo) y 5 intentos de examen en producción. Las 182 comprobaciones RLS y
-el E2E se ejecutaron **en local**, no contra el proyecto remoto. El aislamiento
-entre estudiantes está diseñado y probado localmente, pero no demostrado en el
-entorno real (`M-1` a `M-3`, §5).
+Hay 2 usuarios (1 administradora y 1 estudiante activa, creada y confirmada
+administrativamente) y 5 intentos de examen en producción. Las 182
+comprobaciones RLS y el E2E se ejecutaron **en local**, no contra el proyecto
+remoto. El aislamiento entre estudiantes está diseñado y probado localmente,
+pero no demostrado en el entorno real (`M-1` a `M-3`, §5).
 
 **Intento del 23 de agosto de 2026:** se intentó crear el proyecto de ensayo
 para `M-1` (costo confirmado: $0/mes, cabe en el plan gratuito). Falló: la
