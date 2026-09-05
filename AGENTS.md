@@ -59,8 +59,8 @@ transcripción → preparación editorial → borrador → revisión → publica
   Vercel sobre el plan Hobby (no autoriza uso comercial). **Vercel ya está
   conectado a Git**: el último deployment está `READY` en producción y
   corresponde al commit actual de `main`. Supabase ya tiene el catálogo
-  publicado descrito arriba, pero sigue siendo de uso exclusivo de la
-  administradora: no hay estudiantes ni cobros.
+  publicado descrito arriba. Desde el 5 de septiembre de 2026 hay una cuenta
+  `student` invitada, pendiente de confirmar su correo; todavía no hay cobros.
 - La administradora se crea mediante `docs/ADMIN_BOOTSTRAP.md`. No restaures la
   autopromoción basada en `ADMIN_EMAIL` ni promociones usuarios dentro del
   render o de una petición GET.
