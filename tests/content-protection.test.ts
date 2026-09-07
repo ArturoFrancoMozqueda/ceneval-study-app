@@ -14,16 +14,17 @@ test("el layout monta una sola cortina para sesiones autenticadas", () => {
   assert.match(layoutSource, /user \? " privacy-protected" : ""/);
 });
 
-test("la cortina cubre las señales de privacidad sin heurísticas ni sondeo", () => {
+test("la cortina no oculta el contenido al capturar o cambiar de ventana", () => {
   for (const eventName of [
     "blur",
     "focus",
     "visibilitychange",
     "pagehide",
     "pageshow",
-    "beforeprint",
-    "afterprint",
   ]) {
+    assert.doesNotMatch(curtainSource, new RegExp(`addEventListener\\("${eventName}"`));
+  }
+  for (const eventName of ["beforeprint", "afterprint"]) {
     assert.match(curtainSource, new RegExp(`addEventListener\\("${eventName}"`));
     assert.match(curtainSource, new RegExp(`removeEventListener\\("${eventName}"`));
   }
@@ -51,7 +52,7 @@ test("el mensaje declara honestamente el límite de una aplicación web", () => 
   assert.match(curtainSource, /className="sr-only"/);
 });
 
-test("la cortina de foco es negra, opaca y silenciosa", () => {
+test("la cortina de impresión conserva su presentación silenciosa", () => {
   assert.match(curtainSource, /bg-black/);
   assert.match(curtainSource, /aria-hidden="true"/);
   assert.doesNotMatch(curtainSource, /aria-live|backdrop-blur|bg-background\//);
