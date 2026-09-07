@@ -468,6 +468,22 @@ async function main() {
       await cleanupFixture(service);
       await verifyClean(service);
       const prepared = await prepareFixture(service);
+      const studentProbe = createClient(credentials.apiUrl, credentials.publishableKey, {
+        auth: { autoRefreshToken: false, persistSession: false },
+      });
+      const probeLogin = await studentProbe.auth.signInWithPassword({
+        email: STUDENT_EMAIL,
+        password: prepared.studentPassword,
+      });
+      if (probeLogin.error) {
+        throw new Error(`El acceso del fixture falló antes del navegador: ${probeLogin.error.code ?? "auth_error"} (${probeLogin.error.status ?? 0}).`);
+      }
+      const probeProfile = await studentProbe.from("profiles")
+        .select("role,terms_accepted_at").eq("id", probeLogin.data.user.id).single();
+      if (probeProfile.error || probeProfile.data.role !== "student" || probeProfile.data.terms_accepted_at !== null) {
+        throw new Error(`Perfil sintético inesperado antes del navegador: ${probeProfile.error?.code ?? "profile_state"}.`);
+      }
+      await studentProbe.auth.signOut();
       console.log("✓ Fixture sintético E2E preparado exclusivamente en Supabase local.");
       await runChild(command, args, {
         ...process.env,

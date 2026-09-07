@@ -133,6 +133,14 @@ export async function HomeDashboard() {
         >
           {primaryAction.label}
         </Link>
+        {studyPlan.source === "active" && nextTopic && completedCount < 3 ? (
+          <Link
+            className="mt-3 flex min-h-11 w-fit items-center text-sm font-semibold text-white underline underline-offset-4"
+            href={`/temas/${nextTopic.id}?modo=leccion`}
+          >
+            Volver a mi lección
+          </Link>
+        ) : null}
       </section>
 
       <section className="mt-8 grid gap-4 sm:grid-cols-3">
