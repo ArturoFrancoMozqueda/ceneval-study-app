@@ -12,6 +12,7 @@
 
 # testing
 /coverage
+/artifacts/e2e/
 
 # database backups (may contain private user and study data)
 /backups/supabase/

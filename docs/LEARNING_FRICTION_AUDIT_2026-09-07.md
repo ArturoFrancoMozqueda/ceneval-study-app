@@ -4,21 +4,23 @@ Revisión del inicio, ruta curricular, lección, práctica adaptativa y examen,
 desde `bbba44d`. Objetivo: facilitar decidir qué hacer, recuperar conocimientos,
 comparar el razonamiento y volver a estudiar con una acción clara.
 
-La evidencia inicial es de código y contratos existentes; no es una observación
-de estudiantes reales ni una medición de mejora de retención. No se modifica el
+La evidencia combina revisión de código, contratos existentes y un recorrido de
+solo lectura con una cuenta de estudiante autorizada. No es una observación de
+la estudiante usando la app ni una medición de mejora de retención. No se modifica el
 corpus jurídico, las claves, el algoritmo de intervalos ni el acceso por invitación.
 
 ## Hallazgos y entregas
 
 | Prioridad | Fricción comprobada | Efecto esperado | Corrección / estado |
 | --- | --- | --- | --- |
+| Alta | Entrar a un tema abría práctica; la vista breve requería otro clic y la comprobación precedía a la explicación. | Hace difícil encontrar el material necesario para aprender antes de recuperar. | PR #31: lectura por defecto, vista breve visible y explicación antes de la comprobación. |
 | Alta | Inicio: el enlace para continuar una lección omitía `modo=leccion`, aunque prometía retomar lo pausado (`home-dashboard.tsx`). | Obliga a reconstruir dónde se estaba y cambiar de modo. | Entrega 1: enlace al modo y paso guardados. |
 | Alta | Inicio: solo contaban lectura y exámenes como actividad; practicar podía devolver a la bienvenida. El plan se calculaba después de esa salida. | Oculta el trabajo realizado y la ronda que falta terminar. | Entrega 1: consulta el plan antes de decidir la bienvenida y prioriza la ronda activa. |
-| Alta | El borrador desaparece de la pantalla al revelar la clave (`adaptive-practice.tsx`). | Exige recordar lo escrito a la vez que se compara; favorece juzgar por familiaridad. | Entrega 2 prevista: respuesta original visible junto a los criterios, sin editarla tras revelar. |
-| Alta | Las tarjetas del corpus adaptativo no construyen `contextHref`, aunque la interfaz ya ofrece apoyo cuando existe. | Quien no comprende no tiene acceso directo a la lección de esa pregunta. | Entrega 2 prevista: enlace al tema real de cada reactivo. |
-| Media | Cambiar de ronda o repetirla tiene rutas asíncronas sin recuperación completa de excepciones. | Un fallo puede dejar la pantalla preparando indefinidamente. | Entrega 2 prevista: estados de error recuperables y bloqueo mientras se procesa. |
-| Media | Tres tarjetas de modos, descripción, aviso y otra introducción preceden a la actividad (`topic-detail.tsx`). | Especialmente en móvil, desplaza la primera pregunta lejos del inicio. | Entrega 2 prevista: navegación compacta y textos de orientación más breves. |
-| Media | Tras el examen, el cierre invita principalmente a repetir las mismas preguntas (`exam-player.tsx`). | Puede favorecer recuerdo de opciones sin corregir el razonamiento. | Entrega 2 prevista: acceso a lección y práctica desde el resultado; repetición disponible. |
+| Alta | El borrador desaparece de la pantalla al revelar la clave (`adaptive-practice.tsx`). | Exige recordar lo escrito a la vez que se compara; favorece juzgar por familiaridad. | Entrega 2: respuesta original visible junto a los criterios, sin editarla tras revelar. |
+| Alta | Las tarjetas del corpus adaptativo no construyen `contextHref`, aunque la interfaz ya ofrece apoyo cuando existe. Una ronda pendiente puede pertenecer a otro tema que el abierto. | Quien no comprende no tiene acceso directo a la lección de esa pregunta. | Entrega 2: enlace al tema real de cada reactivo, en otra pestaña para conservar el borrador. |
+| Media | Cambiar de ronda o repetirla tiene rutas asíncronas sin recuperación completa de excepciones. | Un fallo puede dejar la pantalla preparando indefinidamente. | Entrega 2: estados de error recuperables y bloqueo mientras se procesa; no presentar una carga fallida como ronda terminada. |
+| Media | Tres tarjetas de modos, descripción, aviso y otra introducción preceden a la actividad (`topic-detail.tsx`). | Especialmente en móvil, desplaza la primera pregunta lejos del inicio. | Entrega 2: navegación compacta y textos de orientación más breves. |
+| Media | Tras el examen, el cierre invita principalmente a repetir las mismas preguntas (`exam-player.tsx`). | Puede favorecer recuerdo de opciones sin corregir el razonamiento. | Entrega 2: acceso a lección y práctica desde el resultado; repetición disponible. |
 | Media | Las comprobaciones de lección revelan solución y feedback, pero no registran ni interpretan el razonamiento. | No hay evidencia suficiente para atribuir comprensión. | Pendiente: observar uso antes de añadir una evaluación o captura adicional. |
 | Media | El borrador y el detalle interno de la lección no sobreviven a recarga. | Interrupciones pueden obligar a repetir trabajo. | Pendiente: diseñar persistencia privada con caducidad; la política actual prohíbe persistir respuestas libres. No prometer reanudación exacta de cada interacción. |
 
@@ -41,10 +43,12 @@ confianza previa ni se muestran respuestas del examen antes de entregar.
 
 ### Modificaciones y experiencia previa
 
-La prioridad de inicio será: ronda activa → lección incompleta → repaso recomendado
+La prioridad de inicio es: ronda activa → lección incompleta → repaso recomendado
 → primera sesión curricular pendiente → centro de práctica. Es una decisión de
 producto revisable, no un algoritmo científicamente validado. La biblioteca continúa
 permitiendo elegir otros temas.
+Cuando coinciden una ronda activa y una lección incompleta, el inicio también
+ofrece «Volver a mi lección» para no ocultar la lectura pausada.
 
 El apoyo debe ser opcional para quien ya conoce el tema: acceso directo a lección,
 práctica y examen, sin obligar a recorrer nueve materiales reformulados. Se conserva
@@ -102,6 +106,26 @@ orienta estas decisiones; no prueba todavía sus efectos en esta app.
 
 ## Verificación técnica
 
-Entrega 1: pruebas de decisiones de navegación y regresiones locales; lint y build.
-El recorrido de navegador se amplió para volver del inicio al paso «Casos» y retomar
-la misma ronda. La evidencia de ejecución se registra al cerrar cada entrega.
+Las dos entregas aprobaron `npm run test:local`, `npm run lint` y `npm run build`.
+El recorrido de Chromium con Supabase local pasó para
+[continuidad, junto con la entrada de lectura](https://github.com/ArturoFrancoMozqueda/ceneval-study-app/actions/runs/34146211490)
+y para [la combinación completa](https://github.com/ArturoFrancoMozqueda/ceneval-study-app/actions/runs/34146216329).
+Incluye acceso invitado y aceptación sintética, permisos editoriales, navegación de
+biblioteca, lectura visible antes de comprobaciones, reanudación desde el inicio,
+comparación de borrador, apoyo en otra pestaña, ronda completa, examen e historial.
+La comparación también se comprueba a 360 px sin desbordamiento horizontal; el
+segundo run conserva capturas de contenido exclusivamente sintético durante siete días.
+
+Cambios entregados en [PR #31](https://github.com/ArturoFrancoMozqueda/ceneval-study-app/pull/31)
+(lectura, preparado anteriormente), [PR #33](https://github.com/ArturoFrancoMozqueda/ceneval-study-app/pull/33)
+(continuidad) y [PR #34](https://github.com/ArturoFrancoMozqueda/ceneval-study-app/pull/34)
+(comparación y apoyo). El recorrido con la cuenta autorizada fue de solo lectura:
+no se entregaron respuestas ni se modificó su avance para probar los cambios.
+
+La prueba integral detectó un bloqueo anterior del entorno local: en Supabase CLI
+2.115.0, `auth.email.enable_signup` se traduce a `ExternalEmailEnabled`, por lo que
+desactivarlo impide incluso entrar con cuentas invitadas. Se conserva
+`auth.enable_signup = false` y se habilita el proveedor de correo. El fixture
+comprueba antes del navegador que la cuenta sintética puede entrar y que un intento
+de registro devuelve `signup_disabled`. No se cambia Supabase remoto.
+[Mapeo oficial del CLI](https://github.com/supabase/cli/blob/v2.115.0/apps/cli-go/pkg/config/auth.go).

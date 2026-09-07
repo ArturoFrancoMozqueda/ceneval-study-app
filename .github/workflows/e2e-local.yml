@@ -22,6 +22,7 @@ jobs:
       NEXT_TELEMETRY_DISABLED: "1"
       E2E_BASE_URL: http://127.0.0.1:3100
       E2E_PYTHON: .venv-e2e/bin/python
+      E2E_SCREENSHOTS_DIR: artifacts/e2e
     steps:
       - name: Descargar el repositorio
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -49,6 +50,15 @@ jobs:
 
       - name: Ejecutar recorrido E2E aislado
         run: npm run test:e2e:ci
+
+      - name: Conservar capturas de estudio con datos sintéticos
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: estudio-sintetico
+          path: artifacts/e2e/*.png
+          if-no-files-found: ignore
+          retention-days: 7
 
       - name: Detener Supabase local sin conservar datos
         if: always()
