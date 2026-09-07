@@ -265,7 +265,7 @@ def assert_computed_reduced_motion(page: Page, label: str) -> None:
 
 
 def assert_privacy_curtain(page: Page) -> None:
-    """Comprueba las señales web reales sin afirmar que bloquean PrtScn."""
+    """Cambiar de ventana no oculta el contenido; la impresión sigue protegida."""
     curtain = page.locator(".privacy-curtain")
     expect(curtain).to_have_count(1)
     page.bring_to_front()
@@ -280,8 +280,8 @@ def assert_privacy_curtain(page: Page) -> None:
     expect(curtain).to_have_attribute("data-state", "hidden")
 
     page.evaluate("window.dispatchEvent(new Event('blur'))")
-    expect(curtain).to_have_attribute("data-state", "visible")
-    assert curtain.evaluate("el => getComputedStyle(el).backgroundColor") == "rgb(0, 0, 0)"
+    expect(curtain).to_have_attribute("data-state", "hidden")
+    expect(curtain).to_be_hidden()
     page.evaluate("window.dispatchEvent(new Event('focus'))")
     expect(curtain).to_have_attribute("data-state", "hidden")
 
@@ -294,7 +294,7 @@ def assert_privacy_curtain(page: Page) -> None:
           document.dispatchEvent(new Event('visibilitychange'));
         }"""
     )
-    expect(curtain).to_have_attribute("data-state", "visible")
+    expect(curtain).to_have_attribute("data-state", "hidden")
     page.evaluate(
         """() => {
           delete document.hidden;
@@ -302,6 +302,11 @@ def assert_privacy_curtain(page: Page) -> None:
           window.dispatchEvent(new Event('focus'));
         }"""
     )
+    expect(curtain).to_have_attribute("data-state", "hidden")
+
+    page.evaluate("window.dispatchEvent(new Event('pagehide'))")
+    expect(curtain).to_have_attribute("data-state", "hidden")
+    page.evaluate("window.dispatchEvent(new Event('pageshow'))")
     expect(curtain).to_have_attribute("data-state", "hidden")
 
     page.evaluate("window.dispatchEvent(new Event('beforeprint'))")

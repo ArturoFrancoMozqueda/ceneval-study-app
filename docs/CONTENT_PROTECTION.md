@@ -1,11 +1,12 @@
 # Protección de contenido — privacidad y disuasión, no DRM
 
-**Fecha:** 28 de agosto de 2026
+**Fecha:** 7 de septiembre de 2026
 **Referencia:** `docs/PROJECT_STATUS.md` §4 D-2 ("Protección de contenido").
 
 Ninguna medida de una aplicación web bloquea capturas del sistema, grabaciones
-externas o fotografías. Esta implementación reduce exposiciones accidentales y
-el copiado casual sin presentar una garantía técnica inexistente.
+externas o fotografías. Por petición de la usuaria, el ocultamiento al perder
+foco o cambiar de pestaña queda desactivado temporalmente. Se conservan la
+disuasión de copiado de texto y la restricción de impresión/PDF.
 
 ## 1. Medidas implementadas
 
@@ -22,17 +23,9 @@ de tabulación y los nombres de los controles permanecen intactos.
 cuando hay una sesión autenticada. Sustituye los overlays repetidos y la marca de
 agua que antes se montaban dentro de cada material, mapa, tarjeta o revisión.
 
-La cortina cubre toda la aplicación autenticada con negro opaco, sin tarjeta,
-mensaje visual o anuncio `aria-live`, cuando recibe estas señales:
-
-- `blur` o `visibilitychange`: la ventana o pestaña deja de estar activa;
-- `pagehide`: la página entra en salida o en la caché de navegación;
-- `beforeprint`: comienza la impresión o exportación a PDF.
-
-`focus`, `pageshow`, `visibilitychange` visible y `afterprint` sincronizan de
-nuevo el estado. Un almacén externo compartido por el único componente conserva
-las razones activas por separado, de modo que retirar una señal no descubre la
-interfaz si otra sigue activa.
+La cortina se activa únicamente con `beforeprint` y se retira con `afterprint`.
+No registra eventos de foco, visibilidad o navegación: abrir la herramienta de
+recortes o cambiar de ventana ya no cubre la aplicación con negro.
 
 En impresión, `app/globals.css` oculta los hijos del `body` autenticado y muestra
 solo el aviso de que la exportación está deshabilitada. Las páginas públicas no
@@ -62,9 +55,8 @@ eventos, no crea intervalos y no renderiza UI adicional.
 - `user-select: none`, la cortina y el aviso de impresión son fricción de uso,
   no cifrado ni DRM. El contenido ya fue enviado al navegador autorizado.
 
-Una explicación persistente para tecnologías de asistencia declara que la
-cortina reduce exposiciones accidentales y que no impide capturas, grabaciones
-ni fotografías. No se anuncia cada vez que la ventana pierde foco.
+Una explicación persistente para tecnologías de asistencia declara la
+restricción de impresión y que no se impiden capturas, grabaciones ni fotografías.
 
 ## 4. Medidas de infraestructura pendientes
 
@@ -82,6 +74,6 @@ implementa. Tampoco cambia el registro privado, los cobros o las migraciones.
 - `npm run lint` y `npm run build`: contrato completo de TypeScript y Next.js.
 
 Una captura manual o automatizada que todavía obtiene la imagen no constituye
-un fallo de la cortina: es el límite documentado. Los fallos verificables son que
-la cortina no aparezca al perder foco/visibilidad, que quede atascada al volver,
-que se monte más de una vez o que la impresión autenticada revele contenido.
+un fallo. Los fallos verificables son que el contenido vuelva a ocultarse al
+perder foco/visibilidad, que la cortina se monte más de una vez o que la
+impresión autenticada revele contenido.

@@ -2,7 +2,7 @@
 
 import { useSyncExternalStore } from "react";
 
-type CurtainReason = "focus" | "pagehide" | "print" | "visibility";
+type CurtainReason = "print";
 
 const activeReasons = new Set<CurtainReason>();
 const listeners = new Set<() => void>();
@@ -23,41 +23,14 @@ function setReason(reason: CurtainReason, active: boolean) {
   emitChange();
 }
 
-function syncFocusAndVisibility() {
-  setReason("visibility", document.hidden);
-  setReason("focus", !document.hidden && !document.hasFocus());
-}
-
 function attachBrowserListeners() {
-  const handleBlur = () => setReason("focus", true);
-  const handleFocus = () => syncFocusAndVisibility();
-  const handleVisibilityChange = () => syncFocusAndVisibility();
-  const handlePageHide = () => setReason("pagehide", true);
-  const handlePageShow = () => {
-    setReason("pagehide", false);
-    syncFocusAndVisibility();
-  };
   const handleBeforePrint = () => setReason("print", true);
-  const handleAfterPrint = () => {
-    setReason("print", false);
-    syncFocusAndVisibility();
-  };
+  const handleAfterPrint = () => setReason("print", false);
 
-  window.addEventListener("blur", handleBlur);
-  window.addEventListener("focus", handleFocus);
-  document.addEventListener("visibilitychange", handleVisibilityChange);
-  window.addEventListener("pagehide", handlePageHide);
-  window.addEventListener("pageshow", handlePageShow);
   window.addEventListener("beforeprint", handleBeforePrint);
   window.addEventListener("afterprint", handleAfterPrint);
-  syncFocusAndVisibility();
 
   return () => {
-    window.removeEventListener("blur", handleBlur);
-    window.removeEventListener("focus", handleFocus);
-    document.removeEventListener("visibilitychange", handleVisibilityChange);
-    window.removeEventListener("pagehide", handlePageHide);
-    window.removeEventListener("pageshow", handlePageShow);
     window.removeEventListener("beforeprint", handleBeforePrint);
     window.removeEventListener("afterprint", handleAfterPrint);
     activeReasons.clear();
@@ -86,8 +59,8 @@ function getServerSnapshot() {
 }
 
 /**
- * Cortina de privacidad global para reducir exposiciones accidentales cuando
- * la aplicación autenticada deja de estar activa o entra en modo impresión.
+ * Conserva únicamente la protección de impresión de la aplicación autenticada.
+ * El ocultamiento al cambiar de ventana está desactivado por petición de la usuaria.
  * No detecta ni bloquea capturas, grabaciones o fotografías del sistema.
  */
 export function PrivacyCurtain() {
@@ -96,8 +69,7 @@ export function PrivacyCurtain() {
   return (
     <>
       <p className="sr-only">
-        La aplicación oculta visualmente el contenido autenticado cuando la
-        ventana deja de estar activa para reducir exposiciones accidentales.
+        La impresión y exportación a PDF del contenido autenticado están deshabilitadas.
         Una página web no puede impedir capturas del sistema, grabaciones ni
         fotografías.
       </p>
