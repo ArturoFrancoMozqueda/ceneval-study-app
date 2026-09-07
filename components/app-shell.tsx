@@ -16,8 +16,8 @@ import type { CurrentUser } from "@/lib/auth";
 const navigation = [
   { href: "/", label: "Inicio", icon: HomeIcon },
   { href: "/sesiones", label: "Mi ruta", icon: StudyIcon },
-  { href: "/estudiar", label: "Practicar", icon: GlossaryIcon },
   { href: "/materias", label: "Biblioteca", icon: BookIcon },
+  { href: "/estudiar", label: "Practicar", icon: GlossaryIcon },
   { href: "/buscar", label: "Buscar", icon: SearchIcon },
 ];
 

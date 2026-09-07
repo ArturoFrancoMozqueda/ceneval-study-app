@@ -7,6 +7,15 @@ inicio para retomar el modo lección y reconocer las rondas adaptativas pendient
 El análisis de fricciones, las siguientes mejoras y su validación educativa están
 en `docs/LEARNING_FRICTION_AUDIT_2026-09-07.md`.
 
+Seguimiento del 7 de septiembre: se corrigió el acceso a temas que abría
+práctica por defecto. Inicio, biblioteca, búsqueda y progreso ahora llevan a
+la lección, con la lectura inicial visible y la explicación antes de las
+comprobaciones. La navegación presenta estudiar, practicar y simulacro en ese
+orden; los accesos explícitos a práctica usan `?modo=practicar`. La corrección
+no modifica contenido académico ni el progreso guardado. La verificación se
+realiza con el fixture estudiantil local, sin usar la cuenta de Liz; este
+seguimiento no acredita por sí solo un despliegue en producción.
+
 Base documental: `main` con el trabajo integrado hasta este corte (incluye
 todo lo del 22 de agosto — Fase 0, Fase 1 legal, Fase 5 de producto vendible,
 marca "Sube Legal" — más el trabajo del 23–25 de agosto: reconexión de
