@@ -125,7 +125,7 @@ export default async function StudyPage() {
               return (
                 <Link
                   className="rounded-2xl border border-border bg-white p-5 hover:border-brand/30"
-                  href={`/temas/${topic.id}`}
+                  href={`/temas/${topic.id}?modo=practicar`}
                   key={topic.id}
                 >
                   <span className="text-xs font-semibold text-success">

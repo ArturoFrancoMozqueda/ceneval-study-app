@@ -148,7 +148,7 @@ export function ExamPlayer({
                 <Link className="inline-flex min-h-12 items-center rounded-xl bg-brand px-5 font-semibold text-white" href={`/temas/${topicId}?modo=leccion`}>
                   Revisar la lección
                 </Link>
-                <Link className="inline-flex min-h-12 items-center rounded-xl border border-border bg-white px-5 font-semibold text-brand" href={`/temas/${topicId}`}>
+                <Link className="inline-flex min-h-12 items-center rounded-xl border border-border bg-white px-5 font-semibold text-brand" href={`/temas/${topicId}?modo=practicar`}>
                   Practicar este tema
                 </Link>
               </div>

@@ -133,7 +133,6 @@ export function LessonView({
       stepIds.includes(step as StepId),
     ),
   );
-  const [openingRevealed, setOpeningRevealed] = useState(false);
   const [quickCheckIndex, setQuickCheckIndex] = useState(0);
   const [quickCheckRevealed, setQuickCheckRevealed] = useState(false);
   const [caseStage, setCaseStage] = useState(0);
@@ -284,13 +283,14 @@ export function LessonView({
         aria-labelledby="session-title"
         className="rounded-3xl border border-border bg-surface p-5 sm:p-7"
       >
-        <p className="text-sm font-semibold text-success">Lección de apoyo</p>
+        <p className="text-sm font-semibold text-success">Material de estudio</p>
         <h2 className="mt-1 text-2xl font-semibold" id="session-title">
-          Consulta solo lo que necesites
+          Primero comprende el tema
         </h2>
         <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
-          La práctica es la actividad principal. Aquí puedes volver a la vista breve,
-          profundizar en la explicación o revisar los casos sin perder tu avance.
+          Comienza con la vista breve, lee la explicación y revisa los casos.
+          Después podrás practicar y hacer el simulacro. Puedes volver a cualquier
+          paso sin perder tu avance.
         </p>
       </section>
 
@@ -338,46 +338,34 @@ export function LessonView({
           <ContentShield>
             <div className="rounded-3xl bg-brand p-6 text-white sm:p-9">
               <p className="text-sm font-semibold text-white/70">
-                Antes de leer
+                Punto de partida
               </p>
               <h2 className="mt-3 max-w-3xl text-2xl font-semibold">
-                {journey?.openingPrompt ?? lesson.topic.title}
+                {opener?.title ?? lesson.topic.title}
               </h2>
-              <p className="mt-4 max-w-2xl text-sm leading-6 text-white/70">
-                Intenta responder mentalmente o en papel. La orientación aparece solo
-                cuando decidas contrastar tu idea.
-              </p>
-              {openingRevealed ? (
-                <div className="mt-6 border-t border-white/20 pt-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/60">
-                    Orientación esencial
-                  </p>
-                  <ProtectedText as="p" className="mt-3 max-w-3xl leading-8 text-white/90">
-                    {opener?.content ?? lesson.topic.description}
-                  </ProtectedText>
-                  <button
-                    className="mt-6 min-h-12 rounded-xl bg-white px-5 font-semibold text-brand"
-                    onClick={() => completeAndContinue("discover")}
-                    type="button"
-                  >
-                    Profundizar en la explicación
-                  </button>
+              <ProtectedText as="p" className="mt-4 max-w-3xl leading-8 text-white/90">
+                {opener?.content ?? lesson.topic.description}
+              </ProtectedText>
+              {journey?.openingPrompt ? (
+                <div className="mt-6 border-t border-white/20 pt-5">
+                  <p className="text-sm font-semibold text-white/70">Al leer, ten presente esta pregunta</p>
+                  <ProtectedText as="p" className="mt-2 leading-7">{journey.openingPrompt}</ProtectedText>
                 </div>
-              ) : (
-                <button
-                  className="mt-6 min-h-12 rounded-xl bg-white px-5 font-semibold text-brand"
-                  onClick={() => setOpeningRevealed(true)}
-                  type="button"
-                >
-                  Contrastar mi idea
-                </button>
-              )}
+              ) : null}
+              <button
+                className="mt-6 min-h-12 rounded-xl bg-white px-5 font-semibold text-brand"
+                onClick={() => completeAndContinue("discover")}
+                type="button"
+              >
+                Profundizar en la explicación
+              </button>
             </div>
           </ContentShield>
         ) : null}
 
         {activeStep === "understand" ? (
           <div className="space-y-6">
+            {explanation ? <Material material={explanation} /> : null}
             {quickCheck ? (
               <ContentShield>
                 <section className="rounded-2xl border border-brand/20 bg-brand-soft p-5 sm:p-6" aria-labelledby="quick-check-title">
@@ -415,7 +403,6 @@ export function LessonView({
                 </section>
               </ContentShield>
             ) : null}
-            {explanation ? <Material material={explanation} /> : null}
 
             <MaterialDisclosure
               description="Consulta la base normativa cuando necesites verificar de dónde proviene la explicación principal."
@@ -516,7 +503,7 @@ export function LessonView({
                 ) : null}
                 <Link
                   className="inline-flex min-h-12 items-center justify-center rounded-xl bg-brand px-5 font-semibold text-white"
-                  href={`/temas/${lesson.topic.id}`}
+                  href={`/temas/${lesson.topic.id}?modo=practicar`}
                 >
                   Practicar este tema
                 </Link>
