@@ -628,7 +628,19 @@ def main() -> None:
             page.get_by_label("Correo electrónico").fill(student_email)
             page.get_by_label("Contraseña").fill(student_password)
             page.get_by_role("button", name="Iniciar sesión").click()
-            page.wait_for_url(f"{base_url}/aceptar-terminos")
+            try:
+                page.wait_for_url(f"{base_url}/aceptar-terminos")
+            except Exception:
+                print(json.dumps({
+                    "login_path": urlparse(page.url).path,
+                    "headings": page.locator("h1").all_text_contents(),
+                    "alerts": [redact(text, secrets) for text in page.get_by_role("alert").all_text_contents()],
+                    "email_filled": bool(page.get_by_label("Correo electrónico").count() and page.get_by_label("Correo electrónico").input_value()),
+                    "console_errors": console_errors,
+                    "page_errors": page_errors,
+                    "network_errors": network_errors,
+                }), flush=True)
+                raise
             expect(
                 page.get_by_role("heading", name="Confirma las condiciones de acceso")
             ).to_be_visible()
