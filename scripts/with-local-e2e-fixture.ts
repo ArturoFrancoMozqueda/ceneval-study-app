@@ -484,6 +484,15 @@ async function main() {
         throw new Error(`Perfil sintético inesperado antes del navegador: ${probeProfile.error?.code ?? "profile_state"}.`);
       }
       await studentProbe.auth.signOut();
+      // Probe with an existing, reserved fixture address so a misconfiguration
+      // cannot leave an extra account behind. Public registration must stay closed.
+      const signupProbe = await studentProbe.auth.signUp({
+        email: STUDENT_EMAIL,
+        password: prepared.studentPassword,
+      });
+      if (signupProbe.error?.code !== "signup_disabled") {
+        throw new Error(`El registro público local no está cerrado: ${signupProbe.error?.code ?? "unexpected_signup_success"}.`);
+      }
       console.log("✓ Fixture sintético E2E preparado exclusivamente en Supabase local.");
       await runChild(command, args, {
         ...process.env,
