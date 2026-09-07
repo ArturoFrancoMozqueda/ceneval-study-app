@@ -673,9 +673,9 @@ def main() -> None:
             expect(page).to_have_url(f"{topic_url}?modo=practicar")
             expect(page.get_by_role("button", name="Iniciar ronda adaptativa")).to_be_visible()
             page.goto(f"{base_url}/", wait_until="networkidle")
-            page.get_by_role("link", name="Continuar sesión", exact=True).click()
+            page.get_by_role("link", name="Continuar lección", exact=True).click()
             wait_for_network(page)
-            expect(page).to_have_url(topic_url)
+            expect(page).to_have_url(lesson_url)
             expect(page.get_by_role("heading", name="Material sintético 2", exact=True)).to_be_visible()
 
             page.goto(f"{base_url}/materias", wait_until="networkidle")
@@ -868,7 +868,7 @@ def main() -> None:
             page.get_by_role("link", name="Continuar práctica", exact=True).click()
             wait_for_network(page)
             expect(page.get_by_text("Pregunta 1 de 5", exact=True)).to_be_visible()
-            page.goto(topic_url, wait_until="networkidle")
+            page.goto(f"{topic_url}?modo=practicar", wait_until="networkidle")
             for index in range(5):
                 expect(page.get_by_text(f"Pregunta {index + 1} de 5", exact=True)).to_be_visible()
                 page.locator("label").filter(has_text="Puedo explicarlo").click()
