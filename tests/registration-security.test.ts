@@ -82,7 +82,9 @@ test("el acceso es por invitación y el registro no puede crear cuentas", () => 
   assert.doesNotMatch(authActions, /auth\.signUp|signUpAction/);
   assert.match(tomlSection(authConfig, "auth"), /^enable_signup = false$/m);
   assert.match(tomlSection(authConfig, "auth"), /^enable_anonymous_sign_ins = false$/m);
-  assert.match(tomlSection(authConfig, "auth.email"), /^enable_signup = false$/m);
+  // The CLI maps this email flag to ExternalEmailEnabled, including password login.
+  // The global auth flag above is what closes public registration.
+  assert.match(tomlSection(authConfig, "auth.email"), /^enable_signup = true$/m);
 });
 
 test("la primera entrada registra aceptación propia antes de estudiar", () => {
