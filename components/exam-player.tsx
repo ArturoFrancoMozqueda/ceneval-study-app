@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { submitExamAction, type ActionResult } from "@/app/actions/academic";
 import { ContentShield } from "@/components/content-shield";
@@ -21,9 +22,11 @@ const difficultyLabel = {
 export function ExamPlayer({
   exam,
   onComplete,
+  topicId,
 }: {
   exam: Exam;
   onComplete?: () => void;
+  topicId?: number;
 }) {
   const [run, setRun] = useState(createExamRunState);
   const submissionLock = useRef(false);
@@ -134,6 +137,23 @@ export function ExamPlayer({
           <p className="mt-2 text-muted">
             Tu intento quedó guardado. Revisa cada razonamiento.
           </p>
+          {topicId ? (
+            <div className="mt-5">
+              <p className="text-sm leading-6 text-muted">
+                {result.score < result.total
+                  ? "Identifica qué regla o razonamiento faltó; consulta la lección antes de volver a intentarlo."
+                  : "Recuperaste estas respuestas. Vuelve a practicar otro día para comprobar qué recuerdas."}
+              </p>
+              <div className="mt-4 flex flex-wrap justify-center gap-3">
+                <Link className="inline-flex min-h-12 items-center rounded-xl bg-brand px-5 font-semibold text-white" href={`/temas/${topicId}?modo=leccion`}>
+                  Revisar la lección
+                </Link>
+                <Link className="inline-flex min-h-12 items-center rounded-xl border border-border bg-white px-5 font-semibold text-brand" href={`/temas/${topicId}`}>
+                  Practicar este tema
+                </Link>
+              </div>
+            </div>
+          ) : null}
         </div>
         <div className="mt-6 space-y-4">
           {exam.questions.map((question) => {

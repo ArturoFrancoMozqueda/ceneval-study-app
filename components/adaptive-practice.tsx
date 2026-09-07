@@ -92,6 +92,7 @@ export function AdaptivePractice({
         question: item.prompt,
         answer: "",
         position: index + 1,
+        contextHref: `/temas/${item.topicId}?modo=leccion`,
         contextLabel: `${item.stableCode} · ${
           item.retrievalType === "free_recall"
             ? "Recuerdo libre"
@@ -112,6 +113,7 @@ export function AdaptivePractice({
       .then((result) => {
         if (!active) return;
         if ("error" in result) {
+          setSaveError(result.error);
           setAdaptiveSession(null);
           setQueue(createPracticeQueue(cards.length));
           setCursor(0);
@@ -125,6 +127,7 @@ export function AdaptivePractice({
       })
       .catch(() => {
         if (!active) return;
+        setSaveError("No pudimos recuperar tu ronda. Intenta iniciarla de nuevo para retomarla.");
         setAdaptiveSession(null);
         setQueue(createPracticeQueue(cards.length));
         setCursor(0);
@@ -148,6 +151,7 @@ export function AdaptivePractice({
   }
 
   async function startAdaptiveRound() {
+    if (starting) return;
     setStarting(true);
     setSaveError("");
     try {
@@ -162,6 +166,7 @@ export function AdaptivePractice({
       setAdaptiveSession(result.session);
       setQueue(result.session.items.map((_, index) => index));
       setCursor(Math.max(0, result.session.currentPosition - 1));
+      resetRoundFeedback();
     } catch {
       setSaveError("No pudimos preparar la ronda. Revisa tu conexión e intenta nuevamente.");
     } finally {
@@ -170,31 +175,28 @@ export function AdaptivePractice({
   }
 
   async function startFreshAdaptiveRound() {
-    if (!adaptiveSession) return;
+    if (!adaptiveSession || saving || starting) return;
     setSaving(true);
     setSaveError("");
-    const abandoned = await abandonPracticeSessionAction({
-      sessionId: adaptiveSession.id,
-    });
-    if ("error" in abandoned) {
-      setSaveError(abandoned.error);
-      setSaving(false);
-      return;
-    }
-    setAdaptiveSession(undefined);
-    const result = await startOrResumePracticeSessionAction({
-      ...(topicId === undefined ? {} : { topicId }),
-      targetSize: 5,
-    });
-    if ("error" in result) {
+    try {
+      const abandoned = await abandonPracticeSessionAction({
+        sessionId: adaptiveSession.id,
+      });
+      if ("error" in abandoned) {
+        setSaveError(abandoned.error);
+        return;
+      }
       setAdaptiveSession(null);
-      setQueue(createPracticeQueue(cards.length));
-      setCursor(0);
-    } else {
-      setAdaptiveSession(result.session);
-      setQueue(result.session.items.map((_, index) => index));
-      setCursor(Math.max(0, result.session.currentPosition - 1));
+      resetRoundFeedback();
+      await startAdaptiveRound();
+    } catch {
+      setSaveError("No pudimos cambiar de ronda. Revisa tu conexión e intenta nuevamente.");
+    } finally {
+      setSaving(false);
     }
+  }
+
+  function resetRoundFeedback() {
     setConfidence(null);
     setRevealed(false);
     setScratchpad("");
@@ -202,7 +204,7 @@ export function AdaptivePractice({
     setAnswerKey(null);
     setCounts({ correct: 0, partial: 0, incorrect: 0 });
     setFeedback("");
-    setSaving(false);
+    setRetriedCards([]);
   }
 
   if (shouldLoadAdaptive && !adaptiveSession) {
@@ -248,44 +250,25 @@ export function AdaptivePractice({
           Ya hiciste el trabajo difícil: recuperar
         </h2>
         <p className="mt-3 max-w-2xl leading-7 text-muted">
-          {counts.correct} correctas · {counts.partial} parciales · {counts.incorrect}{" "}
+          En esta visita: {counts.correct} correctas · {counts.partial} parciales · {counts.incorrect}{" "}
           incorrectas. Los errores no borran el avance: indican qué conviene volver a intentar.
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <button
-            className="min-h-12 rounded-xl border border-border bg-white px-5 font-semibold text-brand"
+            className="min-h-12 rounded-xl border border-border bg-white px-5 font-semibold text-brand disabled:opacity-50"
+            disabled={starting}
             onClick={async () => {
               if (shouldLoadAdaptive && usingAdaptiveCorpus) {
-                setAdaptiveSession(undefined);
-                const result = await startOrResumePracticeSessionAction({
-                  ...(topicId === undefined ? {} : { topicId }),
-                  targetSize: 5,
-                });
-                if ("error" in result) {
-                  setAdaptiveSession(null);
-                  setQueue(createPracticeQueue(cards.length));
-                  setCursor(0);
-                } else {
-                  setAdaptiveSession(result.session);
-                  setQueue(result.session.items.map((_, index) => index));
-                  setCursor(Math.max(0, result.session.currentPosition - 1));
-                }
+                await startAdaptiveRound();
               } else {
                 setQueue(createPracticeQueue(cards.length));
                 setCursor(0);
+                resetRoundFeedback();
               }
-              setConfidence(null);
-              setRevealed(false);
-              setScratchpad("");
-              setRetriedCards([]);
-              setCounts({ correct: 0, partial: 0, incorrect: 0 });
-              setFeedback("");
-              setAttemptId(null);
-              setAnswerKey(null);
             }}
             type="button"
           >
-            Practicar otra ronda
+            {starting ? "Preparando ronda…" : "Practicar otra ronda"}
           </button>
           {completionHref ? (
             <Link
@@ -296,6 +279,7 @@ export function AdaptivePractice({
             </Link>
           ) : null}
         </div>
+        {saveError ? <p className="mt-4 text-sm font-semibold text-danger" role="alert">{saveError}</p> : null}
       </section>
     );
   }
@@ -331,6 +315,8 @@ export function AdaptivePractice({
   async function rate(outcome: PracticeOutcome) {
     const activeCard = card;
     if (!confidence || !activeCard) return;
+    // Coincide con la normalización del servidor: ver la clave no es recordar.
+    if (confidence === "no_recall") outcome = "incorrect";
     setSaving(true);
     setSaveError("");
     try {
@@ -341,10 +327,14 @@ export function AdaptivePractice({
           setSaveError(result.error);
           return;
         }
+        const refreshed = await getPracticeSessionAction();
+        if ("error" in refreshed) {
+          setSaveError("Tu respuesta se guardó, pero no pudimos cargar el siguiente paso. Vuelve a seleccionar tu resultado para continuar.");
+          return;
+        }
         setCounts((current) => ({ ...current, [outcome]: current[outcome] + 1 }));
         setFeedback(feedbackForPracticeResult(outcome));
-        const refreshed = await getPracticeSessionAction();
-        if (!("error" in refreshed) && refreshed.session) {
+        if (refreshed.session) {
           setAdaptiveSession(refreshed.session);
           setQueue(refreshed.session.items.map((_, index) => index));
           setCursor(Math.max(0, refreshed.session.currentPosition - 1));
@@ -386,7 +376,7 @@ export function AdaptivePractice({
       setAttemptId(null);
       setAnswerKey(null);
     } catch {
-      setSaveError("No se guardó este intento. Revisa tu conexión e intenta nuevamente.");
+      setSaveError("No pudimos confirmar el siguiente paso. Revisa tu conexión y vuelve a seleccionar tu resultado.");
     } finally {
       setSaving(false);
     }
@@ -436,7 +426,7 @@ export function AdaptivePractice({
         {usingAdaptiveCorpus ? (
           <button
             className="min-h-10 rounded-xl border border-border bg-white px-4 text-xs font-semibold text-brand hover:border-brand/30 disabled:opacity-50"
-            disabled={saving}
+            disabled={saving || starting}
             onClick={startFreshAdaptiveRound}
             type="button"
           >
@@ -468,7 +458,7 @@ export function AdaptivePractice({
                 className="mt-2 min-h-24 w-full resize-y rounded-xl border border-border bg-background p-4 leading-7"
                 id={`${accessibleId}-scratchpad`}
                 onChange={(event) => setScratchpad(event.target.value)}
-                placeholder="Este borrador permanece en tu dispositivo y se borra al avanzar."
+                placeholder="Explica qué responderías y por qué. Se borra al avanzar o salir."
                 value={scratchpad}
               />
               <fieldset className="mt-6">
@@ -508,6 +498,15 @@ export function AdaptivePractice({
             </div>
           ) : (
             <div className="mt-7 border-t border-border pt-6">
+              <div className="mb-6 rounded-xl border border-border bg-background p-4">
+                <h3 className="text-sm font-semibold">Tu respuesta antes de ver la clave</h3>
+                <p className="mt-2 whitespace-pre-wrap break-words leading-7">
+                  {scratchpad.trim() ? scratchpad : "Respondiste mentalmente o en papel. Compárala con los puntos de la clave."}
+                </p>
+                <p className="mt-2 text-sm text-muted">
+                  Identifica qué acertaste y qué faltó antes de elegir tu resultado.
+                </p>
+              </div>
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-success">
                 Clave de comparación
               </p>
@@ -596,8 +595,8 @@ export function AdaptivePractice({
         </p>
       ) : null}
       {card.contextHref ? (
-        <Link className="mt-5 inline-flex min-h-11 items-center text-sm font-semibold text-brand" href={card.contextHref}>
-          Consultar la lección de apoyo
+        <Link className="mt-5 inline-flex min-h-11 items-center text-sm font-semibold text-brand" href={card.contextHref} target="_blank" rel="noopener noreferrer">
+          Consultar la lección de apoyo (abre en otra pestaña)
         </Link>
       ) : null}
     </section>

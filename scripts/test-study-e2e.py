@@ -830,12 +830,33 @@ def main() -> None:
             page.goto(topic_url, wait_until="networkidle")
             for index in range(5):
                 expect(page.get_by_text(f"Pregunta {index + 1} de 5", exact=True)).to_be_visible()
+                scratchpad = page.get_by_role("textbox", name=re.compile("Esboza tu respuesta"))
+                expect(scratchpad).to_have_value("")
+                draft = f"Respuesta propia de prueba {index + 1}: aplicaría la regla por estos hechos."
+                scratchpad.fill(draft)
                 page.locator("label").filter(has_text="Puedo explicarlo").click()
                 expect(
                     page.get_by_role("radio", name=re.compile("Puedo explicarlo"))
                 ).to_be_checked()
                 page.get_by_role("button", name="Comparar con la clave").click()
                 expect(page.get_by_text("Clave de comparación", exact=True)).to_be_visible()
+                expect(page.get_by_role("heading", name="Tu respuesta antes de ver la clave")).to_be_visible()
+                expect(page.get_by_text(draft, exact=True)).to_be_visible()
+                expect(scratchpad).to_have_count(0)
+                support = page.get_by_role("link", name=re.compile("Consultar la lección de apoyo"))
+                expect(support).to_have_attribute("href", f"{topic_path}?modo=leccion")
+                if index == 0:
+                    with page.expect_popup() as support_popup:
+                        support.click()
+                    support_page = support_popup.value
+                    wait_for_network(support_page)
+                    expect(support_page.get_by_role("navigation", name="Recorrido de aprendizaje")).to_be_visible()
+                    support_page.close()
+                    expect(page.get_by_text(draft, exact=True)).to_be_visible()
+                    page.set_viewport_size({"width": 360, "height": 800})
+                    if page.evaluate("document.documentElement.scrollWidth > window.innerWidth"):
+                        raise AssertionError("La comparación de respuesta desborda en móvil.")
+                    page.set_viewport_size({"width": 1440, "height": 1000})
                 page.get_by_role("button", name=re.compile("Correcta")).click()
                 wait_for_network(page)
             completion_heading = page.get_by_role(
@@ -877,6 +898,12 @@ def main() -> None:
             expect(result_heading).to_be_focused()
             expect(page.get_by_text("0/10", exact=True)).to_be_visible()
             expect(page.get_by_text("Tu intento quedó guardado.", exact=False)).to_be_visible()
+            expect(page.get_by_role("link", name="Revisar la lección", exact=True)).to_have_attribute(
+                "href", f"{topic_path}?modo=leccion"
+            )
+            expect(page.get_by_role("link", name="Practicar este tema", exact=True)).to_have_attribute(
+                "href", topic_path
+            )
             expect(page.get_by_text("Necesita repaso", exact=True)).to_have_count(10)
             expect(page.get_by_role("heading", name="Tu respuesta")).to_have_count(10)
             expect(page.get_by_text("Opción sintética A", exact=True)).to_have_count(10)

@@ -18,7 +18,7 @@ export default async function ReviewPage() {
     contextLabel: [card.curriculumCode, card.topicTitle]
       .filter(Boolean)
       .join(" · "),
-    contextHref: `/temas/${card.topicId}`,
+    contextHref: `/temas/${card.topicId}?modo=leccion`,
   }));
   const nextReviewLabel = reviewOverview.nextReviewAt
     ? new Intl.DateTimeFormat("es-MX", {
