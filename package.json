@@ -37,7 +37,7 @@
     "test:backup-restore-contract": "tsx --test tests/local-backup-restore.test.ts",
     "test:e2e:process-cleanup": "tsx --test tests/local-process-cleanup.test.ts && pwsh -NoProfile -File scripts/test-local-process-cleanup.ps1",
     "test:rls-local-contract": "tsx --test tests/rls-local-runner.test.ts",
-    "test:continuation": "tsx --test tests/study-continuation.test.ts",
+    "test:continuation": "tsx --test tests/study-continuation.test.ts tests/next-study-action.test.ts",
     "test:onboarding": "tsx --test tests/study-onboarding.test.ts",
     "test:study-experience": "tsx --test tests/study-experience-honesty.test.ts",
     "test:accessibility-contract": "tsx --test tests/study-accessibility-contract.test.ts",
