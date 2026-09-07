@@ -111,6 +111,7 @@ export async function TopicDetail({
             automáticamente; tú valoras qué acertaste.
           </p>
           <AdaptivePractice
+            key={topicId}
             cards={lesson.flashcards}
             completionHref={`/temas/${topicId}?modo=simulacro`}
             topicId={topicId}
@@ -120,6 +121,7 @@ export async function TopicDetail({
 
       {mode === "leccion" ? (
         <LessonView
+          key={topicId}
           initialProgress={progress}
           lesson={lesson}
         />
@@ -138,7 +140,7 @@ export async function TopicDetail({
             </p>
           </div>
           {lesson.exam ? (
-            <ExamPlayer exam={lesson.exam} topicId={topicId} />
+            <ExamPlayer key={lesson.exam.id} exam={lesson.exam} topicId={topicId} />
           ) : (
             <p className="rounded-2xl border border-dashed border-border bg-surface p-6 text-muted">
               El simulacro de este tema todavía no está disponible.

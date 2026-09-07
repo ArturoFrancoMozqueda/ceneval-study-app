@@ -2,6 +2,7 @@ import json
 import os
 import re
 from datetime import date
+from pathlib import Path
 from urllib.error import HTTPError
 from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
@@ -57,6 +58,14 @@ def safe_request_label(raw_url: str) -> str:
 
 def wait_for_network(page: Page) -> None:
     page.wait_for_load_state("networkidle")
+
+
+def capture_learning_screen(page: Page, name: str) -> None:
+    directory = os.environ.get("E2E_SCREENSHOTS_DIR")
+    if directory:
+        destination = Path(directory)
+        destination.mkdir(parents=True, exist_ok=True)
+        page.screenshot(path=str(destination / f"{name}.png"), full_page=True)
 
 
 def attach_error_gates(
@@ -868,7 +877,9 @@ def main() -> None:
                     page.set_viewport_size({"width": 360, "height": 800})
                     if page.evaluate("document.documentElement.scrollWidth > window.innerWidth"):
                         raise AssertionError("La comparación de respuesta desborda en móvil.")
+                    capture_learning_screen(page, "comparacion-movil")
                     page.set_viewport_size({"width": 1440, "height": 1000})
+                    capture_learning_screen(page, "comparacion-escritorio")
                 page.get_by_role("button", name=re.compile("Correcta")).click()
                 wait_for_network(page)
             completion_heading = page.get_by_role(
