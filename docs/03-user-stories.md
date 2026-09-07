@@ -43,6 +43,10 @@ el simulacro, y consultar dentro de la lección el mapa, la guía y las fuentes.
 
 **Aceptación:** los tres recorridos principales y sus recursos funcionan en
 móvil y escritorio, sin presentar reformulaciones como contenido nuevo.
+Al abrir un tema desde inicio, biblioteca, búsqueda o progreso, se muestra la
+lección por defecto y su lectura inicial está visible sin contestar preguntas.
+La explicación precede a las comprobaciones. Practicar y hacer el simulacro
+son opciones explícitas; al volver a estudiar se conserva el paso guardado.
 
 ### US-069 Conservar progreso privado
 

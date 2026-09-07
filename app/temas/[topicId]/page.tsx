@@ -37,9 +37,9 @@ export default async function TopicPage({
 
   const requestedMode = Array.isArray(rawMode) ? rawMode[0] : rawMode;
   const mode =
-    requestedMode === "leccion" || requestedMode === "simulacro"
+    requestedMode === "practicar" || requestedMode === "simulacro"
       ? requestedMode
-      : "practicar";
+      : "leccion";
 
   return <TopicDetail mode={mode} topicId={numericId} />;
 }

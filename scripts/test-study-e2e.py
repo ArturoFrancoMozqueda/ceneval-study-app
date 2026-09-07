@@ -632,6 +632,35 @@ def main() -> None:
             page.wait_for_url(f"{base_url}/")
             wait_for_network(page)
 
+            # La estudiante nueva debe llegar al material mediante los enlaces
+            # de inicio y clase, sin conocer el parámetro ?modo=leccion.
+            page.get_by_role("link", name="Ver los temas de esta sesión").click()
+            wait_for_network(page)
+            page.locator(f'a[href="{topic_path}"]').first.click()
+            wait_for_network(page)
+            expect(page).to_have_url(topic_url)
+            study_modes = page.get_by_role("navigation", name="Modo de estudio")
+            expect(study_modes.get_by_role("link").first).to_contain_text("Estudiar el tema")
+            expect(study_modes.get_by_role("link", name=re.compile("Estudiar el tema"))).to_have_attribute("aria-current", "page")
+            expect(page.get_by_role("heading", name="Material sintético 1", exact=True)).to_be_visible()
+            expect(page.get_by_text("Contenido artificial suficientemente largo para validar persistencia sin afirmaciones jurídicas.", exact=True)).to_be_visible()
+            expect(page.get_by_role("button", name="Iniciar ronda adaptativa")).to_have_count(0)
+            page.get_by_role("button", name="Profundizar en la explicación").click()
+            expect(page.get_by_role("heading", name="Material sintético 2", exact=True)).to_be_visible()
+            explanation = page.get_by_role("heading", name="Material sintético 2", exact=True)
+            check = page.get_by_role("heading", name="Pregunta sintética de comprobación número 1", exact=True)
+            assert explanation.bounding_box()["y"] < check.bounding_box()["y"]
+            expect(page.get_by_role("status")).to_have_text("Avance guardado")
+            study_modes.get_by_role("link", name=re.compile("^Practicar")).click()
+            wait_for_network(page)
+            expect(page).to_have_url(f"{topic_url}?modo=practicar")
+            expect(page.get_by_role("button", name="Iniciar ronda adaptativa")).to_be_visible()
+            page.goto(f"{base_url}/", wait_until="networkidle")
+            page.get_by_role("link", name="Continuar sesión", exact=True).click()
+            wait_for_network(page)
+            expect(page).to_have_url(topic_url)
+            expect(page.get_by_role("heading", name="Material sintético 2", exact=True)).to_be_visible()
+
             page.goto(f"{base_url}/materias", wait_until="networkidle")
             expect(
                 page.get_by_role("heading", name="Biblioteca CENEVAL", exact=True)
