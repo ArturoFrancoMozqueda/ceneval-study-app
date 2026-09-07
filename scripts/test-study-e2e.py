@@ -628,7 +628,19 @@ def main() -> None:
             page.get_by_label("Correo electrónico").fill(student_email)
             page.get_by_label("Contraseña").fill(student_password)
             page.get_by_role("button", name="Iniciar sesión").click()
-            page.wait_for_url(f"{base_url}/aceptar-terminos")
+            try:
+                page.wait_for_url(f"{base_url}/aceptar-terminos")
+            except Exception:
+                print(json.dumps({
+                    "login_path": urlparse(page.url).path,
+                    "headings": page.locator("h1").all_text_contents(),
+                    "alerts": [redact(text, secrets) for text in page.get_by_role("alert").all_text_contents()],
+                    "email_filled": bool(page.get_by_label("Correo electrónico").count() and page.get_by_label("Correo electrónico").input_value()),
+                    "console_errors": console_errors,
+                    "page_errors": page_errors,
+                    "network_errors": network_errors,
+                }), flush=True)
+                raise
             expect(
                 page.get_by_role("heading", name="Confirma las condiciones de acceso")
             ).to_be_visible()
@@ -661,9 +673,9 @@ def main() -> None:
             expect(page).to_have_url(f"{topic_url}?modo=practicar")
             expect(page.get_by_role("button", name="Iniciar ronda adaptativa")).to_be_visible()
             page.goto(f"{base_url}/", wait_until="networkidle")
-            page.get_by_role("link", name="Continuar sesión", exact=True).click()
+            page.get_by_role("link", name="Continuar lección", exact=True).click()
             wait_for_network(page)
-            expect(page).to_have_url(topic_url)
+            expect(page).to_have_url(lesson_url)
             expect(page.get_by_role("heading", name="Material sintético 2", exact=True)).to_be_visible()
 
             page.goto(f"{base_url}/materias", wait_until="networkidle")
@@ -830,6 +842,14 @@ def main() -> None:
                 'nav[aria-label="Recorrido de aprendizaje"] button[aria-current="step"]'
             )
             expect(current_step).to_contain_text("Casos")
+            page.goto(f"{base_url}/", wait_until="networkidle")
+            resume_lesson = page.get_by_role("link", name="Continuar lección", exact=True)
+            expect(resume_lesson).to_have_attribute("href", f"{topic_path}?modo=leccion")
+            resume_lesson.click()
+            wait_for_network(page)
+            expect(page.locator(
+                'nav[aria-label="Recorrido de aprendizaje"] button[aria-current="step"]'
+            )).to_contain_text("Casos")
             optional_review = page.locator("summary").filter(
                 has_text="Otras formas de repasar"
             )
@@ -843,6 +863,12 @@ def main() -> None:
             page.get_by_role("link", name="Practicar este tema").click()
             wait_for_network(page)
             page.get_by_role("button", name="Iniciar ronda adaptativa").click()
+            expect(page.get_by_text("Pregunta 1 de 5", exact=True)).to_be_visible()
+            page.goto(f"{base_url}/", wait_until="networkidle")
+            page.get_by_role("link", name="Continuar práctica", exact=True).click()
+            wait_for_network(page)
+            expect(page.get_by_text("Pregunta 1 de 5", exact=True)).to_be_visible()
+            page.goto(f"{topic_url}?modo=practicar", wait_until="networkidle")
             for index in range(5):
                 expect(page.get_by_text(f"Pregunta {index + 1} de 5", exact=True)).to_be_visible()
                 page.locator("label").filter(has_text="Puedo explicarlo").click()

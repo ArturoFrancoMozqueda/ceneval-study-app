@@ -1,6 +1,11 @@
 # Estado actual y plan de venta — CENEVAL Study App
 
-Última actualización: 4 de septiembre de 2026 (hora de México)
+Última actualización: 7 de septiembre de 2026 (hora de México)
+
+Seguimiento de aprendizaje del 7 de septiembre: se corrigió la continuidad del
+inicio para retomar el modo lección y reconocer las rondas adaptativas pendientes.
+El análisis de fricciones, las siguientes mejoras y su validación educativa están
+en `docs/LEARNING_FRICTION_AUDIT_2026-09-07.md`.
 
 Seguimiento del 7 de septiembre: se corrigió el acceso a temas que abría
 práctica por defecto. Inicio, biblioteca, búsqueda y progreso ahora llevan a

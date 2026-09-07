@@ -8,7 +8,7 @@ import {
 } from "@/lib/data/academic";
 import { getStudyPlanOverview } from "@/lib/data/study-plan";
 import { deriveStudyOnboarding } from "@/lib/study/onboarding";
-import { getTopicJourneyStatus } from "@/lib/study/progress-presentation";
+import { deriveNextStudyAction } from "@/lib/study/next-action";
 import { deriveSessionPath } from "@/lib/study/session-path";
 import { writeDependencyFailure } from "@/lib/operations/safe-log";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
@@ -21,7 +21,7 @@ function failDashboardQuery(operation: string, error: unknown): never {
 export async function HomeDashboard() {
   const user = await requireUser();
   const supabase = await createServerSupabaseClient();
-  const [attempts, progressResult] = await Promise.all([
+  const [attempts, progressResult, studyPlanResult] = await Promise.all([
     supabase
       .from("exam_attempts")
       .select("score,total_questions")
@@ -33,6 +33,7 @@ export async function HomeDashboard() {
       .order("last_activity_at", { ascending: false })
       .limit(1)
       .maybeSingle(),
+    getStudyPlanOverview(user.id),
   ]);
 
   if (attempts.error) {
@@ -43,7 +44,10 @@ export async function HomeDashboard() {
   }
 
   const progress = progressResult.data;
-  const hasActivity = Boolean(progress || attempts.data?.length);
+  const studyPlan = studyPlanResult.overview;
+  const hasActivity = Boolean(
+    progress || attempts.data?.length || studyPlan.source !== "new",
+  );
 
   if (!hasActivity) {
     const sessions = await getPublishedSessions(user.id);
@@ -60,12 +64,10 @@ export async function HomeDashboard() {
     }
   }
 
-  const [subjects, studyPlanResult, sessions] = await Promise.all([
+  const [subjects, sessions] = await Promise.all([
     getSubjects(),
-    getStudyPlanOverview(user.id),
     getPublishedSessions(user.id),
   ]);
-  const studyPlan = studyPlanResult.overview;
   const totalAnswers = (attempts.data ?? []).reduce(
     (sum, attempt) => sum + (attempt.total_questions ?? 0),
     0,
@@ -88,7 +90,6 @@ export async function HomeDashboard() {
   const completedCount = Array.isArray(progress?.completed_steps)
     ? progress.completed_steps.length
     : 0;
-  const journeyStatus = getTopicJourneyStatus(completedCount);
   const sessionPath = deriveSessionPath(sessions);
   const currentSession = sessionPath.find(
     ({ pathStatus }) => pathStatus === "current",
@@ -96,17 +97,12 @@ export async function HomeDashboard() {
   const accreditedSessions = sessionPath.filter(
     ({ pathStatus }) => pathStatus === "completed",
   ).length;
-  const shouldResumeTopic = Boolean(nextTopic && completedCount < 3);
-  const primaryHref = shouldResumeTopic
-    ? `/temas/${nextTopic?.id}`
-    : currentSession
-      ? `/clases/${currentSession.id}`
-      : "/estudiar";
-  const primaryTitle = shouldResumeTopic
-    ? `Continúa: ${nextTopic?.title}`
-    : currentSession
-      ? `${currentSession.curriculumCode} · ${currentSession.title}`
-      : "Refuerza lo que ya aprendiste";
+  const primaryAction = deriveNextStudyAction({
+    plan: studyPlan,
+    topic: nextTopic,
+    completedSteps: completedCount,
+    session: currentSession,
+  });
 
   return (
     <div>
@@ -126,27 +122,25 @@ export async function HomeDashboard() {
       <section className="mt-8 rounded-3xl bg-brand p-6 text-white sm:p-8">
         <p className="text-sm font-semibold text-white/70">Tu recomendación de hoy</p>
         <h2 className="mt-2 text-2xl font-semibold">
-          {primaryTitle}
+          {primaryAction.title}
         </h2>
         <p className="mt-2 max-w-2xl leading-7 text-white/80">
-          {shouldResumeTopic
-            ? `${journeyStatus}: retoma exactamente donde pausaste.`
-            : currentSession
-              ? currentSession.completedSteps >= currentSession.totalSteps && currentSession.totalSteps > 0
-                ? "Ya recorriste la lección; su examen es el siguiente paso para acreditar la sesión."
-                : "Es la primera sesión pendiente en tu ruta curricular."
-              : "Tu ruta está acreditada. Mantén lo aprendido con una ronda adaptativa."}
+          {primaryAction.description}
         </p>
         <Link
           className="mt-5 inline-flex min-h-11 items-center rounded-xl bg-white px-5 font-semibold text-brand"
-          href={primaryHref}
+          href={primaryAction.href}
         >
-          {shouldResumeTopic
-            ? "Continuar sesión"
-            : currentSession
-              ? "Seguir mi ruta"
-              : "Practicar ahora"}
+          {primaryAction.label}
         </Link>
+        {studyPlan.source === "active" && nextTopic && completedCount < 3 ? (
+          <Link
+            className="mt-3 flex min-h-11 w-fit items-center text-sm font-semibold text-white underline underline-offset-4"
+            href={`/temas/${nextTopic.id}?modo=leccion`}
+          >
+            Volver a mi lección
+          </Link>
+        ) : null}
       </section>
 
       <section className="mt-8 grid gap-4 sm:grid-cols-3">
