@@ -70,8 +70,8 @@ export function FirstStudyExperience({
           {firstName ? `${firstName}, elige dónde comenzar.` : "Elige dónde comenzar."}
         </h1>
         <p className="mt-4 max-w-2xl text-lg leading-7 text-muted">
-          Empieza con una sola sesión. La ruta te mostrará qué sigue cuando la
-          termines.
+          Elige una materia y abre sus temas para leer la explicación y los
+          ejemplos. Después podrás practicar y hacer el simulacro.
         </p>
       </header>
 
@@ -104,7 +104,7 @@ export function FirstStudyExperience({
               className="mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-white px-5 text-sm font-semibold text-brand hover:bg-background"
               href={`/clases/${state.recommended.id}`}
             >
-              Comenzar esta sesión
+              Ver los temas de esta sesión
               <ArrowRightIcon className="size-4" />
             </Link>
           </div>

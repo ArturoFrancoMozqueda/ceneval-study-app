@@ -12,13 +12,13 @@ import {
 export type StudyMode = "practicar" | "leccion" | "simulacro";
 
 const modeCopy: Record<StudyMode, { label: string; description: string }> = {
+  leccion: {
+    label: "Estudiar el tema",
+    description: "Lee la explicación y consulta el mapa, los ejemplos y las fuentes.",
+  },
   practicar: {
     label: "Practicar",
-    description: "Recupera, contrasta y ajusta en una ronda breve.",
-  },
-  leccion: {
-    label: "Consultar la lección",
-    description: "Vuelve a la explicación, el mapa y los casos.",
+    description: "Después de estudiar, comprueba lo que recuerdas en una ronda breve.",
   },
   simulacro: {
     label: "Hacer simulacro",
@@ -84,7 +84,7 @@ export async function TopicDetail({
             ([value, copy]) => {
               const active = mode === value;
               const href =
-                value === "practicar"
+                value === "leccion"
                   ? `/temas/${topicId}`
                   : `/temas/${topicId}?modo=${value}`;
               return (
